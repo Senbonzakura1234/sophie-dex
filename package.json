@@ -1,44 +1,54 @@
 {
-  "name": "atelier-dex",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "postinstall": "prisma generate",
-    "lint": "next lint",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@prisma/client": "^4.7.0",
-    "@tanstack/react-query": "^4.19.0",
-    "@trpc/client": "^10.4.2",
-    "@trpc/next": "^10.4.2",
-    "@trpc/react-query": "^10.4.2",
-    "@trpc/server": "^10.4.2",
-    "next": "13.0.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "superjson": "1.9.1",
-    "zod": "^3.19.1"
-  },
-  "devDependencies": {
-    "@types/node": "^18.11.10",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.9",
-    "@typescript-eslint/eslint-plugin": "^5.45.0",
-    "@typescript-eslint/parser": "^5.45.0",
-    "autoprefixer": "^10.4.13",
-    "eslint": "^8.28.0",
-    "eslint-config-next": "13.0.2",
-    "postcss": "^8.4.19",
-    "prettier": "^2.8.0",
-    "prettier-plugin-tailwindcss": "^0.1.13",
-    "prisma": "^4.7.0",
-    "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.3"
-  },
-  "ct3aMetadata": {
-    "initVersion": "6.11.0"
-  }
+	"name": "atelier-dex",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"build": "next build",
+		"dev": "next dev",
+		"postinstall": "prisma generate",
+		"lint": "next lint",
+		"start": "next start",
+		"lint:fix": "eslint --ext .js,.jsx,.ts,.tsx,.json . --fix",
+		"build-types": "tsc --noEmit --pretty"
+	},
+	"dependencies": {
+		"@prisma/client": "^4.7.0",
+		"@tanstack/react-query": "^4.19.0",
+		"@trpc/client": "^10.4.2",
+		"@trpc/next": "^10.4.2",
+		"@trpc/react-query": "^10.4.2",
+		"@trpc/server": "^10.4.2",
+		"daisyui": "^2.42.1",
+		"next": "13.0.6",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"superjson": "1.9.1",
+		"zod": "^3.19.1"
+	},
+	"devDependencies": {
+		"@types/node": "^18.11.10",
+		"@types/react": "^18.0.25",
+		"@types/react-dom": "^18.0.9",
+		"@typescript-eslint/eslint-plugin": "^5.45.0",
+		"@typescript-eslint/parser": "^5.45.0",
+		"autoprefixer": "^10.4.13",
+		"eslint": "^8.28.0",
+		"eslint-config-next": "13.0.2",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-json": "^3.1.0",
+		"eslint-plugin-jsx-a11y": "^6.6.1",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-simple-import-sort": "^8.0.0",
+		"eslint-plugin-tailwindcss": "^3.7.1",
+		"eslint-plugin-unused-imports": "^2.0.0",
+		"postcss": "^8.4.19",
+		"prettier": "^2.8.0",
+		"prisma": "^4.7.0",
+		"tailwindcss": "^3.2.4",
+		"typescript": "^4.9.3"
+	},
+	"ct3aMetadata": {
+		"initVersion": "6.11.0"
+	}
 }

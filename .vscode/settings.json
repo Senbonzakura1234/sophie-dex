@@ -1,3 +1,18 @@
 {
+	"cSpell.diagnosticLevel": "Hint",
+	"cSpell.ignorePaths": ["**/node_modules/**", "**/.vscode/extensions.json", ".env", "**/dist/**"],
+	"cSpell.words": ["clsx", "daisyui", "heroicons", "tailwindcss", "tsconfigs", "tabler-icons-react"],
+	"css.lint.unknownAtRules": "ignore",
+	"editor.formatOnSave": true,
+	"editor.rulers": [120],
+	"eslint.alwaysShowStatus": true,
+	"eslint.format.enable": true,
+	"eslint.lintTask.enable": true,
+	"eslint.packageManager": "yarn",
+	"files.associations": {
+		"*.eslintrc": "json",
+		"*.json": "json",
+		"*.prettierrc": "json"
+	},
 	"typescript.tsdk": "node_modules\\typescript\\lib"
 }
