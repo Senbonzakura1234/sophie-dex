@@ -2,95 +2,95 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 enum COLOR {
-  GREEN
-  BLUE
-  WHITE
-  YELLOW
-  RED
-  NONE
+   GREEN
+   BLUE
+   WHITE
+   YELLOW
+   RED
+   NONE
 }
 
 enum ITEM_CATEGORY {
-  PLANT
-  MEDICINE_MAT
-  WATER
-  IMPORTANT
-  BOMB
-  MEDICINE
-  FOOD
-  SWEETS
-  CLOTH
-  NEUTRALIZER
-  WEAPON_MAT
-  ARMOR_MAT
-  WEAPON
-  ARMOR
-  ACCESSORY
-  POISON_MAT
-  SECRET_POWER
-  FUEL
-  THREAD
-  WOOD
-  ELIXIR
-  ORE
-  GUNPOWDER
-  GEM
-  METAL
-  CLAY
-  ANIMAL
-  INGREDIENT
-  PAPER
-  MAGIC_ITEM
+   PLANT
+   MEDICINE_MAT
+   WATER
+   IMPORTANT
+   BOMB
+   MEDICINE
+   FOOD
+   SWEETS
+   CLOTH
+   NEUTRALIZER
+   WEAPON_MAT
+   ARMOR_MAT
+   WEAPON
+   ARMOR
+   ACCESSORY
+   POISON_MAT
+   SECRET_POWER
+   FUEL
+   THREAD
+   WOOD
+   ELIXIR
+   ORE
+   GUNPOWDER
+   GEM
+   METAL
+   CLAY
+   ANIMAL
+   INGREDIENT
+   PAPER
+   MAGIC_ITEM
 }
 
 enum TRAIT_CATEGORY {
-  ACCESSORY
-  ARMOR
-  ATK_ITEM
-  BUFF_ITEM
-  DE_BUFF_ITEM
-  HEAL_ITEM
-  WEAPON
+   ACCESSORY
+   ARMOR
+   ATK_ITEM
+   BUFF_ITEM
+   DE_BUFF_ITEM
+   HEAL_ITEM
+   WEAPON
 }
 
 type ItemCategories {
-  name  ITEM_CATEGORY
-  grade Int
+   name  ITEM_CATEGORY
+   grade Int
 }
 
 type MergeTrait {
-  consist String[]
+   consist String[]
 }
 
 generator client {
-  provider = "prisma-client-js"
+   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "mongodb"
-  url      = env("DATABASE_URL")
+   provider = "mongodb"
+   url      = env("DATABASE_URL")
 }
 
 model Effect {
-  id          String @id @default(auto()) @map("_id") @db.ObjectId
-  noId        Int
-  name        String
-  description String
+   id          String @id @default(auto()) @map("_id") @db.ObjectId
+   noId        Int
+   name        String
+   description String
 }
 
 model Trait {
-  id              String           @id @default(auto()) @map("_id") @db.ObjectId
-  noId            Int
-  name            String
-  description     String
-  traitCategories TRAIT_CATEGORY[]
-  mergeFrom MergeTrait[]
+   id              String           @id @default(auto()) @map("_id") @db.ObjectId
+   noId            Int
+   name            String
+   description     String
+   traitCategories TRAIT_CATEGORY[]
+   mergeFrom       MergeTrait[]
 }
 
 model Item {
-  id             String          @id @default(auto()) @map("_id") @db.ObjectId
-  noId           Int
-  name           String
-  color          COLOR
-  itemCategories ITEM_CATEGORY[]
+   id             String           @id @default(auto()) @map("_id") @db.ObjectId
+   noId           Int
+   name           String
+   color          COLOR
+   itemCategories ItemCategories[]
 }

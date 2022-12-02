@@ -1,4 +1,4 @@
-import { publicProcedure, router } from '../trpc';
+import { publicProcedure, router } from '@root/server/trpc/trpc';
 
 export const exampleRouter = router({
 	getAll: publicProcedure.query(({ ctx }) => {
