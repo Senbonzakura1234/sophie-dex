@@ -5,129 +5,86 @@ export const itemRouter = router({
 	getAll: publicProcedure.input(serverSearchQueryValidator).query(async ({ ctx, input }) => {
 		const { search, sortBy, direction, color, itemCategory, page, limit, cursor } = input;
 
-		// const [totalRecord, records] = await ctx.prisma.$transaction([
-		// 	ctx.prisma.item.count({
-		// 		where: {
-		// 			...(search
-		// 				? {
-		// 						name: {
-		// 							contains: search,
-		// 							mode: 'insensitive',
-		// 						},
-		// 				  }
-		// 				: {}),
-		// 			AND: [
-		// 				...(itemCategory
-		// 					? [
-		// 							{
-		// 								itemCategories: {
-		// 									some: {
-		// 										name: {
-		// 											equals: itemCategory,
-		// 										},
-		// 									},
-		// 								},
-		// 							},
-		// 					  ]
-		// 					: []),
-		// 				...(color
-		// 					? [
-		// 							{
-		// 								color: {
-		// 									equals: color,
-		// 								},
-		// 							},
-		// 					  ]
-		// 					: []),
-		// 			],
-		// 		},
-		// 	}),
-		// 	ctx.prisma.item.findMany({
-		// 		where: {
-		// 			...(search
-		// 				? {
-		// 						name: {
-		// 							contains: search,
-		// 							mode: 'insensitive',
-		// 						},
-		// 				  }
-		// 				: {}),
-		// 			AND: [
-		// 				...(itemCategory
-		// 					? [
-		// 							{
-		// 								itemCategories: {
-		// 									some: {
-		// 										name: {
-		// 											equals: itemCategory,
-		// 										},
-		// 									},
-		// 								},
-		// 							},
-		// 					  ]
-		// 					: []),
-		// 				...(color
-		// 					? [
-		// 							{
-		// 								color: {
-		// 									equals: color,
-		// 								},
-		// 							},
-		// 					  ]
-		// 					: []),
-		// 			],
-		// 		},
-		// 		orderBy: {
-		// 			[sortBy]: direction,
-		// 		},
-		// 		skip: (page - 1) * limit,
-		// 		take: limit,
-		// 		cursor: cursor ? { id: cursor } : undefined,
-		// 	}),
-		// ]);
-
-		const records = await ctx.prisma.item.findMany({
-			where: {
-				...(search
-					? {
-							name: {
-								contains: search,
-								mode: 'insensitive',
-							},
-					  }
-					: {}),
-				AND: [
-					...(itemCategory
-						? [
-								{
-									itemCategories: {
-										some: {
-											name: {
-												equals: itemCategory,
+		const [totalRecord, records] = await ctx.prisma.$transaction([
+			ctx.prisma.item.count({
+				where: {
+					...(search
+						? {
+								name: {
+									contains: search,
+									mode: 'insensitive',
+								},
+						  }
+						: {}),
+					AND: [
+						...(itemCategory
+							? [
+									{
+										itemCategories: {
+											some: {
+												name: {
+													equals: itemCategory,
+												},
 											},
 										},
 									},
-								},
-						  ]
-						: []),
-					...(color
-						? [
-								{
-									color: {
-										equals: color,
+							  ]
+							: []),
+						...(color
+							? [
+									{
+										color: {
+											equals: color,
+										},
 									},
+							  ]
+							: []),
+					],
+				},
+			}),
+			ctx.prisma.item.findMany({
+				where: {
+					...(search
+						? {
+								name: {
+									contains: search,
+									mode: 'insensitive',
 								},
-						  ]
-						: []),
-				],
-			},
-			orderBy: {
-				[sortBy]: direction,
-			},
-			skip: (page - 1) * limit,
-			take: limit,
-			cursor: cursor ? { id: cursor } : undefined,
-		});
+						  }
+						: {}),
+					AND: [
+						...(itemCategory
+							? [
+									{
+										itemCategories: {
+											some: {
+												name: {
+													equals: itemCategory,
+												},
+											},
+										},
+									},
+							  ]
+							: []),
+						...(color
+							? [
+									{
+										color: {
+											equals: color,
+										},
+									},
+							  ]
+							: []),
+					],
+				},
+				orderBy: {
+					[sortBy]: direction,
+				},
+				skip: (page - 1) * limit,
+				take: limit,
+				cursor: cursor ? { id: cursor } : undefined,
+			}),
+		]);
 
 		const newCursor = records.at(-1)?.id as string;
 
@@ -136,8 +93,8 @@ export const itemRouter = router({
 			cursor: newCursor,
 			page,
 			limit,
-			// totalRecord,
-			// totalPage: Math.ceil(totalRecord / limit),
+			totalRecord,
+			totalPage: Math.ceil(totalRecord / limit),
 		};
 	}),
 	// getOne: publicProcedure.query(async ({ ctx }) => {}),
