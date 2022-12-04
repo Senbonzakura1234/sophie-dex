@@ -28,17 +28,17 @@ export const traitRouter = router({
 							],
 					  }
 					: {}),
-				AND: [
-					...(traitCategory
-						? [
+				...(traitCategory
+					? {
+							AND: [
 								{
 									traitCategories: {
 										equals: traitCategory,
 									},
 								},
-						  ]
-						: []),
-				],
+							],
+					  }
+					: {}),
 			},
 		});
 
