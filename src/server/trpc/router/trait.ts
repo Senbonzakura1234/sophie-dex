@@ -1,8 +1,8 @@
 import { publicProcedure, router } from '@root/server/trpc/trpc';
-import { searchQueryValidator } from '@root/types/common/zod';
+import { serverSearchQueryValidator } from '@root/types/common/zod';
 
 export const traitRouter = router({
-	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }) => {
+	getAll: publicProcedure.input(serverSearchQueryValidator).query(async ({ ctx, input }) => {
 		const { search, sortBy, direction, traitCategory, page, limit, cursor } = input;
 
 		const [totalRecord, records] = await ctx.prisma.$transaction([
