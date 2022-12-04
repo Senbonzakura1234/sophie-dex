@@ -1,9 +1,13 @@
 import { router } from '@root/server/trpc/trpc';
 
-import { exampleRouter } from './example';
+import { effectRouter } from './effect';
+import { itemRouter } from './item';
+import { traitRouter } from './trait';
 
 export const appRouter = router({
-	example: exampleRouter,
+	effect: effectRouter,
+	item: itemRouter,
+	trait: traitRouter,
 });
 
 // export type definition of API

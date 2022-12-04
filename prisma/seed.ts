@@ -7,28 +7,16 @@ import traits from './data/traits';
 const prisma = new PrismaClient();
 
 async function seed() {
-	effects.forEach(async ({ id, ...effect }) => {
-		await prisma.effect.upsert({
-			where: { id },
-			create: { id, ...effect },
-			update: { ...effect },
-		});
+	effects.forEach(async effect => {
+		await prisma.effect.create({ data: effect });
 	});
 
-	traits.forEach(async ({ id, ...trait }) => {
-		await prisma.trait.upsert({
-			where: { id },
-			create: { id, ...trait },
-			update: { ...trait },
-		});
+	traits.forEach(async trait => {
+		await prisma.trait.create({ data: trait });
 	});
 
-	items.forEach(async ({ id, ...item }) => {
-		await prisma.item.upsert({
-			where: { id },
-			create: { id, ...item },
-			update: { ...item },
-		});
+	items.forEach(async item => {
+		await prisma.item.create({ data: item });
 	});
 }
 

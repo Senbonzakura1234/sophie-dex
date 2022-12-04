@@ -7,6 +7,8 @@ export const Color = {
 	NONE: 'None',
 } as const;
 
+export const colorList = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW', 'NONE'] as const;
+
 export type Color = typeof Color[keyof typeof Color];
 
 export const ItemCategory = {
@@ -42,6 +44,39 @@ export const ItemCategory = {
 	MAGIC_ITEM: 'Magic Item',
 } as const;
 
+export const itemCategoryList = [
+	'PLANT',
+	'MEDICINE_MAT',
+	'WATER',
+	'IMPORTANT',
+	'BOMB',
+	'MEDICINE',
+	'FOOD',
+	'SWEETS',
+	'CLOTH',
+	'NEUTRALIZER',
+	'WEAPON_MAT',
+	'ARMOR_MAT',
+	'WEAPON',
+	'ARMOR',
+	'ACCESSORY',
+	'POISON_MAT',
+	'SECRET_POWER',
+	'FUEL',
+	'THREAD',
+	'WOOD',
+	'ELIXIR',
+	'ORE',
+	'GUNPOWDER',
+	'GEM',
+	'METAL',
+	'CLAY',
+	'ANIMAL',
+	'INGREDIENT',
+	'PAPER',
+	'MAGIC_ITEM',
+] as const;
+
 export type ItemCategory = typeof ItemCategory[keyof typeof ItemCategory];
 
 export const TraitCategory = {
@@ -53,6 +88,16 @@ export const TraitCategory = {
 	HEAL_ITEM: 'Heal Item',
 	WEAPON: 'Weapon',
 } as const;
+
+export const traitCategoryList = [
+	'ACCESSORY',
+	'ARMOR',
+	'ATK_ITEM',
+	'BUFF_ITEM',
+	'DE_BUFF_ITEM',
+	'HEAL_ITEM',
+	'WEAPON',
+] as const;
 
 export type TraitCategory = typeof TraitCategory[keyof typeof TraitCategory];
 
