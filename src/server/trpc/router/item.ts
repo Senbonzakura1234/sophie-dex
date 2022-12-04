@@ -3,25 +3,22 @@ import { searchQueryValidator } from '@root/types/common/zod';
 
 export const itemRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }) => {
-		const { cursor, page, limit, search, sortBy, direction, color, itemCategory } = input;
+		const { search, sortBy, direction, color, itemCategory } = input;
 		const records = await ctx.prisma.item.findMany({
 			orderBy: {
 				[sortBy]: direction,
 			},
-			skip: (page - 1) * limit,
-			take: limit,
-			cursor: cursor ? { id: cursor } : undefined,
+
 			where: {
+				...(search
+					? {
+							name: {
+								contains: search,
+								mode: 'insensitive',
+							},
+					  }
+					: {}),
 				AND: [
-					...(search
-						? [
-								{
-									name: {
-										contains: search,
-									},
-								},
-						  ]
-						: []),
 					...(itemCategory
 						? [
 								{
@@ -48,16 +45,7 @@ export const itemRouter = router({
 			},
 		});
 
-		const newCursor = records.at(-1)?.id;
-
-		return {
-			records,
-			cursor: newCursor,
-			page,
-			limit,
-			totalRecord: records.length,
-			totalPage: Math.ceil(records.length / limit),
-		};
+		return records;
 	}),
 	// getOne: publicProcedure.query(async ({ ctx }) => {}),
 });

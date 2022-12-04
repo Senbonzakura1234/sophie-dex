@@ -4,9 +4,12 @@ import { type NextPage } from 'next';
 import { useEffect } from 'react';
 
 const Traits: NextPage = () => {
-	const searchQuery = useSearchQuery();
-	const { data, isSuccess, error, isError } = trpc.trait.getAll.useQuery(searchQuery, {
+	const { securedQuery, updateQuery, isReady } = useSearchQuery();
+	const { data, isSuccess, error, isError } = trpc.trait.getAll.useQuery(securedQuery, {
 		retry: 3,
+		enabled: isReady,
+		refetchOnReconnect: false,
+		refetchOnWindowFocus: false,
 	});
 
 	useEffect(() => {
@@ -14,7 +17,17 @@ const Traits: NextPage = () => {
 		if (isError) console.log(error);
 	}, [data, error, isError, isSuccess]);
 
-	return <div></div>;
+	return (
+		<div>
+			<button
+				onClick={() => {
+					updateQuery({ search: 'price' });
+				}}
+			>
+				test
+			</button>
+		</div>
+	);
 };
 
 export default Traits;

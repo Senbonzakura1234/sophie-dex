@@ -1,27 +1,35 @@
 import type { SearchQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
+import { parseObjToParam } from '@root/utils/helper';
 import { useRouter } from 'next/router';
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 
-export const useSearchQuery = (): SearchQuery => {
-	const { query } = useRouter();
+export const useSearchQuery = (): {
+	isReady: boolean;
+	securedQuery: SearchQuery;
+	updateQuery: (nextQuery: Partial<SearchQuery>) => void;
+} => {
+	const { query, isReady, push, pathname } = useRouter();
 
 	const securedQuery: SearchQuery = useMemo(() => {
 		const result = searchQueryValidator.safeParse(query);
+
 		return result.success
 			? result.data
 			: {
 					search: null,
-					page: 1,
-					limit: 20,
 					sortBy: 'noId',
 					direction: 'asc',
-					cursor: null,
 					itemCategory: null,
 					traitCategory: null,
 					color: null,
 			  };
 	}, [query]);
 
-	return securedQuery;
+	const updateQuery = useCallback(
+		(nextQuery: Partial<SearchQuery>) => push(`${pathname}?${parseObjToParam(nextQuery)}`, undefined, {}),
+		[push, pathname],
+	);
+
+	return { securedQuery, isReady, updateQuery };
 };
