@@ -23,6 +23,9 @@ export const useSearchQuery = (): {
 					itemCategory: null,
 					traitCategory: null,
 					color: null,
+					cursor: null,
+					limit: 20,
+					page: 1,
 			  };
 	}, [query]);
 
