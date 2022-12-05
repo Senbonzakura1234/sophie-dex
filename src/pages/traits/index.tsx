@@ -27,7 +27,7 @@ const columns = [
 		cell: info =>
 			info
 				.getValue()
-				.map(({ consist }) => consist.join('+'))
+				.map(({ consist }) => consist.map(({ name }) => name).join('+'))
 				.join(''),
 		footer: info => info.column.id,
 	}),
