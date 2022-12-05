@@ -26,7 +26,7 @@ export const useSearchQuery = (): {
 					traitCategory: null,
 					color: null,
 					cursor: null,
-					limit: 20,
+					limit: 10,
 					page: 1,
 			  };
 	}, [query]);

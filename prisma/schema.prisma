@@ -58,8 +58,15 @@ type ItemCategories {
    grade Int
 }
 
+type MergeTraitItem {
+   id          String
+   noId        Int
+   name        String
+   description String
+}
+
 type MergeTrait {
-   consist String[]
+   consist MergeTraitItem[]
 }
 
 generator client {

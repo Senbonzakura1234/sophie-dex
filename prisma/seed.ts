@@ -7,17 +7,23 @@ import traits from './data/traits';
 const prisma = new PrismaClient();
 
 async function seed() {
-	effects.forEach(async effect => {
-		await prisma.effect.create({ data: effect });
-	});
+	effects
+		.sort((a, b) => a.noId - b.noId)
+		.forEach(async effect => {
+			await prisma.effect.create({ data: effect });
+		});
 
-	traits.forEach(async trait => {
-		await prisma.trait.create({ data: trait });
-	});
+	traits
+		.sort((a, b) => a.noId - b.noId)
+		.forEach(async trait => {
+			await prisma.trait.create({ data: trait });
+		});
 
-	items.forEach(async item => {
-		await prisma.item.create({ data: item });
-	});
+	items
+		.sort((a, b) => a.noId - b.noId)
+		.forEach(async item => {
+			await prisma.item.create({ data: item });
+		});
 }
 
 seed()

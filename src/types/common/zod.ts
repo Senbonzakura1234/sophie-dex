@@ -30,13 +30,13 @@ const searchQuerySchema = {
 
 export const serverSearchQueryValidator = z.object({
 	page: z.number().int().nonnegative().default(1),
-	limit: z.number().int().nonnegative().default(20),
+	limit: z.number().int().nonnegative().default(10),
 	...searchQuerySchema,
 });
 
 export const clientSearchQueryValidator = z.object({
 	page: z.preprocess(safePreprocessor(stringToNumberSchema(1)), z.number().int().nonnegative().default(1)),
-	limit: z.preprocess(safePreprocessor(stringToNumberSchema(20)), z.number().int().nonnegative().default(20)),
+	limit: z.preprocess(safePreprocessor(stringToNumberSchema(10)), z.number().int().nonnegative().default(10)),
 	...searchQuerySchema,
 });
 

@@ -1,4 +1,4 @@
-export const Color = {
+export const ColorDisplay = {
 	GREEN: 'Green',
 	BLUE: 'Blue',
 	WHITE: 'White',
@@ -9,9 +9,9 @@ export const Color = {
 
 export const colorList = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW', 'NONE'] as const;
 
-export type Color = typeof Color[keyof typeof Color];
+export type ColorDisplay = typeof ColorDisplay[keyof typeof ColorDisplay];
 
-export const ItemCategory = {
+export const ItemCategoryDisplay = {
 	PLANT: 'Plant',
 	MEDICINE_MAT: 'Medicine Mat',
 	WATER: 'Water',
@@ -77,9 +77,9 @@ export const itemCategoryList = [
 	'MAGIC_ITEM',
 ] as const;
 
-export type ItemCategory = typeof ItemCategory[keyof typeof ItemCategory];
+export type ItemCategoryDisplay = typeof ItemCategoryDisplay[keyof typeof ItemCategoryDisplay];
 
-export const TraitCategory = {
+export const TraitCategoryDisplay = {
 	ACCESSORY: 'Accessory',
 	ARMOR: 'Armor',
 	ATK_ITEM: 'Attack Item',
@@ -99,33 +99,6 @@ export const traitCategoryList = [
 	'WEAPON',
 ] as const;
 
-export type TraitCategory = typeof TraitCategory[keyof typeof TraitCategory];
+export type TraitCategoryDisplay = typeof TraitCategoryDisplay[keyof typeof TraitCategoryDisplay];
 
-export type Item = {
-	id: string;
-	noId: number;
-	name: string;
-	color: keyof typeof Color;
-	itemCategories: {
-		name: keyof typeof ItemCategory;
-		grade: number;
-	}[];
-};
-
-export type Effect = {
-	id: string;
-	noId: number;
-	name: string;
-	description: string;
-};
-
-export type Trait = {
-	id: string;
-	noId: number;
-	name: string;
-	description: string;
-	mergeFrom: {
-		consist: string[];
-	}[];
-	traitCategories: (keyof typeof TraitCategory)[];
-};
+type B = TraitCategoryDisplay;

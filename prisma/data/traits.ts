@@ -30,7 +30,22 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec963',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec965', '638a4d47a44f4fa4b0dec96a'],
+				consist: [
+					{
+						description:
+							'Effect: Price when selling to shops decreases a little, but also decreases duplication price.',
+						id: '638a4d47a44f4fa4b0dec965',
+						name: 'Low Price',
+						noId: 0,
+					},
+					{
+						description:
+							'Effect: Price when selling to shops decreases quite a bit, but also decreases duplication price.',
+						id: '638a4d47a44f4fa4b0dec96a',
+						name: 'Low Price+',
+						noId: 1,
+					},
+				],
 			},
 		],
 		name: 'Common Item',
@@ -42,7 +57,22 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec96b',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec96a', '638a4d47a44f4fa4b0dec968'],
+				consist: [
+					{
+						description:
+							'Effect: Price when selling to shops decreases quite a bit, but also decreases duplication price.',
+						id: '638a4d47a44f4fa4b0dec96a',
+						name: 'Low Price+',
+						noId: 1,
+					},
+					{
+						description:
+							'Effect: Price when selling to shops decreases quite a lot, but also decreases duplication price.',
+						id: '638a4d47a44f4fa4b0dec968',
+						name: 'Low Price++',
+						noId: 2,
+					},
+				],
 			},
 		],
 		name: 'Mass Produced',
@@ -54,7 +84,22 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec969',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec963', '638a4d47a44f4fa4b0dec96b'],
+				consist: [
+					{
+						description:
+							'Effect: Price when selling to shops decreases quite a lot, but also decreases duplication price.',
+						id: '638a4d47a44f4fa4b0dec963',
+						name: 'Common Item',
+						noId: 3,
+					},
+					{
+						description:
+							'Effect: Price when selling to shops decreases massively, but also decreases duplication price.',
+						id: '638a4d47a44f4fa4b0dec96b',
+						name: 'Mass Produced',
+						noId: 4,
+					},
+				],
 			},
 		],
 		name: 'No Price',
@@ -90,7 +135,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec96e',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec967', '638a4d47a44f4fa4b0dec962'],
+				consist: [
+					{
+						description: 'Effect: Price when selling to shops increases a little.',
+						id: '638a4d47a44f4fa4b0dec967',
+						name: 'High Price',
+						noId: 6,
+					},
+					{
+						description: 'Effect: Price when selling to shops increases quite a bit.',
+						id: '638a4d47a44f4fa4b0dec962',
+						name: 'High Price+',
+						noId: 7,
+					},
+				],
 			},
 		],
 		name: 'High Class',
@@ -102,7 +160,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec96d',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec962', '638a4d47a44f4fa4b0dec966'],
+				consist: [
+					{
+						description: 'Effect: Price when selling to shops increases quite a bit.',
+						id: '638a4d47a44f4fa4b0dec962',
+						name: 'High Price+',
+						noId: 7,
+					},
+					{
+						description: 'Effect: Price when selling to shops increases quite a lot.',
+						id: '638a4d47a44f4fa4b0dec966',
+						name: 'High Price++',
+						noId: 8,
+					},
+				],
 			},
 		],
 		name: 'Rare Item',
@@ -114,7 +185,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec964',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec96e', '638a4d47a44f4fa4b0dec96d'],
+				consist: [
+					{
+						description: 'Effect: Price when selling to shops increases quite a lot.',
+						id: '638a4d47a44f4fa4b0dec96e',
+						name: 'High Class',
+						noId: 9,
+					},
+					{
+						description: 'Effect: Price when selling to shops increases massively.',
+						id: '638a4d47a44f4fa4b0dec96d',
+						name: 'Rare Item',
+						noId: 10,
+					},
+				],
 			},
 		],
 		name: 'Premium Price',
@@ -150,7 +234,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec973',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec982', '638a4d47a44f4fa4b0dec970'],
+				consist: [
+					{
+						description: 'Effect: Increases item quality by 10% when this trait is transferred.',
+						id: '638a4d47a44f4fa4b0dec982',
+						name: 'Quality Up',
+						noId: 12,
+					},
+					{
+						description: 'Effect: Increases item quality by 15% when this trait is transferred.',
+						id: '638a4d47a44f4fa4b0dec970',
+						name: 'Quality Up+',
+						noId: 13,
+					},
+				],
 			},
 		],
 		name: 'Well Made',
@@ -162,7 +259,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec97e',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec970', '638a4d47a44f4fa4b0dec972'],
+				consist: [
+					{
+						description: 'Effect: Increases item quality by 15% when this trait is transferred.',
+						id: '638a4d47a44f4fa4b0dec970',
+						name: 'Quality Up+',
+						noId: 13,
+					},
+					{
+						description: 'Effect: Increases item quality by 20% when this trait is transferred.',
+						id: '638a4d47a44f4fa4b0dec972',
+						name: 'Quality Up++',
+						noId: 14,
+					},
+				],
 			},
 		],
 		name: 'Pro Perfection',
@@ -174,7 +284,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec971',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec973', '638a4d47a44f4fa4b0dec97e'],
+				consist: [
+					{
+						description: 'Effect: Increases item quality by 20% when this trait is transferred.',
+						id: '638a4d47a44f4fa4b0dec973',
+						name: 'Well Made',
+						noId: 15,
+					},
+					{
+						description: 'Effect: Increases item quality by 30% when this trait is transferred.',
+						id: '638a4d47a44f4fa4b0dec97e',
+						name: 'Pro Perfection',
+						noId: 16,
+					},
+				],
 			},
 		],
 		name: 'Super Quality',
@@ -210,7 +333,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec974',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec96c', '638a4d47a44f4fa4b0dec96f'],
+				consist: [
+					{
+						description: 'Effect: Increases attack item effect by 5%.',
+						id: '638a4d47a44f4fa4b0dec96c',
+						name: 'Destruction Up',
+						noId: 52,
+					},
+					{
+						description: 'Effect: Increases attack item effect by 7%.',
+						id: '638a4d47a44f4fa4b0dec96f',
+						name: 'Destruction Up+',
+						noId: 53,
+					},
+				],
 			},
 		],
 		name: 'Big Destruction',
@@ -222,7 +358,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec977',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec96f', '638a4d47a44f4fa4b0dec984'],
+				consist: [
+					{
+						description: 'Effect: Increases attack item effect by 7%.',
+						id: '638a4d47a44f4fa4b0dec96f',
+						name: 'Destruction Up+',
+						noId: 53,
+					},
+					{
+						description: 'Effect: Increases attack item effect by 10%.',
+						id: '638a4d47a44f4fa4b0dec984',
+						name: 'Destruction Up++',
+						noId: 54,
+					},
+				],
 			},
 		],
 		name: 'Intense Destruction',
@@ -234,7 +383,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec975',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec974', '638a4d47a44f4fa4b0dec977'],
+				consist: [
+					{
+						description: 'Effect: Increases attack item effect by 12%.',
+						id: '638a4d47a44f4fa4b0dec974',
+						name: 'Big Destruction',
+						noId: 55,
+					},
+					{
+						description: 'Effect: Increases attack item effect by 17%.',
+						id: '638a4d47a44f4fa4b0dec977',
+						name: 'Intense Destruction',
+						noId: 56,
+					},
+				],
 			},
 		],
 		name: 'Ultimate Destruction',
@@ -278,7 +440,22 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec981',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec978', '638a4d47a44f4fa4b0dec976'],
+				consist: [
+					{
+						description:
+							'Effect: Attack item enhanced by a small, fixed amount. Lower power equals stronger enhancement.',
+						id: '638a4d47a44f4fa4b0dec978',
+						name: 'Fixed Power',
+						noId: 59,
+					},
+					{
+						description:
+							'Effect: Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.',
+						id: '638a4d47a44f4fa4b0dec976',
+						name: 'Fixed Power+',
+						noId: 60,
+					},
+				],
 			},
 		],
 		name: 'Pain in Numbers',
@@ -290,7 +467,22 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec97a',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec976', '638a4d47a44f4fa4b0dec97b'],
+				consist: [
+					{
+						description:
+							'Effect: Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.',
+						id: '638a4d47a44f4fa4b0dec976',
+						name: 'Fixed Power+',
+						noId: 60,
+					},
+					{
+						description:
+							'Effect: Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.',
+						id: '638a4d47a44f4fa4b0dec97b',
+						name: 'Fixed Power++',
+						noId: 61,
+					},
+				],
 			},
 		],
 		name: 'Damage in Numbers',
@@ -302,7 +494,22 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec9a4',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec981', '638a4d47a44f4fa4b0dec97a'],
+				consist: [
+					{
+						description:
+							'Effect: Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.',
+						id: '638a4d47a44f4fa4b0dec981',
+						name: 'Pain in Numbers',
+						noId: 62,
+					},
+					{
+						description:
+							'Effect: Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.',
+						id: '638a4d47a44f4fa4b0dec97a',
+						name: 'Damage in Numbers',
+						noId: 63,
+					},
+				],
 			},
 		],
 		name: 'Big Damage Numbers',
@@ -371,7 +578,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec995',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec9a1', '638a4d47a44f4fa4b0dec983'],
+				consist: [
+					{
+						description: 'Effect: Increases recovery item effect by 10%.',
+						id: '638a4d47a44f4fa4b0dec9a1',
+						name: 'Recovery Up',
+						noId: 103,
+					},
+					{
+						description: 'Effect: Increases recovery item effect by 15%.',
+						id: '638a4d47a44f4fa4b0dec983',
+						name: 'Recovery Up+',
+						noId: 104,
+					},
+				],
 			},
 		],
 		name: 'Big Recovery',
@@ -383,7 +603,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec986',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec983', '638a4d47a44f4fa4b0dec985'],
+				consist: [
+					{
+						description: 'Effect: Increases recovery item effect by 15%.',
+						id: '638a4d47a44f4fa4b0dec983',
+						name: 'Recovery Up+',
+						noId: 104,
+					},
+					{
+						description: 'Effect: Increases recovery item effect by 20%.',
+						id: '638a4d47a44f4fa4b0dec985',
+						name: 'Recovery Up++',
+						noId: 105,
+					},
+				],
 			},
 		],
 		name: 'Intense Recovery',
@@ -395,7 +628,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec997',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec995', '638a4d47a44f4fa4b0dec986'],
+				consist: [
+					{
+						description: 'Effect: Increases recovery item effect by 25%.',
+						id: '638a4d47a44f4fa4b0dec995',
+						name: 'Big Recovery',
+						noId: 106,
+					},
+					{
+						description: 'Effect: Increases recovery item effect by 35%.',
+						id: '638a4d47a44f4fa4b0dec986',
+						name: 'Intense Recovery',
+						noId: 107,
+					},
+				],
 			},
 		],
 		name: 'Ultimate Recovery',
@@ -439,7 +685,22 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec98d',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec989', '638a4d47a44f4fa4b0dec987'],
+				consist: [
+					{
+						description:
+							'Effect: Recovery item enhanced by a tiny, fixed amount. Lower power equals stronger effect.',
+						id: '638a4d47a44f4fa4b0dec989',
+						name: 'Fixed Recovery',
+						noId: 110,
+					},
+					{
+						description:
+							'Effect: Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.',
+						id: '638a4d47a44f4fa4b0dec987',
+						name: 'Fixed Recovery+',
+						noId: 111,
+					},
+				],
 			},
 		],
 		name: 'Medicine Enhance',
@@ -451,7 +712,21 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec98b',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec987', '638a4d47a44f4fa4b0dec98a'],
+				consist: [
+					{
+						description:
+							'Effect: Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.',
+						id: '638a4d47a44f4fa4b0dec987',
+						name: 'Fixed Recovery+',
+						noId: 111,
+					},
+					{
+						description: 'Effect: Recovery item enhanced by a fixed amount. Lower power equals stronger effect.',
+						id: '638a4d47a44f4fa4b0dec98a',
+						name: 'Fixed Recovery++',
+						noId: 112,
+					},
+				],
 			},
 		],
 		name: 'Big Medicine Enhance',
@@ -463,7 +738,21 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec993',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec98d', '638a4d47a44f4fa4b0dec98b'],
+				consist: [
+					{
+						description:
+							'Effect: Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.',
+						id: '638a4d47a44f4fa4b0dec98d',
+						name: 'Medicine Enhance',
+						noId: 113,
+					},
+					{
+						description: 'Effect: Recovery item enhanced by a fixed amount. Lower power equals stronger effect.',
+						id: '638a4d47a44f4fa4b0dec98b',
+						name: 'Big Medicine Enhance',
+						noId: 114,
+					},
+				],
 			},
 		],
 		name: 'Super Enhance Recovery',
@@ -508,7 +797,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec98e',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec990', '638a4d47a44f4fa4b0dec98f'],
+				consist: [
+					{
+						description: 'Effect: Gives item a 15% chance to critical hit.',
+						id: '638a4d47a44f4fa4b0dec990',
+						name: 'Critical',
+						noId: 145,
+					},
+					{
+						description: 'Effect: Gives item a 25% chance to critical hit.',
+						id: '638a4d47a44f4fa4b0dec98f',
+						name: 'Critical+',
+						noId: 146,
+					},
+				],
 			},
 		],
 		name: 'Critical Finish',
@@ -520,7 +822,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec992',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec98f', '638a4d47a44f4fa4b0dec991'],
+				consist: [
+					{
+						description: 'Effect: Gives item a 25% chance to critical hit.',
+						id: '638a4d47a44f4fa4b0dec98f',
+						name: 'Critical+',
+						noId: 146,
+					},
+					{
+						description: 'Effect: Gives item a 35% chance to critical hit.',
+						id: '638a4d47a44f4fa4b0dec991',
+						name: 'Critical++',
+						noId: 147,
+					},
+				],
 			},
 		],
 		name: 'Always Critical',
@@ -532,7 +847,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec994',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec98e', '638a4d47a44f4fa4b0dec992'],
+				consist: [
+					{
+						description: 'Effect: Gives item a 50% chance to critical hit.',
+						id: '638a4d47a44f4fa4b0dec98e',
+						name: 'Critical Finish',
+						noId: 148,
+					},
+					{
+						description: 'Effect: Item will always critical hit.',
+						id: '638a4d47a44f4fa4b0dec992',
+						name: 'Always Critical',
+						noId: 149,
+					},
+				],
 			},
 		],
 		name: 'One Hit Kill',
@@ -568,7 +896,22 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec9a8',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec998', '638a4d47a44f4fa4b0dec996'],
+				consist: [
+					{
+						description:
+							'Effect: Reduces item number variation slightly, making it easier to score higher numbers.',
+						id: '638a4d47a44f4fa4b0dec998',
+						name: 'Stable Effect',
+						noId: 151,
+					},
+					{
+						description:
+							'Effect: Reduces item number variation a little, making it easier to score higher numbers.',
+						id: '638a4d47a44f4fa4b0dec996',
+						name: 'Stable Effect+',
+						noId: 152,
+					},
+				],
 			},
 		],
 		name: 'Stability Emphasis',
@@ -580,7 +923,21 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9ca',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec996', '638a4d47a44f4fa4b0dec999'],
+				consist: [
+					{
+						description:
+							'Effect: Reduces item number variation a little, making it easier to score higher numbers.',
+						id: '638a4d47a44f4fa4b0dec996',
+						name: 'Stable Effect+',
+						noId: 152,
+					},
+					{
+						description: 'Effect: Reduces item number variation, making it easier to score higher numbers.',
+						id: '638a4d47a44f4fa4b0dec999',
+						name: 'Stable Effect++',
+						noId: 153,
+					},
+				],
 			},
 		],
 		name: 'Solid Effect',
@@ -592,7 +949,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec99d',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec9a8', '638a4d48a44f4fa4b0dec9ca'],
+				consist: [
+					{
+						description: 'Effect: Reduces item number variation, making it easier to score higher numbers.',
+						id: '638a4d47a44f4fa4b0dec9a8',
+						name: 'Stability Emphasis',
+						noId: 154,
+					},
+					{
+						description: 'Effect: Halves item number variation, making it easier to score higher numbers.',
+						id: '638a4d48a44f4fa4b0dec9ca',
+						name: 'Solid Effect',
+						noId: 155,
+					},
+				],
 			},
 		],
 		name: 'Boost Expected Value',
@@ -620,7 +990,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec9a0',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec99a', '638a4d47a44f4fa4b0dec99b'],
+				consist: [
+					{
+						description: 'Effect: Increases item use count by 1. Power is reduced a little.',
+						id: '638a4d47a44f4fa4b0dec99a',
+						name: 'Use Count +1',
+						noId: 172,
+					},
+					{
+						description: 'Effect: Increases item use count by 2. Power is reduced slightly.',
+						id: '638a4d47a44f4fa4b0dec99b',
+						name: 'Use Count +2',
+						noId: 173,
+					},
+				],
 			},
 		],
 		name: 'Multiply',
@@ -648,7 +1031,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec9a3',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec99c', '638a4d47a44f4fa4b0dec99f'],
+				consist: [
+					{
+						description: 'Effect: Reduces item use count by 1. Power is increased a little.',
+						id: '638a4d47a44f4fa4b0dec99c',
+						name: 'Use Count -1',
+						noId: 175,
+					},
+					{
+						description: 'Effect: Reduces item use count by 2. Power is increased.',
+						id: '638a4d47a44f4fa4b0dec99f',
+						name: 'Use Count -2',
+						noId: 176,
+					},
+				],
 			},
 		],
 		name: 'Reduction',
@@ -684,7 +1080,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec9a5',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec99e', '638a4d48a44f4fa4b0dec9cd'],
+				consist: [
+					{
+						description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 10.',
+						id: '638a4d47a44f4fa4b0dec99e',
+						name: 'HP Enhance',
+						noId: 190,
+					},
+					{
+						description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 15.',
+						id: '638a4d48a44f4fa4b0dec9cd',
+						name: 'HP Boost',
+						noId: 191,
+					},
+				],
 			},
 		],
 		name: 'Full of Life',
@@ -696,7 +1105,20 @@ const traits: Trait[] = [
 		id: '638a4d49a44f4fa4b0deca80',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec99e', '638a4d48a44f4fa4b0dec9cd'],
+				consist: [
+					{
+						description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 10.',
+						id: '638a4d47a44f4fa4b0dec99e',
+						name: 'HP Enhance',
+						noId: 190,
+					},
+					{
+						description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 15.',
+						id: '638a4d48a44f4fa4b0dec9cd',
+						name: 'HP Boost',
+						noId: 191,
+					},
+				],
 			},
 		],
 		name: 'Full of Life',
@@ -708,7 +1130,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec9a9',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9cd', '638a4d47a44f4fa4b0dec9a2'],
+				consist: [
+					{
+						description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 15.',
+						id: '638a4d48a44f4fa4b0dec9cd',
+						name: 'HP Boost',
+						noId: 191,
+					},
+					{
+						description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 25.',
+						id: '638a4d47a44f4fa4b0dec9a2',
+						name: 'HP Super Enhance',
+						noId: 192,
+					},
+				],
 			},
 		],
 		name: 'Overflowing Life',
@@ -720,7 +1155,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9b0',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec9a5', '638a4d47a44f4fa4b0dec9a9'],
+				consist: [
+					{
+						description: 'Effect: Maximum HP increases by 25.',
+						id: '638a4d47a44f4fa4b0dec9a5',
+						name: 'Full of Life',
+						noId: 193,
+					},
+					{
+						description: 'Effect: Maximum HP increases by 40.',
+						id: '638a4d47a44f4fa4b0dec9a9',
+						name: 'Overflowing Life',
+						noId: 194,
+					},
+				],
 			},
 		],
 		name: 'Power of Life',
@@ -756,7 +1204,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec9ad',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec9a6', '638a4d47a44f4fa4b0dec9a7'],
+				consist: [
+					{
+						description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 10.',
+						id: '638a4d47a44f4fa4b0dec9a6',
+						name: 'MP Enhance',
+						noId: 196,
+					},
+					{
+						description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 15.',
+						id: '638a4d47a44f4fa4b0dec9a7',
+						name: 'MP Boost',
+						noId: 197,
+					},
+				],
 			},
 		],
 		name: "Magician's Wisdom",
@@ -768,7 +1229,20 @@ const traits: Trait[] = [
 		id: '638a4d47a44f4fa4b0dec9ab',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec9a7', '638a4d47a44f4fa4b0dec9aa'],
+				consist: [
+					{
+						description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 15.',
+						id: '638a4d47a44f4fa4b0dec9a7',
+						name: 'MP Boost',
+						noId: 197,
+					},
+					{
+						description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 25.',
+						id: '638a4d47a44f4fa4b0dec9aa',
+						name: 'MP Super Enhance',
+						noId: 198,
+					},
+				],
 			},
 		],
 		name: "Grand Magician's Wisdom",
@@ -780,7 +1254,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9b4',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec9ad', '638a4d47a44f4fa4b0dec9ab'],
+				consist: [
+					{
+						description: 'Effect: Maximum MP increases by 25.',
+						id: '638a4d47a44f4fa4b0dec9ad',
+						name: "Magician's Wisdom",
+						noId: 199,
+					},
+					{
+						description: 'Effect: Maximum MP increases by 40.',
+						id: '638a4d47a44f4fa4b0dec9ab',
+						name: "Grand Magician's Wisdom",
+						noId: 200,
+					},
+				],
 			},
 		],
 		name: 'Wisdom of the Gods',
@@ -816,7 +1303,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9ba',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec9ac', '638a4d47a44f4fa4b0dec9ae'],
+				consist: [
+					{
+						description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 5.',
+						id: '638a4d47a44f4fa4b0dec9ac',
+						name: 'LP Enhance',
+						noId: 202,
+					},
+					{
+						description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 7.',
+						id: '638a4d47a44f4fa4b0dec9ae',
+						name: 'LP Boost',
+						noId: 203,
+					},
+				],
 			},
 		],
 		name: 'Full of Stamina',
@@ -828,7 +1328,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9b1',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec9ae', '638a4d48a44f4fa4b0dec9af'],
+				consist: [
+					{
+						description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 7.',
+						id: '638a4d47a44f4fa4b0dec9ae',
+						name: 'LP Boost',
+						noId: 203,
+					},
+					{
+						description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 10.',
+						id: '638a4d48a44f4fa4b0dec9af',
+						name: 'LP Super Enhance',
+						noId: 204,
+					},
+				],
 			},
 		],
 		name: 'Unabating Stamina',
@@ -840,7 +1353,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9b5',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9ba', '638a4d48a44f4fa4b0dec9b1'],
+				consist: [
+					{
+						description: 'Effect: Maximum LP increases by 12.',
+						id: '638a4d48a44f4fa4b0dec9ba',
+						name: 'Full of Stamina',
+						noId: 205,
+					},
+					{
+						description: 'Effect: Maximum LP increases by 17.',
+						id: '638a4d48a44f4fa4b0dec9b1',
+						name: 'Unabating Stamina',
+						noId: 206,
+					},
+				],
 			},
 		],
 		name: 'Infinite Stamina',
@@ -852,7 +1378,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9b7',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec9a5', '638a4d47a44f4fa4b0dec9ad'],
+				consist: [
+					{
+						description: 'Effect: Maximum HP increases by 25.',
+						id: '638a4d47a44f4fa4b0dec9a5',
+						name: 'Full of Life',
+						noId: 193,
+					},
+					{
+						description: 'Effect: Maximum MP increases by 25.',
+						id: '638a4d47a44f4fa4b0dec9ad',
+						name: "Magician's Wisdom",
+						noId: 199,
+					},
+				],
 			},
 		],
 		name: 'HPMP Enhance',
@@ -864,7 +1403,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9b2',
 		mergeFrom: [
 			{
-				consist: ['638a4d47a44f4fa4b0dec9a9', '638a4d47a44f4fa4b0dec9ab'],
+				consist: [
+					{
+						description: 'Effect: Maximum HP increases by 40.',
+						id: '638a4d47a44f4fa4b0dec9a9',
+						name: 'Overflowing Life',
+						noId: 194,
+					},
+					{
+						description: 'Effect: Maximum MP increases by 40.',
+						id: '638a4d47a44f4fa4b0dec9ab',
+						name: "Grand Magician's Wisdom",
+						noId: 200,
+					},
+				],
 			},
 		],
 		name: 'HPMP Boost',
@@ -876,7 +1428,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9b8',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9b0', '638a4d48a44f4fa4b0dec9b4'],
+				consist: [
+					{
+						description: 'Effect: Maximum HP increases by 70.',
+						id: '638a4d48a44f4fa4b0dec9b0',
+						name: 'Power of Life',
+						noId: 195,
+					},
+					{
+						description: 'Effect: Maximum MP increases by 70.',
+						id: '638a4d48a44f4fa4b0dec9b4',
+						name: 'Wisdom of the Gods',
+						noId: 201,
+					},
+				],
 			},
 		],
 		name: 'HPMP Super Enhance',
@@ -912,7 +1477,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9b9',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9b3', '638a4d48a44f4fa4b0dec9b6'],
+				consist: [
+					{
+						description: 'Bestows a stat boost. Effect: Increases base stats by 5%.',
+						id: '638a4d48a44f4fa4b0dec9b3',
+						name: 'Parameters +5%',
+						noId: 211,
+					},
+					{
+						description: 'Bestows a stat boost. Effect: Increases base stats by 6%.',
+						id: '638a4d48a44f4fa4b0dec9b6',
+						name: 'Parameters +6%',
+						noId: 212,
+					},
+				],
 			},
 		],
 		name: 'Enhance the Body',
@@ -924,7 +1502,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9be',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9b6', '638a4d48a44f4fa4b0dec9bc'],
+				consist: [
+					{
+						description: 'Bestows a stat boost. Effect: Increases base stats by 6%.',
+						id: '638a4d48a44f4fa4b0dec9b6',
+						name: 'Parameters +6%',
+						noId: 212,
+					},
+					{
+						description: 'Bestows a stat boost. Effect: Increases base stats by 7%.',
+						id: '638a4d48a44f4fa4b0dec9bc',
+						name: 'Parameters +7%',
+						noId: 213,
+					},
+				],
 			},
 		],
 		name: 'Draw Out Power',
@@ -936,7 +1527,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9bb',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9b9', '638a4d48a44f4fa4b0dec9be'],
+				consist: [
+					{
+						description: 'Effect: Increases base stats by 10%.',
+						id: '638a4d48a44f4fa4b0dec9b9',
+						name: 'Enhance the Body',
+						noId: 214,
+					},
+					{
+						description: 'Effect: Increases base stats by 12%.',
+						id: '638a4d48a44f4fa4b0dec9be',
+						name: 'Draw Out Power',
+						noId: 215,
+					},
+				],
 			},
 		],
 		name: 'Develops the Body',
@@ -980,7 +1584,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9c5',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9d3', '638a4d48a44f4fa4b0dec9bf'],
+				consist: [
+					{
+						description: 'Enhances weapon attack power. Effect: Increases attack power by 7.',
+						id: '638a4d48a44f4fa4b0dec9d3',
+						name: 'Attack Enhance',
+						noId: 218,
+					},
+					{
+						description: 'Enhances weapon attack power. Effect: Increases attack power by 10.',
+						id: '638a4d48a44f4fa4b0dec9bf',
+						name: 'Attack Boost',
+						noId: 219,
+					},
+				],
 			},
 		],
 		name: 'Power of Beasts',
@@ -992,7 +1609,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9c3',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9bf', '638a4d48a44f4fa4b0dec9bd'],
+				consist: [
+					{
+						description: 'Enhances weapon attack power. Effect: Increases attack power by 10.',
+						id: '638a4d48a44f4fa4b0dec9bf',
+						name: 'Attack Boost',
+						noId: 219,
+					},
+					{
+						description: 'Enhances weapon attack power. Effect: Increases attack power by 15.',
+						id: '638a4d48a44f4fa4b0dec9bd',
+						name: 'Attack Super Enhance',
+						noId: 220,
+					},
+				],
 			},
 		],
 		name: 'Power of Destruction',
@@ -1004,7 +1634,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9c4',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9c5', '638a4d48a44f4fa4b0dec9c3'],
+				consist: [
+					{
+						description: 'Effect: Increases attack power by 15.',
+						id: '638a4d48a44f4fa4b0dec9c5',
+						name: 'Power of Beasts',
+						noId: 221,
+					},
+					{
+						description: 'Effect: Increases attack power by 25.',
+						id: '638a4d48a44f4fa4b0dec9c3',
+						name: 'Power of Destruction',
+						noId: 222,
+					},
+				],
 			},
 		],
 		name: 'Power of Gods',
@@ -1040,7 +1683,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9c8',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9c1', '638a4d48a44f4fa4b0dec9c2'],
+				consist: [
+					{
+						description: 'Enhances armor defense. Effect: Increases defense by 7.',
+						id: '638a4d48a44f4fa4b0dec9c1',
+						name: 'Defense Enhance',
+						noId: 224,
+					},
+					{
+						description: 'Enhances armor defense. Effect: Increases defense by 10.',
+						id: '638a4d48a44f4fa4b0dec9c2',
+						name: 'Defense Boost',
+						noId: 225,
+					},
+				],
 			},
 		],
 		name: 'Steel Defense',
@@ -1052,7 +1708,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9cc',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9c2', '638a4d48a44f4fa4b0dec9c6'],
+				consist: [
+					{
+						description: 'Enhances armor defense. Effect: Increases defense by 10.',
+						id: '638a4d48a44f4fa4b0dec9c2',
+						name: 'Defense Boost',
+						noId: 225,
+					},
+					{
+						description: 'Enhances armor defense. Effect: Increases defense by 15.',
+						id: '638a4d48a44f4fa4b0dec9c6',
+						name: 'Defense Super Enhance',
+						noId: 226,
+					},
+				],
 			},
 		],
 		name: 'Diamond Defense',
@@ -1064,7 +1733,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9cb',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9c8', '638a4d48a44f4fa4b0dec9cc'],
+				consist: [
+					{
+						description: 'Effect: Increases defense by 15.',
+						id: '638a4d48a44f4fa4b0dec9c8',
+						name: 'Steel Defense',
+						noId: 227,
+					},
+					{
+						description: 'Effect: Increases defense by 25.',
+						id: '638a4d48a44f4fa4b0dec9cc',
+						name: 'Diamond Defense',
+						noId: 228,
+					},
+				],
 			},
 		],
 		name: 'Dragonscale Defense',
@@ -1100,7 +1782,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9cf',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9c7', '638a4d48a44f4fa4b0dec9c9'],
+				consist: [
+					{
+						description: 'Accessories with this will increase speed. Effect: Increases speed by 7.',
+						id: '638a4d48a44f4fa4b0dec9c7',
+						name: 'Speed Enhance',
+						noId: 230,
+					},
+					{
+						description: 'Accessories with this will increase speed. Effect: Increases speed by 10.',
+						id: '638a4d48a44f4fa4b0dec9c9',
+						name: 'Speed Boost',
+						noId: 231,
+					},
+				],
 			},
 		],
 		name: 'Speed of Skanda',
@@ -1112,7 +1807,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9d1',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9c9', '638a4d48a44f4fa4b0dec9d0'],
+				consist: [
+					{
+						description: 'Accessories with this will increase speed. Effect: Increases speed by 10.',
+						id: '638a4d48a44f4fa4b0dec9c9',
+						name: 'Speed Boost',
+						noId: 231,
+					},
+					{
+						description: 'Accessories with this will increase speed. Effect: Increases speed by 15.',
+						id: '638a4d48a44f4fa4b0dec9d0',
+						name: 'Speed Super Enhance',
+						noId: 232,
+					},
+				],
 			},
 		],
 		name: 'Speed of Gods',
@@ -1124,7 +1832,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9ce',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9cf', '638a4d48a44f4fa4b0dec9d1'],
+				consist: [
+					{
+						description: 'Effect: Increases speed by 15.',
+						id: '638a4d48a44f4fa4b0dec9cf',
+						name: 'Speed of Skanda',
+						noId: 233,
+					},
+					{
+						description: 'Effect: Increases speed by 25.',
+						id: '638a4d48a44f4fa4b0dec9d1',
+						name: 'Speed of Gods',
+						noId: 234,
+					},
+				],
 			},
 		],
 		name: 'Speed of Light',
@@ -1136,7 +1857,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9d8',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9d3', '638a4d48a44f4fa4b0dec9c1'],
+				consist: [
+					{
+						description: 'Enhances weapon attack power. Effect: Increases attack power by 7.',
+						id: '638a4d48a44f4fa4b0dec9d3',
+						name: 'Attack Enhance',
+						noId: 218,
+					},
+					{
+						description: 'Enhances armor defense. Effect: Increases defense by 7.',
+						id: '638a4d48a44f4fa4b0dec9c1',
+						name: 'Defense Enhance',
+						noId: 224,
+					},
+				],
 			},
 		],
 		name: 'ATK DEF Enhance',
@@ -1148,7 +1882,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9d4',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9d3', '638a4d48a44f4fa4b0dec9c7'],
+				consist: [
+					{
+						description: 'Enhances weapon attack power. Effect: Increases attack power by 7.',
+						id: '638a4d48a44f4fa4b0dec9d3',
+						name: 'Attack Enhance',
+						noId: 218,
+					},
+					{
+						description: 'Accessories with this will increase speed. Effect: Increases speed by 7.',
+						id: '638a4d48a44f4fa4b0dec9c7',
+						name: 'Speed Enhance',
+						noId: 230,
+					},
+				],
 			},
 		],
 		name: 'ATK SPD Enhance',
@@ -1160,7 +1907,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9d6',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9c1', '638a4d48a44f4fa4b0dec9c7'],
+				consist: [
+					{
+						description: 'Enhances armor defense. Effect: Increases defense by 7.',
+						id: '638a4d48a44f4fa4b0dec9c1',
+						name: 'Defense Enhance',
+						noId: 224,
+					},
+					{
+						description: 'Accessories with this will increase speed. Effect: Increases speed by 7.',
+						id: '638a4d48a44f4fa4b0dec9c7',
+						name: 'Speed Enhance',
+						noId: 230,
+					},
+				],
 			},
 		],
 		name: 'DEF SPD Enhance',
@@ -1172,13 +1932,52 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9d5',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9d8', '638a4d48a44f4fa4b0dec9d4'],
+				consist: [
+					{
+						description: 'Effect: Increases attack & defense by 5.',
+						id: '638a4d48a44f4fa4b0dec9d8',
+						name: 'ATK DEF Enhance',
+						noId: 236,
+					},
+					{
+						description: 'Effect: Increases attack & speed by 5.',
+						id: '638a4d48a44f4fa4b0dec9d4',
+						name: 'ATK SPD Enhance',
+						noId: 237,
+					},
+				],
 			},
 			{
-				consist: ['638a4d48a44f4fa4b0dec9d8', '638a4d48a44f4fa4b0dec9d6'],
+				consist: [
+					{
+						description: 'Effect: Increases attack & defense by 5.',
+						id: '638a4d48a44f4fa4b0dec9d8',
+						name: 'ATK DEF Enhance',
+						noId: 236,
+					},
+					{
+						description: 'Effect: Increases defense & speed by 5.',
+						id: '638a4d48a44f4fa4b0dec9d6',
+						name: 'DEF SPD Enhance',
+						noId: 238,
+					},
+				],
 			},
 			{
-				consist: ['638a4d48a44f4fa4b0dec9d4', '638a4d48a44f4fa4b0dec9d6'],
+				consist: [
+					{
+						description: 'Effect: Increases attack & speed by 5.',
+						id: '638a4d48a44f4fa4b0dec9d4',
+						name: 'ATK SPD Enhance',
+						noId: 237,
+					},
+					{
+						description: 'Effect: Increases defense & speed by 5.',
+						id: '638a4d48a44f4fa4b0dec9d6',
+						name: 'DEF SPD Enhance',
+						noId: 238,
+					},
+				],
 			},
 		],
 		name: 'All Stat Enhance',
@@ -1190,7 +1989,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9d2',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9bf', '638a4d48a44f4fa4b0dec9c2'],
+				consist: [
+					{
+						description: 'Enhances weapon attack power. Effect: Increases attack power by 10.',
+						id: '638a4d48a44f4fa4b0dec9bf',
+						name: 'Attack Boost',
+						noId: 219,
+					},
+					{
+						description: 'Enhances armor defense. Effect: Increases defense by 10.',
+						id: '638a4d48a44f4fa4b0dec9c2',
+						name: 'Defense Boost',
+						noId: 225,
+					},
+				],
 			},
 		],
 		name: 'ATK DEF Boost',
@@ -1202,7 +2014,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9db',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9bf', '638a4d48a44f4fa4b0dec9c9'],
+				consist: [
+					{
+						description: 'Enhances weapon attack power. Effect: Increases attack power by 10.',
+						id: '638a4d48a44f4fa4b0dec9bf',
+						name: 'Attack Boost',
+						noId: 219,
+					},
+					{
+						description: 'Accessories with this will increase speed. Effect: Increases speed by 10.',
+						id: '638a4d48a44f4fa4b0dec9c9',
+						name: 'Speed Boost',
+						noId: 231,
+					},
+				],
 			},
 		],
 		name: 'ATK SPD Boost',
@@ -1214,7 +2039,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9d9',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9c2', '638a4d48a44f4fa4b0dec9c9'],
+				consist: [
+					{
+						description: 'Enhances armor defense. Effect: Increases defense by 10.',
+						id: '638a4d48a44f4fa4b0dec9c2',
+						name: 'Defense Boost',
+						noId: 225,
+					},
+					{
+						description: 'Accessories with this will increase speed. Effect: Increases speed by 10.',
+						id: '638a4d48a44f4fa4b0dec9c9',
+						name: 'Speed Boost',
+						noId: 231,
+					},
+				],
 			},
 		],
 		name: 'DEF SPD Boost',
@@ -1226,13 +2064,52 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9e4',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9d2', '638a4d48a44f4fa4b0dec9db'],
+				consist: [
+					{
+						description: 'Effect: Increases attack & defense by 7.',
+						id: '638a4d48a44f4fa4b0dec9d2',
+						name: 'ATK DEF Boost',
+						noId: 240,
+					},
+					{
+						description: 'Effect: Increases attack & speed by 7.',
+						id: '638a4d48a44f4fa4b0dec9db',
+						name: 'ATK SPD Boost',
+						noId: 241,
+					},
+				],
 			},
 			{
-				consist: ['638a4d48a44f4fa4b0dec9d2', '638a4d48a44f4fa4b0dec9d9'],
+				consist: [
+					{
+						description: 'Effect: Increases attack & defense by 7.',
+						id: '638a4d48a44f4fa4b0dec9d2',
+						name: 'ATK DEF Boost',
+						noId: 240,
+					},
+					{
+						description: 'Effect: Increases defense & speed by 7.',
+						id: '638a4d48a44f4fa4b0dec9d9',
+						name: 'DEF SPD Boost',
+						noId: 242,
+					},
+				],
 			},
 			{
-				consist: ['638a4d48a44f4fa4b0dec9db', '638a4d48a44f4fa4b0dec9d9'],
+				consist: [
+					{
+						description: 'Effect: Increases attack & speed by 7.',
+						id: '638a4d48a44f4fa4b0dec9db',
+						name: 'ATK SPD Boost',
+						noId: 241,
+					},
+					{
+						description: 'Effect: Increases defense & speed by 7.',
+						id: '638a4d48a44f4fa4b0dec9d9',
+						name: 'DEF SPD Boost',
+						noId: 242,
+					},
+				],
 			},
 		],
 		name: 'All Stat Boost',
@@ -1244,7 +2121,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9d7',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9d5', '638a4d48a44f4fa4b0dec9e4'],
+				consist: [
+					{
+						description: 'Effect: Increases all stats by 5.',
+						id: '638a4d48a44f4fa4b0dec9d5',
+						name: 'All Stat Enhance',
+						noId: 239,
+					},
+					{
+						description: 'Effect: Increases all stats by 7.',
+						id: '638a4d48a44f4fa4b0dec9e4',
+						name: 'All Stat Boost',
+						noId: 243,
+					},
+				],
 			},
 		],
 		name: 'All Stat Super Enhance',
@@ -1256,7 +2146,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9da',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9e4', '638a4d48a44f4fa4b0dec9d7'],
+				consist: [
+					{
+						description: 'Effect: Increases all stats by 7.',
+						id: '638a4d48a44f4fa4b0dec9e4',
+						name: 'All Stat Boost',
+						noId: 243,
+					},
+					{
+						description: 'Effect: Increases all stats except resistances by 10.',
+						id: '638a4d48a44f4fa4b0dec9d7',
+						name: 'All Stat Super Enhance',
+						noId: 244,
+					},
+				],
 			},
 		],
 		name: 'Well Rounded Power',
@@ -1308,7 +2211,22 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9df',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9de', '638a4d48a44f4fa4b0dec9e0'],
+				consist: [
+					{
+						description:
+							'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 10%.',
+						id: '638a4d48a44f4fa4b0dec9de',
+						name: 'Consume MP -10%',
+						noId: 298,
+					},
+					{
+						description:
+							'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 15%.',
+						id: '638a4d48a44f4fa4b0dec9e0',
+						name: 'Consume MP -15%',
+						noId: 299,
+					},
+				],
 			},
 		],
 		name: 'Cut MP Consume',
@@ -1320,7 +2238,22 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9e7',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9e0', '638a4d48a44f4fa4b0dec9e1'],
+				consist: [
+					{
+						description:
+							'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 15%.',
+						id: '638a4d48a44f4fa4b0dec9e0',
+						name: 'Consume MP -15%',
+						noId: 299,
+					},
+					{
+						description:
+							'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 20%.',
+						id: '638a4d48a44f4fa4b0dec9e1',
+						name: 'Consume MP -20%',
+						noId: 300,
+					},
+				],
 			},
 		],
 		name: 'Compact MP Consume',
@@ -1332,7 +2265,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9e3',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9df', '638a4d48a44f4fa4b0dec9e7'],
+				consist: [
+					{
+						description: 'Effect: Reduces MP consumption of skills by 20%.',
+						id: '638a4d48a44f4fa4b0dec9df',
+						name: 'Cut MP Consume',
+						noId: 301,
+					},
+					{
+						description: 'Effect: Reduces MP consumption of skills by 30%.',
+						id: '638a4d48a44f4fa4b0dec9e7',
+						name: 'Compact MP Consume',
+						noId: 302,
+					},
+				],
 			},
 		],
 		name: 'Halve MP Consume',
@@ -1368,7 +2314,22 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9ee',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9e2', '638a4d48a44f4fa4b0dec9e5'],
+				consist: [
+					{
+						description:
+							'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 5%.',
+						id: '638a4d48a44f4fa4b0dec9e2',
+						name: 'Skill Power +5%',
+						noId: 304,
+					},
+					{
+						description:
+							'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 7%.',
+						id: '638a4d48a44f4fa4b0dec9e5',
+						name: 'Skill Power +7%',
+						noId: 305,
+					},
+				],
 			},
 		],
 		name: 'Skill Enhance',
@@ -1380,7 +2341,22 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9eb',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9e5', '638a4d48a44f4fa4b0dec9e6'],
+				consist: [
+					{
+						description:
+							'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 7%.',
+						id: '638a4d48a44f4fa4b0dec9e5',
+						name: 'Skill Power +7%',
+						noId: 305,
+					},
+					{
+						description:
+							'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 10%.',
+						id: '638a4d48a44f4fa4b0dec9e6',
+						name: 'Skill Power +10%',
+						noId: 306,
+					},
+				],
 			},
 		],
 		name: 'Skill Boost',
@@ -1392,7 +2368,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9ef',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9ee', '638a4d48a44f4fa4b0dec9eb'],
+				consist: [
+					{
+						description: 'Effect: Increases skill power and MP consumption by 12%.',
+						id: '638a4d48a44f4fa4b0dec9ee',
+						name: 'Skill Enhance',
+						noId: 307,
+					},
+					{
+						description: 'Effect: Increases skill power and MP consumption by 17%.',
+						id: '638a4d48a44f4fa4b0dec9eb',
+						name: 'Skill Boost',
+						noId: 308,
+					},
+				],
 			},
 		],
 		name: 'Skill Super Enhance',
@@ -1404,7 +2393,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9f1',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9df', '638a4d48a44f4fa4b0dec9ee'],
+				consist: [
+					{
+						description: 'Effect: Reduces MP consumption of skills by 20%.',
+						id: '638a4d48a44f4fa4b0dec9df',
+						name: 'Cut MP Consume',
+						noId: 301,
+					},
+					{
+						description: 'Effect: Increases skill power and MP consumption by 12%.',
+						id: '638a4d48a44f4fa4b0dec9ee',
+						name: 'Skill Enhance',
+						noId: 307,
+					},
+				],
 			},
 		],
 		name: 'Eco Skill',
@@ -1416,7 +2418,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9f2',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9e7', '638a4d48a44f4fa4b0dec9eb'],
+				consist: [
+					{
+						description: 'Effect: Reduces MP consumption of skills by 30%.',
+						id: '638a4d48a44f4fa4b0dec9e7',
+						name: 'Compact MP Consume',
+						noId: 302,
+					},
+					{
+						description: 'Effect: Increases skill power and MP consumption by 17%.',
+						id: '638a4d48a44f4fa4b0dec9eb',
+						name: 'Skill Boost',
+						noId: 308,
+					},
+				],
 			},
 		],
 		name: 'Skill Cost Compress',
@@ -1428,7 +2443,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0dec9ed',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0dec9e3', '638a4d48a44f4fa4b0dec9ef'],
+				consist: [
+					{
+						description: 'Effect: Reduces MP consumption of skills by 50%.',
+						id: '638a4d48a44f4fa4b0dec9e3',
+						name: 'Halve MP Consume',
+						noId: 303,
+					},
+					{
+						description: 'Effect: Increases skill power and MP consumption by 30%.',
+						id: '638a4d48a44f4fa4b0dec9ef',
+						name: 'Skill Super Enhance',
+						noId: 309,
+					},
+				],
 			},
 		],
 		name: 'Skill Savings',
@@ -1608,7 +2636,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0deca05',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0deca02', '638a4d48a44f4fa4b0deca03'],
+				consist: [
+					{
+						description: 'Effect: Absorb 3% of damage dealt through attacks to restore your own HP.',
+						id: '638a4d48a44f4fa4b0deca02',
+						name: 'Damage Absorb',
+						noId: 401,
+					},
+					{
+						description: 'Effect: Absorb 5% of damage dealt through attacks to restore your own HP.',
+						id: '638a4d48a44f4fa4b0deca03',
+						name: 'Damage Absorb+',
+						noId: 402,
+					},
+				],
 			},
 		],
 		name: 'HP Absorb',
@@ -1620,7 +2661,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0deca06',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0deca03', '638a4d48a44f4fa4b0deca01'],
+				consist: [
+					{
+						description: 'Effect: Absorb 5% of damage dealt through attacks to restore your own HP.',
+						id: '638a4d48a44f4fa4b0deca03',
+						name: 'Damage Absorb+',
+						noId: 402,
+					},
+					{
+						description: 'Effect: Absorb 7% of damage dealt through attacks to restore your own HP.',
+						id: '638a4d48a44f4fa4b0deca01',
+						name: 'Damage Absorb++',
+						noId: 403,
+					},
+				],
 			},
 		],
 		name: 'Steal Life',
@@ -1632,7 +2686,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0deca07',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0deca05', '638a4d48a44f4fa4b0deca06'],
+				consist: [
+					{
+						description: 'Effect: Absorb 7% of damage dealt through attacks to restore your own HP.',
+						id: '638a4d48a44f4fa4b0deca05',
+						name: 'HP Absorb',
+						noId: 404,
+					},
+					{
+						description: 'Effect: Absorb 10% of damage dealt through attacks to restore your own HP.',
+						id: '638a4d48a44f4fa4b0deca06',
+						name: 'Steal Life',
+						noId: 405,
+					},
+				],
 			},
 		],
 		name: 'Absorb Soul',
@@ -1741,7 +2808,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0deca16',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0deca0e', '638a4d48a44f4fa4b0deca11'],
+				consist: [
+					{
+						description: 'Effect: Increases damage dealt to Broken targets by 10%.',
+						id: '638a4d48a44f4fa4b0deca0e',
+						name: 'Enhance Finisher',
+						noId: 446,
+					},
+					{
+						description: 'Effect: Increases damage dealt to Broken targets by 20%.',
+						id: '638a4d48a44f4fa4b0deca11',
+						name: 'Enhance Finisher+',
+						noId: 447,
+					},
+				],
 			},
 		],
 		name: 'Merciless Blow',
@@ -1753,7 +2833,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0deca19',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0deca11', '638a4d48a44f4fa4b0deca12'],
+				consist: [
+					{
+						description: 'Effect: Increases damage dealt to Broken targets by 20%.',
+						id: '638a4d48a44f4fa4b0deca11',
+						name: 'Enhance Finisher+',
+						noId: 447,
+					},
+					{
+						description: 'Effect: Increases damage dealt to Broken targets by 30%.',
+						id: '638a4d48a44f4fa4b0deca12',
+						name: 'Enhance Finisher++',
+						noId: 448,
+					},
+				],
 			},
 		],
 		name: 'Relentless Blow',
@@ -1765,7 +2858,20 @@ const traits: Trait[] = [
 		id: '638a4d48a44f4fa4b0deca1b',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0deca16', '638a4d48a44f4fa4b0deca19'],
+				consist: [
+					{
+						description: 'Effect: Increases damage dealt to Broken targets by 30%.',
+						id: '638a4d48a44f4fa4b0deca16',
+						name: 'Merciless Blow',
+						noId: 449,
+					},
+					{
+						description: 'Effect: Increases damage dealt to Broken targets by 40%.',
+						id: '638a4d48a44f4fa4b0deca19',
+						name: 'Relentless Blow',
+						noId: 450,
+					},
+				],
 			},
 		],
 		name: 'Ruthless Blow',
@@ -1793,7 +2899,20 @@ const traits: Trait[] = [
 		id: '638a4d49a44f4fa4b0deca1c',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0deca17', '638a4d48a44f4fa4b0deca10'],
+				consist: [
+					{
+						description: 'Effect: Enhances item effect according to strength of traits present.',
+						id: '638a4d48a44f4fa4b0deca17',
+						name: 'Trait Enhance',
+						noId: 464,
+					},
+					{
+						description: 'Effect: Greatly enhances item effect according to strength of traits present.',
+						id: '638a4d48a44f4fa4b0deca10',
+						name: 'Trait Enhance+',
+						noId: 465,
+					},
+				],
 			},
 		],
 		name: 'Cost Bonus',
@@ -1830,7 +2949,20 @@ const traits: Trait[] = [
 		id: '638a4d49a44f4fa4b0deca1f',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0deca14', '638a4d48a44f4fa4b0deca15'],
+				consist: [
+					{
+						description: 'Effect: Power increases by number of targets in effect area x 5%.',
+						id: '638a4d48a44f4fa4b0deca14',
+						name: 'Area Bonus',
+						noId: 480,
+					},
+					{
+						description: 'Effect: Power increases by number of targets in effect area x 10%.',
+						id: '638a4d48a44f4fa4b0deca15',
+						name: 'Area Bonus+',
+						noId: 481,
+					},
+				],
 			},
 		],
 		name: 'Effective Vs Many',
@@ -1866,7 +2998,20 @@ const traits: Trait[] = [
 		id: '638a4d49a44f4fa4b0deca20',
 		mergeFrom: [
 			{
-				consist: ['638a4d48a44f4fa4b0deca18', '638a4d49a44f4fa4b0deca22'],
+				consist: [
+					{
+						description: 'Effect: Power increases by 10 / number of targets in effect area %.',
+						id: '638a4d48a44f4fa4b0deca18',
+						name: 'Fewer Bonus',
+						noId: 484,
+					},
+					{
+						description: 'Effect: Power increases by 15 / number of targets in effect area %.',
+						id: '638a4d49a44f4fa4b0deca22',
+						name: 'Fewer Bonus+',
+						noId: 485,
+					},
+				],
 			},
 		],
 		name: 'Effective Vs One',
@@ -1911,7 +3056,20 @@ const traits: Trait[] = [
 		id: '638a4d49a44f4fa4b0deca28',
 		mergeFrom: [
 			{
-				consist: ['638a4d49a44f4fa4b0deca29', '638a4d49a44f4fa4b0deca23'],
+				consist: [
+					{
+						description: 'Effect: Power increases by 10% when use count is 1.',
+						id: '638a4d49a44f4fa4b0deca29',
+						name: 'Enhance Last',
+						noId: 507,
+					},
+					{
+						description: 'Effect: Power increases by 20% when use count is 1.',
+						id: '638a4d49a44f4fa4b0deca23',
+						name: 'Enhance Last+',
+						noId: 508,
+					},
+				],
 			},
 		],
 		name: 'Final Blow',
@@ -1947,7 +3105,22 @@ const traits: Trait[] = [
 		id: '638a4d49a44f4fa4b0deca27',
 		mergeFrom: [
 			{
-				consist: ['638a4d49a44f4fa4b0deca21', '638a4d49a44f4fa4b0deca25'],
+				consist: [
+					{
+						description:
+							'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 3%.',
+						id: '638a4d49a44f4fa4b0deca21',
+						name: 'Count Compress',
+						noId: 511,
+					},
+					{
+						description:
+							'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 5%.',
+						id: '638a4d49a44f4fa4b0deca25',
+						name: 'Count Compress+',
+						noId: 512,
+					},
+				],
 			},
 		],
 		name: 'Force Final',
@@ -1983,7 +3156,20 @@ const traits: Trait[] = [
 		id: '638a4d49a44f4fa4b0deca34',
 		mergeFrom: [
 			{
-				consist: ['638a4d49a44f4fa4b0deca2d', '638a4d49a44f4fa4b0deca2c'],
+				consist: [
+					{
+						description: 'Effect: Increases item power by maximum use count x 2%.',
+						id: '638a4d49a44f4fa4b0deca2d',
+						name: 'Count Bonus',
+						noId: 515,
+					},
+					{
+						description: 'Effect: Increases item power by maximum use count x 3%.',
+						id: '638a4d49a44f4fa4b0deca2c',
+						name: 'Count Bonus+',
+						noId: 516,
+					},
+				],
 			},
 		],
 		name: 'Count Boost',
@@ -2019,7 +3205,20 @@ const traits: Trait[] = [
 		id: '638a4d49a44f4fa4b0deca2f',
 		mergeFrom: [
 			{
-				consist: ['638a4d49a44f4fa4b0deca2a', '638a4d49a44f4fa4b0deca2b'],
+				consist: [
+					{
+						description: 'Effect: Reduces WT after using item by 10%. Power is decreased slightly.',
+						id: '638a4d49a44f4fa4b0deca2a',
+						name: 'Fast Use',
+						noId: 541,
+					},
+					{
+						description: 'Effect: Reduces WT after using item by 20%. Power is decreased a small amount.',
+						id: '638a4d49a44f4fa4b0deca2b',
+						name: 'Fast Use+',
+						noId: 542,
+					},
+				],
 			},
 		],
 		name: 'Sonic Throw',
@@ -2055,7 +3254,21 @@ const traits: Trait[] = [
 		id: '638a4d49a44f4fa4b0deca35',
 		mergeFrom: [
 			{
-				consist: ['638a4d49a44f4fa4b0deca30', '638a4d49a44f4fa4b0deca33'],
+				consist: [
+					{
+						description:
+							'Effect: Wait time after using item increases a little, but power increases a little too.',
+						id: '638a4d49a44f4fa4b0deca30',
+						name: 'Power Throw',
+						noId: 545,
+					},
+					{
+						description: 'Effect: Wait time after using item increases, but power increases too.',
+						id: '638a4d49a44f4fa4b0deca33',
+						name: 'Power Throw+',
+						noId: 546,
+					},
+				],
 			},
 		],
 		name: 'Strong Throw',
@@ -2083,7 +3296,22 @@ const traits: Trait[] = [
 		id: '638a4d49a44f4fa4b0deca37',
 		mergeFrom: [
 			{
-				consist: ['638a4d49a44f4fa4b0deca32', '638a4d49a44f4fa4b0deca31'],
+				consist: [
+					{
+						description:
+							'Effect: Increases item power by a small amount proportional to wait time after using item.',
+						id: '638a4d49a44f4fa4b0deca32',
+						name: 'Wait Time Enhance',
+						noId: 548,
+					},
+					{
+						description:
+							'Effect: Increases item power by a decent amount proportional to wait time after using item.',
+						id: '638a4d49a44f4fa4b0deca31',
+						name: 'Wait Time Enhance+',
+						noId: 549,
+					},
+				],
 			},
 		],
 		name: 'Charge Item',
@@ -2143,7 +3371,20 @@ const traits: Trait[] = [
 		id: '638a4d49a44f4fa4b0deca4b',
 		mergeFrom: [
 			{
-				consist: ['638a4d49a44f4fa4b0deca36', '638a4d49a44f4fa4b0deca3c'],
+				consist: [
+					{
+						description: 'Effect: Increases item effect by a decent amount as size increases.',
+						id: '638a4d49a44f4fa4b0deca36',
+						name: 'Size Enhance',
+						noId: 575,
+					},
+					{
+						description: 'Effect: Increases item effect as size increases.',
+						id: '638a4d49a44f4fa4b0deca3c',
+						name: 'Size Super Enhance',
+						noId: 576,
+					},
+				],
 			},
 		],
 		name: 'Crush Dimension',
@@ -2171,7 +3412,20 @@ const traits: Trait[] = [
 		id: '638a4d49a44f4fa4b0deca46',
 		mergeFrom: [
 			{
-				consist: ['638a4d49a44f4fa4b0deca3d', '638a4d49a44f4fa4b0deca3f'],
+				consist: [
+					{
+						description: 'Effect: Reduces equipment cost of usable item by 5.',
+						id: '638a4d49a44f4fa4b0deca3d',
+						name: 'Kind of Light',
+						noId: 578,
+					},
+					{
+						description: 'Effect: Reduces equipment cost of usable item by 8.',
+						id: '638a4d49a44f4fa4b0deca3f',
+						name: 'Light',
+						noId: 579,
+					},
+				],
 			},
 		],
 		name: 'Easy to Handle',
@@ -2183,7 +3437,20 @@ const traits: Trait[] = [
 		id: '638a4d49a44f4fa4b0deca43',
 		mergeFrom: [
 			{
-				consist: ['638a4d49a44f4fa4b0deca3f', '638a4d49a44f4fa4b0deca46'],
+				consist: [
+					{
+						description: 'Effect: Reduces equipment cost of usable item by 8.',
+						id: '638a4d49a44f4fa4b0deca3f',
+						name: 'Light',
+						noId: 579,
+					},
+					{
+						description: 'Effect: Reduces equipment cost of usable item by 12.',
+						id: '638a4d49a44f4fa4b0deca46',
+						name: 'Easy to Handle',
+						noId: 580,
+					},
+				],
 			},
 		],
 		name: 'Accustoms Quickly',
@@ -2701,4 +3968,5 @@ const traits: Trait[] = [
 		traitCategories: ['WEAPON'],
 	},
 ];
+
 export default traits;
