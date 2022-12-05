@@ -1,5 +1,6 @@
 import type { Trait } from '@prisma/client';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
+import { TraitCategoryDisplay } from '@root/types/model';
 import { trpc } from '@root/utils/trpc';
 import { createColumnHelper, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
 import { type NextPage } from 'next';
@@ -20,15 +21,19 @@ const columns = [
 		footer: info => info.column.id,
 	}),
 	columnHelper.accessor('traitCategories', {
-		cell: info => info.getValue().join(','),
+		cell: info =>
+			info
+				.getValue()
+				.map(category => `"${TraitCategoryDisplay[category]}"`)
+				.join(', '),
 		footer: info => info.column.id,
 	}),
 	columnHelper.accessor('mergeFrom', {
 		cell: info =>
 			info
 				.getValue()
-				.map(({ consist }) => consist.map(({ name }) => name).join('+'))
-				.join(''),
+				.map(({ consist }) => consist.map(({ name }) => `"${name}"`).join(' + '))
+				.join(', '),
 		footer: info => info.column.id,
 	}),
 ];

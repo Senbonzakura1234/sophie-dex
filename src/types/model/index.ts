@@ -100,5 +100,3 @@ export const traitCategoryList = [
 ] as const;
 
 export type TraitCategoryDisplay = typeof TraitCategoryDisplay[keyof typeof TraitCategoryDisplay];
-
-type B = TraitCategoryDisplay;
