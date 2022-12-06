@@ -1,87 +1,63 @@
+import { defaultSearchParam } from '@root/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
-import { serverSearchQueryValidator } from '@root/types/common/zod';
+import { searchQueryValidator } from '@root/types/common/zod';
 
 export const itemRouter = router({
-	getAll: publicProcedure.input(serverSearchQueryValidator).query(async ({ ctx, input }) => {
-		const { search, sortBy, direction, color, itemCategory, page, limit, cursor } = input;
+	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }) => {
+		const { search, sortBy, direction, color, itemCategory, page, limit, cursor } = {
+			...defaultSearchParam,
+			...input,
+		};
+
+		const pageInt = parseInt(page ?? '1');
+		const limitInt = parseInt(limit ?? '10');
+
+		const where = {
+			...(search
+				? {
+						name: {
+							contains: search,
+							mode: 'insensitive',
+						},
+				  }
+				: {}),
+			AND: [
+				...(itemCategory
+					? [
+							{
+								itemCategories: {
+									some: {
+										name: {
+											equals: itemCategory,
+										},
+									},
+								},
+							},
+					  ]
+					: []),
+				...(color
+					? [
+							{
+								color: {
+									equals: color,
+								},
+							},
+					  ]
+					: []),
+			],
+		} as never;
 
 		const [totalRecord, records] = await ctx.prisma.$transaction([
 			ctx.prisma.item.count({
-				where: {
-					...(search
-						? {
-								name: {
-									contains: search,
-									mode: 'insensitive',
-								},
-						  }
-						: {}),
-					AND: [
-						...(itemCategory
-							? [
-									{
-										itemCategories: {
-											some: {
-												name: {
-													equals: itemCategory,
-												},
-											},
-										},
-									},
-							  ]
-							: []),
-						...(color
-							? [
-									{
-										color: {
-											equals: color,
-										},
-									},
-							  ]
-							: []),
-					],
-				},
+				where,
 			}),
 			ctx.prisma.item.findMany({
-				where: {
-					...(search
-						? {
-								name: {
-									contains: search,
-									mode: 'insensitive',
-								},
-						  }
-						: {}),
-					AND: [
-						...(itemCategory
-							? [
-									{
-										itemCategories: {
-											some: {
-												name: {
-													equals: itemCategory,
-												},
-											},
-										},
-									},
-							  ]
-							: []),
-						...(color
-							? [
-									{
-										color: {
-											equals: color,
-										},
-									},
-							  ]
-							: []),
-					],
-				},
+				where,
 				orderBy: {
 					[sortBy]: direction,
 				},
-				skip: (page - 1) * limit,
-				take: limit,
+				skip: (pageInt - 1) * limitInt,
+				take: limitInt,
 				cursor: cursor ? { id: cursor } : undefined,
 			}),
 		]);
@@ -94,7 +70,7 @@ export const itemRouter = router({
 			page,
 			limit,
 			totalRecord,
-			totalPage: Math.ceil(totalRecord / limit),
+			totalPage: Math.ceil(totalRecord / limitInt),
 		};
 	}),
 	// getOne: publicProcedure.query(async ({ ctx }) => {}),

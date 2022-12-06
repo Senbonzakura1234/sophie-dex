@@ -21,6 +21,7 @@
 		"@trpc/next": "^10.4.2",
 		"@trpc/react-query": "^10.4.2",
 		"@trpc/server": "^10.4.2",
+		"clsx": "^1.2.1",
 		"daisyui": "^2.42.1",
 		"next": "13.0.6",
 		"react": "18.2.0",

@@ -1,3 +1,5 @@
+import type { COLOR, ITEM_CATEGORY, TRAIT_CATEGORY } from '@prisma/client';
+
 export const ColorDisplay = {
 	GREEN: 'Green',
 	BLUE: 'Blue',
@@ -5,9 +7,9 @@ export const ColorDisplay = {
 	YELLOW: 'Yellow',
 	RED: 'Red',
 	NONE: 'None',
-} as const;
+} as const satisfies Readonly<{ [color in COLOR]: string }>;
 
-export const colorList = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW', 'NONE'] as const;
+export const colorList = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW', 'NONE'] as const satisfies Readonly<COLOR[]>;
 
 export type ColorDisplay = typeof ColorDisplay[keyof typeof ColorDisplay];
 
@@ -42,7 +44,7 @@ export const ItemCategoryDisplay = {
 	INGREDIENT: 'Ingredient',
 	PAPER: 'Paper',
 	MAGIC_ITEM: 'Magic Item',
-} as const;
+} as const satisfies Readonly<{ [itemCategory in ITEM_CATEGORY]: string }>;
 
 export const itemCategoryList = [
 	'PLANT',
@@ -75,7 +77,7 @@ export const itemCategoryList = [
 	'INGREDIENT',
 	'PAPER',
 	'MAGIC_ITEM',
-] as const;
+] as const satisfies Readonly<ITEM_CATEGORY[]>;
 
 export type ItemCategoryDisplay = typeof ItemCategoryDisplay[keyof typeof ItemCategoryDisplay];
 
@@ -87,7 +89,7 @@ export const TraitCategoryDisplay = {
 	DE_BUFF_ITEM: 'De-Buff Item',
 	HEAL_ITEM: 'Heal Item',
 	WEAPON: 'Weapon',
-} as const;
+} as const satisfies Readonly<{ [traitCategory in TRAIT_CATEGORY]: string }>;
 
 export const traitCategoryList = [
 	'ACCESSORY',
@@ -97,6 +99,6 @@ export const traitCategoryList = [
 	'DE_BUFF_ITEM',
 	'HEAL_ITEM',
 	'WEAPON',
-] as const;
+] as const satisfies Readonly<TRAIT_CATEGORY[]>;
 
 export type TraitCategoryDisplay = typeof TraitCategoryDisplay[keyof typeof TraitCategoryDisplay];

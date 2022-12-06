@@ -14,9 +14,11 @@ export const safePreprocessor =
 		return parsed.data;
 	};
 
-const searchQuerySchema = {
+export const sortByValidator = z.enum(['noId', 'name']).default('noId');
+
+export const searchQueryValidator = z.object({
 	search: z.string().nullish().default(null),
-	sortBy: z.enum(['noId', 'name']).default('noId'),
+	sortBy: sortByValidator,
 	direction: z.enum(['asc', 'desc']).default('asc'),
 	itemCategory: z.enum(itemCategoryList).nullish().default(null),
 	traitCategory: z.enum(traitCategoryList).nullish().default(null),
@@ -26,19 +28,16 @@ const searchQuerySchema = {
 		.regex(/^[0-9A-F]{24}$/i)
 		.nullish()
 		.default(null),
-};
-
-export const serverSearchQueryValidator = z.object({
-	page: z.number().int().nonnegative().default(1),
-	limit: z.number().int().nonnegative().default(10),
-	...searchQuerySchema,
+	page: z
+		.string()
+		.regex(/^[1-9]\d*$/)
+		.nullish()
+		.default('1'),
+	limit: z
+		.string()
+		.regex(/^[1-9]\d*$/)
+		.nullish()
+		.default('10'),
 });
 
-export const clientSearchQueryValidator = z.object({
-	page: z.preprocess(safePreprocessor(stringToNumberSchema(1)), z.number().int().nonnegative().default(1)),
-	limit: z.preprocess(safePreprocessor(stringToNumberSchema(10)), z.number().int().nonnegative().default(10)),
-	...searchQuerySchema,
-});
-
-export type ServerSearchQuery = z.infer<typeof serverSearchQueryValidator>;
-export type ClientSearchQuery = z.infer<typeof clientSearchQueryValidator>;
+export type SearchQuery = z.infer<typeof searchQueryValidator>;
