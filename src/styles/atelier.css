@@ -1,0 +1,1182 @@
+:root {
+	--atelier-escha-accessory: '\ea01';
+	--atelier-escha-armor: '\ea02';
+	--atelier-escha-bomb: '\ea03';
+	--atelier-escha-buff: '\ea04';
+	--atelier-escha-category-liquid: '\ea05';
+	--atelier-escha-heal: '\ea06';
+	--atelier-escha-weapon: '\ea07';
+	--atelier-meruru-category-construction: '\ea08';
+	--atelier-meruru-category-development: '\ea09';
+	--atelier-meruru-category-farming: '\ea0a';
+	--atelier-meruru-category-housing: '\ea0b';
+	--atelier-meruru-category-mushroom: '\ea0c';
+	--atelier-meruru-category-security: '\ea0d';
+	--atelier-meruru-category-tourism: '\ea0e';
+	--atelier-ryza2-book: '\ea0f';
+	--atelier-ryza2-boss-enemy: '\ea10';
+	--atelier-ryza2-category-accessories: '\ea11';
+	--atelier-ryza2-category-animal-products: '\ea12';
+	--atelier-ryza2-category-armor: '\ea13';
+	--atelier-ryza2-category-beehives: '\ea14';
+	--atelier-ryza2-category-bombs: '\ea15';
+	--atelier-ryza2-category-bugs: '\ea16';
+	--atelier-ryza2-category-cloth: '\ea17';
+	--atelier-ryza2-category-dragon-mat: '\ea18';
+	--atelier-ryza2-category-edibles: '\ea19';
+	--atelier-ryza2-category-elixirs: '\ea1a';
+	--atelier-ryza2-category-essence: '\ea1b';
+	--atelier-ryza2-category-flowers: '\ea1c';
+	--atelier-ryza2-category-food: '\ea1d';
+	--atelier-ryza2-category-fruit: '\ea1e';
+	--atelier-ryza2-category-fuel: '\ea1f';
+	--atelier-ryza2-category-furniture: '\ea20';
+	--atelier-ryza2-category-gases: '\ea21';
+	--atelier-ryza2-category-gemstones: '\ea22';
+	--atelier-ryza2-category-general-goods: '\ea23';
+	--atelier-ryza2-category-gunpowder: '\ea24';
+	--atelier-ryza2-category-ingots: '\ea25';
+	--atelier-ryza2-category-jewels: '\ea26';
+	--atelier-ryza2-category-key-items: '\ea27';
+	--atelier-ryza2-category-lumber: '\ea28';
+	--atelier-ryza2-category-magic-tools: '\ea29';
+	--atelier-ryza2-category-magical: '\ea2a';
+	--atelier-ryza2-category-medicinal: '\ea2b';
+	--atelier-ryza2-category-medicine: '\ea2c';
+	--atelier-ryza2-category-metal: '\ea2d';
+	--atelier-ryza2-category-mushrooms: '\ea2e';
+	--atelier-ryza2-category-neutralizers: '\ea2f';
+	--atelier-ryza2-category-ore: '\ea30';
+	--atelier-ryza2-category-plants: '\ea31';
+	--atelier-ryza2-category-poisons: '\ea32';
+	--atelier-ryza2-category-puniballs: '\ea33';
+	--atelier-ryza2-category-sand: '\ea34';
+	--atelier-ryza2-category-seafood: '\ea35';
+	--atelier-ryza2-category-seeds: '\ea36';
+	--atelier-ryza2-category-spices: '\ea37';
+	--atelier-ryza2-category-stone: '\ea38';
+	--atelier-ryza2-category-threads: '\ea39';
+	--atelier-ryza2-category-tools: '\ea3a';
+	--atelier-ryza2-category-uni: '\ea3b';
+	--atelier-ryza2-category-water: '\ea3c';
+	--atelier-ryza2-category-weapons: '\ea3d';
+	--atelier-ryza2-equipment: '\ea3e';
+	--atelier-ryza2-fire: '\ea3f';
+	--atelier-ryza2-forge: '\ea40';
+	--atelier-ryza2-ice: '\ea41';
+	--atelier-ryza2-large-enemy: '\ea42';
+	--atelier-ryza2-lightning: '\ea43';
+	--atelier-ryza2-magic: '\ea44';
+	--atelier-ryza2-material: '\ea45';
+	--atelier-ryza2-medium-enemy: '\ea46';
+	--atelier-ryza2-physical: '\ea47';
+	--atelier-ryza2-race-ancient-philuscha: '\ea48';
+	--atelier-ryza2-race-beetle: '\ea49';
+	--atelier-ryza2-race-demon-beast: '\ea4a';
+	--atelier-ryza2-race-golem: '\ea4b';
+	--atelier-ryza2-race-guardian: '\ea4c';
+	--atelier-ryza2-race-hedgehog: '\ea4d';
+	--atelier-ryza2-race-knight: '\ea4e';
+	--atelier-ryza2-race-puni: '\ea4f';
+	--atelier-ryza2-race-roadrunner: '\ea50';
+	--atelier-ryza2-race-scorpion: '\ea51';
+	--atelier-ryza2-race-shark: '\ea52';
+	--atelier-ryza2-race-sheep: '\ea53';
+	--atelier-ryza2-race-spirit: '\ea54';
+	--atelier-ryza2-race-weasel-king: '\ea55';
+	--atelier-ryza2-race-weasel: '\ea56';
+	--atelier-ryza2-race-wyrm: '\ea57';
+	--atelier-ryza2-shop: '\ea58';
+	--atelier-ryza2-small-enemy: '\ea59';
+	--atelier-ryza2-tool-axe: '\ea5a';
+	--atelier-ryza2-tool-bomb-rod: '\ea5b';
+	--atelier-ryza2-tool-bug-net: '\ea5c';
+	--atelier-ryza2-tool-fishing-rod: '\ea5d';
+	--atelier-ryza2-tool-gather: '\ea5e';
+	--atelier-ryza2-tool-hammer: '\ea5f';
+	--atelier-ryza2-tool-sickle: '\ea60';
+	--atelier-ryza2-tool-staff: '\ea61';
+	--atelier-ryza2-tool-water: '\ea62';
+	--atelier-ryza2-type-accessory: '\ea63';
+	--atelier-ryza2-type-armor: '\ea64';
+	--atelier-ryza2-type-attack: '\ea65';
+	--atelier-ryza2-type-buff: '\ea66';
+	--atelier-ryza2-type-debuff: '\ea67';
+	--atelier-ryza2-type-heal: '\ea68';
+	--atelier-ryza2-type-synthesis: '\ea69';
+	--atelier-ryza2-type-weapon: '\ea6a';
+	--atelier-ryza2-wind: '\ea6b';
+	--atelier-shallie-category-a-light-armor: '\ea6c';
+	--atelier-shallie-category-accessory: '\ea6d';
+	--atelier-shallie-category-adventure: '\ea6e';
+	--atelier-shallie-category-ancient-power: '\ea6f';
+	--atelier-shallie-category-ancient-relic: '\ea70';
+	--atelier-shallie-category-animal: '\ea71';
+	--atelier-shallie-category-antique: '\ea72';
+	--atelier-shallie-category-apple: '\ea73';
+	--atelier-shallie-category-aroma: '\ea74';
+	--atelier-shallie-category-bee-hive: '\ea75';
+	--atelier-shallie-category-bomb: '\ea76';
+	--atelier-shallie-category-book: '\ea77';
+	--atelier-shallie-category-clay: '\ea78';
+	--atelier-shallie-category-cloth: '\ea79';
+	--atelier-shallie-category-dragon-material: '\ea7a';
+	--atelier-shallie-category-elixir: '\ea7b';
+	--atelier-shallie-category-feather: '\ea7c';
+	--atelier-shallie-category-fish: '\ea7d';
+	--atelier-shallie-category-food: '\ea7e';
+	--atelier-shallie-category-fruit: '\ea7f';
+	--atelier-shallie-category-fuel: '\ea80';
+	--atelier-shallie-category-gas: '\ea81';
+	--atelier-shallie-category-grain: '\ea82';
+	--atelier-shallie-category-gunpowder: '\ea83';
+	--atelier-shallie-category-ingot: '\ea84';
+	--atelier-shallie-category-jewel: '\ea85';
+	--atelier-shallie-category-key-item: '\ea86';
+	--atelier-shallie-category-liquid: '\ea87';
+	--atelier-shallie-category-lumber: '\ea88';
+	--atelier-shallie-category-magic-herb: '\ea89';
+	--atelier-shallie-category-magic-tool: '\ea8a';
+	--atelier-shallie-category-meat: '\ea8b';
+	--atelier-shallie-category-medicine: '\ea8c';
+	--atelier-shallie-category-metal: '\ea8d';
+	--atelier-shallie-category-mystery: '\ea8e';
+	--atelier-shallie-category-natural: '\ea8f';
+	--atelier-shallie-category-ore: '\ea90';
+	--atelier-shallie-category-paper: '\ea91';
+	--atelier-shallie-category-pelt: '\ea93';
+	--atelier-shallie-category-plant: '\ea95';
+	--atelier-shallie-category-poison: '\ea92';
+	--atelier-shallie-category-sand: '\ea94';
+	--atelier-shallie-category-seasoning: '\ea96';
+	--atelier-shallie-category-slag-part: '\ea97';
+	--atelier-shallie-category-snack: '\ea99';
+	--atelier-shallie-category-sundry: '\ea98';
+	--atelier-shallie-category-thread: '\ea9a';
+	--atelier-shallie-category-vegetable: '\ea9b';
+	--atelier-shallie-category-w-bell: '\ea9c';
+	--atelier-shallie-category-wood: '\ea9d';
+	--atelier-shallie-earth: '\ea9e';
+	--atelier-shallie-fire: '\ea9f';
+	--atelier-shallie-race-alchemic: '\eaa0';
+	--atelier-shallie-race-animal: '\eaa1';
+	--atelier-shallie-race-beast: '\eaa2';
+	--atelier-shallie-race-dragon: '\eaa3';
+	--atelier-shallie-race-elemental: '\eaa4';
+	--atelier-shallie-race-humanoid: '\eaa5';
+	--atelier-shallie-race-rare-slag: '\eaa6';
+	--atelier-shallie-race-slag: '\eaa7';
+	--atelier-shallie-water: '\eaa8';
+	--atelier-shallie-wind: '\eaa9';
+	--atelier-sophie2-category-catalysts: '\eaaa';
+	--atelier-sophie2-category-seafood: '\eaab';
+	--atelier-sophie2-category-spices: '\eaac';
+	--atelier-sophie2-category-talismans: '\eaad';
+	--atelier-sophie2-element-fire: '\eaae';
+	--atelier-sophie2-element-ice: '\eaaf';
+	--atelier-sophie2-element-light: '\eab0';
+	--atelier-sophie2-element-lightning: '\eab1';
+	--atelier-sophie2-element-magic: '\eab2';
+	--atelier-sophie2-element-wind: '\eab3';
+	--atelier-sophie2-race-apostle: '\eab4';
+	--atelier-sophie2-race-apparition: '\eab5';
+	--atelier-sophie2-race-bat: '\eab6';
+	--atelier-sophie2-race-beast: '\eab7';
+	--atelier-sophie2-race-bird: '\eab8';
+	--atelier-sophie2-race-dragon: '\eab9';
+	--atelier-sophie2-race-dragonaire: '\eaba';
+	--atelier-sophie2-race-dream-eater: '\eabb';
+	--atelier-sophie2-race-dryad: '\eabc';
+	--atelier-sophie2-race-elvira: '\eabd';
+	--atelier-sophie2-race-erde-wiege: '\eabe';
+	--atelier-sophie2-race-ghost: '\eabf';
+	--atelier-sophie2-race-golem: '\eac0';
+	--atelier-sophie2-race-jellyfish: '\eac1';
+	--atelier-sophie2-race-magical-creature: '\eac2';
+	--atelier-sophie2-race-medium-groll: '\eac3';
+	--atelier-sophie2-race-mushroom: '\eac4';
+	--atelier-sophie2-race-plant: '\eac5';
+	--atelier-sophie2-race-puni: '\eac6';
+	--atelier-sophie2-race-rabbit: '\eac7';
+	--atelier-sophie2-race-sea-serpent: '\eac8';
+	--atelier-sophie2-race-small-groll: '\eac9';
+	--atelier-sophie2-tool-hammer: '\eaca';
+	--atelier-sophie2-tool-pickaxe: '\eacb';
+	--atelier-sophie2-tool-slingshot: '\eacc';
+	--atelier-sophie2-type-exploration: '\eacd';
+	--atelier-sophie2-usable: '\eace';
+	--atelier-totori-category-accessory: '\eacf';
+	--atelier-totori-category-bomb: '\ead0';
+	--atelier-totori-category-bug: '\ead1';
+	--atelier-totori-category-cloth: '\ead2';
+	--atelier-totori-category-cooking: '\ead3';
+	--atelier-totori-category-dessert: '\ead4';
+	--atelier-totori-category-elixir: '\ead5';
+	--atelier-totori-category-fish: '\ead6';
+	--atelier-totori-category-fuel: '\ead7';
+	--atelier-totori-category-gunpowder: '\ead8';
+	--atelier-totori-category-healing: '\ead9';
+	--atelier-totori-category-ingot: '\eada';
+	--atelier-totori-category-jewel: '\eadb';
+	--atelier-totori-category-key-item: '\eae3';
+	--atelier-totori-category-liquid: '\eadc';
+	--atelier-totori-category-lumber: '\eadd';
+	--atelier-totori-category-magic-tool: '\eade';
+	--atelier-totori-category-meat: '\eae4';
+	--atelier-totori-category-medicine: '\eadf';
+	--atelier-totori-category-mystery: '\eae0';
+	--atelier-totori-category-ore: '\eae1';
+	--atelier-totori-category-pie: '\eae2';
+	--atelier-totori-category-plant: '\eae5';
+	--atelier-totori-category-poison: '\eae6';
+	--atelier-totori-category-seasoning: '\eae7';
+	--atelier-totori-category-spice: '\eae8';
+	--atelier-totori-category-sundry: '\eae9';
+	--atelier-totori-category-supplement: '\eaea';
+	--atelier-totori-category-threads: '\eaeb';
+	--atelier-totori-category-vegetable: '\eaec';
+}
+
+.atelier-escha-accessory::before {
+	content: var(--atelier-escha-accessory);
+}
+
+.atelier-escha-armor::before {
+	content: var(--atelier-escha-armor);
+}
+
+.atelier-escha-bomb::before {
+	content: var(--atelier-escha-bomb);
+}
+
+.atelier-escha-buff::before {
+	content: var(--atelier-escha-buff);
+}
+
+.atelier-escha-category-liquid::before {
+	content: var(--atelier-escha-category-liquid);
+}
+
+.atelier-escha-heal::before {
+	content: var(--atelier-escha-heal);
+}
+
+.atelier-escha-weapon::before {
+	content: var(--atelier-escha-weapon);
+}
+
+.atelier-meruru-category-construction::before {
+	content: var(--atelier-meruru-category-construction);
+}
+
+.atelier-meruru-category-development::before {
+	content: var(--atelier-meruru-category-development);
+}
+
+.atelier-meruru-category-farming::before {
+	content: var(--atelier-meruru-category-farming);
+}
+
+.atelier-meruru-category-housing::before {
+	content: var(--atelier-meruru-category-housing);
+}
+
+.atelier-meruru-category-mushroom::before {
+	content: var(--atelier-meruru-category-mushroom);
+}
+
+.atelier-meruru-category-security::before {
+	content: var(--atelier-meruru-category-security);
+}
+
+.atelier-meruru-category-tourism::before {
+	content: var(--atelier-meruru-category-tourism);
+}
+
+.atelier-ryza2-book::before {
+	content: var(--atelier-ryza2-book);
+}
+
+.atelier-ryza2-boss-enemy::before {
+	content: var(--atelier-ryza2-boss-enemy);
+}
+
+.atelier-ryza2-category-accessories::before {
+	content: var(--atelier-ryza2-category-accessories);
+}
+
+.atelier-ryza2-category-animal-products::before {
+	content: var(--atelier-ryza2-category-animal-products);
+}
+
+.atelier-ryza2-category-armor::before {
+	content: var(--atelier-ryza2-category-armor);
+}
+
+.atelier-ryza2-category-beehives::before {
+	content: var(--atelier-ryza2-category-beehives);
+}
+
+.atelier-ryza2-category-bombs::before {
+	content: var(--atelier-ryza2-category-bombs);
+}
+
+.atelier-ryza2-category-bugs::before {
+	content: var(--atelier-ryza2-category-bugs);
+}
+
+.atelier-ryza2-category-cloth::before {
+	content: var(--atelier-ryza2-category-cloth);
+}
+
+.atelier-ryza2-category-dragon-mat::before {
+	content: var(--atelier-ryza2-category-dragon-mat);
+}
+
+.atelier-ryza2-category-edibles::before {
+	content: var(--atelier-ryza2-category-edibles);
+}
+
+.atelier-ryza2-category-elixirs::before {
+	content: var(--atelier-ryza2-category-elixirs);
+}
+
+.atelier-ryza2-category-essence::before {
+	content: var(--atelier-ryza2-category-essence);
+}
+
+.atelier-ryza2-category-flowers::before {
+	content: var(--atelier-ryza2-category-flowers);
+}
+
+.atelier-ryza2-category-food::before {
+	content: var(--atelier-ryza2-category-food);
+}
+
+.atelier-ryza2-category-fruit::before {
+	content: var(--atelier-ryza2-category-fruit);
+}
+
+.atelier-ryza2-category-fuel::before {
+	content: var(--atelier-ryza2-category-fuel);
+}
+
+.atelier-ryza2-category-furniture::before {
+	content: var(--atelier-ryza2-category-furniture);
+}
+
+.atelier-ryza2-category-gases::before {
+	content: var(--atelier-ryza2-category-gases);
+}
+
+.atelier-ryza2-category-gemstones::before {
+	content: var(--atelier-ryza2-category-gemstones);
+}
+
+.atelier-ryza2-category-general-goods::before {
+	content: var(--atelier-ryza2-category-general-goods);
+}
+
+.atelier-ryza2-category-gunpowder::before {
+	content: var(--atelier-ryza2-category-gunpowder);
+}
+
+.atelier-ryza2-category-ingots::before {
+	content: var(--atelier-ryza2-category-ingots);
+}
+
+.atelier-ryza2-category-jewels::before {
+	content: var(--atelier-ryza2-category-jewels);
+}
+
+.atelier-ryza2-category-key-items::before {
+	content: var(--atelier-ryza2-category-key-items);
+}
+
+.atelier-ryza2-category-lumber::before {
+	content: var(--atelier-ryza2-category-lumber);
+}
+
+.atelier-ryza2-category-magic-tools::before {
+	content: var(--atelier-ryza2-category-magic-tools);
+}
+
+.atelier-ryza2-category-magical::before {
+	content: var(--atelier-ryza2-category-magical);
+}
+
+.atelier-ryza2-category-medicinal::before {
+	content: var(--atelier-ryza2-category-medicinal);
+}
+
+.atelier-ryza2-category-medicine::before {
+	content: var(--atelier-ryza2-category-medicine);
+}
+
+.atelier-ryza2-category-metal::before {
+	content: var(--atelier-ryza2-category-metal);
+}
+
+.atelier-ryza2-category-mushrooms::before {
+	content: var(--atelier-ryza2-category-mushrooms);
+}
+
+.atelier-ryza2-category-neutralizers::before {
+	content: var(--atelier-ryza2-category-neutralizers);
+}
+
+.atelier-ryza2-category-ore::before {
+	content: var(--atelier-ryza2-category-ore);
+}
+
+.atelier-ryza2-category-plants::before {
+	content: var(--atelier-ryza2-category-plants);
+}
+
+.atelier-ryza2-category-poisons::before {
+	content: var(--atelier-ryza2-category-poisons);
+}
+
+.atelier-ryza2-category-puniballs::before {
+	content: var(--atelier-ryza2-category-puniballs);
+}
+
+.atelier-ryza2-category-sand::before {
+	content: var(--atelier-ryza2-category-sand);
+}
+
+.atelier-ryza2-category-seafood::before {
+	content: var(--atelier-ryza2-category-seafood);
+}
+
+.atelier-ryza2-category-seeds::before {
+	content: var(--atelier-ryza2-category-seeds);
+}
+
+.atelier-ryza2-category-spices::before {
+	content: var(--atelier-ryza2-category-spices);
+}
+
+.atelier-ryza2-category-stone::before {
+	content: var(--atelier-ryza2-category-stone);
+}
+
+.atelier-ryza2-category-threads::before {
+	content: var(--atelier-ryza2-category-threads);
+}
+
+.atelier-ryza2-category-tools::before {
+	content: var(--atelier-ryza2-category-tools);
+}
+
+.atelier-ryza2-category-uni::before {
+	content: var(--atelier-ryza2-category-uni);
+}
+
+.atelier-ryza2-category-water::before {
+	content: var(--atelier-ryza2-category-water);
+}
+
+.atelier-ryza2-category-weapons::before {
+	content: var(--atelier-ryza2-category-weapons);
+}
+
+.atelier-ryza2-equipment::before {
+	content: var(--atelier-ryza2-equipment);
+}
+
+.atelier-ryza2-fire::before {
+	content: var(--atelier-ryza2-fire);
+}
+
+.atelier-ryza2-forge::before {
+	content: var(--atelier-ryza2-forge);
+}
+
+.atelier-ryza2-ice::before {
+	content: var(--atelier-ryza2-ice);
+}
+
+.atelier-ryza2-large-enemy::before {
+	content: var(--atelier-ryza2-large-enemy);
+}
+
+.atelier-ryza2-lightning::before {
+	content: var(--atelier-ryza2-lightning);
+}
+
+.atelier-ryza2-magic::before {
+	content: var(--atelier-ryza2-magic);
+}
+
+.atelier-ryza2-material::before {
+	content: var(--atelier-ryza2-material);
+}
+
+.atelier-ryza2-medium-enemy::before {
+	content: var(--atelier-ryza2-medium-enemy);
+}
+
+.atelier-ryza2-physical::before {
+	content: var(--atelier-ryza2-physical);
+}
+
+.atelier-ryza2-race-ancient-philuscha::before {
+	content: var(--atelier-ryza2-race-ancient-philuscha);
+}
+
+.atelier-ryza2-race-beetle::before {
+	content: var(--atelier-ryza2-race-beetle);
+}
+
+.atelier-ryza2-race-demon-beast::before {
+	content: var(--atelier-ryza2-race-demon-beast);
+}
+
+.atelier-ryza2-race-golem::before {
+	content: var(--atelier-ryza2-race-golem);
+}
+
+.atelier-ryza2-race-guardian::before {
+	content: var(--atelier-ryza2-race-guardian);
+}
+
+.atelier-ryza2-race-hedgehog::before {
+	content: var(--atelier-ryza2-race-hedgehog);
+}
+
+.atelier-ryza2-race-knight::before {
+	content: var(--atelier-ryza2-race-knight);
+}
+
+.atelier-ryza2-race-puni::before {
+	content: var(--atelier-ryza2-race-puni);
+}
+
+.atelier-ryza2-race-roadrunner::before {
+	content: var(--atelier-ryza2-race-roadrunner);
+}
+
+.atelier-ryza2-race-scorpion::before {
+	content: var(--atelier-ryza2-race-scorpion);
+}
+
+.atelier-ryza2-race-shark::before {
+	content: var(--atelier-ryza2-race-shark);
+}
+
+.atelier-ryza2-race-sheep::before {
+	content: var(--atelier-ryza2-race-sheep);
+}
+
+.atelier-ryza2-race-spirit::before {
+	content: var(--atelier-ryza2-race-spirit);
+}
+
+.atelier-ryza2-race-weasel-king::before {
+	content: var(--atelier-ryza2-race-weasel-king);
+}
+
+.atelier-ryza2-race-weasel::before {
+	content: var(--atelier-ryza2-race-weasel);
+}
+
+.atelier-ryza2-race-wyrm::before {
+	content: var(--atelier-ryza2-race-wyrm);
+}
+
+.atelier-ryza2-shop::before {
+	content: var(--atelier-ryza2-shop);
+}
+
+.atelier-ryza2-small-enemy::before {
+	content: var(--atelier-ryza2-small-enemy);
+}
+
+.atelier-ryza2-tool-axe::before {
+	content: var(--atelier-ryza2-tool-axe);
+}
+
+.atelier-ryza2-tool-bomb-rod::before {
+	content: var(--atelier-ryza2-tool-bomb-rod);
+}
+
+.atelier-ryza2-tool-bug-net::before {
+	content: var(--atelier-ryza2-tool-bug-net);
+}
+
+.atelier-ryza2-tool-fishing-rod::before {
+	content: var(--atelier-ryza2-tool-fishing-rod);
+}
+
+.atelier-ryza2-tool-gather::before {
+	content: var(--atelier-ryza2-tool-gather);
+}
+
+.atelier-ryza2-tool-hammer::before {
+	content: var(--atelier-ryza2-tool-hammer);
+}
+
+.atelier-ryza2-tool-sickle::before {
+	content: var(--atelier-ryza2-tool-sickle);
+}
+
+.atelier-ryza2-tool-staff::before {
+	content: var(--atelier-ryza2-tool-staff);
+}
+
+.atelier-ryza2-tool-water::before {
+	content: var(--atelier-ryza2-tool-water);
+}
+
+.atelier-ryza2-type-accessory::before {
+	content: var(--atelier-ryza2-type-accessory);
+}
+
+.atelier-ryza2-type-armor::before {
+	content: var(--atelier-ryza2-type-armor);
+}
+
+.atelier-ryza2-type-attack::before {
+	content: var(--atelier-ryza2-type-attack);
+}
+
+.atelier-ryza2-type-buff::before {
+	content: var(--atelier-ryza2-type-buff);
+}
+
+.atelier-ryza2-type-debuff::before {
+	content: var(--atelier-ryza2-type-debuff);
+}
+
+.atelier-ryza2-type-heal::before {
+	content: var(--atelier-ryza2-type-heal);
+}
+
+.atelier-ryza2-type-synthesis::before {
+	content: var(--atelier-ryza2-type-synthesis);
+}
+
+.atelier-ryza2-type-weapon::before {
+	content: var(--atelier-ryza2-type-weapon);
+}
+
+.atelier-ryza2-wind::before {
+	content: var(--atelier-ryza2-wind);
+}
+
+.atelier-shallie-category-a-light-armor::before {
+	content: var(--atelier-shallie-category-a-light-armor);
+}
+
+.atelier-shallie-category-accessory::before {
+	content: var(--atelier-shallie-category-accessory);
+}
+
+.atelier-shallie-category-adventure::before {
+	content: var(--atelier-shallie-category-adventure);
+}
+
+.atelier-shallie-category-ancient-power::before {
+	content: var(--atelier-shallie-category-ancient-power);
+}
+
+.atelier-shallie-category-ancient-relic::before {
+	content: var(--atelier-shallie-category-ancient-relic);
+}
+
+.atelier-shallie-category-animal::before {
+	content: var(--atelier-shallie-category-animal);
+}
+
+.atelier-shallie-category-antique::before {
+	content: var(--atelier-shallie-category-antique);
+}
+
+.atelier-shallie-category-apple::before {
+	content: var(--atelier-shallie-category-apple);
+}
+
+.atelier-shallie-category-aroma::before {
+	content: var(--atelier-shallie-category-aroma);
+}
+
+.atelier-shallie-category-bee-hive::before {
+	content: var(--atelier-shallie-category-bee-hive);
+}
+
+.atelier-shallie-category-bomb::before {
+	content: var(--atelier-shallie-category-bomb);
+}
+
+.atelier-shallie-category-book::before {
+	content: var(--atelier-shallie-category-book);
+}
+
+.atelier-shallie-category-clay::before {
+	content: var(--atelier-shallie-category-clay);
+}
+
+.atelier-shallie-category-cloth::before {
+	content: var(--atelier-shallie-category-cloth);
+}
+
+.atelier-shallie-category-dragon-material::before {
+	content: var(--atelier-shallie-category-dragon-material);
+}
+
+.atelier-shallie-category-elixir::before {
+	content: var(--atelier-shallie-category-elixir);
+}
+
+.atelier-shallie-category-feather::before {
+	content: var(--atelier-shallie-category-feather);
+}
+
+.atelier-shallie-category-fish::before {
+	content: var(--atelier-shallie-category-fish);
+}
+
+.atelier-shallie-category-food::before {
+	content: var(--atelier-shallie-category-food);
+}
+
+.atelier-shallie-category-fruit::before {
+	content: var(--atelier-shallie-category-fruit);
+}
+
+.atelier-shallie-category-fuel::before {
+	content: var(--atelier-shallie-category-fuel);
+}
+
+.atelier-shallie-category-gas::before {
+	content: var(--atelier-shallie-category-gas);
+}
+
+.atelier-shallie-category-grain::before {
+	content: var(--atelier-shallie-category-grain);
+}
+
+.atelier-shallie-category-gunpowder::before {
+	content: var(--atelier-shallie-category-gunpowder);
+}
+
+.atelier-shallie-category-ingot::before {
+	content: var(--atelier-shallie-category-ingot);
+}
+
+.atelier-shallie-category-jewel::before {
+	content: var(--atelier-shallie-category-jewel);
+}
+
+.atelier-shallie-category-key-item::before {
+	content: var(--atelier-shallie-category-key-item);
+}
+
+.atelier-shallie-category-liquid::before {
+	content: var(--atelier-shallie-category-liquid);
+}
+
+.atelier-shallie-category-lumber::before {
+	content: var(--atelier-shallie-category-lumber);
+}
+
+.atelier-shallie-category-magic-herb::before {
+	content: var(--atelier-shallie-category-magic-herb);
+}
+
+.atelier-shallie-category-magic-tool::before {
+	content: var(--atelier-shallie-category-magic-tool);
+}
+
+.atelier-shallie-category-meat::before {
+	content: var(--atelier-shallie-category-meat);
+}
+
+.atelier-shallie-category-medicine::before {
+	content: var(--atelier-shallie-category-medicine);
+}
+
+.atelier-shallie-category-metal::before {
+	content: var(--atelier-shallie-category-metal);
+}
+
+.atelier-shallie-category-mystery::before {
+	content: var(--atelier-shallie-category-mystery);
+}
+
+.atelier-shallie-category-natural::before {
+	content: var(--atelier-shallie-category-natural);
+}
+
+.atelier-shallie-category-ore::before {
+	content: var(--atelier-shallie-category-ore);
+}
+
+.atelier-shallie-category-paper::before {
+	content: var(--atelier-shallie-category-paper);
+}
+
+.atelier-shallie-category-pelt::before {
+	content: var(--atelier-shallie-category-pelt);
+}
+
+.atelier-shallie-category-plant::before {
+	content: var(--atelier-shallie-category-plant);
+}
+
+.atelier-shallie-category-poison::before {
+	content: var(--atelier-shallie-category-poison);
+}
+
+.atelier-shallie-category-sand::before {
+	content: var(--atelier-shallie-category-sand);
+}
+
+.atelier-shallie-category-seasoning::before {
+	content: var(--atelier-shallie-category-seasoning);
+}
+
+.atelier-shallie-category-slag-part::before {
+	content: var(--atelier-shallie-category-slag-part);
+}
+
+.atelier-shallie-category-snack::before {
+	content: var(--atelier-shallie-category-snack);
+}
+
+.atelier-shallie-category-sundry::before {
+	content: var(--atelier-shallie-category-sundry);
+}
+
+.atelier-shallie-category-thread::before {
+	content: var(--atelier-shallie-category-thread);
+}
+
+.atelier-shallie-category-vegetable::before {
+	content: var(--atelier-shallie-category-vegetable);
+}
+
+.atelier-shallie-category-w-bell::before {
+	content: var(--atelier-shallie-category-w-bell);
+}
+
+.atelier-shallie-category-wood::before {
+	content: var(--atelier-shallie-category-wood);
+}
+
+.atelier-shallie-earth::before {
+	content: var(--atelier-shallie-earth);
+}
+
+.atelier-shallie-fire::before {
+	content: var(--atelier-shallie-fire);
+}
+
+.atelier-shallie-race-alchemic::before {
+	content: var(--atelier-shallie-race-alchemic);
+}
+
+.atelier-shallie-race-animal::before {
+	content: var(--atelier-shallie-race-animal);
+}
+
+.atelier-shallie-race-beast::before {
+	content: var(--atelier-shallie-race-beast);
+}
+
+.atelier-shallie-race-dragon::before {
+	content: var(--atelier-shallie-race-dragon);
+}
+
+.atelier-shallie-race-elemental::before {
+	content: var(--atelier-shallie-race-elemental);
+}
+
+.atelier-shallie-race-humanoid::before {
+	content: var(--atelier-shallie-race-humanoid);
+}
+
+.atelier-shallie-race-rare-slag::before {
+	content: var(--atelier-shallie-race-rare-slag);
+}
+
+.atelier-shallie-race-slag::before {
+	content: var(--atelier-shallie-race-slag);
+}
+
+.atelier-shallie-water::before {
+	content: var(--atelier-shallie-water);
+}
+
+.atelier-shallie-wind::before {
+	content: var(--atelier-shallie-wind);
+}
+
+.atelier-sophie2-category-catalysts::before {
+	content: var(--atelier-sophie2-category-catalysts);
+}
+
+.atelier-sophie2-category-seafood::before {
+	content: var(--atelier-sophie2-category-seafood);
+}
+
+.atelier-sophie2-category-spices::before {
+	content: var(--atelier-sophie2-category-spices);
+}
+
+.atelier-sophie2-category-talismans::before {
+	content: var(--atelier-sophie2-category-talismans);
+}
+
+.atelier-sophie2-element-fire::before {
+	content: var(--atelier-sophie2-element-fire);
+}
+
+.atelier-sophie2-element-ice::before {
+	content: var(--atelier-sophie2-element-ice);
+}
+
+.atelier-sophie2-element-light::before {
+	content: var(--atelier-sophie2-element-light);
+}
+
+.atelier-sophie2-element-lightning::before {
+	content: var(--atelier-sophie2-element-lightning);
+}
+
+.atelier-sophie2-element-magic::before {
+	content: var(--atelier-sophie2-element-magic);
+}
+
+.atelier-sophie2-element-wind::before {
+	content: var(--atelier-sophie2-element-wind);
+}
+
+.atelier-sophie2-race-apostle::before {
+	content: var(--atelier-sophie2-race-apostle);
+}
+
+.atelier-sophie2-race-apparition::before {
+	content: var(--atelier-sophie2-race-apparition);
+}
+
+.atelier-sophie2-race-bat::before {
+	content: var(--atelier-sophie2-race-bat);
+}
+
+.atelier-sophie2-race-beast::before {
+	content: var(--atelier-sophie2-race-beast);
+}
+
+.atelier-sophie2-race-bird::before {
+	content: var(--atelier-sophie2-race-bird);
+}
+
+.atelier-sophie2-race-dragon::before {
+	content: var(--atelier-sophie2-race-dragon);
+}
+
+.atelier-sophie2-race-dragonaire::before {
+	content: var(--atelier-sophie2-race-dragonaire);
+}
+
+.atelier-sophie2-race-dream-eater::before {
+	content: var(--atelier-sophie2-race-dream-eater);
+}
+
+.atelier-sophie2-race-dryad::before {
+	content: var(--atelier-sophie2-race-dryad);
+}
+
+.atelier-sophie2-race-elvira::before {
+	content: var(--atelier-sophie2-race-elvira);
+}
+
+.atelier-sophie2-race-erde-wiege::before {
+	content: var(--atelier-sophie2-race-erde-wiege);
+}
+
+.atelier-sophie2-race-ghost::before {
+	content: var(--atelier-sophie2-race-ghost);
+}
+
+.atelier-sophie2-race-golem::before {
+	content: var(--atelier-sophie2-race-golem);
+}
+
+.atelier-sophie2-race-jellyfish::before {
+	content: var(--atelier-sophie2-race-jellyfish);
+}
+
+.atelier-sophie2-race-magical-creature::before {
+	content: var(--atelier-sophie2-race-magical-creature);
+}
+
+.atelier-sophie2-race-medium-groll::before {
+	content: var(--atelier-sophie2-race-medium-groll);
+}
+
+.atelier-sophie2-race-mushroom::before {
+	content: var(--atelier-sophie2-race-mushroom);
+}
+
+.atelier-sophie2-race-plant::before {
+	content: var(--atelier-sophie2-race-plant);
+}
+
+.atelier-sophie2-race-puni::before {
+	content: var(--atelier-sophie2-race-puni);
+}
+
+.atelier-sophie2-race-rabbit::before {
+	content: var(--atelier-sophie2-race-rabbit);
+}
+
+.atelier-sophie2-race-sea-serpent::before {
+	content: var(--atelier-sophie2-race-sea-serpent);
+}
+
+.atelier-sophie2-race-small-groll::before {
+	content: var(--atelier-sophie2-race-small-groll);
+}
+
+.atelier-sophie2-tool-hammer::before {
+	content: var(--atelier-sophie2-tool-hammer);
+}
+
+.atelier-sophie2-tool-pickaxe::before {
+	content: var(--atelier-sophie2-tool-pickaxe);
+}
+
+.atelier-sophie2-tool-slingshot::before {
+	content: var(--atelier-sophie2-tool-slingshot);
+}
+
+.atelier-sophie2-type-exploration::before {
+	content: var(--atelier-sophie2-type-exploration);
+}
+
+.atelier-sophie2-usable::before {
+	content: var(--atelier-sophie2-usable);
+}
+
+.atelier-totori-category-accessory::before {
+	content: var(--atelier-totori-category-accessory);
+}
+
+.atelier-totori-category-bomb::before {
+	content: var(--atelier-totori-category-bomb);
+}
+
+.atelier-totori-category-bug::before {
+	content: var(--atelier-totori-category-bug);
+}
+
+.atelier-totori-category-cloth::before {
+	content: var(--atelier-totori-category-cloth);
+}
+
+.atelier-totori-category-cooking::before {
+	content: var(--atelier-totori-category-cooking);
+}
+
+.atelier-totori-category-dessert::before {
+	content: var(--atelier-totori-category-dessert);
+}
+
+.atelier-totori-category-elixir::before {
+	content: var(--atelier-totori-category-elixir);
+}
+
+.atelier-totori-category-fish::before {
+	content: var(--atelier-totori-category-fish);
+}
+
+.atelier-totori-category-fuel::before {
+	content: var(--atelier-totori-category-fuel);
+}
+
+.atelier-totori-category-gunpowder::before {
+	content: var(--atelier-totori-category-gunpowder);
+}
+
+.atelier-totori-category-healing::before {
+	content: var(--atelier-totori-category-healing);
+}
+
+.atelier-totori-category-ingot::before {
+	content: var(--atelier-totori-category-ingot);
+}
+
+.atelier-totori-category-jewel::before {
+	content: var(--atelier-totori-category-jewel);
+}
+
+.atelier-totori-category-key-item::before {
+	content: var(--atelier-totori-category-key-item);
+}
+
+.atelier-totori-category-liquid::before {
+	content: var(--atelier-totori-category-liquid);
+}
+
+.atelier-totori-category-lumber::before {
+	content: var(--atelier-totori-category-lumber);
+}
+
+.atelier-totori-category-magic-tool::before {
+	content: var(--atelier-totori-category-magic-tool);
+}
+
+.atelier-totori-category-meat::before {
+	content: var(--atelier-totori-category-meat);
+}
+
+.atelier-totori-category-medicine::before {
+	content: var(--atelier-totori-category-medicine);
+}
+
+.atelier-totori-category-mystery::before {
+	content: var(--atelier-totori-category-mystery);
+}
+
+.atelier-totori-category-ore::before {
+	content: var(--atelier-totori-category-ore);
+}
+
+.atelier-totori-category-pie::before {
+	content: var(--atelier-totori-category-pie);
+}
+
+.atelier-totori-category-plant::before {
+	content: var(--atelier-totori-category-plant);
+}
+
+.atelier-totori-category-poison::before {
+	content: var(--atelier-totori-category-poison);
+}
+
+.atelier-totori-category-seasoning::before {
+	content: var(--atelier-totori-category-seasoning);
+}
+
+.atelier-totori-category-spice::before {
+	content: var(--atelier-totori-category-spice);
+}
+
+.atelier-totori-category-sundry::before {
+	content: var(--atelier-totori-category-sundry);
+}
+
+.atelier-totori-category-supplement::before {
+	content: var(--atelier-totori-category-supplement);
+}
+
+.atelier-totori-category-threads::before {
+	content: var(--atelier-totori-category-threads);
+}
+
+.atelier-totori-category-vegetable::before {
+	content: var(--atelier-totori-category-vegetable);
+}

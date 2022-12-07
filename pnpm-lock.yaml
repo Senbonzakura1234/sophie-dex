@@ -1,10 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@next/font': ^13.0.6
   '@prisma/client': ^4.7.0
   '@tailwindcss/typography': ^0.5.8
   '@tanstack/react-query': ^4.19.0
-  '@tanstack/react-table': ^8.7.0
   '@trpc/client': ^10.4.2
   '@trpc/next': ^10.4.2
   '@trpc/react-query': ^10.4.2
@@ -40,10 +40,10 @@ specifiers:
   zod: ^3.19.1
 
 dependencies:
+  '@next/font': 13.0.6
   '@prisma/client': 4.7.0_prisma@4.7.0
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
   '@tanstack/react-query': 4.19.0_biqbaboplfbrettd7655fr4n2y
-  '@tanstack/react-table': 8.7.0_biqbaboplfbrettd7655fr4n2y
   '@trpc/client': 10.4.2_@trpc+server@10.4.2
   '@trpc/next': 10.4.2_7xwllrfqp47yruji3ydp7c2pyi
   '@trpc/react-query': 10.4.2_yizyvx5vkdbtksk5zhgjdfntnm
@@ -182,6 +182,10 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
+
+  /@next/font/13.0.6:
+    resolution: {integrity: sha512-5vxNmvnV0CbYjQGtztD5Axft9C7npKihbQpiFhnDwdb99f9K/QSFfcJqxz0E5QBkf67O2niVGJ5lApJDu78w0w==}
+    dev: false
 
   /@next/swc-android-arm-eabi/13.0.6:
     resolution: {integrity: sha512-FGFSj3v2Bluw8fD/X+1eXIEB0PhoJE0zfutsAauRhmNpjjZshLDgoXMWm1jTRL/04K/o9gwwO2+A8+sPVCH1uw==}
@@ -382,23 +386,6 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
-    dev: false
-
-  /@tanstack/react-table/8.7.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-VJ+9rsymDLaSU35rWOfX0bwNXnpW1i+T14wi+sHx8lxwAsfg6IY1Yw7FPfGADvUFP5eQn2t4nlohAJd+IoEj/Q==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      react: '>=16'
-      react-dom: '>=16'
-    dependencies:
-      '@tanstack/table-core': 8.7.0
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-    dev: false
-
-  /@tanstack/table-core/8.7.0:
-    resolution: {integrity: sha512-DRiRbOAmDHapzUBd4/C4Yy+FTug4fdGp5sdZWWfCq4wxRoaXQraQgbzmK23a3QcbwLFtLeNezPkZrqbJWuX+VA==}
-    engines: {node: '>=12'}
     dev: false
 
   /@trpc/client/10.4.2_@trpc+server@10.4.2:

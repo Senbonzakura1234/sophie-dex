@@ -1,5 +1,7 @@
 import type { COLOR, ITEM_CATEGORY, TRAIT_CATEGORY } from '@prisma/client';
 
+import type { UnicodeClass } from '../fonts/atelier';
+
 export const ColorDisplay = {
 	GREEN: 'Green',
 	BLUE: 'Blue',
@@ -81,15 +83,41 @@ export const itemCategoryList = [
 
 export type ItemCategoryDisplay = typeof ItemCategoryDisplay[keyof typeof ItemCategoryDisplay];
 
-export const TraitCategoryDisplay = {
-	ACCESSORY: 'Accessory',
-	ARMOR: 'Armor',
-	ATK_ITEM: 'Attack Item',
-	BUFF_ITEM: 'Buff Item',
-	DE_BUFF_ITEM: 'De-Buff Item',
-	HEAL_ITEM: 'Heal Item',
-	WEAPON: 'Weapon',
-} as const satisfies Readonly<{ [traitCategory in TRAIT_CATEGORY]: string }>;
+export const TraitCategoryMap = {
+	ATK_ITEM: {
+		name: 'Attack Item',
+		className: 'atelier-ryza2-type-attack',
+	},
+	HEAL_ITEM: {
+		name: 'Heal Item',
+		className: 'atelier-ryza2-type-heal',
+	},
+	DE_BUFF_ITEM: {
+		name: 'De-Buff Item',
+		className: 'atelier-ryza2-type-debuff',
+	},
+	BUFF_ITEM: {
+		name: 'Buff Item',
+		className: 'atelier-ryza2-type-buff',
+	},
+	WEAPON: {
+		name: 'Weapon',
+		className: 'atelier-ryza2-type-weapon',
+	},
+	ARMOR: {
+		name: 'Armor',
+		className: 'atelier-ryza2-type-armor',
+	},
+	ACCESSORY: {
+		name: 'Accessory',
+		className: 'atelier-ryza2-type-accessory',
+	},
+} as const satisfies Readonly<{
+	[traitCategory in TRAIT_CATEGORY]: {
+		name: string;
+		className: UnicodeClass;
+	};
+}>;
 
 export const traitCategoryList = [
 	'ACCESSORY',
@@ -101,4 +129,4 @@ export const traitCategoryList = [
 	'WEAPON',
 ] as const satisfies Readonly<TRAIT_CATEGORY[]>;
 
-export type TraitCategoryDisplay = typeof TraitCategoryDisplay[keyof typeof TraitCategoryDisplay];
+export type TraitCategoryDisplay = typeof TraitCategoryMap[keyof typeof TraitCategoryMap];
