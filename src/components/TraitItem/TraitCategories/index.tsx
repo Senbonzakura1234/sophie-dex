@@ -1,8 +1,11 @@
+import localFont from '@next/font/local';
 import type { TRAIT_CATEGORY } from '@prisma/client';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { TraitCategoryMap } from '@root/types/model';
 import clsx from 'clsx';
 import type { FC } from 'react';
+
+const AtelierFont = localFont({ src: '../../../assets/fonts/Atelier.woff2' });
 
 const TraitCategories: FC<{
 	traitCategories: TRAIT_CATEGORY[];
@@ -19,7 +22,7 @@ const TraitCategories: FC<{
 						{
 							'btn-primary': securedQuery.traitCategory === traitCategory,
 						},
-						'btn btn-sm gap-2 rounded-full capitalize',
+						'btn gap-2 rounded-full capitalize',
 					)}
 					onClick={() =>
 						updateQuery({
@@ -30,14 +33,15 @@ const TraitCategories: FC<{
 					}
 				>
 					<div
+						style={AtelierFont.style}
 						className={clsx(
 							{
 								'badge-error': securedQuery.traitCategory !== traitCategory,
 							},
-							'badge',
+							'badge badge-lg',
 						)}
 					>
-						<div className={TraitCategoryMap[traitCategory].className}></div>
+						<div className={clsx(TraitCategoryMap[traitCategory].className, 'text-lg')}></div>
 					</div>
 					{TraitCategoryMap[traitCategory].name}
 				</button>

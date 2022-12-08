@@ -1,6 +1,7 @@
 import { defaultSearchParam } from '@root/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
 import { searchQueryValidator } from '@root/types/common/zod';
+import traits from 'prisma/data/traits';
 
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }) => {
@@ -67,5 +68,16 @@ export const traitRouter = router({
 			totalPage: Math.ceil(totalRecord / limitInt),
 		};
 	}),
-	// getOne: publicProcedure.query(async ({ ctx }) => {}),
+
+	getAllStub: publicProcedure.input(searchQueryValidator).query(async () => {
+		const data = traits.filter(trait => trait.mergeFrom.length > 0);
+		return {
+			records: data.slice(0, 10),
+			cursor: null,
+			page: 1,
+			limit: 10,
+			totalRecord: data.length,
+			totalPage: Math.ceil(data.length / 10),
+		};
+	}),
 });

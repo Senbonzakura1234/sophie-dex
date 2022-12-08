@@ -14,6 +14,7 @@ module.exports = {
 			},
 			gridTemplateColumns: {
 				searchBar: 'minmax(auto, 1fr) 48px',
+				cardList: 'repeat(auto-fit, minmax(32rem, 1fr))',
 			},
 			fill: {
 				['none']: 'none',

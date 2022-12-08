@@ -1,6 +1,7 @@
 import { defaultSearchParam } from '@root/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
 import { searchQueryValidator } from '@root/types/common/zod';
+import effects from 'prisma/data/effects';
 
 export const effectRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }) => {
@@ -56,5 +57,15 @@ export const effectRouter = router({
 			totalPage: Math.ceil(totalRecord / limitInt),
 		};
 	}),
-	// getOne: publicProcedure.query(async ({ ctx }) => {}),
+
+	getAllStub: publicProcedure.input(searchQueryValidator).query(async () => {
+		return {
+			records: effects.slice(0, 10),
+			cursor: null,
+			page: 1,
+			limit: 10,
+			totalRecord: effects.length,
+			totalPage: Math.ceil(effects.length / 10),
+		};
+	}),
 });

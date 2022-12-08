@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 const Effects: NextPage = () => {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();
-	const { data, isSuccess, error, isError } = trpc.effect.getAll.useQuery(securedQuery, {
+	const { data, isSuccess, error, isError } = trpc.effect.getAllStub.useQuery(securedQuery, {
 		retry: 3,
 		enabled: isReady,
 		refetchOnReconnect: false,
