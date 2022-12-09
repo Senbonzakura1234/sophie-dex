@@ -11,3 +11,5 @@ export const defaultSearchParam: SearchQuery = {
 	limit: '10',
 	page: '1',
 };
+
+export const idRegex = /^[0-9A-F]{24}$/i;

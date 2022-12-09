@@ -1,9 +1,11 @@
+import { idRegex } from '@root/constants';
 import type { ZodType } from 'zod';
 import { z } from 'zod';
 
 import { colorList, itemCategoryList, traitCategoryList } from '../model';
 
 export const stringToNumberSchema = (def: number) => z.string().default(`${def}`).transform(Number);
+
 export const safePreprocessor =
 	<O, Z extends ZodType<O>>(preprocessorSchema: Z) =>
 	(val: unknown): O | null => {
@@ -23,11 +25,7 @@ export const searchQueryValidator = z.object({
 	itemCategory: z.enum(itemCategoryList).nullish().default(null),
 	traitCategory: z.enum(traitCategoryList).nullish().default(null),
 	color: z.enum(colorList).nullish().default(null),
-	cursor: z
-		.string()
-		.regex(/^[0-9A-F]{24}$/i)
-		.nullish()
-		.default(null),
+	cursor: z.string().regex(idRegex).nullish().default(null),
 	page: z
 		.string()
 		.regex(/^[1-9]\d*$/)
@@ -41,3 +39,9 @@ export const searchQueryValidator = z.object({
 });
 
 export type SearchQuery = z.infer<typeof searchQueryValidator>;
+
+export const idQueryValidator = z.object({
+	id: z.string().regex(idRegex).nullish().default(null),
+});
+
+export type IdQuery = z.infer<typeof idQueryValidator>;

@@ -1,5 +1,5 @@
-import type { SearchQuery } from '@root/types/common/zod';
-import { searchQueryValidator } from '@root/types/common/zod';
+import type { IdQuery, SearchQuery } from '@root/types/common/zod';
+import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import { parseObjToParam } from '@root/utils/helper';
 import { useRouter } from 'next/router';
 import { useCallback, useMemo } from 'react';
@@ -18,10 +18,34 @@ export const useSearchQuery = (): {
 	}, [query]);
 
 	const updateQuery = useCallback(
-		(nextQuery: Partial<SearchQuery>) =>
-			push(`${pathname}?${parseObjToParam({ ...securedQuery, ...nextQuery })}`, undefined, {}),
-		[push, pathname, securedQuery],
+		(nextQuery: Partial<SearchQuery>) => {
+			if (isReady) push(`${pathname}?${parseObjToParam({ ...securedQuery, ...nextQuery })}`, undefined, {});
+		},
+		[isReady, push, pathname, securedQuery],
 	);
 
 	return { securedQuery, isReady, updateQuery };
+};
+
+export const useIdQuery = (): {
+	isReady: boolean;
+	securedIdQuery: Partial<IdQuery>;
+	updateIdQuery: (nextQuery: Partial<IdQuery>) => void;
+} => {
+	const { query, isReady, push, pathname } = useRouter();
+
+	const securedIdQuery: Partial<IdQuery> = useMemo(() => {
+		const result = idQueryValidator.safeParse(query);
+
+		return result.success ? query : {};
+	}, [query]);
+
+	const updateIdQuery = useCallback(
+		(nextId: Partial<IdQuery>) => {
+			if (isReady) push(`${pathname}/${nextId.id}`, undefined, {});
+		},
+		[isReady, push, pathname],
+	);
+
+	return { securedIdQuery, isReady, updateIdQuery };
 };
