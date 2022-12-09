@@ -38,6 +38,7 @@ export const useIdQuery = (): {
 	isReady: boolean;
 	securedIdQuery: Partial<IdQuery>;
 	updateIdQuery: (nextQuery: Partial<IdQuery>) => void;
+	backToListPage: () => void;
 } => {
 	const { query, isReady, push, pathname } = useRouter();
 
@@ -58,5 +59,12 @@ export const useIdQuery = (): {
 		[isReady, push, pathname],
 	);
 
-	return { securedIdQuery, isReady, updateIdQuery };
+	const backToListPage = useCallback(() => {
+		if (isReady)
+			push({
+				pathname: pathname.replaceAll('[id]', ''),
+			});
+	}, [isReady, pathname, push]);
+
+	return { securedIdQuery, isReady, updateIdQuery, backToListPage };
 };
