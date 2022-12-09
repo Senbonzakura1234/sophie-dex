@@ -70,7 +70,7 @@ export const traitRouter = router({
 	}),
 
 	getAllStub: publicProcedure.input(searchQueryValidator).query(async () => {
-		const data = traits.filter(trait => trait.mergeFrom.length > 0);
+		const data = traits.filter(trait => trait.mergeFrom.length > 1);
 		return {
 			records: data.slice(0, 10),
 			cursor: null,

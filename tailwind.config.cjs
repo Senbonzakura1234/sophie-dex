@@ -15,6 +15,7 @@ module.exports = {
 			gridTemplateColumns: {
 				searchBar: 'minmax(auto, 1fr) 48px',
 				cardList: 'repeat(auto-fit, minmax(32rem, 1fr))',
+				traitMergeList: 'repeat(auto-fit, minmax(14rem, 1fr))',
 			},
 			fill: {
 				['none']: 'none',
@@ -26,7 +27,7 @@ module.exports = {
 	},
 	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 	daisyui: {
-		themes: ['light'],
+		themes: ['garden'],
 		// darkTheme: 'dracula',
 	},
 	darkMode: 'class',

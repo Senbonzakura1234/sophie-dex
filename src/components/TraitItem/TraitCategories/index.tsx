@@ -4,6 +4,7 @@ import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { TraitCategoryMap } from '@root/types/model';
 import clsx from 'clsx';
 import type { FC } from 'react';
+import { useCallback } from 'react';
 
 const AtelierFont = localFont({ src: '../../../assets/fonts/Atelier.woff2' });
 
@@ -12,39 +13,46 @@ const TraitCategories: FC<{
 }> = ({ traitCategories }) => {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();
 
+	const isClickAble = useCallback(
+		(code: TRAIT_CATEGORY) => traitCategories.includes(code) && isReady,
+		[isReady, traitCategories],
+	);
+
 	return (
-		<div className='flex max-w-fit flex-wrap gap-2 py-2'>
-			{traitCategories.map((traitCategory, key) => (
-				<button
-					disabled={!isReady}
-					key={key}
+		<div className='mb-7 flex max-w-fit flex-wrap gap-2'>
+			{TraitCategoryMap.map(({ className, code, name }, key) => (
+				<div
 					className={clsx(
 						{
-							'btn-primary': securedQuery.traitCategory === traitCategory,
+							'tooltip-secondary': securedQuery.traitCategory === code && isClickAble(code),
+							'tooltip-primary': securedQuery.traitCategory !== code && isClickAble(code),
 						},
-						'btn gap-2 rounded-full capitalize',
+						'tooltip tooltip-bottom',
 					)}
-					onClick={() =>
-						updateQuery({
-							page: '1',
-							limit: '10',
-							traitCategory: securedQuery.traitCategory === traitCategory ? null : traitCategory,
-						})
-					}
+					data-tip={name}
+					key={key}
 				>
-					<div
-						style={AtelierFont.style}
+					<button
+						disabled={!isClickAble(code)}
 						className={clsx(
 							{
-								'badge-error': securedQuery.traitCategory !== traitCategory,
+								'btn-secondary': securedQuery.traitCategory === code && isClickAble(code),
+								'btn-primary': securedQuery.traitCategory !== code && isClickAble(code),
 							},
-							'badge badge-lg',
+							'btn btn-sm lg:btn-md',
 						)}
+						onClick={() => {
+							if (isClickAble(code))
+								updateQuery({
+									page: '1',
+									limit: '10',
+									traitCategory: securedQuery.traitCategory === code ? null : code,
+								});
+						}}
 					>
-						<div className={clsx(TraitCategoryMap[traitCategory].className, 'text-lg')}></div>
-					</div>
-					{TraitCategoryMap[traitCategory].name}
-				</button>
+						<div style={AtelierFont.style} className={clsx(className, 'w-6 text-xl')}></div>
+					</button>
+				</div>
 			))}
 		</div>
 	);

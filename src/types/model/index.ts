@@ -83,41 +83,49 @@ export const itemCategoryList = [
 
 export type ItemCategoryDisplay = typeof ItemCategoryDisplay[keyof typeof ItemCategoryDisplay];
 
-export const TraitCategoryMap = {
-	ATK_ITEM: {
+export const TraitCategoryMap = [
+	{
+		code: 'ATK_ITEM',
 		name: 'Attack Item',
 		className: 'atelier-ryza2-type-attack',
 	},
-	HEAL_ITEM: {
+	{
+		code: 'HEAL_ITEM',
 		name: 'Heal Item',
 		className: 'atelier-ryza2-type-heal',
 	},
-	DE_BUFF_ITEM: {
+	{
+		code: 'DE_BUFF_ITEM',
 		name: 'De-Buff Item',
 		className: 'atelier-ryza2-type-debuff',
 	},
-	BUFF_ITEM: {
+	{
+		code: 'BUFF_ITEM',
 		name: 'Buff Item',
 		className: 'atelier-ryza2-type-buff',
 	},
-	WEAPON: {
+	{
+		code: 'WEAPON',
 		name: 'Weapon',
 		className: 'atelier-ryza2-type-weapon',
 	},
-	ARMOR: {
+	{
+		code: 'ARMOR',
 		name: 'Armor',
 		className: 'atelier-ryza2-type-armor',
 	},
-	ACCESSORY: {
+	{
+		code: 'ACCESSORY',
 		name: 'Accessory',
 		className: 'atelier-ryza2-type-accessory',
 	},
-} as const satisfies Readonly<{
-	[traitCategory in TRAIT_CATEGORY]: {
+] as const satisfies Readonly<
+	{
+		code: TRAIT_CATEGORY;
 		name: string;
 		className: UnicodeClass;
-	};
-}>;
+	}[]
+>;
 
 export const traitCategoryList = [
 	'ACCESSORY',

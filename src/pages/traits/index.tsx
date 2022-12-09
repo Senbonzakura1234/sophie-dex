@@ -13,7 +13,7 @@ const Traits: NextPage = () => {
 	});
 
 	return (
-		<div className='grid-cols-cardList container	 mx-auto grid auto-rows-fr gap-4'>
+		<div className='grid-cols-cardList container	mx-auto grid auto-rows-fr gap-4'>
 			{isSuccess ? data.records.map(trait => <TraitItem key={trait.id} trait={trait} />) : null}
 		</div>
 	);
