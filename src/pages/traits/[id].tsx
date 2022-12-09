@@ -4,7 +4,7 @@ import { trpc } from '@root/utils/trpc';
 import type { NextPage } from 'next';
 
 const Trait: NextPage = () => {
-	const { isReady, securedIdQuery, backToListPage } = useIdQuery();
+	const { isReady, securedIdQuery } = useIdQuery();
 	const { data, isSuccess } = trpc.trait.getOne.useQuery(securedIdQuery, {
 		retry: 2,
 		enabled: isReady,
