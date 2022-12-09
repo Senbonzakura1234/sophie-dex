@@ -19,14 +19,10 @@ export const useSearchQuery = (): {
 
 	const updateQuery = useCallback(
 		(nextQuery: Partial<SearchQuery>) => {
-			console.log(pathname);
+			const parseQuery = parseObjToParam({ ...securedQuery, ...nextQuery }).toString();
 
 			if (isReady)
-				push(
-					`${pathname.replaceAll('[id]', '')}?${parseObjToParam({ ...securedQuery, ...nextQuery })}`,
-					undefined,
-					{},
-				);
+				push(`${pathname.replaceAll('[id]', '')}${parseQuery.length > 0 ? '?' : ''}${parseQuery}`, undefined, {});
 		},
 		[isReady, push, pathname, securedQuery],
 	);

@@ -13,9 +13,9 @@ const Trait: NextPage = () => {
 	});
 
 	return isSuccess ? (
-		<div className='grid h-full w-full place-content-center gap-4 p-2'>
+		<section className='grid h-full w-full place-content-center gap-4 p-2'>
 			<TraitItem trait={data} />
-		</div>
+		</section>
 	) : null;
 };
 

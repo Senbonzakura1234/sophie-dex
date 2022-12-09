@@ -9,7 +9,7 @@ import { TraitMergeList } from './TraitMergeList';
 const TraitItem: FC<{ trait: Trait }> = ({ trait: { name, description, noId, traitCategories, mergeFrom, id } }) => {
 	const { isReady, updateIdQuery, securedIdQuery, backToListPage } = useIdQuery();
 	return (
-		<div className='card bg-base-100 grid w-full grow-0 shadow-xl'>
+		<article className='card bg-base-100 grid w-full grow-0 shadow-2xl'>
 			<div className='card-body'>
 				{securedIdQuery.id === id && (
 					<div className='card-actions place-content-end'>
@@ -32,7 +32,7 @@ const TraitItem: FC<{ trait: Trait }> = ({ trait: { name, description, noId, tra
 				<TraitCategories traitCategories={traitCategories} />
 				<TraitMergeList mergeFrom={mergeFrom} />
 			</div>
-		</div>
+		</article>
 	);
 };
 

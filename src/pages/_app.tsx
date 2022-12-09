@@ -14,7 +14,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
 			<Head>
 				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 			</Head>
-			<main className='h-screen w-screen'>
+			<main className='bg-base-200 h-screen w-screen overflow-y-auto'>
 				<Component {...pageProps} />
 			</main>
 		</>

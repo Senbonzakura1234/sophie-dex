@@ -13,8 +13,8 @@ module.exports = {
 				layoutDesktop: '72px minmax(auto, 1fr)',
 			},
 			gridTemplateColumns: {
-				searchBar: 'minmax(auto, 1fr) 48px',
-				cardList: 'repeat(auto-fit, minmax(24rem, 1fr))',
+				cardList: 'repeat(auto-fit, minmax(22rem, 1fr))',
+				searchBar: 'repeat(auto-fill, minmax(22rem, 1fr))',
 				traitMergeList: 'repeat(auto-fit, minmax(14rem, 1fr))',
 			},
 			fill: {
