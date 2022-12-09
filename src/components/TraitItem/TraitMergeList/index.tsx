@@ -1,9 +1,11 @@
 import type { MergeTrait } from '@prisma/client';
+import { useIdQuery } from '@root/hooks/useSearchQuery';
 import type { FC } from 'react';
 
 export const TraitMergeList: FC<{ mergeFrom: MergeTrait[] }> = ({ mergeFrom }) => {
+	const { isReady, updateIdQuery } = useIdQuery();
 	return (
-		<div className='grid-cols-traitMergeList grid gap-2'>
+		<div className='grid-cols-traitMergeList grid place-content-center gap-2'>
 			{mergeFrom.map(({ consist }, key) => (
 				<ul className='steps gap-2 overflow-visible' key={key}>
 					{consist.map(({ id, name, description }) => (
@@ -13,8 +15,15 @@ export const TraitMergeList: FC<{ mergeFrom: MergeTrait[] }> = ({ mergeFrom }) =
 							className='step step-primary'
 							data-content=''
 						>
-							<div className='tooltip tooltip-bottom z-50 w-fit' data-tip={description}>
-								<button className='btn btn-sm capitalize'>{name}</button>
+							<div className='lg:tooltip lg:tooltip-bottom lg:z-50' data-tip={description}>
+								<button
+									onClick={() => {
+										if (isReady) updateIdQuery({ id });
+									}}
+									className='btn btn-sm capitalize'
+								>
+									{name}
+								</button>
 							</div>
 						</li>
 					))}

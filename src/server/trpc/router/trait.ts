@@ -1,6 +1,7 @@
 import { defaultSearchParam } from '@root/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
-import { searchQueryValidator } from '@root/types/common/zod';
+import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
+import { TRPCError } from '@trpc/server';
 import traits from 'prisma/data/traits';
 
 export const traitRouter = router({
@@ -79,5 +80,23 @@ export const traitRouter = router({
 			totalRecord: data.length,
 			totalPage: Math.ceil(data.length / 10),
 		};
+	}),
+
+	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }) => {
+		try {
+			const { id } = input;
+			if (!id)
+				throw new TRPCError({
+					code: 'BAD_REQUEST',
+					message: 'Invalid Trait Id.',
+				});
+			return await ctx.prisma.trait.findFirstOrThrow({ where: { id } });
+		} catch (cause) {
+			throw new TRPCError({
+				code: 'NOT_FOUND',
+				message: 'Trait not found.',
+				cause,
+			});
+		}
 	}),
 });

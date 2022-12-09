@@ -4,14 +4,20 @@ import '@root/styles/globals.css';
 // import localFont from '@next/font/local';
 import { trpc } from '@root/utils/trpc';
 import { type AppType } from 'next/app';
+import Head from 'next/head';
 
 // const { style } = localFont({ src: '../assets/fonts/Atelier.woff2' });
 
 const MyApp: AppType = ({ Component, pageProps }) => {
 	return (
-		<main>
-			<Component {...pageProps} />
-		</main>
+		<>
+			<Head>
+				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+			</Head>
+			<main className='h-screen w-screen'>
+				<Component {...pageProps} />
+			</main>
+		</>
 	);
 };
 

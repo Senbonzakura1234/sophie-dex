@@ -24,10 +24,10 @@ const TraitCategories: FC<{
 				<div
 					className={clsx(
 						{
-							'tooltip-secondary': securedQuery.traitCategory === code && isClickAble(code),
-							'tooltip-primary': securedQuery.traitCategory !== code && isClickAble(code),
+							'lg:tooltip-secondary': securedQuery.traitCategory === code && isClickAble(code),
+							'lg:tooltip-primary': securedQuery.traitCategory !== code && isClickAble(code),
 						},
-						'tooltip tooltip-bottom',
+						'lg:tooltip lg:tooltip-bottom',
 					)}
 					data-tip={name}
 					key={key}

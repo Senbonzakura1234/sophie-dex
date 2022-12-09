@@ -19,7 +19,14 @@ export const useSearchQuery = (): {
 
 	const updateQuery = useCallback(
 		(nextQuery: Partial<SearchQuery>) => {
-			if (isReady) push(`${pathname}?${parseObjToParam({ ...securedQuery, ...nextQuery })}`, undefined, {});
+			console.log(pathname);
+
+			if (isReady)
+				push(
+					`${pathname.replaceAll('[id]', '')}?${parseObjToParam({ ...securedQuery, ...nextQuery })}`,
+					undefined,
+					{},
+				);
 		},
 		[isReady, push, pathname, securedQuery],
 	);
@@ -42,7 +49,11 @@ export const useIdQuery = (): {
 
 	const updateIdQuery = useCallback(
 		(nextId: Partial<IdQuery>) => {
-			if (isReady) push(`${pathname}/${nextId.id}`, undefined, {});
+			if (isReady)
+				push({
+					pathname: pathname.includes('[id]') ? pathname : `${pathname}/[id]`,
+					query: { id: nextId.id },
+				});
 		},
 		[isReady, push, pathname],
 	);

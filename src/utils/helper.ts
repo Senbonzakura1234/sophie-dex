@@ -9,12 +9,12 @@ export const checkValidItemCateKey = (key: string) => {
 export const parseObjToParam = (input: Record<string, number | string | string[] | null | undefined>) => {
 	const queryParse = Object.fromEntries(
 		Object.entries(input)
-			.filter(([, value]) => value !== null)
+			.filter(([key, value]) => value !== null && key !== 'id')
 			.map(([key, value]) => {
 				if (value instanceof Array) return [key, value];
 				return [key, value?.toString() || ''];
 			}),
 	);
 
-	return new URLSearchParams(queryParse).toString();
+	return new URLSearchParams(queryParse);
 };
