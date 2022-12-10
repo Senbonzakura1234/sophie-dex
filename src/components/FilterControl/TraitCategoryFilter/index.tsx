@@ -23,9 +23,7 @@ const TraitCategoryFilter: FC = () => {
 
 	return (
 		<div className='flex gap-2'>
-			<small className='my-auto text-sm font-bold'>
-				<span className='hidden xl:inline'>Trait </span>Category:{' '}
-			</small>
+			<small className='my-auto text-sm font-bold'>Category:</small>
 			<SelectOption<TRAIT_CATEGORY | null>
 				style={AtelierFont.style}
 				list={TraitCategorySelectList}
