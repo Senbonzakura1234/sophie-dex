@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import type { FC } from 'react';
 
 import TraitCategories from './TraitCategories';
-import { TraitMergeList } from './TraitMergeList';
+import TraitMergeList from './TraitMergeList';
 
 const TraitRecord: FC<{ trait: Trait }> = ({ trait: { name, description, noId, traitCategories, mergeFrom, id } }) => {
 	const { isReady, updateIdQuery, securedIdQuery, backToListPage } = useIdQuery();

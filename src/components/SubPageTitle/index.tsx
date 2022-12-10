@@ -1,11 +1,12 @@
 import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import sophieBg from '@root/assets/pictures/sophie.jpg';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
+import type { PageName } from '@root/types/common';
 import Image from 'next/image';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 
-const SubPageTitle: FC<{ pageName: string }> = ({ pageName }) => {
+const SubPageTitle: FC<{ pageName: PageName }> = ({ pageName }) => {
 	const { securedQuery, isReady, updateQuery } = useSearchQuery();
 	const [search, setSearch] = useState<string>('');
 
@@ -32,7 +33,7 @@ const SubPageTitle: FC<{ pageName: string }> = ({ pageName }) => {
 							}}
 							type='text'
 							placeholder='Name or description...'
-							className='input input-bordered input-primary grow'
+							className='input input-bordered input-primary grow !outline-none'
 						/>
 						{search.length > 0 && (
 							<button
@@ -46,7 +47,7 @@ const SubPageTitle: FC<{ pageName: string }> = ({ pageName }) => {
 							onClick={() => {
 								if (isReady) updateQuery({ search: search.length > 0 ? search : null });
 							}}
-							className='btn btn-primary xl:w-32'
+							className='btn border-0 xl:w-32'
 						>
 							<MagnifyingGlassIcon width={24} height={24} />
 						</button>

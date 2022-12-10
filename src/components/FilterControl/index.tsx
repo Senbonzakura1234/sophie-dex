@@ -1,3 +1,4 @@
+import type { PageName } from '@root/types/common';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
@@ -5,12 +6,13 @@ import Paginate from './Paginate';
 import ResetFilter from './ResetFilter';
 import SortControl from './SortControl';
 
-const FilterControl: FC<{ page: string; totalPage: number; limit: string; totalRecord: number }> = ({
-	limit = '10',
-	page = '1',
-	totalPage = 0,
-	totalRecord = 0,
-}) => {
+const FilterControl: FC<{
+	page: string;
+	totalPage: number;
+	limit: string;
+	totalRecord: number;
+	pageName: PageName;
+}> = ({ limit = '10', page = '1', totalPage = 0, totalRecord = 0 }) => {
 	const { limitInt, pageInt } = useMemo(
 		() => ({ limitInt: parseInt(limit) || 10, pageInt: parseInt(page) || 1 }),
 		[limit, page],

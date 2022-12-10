@@ -16,9 +16,10 @@ const Effects: NextPage = () => {
 
 	return (
 		<>
-			<SubPageTitle pageName={'Effect'} />
+			<SubPageTitle pageName='Effect' />
 			{isSuccess && (
 				<FilterControl
+					pageName='Effect'
 					page={data.page ?? '1'}
 					totalPage={data.totalPage}
 					limit={data.limit ?? '10'}

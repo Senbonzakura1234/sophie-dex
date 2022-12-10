@@ -5,18 +5,31 @@ import {
 	ChevronLeftIcon,
 	ChevronRightIcon,
 } from '@heroicons/react/24/solid';
+import SelectOption from '@root/components/SelectOption';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
+import type { SelectOptionItem } from '@root/types/common';
 import type { FC } from 'react';
 import { useMemo, useState } from 'react';
 
 const Paginate: FC<{ page: number; totalPage: number }> = ({ page, totalPage }) => {
 	const { isReady, updateQuery } = useSearchQuery();
 
-	const [goToPage, setGoToPage] = useState<string>(`${page}`);
+	const pageList: SelectOptionItem<string>[] = useMemo(
+		() =>
+			Array(totalPage)
+				.fill(0)
+				.map((p, index) => ({ value: `${index + 1}`, label: `Page ${index + 1}` })),
+		[totalPage],
+	);
+
+	const [goToPage, setGoToPage] = useState<SelectOptionItem<string>>({
+		value: `${page}`,
+		label: `Page ${page}`,
+	});
 
 	const isPreviousDisable = useMemo(() => !isReady || page === 1, [isReady, page]);
 	const isNextDisable = useMemo(() => !isReady || page === totalPage, [isReady, page, totalPage]);
-	const isJumpToDisable = useMemo(() => !isReady || goToPage === `${page}`, [goToPage, isReady, page]);
+	const isJumpToDisable = useMemo(() => !isReady || goToPage.value === `${page}`, [goToPage, isReady, page]);
 
 	return (
 		<div className='form-control'>
@@ -42,29 +55,19 @@ const Paginate: FC<{ page: number; totalPage: number }> = ({ page, totalPage }) 
 					<ChevronLeftIcon width={16} height={16} />
 				</button>
 
-				<select
-					className='select select-xs my-auto !outline-none'
-					disabled={!isReady}
+				<SelectOption
+					list={pageList}
+					setValue={setGoToPage}
 					value={goToPage}
-					onChange={e => {
-						if (!isReady || e.target.value === `${page}`) return;
-						setGoToPage(() => e.target.value);
-					}}
-				>
-					{Array(totalPage)
-						.fill(0)
-						.map((_, index) => (
-							<option value={`${index + 1}`} key={index} disabled={!isReady || page === index + 1}>
-								Page {index + 1}
-							</option>
-						))}
-				</select>
+					className='my-auto w-32'
+					withTickBox
+				/>
 
 				<button
 					className='btn btn-ghost btn-circle btn-sm my-auto'
 					onClick={() => {
 						if (isJumpToDisable) return;
-						updateQuery({ page: goToPage });
+						updateQuery({ page: goToPage.value });
 					}}
 				>
 					<ArrowTopRightOnSquareIcon width={16} height={16} />

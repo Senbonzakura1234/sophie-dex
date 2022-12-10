@@ -2,7 +2,7 @@ import type { MergeTrait } from '@prisma/client';
 import { useIdQuery } from '@root/hooks/useSearchQuery';
 import type { FC } from 'react';
 
-export const TraitMergeList: FC<{ mergeFrom: MergeTrait[] }> = ({ mergeFrom }) => {
+const TraitMergeList: FC<{ mergeFrom: MergeTrait[] }> = ({ mergeFrom }) => {
 	const { isReady, updateIdQuery } = useIdQuery();
 	return (
 		<div className='grid place-content-center gap-2 xl:grid-cols-3'>
@@ -27,3 +27,5 @@ export const TraitMergeList: FC<{ mergeFrom: MergeTrait[] }> = ({ mergeFrom }) =
 		</div>
 	);
 };
+
+export default TraitMergeList;
