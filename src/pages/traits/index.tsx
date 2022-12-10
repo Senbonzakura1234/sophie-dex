@@ -16,7 +16,7 @@ const Traits: NextPage = () => {
 
 	return (
 		<>
-			<SubPageTitle />
+			<SubPageTitle pageName={'Trait'} />
 			{isSuccess && (
 				<FilterControl
 					page={data.page ?? '1'}

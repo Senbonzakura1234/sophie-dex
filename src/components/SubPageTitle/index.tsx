@@ -5,7 +5,7 @@ import Image from 'next/image';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 
-const SubPageTitle: FC = () => {
+const SubPageTitle: FC<{ pageName: string }> = ({ pageName }) => {
 	const { securedQuery, isReady, updateQuery } = useSearchQuery();
 	const [search, setSearch] = useState<string>('');
 
@@ -18,8 +18,11 @@ const SubPageTitle: FC = () => {
 			<Image className='object-cover' fill placeholder='blur' src={sophieBg} alt='sophie' sizes='100vw' />
 			<div className='bg-primary/75 absolute inset-0 z-10'></div>
 
-			<div className='container absolute inset-0 z-20 mx-auto flex px-4'>
-				<div className='form-control m-auto w-full max-w-4xl'>
+			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-6 px-4 pt-5 xl:gap-10'>
+				<div className='text-secondary w-full text-center text-5xl font-extrabold decoration-black decoration-2 xl:text-7xl'>
+					{pageName}
+				</div>
+				<div className='form-control w-full max-w-4xl'>
 					<div className='input-group relative'>
 						<input
 							value={search}
