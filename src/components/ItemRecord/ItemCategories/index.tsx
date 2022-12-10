@@ -1,5 +1,6 @@
 import { ItemCategories } from '@prisma/client';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
+import { ItemCategoryDisplay } from '@root/types/model';
 import type { FC } from 'react';
 
 const ItemCategories: FC<{ itemCategories: ItemCategories[] }> = ({ itemCategories }) => {
@@ -16,7 +17,7 @@ const ItemCategories: FC<{ itemCategories: ItemCategories[] }> = ({ itemCategori
 					key={k}
 					className='link text-accent-content text-xs capitalize italic'
 				>
-					{c.name.toLowerCase()} ({c.grade})
+					{ItemCategoryDisplay[c.name].toLocaleLowerCase()} ({c.grade})
 				</a>
 			))}
 		</div>

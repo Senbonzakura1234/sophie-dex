@@ -8,4 +8,4 @@ export const PageName = {
 
 export type PageName = typeof PageName[keyof typeof PageName];
 
-export type SelectOptionItem<V> = { value: V; label: ReactNode };
+export type SelectOptionItem<V> = { value: V; label?: ReactNode; icon?: ReactNode };

@@ -55,13 +55,7 @@ const Paginate: FC<{ page: number; totalPage: number }> = ({ page, totalPage }) 
 					<ChevronLeftIcon width={16} height={16} />
 				</button>
 
-				<SelectOption
-					list={pageList}
-					setValue={setGoToPage}
-					value={goToPage}
-					className='my-auto w-32'
-					withTickBox
-				/>
+				<SelectOption list={pageList} setValue={setGoToPage} value={goToPage} className='my-auto w-32' withIcon />
 
 				<button
 					className='btn btn-ghost btn-circle btn-sm my-auto'

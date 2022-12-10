@@ -19,7 +19,7 @@ const Traits: NextPage = () => {
 			<SubPageTitle pageName='Trait' />
 			{isSuccess && (
 				<FilterControl
-					pageName='Effect'
+					pageName='Trait'
 					page={data.page ?? '1'}
 					totalPage={data.totalPage}
 					limit={data.limit ?? '10'}
