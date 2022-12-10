@@ -5,7 +5,7 @@ import { defaultTraitCategorySelect, TraitCategorySelectList } from '@root/compo
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { SelectOptionItem } from '@root/types/common';
 import type { FC } from 'react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 const AtelierFont = localFont({ src: '../../../assets/fonts/Atelier.woff2' });
 
@@ -20,6 +20,10 @@ const TraitCategoryFilter: FC = () => {
 
 	const [traitCateSelected, setTraitCateSelected] =
 		useState<SelectOptionItem<TRAIT_CATEGORY | null>>(defaultTraitCate);
+
+	useEffect(() => {
+		setTraitCateSelected(() => defaultTraitCate);
+	}, [defaultTraitCate]);
 
 	return (
 		<div className='flex gap-2'>

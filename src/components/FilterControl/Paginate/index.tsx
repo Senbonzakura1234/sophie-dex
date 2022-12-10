@@ -9,7 +9,7 @@ import SelectOption from '@root/components/SelectOption';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { SelectOptionItem } from '@root/types/common';
 import type { FC } from 'react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 const Paginate: FC<{ page: number; totalPage: number }> = ({ page, totalPage }) => {
 	const { isReady, updateQuery } = useSearchQuery();
@@ -26,6 +26,13 @@ const Paginate: FC<{ page: number; totalPage: number }> = ({ page, totalPage }) 
 		value: `${page}`,
 		label: `Page ${page}`,
 	});
+
+	useEffect(() => {
+		setGoToPage(() => ({
+			value: `${page}`,
+			label: `Page ${page}`,
+		}));
+	}, [page]);
 
 	const isPreviousDisable = useMemo(() => !isReady || page === 1, [isReady, page]);
 	const isNextDisable = useMemo(() => !isReady || page === totalPage, [isReady, page, totalPage]);
