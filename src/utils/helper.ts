@@ -1,3 +1,4 @@
+import type { COLOR } from '@prisma/client';
 import { itemCategoryList } from '@root/types/model';
 import { z } from 'zod';
 
@@ -17,4 +18,9 @@ export const parseObjToParam = (input: Record<string, number | string | string[]
 	);
 
 	return new URLSearchParams(queryParse);
+};
+
+export const parseColorToClassName = (color: COLOR): `bg-${string}-500` => {
+	if (color === 'NONE') return 'bg-slate-500' as const;
+	return `bg-${color.toLocaleLowerCase()}-500` as const;
 };

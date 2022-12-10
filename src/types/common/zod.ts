@@ -2,7 +2,7 @@ import { idRegex } from '@root/constants';
 import type { ZodType } from 'zod';
 import { z } from 'zod';
 
-import { colorList, itemCategoryList, traitCategoryList } from '../model';
+import { colorMap, itemCategoryList, traitCategoryList } from '../model';
 
 export const stringToNumberSchema = (def: number) => z.string().default(`${def}`).transform(Number);
 
@@ -24,7 +24,7 @@ export const searchQueryValidator = z.object({
 	direction: z.enum(['asc', 'desc']).default('asc'),
 	itemCategory: z.enum(itemCategoryList).nullish().default(null),
 	traitCategory: z.enum(traitCategoryList).nullish().default(null),
-	color: z.enum(colorList).nullish().default(null),
+	color: z.enum(colorMap).nullish().default(null),
 	cursor: z.string().regex(idRegex).nullish().default(null),
 	page: z
 		.string()
