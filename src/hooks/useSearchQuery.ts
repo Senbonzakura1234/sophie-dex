@@ -8,6 +8,7 @@ export const useSearchQuery = (): {
 	isReady: boolean;
 	securedQuery: Partial<SearchQuery>;
 	updateQuery: (nextQuery: Partial<SearchQuery>) => void;
+	resetQuery: () => void;
 } => {
 	const { query, isReady, push, pathname } = useRouter();
 
@@ -27,7 +28,11 @@ export const useSearchQuery = (): {
 		[isReady, push, pathname, securedQuery],
 	);
 
-	return { securedQuery, isReady, updateQuery };
+	const resetQuery = useCallback(() => {
+		if (isReady) push(`${pathname.replaceAll('[id]', '')}`, undefined, {});
+	}, [isReady, pathname, push]);
+
+	return { securedQuery, isReady, updateQuery, resetQuery };
 };
 
 export const useIdQuery = (): {

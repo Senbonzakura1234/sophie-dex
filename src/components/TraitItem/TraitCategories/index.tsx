@@ -24,10 +24,10 @@ const TraitCategories: FC<{
 				<div
 					className={clsx(
 						{
-							'lg:tooltip-secondary': securedQuery.traitCategory === code && isClickAble(code),
-							'lg:tooltip-primary': securedQuery.traitCategory !== code && isClickAble(code),
+							'xl:tooltip-secondary': securedQuery.traitCategory === code && isClickAble(code),
+							'xl:tooltip-primary': securedQuery.traitCategory !== code && isClickAble(code),
 						},
-						'lg:tooltip lg:tooltip-bottom',
+						'xl:tooltip xl:tooltip-bottom',
 					)}
 					data-tip={name}
 					key={key}
@@ -39,7 +39,7 @@ const TraitCategories: FC<{
 								'btn-secondary': securedQuery.traitCategory === code && isClickAble(code),
 								'btn-primary': securedQuery.traitCategory !== code && isClickAble(code),
 							},
-							'btn btn-sm lg:btn-md',
+							'btn btn-sm xl:btn-md',
 						)}
 						onClick={() => {
 							if (isClickAble(code))

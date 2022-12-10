@@ -18,17 +18,19 @@ const TraitItem: FC<{ trait: Trait }> = ({ trait: { name, description, noId, tra
 						</button>
 					</div>
 				)}
-				<h2
-					onClick={() => {
-						if (securedIdQuery.id === id) return;
-						if (isReady) updateIdQuery({ id });
-					}}
-					className={clsx({ ['link']: securedIdQuery.id !== id }, 'card-title')}
-				>
-					{name}
-				</h2>
-				<small>grade: {noId}</small>
-				<p className='text-lg'>{description}</p>
+				<div className='card-title'>
+					<div
+						onClick={() => {
+							if (securedIdQuery.id === id) return;
+							if (isReady) updateIdQuery({ id });
+						}}
+						className={clsx({ ['link']: securedIdQuery.id !== id })}
+					>
+						{name}
+					</div>
+				</div>
+				<div className='text-sm'>grade: {noId}</div>
+				<div className='text-lg xl:h-16'>{description}</div>
 				<TraitCategories traitCategories={traitCategories} />
 				<TraitMergeList mergeFrom={mergeFrom} />
 			</div>
