@@ -1,6 +1,6 @@
 import FilterControl from '@root/components/FilterControl';
 import SubPageTitle from '@root/components/SubPageTitle';
-import TraitItem from '@root/components/TraitItem';
+import TraitRecord from '@root/components/TraitRecord';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { trpc } from '@root/utils/trpc';
 import { type NextPage } from 'next';
@@ -26,7 +26,7 @@ const Traits: NextPage = () => {
 				/>
 			)}
 			<section className='container mx-auto grid auto-rows-fr gap-6 p-3 xl:grid-cols-2'>
-				{isSuccess ? data.records.map(trait => <TraitItem key={trait.id} trait={trait} />) : null}
+				{isSuccess ? data.records.map(trait => <TraitRecord key={trait.id} trait={trait} />) : null}
 			</section>
 		</>
 	);

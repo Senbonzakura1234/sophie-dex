@@ -1,12 +1,9 @@
-import type { Trait } from '@prisma/client';
+import type { Effect } from '@prisma/client';
 import { useIdQuery } from '@root/hooks/useSearchQuery';
 import clsx from 'clsx';
 import type { FC } from 'react';
 
-import TraitCategories from './TraitCategories';
-import { TraitMergeList } from './TraitMergeList';
-
-const TraitItem: FC<{ trait: Trait }> = ({ trait: { name, description, noId, traitCategories, mergeFrom, id } }) => {
+const EffectRecord: FC<{ effect: Effect }> = ({ effect: { name, description, noId, id } }) => {
 	const { isReady, updateIdQuery, securedIdQuery, backToListPage } = useIdQuery();
 	return (
 		<article className='card bg-base-100 grid w-full grow-0 shadow-2xl'>
@@ -31,11 +28,9 @@ const TraitItem: FC<{ trait: Trait }> = ({ trait: { name, description, noId, tra
 				</div>
 				<div className='text-sm'>grade: {noId}</div>
 				<div className='text-lg xl:h-16'>{description}</div>
-				<TraitCategories traitCategories={traitCategories} />
-				<TraitMergeList mergeFrom={mergeFrom} />
 			</div>
 		</article>
 	);
 };
 
-export default TraitItem;
+export default EffectRecord;
