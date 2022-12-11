@@ -7,12 +7,21 @@ import {
 } from '@heroicons/react/24/solid';
 import SelectOption from '@root/components/SelectOption';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import type { SelectOptionItem } from '@root/types/common';
+import type { FilterData, SelectOptionItem, SetFilterData } from '@root/types/common';
 import type { FC } from 'react';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
-const Paginate: FC<{ page: number; totalPage: number }> = ({ page, totalPage }) => {
+const Paginate: FC<{
+	page: number;
+	totalPage: number;
+	filterData: FilterData;
+	setFilterData: SetFilterData;
+}> = ({ page, totalPage, setFilterData: { setGoToPage }, filterData: { goToPage, traitCateSelected } }) => {
 	const { isReady, updateQuery } = useSearchQuery();
+
+	const isPreviousDisable = useMemo(() => !isReady || page === 1, [isReady, page]);
+	const isNextDisable = useMemo(() => !isReady || page === totalPage, [isReady, page, totalPage]);
+	const isJumpToDisable = useMemo(() => !isReady || goToPage.value === `${page}`, [goToPage, isReady, page]);
 
 	const pageList: SelectOptionItem<string>[] = useMemo(
 		() =>
@@ -21,22 +30,6 @@ const Paginate: FC<{ page: number; totalPage: number }> = ({ page, totalPage }) 
 				.map((p, index) => ({ value: `${index + 1}`, label: `Page ${index + 1}` })),
 		[totalPage],
 	);
-
-	const [goToPage, setGoToPage] = useState<SelectOptionItem<string>>({
-		value: `${page}`,
-		label: `Page ${page}`,
-	});
-
-	useEffect(() => {
-		setGoToPage(() => ({
-			value: `${page}`,
-			label: `Page ${page}`,
-		}));
-	}, [page]);
-
-	const isPreviousDisable = useMemo(() => !isReady || page === 1, [isReady, page]);
-	const isNextDisable = useMemo(() => !isReady || page === totalPage, [isReady, page, totalPage]);
-	const isJumpToDisable = useMemo(() => !isReady || goToPage.value === `${page}`, [goToPage, isReady, page]);
 
 	return (
 		<div className='form-control'>
@@ -68,7 +61,7 @@ const Paginate: FC<{ page: number; totalPage: number }> = ({ page, totalPage }) 
 					className='btn btn-ghost btn-circle btn-sm my-auto'
 					onClick={() => {
 						if (isJumpToDisable) return;
-						updateQuery({ page: goToPage.value });
+						updateQuery({ traitCategory: traitCateSelected.value, page: goToPage.value });
 					}}
 				>
 					<ArrowTopRightOnSquareIcon width={16} height={16} />
