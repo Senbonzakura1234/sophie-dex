@@ -10,7 +10,7 @@ const Breadcrumb = () => {
 
 	return (
 		<div className='flex w-full'>
-			<div className='card card-compact bg-base-100 mx-auto w-64 max-w-full py-1 xl:w-2/5'>
+			<nav className='card card-compact bg-base-100 mx-auto w-64 max-w-full py-1 xl:w-2/5'>
 				<div className='breadcrumbs mx-auto text-xs font-extrabold xl:text-base'>
 					<ul className='gap-1'>
 						<li>
@@ -41,13 +41,13 @@ const Breadcrumb = () => {
 									>
 										{n}
 									</Link>
-									{index < 2 && <div> / </div>}
+									{index < 2 && <span> / </span>}
 								</Fragment>
 							))}
 						</li>
 					</ul>
 				</div>
-			</div>
+			</nav>
 		</div>
 	);
 };

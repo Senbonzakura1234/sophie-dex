@@ -39,6 +39,7 @@ specifiers:
   tailwindcss: ^3.2.4
   tsx: ^3.12.1
   typescript: ^4.9.3
+  use-scrollable-ref: ^1.0.2
   zod: ^3.19.1
 
 dependencies:
@@ -58,6 +59,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   superjson: 1.9.1
+  use-scrollable-ref: 1.0.2_biqbaboplfbrettd7655fr4n2y
   zod: 3.19.1
 
 devDependencies:
@@ -2919,6 +2921,16 @@ packages:
     dependencies:
       punycode: 2.1.1
     dev: true
+
+  /use-scrollable-ref/1.0.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-zTa30hE2v+qMULZDJWITGP/No/56Q1uwKfPYiaGHga5fA13H9O67F0FS3jqavYSX++pofc7TpWl+U8FaGHHxFQ==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /use-sync-external-store/1.2.0_react@18.2.0:
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}

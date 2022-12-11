@@ -50,6 +50,7 @@ const Paginate: FC<{
 				>
 					<ChevronDoubleLeftIcon width={16} height={16} />
 				</button>
+
 				<button
 					disabled={isPreviousDisable}
 					onClick={() => {

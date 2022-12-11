@@ -29,7 +29,7 @@ const ItemRecord: FC<{ item: Item }> = ({ item: { name, noId, id, color, itemCat
 						{name}
 					</div>
 				</div>
-				<div className='text-sm'>grade: {noId}</div>
+				<span className='text-sm'>grade: {noId}</span>
 				<Color color={color} />
 				<ItemCategories itemCategories={itemCategories} />
 			</div>

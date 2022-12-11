@@ -15,6 +15,7 @@ const EffectRecord: FC<{ effect: Effect }> = ({ effect: { name, description, noI
 						</button>
 					</div>
 				)}
+
 				<div className='card-title'>
 					<div
 						onClick={() => {
@@ -26,8 +27,9 @@ const EffectRecord: FC<{ effect: Effect }> = ({ effect: { name, description, noI
 						{name}
 					</div>
 				</div>
-				<div className='text-sm'>grade: {noId}</div>
-				<div className='text-lg xl:h-16'>{description}</div>
+
+				<span className='text-sm'>grade: {noId}</span>
+				<span className='text-lg xl:h-16'>{description}</span>
 			</div>
 		</article>
 	);

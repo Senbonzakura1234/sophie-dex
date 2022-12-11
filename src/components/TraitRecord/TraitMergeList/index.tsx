@@ -5,7 +5,7 @@ import type { FC } from 'react';
 const TraitMergeList: FC<{ mergeFrom: MergeTrait[] }> = ({ mergeFrom }) => {
 	const { isReady, updateIdQuery } = useIdQuery();
 	return (
-		<div className='grid place-content-center gap-2 xl:grid-cols-3'>
+		<nav className='grid place-content-center gap-2 xl:grid-cols-3'>
 			{mergeFrom.map(({ consist }, key) => (
 				<ul className='steps gap-2 overflow-visible' key={key}>
 					{consist.map(({ id, name, description }) => (
@@ -24,7 +24,7 @@ const TraitMergeList: FC<{ mergeFrom: MergeTrait[] }> = ({ mergeFrom }) => {
 					))}
 				</ul>
 			))}
-		</div>
+		</nav>
 	);
 };
 

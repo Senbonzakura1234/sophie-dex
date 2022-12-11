@@ -35,7 +35,7 @@ const FilterControl: FC<{
 
 	return (
 		<section className='container mx-auto p-3'>
-			<div className='card bg-base-100 flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-2xl xl:place-content-end'>
+			<nav className='card bg-base-100 flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-2xl xl:place-content-end'>
 				<SortControl />
 				<div className='flex flex-wrap gap-2'>
 					{pageName === 'Trait' ? (
@@ -50,9 +50,11 @@ const FilterControl: FC<{
 
 					<ApplyFilter filterData={filterData} isCanApplyFilter={isCanApplyFilter} />
 				</div>
+
 				<div className='text-secondary-content my-auto text-xs font-bold'>
 					{from} - {to} of {totalRecord} records
 				</div>
+
 				<Paginate
 					page={pageInt}
 					totalPage={totalPage}
@@ -60,8 +62,9 @@ const FilterControl: FC<{
 					setFilterData={setFilterData}
 					isCanApplyFilter={isCanApplyFilter}
 				/>
+
 				<ResetFilter setFilterData={setFilterData} />
-			</div>
+			</nav>
 		</section>
 	);
 };

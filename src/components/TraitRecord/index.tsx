@@ -18,6 +18,7 @@ const TraitRecord: FC<{ trait: Trait }> = ({ trait: { name, description, noId, t
 						</button>
 					</div>
 				)}
+
 				<div className='card-title'>
 					<div
 						onClick={() => {
@@ -29,9 +30,13 @@ const TraitRecord: FC<{ trait: Trait }> = ({ trait: { name, description, noId, t
 						{name}
 					</div>
 				</div>
-				<div className='text-sm'>grade: {noId}</div>
-				<div className='text-lg xl:h-16'>{description}</div>
+
+				<span className='text-sm'>grade: {noId}</span>
+
+				<span className='text-lg xl:h-16'>{description}</span>
+
 				<TraitCategories traitCategories={traitCategories} />
+
 				<TraitMergeList mergeFrom={mergeFrom} />
 			</div>
 		</article>

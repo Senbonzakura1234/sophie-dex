@@ -16,7 +16,7 @@ const PageTitle: FC<{ pageName: PageName }> = ({ pageName }) => {
 					'h-1/3': pageName !== 'Atelier Dex',
 					'h-full': pageName === 'Atelier Dex',
 				},
-				'relative  w-full overflow-hidden',
+				'relative w-full overflow-hidden',
 			)}
 		>
 			<Image className='object-cover' fill placeholder='blur' src={sophieBg} alt='sophie' sizes='100vw' />

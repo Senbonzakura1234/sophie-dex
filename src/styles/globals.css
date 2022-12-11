@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+	::-webkit-scrollbar {
+		width: theme('spacing.2');
+		height: theme('spacing.2');
+	}
+
+	::-webkit-scrollbar-track {
+		border-radius: theme('borderRadius.2xl');
+		transition: theme('transitionProperty.all') 300ms;
+		background: transparent;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: theme('borderRadius.2xl');
+		transition: theme('transitionProperty.all') 300ms;
+		background: theme('backgroundColor.primary');
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: theme('backgroundColor.primary-focus');
+	}
+}

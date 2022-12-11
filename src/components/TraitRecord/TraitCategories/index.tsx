@@ -19,7 +19,7 @@ const TraitCategories: FC<{
 	);
 
 	return (
-		<div className='mb-7 flex max-w-fit flex-wrap gap-2'>
+		<nav className='mb-7 flex max-w-fit flex-wrap gap-2'>
 			{TraitCategoryMap.map(({ className, code, name }, key) => (
 				<div
 					className={clsx(
@@ -54,7 +54,7 @@ const TraitCategories: FC<{
 					</button>
 				</div>
 			))}
-		</div>
+		</nav>
 	);
 };
 

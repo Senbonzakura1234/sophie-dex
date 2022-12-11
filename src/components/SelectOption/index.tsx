@@ -23,7 +23,7 @@ export default function SelectOption<V extends string | number | null>({
 	useCustomIcon?: boolean;
 }) {
 	return (
-		<div className={className} style={style}>
+		<menu className={className} style={style}>
 			<Listbox value={value} onChange={setValue} disabled={list.length === 1}>
 				<div className='relative'>
 					<Listbox.Button
@@ -93,6 +93,6 @@ export default function SelectOption<V extends string | number | null>({
 					</Transition>
 				</div>
 			</Listbox>
-		</div>
+		</menu>
 	);
 }
