@@ -1,5 +1,6 @@
 import localFont from '@next/font/local';
 import type { TRAIT_CATEGORY } from '@prisma/client';
+import { defaultLimit } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { TraitCategoryMap } from '@root/types/model';
 import clsx from 'clsx';
@@ -45,7 +46,7 @@ const TraitCategories: FC<{
 							if (isClickAble(code))
 								updateQuery({
 									page: '1',
-									limit: '10',
+									limit: defaultLimit,
 									traitCategory: securedQuery.traitCategory === code ? null : code,
 								});
 						}}

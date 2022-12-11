@@ -4,6 +4,9 @@ import type { SearchQuery } from '@root/types/common/zod';
 export const APP_NAME = 'Sophie Dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book - Wiki';
 
+export const defaultLimit = '20';
+export const defaultLimitInt = 20;
+
 export const defaultSearchParam: SearchQuery = {
 	search: null,
 	sortBy: 'noId',
@@ -12,7 +15,7 @@ export const defaultSearchParam: SearchQuery = {
 	traitCategory: null,
 	color: null,
 	cursor: null,
-	limit: '10',
+	limit: defaultLimit,
 	page: '1',
 };
 

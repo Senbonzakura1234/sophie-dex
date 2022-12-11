@@ -1,4 +1,4 @@
-import { HomeModernIcon } from '@heroicons/react/20/solid';
+import { HomeModernIcon } from '@heroicons/react/24/solid';
 import { PageNameList } from '@root/constants';
 import clsx from 'clsx';
 import Link from 'next/link';

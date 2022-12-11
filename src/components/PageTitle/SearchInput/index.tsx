@@ -1,4 +1,4 @@
-import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/20/solid';
+import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';

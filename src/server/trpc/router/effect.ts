@@ -1,4 +1,4 @@
-import { defaultSearchParam } from '@root/constants';
+import { defaultLimit, defaultLimitInt, defaultSearchParam } from '@root/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import { TRPCError } from '@trpc/server';
@@ -9,7 +9,7 @@ export const effectRouter = router({
 		const { search, sortBy, direction, page, limit, cursor } = { ...defaultSearchParam, ...input };
 
 		const pageInt = parseInt(page ?? '1');
-		const limitInt = parseInt(limit ?? '10');
+		const limitInt = parseInt(limit ?? defaultLimit);
 
 		const where = {
 			...(search
@@ -61,12 +61,12 @@ export const effectRouter = router({
 
 	getAllStub: publicProcedure.input(searchQueryValidator).query(async () => {
 		return {
-			records: effects.slice(0, 10),
+			records: effects.slice(0, defaultLimitInt),
 			cursor: null,
-			page: 1,
-			limit: 10,
+			page: '1',
+			limit: defaultLimit,
 			totalRecord: effects.length,
-			totalPage: Math.ceil(effects.length / 10),
+			totalPage: Math.ceil(effects.length / defaultLimitInt),
 		};
 	}),
 

@@ -1,5 +1,5 @@
 import { Transition } from '@headlessui/react';
-import { ArrowUpOnSquareIcon } from '@heroicons/react/20/solid';
+import { ArrowUpOnSquareIcon } from '@heroicons/react/24/solid';
 import type { FC, RefObject } from 'react';
 import { Fragment, useCallback, useState } from 'react';
 

@@ -1,5 +1,5 @@
 import { Listbox, Transition } from '@headlessui/react';
-import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/24/solid';
 import type { SelectOptionItem } from '@root/types/common';
 import clsx from 'clsx';
 import type { CSSProperties, Dispatch, SetStateAction } from 'react';

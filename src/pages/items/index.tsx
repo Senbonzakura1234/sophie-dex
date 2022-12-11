@@ -1,6 +1,7 @@
 import FilterControl from '@root/components/FilterControl';
 import ItemRecord from '@root/components/ItemRecord';
 import ListLayout from '@root/components/Layout/ListLayout';
+import { defaultLimit } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { trpc } from '@root/utils/trpc';
 import { type NextPage } from 'next';
@@ -23,7 +24,7 @@ const Items: NextPage = () => {
 						pageName='Item'
 						page={data.page ?? '1'}
 						totalPage={data.totalPage}
-						limit={data.limit ?? '10'}
+						limit={data.limit ?? defaultLimit}
 						totalRecord={data.totalRecord}
 					/>
 				) : null

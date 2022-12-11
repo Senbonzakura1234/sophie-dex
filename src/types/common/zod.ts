@@ -1,4 +1,4 @@
-import { idRegex } from '@root/constants';
+import { defaultLimit, idRegex } from '@root/constants';
 import type { ZodType } from 'zod';
 import { z } from 'zod';
 
@@ -35,7 +35,7 @@ export const searchQueryValidator = z.object({
 		.string()
 		.regex(/^[1-9]\d*$/)
 		.nullish()
-		.default('10'),
+		.default(defaultLimit),
 });
 
 export type SearchQuery = z.infer<typeof searchQueryValidator>;

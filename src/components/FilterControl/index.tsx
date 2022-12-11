@@ -1,3 +1,4 @@
+import { defaultLimit, defaultLimitInt } from '@root/constants';
 import { useFilterControl } from '@root/hooks/useFilterControl';
 import type { PageName } from '@root/types/common';
 import type { FC } from 'react';
@@ -17,9 +18,9 @@ const FilterControl: FC<{
 	limit: string;
 	totalRecord: number;
 	pageName: PageName;
-}> = ({ limit = '10', page = '1', totalPage = 0, totalRecord = 0, pageName }) => {
+}> = ({ limit = defaultLimit, page = '1', totalPage = 0, totalRecord = 0, pageName }) => {
 	const { limitInt, pageInt } = useMemo(
-		() => ({ limitInt: parseInt(limit) || 10, pageInt: parseInt(page) || 1 }),
+		() => ({ limitInt: parseInt(limit) || defaultLimitInt, pageInt: parseInt(page) || 1 }),
 		[limit, page],
 	);
 
