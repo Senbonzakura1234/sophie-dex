@@ -23,7 +23,7 @@ export default function SelectOption<V extends string | number | null>({
 	useCustomIcon?: boolean;
 }) {
 	return (
-		<menu className={className} style={style}>
+		<menu className={className}>
 			<Listbox value={value} onChange={setValue} disabled={list.length === 1}>
 				<div className='relative'>
 					<Listbox.Button
@@ -34,7 +34,7 @@ export default function SelectOption<V extends string | number | null>({
 							'focus-visible:border-primary-focus focus-visible:ring-offset-secondary-focus relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left text-xs shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 xl:text-sm',
 						)}
 					>
-						<span className='flex gap-2 truncate font-bold'>
+						<span className='flex gap-2 truncate font-bold' style={style}>
 							{withIcon && value.icon} {value.label}
 						</span>
 						<span className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2'>
@@ -75,6 +75,7 @@ export default function SelectOption<V extends string | number | null>({
 									</span>
 									{(item.value === value.value && withIcon) || useCustomIcon ? (
 										<span
+											style={style}
 											className={clsx(
 												{ 'text-primary': !useCustomIcon },
 												' absolute inset-y-0 left-0 flex items-center pl-3',

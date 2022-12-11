@@ -4,6 +4,7 @@ import type { PageName } from '@root/types/common';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
+import FadeWrapper from '../Animations/FadeWrapper';
 import ApplyFilter from './ApplyFilter';
 import ColorFilter from './ColorFilter';
 import ItemCategoryFilter from './ItemCategoryFilter';
@@ -35,38 +36,40 @@ const FilterControl: FC<{
 	const { filterData, setFilterData, isCanApplyFilter } = useFilterControl();
 
 	return (
-		<section className='container mx-auto p-3'>
-			<nav className='card bg-base-100 flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-2xl xl:place-content-end'>
-				<SortControl />
-				<div className='flex flex-wrap gap-2'>
-					{pageName === 'Trait' ? (
-						<TraitCategoryFilter filterData={filterData} setFilterData={setFilterData} />
-					) : null}
-					{pageName === 'Item' ? (
-						<>
-							<ColorFilter filterData={filterData} setFilterData={setFilterData} />
-							<ItemCategoryFilter filterData={filterData} setFilterData={setFilterData} />
-						</>
-					) : null}
+		<FadeWrapper show={true} appear={true}>
+			<section className='container mx-auto p-3'>
+				<nav className='card bg-base-100 flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-2xl xl:place-content-end'>
+					<SortControl />
+					<div className='flex flex-wrap gap-2'>
+						{pageName === 'Trait' ? (
+							<TraitCategoryFilter filterData={filterData} setFilterData={setFilterData} />
+						) : null}
+						{pageName === 'Item' ? (
+							<>
+								<ColorFilter filterData={filterData} setFilterData={setFilterData} />
+								<ItemCategoryFilter filterData={filterData} setFilterData={setFilterData} />
+							</>
+						) : null}
 
-					<ApplyFilter filterData={filterData} isCanApplyFilter={isCanApplyFilter} />
-				</div>
+						<ApplyFilter filterData={filterData} isCanApplyFilter={isCanApplyFilter} />
+					</div>
 
-				<div className='text-secondary-content my-auto text-xs font-bold'>
-					{from} - {to} of {totalRecord} records
-				</div>
+					<div className='text-secondary-content my-auto text-xs font-bold'>
+						{from} - {to} of {totalRecord} records
+					</div>
 
-				<Paginate
-					page={pageInt}
-					totalPage={totalPage}
-					filterData={filterData}
-					setFilterData={setFilterData}
-					isCanApplyFilter={isCanApplyFilter}
-				/>
+					<Paginate
+						page={pageInt}
+						totalPage={totalPage}
+						filterData={filterData}
+						setFilterData={setFilterData}
+						isCanApplyFilter={isCanApplyFilter}
+					/>
 
-				<ResetFilter setFilterData={setFilterData} />
-			</nav>
-		</section>
+					<ResetFilter setFilterData={setFilterData} />
+				</nav>
+			</section>
+		</FadeWrapper>
 	);
 };
 

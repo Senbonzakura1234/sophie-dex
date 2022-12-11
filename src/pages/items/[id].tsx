@@ -1,13 +1,18 @@
-import ItemRecord from '@root/components/ItemRecord';
 import DetailLayout from '@root/components/Layout/DetailLayout';
+import { RecordPlaceHolder } from '@root/components/SubComponent';
 import { useIdQuery } from '@root/hooks/useSearchQuery';
 import { trpc } from '@root/utils/trpc';
 import type { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
+
+const ItemRecord = dynamic(() => import('@root/components/ItemRecord'), {
+	ssr: false,
+});
 
 const ItemDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
-	const { data, isSuccess } = trpc.item.getOne.useQuery(securedIdQuery, {
+	const { data, isSuccess, isLoading } = trpc.item.getOne.useQuery(securedIdQuery, {
 		retry: 2,
 		enabled: isReady,
 		refetchOnReconnect: false,
@@ -16,10 +21,9 @@ const ItemDetail: NextPage = () => {
 
 	return (
 		<DetailLayout
-			isSuccess={isSuccess}
 			pageName='Item'
 			extraHead={
-				isSuccess ? (
+				!isLoading && isSuccess ? (
 					<Head>
 						<title>Item - {data.name}</title>
 						<meta
@@ -30,7 +34,7 @@ const ItemDetail: NextPage = () => {
 				) : null
 			}
 		>
-			{isSuccess && <ItemRecord item={data} />}
+			{!isLoading && isSuccess ? <ItemRecord item={data} /> : <RecordPlaceHolder />}
 		</DetailLayout>
 	);
 };

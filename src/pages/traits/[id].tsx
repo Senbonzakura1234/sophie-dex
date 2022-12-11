@@ -1,13 +1,18 @@
 import DetailLayout from '@root/components/Layout/DetailLayout';
-import TraitRecord from '@root/components/TraitRecord';
+import { RecordPlaceHolder } from '@root/components/SubComponent';
 import { useIdQuery } from '@root/hooks/useSearchQuery';
 import { trpc } from '@root/utils/trpc';
 import type { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
+
+const TraitRecord = dynamic(() => import('@root/components/TraitRecord'), {
+	ssr: false,
+});
 
 const TraitDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
-	const { data, isSuccess } = trpc.trait.getOne.useQuery(securedIdQuery, {
+	const { data, isSuccess, isLoading } = trpc.trait.getOne.useQuery(securedIdQuery, {
 		retry: 2,
 		enabled: isReady,
 		refetchOnReconnect: false,
@@ -16,10 +21,9 @@ const TraitDetail: NextPage = () => {
 
 	return (
 		<DetailLayout
-			isSuccess={isSuccess}
 			pageName='Trait'
 			extraHead={
-				isSuccess ? (
+				!isLoading && isSuccess ? (
 					<Head>
 						<title>Trait - {data.name}</title>
 						<meta name='description' content={data.description} />
@@ -27,7 +31,7 @@ const TraitDetail: NextPage = () => {
 				) : null
 			}
 		>
-			{isSuccess && <TraitRecord trait={data} />}
+			{!isLoading && isSuccess ? <TraitRecord trait={data} /> : <RecordPlaceHolder />}
 		</DetailLayout>
 	);
 };

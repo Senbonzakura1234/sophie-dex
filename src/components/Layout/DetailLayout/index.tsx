@@ -2,7 +2,7 @@ import type { PageName } from '@root/types/common';
 import Head from 'next/head';
 import type { FC, ReactNode } from 'react';
 
-const DetailLayout: FC<{ pageName: PageName; children?: ReactNode; extraHead?: ReactNode; isSuccess: boolean }> = ({
+const DetailLayout: FC<{ pageName: PageName; children?: ReactNode; extraHead?: ReactNode }> = ({
 	pageName,
 	children,
 	extraHead,

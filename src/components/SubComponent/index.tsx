@@ -1,6 +1,7 @@
 import type { COLOR, ITEM_CATEGORY, TRAIT_CATEGORY } from '@prisma/client';
 import type { SelectOptionItem } from '@root/types/common';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
+import type { FC } from 'react';
 
 const TraitCategoryMap = [
 	{
@@ -195,3 +196,20 @@ export const ColorSelectList = [
 		value: color,
 	})),
 ] satisfies SelectOptionItem<COLOR | null>[];
+
+export const RecordPlaceHolder: FC = () => <div className='card bg-base-100 h-[300px] w-full animate-pulse'></div>;
+
+export const ListPlaceHolder: FC<{ limit: number }> = ({ limit }) => (
+	<>
+		{Array(limit)
+			.fill(0)
+			.map((_, k) => (
+				<RecordPlaceHolder key={k} />
+			))}
+	</>
+);
+export const FilterControlPlaceHolder: FC = () => (
+	<div className='container mx-auto w-full animate-pulse p-3'>
+		<div className='card bg-base-100 h-[60px] w-full'></div>
+	</div>
+);

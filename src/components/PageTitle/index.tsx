@@ -2,11 +2,17 @@ import sophieBg from '@root/assets/pictures/sophie-bg.jpg';
 import sophieLogo from '@root/assets/pictures/sophie-logo.png';
 import type { PageName } from '@root/types/common';
 import clsx from 'clsx';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import type { FC } from 'react';
 
-import Breadcrumb from './Breadcrumb';
-import SearchInput from './SearchInput';
+const Breadcrumb = dynamic(() => import('./Breadcrumb'), {
+	ssr: false,
+});
+
+const SearchInput = dynamic(() => import('./SearchInput'), {
+	ssr: false,
+});
 
 const PageTitle: FC<{ pageName: PageName }> = ({ pageName }) => {
 	return (

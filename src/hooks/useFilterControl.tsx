@@ -43,7 +43,7 @@ export const useFilterControl = (): {
 	const [itemCateSelected, setItemCateSelected] = useState<SelectOptionItem<ITEM_CATEGORY | null>>(defaultItemCate);
 
 	const isGoToPageValid = useMemo(
-		() => !isEqualWithNullish(goToPage.value, securedQuery.page),
+		() => !isEqualWithNullish(goToPage.value ?? '1', securedQuery.page ?? '1'),
 		[goToPage.value, securedQuery.page],
 	);
 
@@ -66,11 +66,6 @@ export const useFilterControl = (): {
 		() => isReady && (isGoToPageValid || isTraitCateSelectValid || isColorSelectValid || isItemCateSelectValid),
 		[isColorSelectValid, isGoToPageValid, isItemCateSelectValid, isReady, isTraitCateSelectValid],
 	);
-
-	useEffect(() => {
-		console.log('pageSelected', goToPage.value);
-		console.log('page', securedQuery.page);
-	}, [goToPage.value, securedQuery.page]);
 
 	useEffect(() => {
 		setGoToPage(() => ({

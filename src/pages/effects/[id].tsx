@@ -1,13 +1,18 @@
-import EffectRecord from '@root/components/EffectRecord';
 import DetailLayout from '@root/components/Layout/DetailLayout';
+import { RecordPlaceHolder } from '@root/components/SubComponent';
 import { useIdQuery } from '@root/hooks/useSearchQuery';
 import { trpc } from '@root/utils/trpc';
 import type { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
+
+const EffectRecord = dynamic(() => import('@root/components/EffectRecord'), {
+	ssr: false,
+});
 
 const EffectDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
-	const { data, isSuccess } = trpc.effect.getOne.useQuery(securedIdQuery, {
+	const { data, isSuccess, isLoading } = trpc.effect.getOne.useQuery(securedIdQuery, {
 		retry: 2,
 		enabled: isReady,
 		refetchOnReconnect: false,
@@ -16,10 +21,9 @@ const EffectDetail: NextPage = () => {
 
 	return (
 		<DetailLayout
-			isSuccess={isSuccess}
 			pageName='Effect'
 			extraHead={
-				isSuccess ? (
+				!isLoading && isSuccess ? (
 					<Head>
 						<title>Effect - {data.name}</title>
 						<meta name='description' content={data.description} />
@@ -27,7 +31,7 @@ const EffectDetail: NextPage = () => {
 				) : null
 			}
 		>
-			{isSuccess && <EffectRecord effect={data} />}
+			{!isLoading && isSuccess ? <EffectRecord effect={data} /> : <RecordPlaceHolder />}
 		</DetailLayout>
 	);
 };
