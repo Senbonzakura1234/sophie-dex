@@ -16,12 +16,18 @@ const Paginate: FC<{
 	totalPage: number;
 	filterData: FilterData;
 	setFilterData: SetFilterData;
-}> = ({ page, totalPage, setFilterData: { setGoToPage }, filterData: { goToPage, traitCateSelected } }) => {
+	isCanApplyFilter: boolean;
+}> = ({
+	page,
+	totalPage,
+	setFilterData: { setGoToPage },
+	filterData: { goToPage, traitCateSelected, colorSelected, itemCateSelected },
+	isCanApplyFilter,
+}) => {
 	const { isReady, updateQuery } = useSearchQuery();
 
 	const isPreviousDisable = useMemo(() => !isReady || page === 1, [isReady, page]);
 	const isNextDisable = useMemo(() => !isReady || page === totalPage, [isReady, page, totalPage]);
-	const isJumpToDisable = useMemo(() => !isReady || goToPage.value === `${page}`, [goToPage, isReady, page]);
 
 	const pageList: SelectOptionItem<string>[] = useMemo(
 		() =>
@@ -55,13 +61,25 @@ const Paginate: FC<{
 					<ChevronLeftIcon width={16} height={16} />
 				</button>
 
-				<SelectOption list={pageList} setValue={setGoToPage} value={goToPage} className='my-auto w-32' withIcon />
+				<SelectOption<string | null>
+					list={pageList}
+					setValue={setGoToPage}
+					value={goToPage}
+					className='my-auto w-32'
+					withIcon
+				/>
 
 				<button
-					className='btn btn-ghost btn-circle btn-sm my-auto'
+					className='btn btn-ghost btn-circle btn-sm my-auto hidden xl:inline-flex'
+					disabled={!isCanApplyFilter}
 					onClick={() => {
-						if (isJumpToDisable) return;
-						updateQuery({ traitCategory: traitCateSelected.value, page: goToPage.value });
+						if (isCanApplyFilter)
+							updateQuery({
+								page: goToPage.value,
+								traitCategory: traitCateSelected.value,
+								color: colorSelected.value,
+								itemCategory: itemCateSelected.value,
+							});
 					}}
 				>
 					<ArrowTopRightOnSquareIcon width={16} height={16} />

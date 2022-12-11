@@ -119,13 +119,11 @@ export const TraitCategoryMap = [
 		name: 'Accessory',
 		className: 'atelier-ryza2-type-accessory',
 	},
-] as const satisfies Readonly<
-	{
-		code: TRAIT_CATEGORY;
-		name: string;
-		className: UnicodeClass;
-	}[]
->;
+] satisfies {
+	code: TRAIT_CATEGORY;
+	name: string;
+	className: UnicodeClass;
+}[];
 
 export const traitCategoryList = [
 	'ACCESSORY',

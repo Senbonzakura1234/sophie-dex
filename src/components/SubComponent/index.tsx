@@ -1,4 +1,4 @@
-import type { ITEM_CATEGORY, TRAIT_CATEGORY } from '@prisma/client';
+import type { COLOR, ITEM_CATEGORY, TRAIT_CATEGORY } from '@prisma/client';
 import type { SelectOptionItem } from '@root/types/common';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 
@@ -38,15 +38,19 @@ const TraitCategoryMap = [
 		name: 'Accessory',
 		className: 'atelier-ryza2-type-accessory',
 	},
-] as const satisfies Readonly<
-	{
-		code: TRAIT_CATEGORY;
-		name: string;
-		className: UnicodeClass;
-	}[]
->;
+] satisfies {
+	code: TRAIT_CATEGORY;
+	name: string;
+	className: UnicodeClass;
+}[];
+
+const colorMap = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW', 'NONE'] satisfies COLOR[];
 
 export const ItemCategorySelectList = [
+	{
+		value: null,
+		label: '-----------------',
+	},
 	{
 		value: 'PLANT',
 		label: 'Plant',
@@ -167,19 +171,27 @@ export const ItemCategorySelectList = [
 		value: 'MAGIC_ITEM',
 		label: 'Magic Item',
 	},
-] as const satisfies Readonly<SelectOptionItem<ITEM_CATEGORY>[]>;
+] satisfies SelectOptionItem<ITEM_CATEGORY | null>[];
 
-export const defaultTraitCategorySelect = {
+export const defaultSelect = {
 	value: null,
 	label: '-----------------',
 	icon: <span className='h-4 w-4 xl:h-5 xl:w-5' aria-hidden='true' />,
 };
 
 export const TraitCategorySelectList = [
-	defaultTraitCategorySelect,
+	defaultSelect,
 	...TraitCategoryMap.map(({ code, name, className }) => ({
 		label: name,
 		value: code,
 		icon: <span className={`h-4 w-4 xl:h-5 xl:w-5 ${className}`} aria-hidden='true' />,
 	})),
 ] satisfies SelectOptionItem<TRAIT_CATEGORY | null>[];
+
+export const ColorSelectList = [
+	defaultSelect,
+	...colorMap.map(color => ({
+		label: <span className='capitalize'>{color.toLocaleLowerCase()}</span>,
+		value: color,
+	})),
+] satisfies SelectOptionItem<COLOR | null>[];

@@ -24,3 +24,8 @@ export const parseColorToClassName = (color: COLOR): `bg-${string}-500` => {
 	if (color === 'NONE') return 'bg-slate-500' as const;
 	return `bg-${color.toLocaleLowerCase()}-500` as const;
 };
+
+export const isEqualWithNullish = (a: unknown, b: unknown) => {
+	if (!a === true && !b === true) return true;
+	return a === b;
+};

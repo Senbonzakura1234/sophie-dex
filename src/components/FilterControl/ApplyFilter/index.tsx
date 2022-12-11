@@ -2,26 +2,30 @@ import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { FilterData } from '@root/types/common';
 import type { FC } from 'react';
 
-const ApplyFilter: FC<{ filterData: FilterData }> = ({ filterData }) => {
-	const { securedQuery, isReady, updateQuery } = useSearchQuery();
+const ApplyFilter: FC<{ filterData: FilterData; isCanApplyFilter: boolean }> = ({
+	isCanApplyFilter,
+	filterData: { goToPage, colorSelected, traitCateSelected, itemCateSelected },
+}) => {
+	const { updateQuery } = useSearchQuery();
 
 	return (
-		<button
-			onClick={() => {
-				if (
-					isReady &&
-					(securedQuery.traitCategory !== filterData.traitCateSelected.value ||
-						securedQuery.page !== filterData.goToPage.value)
-				)
-					updateQuery({
-						page: filterData.goToPage.value,
-						traitCategory: filterData.traitCateSelected.value,
-					});
-			}}
-			className='btn btn-xs btn-primary my-auto'
-		>
-			Filter
-		</button>
+		<div className='my-auto grow xl:grow-0'>
+			<button
+				onClick={() => {
+					if (isCanApplyFilter)
+						updateQuery({
+							page: goToPage.value,
+							traitCategory: traitCateSelected.value,
+							color: colorSelected.value,
+							itemCategory: itemCateSelected.value,
+						});
+				}}
+				disabled={!isCanApplyFilter}
+				className='btn btn-xs btn-primary gap-1 capitalize'
+			>
+				<span className='hide xl:inline'>Apply</span>Filter
+			</button>
+		</div>
 	);
 };
 

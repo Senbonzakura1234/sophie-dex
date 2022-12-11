@@ -1,30 +1,30 @@
 import localFont from '@next/font/local';
-import type { TRAIT_CATEGORY } from '@prisma/client';
+import type { ITEM_CATEGORY } from '@prisma/client';
 import SelectOption from '@root/components/SelectOption';
-import { TraitCategorySelectList } from '@root/components/SubComponent';
+import { ItemCategorySelectList } from '@root/components/SubComponent';
 import type { FilterData, SetFilterData } from '@root/types/common';
 import type { FC } from 'react';
 
 const AtelierFont = localFont({ src: '../../../assets/fonts/Atelier.woff2' });
 
-const TraitCategoryFilter: FC<{
+const ItemCategoryFilter: FC<{
 	filterData: FilterData;
 	setFilterData: SetFilterData;
-}> = ({ filterData: { traitCateSelected }, setFilterData: { setTraitCateSelected } }) => {
+}> = ({ filterData: { itemCateSelected }, setFilterData: { setItemCateSelected } }) => {
 	return (
 		<div className='flex grow gap-2 xl:grow-0'>
 			<small className='my-auto text-sm font-bold'>Category:</small>
-			<SelectOption<TRAIT_CATEGORY | null>
+			<SelectOption<ITEM_CATEGORY | null>
 				style={AtelierFont.style}
-				list={TraitCategorySelectList}
-				setValue={setTraitCateSelected}
-				value={traitCateSelected}
-				className='my-auto w-40'
-				useCustomIcon={true}
-				withIcon={true}
+				list={ItemCategorySelectList}
+				setValue={setItemCateSelected}
+				value={itemCateSelected}
+				className='my-auto w-32 xl:w-36'
+				useCustomIcon={false}
+				withIcon={false}
 			/>
 		</div>
 	);
 };
 
-export default TraitCategoryFilter;
+export default ItemCategoryFilter;

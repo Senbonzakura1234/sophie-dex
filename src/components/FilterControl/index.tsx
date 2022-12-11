@@ -1,10 +1,11 @@
 import { useFilterControl } from '@root/hooks/useFilterControl';
-import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { PageName } from '@root/types/common';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
 import ApplyFilter from './ApplyFilter';
+import ColorFilter from './ColorFilter';
+import ItemCategoryFilter from './ItemCategoryFilter';
 import Paginate from './Paginate';
 import ResetFilter from './ResetFilter';
 import SortControl from './SortControl';
@@ -17,8 +18,6 @@ const FilterControl: FC<{
 	totalRecord: number;
 	pageName: PageName;
 }> = ({ limit = '10', page = '1', totalPage = 0, totalRecord = 0, pageName }) => {
-	const { securedQuery, isReady, updateQuery } = useSearchQuery();
-
 	const { limitInt, pageInt } = useMemo(
 		() => ({ limitInt: parseInt(limit) || 10, pageInt: parseInt(page) || 1 }),
 		[limit, page],
@@ -32,26 +31,35 @@ const FilterControl: FC<{
 		[limitInt, pageInt, totalRecord],
 	);
 
-	const { filterData, setFilterData } = useFilterControl({
-		page,
-		traitCategory: securedQuery.traitCategory,
-	});
+	const { filterData, setFilterData, isCanApplyFilter } = useFilterControl();
 
 	return (
 		<section className='container mx-auto p-3'>
 			<div className='card bg-base-100 flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-2xl xl:place-content-end'>
 				<SortControl />
-				<div className='flex gap-2'>
+				<div className='flex flex-wrap gap-2'>
 					{pageName === 'Trait' ? (
 						<TraitCategoryFilter filterData={filterData} setFilterData={setFilterData} />
 					) : null}
+					{pageName === 'Item' ? (
+						<>
+							<ColorFilter filterData={filterData} setFilterData={setFilterData} />
+							<ItemCategoryFilter filterData={filterData} setFilterData={setFilterData} />
+						</>
+					) : null}
 
-					<ApplyFilter filterData={filterData} />
+					<ApplyFilter filterData={filterData} isCanApplyFilter={isCanApplyFilter} />
 				</div>
 				<div className='text-secondary-content my-auto text-xs font-bold'>
 					{from} - {to} of {totalRecord} records
 				</div>
-				<Paginate page={pageInt} totalPage={totalPage} filterData={filterData} setFilterData={setFilterData} />
+				<Paginate
+					page={pageInt}
+					totalPage={totalPage}
+					filterData={filterData}
+					setFilterData={setFilterData}
+					isCanApplyFilter={isCanApplyFilter}
+				/>
 				<ResetFilter setFilterData={setFilterData} />
 			</div>
 		</section>

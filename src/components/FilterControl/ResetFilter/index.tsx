@@ -1,4 +1,4 @@
-import { defaultTraitCategorySelect } from '@root/components/SubComponent';
+import { defaultSelect } from '@root/components/SubComponent';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { SetFilterData } from '@root/types/common';
 import type { FC } from 'react';
@@ -14,7 +14,7 @@ const ResetFilter: FC<{ setFilterData: SetFilterData }> = ({
 			onClick={() => {
 				if (isReady) {
 					setGoToPage(() => ({ value: '1', label: `Page ${1}` }));
-					setTraitCateSelected(() => defaultTraitCategorySelect);
+					setTraitCateSelected(() => defaultSelect);
 					resetQuery();
 				}
 			}}

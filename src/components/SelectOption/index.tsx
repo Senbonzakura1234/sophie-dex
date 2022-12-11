@@ -24,11 +24,18 @@ export default function SelectOption<V extends string | number | null>({
 }) {
 	return (
 		<div className={className} style={style}>
-			<Listbox value={value} onChange={setValue}>
+			<Listbox value={value} onChange={setValue} disabled={list.length === 1}>
 				<div className='relative'>
-					<Listbox.Button className='focus-visible:border-primary-focus focus-visible:ring-offset-secondary-focus relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left text-xs shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 xl:text-sm'>
+					<Listbox.Button
+						className={clsx(
+							{
+								'cursor-not-allowed opacity-50': list.length === 1,
+							},
+							'focus-visible:border-primary-focus focus-visible:ring-offset-secondary-focus relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left text-xs shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 xl:text-sm',
+						)}
+					>
 						<span className='flex gap-2 truncate font-bold'>
-							{value.icon} {value.label}
+							{withIcon && value.icon} {value.label}
 						</span>
 						<span className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2'>
 							<ChevronUpDownIcon className='h-4 w-4 xl:h-5 xl:w-5' aria-hidden='true' />

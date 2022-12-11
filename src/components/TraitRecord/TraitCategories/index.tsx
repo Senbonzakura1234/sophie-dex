@@ -50,7 +50,7 @@ const TraitCategories: FC<{
 								});
 						}}
 					>
-						<div style={AtelierFont.style} className={clsx(className, 'w-6 text-xl')}></div>
+						<div style={AtelierFont.style} className={clsx(className, 'w-5 text-lg xl:w-6 xl:text-xl')}></div>
 					</button>
 				</div>
 			))}
