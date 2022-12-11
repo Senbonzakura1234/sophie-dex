@@ -1,6 +1,6 @@
 import EffectRecord from '@root/components/EffectRecord';
 import FilterControl from '@root/components/FilterControl';
-import PageTitle from '@root/components/PageTitle';
+import ListLayout from '@root/components/Layout/ListLayout';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { trpc } from '@root/utils/trpc';
 import { type NextPage } from 'next';
@@ -15,21 +15,22 @@ const Effects: NextPage = () => {
 	});
 
 	return (
-		<>
-			<PageTitle pageName='Effect' />
-			{isSuccess && (
-				<FilterControl
-					pageName='Effect'
-					page={data.page ?? '1'}
-					totalPage={data.totalPage}
-					limit={data.limit ?? '10'}
-					totalRecord={data.totalRecord}
-				/>
-			)}
-			<section className='container mx-auto grid auto-rows-fr gap-6 p-3 xl:grid-cols-2'>
-				{isSuccess ? data.records.map(effect => <EffectRecord key={effect.id} effect={effect} />) : null}
-			</section>
-		</>
+		<ListLayout
+			pageName='Effect'
+			filterControl={
+				isSuccess ? (
+					<FilterControl
+						pageName='Effect'
+						page={data.page ?? '1'}
+						totalPage={data.totalPage}
+						limit={data.limit ?? '10'}
+						totalRecord={data.totalRecord}
+					/>
+				) : null
+			}
+		>
+			{isSuccess ? data.records.map(effect => <EffectRecord key={effect.id} effect={effect} />) : null}
+		</ListLayout>
 	);
 };
 

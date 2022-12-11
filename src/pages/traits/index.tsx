@@ -1,5 +1,5 @@
 import FilterControl from '@root/components/FilterControl';
-import PageTitle from '@root/components/PageTitle';
+import ListLayout from '@root/components/Layout/ListLayout';
 import TraitRecord from '@root/components/TraitRecord';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { trpc } from '@root/utils/trpc';
@@ -15,21 +15,22 @@ const Traits: NextPage = () => {
 	});
 
 	return (
-		<>
-			<PageTitle pageName='Trait' />
-			{isSuccess && (
-				<FilterControl
-					pageName='Trait'
-					page={data.page ?? '1'}
-					totalPage={data.totalPage}
-					limit={data.limit ?? '10'}
-					totalRecord={data.totalRecord}
-				/>
-			)}
-			<section className='container mx-auto grid auto-rows-fr gap-6 p-3 xl:grid-cols-2'>
-				{isSuccess ? data.records.map(trait => <TraitRecord key={trait.id} trait={trait} />) : null}
-			</section>
-		</>
+		<ListLayout
+			pageName='Trait'
+			filterControl={
+				isSuccess ? (
+					<FilterControl
+						pageName='Trait'
+						page={data.page ?? '1'}
+						totalPage={data.totalPage}
+						limit={data.limit ?? '10'}
+						totalRecord={data.totalRecord}
+					/>
+				) : null
+			}
+		>
+			{isSuccess ? data.records.map(trait => <TraitRecord key={trait.id} trait={trait} />) : null}
+		</ListLayout>
 	);
 };
 
