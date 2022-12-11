@@ -21,7 +21,7 @@ const EffectRecord: FC<{ effect: Effect }> = ({ effect: { name, description, noI
 							if (securedIdQuery.id === id) return;
 							if (isReady) updateIdQuery({ id });
 						}}
-						className={clsx({ ['link']: securedIdQuery.id !== id })}
+						className={clsx({ ['link link-hover']: securedIdQuery.id !== id })}
 					>
 						{name}
 					</div>

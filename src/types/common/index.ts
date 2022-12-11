@@ -5,6 +5,7 @@ export const PageName = {
 	EFFECT: 'Effect',
 	ITEM: 'Item',
 	TRAIT: 'Trait',
+	HOME: 'Atelier Dex',
 } as const;
 
 export type PageName = typeof PageName[keyof typeof PageName];

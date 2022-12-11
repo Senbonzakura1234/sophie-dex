@@ -1,6 +1,6 @@
 import FilterControl from '@root/components/FilterControl';
 import ItemRecord from '@root/components/ItemRecord';
-import SubPageTitle from '@root/components/SubPageTitle';
+import PageTitle from '@root/components/PageTitle';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { trpc } from '@root/utils/trpc';
 import { type NextPage } from 'next';
@@ -16,7 +16,7 @@ const Items: NextPage = () => {
 
 	return (
 		<>
-			<SubPageTitle pageName='Item' />
+			<PageTitle pageName='Item' />
 			{isSuccess && (
 				<FilterControl
 					pageName='Item'

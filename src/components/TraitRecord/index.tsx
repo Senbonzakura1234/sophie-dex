@@ -24,7 +24,7 @@ const TraitRecord: FC<{ trait: Trait }> = ({ trait: { name, description, noId, t
 							if (securedIdQuery.id === id) return;
 							if (isReady) updateIdQuery({ id });
 						}}
-						className={clsx({ ['link']: securedIdQuery.id !== id })}
+						className={clsx({ ['link link-hover']: securedIdQuery.id !== id })}
 					>
 						{name}
 					</div>

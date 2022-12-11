@@ -13,7 +13,7 @@ const TraitDetail: NextPage = () => {
 	});
 
 	return isSuccess ? (
-		<section className='grid h-full w-full place-content-center gap-4 p-2'>
+		<section className='grid h-full w-full grid-cols-1 place-content-center gap-4 p-2 xl:grid-cols-none'>
 			<TraitRecord trait={data} />
 		</section>
 	) : null;

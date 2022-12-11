@@ -15,7 +15,7 @@ const ItemCategories: FC<{ itemCategories: ItemCategories[] }> = ({ itemCategori
 						if (isReady) updateQuery({ itemCategory: c.name });
 					}}
 					key={k}
-					className='link text-accent-content text-xs capitalize italic'
+					className='link link-hover text-accent-content text-xs capitalize italic'
 				>
 					{ItemCategoryDisplay[c.name].toLocaleLowerCase()} ({c.grade})
 				</a>

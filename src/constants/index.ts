@@ -1,3 +1,4 @@
+import type { PageName } from '@root/types/common';
 import type { SearchQuery } from '@root/types/common/zod';
 
 export const defaultSearchParam: SearchQuery = {
@@ -13,3 +14,5 @@ export const defaultSearchParam: SearchQuery = {
 };
 
 export const idRegex = /^[0-9A-F]{24}$/i;
+
+export const PageNameList = ['Effect', 'Item', 'Trait'] as const satisfies Readonly<PageName[]>;

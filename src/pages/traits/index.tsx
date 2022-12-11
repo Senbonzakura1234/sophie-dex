@@ -1,5 +1,5 @@
 import FilterControl from '@root/components/FilterControl';
-import SubPageTitle from '@root/components/SubPageTitle';
+import PageTitle from '@root/components/PageTitle';
 import TraitRecord from '@root/components/TraitRecord';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { trpc } from '@root/utils/trpc';
@@ -16,7 +16,7 @@ const Traits: NextPage = () => {
 
 	return (
 		<>
-			<SubPageTitle pageName='Trait' />
+			<PageTitle pageName='Trait' />
 			{isSuccess && (
 				<FilterControl
 					pageName='Trait'

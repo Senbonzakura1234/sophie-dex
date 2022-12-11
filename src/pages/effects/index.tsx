@@ -1,6 +1,6 @@
 import EffectRecord from '@root/components/EffectRecord';
 import FilterControl from '@root/components/FilterControl';
-import SubPageTitle from '@root/components/SubPageTitle';
+import PageTitle from '@root/components/PageTitle';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { trpc } from '@root/utils/trpc';
 import { type NextPage } from 'next';
@@ -16,7 +16,7 @@ const Effects: NextPage = () => {
 
 	return (
 		<>
-			<SubPageTitle pageName='Effect' />
+			<PageTitle pageName='Effect' />
 			{isSuccess && (
 				<FilterControl
 					pageName='Effect'
