@@ -8,15 +8,15 @@ const ScrollWrapper: FC<{ children?: ReactNode; scrollRef?: RefObject<HTMLDivEle
 	className,
 }) => {
 	return (
-		<Root className={clsx('ScrollAreaRoot', className)} type='hover'>
-			<Viewport className='ScrollAreaViewport scroll-wrapper relative h-full w-full scroll-smooth' ref={scrollRef}>
+		<Root className={clsx('scroll-area-root', className)} type='hover'>
+			<Viewport className='scroll-area-viewport scroll-wrapper relative h-full w-full' ref={scrollRef}>
 				{children}
 			</Viewport>
-			<Scrollbar className='ScrollAreaScrollbar' orientation='vertical' forceMount={true}>
-				<Thumb className='ScrollAreaThumb' />
+			<Scrollbar className='scroll-area-scrollbar' orientation='vertical' forceMount={true}>
+				<Thumb className='scroll-area-thumb' />
 			</Scrollbar>
-			<Scrollbar className='ScrollAreaScrollbar' orientation='horizontal'>
-				<Thumb className='ScrollAreaThumb' />
+			<Scrollbar className='scroll-area-scrollbar' orientation='horizontal'>
+				<Thumb className='scroll-area-thumb' />
 			</Scrollbar>
 			<Corner className='ScrollAreaCorner' />
 		</Root>
