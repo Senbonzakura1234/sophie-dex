@@ -5,7 +5,7 @@
 @font-face {
 	font-family: 'Atelier';
 	font-style: normal;
-	src: local(''), url('/Atelier.woff2') format('woff2');
+	src: local(''), url('/fonts/Atelier.woff2') format('woff2');
 }
 
 @layer components {
