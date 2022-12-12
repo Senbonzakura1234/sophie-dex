@@ -1,5 +1,5 @@
 import ScrollToTop from '@root/components/ScrollToTop';
-import { APP_DESCRIPTION, APP_NAME } from '@root/constants';
+import { APP_DESCRIPTION, APP_KEYWORD, APP_NAME } from '@root/constants';
 import Head from 'next/head';
 import type { FC, ReactNode } from 'react';
 import useScrollableRef from 'use-scrollable-ref';
@@ -13,6 +13,7 @@ const RootLayout: FC<{ children?: ReactNode }> = ({ children }) => {
 				<meta name='description' content={APP_DESCRIPTION} />
 				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 				<link rel='icon' href='/favicon.jpg' />
+				<meta name='keywords' content={APP_KEYWORD} />
 			</Head>
 
 			<main className='bg-base-200 relative h-screen w-screen overflow-y-auto scroll-smooth' ref={scrollableRef}>

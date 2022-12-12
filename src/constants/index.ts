@@ -3,6 +3,7 @@ import type { SearchQuery } from '@root/types/common/zod';
 
 export const APP_NAME = 'Sophie Dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book - Wiki';
+export const APP_KEYWORD = 'Atelier, Wiki, Sophie, Mysterious';
 
 export const defaultLimit = '20';
 export const defaultLimitInt = 20;
