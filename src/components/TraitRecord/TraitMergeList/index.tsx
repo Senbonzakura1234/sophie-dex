@@ -10,7 +10,7 @@ const TraitMergeList: FC<{ mergeFrom: MergeTrait[] }> = ({ mergeFrom }) => {
 					{consist.map(({ id, name, description }) => (
 						<li key={id} className='step step-primary' data-content='+'>
 							<div className='xl:tooltip xl:tooltip-bottom xl:z-50' data-tip={description}>
-								<Link href={{ pathname: `/traits/${id}` }} className='btn btn-sm capitalize'>
+								<Link href={{ pathname: `/traits/${id}` }} aria-label={name} className='btn btn-sm capitalize'>
 									{name}
 								</Link>
 							</div>

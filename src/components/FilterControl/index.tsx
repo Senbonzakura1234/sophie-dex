@@ -1,6 +1,7 @@
 import { defaultLimit, defaultLimitInt } from '@root/constants';
 import { useFilterControl } from '@root/hooks/useFilterControl';
 import type { PageName } from '@root/types/common';
+import dynamic from 'next/dynamic';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
@@ -11,7 +12,10 @@ import ItemCategoryFilter from './ItemCategoryFilter';
 import Paginate from './Paginate';
 import ResetFilter from './ResetFilter';
 import SortControl from './SortControl';
-import TraitCategoryFilter from './TraitCategoryFilter';
+
+const TraitCategoryFilter = dynamic(() => import('./TraitCategoryFilter'), {
+	ssr: false,
+});
 
 const FilterControl: FC<{
 	page: string;

@@ -14,10 +14,11 @@ const ItemCategories: FC<{ itemCategories: ItemCategories[] }> = ({ itemCategori
 						e.preventDefault();
 						if (isReady) updateQuery({ itemCategory: c.name });
 					}}
+					aria-label={ItemCategoryDisplay[c.name]}
 					key={k}
 					className='link link-hover text-accent-content text-xs capitalize italic'
 				>
-					{ItemCategoryDisplay[c.name].toLocaleLowerCase()} ({c.grade})
+					{ItemCategoryDisplay[c.name]} ({c.grade})
 				</a>
 			))}
 		</div>

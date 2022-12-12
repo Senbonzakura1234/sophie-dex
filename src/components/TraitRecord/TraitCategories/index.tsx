@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import type { FC } from 'react';
 import { useCallback } from 'react';
 
-const AtelierFont = localFont({ src: '../../../assets/fonts/Atelier.woff2' });
+const AtelierFont = localFont({ src: '../../../assets/fonts/atelier.woff2', preload: false });
 
 const TraitCategories: FC<{
 	traitCategories: TRAIT_CATEGORY[];

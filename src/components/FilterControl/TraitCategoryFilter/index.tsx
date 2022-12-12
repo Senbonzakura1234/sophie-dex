@@ -5,7 +5,7 @@ import { TraitCategorySelectList } from '@root/components/SubComponent';
 import type { FilterData, SetFilterData } from '@root/types/common';
 import type { FC } from 'react';
 
-const AtelierFont = localFont({ src: '../../../assets/fonts/Atelier.woff2' });
+const AtelierFont = localFont({ src: '../../../assets/fonts/atelier.woff2', preload: false });
 
 const TraitCategoryFilter: FC<{
 	filterData: FilterData;

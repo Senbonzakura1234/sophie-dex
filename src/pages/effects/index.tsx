@@ -1,18 +1,11 @@
+import EffectRecord from '@root/components/EffectRecord';
+import FilterControl from '@root/components/FilterControl';
 import ListLayout from '@root/components/Layout/ListLayout';
 import { FilterControlPlaceHolder, ListPlaceHolder } from '@root/components/SubComponent';
 import { defaultLimit, defaultLimitInt } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { trpc } from '@root/utils/trpc';
 import { type NextPage } from 'next';
-import dynamic from 'next/dynamic';
-
-const EffectRecord = dynamic(() => import('@root/components/EffectRecord'), {
-	ssr: false,
-});
-
-const FilterControl = dynamic(() => import('@root/components/FilterControl'), {
-	ssr: false,
-});
 
 const Effects: NextPage = () => {
 	const { securedQuery, isReady } = useSearchQuery();

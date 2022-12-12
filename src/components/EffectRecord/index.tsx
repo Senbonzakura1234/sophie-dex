@@ -1,3 +1,4 @@
+import { LinkIcon } from '@heroicons/react/24/solid';
 import type { Effect } from '@prisma/client';
 import { useIdQuery } from '@root/hooks/useSearchQuery';
 import clsx from 'clsx';
@@ -14,7 +15,11 @@ const EffectRecord: FC<{ effect: Effect }> = ({ effect: { name, description, noI
 				<div className='card-body'>
 					{securedIdQuery.id === id && (
 						<div className='card-actions place-content-end'>
-							<Link href={{ pathname: '/effects' }} className='btn btn-sm btn-outline capitalize'>
+							<Link
+								href={{ pathname: '/effects' }}
+								className='btn btn-sm btn-outline capitalize'
+								aria-label='Back to search'
+							>
 								Back to search
 							</Link>
 						</div>
@@ -24,8 +29,12 @@ const EffectRecord: FC<{ effect: Effect }> = ({ effect: { name, description, noI
 						<Link
 							href={{ pathname: `/effects/${id}` }}
 							className={clsx({ ['link link-hover']: securedIdQuery.id !== id })}
+							aria-label={name}
 						>
-							{name}
+							<span className='flex gap-2'>
+								<LinkIcon className={clsx({ hidden: securedIdQuery.id === id }, 'my-auto h-4 w-4')} />
+								{name}
+							</span>
 						</Link>
 					</div>
 

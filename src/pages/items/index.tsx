@@ -1,18 +1,11 @@
+import FilterControl from '@root/components/FilterControl';
+import ItemRecord from '@root/components/ItemRecord';
 import ListLayout from '@root/components/Layout/ListLayout';
 import { FilterControlPlaceHolder, ListPlaceHolder } from '@root/components/SubComponent';
 import { defaultLimit, defaultLimitInt } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { trpc } from '@root/utils/trpc';
 import { type NextPage } from 'next';
-import dynamic from 'next/dynamic';
-
-const ItemRecord = dynamic(() => import('@root/components/ItemRecord'), {
-	ssr: false,
-});
-
-const FilterControl = dynamic(() => import('@root/components/FilterControl'), {
-	ssr: false,
-});
 
 const Items: NextPage = () => {
 	const { securedQuery, isReady } = useSearchQuery();

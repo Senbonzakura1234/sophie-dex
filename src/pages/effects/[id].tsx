@@ -1,14 +1,10 @@
+import EffectRecord from '@root/components/EffectRecord';
 import DetailLayout from '@root/components/Layout/DetailLayout';
 import { RecordPlaceHolder } from '@root/components/SubComponent';
 import { useIdQuery } from '@root/hooks/useSearchQuery';
 import { trpc } from '@root/utils/trpc';
 import type { NextPage } from 'next';
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
-
-const EffectRecord = dynamic(() => import('@root/components/EffectRecord'), {
-	ssr: false,
-});
 
 const EffectDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();

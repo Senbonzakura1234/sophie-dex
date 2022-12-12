@@ -1,4 +1,4 @@
-import { HomeModernIcon } from '@heroicons/react/24/solid';
+import { HomeIcon, LinkIcon } from '@heroicons/react/24/solid';
 import FadeWrapper from '@root/components/Animations/FadeWrapper';
 import { PageNameList } from '@root/constants';
 import clsx from 'clsx';
@@ -24,8 +24,9 @@ const Breadcrumb = () => {
 										'link gap-1',
 									)}
 									href={{ pathname: '/' }}
+									aria-label='Go to homepage'
 								>
-									<HomeModernIcon className='h-4 w-4' />
+									<HomeIcon className='h-4 w-4' />
 									<span className='hidden xl:inline'>Home</span>
 								</Link>
 							</li>
@@ -37,13 +38,15 @@ const Breadcrumb = () => {
 												{
 													'link-hover text-primary': pathname !== `/${n.toLowerCase()}s`,
 												},
-												'link',
+												'link gap-1',
 											)}
 											href={{ pathname: `/${n.toLowerCase()}s` }}
+											aria-label={`Go to ${index} Search`}
 										>
+											<LinkIcon className='hidden h-4 w-4 xl:block' />
 											{n}
 										</Link>
-										{index < 2 && <span> / </span>}
+										{index < 2 && <span> &bull; </span>}
 									</Fragment>
 								))}
 							</li>
