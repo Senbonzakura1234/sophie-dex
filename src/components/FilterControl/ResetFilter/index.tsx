@@ -10,6 +10,7 @@ const ResetFilter: FC<{ setFilterData: SetFilterData }> = ({
 	return (
 		<button
 			className='btn btn-xs my-auto'
+			role='navigation'
 			disabled={!isReady}
 			onClick={() => {
 				if (isReady) {
@@ -18,6 +19,7 @@ const ResetFilter: FC<{ setFilterData: SetFilterData }> = ({
 					resetQuery();
 				}
 			}}
+			aria-label='Reset Filter'
 		>
 			Reset Filter
 		</button>

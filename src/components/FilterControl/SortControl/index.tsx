@@ -17,10 +17,13 @@ const SortControl: FC = () => {
 	return (
 		<div className='my-auto flex w-full flex-wrap gap-2 xl:w-auto'>
 			<div className='input-group w-auto'>
-				<button className='btn btn-xs capitalize' disabled>
+				<button role='none' className='btn btn-xs capitalize' disabled>
 					Sort:
 				</button>
+
 				<button
+					role='navigation'
+					aria-label='Sort By Grade'
 					disabled={!isReady}
 					onClick={() => {
 						if (sortBy !== 'noId') updateQuery({ sortBy: 'noId', direction: 'asc' });
@@ -35,7 +38,10 @@ const SortControl: FC = () => {
 				>
 					Grade
 				</button>
+
 				<button
+					role='navigation'
+					aria-label='Sort By Name'
 					disabled={!isReady}
 					onClick={() => {
 						if (sortBy !== 'name') updateQuery({ sortBy: 'name', direction: 'asc' });
@@ -52,10 +58,13 @@ const SortControl: FC = () => {
 				</button>
 			</div>
 			<div className='input-group w-auto'>
-				<button className='btn btn-xs capitalize' disabled>
+				<button role='none' className='btn btn-xs capitalize' disabled>
 					Direction:
 				</button>
+
 				<button
+					role='navigation'
+					aria-label='Sort Ascending'
 					disabled={!isReady}
 					onClick={() => {
 						if (direction !== 'asc') updateQuery({ direction: 'asc' });
@@ -70,7 +79,10 @@ const SortControl: FC = () => {
 				>
 					asc
 				</button>
+
 				<button
+					role='navigation'
+					aria-label='Sort Descending'
 					disabled={!isReady}
 					onClick={() => {
 						if (direction !== 'desc') updateQuery({ direction: 'desc' });

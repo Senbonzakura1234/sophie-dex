@@ -11,6 +11,7 @@ const ApplyFilter: FC<{ filterData: FilterData; isCanApplyFilter: boolean }> = (
 	return (
 		<div className='my-auto grow xl:grow-0'>
 			<button
+				role='navigation'
 				onClick={() => {
 					if (isCanApplyFilter)
 						updateQuery({
@@ -20,6 +21,7 @@ const ApplyFilter: FC<{ filterData: FilterData; isCanApplyFilter: boolean }> = (
 							itemCategory: itemCateSelected.value,
 						});
 				}}
+				aria-label='Apply Filter'
 				disabled={!isCanApplyFilter}
 				className='btn btn-xs btn-primary gap-1 capitalize'
 			>

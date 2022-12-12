@@ -1,6 +1,7 @@
 import type { Item } from '@prisma/client';
 import { useIdQuery } from '@root/hooks/useSearchQuery';
 import clsx from 'clsx';
+import Link from 'next/link';
 import type { FC } from 'react';
 
 import FadeWrapper from '../Animations/FadeWrapper';
@@ -8,28 +9,25 @@ import Color from './Color';
 import ItemCategories from './ItemCategories';
 
 const ItemRecord: FC<{ item: Item }> = ({ item: { name, noId, id, color, itemCategories } }) => {
-	const { isReady, updateIdQuery, securedIdQuery, backToListPage } = useIdQuery();
+	const { isReady, securedIdQuery } = useIdQuery();
 	return (
 		<FadeWrapper show={isReady} appear={true}>
 			<article className='card bg-base-100 grid w-full grow-0 shadow-2xl'>
 				<div className='card-body'>
 					{securedIdQuery.id === id && (
 						<div className='card-actions place-content-end'>
-							<button className='btn btn-sm btn-outline capitalize' onClick={backToListPage}>
+							<Link href={{ pathname: '/items' }} className='btn btn-sm btn-outline capitalize'>
 								Back to search
-							</button>
+							</Link>
 						</div>
 					)}
 					<div className='card-title'>
-						<div
-							onClick={() => {
-								if (securedIdQuery.id === id) return;
-								if (isReady) updateIdQuery({ id });
-							}}
+						<Link
+							href={{ pathname: `/items/${id}` }}
 							className={clsx({ ['link link-hover']: securedIdQuery.id !== id })}
 						>
 							{name}
-						</div>
+						</Link>
 					</div>
 					<span className='text-sm'>grade: {noId}</span>
 					<Color color={color} />

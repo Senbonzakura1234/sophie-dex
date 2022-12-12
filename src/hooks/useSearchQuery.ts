@@ -38,10 +38,8 @@ export const useSearchQuery = (): {
 export const useIdQuery = (): {
 	isReady: boolean;
 	securedIdQuery: Partial<IdQuery>;
-	updateIdQuery: (nextQuery: Partial<IdQuery>) => void;
-	backToListPage: () => void;
 } => {
-	const { query, isReady, push, pathname } = useRouter();
+	const { query, isReady } = useRouter();
 
 	const securedIdQuery: Partial<IdQuery> = useMemo(() => {
 		const result = idQueryValidator.safeParse(query);
@@ -49,23 +47,5 @@ export const useIdQuery = (): {
 		return result.success ? query : {};
 	}, [query]);
 
-	const updateIdQuery = useCallback(
-		(nextId: Partial<IdQuery>) => {
-			if (isReady)
-				push({
-					pathname: pathname.includes('[id]') ? pathname : `${pathname}/[id]`,
-					query: { id: nextId.id },
-				});
-		},
-		[isReady, push, pathname],
-	);
-
-	const backToListPage = useCallback(() => {
-		if (isReady)
-			push({
-				pathname: pathname.replaceAll('[id]', ''),
-			});
-	}, [isReady, pathname, push]);
-
-	return { securedIdQuery, isReady, updateIdQuery, backToListPage };
+	return { securedIdQuery, isReady };
 };

@@ -28,6 +28,8 @@ const SearchInput: FC = () => {
 					/>
 					{search.length > 0 && (
 						<button
+							role='search'
+							aria-label='Clear search query'
 							onClick={() => setSearch(() => '')}
 							className='btn btn-sm btn-ghost btn-circle absolute inset-y-[16%] right-16 z-10 xl:right-36'
 						>
@@ -35,6 +37,8 @@ const SearchInput: FC = () => {
 						</button>
 					)}
 					<button
+						role='navigation'
+						aria-label='Apply search query'
 						onClick={() => {
 							if (isReady) updateQuery({ search: search.length > 0 ? search : null });
 						}}

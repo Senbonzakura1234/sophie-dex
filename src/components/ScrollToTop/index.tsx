@@ -31,6 +31,7 @@ const ScrollToTop: FC<{
 			<div className='fixed inset-x-1/2 bottom-3 z-30 flex -translate-x-1/2 place-content-center lg:left-auto lg:right-6 lg:bottom-6'>
 				<button
 					className='btn btn-circle shadow-xl'
+					aria-label='Back To Top'
 					disabled={isScrolling || !scrollableBottomReached}
 					onClick={scrollToTop}
 				>

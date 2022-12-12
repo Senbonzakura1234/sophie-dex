@@ -1,9 +1,8 @@
 import type { MergeTrait } from '@prisma/client';
-import { useIdQuery } from '@root/hooks/useSearchQuery';
+import Link from 'next/link';
 import type { FC } from 'react';
 
 const TraitMergeList: FC<{ mergeFrom: MergeTrait[] }> = ({ mergeFrom }) => {
-	const { isReady, updateIdQuery } = useIdQuery();
 	return (
 		<nav className='grid place-content-center gap-2 xl:grid-cols-3'>
 			{mergeFrom.map(({ consist }, key) => (
@@ -11,14 +10,9 @@ const TraitMergeList: FC<{ mergeFrom: MergeTrait[] }> = ({ mergeFrom }) => {
 					{consist.map(({ id, name, description }) => (
 						<li key={id} className='step step-primary' data-content='+'>
 							<div className='xl:tooltip xl:tooltip-bottom xl:z-50' data-tip={description}>
-								<button
-									onClick={() => {
-										if (isReady) updateIdQuery({ id });
-									}}
-									className='btn btn-sm capitalize'
-								>
+								<Link href={{ pathname: `/traits/${id}` }} className='btn btn-sm capitalize'>
 									{name}
-								</button>
+								</Link>
 							</div>
 						</li>
 					))}

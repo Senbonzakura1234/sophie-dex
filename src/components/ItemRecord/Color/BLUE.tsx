@@ -13,6 +13,8 @@ const BLUE: FC<{ color: COLOR }> = ({ color }) => {
 			onClick={() => {
 				if (!isBtnDisabled) updateQuery({ color });
 			}}
+			role='navigation'
+			aria-label={`Filter ${color} Item`}
 			disabled={!isReady}
 			className='btn btn-xs border-blue-500 bg-blue-500 font-extrabold hover:border-blue-600 hover:bg-blue-600'
 		>
