@@ -6,6 +6,7 @@ module.exports = {
 			sans: ['Varela Round', 'sans-serif'],
 			serif: ['Merriweather Sans', 'sans-serif'],
 			mono: ['Monoton', 'cursive'],
+			atelier: ['Atelier'],
 		},
 		extend: {
 			gridTemplateRows: {

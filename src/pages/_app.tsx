@@ -1,4 +1,3 @@
-import '@root/styles/atelier.css';
 import '@root/styles/globals.css';
 
 import RootLayout from '@root/components/Layout/RootLayout';

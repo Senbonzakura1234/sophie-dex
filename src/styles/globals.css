@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: 'Atelier';
+	font-style: normal;
+	src: local(''), url('/Atelier.woff2') format('woff2');
+}
+
 @layer components {
 	.atelier-ryza2-book::before {
 		content: '\ea0f';

@@ -1,4 +1,3 @@
-import localFont from '@next/font/local';
 import type { TRAIT_CATEGORY } from '@prisma/client';
 import { defaultLimit } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
@@ -6,8 +5,6 @@ import { TraitCategoryMap } from '@root/types/model';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useCallback } from 'react';
-
-const AtelierFont = localFont({ src: '../../../assets/fonts/atelier.woff2' });
 
 const TraitCategories: FC<{
 	traitCategories: TRAIT_CATEGORY[];
@@ -51,7 +48,7 @@ const TraitCategories: FC<{
 								});
 						}}
 					>
-						<div style={AtelierFont.style} className={clsx(className, 'w-5 text-lg xl:w-6 xl:text-xl')}></div>
+						<div className={clsx(className, 'font-atelier w-5 text-lg xl:w-6 xl:text-xl')}></div>
 					</button>
 				</div>
 			))}
