@@ -32,7 +32,7 @@ const PageTitle: FC<{ pageName: PageName }> = ({ pageName }) => {
 				src={sophieBg}
 				alt='sophie'
 				sizes='80vw'
-				priority={true}
+				priority={false}
 			/>
 			<div className='bg-primary/75 absolute inset-0 z-10'></div>
 
