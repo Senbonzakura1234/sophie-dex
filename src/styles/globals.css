@@ -9,6 +9,10 @@
 }
 
 @layer components {
+	.scroll-wrapper > div {
+		display: block !important;
+		height: 100vh;
+	}
 	.atelier-ryza2-book::before {
 		content: '\ea0f';
 	}
@@ -291,26 +295,61 @@
 }
 
 @layer utilities {
-	@media (min-width: theme('screens.lg')) {
-		::-webkit-scrollbar {
-			width: theme('spacing.2');
-			height: theme('spacing.2');
-		}
+	.ScrollAreaRoot {
+		overflow: hidden;
+		--scrollbar-size: 10px;
+	}
 
-		::-webkit-scrollbar-track {
-			border-radius: theme('borderRadius.2xl');
-			transition: theme('transitionProperty.all') 300ms;
-			background: transparent;
-		}
+	.ScrollAreaViewport {
+		width: 100%;
+		height: 100%;
+	}
 
-		::-webkit-scrollbar-thumb {
-			border-radius: theme('borderRadius.2xl');
-			transition: theme('transitionProperty.all') 300ms;
-			background: theme('backgroundColor.primary');
-		}
+	.ScrollAreaScrollbar {
+		z-index: theme('zIndex.30');
+		display: flex;
+		/* ensures no selection */
+		user-select: none;
+		/* disable browser handling of all panning and zooming gestures on touch devices */
+		touch-action: none;
+		padding: 2px;
+		background: transparent;
+	}
 
-		::-webkit-scrollbar-thumb:hover {
-			background: theme('backgroundColor.primary-focus');
-		}
+	.ScrollAreaScrollbar[data-orientation='vertical'] {
+		width: theme('spacing.2');
+	}
+	.ScrollAreaScrollbar[data-orientation='horizontal'] {
+		flex-direction: column;
+		height: theme('spacing.2');
+	}
+
+	.ScrollAreaThumb {
+		flex: 1;
+		background: theme('colors.base-content');
+		opacity: 0.5;
+		border-radius: theme('spacing.1');
+		position: relative;
+		transition: opacity 160ms ease-out;
+	}
+	/* increase target size for touch devices https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */
+	.ScrollAreaThumb::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+		min-width: 44px;
+		min-height: 44px;
+	}
+
+	.ScrollAreaScrollbar:hover .ScrollAreaThumb {
+		opacity: 1;
+	}
+
+	.ScrollAreaCorner {
+		background: theme('colors.base-content');
 	}
 }
