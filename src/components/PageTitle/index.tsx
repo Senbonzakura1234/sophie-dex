@@ -1,12 +1,12 @@
-import sophieBg from '@root/assets/pictures/sophie-bg.jpg';
 import sophieLogo from '@root/assets/pictures/sophie-logo.png';
+import topBg from '@root/assets/pictures/top.jpg';
 import type { PageName } from '@root/types/common';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import type { FC } from 'react';
 
-const Breadcrumb = dynamic(() => import('./Breadcrumb'), {
+const Breadcrumb = dynamic(() => import('../Breadcrumb'), {
 	ssr: false,
 });
 
@@ -29,7 +29,7 @@ const PageTitle: FC<{ pageName: PageName }> = ({ pageName }) => {
 				className='object-cover'
 				fill
 				placeholder='blur'
-				src={sophieBg}
+				src={topBg}
 				alt='sophie'
 				sizes='100vh'
 				priority={false}

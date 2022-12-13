@@ -43,7 +43,7 @@ const FilterControl: FC<{
 
 	return (
 		<FadeWrapper show={true} appear={true}>
-			<section className='container mx-auto mt-3 p-3'>
+			<section className='container mx-auto px-3 pt-6 pb-3'>
 				<nav className='card bg-base-100 flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-2xl xl:place-content-end'>
 					<SortControl />
 					<div className='flex flex-wrap gap-2'>
