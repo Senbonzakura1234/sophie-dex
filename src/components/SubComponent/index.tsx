@@ -209,7 +209,7 @@ export const ListPlaceHolder: FC<{ limit: number }> = ({ limit }) => (
 	</>
 );
 export const FilterControlPlaceHolder: FC = () => (
-	<div className='container mx-auto w-full animate-pulse p-3'>
+	<div className='container mx-auto mt-3 w-full animate-pulse p-3'>
 		<div className='card bg-base-100 h-[60px] w-full'></div>
 	</div>
 );
