@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 const ApplyFilter: FC<{ filterData: FilterData; isCanApplyFilter: boolean }> = ({
 	isCanApplyFilter,
-	filterData: { goToPage, colorSelected, traitCateSelected, itemCateSelected },
+	filterData: { colorSelected, traitCateSelected, itemCateSelected },
 }) => {
 	const { updateQuery } = useSearchQuery();
 
@@ -15,7 +15,7 @@ const ApplyFilter: FC<{ filterData: FilterData; isCanApplyFilter: boolean }> = (
 				onClick={() => {
 					if (isCanApplyFilter)
 						updateQuery({
-							page: goToPage.value,
+							page: '1',
 							traitCategory: traitCateSelected.value,
 							color: colorSelected.value,
 							itemCategory: itemCateSelected.value,

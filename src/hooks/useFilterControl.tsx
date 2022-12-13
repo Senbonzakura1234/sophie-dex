@@ -30,22 +30,12 @@ export const useFilterControl = (): {
 		return ItemCategorySelectList.find(({ value }) => value === securedQuery.itemCategory) ?? defaultSelect;
 	}, [securedQuery.itemCategory]);
 
-	const [goToPage, setGoToPage] = useState<SelectOptionItem<string | null>>({
-		value: securedQuery.page ?? null,
-		label: `Page ${securedQuery.page ?? '1'}`,
-	});
-
 	const [traitCateSelected, setTraitCateSelected] =
 		useState<SelectOptionItem<TRAIT_CATEGORY | null>>(defaultTraitCate);
 
 	const [colorSelected, setColorSelected] = useState<SelectOptionItem<COLOR | null>>(defaultColor);
 
 	const [itemCateSelected, setItemCateSelected] = useState<SelectOptionItem<ITEM_CATEGORY | null>>(defaultItemCate);
-
-	const isGoToPageValid = useMemo(
-		() => !isEqualWithNullish(goToPage.value ?? '1', securedQuery.page ?? '1'),
-		[goToPage.value, securedQuery.page],
-	);
 
 	const isTraitCateSelectValid = useMemo(
 		() => !isEqualWithNullish(securedQuery.traitCategory, traitCateSelected.value),
@@ -63,16 +53,9 @@ export const useFilterControl = (): {
 	);
 
 	const isCanApplyFilter = useMemo(
-		() => isReady && (isGoToPageValid || isTraitCateSelectValid || isColorSelectValid || isItemCateSelectValid),
-		[isColorSelectValid, isGoToPageValid, isItemCateSelectValid, isReady, isTraitCateSelectValid],
+		() => isReady && (isTraitCateSelectValid || isColorSelectValid || isItemCateSelectValid),
+		[isColorSelectValid, isItemCateSelectValid, isReady, isTraitCateSelectValid],
 	);
-
-	useEffect(() => {
-		setGoToPage(() => ({
-			value: securedQuery.page ?? null,
-			label: `Page ${securedQuery.page ?? '1'}`,
-		}));
-	}, [securedQuery.page]);
 
 	useEffect(() => {
 		setTraitCateSelected(() => defaultTraitCate);
@@ -83,8 +66,8 @@ export const useFilterControl = (): {
 	}, [defaultColor]);
 
 	return {
-		setFilterData: { setTraitCateSelected, setGoToPage, setColorSelected, setItemCateSelected },
-		filterData: { traitCateSelected, goToPage, colorSelected, itemCateSelected },
+		setFilterData: { setTraitCateSelected, setColorSelected, setItemCateSelected },
+		filterData: { traitCateSelected, colorSelected, itemCateSelected },
 		isCanApplyFilter,
 	};
 };

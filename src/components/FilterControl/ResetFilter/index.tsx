@@ -1,11 +1,12 @@
 import { defaultSelect } from '@root/components/SubComponent';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import type { SetFilterData } from '@root/types/common';
-import type { FC } from 'react';
+import type { SelectOptionItem, SetFilterData } from '@root/types/common';
+import type { Dispatch, FC, SetStateAction } from 'react';
 
-const ResetFilter: FC<{ setFilterData: SetFilterData }> = ({
-	setFilterData: { setGoToPage, setTraitCateSelected },
-}) => {
+const ResetFilter: FC<{
+	setFilterData: SetFilterData;
+	setGoToPage: Dispatch<SetStateAction<SelectOptionItem<string | null>>>;
+}> = ({ setFilterData: { setTraitCateSelected, setColorSelected, setItemCateSelected }, setGoToPage }) => {
 	const { resetQuery, isReady } = useSearchQuery();
 	return (
 		<button
@@ -14,8 +15,10 @@ const ResetFilter: FC<{ setFilterData: SetFilterData }> = ({
 			disabled={!isReady}
 			onClick={() => {
 				if (isReady) {
-					setGoToPage(() => ({ value: '1', label: `Page ${1}` }));
+					setGoToPage(() => ({ value: null, label: `Page ${1}` }));
 					setTraitCateSelected(() => defaultSelect);
+					setColorSelected(() => defaultSelect);
+					setItemCateSelected(() => defaultSelect);
 					resetQuery();
 				}
 			}}

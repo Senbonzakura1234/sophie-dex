@@ -7,23 +7,17 @@ import {
 } from '@heroicons/react/24/solid';
 import SelectOption from '@root/components/SelectOption';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import type { FilterData, SelectOptionItem, SetFilterData } from '@root/types/common';
-import type { FC } from 'react';
+import type { SelectOptionItem } from '@root/types/common';
+import type { Dispatch, FC, SetStateAction } from 'react';
 import { useMemo } from 'react';
 
 const Paginate: FC<{
 	page: number;
 	totalPage: number;
-	filterData: FilterData;
-	setFilterData: SetFilterData;
-	isCanApplyFilter: boolean;
-}> = ({
-	page,
-	totalPage,
-	setFilterData: { setGoToPage },
-	filterData: { goToPage, traitCateSelected, colorSelected, itemCateSelected },
-	isCanApplyFilter,
-}) => {
+	isCanGoToPage: boolean;
+	goToPage: SelectOptionItem<string | null>;
+	setGoToPage: Dispatch<SetStateAction<SelectOptionItem<string | null>>>;
+}> = ({ page, totalPage, isCanGoToPage, goToPage, setGoToPage }) => {
 	const { isReady, updateQuery } = useSearchQuery();
 
 	const isPreviousDisable = useMemo(() => !isReady || page === 1, [isReady, page]);
@@ -77,15 +71,9 @@ const Paginate: FC<{
 				<button
 					role='navigation'
 					className='btn btn-ghost btn-circle btn-sm my-auto hidden xl:inline-flex'
-					disabled={!isCanApplyFilter}
+					disabled={!isCanGoToPage}
 					onClick={() => {
-						if (isCanApplyFilter)
-							updateQuery({
-								page: goToPage.value,
-								traitCategory: traitCateSelected.value,
-								color: colorSelected.value,
-								itemCategory: itemCateSelected.value,
-							});
+						if (isCanGoToPage) updateQuery({ page: goToPage.value });
 					}}
 					aria-label='Jump To Page'
 				>

@@ -1,5 +1,6 @@
 import { defaultLimit, defaultLimitInt } from '@root/constants';
 import { useFilterControl } from '@root/hooks/useFilterControl';
+import { useGoToPageControl } from '@root/hooks/useGoToPageControl';
 import type { PageName } from '@root/types/common';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
@@ -38,6 +39,7 @@ const FilterControl: FC<{
 	);
 
 	const { filterData, setFilterData, isCanApplyFilter } = useFilterControl();
+	const { goToPage, setGoToPage, isCanGoToPage } = useGoToPageControl();
 
 	return (
 		<FadeWrapper show={true} appear={true}>
@@ -65,12 +67,12 @@ const FilterControl: FC<{
 					<Paginate
 						page={pageInt}
 						totalPage={totalPage}
-						filterData={filterData}
-						setFilterData={setFilterData}
-						isCanApplyFilter={isCanApplyFilter}
+						goToPage={goToPage}
+						setGoToPage={setGoToPage}
+						isCanGoToPage={isCanGoToPage}
 					/>
 
-					<ResetFilter setFilterData={setFilterData} />
+					<ResetFilter setFilterData={setFilterData} setGoToPage={setGoToPage} />
 				</nav>
 			</section>
 		</FadeWrapper>
