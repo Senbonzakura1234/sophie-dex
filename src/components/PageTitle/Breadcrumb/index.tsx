@@ -14,7 +14,7 @@ const Breadcrumb = () => {
 			<div className='flex w-full'>
 				<nav className='card card-compact bg-base-100 mx-auto w-64 max-w-full py-1 xl:w-2/5'>
 					<div className='breadcrumbs mx-auto text-xs font-extrabold xl:text-base'>
-						<ul className='gap-1'>
+						<ul className='gap-1 font-serif font-extrabold'>
 							<li>
 								<Link
 									className={clsx(
@@ -46,7 +46,7 @@ const Breadcrumb = () => {
 											<LinkIcon className='hidden h-4 w-4 xl:block' />
 											{n}
 										</Link>
-										{index < 2 && <span> &bull; </span>}
+										{index < 2 && <div className='bg-base-300 h-2 w-2 rounded-full'></div>}
 									</Fragment>
 								))}
 							</li>

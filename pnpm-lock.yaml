@@ -42,7 +42,7 @@ specifiers:
   tsx: ^3.12.1
   typescript: ^4.9.3
   use-scrollable-ref: ^1.0.2
-  zod: ^3.19.1
+  zod: ^3.20.2
 
 dependencies:
   '@headlessui/react': 1.7.5_biqbaboplfbrettd7655fr4n2y
@@ -63,7 +63,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   superjson: 1.9.1
   use-scrollable-ref: 1.0.2_biqbaboplfbrettd7655fr4n2y
-  zod: 3.19.1
+  zod: 3.20.2
 
 devDependencies:
   '@types/node': 18.11.10
@@ -3327,6 +3327,6 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zod/3.19.1:
-    resolution: {integrity: sha512-LYjZsEDhCdYET9ikFu6dVPGp2YH9DegXjdJToSzD9rO6fy4qiRYFoyEYwps88OseJlPyl2NOe2iJuhEhL7IpEA==}
+  /zod/3.20.2:
+    resolution: {integrity: sha512-1MzNQdAvO+54H+EaK5YpyEy0T+Ejo/7YLHS93G3RnYWh5gaotGHwGeN/ZO687qEDU2y4CdStQYXVHIgrUl5UVQ==}
     dev: false

@@ -1,8 +1,9 @@
-import { defaultLimit, defaultLimitInt, defaultSearchParam } from '@root/constants';
+import type { Item } from '@prisma/client';
+import { defaultLimit, defaultSearchParam } from '@root/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
+import type { ListRecord } from '@root/types/model';
 import { TRPCError } from '@trpc/server';
-import items from 'prisma/data/items';
 
 export const itemRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }) => {
@@ -66,7 +67,7 @@ export const itemRouter = router({
 
 		const newCursor = records.at(-1)?.id as string;
 
-		return {
+		const listRecord: ListRecord<Item> = {
 			records,
 			cursor: newCursor,
 			page,
@@ -74,18 +75,8 @@ export const itemRouter = router({
 			totalRecord,
 			totalPage: Math.ceil(totalRecord / limitInt),
 		};
-	}),
 
-	getAllStub: publicProcedure.input(searchQueryValidator).query(async () => {
-		const data = items.filter(item => item.itemCategories.length > 2);
-		return {
-			records: data.slice(0, defaultLimitInt),
-			cursor: null,
-			page: '1',
-			limit: defaultLimit,
-			totalRecord: data.length,
-			totalPage: Math.ceil(data.length / defaultLimitInt),
-		};
+		return listRecord;
 	}),
 
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }) => {

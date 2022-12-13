@@ -16,7 +16,7 @@ const ItemCategories: FC<{ itemCategories: ItemCategories[] }> = ({ itemCategori
 					}}
 					aria-label={ItemCategoryDisplay[c.name]}
 					key={k}
-					className='link link-hover text-accent-content text-xs capitalize italic'
+					className='link link-hover text-accent-content font-serif text-xs capitalize italic'
 				>
 					{ItemCategoryDisplay[c.name]} ({c.grade})
 				</a>

@@ -18,7 +18,7 @@ const RootLayout: FC<{ children?: ReactNode }> = ({ children }) => {
 				<meta name='keywords' content={APP_KEYWORD} />
 			</Head>
 
-			<ScrollWrapper scrollRef={scrollableRef} className='bg-base-200 h-screen w-screen'>
+			<ScrollWrapper scrollRef={scrollableRef} className='bg-base-200 h-screen w-screen !antialiased'>
 				{children}
 				<ScrollToTop
 					scrollableBottomReached={scrollableBottomReached}

@@ -22,4 +22,6 @@ export const defaultSearchParam: SearchQuery = {
 
 export const idRegex = /^[0-9A-F]{24}$/i;
 
+export const positiveIntRegex = /^[1-9]\d*$/;
+
 export const PageNameList = ['Effect', 'Item', 'Trait'] as const satisfies Readonly<PageName[]>;

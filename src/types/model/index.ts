@@ -136,3 +136,12 @@ export const traitCategoryList = [
 ] as const satisfies Readonly<TRAIT_CATEGORY[]>;
 
 export type TraitCategoryDisplay = typeof TraitCategoryMap[keyof typeof TraitCategoryMap];
+
+export type ListRecord<T> = {
+	records: T[];
+	cursor: string;
+	page: string | null;
+	limit: string | null;
+	totalRecord: number;
+	totalPage: number;
+};

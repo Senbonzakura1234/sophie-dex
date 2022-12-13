@@ -3,8 +3,8 @@ module.exports = {
 	content: ['./src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		fontFamily: {
-			sans: ['Varela Round', 'sans-serif'],
-			serif: ['Merriweather Sans', 'sans-serif'],
+			sans: ['Rubik', 'sans-serif'],
+			serif: ['Roboto Slab', 'serif'],
 			mono: ['Monoton', 'cursive'],
 			atelier: ['Atelier'],
 		},

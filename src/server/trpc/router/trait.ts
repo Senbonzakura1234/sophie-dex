@@ -1,8 +1,9 @@
-import { defaultLimit, defaultLimitInt, defaultSearchParam } from '@root/constants';
+import type { Trait } from '@prisma/client';
+import { defaultLimit, defaultSearchParam } from '@root/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
+import type { ListRecord } from '@root/types/model';
 import { TRPCError } from '@trpc/server';
-import traits from 'prisma/data/traits';
 
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }) => {
@@ -60,7 +61,7 @@ export const traitRouter = router({
 
 		const newCursor = records.at(-1)?.id as string;
 
-		return {
+		const listRecord: ListRecord<Trait> = {
 			records,
 			cursor: newCursor,
 			page,
@@ -68,18 +69,8 @@ export const traitRouter = router({
 			totalRecord,
 			totalPage: Math.ceil(totalRecord / limitInt),
 		};
-	}),
 
-	getAllStub: publicProcedure.input(searchQueryValidator).query(async () => {
-		const data = traits.filter(trait => trait.mergeFrom.length > 1);
-		return {
-			records: data.slice(0, defaultLimitInt),
-			cursor: null,
-			page: '1',
-			limit: defaultLimit,
-			totalRecord: data.length,
-			totalPage: Math.ceil(data.length / defaultLimitInt),
-		};
+		return listRecord;
 	}),
 
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }) => {

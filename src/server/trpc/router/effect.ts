@@ -1,8 +1,9 @@
-import { defaultLimit, defaultLimitInt, defaultSearchParam } from '@root/constants';
+import type { Effect } from '@prisma/client';
+import { defaultLimit, defaultSearchParam } from '@root/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
+import type { ListRecord } from '@root/types/model';
 import { TRPCError } from '@trpc/server';
-import effects from 'prisma/data/effects';
 
 export const effectRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }) => {
@@ -49,7 +50,7 @@ export const effectRouter = router({
 
 		const newCursor = records.at(-1)?.id as string;
 
-		return {
+		const listRecord: ListRecord<Effect> = {
 			records,
 			cursor: newCursor,
 			page,
@@ -57,17 +58,8 @@ export const effectRouter = router({
 			totalRecord,
 			totalPage: Math.ceil(totalRecord / limitInt),
 		};
-	}),
 
-	getAllStub: publicProcedure.input(searchQueryValidator).query(async () => {
-		return {
-			records: effects.slice(0, defaultLimitInt),
-			cursor: null,
-			page: '1',
-			limit: defaultLimit,
-			totalRecord: effects.length,
-			totalPage: Math.ceil(effects.length / defaultLimitInt),
-		};
+		return listRecord;
 	}),
 
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }) => {

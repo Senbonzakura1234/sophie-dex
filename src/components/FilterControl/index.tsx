@@ -58,7 +58,7 @@ const FilterControl: FC<{
 						<ApplyFilter filterData={filterData} isCanApplyFilter={isCanApplyFilter} />
 					</div>
 
-					<div className='text-secondary-content my-auto text-xs font-bold'>
+					<div className='text-secondary-content my-auto text-xs font-semibold'>
 						{from} - {to} of {totalRecord} records
 					</div>
 

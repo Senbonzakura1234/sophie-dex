@@ -18,7 +18,7 @@ const ScrollWrapper: FC<{ children?: ReactNode; scrollRef?: RefObject<HTMLDivEle
 			<Scrollbar className='scroll-area-scrollbar' orientation='horizontal'>
 				<Thumb className='scroll-area-thumb' />
 			</Scrollbar>
-			<Corner className='ScrollAreaCorner' />
+			<Corner className='scroll-area-corner' />
 		</Root>
 	);
 };

@@ -37,9 +37,10 @@ export const useSearchQuery = (): {
 
 export const useIdQuery = (): {
 	isReady: boolean;
+	pathname: string;
 	securedIdQuery: Partial<IdQuery>;
 } => {
-	const { query, isReady } = useRouter();
+	const { query, isReady, pathname } = useRouter();
 
 	const securedIdQuery: Partial<IdQuery> = useMemo(() => {
 		const result = idQueryValidator.safeParse(query);
@@ -47,5 +48,5 @@ export const useIdQuery = (): {
 		return result.success ? query : {};
 	}, [query]);
 
-	return { securedIdQuery, isReady };
+	return { securedIdQuery, isReady, pathname: pathname.replaceAll('/[id]', '') };
 };
