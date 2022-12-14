@@ -6,7 +6,7 @@ import {
 	ChevronRightIcon,
 } from '@heroicons/react/24/solid';
 import SelectOption from '@root/components/SelectOption';
-import { useSearchQuery } from '@root/hooks/useSercuredRouter';
+import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { GoToPage } from '@root/types/common';
 import type { PaginateProps } from '@root/types/common/props';
 import type { FC } from 'react';

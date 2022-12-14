@@ -1,4 +1,4 @@
-import { useSearchQuery } from '@root/hooks/useSercuredRouter';
+import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { ApplyFilterProps } from '@root/types/common/props';
 import type { FC } from 'react';
 

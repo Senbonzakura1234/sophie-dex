@@ -1,7 +1,7 @@
 import ItemRecord from '@root/components/ItemRecord';
 import DetailLayout from '@root/components/Layout/DetailLayout';
 import { RecordPlaceHolder } from '@root/components/SubComponent';
-import { useIdQuery } from '@root/hooks/useSercuredRouter';
+import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import { trpc } from '@root/utils/trpc';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -9,7 +9,7 @@ import Head from 'next/head';
 const ItemDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
 	const { data, isSuccess, isLoading } = trpc.item.getOne.useQuery(securedIdQuery, {
-		retry: 2,
+		retry: 1,
 		enabled: isReady,
 		refetchOnReconnect: false,
 		refetchOnWindowFocus: false,

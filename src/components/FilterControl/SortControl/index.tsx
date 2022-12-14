@@ -1,4 +1,4 @@
-import { useSearchQuery } from '@root/hooks/useSercuredRouter';
+import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';

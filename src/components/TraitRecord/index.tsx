@@ -1,4 +1,4 @@
-import { useIdQuery } from '@root/hooks/useSercuredRouter';
+import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { TraitRecordProps } from '@root/types/common/props';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';

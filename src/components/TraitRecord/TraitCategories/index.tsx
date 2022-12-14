@@ -1,6 +1,6 @@
 import type { TRAIT_CATEGORY } from '@prisma/client';
 import { defaultLimit } from '@root/constants';
-import { useSearchQuery } from '@root/hooks/useSercuredRouter';
+import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { TraitCategoriesProps } from '@root/types/common/props';
 import { TraitCategoryMap } from '@root/types/model';
 import clsx from 'clsx';
