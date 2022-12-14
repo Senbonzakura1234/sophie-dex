@@ -8,10 +8,12 @@
 import withPWA from 'next-pwa';
 
 const pwaConfig = withPWA({
-	dest: 'public',
+	dest: '.',
 	register: true,
-	skipWaiting: true,
+	cacheStartUrl: true,
 	cacheOnFrontEndNav: true,
+	cleanupOutdatedCaches: true,
+	disable: process.env.NODE_ENV === 'development',
 });
 
 /** @type {import("next").NextConfig} */

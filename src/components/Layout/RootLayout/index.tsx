@@ -19,6 +19,8 @@ const RootLayout: FC<{ children?: ReactNode }> = ({ children }) => {
 				<link rel='manifest' href='/manifest.json' />
 				<meta name='theme-color' content='#F4C54F' />
 
+				<link rel='apple-touch-icon' href='/assets/splash_screens/icon.png' />
+
 				<link
 					rel='apple-touch-startup-image'
 					media='screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)'
