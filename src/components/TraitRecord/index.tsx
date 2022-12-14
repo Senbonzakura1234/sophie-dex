@@ -1,5 +1,5 @@
 import { useIdQuery } from '@root/hooks/useSearchQuery';
-import type { TraitRecordProps } from '@root/types/common';
+import type { TraitRecordProps } from '@root/types/common/props';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
 

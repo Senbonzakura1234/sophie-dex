@@ -1,4 +1,4 @@
-import type { TraitMergeListProps } from '@root/types/common';
+import type { TraitMergeListProps } from '@root/types/common/props';
 import Link from 'next/link';
 import type { FC } from 'react';
 

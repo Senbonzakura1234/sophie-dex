@@ -1,6 +1,6 @@
 import PageFooter from '@root/components/PageFooter';
 import PageTitle from '@root/components/PageTitle';
-import type { ListLayoutProps } from '@root/types/common';
+import type { ListLayoutProps } from '@root/types/common/props';
 import Head from 'next/head';
 import type { FC } from 'react';
 

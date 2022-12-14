@@ -1,5 +1,5 @@
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import type { ApplyFilterProps } from '@root/types/common';
+import type { ApplyFilterProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
 const ApplyFilter: FC<ApplyFilterProps> = ({

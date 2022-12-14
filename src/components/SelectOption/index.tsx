@@ -1,6 +1,6 @@
 import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/24/solid';
-import type { SelectOptionProps } from '@root/types/common';
+import type { SelectOptionProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { Fragment } from 'react';
 

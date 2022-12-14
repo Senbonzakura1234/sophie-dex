@@ -1,9 +1,9 @@
 import { Corner, Root, Scrollbar, Thumb, Viewport } from '@radix-ui/react-scroll-area';
-import type { ScrollWrapperProps } from '@root/types/common';
+import type { ScrollWrapperProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 
-const ScrollWrapper: FC<ScrollWrapperProps> = ({ children, ref, className }) => {
+const ScrollWrapper: FC<ScrollWrapperProps> = ({ children, refObject: ref, className }) => {
 	return (
 		<Root className={clsx('scroll-area-root', className)} type='hover'>
 			<Viewport className='scroll-area-viewport scroll-wrapper relative h-full w-full' ref={ref}>

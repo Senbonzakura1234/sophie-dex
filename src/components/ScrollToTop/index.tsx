@@ -1,11 +1,11 @@
 import { ArrowUpOnSquareIcon } from '@heroicons/react/24/solid';
-import type { ScrollToTopProps } from '@root/types/common';
+import type { ScrollToTopProps } from '@root/types/common/props';
 import type { FC } from 'react';
 import { useCallback, useState } from 'react';
 
 import FadeWrapper from '../Animations/FadeWrapper';
 
-const ScrollToTop: FC<ScrollToTopProps> = ({ scrollableBottomReached, ref, scrollPosition }) => {
+const ScrollToTop: FC<ScrollToTopProps> = ({ scrollableBottomReached, refObject: ref, scrollPosition }) => {
 	const [isScrolling, setIsScrolling] = useState(false);
 
 	const scrollToTop = useCallback(() => {

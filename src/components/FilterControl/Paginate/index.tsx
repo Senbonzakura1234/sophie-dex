@@ -7,7 +7,8 @@ import {
 } from '@heroicons/react/24/solid';
 import SelectOption from '@root/components/SelectOption';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import type { PaginateProps, SelectOptionItem } from '@root/types/common';
+import type { SelectOptionItem } from '@root/types/common';
+import type { PaginateProps } from '@root/types/common/props';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 

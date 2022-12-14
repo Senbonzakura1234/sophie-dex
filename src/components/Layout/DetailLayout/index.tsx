@@ -1,4 +1,4 @@
-import type { DetailLayoutProps } from '@root/types/common';
+import type { DetailLayoutProps } from '@root/types/common/props';
 import Head from 'next/head';
 import type { FC } from 'react';
 

@@ -1,7 +1,7 @@
 import type { ITEM_CATEGORY } from '@prisma/client';
 import SelectOption from '@root/components/SelectOption';
 import { ItemCategorySelectList } from '@root/components/SubComponent';
-import type { ItemCategoryFilterProps } from '@root/types/common';
+import type { ItemCategoryFilterProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
 const ItemCategoryFilter: FC<ItemCategoryFilterProps> = ({

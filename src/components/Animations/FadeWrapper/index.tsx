@@ -1,5 +1,5 @@
 import { Transition } from '@headlessui/react';
-import type { FadeWrapperProps } from '@root/types/common';
+import type { FadeWrapperProps } from '@root/types/common/props';
 import type { FC } from 'react';
 import { Fragment } from 'react';
 

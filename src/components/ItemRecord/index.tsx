@@ -1,5 +1,5 @@
 import { useIdQuery } from '@root/hooks/useSearchQuery';
-import type { ItemRecordProps } from '@root/types/common';
+import type { ItemRecordProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
 import FadeWrapper from '../Animations/FadeWrapper';

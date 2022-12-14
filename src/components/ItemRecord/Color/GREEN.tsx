@@ -1,9 +1,9 @@
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import type { GREENProp } from '@root/types/common';
+import type { GREENProps } from '@root/types/common/props';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
-const GREEN: FC<GREENProp> = ({ color }) => {
+const GREEN: FC<GREENProps> = ({ color }) => {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const isBtnDisabled = useMemo(() => !isReady || securedQuery.color === color, [color, isReady, securedQuery.color]);

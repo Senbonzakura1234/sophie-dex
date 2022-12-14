@@ -1,7 +1,7 @@
 import ScrollToTop from '@root/components/ScrollToTop';
 import ScrollWrapper from '@root/components/ScrollWrapper';
 import { APP_DESCRIPTION, APP_KEYWORD, APP_NAME } from '@root/constants';
-import type { RootLayoutProps } from '@root/types/common';
+import type { RootLayoutProps } from '@root/types/common/props';
 import Head from 'next/head';
 import type { FC } from 'react';
 import useScrollableRef from 'use-scrollable-ref';
@@ -194,11 +194,11 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
 				/>
 			</Head>
 
-			<ScrollWrapper ref={scrollableRef} className='bg-base-200 h-screen w-screen !antialiased'>
+			<ScrollWrapper refObject={scrollableRef} className='bg-base-200 h-screen w-screen !antialiased'>
 				{children}
 				<ScrollToTop
 					scrollableBottomReached={scrollableBottomReached}
-					ref={scrollableRef}
+					refObject={scrollableRef}
 					scrollPosition={scrollPosition}
 				/>
 			</ScrollWrapper>

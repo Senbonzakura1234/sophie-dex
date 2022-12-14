@@ -1,5 +1,5 @@
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import type { ItemCategoriesProps } from '@root/types/common';
+import type { ItemCategoriesProps } from '@root/types/common/props';
 import { ItemCategoryDisplay } from '@root/types/model';
 import type { FC } from 'react';
 

@@ -1,6 +1,6 @@
 import { DocumentChartBarIcon, HomeIcon } from '@heroicons/react/24/outline';
 import { ArrowLeftOnRectangleIcon, LinkIcon } from '@heroicons/react/24/solid';
-import type { RecordHeadProps } from '@root/types/common';
+import type { RecordHeadProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import Link from 'next/link';
 import type { FC } from 'react';

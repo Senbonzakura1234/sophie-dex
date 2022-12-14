@@ -1,7 +1,7 @@
 import { defaultLimit, defaultLimitInt } from '@root/constants';
 import { useFilterControl } from '@root/hooks/useFilterControl';
 import { useGoToPageControl } from '@root/hooks/useGoToPageControl';
-import type { FilterControlProps } from '@root/types/common';
+import type { FilterControlProps } from '@root/types/common/props';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
 import { useMemo } from 'react';

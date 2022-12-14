@@ -1,7 +1,7 @@
 import type { TRAIT_CATEGORY } from '@prisma/client';
 import SelectOption from '@root/components/SelectOption';
 import { TraitCategorySelectList } from '@root/components/SubComponent';
-import type { TraitCategoryFilterProps } from '@root/types/common';
+import type { TraitCategoryFilterProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
 const TraitCategoryFilter: FC<TraitCategoryFilterProps> = ({

@@ -1,4 +1,4 @@
-import type { ColorProps } from '@root/types/common';
+import type { ColorProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
 import BLUE from './BLUE';

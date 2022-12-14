@@ -1,7 +1,7 @@
 import type { COLOR } from '@prisma/client';
 import SelectOption from '@root/components/SelectOption';
 import { ColorSelectList } from '@root/components/SubComponent';
-import type { ColorFilterProps } from '@root/types/common';
+import type { ColorFilterProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
 const ColorFilter: FC<ColorFilterProps> = ({ filterData: { colorSelected }, setFilterData: { setColorSelected } }) => {
