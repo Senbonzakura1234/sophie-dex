@@ -5,6 +5,15 @@
  */
 !process.env.SKIP_ENV_VALIDATION && (await import('./src/env/server.mjs'));
 
+import withPWA from 'next-pwa';
+
+const pwaConfig = withPWA({
+	dest: 'public',
+	register: true,
+	skipWaiting: true,
+	cacheOnFrontEndNav: true,
+});
+
 /** @type {import("next").NextConfig} */
 const config = {
 	productionBrowserSourceMaps: true,
@@ -14,5 +23,6 @@ const config = {
 		locales: ['en'],
 		defaultLocale: 'en',
 	},
+	...pwaConfig,
 };
 export default config;

@@ -32,7 +32,8 @@
 	"files.associations": {
 		"*.eslintrc": "json",
 		"*.json": "json",
-		"*.prettierrc": "json"
+		"*.prettierrc": "json",
+		"*.webmanifest": "json"
 	},
 	"typescript.tsdk": "node_modules\\typescript\\lib"
 }
