@@ -20,7 +20,7 @@ const ListLayout: FC<{ pageName: PageName; children?: ReactNode; filterControl?:
 
 			{filterControl}
 
-			<section className='container mx-auto grid auto-rows-fr gap-6 px-3 pt-3 pb-9 xl:grid-cols-2'>
+			<section className='container mx-auto grid auto-rows-fr gap-6 px-3 pt-3 pb-9 2xl:grid-cols-2'>
 				{children}
 			</section>
 

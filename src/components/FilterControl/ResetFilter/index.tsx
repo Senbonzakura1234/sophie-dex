@@ -10,7 +10,7 @@ const ResetFilter: FC<{
 	const { resetQuery, isReady } = useSearchQuery();
 	return (
 		<button
-			className='btn btn-xs my-auto'
+			className='btn btn-xs my-auto gap-1'
 			role='navigation'
 			disabled={!isReady}
 			onClick={() => {
@@ -24,7 +24,7 @@ const ResetFilter: FC<{
 			}}
 			aria-label='Reset Filter'
 		>
-			Reset Filter
+			Reset<span className='2xl:hidden'>Filter</span>
 		</button>
 	);
 };

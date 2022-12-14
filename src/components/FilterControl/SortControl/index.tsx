@@ -15,7 +15,7 @@ const SortControl: FC = () => {
 	);
 
 	return (
-		<div className='my-auto flex w-full flex-wrap gap-2 xl:w-auto'>
+		<div className='my-auto flex w-full flex-wrap gap-2 2xl:w-auto'>
 			<div className='input-group w-auto'>
 				<button role='none' className='btn btn-xs capitalize' disabled>
 					Sort:

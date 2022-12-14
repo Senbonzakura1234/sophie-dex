@@ -44,8 +44,11 @@ const FilterControl: FC<{
 	return (
 		<FadeWrapper show={true} appear={true}>
 			<section className='container mx-auto px-3 pt-6 pb-3'>
-				<nav className='card bg-base-100 flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-2xl xl:place-content-end'>
+				<nav className='card bg-base-100 flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-2xl 2xl:place-content-end'>
 					<SortControl />
+
+					<div className='divider divider-horizontal m-0 hidden w-auto 2xl:flex'></div>
+
 					<div className='flex flex-wrap gap-2'>
 						{pageName === 'Trait' ? (
 							<TraitCategoryFilter filterData={filterData} setFilterData={setFilterData} />
@@ -60,6 +63,8 @@ const FilterControl: FC<{
 						<ApplyFilter filterData={filterData} isCanApplyFilter={isCanApplyFilter} />
 					</div>
 
+					<div className='divider divider-horizontal m-0 hidden w-auto 2xl:flex'></div>
+
 					<div className='text-secondary-content my-auto text-xs font-semibold'>
 						{from} - {to} of {totalRecord} records
 					</div>
@@ -71,6 +76,8 @@ const FilterControl: FC<{
 						setGoToPage={setGoToPage}
 						isCanGoToPage={isCanGoToPage}
 					/>
+
+					<div className='divider divider-horizontal m-0 hidden w-auto 2xl:flex'></div>
 
 					<ResetFilter setFilterData={setFilterData} setGoToPage={setGoToPage} />
 				</nav>

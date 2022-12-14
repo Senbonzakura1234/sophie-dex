@@ -27,7 +27,7 @@ const RecordHead: FC<{ name: string; id: string; isCurrentRecord: boolean; pathn
 						aria-label='Back to search'
 					>
 						<ArrowLeftOnRectangleIcon className='my-auto h-4 w-4' />
-						<span className='hidden xl:inline'>Back to search</span>
+						<span className='hidden 2xl:inline'>Back to search</span>
 					</Link>
 				</div>
 			)}

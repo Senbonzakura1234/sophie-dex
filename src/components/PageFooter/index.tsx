@@ -9,7 +9,7 @@ const Breadcrumb = dynamic(() => import('../Breadcrumb'), {
 
 const PageFooter: FC = () => {
 	return (
-		<section className='xl:h1/4 relative h-1/3 w-full overflow-hidden shadow-inner'>
+		<section className='2xl:h1/4 relative h-1/3 w-full overflow-hidden shadow-inner'>
 			<Image
 				className='object-cover'
 				fill
@@ -21,7 +21,7 @@ const PageFooter: FC = () => {
 			/>
 			<div className='bg-primary/50 absolute inset-0 z-10'></div>
 
-			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-3 px-4 pt-5 xl:gap-6'>
+			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-3 px-4 pt-5 2xl:gap-6'>
 				<Breadcrumb />
 			</div>
 		</section>

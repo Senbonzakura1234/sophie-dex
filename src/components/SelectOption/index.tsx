@@ -31,7 +31,7 @@ export default function SelectOption<V extends string | number | null>({
 							{
 								'cursor-not-allowed opacity-50': list.length === 1,
 							},
-							'focus-visible:border-primary-focus focus-visible:ring-offset-secondary-focus relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left text-xs shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 xl:text-sm',
+							'focus-visible:border-primary-focus focus-visible:ring-offset-secondary-focus relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left text-xs shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 2xl:text-sm',
 						)}
 					>
 						<span className='flex gap-2 truncate pl-1 font-bold'>
@@ -39,7 +39,7 @@ export default function SelectOption<V extends string | number | null>({
 							{value.label}
 						</span>
 						<span className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2'>
-							<ChevronUpDownIcon className='h-4 w-4 xl:h-5 xl:w-5' aria-hidden='true' />
+							<ChevronUpDownIcon className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />
 						</span>
 					</Listbox.Button>
 					<Transition
@@ -69,7 +69,7 @@ export default function SelectOption<V extends string | number | null>({
 											{
 												'font-bold': item.value === value.value,
 											},
-											'xl:text-md block truncate text-sm',
+											'2xl:text-md block truncate text-sm',
 										)}
 									>
 										{item.label}
@@ -85,7 +85,7 @@ export default function SelectOption<V extends string | number | null>({
 											{useCustomIcon ? (
 												item.icon
 											) : (
-												<CheckIcon className='h-4 w-4 xl:h-5 xl:w-5' aria-hidden='true' />
+												<CheckIcon className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />
 											)}
 										</span>
 									) : null}

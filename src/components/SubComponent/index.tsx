@@ -50,7 +50,7 @@ const colorMap = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW', 'NONE'] satisfies C
 export const ItemCategorySelectList = [
 	{
 		value: null,
-		label: '-----------------',
+		label: '------------',
 	},
 	{
 		value: 'PLANT',
@@ -176,8 +176,8 @@ export const ItemCategorySelectList = [
 
 export const defaultSelect = {
 	value: null,
-	label: '-----------------',
-	icon: <span className='h-4 w-4 xl:h-5 xl:w-5' aria-hidden='true' />,
+	label: '----------',
+	icon: <span className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />,
 };
 
 export const TraitCategorySelectList = [
@@ -185,7 +185,7 @@ export const TraitCategorySelectList = [
 	...TraitCategoryMap.map(({ code, name, className }) => ({
 		label: name,
 		value: code,
-		icon: <span className={`h-4 w-4 xl:h-5 xl:w-5 ${className}`} aria-hidden='true' />,
+		icon: <span className={`h-4 w-4 2xl:h-5 2xl:w-5 ${className}`} aria-hidden='true' />,
 	})),
 ] satisfies SelectOptionItem<TRAIT_CATEGORY | null>[];
 

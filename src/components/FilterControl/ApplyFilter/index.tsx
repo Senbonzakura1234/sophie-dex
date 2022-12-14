@@ -9,7 +9,7 @@ const ApplyFilter: FC<{ filterData: FilterData; isCanApplyFilter: boolean }> = (
 	const { updateQuery } = useSearchQuery();
 
 	return (
-		<div className='my-auto grow xl:grow-0'>
+		<div className='my-auto grow 2xl:grow-0'>
 			<button
 				role='navigation'
 				onClick={() => {
@@ -25,7 +25,7 @@ const ApplyFilter: FC<{ filterData: FilterData; isCanApplyFilter: boolean }> = (
 				disabled={!isCanApplyFilter}
 				className='btn btn-xs btn-primary gap-1 capitalize'
 			>
-				<span className='hide xl:inline'>Apply</span>Filter
+				<span className='hide 2xl:inline'>Apply</span>Filter
 			</button>
 		</div>
 	);

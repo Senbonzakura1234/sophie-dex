@@ -21,7 +21,7 @@ const TraitRecord: FC<{ trait: Trait }> = ({ trait: { name, description, noId, t
 
 					<span className='text-sm'>grade: {noId}</span>
 
-					<span className='font-serif text-lg xl:h-16'>{description}</span>
+					<span className='font-serif text-lg 2xl:h-16'>{description}</span>
 
 					<TraitCategories traitCategories={traitCategories} />
 

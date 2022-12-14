@@ -9,13 +9,13 @@ const ItemCategoryFilter: FC<{
 	setFilterData: SetFilterData;
 }> = ({ filterData: { itemCateSelected }, setFilterData: { setItemCateSelected } }) => {
 	return (
-		<div className='flex grow gap-2 xl:grow-0'>
+		<div className='flex grow gap-2 2xl:grow-0'>
 			<small className='my-auto text-sm font-bold'>Category:</small>
 			<SelectOption<ITEM_CATEGORY | null>
 				list={ItemCategorySelectList}
 				setValue={setItemCateSelected}
 				value={itemCateSelected}
-				className='my-auto w-32 xl:w-36'
+				className='my-auto w-32 2xl:w-32'
 				useCustomIcon={false}
 				withIcon={false}
 			/>

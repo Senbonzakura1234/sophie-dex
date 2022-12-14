@@ -22,10 +22,10 @@ const TraitCategories: FC<{
 				<div
 					className={clsx(
 						{
-							'xl:tooltip-secondary': securedQuery.traitCategory === code && isClickAble(code),
-							'xl:tooltip-primary': securedQuery.traitCategory !== code && isClickAble(code),
+							'2xl:tooltip-secondary': securedQuery.traitCategory === code && isClickAble(code),
+							'2xl:tooltip-primary': securedQuery.traitCategory !== code && isClickAble(code),
 						},
-						'xl:tooltip xl:tooltip-bottom',
+						'2xl:tooltip 2xl:tooltip-bottom',
 					)}
 					data-tip={name}
 					key={key}
@@ -37,7 +37,7 @@ const TraitCategories: FC<{
 								'btn-secondary': securedQuery.traitCategory === code && isClickAble(code),
 								'btn-primary': securedQuery.traitCategory !== code && isClickAble(code),
 							},
-							'btn btn-sm xl:btn-md',
+							'btn btn-sm 2xl:btn-md',
 						)}
 						onClick={() => {
 							if (isClickAble(code))
@@ -48,7 +48,7 @@ const TraitCategories: FC<{
 								});
 						}}
 					>
-						<div className={clsx(className, 'font-atelier w-5 text-lg xl:w-6 xl:text-xl')}></div>
+						<div className={clsx(className, 'font-atelier w-5 text-lg 2xl:w-6 2xl:text-xl')}></div>
 					</button>
 				</div>
 			))}

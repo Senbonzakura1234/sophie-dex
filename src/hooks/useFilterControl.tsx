@@ -18,17 +18,20 @@ export const useFilterControl = (): {
 } => {
 	const { securedQuery, isReady } = useSearchQuery();
 
-	const defaultTraitCate = useMemo(() => {
-		return TraitCategorySelectList.find(({ value }) => value === securedQuery.traitCategory) ?? defaultSelect;
-	}, [securedQuery.traitCategory]);
+	const defaultTraitCate = useMemo(
+		() => TraitCategorySelectList.find(({ value }) => value === securedQuery.traitCategory) ?? defaultSelect,
+		[securedQuery.traitCategory],
+	);
 
-	const defaultColor = useMemo(() => {
-		return ColorSelectList.find(({ value }) => value === securedQuery.color) ?? defaultSelect;
-	}, [securedQuery.color]);
+	const defaultColor = useMemo(
+		() => ColorSelectList.find(({ value }) => value === securedQuery.color) ?? defaultSelect,
+		[securedQuery.color],
+	);
 
-	const defaultItemCate = useMemo(() => {
-		return ItemCategorySelectList.find(({ value }) => value === securedQuery.itemCategory) ?? defaultSelect;
-	}, [securedQuery.itemCategory]);
+	const defaultItemCate = useMemo(
+		() => ItemCategorySelectList.find(({ value }) => value === securedQuery.itemCategory) ?? defaultSelect,
+		[securedQuery.itemCategory],
+	);
 
 	const [traitCateSelected, setTraitCateSelected] =
 		useState<SelectOptionItem<TRAIT_CATEGORY | null>>(defaultTraitCate);

@@ -70,7 +70,7 @@ const Paginate: FC<{
 
 				<button
 					role='navigation'
-					className='btn btn-ghost btn-circle btn-sm my-auto hidden xl:inline-flex'
+					className='btn btn-ghost btn-circle btn-sm my-auto hidden 2xl:inline-flex'
 					disabled={!isCanGoToPage}
 					onClick={() => {
 						if (isCanGoToPage) updateQuery({ page: goToPage.value });

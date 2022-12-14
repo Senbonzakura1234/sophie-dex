@@ -12,8 +12,8 @@ const Breadcrumb = () => {
 	return (
 		<FadeWrapper show={isReady} appear={true}>
 			<div className='flex w-full'>
-				<nav className='card card-compact bg-base-100 mx-auto w-64 max-w-full py-1 xl:w-2/5'>
-					<div className='breadcrumbs mx-auto text-xs font-extrabold xl:text-base'>
+				<nav className='card card-compact bg-base-100 mx-auto w-64 max-w-full py-1 2xl:w-2/5'>
+					<div className='breadcrumbs mx-auto text-xs font-extrabold 2xl:text-base'>
 						<ul className='gap-1 font-serif font-extrabold'>
 							<li>
 								<Link
@@ -27,10 +27,10 @@ const Breadcrumb = () => {
 									aria-label='Go to homepage'
 								>
 									<HomeIcon className='h-4 w-4' />
-									<span className='hidden xl:inline'>Home</span>
+									<span className='hidden 2xl:inline'>Home</span>
 								</Link>
 							</li>
-							<li className='flex gap-2 before:!m-0 xl:gap-3'>
+							<li className='flex gap-2 before:!m-0 2xl:gap-3'>
 								{PageNameList.map((n, index) => (
 									<Fragment key={n}>
 										<Link
@@ -43,7 +43,7 @@ const Breadcrumb = () => {
 											href={{ pathname: `/${n.toLowerCase()}s` }}
 											aria-label={`Go to ${index} Search`}
 										>
-											<LinkIcon className='hidden h-4 w-4 xl:block' />
+											<LinkIcon className='hidden h-4 w-4 2xl:block' />
 											{n}
 										</Link>
 										{index < 2 && <div className='bg-base-300 h-2 w-2 rounded-full'></div>}

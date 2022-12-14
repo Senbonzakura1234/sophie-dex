@@ -9,13 +9,13 @@ const TraitCategoryFilter: FC<{
 	setFilterData: SetFilterData;
 }> = ({ filterData: { traitCateSelected }, setFilterData: { setTraitCateSelected } }) => {
 	return (
-		<div className='flex grow gap-2 xl:grow-0'>
+		<div className='flex grow gap-2 2xl:grow-0'>
 			<small className='my-auto text-sm font-bold'>Category:</small>
 			<SelectOption<TRAIT_CATEGORY | null>
 				list={TraitCategorySelectList}
 				setValue={setTraitCateSelected}
 				value={traitCateSelected}
-				className='my-auto w-40'
+				className='my-auto w-36'
 				useCustomIcon={true}
 				withIcon={true}
 				useAtelierFont={true}

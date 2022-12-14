@@ -15,7 +15,7 @@ const EffectRecord: FC<{ effect: Effect }> = ({ effect: { name, description, noI
 
 					<span className='text-sm'>grade: {noId}</span>
 
-					<span className='font-serif text-lg xl:h-16'>{description}</span>
+					<span className='font-serif text-lg 2xl:h-16'>{description}</span>
 				</div>
 			</article>
 		</FadeWrapper>

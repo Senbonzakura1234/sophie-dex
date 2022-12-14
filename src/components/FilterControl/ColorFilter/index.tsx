@@ -9,7 +9,7 @@ const ColorFilter: FC<{
 	setFilterData: SetFilterData;
 }> = ({ filterData: { colorSelected }, setFilterData: { setColorSelected } }) => {
 	return (
-		<div className='flex grow gap-2 xl:grow-0'>
+		<div className='flex grow gap-2 2xl:grow-0'>
 			<small className='my-auto text-sm font-bold'>Color:</small>
 			<SelectOption<COLOR | null>
 				list={ColorSelectList}
