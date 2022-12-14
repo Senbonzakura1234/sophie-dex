@@ -1,5 +1,5 @@
 import type { Trait } from '@prisma/client';
-import { defaultLimit, defaultSearchParam } from '@root/constants';
+import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';
@@ -7,18 +7,10 @@ import { TRPCError } from '@trpc/server';
 
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }) => {
-		const {
-			search,
-			sortBy = 'noId',
-			direction = 'asc',
-			traitCategory,
-			page,
-			limit,
-			cursor,
-		} = { ...defaultSearchParam, ...input };
+		const { search, sortBy = 'noId', direction = 'asc', traitCategory, page, limit, cursor } = { ...input };
 
-		const pageInt = parseInt(page ?? '1');
-		const limitInt = parseInt(limit ?? defaultLimit);
+		const pageInt = page ?? 1;
+		const limitInt = limit ?? defaultLimit;
 
 		const where = {
 			...(search

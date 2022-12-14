@@ -7,7 +7,7 @@ import {
 } from '@heroicons/react/24/solid';
 import SelectOption from '@root/components/SelectOption';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import type { SelectOptionItem } from '@root/types/common';
+import type { GoToPage } from '@root/types/common';
 import type { PaginateProps } from '@root/types/common/props';
 import type { FC } from 'react';
 import { useMemo } from 'react';
@@ -18,11 +18,11 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, isCanGoToPage, goToPage,
 	const isPreviousDisable = useMemo(() => !isReady || page === 1, [isReady, page]);
 	const isNextDisable = useMemo(() => !isReady || page === totalPage, [isReady, page, totalPage]);
 
-	const pageList: SelectOptionItem<string>[] = useMemo(
+	const pageList: GoToPage[] = useMemo(
 		() =>
 			Array(totalPage)
 				.fill(0)
-				.map((p, index) => ({ value: `${index + 1}`, label: `Page ${index + 1}` })),
+				.map((p, index) => ({ value: index + 1, label: `Page ${index + 1}` })),
 		[totalPage],
 	);
 
@@ -34,7 +34,7 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, isCanGoToPage, goToPage,
 					disabled={isPreviousDisable}
 					onClick={() => {
 						if (isPreviousDisable) return;
-						updateQuery({ page: '1' });
+						updateQuery({ page: 1 });
 					}}
 					aria-label='Go To First Page'
 					className='btn btn-ghost btn-circle btn-sm my-auto'
@@ -47,7 +47,7 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, isCanGoToPage, goToPage,
 					disabled={isPreviousDisable}
 					onClick={() => {
 						if (isPreviousDisable) return;
-						updateQuery({ page: `${page - 1}` });
+						updateQuery({ page: page - 1 });
 					}}
 					aria-label='Go To Previous Page'
 					className='btn btn-ghost btn-circle btn-sm my-auto'
@@ -55,7 +55,7 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, isCanGoToPage, goToPage,
 					<ChevronLeftIcon width={16} height={16} />
 				</button>
 
-				<SelectOption<string | null>
+				<SelectOption<number | null>
 					list={pageList}
 					setValue={setGoToPage}
 					value={goToPage}
@@ -80,7 +80,7 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, isCanGoToPage, goToPage,
 					disabled={isNextDisable}
 					onClick={() => {
 						if (isNextDisable) return;
-						updateQuery({ page: `${page + 1}` });
+						updateQuery({ page: page + 1 });
 					}}
 					aria-label='Go To Next Page'
 					className='btn btn-ghost btn-circle btn-sm my-auto'
@@ -93,7 +93,7 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, isCanGoToPage, goToPage,
 					disabled={isNextDisable}
 					onClick={() => {
 						if (isNextDisable) return;
-						updateQuery({ page: `${totalPage}` });
+						updateQuery({ page: totalPage });
 					}}
 					aria-label='Go To Last Page'
 					className='btn btn-ghost btn-circle btn-sm my-auto'

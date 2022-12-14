@@ -1,11 +1,10 @@
-import type { COLOR, ITEM_CATEGORY, TRAIT_CATEGORY } from '@prisma/client';
 import {
 	ColorSelectList,
 	defaultSelect,
 	ItemCategorySelectList,
 	TraitCategorySelectList,
 } from '@root/components/SubComponent';
-import type { FilterData, SelectOptionItem, SetFilterData } from '@root/types/common';
+import type { ColorSelected, FilterData, ItemCateSelected, SetFilterData, TraitCateSelected } from '@root/types/common';
 import { isEqualWithNullish } from '@root/utils/helper';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -33,12 +32,11 @@ export const useFilterControl = (): {
 		[securedQuery.itemCategory],
 	);
 
-	const [traitCateSelected, setTraitCateSelected] =
-		useState<SelectOptionItem<TRAIT_CATEGORY | null>>(defaultTraitCate);
+	const [traitCateSelected, setTraitCateSelected] = useState<TraitCateSelected>(defaultTraitCate);
 
-	const [colorSelected, setColorSelected] = useState<SelectOptionItem<COLOR | null>>(defaultColor);
+	const [colorSelected, setColorSelected] = useState<ColorSelected>(defaultColor);
 
-	const [itemCateSelected, setItemCateSelected] = useState<SelectOptionItem<ITEM_CATEGORY | null>>(defaultItemCate);
+	const [itemCateSelected, setItemCateSelected] = useState<ItemCateSelected>(defaultItemCate);
 
 	const isTraitCateSelectValid = useMemo(
 		() => !isEqualWithNullish(securedQuery.traitCategory, traitCateSelected.value),

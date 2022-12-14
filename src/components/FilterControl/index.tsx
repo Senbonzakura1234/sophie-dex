@@ -1,4 +1,4 @@
-import { defaultLimit, defaultLimitInt } from '@root/constants';
+import { defaultLimit } from '@root/constants';
 import { useFilterControl } from '@root/hooks/useFilterControl';
 import { useGoToPageControl } from '@root/hooks/useGoToPageControl';
 import type { FilterControlProps } from '@root/types/common/props';
@@ -21,22 +21,17 @@ const TraitCategoryFilter = dynamic(() => import('./TraitCategoryFilter'), {
 
 const FilterControl: FC<FilterControlProps> = ({
 	limit = defaultLimit,
-	page = '1',
+	page = 1,
 	totalPage = 0,
 	totalRecord = 0,
 	pageName,
 }) => {
-	const { limitInt, pageInt } = useMemo(
-		() => ({ limitInt: parseInt(limit) || defaultLimitInt, pageInt: parseInt(page) || 1 }),
-		[limit, page],
-	);
-
 	const { from, to } = useMemo(
 		() => ({
-			from: (pageInt - 1) * limitInt + 1,
-			to: pageInt * limitInt > totalRecord ? totalRecord : pageInt * limitInt,
+			from: (page - 1) * limit + 1,
+			to: page * limit > totalRecord ? totalRecord : page * limit,
 		}),
-		[limitInt, pageInt, totalRecord],
+		[limit, page, totalRecord],
 	);
 
 	const { filterData, setFilterData, isCanApplyFilter } = useFilterControl();
@@ -71,7 +66,7 @@ const FilterControl: FC<FilterControlProps> = ({
 					</div>
 
 					<Paginate
-						page={pageInt}
+						page={page}
 						totalPage={totalPage}
 						goToPage={goToPage}
 						setGoToPage={setGoToPage}

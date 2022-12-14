@@ -11,15 +11,23 @@ export const PageName = {
 export type PageName = typeof PageName[keyof typeof PageName];
 
 export type SelectOptionItem<V> = { value: V; label?: ReactNode; icon?: ReactNode };
+export type SetSelectOptionItem<V> = Dispatch<SetStateAction<SelectOptionItem<V>>>;
+
+export type TraitCateSelected = SelectOptionItem<TRAIT_CATEGORY | null>;
+export type ColorSelected = SelectOptionItem<COLOR | null>;
+export type ItemCateSelected = SelectOptionItem<ITEM_CATEGORY | null>;
 
 export type FilterData = {
-	traitCateSelected: SelectOptionItem<TRAIT_CATEGORY | null>;
-	colorSelected: SelectOptionItem<COLOR | null>;
-	itemCateSelected: SelectOptionItem<ITEM_CATEGORY | null>;
+	traitCateSelected: TraitCateSelected;
+	colorSelected: ColorSelected;
+	itemCateSelected: ItemCateSelected;
 };
 
 export type SetFilterData = {
-	setTraitCateSelected: Dispatch<SetStateAction<SelectOptionItem<TRAIT_CATEGORY | null>>>;
-	setColorSelected: Dispatch<SetStateAction<SelectOptionItem<COLOR | null>>>;
-	setItemCateSelected: Dispatch<SetStateAction<SelectOptionItem<ITEM_CATEGORY | null>>>;
+	setTraitCateSelected: SetSelectOptionItem<TRAIT_CATEGORY | null>;
+	setColorSelected: SetSelectOptionItem<COLOR | null>;
+	setItemCateSelected: SetSelectOptionItem<ITEM_CATEGORY | null>;
 };
+
+export type GoToPage = SelectOptionItem<number | null>;
+export type SetGoToPage = Dispatch<SetStateAction<GoToPage>>;

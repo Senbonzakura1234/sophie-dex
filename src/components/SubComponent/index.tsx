@@ -1,5 +1,5 @@
-import type { COLOR, ITEM_CATEGORY, TRAIT_CATEGORY } from '@prisma/client';
-import type { SelectOptionItem } from '@root/types/common';
+import type { COLOR, TRAIT_CATEGORY } from '@prisma/client';
+import type { ColorSelected, ItemCateSelected, TraitCateSelected } from '@root/types/common';
 import type { ListPlaceHolderProps } from '@root/types/common/props';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 import type { FC } from 'react';
@@ -173,7 +173,7 @@ export const ItemCategorySelectList = [
 		value: 'MAGIC_ITEM',
 		label: 'Magic Item',
 	},
-] satisfies SelectOptionItem<ITEM_CATEGORY | null>[];
+] satisfies ItemCateSelected[];
 
 export const defaultSelect = {
 	value: null,
@@ -188,7 +188,7 @@ export const TraitCategorySelectList = [
 		value: code,
 		icon: <span className={`h-4 w-4 2xl:h-5 2xl:w-5 ${className}`} aria-hidden='true' />,
 	})),
-] satisfies SelectOptionItem<TRAIT_CATEGORY | null>[];
+] satisfies TraitCateSelected[];
 
 export const ColorSelectList = [
 	defaultSelect,
@@ -196,7 +196,7 @@ export const ColorSelectList = [
 		label: <span className='capitalize'>{color.toLocaleLowerCase()}</span>,
 		value: color,
 	})),
-] satisfies SelectOptionItem<COLOR | null>[];
+] satisfies ColorSelected[];
 
 export const RecordPlaceHolder: FC = () => <div className='card bg-base-100 h-[300px] w-full animate-pulse'></div>;
 

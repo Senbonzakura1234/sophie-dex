@@ -1,7 +1,15 @@
 import type { COLOR, Effect, Item, ItemCategories, MergeTrait, Trait, TRAIT_CATEGORY } from '@prisma/client';
-import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react';
+import type { ReactNode, RefObject } from 'react';
 
-import type { FilterData, PageName, SelectOptionItem, SetFilterData } from '.';
+import type {
+	FilterData,
+	GoToPage,
+	PageName,
+	SelectOptionItem,
+	SetFilterData,
+	SetGoToPage,
+	SetSelectOptionItem,
+} from '.';
 
 export type ClassNameProps = { className?: string };
 export type ChildrenProps = { children?: ReactNode };
@@ -19,9 +27,9 @@ export type ItemRecordProps = RecordProps<Item>;
 export type TraitRecordProps = RecordProps<Trait>;
 
 export type FilterControlProps = {
-	page: string;
+	page: number;
 	totalPage: number;
-	limit: string;
+	limit: number;
 	totalRecord: number;
 } & PageNameProps;
 
@@ -40,13 +48,13 @@ export type PaginateProps = {
 	page: number;
 	totalPage: number;
 	isCanGoToPage: boolean;
-	goToPage: SelectOptionItem<string | null>;
-	setGoToPage: Dispatch<SetStateAction<SelectOptionItem<string | null>>>;
+	goToPage: GoToPage;
+	setGoToPage: SetGoToPage;
 };
 
 export type ResetFilterProps = {
 	setFilterData: SetFilterData;
-	setGoToPage: Dispatch<SetStateAction<SelectOptionItem<string | null>>>;
+	setGoToPage: SetGoToPage;
 };
 
 export type ColorProps = { color: COLOR };
@@ -88,7 +96,7 @@ export type TraitMergeListProps = { mergeFrom: MergeTrait[] };
 export type SelectOptionProps<V> = {
 	value: SelectOptionItem<V>;
 	list: SelectOptionItem<V>[];
-	setValue: Dispatch<SetStateAction<SelectOptionItem<V>>>;
+	setValue: SetSelectOptionItem<V>;
 	withIcon?: boolean;
 	useCustomIcon?: boolean;
 	useAtelierFont?: boolean;

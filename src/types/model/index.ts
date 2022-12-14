@@ -140,8 +140,8 @@ export type TraitCategoryDisplay = typeof TraitCategoryMap[keyof typeof TraitCat
 export type ListRecord<T> = {
 	records: T[];
 	cursor: string;
-	page: string | null;
-	limit: string | null;
+	page: number | null;
+	limit: number | null;
 	totalRecord: number;
 	totalPage: number;
 };

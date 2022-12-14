@@ -15,7 +15,7 @@ const ApplyFilter: FC<ApplyFilterProps> = ({
 				onClick={() => {
 					if (isCanApplyFilter)
 						updateQuery({
-							page: '1',
+							page: 1,
 							traitCategory: traitCateSelected.value,
 							color: colorSelected.value,
 							itemCategory: itemCateSelected.value,

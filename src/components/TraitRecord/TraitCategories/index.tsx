@@ -41,7 +41,7 @@ const TraitCategories: FC<TraitCategoriesProps> = ({ traitCategories }) => {
 						onClick={() => {
 							if (isClickAble(code))
 								updateQuery({
-									page: '1',
+									page: 1,
 									limit: defaultLimit,
 									traitCategory: securedQuery.traitCategory === code ? null : code,
 								});

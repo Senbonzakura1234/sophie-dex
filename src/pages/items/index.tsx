@@ -2,7 +2,7 @@ import FilterControl from '@root/components/FilterControl';
 import ItemRecord from '@root/components/ItemRecord';
 import ListLayout from '@root/components/Layout/ListLayout';
 import { FilterControlPlaceHolder, ListPlaceHolder } from '@root/components/SubComponent';
-import { defaultLimit, defaultLimitInt } from '@root/constants';
+import { defaultLimit } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { trpc } from '@root/utils/trpc';
 import { type NextPage } from 'next';
@@ -23,7 +23,7 @@ const Items: NextPage = () => {
 				!isLoading && isSuccess ? (
 					<FilterControl
 						pageName='Item'
-						page={data.page ?? '1'}
+						page={data.page ?? 1}
 						totalPage={data.totalPage}
 						limit={data.limit ?? defaultLimit}
 						totalRecord={data.totalRecord}
@@ -36,7 +36,7 @@ const Items: NextPage = () => {
 			{!isLoading && isSuccess ? (
 				data.records.map(item => <ItemRecord key={item.id} record={item} />)
 			) : (
-				<ListPlaceHolder limit={defaultLimitInt} />
+				<ListPlaceHolder limit={defaultLimit} />
 			)}
 		</ListLayout>
 	);

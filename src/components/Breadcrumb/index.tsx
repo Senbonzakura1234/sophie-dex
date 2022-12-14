@@ -1,6 +1,6 @@
 import { HomeIcon, LinkIcon } from '@heroicons/react/24/solid';
 import FadeWrapper from '@root/components/Animations/FadeWrapper';
-import { PageNameList } from '@root/constants';
+import { pageNameList } from '@root/constants';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -33,7 +33,7 @@ const Breadcrumb = () => {
 								</Link>
 							</li>
 							<li className='flex gap-2 before:!m-0 2xl:gap-3'>
-								{PageNameList.map((n, index) => (
+								{pageNameList.map((n, index) => (
 									<Fragment key={n}>
 										<Link
 											className={clsx(
