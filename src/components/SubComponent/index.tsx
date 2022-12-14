@@ -1,5 +1,5 @@
 import type { COLOR, ITEM_CATEGORY, TRAIT_CATEGORY } from '@prisma/client';
-import type { SelectOptionItem } from '@root/types/common';
+import type { ListPlaceHolderProps, SelectOptionItem } from '@root/types/common';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 import type { FC } from 'react';
 
@@ -199,7 +199,7 @@ export const ColorSelectList = [
 
 export const RecordPlaceHolder: FC = () => <div className='card bg-base-100 h-[300px] w-full animate-pulse'></div>;
 
-export const ListPlaceHolder: FC<{ limit: number }> = ({ limit }) => (
+export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ limit }) => (
 	<>
 		{Array(limit)
 			.fill(0)

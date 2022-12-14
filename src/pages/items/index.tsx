@@ -34,7 +34,7 @@ const Items: NextPage = () => {
 			}
 		>
 			{!isLoading && isSuccess ? (
-				data.records.map(item => <ItemRecord key={item.id} item={item} />)
+				data.records.map(item => <ItemRecord key={item.id} record={item} />)
 			) : (
 				<ListPlaceHolder limit={defaultLimitInt} />
 			)}

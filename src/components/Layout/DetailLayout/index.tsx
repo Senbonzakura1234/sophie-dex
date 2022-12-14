@@ -1,12 +1,8 @@
-import type { PageName } from '@root/types/common';
+import type { DetailLayoutProps } from '@root/types/common';
 import Head from 'next/head';
-import type { FC, ReactNode } from 'react';
+import type { FC } from 'react';
 
-const DetailLayout: FC<{ pageName: PageName; children?: ReactNode; extraHead?: ReactNode }> = ({
-	pageName,
-	children,
-	extraHead,
-}) => {
+const DetailLayout: FC<DetailLayoutProps> = ({ pageName, children, extraHead }) => {
 	return (
 		<>
 			<Head>

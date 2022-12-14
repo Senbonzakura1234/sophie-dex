@@ -1,9 +1,9 @@
-import type { COLOR } from '@prisma/client';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
+import type { ColorProps } from '@root/types/common';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
-const WHITE: FC<{ color: COLOR }> = ({ color }) => {
+const WHITE: FC<ColorProps> = ({ color }) => {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const isBtnDisabled = useMemo(() => !isReady || securedQuery.color === color, [color, isReady, securedQuery.color]);

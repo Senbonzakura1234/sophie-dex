@@ -1,14 +1,10 @@
 import PageFooter from '@root/components/PageFooter';
 import PageTitle from '@root/components/PageTitle';
-import type { PageName } from '@root/types/common';
+import type { ListLayoutProps } from '@root/types/common';
 import Head from 'next/head';
-import type { FC, ReactNode } from 'react';
+import type { FC } from 'react';
 
-const ListLayout: FC<{ pageName: PageName; children?: ReactNode; filterControl?: ReactNode }> = ({
-	pageName,
-	filterControl,
-	children,
-}) => {
+const ListLayout: FC<ListLayoutProps> = ({ pageName, filterControl, children }) => {
 	return (
 		<>
 			<Head>

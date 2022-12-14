@@ -1,5 +1,5 @@
-import type { Trait } from '@prisma/client';
 import { useIdQuery } from '@root/hooks/useSearchQuery';
+import type { TraitRecordProps } from '@root/types/common';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
 
@@ -11,7 +11,7 @@ const TraitCategories = dynamic(() => import('./TraitCategories'), {
 	ssr: false,
 });
 
-const TraitRecord: FC<{ trait: Trait }> = ({ trait: { name, description, noId, traitCategories, mergeFrom, id } }) => {
+const TraitRecord: FC<TraitRecordProps> = ({ record: { name, description, noId, traitCategories, mergeFrom, id } }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 	return (
 		<FadeWrapper show={isReady} appear={true}>

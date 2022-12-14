@@ -1,8 +1,8 @@
-import type { MergeTrait } from '@prisma/client';
+import type { TraitMergeListProps } from '@root/types/common';
 import Link from 'next/link';
 import type { FC } from 'react';
 
-const TraitMergeList: FC<{ mergeFrom: MergeTrait[] }> = ({ mergeFrom }) => {
+const TraitMergeList: FC<TraitMergeListProps> = ({ mergeFrom }) => {
 	return (
 		<nav className='grid place-content-center gap-2 2xl:grid-cols-3'>
 			{mergeFrom.map(({ consist }, key) => (

@@ -1,14 +1,13 @@
 import type { TRAIT_CATEGORY } from '@prisma/client';
 import { defaultLimit } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
+import type { TraitCategoriesProps } from '@root/types/common';
 import { TraitCategoryMap } from '@root/types/model';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useCallback } from 'react';
 
-const TraitCategories: FC<{
-	traitCategories: TRAIT_CATEGORY[];
-}> = ({ traitCategories }) => {
+const TraitCategories: FC<TraitCategoriesProps> = ({ traitCategories }) => {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();
 
 	const isClickAble = useCallback(

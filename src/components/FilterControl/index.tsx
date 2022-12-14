@@ -1,7 +1,7 @@
 import { defaultLimit, defaultLimitInt } from '@root/constants';
 import { useFilterControl } from '@root/hooks/useFilterControl';
 import { useGoToPageControl } from '@root/hooks/useGoToPageControl';
-import type { PageName } from '@root/types/common';
+import type { FilterControlProps } from '@root/types/common';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
 import { useMemo } from 'react';
@@ -19,13 +19,13 @@ const TraitCategoryFilter = dynamic(() => import('./TraitCategoryFilter'), {
 	ssr: false,
 });
 
-const FilterControl: FC<{
-	page: string;
-	totalPage: number;
-	limit: string;
-	totalRecord: number;
-	pageName: PageName;
-}> = ({ limit = defaultLimit, page = '1', totalPage = 0, totalRecord = 0, pageName }) => {
+const FilterControl: FC<FilterControlProps> = ({
+	limit = defaultLimit,
+	page = '1',
+	totalPage = 0,
+	totalRecord = 0,
+	pageName,
+}) => {
 	const { limitInt, pageInt } = useMemo(
 		() => ({ limitInt: parseInt(limit) || defaultLimitInt, pageInt: parseInt(page) || 1 }),
 		[limit, page],

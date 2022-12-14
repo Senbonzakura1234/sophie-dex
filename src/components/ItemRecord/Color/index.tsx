@@ -1,4 +1,4 @@
-import type { COLOR } from '@prisma/client';
+import type { ColorProps } from '@root/types/common';
 import type { FC } from 'react';
 
 import BLUE from './BLUE';
@@ -8,7 +8,7 @@ import RED from './RED';
 import WHITE from './WHITE';
 import YELLOW from './YELLOW';
 
-const Color: FC<{ color: COLOR }> = ({ color }) => {
+const Color: FC<ColorProps> = ({ color }) => {
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
 			<div className='font-bold'>Color: </div>

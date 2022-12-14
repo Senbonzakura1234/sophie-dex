@@ -1,13 +1,9 @@
 import { Transition } from '@headlessui/react';
-import type { FC, ReactNode } from 'react';
+import type { FadeWrapperProps } from '@root/types/common';
+import type { FC } from 'react';
 import { Fragment } from 'react';
 
-const FadeWrapper: FC<{ children: ReactNode; show: boolean; appear?: boolean; isTransForm?: boolean }> = ({
-	children,
-	show,
-	appear,
-	isTransForm,
-}) => {
+const FadeWrapper: FC<FadeWrapperProps> = ({ children, show, appear, isTransForm }) => {
 	return (
 		<Transition
 			appear={appear}

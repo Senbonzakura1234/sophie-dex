@@ -30,7 +30,7 @@ const ItemDetail: NextPage = () => {
 				) : null
 			}
 		>
-			{!isLoading && isSuccess ? <ItemRecord item={data} /> : <RecordPlaceHolder />}
+			{!isLoading && isSuccess ? <ItemRecord record={data} /> : <RecordPlaceHolder />}
 		</DetailLayout>
 	);
 };

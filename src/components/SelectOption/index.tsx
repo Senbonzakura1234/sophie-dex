@@ -1,8 +1,7 @@
 import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/24/solid';
-import type { SelectOptionItem } from '@root/types/common';
+import type { SelectOptionProps } from '@root/types/common';
 import clsx from 'clsx';
-import type { Dispatch, SetStateAction } from 'react';
 import { Fragment } from 'react';
 
 export default function SelectOption<V extends string | number | null>({
@@ -13,15 +12,7 @@ export default function SelectOption<V extends string | number | null>({
 	withIcon = false,
 	useCustomIcon = false,
 	useAtelierFont = false,
-}: {
-	value: SelectOptionItem<V>;
-	list: SelectOptionItem<V>[];
-	setValue: Dispatch<SetStateAction<SelectOptionItem<V>>>;
-	className?: string;
-	withIcon?: boolean;
-	useCustomIcon?: boolean;
-	useAtelierFont?: boolean;
-}) {
+}: SelectOptionProps<V>) {
 	return (
 		<menu className={className}>
 			<Listbox value={value} onChange={setValue} disabled={list.length === 1}>

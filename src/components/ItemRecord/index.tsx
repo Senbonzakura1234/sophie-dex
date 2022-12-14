@@ -1,5 +1,5 @@
-import type { Item } from '@prisma/client';
 import { useIdQuery } from '@root/hooks/useSearchQuery';
+import type { ItemRecordProps } from '@root/types/common';
 import type { FC } from 'react';
 
 import FadeWrapper from '../Animations/FadeWrapper';
@@ -7,7 +7,7 @@ import RecordHead from '../RecordHead';
 import Color from './Color';
 import ItemCategories from './ItemCategories';
 
-const ItemRecord: FC<{ item: Item }> = ({ item: { name, noId, id, color, itemCategories } }) => {
+const ItemRecord: FC<ItemRecordProps> = ({ record: { name, noId, id, color, itemCategories } }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 	return (
 		<FadeWrapper show={isReady} appear={true}>

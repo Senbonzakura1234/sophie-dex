@@ -27,7 +27,7 @@ const TraitDetail: NextPage = () => {
 				) : null
 			}
 		>
-			{!isLoading && isSuccess ? <TraitRecord trait={data} /> : <RecordPlaceHolder />}
+			{!isLoading && isSuccess ? <TraitRecord record={data} /> : <RecordPlaceHolder />}
 		</DetailLayout>
 	);
 };

@@ -1,8 +1,8 @@
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import type { FilterData } from '@root/types/common';
+import type { ApplyFilterProps } from '@root/types/common';
 import type { FC } from 'react';
 
-const ApplyFilter: FC<{ filterData: FilterData; isCanApplyFilter: boolean }> = ({
+const ApplyFilter: FC<ApplyFilterProps> = ({
 	isCanApplyFilter,
 	filterData: { colorSelected, traitCateSelected, itemCateSelected },
 }) => {

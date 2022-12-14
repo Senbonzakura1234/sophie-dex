@@ -34,7 +34,7 @@ const Traits: NextPage = () => {
 			}
 		>
 			{!isLoading && isSuccess ? (
-				data.records.map(trait => <TraitRecord key={trait.id} trait={trait} />)
+				data.records.map(trait => <TraitRecord key={trait.id} record={trait} />)
 			) : (
 				<ListPlaceHolder limit={defaultLimitInt} />
 			)}

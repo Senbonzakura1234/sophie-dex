@@ -34,7 +34,7 @@ const Effects: NextPage = () => {
 			}
 		>
 			{!isLoading && isSuccess ? (
-				data.records.map(effect => <EffectRecord key={effect.id} effect={effect} />)
+				data.records.map(effect => <EffectRecord key={effect.id} record={effect} />)
 			) : (
 				<ListPlaceHolder limit={defaultLimitInt} />
 			)}

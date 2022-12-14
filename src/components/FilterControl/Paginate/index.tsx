@@ -7,17 +7,11 @@ import {
 } from '@heroicons/react/24/solid';
 import SelectOption from '@root/components/SelectOption';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import type { SelectOptionItem } from '@root/types/common';
-import type { Dispatch, FC, SetStateAction } from 'react';
+import type { PaginateProps, SelectOptionItem } from '@root/types/common';
+import type { FC } from 'react';
 import { useMemo } from 'react';
 
-const Paginate: FC<{
-	page: number;
-	totalPage: number;
-	isCanGoToPage: boolean;
-	goToPage: SelectOptionItem<string | null>;
-	setGoToPage: Dispatch<SetStateAction<SelectOptionItem<string | null>>>;
-}> = ({ page, totalPage, isCanGoToPage, goToPage, setGoToPage }) => {
+const Paginate: FC<PaginateProps> = ({ page, totalPage, isCanGoToPage, goToPage, setGoToPage }) => {
 	const { isReady, updateQuery } = useSearchQuery();
 
 	const isPreviousDisable = useMemo(() => !isReady || page === 1, [isReady, page]);

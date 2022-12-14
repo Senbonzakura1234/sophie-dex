@@ -27,7 +27,7 @@ const EffectDetail: NextPage = () => {
 				) : null
 			}
 		>
-			{!isLoading && isSuccess ? <EffectRecord effect={data} /> : <RecordPlaceHolder />}
+			{!isLoading && isSuccess ? <EffectRecord record={data} /> : <RecordPlaceHolder />}
 		</DetailLayout>
 	);
 };
