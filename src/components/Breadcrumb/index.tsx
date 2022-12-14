@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Fragment } from 'react';
 
+import CircleDivider from '../CircleDivider';
+
 const Breadcrumb = () => {
 	const { pathname, isReady } = useRouter();
 
@@ -46,7 +48,7 @@ const Breadcrumb = () => {
 											<LinkIcon className='hidden h-4 w-4 2xl:block' />
 											{n}
 										</Link>
-										{index < 2 && <div className='bg-base-300 h-2 w-2 rounded-full'></div>}
+										{index < 2 && <CircleDivider className='bg-base-300 h-2 w-2' />}
 									</Fragment>
 								))}
 							</li>

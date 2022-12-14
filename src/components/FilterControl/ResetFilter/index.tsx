@@ -24,7 +24,7 @@ const ResetFilter: FC<{
 			}}
 			aria-label='Reset Filter'
 		>
-			Reset<span className='2xl:hidden'>Filter</span>
+			Reset Filter
 		</button>
 	);
 };

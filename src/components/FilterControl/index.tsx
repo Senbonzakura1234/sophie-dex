@@ -7,6 +7,7 @@ import type { FC } from 'react';
 import { useMemo } from 'react';
 
 import FadeWrapper from '../Animations/FadeWrapper';
+import CircleDivider from '../CircleDivider';
 import ApplyFilter from './ApplyFilter';
 import ColorFilter from './ColorFilter';
 import ItemCategoryFilter from './ItemCategoryFilter';
@@ -47,7 +48,7 @@ const FilterControl: FC<{
 				<nav className='card bg-base-100 flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-2xl 2xl:place-content-end'>
 					<SortControl />
 
-					<div className='divider divider-horizontal m-0 hidden w-auto 2xl:flex'></div>
+					<CircleDivider className='bg-base-300 my-auto hidden h-2 w-2 2xl:block' />
 
 					<div className='flex flex-wrap gap-2'>
 						{pageName === 'Trait' ? (
@@ -63,7 +64,7 @@ const FilterControl: FC<{
 						<ApplyFilter filterData={filterData} isCanApplyFilter={isCanApplyFilter} />
 					</div>
 
-					<div className='divider divider-horizontal m-0 hidden w-auto 2xl:flex'></div>
+					<CircleDivider className='bg-base-300 my-auto hidden h-2 w-2 2xl:block' />
 
 					<div className='text-secondary-content my-auto text-xs font-semibold'>
 						{from} - {to} of {totalRecord} records
@@ -77,7 +78,7 @@ const FilterControl: FC<{
 						isCanGoToPage={isCanGoToPage}
 					/>
 
-					<div className='divider divider-horizontal m-0 hidden w-auto 2xl:flex'></div>
+					<CircleDivider className='bg-base-300 my-auto hidden h-2 w-2 2xl:block' />
 
 					<ResetFilter setFilterData={setFilterData} setGoToPage={setGoToPage} />
 				</nav>
