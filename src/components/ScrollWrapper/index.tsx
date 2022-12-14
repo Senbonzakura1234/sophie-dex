@@ -5,7 +5,7 @@ import type { FC } from 'react';
 
 const ScrollWrapper: FC<ScrollWrapperProps> = ({ children, refObject: ref, className }) => {
 	return (
-		<Root className={clsx('scroll-area-root', className)} type='hover'>
+		<Root className={clsx('scroll-area-root', className)} type='auto'>
 			<Viewport className='scroll-area-viewport scroll-wrapper relative h-full w-full' ref={ref}>
 				{children}
 			</Viewport>

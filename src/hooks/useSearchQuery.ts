@@ -15,7 +15,7 @@ export const useSearchQuery = (): {
 	const securedQuery: Partial<SearchQuery> = useMemo(() => {
 		const result = searchQueryValidator.safeParse(query);
 
-		return result.success ? query : {};
+		return result.success ? result.data : {};
 	}, [query]);
 
 	const updateQuery = useCallback(
