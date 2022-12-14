@@ -1,6 +1,6 @@
 import type { IdQuery, SearchQuery } from '@root/types/common/zod';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
-import { parseObjToParam } from '@root/utils/helper';
+import { parseSecuredQuery } from '@root/utils/helper';
 import { useRouter } from 'next/router';
 import { useCallback, useMemo } from 'react';
 
@@ -20,10 +20,9 @@ export const useSearchQuery = (): {
 
 	const updateQuery = useCallback(
 		(nextQuery: Partial<SearchQuery>) => {
-			const parseQuery = parseObjToParam({ ...securedQuery, ...nextQuery }).toString();
+			const parseQuery = parseSecuredQuery({ ...securedQuery, ...nextQuery });
 
-			if (isReady)
-				push(`${pathname.replaceAll('[id]', '')}${parseQuery.length > 0 ? '?' : ''}${parseQuery}`, undefined, {});
+			if (isReady) push(`${pathname.replaceAll('[id]', '')}${parseQuery}`, undefined, {});
 		},
 		[isReady, push, pathname, securedQuery],
 	);

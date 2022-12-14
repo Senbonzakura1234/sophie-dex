@@ -1,4 +1,4 @@
-import { useSearchQuery } from '@root/hooks/useSearchQuery';
+import { useSearchQuery } from '@root/hooks/useSercuredRouter';
 import type { REDProps } from '@root/types/common/props';
 import type { FC } from 'react';
 import { useMemo } from 'react';

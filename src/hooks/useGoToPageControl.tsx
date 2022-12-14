@@ -2,7 +2,7 @@ import type { GoToPage, SetGoToPage } from '@root/types/common';
 import { isEqualWithNullish } from '@root/utils/helper';
 import { useEffect, useMemo, useState } from 'react';
 
-import { useSearchQuery } from './useSearchQuery';
+import { useSearchQuery } from './useSercuredRouter';
 
 export const useGoToPageControl = (): {
 	goToPage: GoToPage;

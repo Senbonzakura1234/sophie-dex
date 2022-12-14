@@ -8,7 +8,7 @@ import type { ColorSelected, FilterData, ItemCateSelected, SetFilterData, TraitC
 import { isEqualWithNullish } from '@root/utils/helper';
 import { useEffect, useMemo, useState } from 'react';
 
-import { useSearchQuery } from './useSearchQuery';
+import { useSearchQuery } from './useSercuredRouter';
 
 export const useFilterControl = (): {
 	filterData: FilterData;

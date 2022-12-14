@@ -1,6 +1,6 @@
 import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import FadeWrapper from '@root/components/Animations/FadeWrapper';
-import { useSearchQuery } from '@root/hooks/useSearchQuery';
+import { useSearchQuery } from '@root/hooks/useSercuredRouter';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 

@@ -1,4 +1,4 @@
-import { useIdQuery } from '@root/hooks/useSearchQuery';
+import { useIdQuery } from '@root/hooks/useSercuredRouter';
 import type { ItemRecordProps } from '@root/types/common/props';
 import type { FC } from 'react';
 

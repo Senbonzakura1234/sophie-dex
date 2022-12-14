@@ -1,4 +1,3 @@
-import type { COLOR } from '@prisma/client';
 import { itemCategoryList } from '@root/types/model';
 import { z } from 'zod';
 
@@ -20,9 +19,17 @@ export const parseObjToParam = (input: Record<string, number | string | string[]
 	return new URLSearchParams(queryParse);
 };
 
-export const parseColorToClassName = (color: COLOR): `bg-${string}-500` => {
-	if (color === 'NONE') return 'bg-slate-500' as const;
-	return `bg-${color.toLocaleLowerCase()}-500` as const;
+export const parseSecuredQuery = (input: Record<string, number | string | null>): string => {
+	const arrQuery: string[] = [];
+
+	for (const key in input) {
+		if (Object.prototype.hasOwnProperty.call(input, key)) {
+			const element = input[key];
+			if (element) arrQuery.push(`${key}=${element}`);
+		}
+	}
+
+	return arrQuery.length > 0 ? `?${arrQuery.join('&')}` : '';
 };
 
 export const isEqualWithNullish = (a: unknown, b: unknown) => {

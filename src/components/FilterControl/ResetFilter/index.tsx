@@ -1,5 +1,5 @@
 import { defaultSelect } from '@root/components/SubComponent';
-import { useSearchQuery } from '@root/hooks/useSearchQuery';
+import { useSearchQuery } from '@root/hooks/useSercuredRouter';
 import type { ResetFilterProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
