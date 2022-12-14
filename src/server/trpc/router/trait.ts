@@ -7,7 +7,15 @@ import { TRPCError } from '@trpc/server';
 
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }) => {
-		const { search, sortBy, direction, traitCategory, page, limit, cursor } = { ...defaultSearchParam, ...input };
+		const {
+			search,
+			sortBy = 'noId',
+			direction = 'asc',
+			traitCategory,
+			page,
+			limit,
+			cursor,
+		} = { ...defaultSearchParam, ...input };
 
 		const pageInt = parseInt(page ?? '1');
 		const limitInt = parseInt(limit ?? defaultLimit);
@@ -51,7 +59,7 @@ export const traitRouter = router({
 			ctx.prisma.trait.findMany({
 				where,
 				orderBy: {
-					[sortBy]: direction,
+					[sortBy ?? 'noId']: direction ?? 'asc',
 				},
 				skip: (pageInt - 1) * limitInt,
 				take: limitInt,
