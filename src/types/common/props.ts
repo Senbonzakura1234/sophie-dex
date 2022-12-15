@@ -1,4 +1,6 @@
 import type { COLOR, Effect, Item, ItemCategories, MergeTrait, Trait, TRAIT_CATEGORY } from '@prisma/client';
+import type { Maybe } from '@trpc/server';
+import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
 import type { ReactNode, RefObject } from 'react';
 
 import type {
@@ -70,8 +72,14 @@ export type ItemCategoriesProps = { itemCategories: ItemCategories[] };
 
 export type DefaultLayoutProps = ChildrenProps & PageNameProps;
 
-export type DetailLayoutProps = DefaultLayoutProps & { extraHead?: ReactNode };
-export type ListLayoutProps = DefaultLayoutProps & { filterControl?: ReactNode };
+export type ErrorResultProps = {
+	isError: boolean;
+	errorData: Maybe<DefaultErrorData>;
+	errorMessage: string | undefined;
+};
+
+export type DetailLayoutProps = DefaultLayoutProps & { extraHead?: ReactNode } & ErrorResultProps;
+export type ListLayoutProps = DefaultLayoutProps & { filterControl?: ReactNode } & ErrorResultProps;
 export type RootLayoutProps = ChildrenProps;
 
 export type PageTitleProps = PageNameProps;
@@ -101,3 +109,5 @@ export type SelectOptionProps<V> = {
 	useCustomIcon?: boolean;
 	useAtelierFont?: boolean;
 } & ClassNameProps;
+
+export type ErrorModalProps = ErrorResultProps;

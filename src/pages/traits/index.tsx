@@ -9,7 +9,7 @@ import { type NextPage } from 'next';
 
 const Traits: NextPage = () => {
 	const { securedQuery, isReady } = useSearchQuery();
-	const { data, isSuccess, isLoading } = trpc.trait.getAll.useQuery(securedQuery, {
+	const { data, isSuccess, isLoading, isError, error } = trpc.trait.getAll.useQuery(securedQuery, {
 		retry: 1,
 		enabled: isReady,
 		refetchOnReconnect: false,
@@ -18,6 +18,9 @@ const Traits: NextPage = () => {
 
 	return (
 		<ListLayout
+			isError={isError}
+			errorData={error?.data}
+			errorMessage={error?.message}
 			pageName='Trait'
 			filterControl={
 				!isLoading && isSuccess ? (

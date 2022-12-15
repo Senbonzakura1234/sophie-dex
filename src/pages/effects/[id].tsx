@@ -15,8 +15,13 @@ const EffectDetail: NextPage = () => {
 		refetchOnWindowFocus: false,
 	});
 
+	console.log(error?.message);
+
 	return (
 		<DetailLayout
+			isError={isError}
+			errorData={error?.data}
+			errorMessage={error?.message}
 			pageName='Effect'
 			extraHead={
 				!isLoading && isSuccess ? (

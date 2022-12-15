@@ -1,10 +1,11 @@
+import ErrorModal from '@root/components/ErrorModal';
 import PageFooter from '@root/components/PageFooter';
 import PageTitle from '@root/components/PageTitle';
 import type { ListLayoutProps } from '@root/types/common/props';
 import Head from 'next/head';
 import type { FC } from 'react';
 
-const ListLayout: FC<ListLayoutProps> = ({ pageName, filterControl, children }) => {
+const ListLayout: FC<ListLayoutProps> = ({ pageName, filterControl, children, errorData, errorMessage, isError }) => {
 	return (
 		<>
 			<Head>
@@ -21,6 +22,8 @@ const ListLayout: FC<ListLayoutProps> = ({ pageName, filterControl, children }) 
 			</section>
 
 			<PageFooter />
+
+			<ErrorModal isError={isError} errorData={errorData} errorMessage={errorMessage} />
 		</>
 	);
 };

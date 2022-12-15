@@ -8,7 +8,7 @@ import Head from 'next/head';
 
 const ItemDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
-	const { data, isSuccess, isLoading } = trpc.item.getOne.useQuery(securedIdQuery, {
+	const { data, isSuccess, isLoading, isError, error } = trpc.item.getOne.useQuery(securedIdQuery, {
 		retry: 1,
 		enabled: isReady,
 		refetchOnReconnect: false,
@@ -17,6 +17,9 @@ const ItemDetail: NextPage = () => {
 
 	return (
 		<DetailLayout
+			isError={isError}
+			errorData={error?.data}
+			errorMessage={error?.message}
 			pageName='Item'
 			extraHead={
 				!isLoading && isSuccess ? (

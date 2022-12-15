@@ -79,20 +79,21 @@ export const itemRouter = router({
 	}),
 
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }) => {
-		try {
-			const { id } = input;
-			if (!id)
-				throw new TRPCError({
-					code: 'BAD_REQUEST',
-					message: 'Invalid Trait Id.',
-				});
-			return await ctx.prisma.item.findFirstOrThrow({ where: { id } });
-		} catch (cause) {
+		const { id } = input;
+		if (!id)
 			throw new TRPCError({
-				code: 'NOT_FOUND',
-				message: 'Trait not found.',
-				cause,
+				code: 'BAD_REQUEST',
+				message: 'Invalid Record Id.',
 			});
-		}
+
+		const record = await ctx.prisma.item.findFirst({ where: { id } });
+
+		if (record) return record;
+
+		throw new TRPCError({
+			code: 'NOT_FOUND',
+			message: 'Record not found.',
+			cause: `Record id: ${id}`,
+		});
 	}),
 });
