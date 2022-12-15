@@ -6,11 +6,11 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import type { FC } from 'react';
 
-const Breadcrumb = dynamic(() => import('../Breadcrumb'), {
+const SearchInput = dynamic(() => import('./SearchInput'), {
 	ssr: false,
 });
 
-const SearchInput = dynamic(() => import('./SearchInput'), {
+const Breadcrumb = dynamic(() => import('../Breadcrumb'), {
 	ssr: false,
 });
 
@@ -32,20 +32,39 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => {
 				src={topBg}
 				alt='sophie'
 				sizes='100vh'
-				priority={false}
+				priority={pageName !== 'Atelier Dex'}
 			/>
+
 			<div className='bg-primary/50 absolute inset-0 z-10'></div>
 
 			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-3 px-4 pt-5 2xl:gap-6'>
 				<div className='text-secondary text-shadow-dark w-full text-center font-serif text-5xl font-bold xl:text-6xl 2xl:text-7xl'>
-					{pageName === 'Atelier Dex' ? (
-						<Image className='mx-auto' src={sophieLogo} alt={pageName} priority={true} sizes='30vw' />
-					) : (
-						<>{pageName}</>
-					)}
+					<Image
+						className={clsx(
+							{
+								hidden: pageName !== 'Atelier Dex',
+								block: pageName === 'Atelier Dex',
+							},
+							'mx-auto',
+						)}
+						src={sophieLogo}
+						alt={pageName}
+						priority={pageName === 'Atelier Dex'}
+						sizes='30vw'
+					/>
+					<div
+						className={clsx({
+							hidden: pageName === 'Atelier Dex',
+							block: pageName !== 'Atelier Dex',
+						})}
+					>
+						{pageName}
+					</div>
 				</div>
-				{pageName !== 'Atelier Dex' ? <SearchInput /> : null}
-				<Breadcrumb />
+
+				<SearchInput pageName={pageName} />
+
+				<Breadcrumb isShowAuthor={pageName === 'Atelier Dex'} />
 			</div>
 		</section>
 	);

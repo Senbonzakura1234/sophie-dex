@@ -1,26 +1,27 @@
 import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import FadeWrapper from '@root/components/Animations/FadeWrapper';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import type { SearchInputProps } from '@root/types/common/props';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 
-const SearchInput: FC = () => {
-	const { securedQuery, isReady, updateQuery } = useSearchQuery();
+const SearchInput: FC<SearchInputProps> = ({ pageName }) => {
+	const { securedQuery, updateQuery } = useSearchQuery();
 	const [search, setSearch] = useState<string>('');
 
 	useEffect(() => {
-		if (isReady && securedQuery.search) setSearch(securedQuery.search);
-	}, [isReady, securedQuery.search]);
+		if (securedQuery.search) setSearch(securedQuery.search);
+	}, [securedQuery.search]);
 
 	return (
-		<FadeWrapper show={isReady} appear={true}>
+		<FadeWrapper show={pageName !== 'Atelier Dex'} appear={true}>
 			<div className='form-control w-full max-w-4xl'>
 				<div className='input-group input-group-sm 2xl:input-group-md relative'>
 					<input
 						value={search}
 						onChange={e => setSearch(() => e.target.value)}
 						onKeyUp={e => {
-							if (e.key === 'Enter' && isReady) updateQuery({ search: search.length > 0 ? search : null });
+							if (e.key === 'Enter') updateQuery({ search: search.length > 0 ? search : null });
 						}}
 						type='text'
 						placeholder='Name or description...'
@@ -39,9 +40,7 @@ const SearchInput: FC = () => {
 					<button
 						role='navigation'
 						aria-label='Apply search query'
-						onClick={() => {
-							if (isReady) updateQuery({ search: search.length > 0 ? search : null });
-						}}
+						onClick={() => updateQuery({ search: search.length > 0 ? search : null })}
 						className='btn btn-sm xl:btn-md w-20 border-0 2xl:w-32'
 					>
 						<MagnifyingGlassIcon width={24} height={24} />

@@ -22,6 +22,8 @@ export type RecordProps<T> = { record: T };
 
 export type FadeWrapperProps = { children: ReactNode; show: boolean; appear?: boolean; isTransForm?: boolean };
 
+export type BreadcrumbProps = { isShowAuthor: boolean };
+
 export type CircleDividerProps = ClassNameProps;
 
 export type EffectRecordProps = RecordProps<Effect>;
@@ -42,9 +44,9 @@ export type SelectFilterProps = {
 	setFilterData: SetFilterData;
 };
 
-export type ColorFilterProps = SelectFilterProps;
-export type ItemCategoryFilterProps = SelectFilterProps;
-export type TraitCategoryFilterProps = SelectFilterProps;
+export type ColorFilterProps = SelectFilterProps & PageNameProps;
+export type ItemCategoryFilterProps = SelectFilterProps & PageNameProps;
+export type TraitCategoryFilterProps = SelectFilterProps & PageNameProps;
 
 export type PaginateProps = {
 	page: number;
@@ -83,6 +85,8 @@ export type ListLayoutProps = DefaultLayoutProps & { filterControl?: ReactNode }
 export type RootLayoutProps = ChildrenProps;
 
 export type PageTitleProps = PageNameProps;
+
+export type SearchInputProps = PageNameProps;
 
 export type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pathname: string };
 

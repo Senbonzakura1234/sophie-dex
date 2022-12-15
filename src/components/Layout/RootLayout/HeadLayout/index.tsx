@@ -1,4 +1,4 @@
-import { APP_DESCRIPTION, APP_KEYWORD, APP_NAME } from '@root/constants';
+import { APP_AUTHOR, APP_DESCRIPTION, APP_KEYWORD, APP_NAME } from '@root/constants';
 import Head from 'next/head';
 import type { FC } from 'react';
 
@@ -10,6 +10,7 @@ const HeadLayout: FC = () => {
 			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 			<link rel='icon' href='/favicon.ico' />
 			<meta name='keywords' content={APP_KEYWORD} />
+			<meta name='author' content={APP_AUTHOR} />
 			<link rel='manifest' href='/manifest.json' />
 			<meta name='theme-color' content='#F4C54F' />
 

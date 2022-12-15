@@ -1,15 +1,11 @@
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { TraitRecordProps } from '@root/types/common/props';
-import dynamic from 'next/dynamic';
 import type { FC } from 'react';
 
 import FadeWrapper from '../Animations/FadeWrapper';
 import RecordHead from '../RecordHead';
+import TraitCategories from './TraitCategories';
 import TraitMergeList from './TraitMergeList';
-
-const TraitCategories = dynamic(() => import('./TraitCategories'), {
-	ssr: false,
-});
 
 const TraitRecord: FC<TraitRecordProps> = ({
 	record: { name, description, grade, traitCategories, mergeFrom, id },

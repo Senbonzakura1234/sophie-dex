@@ -2,14 +2,24 @@ import type { TRAIT_CATEGORY } from '@prisma/client';
 import SelectOption from '@root/components/SelectOption';
 import { TraitCategorySelectList } from '@root/components/SubComponent';
 import type { TraitCategoryFilterProps } from '@root/types/common/props';
+import clsx from 'clsx';
 import type { FC } from 'react';
 
 const TraitCategoryFilter: FC<TraitCategoryFilterProps> = ({
 	filterData: { traitCateSelected },
 	setFilterData: { setTraitCateSelected },
+	pageName,
 }) => {
 	return (
-		<div className='flex grow gap-2 2xl:grow-0'>
+		<div
+			className={clsx(
+				{
+					flex: pageName === 'Trait',
+					hidden: pageName !== 'Trait',
+				},
+				'grow gap-2 2xl:grow-0',
+			)}
+		>
 			<small className='my-auto text-sm font-bold'>Category:</small>
 			<SelectOption<TRAIT_CATEGORY | null>
 				list={TraitCategorySelectList}

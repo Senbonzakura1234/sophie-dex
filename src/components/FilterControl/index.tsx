@@ -2,7 +2,6 @@ import { defaultLimit } from '@root/constants';
 import { useFilterControl } from '@root/hooks/useFilterControl';
 import { useGoToPageControl } from '@root/hooks/useGoToPageControl';
 import type { FilterControlProps } from '@root/types/common/props';
-import dynamic from 'next/dynamic';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
@@ -14,10 +13,7 @@ import ItemCategoryFilter from './ItemCategoryFilter';
 import Paginate from './Paginate';
 import ResetFilter from './ResetFilter';
 import SortControl from './SortControl';
-
-const TraitCategoryFilter = dynamic(() => import('./TraitCategoryFilter'), {
-	ssr: false,
-});
+import TraitCategoryFilter from './TraitCategoryFilter';
 
 const FilterControl: FC<FilterControlProps> = ({
 	limit = defaultLimit,
@@ -46,15 +42,9 @@ const FilterControl: FC<FilterControlProps> = ({
 					<CircleDivider className='bg-base-300 my-auto hidden h-2 w-2 2xl:block' />
 
 					<div className='flex flex-wrap gap-2'>
-						{pageName === 'Trait' ? (
-							<TraitCategoryFilter filterData={filterData} setFilterData={setFilterData} />
-						) : null}
-						{pageName === 'Item' ? (
-							<>
-								<ColorFilter filterData={filterData} setFilterData={setFilterData} />
-								<ItemCategoryFilter filterData={filterData} setFilterData={setFilterData} />
-							</>
-						) : null}
+						<TraitCategoryFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
+						<ColorFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
+						<ItemCategoryFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
 
 						<ApplyFilter filterData={filterData} isCanApplyFilter={isCanApplyFilter} />
 					</div>

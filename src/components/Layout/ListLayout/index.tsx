@@ -21,7 +21,7 @@ const ListLayout: FC<ListLayoutProps> = ({ pageName, filterControl, children, er
 				{children}
 			</section>
 
-			<PageFooter />
+			<PageFooter pageName={pageName} />
 
 			<ErrorModal isError={isError} errorData={errorData} errorMessage={errorMessage} />
 		</>
