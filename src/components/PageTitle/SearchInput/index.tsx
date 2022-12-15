@@ -15,7 +15,7 @@ const SearchInput: FC = () => {
 	return (
 		<FadeWrapper show={isReady} appear={true}>
 			<div className='form-control w-full max-w-4xl'>
-				<div className='input-group input-group-xs 2xl:input-group-md relative'>
+				<div className='input-group input-group-sm 2xl:input-group-md relative'>
 					<input
 						value={search}
 						onChange={e => setSearch(() => e.target.value)}
@@ -24,14 +24,14 @@ const SearchInput: FC = () => {
 						}}
 						type='text'
 						placeholder='Name or description...'
-						className='input input-bordered input-primary grow !outline-none'
+						className='input input-bordered input-primary input-sm xl:input-md grow !outline-none'
 					/>
 					{search.length > 0 && (
 						<button
 							role='search'
 							aria-label='Clear search query'
 							onClick={() => setSearch(() => '')}
-							className='btn btn-sm btn-ghost btn-circle absolute inset-y-[16%] right-16 z-10 2xl:right-36'
+							className='btn btn-sm btn-ghost btn-circle absolute inset-y-[16%] right-16 z-10 hidden xl:flex 2xl:right-36'
 						>
 							<XMarkIcon width={20} height={20} />
 						</button>
@@ -42,7 +42,7 @@ const SearchInput: FC = () => {
 						onClick={() => {
 							if (isReady) updateQuery({ search: search.length > 0 ? search : null });
 						}}
-						className='btn border-0 2xl:w-32'
+						className='btn btn-sm xl:btn-md w-20 border-0 2xl:w-32'
 					>
 						<MagnifyingGlassIcon width={24} height={24} />
 					</button>
