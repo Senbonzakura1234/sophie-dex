@@ -15,7 +15,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Magic Grass',
-		noId: 0,
+		grade: 0,
 	},
 	{
 		color: 'BLUE',
@@ -31,7 +31,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Cobalt Grass',
-		noId: 1,
+		grade: 1,
 	},
 	{
 		color: 'BLUE',
@@ -47,7 +47,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Fairy Poison Grass',
-		noId: 2,
+		grade: 2,
 	},
 	{
 		color: 'WHITE',
@@ -67,7 +67,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Mystic Herb',
-		noId: 3,
+		grade: 3,
 	},
 	{
 		color: 'YELLOW',
@@ -83,7 +83,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Sunset Grass',
-		noId: 4,
+		grade: 4,
 	},
 	{
 		color: 'GREEN',
@@ -99,7 +99,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Five Day Vine',
-		noId: 5,
+		grade: 5,
 	},
 	{
 		color: 'WHITE',
@@ -119,7 +119,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Mountain Cotton',
-		noId: 6,
+		grade: 6,
 	},
 	{
 		color: 'GREEN',
@@ -135,7 +135,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Mossy Driftwood',
-		noId: 7,
+		grade: 7,
 	},
 	{
 		color: 'YELLOW',
@@ -151,7 +151,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Kifa',
-		noId: 8,
+		grade: 8,
 	},
 	{
 		color: 'GREEN',
@@ -167,7 +167,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Altare',
-		noId: 9,
+		grade: 9,
 	},
 	{
 		color: 'RED',
@@ -183,7 +183,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Crimson Herb',
-		noId: 10,
+		grade: 10,
 	},
 	{
 		color: 'WHITE',
@@ -199,7 +199,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Princess Grass',
-		noId: 11,
+		grade: 11,
 	},
 	{
 		color: 'WHITE',
@@ -215,7 +215,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Eternal Blossom',
-		noId: 12,
+		grade: 12,
 	},
 	{
 		color: 'WHITE',
@@ -235,7 +235,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Dunkelheit',
-		noId: 13,
+		grade: 13,
 	},
 	{
 		color: 'RED',
@@ -255,7 +255,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Dunkelstern',
-		noId: 14,
+		grade: 14,
 	},
 	{
 		color: 'YELLOW',
@@ -267,7 +267,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Aizen Ore',
-		noId: 15,
+		grade: 15,
 	},
 	{
 		color: 'GREEN',
@@ -279,7 +279,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Raiden Ore',
-		noId: 16,
+		grade: 16,
 	},
 	{
 		color: 'RED',
@@ -291,7 +291,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Kupulf Ore',
-		noId: 17,
+		grade: 17,
 	},
 	{
 		color: 'RED',
@@ -307,7 +307,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Kaen Stone',
-		noId: 18,
+		grade: 18,
 	},
 	{
 		color: 'BLUE',
@@ -323,7 +323,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Hakurei Stone',
-		noId: 19,
+		grade: 19,
 	},
 	{
 		color: 'WHITE',
@@ -339,7 +339,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Spirit Stone',
-		noId: 20,
+		grade: 20,
 	},
 	{
 		color: 'WHITE',
@@ -359,7 +359,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Black Orb',
-		noId: 21,
+		grade: 21,
 	},
 	{
 		color: 'YELLOW',
@@ -375,7 +375,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Fairy Ball',
-		noId: 22,
+		grade: 22,
 	},
 	{
 		color: 'GREEN',
@@ -387,7 +387,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Lakebottom Soil',
-		noId: 23,
+		grade: 23,
 	},
 	{
 		color: 'BLUE',
@@ -399,7 +399,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Seabed Soil',
-		noId: 24,
+		grade: 24,
 	},
 	{
 		color: 'WHITE',
@@ -419,7 +419,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Ancient Tablet',
-		noId: 25,
+		grade: 25,
 	},
 	{
 		color: 'YELLOW',
@@ -435,7 +435,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Broken Stone',
-		noId: 26,
+		grade: 26,
 	},
 	{
 		color: 'GREEN',
@@ -451,7 +451,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Ancient Pillar',
-		noId: 27,
+		grade: 27,
 	},
 	{
 		color: 'WHITE',
@@ -471,7 +471,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Smoldering Stone',
-		noId: 28,
+		grade: 28,
 	},
 	{
 		color: 'WHITE',
@@ -487,7 +487,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Fardenlite',
-		noId: 29,
+		grade: 29,
 	},
 	{
 		color: 'BLUE',
@@ -503,7 +503,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Night Crystal',
-		noId: 30,
+		grade: 30,
 	},
 	{
 		color: 'BLUE',
@@ -519,7 +519,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Shining Ore',
-		noId: 31,
+		grade: 31,
 	},
 	{
 		color: 'BLUE',
@@ -535,7 +535,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Silver Crystal',
-		noId: 32,
+		grade: 32,
 	},
 	{
 		color: 'WHITE',
@@ -559,7 +559,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Spirit Crystal',
-		noId: 33,
+		grade: 33,
 	},
 	{
 		color: 'RED',
@@ -575,7 +575,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Monster Feather',
-		noId: 34,
+		grade: 34,
 	},
 	{
 		color: 'YELLOW',
@@ -591,7 +591,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Strong Bone',
-		noId: 35,
+		grade: 35,
 	},
 	{
 		color: 'GREEN',
@@ -611,7 +611,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Island Fish Fin',
-		noId: 36,
+		grade: 36,
 	},
 	{
 		color: 'YELLOW',
@@ -627,7 +627,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Animal Fur',
-		noId: 37,
+		grade: 37,
 	},
 	{
 		color: 'RED',
@@ -643,7 +643,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Dawn Fur',
-		noId: 38,
+		grade: 38,
 	},
 	{
 		color: 'YELLOW',
@@ -655,7 +655,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Silver Web',
-		noId: 39,
+		grade: 39,
 	},
 	{
 		color: 'YELLOW',
@@ -667,7 +667,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Gold Steel Web',
-		noId: 40,
+		grade: 40,
 	},
 	{
 		color: 'WHITE',
@@ -687,7 +687,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Dragon Scale',
-		noId: 41,
+		grade: 41,
 	},
 	{
 		color: 'BLUE',
@@ -699,7 +699,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Well Water',
-		noId: 42,
+		grade: 42,
 	},
 	{
 		color: 'BLUE',
@@ -711,7 +711,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Good Water',
-		noId: 43,
+		grade: 43,
 	},
 	{
 		color: 'BLUE',
@@ -727,7 +727,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Kirchen Milk',
-		noId: 44,
+		grade: 44,
 	},
 	{
 		color: 'GREEN',
@@ -743,7 +743,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Luminous Water',
-		noId: 45,
+		grade: 45,
 	},
 	{
 		color: 'RED',
@@ -763,7 +763,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Nitro Water',
-		noId: 46,
+		grade: 46,
 	},
 	{
 		color: 'RED',
@@ -779,7 +779,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Suspicious Liquid',
-		noId: 47,
+		grade: 47,
 	},
 	{
 		color: 'BLUE',
@@ -795,7 +795,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Puni Fluid',
-		noId: 48,
+		grade: 48,
 	},
 	{
 		color: 'WHITE',
@@ -815,7 +815,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Rainbow Puni Fluid',
-		noId: 49,
+		grade: 49,
 	},
 	{
 		color: 'RED',
@@ -835,7 +835,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Dragon Bloodstone',
-		noId: 50,
+		grade: 50,
 	},
 	{
 		color: 'WHITE',
@@ -851,7 +851,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Holy Water',
-		noId: 51,
+		grade: 51,
 	},
 	{
 		color: 'BLUE',
@@ -867,7 +867,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Puniball',
-		noId: 52,
+		grade: 52,
 	},
 	{
 		color: 'YELLOW',
@@ -883,7 +883,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Golden Puniball',
-		noId: 53,
+		grade: 53,
 	},
 	{
 		color: 'YELLOW',
@@ -899,7 +899,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Uni',
-		noId: 54,
+		grade: 54,
 	},
 	{
 		color: 'RED',
@@ -919,7 +919,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Red Uni',
-		noId: 55,
+		grade: 55,
 	},
 	{
 		color: 'GREEN',
@@ -935,7 +935,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Ramel Wheat',
-		noId: 56,
+		grade: 56,
 	},
 	{
 		color: 'GREEN',
@@ -951,7 +951,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Weiss Powder',
-		noId: 57,
+		grade: 57,
 	},
 	{
 		color: 'YELLOW',
@@ -967,7 +967,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Soil Potato',
-		noId: 58,
+		grade: 58,
 	},
 	{
 		color: 'YELLOW',
@@ -983,7 +983,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Silver Potato',
-		noId: 59,
+		grade: 59,
 	},
 	{
 		color: 'YELLOW',
@@ -999,7 +999,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Beehive',
-		noId: 60,
+		grade: 60,
 	},
 	{
 		color: 'YELLOW',
@@ -1019,7 +1019,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Unknown Egg',
-		noId: 61,
+		grade: 61,
 	},
 	{
 		color: 'GREEN',
@@ -1035,7 +1035,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Whimsy Strawberry',
-		noId: 62,
+		grade: 62,
 	},
 	{
 		color: 'BLUE',
@@ -1051,7 +1051,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Bursting Berry',
-		noId: 63,
+		grade: 63,
 	},
 	{
 		color: 'GREEN',
@@ -1067,7 +1067,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Paper Scrap',
-		noId: 64,
+		grade: 64,
 	},
 	{
 		color: 'YELLOW',
@@ -1079,7 +1079,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Natural Oil',
-		noId: 65,
+		grade: 65,
 	},
 	{
 		color: 'GREEN',
@@ -1091,7 +1091,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Zafloa Oil',
-		noId: 66,
+		grade: 66,
 	},
 	{
 		color: 'GREEN',
@@ -1107,7 +1107,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Church Talisman',
-		noId: 67,
+		grade: 67,
 	},
 	{
 		color: 'GREEN',
@@ -1123,7 +1123,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'High Class Talisman',
-		noId: 68,
+		grade: 68,
 	},
 	{
 		color: 'WHITE',
@@ -1143,7 +1143,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Pious Talisman',
-		noId: 69,
+		grade: 69,
 	},
 	{
 		color: 'BLUE',
@@ -1159,7 +1159,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Pretty Shell',
-		noId: 70,
+		grade: 70,
 	},
 	{
 		color: 'WHITE',
@@ -1175,7 +1175,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Pelem Shell',
-		noId: 71,
+		grade: 71,
 	},
 	{
 		color: 'BLUE',
@@ -1191,7 +1191,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Blue Steel Stone',
-		noId: 72,
+		grade: 72,
 	},
 	{
 		color: 'RED',
@@ -1207,7 +1207,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Star Powder',
-		noId: 73,
+		grade: 73,
 	},
 	{
 		color: 'RED',
@@ -1223,7 +1223,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Sun Powder',
-		noId: 74,
+		grade: 74,
 	},
 	{
 		color: 'BLUE',
@@ -1239,7 +1239,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Crystal Shard',
-		noId: 75,
+		grade: 75,
 	},
 	{
 		color: 'WHITE',
@@ -1259,7 +1259,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Rainbow Crystal',
-		noId: 76,
+		grade: 76,
 	},
 	{
 		color: 'BLUE',
@@ -1275,7 +1275,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Pendeloch',
-		noId: 77,
+		grade: 77,
 	},
 	{
 		color: 'GREEN',
@@ -1291,7 +1291,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Pendegrune',
-		noId: 78,
+		grade: 78,
 	},
 	{
 		color: 'BLUE',
@@ -1307,7 +1307,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Evil Core',
-		noId: 79,
+		grade: 79,
 	},
 	{
 		color: 'RED',
@@ -1327,7 +1327,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Dragon Heart',
-		noId: 80,
+		grade: 80,
 	},
 	{
 		color: 'WHITE',
@@ -1339,7 +1339,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Forgotten Wood',
-		noId: 81,
+		grade: 81,
 	},
 	{
 		color: 'WHITE',
@@ -1351,7 +1351,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Forgotten Gem',
-		noId: 82,
+		grade: 82,
 	},
 	{
 		color: 'WHITE',
@@ -1363,7 +1363,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Forgotten Ore',
-		noId: 83,
+		grade: 83,
 	},
 	{
 		color: 'WHITE',
@@ -1375,7 +1375,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Forgotten Part',
-		noId: 84,
+		grade: 84,
 	},
 	{
 		color: 'YELLOW',
@@ -1387,7 +1387,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Useless Fragment',
-		noId: 85,
+		grade: 85,
 	},
 	{
 		color: 'GREEN',
@@ -1399,7 +1399,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Burnt Fragment',
-		noId: 86,
+		grade: 86,
 	},
 	{
 		color: 'BLUE',
@@ -1411,7 +1411,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Stinky Fragment',
-		noId: 87,
+		grade: 87,
 	},
 	{
 		color: 'RED',
@@ -1423,7 +1423,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Pretty Fragment',
-		noId: 88,
+		grade: 88,
 	},
 	{
 		color: 'WHITE',
@@ -1439,7 +1439,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Failure Ash',
-		noId: 89,
+		grade: 89,
 	},
 	{
 		color: 'GREEN',
@@ -1451,7 +1451,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Haze Grass Petal',
-		noId: 90,
+		grade: 90,
 	},
 	{
 		color: 'RED',
@@ -1463,7 +1463,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Eternity Scale',
-		noId: 91,
+		grade: 91,
 	},
 	{
 		color: 'BLUE',
@@ -1483,7 +1483,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Magic Page',
-		noId: 92,
+		grade: 92,
 	},
 	{
 		color: 'RED',
@@ -1503,7 +1503,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Torn Grimoire',
-		noId: 93,
+		grade: 93,
 	},
 	{
 		color: 'GREEN',
@@ -1523,7 +1523,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Unknown Knowledge Scrap',
-		noId: 94,
+		grade: 94,
 	},
 	{
 		color: 'YELLOW',
@@ -1543,7 +1543,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Sealed Knowledge Scrap',
-		noId: 95,
+		grade: 95,
 	},
 	{
 		color: 'YELLOW',
@@ -1555,7 +1555,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Uni Bag',
-		noId: 142,
+		grade: 142,
 	},
 	{
 		color: 'RED',
@@ -1567,7 +1567,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Bomb',
-		noId: 143,
+		grade: 143,
 	},
 	{
 		color: 'BLUE',
@@ -1579,7 +1579,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Ice Bomb',
-		noId: 144,
+		grade: 144,
 	},
 	{
 		color: 'GREEN',
@@ -1591,7 +1591,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Lightning Bomb',
-		noId: 145,
+		grade: 145,
 	},
 	{
 		color: 'YELLOW',
@@ -1603,7 +1603,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Craft',
-		noId: 146,
+		grade: 146,
 	},
 	{
 		color: 'RED',
@@ -1615,7 +1615,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Ori Bomb',
-		noId: 147,
+		grade: 147,
 	},
 	{
 		color: 'BLUE',
@@ -1627,7 +1627,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Stahl Ice Bomb',
-		noId: 148,
+		grade: 148,
 	},
 	{
 		color: 'GREEN',
@@ -1639,7 +1639,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Lightning Crystal',
-		noId: 149,
+		grade: 149,
 	},
 	{
 		color: 'BLUE',
@@ -1651,7 +1651,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Puni Missile',
-		noId: 150,
+		grade: 150,
 	},
 	{
 		color: 'YELLOW',
@@ -1667,7 +1667,7 @@ const items: Item[] = [
 			},
 		],
 		name: "God's Gift",
-		noId: 151,
+		grade: 151,
 	},
 	{
 		color: 'WHITE',
@@ -1683,7 +1683,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Flame of Origin',
-		noId: 152,
+		grade: 152,
 	},
 	{
 		color: 'GREEN',
@@ -1695,70 +1695,70 @@ const items: Item[] = [
 			},
 		],
 		name: "Magician's Flute",
-		noId: 153,
+		grade: 153,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344969',
 		itemCategories: [],
 		name: 'Red Uni Bag',
-		noId: 154,
+		grade: 154,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834496b',
 		itemCategories: [],
 		name: 'Blau Bomb',
-		noId: 155,
+		grade: 155,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834496a',
 		itemCategories: [],
 		name: 'Vio Ice Bomb',
-		noId: 156,
+		grade: 156,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344976',
 		itemCategories: [],
 		name: 'Blitz Stone',
-		noId: 157,
+		grade: 157,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344971',
 		itemCategories: [],
 		name: 'Craft Bag',
-		noId: 158,
+		grade: 158,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834496f',
 		itemCategories: [],
 		name: 'Peta Bomb',
-		noId: 159,
+		grade: 159,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344974',
 		itemCategories: [],
 		name: 'Einsof Ice Bomb',
-		noId: 160,
+		grade: 160,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344973',
 		itemCategories: [],
 		name: 'Blitz Crystal',
-		noId: 161,
+		grade: 161,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344975',
 		itemCategories: [],
 		name: 'Black Puni Missile',
-		noId: 162,
+		grade: 162,
 	},
 	{
 		color: 'YELLOW',
@@ -1774,7 +1774,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Heaven's Cleanser",
-		noId: 163,
+		grade: 163,
 	},
 	{
 		color: 'WHITE',
@@ -1790,7 +1790,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Flame of the End',
-		noId: 164,
+		grade: 164,
 	},
 	{
 		color: 'GREEN',
@@ -1802,7 +1802,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Necromancer Flute',
-		noId: 165,
+		grade: 165,
 	},
 	{
 		color: 'GREEN',
@@ -1814,7 +1814,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Berg Medicine',
-		noId: 216,
+		grade: 216,
 	},
 	{
 		color: 'BLUE',
@@ -1826,7 +1826,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Refuel Bottle',
-		noId: 217,
+		grade: 217,
 	},
 	{
 		color: 'GREEN',
@@ -1838,7 +1838,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Breezy Aroma',
-		noId: 218,
+		grade: 218,
 	},
 	{
 		color: 'WHITE',
@@ -1854,7 +1854,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Nectar of Life',
-		noId: 219,
+		grade: 219,
 	},
 	{
 		color: 'WHITE',
@@ -1870,7 +1870,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Mystery Elixir',
-		noId: 220,
+		grade: 220,
 	},
 	{
 		color: 'GREEN',
@@ -1886,7 +1886,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Simple Sweets',
-		noId: 221,
+		grade: 221,
 	},
 	{
 		color: 'BLUE',
@@ -1902,7 +1902,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Sotea',
-		noId: 222,
+		grade: 222,
 	},
 	{
 		color: 'BLUE',
@@ -1922,7 +1922,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Puni Jelly',
-		noId: 223,
+		grade: 223,
 	},
 	{
 		color: 'YELLOW',
@@ -1938,7 +1938,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Sofinancier',
-		noId: 224,
+		grade: 224,
 	},
 	{
 		color: 'BLUE',
@@ -1954,7 +1954,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Piro Sotea',
-		noId: 225,
+		grade: 225,
 	},
 	{
 		color: 'RED',
@@ -1974,7 +1974,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Alchemy Drops',
-		noId: 226,
+		grade: 226,
 	},
 	{
 		color: 'RED',
@@ -1986,7 +1986,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Plain Waffle',
-		noId: 227,
+		grade: 227,
 	},
 	{
 		color: 'RED',
@@ -1998,70 +1998,70 @@ const items: Item[] = [
 			},
 		],
 		name: 'Bagel Sandwich',
-		noId: 228,
+		grade: 228,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834498b',
 		itemCategories: [],
 		name: 'Yellow Ointment',
-		noId: 229,
+		grade: 229,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834498c',
 		itemCategories: [],
 		name: 'Relief Drink',
-		noId: 230,
+		grade: 230,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344982',
 		itemCategories: [],
 		name: 'Fairy Breath',
-		noId: 231,
+		grade: 231,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834498a',
 		itemCategories: [],
 		name: 'Lifesteal Drops',
-		noId: 232,
+		grade: 232,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344989',
 		itemCategories: [],
 		name: 'Goddess Tear',
-		noId: 233,
+		grade: 233,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344990',
 		itemCategories: [],
 		name: 'Rock Cookie',
-		noId: 234,
+		grade: 234,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834498e',
 		itemCategories: [],
 		name: 'Black Sotea',
-		noId: 235,
+		grade: 235,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834498f',
 		itemCategories: [],
 		name: 'Rainbow Puni Jelly',
-		noId: 236,
+		grade: 236,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834498d',
 		itemCategories: [],
 		name: 'Medicinal Cake',
-		noId: 237,
+		grade: 237,
 	},
 	{
 		color: 'BLUE',
@@ -2073,7 +2073,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Supreme Hot Milk',
-		noId: 238,
+		grade: 238,
 	},
 	{
 		color: 'BLUE',
@@ -2085,7 +2085,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Honey Syrup',
-		noId: 239,
+		grade: 239,
 	},
 	{
 		color: 'WHITE',
@@ -2097,7 +2097,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Angel's Whisper",
-		noId: 290,
+		grade: 290,
 	},
 	{
 		color: 'GREEN',
@@ -2109,7 +2109,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Warding Incense',
-		noId: 291,
+		grade: 291,
 	},
 	{
 		color: 'RED',
@@ -2121,7 +2121,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Bottled Misfortune',
-		noId: 292,
+		grade: 292,
 	},
 	{
 		color: 'BLUE',
@@ -2133,7 +2133,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Spirit Weave Cloth',
-		noId: 293,
+		grade: 293,
 	},
 	{
 		color: 'RED',
@@ -2145,7 +2145,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Fire Dragon Medicine',
-		noId: 294,
+		grade: 294,
 	},
 	{
 		color: 'WHITE',
@@ -2161,7 +2161,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Codex of Creation',
-		noId: 295,
+		grade: 295,
 	},
 	{
 		color: 'YELLOW',
@@ -2173,7 +2173,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Imp's Mischief",
-		noId: 296,
+		grade: 296,
 	},
 	{
 		color: 'RED',
@@ -2185,42 +2185,42 @@ const items: Item[] = [
 			},
 		],
 		name: "Hero's Medicine",
-		noId: 297,
+		grade: 297,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c844834499b',
 		itemCategories: [],
 		name: 'Fallen Angel Bell',
-		noId: 298,
+		grade: 298,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c8448344999',
 		itemCategories: [],
 		name: 'Hunger Incense',
-		noId: 299,
+		grade: 299,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c844834499e',
 		itemCategories: [],
 		name: 'Edible Mist',
-		noId: 300,
+		grade: 300,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c844834499f',
 		itemCategories: [],
 		name: 'Mirage Film',
-		noId: 301,
+		grade: 301,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449aa',
 		itemCategories: [],
 		name: 'Leidenpruft',
-		noId: 302,
+		grade: 302,
 	},
 	{
 		color: 'WHITE',
@@ -2236,21 +2236,21 @@ const items: Item[] = [
 			},
 		],
 		name: 'Sealing Book',
-		noId: 303,
+		grade: 303,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c844834499d',
 		itemCategories: [],
 		name: "Demon's Mischief",
-		noId: 304,
+		grade: 304,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449a0',
 		itemCategories: [],
 		name: 'Berserker Medicine',
-		noId: 305,
+		grade: 305,
 	},
 	{
 		color: 'GREEN',
@@ -2262,14 +2262,14 @@ const items: Item[] = [
 			},
 		],
 		name: 'Wonder Stimulant',
-		noId: 356,
+		grade: 356,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449a1',
 		itemCategories: [],
 		name: 'Restful Tent',
-		noId: 357,
+		grade: 357,
 	},
 	{
 		color: 'YELLOW',
@@ -2281,7 +2281,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Fairy Guide',
-		noId: 358,
+		grade: 358,
 	},
 	{
 		color: 'YELLOW',
@@ -2297,7 +2297,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Living Cart',
-		noId: 359,
+		grade: 359,
 	},
 	{
 		color: 'BLUE',
@@ -2309,7 +2309,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Clear Drops',
-		noId: 360,
+		grade: 360,
 	},
 	{
 		color: 'BLUE',
@@ -2325,7 +2325,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Mana Feather',
-		noId: 361,
+		grade: 361,
 	},
 	{
 		color: 'GREEN',
@@ -2337,7 +2337,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Traveler's Shoes",
-		noId: 362,
+		grade: 362,
 	},
 	{
 		color: 'YELLOW',
@@ -2349,7 +2349,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Deluxe Backpack',
-		noId: 363,
+		grade: 363,
 	},
 	{
 		color: 'YELLOW',
@@ -2361,7 +2361,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Emergency Bag',
-		noId: 364,
+		grade: 364,
 	},
 	{
 		color: 'BLUE',
@@ -2373,7 +2373,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Gathering Gloves',
-		noId: 365,
+		grade: 365,
 	},
 	{
 		color: 'RED',
@@ -2385,7 +2385,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Victor's Charm",
-		noId: 366,
+		grade: 366,
 	},
 	{
 		color: 'GREEN',
@@ -2397,7 +2397,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Training Charm',
-		noId: 367,
+		grade: 367,
 	},
 	{
 		color: 'YELLOW',
@@ -2413,7 +2413,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Warding Charm',
-		noId: 368,
+		grade: 368,
 	},
 	{
 		color: 'WHITE',
@@ -2425,7 +2425,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Heart Pendant',
-		noId: 369,
+		grade: 369,
 	},
 	{
 		color: 'RED',
@@ -2437,7 +2437,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Neutralizer R',
-		noId: 420,
+		grade: 420,
 	},
 	{
 		color: 'BLUE',
@@ -2449,7 +2449,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Neutralizer B',
-		noId: 421,
+		grade: 421,
 	},
 	{
 		color: 'GREEN',
@@ -2461,7 +2461,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Neutralizer G',
-		noId: 422,
+		grade: 422,
 	},
 	{
 		color: 'YELLOW',
@@ -2473,7 +2473,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Neutralizer Y',
-		noId: 423,
+		grade: 423,
 	},
 	{
 		color: 'BLUE',
@@ -2485,7 +2485,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Pure Water',
-		noId: 424,
+		grade: 424,
 	},
 	{
 		color: 'BLUE',
@@ -2501,7 +2501,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Spirit Tears',
-		noId: 425,
+		grade: 425,
 	},
 	{
 		color: 'YELLOW',
@@ -2517,7 +2517,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Apcol',
-		noId: 426,
+		grade: 426,
 	},
 	{
 		color: 'RED',
@@ -2533,7 +2533,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Ramel Flour',
-		noId: 427,
+		grade: 427,
 	},
 	{
 		color: 'YELLOW',
@@ -2545,7 +2545,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Honey',
-		noId: 428,
+		grade: 428,
 	},
 	{
 		color: 'GREEN',
@@ -2565,7 +2565,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Natural Yeast',
-		noId: 429,
+		grade: 429,
 	},
 	{
 		color: 'RED',
@@ -2581,7 +2581,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Elixir Base',
-		noId: 430,
+		grade: 430,
 	},
 	{
 		color: 'RED',
@@ -2597,7 +2597,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Zettel',
-		noId: 431,
+		grade: 431,
 	},
 	{
 		color: 'YELLOW',
@@ -2613,7 +2613,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Refresh Oil',
-		noId: 432,
+		grade: 432,
 	},
 	{
 		color: 'RED',
@@ -2625,7 +2625,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Flame Powder',
-		noId: 433,
+		grade: 433,
 	},
 	{
 		color: 'GREEN',
@@ -2637,7 +2637,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Blitzlite',
-		noId: 434,
+		grade: 434,
 	},
 	{
 		color: 'WHITE',
@@ -2653,7 +2653,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Geist Aizen',
-		noId: 435,
+		grade: 435,
 	},
 	{
 		color: 'WHITE',
@@ -2669,7 +2669,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Alchemic Clay',
-		noId: 436,
+		grade: 436,
 	},
 	{
 		color: 'YELLOW',
@@ -2685,7 +2685,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Gold Thread',
-		noId: 437,
+		grade: 437,
 	},
 	{
 		color: 'GREEN',
@@ -2697,7 +2697,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Spruce',
-		noId: 438,
+		grade: 438,
 	},
 	{
 		color: 'RED',
@@ -2713,7 +2713,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Ingot',
-		noId: 439,
+		grade: 439,
 	},
 	{
 		color: 'RED',
@@ -2729,7 +2729,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Stahl Metal',
-		noId: 440,
+		grade: 440,
 	},
 	{
 		color: 'RED',
@@ -2745,7 +2745,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Silvalia',
-		noId: 441,
+		grade: 441,
 	},
 	{
 		color: 'RED',
@@ -2761,7 +2761,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Rubilium',
-		noId: 442,
+		grade: 442,
 	},
 	{
 		color: 'RED',
@@ -2777,7 +2777,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Golt Aizen',
-		noId: 443,
+		grade: 443,
 	},
 	{
 		color: 'RED',
@@ -2793,7 +2793,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Harmonium',
-		noId: 444,
+		grade: 444,
 	},
 	{
 		color: 'YELLOW',
@@ -2809,7 +2809,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Cloth',
-		noId: 445,
+		grade: 445,
 	},
 	{
 		color: 'YELLOW',
@@ -2825,7 +2825,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Mofcott',
-		noId: 446,
+		grade: 446,
 	},
 	{
 		color: 'YELLOW',
@@ -2841,7 +2841,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Adal Cloth',
-		noId: 447,
+		grade: 447,
 	},
 	{
 		color: 'YELLOW',
@@ -2857,7 +2857,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Flugel',
-		noId: 448,
+		grade: 448,
 	},
 	{
 		color: 'YELLOW',
@@ -2873,7 +2873,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Fairheit',
-		noId: 449,
+		grade: 449,
 	},
 	{
 		color: 'YELLOW',
@@ -2889,7 +2889,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Velvetis',
-		noId: 450,
+		grade: 450,
 	},
 	{
 		color: 'BLUE',
@@ -2905,7 +2905,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Snowflake Crystal',
-		noId: 451,
+		grade: 451,
 	},
 	{
 		color: 'BLUE',
@@ -2917,7 +2917,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Noble Sapphire',
-		noId: 452,
+		grade: 452,
 	},
 	{
 		color: 'RED',
@@ -2941,7 +2941,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Dusk Drop',
-		noId: 453,
+		grade: 453,
 	},
 	{
 		color: 'YELLOW',
@@ -2957,7 +2957,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Crystal Ball',
-		noId: 454,
+		grade: 454,
 	},
 	{
 		color: 'WHITE',
@@ -2969,7 +2969,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Compass of Hades',
-		noId: 455,
+		grade: 455,
 	},
 	{
 		color: 'RED',
@@ -2993,7 +2993,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Crimson Stone',
-		noId: 456,
+		grade: 456,
 	},
 	{
 		color: 'WHITE',
@@ -3017,7 +3017,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Philosopher Stone',
-		noId: 457,
+		grade: 457,
 	},
 	{
 		color: 'RED',
@@ -3041,7 +3041,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Sun Drop',
-		noId: 458,
+		grade: 458,
 	},
 	{
 		color: 'GREEN',
@@ -3061,7 +3061,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Mineral Extract',
-		noId: 459,
+		grade: 459,
 	},
 	{
 		color: 'YELLOW',
@@ -3073,7 +3073,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Fertile Soil',
-		noId: 460,
+		grade: 460,
 	},
 	{
 		color: 'WHITE',
@@ -3085,7 +3085,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Precise Parts',
-		noId: 461,
+		grade: 461,
 	},
 	{
 		color: 'WHITE',
@@ -3097,7 +3097,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Grandma's Cauldron",
-		noId: 509,
+		grade: 509,
 	},
 	{
 		color: 'WHITE',
@@ -3109,7 +3109,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Practice Cauldron',
-		noId: 510,
+		grade: 510,
 	},
 	{
 		color: 'WHITE',
@@ -3121,7 +3121,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Tuned Cauldron',
-		noId: 511,
+		grade: 511,
 	},
 	{
 		color: 'WHITE',
@@ -3133,7 +3133,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Expert Cauldron',
-		noId: 512,
+		grade: 512,
 	},
 	{
 		color: 'WHITE',
@@ -3145,7 +3145,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Fairy Cauldron',
-		noId: 513,
+		grade: 513,
 	},
 	{
 		color: 'WHITE',
@@ -3157,7 +3157,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Ancient Cauldron',
-		noId: 514,
+		grade: 514,
 	},
 	{
 		color: 'WHITE',
@@ -3169,7 +3169,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Teacher's Cauldron",
-		noId: 515,
+		grade: 515,
 	},
 	{
 		color: 'WHITE',
@@ -3181,7 +3181,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Hermit's Cauldron",
-		noId: 516,
+		grade: 516,
 	},
 	{
 		color: 'WHITE',
@@ -3193,35 +3193,35 @@ const items: Item[] = [
 			},
 		],
 		name: 'Miraculous Cauldron',
-		noId: 517,
+		grade: 517,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449de',
 		itemCategories: [],
 		name: 'Rein Gem',
-		noId: 518,
+		grade: 518,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449e1',
 		itemCategories: [],
 		name: 'Forg Gem',
-		noId: 519,
+		grade: 519,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449e5',
 		itemCategories: [],
 		name: 'Vax Gem',
-		noId: 520,
+		grade: 520,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449e2',
 		itemCategories: [],
 		name: 'Samil Gem',
-		noId: 521,
+		grade: 521,
 	},
 	{
 		color: 'WHITE',
@@ -3233,28 +3233,28 @@ const items: Item[] = [
 			},
 		],
 		name: 'Eye of Mercury',
-		noId: 522,
+		grade: 522,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449e6',
 		itemCategories: [],
 		name: 'Alchemy Glass Tool',
-		noId: 523,
+		grade: 523,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449e9',
 		itemCategories: [],
 		name: 'Growth Accelerator',
-		noId: 524,
+		grade: 524,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449e8',
 		itemCategories: [],
 		name: 'Personal Mixing Rod',
-		noId: 525,
+		grade: 525,
 	},
 	{
 		color: 'GREEN',
@@ -3266,7 +3266,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Starting Staff',
-		noId: 576,
+		grade: 576,
 	},
 	{
 		color: 'BLUE',
@@ -3278,7 +3278,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Flourish Heart',
-		noId: 577,
+		grade: 577,
 	},
 	{
 		color: 'RED',
@@ -3290,7 +3290,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Wandering Staff',
-		noId: 578,
+		grade: 578,
 	},
 	{
 		color: 'YELLOW',
@@ -3302,7 +3302,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Prosper Heart',
-		noId: 579,
+		grade: 579,
 	},
 	{
 		color: 'WHITE',
@@ -3314,7 +3314,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Eternal Cycle Staff',
-		noId: 580,
+		grade: 580,
 	},
 	{
 		color: 'YELLOW',
@@ -3326,7 +3326,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Moon Caller',
-		noId: 581,
+		grade: 581,
 	},
 	{
 		color: 'BLUE',
@@ -3338,7 +3338,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Aura Bangle',
-		noId: 582,
+		grade: 582,
 	},
 	{
 		color: 'RED',
@@ -3350,7 +3350,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Cosmo Caller',
-		noId: 583,
+		grade: 583,
 	},
 	{
 		color: 'GREEN',
@@ -3362,7 +3362,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Arch Bangle',
-		noId: 584,
+		grade: 584,
 	},
 	{
 		color: 'WHITE',
@@ -3374,7 +3374,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Bright Night',
-		noId: 585,
+		grade: 585,
 	},
 	{
 		color: 'BLUE',
@@ -3386,7 +3386,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Formal Rapier',
-		noId: 586,
+		grade: 586,
 	},
 	{
 		color: 'GREEN',
@@ -3398,7 +3398,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Brave Rapier',
-		noId: 587,
+		grade: 587,
 	},
 	{
 		color: 'RED',
@@ -3410,7 +3410,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Knight's Rapier",
-		noId: 588,
+		grade: 588,
 	},
 	{
 		color: 'BLUE',
@@ -3422,7 +3422,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Hero's Rapier",
-		noId: 589,
+		grade: 589,
 	},
 	{
 		color: 'WHITE',
@@ -3434,7 +3434,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Monika's Estoc",
-		noId: 590,
+		grade: 590,
 	},
 	{
 		color: 'YELLOW',
@@ -3446,7 +3446,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Earth Shovel',
-		noId: 591,
+		grade: 591,
 	},
 	{
 		color: 'BLUE',
@@ -3458,7 +3458,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Idle Shovel',
-		noId: 592,
+		grade: 592,
 	},
 	{
 		color: 'RED',
@@ -3470,7 +3470,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Heaven's Shovel",
-		noId: 593,
+		grade: 593,
 	},
 	{
 		color: 'YELLOW',
@@ -3482,7 +3482,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Shovel of Hope',
-		noId: 594,
+		grade: 594,
 	},
 	{
 		color: 'GREEN',
@@ -3494,7 +3494,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Bountiful Harvester',
-		noId: 595,
+		grade: 595,
 	},
 	{
 		color: 'WHITE',
@@ -3506,7 +3506,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Knight Blade',
-		noId: 596,
+		grade: 596,
 	},
 	{
 		color: 'RED',
@@ -3518,7 +3518,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Breaker',
-		noId: 597,
+		grade: 597,
 	},
 	{
 		color: 'BLUE',
@@ -3530,7 +3530,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Paladin Blade',
-		noId: 598,
+		grade: 598,
 	},
 	{
 		color: 'RED',
@@ -3542,7 +3542,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Banisher',
-		noId: 599,
+		grade: 599,
 	},
 	{
 		color: 'YELLOW',
@@ -3554,7 +3554,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Evandeit',
-		noId: 600,
+		grade: 600,
 	},
 	{
 		color: 'RED',
@@ -3566,7 +3566,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Demon Slayer',
-		noId: 601,
+		grade: 601,
 	},
 	{
 		color: 'GREEN',
@@ -3578,7 +3578,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Dark Light',
-		noId: 602,
+		grade: 602,
 	},
 	{
 		color: 'BLUE',
@@ -3590,7 +3590,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Demon God Slayer',
-		noId: 603,
+		grade: 603,
 	},
 	{
 		color: 'RED',
@@ -3602,7 +3602,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'True Dark Light',
-		noId: 604,
+		grade: 604,
 	},
 	{
 		color: 'BLUE',
@@ -3614,7 +3614,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Light of Dawn',
-		noId: 605,
+		grade: 605,
 	},
 	{
 		color: 'RED',
@@ -3626,7 +3626,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Steel Gauntlet',
-		noId: 606,
+		grade: 606,
 	},
 	{
 		color: 'GREEN',
@@ -3638,7 +3638,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Roaring Thunder',
-		noId: 607,
+		grade: 607,
 	},
 	{
 		color: 'BLUE',
@@ -3650,7 +3650,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Puni Gauntlet',
-		noId: 608,
+		grade: 608,
 	},
 	{
 		color: 'BLUE',
@@ -3662,7 +3662,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Resplendent Frost',
-		noId: 609,
+		grade: 609,
 	},
 	{
 		color: 'RED',
@@ -3674,7 +3674,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Devouring Flame',
-		noId: 610,
+		grade: 610,
 	},
 	{
 		color: 'RED',
@@ -3686,7 +3686,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Metal Bullets',
-		noId: 611,
+		grade: 611,
 	},
 	{
 		color: 'YELLOW',
@@ -3698,7 +3698,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Piercing Bullets',
-		noId: 612,
+		grade: 612,
 	},
 	{
 		color: 'BLUE',
@@ -3710,7 +3710,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Crystal Bullets',
-		noId: 613,
+		grade: 613,
 	},
 	{
 		color: 'RED',
@@ -3722,7 +3722,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Diamant',
-		noId: 614,
+		grade: 614,
 	},
 	{
 		color: 'BLUE',
@@ -3734,7 +3734,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Wild Cat',
-		noId: 615,
+		grade: 615,
 	},
 	{
 		color: 'BLUE',
@@ -3746,7 +3746,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Maiden's Spear",
-		noId: 616,
+		grade: 616,
 	},
 	{
 		color: 'YELLOW',
@@ -3758,7 +3758,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Madcat Spear',
-		noId: 617,
+		grade: 617,
 	},
 	{
 		color: 'GREEN',
@@ -3770,7 +3770,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Lady's Spear",
-		noId: 618,
+		grade: 618,
 	},
 	{
 		color: 'GREEN',
@@ -3782,7 +3782,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'White Panther',
-		noId: 619,
+		grade: 619,
 	},
 	{
 		color: 'RED',
@@ -3794,7 +3794,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Vivid Spear',
-		noId: 620,
+		grade: 620,
 	},
 	{
 		color: 'GREEN',
@@ -3806,7 +3806,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Traveler's Vest",
-		noId: 686,
+		grade: 686,
 	},
 	{
 		color: 'RED',
@@ -3818,7 +3818,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Plate Vest',
-		noId: 687,
+		grade: 687,
 	},
 	{
 		color: 'YELLOW',
@@ -3830,7 +3830,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Gold Jacket',
-		noId: 688,
+		grade: 688,
 	},
 	{
 		color: 'GREEN',
@@ -3842,7 +3842,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Colorful Vest',
-		noId: 689,
+		grade: 689,
 	},
 	{
 		color: 'RED',
@@ -3854,7 +3854,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Aegis Jacket',
-		noId: 690,
+		grade: 690,
 	},
 	{
 		color: 'BLUE',
@@ -3866,7 +3866,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Alchemy Vest',
-		noId: 691,
+		grade: 691,
 	},
 	{
 		color: 'GREEN',
@@ -3878,7 +3878,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Hard Coat',
-		noId: 692,
+		grade: 692,
 	},
 	{
 		color: 'RED',
@@ -3890,7 +3890,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Plate Coat',
-		noId: 693,
+		grade: 693,
 	},
 	{
 		color: 'GREEN',
@@ -3902,7 +3902,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Farden Coat',
-		noId: 694,
+		grade: 694,
 	},
 	{
 		color: 'BLUE',
@@ -3914,7 +3914,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Reactive Coat',
-		noId: 695,
+		grade: 695,
 	},
 	{
 		color: 'RED',
@@ -3926,7 +3926,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Dragonscale Coat',
-		noId: 696,
+		grade: 696,
 	},
 	{
 		color: 'WHITE',
@@ -3938,7 +3938,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Ancient Coat',
-		noId: 697,
+		grade: 697,
 	},
 	{
 		color: 'GREEN',
@@ -3950,7 +3950,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'First Shirt',
-		noId: 698,
+		grade: 698,
 	},
 	{
 		color: 'YELLOW',
@@ -3962,7 +3962,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Mixed Fur Shirt',
-		noId: 699,
+		grade: 699,
 	},
 	{
 		color: 'GREEN',
@@ -3974,7 +3974,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Wanderer's Shirt",
-		noId: 700,
+		grade: 700,
 	},
 	{
 		color: 'BLUE',
@@ -3986,7 +3986,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Weightless Shirt',
-		noId: 701,
+		grade: 701,
 	},
 	{
 		color: 'GREEN',
@@ -3998,7 +3998,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Natural Clothes',
-		noId: 702,
+		grade: 702,
 	},
 	{
 		color: 'RED',
@@ -4010,7 +4010,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Full Metal Shirt',
-		noId: 703,
+		grade: 703,
 	},
 	{
 		color: 'WHITE',
@@ -4022,7 +4022,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Paraselene Clothes',
-		noId: 704,
+		grade: 704,
 	},
 	{
 		color: 'WHITE',
@@ -4034,7 +4034,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Alchemy Mantle',
-		noId: 705,
+		grade: 705,
 	},
 	{
 		color: 'BLUE',
@@ -4046,7 +4046,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Soft Armor',
-		noId: 706,
+		grade: 706,
 	},
 	{
 		color: 'BLUE',
@@ -4058,7 +4058,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Tight Shirt',
-		noId: 707,
+		grade: 707,
 	},
 	{
 		color: 'WHITE',
@@ -4070,7 +4070,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Bridal Blouse',
-		noId: 708,
+		grade: 708,
 	},
 	{
 		color: 'WHITE',
@@ -4082,7 +4082,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Resurrection Wear',
-		noId: 709,
+		grade: 709,
 	},
 	{
 		color: 'RED',
@@ -4094,7 +4094,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Life Bangle',
-		noId: 760,
+		grade: 760,
 	},
 	{
 		color: 'RED',
@@ -4106,7 +4106,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'White-Hot Headband',
-		noId: 761,
+		grade: 761,
 	},
 	{
 		color: 'YELLOW',
@@ -4118,7 +4118,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Angel Ribbon',
-		noId: 762,
+		grade: 762,
 	},
 	{
 		color: 'GREEN',
@@ -4130,7 +4130,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Feather Ornament',
-		noId: 763,
+		grade: 763,
 	},
 	{
 		color: 'BLUE',
@@ -4142,7 +4142,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Spirit Earrings',
-		noId: 764,
+		grade: 764,
 	},
 	{
 		color: 'GREEN',
@@ -4154,7 +4154,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Ambrosia Garland',
-		noId: 765,
+		grade: 765,
 	},
 	{
 		color: 'YELLOW',
@@ -4166,7 +4166,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Meister Mittens',
-		noId: 766,
+		grade: 766,
 	},
 	{
 		color: 'GREEN',
@@ -4178,7 +4178,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Mind's Eye Monocle",
-		noId: 767,
+		grade: 767,
 	},
 	{
 		color: 'WHITE',
@@ -4190,7 +4190,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Monochrome Glasses',
-		noId: 768,
+		grade: 768,
 	},
 	{
 		color: 'BLUE',
@@ -4202,7 +4202,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Chronicle Mark',
-		noId: 769,
+		grade: 769,
 	},
 	{
 		color: 'GREEN',
@@ -4214,7 +4214,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Time Control Hourglass',
-		noId: 770,
+		grade: 770,
 	},
 	{
 		color: 'YELLOW',
@@ -4226,7 +4226,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Friendly Persona',
-		noId: 771,
+		grade: 771,
 	},
 	{
 		color: 'RED',
@@ -4238,7 +4238,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Hustle Belt',
-		noId: 772,
+		grade: 772,
 	},
 	{
 		color: 'GREEN',
@@ -4250,7 +4250,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Element Guard',
-		noId: 773,
+		grade: 773,
 	},
 	{
 		color: 'BLUE',
@@ -4262,7 +4262,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Gunade Ring',
-		noId: 774,
+		grade: 774,
 	},
 	{
 		color: 'GREEN',
@@ -4274,7 +4274,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Plachta's Core",
-		noId: 825,
+		grade: 825,
 	},
 	{
 		color: 'GREEN',
@@ -4286,7 +4286,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Plachta's Clothes",
-		noId: 826,
+		grade: 826,
 	},
 	{
 		color: 'WHITE',
@@ -4298,7 +4298,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Soul Stone',
-		noId: 827,
+		grade: 827,
 	},
 	{
 		color: 'WHITE',
@@ -4310,7 +4310,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Spirit Needle',
-		noId: 828,
+		grade: 828,
 	},
 	{
 		color: 'WHITE',
@@ -4322,7 +4322,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Key of Truth',
-		noId: 829,
+		grade: 829,
 	},
 	{
 		color: 'WHITE',
@@ -4338,7 +4338,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Hexe Auris',
-		noId: 830,
+		grade: 830,
 	},
 	{
 		color: 'GREEN',
@@ -4350,7 +4350,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Ares Brooch',
-		noId: 831,
+		grade: 831,
 	},
 	{
 		color: 'WHITE',
@@ -4362,7 +4362,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Plachta Doll',
-		noId: 832,
+		grade: 832,
 	},
 	{
 		color: 'GREEN',
@@ -4374,7 +4374,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Music Box of Memory',
-		noId: 833,
+		grade: 833,
 	},
 	{
 		color: 'YELLOW',
@@ -4386,7 +4386,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Puppeteer String',
-		noId: 834,
+		grade: 834,
 	},
 	{
 		color: 'YELLOW',
@@ -4398,7 +4398,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Sage's Soil",
-		noId: 835,
+		grade: 835,
 	},
 	{
 		color: 'WHITE',
@@ -4410,7 +4410,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Prototype Fertilizer',
-		noId: 836,
+		grade: 836,
 	},
 	{
 		color: 'WHITE',
@@ -4422,7 +4422,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Date Ticket',
-		noId: 837,
+		grade: 837,
 	},
 	{
 		color: 'WHITE',
@@ -4434,7 +4434,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Moisture Grass',
-		noId: 838,
+		grade: 838,
 	},
 	{
 		color: 'WHITE',
@@ -4446,7 +4446,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Sage's Emblem",
-		noId: 839,
+		grade: 839,
 	},
 	{
 		color: 'WHITE',
@@ -4458,7 +4458,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Atelier Tent',
-		noId: 840,
+		grade: 840,
 	},
 	{
 		color: 'WHITE',
@@ -4470,7 +4470,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Old Certificate',
-		noId: 841,
+		grade: 841,
 	},
 	{
 		color: 'WHITE',
@@ -4482,7 +4482,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Old Clothing',
-		noId: 842,
+		grade: 842,
 	},
 	{
 		color: 'WHITE',
@@ -4494,7 +4494,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Grandma's Clothes",
-		noId: 843,
+		grade: 843,
 	},
 	{
 		color: 'GREEN',
@@ -4514,7 +4514,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Living Broom',
-		noId: 844,
+		grade: 844,
 	},
 	{
 		color: 'WHITE',
@@ -4530,7 +4530,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Corneria Doll',
-		noId: 845,
+		grade: 845,
 	},
 	{
 		color: 'RED',
@@ -4542,7 +4542,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Gathering Buddy',
-		noId: 887,
+		grade: 887,
 	},
 	{
 		color: 'GREEN',
@@ -4554,7 +4554,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Eternal Brilliance',
-		noId: 888,
+		grade: 888,
 	},
 	{
 		color: 'BLUE',
@@ -4566,7 +4566,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Soul Techniques',
-		noId: 889,
+		grade: 889,
 	},
 	{
 		color: 'YELLOW',
@@ -4578,7 +4578,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Alchemic Drive Guide',
-		noId: 890,
+		grade: 890,
 	},
 	{
 		color: 'YELLOW',
@@ -4590,7 +4590,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Blessing of the Sun',
-		noId: 891,
+		grade: 891,
 	},
 	{
 		color: 'WHITE',
@@ -4602,7 +4602,7 @@ const items: Item[] = [
 			},
 		],
 		name: 'Recipe of Origin',
-		noId: 892,
+		grade: 892,
 	},
 	{
 		color: 'WHITE',
@@ -4614,7 +4614,7 @@ const items: Item[] = [
 			},
 		],
 		name: "Puppeteer's Tools",
-		noId: 893,
+		grade: 893,
 	},
 	{
 		color: 'RED',
@@ -4626,21 +4626,21 @@ const items: Item[] = [
 			},
 		],
 		name: "Alchemist's Book",
-		noId: 894,
+		grade: 894,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bd92862c8448344a5d',
 		itemCategories: [],
 		name: "Canaria's Note",
-		noId: 895,
+		grade: 895,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bc92862c8448344a5c',
 		itemCategories: [],
 		name: 'Epigraph of All Creation',
-		noId: 896,
+		grade: 896,
 	},
 ];
 

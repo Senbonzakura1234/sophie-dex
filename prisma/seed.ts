@@ -8,19 +8,19 @@ const prisma = new PrismaClient();
 
 async function seed() {
 	effects
-		.sort((a, b) => a.noId - b.noId)
+		.sort((a, b) => a.grade - b.grade)
 		.forEach(async effect => {
 			await prisma.effect.create({ data: effect });
 		});
 
 	traits
-		.sort((a, b) => a.noId - b.noId)
+		.sort((a, b) => a.grade - b.grade)
 		.forEach(async trait => {
 			await prisma.trait.create({ data: trait });
 		});
 
 	items
-		.sort((a, b) => a.noId - b.noId)
+		.sort((a, b) => a.grade - b.grade)
 		.forEach(async item => {
 			await prisma.item.create({ data: item });
 		});

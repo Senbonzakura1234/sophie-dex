@@ -56,7 +56,7 @@ export const itemRouter = router({
 			ctx.prisma.item.findMany({
 				where,
 				orderBy: {
-					[sortBy ?? 'noId']: direction ?? 'asc',
+					[sortBy ?? 'grade']: direction ?? 'asc',
 				},
 				skip: (pageInt - 1) * limitInt,
 				take: limitInt,

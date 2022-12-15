@@ -11,7 +11,9 @@ const TraitCategories = dynamic(() => import('./TraitCategories'), {
 	ssr: false,
 });
 
-const TraitRecord: FC<TraitRecordProps> = ({ record: { name, description, noId, traitCategories, mergeFrom, id } }) => {
+const TraitRecord: FC<TraitRecordProps> = ({
+	record: { name, description, grade, traitCategories, mergeFrom, id },
+}) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 	return (
 		<FadeWrapper show={isReady} appear={true}>
@@ -19,7 +21,7 @@ const TraitRecord: FC<TraitRecordProps> = ({ record: { name, description, noId, 
 				<div className='card-body'>
 					<RecordHead id={id} isCurrentRecord={securedIdQuery.id === id} name={name} pathname={pathname} />
 
-					<span className='text-sm'>grade: {noId}</span>
+					<span className='text-sm'>grade: {grade}</span>
 
 					<span className='font-serif text-lg 2xl:h-16'>{description}</span>
 

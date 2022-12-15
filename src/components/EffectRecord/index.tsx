@@ -5,7 +5,7 @@ import type { FC } from 'react';
 import FadeWrapper from '../Animations/FadeWrapper';
 import RecordHead from '../RecordHead';
 
-const EffectRecord: FC<EffectRecordProps> = ({ record: { name, description, noId, id } }) => {
+const EffectRecord: FC<EffectRecordProps> = ({ record: { name, description, grade, id } }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 
 	return (
@@ -14,7 +14,7 @@ const EffectRecord: FC<EffectRecordProps> = ({ record: { name, description, noId
 				<div className='card-body'>
 					<RecordHead id={id} isCurrentRecord={securedIdQuery.id === id} name={name} pathname={pathname} />
 
-					<span className='text-sm'>grade: {noId}</span>
+					<span className='text-sm'>grade: {grade}</span>
 
 					<span className='font-serif text-lg 2xl:h-16'>{description}</span>
 				</div>

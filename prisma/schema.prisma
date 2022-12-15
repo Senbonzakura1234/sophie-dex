@@ -60,7 +60,7 @@ type ItemCategories {
 
 type MergeTraitItem {
    id          String
-   noId        Int
+   grade       Int
    name        String
    description String
 }
@@ -80,14 +80,14 @@ datasource db {
 
 model Effect {
    id          String @id @default(auto()) @map("_id") @db.ObjectId
-   noId        Int
+   grade       Int
    name        String
    description String
 }
 
 model Trait {
    id              String           @id @default(auto()) @map("_id") @db.ObjectId
-   noId            Int
+   grade           Int
    name            String
    description     String
    traitCategories TRAIT_CATEGORY[]
@@ -96,7 +96,7 @@ model Trait {
 
 model Item {
    id             String           @id @default(auto()) @map("_id") @db.ObjectId
-   noId           Int
+   grade          Int
    name           String
    color          COLOR
    itemCategories ItemCategories[]
