@@ -7,6 +7,11 @@
 	],
 	"overrides": [
 		{
+			"extends": ["plugin:markdown/recommended"],
+			"files": ["**/*.md"],
+			"processor": "markdown/markdown"
+		},
+		{
 			"extends": ["plugin:prettier/recommended"],
 			"files": ["**/*.mjs", "**/*.cjs"],
 			"parserOptions": {
