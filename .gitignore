@@ -40,3 +40,9 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# PWA
+service-worker.gen.js
+workbox-*.js
+service-worker.gen.js.map
+workbox-*.js.map

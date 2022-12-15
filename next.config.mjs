@@ -8,7 +8,8 @@
 import withPWA from 'next-pwa';
 
 const pwaConfig = withPWA({
-	dest: '.',
+	dest: 'public',
+	sw: 'service-worker.gen.js',
 	register: true,
 	cacheStartUrl: true,
 	cacheOnFrontEndNav: true,
@@ -16,8 +17,7 @@ const pwaConfig = withPWA({
 	disable: process.env.NODE_ENV === 'development',
 });
 
-/** @type {import("next").NextConfig} */
-const config = {
+const config = pwaConfig({
 	productionBrowserSourceMaps: true,
 	reactStrictMode: true,
 	swcMinify: true,
@@ -25,6 +25,6 @@ const config = {
 		locales: ['en'],
 		defaultLocale: 'en',
 	},
-	...pwaConfig,
-};
+});
+
 export default config;
