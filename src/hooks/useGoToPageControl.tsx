@@ -22,7 +22,7 @@ export const useGoToPageControl = (): {
 	const [goToPage, setGoToPage] = useState<GoToPage>(defaultGoToPage);
 
 	const isGoToPageValid = useMemo(
-		() => !isEqualWithNullish(goToPage.value ?? '1', securedQuery.page ?? '1'),
+		() => !isEqualWithNullish(goToPage.value ?? 1, securedQuery.page ?? 1),
 		[goToPage.value, securedQuery.page],
 	);
 

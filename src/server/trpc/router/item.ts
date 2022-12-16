@@ -6,7 +6,7 @@ import type { ListRecord } from '@root/types/model';
 import { TRPCError } from '@trpc/server';
 
 export const itemRouter = router({
-	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }) => {
+	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Item>> => {
 		const { search, sortBy, direction, color, itemCategory, page, limit } = {
 			...input,
 		};
@@ -63,18 +63,16 @@ export const itemRouter = router({
 			}),
 		]);
 
-		const listRecord: ListRecord<Item> = {
+		return {
 			records,
 			page,
 			limit,
 			totalRecord,
 			totalPage: Math.ceil(totalRecord / limitInt),
 		};
-
-		return listRecord;
 	}),
 
-	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }) => {
+	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }): Promise<Item> => {
 		const { id } = input;
 		if (!id)
 			throw new TRPCError({

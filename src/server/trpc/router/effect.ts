@@ -6,7 +6,7 @@ import type { ListRecord } from '@root/types/model';
 import { TRPCError } from '@trpc/server';
 
 export const effectRouter = router({
-	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }) => {
+	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Effect>> => {
 		const { search, sortBy, direction, page, limit } = { ...input };
 
 		const pageInt = page ?? 1;
@@ -47,18 +47,16 @@ export const effectRouter = router({
 			}),
 		]);
 
-		const listRecord: ListRecord<Effect> = {
+		return {
 			records,
 			page,
 			limit,
 			totalRecord,
 			totalPage: Math.ceil(totalRecord / limitInt),
 		};
-
-		return listRecord;
 	}),
 
-	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }) => {
+	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }): Promise<Effect> => {
 		const { id } = input;
 		if (!id)
 			throw new TRPCError({
