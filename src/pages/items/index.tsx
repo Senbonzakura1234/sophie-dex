@@ -10,9 +10,8 @@ import { type NextPage } from 'next';
 const Items: NextPage = () => {
 	const { securedQuery, isReady } = useSearchQuery();
 	const { data, isSuccess, isLoading, isError, error } = trpc.item.getAll.useQuery(securedQuery, {
-		retry: 1,
+		retry: 2,
 		enabled: isReady,
-		refetchOnReconnect: false,
 		refetchOnWindowFocus: false,
 	});
 

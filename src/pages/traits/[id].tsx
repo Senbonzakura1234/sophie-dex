@@ -9,9 +9,8 @@ import Head from 'next/head';
 const TraitDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
 	const { data, isSuccess, isLoading, isError, error } = trpc.trait.getOne.useQuery(securedIdQuery, {
-		retry: 1,
+		retry: 2,
 		enabled: isReady,
-		refetchOnReconnect: false,
 		refetchOnWindowFocus: false,
 	});
 

@@ -9,9 +9,8 @@ import Head from 'next/head';
 const ItemDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
 	const { data, isSuccess, isLoading, isError, error } = trpc.item.getOne.useQuery(securedIdQuery, {
-		retry: 1,
+		retry: 2,
 		enabled: isReady,
-		refetchOnReconnect: false,
 		refetchOnWindowFocus: false,
 	});
 

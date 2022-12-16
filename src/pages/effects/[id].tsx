@@ -9,13 +9,10 @@ import Head from 'next/head';
 const EffectDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
 	const { data, isSuccess, isLoading, isError, error } = trpc.effect.getOne.useQuery(securedIdQuery, {
-		retry: 1,
+		retry: 2,
 		enabled: isReady,
-		refetchOnReconnect: false,
 		refetchOnWindowFocus: false,
 	});
-
-	console.log(error?.message);
 
 	return (
 		<DetailLayout
