@@ -7,7 +7,7 @@ import { TRPCError } from '@trpc/server';
 
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }) => {
-		const { search, sortBy = 'grade', direction = 'asc', traitCategory, page, limit, cursor } = { ...input };
+		const { search, sortBy = 'grade', direction = 'asc', traitCategory, page, limit } = { ...input };
 
 		const pageInt = page ?? 1;
 		const limitInt = limit ?? defaultLimit;
@@ -55,15 +55,11 @@ export const traitRouter = router({
 				},
 				skip: (pageInt - 1) * limitInt,
 				take: limitInt,
-				cursor: cursor ? { id: cursor } : undefined,
 			}),
 		]);
 
-		const newCursor = records.at(-1)?.id as string;
-
 		const listRecord: ListRecord<Trait> = {
 			records,
-			cursor: newCursor,
 			page,
 			limit,
 			totalRecord,

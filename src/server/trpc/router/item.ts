@@ -7,7 +7,7 @@ import { TRPCError } from '@trpc/server';
 
 export const itemRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }) => {
-		const { search, sortBy, direction, color, itemCategory, page, limit, cursor } = {
+		const { search, sortBy, direction, color, itemCategory, page, limit } = {
 			...input,
 		};
 
@@ -60,15 +60,11 @@ export const itemRouter = router({
 				},
 				skip: (pageInt - 1) * limitInt,
 				take: limitInt,
-				cursor: cursor ? { id: cursor } : undefined,
 			}),
 		]);
 
-		const newCursor = records.at(-1)?.id as string;
-
 		const listRecord: ListRecord<Item> = {
 			records,
-			cursor: newCursor,
 			page,
 			limit,
 			totalRecord,

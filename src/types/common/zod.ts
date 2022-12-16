@@ -22,7 +22,6 @@ export const searchQueryValidator = z.object({
 	itemCategory: itemCategorySchema,
 	traitCategory: traitCategorySchema,
 	color: colorSchema,
-	cursor: idSchema,
 	page: pageSchema,
 	limit: limitSchema,
 });
