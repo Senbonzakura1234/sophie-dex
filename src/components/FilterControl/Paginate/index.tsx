@@ -22,7 +22,7 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, isCanGoToPage, goToPage,
 		() =>
 			Array(totalPage)
 				.fill(0)
-				.map((p, index) => ({ value: index + 1, label: `Page ${index + 1}` })),
+				.map((_, i) => ({ value: i + 1, label: `Page ${i + 1}` })),
 		[totalPage],
 	);
 

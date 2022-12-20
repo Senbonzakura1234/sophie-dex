@@ -1,5 +1,5 @@
 import type { Trait } from '@prisma/client';
-import { defaultLimit } from '@root/constants';
+import { defaultLimit } from '@root/env/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';

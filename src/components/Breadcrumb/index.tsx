@@ -36,7 +36,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 									</Link>
 								</li>
 								<li className='flex gap-2 before:!m-0 2xl:gap-3'>
-									{pageNameList.map((n, index) => (
+									{pageNameList.map((n, i) => (
 										<Fragment key={n}>
 											<Link
 												className={clsx(
@@ -46,12 +46,12 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 													'link gap-1',
 												)}
 												href={{ pathname: `/${n.toLowerCase()}s` }}
-												aria-label={`Go to ${index} Search`}
+												aria-label={`Go to ${i} Search`}
 											>
 												<LinkIcon className='hidden h-4 w-4 2xl:block' />
 												{n}
 											</Link>
-											{index < 2 && <CircleDivider className='bg-base-300 h-2 w-2' />}
+											{i < 2 && <CircleDivider className='bg-base-300 h-2 w-2' />}
 										</Fragment>
 									))}
 								</li>
