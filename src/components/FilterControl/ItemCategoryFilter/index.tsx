@@ -1,4 +1,4 @@
-import type { ITEM_CATEGORY } from '@prisma/client';
+import type { RELATED_CATEGORY } from '@prisma/client';
 import SelectOption from '@root/components/SelectOption';
 import { ItemCategorySelectList } from '@root/components/SubComponent';
 import type { ItemCategoryFilterProps } from '@root/types/common/props';
@@ -21,7 +21,7 @@ const ItemCategoryFilter: FC<ItemCategoryFilterProps> = ({
 			)}
 		>
 			<small className='my-auto text-sm font-bold'>Category:</small>
-			<SelectOption<ITEM_CATEGORY | null>
+			<SelectOption<RELATED_CATEGORY | null>
 				list={ItemCategorySelectList}
 				setValue={setItemCateSelected}
 				value={itemCateSelected}

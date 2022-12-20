@@ -1,4 +1,4 @@
-import type { COLOR, ITEM_CATEGORY, TRAIT_CATEGORY } from '@prisma/client';
+import type { COLOR, RELATED_CATEGORY, TRAIT_CATEGORY } from '@prisma/client';
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
 
 export const PageName = {
@@ -15,7 +15,7 @@ export type SetSelectOptionItem<V> = Dispatch<SetStateAction<SelectOptionItem<V>
 
 export type TraitCateSelected = SelectOptionItem<TRAIT_CATEGORY | null>;
 export type ColorSelected = SelectOptionItem<COLOR | null>;
-export type ItemCateSelected = SelectOptionItem<ITEM_CATEGORY | null>;
+export type ItemCateSelected = SelectOptionItem<RELATED_CATEGORY | null>;
 
 export type FilterData = {
 	traitCateSelected: TraitCateSelected;
@@ -26,7 +26,7 @@ export type FilterData = {
 export type SetFilterData = {
 	setTraitCateSelected: SetSelectOptionItem<TRAIT_CATEGORY | null>;
 	setColorSelected: SetSelectOptionItem<COLOR | null>;
-	setItemCateSelected: SetSelectOptionItem<ITEM_CATEGORY | null>;
+	setItemCateSelected: SetSelectOptionItem<RELATED_CATEGORY | null>;
 };
 
 export type GoToPage = SelectOptionItem<number | null>;

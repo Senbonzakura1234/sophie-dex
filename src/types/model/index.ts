@@ -1,4 +1,4 @@
-import type { COLOR, ITEM_CATEGORY, TRAIT_CATEGORY } from '@prisma/client';
+import type { COLOR, RELATED_CATEGORY, TRAIT_CATEGORY } from '@prisma/client';
 
 import type { UnicodeClass } from '../fonts/atelier';
 
@@ -46,7 +46,7 @@ export const ItemCategoryDisplay = {
 	INGREDIENT: 'Ingredient',
 	PAPER: 'Paper',
 	MAGIC_ITEM: 'Magic Item',
-} as const satisfies Readonly<{ [itemCategory in ITEM_CATEGORY]: string }>;
+} as const satisfies Readonly<{ [relatedCategory in RELATED_CATEGORY]: string }>;
 
 export const itemCategoryList = [
 	'PLANT',
@@ -79,7 +79,7 @@ export const itemCategoryList = [
 	'INGREDIENT',
 	'PAPER',
 	'MAGIC_ITEM',
-] as const satisfies Readonly<ITEM_CATEGORY[]>;
+] as const satisfies Readonly<RELATED_CATEGORY[]>;
 
 export type ItemCategoryDisplay = typeof ItemCategoryDisplay[keyof typeof ItemCategoryDisplay];
 

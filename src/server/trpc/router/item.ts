@@ -27,7 +27,7 @@ export const itemRouter = router({
 				...(itemCategory
 					? [
 							{
-								itemCategories: {
+								relatedCategories: {
 									some: {
 										name: {
 											equals: itemCategory,

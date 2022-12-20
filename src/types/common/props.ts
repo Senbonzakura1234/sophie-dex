@@ -1,4 +1,4 @@
-import type { COLOR, Effect, Item, ItemCategories, MergeTrait, Trait, TRAIT_CATEGORY } from '@prisma/client';
+import type { COLOR, Effect, Item, MergeTrait, RelatedCategories, Trait, TRAIT_CATEGORY } from '@prisma/client';
 import type { Maybe } from '@trpc/server';
 import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
 import type { ReactNode, RefObject } from 'react';
@@ -70,7 +70,7 @@ export type YELLOWProps = ColorProps;
 export type WHITEProps = ColorProps;
 export type NONEProps = ColorProps;
 
-export type ItemCategoriesProps = { itemCategories: ItemCategories[] };
+export type RelatedCategoriesProps = { relatedCategories: RelatedCategories[] };
 
 export type DefaultLayoutProps = ChildrenProps & PageNameProps;
 

@@ -1,14 +1,14 @@
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { ItemCategoriesProps } from '@root/types/common/props';
+import type { RelatedCategoriesProps } from '@root/types/common/props';
 import { ItemCategoryDisplay } from '@root/types/model';
 import type { FC } from 'react';
 
-const ItemCategories: FC<ItemCategoriesProps> = ({ itemCategories }) => {
+const RelatedCategories: FC<RelatedCategoriesProps> = ({ relatedCategories }) => {
 	const { isReady, updateQuery } = useSearchQuery();
 
 	return (
 		<div className='flex flex-wrap gap-2'>
-			{itemCategories.map((c, k) => (
+			{relatedCategories.map((c, k) => (
 				<a
 					onClick={e => {
 						e.preventDefault();
@@ -25,4 +25,4 @@ const ItemCategories: FC<ItemCategoriesProps> = ({ itemCategories }) => {
 	);
 };
 
-export default ItemCategories;
+export default RelatedCategories;

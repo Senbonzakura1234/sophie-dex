@@ -10,7 +10,7 @@ enum COLOR {
    NONE
 }
 
-enum ITEM_CATEGORY {
+enum RELATED_CATEGORY {
    PLANT
    MEDICINE_MAT
    WATER
@@ -53,8 +53,8 @@ enum TRAIT_CATEGORY {
    WEAPON
 }
 
-type ItemCategories {
-   name  ITEM_CATEGORY
+type RelatedCategories {
+   name  RELATED_CATEGORY
    grade Int
 }
 
@@ -95,9 +95,10 @@ model Trait {
 }
 
 model Item {
-   id             String           @id @default(auto()) @map("_id") @db.ObjectId
-   grade          Int
-   name           String
-   color          COLOR
-   itemCategories ItemCategories[]
+   id                String              @id @default(auto()) @map("_id") @db.ObjectId
+   grade             Int
+   name              String
+   color             COLOR
+   relatedCategories RelatedCategories[]
+   level             Int?
 }

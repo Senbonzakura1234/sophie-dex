@@ -5,9 +5,9 @@ import type { FC } from 'react';
 import FadeWrapper from '../Animations/FadeWrapper';
 import RecordHead from '../RecordHead';
 import Color from './Color';
-import ItemCategories from './ItemCategories';
+import RelatedCategories from './RelatedCategories';
 
-const ItemRecord: FC<ItemRecordProps> = ({ record: { name, grade, id, color, itemCategories } }) => {
+const ItemRecord: FC<ItemRecordProps> = ({ record: { name, grade, id, color, relatedCategories } }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 	return (
 		<FadeWrapper show={isReady} appear={true}>
@@ -19,7 +19,7 @@ const ItemRecord: FC<ItemRecordProps> = ({ record: { name, grade, id, color, ite
 
 					<Color color={color} />
 
-					<ItemCategories itemCategories={itemCategories} />
+					<RelatedCategories relatedCategories={relatedCategories} />
 				</div>
 			</article>
 		</FadeWrapper>

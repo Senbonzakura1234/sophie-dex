@@ -4,7 +4,7 @@ const items: Item[] = [
 	{
 		color: 'GREEN',
 		id: '638a47b992862c8448344910',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'PLANT',
@@ -16,11 +16,12 @@ const items: Item[] = [
 		],
 		name: 'Magic Grass',
 		grade: 0,
+		level: 2,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47b992862c8448344908',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'PLANT',
@@ -32,11 +33,12 @@ const items: Item[] = [
 		],
 		name: 'Cobalt Grass',
 		grade: 1,
+		level: 3,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47b992862c8448344905',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'PLANT',
@@ -48,11 +50,12 @@ const items: Item[] = [
 		],
 		name: 'Fairy Poison Grass',
 		grade: 2,
+		level: 11,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47b992862c844834490a',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'PLANT',
@@ -68,11 +71,12 @@ const items: Item[] = [
 		],
 		name: 'Mystic Herb',
 		grade: 3,
+		level: 15,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47b992862c844834490d',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 5,
 				name: 'PLANT',
@@ -84,11 +88,12 @@ const items: Item[] = [
 		],
 		name: 'Sunset Grass',
 		grade: 4,
+		level: 2,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47b992862c8448344904',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'PLANT',
@@ -100,11 +105,12 @@ const items: Item[] = [
 		],
 		name: 'Five Day Vine',
 		grade: 5,
+		level: 10,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47b992862c8448344909',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'PLANT',
@@ -120,11 +126,12 @@ const items: Item[] = [
 		],
 		name: 'Mountain Cotton',
 		grade: 6,
+		level: 7,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47b992862c8448344903',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'WOOD',
@@ -136,11 +143,12 @@ const items: Item[] = [
 		],
 		name: 'Mossy Driftwood',
 		grade: 7,
+		level: 13,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47b992862c8448344906',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'WOOD',
@@ -152,11 +160,12 @@ const items: Item[] = [
 		],
 		name: 'Kifa',
 		grade: 8,
+		level: 10,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47b992862c8448344925',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'PLANT',
@@ -168,11 +177,12 @@ const items: Item[] = [
 		],
 		name: 'Altare',
 		grade: 9,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47b992862c844834490b',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'PLANT',
@@ -184,11 +194,12 @@ const items: Item[] = [
 		],
 		name: 'Crimson Herb',
 		grade: 10,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47b992862c8448344907',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'PLANT',
@@ -200,11 +211,12 @@ const items: Item[] = [
 		],
 		name: 'Princess Grass',
 		grade: 11,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47b992862c844834490c',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'PLANT',
@@ -216,11 +228,12 @@ const items: Item[] = [
 		],
 		name: 'Eternal Blossom',
 		grade: 12,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47b992862c844834490e',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 50,
 				name: 'PLANT',
@@ -236,11 +249,12 @@ const items: Item[] = [
 		],
 		name: 'Dunkelheit',
 		grade: 13,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47b992862c8448344914',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'PLANT',
@@ -256,11 +270,12 @@ const items: Item[] = [
 		],
 		name: 'Dunkelstern',
 		grade: 14,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47b992862c8448344922',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ORE',
@@ -268,11 +283,12 @@ const items: Item[] = [
 		],
 		name: 'Aizen Ore',
 		grade: 15,
+		level: 7,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47b992862c8448344911',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ORE',
@@ -280,11 +296,12 @@ const items: Item[] = [
 		],
 		name: 'Raiden Ore',
 		grade: 16,
+		level: 9,
 	},
 	{
 		color: 'RED',
 		id: '638a47b992862c844834490f',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'ORE',
@@ -292,11 +309,12 @@ const items: Item[] = [
 		],
 		name: 'Kupulf Ore',
 		grade: 17,
+		level: 9,
 	},
 	{
 		color: 'RED',
 		id: '638a47b992862c8448344913',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ORE',
@@ -308,11 +326,12 @@ const items: Item[] = [
 		],
 		name: 'Kaen Stone',
 		grade: 18,
+		level: 5,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47b992862c8448344912',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ORE',
@@ -324,11 +343,12 @@ const items: Item[] = [
 		],
 		name: 'Hakurei Stone',
 		grade: 19,
+		level: 7,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47b992862c8448344915',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'ORE',
@@ -340,11 +360,12 @@ const items: Item[] = [
 		],
 		name: 'Spirit Stone',
 		grade: 20,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47b992862c844834491d',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'ORE',
@@ -360,11 +381,12 @@ const items: Item[] = [
 		],
 		name: 'Black Orb',
 		grade: 21,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47b992862c8448344919',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'CLAY',
@@ -376,11 +398,12 @@ const items: Item[] = [
 		],
 		name: 'Fairy Ball',
 		grade: 22,
+		level: 3,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47b992862c8448344916',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'CLAY',
@@ -388,11 +411,12 @@ const items: Item[] = [
 		],
 		name: 'Lakebottom Soil',
 		grade: 23,
+		level: 9,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47b992862c8448344917',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'CLAY',
@@ -400,11 +424,12 @@ const items: Item[] = [
 		],
 		name: 'Seabed Soil',
 		grade: 24,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47b992862c8448344921',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ORE',
@@ -420,11 +445,12 @@ const items: Item[] = [
 		],
 		name: 'Ancient Tablet',
 		grade: 25,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47b992862c844834491b',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'ORE',
@@ -436,11 +462,12 @@ const items: Item[] = [
 		],
 		name: 'Broken Stone',
 		grade: 26,
+		level: 11,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47b992862c8448344918',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'ORE',
@@ -452,11 +479,12 @@ const items: Item[] = [
 		],
 		name: 'Ancient Pillar',
 		grade: 27,
+		level: 21,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47b992862c8448344920',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'ORE',
@@ -472,11 +500,12 @@ const items: Item[] = [
 		],
 		name: 'Smoldering Stone',
 		grade: 28,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47b992862c844834491a',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'ORE',
@@ -488,11 +517,12 @@ const items: Item[] = [
 		],
 		name: 'Fardenlite',
 		grade: 29,
+		level: 25,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47b992862c844834492d',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'ORE',
@@ -504,11 +534,12 @@ const items: Item[] = [
 		],
 		name: 'Night Crystal',
 		grade: 30,
+		level: 29,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47b992862c844834491f',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'ORE',
@@ -520,11 +551,12 @@ const items: Item[] = [
 		],
 		name: 'Shining Ore',
 		grade: 31,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47b992862c844834491c',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'ORE',
@@ -536,11 +568,12 @@ const items: Item[] = [
 		],
 		name: 'Silver Crystal',
 		grade: 32,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c8448344931',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'ORE',
@@ -560,11 +593,12 @@ const items: Item[] = [
 		],
 		name: 'Spirit Crystal',
 		grade: 33,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47b992862c844834491e',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ANIMAL',
@@ -576,11 +610,12 @@ const items: Item[] = [
 		],
 		name: 'Monster Feather',
 		grade: 34,
+		level: 4,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c8448344941',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'ANIMAL',
@@ -592,11 +627,12 @@ const items: Item[] = [
 		],
 		name: 'Strong Bone',
 		grade: 35,
+		level: 6,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47b992862c8448344923',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'ANIMAL',
@@ -612,11 +648,12 @@ const items: Item[] = [
 		],
 		name: 'Island Fish Fin',
 		grade: 36,
+		level: 14,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47b992862c8448344924',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'ANIMAL',
@@ -628,11 +665,12 @@ const items: Item[] = [
 		],
 		name: 'Animal Fur',
 		grade: 37,
+		level: 8,
 	},
 	{
 		color: 'RED',
 		id: '638a47b992862c8448344926',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'ANIMAL',
@@ -644,11 +682,12 @@ const items: Item[] = [
 		],
 		name: 'Dawn Fur',
 		grade: 38,
+		level: 21,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47b992862c844834492a',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'THREAD',
@@ -656,11 +695,12 @@ const items: Item[] = [
 		],
 		name: 'Silver Web',
 		grade: 39,
+		level: 10,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c8448344944',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'THREAD',
@@ -668,11 +708,12 @@ const items: Item[] = [
 		],
 		name: 'Gold Steel Web',
 		grade: 40,
+		level: 30,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47b992862c8448344929',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'ANIMAL',
@@ -688,11 +729,12 @@ const items: Item[] = [
 		],
 		name: 'Dragon Scale',
 		grade: 41,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47b992862c8448344927',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'WATER',
@@ -700,11 +742,12 @@ const items: Item[] = [
 		],
 		name: 'Well Water',
 		grade: 42,
+		level: 1,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47b992862c8448344928',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'WATER',
@@ -712,11 +755,12 @@ const items: Item[] = [
 		],
 		name: 'Good Water',
 		grade: 43,
+		level: 8,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47b992862c844834492b',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'INGREDIENT',
@@ -728,11 +772,12 @@ const items: Item[] = [
 		],
 		name: 'Kirchen Milk',
 		grade: 44,
+		level: 10,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47b992862c844834492e',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'WATER',
@@ -744,11 +789,12 @@ const items: Item[] = [
 		],
 		name: 'Luminous Water',
 		grade: 45,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47b992862c8448344930',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'GUNPOWDER',
@@ -764,11 +810,12 @@ const items: Item[] = [
 		],
 		name: 'Nitro Water',
 		grade: 46,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47b992862c844834492c',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'WATER',
@@ -780,11 +827,12 @@ const items: Item[] = [
 		],
 		name: 'Suspicious Liquid',
 		grade: 47,
+		level: 20,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47b992862c844834492f',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'WATER',
@@ -796,11 +844,12 @@ const items: Item[] = [
 		],
 		name: 'Puni Fluid',
 		grade: 48,
+		level: 9,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c8448344932',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'WATER',
@@ -816,11 +865,12 @@ const items: Item[] = [
 		],
 		name: 'Rainbow Puni Fluid',
 		grade: 49,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47ba92862c8448344933',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'WATER',
@@ -836,11 +886,12 @@ const items: Item[] = [
 		],
 		name: 'Dragon Bloodstone',
 		grade: 50,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c844834493a',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'WATER',
@@ -852,11 +903,12 @@ const items: Item[] = [
 		],
 		name: 'Holy Water',
 		grade: 51,
+		level: 10,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344936',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 5,
 				name: 'INGREDIENT',
@@ -868,11 +920,12 @@ const items: Item[] = [
 		],
 		name: 'Puniball',
 		grade: 52,
+		level: 4,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c8448344935',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'INGREDIENT',
@@ -884,11 +937,12 @@ const items: Item[] = [
 		],
 		name: 'Golden Puniball',
 		grade: 53,
+		level: 15,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c8448344934',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'INGREDIENT',
@@ -900,11 +954,12 @@ const items: Item[] = [
 		],
 		name: 'Uni',
 		grade: 54,
+		level: 2,
 	},
 	{
 		color: 'RED',
 		id: '638a47ba92862c8448344938',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'INGREDIENT',
@@ -920,11 +975,12 @@ const items: Item[] = [
 		],
 		name: 'Red Uni',
 		grade: 55,
+		level: 9,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c8448344937',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'INGREDIENT',
@@ -936,11 +992,12 @@ const items: Item[] = [
 		],
 		name: 'Ramel Wheat',
 		grade: 56,
+		level: 6,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c8448344939',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'INGREDIENT',
@@ -952,11 +1009,12 @@ const items: Item[] = [
 		],
 		name: 'Weiss Powder',
 		grade: 57,
+		level: 14,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c8448344947',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'INGREDIENT',
@@ -968,11 +1026,12 @@ const items: Item[] = [
 		],
 		name: 'Soil Potato',
 		grade: 58,
+		level: 9,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c844834493c',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'INGREDIENT',
@@ -984,11 +1043,12 @@ const items: Item[] = [
 		],
 		name: 'Silver Potato',
 		grade: 59,
+		level: 15,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c844834493f',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'INGREDIENT',
@@ -1000,11 +1060,12 @@ const items: Item[] = [
 		],
 		name: 'Beehive',
 		grade: 60,
+		level: 9,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c844834493e',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'INGREDIENT',
@@ -1020,11 +1081,12 @@ const items: Item[] = [
 		],
 		name: 'Unknown Egg',
 		grade: 61,
+		level: 17,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c8448344942',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'INGREDIENT',
@@ -1036,11 +1098,12 @@ const items: Item[] = [
 		],
 		name: 'Whimsy Strawberry',
 		grade: 62,
+		level: 10,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344940',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'INGREDIENT',
@@ -1052,11 +1115,12 @@ const items: Item[] = [
 		],
 		name: 'Bursting Berry',
 		grade: 63,
+		level: 11,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c8448344970',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'PAPER',
@@ -1068,11 +1132,12 @@ const items: Item[] = [
 		],
 		name: 'Paper Scrap',
 		grade: 64,
+		level: 5,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c844834493d',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'FUEL',
@@ -1080,11 +1145,12 @@ const items: Item[] = [
 		],
 		name: 'Natural Oil',
 		grade: 65,
+		level: 9,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c844834493b',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'FUEL',
@@ -1092,11 +1158,12 @@ const items: Item[] = [
 		],
 		name: 'Zafloa Oil',
 		grade: 66,
+		level: 13,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c8448344943',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'PAPER',
@@ -1108,11 +1175,12 @@ const items: Item[] = [
 		],
 		name: 'Church Talisman',
 		grade: 67,
+		level: 10,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c8448344946',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'PAPER',
@@ -1124,11 +1192,12 @@ const items: Item[] = [
 		],
 		name: 'High Class Talisman',
 		grade: 68,
+		level: 17,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c844834496c',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'PAPER',
@@ -1144,11 +1213,12 @@ const items: Item[] = [
 		],
 		name: 'Pious Talisman',
 		grade: 69,
+		level: 26,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344945',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'GEM',
@@ -1160,11 +1230,12 @@ const items: Item[] = [
 		],
 		name: 'Pretty Shell',
 		grade: 70,
+		level: 5,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c844834494b',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'GEM',
@@ -1176,11 +1247,12 @@ const items: Item[] = [
 		],
 		name: 'Pelem Shell',
 		grade: 71,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344948',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'GEM',
@@ -1192,11 +1264,12 @@ const items: Item[] = [
 		],
 		name: 'Blue Steel Stone',
 		grade: 72,
+		level: 26,
 	},
 	{
 		color: 'RED',
 		id: '638a47ba92862c8448344949',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'ELIXIR',
@@ -1208,11 +1281,12 @@ const items: Item[] = [
 		],
 		name: 'Star Powder',
 		grade: 73,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47ba92862c844834495d',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'ELIXIR',
@@ -1224,11 +1298,12 @@ const items: Item[] = [
 		],
 		name: 'Sun Powder',
 		grade: 74,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c844834494a',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'GEM',
@@ -1240,11 +1315,12 @@ const items: Item[] = [
 		],
 		name: 'Crystal Shard',
 		grade: 75,
+		level: 11,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c844834494c',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'GEM',
@@ -1260,11 +1336,12 @@ const items: Item[] = [
 		],
 		name: 'Rainbow Crystal',
 		grade: 76,
+		level: 25,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344951',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'SECRET_POWER',
@@ -1276,11 +1353,12 @@ const items: Item[] = [
 		],
 		name: 'Pendeloch',
 		grade: 77,
+		level: 14,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c844834494e',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'SECRET_POWER',
@@ -1292,11 +1370,12 @@ const items: Item[] = [
 		],
 		name: 'Pendegrune',
 		grade: 78,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344952',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'GEM',
@@ -1308,11 +1387,12 @@ const items: Item[] = [
 		],
 		name: 'Evil Core',
 		grade: 79,
+		level: 22,
 	},
 	{
 		color: 'RED',
 		id: '638a47ba92862c844834494f',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'GEM',
@@ -1328,11 +1408,12 @@ const items: Item[] = [
 		],
 		name: 'Dragon Heart',
 		grade: 80,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c844834494d',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 50,
 				name: 'WOOD',
@@ -1340,11 +1421,12 @@ const items: Item[] = [
 		],
 		name: 'Forgotten Wood',
 		grade: 81,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c8448344950',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 50,
 				name: 'GEM',
@@ -1352,11 +1434,12 @@ const items: Item[] = [
 		],
 		name: 'Forgotten Gem',
 		grade: 82,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c8448344955',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 50,
 				name: 'ORE',
@@ -1364,11 +1447,12 @@ const items: Item[] = [
 		],
 		name: 'Forgotten Ore',
 		grade: 83,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c8448344953',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 50,
 				name: 'METAL',
@@ -1376,11 +1460,12 @@ const items: Item[] = [
 		],
 		name: 'Forgotten Part',
 		grade: 84,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c8448344954',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ELIXIR',
@@ -1388,11 +1473,12 @@ const items: Item[] = [
 		],
 		name: 'Useless Fragment',
 		grade: 85,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c8448344956',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ELIXIR',
@@ -1400,11 +1486,12 @@ const items: Item[] = [
 		],
 		name: 'Burnt Fragment',
 		grade: 86,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344958',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ELIXIR',
@@ -1412,11 +1499,12 @@ const items: Item[] = [
 		],
 		name: 'Stinky Fragment',
 		grade: 87,
+		level: 3,
 	},
 	{
 		color: 'RED',
 		id: '638a47ba92862c8448344957',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ELIXIR',
@@ -1424,11 +1512,12 @@ const items: Item[] = [
 		],
 		name: 'Pretty Fragment',
 		grade: 88,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c844834495b',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 5,
 				name: 'ELIXIR',
@@ -1440,11 +1529,12 @@ const items: Item[] = [
 		],
 		name: 'Failure Ash',
 		grade: 89,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c8448344959',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'IMPORTANT',
@@ -1452,11 +1542,12 @@ const items: Item[] = [
 		],
 		name: 'Haze Grass Petal',
 		grade: 90,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47ba92862c844834495a',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'IMPORTANT',
@@ -1464,11 +1555,12 @@ const items: Item[] = [
 		],
 		name: 'Eternity Scale',
 		grade: 91,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344961',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'PAPER',
@@ -1484,11 +1576,12 @@ const items: Item[] = [
 		],
 		name: 'Magic Page',
 		grade: 92,
+		level: 18,
 	},
 	{
 		color: 'RED',
 		id: '638a47ba92862c8448344972',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'MAGIC_ITEM',
@@ -1504,11 +1597,12 @@ const items: Item[] = [
 		],
 		name: 'Torn Grimoire',
 		grade: 93,
+		level: 25,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c844834495e',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'PAPER',
@@ -1524,11 +1618,12 @@ const items: Item[] = [
 		],
 		name: 'Unknown Knowledge Scrap',
 		grade: 94,
+		level: 21,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c8448344965',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'PAPER',
@@ -1544,11 +1639,12 @@ const items: Item[] = [
 		],
 		name: 'Sealed Knowledge Scrap',
 		grade: 95,
+		level: 21,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c844834495c',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'BOMB',
@@ -1556,11 +1652,12 @@ const items: Item[] = [
 		],
 		name: 'Uni Bag',
 		grade: 142,
+		level: 4,
 	},
 	{
 		color: 'RED',
 		id: '638a47ba92862c8448344963',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'BOMB',
@@ -1568,11 +1665,12 @@ const items: Item[] = [
 		],
 		name: 'Bomb',
 		grade: 143,
+		level: 10,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344960',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'BOMB',
@@ -1580,11 +1678,12 @@ const items: Item[] = [
 		],
 		name: 'Ice Bomb',
 		grade: 144,
+		level: 12,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c8448344962',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'BOMB',
@@ -1592,11 +1691,12 @@ const items: Item[] = [
 		],
 		name: 'Lightning Bomb',
 		grade: 145,
+		level: 14,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c844834495f',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'BOMB',
@@ -1604,11 +1704,12 @@ const items: Item[] = [
 		],
 		name: 'Craft',
 		grade: 146,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47ba92862c8448344967',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'BOMB',
@@ -1616,11 +1717,12 @@ const items: Item[] = [
 		],
 		name: 'Ori Bomb',
 		grade: 147,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344964',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'BOMB',
@@ -1628,11 +1730,12 @@ const items: Item[] = [
 		],
 		name: 'Stahl Ice Bomb',
 		grade: 148,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c8448344966',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'BOMB',
@@ -1640,11 +1743,12 @@ const items: Item[] = [
 		],
 		name: 'Lightning Crystal',
 		grade: 149,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344968',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'BOMB',
@@ -1652,11 +1756,12 @@ const items: Item[] = [
 		],
 		name: 'Puni Missile',
 		grade: 150,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c844834497d',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'BOMB',
@@ -1668,11 +1773,12 @@ const items: Item[] = [
 		],
 		name: "God's Gift",
 		grade: 151,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c844834496d',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'BOMB',
@@ -1684,11 +1790,12 @@ const items: Item[] = [
 		],
 		name: 'Flame of Origin',
 		grade: 152,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c844834496e',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'MAGIC_ITEM',
@@ -1696,74 +1803,84 @@ const items: Item[] = [
 		],
 		name: "Magician's Flute",
 		grade: 153,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344969',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Red Uni Bag',
 		grade: 154,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834496b',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Blau Bomb',
 		grade: 155,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834496a',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Vio Ice Bomb',
 		grade: 156,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344976',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Blitz Stone',
 		grade: 157,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344971',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Craft Bag',
 		grade: 158,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834496f',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Peta Bomb',
 		grade: 159,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344974',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Einsof Ice Bomb',
 		grade: 160,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344973',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Blitz Crystal',
 		grade: 161,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344975',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Black Puni Missile',
 		grade: 162,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c8448344977',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'BOMB',
@@ -1775,11 +1892,12 @@ const items: Item[] = [
 		],
 		name: "Heaven's Cleanser",
 		grade: 163,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c8448344978',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'BOMB',
@@ -1791,11 +1909,12 @@ const items: Item[] = [
 		],
 		name: 'Flame of the End',
 		grade: 164,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c844834497b',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'MAGIC_ITEM',
@@ -1803,11 +1922,12 @@ const items: Item[] = [
 		],
 		name: 'Necromancer Flute',
 		grade: 165,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c844834497f',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'MEDICINE',
@@ -1815,11 +1935,12 @@ const items: Item[] = [
 		],
 		name: 'Berg Medicine',
 		grade: 216,
+		level: 1,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344979',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'MEDICINE',
@@ -1827,11 +1948,12 @@ const items: Item[] = [
 		],
 		name: 'Refuel Bottle',
 		grade: 217,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c844834497a',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'MEDICINE',
@@ -1839,11 +1961,12 @@ const items: Item[] = [
 		],
 		name: 'Breezy Aroma',
 		grade: 218,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c844834497c',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'MEDICINE',
@@ -1855,11 +1978,12 @@ const items: Item[] = [
 		],
 		name: 'Nectar of Life',
 		grade: 219,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47ba92862c8448344986',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'MEDICINE',
@@ -1871,11 +1995,12 @@ const items: Item[] = [
 		],
 		name: 'Mystery Elixir',
 		grade: 220,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c844834497e',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'FOOD',
@@ -1887,11 +2012,12 @@ const items: Item[] = [
 		],
 		name: 'Simple Sweets',
 		grade: 221,
+		level: 2,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344980',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'FOOD',
@@ -1903,11 +2029,12 @@ const items: Item[] = [
 		],
 		name: 'Sotea',
 		grade: 222,
+		level: 3,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344983',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'FOOD',
@@ -1923,11 +2050,12 @@ const items: Item[] = [
 		],
 		name: 'Puni Jelly',
 		grade: 223,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47ba92862c8448344981',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'FOOD',
@@ -1939,11 +2067,12 @@ const items: Item[] = [
 		],
 		name: 'Sofinancier',
 		grade: 224,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344985',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'FOOD',
@@ -1955,11 +2084,12 @@ const items: Item[] = [
 		],
 		name: 'Piro Sotea',
 		grade: 225,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47ba92862c8448344987',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'FOOD',
@@ -1975,11 +2105,12 @@ const items: Item[] = [
 		],
 		name: 'Alchemy Drops',
 		grade: 226,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47ba92862c8448344988',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'FOOD',
@@ -1987,11 +2118,12 @@ const items: Item[] = [
 		],
 		name: 'Plain Waffle',
 		grade: 227,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47ba92862c8448344984',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'FOOD',
@@ -1999,74 +2131,84 @@ const items: Item[] = [
 		],
 		name: 'Bagel Sandwich',
 		grade: 228,
+		level: 9,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834498b',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Yellow Ointment',
 		grade: 229,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834498c',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Relief Drink',
 		grade: 230,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344982',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Fairy Breath',
 		grade: 231,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834498a',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Lifesteal Drops',
 		grade: 232,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344989',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Goddess Tear',
 		grade: 233,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c8448344990',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Rock Cookie',
 		grade: 234,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834498e',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Black Sotea',
 		grade: 235,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834498f',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Rainbow Puni Jelly',
 		grade: 236,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47ba92862c844834498d',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Medicinal Cake',
 		grade: 237,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47ba92862c8448344992',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'FOOD',
@@ -2074,11 +2216,12 @@ const items: Item[] = [
 		],
 		name: 'Supreme Hot Milk',
 		grade: 238,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bb92862c8448344996',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'MEDICINE',
@@ -2086,11 +2229,12 @@ const items: Item[] = [
 		],
 		name: 'Honey Syrup',
 		grade: 239,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c8448344998',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'MAGIC_ITEM',
@@ -2098,11 +2242,12 @@ const items: Item[] = [
 		],
 		name: "Angel's Whisper",
 		grade: 290,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47ba92862c8448344991',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'MEDICINE',
@@ -2110,11 +2255,12 @@ const items: Item[] = [
 		],
 		name: 'Warding Incense',
 		grade: 291,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c8448344993',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'MEDICINE',
@@ -2122,11 +2268,12 @@ const items: Item[] = [
 		],
 		name: 'Bottled Misfortune',
 		grade: 292,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bb92862c8448344997',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'CLOTH',
@@ -2134,11 +2281,12 @@ const items: Item[] = [
 		],
 		name: 'Spirit Weave Cloth',
 		grade: 293,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c8448344994',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'MEDICINE',
@@ -2146,11 +2294,12 @@ const items: Item[] = [
 		],
 		name: 'Fire Dragon Medicine',
 		grade: 294,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c844834499a',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'MAGIC_ITEM',
@@ -2162,11 +2311,12 @@ const items: Item[] = [
 		],
 		name: 'Codex of Creation',
 		grade: 295,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c8448344995',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'MAGIC_ITEM',
@@ -2174,11 +2324,12 @@ const items: Item[] = [
 		],
 		name: "Imp's Mischief",
 		grade: 296,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c844834499c',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'MEDICINE',
@@ -2186,46 +2337,52 @@ const items: Item[] = [
 		],
 		name: "Hero's Medicine",
 		grade: 297,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c844834499b',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Fallen Angel Bell',
 		grade: 298,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c8448344999',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Hunger Incense',
 		grade: 299,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c844834499e',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Edible Mist',
 		grade: 300,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c844834499f',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Mirage Film',
 		grade: 301,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449aa',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Leidenpruft',
 		grade: 302,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449a2',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'MAGIC_ITEM',
@@ -2237,25 +2394,28 @@ const items: Item[] = [
 		],
 		name: 'Sealing Book',
 		grade: 303,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c844834499d',
-		itemCategories: [],
+		relatedCategories: [],
 		name: "Demon's Mischief",
 		grade: 304,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449a0',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Berserker Medicine',
 		grade: 305,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bb92862c84483449a5',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'MEDICINE',
@@ -2263,18 +2423,20 @@ const items: Item[] = [
 		],
 		name: 'Wonder Stimulant',
 		grade: 356,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449a1',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Restful Tent',
 		grade: 357,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449a4',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'MAGIC_ITEM',
@@ -2282,11 +2444,12 @@ const items: Item[] = [
 		],
 		name: 'Fairy Guide',
 		grade: 358,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449ab',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'MAGIC_ITEM',
@@ -2298,11 +2461,12 @@ const items: Item[] = [
 		],
 		name: 'Living Cart',
 		grade: 359,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bb92862c84483449a7',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'MAGIC_ITEM',
@@ -2310,11 +2474,12 @@ const items: Item[] = [
 		],
 		name: 'Clear Drops',
 		grade: 360,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bb92862c84483449a9',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'MAGIC_ITEM',
@@ -2326,11 +2491,12 @@ const items: Item[] = [
 		],
 		name: 'Mana Feather',
 		grade: 361,
+		level: 11,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bb92862c84483449a3',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'CLOTH',
@@ -2338,11 +2504,12 @@ const items: Item[] = [
 		],
 		name: "Traveler's Shoes",
 		grade: 362,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449a6',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'CLOTH',
@@ -2350,11 +2517,12 @@ const items: Item[] = [
 		],
 		name: 'Deluxe Backpack',
 		grade: 363,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449a8',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'MAGIC_ITEM',
@@ -2362,11 +2530,12 @@ const items: Item[] = [
 		],
 		name: 'Emergency Bag',
 		grade: 364,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bb92862c84483449ad',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 5,
 				name: 'CLOTH',
@@ -2374,11 +2543,12 @@ const items: Item[] = [
 		],
 		name: 'Gathering Gloves',
 		grade: 365,
+		level: 16,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449ac',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'MAGIC_ITEM',
@@ -2386,11 +2556,12 @@ const items: Item[] = [
 		],
 		name: "Victor's Charm",
 		grade: 366,
+		level: 12,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bb92862c84483449b1',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'MAGIC_ITEM',
@@ -2398,11 +2569,12 @@ const items: Item[] = [
 		],
 		name: 'Training Charm',
 		grade: 367,
+		level: 17,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449af',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'MAGIC_ITEM',
@@ -2414,11 +2586,12 @@ const items: Item[] = [
 		],
 		name: 'Warding Charm',
 		grade: 368,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449b0',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'METAL',
@@ -2426,11 +2599,12 @@ const items: Item[] = [
 		],
 		name: 'Heart Pendant',
 		grade: 369,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449ae',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'NEUTRALIZER',
@@ -2438,11 +2612,12 @@ const items: Item[] = [
 		],
 		name: 'Neutralizer R',
 		grade: 420,
+		level: 2,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bb92862c84483449b5',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'NEUTRALIZER',
@@ -2450,11 +2625,12 @@ const items: Item[] = [
 		],
 		name: 'Neutralizer B',
 		grade: 421,
+		level: 2,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bb92862c84483449b6',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'NEUTRALIZER',
@@ -2462,11 +2638,12 @@ const items: Item[] = [
 		],
 		name: 'Neutralizer G',
 		grade: 422,
+		level: 2,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449b3',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'NEUTRALIZER',
@@ -2474,11 +2651,12 @@ const items: Item[] = [
 		],
 		name: 'Neutralizer Y',
 		grade: 423,
+		level: 2,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bb92862c84483449b2',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 50,
 				name: 'WATER',
@@ -2486,11 +2664,12 @@ const items: Item[] = [
 		],
 		name: 'Pure Water',
 		grade: 424,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bb92862c84483449bf',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'WATER',
@@ -2502,11 +2681,12 @@ const items: Item[] = [
 		],
 		name: 'Spirit Tears',
 		grade: 425,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449b4',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'INGREDIENT',
@@ -2518,11 +2698,12 @@ const items: Item[] = [
 		],
 		name: 'Apcol',
 		grade: 426,
+		level: 5,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449bb',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'INGREDIENT',
@@ -2534,11 +2715,12 @@ const items: Item[] = [
 		],
 		name: 'Ramel Flour',
 		grade: 427,
+		level: 3,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449b8',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'INGREDIENT',
@@ -2546,11 +2728,12 @@ const items: Item[] = [
 		],
 		name: 'Honey',
 		grade: 428,
+		level: 6,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bb92862c84483449b7',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'INGREDIENT',
@@ -2566,11 +2749,12 @@ const items: Item[] = [
 		],
 		name: 'Natural Yeast',
 		grade: 429,
+		level: 23,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449bd',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'MEDICINE_MAT',
@@ -2582,11 +2766,12 @@ const items: Item[] = [
 		],
 		name: 'Elixir Base',
 		grade: 430,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449bc',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'PAPER',
@@ -2598,11 +2783,12 @@ const items: Item[] = [
 		],
 		name: 'Zettel',
 		grade: 431,
+		level: 5,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449ba',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'FUEL',
@@ -2614,11 +2800,12 @@ const items: Item[] = [
 		],
 		name: 'Refresh Oil',
 		grade: 432,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449b9',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'GUNPOWDER',
@@ -2626,11 +2813,12 @@ const items: Item[] = [
 		],
 		name: 'Flame Powder',
 		grade: 433,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bb92862c84483449be',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'METAL',
@@ -2638,11 +2826,12 @@ const items: Item[] = [
 		],
 		name: 'Blitzlite',
 		grade: 434,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449c0',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'METAL',
@@ -2654,11 +2843,12 @@ const items: Item[] = [
 		],
 		name: 'Geist Aizen',
 		grade: 435,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449c2',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'CLAY',
@@ -2670,11 +2860,12 @@ const items: Item[] = [
 		],
 		name: 'Alchemic Clay',
 		grade: 436,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449c1',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 45,
 				name: 'THREAD',
@@ -2686,11 +2877,12 @@ const items: Item[] = [
 		],
 		name: 'Gold Thread',
 		grade: 437,
+		level: 10,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bb92862c84483449c3',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'WOOD',
@@ -2698,11 +2890,12 @@ const items: Item[] = [
 		],
 		name: 'Spruce',
 		grade: 438,
+		level: 9,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449c4',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'WEAPON_MAT',
@@ -2714,11 +2907,12 @@ const items: Item[] = [
 		],
 		name: 'Ingot',
 		grade: 439,
+		level: 7,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449c5',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'WEAPON_MAT',
@@ -2730,11 +2924,12 @@ const items: Item[] = [
 		],
 		name: 'Stahl Metal',
 		grade: 440,
+		level: 10,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449c6',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'WEAPON_MAT',
@@ -2746,11 +2941,12 @@ const items: Item[] = [
 		],
 		name: 'Silvalia',
 		grade: 441,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449c7',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'WEAPON_MAT',
@@ -2762,11 +2958,12 @@ const items: Item[] = [
 		],
 		name: 'Rubilium',
 		grade: 442,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449cc',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'WEAPON_MAT',
@@ -2778,11 +2975,12 @@ const items: Item[] = [
 		],
 		name: 'Golt Aizen',
 		grade: 443,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449ca',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 45,
 				name: 'WEAPON_MAT',
@@ -2794,11 +2992,12 @@ const items: Item[] = [
 		],
 		name: 'Harmonium',
 		grade: 444,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449c8',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'ARMOR_MAT',
@@ -2810,11 +3009,12 @@ const items: Item[] = [
 		],
 		name: 'Cloth',
 		grade: 445,
+		level: 8,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449cb',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'ARMOR_MAT',
@@ -2826,11 +3026,12 @@ const items: Item[] = [
 		],
 		name: 'Mofcott',
 		grade: 446,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449ce',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'ARMOR_MAT',
@@ -2842,11 +3043,12 @@ const items: Item[] = [
 		],
 		name: 'Adal Cloth',
 		grade: 447,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449c9',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'ARMOR_MAT',
@@ -2858,11 +3060,12 @@ const items: Item[] = [
 		],
 		name: 'Flugel',
 		grade: 448,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449cd',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'ARMOR_MAT',
@@ -2874,11 +3077,12 @@ const items: Item[] = [
 		],
 		name: 'Fairheit',
 		grade: 449,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449cf',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 45,
 				name: 'ARMOR_MAT',
@@ -2890,11 +3094,12 @@ const items: Item[] = [
 		],
 		name: 'Velvetis',
 		grade: 450,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bb92862c84483449d8',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'METAL',
@@ -2906,11 +3111,12 @@ const items: Item[] = [
 		],
 		name: 'Snowflake Crystal',
 		grade: 451,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bb92862c84483449d0',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'GEM',
@@ -2918,11 +3124,12 @@ const items: Item[] = [
 		],
 		name: 'Noble Sapphire',
 		grade: 452,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449d3',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'POISON_MAT',
@@ -2942,11 +3149,12 @@ const items: Item[] = [
 		],
 		name: 'Dusk Drop',
 		grade: 453,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449d2',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'GEM',
@@ -2958,11 +3166,12 @@ const items: Item[] = [
 		],
 		name: 'Crystal Ball',
 		grade: 454,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449d1',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'IMPORTANT',
@@ -2970,11 +3179,12 @@ const items: Item[] = [
 		],
 		name: 'Compass of Hades',
 		grade: 455,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449d6',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'ANIMAL',
@@ -2994,11 +3204,12 @@ const items: Item[] = [
 		],
 		name: 'Crimson Stone',
 		grade: 456,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449d7',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 99,
 				name: 'METAL',
@@ -3018,11 +3229,12 @@ const items: Item[] = [
 		],
 		name: 'Philosopher Stone',
 		grade: 457,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449f4',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'SECRET_POWER',
@@ -3042,11 +3254,12 @@ const items: Item[] = [
 		],
 		name: 'Sun Drop',
 		grade: 458,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bb92862c84483449d5',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'MEDICINE_MAT',
@@ -3062,11 +3275,12 @@ const items: Item[] = [
 		],
 		name: 'Mineral Extract',
 		grade: 459,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449e0',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'CLAY',
@@ -3074,11 +3288,12 @@ const items: Item[] = [
 		],
 		name: 'Fertile Soil',
 		grade: 460,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449d4',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'METAL',
@@ -3086,11 +3301,12 @@ const items: Item[] = [
 		],
 		name: 'Precise Parts',
 		grade: 461,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449da',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 5,
 				name: 'IMPORTANT',
@@ -3098,11 +3314,12 @@ const items: Item[] = [
 		],
 		name: "Grandma's Cauldron",
 		grade: 509,
+		level: 4,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449d9',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 5,
 				name: 'IMPORTANT',
@@ -3110,11 +3327,12 @@ const items: Item[] = [
 		],
 		name: 'Practice Cauldron',
 		grade: 510,
+		level: 4,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449ec',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'IMPORTANT',
@@ -3122,11 +3340,12 @@ const items: Item[] = [
 		],
 		name: 'Tuned Cauldron',
 		grade: 511,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449db',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'IMPORTANT',
@@ -3134,11 +3353,12 @@ const items: Item[] = [
 		],
 		name: 'Expert Cauldron',
 		grade: 512,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449dc',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'IMPORTANT',
@@ -3146,11 +3366,12 @@ const items: Item[] = [
 		],
 		name: 'Fairy Cauldron',
 		grade: 513,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449dd',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'IMPORTANT',
@@ -3158,11 +3379,12 @@ const items: Item[] = [
 		],
 		name: 'Ancient Cauldron',
 		grade: 514,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449df',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'IMPORTANT',
@@ -3170,11 +3392,12 @@ const items: Item[] = [
 		],
 		name: "Teacher's Cauldron",
 		grade: 515,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449e3',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'IMPORTANT',
@@ -3182,11 +3405,12 @@ const items: Item[] = [
 		],
 		name: "Hermit's Cauldron",
 		grade: 516,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449e4',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 45,
 				name: 'IMPORTANT',
@@ -3194,39 +3418,44 @@ const items: Item[] = [
 		],
 		name: 'Miraculous Cauldron',
 		grade: 517,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449de',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Rein Gem',
 		grade: 518,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449e1',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Forg Gem',
 		grade: 519,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449e5',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Vax Gem',
 		grade: 520,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449e2',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Samil Gem',
 		grade: 521,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449e7',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'MAGIC_ITEM',
@@ -3234,32 +3463,36 @@ const items: Item[] = [
 		],
 		name: 'Eye of Mercury',
 		grade: 522,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449e6',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Alchemy Glass Tool',
 		grade: 523,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449e9',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Growth Accelerator',
 		grade: 524,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bb92862c84483449e8',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Personal Mixing Rod',
 		grade: 525,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bb92862c84483449eb',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'WEAPON',
@@ -3267,11 +3500,12 @@ const items: Item[] = [
 		],
 		name: 'Starting Staff',
 		grade: 576,
+		level: 6,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bb92862c84483449ea',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'WEAPON',
@@ -3279,11 +3513,12 @@ const items: Item[] = [
 		],
 		name: 'Flourish Heart',
 		grade: 577,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449ed',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'WEAPON',
@@ -3291,11 +3526,12 @@ const items: Item[] = [
 		],
 		name: 'Wandering Staff',
 		grade: 578,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c84483449fa',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'WEAPON',
@@ -3303,11 +3539,12 @@ const items: Item[] = [
 		],
 		name: 'Prosper Heart',
 		grade: 579,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449ef',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'WEAPON',
@@ -3315,11 +3552,12 @@ const items: Item[] = [
 		],
 		name: 'Eternal Cycle Staff',
 		grade: 580,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bb92862c84483449f6',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'WEAPON',
@@ -3327,11 +3565,12 @@ const items: Item[] = [
 		],
 		name: 'Moon Caller',
 		grade: 581,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bb92862c84483449ee',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'WEAPON',
@@ -3339,11 +3578,12 @@ const items: Item[] = [
 		],
 		name: 'Aura Bangle',
 		grade: 582,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449f7',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'WEAPON',
@@ -3351,11 +3591,12 @@ const items: Item[] = [
 		],
 		name: 'Cosmo Caller',
 		grade: 583,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bb92862c84483449f0',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'WEAPON',
@@ -3363,11 +3604,12 @@ const items: Item[] = [
 		],
 		name: 'Arch Bangle',
 		grade: 584,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bb92862c84483449f3',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'WEAPON',
@@ -3375,11 +3617,12 @@ const items: Item[] = [
 		],
 		name: 'Bright Night',
 		grade: 585,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bb92862c84483449f1',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'WEAPON',
@@ -3387,11 +3630,12 @@ const items: Item[] = [
 		],
 		name: 'Formal Rapier',
 		grade: 586,
+		level: 8,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c84483449f8',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'WEAPON',
@@ -3399,11 +3643,12 @@ const items: Item[] = [
 		],
 		name: 'Brave Rapier',
 		grade: 587,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bb92862c84483449f2',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'WEAPON',
@@ -3411,11 +3656,12 @@ const items: Item[] = [
 		],
 		name: "Knight's Rapier",
 		grade: 588,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bb92862c84483449f5',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'WEAPON',
@@ -3423,11 +3669,12 @@ const items: Item[] = [
 		],
 		name: "Hero's Rapier",
 		grade: 589,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a0a',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'WEAPON',
@@ -3435,11 +3682,12 @@ const items: Item[] = [
 		],
 		name: "Monika's Estoc",
 		grade: 590,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c84483449fc',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'WEAPON',
@@ -3447,11 +3695,12 @@ const items: Item[] = [
 		],
 		name: 'Earth Shovel',
 		grade: 591,
+		level: 5,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c84483449fb',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'WEAPON',
@@ -3459,11 +3708,12 @@ const items: Item[] = [
 		],
 		name: 'Idle Shovel',
 		grade: 592,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c84483449ff',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'WEAPON',
@@ -3471,11 +3721,12 @@ const items: Item[] = [
 		],
 		name: "Heaven's Shovel",
 		grade: 593,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c84483449f9',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'WEAPON',
@@ -3483,11 +3734,12 @@ const items: Item[] = [
 		],
 		name: 'Shovel of Hope',
 		grade: 594,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c84483449fd',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'WEAPON',
@@ -3495,11 +3747,12 @@ const items: Item[] = [
 		],
 		name: 'Bountiful Harvester',
 		grade: 595,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a00',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'WEAPON',
@@ -3507,11 +3760,12 @@ const items: Item[] = [
 		],
 		name: 'Knight Blade',
 		grade: 596,
+		level: 9,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c84483449fe',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'WEAPON',
@@ -3519,11 +3773,12 @@ const items: Item[] = [
 		],
 		name: 'Breaker',
 		grade: 597,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a02',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'WEAPON',
@@ -3531,11 +3786,12 @@ const items: Item[] = [
 		],
 		name: 'Paladin Blade',
 		grade: 598,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a01',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'WEAPON',
@@ -3543,11 +3799,12 @@ const items: Item[] = [
 		],
 		name: 'Banisher',
 		grade: 599,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c8448344a05',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'WEAPON',
@@ -3555,11 +3812,12 @@ const items: Item[] = [
 		],
 		name: 'Evandeit',
 		grade: 600,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a06',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'WEAPON',
@@ -3567,11 +3825,12 @@ const items: Item[] = [
 		],
 		name: 'Demon Slayer',
 		grade: 601,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a03',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'WEAPON',
@@ -3579,11 +3838,12 @@ const items: Item[] = [
 		],
 		name: 'Dark Light',
 		grade: 602,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a09',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'WEAPON',
@@ -3591,11 +3851,12 @@ const items: Item[] = [
 		],
 		name: 'Demon God Slayer',
 		grade: 603,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a04',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'WEAPON',
@@ -3603,11 +3864,12 @@ const items: Item[] = [
 		],
 		name: 'True Dark Light',
 		grade: 604,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a0c',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'WEAPON',
@@ -3615,11 +3877,12 @@ const items: Item[] = [
 		],
 		name: 'Light of Dawn',
 		grade: 605,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a10',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'WEAPON',
@@ -3627,11 +3890,12 @@ const items: Item[] = [
 		],
 		name: 'Steel Gauntlet',
 		grade: 606,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a07',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'WEAPON',
@@ -3639,11 +3903,12 @@ const items: Item[] = [
 		],
 		name: 'Roaring Thunder',
 		grade: 607,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a08',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'WEAPON',
@@ -3651,11 +3916,12 @@ const items: Item[] = [
 		],
 		name: 'Puni Gauntlet',
 		grade: 608,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a0e',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'WEAPON',
@@ -3663,11 +3929,12 @@ const items: Item[] = [
 		],
 		name: 'Resplendent Frost',
 		grade: 609,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a19',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'WEAPON',
@@ -3675,11 +3942,12 @@ const items: Item[] = [
 		],
 		name: 'Devouring Flame',
 		grade: 610,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a0b',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'WEAPON',
@@ -3687,11 +3955,12 @@ const items: Item[] = [
 		],
 		name: 'Metal Bullets',
 		grade: 611,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c8448344a12',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'WEAPON',
@@ -3699,11 +3968,12 @@ const items: Item[] = [
 		],
 		name: 'Piercing Bullets',
 		grade: 612,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a0f',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'WEAPON',
@@ -3711,11 +3981,12 @@ const items: Item[] = [
 		],
 		name: 'Crystal Bullets',
 		grade: 613,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a1a',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'WEAPON',
@@ -3723,11 +3994,12 @@ const items: Item[] = [
 		],
 		name: 'Diamant',
 		grade: 614,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a16',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'WEAPON',
@@ -3735,11 +4007,12 @@ const items: Item[] = [
 		],
 		name: 'Wild Cat',
 		grade: 615,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a0d',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'WEAPON',
@@ -3747,11 +4020,12 @@ const items: Item[] = [
 		],
 		name: "Maiden's Spear",
 		grade: 616,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c8448344a14',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'WEAPON',
@@ -3759,11 +4033,12 @@ const items: Item[] = [
 		],
 		name: 'Madcat Spear',
 		grade: 617,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a11',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'WEAPON',
@@ -3771,11 +4046,12 @@ const items: Item[] = [
 		],
 		name: "Lady's Spear",
 		grade: 618,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a13',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'WEAPON',
@@ -3783,11 +4059,12 @@ const items: Item[] = [
 		],
 		name: 'White Panther',
 		grade: 619,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a17',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'WEAPON',
@@ -3795,11 +4072,12 @@ const items: Item[] = [
 		],
 		name: 'Vivid Spear',
 		grade: 620,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a15',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 5,
 				name: 'ARMOR',
@@ -3807,11 +4085,12 @@ const items: Item[] = [
 		],
 		name: "Traveler's Vest",
 		grade: 686,
+		level: 6,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a18',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ARMOR',
@@ -3819,11 +4098,12 @@ const items: Item[] = [
 		],
 		name: 'Plate Vest',
 		grade: 687,
+		level: 11,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c8448344a1d',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'ARMOR',
@@ -3831,11 +4111,12 @@ const items: Item[] = [
 		],
 		name: 'Gold Jacket',
 		grade: 688,
+		level: 28,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a1b',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'ARMOR',
@@ -3843,11 +4124,12 @@ const items: Item[] = [
 		],
 		name: 'Colorful Vest',
 		grade: 689,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a20',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'ARMOR',
@@ -3855,11 +4137,12 @@ const items: Item[] = [
 		],
 		name: 'Aegis Jacket',
 		grade: 690,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a1c',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'ARMOR',
@@ -3867,11 +4150,12 @@ const items: Item[] = [
 		],
 		name: 'Alchemy Vest',
 		grade: 691,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a1e',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 5,
 				name: 'ARMOR',
@@ -3879,11 +4163,12 @@ const items: Item[] = [
 		],
 		name: 'Hard Coat',
 		grade: 692,
+		level: 8,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a1f',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ARMOR',
@@ -3891,11 +4176,12 @@ const items: Item[] = [
 		],
 		name: 'Plate Coat',
 		grade: 693,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a23',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'ARMOR',
@@ -3903,11 +4189,12 @@ const items: Item[] = [
 		],
 		name: 'Farden Coat',
 		grade: 694,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a29',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'ARMOR',
@@ -3915,11 +4202,12 @@ const items: Item[] = [
 		],
 		name: 'Reactive Coat',
 		grade: 695,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a26',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'ARMOR',
@@ -3927,11 +4215,12 @@ const items: Item[] = [
 		],
 		name: 'Dragonscale Coat',
 		grade: 696,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a28',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'ARMOR',
@@ -3939,11 +4228,12 @@ const items: Item[] = [
 		],
 		name: 'Ancient Coat',
 		grade: 697,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a21',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 5,
 				name: 'ARMOR',
@@ -3951,11 +4241,12 @@ const items: Item[] = [
 		],
 		name: 'First Shirt',
 		grade: 698,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c8448344a22',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ARMOR',
@@ -3963,11 +4254,12 @@ const items: Item[] = [
 		],
 		name: 'Mixed Fur Shirt',
 		grade: 699,
+		level: 8,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a2b',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'ARMOR',
@@ -3975,11 +4267,12 @@ const items: Item[] = [
 		],
 		name: "Wanderer's Shirt",
 		grade: 700,
+		level: 14,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a27',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'ARMOR',
@@ -3987,11 +4280,12 @@ const items: Item[] = [
 		],
 		name: 'Weightless Shirt',
 		grade: 701,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a25',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'ARMOR',
@@ -3999,11 +4293,12 @@ const items: Item[] = [
 		],
 		name: 'Natural Clothes',
 		grade: 702,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a24',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'ARMOR',
@@ -4011,11 +4306,12 @@ const items: Item[] = [
 		],
 		name: 'Full Metal Shirt',
 		grade: 703,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a2a',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'ARMOR',
@@ -4023,11 +4319,12 @@ const items: Item[] = [
 		],
 		name: 'Paraselene Clothes',
 		grade: 704,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a2e',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'ARMOR',
@@ -4035,11 +4332,12 @@ const items: Item[] = [
 		],
 		name: 'Alchemy Mantle',
 		grade: 705,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a2f',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 45,
 				name: 'ARMOR',
@@ -4047,11 +4345,12 @@ const items: Item[] = [
 		],
 		name: 'Soft Armor',
 		grade: 706,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a33',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 45,
 				name: 'ARMOR',
@@ -4059,11 +4358,12 @@ const items: Item[] = [
 		],
 		name: 'Tight Shirt',
 		grade: 707,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a2c',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 50,
 				name: 'ARMOR',
@@ -4071,11 +4371,12 @@ const items: Item[] = [
 		],
 		name: 'Bridal Blouse',
 		grade: 708,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a2d',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 50,
 				name: 'ARMOR',
@@ -4083,11 +4384,12 @@ const items: Item[] = [
 		],
 		name: 'Resurrection Wear',
 		grade: 709,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a34',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ACCESSORY',
@@ -4095,11 +4397,12 @@ const items: Item[] = [
 		],
 		name: 'Life Bangle',
 		grade: 760,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a37',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'ACCESSORY',
@@ -4107,11 +4410,12 @@ const items: Item[] = [
 		],
 		name: 'White-Hot Headband',
 		grade: 761,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c8448344a32',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'ACCESSORY',
@@ -4119,11 +4423,12 @@ const items: Item[] = [
 		],
 		name: 'Angel Ribbon',
 		grade: 762,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a38',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'ACCESSORY',
@@ -4131,11 +4436,12 @@ const items: Item[] = [
 		],
 		name: 'Feather Ornament',
 		grade: 763,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a31',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'ACCESSORY',
@@ -4143,11 +4449,12 @@ const items: Item[] = [
 		],
 		name: 'Spirit Earrings',
 		grade: 764,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a30',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'ACCESSORY',
@@ -4155,11 +4462,12 @@ const items: Item[] = [
 		],
 		name: 'Ambrosia Garland',
 		grade: 765,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c8448344a35',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'ACCESSORY',
@@ -4167,11 +4475,12 @@ const items: Item[] = [
 		],
 		name: 'Meister Mittens',
 		grade: 766,
+		level: 13,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a36',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'ACCESSORY',
@@ -4179,11 +4488,12 @@ const items: Item[] = [
 		],
 		name: "Mind's Eye Monocle",
 		grade: 767,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a3a',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'ACCESSORY',
@@ -4191,11 +4501,12 @@ const items: Item[] = [
 		],
 		name: 'Monochrome Glasses',
 		grade: 768,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a3b',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'ACCESSORY',
@@ -4203,11 +4514,12 @@ const items: Item[] = [
 		],
 		name: 'Chronicle Mark',
 		grade: 769,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a39',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'ACCESSORY',
@@ -4215,11 +4527,12 @@ const items: Item[] = [
 		],
 		name: 'Time Control Hourglass',
 		grade: 770,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c8448344a3c',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'ACCESSORY',
@@ -4227,11 +4540,12 @@ const items: Item[] = [
 		],
 		name: 'Friendly Persona',
 		grade: 771,
+		level: 16,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a42',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'ACCESSORY',
@@ -4239,11 +4553,12 @@ const items: Item[] = [
 		],
 		name: 'Hustle Belt',
 		grade: 772,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a3e',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'ACCESSORY',
@@ -4251,11 +4566,12 @@ const items: Item[] = [
 		],
 		name: 'Element Guard',
 		grade: 773,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a3f',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'ACCESSORY',
@@ -4263,11 +4579,12 @@ const items: Item[] = [
 		],
 		name: 'Gunade Ring',
 		grade: 774,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a3d',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'IMPORTANT',
@@ -4275,11 +4592,12 @@ const items: Item[] = [
 		],
 		name: "Plachta's Core",
 		grade: 825,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a44',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'IMPORTANT',
@@ -4287,11 +4605,12 @@ const items: Item[] = [
 		],
 		name: "Plachta's Clothes",
 		grade: 826,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a40',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'IMPORTANT',
@@ -4299,11 +4618,12 @@ const items: Item[] = [
 		],
 		name: 'Soul Stone',
 		grade: 827,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a41',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'IMPORTANT',
@@ -4311,11 +4631,12 @@ const items: Item[] = [
 		],
 		name: 'Spirit Needle',
 		grade: 828,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a46',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 50,
 				name: 'IMPORTANT',
@@ -4323,11 +4644,12 @@ const items: Item[] = [
 		],
 		name: 'Key of Truth',
 		grade: 829,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a4a',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'METAL',
@@ -4339,11 +4661,12 @@ const items: Item[] = [
 		],
 		name: 'Hexe Auris',
 		grade: 830,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a47',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'ACCESSORY',
@@ -4351,11 +4674,12 @@ const items: Item[] = [
 		],
 		name: 'Ares Brooch',
 		grade: 831,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a43',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'IMPORTANT',
@@ -4363,11 +4687,12 @@ const items: Item[] = [
 		],
 		name: 'Plachta Doll',
 		grade: 832,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a45',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'IMPORTANT',
@@ -4375,11 +4700,12 @@ const items: Item[] = [
 		],
 		name: 'Music Box of Memory',
 		grade: 833,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c8448344a4b',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'THREAD',
@@ -4387,11 +4713,12 @@ const items: Item[] = [
 		],
 		name: 'Puppeteer String',
 		grade: 834,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c8448344a48',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'CLAY',
@@ -4399,11 +4726,12 @@ const items: Item[] = [
 		],
 		name: "Sage's Soil",
 		grade: 835,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a4c',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'IMPORTANT',
@@ -4411,11 +4739,12 @@ const items: Item[] = [
 		],
 		name: 'Prototype Fertilizer',
 		grade: 836,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a49',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 5,
 				name: 'IMPORTANT',
@@ -4423,11 +4752,12 @@ const items: Item[] = [
 		],
 		name: 'Date Ticket',
 		grade: 837,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a50',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 50,
 				name: 'IMPORTANT',
@@ -4435,11 +4765,12 @@ const items: Item[] = [
 		],
 		name: 'Moisture Grass',
 		grade: 838,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a52',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 50,
 				name: 'IMPORTANT',
@@ -4447,11 +4778,12 @@ const items: Item[] = [
 		],
 		name: "Sage's Emblem",
 		grade: 839,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a4f',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 50,
 				name: 'IMPORTANT',
@@ -4459,11 +4791,12 @@ const items: Item[] = [
 		],
 		name: 'Atelier Tent',
 		grade: 840,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a4e',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 5,
 				name: 'IMPORTANT',
@@ -4471,11 +4804,12 @@ const items: Item[] = [
 		],
 		name: 'Old Certificate',
 		grade: 841,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a51',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 5,
 				name: 'IMPORTANT',
@@ -4483,11 +4817,12 @@ const items: Item[] = [
 		],
 		name: 'Old Clothing',
 		grade: 842,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a4d',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'IMPORTANT',
@@ -4495,11 +4830,12 @@ const items: Item[] = [
 		],
 		name: "Grandma's Clothes",
 		grade: 843,
+		level: null,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a5b',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'MAGIC_ITEM',
@@ -4515,11 +4851,12 @@ const items: Item[] = [
 		],
 		name: 'Living Broom',
 		grade: 844,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a55',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'CLOTH',
@@ -4531,11 +4868,12 @@ const items: Item[] = [
 		],
 		name: 'Corneria Doll',
 		grade: 845,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a54',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 5,
 				name: 'IMPORTANT',
@@ -4543,11 +4881,12 @@ const items: Item[] = [
 		],
 		name: 'Gathering Buddy',
 		grade: 887,
+		level: 8,
 	},
 	{
 		color: 'GREEN',
 		id: '638a47bc92862c8448344a53',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 10,
 				name: 'IMPORTANT',
@@ -4555,11 +4894,12 @@ const items: Item[] = [
 		],
 		name: 'Eternal Brilliance',
 		grade: 888,
+		level: null,
 	},
 	{
 		color: 'BLUE',
 		id: '638a47bc92862c8448344a57',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 15,
 				name: 'IMPORTANT',
@@ -4567,11 +4907,12 @@ const items: Item[] = [
 		],
 		name: 'Soul Techniques',
 		grade: 889,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c8448344a56',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 20,
 				name: 'IMPORTANT',
@@ -4579,11 +4920,12 @@ const items: Item[] = [
 		],
 		name: 'Alchemic Drive Guide',
 		grade: 890,
+		level: null,
 	},
 	{
 		color: 'YELLOW',
 		id: '638a47bc92862c8448344a59',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 25,
 				name: 'IMPORTANT',
@@ -4591,11 +4933,12 @@ const items: Item[] = [
 		],
 		name: 'Blessing of the Sun',
 		grade: 891,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bc92862c8448344a5a',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 30,
 				name: 'IMPORTANT',
@@ -4603,11 +4946,12 @@ const items: Item[] = [
 		],
 		name: 'Recipe of Origin',
 		grade: 892,
+		level: null,
 	},
 	{
 		color: 'WHITE',
 		id: '638a47bd92862c8448344a5e',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 35,
 				name: 'IMPORTANT',
@@ -4615,11 +4959,12 @@ const items: Item[] = [
 		],
 		name: "Puppeteer's Tools",
 		grade: 893,
+		level: null,
 	},
 	{
 		color: 'RED',
 		id: '638a47bc92862c8448344a58',
-		itemCategories: [
+		relatedCategories: [
 			{
 				grade: 40,
 				name: 'IMPORTANT',
@@ -4627,20 +4972,23 @@ const items: Item[] = [
 		],
 		name: "Alchemist's Book",
 		grade: 894,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bd92862c8448344a5d',
-		itemCategories: [],
+		relatedCategories: [],
 		name: "Canaria's Note",
 		grade: 895,
+		level: null,
 	},
 	{
 		color: 'NONE',
 		id: '638a47bc92862c8448344a5c',
-		itemCategories: [],
+		relatedCategories: [],
 		name: 'Epigraph of All Creation',
 		grade: 896,
+		level: null,
 	},
 ];
 
