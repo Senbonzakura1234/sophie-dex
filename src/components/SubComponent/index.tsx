@@ -1,5 +1,5 @@
 import type { COLOR, TRAIT_CATEGORY } from '@prisma/client';
-import type { ColorSelected, ItemCateSelected, TraitCateSelected } from '@root/types/common';
+import type { ColorSelected, RelatedCateSelected, TraitCateSelected } from '@root/types/common';
 import type { ListPlaceHolderProps } from '@root/types/common/props';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 import type { FC } from 'react';
@@ -48,7 +48,7 @@ const TraitCategoryMap = [
 
 const colorMap = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW', 'NONE'] satisfies COLOR[];
 
-export const ItemCategorySelectList = [
+export const RelatedCategorySelectList = [
 	{
 		value: null,
 		label: '------------',
@@ -173,7 +173,7 @@ export const ItemCategorySelectList = [
 		value: 'MAGIC_ITEM',
 		label: 'Magic Item',
 	},
-] satisfies ItemCateSelected[];
+] satisfies RelatedCateSelected[];
 
 export const defaultSelect = {
 	value: null,

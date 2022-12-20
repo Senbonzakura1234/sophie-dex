@@ -9,8 +9,8 @@ import FadeWrapper from '../Animations/FadeWrapper';
 import CircleDivider from '../CircleDivider';
 import ApplyFilter from './ApplyFilter';
 import ColorFilter from './ColorFilter';
-import ItemCategoryFilter from './ItemCategoryFilter';
 import Paginate from './Paginate';
+import RelatedCategoryFilter from './RelatedCategoryFilter';
 import ResetFilter from './ResetFilter';
 import SortControl from './SortControl';
 import TraitCategoryFilter from './TraitCategoryFilter';
@@ -44,7 +44,7 @@ const FilterControl: FC<FilterControlProps> = ({
 					<div className='flex flex-wrap gap-2'>
 						<TraitCategoryFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
 						<ColorFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
-						<ItemCategoryFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
+						<RelatedCategoryFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
 
 						<ApplyFilter filterData={filterData} isCanApplyFilter={isCanApplyFilter} />
 					</div>

@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 const ApplyFilter: FC<ApplyFilterProps> = ({
 	isCanApplyFilter,
-	filterData: { colorSelected, traitCateSelected, itemCateSelected },
+	filterData: { colorSelected, traitCateSelected, relatedCateSelected },
 }) => {
 	const { updateQuery } = useSearchQuery();
 
@@ -18,7 +18,7 @@ const ApplyFilter: FC<ApplyFilterProps> = ({
 							page: 1,
 							traitCategory: traitCateSelected.value,
 							color: colorSelected.value,
-							itemCategory: itemCateSelected.value,
+							relatedCategory: relatedCateSelected.value,
 						});
 				}}
 				aria-label='Apply Filter'

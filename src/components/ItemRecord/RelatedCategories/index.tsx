@@ -1,6 +1,6 @@
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { RelatedCategoriesProps } from '@root/types/common/props';
-import { ItemCategoryDisplay } from '@root/types/model';
+import { RelatedCategoryDisplay } from '@root/types/model';
 import type { FC } from 'react';
 
 const RelatedCategories: FC<RelatedCategoriesProps> = ({ relatedCategories }) => {
@@ -12,13 +12,13 @@ const RelatedCategories: FC<RelatedCategoriesProps> = ({ relatedCategories }) =>
 				<a
 					onClick={e => {
 						e.preventDefault();
-						if (isReady) updateQuery({ itemCategory: c.name });
+						if (isReady) updateQuery({ relatedCategory: c.name });
 					}}
-					aria-label={ItemCategoryDisplay[c.name]}
+					aria-label={RelatedCategoryDisplay[c.name]}
 					key={k}
 					className='link link-hover text-accent-content font-serif text-xs capitalize italic'
 				>
-					{ItemCategoryDisplay[c.name]} ({c.grade})
+					{RelatedCategoryDisplay[c.name]} ({c.grade})
 				</a>
 			))}
 		</div>

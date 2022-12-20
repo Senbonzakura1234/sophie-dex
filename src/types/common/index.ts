@@ -15,18 +15,18 @@ export type SetSelectOptionItem<V> = Dispatch<SetStateAction<SelectOptionItem<V>
 
 export type TraitCateSelected = SelectOptionItem<TRAIT_CATEGORY | null>;
 export type ColorSelected = SelectOptionItem<COLOR | null>;
-export type ItemCateSelected = SelectOptionItem<RELATED_CATEGORY | null>;
+export type RelatedCateSelected = SelectOptionItem<RELATED_CATEGORY | null>;
 
 export type FilterData = {
 	traitCateSelected: TraitCateSelected;
 	colorSelected: ColorSelected;
-	itemCateSelected: ItemCateSelected;
+	relatedCateSelected: RelatedCateSelected;
 };
 
 export type SetFilterData = {
 	setTraitCateSelected: SetSelectOptionItem<TRAIT_CATEGORY | null>;
 	setColorSelected: SetSelectOptionItem<COLOR | null>;
-	setItemCateSelected: SetSelectOptionItem<RELATED_CATEGORY | null>;
+	setrelatedCateSelected: SetSelectOptionItem<RELATED_CATEGORY | null>;
 };
 
 export type GoToPage = SelectOptionItem<number | null>;

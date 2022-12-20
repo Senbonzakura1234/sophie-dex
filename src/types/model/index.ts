@@ -15,7 +15,7 @@ export const colorMap = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW', 'NONE'] as c
 
 export type ColorDisplay = typeof ColorDisplay[keyof typeof ColorDisplay];
 
-export const ItemCategoryDisplay = {
+export const RelatedCategoryDisplay = {
 	PLANT: 'Plant',
 	MEDICINE_MAT: 'Medicine Mat',
 	WATER: 'Water',
@@ -48,7 +48,7 @@ export const ItemCategoryDisplay = {
 	MAGIC_ITEM: 'Magic Item',
 } as const satisfies Readonly<{ [relatedCategory in RELATED_CATEGORY]: string }>;
 
-export const itemCategoryList = [
+export const relatedCategoryList = [
 	'PLANT',
 	'MEDICINE_MAT',
 	'WATER',
@@ -81,7 +81,7 @@ export const itemCategoryList = [
 	'MAGIC_ITEM',
 ] as const satisfies Readonly<RELATED_CATEGORY[]>;
 
-export type ItemCategoryDisplay = typeof ItemCategoryDisplay[keyof typeof ItemCategoryDisplay];
+export type RelatedCategoryDisplay = typeof RelatedCategoryDisplay[keyof typeof RelatedCategoryDisplay];
 
 export const TraitCategoryMap = [
 	{

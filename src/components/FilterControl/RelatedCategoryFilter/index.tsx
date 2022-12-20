@@ -1,13 +1,13 @@
 import type { RELATED_CATEGORY } from '@prisma/client';
 import SelectOption from '@root/components/SelectOption';
-import { ItemCategorySelectList } from '@root/components/SubComponent';
-import type { ItemCategoryFilterProps } from '@root/types/common/props';
+import { RelatedCategorySelectList } from '@root/components/SubComponent';
+import type { RelatedCategoryFilterProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 
-const ItemCategoryFilter: FC<ItemCategoryFilterProps> = ({
-	filterData: { itemCateSelected },
-	setFilterData: { setItemCateSelected },
+const RelatedCategoryFilter: FC<RelatedCategoryFilterProps> = ({
+	filterData: { relatedCateSelected: relatedCateSelected },
+	setFilterData: { setrelatedCateSelected },
 	pageName,
 }) => {
 	return (
@@ -22,9 +22,9 @@ const ItemCategoryFilter: FC<ItemCategoryFilterProps> = ({
 		>
 			<small className='my-auto text-sm font-bold'>Category:</small>
 			<SelectOption<RELATED_CATEGORY | null>
-				list={ItemCategorySelectList}
-				setValue={setItemCateSelected}
-				value={itemCateSelected}
+				list={RelatedCategorySelectList}
+				setValue={setrelatedCateSelected}
+				value={relatedCateSelected}
 				className='my-auto w-32 2xl:w-32'
 				useCustomIcon={false}
 				withIcon={false}
@@ -33,4 +33,4 @@ const ItemCategoryFilter: FC<ItemCategoryFilterProps> = ({
 	);
 };
 
-export default ItemCategoryFilter;
+export default RelatedCategoryFilter;

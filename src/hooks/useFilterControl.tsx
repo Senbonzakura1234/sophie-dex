@@ -1,10 +1,16 @@
 import {
 	ColorSelectList,
 	defaultSelect,
-	ItemCategorySelectList,
+	RelatedCategorySelectList,
 	TraitCategorySelectList,
 } from '@root/components/SubComponent';
-import type { ColorSelected, FilterData, ItemCateSelected, SetFilterData, TraitCateSelected } from '@root/types/common';
+import type {
+	ColorSelected,
+	FilterData,
+	RelatedCateSelected,
+	SetFilterData,
+	TraitCateSelected,
+} from '@root/types/common';
 import { isEqualWithNullish } from '@root/utils/helper';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -27,16 +33,16 @@ export const useFilterControl = (): {
 		[securedQuery.color],
 	);
 
-	const defaultItemCate = useMemo(
-		() => ItemCategorySelectList.find(({ value }) => value === securedQuery.itemCategory) ?? defaultSelect,
-		[securedQuery.itemCategory],
+	const defaultRelatedCate = useMemo(
+		() => RelatedCategorySelectList.find(({ value }) => value === securedQuery.relatedCategory) ?? defaultSelect,
+		[securedQuery.relatedCategory],
 	);
 
 	const [traitCateSelected, setTraitCateSelected] = useState<TraitCateSelected>(defaultTraitCate);
 
 	const [colorSelected, setColorSelected] = useState<ColorSelected>(defaultColor);
 
-	const [itemCateSelected, setItemCateSelected] = useState<ItemCateSelected>(defaultItemCate);
+	const [relatedCateSelected, setrelatedCateSelected] = useState<RelatedCateSelected>(defaultRelatedCate);
 
 	const isTraitCateSelectValid = useMemo(
 		() => !isEqualWithNullish(securedQuery.traitCategory, traitCateSelected.value),
@@ -48,14 +54,14 @@ export const useFilterControl = (): {
 		[colorSelected.value, securedQuery.color],
 	);
 
-	const isItemCateSelectValid = useMemo(
-		() => !isEqualWithNullish(securedQuery.itemCategory, itemCateSelected.value),
-		[itemCateSelected.value, securedQuery.itemCategory],
+	const isRelatedCateSelectValid = useMemo(
+		() => !isEqualWithNullish(securedQuery.relatedCategory, relatedCateSelected.value),
+		[relatedCateSelected.value, securedQuery.relatedCategory],
 	);
 
 	const isCanApplyFilter = useMemo(
-		() => isReady && (isTraitCateSelectValid || isColorSelectValid || isItemCateSelectValid),
-		[isColorSelectValid, isItemCateSelectValid, isReady, isTraitCateSelectValid],
+		() => isReady && (isTraitCateSelectValid || isColorSelectValid || isRelatedCateSelectValid),
+		[isColorSelectValid, isRelatedCateSelectValid, isReady, isTraitCateSelectValid],
 	);
 
 	useEffect(() => {
@@ -67,8 +73,8 @@ export const useFilterControl = (): {
 	}, [defaultColor]);
 
 	return {
-		setFilterData: { setTraitCateSelected, setColorSelected, setItemCateSelected },
-		filterData: { traitCateSelected, colorSelected, itemCateSelected },
+		setFilterData: { setTraitCateSelected, setColorSelected, setrelatedCateSelected },
+		filterData: { traitCateSelected, colorSelected, relatedCateSelected: relatedCateSelected },
 		isCanApplyFilter,
 	};
 };

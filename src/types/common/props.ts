@@ -45,7 +45,7 @@ export type SelectFilterProps = {
 };
 
 export type ColorFilterProps = SelectFilterProps & PageNameProps;
-export type ItemCategoryFilterProps = SelectFilterProps & PageNameProps;
+export type RelatedCategoryFilterProps = SelectFilterProps & PageNameProps;
 export type TraitCategoryFilterProps = SelectFilterProps & PageNameProps;
 
 export type PaginateProps = {
