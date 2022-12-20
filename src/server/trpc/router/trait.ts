@@ -1,5 +1,5 @@
 import type { Trait } from '@prisma/client';
-import { defaultLimit } from '@root/env/constants';
+import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';
@@ -7,7 +7,7 @@ import { TRPCError } from '@trpc/server';
 
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Trait>> => {
-		const { search, sortBy = 'grade', direction = 'asc', traitCategory, page, limit } = { ...input };
+		const { search, sortBy = 'index', direction = 'asc', traitCategory, page, limit } = { ...input };
 
 		const pageInt = page ?? 1;
 		const limitInt = limit ?? defaultLimit;
@@ -51,7 +51,7 @@ export const traitRouter = router({
 			ctx.prisma.trait.findMany({
 				where,
 				orderBy: {
-					[sortBy ?? 'grade']: direction ?? 'asc',
+					[sortBy ?? 'index']: direction ?? 'asc',
 				},
 				skip: (pageInt - 1) * limitInt,
 				take: limitInt,

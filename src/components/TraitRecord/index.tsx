@@ -8,7 +8,7 @@ import TraitCategories from './TraitCategories';
 import TraitMergeList from './TraitMergeList';
 
 const TraitRecord: FC<TraitRecordProps> = ({
-	record: { name, description, grade, traitCategories, mergeFrom, id },
+	record: { name, description, index, traitCategories, mergeFrom, id },
 }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 	return (
@@ -17,7 +17,7 @@ const TraitRecord: FC<TraitRecordProps> = ({
 				<div className='card-body'>
 					<RecordHead id={id} isCurrentRecord={securedIdQuery.id === id} name={name} pathname={pathname} />
 
-					<span className='text-sm'>grade: {grade}</span>
+					<span className='text-sm'>index: {index}</span>
 
 					<span className='font-serif text-lg 2xl:h-16'>{description}</span>
 

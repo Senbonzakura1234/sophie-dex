@@ -7,7 +7,7 @@ import RecordHead from '../RecordHead';
 import Color from './Color';
 import RelatedCategories from './RelatedCategories';
 
-const ItemRecord: FC<ItemRecordProps> = ({ record: { name, grade, id, color, relatedCategories } }) => {
+const ItemRecord: FC<ItemRecordProps> = ({ record: { name, index, id, color, relatedCategories } }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 	return (
 		<FadeWrapper show={isReady} appear={true}>
@@ -15,7 +15,7 @@ const ItemRecord: FC<ItemRecordProps> = ({ record: { name, grade, id, color, rel
 				<div className='card-body'>
 					<RecordHead id={id} isCurrentRecord={securedIdQuery.id === id} name={name} pathname={pathname} />
 
-					<span className='text-sm'>grade: {grade}</span>
+					<span className='text-sm'>index: {index}</span>
 
 					<Color color={color} />
 

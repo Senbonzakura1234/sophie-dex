@@ -55,12 +55,12 @@ enum TRAIT_CATEGORY {
 
 type RelatedCategories {
    name  RELATED_CATEGORY
-   grade Int
+   count Int
 }
 
 type MergeTraitItem {
    id          String
-   grade       Int
+   index       Int
    name        String
    description String
 }
@@ -80,14 +80,14 @@ datasource db {
 
 model Effect {
    id          String @id @default(auto()) @map("_id") @db.ObjectId
-   grade       Int
+   index       Int
    name        String
    description String
 }
 
 model Trait {
    id              String           @id @default(auto()) @map("_id") @db.ObjectId
-   grade           Int
+   index           Int
    name            String
    description     String
    traitCategories TRAIT_CATEGORY[]
@@ -96,7 +96,7 @@ model Trait {
 
 model Item {
    id                String              @id @default(auto()) @map("_id") @db.ObjectId
-   grade             Int
+   index             Int
    name              String
    color             COLOR
    relatedCategories RelatedCategories[]

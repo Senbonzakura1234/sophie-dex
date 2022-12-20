@@ -18,7 +18,7 @@ const RelatedCategories: FC<RelatedCategoriesProps> = ({ relatedCategories }) =>
 					key={k}
 					className='link link-hover text-accent-content font-serif text-xs capitalize italic'
 				>
-					{RelatedCategoryDisplay[c.name]} ({c.grade})
+					{RelatedCategoryDisplay[c.name]} ({c.count})
 				</a>
 			))}
 		</div>

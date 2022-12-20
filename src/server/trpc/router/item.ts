@@ -1,5 +1,5 @@
 import type { Item } from '@prisma/client';
-import { defaultLimit } from '@root/env/constants';
+import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';
@@ -56,7 +56,7 @@ export const itemRouter = router({
 			ctx.prisma.item.findMany({
 				where,
 				orderBy: {
-					[sortBy ?? 'grade']: direction ?? 'asc',
+					[sortBy ?? 'index']: direction ?? 'asc',
 				},
 				skip: (pageInt - 1) * limitInt,
 				take: limitInt,

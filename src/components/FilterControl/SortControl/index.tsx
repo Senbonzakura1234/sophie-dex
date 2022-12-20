@@ -8,7 +8,7 @@ const SortControl: FC = () => {
 
 	const { sortBy, direction } = useMemo(
 		() => ({
-			sortBy: securedQuery.sortBy || 'grade',
+			sortBy: securedQuery.sortBy || 'index',
 			direction: securedQuery.direction || 'asc',
 		}),
 		[securedQuery.direction, securedQuery.sortBy],
@@ -23,20 +23,20 @@ const SortControl: FC = () => {
 
 				<button
 					role='navigation'
-					aria-label='Sort By Grade'
+					aria-label='Sort By Index'
 					disabled={!isReady}
 					onClick={() => {
-						if (sortBy !== 'grade') updateQuery({ sortBy: 'grade', direction: 'asc' });
+						if (sortBy !== 'index') updateQuery({ sortBy: 'index', direction: 'asc' });
 					}}
 					className={clsx(
 						{
-							'btn-active btn-primary': sortBy === 'grade',
-							'btn-secondary': sortBy !== 'grade',
+							'btn-active btn-primary': sortBy === 'index',
+							'btn-secondary': sortBy !== 'index',
 						},
 						'btn btn-xs capitalize',
 					)}
 				>
-					Grade
+					Index
 				</button>
 
 				<button

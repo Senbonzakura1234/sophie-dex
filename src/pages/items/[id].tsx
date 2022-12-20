@@ -26,7 +26,7 @@ const ItemDetail: NextPage = () => {
 						<title>Item - {data.name}</title>
 						<meta
 							name='description'
-							content={data.relatedCategories.map(c => `${c.name} (${c.grade})`).join(', ')}
+							content={data.relatedCategories.map(c => `${c.name} (${c.count})`).join(', ')}
 						/>
 					</Head>
 				) : null
