@@ -50,19 +50,19 @@ export const categoryMap = [
 	{
 		code: 'BOOK',
 		name: 'Book',
-		className: 'atelier__category-accessories',
+		className: 'atelier__book',
 	},
 
 	{
 		code: 'EXPLORATION',
 		name: 'Exploration',
-		className: 'atelier__book',
+		className: 'atelier__tool-gather',
 	},
 
 	{
 		code: 'MACHINE',
 		name: 'Machine',
-		className: 'atelier__equipment',
+		className: 'atelier__category-neutralizers',
 	},
 
 	{
