@@ -1,8 +1,8 @@
 import type { CATEGORY } from '@prisma/client';
+import { categoryMap } from '@root/components/SubComponent';
 import { defaultLimit } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { CategoriesProps } from '@root/types/common/props';
-import { CategoryMap } from '@root/types/model';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useCallback } from 'react';
@@ -14,7 +14,7 @@ const Categories: FC<CategoriesProps> = ({ categories }) => {
 
 	return (
 		<nav className='mb-7 flex max-w-fit flex-wrap gap-2'>
-			{CategoryMap.map(({ className, code, name }, key) => (
+			{categoryMap.map(({ className, code, name }, key) => (
 				<div
 					className={clsx(
 						{

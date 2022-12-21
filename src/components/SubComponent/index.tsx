@@ -4,7 +4,7 @@ import type { ListPlaceHolderProps } from '@root/types/common/props';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 import type { FC } from 'react';
 
-const categoryMap = [
+export const categoryMap = [
 	{
 		code: 'ATK_ITEM',
 		name: 'Attack Item',
@@ -39,6 +39,36 @@ const categoryMap = [
 		code: 'ACCESSORY',
 		name: 'Accessory',
 		className: 'atelier-ryza2-type-accessory',
+	},
+
+	{
+		code: 'MATERIAL',
+		name: 'Material',
+		className: 'atelier-ryza2-category-accessories',
+	},
+
+	{
+		code: 'BOOK',
+		name: 'Book',
+		className: 'atelier-ryza2-category-accessories',
+	},
+
+	{
+		code: 'EXPLORATION',
+		name: 'Exploration',
+		className: 'atelier-ryza2-category-accessories',
+	},
+
+	{
+		code: 'MACHINE',
+		name: 'Machine',
+		className: 'atelier-ryza2-category-accessories',
+	},
+
+	{
+		code: 'SYNTHESIS',
+		name: 'Synthesis',
+		className: 'atelier-ryza2-category-accessories',
 	},
 ] satisfies {
 	code: CATEGORY;

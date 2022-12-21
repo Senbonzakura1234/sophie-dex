@@ -1,7 +1,5 @@
 import type { CATEGORY, COLOR, RELATED_CATEGORY } from '@prisma/client';
 
-import type { UnicodeClass } from '../fonts/atelier';
-
 export const ColorDisplay = {
 	GREEN: 'Green',
 	BLUE: 'Blue',
@@ -83,48 +81,6 @@ export const relatedCategoryList = [
 
 export type RelatedCategoryDisplay = typeof RelatedCategoryDisplay[keyof typeof RelatedCategoryDisplay];
 
-export const CategoryMap = [
-	{
-		code: 'ATK_ITEM',
-		name: 'Attack Item',
-		className: 'atelier-ryza2-type-attack',
-	},
-	{
-		code: 'HEAL_ITEM',
-		name: 'Heal Item',
-		className: 'atelier-ryza2-type-heal',
-	},
-	{
-		code: 'DE_BUFF_ITEM',
-		name: 'De-Buff Item',
-		className: 'atelier-ryza2-type-debuff',
-	},
-	{
-		code: 'BUFF_ITEM',
-		name: 'Buff Item',
-		className: 'atelier-ryza2-type-buff',
-	},
-	{
-		code: 'WEAPON',
-		name: 'Weapon',
-		className: 'atelier-ryza2-type-weapon',
-	},
-	{
-		code: 'ARMOR',
-		name: 'Armor',
-		className: 'atelier-ryza2-type-armor',
-	},
-	{
-		code: 'ACCESSORY',
-		name: 'Accessory',
-		className: 'atelier-ryza2-type-accessory',
-	},
-] satisfies {
-	code: CATEGORY;
-	name: string;
-	className: UnicodeClass;
-}[];
-
 export const categoryList = [
 	'ACCESSORY',
 	'ARMOR',
@@ -133,9 +89,12 @@ export const categoryList = [
 	'DE_BUFF_ITEM',
 	'HEAL_ITEM',
 	'WEAPON',
+	'MATERIAL',
+	'BOOK',
+	'EXPLORATION',
+	'MACHINE',
+	'SYNTHESIS',
 ] as const satisfies Readonly<CATEGORY[]>;
-
-export type CategoryDisplay = typeof CategoryMap[keyof typeof CategoryMap];
 
 export type ListRecord<T> = {
 	records: T[];
