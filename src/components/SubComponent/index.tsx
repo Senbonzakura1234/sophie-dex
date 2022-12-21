@@ -8,67 +8,67 @@ export const categoryMap = [
 	{
 		code: 'ATK_ITEM',
 		name: 'Attack Item',
-		className: 'atelier-ryza2-type-attack',
+		className: 'atelier__type-attack',
 	},
 	{
 		code: 'HEAL_ITEM',
 		name: 'Heal Item',
-		className: 'atelier-ryza2-type-heal',
+		className: 'atelier__type-heal',
 	},
 	{
 		code: 'DE_BUFF_ITEM',
 		name: 'De-Buff Item',
-		className: 'atelier-ryza2-type-debuff',
+		className: 'atelier__type-debuff',
 	},
 	{
 		code: 'BUFF_ITEM',
 		name: 'Buff Item',
-		className: 'atelier-ryza2-type-buff',
+		className: 'atelier__type-buff',
 	},
 	{
 		code: 'WEAPON',
 		name: 'Weapon',
-		className: 'atelier-ryza2-type-weapon',
+		className: 'atelier__type-weapon',
 	},
 	{
 		code: 'ARMOR',
 		name: 'Armor',
-		className: 'atelier-ryza2-type-armor',
+		className: 'atelier__type-armor',
 	},
 	{
 		code: 'ACCESSORY',
 		name: 'Accessory',
-		className: 'atelier-ryza2-type-accessory',
+		className: 'atelier__type-accessory',
 	},
 
 	{
 		code: 'MATERIAL',
 		name: 'Material',
-		className: 'atelier-ryza2-category-accessories',
+		className: 'atelier__material',
 	},
 
 	{
 		code: 'BOOK',
 		name: 'Book',
-		className: 'atelier-ryza2-category-accessories',
+		className: 'atelier__category-accessories',
 	},
 
 	{
 		code: 'EXPLORATION',
 		name: 'Exploration',
-		className: 'atelier-ryza2-category-accessories',
+		className: 'atelier__book',
 	},
 
 	{
 		code: 'MACHINE',
 		name: 'Machine',
-		className: 'atelier-ryza2-category-accessories',
+		className: 'atelier__equipment',
 	},
 
 	{
 		code: 'SYNTHESIS',
 		name: 'Synthesis',
-		className: 'atelier-ryza2-category-accessories',
+		className: 'atelier__type-synthesis',
 	},
 ] satisfies {
 	code: CATEGORY;
