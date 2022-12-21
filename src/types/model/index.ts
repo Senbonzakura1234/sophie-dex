@@ -1,4 +1,4 @@
-import type { COLOR, RELATED_CATEGORY, TRAIT_CATEGORY } from '@prisma/client';
+import type { CATEGORY, COLOR, RELATED_CATEGORY } from '@prisma/client';
 
 import type { UnicodeClass } from '../fonts/atelier';
 
@@ -83,7 +83,7 @@ export const relatedCategoryList = [
 
 export type RelatedCategoryDisplay = typeof RelatedCategoryDisplay[keyof typeof RelatedCategoryDisplay];
 
-export const TraitCategoryMap = [
+export const CategoryMap = [
 	{
 		code: 'ATK_ITEM',
 		name: 'Attack Item',
@@ -120,12 +120,12 @@ export const TraitCategoryMap = [
 		className: 'atelier-ryza2-type-accessory',
 	},
 ] satisfies {
-	code: TRAIT_CATEGORY;
+	code: CATEGORY;
 	name: string;
 	className: UnicodeClass;
 }[];
 
-export const traitCategoryList = [
+export const categoryList = [
 	'ACCESSORY',
 	'ARMOR',
 	'ATK_ITEM',
@@ -133,9 +133,9 @@ export const traitCategoryList = [
 	'DE_BUFF_ITEM',
 	'HEAL_ITEM',
 	'WEAPON',
-] as const satisfies Readonly<TRAIT_CATEGORY[]>;
+] as const satisfies Readonly<CATEGORY[]>;
 
-export type TraitCategoryDisplay = typeof TraitCategoryMap[keyof typeof TraitCategoryMap];
+export type CategoryDisplay = typeof CategoryMap[keyof typeof CategoryMap];
 
 export type ListRecord<T> = {
 	records: T[];

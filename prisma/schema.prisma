@@ -43,7 +43,7 @@ enum RELATED_CATEGORY {
    MAGIC_ITEM
 }
 
-enum TRAIT_CATEGORY {
+enum CATEGORY {
    ACCESSORY
    ARMOR
    ATK_ITEM
@@ -86,12 +86,12 @@ model Effect {
 }
 
 model Trait {
-   id              String           @id @default(auto()) @map("_id") @db.ObjectId
-   index           Int
-   name            String
-   description     String
-   traitCategories TRAIT_CATEGORY[]
-   mergeFrom       MergeTrait[]
+   id          String       @id @default(auto()) @map("_id") @db.ObjectId
+   index       Int
+   name        String
+   description String
+   categories  CATEGORY[]
+   mergeFrom   MergeTrait[]
 }
 
 model Item {

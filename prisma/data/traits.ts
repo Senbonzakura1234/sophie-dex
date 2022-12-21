@@ -7,7 +7,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Low Price',
 		index: 0,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Price when selling to shops decreases quite a bit, but also decreases duplication price.',
@@ -15,7 +15,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Low Price+',
 		index: 1,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Price when selling to shops decreases quite a lot, but also decreases duplication price.',
@@ -23,7 +23,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Low Price++',
 		index: 2,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Price when selling to shops decreases quite a lot, but also decreases duplication price.',
@@ -50,7 +50,7 @@ const traits: Trait[] = [
 		],
 		name: 'Common Item',
 		index: 3,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Price when selling to shops decreases massively, but also decreases duplication price.',
@@ -77,7 +77,7 @@ const traits: Trait[] = [
 		],
 		name: 'Mass Produced',
 		index: 4,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Price when selling to shops plummets, but also decreases duplication price.',
@@ -104,7 +104,7 @@ const traits: Trait[] = [
 		],
 		name: 'No Price',
 		index: 5,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Price when selling to shops increases a little.',
@@ -112,7 +112,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'High Price',
 		index: 6,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Price when selling to shops increases quite a bit.',
@@ -120,7 +120,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'High Price+',
 		index: 7,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Price when selling to shops increases quite a lot.',
@@ -128,7 +128,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'High Price++',
 		index: 8,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Price when selling to shops increases quite a lot.',
@@ -153,7 +153,7 @@ const traits: Trait[] = [
 		],
 		name: 'High Class',
 		index: 9,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Price when selling to shops increases massively.',
@@ -178,7 +178,7 @@ const traits: Trait[] = [
 		],
 		name: 'Rare Item',
 		index: 10,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Price when selling to shops skyrockets.',
@@ -203,7 +203,7 @@ const traits: Trait[] = [
 		],
 		name: 'Premium Price',
 		index: 11,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases item quality by 10% when this trait is transferred.',
@@ -211,7 +211,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Quality Up',
 		index: 12,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases item quality by 15% when this trait is transferred.',
@@ -219,7 +219,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Quality Up+',
 		index: 13,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases item quality by 20% when this trait is transferred.',
@@ -227,7 +227,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Quality Up++',
 		index: 14,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases item quality by 20% when this trait is transferred.',
@@ -252,7 +252,7 @@ const traits: Trait[] = [
 		],
 		name: 'Well Made',
 		index: 15,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases item quality by 30% when this trait is transferred.',
@@ -277,7 +277,7 @@ const traits: Trait[] = [
 		],
 		name: 'Pro Perfection',
 		index: 16,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases item quality by 50% when this trait is transferred.',
@@ -302,7 +302,7 @@ const traits: Trait[] = [
 		],
 		name: 'Super Quality',
 		index: 17,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases attack item effect by 5%.',
@@ -310,7 +310,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Destruction Up',
 		index: 52,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Increases attack item effect by 7%.',
@@ -318,7 +318,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Destruction Up+',
 		index: 53,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Increases attack item effect by 10%.',
@@ -326,7 +326,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Destruction Up++',
 		index: 54,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Increases attack item effect by 12%.',
@@ -351,7 +351,7 @@ const traits: Trait[] = [
 		],
 		name: 'Big Destruction',
 		index: 55,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Increases attack item effect by 17%.',
@@ -376,7 +376,7 @@ const traits: Trait[] = [
 		],
 		name: 'Intense Destruction',
 		index: 56,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Increases attack item effect by 30%.',
@@ -401,7 +401,7 @@ const traits: Trait[] = [
 		],
 		name: 'Ultimate Destruction',
 		index: 57,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Increases attack item effect by 40%.',
@@ -409,7 +409,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Power to Destroy Gods',
 		index: 58,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Attack item enhanced by a small, fixed amount. Lower power equals stronger enhancement.',
@@ -417,7 +417,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Fixed Power',
 		index: 59,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.',
@@ -425,7 +425,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Fixed Power+',
 		index: 60,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.',
@@ -433,7 +433,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Fixed Power++',
 		index: 61,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.',
@@ -460,7 +460,7 @@ const traits: Trait[] = [
 		],
 		name: 'Pain in Numbers',
 		index: 62,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.',
@@ -487,7 +487,7 @@ const traits: Trait[] = [
 		],
 		name: 'Damage in Numbers',
 		index: 63,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Attack item enhanced by a huge, fixed amount. Lower power equals stronger enhancement.',
@@ -514,7 +514,7 @@ const traits: Trait[] = [
 		],
 		name: 'Big Damage Numbers',
 		index: 64,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description:
@@ -523,7 +523,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Legendary Destruction',
 		index: 65,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Attacks cause 5% additional damage, and increases skill power by 5%.',
@@ -531,7 +531,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Increase Sharpness',
 		index: 66,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Attacks cause 7% additional damage, and increases skill power by 7%.',
@@ -539,7 +539,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Cuts Easily',
 		index: 67,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Attacks cause 10% additional damage, and increases skill power by 10%.',
@@ -547,7 +547,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Increase Aggression',
 		index: 68,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Increases recovery item effect by 10%.',
@@ -555,7 +555,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Recovery Up',
 		index: 103,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases recovery item effect by 15%.',
@@ -563,7 +563,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Recovery Up+',
 		index: 104,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases recovery item effect by 20%.',
@@ -571,7 +571,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Recovery Up++',
 		index: 105,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases recovery item effect by 25%.',
@@ -596,7 +596,7 @@ const traits: Trait[] = [
 		],
 		name: 'Big Recovery',
 		index: 106,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases recovery item effect by 35%.',
@@ -621,7 +621,7 @@ const traits: Trait[] = [
 		],
 		name: 'Intense Recovery',
 		index: 107,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases recovery item effect by 50%.',
@@ -646,7 +646,7 @@ const traits: Trait[] = [
 		],
 		name: 'Ultimate Recovery',
 		index: 108,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases recovery item effect by 40%.',
@@ -654,7 +654,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Blessed by God',
 		index: 109,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Recovery item enhanced by a tiny, fixed amount. Lower power equals stronger effect.',
@@ -662,7 +662,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Fixed Recovery',
 		index: 110,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.',
@@ -670,7 +670,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Fixed Recovery+',
 		index: 111,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Recovery item enhanced by a fixed amount. Lower power equals stronger effect.',
@@ -678,7 +678,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Fixed Recovery++',
 		index: 112,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.',
@@ -705,7 +705,7 @@ const traits: Trait[] = [
 		],
 		name: 'Medicine Enhance',
 		index: 113,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Recovery item enhanced by a fixed amount. Lower power equals stronger effect.',
@@ -731,7 +731,7 @@ const traits: Trait[] = [
 		],
 		name: 'Big Medicine Enhance',
 		index: 114,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Recovery item enhanced by a large, fixed amount. Lower power equals stronger effect.',
@@ -757,7 +757,7 @@ const traits: Trait[] = [
 		],
 		name: 'Super Enhance Recovery',
 		index: 115,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description:
@@ -766,7 +766,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Legendary Recovery',
 		index: 116,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Gives item a 15% chance to critical hit.',
@@ -774,7 +774,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Critical',
 		index: 145,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Gives item a 25% chance to critical hit.',
@@ -782,7 +782,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Critical+',
 		index: 146,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Gives item a 35% chance to critical hit.',
@@ -790,7 +790,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Critical++',
 		index: 147,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Gives item a 50% chance to critical hit.',
@@ -815,7 +815,7 @@ const traits: Trait[] = [
 		],
 		name: 'Critical Finish',
 		index: 148,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Item will always critical hit.',
@@ -840,7 +840,7 @@ const traits: Trait[] = [
 		],
 		name: 'Always Critical',
 		index: 149,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Item will always critical hit, and KO target (bosses excluded).',
@@ -865,7 +865,7 @@ const traits: Trait[] = [
 		],
 		name: 'One Hit Kill',
 		index: 150,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces item number variation slightly, making it easier to score higher numbers.',
@@ -873,7 +873,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Stable Effect',
 		index: 151,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces item number variation a little, making it easier to score higher numbers.',
@@ -881,7 +881,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Stable Effect+',
 		index: 152,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces item number variation, making it easier to score higher numbers.',
@@ -889,7 +889,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Stable Effect++',
 		index: 153,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces item number variation, making it easier to score higher numbers.',
@@ -916,7 +916,7 @@ const traits: Trait[] = [
 		],
 		name: 'Stability Emphasis',
 		index: 154,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Halves item number variation, making it easier to score higher numbers.',
@@ -942,7 +942,7 @@ const traits: Trait[] = [
 		],
 		name: 'Solid Effect',
 		index: 155,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Stabilizes item number variation, making it far easier to score higher numbers.',
@@ -967,7 +967,7 @@ const traits: Trait[] = [
 		],
 		name: 'Boost Expected Value',
 		index: 156,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases item use count by 1. Power is reduced a little.',
@@ -975,7 +975,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Use Count +1',
 		index: 172,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases item use count by 2. Power is reduced slightly.',
@@ -983,7 +983,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Use Count +2',
 		index: 173,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases item use count by 3.',
@@ -1008,7 +1008,7 @@ const traits: Trait[] = [
 		],
 		name: 'Multiply',
 		index: 174,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces item use count by 1. Power is increased a little.',
@@ -1016,7 +1016,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Use Count -1',
 		index: 175,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces item use count by 2. Power is increased.',
@@ -1024,7 +1024,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Use Count -2',
 		index: 176,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces item use count by 5. Power is massively increased.',
@@ -1049,7 +1049,7 @@ const traits: Trait[] = [
 		],
 		name: 'Reduction',
 		index: 177,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 10.',
@@ -1057,7 +1057,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'HP Enhance',
 		index: 190,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 15.',
@@ -1065,7 +1065,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'HP Boost',
 		index: 191,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 25.',
@@ -1073,7 +1073,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'HP Super Enhance',
 		index: 192,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Effect: Maximum HP increases by 25.',
@@ -1098,7 +1098,7 @@ const traits: Trait[] = [
 		],
 		name: 'Full of Life',
 		index: 193,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ACCESSORY', 'ARMOR', 'BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Revive from KO, and also removes 3 status ailments.',
@@ -1123,7 +1123,7 @@ const traits: Trait[] = [
 		],
 		name: 'Full of Life',
 		index: 193,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ACCESSORY', 'ARMOR', 'BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Maximum HP increases by 40.',
@@ -1148,7 +1148,7 @@ const traits: Trait[] = [
 		],
 		name: 'Overflowing Life',
 		index: 194,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Effect: Maximum HP increases by 70.',
@@ -1173,7 +1173,7 @@ const traits: Trait[] = [
 		],
 		name: 'Power of Life',
 		index: 195,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 10.',
@@ -1181,7 +1181,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'MP Enhance',
 		index: 196,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 15.',
@@ -1189,7 +1189,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'MP Boost',
 		index: 197,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 25.',
@@ -1197,7 +1197,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'MP Super Enhance',
 		index: 198,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Effect: Maximum MP increases by 25.',
@@ -1222,7 +1222,7 @@ const traits: Trait[] = [
 		],
 		name: "Magician's Wisdom",
 		index: 199,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Effect: Maximum MP increases by 40.',
@@ -1247,7 +1247,7 @@ const traits: Trait[] = [
 		],
 		name: "Grand Magician's Wisdom",
 		index: 200,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Effect: Maximum MP increases by 70.',
@@ -1272,7 +1272,7 @@ const traits: Trait[] = [
 		],
 		name: 'Wisdom of the Gods',
 		index: 201,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 5.',
@@ -1280,7 +1280,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'LP Enhance',
 		index: 202,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 7.',
@@ -1288,7 +1288,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'LP Boost',
 		index: 203,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 10.',
@@ -1296,7 +1296,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'LP Super Enhance',
 		index: 204,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Effect: Maximum LP increases by 12.',
@@ -1321,7 +1321,7 @@ const traits: Trait[] = [
 		],
 		name: 'Full of Stamina',
 		index: 205,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Effect: Maximum LP increases by 17.',
@@ -1346,7 +1346,7 @@ const traits: Trait[] = [
 		],
 		name: 'Unabating Stamina',
 		index: 206,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Effect: Maximum LP increases by 30.',
@@ -1371,7 +1371,7 @@ const traits: Trait[] = [
 		],
 		name: 'Infinite Stamina',
 		index: 207,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Effect: Maximum HP and MP increases by 15.',
@@ -1396,7 +1396,7 @@ const traits: Trait[] = [
 		],
 		name: 'HPMP Enhance',
 		index: 208,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Effect: Maximum HP and MP increases by 25.',
@@ -1421,7 +1421,7 @@ const traits: Trait[] = [
 		],
 		name: 'HPMP Boost',
 		index: 209,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Effect: Maximum HP and MP increases by 40.',
@@ -1446,7 +1446,7 @@ const traits: Trait[] = [
 		],
 		name: 'HPMP Super Enhance',
 		index: 210,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Bestows a stat boost. Effect: Increases base stats by 5%.',
@@ -1454,7 +1454,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Parameters +5%',
 		index: 211,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Bestows a stat boost. Effect: Increases base stats by 6%.',
@@ -1462,7 +1462,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Parameters +6%',
 		index: 212,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Bestows a stat boost. Effect: Increases base stats by 7%.',
@@ -1470,7 +1470,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Parameters +7%',
 		index: 213,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Effect: Increases base stats by 10%.',
@@ -1495,7 +1495,7 @@ const traits: Trait[] = [
 		],
 		name: 'Enhance the Body',
 		index: 214,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Effect: Increases base stats by 12%.',
@@ -1520,7 +1520,7 @@ const traits: Trait[] = [
 		],
 		name: 'Draw Out Power',
 		index: 215,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Effect: Increases base stats by 15%.',
@@ -1545,7 +1545,7 @@ const traits: Trait[] = [
 		],
 		name: 'Develops the Body',
 		index: 216,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Effect: Increases base stats by 20%.',
@@ -1553,7 +1553,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Evolves the Body',
 		index: 217,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Enhances weapon attack power. Effect: Increases attack power by 7.',
@@ -1561,7 +1561,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Attack Enhance',
 		index: 218,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Enhances weapon attack power. Effect: Increases attack power by 10.',
@@ -1569,7 +1569,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Attack Boost',
 		index: 219,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Enhances weapon attack power. Effect: Increases attack power by 15.',
@@ -1577,7 +1577,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Attack Super Enhance',
 		index: 220,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Increases attack power by 15.',
@@ -1602,7 +1602,7 @@ const traits: Trait[] = [
 		],
 		name: 'Power of Beasts',
 		index: 221,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Increases attack power by 25.',
@@ -1627,7 +1627,7 @@ const traits: Trait[] = [
 		],
 		name: 'Power of Destruction',
 		index: 222,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Increases attack power by 40.',
@@ -1652,7 +1652,7 @@ const traits: Trait[] = [
 		],
 		name: 'Power of Gods',
 		index: 223,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Enhances armor defense. Effect: Increases defense by 7.',
@@ -1660,7 +1660,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Defense Enhance',
 		index: 224,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Enhances armor defense. Effect: Increases defense by 10.',
@@ -1668,7 +1668,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Defense Boost',
 		index: 225,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Enhances armor defense. Effect: Increases defense by 15.',
@@ -1676,7 +1676,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Defense Super Enhance',
 		index: 226,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Effect: Increases defense by 15.',
@@ -1701,7 +1701,7 @@ const traits: Trait[] = [
 		],
 		name: 'Steel Defense',
 		index: 227,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Effect: Increases defense by 25.',
@@ -1726,7 +1726,7 @@ const traits: Trait[] = [
 		],
 		name: 'Diamond Defense',
 		index: 228,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Effect: Increases defense by 40.',
@@ -1751,7 +1751,7 @@ const traits: Trait[] = [
 		],
 		name: 'Dragonscale Defense',
 		index: 229,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Accessories with this will increase speed. Effect: Increases speed by 7.',
@@ -1759,7 +1759,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Speed Enhance',
 		index: 230,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description: 'Accessories with this will increase speed. Effect: Increases speed by 10.',
@@ -1767,7 +1767,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Speed Boost',
 		index: 231,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description: 'Accessories with this will increase speed. Effect: Increases speed by 15.',
@@ -1775,7 +1775,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Speed Super Enhance',
 		index: 232,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description: 'Effect: Increases speed by 15.',
@@ -1800,7 +1800,7 @@ const traits: Trait[] = [
 		],
 		name: 'Speed of Skanda',
 		index: 233,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description: 'Effect: Increases speed by 25.',
@@ -1825,7 +1825,7 @@ const traits: Trait[] = [
 		],
 		name: 'Speed of Gods',
 		index: 234,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description: 'Effect: Increases speed by 40.',
@@ -1850,7 +1850,7 @@ const traits: Trait[] = [
 		],
 		name: 'Speed of Light',
 		index: 235,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description: 'Effect: Increases attack & defense by 5.',
@@ -1875,7 +1875,7 @@ const traits: Trait[] = [
 		],
 		name: 'ATK DEF Enhance',
 		index: 236,
-		traitCategories: ['ARMOR', 'WEAPON'],
+		categories: ['ARMOR', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases attack & speed by 5.',
@@ -1900,7 +1900,7 @@ const traits: Trait[] = [
 		],
 		name: 'ATK SPD Enhance',
 		index: 237,
-		traitCategories: ['ACCESSORY', 'WEAPON'],
+		categories: ['ACCESSORY', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases defense & speed by 5.',
@@ -1925,7 +1925,7 @@ const traits: Trait[] = [
 		],
 		name: 'DEF SPD Enhance',
 		index: 238,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Effect: Increases all stats by 5.',
@@ -1982,7 +1982,7 @@ const traits: Trait[] = [
 		],
 		name: 'All Stat Enhance',
 		index: 239,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases attack & defense by 7.',
@@ -2007,7 +2007,7 @@ const traits: Trait[] = [
 		],
 		name: 'ATK DEF Boost',
 		index: 240,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases attack & speed by 7.',
@@ -2032,7 +2032,7 @@ const traits: Trait[] = [
 		],
 		name: 'ATK SPD Boost',
 		index: 241,
-		traitCategories: ['ACCESSORY', 'WEAPON'],
+		categories: ['ACCESSORY', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases defense & speed by 7.',
@@ -2057,7 +2057,7 @@ const traits: Trait[] = [
 		],
 		name: 'DEF SPD Boost',
 		index: 242,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Effect: Increases all stats by 7.',
@@ -2114,7 +2114,7 @@ const traits: Trait[] = [
 		],
 		name: 'All Stat Boost',
 		index: 243,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases all stats except resistances by 10.',
@@ -2139,7 +2139,7 @@ const traits: Trait[] = [
 		],
 		name: 'All Stat Super Enhance',
 		index: 244,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases all stats except resistances by 25.',
@@ -2164,7 +2164,7 @@ const traits: Trait[] = [
 		],
 		name: 'Well Rounded Power',
 		index: 245,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases maximum HP and MP by 50.',
@@ -2172,7 +2172,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Flawless Body',
 		index: 246,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Effect: Increases defense by 30, and increases all base stats by 15%.',
@@ -2180,7 +2180,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Tenacious Body',
 		index: 247,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 10%.',
@@ -2188,7 +2188,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Consume MP -10%',
 		index: 298,
-		traitCategories: ['ACCESSORY', 'WEAPON'],
+		categories: ['ACCESSORY', 'WEAPON'],
 	},
 	{
 		description: 'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 15%.',
@@ -2196,7 +2196,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Consume MP -15%',
 		index: 299,
-		traitCategories: ['ACCESSORY', 'WEAPON'],
+		categories: ['ACCESSORY', 'WEAPON'],
 	},
 	{
 		description: 'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 20%.',
@@ -2204,7 +2204,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Consume MP -20%',
 		index: 300,
-		traitCategories: ['ACCESSORY', 'WEAPON'],
+		categories: ['ACCESSORY', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Reduces MP consumption of skills by 20%.',
@@ -2231,7 +2231,7 @@ const traits: Trait[] = [
 		],
 		name: 'Cut MP Consume',
 		index: 301,
-		traitCategories: ['ACCESSORY', 'WEAPON'],
+		categories: ['ACCESSORY', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Reduces MP consumption of skills by 30%.',
@@ -2258,7 +2258,7 @@ const traits: Trait[] = [
 		],
 		name: 'Compact MP Consume',
 		index: 302,
-		traitCategories: ['ACCESSORY', 'WEAPON'],
+		categories: ['ACCESSORY', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Reduces MP consumption of skills by 50%.',
@@ -2283,7 +2283,7 @@ const traits: Trait[] = [
 		],
 		name: 'Halve MP Consume',
 		index: 303,
-		traitCategories: ['ACCESSORY', 'WEAPON'],
+		categories: ['ACCESSORY', 'WEAPON'],
 	},
 	{
 		description: 'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 5%.',
@@ -2291,7 +2291,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Skill Power +5%',
 		index: 304,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 7%.',
@@ -2299,7 +2299,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Skill Power +7%',
 		index: 305,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 10%.',
@@ -2307,7 +2307,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Skill Power +10%',
 		index: 306,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Increases skill power and MP consumption by 12%.',
@@ -2334,7 +2334,7 @@ const traits: Trait[] = [
 		],
 		name: 'Skill Enhance',
 		index: 307,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Increases skill power and MP consumption by 17%.',
@@ -2361,7 +2361,7 @@ const traits: Trait[] = [
 		],
 		name: 'Skill Boost',
 		index: 308,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Increases skill power and MP consumption by 30%.',
@@ -2386,7 +2386,7 @@ const traits: Trait[] = [
 		],
 		name: 'Skill Super Enhance',
 		index: 309,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Increases skill power by 7%, and reduces MP consumption by 7%.',
@@ -2411,7 +2411,7 @@ const traits: Trait[] = [
 		],
 		name: 'Eco Skill',
 		index: 310,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Increases skill power by 10%, and reduces MP consumption by 10%.',
@@ -2436,7 +2436,7 @@ const traits: Trait[] = [
 		],
 		name: 'Skill Cost Compress',
 		index: 311,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Increases skill power by 15%, and reduces MP consumption by 15%.',
@@ -2461,7 +2461,7 @@ const traits: Trait[] = [
 		],
 		name: 'Skill Savings',
 		index: 312,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Increases skill power by 25%, and reduces MP consumption by 25%.',
@@ -2469,7 +2469,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Expert Skill',
 		index: 313,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Increases skill power by 35%, and reduces MP consumption by 35%.',
@@ -2477,7 +2477,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Super Skill',
 		index: 314,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: "Effect: Massively increases the target's level.",
@@ -2485,7 +2485,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Soul Dwelling',
 		index: 349,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: "Effect: Massively increases the target's attack power.",
@@ -2493,7 +2493,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Blessing of Strength',
 		index: 350,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: "Effect: Massively increases the target's defense.",
@@ -2501,7 +2501,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Blessing of Protection',
 		index: 351,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: "Effect: Massively increases the target's speed.",
@@ -2509,7 +2509,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Blessing of Skanda',
 		index: 352,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Has a chance to inflict Sleep when dealing damage.',
@@ -2517,7 +2517,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Inflict Sleep',
 		index: 365,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Has a chance to inflict Poison when dealing damage.',
@@ -2525,7 +2525,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Inflict Poison',
 		index: 366,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Has a chance to inflict Slow when dealing damage.',
@@ -2533,7 +2533,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Inflict Slow',
 		index: 367,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Has a chance to inflict Curse when dealing damage.',
@@ -2541,7 +2541,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Inflict Curse',
 		index: 368,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Has a chance to inflict Blind when dealing damage.',
@@ -2549,7 +2549,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Inflict Blind',
 		index: 369,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Has a chance to inflict Weak when dealing damage.',
@@ -2557,7 +2557,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Inflict Weak',
 		index: 370,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Has a chance to inflict No Heal when dealing damage.',
@@ -2565,7 +2565,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Inflict No Heal',
 		index: 371,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Has a chance to inflict Seal when dealing damage.',
@@ -2573,7 +2573,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Inflict Seal',
 		index: 372,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
 	},
 	{
 		description: "Effect: Massively reduces the target's level, reducing all stats and damage dealt.",
@@ -2581,7 +2581,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Consume Soul',
 		index: 373,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: "Effect: Massively reduces the target's attack power.",
@@ -2589,7 +2589,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Powerless Curse',
 		index: 374,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: "Effect: Massively reduces the target's defense.",
@@ -2597,7 +2597,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Defenseless Curse',
 		index: 375,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: "Effect: Massively reduces the target's speed.",
@@ -2605,7 +2605,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Slowness Curse',
 		index: 376,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Absorb 3% of damage dealt through attacks to restore your own HP.',
@@ -2613,7 +2613,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Damage Absorb',
 		index: 401,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Absorb 5% of damage dealt through attacks to restore your own HP.',
@@ -2621,7 +2621,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Damage Absorb+',
 		index: 402,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Absorb 7% of damage dealt through attacks to restore your own HP.',
@@ -2629,7 +2629,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Damage Absorb++',
 		index: 403,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Absorb 7% of damage dealt through attacks to restore your own HP.',
@@ -2654,7 +2654,7 @@ const traits: Trait[] = [
 		],
 		name: 'HP Absorb',
 		index: 404,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Absorb 10% of damage dealt through attacks to restore your own HP.',
@@ -2679,7 +2679,7 @@ const traits: Trait[] = [
 		],
 		name: 'Steal Life',
 		index: 405,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Absorb 15% of damage dealt through attacks to restore your own HP.',
@@ -2704,7 +2704,7 @@ const traits: Trait[] = [
 		],
 		name: 'Absorb Soul',
 		index: 406,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description:
@@ -2713,7 +2713,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Over Power',
 		index: 407,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Slag type enemies.',
@@ -2721,7 +2721,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Slag Slayer',
 		index: 422,
-		traitCategories: [],
+		categories: [],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Plant and Spirit type enemies.',
@@ -2729,7 +2729,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Spirit Slayer',
 		index: 423,
-		traitCategories: ['ATK_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Animal and Beast type enemies.',
@@ -2737,7 +2737,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Beast Slayer',
 		index: 424,
-		traitCategories: ['ATK_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Demon type enemies.',
@@ -2745,7 +2745,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Demon Slayer',
 		index: 425,
-		traitCategories: ['ATK_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Dragon type enemies.',
@@ -2753,7 +2753,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Dragon Slayer',
 		index: 426,
-		traitCategories: ['ATK_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to monsters created through magic and alchemy.',
@@ -2761,7 +2761,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Magical Slayer',
 		index: 427,
-		traitCategories: ['ATK_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Puni type enemies.',
@@ -2769,7 +2769,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Puni Slayer',
 		index: 428,
-		traitCategories: ['ATK_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Undead type enemies.',
@@ -2777,7 +2777,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Undead Slayer',
 		index: 429,
-		traitCategories: ['ATK_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Broken targets by 10%.',
@@ -2785,7 +2785,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Enhance Finisher',
 		index: 446,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Broken targets by 20%.',
@@ -2793,7 +2793,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Enhance Finisher+',
 		index: 447,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Broken targets by 30%.',
@@ -2801,7 +2801,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Enhance Finisher++',
 		index: 448,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Broken targets by 30%.',
@@ -2826,7 +2826,7 @@ const traits: Trait[] = [
 		],
 		name: 'Merciless Blow',
 		index: 449,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Broken targets by 40%.',
@@ -2851,7 +2851,7 @@ const traits: Trait[] = [
 		],
 		name: 'Relentless Blow',
 		index: 450,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Broken targets by 60%.',
@@ -2876,7 +2876,7 @@ const traits: Trait[] = [
 		],
 		name: 'Ruthless Blow',
 		index: 451,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Enhances item effect according to strength of traits present.',
@@ -2884,7 +2884,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Trait Enhance',
 		index: 464,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Greatly enhances item effect according to strength of traits present.',
@@ -2892,7 +2892,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Trait Enhance+',
 		index: 465,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Massively enhances item effect according to strength of traits present.',
@@ -2917,7 +2917,7 @@ const traits: Trait[] = [
 		],
 		name: 'Cost Bonus',
 		index: 466,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description:
@@ -2926,7 +2926,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Trait Super Enhance',
 		index: 467,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Power increases by number of targets in effect area x 5%.',
@@ -2934,7 +2934,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Area Bonus',
 		index: 480,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Power increases by number of targets in effect area x 10%.',
@@ -2942,7 +2942,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Area Bonus+',
 		index: 481,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Power increases by number of targets in effect area x 15%.',
@@ -2967,7 +2967,7 @@ const traits: Trait[] = [
 		],
 		name: 'Effective Vs Many',
 		index: 482,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Power increases by number of targets in effect area x 20%.',
@@ -2975,7 +2975,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Multi Bonus',
 		index: 483,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Power increases by 10 / number of targets in effect area %.',
@@ -2983,7 +2983,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Fewer Bonus',
 		index: 484,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Power increases by 15 / number of targets in effect area %.',
@@ -2991,7 +2991,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Fewer Bonus+',
 		index: 485,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Power increases by 20 / number of targets in effect area %.',
@@ -3016,7 +3016,7 @@ const traits: Trait[] = [
 		],
 		name: 'Effective Vs One',
 		index: 486,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Power increases by 30 / number of targets in effect area %.',
@@ -3024,7 +3024,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Single Bonus',
 		index: 487,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description:
@@ -3033,7 +3033,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Few + Many Bonus',
 		index: 488,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Power increases by 10% when use count is 1.',
@@ -3041,7 +3041,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Enhance Last',
 		index: 507,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Power increases by 20% when use count is 1.',
@@ -3049,7 +3049,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Enhance Last+',
 		index: 508,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Power increases by 30% when use count is 1.',
@@ -3074,7 +3074,7 @@ const traits: Trait[] = [
 		],
 		name: 'Final Blow',
 		index: 509,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Power increases by 45% when use count is 1.',
@@ -3082,7 +3082,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Last Strike',
 		index: 510,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 3%.',
@@ -3090,7 +3090,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Count Compress',
 		index: 511,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 5%.',
@@ -3098,7 +3098,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Count Compress+',
 		index: 512,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 7%.',
@@ -3125,7 +3125,7 @@ const traits: Trait[] = [
 		],
 		name: 'Force Final',
 		index: 513,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 10%.',
@@ -3133,7 +3133,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'One Time End',
 		index: 514,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases item power by maximum use count x 2%.',
@@ -3141,7 +3141,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Count Bonus',
 		index: 515,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases item power by maximum use count x 3%.',
@@ -3149,7 +3149,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Count Bonus+',
 		index: 516,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases item power by maximum use count x 5%.',
@@ -3174,7 +3174,7 @@ const traits: Trait[] = [
 		],
 		name: 'Count Boost',
 		index: 517,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases item power by maximum use count x 7%.',
@@ -3182,7 +3182,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Enhance with Count',
 		index: 518,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces WT after using item by 10%. Power is decreased slightly.',
@@ -3190,7 +3190,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Fast Use',
 		index: 541,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces WT after using item by 20%. Power is decreased a small amount.',
@@ -3198,7 +3198,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Fast Use+',
 		index: 542,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces WT after using item by 30%. Power is decreased a small amount.',
@@ -3223,7 +3223,7 @@ const traits: Trait[] = [
 		],
 		name: 'Sonic Throw',
 		index: 543,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces WT after using item by 50%.',
@@ -3231,7 +3231,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Mach Throw',
 		index: 544,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Wait time after using item increases a little, but power increases a little too.',
@@ -3239,7 +3239,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Power Throw',
 		index: 545,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Wait time after using item increases, but power increases too.',
@@ -3247,7 +3247,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Power Throw+',
 		index: 546,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Wait time after using item increases a lot, but power increases a lot too.',
@@ -3273,7 +3273,7 @@ const traits: Trait[] = [
 		],
 		name: 'Strong Throw',
 		index: 547,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases item power by a small amount proportional to wait time after using item.',
@@ -3281,7 +3281,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Wait Time Enhance',
 		index: 548,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases item power by a decent amount proportional to wait time after using item.',
@@ -3289,7 +3289,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Wait Time Enhance+',
 		index: 549,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases item power proportional to wait time after using item.',
@@ -3316,7 +3316,7 @@ const traits: Trait[] = [
 		],
 		name: 'Charge Item',
 		index: 550,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Item size increases by 1 level, equipment cost increases by 5.',
@@ -3324,7 +3324,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Size+',
 		index: 571,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Item size increases by 2 levels, equipment cost increases by 10.',
@@ -3332,7 +3332,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Jumbo Size',
 		index: 572,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Item size decreases by 1 level, equipment cost decreases by 10.',
@@ -3340,7 +3340,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Size -',
 		index: 573,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Item size decreases by 2 levels, equipment cost decreases by 20.',
@@ -3348,7 +3348,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Mini Size',
 		index: 574,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases item effect by a decent amount as size increases.',
@@ -3356,7 +3356,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Size Enhance',
 		index: 575,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases item effect as size increases.',
@@ -3364,7 +3364,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Size Super Enhance',
 		index: 576,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases item effect by a large amount as size increases.',
@@ -3389,7 +3389,7 @@ const traits: Trait[] = [
 		],
 		name: 'Crush Dimension',
 		index: 577,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces equipment cost of usable item by 5.',
@@ -3397,7 +3397,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Kind of Light',
 		index: 578,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces equipment cost of usable item by 8.',
@@ -3405,7 +3405,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Light',
 		index: 579,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces equipment cost of usable item by 12.',
@@ -3430,7 +3430,7 @@ const traits: Trait[] = [
 		],
 		name: 'Easy to Handle',
 		index: 580,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Reduces equipment cost of usable item by 20.',
@@ -3455,7 +3455,7 @@ const traits: Trait[] = [
 		],
 		name: 'Accustoms Quickly',
 		index: 581,
-		traitCategories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Zeal factor enhances the material it resides in. Effect: Increases HP and attack.',
@@ -3463,7 +3463,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Zeal Factor',
 		index: 592,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description: 'Happy heart enhances the material it resides in. Effect: Increases MP and defense.',
@@ -3471,7 +3471,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Happy Heart',
 		index: 593,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description: 'Cunning wit enhances the material it resides in. Effect: Increases critical bonus and accuracy.',
@@ -3479,7 +3479,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Cunning Wit',
 		index: 594,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description:
@@ -3488,7 +3488,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Splendid Glory',
 		index: 595,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description:
@@ -3497,7 +3497,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Benevolent Light',
 		index: 596,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description:
@@ -3506,7 +3506,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Wild Instinct',
 		index: 597,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description:
@@ -3515,7 +3515,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Persistent Faith',
 		index: 598,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description:
@@ -3524,7 +3524,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Guide Intuition',
 		index: 599,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description:
@@ -3533,7 +3533,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Empty World',
 		index: 600,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description:
@@ -3542,7 +3542,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Power of Madness',
 		index: 601,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description:
@@ -3551,7 +3551,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Burning Passion',
 		index: 602,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description:
@@ -3560,7 +3560,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Unwavering Spirit',
 		index: 603,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description: 'Fog of illusion enhances the material it resides in. Effect: Swaps HP and MP, adds evasion chance.',
@@ -3568,7 +3568,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Fog of Illusion',
 		index: 604,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description:
@@ -3577,7 +3577,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Bonds of Belief',
 		index: 605,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description:
@@ -3586,7 +3586,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Hammer of Justice',
 		index: 606,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description:
@@ -3595,7 +3595,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Dreadful King',
 		index: 607,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Unceasing desire enhances the material it resides in. Effect: Absorbs a portion of damage dealt.',
@@ -3603,7 +3603,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Unceasing Desire',
 		index: 608,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Pursuit of knowledge enhances the material it resides in. Effect: Causes additional damage.',
@@ -3611,7 +3611,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Pursuit of Knowledge',
 		index: 609,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description:
@@ -3620,7 +3620,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Star of Expectation',
 		index: 610,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description:
@@ -3629,7 +3629,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Ray of Hope',
 		index: 611,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description:
@@ -3638,7 +3638,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Awakening Courage',
 		index: 612,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description:
@@ -3647,7 +3647,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Kind Soul',
 		index: 613,
-		traitCategories: [],
+		categories: [],
 	},
 	{
 		description:
@@ -3656,7 +3656,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Indomitable Soul',
 		index: 614,
-		traitCategories: ['ARMOR'],
+		categories: ['ARMOR'],
 	},
 	{
 		description: 'Effect: Attacks cause 7% additional damage, and increases skill power by 15%.',
@@ -3664,7 +3664,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Changing Attack',
 		index: 659,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Attacks cause 15% additional damage, and increases skill power by 10%.',
@@ -3672,7 +3672,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Avidya Attack',
 		index: 660,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Attacks cause 15% additional damage, and increases skill power by 15%.',
@@ -3680,7 +3680,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Barrage Attack',
 		index: 661,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Attacks cause 20% additional damage, and increases skill power by 25%.',
@@ -3688,7 +3688,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Skillful Attack',
 		index: 662,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Attacks cause 15% additional damage, and increases skill power by 20%.',
@@ -3696,7 +3696,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Persistent Attack',
 		index: 663,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Attacks cause between 1 - 50% additional damage.',
@@ -3704,7 +3704,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Deadly Attack',
 		index: 664,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: "Effect: Item automatically activates when the user's HP falls below 20% in battle. Consumes MP.",
@@ -3712,7 +3712,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Auto Activate 20%',
 		index: 677,
-		traitCategories: ['HEAL_ITEM'],
+		categories: ['HEAL_ITEM'],
 	},
 	{
 		description: "Effect: Item automatically activates when the user's HP falls below 30% in battle. Consumes MP.",
@@ -3720,7 +3720,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Auto Activate 30%',
 		index: 678,
-		traitCategories: ['HEAL_ITEM'],
+		categories: ['HEAL_ITEM'],
 	},
 	{
 		description: "Effect: Item automatically activates when the user's HP falls below 40% in battle. Consumes MP.",
@@ -3728,7 +3728,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Auto Activate 50%',
 		index: 679,
-		traitCategories: ['HEAL_ITEM'],
+		categories: ['HEAL_ITEM'],
 	},
 	{
 		description: "Effect: Item automatically activates when the user's HP falls below 50% in battle.",
@@ -3736,7 +3736,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Auto Use',
 		index: 680,
-		traitCategories: ['HEAL_ITEM'],
+		categories: ['HEAL_ITEM'],
 	},
 	{
 		description:
@@ -3745,7 +3745,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'No Attribute',
 		index: 681,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Has a high chance to inflict Poison when dealing damage.',
@@ -3753,7 +3753,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Poison Mist',
 		index: 682,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON'],
 	},
 	{
 		description: "Effect: Restores some of the target's HP, and also recovers from Poison.",
@@ -3761,7 +3761,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Slime Compound',
 		index: 683,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description:
@@ -3770,7 +3770,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'False Flower',
 		index: 684,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description:
@@ -3779,7 +3779,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Electrified',
 		index: 685,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Heat causes continuous damage. The effect is small.',
@@ -3787,7 +3787,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Carries Heat',
 		index: 686,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: "Effect: Cold reduces the target's speed, and also has a low chance of inflicting Slow.",
@@ -3795,7 +3795,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Carries Cold',
 		index: 687,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Increases all stats by 8.',
@@ -3803,7 +3803,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Dark Matter',
 		index: 688,
-		traitCategories: ['ACCESSORY'],
+		categories: ['ACCESSORY'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Puni and magical creatures.',
@@ -3811,7 +3811,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Ancient Seal',
 		index: 689,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: Reduces skill power by 10%, but also reduces MP consumption by 30%.',
@@ -3819,7 +3819,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Absorbs Light',
 		index: 690,
-		traitCategories: ['ACCESSORY', 'WEAPON'],
+		categories: ['ACCESSORY', 'WEAPON'],
 	},
 	{
 		description: "Effect: Reduces the target's defense and speed.",
@@ -3827,7 +3827,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Stinks',
 		index: 691,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Restores Break value to the target. Also reduces wait time after turns by a small amount.',
@@ -3835,7 +3835,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Sunny Scent',
 		index: 692,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases attack by 7, and attacks cause a small amount of additional damage.',
@@ -3843,7 +3843,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Cutting Thread',
 		index: 693,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description: 'Effect: The target recovers a small amount of HP, and also recovers from Weak.',
@@ -3851,7 +3851,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Kirchen Bell Special',
 		index: 694,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: "Effect: Increases the target's evasion rate. This effect lasts 5 turns.",
@@ -3859,7 +3859,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Flickering Light',
 		index: 695,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases attack item effect by 5%, and also has a chance to cause Weak.',
@@ -3867,7 +3867,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Unidentified',
 		index: 696,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: The target recovers a small amount of HP, and also recovers from Curse.',
@@ -3875,7 +3875,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Purifying Water',
 		index: 697,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Price when selling to shops increases quite a lot.',
@@ -3883,7 +3883,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Golden Radiance',
 		index: 698,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases attack item effect by 15%.',
@@ -3891,7 +3891,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Super Fine',
 		index: 699,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Increases defense by 10, and also causes a decent amount of HP recovery each turn.',
@@ -3899,7 +3899,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Mutated Material',
 		index: 700,
-		traitCategories: ['ACCESSORY', 'ARMOR'],
+		categories: ['ACCESSORY', 'ARMOR'],
 	},
 	{
 		description: 'Effect: Increases recovery item effect by 30%, but increases equipment cost by 5.',
@@ -3907,7 +3907,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Special Ingredient',
 		index: 701,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description:
@@ -3916,7 +3916,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Secret of Health',
 		index: 702,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases critical hit rate, and also increases damage dealt to Broken targets.',
@@ -3924,7 +3924,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Power of Faith',
 		index: 703,
-		traitCategories: ['ACCESSORY', 'WEAPON'],
+		categories: ['ACCESSORY', 'WEAPON'],
 	},
 	{
 		description: 'Effect: The target recovers from Poison and No Heal ailments.',
@@ -3932,7 +3932,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Medicine Compound',
 		index: 704,
-		traitCategories: ['BUFF_ITEM', 'HEAL_ITEM'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM'],
 	},
 	{
 		description: 'Effect: Increases price when selling to shops.',
@@ -3940,7 +3940,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Rainbow Radiance',
 		index: 705,
-		traitCategories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
+		categories: ['ACCESSORY', 'ARMOR', 'ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'WEAPON'],
 	},
 	{
 		description: 'Effect: Increases damage dealt to Demon and Undead enemies.',
@@ -3948,7 +3948,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Wards Evil',
 		index: 706,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 	{
 		description:
@@ -3957,7 +3957,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Demon Soul',
 		index: 707,
-		traitCategories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM'],
 	},
 	{
 		description: 'Effect: Increases all stats by 15, and also increases skill power by 20%.',
@@ -3965,7 +3965,7 @@ const traits: Trait[] = [
 		mergeFrom: [],
 		name: 'Dragon Soul',
 		index: 708,
-		traitCategories: ['WEAPON'],
+		categories: ['WEAPON'],
 	},
 ];
 

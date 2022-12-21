@@ -1,4 +1,4 @@
-import type { COLOR, Effect, Item, MergeTrait, RelatedCategories, Trait, TRAIT_CATEGORY } from '@prisma/client';
+import type { CATEGORY, COLOR, Effect, Item, MergeTrait, RelatedCategories, Trait } from '@prisma/client';
 import type { Maybe } from '@trpc/server';
 import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
 import type { ReactNode, RefObject } from 'react';
@@ -46,7 +46,7 @@ export type SelectFilterProps = {
 
 export type ColorFilterProps = SelectFilterProps & PageNameProps;
 export type RelatedCategoryFilterProps = SelectFilterProps & PageNameProps;
-export type TraitCategoryFilterProps = SelectFilterProps & PageNameProps;
+export type CategoryFilterProps = SelectFilterProps & PageNameProps;
 
 export type PaginateProps = {
 	page: number;
@@ -99,8 +99,8 @@ export type ScrollWrapperProps = ChildrenProps & ClassNameProps & RefProps<HTMLD
 
 export type ListPlaceHolderProps = { limit: number };
 
-export type TraitCategoriesProps = {
-	traitCategories: TRAIT_CATEGORY[];
+export type CategoriesProps = {
+	categories: CATEGORY[];
 };
 
 export type TraitMergeListProps = { mergeFrom: MergeTrait[] };

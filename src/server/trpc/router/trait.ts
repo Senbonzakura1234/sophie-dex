@@ -7,7 +7,7 @@ import { TRPCError } from '@trpc/server';
 
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Trait>> => {
-		const { search, sortBy = 'index', direction = 'asc', traitCategory, page, limit } = { ...input };
+		const { search, sortBy = 'index', direction = 'asc', category, page, limit } = { ...input };
 
 		const pageInt = page ?? 1;
 		const limitInt = limit ?? defaultLimit;
@@ -31,12 +31,12 @@ export const traitRouter = router({
 						],
 				  }
 				: {}),
-			...(traitCategory
+			...(category
 				? {
 						AND: [
 							{
-								traitCategories: {
-									has: traitCategory,
+								categories: {
+									has: category,
 								},
 							},
 						],

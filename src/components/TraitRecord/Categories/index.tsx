@@ -1,28 +1,25 @@
-import type { TRAIT_CATEGORY } from '@prisma/client';
+import type { CATEGORY } from '@prisma/client';
 import { defaultLimit } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { TraitCategoriesProps } from '@root/types/common/props';
-import { TraitCategoryMap } from '@root/types/model';
+import type { CategoriesProps } from '@root/types/common/props';
+import { CategoryMap } from '@root/types/model';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useCallback } from 'react';
 
-const TraitCategories: FC<TraitCategoriesProps> = ({ traitCategories }) => {
+const Categories: FC<CategoriesProps> = ({ categories }) => {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();
 
-	const isClickAble = useCallback(
-		(code: TRAIT_CATEGORY) => traitCategories.includes(code) && isReady,
-		[isReady, traitCategories],
-	);
+	const isClickAble = useCallback((code: CATEGORY) => categories.includes(code) && isReady, [isReady, categories]);
 
 	return (
 		<nav className='mb-7 flex max-w-fit flex-wrap gap-2'>
-			{TraitCategoryMap.map(({ className, code, name }, key) => (
+			{CategoryMap.map(({ className, code, name }, key) => (
 				<div
 					className={clsx(
 						{
-							'2xl:tooltip-secondary': securedQuery.traitCategory === code && isClickAble(code),
-							'2xl:tooltip-primary': securedQuery.traitCategory !== code && isClickAble(code),
+							'2xl:tooltip-secondary': securedQuery.category === code && isClickAble(code),
+							'2xl:tooltip-primary': securedQuery.category !== code && isClickAble(code),
 						},
 						'2xl:tooltip 2xl:tooltip-bottom',
 					)}
@@ -33,8 +30,8 @@ const TraitCategories: FC<TraitCategoriesProps> = ({ traitCategories }) => {
 						disabled={!isClickAble(code)}
 						className={clsx(
 							{
-								'btn-secondary': securedQuery.traitCategory === code && isClickAble(code),
-								'btn-primary': securedQuery.traitCategory !== code && isClickAble(code),
+								'btn-secondary': securedQuery.category === code && isClickAble(code),
+								'btn-primary': securedQuery.category !== code && isClickAble(code),
 							},
 							'btn btn-sm 2xl:btn-md',
 						)}
@@ -43,7 +40,7 @@ const TraitCategories: FC<TraitCategoriesProps> = ({ traitCategories }) => {
 								updateQuery({
 									page: 1,
 									limit: defaultLimit,
-									traitCategory: securedQuery.traitCategory === code ? null : code,
+									category: securedQuery.category === code ? null : code,
 								});
 						}}
 					>
@@ -55,4 +52,4 @@ const TraitCategories: FC<TraitCategoriesProps> = ({ traitCategories }) => {
 	);
 };
 
-export default TraitCategories;
+export default Categories;

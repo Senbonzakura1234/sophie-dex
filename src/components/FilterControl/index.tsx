@@ -8,12 +8,12 @@ import { useMemo } from 'react';
 import FadeWrapper from '../Animations/FadeWrapper';
 import CircleDivider from '../CircleDivider';
 import ApplyFilter from './ApplyFilter';
+import CategoryFilter from './CategoryFilter';
 import ColorFilter from './ColorFilter';
 import Paginate from './Paginate';
 import RelatedCategoryFilter from './RelatedCategoryFilter';
 import ResetFilter from './ResetFilter';
 import SortControl from './SortControl';
-import TraitCategoryFilter from './TraitCategoryFilter';
 
 const FilterControl: FC<FilterControlProps> = ({
 	limit = defaultLimit,
@@ -42,7 +42,7 @@ const FilterControl: FC<FilterControlProps> = ({
 					<CircleDivider className='bg-base-300 my-auto hidden h-2 w-2 2xl:block' />
 
 					<div className='flex flex-wrap gap-2'>
-						<TraitCategoryFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
+						<CategoryFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
 						<ColorFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
 						<RelatedCategoryFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
 

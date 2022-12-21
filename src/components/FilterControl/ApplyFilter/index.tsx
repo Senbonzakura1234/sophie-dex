@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 const ApplyFilter: FC<ApplyFilterProps> = ({
 	isCanApplyFilter,
-	filterData: { colorSelected, traitCateSelected, relatedCateSelected },
+	filterData: { colorSelected, cateSelected, relatedCateSelected },
 }) => {
 	const { updateQuery } = useSearchQuery();
 
@@ -16,7 +16,7 @@ const ApplyFilter: FC<ApplyFilterProps> = ({
 					if (isCanApplyFilter)
 						updateQuery({
 							page: 1,
-							traitCategory: traitCateSelected.value,
+							category: cateSelected.value,
 							color: colorSelected.value,
 							relatedCategory: relatedCateSelected.value,
 						});

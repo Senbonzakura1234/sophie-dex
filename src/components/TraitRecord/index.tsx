@@ -4,12 +4,10 @@ import type { FC } from 'react';
 
 import FadeWrapper from '../Animations/FadeWrapper';
 import RecordHead from '../RecordHead';
-import TraitCategories from './TraitCategories';
+import Categories from './Categories';
 import TraitMergeList from './TraitMergeList';
 
-const TraitRecord: FC<TraitRecordProps> = ({
-	record: { name, description, index, traitCategories, mergeFrom, id },
-}) => {
+const TraitRecord: FC<TraitRecordProps> = ({ record: { name, description, index, categories, mergeFrom, id } }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 	return (
 		<FadeWrapper show={isReady} appear={true}>
@@ -21,7 +19,7 @@ const TraitRecord: FC<TraitRecordProps> = ({
 
 					<span className='font-serif text-lg 2xl:h-16'>{description}</span>
 
-					<TraitCategories traitCategories={traitCategories} />
+					<Categories categories={categories} />
 
 					<TraitMergeList mergeFrom={mergeFrom} />
 				</div>

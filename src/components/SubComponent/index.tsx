@@ -1,10 +1,10 @@
-import type { COLOR, TRAIT_CATEGORY } from '@prisma/client';
-import type { ColorSelected, RelatedCateSelected, TraitCateSelected } from '@root/types/common';
+import type { CATEGORY, COLOR } from '@prisma/client';
+import type { cateSelected, ColorSelected, RelatedCateSelected } from '@root/types/common';
 import type { ListPlaceHolderProps } from '@root/types/common/props';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 import type { FC } from 'react';
 
-const TraitCategoryMap = [
+const categoryMap = [
 	{
 		code: 'ATK_ITEM',
 		name: 'Attack Item',
@@ -41,7 +41,7 @@ const TraitCategoryMap = [
 		className: 'atelier-ryza2-type-accessory',
 	},
 ] satisfies {
-	code: TRAIT_CATEGORY;
+	code: CATEGORY;
 	name: string;
 	className: UnicodeClass;
 }[];
@@ -181,14 +181,14 @@ export const defaultSelect = {
 	icon: <span className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />,
 };
 
-export const TraitCategorySelectList = [
+export const categorySelectList = [
 	defaultSelect,
-	...TraitCategoryMap.map(({ code, name, className }) => ({
+	...categoryMap.map(({ code, name, className }) => ({
 		label: name,
 		value: code,
 		icon: <span className={`h-4 w-4 2xl:h-5 2xl:w-5 ${className}`} aria-hidden='true' />,
 	})),
-] satisfies TraitCateSelected[];
+] satisfies cateSelected[];
 
 export const ColorSelectList = [
 	defaultSelect,
