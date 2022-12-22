@@ -10,6 +10,7 @@ import type {
 	SelectOptionItem,
 	SetFilterData,
 	SetGoToPage,
+	SetSearchInput,
 	SetSelectOptionItem,
 } from '.';
 
@@ -59,6 +60,7 @@ export type PaginateProps = {
 export type ResetFilterProps = {
 	setFilterData: SetFilterData;
 	setGoToPage: SetGoToPage;
+	setSearchValue: SetSearchInput;
 };
 
 export type ColorProps = { color: COLOR };
@@ -86,7 +88,13 @@ export type RootLayoutProps = ChildrenProps;
 
 export type PageTitleProps = PageNameProps;
 
-export type SearchInputProps = PageNameProps;
+export type SearchInputProps = {
+	searchInput: string;
+	setSearchValue: SetSearchInput;
+	performSearch: () => void;
+	resetSearch: () => void;
+	isSearchValueValid: boolean;
+};
 
 export type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pathname: string };
 

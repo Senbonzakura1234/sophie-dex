@@ -30,7 +30,7 @@ const ErrorModal: FC<ErrorModalProps> = ({ isError, errorData, errorMessage }) =
 								'text-red-600': error.httpStatus >= 500,
 							})}
 						>
-							<h1 className='font-mono text-7xl md:text-9xl'>{error.httpStatus}</h1>
+							<h1 className='font-mono text-7xl tracking-widest md:text-9xl'>{error.httpStatus}</h1>
 							<span className='font-semibold md:text-xl'>{message}</span>
 						</div>
 

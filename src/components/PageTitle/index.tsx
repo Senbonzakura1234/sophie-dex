@@ -6,10 +6,6 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import type { FC } from 'react';
 
-const SearchInput = dynamic(() => import('./SearchInput'), {
-	ssr: false,
-});
-
 const Breadcrumb = dynamic(() => import('../Breadcrumb'), {
 	ssr: false,
 });
@@ -37,7 +33,7 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => {
 
 			<div className='bg-primary/50 absolute inset-0 z-10'></div>
 
-			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-3 px-4 pt-5 2xl:gap-6'>
+			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-9 px-4 pt-5 2xl:gap-6'>
 				<div className='text-secondary text-shadow-dark w-full text-center font-serif text-5xl font-bold xl:text-6xl 2xl:text-7xl'>
 					<Image
 						className={clsx(
@@ -53,16 +49,17 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => {
 						sizes='30vw'
 					/>
 					<div
-						className={clsx({
-							hidden: pageName === 'Atelier Dex',
-							block: pageName !== 'Atelier Dex',
-						})}
+						className={clsx(
+							{
+								hidden: pageName === 'Atelier Dex',
+								block: pageName !== 'Atelier Dex',
+							},
+							'tracking-widest',
+						)}
 					>
 						{pageName}
 					</div>
 				</div>
-
-				<SearchInput pageName={pageName} />
 
 				<Breadcrumb isShowAuthor={pageName === 'Atelier Dex'} />
 			</div>

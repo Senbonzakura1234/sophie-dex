@@ -36,7 +36,7 @@ export const useFilterControl = (): {
 
 	const [colorSelected, setColorSelected] = useState<ColorSelected>(defaultColor);
 
-	const [relatedCateSelected, setrelatedCateSelected] = useState<RelatedCateSelected>(defaultRelatedCate);
+	const [relatedCateSelected, setRelatedCateSelected] = useState<RelatedCateSelected>(defaultRelatedCate);
 
 	const isCateSelectValid = useMemo(
 		() => !isEqualWithNullish(securedQuery.category, cateSelected.value),
@@ -67,7 +67,7 @@ export const useFilterControl = (): {
 	}, [defaultColor]);
 
 	return {
-		setFilterData: { setCateSelected, setColorSelected, setrelatedCateSelected },
+		setFilterData: { setCateSelected, setColorSelected, setRelatedCateSelected },
 		filterData: { cateSelected: cateSelected, colorSelected, relatedCateSelected: relatedCateSelected },
 		isCanApplyFilter,
 	};

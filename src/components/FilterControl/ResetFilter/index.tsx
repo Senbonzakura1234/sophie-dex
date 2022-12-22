@@ -4,8 +4,9 @@ import type { ResetFilterProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
 const ResetFilter: FC<ResetFilterProps> = ({
-	setFilterData: { setCateSelected, setColorSelected, setrelatedCateSelected },
+	setFilterData: { setCateSelected, setColorSelected, setRelatedCateSelected },
 	setGoToPage,
+	setSearchValue,
 }) => {
 	const { resetQuery, isReady } = useSearchQuery();
 	return (
@@ -18,7 +19,8 @@ const ResetFilter: FC<ResetFilterProps> = ({
 					setGoToPage(() => ({ value: null, label: `Page ${1}` }));
 					setCateSelected(() => defaultSelect);
 					setColorSelected(() => defaultSelect);
-					setrelatedCateSelected(() => defaultSelect);
+					setRelatedCateSelected(() => defaultSelect);
+					setSearchValue(() => null);
 					resetQuery();
 				}
 			}}

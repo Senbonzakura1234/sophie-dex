@@ -26,8 +26,11 @@ export type FilterData = {
 export type SetFilterData = {
 	setCateSelected: SetSelectOptionItem<CATEGORY | null>;
 	setColorSelected: SetSelectOptionItem<COLOR | null>;
-	setrelatedCateSelected: SetSelectOptionItem<RELATED_CATEGORY | null>;
+	setRelatedCateSelected: SetSelectOptionItem<RELATED_CATEGORY | null>;
 };
 
 export type GoToPage = SelectOptionItem<number | null>;
 export type SetGoToPage = Dispatch<SetStateAction<GoToPage>>;
+
+export type SearchInput = string | null;
+export type SetSearchInput = Dispatch<SetStateAction<SearchInput>>;
