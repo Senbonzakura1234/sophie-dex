@@ -14,40 +14,42 @@ const Categories: FC<CategoriesProps> = ({ categories }) => {
 
 	return (
 		<nav className='mb-7 flex max-w-fit flex-wrap gap-2'>
-			{[...categoryMap].map(([code, { className, name }], key) => (
-				<div
-					className={clsx(
-						{
-							'2xl:tooltip-secondary': securedQuery.category === code && isClickAble(code),
-							'2xl:tooltip-primary': securedQuery.category !== code && isClickAble(code),
-						},
-						'2xl:tooltip 2xl:tooltip-bottom',
-					)}
-					data-tip={name}
-					key={key}
-				>
-					<button
-						disabled={!isClickAble(code)}
+			{[...categoryMap]
+				.filter(([c]) => !(['KEY_ITEM', 'MACHINE', 'SYNTHESIS', 'EXPLORATION'] as CATEGORY[]).includes(c))
+				.map(([code, { className, name }], key) => (
+					<div
 						className={clsx(
 							{
-								'btn-secondary': securedQuery.category === code && isClickAble(code),
-								'btn-primary': securedQuery.category !== code && isClickAble(code),
+								'2xl:tooltip-secondary': securedQuery.category === code && isClickAble(code),
+								'2xl:tooltip-primary': securedQuery.category !== code && isClickAble(code),
 							},
-							'btn btn-sm 2xl:btn-md',
+							'2xl:tooltip 2xl:tooltip-bottom',
 						)}
-						onClick={() => {
-							if (isClickAble(code))
-								updateQuery({
-									page: 1,
-									limit: defaultLimit,
-									category: securedQuery.category === code ? null : code,
-								});
-						}}
+						data-tip={name}
+						key={key}
 					>
-						<div className={clsx(className, 'font-atelier w-5 text-lg 2xl:w-6 2xl:text-xl')}></div>
-					</button>
-				</div>
-			))}
+						<button
+							disabled={!isClickAble(code)}
+							className={clsx(
+								{
+									'btn-secondary': securedQuery.category === code && isClickAble(code),
+									'btn-primary': securedQuery.category !== code && isClickAble(code),
+								},
+								'btn btn-sm 2xl:btn-md',
+							)}
+							onClick={() => {
+								if (isClickAble(code))
+									updateQuery({
+										page: 1,
+										limit: defaultLimit,
+										category: securedQuery.category === code ? null : code,
+									});
+							}}
+						>
+							<div className={clsx(className, 'font-atelier w-5 text-lg 2xl:w-6 2xl:text-xl')}></div>
+						</button>
+					</div>
+				))}
 		</nav>
 	);
 };
