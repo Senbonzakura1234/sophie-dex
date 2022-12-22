@@ -16,7 +16,9 @@
 		"tailwindcss",
 		"tanstack",
 		"trpc",
-		"tsconfigs"
+		"tsbuildinfo",
+		"tsconfigs",
+		"vsicons"
 	],
 	"css.lint.unknownAtRules": "ignore",
 	"editor.codeActionsOnSave": {
@@ -37,5 +39,78 @@
 		"*.prettierrc": "json",
 		"*.webmanifest": "json"
 	},
-	"typescript.tsdk": "node_modules\\typescript\\lib"
+	"typescript.tsdk": "node_modules\\typescript\\lib",
+	"vsicons.associations.files": [
+		{
+			"extensions": ["trpc.ts", "[trpc].ts", "trpc", "[trpc]"],
+			"filename": true,
+			"format": "svg",
+			"icon": "trpc",
+			"overrides": "ts"
+		},
+		{
+			"extensions": ["seed.ts", "seed", "prisma.ts", "prisma"],
+			"filename": true,
+			"format": "svg",
+			"icon": "prisma",
+			"overrides": "ts"
+		},
+		{
+			"extensions": ["settings.json", "setting.json"],
+			"filename": true,
+			"format": "svg",
+			"icon": "vscode"
+		},
+		{
+			"extensions": ["manifests.json", "manifest.json"],
+			"filename": true,
+			"format": "svg",
+			"icon": "manifest"
+		},
+		{
+			"extensions": ["package.json"],
+			"filename": true,
+			"format": "svg",
+			"icon": "node"
+		},
+		{
+			"extensions": ["tsbuildinfo"],
+			"format": "svg",
+			"icon": "tsconfig_official",
+			"overrides": "tsbuildinfo"
+		}
+	],
+	"vsicons.associations.folders": [
+		{
+			"extensions": ["splash_screens"],
+			"format": "svg",
+			"icon": "images",
+			"overrides": "splash_screens"
+		},
+		{
+			"extensions": ["env"],
+			"format": "svg",
+			"icon": "config",
+			"overrides": "env"
+		},
+		{
+			"extensions": ["backups", "backup"],
+			"format": "svg",
+			"icon": "temp",
+			"overrides": "backup"
+		},
+		{
+			"extensions": ["constants", "constant"],
+			"format": "svg",
+			"icon": "binary",
+			"overrides": "constant"
+		},
+		{
+			"extensions": ["animation", "animations"],
+			"format": "svg",
+			"icon": "theme",
+			"overrides": "constant"
+		}
+	],
+	"vsicons.presets.tsOfficial": true
 }

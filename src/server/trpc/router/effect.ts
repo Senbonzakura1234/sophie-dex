@@ -1,5 +1,5 @@
 import type { Effect } from '@prisma/client';
-import { defaultLimit } from '@root/configs';
+import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';

@@ -1,6 +1,6 @@
 import { HomeIcon, LinkIcon } from '@heroicons/react/24/solid';
 import FadeWrapper from '@root/components/Animations/FadeWrapper';
-import { APP_AUTHOR, pageNameList } from '@root/configs';
+import { APP_AUTHOR, pageNameList } from '@root/constants';
 import type { BreadcrumbProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import Link from 'next/link';
