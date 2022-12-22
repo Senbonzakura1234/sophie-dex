@@ -1,5 +1,4 @@
 import {
-	ArrowTopRightOnSquareIcon,
 	ChevronDoubleLeftIcon,
 	ChevronDoubleRightIcon,
 	ChevronLeftIcon,
@@ -10,7 +9,7 @@ import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { GoToPage } from '@root/types/common';
 import type { PaginateProps } from '@root/types/common/props';
 import type { FC } from 'react';
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 
 const Paginate: FC<PaginateProps> = ({ page, totalPage, isCanGoToPage, goToPage, setGoToPage }) => {
 	const { isReady, updateQuery } = useSearchQuery();
@@ -25,6 +24,10 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, isCanGoToPage, goToPage,
 				.map((_, i) => ({ value: i + 1, label: `Page ${i + 1}` })),
 		[totalPage],
 	);
+
+	useEffect(() => {
+		if (isCanGoToPage) updateQuery({ page: goToPage.value });
+	}, [isCanGoToPage, goToPage, updateQuery]);
 
 	return (
 		<div className='form-control'>
@@ -62,18 +65,6 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, isCanGoToPage, goToPage,
 					className='my-auto w-32'
 					withIcon
 				/>
-
-				<button
-					role='navigation'
-					className='btn btn-ghost btn-circle btn-sm my-auto hidden 2xl:inline-flex'
-					disabled={!isCanGoToPage}
-					onClick={() => {
-						if (isCanGoToPage) updateQuery({ page: goToPage.value });
-					}}
-					aria-label='Jump To Page'
-				>
-					<ArrowTopRightOnSquareIcon width={16} height={16} />
-				</button>
 
 				<button
 					role='navigation'

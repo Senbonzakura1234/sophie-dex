@@ -35,7 +35,7 @@ const ScrollToTop: FC<ScrollToTopProps> = ({ scrollableBottomReached, refObject:
 	}, [isScrolling, scrollPosition, scrollableBottomReached, ref]);
 
 	return (
-		<FadeWrapper show={scrollableBottomReached} isTransForm={true}>
+		<FadeWrapper show={scrollableBottomReached} isTransForm={false}>
 			<div className='fixed inset-x-1/2 bottom-3 z-30 flex -translate-x-1/2 place-content-center lg:left-auto lg:right-6 lg:bottom-6'>
 				<button
 					className='btn btn-circle shadow-xl'

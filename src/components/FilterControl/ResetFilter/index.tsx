@@ -24,7 +24,7 @@ const ResetFilter: FC<ResetFilterProps> = ({
 			}}
 			aria-label='Reset Filter'
 		>
-			Reset Filter
+			Reset
 		</button>
 	);
 };

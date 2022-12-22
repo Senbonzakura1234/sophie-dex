@@ -41,8 +41,8 @@ const FilterControl: FC<FilterControlProps> = ({
 					<CircleDivider className='bg-base-300 my-auto hidden h-2 w-2 2xl:block' />
 
 					<div className='flex flex-wrap gap-2'>
-						<CategoryFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
 						<ColorFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
+						<CategoryFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
 
 						<ApplyFilter filterData={filterData} isCanApplyFilter={isCanApplyFilter} />
 					</div>
