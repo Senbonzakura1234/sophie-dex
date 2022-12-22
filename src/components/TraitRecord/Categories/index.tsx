@@ -15,10 +15,7 @@ const Categories: FC<CategoriesProps> = ({ categories }) => {
 	return (
 		<nav className='mb-7 flex max-w-fit flex-wrap gap-2'>
 			{[...categoryMap]
-				.filter(
-					([c]) =>
-						!(['KEY_ITEM', 'MACHINE', 'SYNTHESIS', 'EXPLORATION', 'MATERIAL', 'BOOK'] as CATEGORY[]).includes(c),
-				)
+				.filter(([c]) => !(['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as CATEGORY[]).includes(c))
 				.map(([code, { className, name }], key) => (
 					<div
 						className={clsx(
