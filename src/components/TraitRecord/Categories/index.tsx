@@ -14,7 +14,7 @@ const Categories: FC<CategoriesProps> = ({ categories }) => {
 
 	return (
 		<nav className='mb-7 flex max-w-fit flex-wrap gap-2'>
-			{categoryMap.map(({ className, code, name }, key) => (
+			{[...categoryMap].map(([code, { className, name }], key) => (
 				<div
 					className={clsx(
 						{

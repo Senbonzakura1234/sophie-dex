@@ -4,77 +4,98 @@ import type { ListPlaceHolderProps } from '@root/types/common/props';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 import type { FC } from 'react';
 
-export const categoryMap = [
+export const categoryMap = new Map<
+	CATEGORY,
 	{
-		code: 'ATK_ITEM',
-		name: 'Attack Item',
-		className: 'atelier__type-attack',
-	},
-	{
-		code: 'HEAL_ITEM',
-		name: 'Heal Item',
-		className: 'atelier__type-heal',
-	},
-	{
-		code: 'DE_BUFF_ITEM',
-		name: 'De-Buff Item',
-		className: 'atelier__type-debuff',
-	},
-	{
-		code: 'BUFF_ITEM',
-		name: 'Buff Item',
-		className: 'atelier__type-buff',
-	},
-	{
-		code: 'WEAPON',
-		name: 'Weapon',
-		className: 'atelier__type-weapon',
-	},
-	{
-		code: 'ARMOR',
-		name: 'Armor',
-		className: 'atelier__type-armor',
-	},
-	{
-		code: 'ACCESSORY',
-		name: 'Accessory',
-		className: 'atelier__type-accessory',
-	},
-
-	{
-		code: 'MATERIAL',
-		name: 'Material',
-		className: 'atelier__material',
-	},
-
-	{
-		code: 'BOOK',
-		name: 'Book',
-		className: 'atelier__book',
-	},
-
-	{
-		code: 'EXPLORATION',
-		name: 'Exploration',
-		className: 'atelier__tool-gather',
-	},
-
-	{
-		code: 'MACHINE',
-		name: 'Machine',
-		className: 'atelier__category-neutralizers',
-	},
-
-	{
-		code: 'SYNTHESIS',
-		name: 'Synthesis',
-		className: 'atelier__type-synthesis',
-	},
-] satisfies {
-	code: CATEGORY;
-	name: string;
-	className: UnicodeClass;
-}[];
+		name: string;
+		className: UnicodeClass;
+	}
+>([
+	[
+		'ATK_ITEM',
+		{
+			name: 'Attack Item',
+			className: 'atelier__type-attack',
+		},
+	],
+	[
+		'HEAL_ITEM',
+		{
+			name: 'Heal Item',
+			className: 'atelier__type-heal',
+		},
+	],
+	[
+		'DE_BUFF_ITEM',
+		{
+			name: 'De-Buff Item',
+			className: 'atelier__type-debuff',
+		},
+	],
+	[
+		'BUFF_ITEM',
+		{
+			name: 'Buff Item',
+			className: 'atelier__type-buff',
+		},
+	],
+	[
+		'WEAPON',
+		{
+			name: 'Weapon',
+			className: 'atelier__type-weapon',
+		},
+	],
+	[
+		'ARMOR',
+		{
+			name: 'Armor',
+			className: 'atelier__type-armor',
+		},
+	],
+	[
+		'ACCESSORY',
+		{
+			name: 'Accessory',
+			className: 'atelier__type-accessory',
+		},
+	],
+	[
+		'MATERIAL',
+		{
+			name: 'Material',
+			className: 'atelier__material',
+		},
+	],
+	[
+		'BOOK',
+		{
+			name: 'Book',
+			className: 'atelier__book',
+		},
+	],
+	[
+		'EXPLORATION',
+		{
+			name: 'Exploration',
+			className: 'atelier__tool-gather',
+		},
+	],
+	[
+		'MACHINE',
+		{
+			name: 'Machine',
+			className: 'atelier__category-neutralizers',
+		},
+	],
+	[
+		'SYNTHESIS',
+		{
+			name: 'Synthesis',
+			className: 'atelier__type-synthesis',
+		},
+	],
+]);
 
 const colorMap = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW', 'NONE'] satisfies COLOR[];
 
@@ -213,7 +234,7 @@ export const defaultSelect = {
 
 export const categorySelectList = [
 	defaultSelect,
-	...categoryMap.map(({ code, name, className }) => ({
+	...[...categoryMap].map(([code, { name, className }]) => ({
 		label: name,
 		value: code,
 		icon: <span className={`h-4 w-4 2xl:h-5 2xl:w-5 ${className}`} aria-hidden='true' />,

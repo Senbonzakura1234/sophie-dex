@@ -14,7 +14,7 @@ const items: Item[] = [
 				name: 'MEDICINE_MAT',
 			},
 		],
-		category: null,
+		category: 'MATERIAL',
 		name: 'Magic Grass',
 		index: 0,
 		level: 2,
