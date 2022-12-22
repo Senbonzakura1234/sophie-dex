@@ -57,6 +57,7 @@ enum CATEGORY {
 
    EXPLORATION
    MACHINE
+   KEY_ITEM
 
    SYNTHESIS
 }

@@ -89,6 +89,13 @@ export const categoryMap = new Map<
 		},
 	],
 	[
+		'KEY_ITEM',
+		{
+			name: 'Key Item',
+			className: 'atelier__category-key-items',
+		},
+	],
+	[
 		'SYNTHESIS',
 		{
 			name: 'Synthesis',

@@ -1,9 +1,12 @@
 import { PrismaClient } from '@prisma/client';
+import traits from 'prisma/data/traits';
 
 const prisma = new PrismaClient();
 
 async function seed() {
-	console.log('test');
+	traits
+		.filter(trait => !trait.categories.includes('HEAL_ITEM') && trait.categories.includes('BUFF_ITEM'))
+		.forEach(t => console.log(t.name));
 }
 
 seed()
