@@ -56,7 +56,7 @@
 			"overrides": "ts"
 		},
 		{
-			"extensions": ["settings.json", "setting.json"],
+			"extensions": ["settings.json", "setting.json", "extensions.json", "extension.json"],
 			"filename": true,
 			"format": "svg",
 			"icon": "vscode"
