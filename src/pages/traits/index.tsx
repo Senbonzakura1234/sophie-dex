@@ -2,7 +2,7 @@ import FilterControl from '@root/components/FilterControl';
 import ListLayout from '@root/components/Layout/ListLayout';
 import { FilterControlPlaceHolder, ListPlaceHolder } from '@root/components/SubComponent';
 import TraitRecord from '@root/components/TraitRecord';
-import { defaultLimit } from '@root/constants';
+import { defaultLimit } from '@root/configs';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import { trpc } from '@root/utils/trpc';
 import { type NextPage } from 'next';

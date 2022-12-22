@@ -1,4 +1,4 @@
-import bottomBg from '@root/assets/pictures/bottom.jpg';
+import bottomBg from '@root/assets/images/bottom.jpg';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import type { FC } from 'react';

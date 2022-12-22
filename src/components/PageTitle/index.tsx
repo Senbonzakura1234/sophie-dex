@@ -1,5 +1,5 @@
-import sophieLogo from '@root/assets/pictures/sophie-logo.png';
-import topBg from '@root/assets/pictures/top.jpg';
+import sophieLogo from '@root/assets/images/sophie-logo.png';
+import topBg from '@root/assets/images/top.jpg';
 import type { PageTitleProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';

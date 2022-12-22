@@ -1,4 +1,4 @@
-import { idRegex } from '@root/constants';
+import { idRegex } from '@root/configs';
 import { z } from 'zod';
 
 import { categoryList, colorMap, relatedCategoryList } from '../model';

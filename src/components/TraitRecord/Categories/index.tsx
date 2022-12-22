@@ -1,6 +1,6 @@
 import type { CATEGORY } from '@prisma/client';
 import { categoryMap, hideCategoryOnTrait } from '@root/components/SubComponent';
-import { defaultLimit } from '@root/constants';
+import { defaultLimit } from '@root/configs';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { CategoriesProps } from '@root/types/common/props';
 import clsx from 'clsx';

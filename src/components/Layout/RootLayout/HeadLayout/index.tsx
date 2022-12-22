@@ -1,4 +1,4 @@
-import { APP_AUTHOR, APP_DESCRIPTION, APP_KEYWORD, APP_NAME } from '@root/constants';
+import { APP_AUTHOR, APP_DESCRIPTION, APP_KEYWORD, APP_NAME } from '@root/configs';
 import Head from 'next/head';
 import type { FC } from 'react';
 
