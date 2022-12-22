@@ -4,6 +4,8 @@ import type { ListPlaceHolderProps } from '@root/types/common/props';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 import type { FC } from 'react';
 
+export const hideCategoryOnTrait: Readonly<CATEGORY[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
+
 export const categoryMap = new Map<
 	CATEGORY,
 	{

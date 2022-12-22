@@ -7,7 +7,7 @@ import { TRPCError } from '@trpc/server';
 
 export const itemRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Item>> => {
-		const { search, sortBy, direction, color, relatedCategory, page, limit } = {
+		const { search, sortBy, direction, color, relatedCategory, page, limit, category } = {
 			...input,
 		};
 
@@ -42,6 +42,15 @@ export const itemRouter = router({
 							{
 								color: {
 									equals: color,
+								},
+							},
+					  ]
+					: []),
+				...(category
+					? [
+							{
+								category: {
+									equals: category,
 								},
 							},
 					  ]

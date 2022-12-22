@@ -11,7 +11,6 @@ import ApplyFilter from './ApplyFilter';
 import CategoryFilter from './CategoryFilter';
 import ColorFilter from './ColorFilter';
 import Paginate from './Paginate';
-import RelatedCategoryFilter from './RelatedCategoryFilter';
 import ResetFilter from './ResetFilter';
 import SortControl from './SortControl';
 
@@ -44,7 +43,6 @@ const FilterControl: FC<FilterControlProps> = ({
 					<div className='flex flex-wrap gap-2'>
 						<CategoryFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
 						<ColorFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
-						<RelatedCategoryFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
 
 						<ApplyFilter filterData={filterData} isCanApplyFilter={isCanApplyFilter} />
 					</div>
