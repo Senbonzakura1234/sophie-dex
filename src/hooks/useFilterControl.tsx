@@ -4,17 +4,14 @@ import {
 	defaultSelect,
 	RelatedCategorySelectList,
 } from '@root/components/SubComponent';
-import type { cateSelected, ColorSelected, FilterData, RelatedCateSelected, SetFilterData } from '@root/types/common';
+import type { cateSelected, ColorSelected, RelatedCateSelected } from '@root/types/common';
+import type { UseFilterControl } from '@root/types/common/hook';
 import { isEqualWithNullish } from '@root/utils/helper';
 import { useEffect, useMemo, useState } from 'react';
 
 import { useSearchQuery } from './useSecuredRouter';
 
-export const useFilterControl = (): {
-	filterData: FilterData;
-	setFilterData: SetFilterData;
-	isCanApplyFilter: boolean;
-} => {
+export const useFilterControl: UseFilterControl = () => {
 	const { securedQuery, isReady } = useSearchQuery();
 
 	const defaultCate = useMemo(

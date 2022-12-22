@@ -1,15 +1,11 @@
+import type { UseIdQuery, UseSearchQuery } from '@root/types/common/hook';
 import type { IdQuery, SearchQuery } from '@root/types/common/zod';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import { parseSecuredQuery } from '@root/utils/helper';
 import { useRouter } from 'next/router';
 import { useCallback, useMemo } from 'react';
 
-export const useSearchQuery = (): {
-	isReady: boolean;
-	securedQuery: Partial<SearchQuery>;
-	updateQuery: (nextQuery: Partial<SearchQuery>) => void;
-	resetQuery: () => void;
-} => {
+export const useSearchQuery: UseSearchQuery = () => {
 	const { query, isReady, push, pathname } = useRouter();
 
 	const securedQuery: Partial<SearchQuery> = useMemo(() => {
@@ -34,11 +30,7 @@ export const useSearchQuery = (): {
 	return { securedQuery, isReady, updateQuery, resetQuery };
 };
 
-export const useIdQuery = (): {
-	isReady: boolean;
-	pathname: string;
-	securedIdQuery: Partial<IdQuery>;
-} => {
+export const useIdQuery: UseIdQuery = () => {
 	const { query, isReady, pathname } = useRouter();
 
 	const securedIdQuery: Partial<IdQuery> = useMemo(() => {

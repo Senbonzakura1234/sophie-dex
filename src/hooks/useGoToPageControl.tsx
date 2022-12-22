@@ -1,14 +1,11 @@
-import type { GoToPage, SetGoToPage } from '@root/types/common';
+import type { GoToPage } from '@root/types/common';
+import type { UseGoToPageControl } from '@root/types/common/hook';
 import { isEqualWithNullish } from '@root/utils/helper';
 import { useEffect, useMemo, useState } from 'react';
 
 import { useSearchQuery } from './useSecuredRouter';
 
-export const useGoToPageControl = (): {
-	goToPage: GoToPage;
-	setGoToPage: SetGoToPage;
-	isCanGoToPage: boolean;
-} => {
+export const useGoToPageControl: UseGoToPageControl = () => {
 	const { securedQuery, isReady } = useSearchQuery();
 
 	const defaultGoToPage = useMemo(
