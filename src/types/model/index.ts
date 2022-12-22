@@ -93,6 +93,7 @@ export const categoryList = [
 	'BOOK',
 	'EXPLORATION',
 	'MACHINE',
+	'KEY_ITEM',
 	'SYNTHESIS',
 ] as const satisfies Readonly<CATEGORY[]>;
 

@@ -9,6 +9,7 @@ import RelatedCategories from './RelatedCategories';
 
 const ItemRecord: FC<ItemRecordProps> = ({ record: { name, index, id, color, relatedCategories } }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
+
 	return (
 		<FadeWrapper show={isReady} appear={true}>
 			<article className='card bg-base-100 grid w-full grow-0 shadow-2xl'>
