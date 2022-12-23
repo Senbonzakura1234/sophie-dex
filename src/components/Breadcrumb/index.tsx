@@ -70,6 +70,12 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 							host: 'github.com',
 							pathname: APP_AUTHOR,
 						}}
+						as={{
+							protocol: 'https',
+							hostname: 'github',
+							host: 'github.com',
+							pathname: APP_AUTHOR,
+						}}
 						aria-label={`github@${APP_AUTHOR}`}
 						className='btn h-auto min-h-0 gap-2 rounded-full bg-white fill-black py-3 capitalize text-black hover:bg-black hover:fill-white hover:text-white'
 					>

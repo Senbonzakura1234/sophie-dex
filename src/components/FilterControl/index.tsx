@@ -32,7 +32,7 @@ const FilterControl: FC<FilterControlProps> = ({
 	);
 
 	const { filterData, setFilterData, isCanApplyFilter } = useFilterControl();
-	const { goToPage, setGoToPage, isCanGoToPage } = useGoToPageControl();
+	const { goToPage, setGoToPage } = useGoToPageControl();
 	const { performSearch, searchInput, setSearchValue, isSearchValueValid, resetSearch } = useSearchInput();
 
 	return (
@@ -69,13 +69,7 @@ const FilterControl: FC<FilterControlProps> = ({
 							{from} - {to} of {totalRecord} records
 						</div>
 
-						<Paginate
-							page={page}
-							totalPage={totalPage}
-							goToPage={goToPage}
-							setGoToPage={setGoToPage}
-							isCanGoToPage={isCanGoToPage}
-						/>
+						<Paginate page={page} totalPage={totalPage} goToPage={goToPage} setGoToPage={setGoToPage} />
 
 						<CircleDivider className='bg-base-300 my-auto hidden h-2 w-2 2xl:block' />
 

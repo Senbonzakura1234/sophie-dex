@@ -10,7 +10,6 @@ export type UseFilterControl = () => {
 export type UseGoToPageControl = () => {
 	goToPage: GoToPage;
 	setGoToPage: SetGoToPage;
-	isCanGoToPage: boolean;
 };
 
 export type UseSearchInput = () => {

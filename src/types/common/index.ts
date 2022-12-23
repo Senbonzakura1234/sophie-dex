@@ -11,7 +11,9 @@ export const PageName = {
 export type PageName = typeof PageName[keyof typeof PageName];
 
 export type SelectOptionItem<V> = { value: V; label?: ReactNode; icon?: ReactNode };
-export type SetSelectOptionItem<V> = Dispatch<SetStateAction<SelectOptionItem<V>>>;
+export type SetSelectOptionItem<V> =
+	| Dispatch<SetStateAction<SelectOptionItem<V>>>
+	| ((select: SelectOptionItem<V>) => void);
 
 export type cateSelected = SelectOptionItem<CATEGORY | null>;
 export type ColorSelected = SelectOptionItem<COLOR | null>;
@@ -30,7 +32,7 @@ export type SetFilterData = {
 };
 
 export type GoToPage = SelectOptionItem<number | null>;
-export type SetGoToPage = Dispatch<SetStateAction<GoToPage>>;
+export type SetGoToPage = (goTo: GoToPage) => void;
 
 export type SearchInput = string | null;
 export type SetSearchInput = Dispatch<SetStateAction<SearchInput>>;

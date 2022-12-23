@@ -52,7 +52,6 @@ export type CategoryFilterProps = SelectFilterProps & PageNameProps;
 export type PaginateProps = {
 	page: number;
 	totalPage: number;
-	isCanGoToPage: boolean;
 	goToPage: GoToPage;
 	setGoToPage: SetGoToPage;
 };

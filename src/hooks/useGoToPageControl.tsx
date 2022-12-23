@@ -1,14 +1,13 @@
-import type { GoToPage } from '@root/types/common';
+import type { GoToPage, SetGoToPage } from '@root/types/common';
 import type { UseGoToPageControl } from '@root/types/common/hook';
-import { isEqualWithNullish } from '@root/utils/helper';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useMemo } from 'react';
 
 import { useSearchQuery } from './useSecuredRouter';
 
 export const useGoToPageControl: UseGoToPageControl = () => {
-	const { securedQuery, isReady } = useSearchQuery();
+	const { securedQuery, updateQuery, isReady } = useSearchQuery();
 
-	const defaultGoToPage = useMemo(
+	const goToPage: GoToPage = useMemo(
 		() => ({
 			value: securedQuery.page ?? null,
 			label: `Page ${securedQuery.page ?? '1'}`,
@@ -16,18 +15,12 @@ export const useGoToPageControl: UseGoToPageControl = () => {
 		[securedQuery.page],
 	);
 
-	const [goToPage, setGoToPage] = useState<GoToPage>(defaultGoToPage);
-
-	const isGoToPageValid = useMemo(
-		() => !isEqualWithNullish(goToPage.value ?? 1, securedQuery.page ?? 1),
-		[goToPage.value, securedQuery.page],
+	const setGoToPage: SetGoToPage = useCallback(
+		goTo => {
+			if (isReady) updateQuery({ page: goTo.value });
+		},
+		[isReady, updateQuery],
 	);
 
-	const isCanGoToPage = useMemo(() => isReady && isGoToPageValid, [isGoToPageValid, isReady]);
-
-	useEffect(() => {
-		setGoToPage(() => defaultGoToPage);
-	}, [defaultGoToPage]);
-
-	return { goToPage, setGoToPage, isCanGoToPage };
+	return { goToPage, setGoToPage };
 };

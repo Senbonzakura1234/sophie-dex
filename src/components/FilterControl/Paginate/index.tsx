@@ -9,9 +9,9 @@ import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { GoToPage } from '@root/types/common';
 import type { PaginateProps } from '@root/types/common/props';
 import type { FC } from 'react';
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 
-const Paginate: FC<PaginateProps> = ({ page, totalPage, isCanGoToPage, goToPage, setGoToPage }) => {
+const Paginate: FC<PaginateProps> = ({ page, totalPage, goToPage, setGoToPage }) => {
 	const { isReady, updateQuery } = useSearchQuery();
 
 	const isPreviousDisable = useMemo(() => !isReady || page === 1, [isReady, page]);
@@ -24,10 +24,6 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, isCanGoToPage, goToPage,
 				.map((_, i) => ({ value: i + 1, label: `Page ${i + 1}` })),
 		[totalPage],
 	);
-
-	useEffect(() => {
-		if (isCanGoToPage) updateQuery({ page: goToPage.value });
-	}, [isCanGoToPage, goToPage, updateQuery]);
 
 	return (
 		<div className='form-control'>
