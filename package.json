@@ -31,7 +31,6 @@
 		"db-seed": "prisma db seed"
 	},
 	"dependencies": {
-		"@builder.io/partytown": "^0.7.3",
 		"@headlessui/react": "^1.7.5",
 		"@heroicons/react": "^2.0.13",
 		"@next/font": "^13.0.6",

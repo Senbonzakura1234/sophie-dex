@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@builder.io/partytown': ^0.7.3
   '@headlessui/react': ^1.7.5
   '@heroicons/react': ^2.0.13
   '@next/font': ^13.0.6
@@ -50,7 +49,6 @@ specifiers:
   zod: ^3.20.2
 
 dependencies:
-  '@builder.io/partytown': 0.7.3
   '@headlessui/react': 1.7.5_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': 2.0.13_react@18.2.0
   '@next/font': 13.0.6
@@ -1264,11 +1262,6 @@ packages:
       '@babel/helper-string-parser': 7.19.4
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
-    dev: false
-
-  /@builder.io/partytown/0.7.3:
-    resolution: {integrity: sha512-hA6WYBFD/exyrEvs0JSvQIILfH0/Jlr5amqE3lt1nPehCus+eQm4ob3LBMRkSaFDWz9clHSLtsGwG52dUjGy3g==}
-    hasBin: true
     dev: false
 
   /@esbuild-kit/cjs-loader/2.4.1:
