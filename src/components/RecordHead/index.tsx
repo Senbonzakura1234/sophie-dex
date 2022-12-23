@@ -12,6 +12,7 @@ const RecordHead: FC<RecordHeadProps> = ({ id, isCurrentRecord, pathname, name }
 				<div className='card-actions mb-2 place-content-between'>
 					<Link
 						href={{ pathname: '/' }}
+						as={{ pathname: '/' }}
 						className='btn btn-sm btn-outline btn-square gap-2 font-bold capitalize'
 						aria-label='Go to homepage'
 					>
@@ -19,6 +20,7 @@ const RecordHead: FC<RecordHeadProps> = ({ id, isCurrentRecord, pathname, name }
 					</Link>
 					<Link
 						href={{ pathname }}
+						as={{ pathname }}
 						className='btn btn-outline btn-sm gap-2 font-bold capitalize'
 						aria-label='Back to search'
 					>
@@ -31,6 +33,7 @@ const RecordHead: FC<RecordHeadProps> = ({ id, isCurrentRecord, pathname, name }
 			<div className='card-title'>
 				<Link
 					href={{ pathname: `${pathname}/${id}` }}
+					as={{ pathname: `${pathname}/${id}` }}
 					className={clsx({
 						['link link-hover']: !isCurrentRecord,
 						'pointer-events-none cursor-default': isCurrentRecord,

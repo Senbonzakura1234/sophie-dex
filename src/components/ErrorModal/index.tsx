@@ -34,7 +34,7 @@ const ErrorModal: FC<ErrorModalProps> = ({ isError, errorData, errorMessage }) =
 							<span className='font-semibold md:text-xl'>{message}</span>
 						</div>
 
-						<Link href='/' className='link link-hover text-sm'>
+						<Link href='/' as='/' className='link link-hover text-sm'>
 							Back to home
 						</Link>
 					</div>

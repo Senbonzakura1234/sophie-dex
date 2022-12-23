@@ -29,6 +29,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 											'link gap-1',
 										)}
 										href={{ pathname: '/' }}
+										as={{ pathname: '/' }}
 										aria-label='Go to homepage'
 									>
 										<HomeIcon className='h-4 w-4' />
@@ -46,6 +47,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 													'link gap-1',
 												)}
 												href={{ pathname: `/${n.toLowerCase()}s` }}
+												as={{ pathname: `/${n.toLowerCase()}s` }}
 												aria-label={`Go to ${i} Search`}
 											>
 												<LinkIcon className='hidden h-4 w-4 2xl:block' />
