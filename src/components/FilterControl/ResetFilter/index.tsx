@@ -16,7 +16,7 @@ const ResetFilter: FC<ResetFilterProps> = ({
 			disabled={!isReady}
 			onClick={() => {
 				if (isReady) {
-					setGoToPage(() => ({ value: null, label: `Page ${1}` }));
+					setGoToPage({ value: null, label: `Page ${1}` });
 					setCateSelected(() => defaultSelect);
 					setColorSelected(() => defaultSelect);
 					setRelatedCateSelected(() => defaultSelect);
