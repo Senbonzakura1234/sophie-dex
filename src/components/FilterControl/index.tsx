@@ -48,7 +48,7 @@ const FilterControl: FC<FilterControlProps> = ({
 				/>
 			</motion.section>
 
-			<motion.section {...framerFadeUp} className='container mx-auto p-3'>
+			<motion.section {...framerFadeUp} className='container relative z-30 mx-auto p-3'>
 				<nav className='card bg-base-100 flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-2xl 2xl:place-content-end'>
 					<SortControl />
 
