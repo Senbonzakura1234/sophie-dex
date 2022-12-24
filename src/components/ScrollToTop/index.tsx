@@ -1,9 +1,10 @@
 import { ArrowUpOnSquareIcon } from '@heroicons/react/24/solid';
+import { framerFade } from '@root/constants/animations';
 import type { ScrollToTopProps } from '@root/types/common/props';
+import clsx from 'clsx';
+import { motion } from 'framer-motion';
 import type { FC } from 'react';
 import { useCallback, useState } from 'react';
-
-import FadeWrapper from '../Animations/FadeWrapper';
 
 const ScrollToTop: FC<ScrollToTopProps> = ({ scrollableBottomReached, refObject: ref, scrollPosition }) => {
 	const [isScrolling, setIsScrolling] = useState(false);
@@ -35,18 +36,22 @@ const ScrollToTop: FC<ScrollToTopProps> = ({ scrollableBottomReached, refObject:
 	}, [isScrolling, scrollPosition, scrollableBottomReached, ref]);
 
 	return (
-		<FadeWrapper show={scrollableBottomReached} isTransForm={false}>
-			<div className='fixed inset-x-1/2 bottom-3 z-30 flex -translate-x-1/2 place-content-center lg:left-auto lg:right-6 lg:bottom-6'>
-				<button
-					className='btn btn-circle shadow-xl'
-					aria-label='Back To Top'
-					disabled={isScrolling || !scrollableBottomReached}
-					onClick={scrollToTop}
-				>
-					<ArrowUpOnSquareIcon className='h4 h-4' />
-				</button>
-			</div>
-		</FadeWrapper>
+		<motion.div
+			{...framerFade}
+			className={clsx(
+				{ hidden: !scrollableBottomReached },
+				'fixed inset-x-1/2 bottom-3 z-30 flex -translate-x-1/2 place-content-center lg:left-auto lg:right-6 lg:bottom-6',
+			)}
+		>
+			<button
+				className='btn btn-circle shadow-xl'
+				aria-label='Back To Top'
+				disabled={isScrolling || !scrollableBottomReached}
+				onClick={scrollToTop}
+			>
+				<ArrowUpOnSquareIcon className='h4 h-4' />
+			</button>
+		</motion.div>
 	);
 };
 

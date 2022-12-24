@@ -12,6 +12,15 @@
 	src: local(''), url('/fonts/Atelier.woff2') format('woff2');
 }
 
+@layer base {
+	html {
+		overflow: hidden;
+	}
+	body {
+		overflow: hidden;
+	}
+}
+
 @layer components {
 	.scroll-wrapper > div {
 		display: block !important;

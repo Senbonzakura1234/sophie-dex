@@ -17,7 +17,7 @@ export const useGoToPageControl: UseGoToPageControl = () => {
 
 	const setGoToPage: SetGoToPage = useCallback(
 		goTo => {
-			const cur = goTo instanceof Function ? goTo(goToPage) : goTo;
+			const cur = typeof goTo === 'function' ? goTo(goToPage) : goTo;
 
 			if (isReady && cur.value !== goToPage.value) updateQuery({ page: cur.value });
 		},

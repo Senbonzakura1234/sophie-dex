@@ -1,14 +1,13 @@
 import sophieLogo from '@root/assets/images/sophie-logo.png';
 import topBg from '@root/assets/images/top.jpg';
+import { framerFadeUp } from '@root/constants/animations';
 import type { PageTitleProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import dynamic from 'next/dynamic';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import type { FC } from 'react';
 
-const Breadcrumb = dynamic(() => import('../Breadcrumb'), {
-	ssr: false,
-});
+import Breadcrumb from '../Breadcrumb';
 
 const PageTitle: FC<PageTitleProps> = ({ pageName }) => {
 	return (
@@ -34,7 +33,10 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => {
 			<div className='bg-primary/50 absolute inset-0 z-10'></div>
 
 			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-9 px-4 pt-5 2xl:gap-6'>
-				<div className='text-secondary text-shadow-dark w-full text-center font-serif text-5xl font-bold xl:text-6xl 2xl:text-7xl'>
+				<motion.div
+					{...framerFadeUp}
+					className='text-secondary text-shadow-dark w-full text-center font-serif text-5xl font-bold xl:text-6xl 2xl:text-7xl'
+				>
 					<Image
 						className={clsx(
 							{
@@ -59,7 +61,7 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => {
 					>
 						{pageName}
 					</div>
-				</div>
+				</motion.div>
 
 				<Breadcrumb isShowAuthor={pageName === 'Atelier Dex'} />
 			</div>

@@ -1,6 +1,8 @@
 import ScrollToTop from '@root/components/ScrollToTop';
 import ScrollWrapper from '@root/components/ScrollWrapper';
+import { framerFadeUp } from '@root/constants/animations';
 import type { RootLayoutProps } from '@root/types/common/props';
+import { motion } from 'framer-motion';
 import type { FC } from 'react';
 import useScrollableRef from 'use-scrollable-ref';
 
@@ -12,7 +14,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
 	});
 
 	return (
-		<div>
+		<motion.main {...framerFadeUp} className='overflow-hidden'>
 			<HeadLayout />
 
 			<ScrollWrapper refObject={scrollableRef} className='bg-base-200 h-screen w-screen !antialiased'>
@@ -23,7 +25,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
 					scrollPosition={scrollPosition}
 				/>
 			</ScrollWrapper>
-		</div>
+		</motion.main>
 	);
 };
 

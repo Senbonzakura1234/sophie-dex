@@ -1,7 +1,9 @@
 import type { CATEGORY, COLOR } from '@prisma/client';
+import { framerFadeUp } from '@root/constants/animations';
 import type { cateSelected, ColorSelected, RelatedCateSelected } from '@root/types/common';
 import type { ListPlaceHolderProps } from '@root/types/common/props';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
+import { motion } from 'framer-motion';
 import type { FC } from 'react';
 
 export const hideCategoryOnTrait: Readonly<CATEGORY[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
@@ -258,7 +260,9 @@ export const ColorSelectList = [
 	})),
 ] satisfies ColorSelected[];
 
-export const RecordPlaceHolder: FC = () => <div className='card bg-base-100 h-[300px] w-full animate-pulse'></div>;
+export const RecordPlaceHolder: FC = () => (
+	<motion.div {...framerFadeUp} className='card bg-base-100 h-[300px] w-full animate-pulse'></motion.div>
+);
 
 export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ limit }) => (
 	<>
@@ -271,12 +275,12 @@ export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ limit }) => (
 );
 export const FilterControlPlaceHolder: FC = () => (
 	<>
-		<div className='container mx-auto w-full animate-pulse px-3 pb-3 pt-6'>
+		<motion.div {...framerFadeUp} className='container mx-auto w-full animate-pulse px-3 pb-3 pt-6'>
 			<div className='card bg-base-100 ml-auto h-[50px] w-full rounded-full shadow-2xl md:w-1/4 md:min-w-[300px]'></div>
-		</div>
+		</motion.div>
 
-		<div className='container mx-auto w-full animate-pulse p-3'>
+		<motion.div {...framerFadeUp} className='container mx-auto w-full animate-pulse p-3'>
 			<div className='card bg-base-100 h-[60px] w-full shadow-2xl'></div>
-		</div>
+		</motion.div>
 	</>
 );

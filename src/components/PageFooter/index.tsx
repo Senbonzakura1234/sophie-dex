@@ -1,11 +1,8 @@
 import bottomBg from '@root/assets/images/bottom.jpg';
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import type { FC } from 'react';
 
-const Breadcrumb = dynamic(() => import('../Breadcrumb'), {
-	ssr: false,
-});
+import Breadcrumb from '../Breadcrumb';
 
 const PageFooter: FC = () => {
 	return (

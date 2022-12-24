@@ -21,8 +21,6 @@ export type PageNameProps = { pageName: PageName };
 
 export type RecordProps<T> = { record: T };
 
-export type FadeWrapperProps = { children: ReactNode; show: boolean; appear?: boolean; isTransForm?: boolean };
-
 export type BreadcrumbProps = { isShowAuthor: boolean };
 
 export type CircleDividerProps = ClassNameProps;
@@ -95,6 +93,7 @@ export type SearchInputProps = {
 	isSearchValueValid: boolean;
 };
 
+export type RecordWrapperProps = ChildrenProps & ClassNameProps;
 export type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pathname: string };
 
 export type ScrollToTopProps = {
