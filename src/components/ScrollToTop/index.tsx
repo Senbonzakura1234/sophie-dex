@@ -1,5 +1,5 @@
 import { ArrowUpOnSquareIcon } from '@heroicons/react/24/solid';
-import { framerFade } from '@root/constants/animations';
+import { framerFade } from '@root/animations';
 import type { ScrollToTopProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';

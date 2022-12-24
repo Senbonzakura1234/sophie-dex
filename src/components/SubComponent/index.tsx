@@ -1,5 +1,5 @@
 import type { CATEGORY, COLOR } from '@prisma/client';
-import { framerFade } from '@root/constants/animations';
+import { framerFade } from '@root/animations';
 import type { cateSelected, ColorSelected, RelatedCateSelected } from '@root/types/common';
 import type { ListPlaceHolderProps } from '@root/types/common/props';
 import type { UnicodeClass } from '@root/types/fonts/atelier';

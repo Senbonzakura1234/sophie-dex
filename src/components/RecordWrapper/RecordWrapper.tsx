@@ -1,4 +1,4 @@
-import { framerFade } from '@root/constants/animations';
+import { framerFade } from '@root/animations';
 import type { RecordWrapperProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';

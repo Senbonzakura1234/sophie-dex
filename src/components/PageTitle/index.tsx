@@ -1,6 +1,6 @@
+import { framerFadeUp } from '@root/animations';
 import sophieLogo from '@root/assets/images/sophie-logo.png';
 import topBg from '@root/assets/images/top.jpg';
-import { framerFadeUp } from '@root/constants/animations';
 import type { PageTitleProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';

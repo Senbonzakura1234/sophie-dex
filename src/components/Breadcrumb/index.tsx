@@ -1,6 +1,6 @@
 import { HomeIcon, LinkIcon } from '@heroicons/react/24/solid';
+import { framerFadeUp } from '@root/animations';
 import { APP_AUTHOR, pageNameList } from '@root/constants';
-import { framerFadeUp } from '@root/constants/animations';
 import type { BreadcrumbProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';

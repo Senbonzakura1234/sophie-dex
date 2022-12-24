@@ -1,5 +1,5 @@
+import { framerFadeUp } from '@root/animations';
 import { defaultLimit } from '@root/constants';
-import { framerFadeUp } from '@root/constants/animations';
 import { useFilterControl } from '@root/hooks/useFilterControl';
 import { useGoToPageControl } from '@root/hooks/useGoToPageControl';
 import { useSearchInput } from '@root/hooks/useSearchInput';

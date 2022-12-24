@@ -1,6 +1,6 @@
+import { framerFadeUp } from '@root/animations';
 import ScrollToTop from '@root/components/ScrollToTop';
 import ScrollWrapper from '@root/components/ScrollWrapper';
-import { framerFadeUp } from '@root/constants/animations';
 import type { RootLayoutProps } from '@root/types/common/props';
 import { motion } from 'framer-motion';
 import type { FC } from 'react';
