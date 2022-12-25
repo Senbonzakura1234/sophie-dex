@@ -1,4 +1,4 @@
-import { framerFadeUp } from '@root/animations';
+import { getFramerFadeUp } from '@root/animations';
 import sophieLogo from '@root/assets/images/sophie-logo.png';
 import topBg from '@root/assets/images/top.jpg';
 import type { PageTitleProps } from '@root/types/common/props';
@@ -30,11 +30,11 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => {
 				priority={pageName !== 'Atelier Dex'}
 			/>
 
-			<div className='bg-primary/50 absolute inset-0 z-10'></div>
+			<div className='bg-primary/40 absolute inset-0 z-10'></div>
 
 			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-9 px-4 pt-5 2xl:gap-6'>
 				<motion.div
-					{...framerFadeUp}
+					{...getFramerFadeUp(0.3)}
 					className='text-secondary text-shadow-dark w-full text-center font-serif text-5xl font-bold xl:text-6xl 2xl:text-7xl'
 				>
 					<Image
@@ -56,7 +56,7 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => {
 								hidden: pageName === 'Atelier Dex',
 								block: pageName !== 'Atelier Dex',
 							},
-							'tracking-widest',
+							'tracking-widest text-slate-50',
 						)}
 					>
 						{pageName}

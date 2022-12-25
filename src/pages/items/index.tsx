@@ -1,7 +1,6 @@
 import FilterControl from '@root/components/FilterControl';
 import ItemRecord from '@root/components/ItemRecord';
 import ListLayout from '@root/components/Layout/ListLayout';
-import { FilterControlPlaceHolder, ListPlaceHolder } from '@root/components/SubComponent';
 import { defaultLimit } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import { trpc } from '@root/utils/trpc';
@@ -18,11 +17,13 @@ const Items: NextPage = () => {
 	return (
 		<ListLayout
 			isError={isError}
+			isSuccess={!isLoading && isSuccess}
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Item'
 			filterControl={
-				!isLoading && isSuccess ? (
+				!isLoading &&
+				isSuccess && (
 					<FilterControl
 						pageName='Item'
 						page={data.page ?? 1}
@@ -30,16 +31,10 @@ const Items: NextPage = () => {
 						limit={data.limit ?? defaultLimit}
 						totalRecord={data.totalRecord}
 					/>
-				) : (
-					<FilterControlPlaceHolder />
 				)
 			}
 		>
-			{!isLoading && isSuccess ? (
-				data.records.map(item => <ItemRecord key={item.id} record={item} />)
-			) : (
-				<ListPlaceHolder limit={defaultLimit} />
-			)}
+			{!isLoading && isSuccess && data.records.map(item => <ItemRecord key={item.id} record={item} />)}
 		</ListLayout>
 	);
 };

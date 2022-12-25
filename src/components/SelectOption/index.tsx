@@ -1,9 +1,9 @@
 import { Listbox } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/24/solid';
-import { framerFade } from '@root/animations';
 import type { SelectOptionProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
+
+import FadeWrapper from '../Animations/FadeWrapper';
 
 export default function SelectOption<V extends string | number | null>({
 	list,
@@ -23,7 +23,7 @@ export default function SelectOption<V extends string | number | null>({
 							{
 								'cursor-not-allowed opacity-50': list.length === 1,
 							},
-							'focus-visible:border-primary-focus focus-visible:ring-offset-secondary-focus relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left text-xs shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 2xl:text-sm',
+							'focus-visible:border-primary-focus focus-visible:ring-offset-secondary-focus relative w-full cursor-pointer rounded-lg bg-white py-2 pl-3 pr-10 text-left text-xs shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 2xl:text-sm',
 						)}
 					>
 						<span className='flex gap-2 truncate pl-1 font-bold'>
@@ -34,7 +34,7 @@ export default function SelectOption<V extends string | number | null>({
 							<ChevronUpDownIcon className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />
 						</span>
 					</Listbox.Button>
-					<motion.div {...framerFade}>
+					<FadeWrapper>
 						<Listbox.Options className='legacy-scroll-area absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm'>
 							{list.map((item, key) => (
 								<Listbox.Option
@@ -79,7 +79,7 @@ export default function SelectOption<V extends string | number | null>({
 								</Listbox.Option>
 							))}
 						</Listbox.Options>
-					</motion.div>
+					</FadeWrapper>
 				</div>
 			</Listbox>
 		</menu>

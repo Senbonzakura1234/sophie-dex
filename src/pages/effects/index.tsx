@@ -1,7 +1,6 @@
 import EffectRecord from '@root/components/EffectRecord';
 import FilterControl from '@root/components/FilterControl';
 import ListLayout from '@root/components/Layout/ListLayout';
-import { FilterControlPlaceHolder, ListPlaceHolder } from '@root/components/SubComponent';
 import { defaultLimit } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import { trpc } from '@root/utils/trpc';
@@ -18,11 +17,13 @@ const Effects: NextPage = () => {
 	return (
 		<ListLayout
 			isError={isError}
+			isSuccess={!isLoading && isSuccess}
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Effect'
 			filterControl={
-				!isLoading && isSuccess ? (
+				!isLoading &&
+				isSuccess && (
 					<FilterControl
 						pageName='Effect'
 						page={data.page ?? 1}
@@ -30,16 +31,10 @@ const Effects: NextPage = () => {
 						limit={data.limit ?? defaultLimit}
 						totalRecord={data.totalRecord}
 					/>
-				) : (
-					<FilterControlPlaceHolder />
 				)
 			}
 		>
-			{!isLoading && isSuccess ? (
-				data.records.map(effect => <EffectRecord key={effect.id} record={effect} />)
-			) : (
-				<ListPlaceHolder limit={defaultLimit} />
-			)}
+			{!isLoading && isSuccess && data.records.map(effect => <EffectRecord key={effect.id} record={effect} />)}
 		</ListLayout>
 	);
 };

@@ -16,7 +16,7 @@ const GREEN: FC<GREENProps> = ({ color }) => {
 			role='navigation'
 			aria-label={`Filter ${color} Item`}
 			disabled={!isReady}
-			className='btn btn-xs border-green-500 bg-green-500 font-extrabold capitalize hover:border-green-600 hover:bg-green-600'
+			className='btn btn-xs border-green-500 bg-green-500 font-extrabold capitalize text-slate-50 hover:border-green-600 hover:bg-green-600'
 		>
 			{color}
 		</button>

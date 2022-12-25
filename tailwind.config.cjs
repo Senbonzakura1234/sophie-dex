@@ -27,7 +27,8 @@ module.exports = {
 	},
 	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 	daisyui: {
-		themes: ['garden'],
+		/** @type {import('@root/types/common/tailwind').TailwindTheme} */
+		themes: ['cupcake'],
 		// darkTheme: 'dracula',
 	},
 	darkMode: 'class',

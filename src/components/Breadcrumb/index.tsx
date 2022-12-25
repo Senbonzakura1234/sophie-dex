@@ -1,5 +1,5 @@
 import { HomeIcon, LinkIcon } from '@heroicons/react/24/solid';
-import { framerFadeUp } from '@root/animations';
+import { getFramerFadeUp } from '@root/animations';
 import { APP_AUTHOR, pageNameList } from '@root/constants';
 import type { BreadcrumbProps } from '@root/types/common/props';
 import clsx from 'clsx';
@@ -16,15 +16,15 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 
 	return (
 		<>
-			<motion.div className='flex w-full' {...framerFadeUp}>
-				<nav className='card card-compact bg-base-100 mx-auto w-64 max-w-full py-1 2xl:w-2/5'>
+			<motion.div className='flex w-full' {...getFramerFadeUp(0.3)}>
+				<nav className='card card-compact bg-base-100 shadow-primary mx-auto w-64 max-w-full py-1 shadow-lg 2xl:w-2/5'>
 					<div className='breadcrumbs mx-auto text-xs font-extrabold 2xl:text-base'>
 						<ul className='gap-1 font-serif font-extrabold'>
 							<li>
 								<Link
 									className={clsx(
 										{
-											'link-hover text-primary': pathname !== '/',
+											'link-hover text-primary hover:text-primary-focus': pathname !== '/',
 										},
 										'link gap-1',
 									)}
@@ -42,7 +42,8 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 										<Link
 											className={clsx(
 												{
-													'link-hover text-primary': pathname !== `/${n.toLowerCase()}s`,
+													'link-hover text-primary hover:text-primary-focus':
+														pathname !== `/${n.toLowerCase()}s`,
 												},
 												'link gap-1',
 											)}
@@ -62,7 +63,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 				</nav>
 			</motion.div>
 
-			<motion.div className={clsx({ hidden: !isShowAuthor })} {...framerFadeUp}>
+			<motion.div className={clsx({ hidden: !isShowAuthor })} {...getFramerFadeUp(0.3)}>
 				<Link
 					href={{
 						protocol: 'https',
@@ -77,7 +78,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 						pathname: APP_AUTHOR,
 					}}
 					aria-label={`github@${APP_AUTHOR}`}
-					className='btn h-auto min-h-0 gap-2 rounded-full bg-white fill-black py-3 capitalize text-black hover:bg-black hover:fill-white hover:text-white'
+					className='btn h-auto min-h-0 gap-2 rounded-full bg-white fill-black py-3 capitalize text-black shadow-lg shadow-black hover:bg-black hover:fill-white hover:text-white hover:shadow hover:shadow-slate-700'
 				>
 					<svg className='my-auto h-4 w-4' viewBox='0 0 98 96' xmlns='http://www.w3.org/2000/svg'>
 						<path

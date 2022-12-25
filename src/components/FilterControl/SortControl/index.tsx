@@ -30,8 +30,8 @@ const SortControl: FC = () => {
 					}}
 					className={clsx(
 						{
-							'btn-active btn-primary': sortBy === 'index',
-							'btn-secondary': sortBy !== 'index',
+							'btn-active btn-primary text-slate-50': sortBy === 'index',
+							'btn-ghost': sortBy !== 'index',
 						},
 						'btn btn-xs capitalize',
 					)}
@@ -48,8 +48,8 @@ const SortControl: FC = () => {
 					}}
 					className={clsx(
 						{
-							'btn-active btn-primary': sortBy === 'name',
-							'btn-secondary': sortBy !== 'name',
+							'btn-active btn-primary text-slate-50': sortBy === 'name',
+							'btn-ghost': sortBy !== 'name',
 						},
 						'btn btn-xs capitalize',
 					)}
@@ -71,8 +71,8 @@ const SortControl: FC = () => {
 					}}
 					className={clsx(
 						{
-							'btn-active btn-primary': direction === 'asc',
-							'btn-secondary': direction !== 'asc',
+							'btn-active btn-primary text-slate-50': direction === 'asc',
+							'btn-ghost': direction !== 'asc',
 						},
 						'btn btn-xs',
 					)}
@@ -89,8 +89,8 @@ const SortControl: FC = () => {
 					}}
 					className={clsx(
 						{
-							'btn-active btn-primary': direction === 'desc',
-							'btn-secondary': direction !== 'desc',
+							'btn-active btn-primary text-slate-50': direction === 'desc',
+							'btn-ghost': direction !== 'desc',
 						},
 						'btn btn-xs',
 					)}

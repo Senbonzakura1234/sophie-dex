@@ -16,7 +16,7 @@ const BLUE: FC<BLUEProps> = ({ color }) => {
 			role='navigation'
 			aria-label={`Filter ${color} Item`}
 			disabled={!isReady}
-			className='btn btn-xs border-blue-500 bg-blue-500 font-extrabold hover:border-blue-600 hover:bg-blue-600'
+			className='btn btn-xs border-blue-500 bg-blue-500 font-extrabold text-slate-50 hover:border-blue-600 hover:bg-blue-600'
 		>
 			{color}
 		</button>

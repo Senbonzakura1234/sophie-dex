@@ -18,8 +18,16 @@ export type ClassNameProps = { className?: string };
 export type ChildrenProps = { children?: ReactNode };
 export type RefProps<E> = { refObject: RefObject<E> };
 export type PageNameProps = { pageName: PageName };
+export type IsSuccessProps = { isSuccess: boolean };
 
 export type RecordProps<T> = { record: T };
+
+export type FadeWrapperProps = {
+	children: ReactNode;
+	show?: boolean;
+	appear?: boolean;
+	isTransForm?: boolean;
+};
 
 export type BreadcrumbProps = { isShowAuthor: boolean };
 
@@ -79,8 +87,8 @@ export type ErrorResultProps = {
 	errorMessage: string | undefined;
 };
 
-export type DetailLayoutProps = DefaultLayoutProps & { extraHead?: ReactNode } & ErrorResultProps;
-export type ListLayoutProps = DefaultLayoutProps & { filterControl?: ReactNode } & ErrorResultProps;
+export type DetailLayoutProps = DefaultLayoutProps & { extraHead?: ReactNode } & ErrorResultProps & IsSuccessProps;
+export type ListLayoutProps = DefaultLayoutProps & { filterControl?: ReactNode } & ErrorResultProps & IsSuccessProps;
 export type RootLayoutProps = ChildrenProps;
 
 export type PageTitleProps = PageNameProps;
@@ -103,7 +111,9 @@ export type ScrollToTopProps = {
 
 export type ScrollWrapperProps = ChildrenProps & ClassNameProps & RefProps<HTMLDivElement>;
 
-export type ListPlaceHolderProps = { limit: number };
+export type RecordPlaceHolderProps = IsSuccessProps;
+export type ListPlaceHolderProps = { limit: number } & IsSuccessProps;
+export type FilterControlPlaceHolderProps = IsSuccessProps;
 
 export type CategoriesProps = {
 	categories: CATEGORY[];

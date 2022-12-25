@@ -6,7 +6,7 @@ import Breadcrumb from '../Breadcrumb';
 
 const PageFooter: FC = () => {
 	return (
-		<section className='2xl:h1/4 relative h-1/3 w-full overflow-hidden shadow-inner'>
+		<section className='2xl:h1/4 relative h-1/3 w-full overflow-hidden shadow-lg'>
 			<Image
 				className='object-cover'
 				fill

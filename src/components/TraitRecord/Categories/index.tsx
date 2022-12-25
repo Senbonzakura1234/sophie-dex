@@ -20,7 +20,6 @@ const Categories: FC<CategoriesProps> = ({ categories }) => {
 					<div
 						className={clsx(
 							{
-								'2xl:tooltip-secondary': securedQuery.category === code && isClickAble(code),
 								'2xl:tooltip-primary': securedQuery.category !== code && isClickAble(code),
 							},
 							'2xl:tooltip 2xl:tooltip-bottom',
@@ -32,8 +31,7 @@ const Categories: FC<CategoriesProps> = ({ categories }) => {
 							disabled={!isClickAble(code)}
 							className={clsx(
 								{
-									'btn-secondary': securedQuery.category === code && isClickAble(code),
-									'btn-primary': securedQuery.category !== code && isClickAble(code),
+									'btn-primary text-slate-50': securedQuery.category !== code && isClickAble(code),
 								},
 								'btn btn-sm 2xl:btn-md',
 							)}

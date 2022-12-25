@@ -1,4 +1,4 @@
-import { framerFadeUp } from '@root/animations';
+import { getFramerFadeUp } from '@root/animations';
 import { defaultLimit } from '@root/constants';
 import { useFilterControl } from '@root/hooks/useFilterControl';
 import { useGoToPageControl } from '@root/hooks/useGoToPageControl';
@@ -38,7 +38,7 @@ const FilterControl: FC<FilterControlProps> = ({
 
 	return (
 		<>
-			<motion.section {...framerFadeUp} className='container mx-auto px-3 pt-6 pb-3'>
+			<motion.section {...getFramerFadeUp()} className='container mx-auto px-3 pt-6 pb-3'>
 				<SearchInput
 					performSearch={performSearch}
 					searchInput={searchInput}
@@ -48,8 +48,8 @@ const FilterControl: FC<FilterControlProps> = ({
 				/>
 			</motion.section>
 
-			<motion.section {...framerFadeUp} className='container relative z-30 mx-auto p-3'>
-				<nav className='card bg-base-100 flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-2xl 2xl:place-content-end'>
+			<motion.section {...getFramerFadeUp()} className='container relative z-30 mx-auto p-3'>
+				<nav className='card bg-base-100 shadow-primary flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-lg 2xl:place-content-end'>
 					<SortControl />
 
 					<CircleDivider className='bg-base-300 my-auto hidden h-2 w-2 2xl:block' />
@@ -63,7 +63,7 @@ const FilterControl: FC<FilterControlProps> = ({
 
 					<CircleDivider className='bg-base-300 my-auto hidden h-2 w-2 2xl:block' />
 
-					<div className='text-secondary-content my-auto text-xs font-semibold'>
+					<div className='text-neutral my-auto text-xs font-semibold'>
 						{from} - {to} of {totalRecord} records
 					</div>
 

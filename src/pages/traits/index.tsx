@@ -1,6 +1,5 @@
 import FilterControl from '@root/components/FilterControl';
 import ListLayout from '@root/components/Layout/ListLayout';
-import { FilterControlPlaceHolder, ListPlaceHolder } from '@root/components/SubComponent';
 import TraitRecord from '@root/components/TraitRecord';
 import { defaultLimit } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
@@ -18,11 +17,13 @@ const Traits: NextPage = () => {
 	return (
 		<ListLayout
 			isError={isError}
+			isSuccess={!isLoading && isSuccess}
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Trait'
 			filterControl={
-				!isLoading && isSuccess ? (
+				!isLoading &&
+				isSuccess && (
 					<FilterControl
 						pageName='Trait'
 						page={data.page ?? 1}
@@ -30,16 +31,10 @@ const Traits: NextPage = () => {
 						limit={data.limit ?? defaultLimit}
 						totalRecord={data.totalRecord}
 					/>
-				) : (
-					<FilterControlPlaceHolder />
 				)
 			}
 		>
-			{!isLoading && isSuccess ? (
-				data.records.map(trait => <TraitRecord key={trait.id} record={trait} />)
-			) : (
-				<ListPlaceHolder limit={defaultLimit} />
-			)}
+			{!isLoading && isSuccess && data.records.map(trait => <TraitRecord key={trait.id} record={trait} />)}
 		</ListLayout>
 	);
 };

@@ -11,7 +11,7 @@ const SearchInput: FC<SearchInputProps> = ({
 	resetSearch,
 }) => {
 	return (
-		<div className='card bg-base-100 relative ml-auto flex w-full flex-row flex-wrap gap-3 rounded-full py-[9px] px-5 shadow-2xl md:w-1/4 md:min-w-[300px]'>
+		<div className='card bg-base-100 shadow-primary relative ml-auto flex w-full flex-row flex-wrap gap-3 rounded-full py-[9px] px-5 shadow-lg md:w-1/4 md:min-w-[300px]'>
 			<input
 				value={searchInput}
 				onChange={e => setSearchValue(() => e.target.value)}

@@ -1,6 +1,5 @@
 import ItemRecord from '@root/components/ItemRecord';
 import DetailLayout from '@root/components/Layout/DetailLayout';
-import { RecordPlaceHolder } from '@root/components/SubComponent';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import { trpc } from '@root/utils/trpc';
 import type { NextPage } from 'next';
@@ -17,6 +16,7 @@ const ItemDetail: NextPage = () => {
 	return (
 		<DetailLayout
 			isError={isError}
+			isSuccess={!isLoading && isSuccess}
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Item'
@@ -32,7 +32,7 @@ const ItemDetail: NextPage = () => {
 				) : null
 			}
 		>
-			{!isLoading && isSuccess ? <ItemRecord record={data} /> : <RecordPlaceHolder />}
+			{!isLoading && isSuccess && <ItemRecord record={data} />}
 		</DetailLayout>
 	);
 };

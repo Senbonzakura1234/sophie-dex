@@ -23,7 +23,7 @@ const ApplyFilter: FC<ApplyFilterProps> = ({
 				}}
 				aria-label='Apply Filter'
 				disabled={!isCanApplyFilter}
-				className='btn btn-xs btn-primary gap-1 capitalize'
+				className='btn btn-xs btn-primary gap-1 capitalize text-slate-50'
 			>
 				<span className='hide 2xl:inline'>Apply</span>Filter
 			</button>

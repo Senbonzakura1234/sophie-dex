@@ -1,8 +1,13 @@
 import type { CATEGORY, COLOR } from '@prisma/client';
-import { framerFade } from '@root/animations';
+import { getFramerFadeUp } from '@root/animations';
 import type { cateSelected, ColorSelected, RelatedCateSelected } from '@root/types/common';
-import type { ListPlaceHolderProps } from '@root/types/common/props';
+import type {
+	FilterControlPlaceHolderProps,
+	ListPlaceHolderProps,
+	RecordPlaceHolderProps,
+} from '@root/types/common/props';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
+import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import type { FC } from 'react';
 
@@ -260,27 +265,37 @@ export const ColorSelectList = [
 	})),
 ] satisfies ColorSelected[];
 
-export const RecordPlaceHolder: FC = () => (
-	<motion.div {...framerFade} className='card bg-base-100 h-[300px] w-full animate-pulse'></motion.div>
+export const RecordPlaceHolder: FC<RecordPlaceHolderProps> = ({ isSuccess }) => (
+	<motion.div
+		{...getFramerFadeUp(0.3)}
+		className={clsx({ hidden: isSuccess }, 'card bg-base-100 h-[300px] w-full animate-pulse')}
+	></motion.div>
 );
 
-export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ limit }) => (
+export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ limit, isSuccess }) => (
 	<>
 		{Array(limit)
 			.fill(0)
 			.map((_, k) => (
-				<RecordPlaceHolder key={k} />
+				<RecordPlaceHolder key={k} isSuccess={isSuccess} />
 			))}
 	</>
 );
-export const FilterControlPlaceHolder: FC = () => (
+
+export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ isSuccess }) => (
 	<>
-		<motion.div {...framerFade} className='container mx-auto w-full animate-pulse px-3 pb-3 pt-6'>
-			<div className='card bg-base-100 ml-auto h-[50px] w-full rounded-full shadow-2xl md:w-1/4 md:min-w-[300px]'></div>
+		<motion.div
+			{...getFramerFadeUp()}
+			className={clsx({ hidden: isSuccess }, 'container mx-auto w-full animate-pulse px-3 pb-3 pt-6')}
+		>
+			<div className='card bg-base-100 shadow-primary ml-auto h-[50px] w-full rounded-full shadow-lg md:w-1/4 md:min-w-[300px]'></div>
 		</motion.div>
 
-		<motion.div {...framerFade} className='container mx-auto w-full animate-pulse p-3'>
-			<div className='card bg-base-100 h-[60px] w-full shadow-2xl'></div>
+		<motion.div
+			{...getFramerFadeUp()}
+			className={clsx({ hidden: isSuccess }, 'container mx-auto w-full animate-pulse p-3')}
+		>
+			<div className='card bg-base-100 shadow-primary h-[60px] w-full shadow-lg'></div>
 		</motion.div>
 	</>
 );

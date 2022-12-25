@@ -1,5 +1,4 @@
 import DetailLayout from '@root/components/Layout/DetailLayout';
-import { RecordPlaceHolder } from '@root/components/SubComponent';
 import TraitRecord from '@root/components/TraitRecord';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import { trpc } from '@root/utils/trpc';
@@ -17,6 +16,7 @@ const TraitDetail: NextPage = () => {
 	return (
 		<DetailLayout
 			isError={isError}
+			isSuccess={!isLoading && isSuccess}
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Trait'
@@ -29,7 +29,7 @@ const TraitDetail: NextPage = () => {
 				) : null
 			}
 		>
-			{!isLoading && isSuccess ? <TraitRecord record={data} /> : <RecordPlaceHolder />}
+			{!isLoading && isSuccess && <TraitRecord record={data} />}
 		</DetailLayout>
 	);
 };

@@ -1,6 +1,5 @@
 import EffectRecord from '@root/components/EffectRecord';
 import DetailLayout from '@root/components/Layout/DetailLayout';
-import { RecordPlaceHolder } from '@root/components/SubComponent';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import { trpc } from '@root/utils/trpc';
 import type { NextPage } from 'next';
@@ -17,6 +16,7 @@ const EffectDetail: NextPage = () => {
 	return (
 		<DetailLayout
 			isError={isError}
+			isSuccess={!isLoading && isSuccess}
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Effect'
@@ -29,7 +29,7 @@ const EffectDetail: NextPage = () => {
 				) : null
 			}
 		>
-			{!isLoading && isSuccess ? <EffectRecord record={data} /> : <RecordPlaceHolder />}
+			{!isLoading && isSuccess && <EffectRecord record={data} />}
 		</DetailLayout>
 	);
 };
