@@ -29,6 +29,8 @@ const Categories: FC<CategoriesProps> = ({ categories }) => {
 					>
 						<button
 							disabled={!isClickAble(code)}
+							aria-label={`Filter by ${name}`}
+							role='navigation'
 							className={clsx(
 								{
 									'btn-primary text-slate-50': securedQuery.category !== code && isClickAble(code),
