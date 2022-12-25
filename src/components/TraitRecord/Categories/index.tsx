@@ -35,7 +35,7 @@ const Categories: FC<CategoriesProps> = ({ categories }) => {
 								{
 									'btn-primary text-slate-50': securedQuery.category !== code && isClickAble(code),
 								},
-								'btn btn-sm 2xl:btn-md',
+								'btn btn-sm 2xl:btn-md rounded-3xl',
 							)}
 							onClick={() => {
 								if (isClickAble(code))
