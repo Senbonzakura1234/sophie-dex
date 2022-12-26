@@ -1,4 +1,3 @@
-import FilterControl from '@root/components/FilterControl';
 import ListLayout from '@root/components/Layout/ListLayout';
 import TraitRecord from '@root/components/TraitRecord';
 import { defaultLimit } from '@root/constants';
@@ -21,18 +20,10 @@ const Traits: NextPage = () => {
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Trait'
-			filterControl={
-				!isLoading &&
-				isSuccess && (
-					<FilterControl
-						pageName='Trait'
-						page={data.page ?? 1}
-						totalPage={data.totalPage}
-						limit={data.limit ?? defaultLimit}
-						totalRecord={data.totalRecord}
-					/>
-				)
-			}
+			page={data?.page ?? 1}
+			totalPage={data?.totalPage ?? 0}
+			limit={data?.limit ?? defaultLimit}
+			totalRecord={data?.totalRecord ?? 0}
 		>
 			{!isLoading && isSuccess && data.records.map(trait => <TraitRecord key={trait.id} record={trait} />)}
 		</ListLayout>

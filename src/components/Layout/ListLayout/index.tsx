@@ -1,4 +1,5 @@
 import ErrorModal from '@root/components/ErrorModal';
+import FilterControl from '@root/components/FilterControl';
 import PageFooter from '@root/components/PageFooter';
 import PageTitle from '@root/components/PageTitle';
 import { FilterControlPlaceHolder, ListPlaceHolder } from '@root/components/SubComponent';
@@ -10,12 +11,15 @@ import type { FC } from 'react';
 
 const ListLayout: FC<ListLayoutProps> = ({
 	pageName,
-	filterControl,
 	children,
 	errorData,
 	errorMessage,
 	isError,
 	isSuccess,
+	limit,
+	page,
+	totalPage,
+	totalRecord,
 }) => {
 	return (
 		<>
@@ -28,12 +32,33 @@ const ListLayout: FC<ListLayoutProps> = ({
 
 			<FilterControlPlaceHolder isSuccess={isSuccess} />
 
-			{filterControl}
+			{isSuccess && (
+				<FilterControl
+					pageName={pageName}
+					page={page}
+					totalPage={totalPage}
+					limit={limit}
+					totalRecord={totalRecord}
+				/>
+			)}
 
 			<section className='container mx-auto grid auto-rows-fr gap-6 px-3 pt-3 pb-9 2xl:grid-cols-2'>
 				<ListPlaceHolder limit={defaultLimit} isSuccess={isSuccess} />
 				{children}
 			</section>
+
+			<FilterControlPlaceHolder isSuccess={isSuccess} isPaginateOnly />
+
+			{isSuccess && (
+				<FilterControl
+					pageName={pageName}
+					page={page}
+					totalPage={totalPage}
+					limit={limit}
+					totalRecord={totalRecord}
+					isPaginateOnly
+				/>
+			)}
 
 			<PageFooter />
 

@@ -1,6 +1,5 @@
 import type { CATEGORY } from '@prisma/client';
 import { categoryMap, hideCategoryOnTrait } from '@root/components/SubComponent';
-import { defaultLimit } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { CategoriesProps } from '@root/types/common/props';
 import clsx from 'clsx';
@@ -40,8 +39,8 @@ const Categories: FC<CategoriesProps> = ({ categories }) => {
 							onClick={() => {
 								if (isClickAble(code))
 									updateQuery({
-										page: 1,
-										limit: defaultLimit,
+										page: null,
+										limit: null,
 										category: securedQuery.category === code ? null : code,
 									});
 							}}

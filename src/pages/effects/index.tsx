@@ -1,5 +1,4 @@
 import EffectRecord from '@root/components/EffectRecord';
-import FilterControl from '@root/components/FilterControl';
 import ListLayout from '@root/components/Layout/ListLayout';
 import { defaultLimit } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
@@ -21,18 +20,10 @@ const Effects: NextPage = () => {
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Effect'
-			filterControl={
-				!isLoading &&
-				isSuccess && (
-					<FilterControl
-						pageName='Effect'
-						page={data.page ?? 1}
-						totalPage={data.totalPage}
-						limit={data.limit ?? defaultLimit}
-						totalRecord={data.totalRecord}
-					/>
-				)
-			}
+			page={data?.page ?? 1}
+			totalPage={data?.totalPage ?? 0}
+			limit={data?.limit ?? defaultLimit}
+			totalRecord={data?.totalRecord ?? 0}
 		>
 			{!isLoading && isSuccess && data.records.map(effect => <EffectRecord key={effect.id} record={effect} />)}
 		</ListLayout>

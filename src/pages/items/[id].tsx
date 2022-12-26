@@ -23,7 +23,7 @@ const ItemDetail: NextPage = () => {
 			extraHead={
 				!isLoading && isSuccess ? (
 					<Head>
-						<title>Item - {data.name}</title>
+						<title>{data.name}</title>
 						<meta
 							name='description'
 							content={data.relatedCategories.map(c => `${c.name} (${c.count})`).join(', ')}

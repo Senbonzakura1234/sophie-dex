@@ -23,7 +23,7 @@ const TraitDetail: NextPage = () => {
 			extraHead={
 				!isLoading && isSuccess ? (
 					<Head>
-						<title>Trait - {data.name}</title>
+						<title>{data.name}</title>
 						<meta name='description' content={data.description} />
 					</Head>
 				) : null

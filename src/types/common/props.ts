@@ -19,6 +19,7 @@ export type ChildrenProps = { children?: ReactNode };
 export type RefProps<E> = { refObject: RefObject<E> };
 export type PageNameProps = { pageName: PageName };
 export type IsSuccessProps = { isSuccess: boolean };
+export type IsPaginateOnlyProps = { isPaginateOnly?: boolean };
 
 export type RecordProps<T> = { record: T };
 
@@ -42,9 +43,10 @@ export type FilterControlProps = {
 	totalPage: number;
 	limit: number;
 	totalRecord: number;
-} & PageNameProps;
+} & PageNameProps &
+	IsPaginateOnlyProps;
 
-export type SortControlProps = PageNameProps;
+export type SortControlProps = PageNameProps & IsPaginateOnlyProps;
 
 export type ApplyFilterProps = { filterData: FilterData; isCanApplyFilter: boolean };
 
@@ -68,7 +70,7 @@ export type ResetFilterProps = {
 	setFilterData: SetFilterData;
 	setGoToPage: SetGoToPage;
 	setSearchValue: SetSearchInput;
-};
+} & IsPaginateOnlyProps;
 
 export type ColorProps = { color: COLOR };
 
@@ -90,7 +92,10 @@ export type ErrorResultProps = {
 };
 
 export type DetailLayoutProps = DefaultLayoutProps & { extraHead?: ReactNode } & ErrorResultProps & IsSuccessProps;
-export type ListLayoutProps = DefaultLayoutProps & { filterControl?: ReactNode } & ErrorResultProps & IsSuccessProps;
+export type ListLayoutProps = DefaultLayoutProps &
+	ErrorResultProps &
+	Omit<FilterControlProps, 'pageName' | 'isPaginateOnly'> &
+	IsSuccessProps;
 export type RootLayoutProps = ChildrenProps;
 
 export type PageTitleProps = PageNameProps;
@@ -115,7 +120,7 @@ export type ScrollWrapperProps = ChildrenProps & ClassNameProps & RefProps<HTMLD
 
 export type RecordPlaceHolderProps = IsSuccessProps;
 export type ListPlaceHolderProps = { limit: number } & IsSuccessProps;
-export type FilterControlPlaceHolderProps = IsSuccessProps;
+export type FilterControlPlaceHolderProps = IsSuccessProps & IsPaginateOnlyProps;
 
 export type CategoriesProps = {
 	categories: CATEGORY[];

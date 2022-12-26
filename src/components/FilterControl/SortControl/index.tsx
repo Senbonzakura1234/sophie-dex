@@ -4,11 +4,7 @@ import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
-const SortControl: FC<SortControlProps> = (
-	{
-		// pageName
-	},
-) => {
+const SortControl: FC<SortControlProps> = ({ pageName, isPaginateOnly }) => {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const { sortBy, direction } = useMemo(
@@ -20,110 +16,110 @@ const SortControl: FC<SortControlProps> = (
 	);
 
 	return (
-		<div className='my-auto flex w-full flex-wrap gap-2 2xl:w-auto'>
-			<div className='input-group w-auto'>
-				<button role='none' className='btn btn-xs border-y-2 border-r-0 capitalize' disabled>
-					Sort:
-				</button>
+		<>
+			<div className={clsx({ hidden: isPaginateOnly }, 'my-auto flex w-full flex-wrap gap-2 2xl:w-auto')}>
+				<small className='my-auto text-sm font-bold'>Sort:</small>
 
-				<button
-					role='navigation'
-					aria-label='Sort By Index'
-					disabled={!isReady}
-					onClick={() => {
-						if (sortBy !== 'index') updateQuery({ sortBy: 'index', direction: 'asc' });
-					}}
-					className={clsx(
-						{
-							'btn-active btn-primary text-slate-50': sortBy === 'index',
-							'btn-ghost border-accent': sortBy !== 'index',
-						},
-						'btn btn-xs border-y-2 border-r-0 capitalize',
-					)}
-				>
-					Index
-				</button>
+				<div className='input-group w-auto'>
+					<button
+						role='navigation'
+						aria-label='Sort By Index'
+						disabled={!isReady}
+						onClick={() => {
+							if (sortBy !== 'index') updateQuery({ sortBy: 'index', direction: 'asc' });
+						}}
+						className={clsx(
+							{
+								'btn-active btn-primary text-slate-50': sortBy === 'index',
+								'btn-ghost border-accent': sortBy !== 'index',
+							},
+							'btn btn-xs border-y-2 border-r-0 capitalize',
+						)}
+					>
+						Index
+					</button>
 
-				{/* <button
-					role='navigation'
-					aria-label='Sort By Name'
-					disabled={!isReady || pageName !== 'Item'}
-					onClick={() => {
-						if (sortBy !== 'level') updateQuery({ sortBy: 'level', direction: 'asc' });
-					}}
-					className={clsx(
-						{
-							'btn-active btn-primary no-animation cursor-default text-slate-50': sortBy === 'level',
-							'btn-ghost border-accent': sortBy !== 'level',
-							hidden: pageName !== 'Item',
-						},
-						'btn btn-xs border-y-2 border-x-0 capitalize',
-					)}
-				>
-					Level
-				</button> */}
+					<button
+						role='navigation'
+						aria-label='Sort By Name'
+						disabled={!isReady || pageName !== 'Item'}
+						onClick={() => {
+							if (sortBy !== 'level') updateQuery({ sortBy: 'level', direction: 'asc' });
+						}}
+						className={clsx(
+							{
+								'btn-active btn-primary no-animation cursor-default text-slate-50': sortBy === 'level',
+								'btn-ghost border-accent': sortBy !== 'level',
+								hidden: pageName !== 'Item',
+							},
+							'btn btn-xs border-y-2 border-x-0 capitalize',
+						)}
+					>
+						Level
+					</button>
 
-				<button
-					role='navigation'
-					aria-label='Sort By Name'
-					disabled={!isReady}
-					onClick={() => {
-						if (sortBy !== 'name') updateQuery({ sortBy: 'name', direction: 'asc' });
-					}}
-					className={clsx(
-						{
-							'btn-active btn-primary text-slate-50': sortBy === 'name',
-							'btn-ghost border-accent': sortBy !== 'name',
-						},
-						'btn btn-xs border-y-2 border-l-0 capitalize',
-					)}
-				>
-					Name
-				</button>
+					<button
+						role='navigation'
+						aria-label='Sort By Name'
+						disabled={!isReady}
+						onClick={() => {
+							if (sortBy !== 'name') updateQuery({ sortBy: 'name', direction: 'asc' });
+						}}
+						className={clsx(
+							{
+								'btn-active btn-primary text-slate-50': sortBy === 'name',
+								'btn-ghost border-accent': sortBy !== 'name',
+							},
+							'btn btn-xs border-y-2 border-l-0 capitalize',
+						)}
+					>
+						Name
+					</button>
+				</div>
 			</div>
 
-			<div className='input-group w-auto'>
-				<button role='none' className='btn btn-xs border-y-2 border-r-0 capitalize' disabled>
-					Direction:
-				</button>
+			<div className={clsx({ hidden: isPaginateOnly }, 'my-auto flex w-full flex-wrap gap-2 2xl:w-auto')}>
+				<small className='my-auto text-sm font-bold'>Direction:</small>
 
-				<button
-					role='navigation'
-					aria-label='Sort Ascending'
-					disabled={!isReady}
-					onClick={() => {
-						if (direction !== 'asc') updateQuery({ direction: 'asc' });
-					}}
-					className={clsx(
-						{
-							'btn-active btn-primary no-animation cursor-default text-slate-50': direction === 'asc',
-							'btn-ghost border-accent': direction !== 'asc',
-						},
-						'btn btn-xs border-y-2 border-r-0',
-					)}
-				>
-					asc
-				</button>
+				<div className='input-group w-auto'>
+					<button
+						role='navigation'
+						aria-label='Sort Ascending'
+						disabled={!isReady}
+						onClick={() => {
+							if (direction !== 'asc') updateQuery({ direction: 'asc' });
+						}}
+						className={clsx(
+							{
+								'btn-active btn-primary no-animation cursor-default text-slate-50': direction === 'asc',
+								'btn-ghost border-accent': direction !== 'asc',
+							},
+							'btn btn-xs border-y-2 border-r-0',
+						)}
+					>
+						asc
+					</button>
 
-				<button
-					role='navigation'
-					aria-label='Sort Descending'
-					disabled={!isReady}
-					onClick={() => {
-						if (direction !== 'desc') updateQuery({ direction: 'desc' });
-					}}
-					className={clsx(
-						{
-							'btn-active btn-primary text-slate-50': direction === 'desc',
-							'btn-ghost border-accent': direction !== 'desc',
-						},
-						'btn btn-xs border-y-2 border-l-0',
-					)}
-				>
-					desc
-				</button>
+					<button
+						role='navigation'
+						aria-label='Sort Descending'
+						disabled={!isReady}
+						onClick={() => {
+							if (direction !== 'desc') updateQuery({ direction: 'desc' });
+						}}
+						className={clsx(
+							{
+								'btn-active btn-primary text-slate-50': direction === 'desc',
+								'btn-ghost border-accent': direction !== 'desc',
+							},
+							'btn btn-xs border-y-2 border-l-0',
+						)}
+					>
+						desc
+					</button>
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

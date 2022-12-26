@@ -113,7 +113,7 @@ export const categoryMap = new Map<
 	],
 ]);
 
-const colorMap = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW', 'NONE'] satisfies COLOR[];
+const colorMap = ['RED', 'BLUE', 'GREEN', 'YELLOW', 'WHITE', 'NONE'] satisfies COLOR[];
 
 export const RelatedCategorySelectList = [
 	{

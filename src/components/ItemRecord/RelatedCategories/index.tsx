@@ -1,10 +1,11 @@
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { RelatedCategoriesProps } from '@root/types/common/props';
 import { RelatedCategoryDisplay } from '@root/types/model';
+import clsx from 'clsx';
 import type { FC } from 'react';
 
 const RelatedCategories: FC<RelatedCategoriesProps> = ({ relatedCategories }) => {
-	const { isReady, updateQuery } = useSearchQuery();
+	const { isReady, updateQuery, securedQuery } = useSearchQuery();
 
 	return (
 		<div className='flex flex-wrap gap-2'>
@@ -16,7 +17,10 @@ const RelatedCategories: FC<RelatedCategoriesProps> = ({ relatedCategories }) =>
 					}}
 					aria-label={RelatedCategoryDisplay[c.name]}
 					key={k}
-					className='link link-hover text-accent-content font-serif text-xs capitalize italic'
+					className={clsx(
+						{ 'link link-hover text-accent-content italic': c.name !== securedQuery.relatedCategory },
+						'font-serif text-xs capitalize italic',
+					)}
 				>
 					{RelatedCategoryDisplay[c.name]} ({c.count})
 				</a>

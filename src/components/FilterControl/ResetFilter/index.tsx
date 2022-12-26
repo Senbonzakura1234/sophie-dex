@@ -1,6 +1,7 @@
 import { defaultSelect } from '@root/components/SubComponent';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { ResetFilterProps } from '@root/types/common/props';
+import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
@@ -8,6 +9,7 @@ const ResetFilter: FC<ResetFilterProps> = ({
 	setFilterData: { setCateSelected, setColorSelected, setRelatedCateSelected },
 	setGoToPage,
 	setSearchValue,
+	isPaginateOnly,
 }) => {
 	const { resetQuery, isReady, securedQuery } = useSearchQuery();
 
@@ -20,7 +22,7 @@ const ResetFilter: FC<ResetFilterProps> = ({
 
 	return (
 		<button
-			className='btn btn-xs my-auto gap-1 capitalize'
+			className={clsx({ hidden: isPaginateOnly }, 'btn btn-xs my-auto gap-1 capitalize')}
 			role='navigation'
 			disabled={isDisable}
 			onClick={() => {

@@ -23,7 +23,7 @@ const EffectDetail: NextPage = () => {
 			extraHead={
 				!isLoading && isSuccess ? (
 					<Head>
-						<title>Effect - {data.name}</title>
+						<title>{data.name}</title>
 						<meta name='description' content={data.description} />
 					</Head>
 				) : null
