@@ -14,8 +14,8 @@ const CategoryFilter: FC<CategoryFilterProps> = ({
 		<div
 			className={clsx(
 				{
-					flex: pageName === 'Trait',
-					hidden: pageName !== 'Trait',
+					flex: pageName !== 'Effect',
+					hidden: pageName === 'Effect',
 				},
 				'grow gap-2 2xl:grow-0',
 			)}
@@ -25,7 +25,7 @@ const CategoryFilter: FC<CategoryFilterProps> = ({
 				list={categorySelectList}
 				setValue={setCateSelected}
 				value={cateSelected}
-				className='my-auto w-36'
+				className='my-auto w-[10.25rem]'
 				useCustomIcon={true}
 				withIcon={true}
 				useAtelierFont={true}

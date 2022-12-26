@@ -34,7 +34,7 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => {
 
 			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-9 px-4 pt-5 2xl:gap-6'>
 				<motion.div
-					{...getFramerFadeUp(0.3)}
+					{...getFramerFadeUp(0.1)}
 					className='text-secondary text-shadow-dark w-full text-center font-serif text-5xl font-bold xl:text-6xl 2xl:text-7xl'
 				>
 					<Image
@@ -50,6 +50,7 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => {
 						priority={pageName === 'Atelier Dex'}
 						sizes='30vw'
 					/>
+
 					<div
 						className={clsx(
 							{

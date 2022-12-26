@@ -36,7 +36,7 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, goToPage, setGoToPage })
 						updateQuery({ page: 1 });
 					}}
 					aria-label='Go To First Page'
-					className='btn btn-ghost btn-circle btn-sm my-auto'
+					className='btn btn-primary btn-circle btn-sm my-auto text-slate-50'
 				>
 					<ChevronDoubleLeftIcon width={16} height={16} />
 				</button>
@@ -49,7 +49,7 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, goToPage, setGoToPage })
 						updateQuery({ page: page - 1 });
 					}}
 					aria-label='Go To Previous Page'
-					className='btn btn-ghost btn-circle btn-sm my-auto'
+					className='btn btn-primary btn-circle btn-sm my-auto text-slate-50'
 				>
 					<ChevronLeftIcon width={16} height={16} />
 				</button>
@@ -58,7 +58,7 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, goToPage, setGoToPage })
 					list={pageList}
 					setValue={setGoToPage}
 					value={goToPage}
-					className='my-auto w-32'
+					className='my-auto w-[7.5rem]'
 					withIcon
 				/>
 
@@ -70,7 +70,7 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, goToPage, setGoToPage })
 						updateQuery({ page: page + 1 });
 					}}
 					aria-label='Go To Next Page'
-					className='btn btn-ghost btn-circle btn-sm my-auto'
+					className='btn btn-primary btn-circle btn-sm my-auto text-slate-50'
 				>
 					<ChevronRightIcon width={16} height={16} />
 				</button>
@@ -83,7 +83,7 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, goToPage, setGoToPage })
 						updateQuery({ page: totalPage });
 					}}
 					aria-label='Go To Last Page'
-					className='btn btn-ghost btn-circle btn-sm my-auto'
+					className='btn btn-primary btn-circle btn-sm my-auto text-slate-50'
 				>
 					<ChevronDoubleRightIcon width={16} height={16} />
 				</button>

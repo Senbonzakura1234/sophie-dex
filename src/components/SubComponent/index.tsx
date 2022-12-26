@@ -267,7 +267,7 @@ export const ColorSelectList = [
 
 export const RecordPlaceHolder: FC<RecordPlaceHolderProps> = ({ isSuccess }) => (
 	<motion.div
-		{...getFramerFadeUp(0.3)}
+		{...getFramerFadeUp(0, 10, 0.1)}
 		className={clsx({ hidden: isSuccess }, 'card bg-base-100 h-[300px] w-full animate-pulse')}
 	></motion.div>
 );
@@ -285,14 +285,14 @@ export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ limit, isSuccess }) 
 export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ isSuccess }) => (
 	<>
 		<motion.div
-			{...getFramerFadeUp()}
+			{...getFramerFadeUp(0, 10, 0.1)}
 			className={clsx({ hidden: isSuccess }, 'container mx-auto w-full animate-pulse px-3 pb-3 pt-6')}
 		>
 			<div className='card bg-base-100 shadow-primary ml-auto h-[50px] w-full rounded-full shadow-lg md:w-1/4 md:min-w-[300px]'></div>
 		</motion.div>
 
 		<motion.div
-			{...getFramerFadeUp()}
+			{...getFramerFadeUp(0, 10, 0.1)}
 			className={clsx({ hidden: isSuccess }, 'container mx-auto w-full animate-pulse p-3')}
 		>
 			<div className='card bg-base-100 shadow-primary h-[60px] w-full shadow-lg'></div>

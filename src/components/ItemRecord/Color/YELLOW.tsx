@@ -1,5 +1,6 @@
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { YELLOWProps } from '@root/types/common/props';
+import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
@@ -16,7 +17,12 @@ const YELLOW: FC<YELLOWProps> = ({ color }) => {
 			role='navigation'
 			aria-label={`Filter ${color} Item`}
 			disabled={!isReady}
-			className='btn btn-xs text-warning-content border-yellow-400 bg-yellow-400 font-extrabold capitalize hover:border-yellow-500 hover:bg-yellow-500'
+			className={clsx(
+				{
+					'!no-animation !cursor-default hover:border-yellow-400 hover:bg-yellow-400': isBtnDisabled,
+				},
+				'btn btn-xs border-yellow-400 bg-yellow-400 font-extrabold capitalize text-slate-900 hover:border-yellow-500 hover:bg-yellow-500',
+			)}
 		>
 			{color}
 		</button>

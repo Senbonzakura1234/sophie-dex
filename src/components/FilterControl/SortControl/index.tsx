@@ -1,9 +1,14 @@
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import type { SortControlProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
-const SortControl: FC = () => {
+const SortControl: FC<SortControlProps> = (
+	{
+		// pageName
+	},
+) => {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const { sortBy, direction } = useMemo(
@@ -17,7 +22,7 @@ const SortControl: FC = () => {
 	return (
 		<div className='my-auto flex w-full flex-wrap gap-2 2xl:w-auto'>
 			<div className='input-group w-auto'>
-				<button role='none' className='btn btn-xs capitalize' disabled>
+				<button role='none' className='btn btn-xs border-y-2 border-r-0 capitalize' disabled>
 					Sort:
 				</button>
 
@@ -31,13 +36,32 @@ const SortControl: FC = () => {
 					className={clsx(
 						{
 							'btn-active btn-primary text-slate-50': sortBy === 'index',
-							'btn-ghost': sortBy !== 'index',
+							'btn-ghost border-accent': sortBy !== 'index',
 						},
-						'btn btn-xs capitalize',
+						'btn btn-xs border-y-2 border-r-0 capitalize',
 					)}
 				>
 					Index
 				</button>
+
+				{/* <button
+					role='navigation'
+					aria-label='Sort By Name'
+					disabled={!isReady || pageName !== 'Item'}
+					onClick={() => {
+						if (sortBy !== 'level') updateQuery({ sortBy: 'level', direction: 'asc' });
+					}}
+					className={clsx(
+						{
+							'btn-active btn-primary no-animation cursor-default text-slate-50': sortBy === 'level',
+							'btn-ghost border-accent': sortBy !== 'level',
+							hidden: pageName !== 'Item',
+						},
+						'btn btn-xs border-y-2 border-x-0 capitalize',
+					)}
+				>
+					Level
+				</button> */}
 
 				<button
 					role='navigation'
@@ -49,16 +73,17 @@ const SortControl: FC = () => {
 					className={clsx(
 						{
 							'btn-active btn-primary text-slate-50': sortBy === 'name',
-							'btn-ghost': sortBy !== 'name',
+							'btn-ghost border-accent': sortBy !== 'name',
 						},
-						'btn btn-xs capitalize',
+						'btn btn-xs border-y-2 border-l-0 capitalize',
 					)}
 				>
 					Name
 				</button>
 			</div>
+
 			<div className='input-group w-auto'>
-				<button role='none' className='btn btn-xs capitalize' disabled>
+				<button role='none' className='btn btn-xs border-y-2 border-r-0 capitalize' disabled>
 					Direction:
 				</button>
 
@@ -71,10 +96,10 @@ const SortControl: FC = () => {
 					}}
 					className={clsx(
 						{
-							'btn-active btn-primary text-slate-50': direction === 'asc',
-							'btn-ghost': direction !== 'asc',
+							'btn-active btn-primary no-animation cursor-default text-slate-50': direction === 'asc',
+							'btn-ghost border-accent': direction !== 'asc',
 						},
-						'btn btn-xs',
+						'btn btn-xs border-y-2 border-r-0',
 					)}
 				>
 					asc
@@ -90,9 +115,9 @@ const SortControl: FC = () => {
 					className={clsx(
 						{
 							'btn-active btn-primary text-slate-50': direction === 'desc',
-							'btn-ghost': direction !== 'desc',
+							'btn-ghost border-accent': direction !== 'desc',
 						},
-						'btn btn-xs',
+						'btn btn-xs border-y-2 border-l-0',
 					)}
 				>
 					desc

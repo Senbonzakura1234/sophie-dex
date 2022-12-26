@@ -10,8 +10,8 @@ import YELLOW from './YELLOW';
 
 const Color: FC<ColorProps> = ({ color }) => {
 	return (
-		<div className='flex max-w-fit flex-wrap gap-2'>
-			<div className='font-bold'>Color: </div>
+		<div className='flex max-w-fit flex-wrap gap-2 [&>*]:shadow-md [&>*]:shadow-slate-600'>
+			<div className='font-bold !shadow-none'>Color: </div>
 			{color === 'RED' && <RED color={color} />}
 			{color === 'BLUE' && <BLUE color={color} />}
 			{color === 'GREEN' && <GREEN color={color} />}

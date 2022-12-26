@@ -12,8 +12,8 @@ export const framerFade: AnimationProps = {
 	exit: { opacity: 0 },
 };
 
-export const getFramerFadeUp = (delay = 0, fadeUpRange = 20): AnimationProps => ({
+export const getFramerFadeUp = (delay = 0, fadeUpRange = 20, duration = 0.5): AnimationProps => ({
 	initial: { opacity: 0, y: fadeUpRange },
-	animate: { opacity: 1, y: 0, transition: { delay } },
+	animate: { opacity: 1, y: 0, transition: { delay, duration } },
 	exit: { opacity: 0, y: fadeUpRange },
 });

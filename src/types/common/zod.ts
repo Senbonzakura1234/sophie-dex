@@ -6,7 +6,7 @@ import { categoryList, colorMap, relatedCategoryList } from '../model';
 const positiveIntSchema = z.coerce.number().positive();
 
 const searchSchema = z.string().nullish().catch(null).default(null);
-const sortBySchema = z.enum(['index', 'name']).nullish().catch(null).default(null);
+const sortBySchema = z.enum(['index', 'name', 'level']).nullish().catch(null).default(null);
 const directionSchema = z.enum(['asc', 'desc']).nullish().catch(null).default(null);
 const relatedCategorySchema = z.enum(relatedCategoryList).nullish().catch(null).default(null);
 const categorySchema = z.enum(categoryList).nullish().catch(null).default(null);

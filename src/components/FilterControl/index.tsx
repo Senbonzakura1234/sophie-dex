@@ -8,7 +8,6 @@ import { motion } from 'framer-motion';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
-import CircleDivider from '../CircleDivider';
 import ApplyFilter from './ApplyFilter';
 import CategoryFilter from './CategoryFilter';
 import ColorFilter from './ColorFilter';
@@ -35,10 +34,11 @@ const FilterControl: FC<FilterControlProps> = ({
 	const { filterData, setFilterData, isCanApplyFilter } = useFilterControl();
 	const { goToPage, setGoToPage } = useGoToPageControl();
 	const { performSearch, searchInput, setSearchValue, isSearchValueValid, resetSearch } = useSearchInput();
+	console.log(isSearchValueValid, isCanApplyFilter);
 
 	return (
 		<>
-			<motion.section {...getFramerFadeUp()} className='container mx-auto px-3 pt-6 pb-3'>
+			<motion.section {...getFramerFadeUp(0, 10, 0.1)} className='container mx-auto px-3 pt-6 pb-3'>
 				<SearchInput
 					performSearch={performSearch}
 					searchInput={searchInput}
@@ -48,11 +48,9 @@ const FilterControl: FC<FilterControlProps> = ({
 				/>
 			</motion.section>
 
-			<motion.section {...getFramerFadeUp()} className='container relative z-30 mx-auto p-3'>
+			<motion.section {...getFramerFadeUp(0, 10, 0.1)} className='container relative z-30 mx-auto p-3'>
 				<nav className='card bg-base-100 shadow-primary flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-lg 2xl:place-content-end'>
-					<SortControl />
-
-					<CircleDivider className='bg-base-300 my-auto hidden h-2 w-2 2xl:block' />
+					<SortControl pageName={pageName} />
 
 					<div className='flex flex-wrap gap-2'>
 						<ColorFilter filterData={filterData} setFilterData={setFilterData} pageName={pageName} />
@@ -61,15 +59,11 @@ const FilterControl: FC<FilterControlProps> = ({
 						<ApplyFilter filterData={filterData} isCanApplyFilter={isCanApplyFilter} />
 					</div>
 
-					<CircleDivider className='bg-base-300 my-auto hidden h-2 w-2 2xl:block' />
-
 					<div className='text-neutral my-auto text-xs font-semibold'>
-						{from} - {to} of {totalRecord} records
+						{from} - {to} of {totalRecord} {pageName.toLocaleLowerCase()}s
 					</div>
 
 					<Paginate page={page} totalPage={totalPage} goToPage={goToPage} setGoToPage={setGoToPage} />
-
-					<CircleDivider className='bg-base-300 my-auto hidden h-2 w-2 2xl:block' />
 
 					<ResetFilter setFilterData={setFilterData} setGoToPage={setGoToPage} setSearchValue={setSearchValue} />
 				</nav>

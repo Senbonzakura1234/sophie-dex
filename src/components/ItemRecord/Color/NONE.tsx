@@ -1,5 +1,6 @@
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { NONEProps } from '@root/types/common/props';
+import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
@@ -16,7 +17,12 @@ const NONE: FC<NONEProps> = ({ color }) => {
 			role='navigation'
 			aria-label={`Filter ${color} Item`}
 			disabled={!isReady}
-			className='btn btn-xs border-slate-400 bg-slate-400 font-extrabold capitalize hover:border-slate-500 hover:bg-slate-500'
+			className={clsx(
+				{
+					'!no-animation !cursor-default hover:border-slate-400 hover:bg-slate-400': isBtnDisabled,
+				},
+				'btn btn-xs border-slate-400 bg-slate-400 font-extrabold capitalize text-slate-50 hover:border-slate-500 hover:bg-slate-500',
+			)}
 		>
 			{color}
 		</button>

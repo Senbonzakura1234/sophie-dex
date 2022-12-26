@@ -16,7 +16,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 
 	return (
 		<>
-			<motion.div className='flex w-full' {...getFramerFadeUp(0.3)}>
+			<motion.div className='flex w-full' {...getFramerFadeUp(0.2)}>
 				<nav className='card card-compact bg-base-100 shadow-primary mx-auto w-64 max-w-full py-1 shadow-lg 2xl:w-2/5'>
 					<div className='breadcrumbs mx-auto text-xs font-extrabold 2xl:text-base'>
 						<ul className='gap-1 font-serif font-extrabold'>
@@ -25,6 +25,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 									className={clsx(
 										{
 											'link-hover text-primary hover:text-primary-focus': pathname !== '/',
+											'no-animation cursor-default': pathname === '/',
 										},
 										'link gap-1',
 									)}
@@ -44,6 +45,8 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 												{
 													'link-hover text-primary hover:text-primary-focus':
 														pathname !== `/${n.toLowerCase()}s`,
+													'no-animation !cursor-default !no-underline':
+														pathname === `/${n.toLowerCase()}s`,
 												},
 												'link gap-1',
 											)}
@@ -63,7 +66,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 				</nav>
 			</motion.div>
 
-			<motion.div className={clsx({ hidden: !isShowAuthor })} {...getFramerFadeUp(0.3)}>
+			<motion.div className={clsx({ hidden: !isShowAuthor })} {...getFramerFadeUp(0.2)}>
 				<Link
 					href={{
 						protocol: 'https',
@@ -71,6 +74,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 						host: 'github.com',
 						pathname: APP_AUTHOR,
 					}}
+					target='_blank'
 					as={{
 						protocol: 'https',
 						hostname: 'github',
@@ -78,7 +82,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 						pathname: APP_AUTHOR,
 					}}
 					aria-label={`github@${APP_AUTHOR}`}
-					className='btn h-auto min-h-0 gap-2 rounded-full bg-white fill-black py-3 capitalize text-black shadow-lg shadow-black hover:bg-black hover:fill-white hover:text-white hover:shadow hover:shadow-slate-700'
+					className='btn btn-ghost h-auto min-h-0 gap-2 rounded-full bg-white fill-black py-3 capitalize text-black shadow-lg shadow-black hover:bg-black hover:fill-white hover:text-white hover:shadow hover:shadow-slate-700'
 				>
 					<svg className='my-auto h-4 w-4' viewBox='0 0 98 96' xmlns='http://www.w3.org/2000/svg'>
 						<path

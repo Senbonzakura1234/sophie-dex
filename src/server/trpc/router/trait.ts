@@ -51,7 +51,7 @@ export const traitRouter = router({
 			ctx.prisma.trait.findMany({
 				where,
 				orderBy: {
-					[sortBy ?? 'index']: direction ?? 'asc',
+					[!!sortBy && sortBy !== 'level' ? sortBy : 'index']: direction ?? 'asc',
 				},
 				skip: (pageInt - 1) * limitInt,
 				take: limitInt,

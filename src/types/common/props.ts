@@ -44,6 +44,8 @@ export type FilterControlProps = {
 	totalRecord: number;
 } & PageNameProps;
 
+export type SortControlProps = PageNameProps;
+
 export type ApplyFilterProps = { filterData: FilterData; isCanApplyFilter: boolean };
 
 export type SelectFilterProps = {
