@@ -1,6 +1,4 @@
-import type { Item } from '@prisma/client';
-
-const items: Item[] = [
+const items = [
 	{
 		category: 'MATERIAL',
 		color: 'GREEN',

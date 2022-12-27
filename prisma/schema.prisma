@@ -110,6 +110,6 @@ model Item {
    name              String
    color             COLOR
    relatedCategories RelatedCategories[]
-   category          CATEGORY?
-   level             Int?
+   category          CATEGORY
+   level             Int
 }
