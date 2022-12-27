@@ -20,53 +20,45 @@ const ListLayout: FC<ListLayoutProps> = ({
 	page,
 	totalPage,
 	totalRecord,
-}) => {
-	return (
-		<>
-			<Head>
-				<title>{pageName}</title>
-				<meta name='description' content={`${pageName} List`} />
-			</Head>
+}) => (
+	<>
+		<Head>
+			<title>{pageName}</title>
+			<meta name='description' content={`${pageName} List`} />
+		</Head>
 
-			<PageTitle pageName={pageName} />
+		<PageTitle pageName={pageName} />
 
-			<FilterControlPlaceHolder isSuccess={isSuccess} isError={isError} />
+		<FilterControlPlaceHolder isSuccess={isSuccess} isError={isError} />
 
-			{isSuccess && (
-				<FilterControl
-					pageName={pageName}
-					page={page}
-					totalPage={totalPage}
-					limit={limit}
-					totalRecord={totalRecord}
-				/>
-			)}
+		{isSuccess && (
+			<FilterControl pageName={pageName} page={page} totalPage={totalPage} limit={limit} totalRecord={totalRecord} />
+		)}
 
-			<section className='container mx-auto grid grow auto-rows-fr gap-6 px-3 pt-3 pb-9 2xl:grid-cols-2'>
-				<ListPlaceHolder limit={defaultLimit} isSuccess={isSuccess} isError={isError} />
-				{children}
-			</section>
+		<section className='container mx-auto grid grow auto-rows-fr gap-6 px-3 pt-3 pb-9 2xl:grid-cols-2'>
+			<ListPlaceHolder limit={defaultLimit} isSuccess={isSuccess} isError={isError} />
+			{children}
+		</section>
 
-			<FilterControlPlaceHolder isSuccess={isSuccess} isPaginateOnly isError={isError} />
+		<FilterControlPlaceHolder isSuccess={isSuccess} isPaginateOnly isError={isError} />
 
-			{isSuccess && (
-				<FilterControl
-					pageName={pageName}
-					page={page}
-					totalPage={totalPage}
-					limit={limit}
-					totalRecord={totalRecord}
-					isPaginateOnly
-				/>
-			)}
+		{isSuccess && (
+			<FilterControl
+				pageName={pageName}
+				page={page}
+				totalPage={totalPage}
+				limit={limit}
+				totalRecord={totalRecord}
+				isPaginateOnly
+			/>
+		)}
 
-			<PageFooter />
+		<PageFooter />
 
-			<AnimatePresence>
-				{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
-			</AnimatePresence>
-		</>
-	);
-};
+		<AnimatePresence>
+			{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
+		</AnimatePresence>
+	</>
+);
 
 export default ListLayout;

@@ -19,7 +19,7 @@ const BLUE: FC<BLUEProps> = ({ color }) => {
 			disabled={!isReady}
 			className={clsx(
 				{
-					'!no-animation !cursor-default hover:border-blue-500 hover:bg-blue-500': isBtnDisabled,
+					'!no-animation !cursor-default !border-blue-500 !bg-blue-500': isBtnDisabled,
 				},
 				'btn btn-xs border-blue-500 bg-blue-500 font-extrabold text-slate-50 hover:border-blue-600 hover:bg-blue-600',
 			)}

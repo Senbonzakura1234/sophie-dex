@@ -13,233 +13,56 @@ import type { FC } from 'react';
 
 export const hideCategoryOnTrait: Readonly<CATEGORY[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
 
-export const categoryMap = new Map<
-	CATEGORY,
-	{
-		name: string;
-		className: UnicodeClass;
-	}
->([
-	[
-		'ATK_ITEM',
-		{
-			name: 'Attack Item',
-			className: 'atelier__type-attack',
-		},
-	],
-	[
-		'HEAL_ITEM',
-		{
-			name: 'Heal Item',
-			className: 'atelier__type-heal',
-		},
-	],
-	[
-		'DE_BUFF_ITEM',
-		{
-			name: 'De-Buff Item',
-			className: 'atelier__type-debuff',
-		},
-	],
-	[
-		'BUFF_ITEM',
-		{
-			name: 'Buff Item',
-			className: 'atelier__type-buff',
-		},
-	],
-	[
-		'WEAPON',
-		{
-			name: 'Weapon',
-			className: 'atelier__type-weapon',
-		},
-	],
-	[
-		'ARMOR',
-		{
-			name: 'Armor',
-			className: 'atelier__type-armor',
-		},
-	],
-	[
-		'ACCESSORY',
-		{
-			name: 'Accessory',
-			className: 'atelier__type-accessory',
-		},
-	],
-	[
-		'MATERIAL',
-		{
-			name: 'Material',
-			className: 'atelier__material',
-		},
-	],
-	[
-		'BOOK',
-		{
-			name: 'Book',
-			className: 'atelier__book',
-		},
-	],
-	[
-		'EXPLORATION',
-		{
-			name: 'Exploration',
-			className: 'atelier__tool-gather',
-		},
-	],
-	[
-		'MACHINE',
-		{
-			name: 'Machine',
-			className: 'atelier__category-neutralizers',
-		},
-	],
-	[
-		'KEY_ITEM',
-		{
-			name: 'Key Item',
-			className: 'atelier__category-key-items',
-		},
-	],
-	[
-		'SYNTHESIS',
-		{
-			name: 'Synthesis',
-			className: 'atelier__type-synthesis',
-		},
-	],
+export const categoryMap = new Map<CATEGORY, { name: string; className: UnicodeClass }>([
+	['MATERIAL', { name: 'Material', className: 'atelier__material' }],
+	['SYNTHESIS', { name: 'Synthesis', className: 'atelier__type-synthesis' }],
+	['WEAPON', { name: 'Weapon', className: 'atelier__type-weapon' }],
+	['ARMOR', { name: 'Armor', className: 'atelier__type-armor' }],
+	['ATK_ITEM', { name: 'Attack Item', className: 'atelier__type-attack' }],
+	['ACCESSORY', { name: 'Accessory', className: 'atelier__type-accessory' }],
+	['HEAL_ITEM', { name: 'Heal Item', className: 'atelier__type-heal' }],
+	['KEY_ITEM', { name: 'Key Item', className: 'atelier__category-key-items' }],
+	['BUFF_ITEM', { name: 'Buff Item', className: 'atelier__type-buff' }],
+	['DE_BUFF_ITEM', { name: 'De-Buff Item', className: 'atelier__type-debuff' }],
+	['EXPLORATION', { name: 'Exploration', className: 'atelier__tool-gather' }],
+	['BOOK', { name: 'Book', className: 'atelier__book' }],
+	['MACHINE', { name: 'Machine', className: 'atelier__category-neutralizers' }],
 ]);
 
-const colorMap = ['RED', 'BLUE', 'GREEN', 'YELLOW', 'WHITE', 'NONE'] satisfies COLOR[];
+const colorMap = ['RED', 'BLUE', 'GREEN', 'YELLOW', 'WHITE'] satisfies COLOR[];
 
 export const RelatedCategorySelectList = [
-	{
-		value: null,
-		label: '------------',
-	},
-	{
-		value: 'PLANT',
-		label: 'Plant',
-	},
-	{
-		value: 'MEDICINE_MAT',
-		label: 'Medicine Mat',
-	},
-	{
-		value: 'WATER',
-		label: 'Water',
-	},
-	{
-		value: 'IMPORTANT',
-		label: 'Important',
-	},
-	{
-		value: 'BOMB',
-		label: 'Bomb',
-	},
-	{
-		value: 'MEDICINE',
-		label: 'Medicine',
-	},
-	{
-		value: 'FOOD',
-		label: 'Food',
-	},
-	{
-		value: 'SWEETS',
-		label: 'Sweets',
-	},
-	{
-		value: 'CLOTH',
-		label: 'Cloth',
-	},
-	{
-		value: 'NEUTRALIZER',
-		label: 'Neutralizer',
-	},
-	{
-		value: 'WEAPON_MAT',
-		label: 'Weapon Mat',
-	},
-	{
-		value: 'ARMOR_MAT',
-		label: 'Armor Mat',
-	},
-	{
-		value: 'WEAPON',
-		label: 'Weapon',
-	},
-	{
-		value: 'ARMOR',
-		label: 'Armor',
-	},
-	{
-		value: 'ACCESSORY',
-		label: 'Accessory',
-	},
-	{
-		value: 'POISON_MAT',
-		label: 'Poison Mat',
-	},
-	{
-		value: 'SECRET_POWER',
-		label: 'Secret Power',
-	},
-	{
-		value: 'FUEL',
-		label: 'Fuel',
-	},
-	{
-		value: 'THREAD',
-		label: 'Thread',
-	},
-	{
-		value: 'WOOD',
-		label: 'Wood',
-	},
-	{
-		value: 'ELIXIR',
-		label: 'Elixir',
-	},
-	{
-		value: 'ORE',
-		label: 'Ore',
-	},
-	{
-		value: 'GUNPOWDER',
-		label: 'Gunpowder',
-	},
-	{
-		value: 'GEM',
-		label: 'Gem',
-	},
-	{
-		value: 'METAL',
-		label: 'Metal',
-	},
-	{
-		value: 'CLAY',
-		label: 'Clay',
-	},
-	{
-		value: 'ANIMAL',
-		label: 'Animal',
-	},
-	{
-		value: 'INGREDIENT',
-		label: 'Ingredient',
-	},
-	{
-		value: 'PAPER',
-		label: 'Paper',
-	},
-	{
-		value: 'MAGIC_ITEM',
-		label: 'Magic Item',
-	},
+	{ value: null, label: '------------' },
+	{ value: 'PLANT', label: 'Plant' },
+	{ value: 'MEDICINE_MAT', label: 'Medicine Mat' },
+	{ value: 'WATER', label: 'Water' },
+	{ value: 'IMPORTANT', label: 'Important' },
+	{ value: 'BOMB', label: 'Bomb' },
+	{ value: 'MEDICINE', label: 'Medicine' },
+	{ value: 'FOOD', label: 'Food' },
+	{ value: 'SWEETS', label: 'Sweets' },
+	{ value: 'CLOTH', label: 'Cloth' },
+	{ value: 'NEUTRALIZER', label: 'Neutralizer' },
+	{ value: 'WEAPON_MAT', label: 'Weapon Mat' },
+	{ value: 'ARMOR_MAT', label: 'Armor Mat' },
+	{ value: 'WEAPON', label: 'Weapon' },
+	{ value: 'ARMOR', label: 'Armor' },
+	{ value: 'ACCESSORY', label: 'Accessory' },
+	{ value: 'POISON_MAT', label: 'Poison Mat' },
+	{ value: 'SECRET_POWER', label: 'Secret Power' },
+	{ value: 'FUEL', label: 'Fuel' },
+	{ value: 'THREAD', label: 'Thread' },
+	{ value: 'WOOD', label: 'Wood' },
+	{ value: 'ELIXIR', label: 'Elixir' },
+	{ value: 'ORE', label: 'Ore' },
+	{ value: 'GUNPOWDER', label: 'Gunpowder' },
+	{ value: 'GEM', label: 'Gem' },
+	{ value: 'METAL', label: 'Metal' },
+	{ value: 'CLAY', label: 'Clay' },
+	{ value: 'ANIMAL', label: 'Animal' },
+	{ value: 'INGREDIENT', label: 'Ingredient' },
+	{ value: 'PAPER', label: 'Paper' },
+	{ value: 'MAGIC_ITEM', label: 'Magic Item' },
 ] satisfies RelatedCateSelected[];
 
 export const defaultSelect = {
@@ -259,17 +82,14 @@ export const categorySelectList = [
 
 export const ColorSelectList = [
 	defaultSelect,
-	...colorMap.map(color => ({
-		label: <span className='capitalize'>{color.toLocaleLowerCase()}</span>,
-		value: color,
-	})),
+	...colorMap.map(color => ({ label: <span className='capitalize'>{color.toLocaleLowerCase()}</span>, value: color })),
 ] satisfies ColorSelected[];
 
 export const RecordPlaceHolder: FC<RecordPlaceHolderProps> = ({ isSuccess, isError }) => (
 	<motion.div
 		{...getFramerFadeUp(0, 10, 0.1)}
 		className={clsx({ hidden: isSuccess || isError }, 'card bg-base-100 h-[300px] w-full animate-pulse')}
-	></motion.div>
+	/>
 );
 
 export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ limit, isSuccess, isError }) =>
@@ -294,12 +114,11 @@ export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ is
 		>
 			<div className='card bg-base-100 shadow-primary ml-auto h-[50px] w-full rounded-full shadow-lg md:w-1/4 md:min-w-[300px]'></div>
 		</motion.div>
-
 		<motion.div
 			{...getFramerFadeUp(0, 10, 0.1)}
 			className={clsx({ hidden: isSuccess || isError }, 'container mx-auto w-full animate-pulse p-3')}
 		>
-			<div className='card bg-base-100 shadow-primary h-[60px] w-full shadow-lg'></div>
+			<div className='card bg-base-100 shadow-primary h-[60px] w-full shadow-lg' />
 		</motion.div>
 	</>
 );

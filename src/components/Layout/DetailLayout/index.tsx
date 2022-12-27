@@ -13,28 +13,26 @@ const DetailLayout: FC<DetailLayoutProps> = ({
 	errorData,
 	errorMessage,
 	isSuccess,
-}) => {
-	return (
-		<>
-			<Head>
-				<title>{pageName}</title>
-				<meta name='description' content={`${pageName} Record`} />
-			</Head>
+}) => (
+	<>
+		<Head>
+			<title>{pageName}</title>
+			<meta name='description' content={`${pageName} Record`} />
+		</Head>
 
-			{extraHead}
+		{extraHead}
 
-			<section className='grid h-full w-full grid-cols-1 place-content-center gap-4 p-2 2xl:grid-cols-none'>
-				<div className='w-[800px] max-w-full'>
-					<RecordPlaceHolder isSuccess={isSuccess} isError={isError} />
-					{children}
-				</div>
-			</section>
+		<section className='grid h-full w-full grid-cols-1 place-content-center gap-4 p-2 2xl:grid-cols-none'>
+			<div className='w-[800px] max-w-full'>
+				<RecordPlaceHolder isSuccess={isSuccess} isError={isError} />
+				{children}
+			</div>
+		</section>
 
-			<AnimatePresence>
-				{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
-			</AnimatePresence>
-		</>
-	);
-};
+		<AnimatePresence>
+			{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
+		</AnimatePresence>
+	</>
+);
 
 export default DetailLayout;

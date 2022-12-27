@@ -50,10 +50,7 @@ export const effectRouter = router({
 		const record = await ctx.prisma.effect.findFirst({ where: { id } }).catch(error => {
 			console.log({ error });
 
-			throw new TRPCError({
-				code: 'INTERNAL_SERVER_ERROR',
-				message: 'Some Thing When Wrong On The Server.',
-			});
+			throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Some Thing When Wrong On The Server.' });
 		});
 
 		if (record) return record;

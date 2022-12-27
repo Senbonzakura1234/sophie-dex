@@ -7,10 +7,7 @@ export type UseFilterControl = () => {
 	isCanApplyFilter: boolean;
 };
 
-export type UseGoToPageControl = () => {
-	goToPage: GoToPage;
-	setGoToPage: SetGoToPage;
-};
+export type UseGoToPageControl = () => { goToPage: GoToPage; setGoToPage: SetGoToPage };
 
 export type UseSearchInput = () => {
 	searchInput: string;
@@ -27,8 +24,4 @@ export type UseSearchQuery = () => {
 	resetQuery: () => void;
 };
 
-export type UseIdQuery = () => {
-	isReady: boolean;
-	pathname: string;
-	securedIdQuery: Partial<IdQuery>;
-};
+export type UseIdQuery = () => { isReady: boolean; pathname: string; securedIdQuery: Partial<IdQuery> };

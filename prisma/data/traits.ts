@@ -4167,4 +4167,5 @@ const traits: Trait[] = [
 		name: 'Dragon Soul',
 	},
 ];
+
 export default traits;

@@ -21,10 +21,7 @@ const config = pwaConfig({
 	productionBrowserSourceMaps: true,
 	reactStrictMode: true,
 	swcMinify: true,
-	i18n: {
-		locales: ['en'],
-		defaultLocale: 'en',
-	},
+	i18n: { locales: ['en'], defaultLocale: 'en' },
 });
 
 export default config;

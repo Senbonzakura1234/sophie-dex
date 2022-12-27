@@ -45,7 +45,7 @@ const Categories: FC<CategoriesProps> = ({ categories }) => {
 									});
 							}}
 						>
-							<div className={clsx(className, 'font-atelier w-5 text-lg 2xl:w-6 2xl:text-xl')}></div>
+							<div className={clsx(className, 'font-atelier w-5 text-lg 2xl:w-6 2xl:text-xl')} />
 						</button>
 					</div>
 				))}

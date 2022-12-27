@@ -1,12 +1,7 @@
 import type { CATEGORY, COLOR, RELATED_CATEGORY } from '@prisma/client';
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
 
-export const PageName = {
-	EFFECT: 'Effect',
-	ITEM: 'Item',
-	TRAIT: 'Trait',
-	HOME: 'Atelier Dex',
-} as const;
+export const PageName = { EFFECT: 'Effect', ITEM: 'Item', TRAIT: 'Trait', HOME: 'Atelier Dex' } as const;
 
 export type PageName = typeof PageName[keyof typeof PageName];
 

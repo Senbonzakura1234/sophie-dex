@@ -9,28 +9,26 @@ const ColorFilter: FC<ColorFilterProps> = ({
 	filterData: { colorSelected },
 	setFilterData: { setColorSelected },
 	pageName,
-}) => {
-	return (
-		<div
-			className={clsx(
-				{
-					flex: pageName === 'Item',
-					hidden: pageName !== 'Item',
-				},
-				'grow gap-2 2xl:grow-0',
-			)}
-		>
-			<small className='my-auto text-sm font-bold'>Color:</small>
-			<SelectOption<COLOR | null>
-				list={ColorSelectList}
-				setValue={setColorSelected}
-				value={colorSelected}
-				className='my-auto w-28'
-				useCustomIcon={false}
-				withIcon={false}
-			/>
-		</div>
-	);
-};
+}) => (
+	<div
+		className={clsx(
+			{
+				flex: pageName === 'Item',
+				hidden: pageName !== 'Item',
+			},
+			'grow gap-2 2xl:grow-0',
+		)}
+	>
+		<small className='my-auto text-sm font-bold'>Color:</small>
+		<SelectOption<COLOR | null>
+			list={ColorSelectList}
+			setValue={setColorSelected}
+			value={colorSelected}
+			className='my-auto w-28'
+			useCustomIcon={false}
+			withIcon={false}
+		/>
+	</div>
+);
 
 export default ColorFilter;

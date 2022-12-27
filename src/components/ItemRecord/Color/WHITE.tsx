@@ -19,13 +19,14 @@ const WHITE: FC<WHITEProps> = ({ color }) => {
 			disabled={!isReady}
 			className={clsx(
 				{
-					'!no-animation !cursor-default hover:bg-white': isBtnDisabled,
+					'!no-animation !cursor-default !border-slate-300 !bg-slate-300': isBtnDisabled,
 				},
-				'btn btn-xs text-base-content btn-ghost font-extrabold capitalize',
+				'btn btn-xs border-slate-300 bg-slate-300 text-slate-900 hover:bg-slate-400 hover:border-slate-400 hover:text-slate-900 font-extrabold capitalize',
 			)}
 		>
 			{color}
 		</button>
 	);
 };
+
 export default WHITE;

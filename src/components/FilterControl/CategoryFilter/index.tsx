@@ -9,29 +9,27 @@ const CategoryFilter: FC<CategoryFilterProps> = ({
 	filterData: { cateSelected },
 	setFilterData: { setCateSelected },
 	pageName,
-}) => {
-	return (
-		<div
-			className={clsx(
-				{
-					flex: pageName !== 'Effect',
-					hidden: pageName === 'Effect',
-				},
-				'grow gap-2 2xl:grow-0',
-			)}
-		>
-			<small className='my-auto text-sm font-bold'>Category:</small>
-			<SelectOption<CATEGORY | null>
-				list={categorySelectList}
-				setValue={setCateSelected}
-				value={cateSelected}
-				className='my-auto w-[10.25rem]'
-				useCustomIcon={true}
-				withIcon={true}
-				useAtelierFont={true}
-			/>
-		</div>
-	);
-};
+}) => (
+	<div
+		className={clsx(
+			{
+				flex: pageName !== 'Effect',
+				hidden: pageName === 'Effect',
+			},
+			'grow gap-2 2xl:grow-0',
+		)}
+	>
+		<small className='my-auto text-sm font-bold'>Category:</small>
+		<SelectOption<CATEGORY | null>
+			list={categorySelectList}
+			setValue={setCateSelected}
+			value={cateSelected}
+			className='my-auto w-[10.25rem]'
+			useCustomIcon={true}
+			withIcon={true}
+			useAtelierFont={true}
+		/>
+	</div>
+);
 
 export default CategoryFilter;

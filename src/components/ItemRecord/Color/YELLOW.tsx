@@ -19,7 +19,7 @@ const YELLOW: FC<YELLOWProps> = ({ color }) => {
 			disabled={!isReady}
 			className={clsx(
 				{
-					'!no-animation !cursor-default hover:border-yellow-400 hover:bg-yellow-400': isBtnDisabled,
+					'!no-animation !cursor-default !border-yellow-400 !bg-yellow-400': isBtnDisabled,
 				},
 				'btn btn-xs border-yellow-400 bg-yellow-400 font-extrabold capitalize text-slate-900 hover:border-yellow-500 hover:bg-yellow-500',
 			)}

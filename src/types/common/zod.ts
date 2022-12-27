@@ -28,8 +28,6 @@ export const searchQueryValidator = z.object({
 
 export type SearchQuery = z.infer<typeof searchQueryValidator>;
 
-export const idQueryValidator = z.object({
-	id: idSchema,
-});
+export const idQueryValidator = z.object({ id: idSchema });
 
 export type IdQuery = z.infer<typeof idQueryValidator>;

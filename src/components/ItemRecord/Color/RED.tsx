@@ -19,7 +19,7 @@ const RED: FC<REDProps> = ({ color }) => {
 			disabled={!isReady}
 			className={clsx(
 				{
-					'!no-animation !cursor-default hover:border-red-500 hover:bg-red-500': isBtnDisabled,
+					'!no-animation !cursor-default !border-red-500 !bg-red-500': isBtnDisabled,
 				},
 				'btn btn-xs border-red-500 bg-red-500 font-extrabold capitalize text-slate-50 hover:border-red-600 hover:bg-red-600',
 			)}

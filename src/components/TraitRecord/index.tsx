@@ -10,6 +10,7 @@ import TraitMergeList from './TraitMergeList';
 
 const TraitRecord: FC<TraitRecordProps> = ({ record: { name, description, index, categories, mergeFrom, id } }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
+
 	return (
 		<RecordWrapper className={clsx({ hidden: !isReady })}>
 			<RecordHead

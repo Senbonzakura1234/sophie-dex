@@ -54,7 +54,7 @@ const FilterControl: FC<FilterControlProps> = ({
 
 			<motion.section
 				{...getFramerFadeUp(0, 10, 0.1)}
-				className={clsx({ 'mb-9': isPaginateOnly }, 'container relative z-30 mx-auto p-3')}
+				className={clsx({ 'mb-9 z-20': isPaginateOnly }, 'container relative z-30 mx-auto p-3')}
 			>
 				<nav
 					className={clsx(

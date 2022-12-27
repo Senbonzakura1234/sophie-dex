@@ -7,7 +7,6 @@ enum COLOR {
    WHITE
    YELLOW
    RED
-   NONE
 }
 
 enum RELATED_CATEGORY {

@@ -19,7 +19,7 @@ const GREEN: FC<GREENProps> = ({ color }) => {
 			disabled={!isReady}
 			className={clsx(
 				{
-					'!no-animation !cursor-default hover:border-green-500 hover:bg-green-500': isBtnDisabled,
+					'!no-animation !cursor-default !border-green-500 !bg-green-500': isBtnDisabled,
 				},
 				'btn btn-xs border-green-500 bg-green-500 font-extrabold capitalize text-slate-50 hover:border-green-600 hover:bg-green-600',
 			)}
