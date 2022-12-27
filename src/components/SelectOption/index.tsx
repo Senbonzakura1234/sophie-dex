@@ -15,12 +15,12 @@ const SelectOption = <V extends string | number | null>({
 	useAtelierFont = false,
 }: SelectOptionProps<V>) => (
 	<menu className={className}>
-		<Listbox value={value} onChange={setValue} disabled={list.length === 1}>
+		<Listbox value={value} onChange={setValue} disabled={list.length <= 1}>
 			<div className='relative'>
 				<Listbox.Button
 					className={clsx(
 						{
-							'cursor-not-allowed opacity-50': list.length === 1,
+							'cursor-not-allowed opacity-50': list.length <= 1,
 						},
 						'focus-visible:border-primary-focus focus-visible:ring-offset-secondary-focus relative w-full cursor-pointer rounded-lg bg-white py-2 pl-3 pr-10 text-left text-xs shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 2xl:text-sm',
 					)}

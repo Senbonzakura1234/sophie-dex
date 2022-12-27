@@ -12,7 +12,7 @@ const RED: FC<REDProps> = ({ color }) => {
 	return (
 		<button
 			onClick={() => {
-				if (!isBtnDisabled) updateQuery({ color });
+				if (!isBtnDisabled) updateQuery({ color, page: null, limit: null });
 			}}
 			role='navigation'
 			aria-label={`Filter ${color} Item`}

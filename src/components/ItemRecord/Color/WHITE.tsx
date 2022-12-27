@@ -12,7 +12,7 @@ const WHITE: FC<WHITEProps> = ({ color }) => {
 	return (
 		<button
 			onClick={() => {
-				if (!isBtnDisabled) updateQuery({ color });
+				if (!isBtnDisabled) updateQuery({ color, page: null, limit: null });
 			}}
 			role='navigation'
 			aria-label={`Filter ${color} Item`}
@@ -21,7 +21,7 @@ const WHITE: FC<WHITEProps> = ({ color }) => {
 				{
 					'!no-animation !cursor-default !border-slate-300 !bg-slate-300': isBtnDisabled,
 				},
-				'btn btn-xs border-slate-300 bg-slate-300 text-slate-900 hover:bg-slate-400 hover:border-slate-400 hover:text-slate-900 font-extrabold capitalize',
+				'btn btn-xs border-slate-300 bg-slate-300 font-extrabold capitalize text-slate-900 hover:border-slate-400 hover:bg-slate-400 hover:text-slate-900',
 			)}
 		>
 			{color}

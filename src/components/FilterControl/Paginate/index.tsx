@@ -14,8 +14,8 @@ import { useMemo } from 'react';
 const Paginate: FC<PaginateProps> = ({ page, totalPage, goToPage, setGoToPage }) => {
 	const { isReady, updateQuery } = useSearchQuery();
 
-	const isPreviousDisable = useMemo(() => !isReady || page === 1, [isReady, page]);
-	const isNextDisable = useMemo(() => !isReady || page === totalPage, [isReady, page, totalPage]);
+	const isPreviousDisable = useMemo(() => !isReady || page <= 1, [isReady, page]);
+	const isNextDisable = useMemo(() => !isReady || page >= totalPage, [isReady, page, totalPage]);
 
 	const pageList: GoToPage[] = useMemo(
 		() =>
