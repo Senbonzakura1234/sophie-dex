@@ -5,7 +5,7 @@ import type { FC } from 'react';
 import Breadcrumb from '../Breadcrumb';
 
 const PageFooter: FC = () => (
-	<section className='2xl:h1/4 relative h-1/3 min-h-[340px] w-full overflow-hidden shadow-inner'>
+	<section className='2xl:h1/4 relative h-1/3 min-h-[300px] w-full overflow-hidden shadow-inner'>
 		<Image
 			className='object-cover'
 			fill

@@ -13,7 +13,7 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => (
 	<section
 		className={clsx(
 			{
-				'h-1/3 min-h-[340px]': pageName !== 'Atelier Dex',
+				'h-1/3 min-h-[300px]': pageName !== 'Atelier Dex',
 				'h-full': pageName === 'Atelier Dex',
 			},
 			'relative w-full overflow-hidden shadow-inner',

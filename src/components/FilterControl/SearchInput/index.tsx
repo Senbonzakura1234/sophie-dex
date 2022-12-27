@@ -10,7 +10,7 @@ const SearchInput: FC<SearchInputProps> = ({
 	isSearchValueValid,
 	resetSearch,
 }) => (
-	<div className='card bg-base-100 shadow-primary relative ml-auto flex w-full flex-row flex-wrap gap-3 rounded-full py-[9px] px-5 shadow-lg md:w-1/4 md:min-w-[300px]'>
+	<div className='card bg-base-100 shadow-primary relative ml-auto flex w-full flex-row gap-3 rounded-full py-[9px] px-5 shadow-lg md:w-1/4 md:min-w-[300px]'>
 		<input
 			value={searchInput}
 			onChange={e => setSearchValue(() => e.target.value)}
@@ -19,7 +19,7 @@ const SearchInput: FC<SearchInputProps> = ({
 			}}
 			type='text'
 			placeholder='Name or description...'
-			className='input input-sm my-auto grow !outline-none'
+			className='input input-sm my-auto grow p-0 !outline-none'
 		/>
 
 		<button
@@ -28,7 +28,7 @@ const SearchInput: FC<SearchInputProps> = ({
 			onClick={() => resetSearch()}
 			disabled={!isSearchValueValid}
 			className={clsx(
-				{ hidden: !isSearchValueValid },
+				{ 'opacity-0': !isSearchValueValid },
 				'btn btn-ghost btn-sm btn-circle my-auto border-0 hover:bg-transparent',
 			)}
 		>
