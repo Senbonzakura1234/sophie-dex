@@ -19,6 +19,8 @@ export type ChildrenProps = { children?: ReactNode };
 export type RefProps<E> = { refObject: RefObject<E> };
 export type PageNameProps = { pageName: PageName };
 export type IsSuccessProps = { isSuccess: boolean };
+export type IsErrorProps = { isError: boolean };
+export type FetchStateProps = IsErrorProps & IsSuccessProps;
 export type IsPaginateOnlyProps = { isPaginateOnly?: boolean };
 
 export type RecordProps<T> = { record: T };
@@ -118,9 +120,9 @@ export type ScrollToTopProps = {
 
 export type ScrollWrapperProps = ChildrenProps & ClassNameProps & RefProps<HTMLDivElement>;
 
-export type RecordPlaceHolderProps = IsSuccessProps;
-export type ListPlaceHolderProps = { limit: number } & IsSuccessProps;
-export type FilterControlPlaceHolderProps = IsSuccessProps & IsPaginateOnlyProps;
+export type RecordPlaceHolderProps = FetchStateProps;
+export type ListPlaceHolderProps = { limit: number } & FetchStateProps;
+export type FilterControlPlaceHolderProps = FetchStateProps & IsPaginateOnlyProps;
 
 export type CategoriesProps = {
 	categories: CATEGORY[];

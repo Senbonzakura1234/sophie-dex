@@ -25,7 +25,7 @@ const DetailLayout: FC<DetailLayoutProps> = ({
 
 			<section className='grid h-full w-full grid-cols-1 place-content-center gap-4 p-2 2xl:grid-cols-none'>
 				<div className='w-[800px] max-w-full'>
-					<RecordPlaceHolder isSuccess={isSuccess} />
+					<RecordPlaceHolder isSuccess={isSuccess} isError={isError} />
 					{children}
 				</div>
 			</section>

@@ -23,7 +23,8 @@
 
 @layer components {
 	.scroll-wrapper > div {
-		display: block !important;
+		display: flex !important;
+		flex-direction: column;
 		height: 100vh;
 	}
 	.atelier__book::before {

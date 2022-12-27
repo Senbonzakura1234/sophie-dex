@@ -30,7 +30,7 @@ const ListLayout: FC<ListLayoutProps> = ({
 
 			<PageTitle pageName={pageName} />
 
-			<FilterControlPlaceHolder isSuccess={isSuccess} />
+			<FilterControlPlaceHolder isSuccess={isSuccess} isError={isError} />
 
 			{isSuccess && (
 				<FilterControl
@@ -42,12 +42,12 @@ const ListLayout: FC<ListLayoutProps> = ({
 				/>
 			)}
 
-			<section className='container mx-auto grid auto-rows-fr gap-6 px-3 pt-3 pb-9 2xl:grid-cols-2'>
-				<ListPlaceHolder limit={defaultLimit} isSuccess={isSuccess} />
+			<section className='container mx-auto grid grow auto-rows-fr gap-6 px-3 pt-3 pb-9 2xl:grid-cols-2'>
+				<ListPlaceHolder limit={defaultLimit} isSuccess={isSuccess} isError={isError} />
 				{children}
 			</section>
 
-			<FilterControlPlaceHolder isSuccess={isSuccess} isPaginateOnly />
+			<FilterControlPlaceHolder isSuccess={isSuccess} isPaginateOnly isError={isError} />
 
 			{isSuccess && (
 				<FilterControl

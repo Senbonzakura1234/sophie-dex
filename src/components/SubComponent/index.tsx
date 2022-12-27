@@ -265,35 +265,39 @@ export const ColorSelectList = [
 	})),
 ] satisfies ColorSelected[];
 
-export const RecordPlaceHolder: FC<RecordPlaceHolderProps> = ({ isSuccess }) => (
+export const RecordPlaceHolder: FC<RecordPlaceHolderProps> = ({ isSuccess, isError }) => (
 	<motion.div
 		{...getFramerFadeUp(0, 10, 0.1)}
-		className={clsx({ hidden: isSuccess }, 'card bg-base-100 h-[300px] w-full animate-pulse')}
+		className={clsx({ hidden: isSuccess || isError }, 'card bg-base-100 h-[300px] w-full animate-pulse')}
 	></motion.div>
 );
 
-export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ limit, isSuccess }) => (
-	<>
-		{Array(limit)
-			.fill(0)
-			.map((_, k) => (
-				<RecordPlaceHolder key={k} isSuccess={isSuccess} />
-			))}
-	</>
-);
+export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ limit, isSuccess, isError }) =>
+	isError ? null : (
+		<>
+			{Array(limit)
+				.fill(0)
+				.map((_, k) => (
+					<RecordPlaceHolder key={k} isSuccess={isSuccess} isError={isError} />
+				))}
+		</>
+	);
 
-export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ isSuccess }) => (
+export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ isSuccess, isPaginateOnly, isError }) => (
 	<>
 		<motion.div
 			{...getFramerFadeUp(0, 10, 0.1)}
-			className={clsx({ hidden: isSuccess }, 'container mx-auto w-full animate-pulse px-3 pb-3 pt-6')}
+			className={clsx(
+				{ hidden: isSuccess || isError || isPaginateOnly },
+				'container mx-auto w-full animate-pulse px-3 pb-3 pt-6',
+			)}
 		>
 			<div className='card bg-base-100 shadow-primary ml-auto h-[50px] w-full rounded-full shadow-lg md:w-1/4 md:min-w-[300px]'></div>
 		</motion.div>
 
 		<motion.div
 			{...getFramerFadeUp(0, 10, 0.1)}
-			className={clsx({ hidden: isSuccess }, 'container mx-auto w-full animate-pulse p-3')}
+			className={clsx({ hidden: isSuccess || isError }, 'container mx-auto w-full animate-pulse p-3')}
 		>
 			<div className='card bg-base-100 shadow-primary h-[60px] w-full shadow-lg'></div>
 		</motion.div>
