@@ -40,10 +40,7 @@ export const effectRouter = router({
 			ctx.prisma.effect.findMany({
 				where,
 				orderBy: {
-					[!!sortBy && sortBy !== 'level' ? sortBy : 'index']: {
-						sort: direction ?? 'asc',
-						nulls: 'last',
-					},
+					[!!sortBy && sortBy !== 'level' ? sortBy : 'index']: direction ?? 'asc',
 				},
 				skip: (pageInt - 1) * limitInt,
 				take: limitInt,
