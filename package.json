@@ -84,6 +84,6 @@
 		"initVersion": "6.11.0"
 	},
 	"prisma": {
-		"seed": "tsx prisma/test"
+		"seed": "tsx prisma/seed.ts"
 	}
 }
