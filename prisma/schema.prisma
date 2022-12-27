@@ -79,7 +79,8 @@ type MergeTrait {
 }
 
 generator client {
-   provider = "prisma-client-js"
+   provider        = "prisma-client-js"
+   previewFeatures = ["orderByNulls"]
 }
 
 datasource db {

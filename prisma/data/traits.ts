@@ -1,5 +1,4 @@
 import type { Trait } from '@prisma/client';
-
 const traits: Trait[] = [
 	{
 		categories: [
@@ -11,7 +10,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Price when selling to shops decreases a little, but also decreases duplication price.',
@@ -30,7 +28,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Price when selling to shops decreases quite a bit, but also decreases duplication price.',
@@ -49,7 +46,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Price when selling to shops decreases quite a lot, but also decreases duplication price.',
@@ -68,7 +64,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Price when selling to shops decreases quite a lot, but also decreases duplication price.',
@@ -106,7 +101,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Price when selling to shops decreases massively, but also decreases duplication price.',
@@ -144,7 +138,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Price when selling to shops plummets, but also decreases duplication price.',
@@ -182,7 +175,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Price when selling to shops increases a little.',
@@ -201,7 +193,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Price when selling to shops increases quite a bit.',
@@ -220,7 +211,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Price when selling to shops increases quite a lot.',
@@ -239,7 +229,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Price when selling to shops increases quite a lot.',
@@ -275,7 +264,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Price when selling to shops increases massively.',
@@ -311,7 +299,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Price when selling to shops skyrockets.',
@@ -347,7 +334,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Increases item quality by 10% when this trait is transferred.',
@@ -366,7 +352,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Increases item quality by 15% when this trait is transferred.',
@@ -385,7 +370,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Increases item quality by 20% when this trait is transferred.',
@@ -404,7 +388,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Increases item quality by 20% when this trait is transferred.',
@@ -440,7 +423,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Increases item quality by 30% when this trait is transferred.',
@@ -476,7 +458,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Increases item quality by 50% when this trait is transferred.',
@@ -503,7 +484,7 @@ const traits: Trait[] = [
 		name: 'Super Quality',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack item effect by 5%.',
 		id: '638a4d47a44f4fa4b0dec96c',
 		index: 52,
@@ -511,7 +492,7 @@ const traits: Trait[] = [
 		name: 'Destruction Up',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack item effect by 7%.',
 		id: '638a4d47a44f4fa4b0dec96f',
 		index: 53,
@@ -519,7 +500,7 @@ const traits: Trait[] = [
 		name: 'Destruction Up+',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack item effect by 10%.',
 		id: '638a4d47a44f4fa4b0dec984',
 		index: 54,
@@ -527,7 +508,7 @@ const traits: Trait[] = [
 		name: 'Destruction Up++',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack item effect by 12%.',
 		id: '638a4d47a44f4fa4b0dec974',
 		index: 55,
@@ -552,7 +533,7 @@ const traits: Trait[] = [
 		name: 'Big Destruction',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack item effect by 17%.',
 		id: '638a4d47a44f4fa4b0dec977',
 		index: 56,
@@ -577,7 +558,7 @@ const traits: Trait[] = [
 		name: 'Intense Destruction',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack item effect by 30%.',
 		id: '638a4d47a44f4fa4b0dec975',
 		index: 57,
@@ -602,7 +583,7 @@ const traits: Trait[] = [
 		name: 'Ultimate Destruction',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack item effect by 40%.',
 		id: '638a4d47a44f4fa4b0dec979',
 		index: 58,
@@ -610,7 +591,7 @@ const traits: Trait[] = [
 		name: 'Power to Destroy Gods',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attack item enhanced by a small, fixed amount. Lower power equals stronger enhancement.',
 		id: '638a4d47a44f4fa4b0dec978',
 		index: 59,
@@ -618,7 +599,7 @@ const traits: Trait[] = [
 		name: 'Fixed Power',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.',
 		id: '638a4d47a44f4fa4b0dec976',
 		index: 60,
@@ -626,7 +607,7 @@ const traits: Trait[] = [
 		name: 'Fixed Power+',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.',
 		id: '638a4d47a44f4fa4b0dec97b',
 		index: 61,
@@ -634,7 +615,7 @@ const traits: Trait[] = [
 		name: 'Fixed Power++',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.',
 		id: '638a4d47a44f4fa4b0dec981',
 		index: 62,
@@ -661,7 +642,7 @@ const traits: Trait[] = [
 		name: 'Pain in Numbers',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.',
 		id: '638a4d47a44f4fa4b0dec97a',
 		index: 63,
@@ -688,7 +669,7 @@ const traits: Trait[] = [
 		name: 'Damage in Numbers',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attack item enhanced by a huge, fixed amount. Lower power equals stronger enhancement.',
 		id: '638a4d47a44f4fa4b0dec9a4',
 		index: 64,
@@ -715,7 +696,7 @@ const traits: Trait[] = [
 		name: 'Big Damage Numbers',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Effect: Attack item enhanced by a ridiculous, fixed amount. This increase scales with the original value.',
 		id: '638a4d47a44f4fa4b0dec97c',
@@ -724,7 +705,7 @@ const traits: Trait[] = [
 		name: 'Legendary Destruction',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attacks cause 5% additional damage, and increases skill power by 5%.',
 		id: '638a4d47a44f4fa4b0dec97f',
 		index: 66,
@@ -732,7 +713,7 @@ const traits: Trait[] = [
 		name: 'Increase Sharpness',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attacks cause 7% additional damage, and increases skill power by 7%.',
 		id: '638a4d47a44f4fa4b0dec980',
 		index: 67,
@@ -740,7 +721,7 @@ const traits: Trait[] = [
 		name: 'Cuts Easily',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attacks cause 10% additional damage, and increases skill power by 10%.',
 		id: '638a4d47a44f4fa4b0dec97d',
 		index: 68,
@@ -748,7 +729,7 @@ const traits: Trait[] = [
 		name: 'Increase Aggression',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases recovery item effect by 10%.',
 		id: '638a4d47a44f4fa4b0dec9a1',
 		index: 103,
@@ -756,7 +737,7 @@ const traits: Trait[] = [
 		name: 'Recovery Up',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases recovery item effect by 15%.',
 		id: '638a4d47a44f4fa4b0dec983',
 		index: 104,
@@ -764,7 +745,7 @@ const traits: Trait[] = [
 		name: 'Recovery Up+',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases recovery item effect by 20%.',
 		id: '638a4d47a44f4fa4b0dec985',
 		index: 105,
@@ -772,7 +753,7 @@ const traits: Trait[] = [
 		name: 'Recovery Up++',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases recovery item effect by 25%.',
 		id: '638a4d47a44f4fa4b0dec995',
 		index: 106,
@@ -797,7 +778,7 @@ const traits: Trait[] = [
 		name: 'Big Recovery',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases recovery item effect by 35%.',
 		id: '638a4d47a44f4fa4b0dec986',
 		index: 107,
@@ -822,7 +803,7 @@ const traits: Trait[] = [
 		name: 'Intense Recovery',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases recovery item effect by 50%.',
 		id: '638a4d47a44f4fa4b0dec997',
 		index: 108,
@@ -847,7 +828,7 @@ const traits: Trait[] = [
 		name: 'Ultimate Recovery',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases recovery item effect by 40%.',
 		id: '638a4d47a44f4fa4b0dec988',
 		index: 109,
@@ -855,7 +836,7 @@ const traits: Trait[] = [
 		name: 'Blessed by God',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Recovery item enhanced by a tiny, fixed amount. Lower power equals stronger effect.',
 		id: '638a4d47a44f4fa4b0dec989',
 		index: 110,
@@ -863,7 +844,7 @@ const traits: Trait[] = [
 		name: 'Fixed Recovery',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.',
 		id: '638a4d47a44f4fa4b0dec987',
 		index: 111,
@@ -871,7 +852,7 @@ const traits: Trait[] = [
 		name: 'Fixed Recovery+',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Recovery item enhanced by a fixed amount. Lower power equals stronger effect.',
 		id: '638a4d47a44f4fa4b0dec98a',
 		index: 112,
@@ -879,7 +860,7 @@ const traits: Trait[] = [
 		name: 'Fixed Recovery++',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.',
 		id: '638a4d47a44f4fa4b0dec98d',
 		index: 113,
@@ -906,7 +887,7 @@ const traits: Trait[] = [
 		name: 'Medicine Enhance',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Recovery item enhanced by a fixed amount. Lower power equals stronger effect.',
 		id: '638a4d47a44f4fa4b0dec98b',
 		index: 114,
@@ -932,7 +913,7 @@ const traits: Trait[] = [
 		name: 'Big Medicine Enhance',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Recovery item enhanced by a large, fixed amount. Lower power equals stronger effect.',
 		id: '638a4d47a44f4fa4b0dec993',
 		index: 115,
@@ -958,7 +939,7 @@ const traits: Trait[] = [
 		name: 'Super Enhance Recovery',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Effect: Recovery item enhanced by a ridiculous, fixed amount. This increase scales with the original value.',
 		id: '638a4d47a44f4fa4b0dec98c',
@@ -967,7 +948,7 @@ const traits: Trait[] = [
 		name: 'Legendary Recovery',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Gives item a 15% chance to critical hit.',
 		id: '638a4d47a44f4fa4b0dec990',
 		index: 145,
@@ -975,7 +956,7 @@ const traits: Trait[] = [
 		name: 'Critical',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Gives item a 25% chance to critical hit.',
 		id: '638a4d47a44f4fa4b0dec98f',
 		index: 146,
@@ -983,7 +964,7 @@ const traits: Trait[] = [
 		name: 'Critical+',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Gives item a 35% chance to critical hit.',
 		id: '638a4d47a44f4fa4b0dec991',
 		index: 147,
@@ -991,7 +972,7 @@ const traits: Trait[] = [
 		name: 'Critical++',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Gives item a 50% chance to critical hit.',
 		id: '638a4d47a44f4fa4b0dec98e',
 		index: 148,
@@ -1016,7 +997,7 @@ const traits: Trait[] = [
 		name: 'Critical Finish',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Item will always critical hit.',
 		id: '638a4d47a44f4fa4b0dec992',
 		index: 149,
@@ -1041,7 +1022,7 @@ const traits: Trait[] = [
 		name: 'Always Critical',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Item will always critical hit, and KO target (bosses excluded).',
 		id: '638a4d47a44f4fa4b0dec994',
 		index: 150,
@@ -1066,7 +1047,7 @@ const traits: Trait[] = [
 		name: 'One Hit Kill',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces item number variation slightly, making it easier to score higher numbers.',
 		id: '638a4d47a44f4fa4b0dec998',
 		index: 151,
@@ -1074,7 +1055,7 @@ const traits: Trait[] = [
 		name: 'Stable Effect',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces item number variation a little, making it easier to score higher numbers.',
 		id: '638a4d47a44f4fa4b0dec996',
 		index: 152,
@@ -1082,7 +1063,7 @@ const traits: Trait[] = [
 		name: 'Stable Effect+',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces item number variation, making it easier to score higher numbers.',
 		id: '638a4d47a44f4fa4b0dec999',
 		index: 153,
@@ -1090,7 +1071,7 @@ const traits: Trait[] = [
 		name: 'Stable Effect++',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces item number variation, making it easier to score higher numbers.',
 		id: '638a4d47a44f4fa4b0dec9a8',
 		index: 154,
@@ -1117,7 +1098,7 @@ const traits: Trait[] = [
 		name: 'Stability Emphasis',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Halves item number variation, making it easier to score higher numbers.',
 		id: '638a4d48a44f4fa4b0dec9ca',
 		index: 155,
@@ -1143,7 +1124,7 @@ const traits: Trait[] = [
 		name: 'Solid Effect',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Stabilizes item number variation, making it far easier to score higher numbers.',
 		id: '638a4d47a44f4fa4b0dec99d',
 		index: 156,
@@ -1168,7 +1149,7 @@ const traits: Trait[] = [
 		name: 'Boost Expected Value',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases item use count by 1. Power is reduced a little.',
 		id: '638a4d47a44f4fa4b0dec99a',
 		index: 172,
@@ -1176,7 +1157,7 @@ const traits: Trait[] = [
 		name: 'Use Count +1',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases item use count by 2. Power is reduced slightly.',
 		id: '638a4d47a44f4fa4b0dec99b',
 		index: 173,
@@ -1184,7 +1165,7 @@ const traits: Trait[] = [
 		name: 'Use Count +2',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases item use count by 3.',
 		id: '638a4d47a44f4fa4b0dec9a0',
 		index: 174,
@@ -1209,7 +1190,7 @@ const traits: Trait[] = [
 		name: 'Multiply',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces item use count by 1. Power is increased a little.',
 		id: '638a4d47a44f4fa4b0dec99c',
 		index: 175,
@@ -1217,7 +1198,7 @@ const traits: Trait[] = [
 		name: 'Use Count -1',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces item use count by 2. Power is increased.',
 		id: '638a4d47a44f4fa4b0dec99f',
 		index: 176,
@@ -1225,7 +1206,7 @@ const traits: Trait[] = [
 		name: 'Use Count -2',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces item use count by 5. Power is massively increased.',
 		id: '638a4d47a44f4fa4b0dec9a3',
 		index: 177,
@@ -1250,7 +1231,7 @@ const traits: Trait[] = [
 		name: 'Reduction',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 10.',
 		id: '638a4d47a44f4fa4b0dec99e',
 		index: 190,
@@ -1258,7 +1239,7 @@ const traits: Trait[] = [
 		name: 'HP Enhance',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 15.',
 		id: '638a4d48a44f4fa4b0dec9cd',
 		index: 191,
@@ -1266,7 +1247,7 @@ const traits: Trait[] = [
 		name: 'HP Boost',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 25.',
 		id: '638a4d47a44f4fa4b0dec9a2',
 		index: 192,
@@ -1274,7 +1255,7 @@ const traits: Trait[] = [
 		name: 'HP Super Enhance',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Maximum HP increases by 25.',
 		id: '638a4d47a44f4fa4b0dec9a5',
 		index: 193,
@@ -1299,7 +1280,7 @@ const traits: Trait[] = [
 		name: 'Full of Life',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Revive from KO, and also removes 3 status ailments.',
 		id: '638a4d49a44f4fa4b0deca80',
 		index: 193,
@@ -1324,7 +1305,7 @@ const traits: Trait[] = [
 		name: 'Full of Life',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Maximum HP increases by 40.',
 		id: '638a4d47a44f4fa4b0dec9a9',
 		index: 194,
@@ -1349,7 +1330,7 @@ const traits: Trait[] = [
 		name: 'Overflowing Life',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Maximum HP increases by 70.',
 		id: '638a4d48a44f4fa4b0dec9b0',
 		index: 195,
@@ -1374,7 +1355,7 @@ const traits: Trait[] = [
 		name: 'Power of Life',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 10.',
 		id: '638a4d47a44f4fa4b0dec9a6',
 		index: 196,
@@ -1382,7 +1363,7 @@ const traits: Trait[] = [
 		name: 'MP Enhance',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 15.',
 		id: '638a4d47a44f4fa4b0dec9a7',
 		index: 197,
@@ -1390,7 +1371,7 @@ const traits: Trait[] = [
 		name: 'MP Boost',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 25.',
 		id: '638a4d47a44f4fa4b0dec9aa',
 		index: 198,
@@ -1398,7 +1379,7 @@ const traits: Trait[] = [
 		name: 'MP Super Enhance',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Maximum MP increases by 25.',
 		id: '638a4d47a44f4fa4b0dec9ad',
 		index: 199,
@@ -1423,7 +1404,7 @@ const traits: Trait[] = [
 		name: "Magician's Wisdom",
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Maximum MP increases by 40.',
 		id: '638a4d47a44f4fa4b0dec9ab',
 		index: 200,
@@ -1448,7 +1429,7 @@ const traits: Trait[] = [
 		name: "Grand Magician's Wisdom",
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Maximum MP increases by 70.',
 		id: '638a4d48a44f4fa4b0dec9b4',
 		index: 201,
@@ -1473,7 +1454,7 @@ const traits: Trait[] = [
 		name: 'Wisdom of the Gods',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 5.',
 		id: '638a4d47a44f4fa4b0dec9ac',
 		index: 202,
@@ -1481,7 +1462,7 @@ const traits: Trait[] = [
 		name: 'LP Enhance',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 7.',
 		id: '638a4d47a44f4fa4b0dec9ae',
 		index: 203,
@@ -1489,7 +1470,7 @@ const traits: Trait[] = [
 		name: 'LP Boost',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 10.',
 		id: '638a4d48a44f4fa4b0dec9af',
 		index: 204,
@@ -1497,7 +1478,7 @@ const traits: Trait[] = [
 		name: 'LP Super Enhance',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Maximum LP increases by 12.',
 		id: '638a4d48a44f4fa4b0dec9ba',
 		index: 205,
@@ -1522,7 +1503,7 @@ const traits: Trait[] = [
 		name: 'Full of Stamina',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Maximum LP increases by 17.',
 		id: '638a4d48a44f4fa4b0dec9b1',
 		index: 206,
@@ -1547,7 +1528,7 @@ const traits: Trait[] = [
 		name: 'Unabating Stamina',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Maximum LP increases by 30.',
 		id: '638a4d48a44f4fa4b0dec9b5',
 		index: 207,
@@ -1572,7 +1553,7 @@ const traits: Trait[] = [
 		name: 'Infinite Stamina',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Maximum HP and MP increases by 15.',
 		id: '638a4d48a44f4fa4b0dec9b7',
 		index: 208,
@@ -1597,7 +1578,7 @@ const traits: Trait[] = [
 		name: 'HPMP Enhance',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Maximum HP and MP increases by 25.',
 		id: '638a4d48a44f4fa4b0dec9b2',
 		index: 209,
@@ -1622,7 +1603,7 @@ const traits: Trait[] = [
 		name: 'HPMP Boost',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Maximum HP and MP increases by 40.',
 		id: '638a4d48a44f4fa4b0dec9b8',
 		index: 210,
@@ -1647,7 +1628,7 @@ const traits: Trait[] = [
 		name: 'HPMP Super Enhance',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows a stat boost. Effect: Increases base stats by 5%.',
 		id: '638a4d48a44f4fa4b0dec9b3',
 		index: 211,
@@ -1655,7 +1636,7 @@ const traits: Trait[] = [
 		name: 'Parameters +5%',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows a stat boost. Effect: Increases base stats by 6%.',
 		id: '638a4d48a44f4fa4b0dec9b6',
 		index: 212,
@@ -1663,7 +1644,7 @@ const traits: Trait[] = [
 		name: 'Parameters +6%',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows a stat boost. Effect: Increases base stats by 7%.',
 		id: '638a4d48a44f4fa4b0dec9bc',
 		index: 213,
@@ -1671,7 +1652,7 @@ const traits: Trait[] = [
 		name: 'Parameters +7%',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases base stats by 10%.',
 		id: '638a4d48a44f4fa4b0dec9b9',
 		index: 214,
@@ -1696,7 +1677,7 @@ const traits: Trait[] = [
 		name: 'Enhance the Body',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases base stats by 12%.',
 		id: '638a4d48a44f4fa4b0dec9be',
 		index: 215,
@@ -1721,7 +1702,7 @@ const traits: Trait[] = [
 		name: 'Draw Out Power',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases base stats by 15%.',
 		id: '638a4d48a44f4fa4b0dec9bb',
 		index: 216,
@@ -1746,7 +1727,7 @@ const traits: Trait[] = [
 		name: 'Develops the Body',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases base stats by 20%.',
 		id: '638a4d48a44f4fa4b0dec9c0',
 		index: 217,
@@ -1754,7 +1735,7 @@ const traits: Trait[] = [
 		name: 'Evolves the Body',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Enhances weapon attack power. Effect: Increases attack power by 7.',
 		id: '638a4d48a44f4fa4b0dec9d3',
 		index: 218,
@@ -1762,7 +1743,7 @@ const traits: Trait[] = [
 		name: 'Attack Enhance',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Enhances weapon attack power. Effect: Increases attack power by 10.',
 		id: '638a4d48a44f4fa4b0dec9bf',
 		index: 219,
@@ -1770,7 +1751,7 @@ const traits: Trait[] = [
 		name: 'Attack Boost',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Enhances weapon attack power. Effect: Increases attack power by 15.',
 		id: '638a4d48a44f4fa4b0dec9bd',
 		index: 220,
@@ -1778,7 +1759,7 @@ const traits: Trait[] = [
 		name: 'Attack Super Enhance',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack power by 15.',
 		id: '638a4d48a44f4fa4b0dec9c5',
 		index: 221,
@@ -1803,7 +1784,7 @@ const traits: Trait[] = [
 		name: 'Power of Beasts',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack power by 25.',
 		id: '638a4d48a44f4fa4b0dec9c3',
 		index: 222,
@@ -1828,7 +1809,7 @@ const traits: Trait[] = [
 		name: 'Power of Destruction',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack power by 40.',
 		id: '638a4d48a44f4fa4b0dec9c4',
 		index: 223,
@@ -1853,7 +1834,7 @@ const traits: Trait[] = [
 		name: 'Power of Gods',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Enhances armor defense. Effect: Increases defense by 7.',
 		id: '638a4d48a44f4fa4b0dec9c1',
 		index: 224,
@@ -1861,7 +1842,7 @@ const traits: Trait[] = [
 		name: 'Defense Enhance',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Enhances armor defense. Effect: Increases defense by 10.',
 		id: '638a4d48a44f4fa4b0dec9c2',
 		index: 225,
@@ -1869,7 +1850,7 @@ const traits: Trait[] = [
 		name: 'Defense Boost',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Enhances armor defense. Effect: Increases defense by 15.',
 		id: '638a4d48a44f4fa4b0dec9c6',
 		index: 226,
@@ -1877,7 +1858,7 @@ const traits: Trait[] = [
 		name: 'Defense Super Enhance',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases defense by 15.',
 		id: '638a4d48a44f4fa4b0dec9c8',
 		index: 227,
@@ -1902,7 +1883,7 @@ const traits: Trait[] = [
 		name: 'Steel Defense',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases defense by 25.',
 		id: '638a4d48a44f4fa4b0dec9cc',
 		index: 228,
@@ -1927,7 +1908,7 @@ const traits: Trait[] = [
 		name: 'Diamond Defense',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases defense by 40.',
 		id: '638a4d48a44f4fa4b0dec9cb',
 		index: 229,
@@ -1952,7 +1933,7 @@ const traits: Trait[] = [
 		name: 'Dragonscale Defense',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Accessories with this will increase speed. Effect: Increases speed by 7.',
 		id: '638a4d48a44f4fa4b0dec9c7',
 		index: 230,
@@ -1960,7 +1941,7 @@ const traits: Trait[] = [
 		name: 'Speed Enhance',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Accessories with this will increase speed. Effect: Increases speed by 10.',
 		id: '638a4d48a44f4fa4b0dec9c9',
 		index: 231,
@@ -1968,7 +1949,7 @@ const traits: Trait[] = [
 		name: 'Speed Boost',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Accessories with this will increase speed. Effect: Increases speed by 15.',
 		id: '638a4d48a44f4fa4b0dec9d0',
 		index: 232,
@@ -1976,7 +1957,7 @@ const traits: Trait[] = [
 		name: 'Speed Super Enhance',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases speed by 15.',
 		id: '638a4d48a44f4fa4b0dec9cf',
 		index: 233,
@@ -2001,7 +1982,7 @@ const traits: Trait[] = [
 		name: 'Speed of Skanda',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases speed by 25.',
 		id: '638a4d48a44f4fa4b0dec9d1',
 		index: 234,
@@ -2026,7 +2007,7 @@ const traits: Trait[] = [
 		name: 'Speed of Gods',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases speed by 40.',
 		id: '638a4d48a44f4fa4b0dec9ce',
 		index: 235,
@@ -2051,7 +2032,7 @@ const traits: Trait[] = [
 		name: 'Speed of Light',
 	},
 	{
-		categories: ['ARMOR', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack & defense by 5.',
 		id: '638a4d48a44f4fa4b0dec9d8',
 		index: 236,
@@ -2076,7 +2057,7 @@ const traits: Trait[] = [
 		name: 'ATK DEF Enhance',
 	},
 	{
-		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack & speed by 5.',
 		id: '638a4d48a44f4fa4b0dec9d4',
 		index: 237,
@@ -2101,7 +2082,7 @@ const traits: Trait[] = [
 		name: 'ATK SPD Enhance',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases defense & speed by 5.',
 		id: '638a4d48a44f4fa4b0dec9d6',
 		index: 238,
@@ -2126,7 +2107,7 @@ const traits: Trait[] = [
 		name: 'DEF SPD Enhance',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases all stats by 5.',
 		id: '638a4d48a44f4fa4b0dec9d5',
 		index: 239,
@@ -2183,7 +2164,7 @@ const traits: Trait[] = [
 		name: 'All Stat Enhance',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack & defense by 7.',
 		id: '638a4d48a44f4fa4b0dec9d2',
 		index: 240,
@@ -2208,7 +2189,7 @@ const traits: Trait[] = [
 		name: 'ATK DEF Boost',
 	},
 	{
-		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack & speed by 7.',
 		id: '638a4d48a44f4fa4b0dec9db',
 		index: 241,
@@ -2233,7 +2214,7 @@ const traits: Trait[] = [
 		name: 'ATK SPD Boost',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases defense & speed by 7.',
 		id: '638a4d48a44f4fa4b0dec9d9',
 		index: 242,
@@ -2258,7 +2239,7 @@ const traits: Trait[] = [
 		name: 'DEF SPD Boost',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases all stats by 7.',
 		id: '638a4d48a44f4fa4b0dec9e4',
 		index: 243,
@@ -2315,7 +2296,7 @@ const traits: Trait[] = [
 		name: 'All Stat Boost',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases all stats except resistances by 10.',
 		id: '638a4d48a44f4fa4b0dec9d7',
 		index: 244,
@@ -2340,7 +2321,7 @@ const traits: Trait[] = [
 		name: 'All Stat Super Enhance',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases all stats except resistances by 25.',
 		id: '638a4d48a44f4fa4b0dec9da',
 		index: 245,
@@ -2365,7 +2346,7 @@ const traits: Trait[] = [
 		name: 'Well Rounded Power',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases maximum HP and MP by 50.',
 		id: '638a4d48a44f4fa4b0dec9dd',
 		index: 246,
@@ -2373,7 +2354,7 @@ const traits: Trait[] = [
 		name: 'Flawless Body',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases defense by 30, and increases all base stats by 15%.',
 		id: '638a4d48a44f4fa4b0dec9dc',
 		index: 247,
@@ -2381,7 +2362,7 @@ const traits: Trait[] = [
 		name: 'Tenacious Body',
 	},
 	{
-		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 10%.',
 		id: '638a4d48a44f4fa4b0dec9de',
 		index: 298,
@@ -2389,7 +2370,7 @@ const traits: Trait[] = [
 		name: 'Consume MP -10%',
 	},
 	{
-		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 15%.',
 		id: '638a4d48a44f4fa4b0dec9e0',
 		index: 299,
@@ -2397,7 +2378,7 @@ const traits: Trait[] = [
 		name: 'Consume MP -15%',
 	},
 	{
-		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 20%.',
 		id: '638a4d48a44f4fa4b0dec9e1',
 		index: 300,
@@ -2405,7 +2386,7 @@ const traits: Trait[] = [
 		name: 'Consume MP -20%',
 	},
 	{
-		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces MP consumption of skills by 20%.',
 		id: '638a4d48a44f4fa4b0dec9df',
 		index: 301,
@@ -2432,7 +2413,7 @@ const traits: Trait[] = [
 		name: 'Cut MP Consume',
 	},
 	{
-		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces MP consumption of skills by 30%.',
 		id: '638a4d48a44f4fa4b0dec9e7',
 		index: 302,
@@ -2459,7 +2440,7 @@ const traits: Trait[] = [
 		name: 'Compact MP Consume',
 	},
 	{
-		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces MP consumption of skills by 50%.',
 		id: '638a4d48a44f4fa4b0dec9e3',
 		index: 303,
@@ -2484,7 +2465,7 @@ const traits: Trait[] = [
 		name: 'Halve MP Consume',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 5%.',
 		id: '638a4d48a44f4fa4b0dec9e2',
 		index: 304,
@@ -2492,7 +2473,7 @@ const traits: Trait[] = [
 		name: 'Skill Power +5%',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 7%.',
 		id: '638a4d48a44f4fa4b0dec9e5',
 		index: 305,
@@ -2500,7 +2481,7 @@ const traits: Trait[] = [
 		name: 'Skill Power +7%',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 10%.',
 		id: '638a4d48a44f4fa4b0dec9e6',
 		index: 306,
@@ -2508,7 +2489,7 @@ const traits: Trait[] = [
 		name: 'Skill Power +10%',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases skill power and MP consumption by 12%.',
 		id: '638a4d48a44f4fa4b0dec9ee',
 		index: 307,
@@ -2535,7 +2516,7 @@ const traits: Trait[] = [
 		name: 'Skill Enhance',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases skill power and MP consumption by 17%.',
 		id: '638a4d48a44f4fa4b0dec9eb',
 		index: 308,
@@ -2562,7 +2543,7 @@ const traits: Trait[] = [
 		name: 'Skill Boost',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases skill power and MP consumption by 30%.',
 		id: '638a4d48a44f4fa4b0dec9ef',
 		index: 309,
@@ -2587,7 +2568,7 @@ const traits: Trait[] = [
 		name: 'Skill Super Enhance',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases skill power by 7%, and reduces MP consumption by 7%.',
 		id: '638a4d48a44f4fa4b0dec9f1',
 		index: 310,
@@ -2612,7 +2593,7 @@ const traits: Trait[] = [
 		name: 'Eco Skill',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases skill power by 10%, and reduces MP consumption by 10%.',
 		id: '638a4d48a44f4fa4b0dec9f2',
 		index: 311,
@@ -2637,7 +2618,7 @@ const traits: Trait[] = [
 		name: 'Skill Cost Compress',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases skill power by 15%, and reduces MP consumption by 15%.',
 		id: '638a4d48a44f4fa4b0dec9ed',
 		index: 312,
@@ -2662,7 +2643,7 @@ const traits: Trait[] = [
 		name: 'Skill Savings',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases skill power by 25%, and reduces MP consumption by 25%.',
 		id: '638a4d48a44f4fa4b0dec9e8',
 		index: 313,
@@ -2670,7 +2651,7 @@ const traits: Trait[] = [
 		name: 'Expert Skill',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases skill power by 35%, and reduces MP consumption by 35%.',
 		id: '638a4d48a44f4fa4b0dec9ec',
 		index: 314,
@@ -2678,7 +2659,7 @@ const traits: Trait[] = [
 		name: 'Super Skill',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Massively increases the target's level.",
 		id: '638a4d48a44f4fa4b0dec9e9',
 		index: 349,
@@ -2686,7 +2667,7 @@ const traits: Trait[] = [
 		name: 'Soul Dwelling',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Massively increases the target's attack power.",
 		id: '638a4d48a44f4fa4b0dec9f0',
 		index: 350,
@@ -2694,7 +2675,7 @@ const traits: Trait[] = [
 		name: 'Blessing of Strength',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Massively increases the target's defense.",
 		id: '638a4d48a44f4fa4b0dec9ea',
 		index: 351,
@@ -2702,7 +2683,7 @@ const traits: Trait[] = [
 		name: 'Blessing of Protection',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Massively increases the target's speed.",
 		id: '638a4d48a44f4fa4b0dec9f3',
 		index: 352,
@@ -2710,7 +2691,7 @@ const traits: Trait[] = [
 		name: 'Blessing of Skanda',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Has a chance to inflict Sleep when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9f4',
 		index: 365,
@@ -2718,7 +2699,7 @@ const traits: Trait[] = [
 		name: 'Inflict Sleep',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Has a chance to inflict Poison when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9f5',
 		index: 366,
@@ -2726,7 +2707,7 @@ const traits: Trait[] = [
 		name: 'Inflict Poison',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Has a chance to inflict Slow when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9f6',
 		index: 367,
@@ -2734,7 +2715,7 @@ const traits: Trait[] = [
 		name: 'Inflict Slow',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Has a chance to inflict Curse when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9fa',
 		index: 368,
@@ -2742,7 +2723,7 @@ const traits: Trait[] = [
 		name: 'Inflict Curse',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Has a chance to inflict Blind when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9fb',
 		index: 369,
@@ -2750,7 +2731,7 @@ const traits: Trait[] = [
 		name: 'Inflict Blind',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Has a chance to inflict Weak when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9f8',
 		index: 370,
@@ -2758,7 +2739,7 @@ const traits: Trait[] = [
 		name: 'Inflict Weak',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Has a chance to inflict No Heal when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9f7',
 		index: 371,
@@ -2766,7 +2747,7 @@ const traits: Trait[] = [
 		name: 'Inflict No Heal',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Has a chance to inflict Seal when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9fc',
 		index: 372,
@@ -2774,7 +2755,7 @@ const traits: Trait[] = [
 		name: 'Inflict Seal',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Massively reduces the target's level, reducing all stats and damage dealt.",
 		id: '638a4d48a44f4fa4b0dec9f9',
 		index: 373,
@@ -2782,7 +2763,7 @@ const traits: Trait[] = [
 		name: 'Consume Soul',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Massively reduces the target's attack power.",
 		id: '638a4d48a44f4fa4b0dec9fd',
 		index: 374,
@@ -2790,7 +2771,7 @@ const traits: Trait[] = [
 		name: 'Powerless Curse',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Massively reduces the target's defense.",
 		id: '638a4d48a44f4fa4b0dec9fe',
 		index: 375,
@@ -2798,7 +2779,7 @@ const traits: Trait[] = [
 		name: 'Defenseless Curse',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Massively reduces the target's speed.",
 		id: '638a4d48a44f4fa4b0dec9ff',
 		index: 376,
@@ -2806,7 +2787,7 @@ const traits: Trait[] = [
 		name: 'Slowness Curse',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Absorb 3% of damage dealt through attacks to restore your own HP.',
 		id: '638a4d48a44f4fa4b0deca02',
 		index: 401,
@@ -2814,7 +2795,7 @@ const traits: Trait[] = [
 		name: 'Damage Absorb',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Absorb 5% of damage dealt through attacks to restore your own HP.',
 		id: '638a4d48a44f4fa4b0deca03',
 		index: 402,
@@ -2822,7 +2803,7 @@ const traits: Trait[] = [
 		name: 'Damage Absorb+',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Absorb 7% of damage dealt through attacks to restore your own HP.',
 		id: '638a4d48a44f4fa4b0deca01',
 		index: 403,
@@ -2830,7 +2811,7 @@ const traits: Trait[] = [
 		name: 'Damage Absorb++',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Absorb 7% of damage dealt through attacks to restore your own HP.',
 		id: '638a4d48a44f4fa4b0deca05',
 		index: 404,
@@ -2855,7 +2836,7 @@ const traits: Trait[] = [
 		name: 'HP Absorb',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Absorb 10% of damage dealt through attacks to restore your own HP.',
 		id: '638a4d48a44f4fa4b0deca06',
 		index: 405,
@@ -2880,7 +2861,7 @@ const traits: Trait[] = [
 		name: 'Steal Life',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Absorb 15% of damage dealt through attacks to restore your own HP.',
 		id: '638a4d48a44f4fa4b0deca07',
 		index: 406,
@@ -2905,7 +2886,7 @@ const traits: Trait[] = [
 		name: 'Absorb Soul',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Effect: Increases attack power by 20, and absorb 10% of damage dealt through attacks to restore your own HP.',
 		id: '638a4d48a44f4fa4b0deca00',
@@ -2914,7 +2895,7 @@ const traits: Trait[] = [
 		name: 'Over Power',
 	},
 	{
-		categories: ['EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Slag type enemies.',
 		id: '638a4d48a44f4fa4b0deca04',
 		index: 422,
@@ -2922,7 +2903,7 @@ const traits: Trait[] = [
 		name: 'Slag Slayer',
 	},
 	{
-		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Plant and Spirit type enemies.',
 		id: '638a4d48a44f4fa4b0deca08',
 		index: 423,
@@ -2930,7 +2911,7 @@ const traits: Trait[] = [
 		name: 'Spirit Slayer',
 	},
 	{
-		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Animal and Beast type enemies.',
 		id: '638a4d48a44f4fa4b0deca09',
 		index: 424,
@@ -2938,7 +2919,7 @@ const traits: Trait[] = [
 		name: 'Beast Slayer',
 	},
 	{
-		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Demon type enemies.',
 		id: '638a4d48a44f4fa4b0deca0a',
 		index: 425,
@@ -2946,7 +2927,7 @@ const traits: Trait[] = [
 		name: 'Demon Slayer',
 	},
 	{
-		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Dragon type enemies.',
 		id: '638a4d48a44f4fa4b0deca0b',
 		index: 426,
@@ -2954,7 +2935,7 @@ const traits: Trait[] = [
 		name: 'Dragon Slayer',
 	},
 	{
-		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to monsters created through magic and alchemy.',
 		id: '638a4d48a44f4fa4b0deca0d',
 		index: 427,
@@ -2962,7 +2943,7 @@ const traits: Trait[] = [
 		name: 'Magical Slayer',
 	},
 	{
-		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Puni type enemies.',
 		id: '638a4d48a44f4fa4b0deca0f',
 		index: 428,
@@ -2970,7 +2951,7 @@ const traits: Trait[] = [
 		name: 'Puni Slayer',
 	},
 	{
-		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Undead type enemies.',
 		id: '638a4d48a44f4fa4b0deca0c',
 		index: 429,
@@ -2978,7 +2959,7 @@ const traits: Trait[] = [
 		name: 'Undead Slayer',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Broken targets by 10%.',
 		id: '638a4d48a44f4fa4b0deca0e',
 		index: 446,
@@ -2986,7 +2967,7 @@ const traits: Trait[] = [
 		name: 'Enhance Finisher',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Broken targets by 20%.',
 		id: '638a4d48a44f4fa4b0deca11',
 		index: 447,
@@ -2994,7 +2975,7 @@ const traits: Trait[] = [
 		name: 'Enhance Finisher+',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Broken targets by 30%.',
 		id: '638a4d48a44f4fa4b0deca12',
 		index: 448,
@@ -3002,7 +2983,7 @@ const traits: Trait[] = [
 		name: 'Enhance Finisher++',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Broken targets by 30%.',
 		id: '638a4d48a44f4fa4b0deca16',
 		index: 449,
@@ -3027,7 +3008,7 @@ const traits: Trait[] = [
 		name: 'Merciless Blow',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Broken targets by 40%.',
 		id: '638a4d48a44f4fa4b0deca19',
 		index: 450,
@@ -3052,7 +3033,7 @@ const traits: Trait[] = [
 		name: 'Relentless Blow',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Broken targets by 60%.',
 		id: '638a4d48a44f4fa4b0deca1b',
 		index: 451,
@@ -3077,7 +3058,7 @@ const traits: Trait[] = [
 		name: 'Ruthless Blow',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Enhances item effect according to strength of traits present.',
 		id: '638a4d48a44f4fa4b0deca17',
 		index: 464,
@@ -3085,7 +3066,7 @@ const traits: Trait[] = [
 		name: 'Trait Enhance',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Greatly enhances item effect according to strength of traits present.',
 		id: '638a4d48a44f4fa4b0deca10',
 		index: 465,
@@ -3093,7 +3074,7 @@ const traits: Trait[] = [
 		name: 'Trait Enhance+',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Massively enhances item effect according to strength of traits present.',
 		id: '638a4d49a44f4fa4b0deca1c',
 		index: 466,
@@ -3118,7 +3099,7 @@ const traits: Trait[] = [
 		name: 'Cost Bonus',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Effect: Enhances item effect according to strength of traits present. Stronger traits equal ridiculously greater enhancement.',
 		id: '638a4d48a44f4fa4b0deca13',
@@ -3127,7 +3108,7 @@ const traits: Trait[] = [
 		name: 'Trait Super Enhance',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Power increases by number of targets in effect area x 5%.',
 		id: '638a4d48a44f4fa4b0deca14',
 		index: 480,
@@ -3135,7 +3116,7 @@ const traits: Trait[] = [
 		name: 'Area Bonus',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Power increases by number of targets in effect area x 10%.',
 		id: '638a4d48a44f4fa4b0deca15',
 		index: 481,
@@ -3143,7 +3124,7 @@ const traits: Trait[] = [
 		name: 'Area Bonus+',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Power increases by number of targets in effect area x 15%.',
 		id: '638a4d49a44f4fa4b0deca1f',
 		index: 482,
@@ -3168,7 +3149,7 @@ const traits: Trait[] = [
 		name: 'Effective Vs Many',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Power increases by number of targets in effect area x 20%.',
 		id: '638a4d48a44f4fa4b0deca1a',
 		index: 483,
@@ -3176,7 +3157,7 @@ const traits: Trait[] = [
 		name: 'Multi Bonus',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Power increases by 10 / number of targets in effect area %.',
 		id: '638a4d48a44f4fa4b0deca18',
 		index: 484,
@@ -3184,7 +3165,7 @@ const traits: Trait[] = [
 		name: 'Fewer Bonus',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Power increases by 15 / number of targets in effect area %.',
 		id: '638a4d49a44f4fa4b0deca22',
 		index: 485,
@@ -3192,7 +3173,7 @@ const traits: Trait[] = [
 		name: 'Fewer Bonus+',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Power increases by 20 / number of targets in effect area %.',
 		id: '638a4d49a44f4fa4b0deca20',
 		index: 486,
@@ -3217,7 +3198,7 @@ const traits: Trait[] = [
 		name: 'Effective Vs One',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Power increases by 30 / number of targets in effect area %.',
 		id: '638a4d49a44f4fa4b0deca1e',
 		index: 487,
@@ -3225,7 +3206,7 @@ const traits: Trait[] = [
 		name: 'Single Bonus',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Effect: Power increases by 20 / number of targets in effect area % + number of targets in effect area x 10%.',
 		id: '638a4d49a44f4fa4b0deca1d',
@@ -3234,7 +3215,7 @@ const traits: Trait[] = [
 		name: 'Few + Many Bonus',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Power increases by 10% when use count is 1.',
 		id: '638a4d49a44f4fa4b0deca29',
 		index: 507,
@@ -3242,7 +3223,7 @@ const traits: Trait[] = [
 		name: 'Enhance Last',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Power increases by 20% when use count is 1.',
 		id: '638a4d49a44f4fa4b0deca23',
 		index: 508,
@@ -3250,7 +3231,7 @@ const traits: Trait[] = [
 		name: 'Enhance Last+',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Power increases by 30% when use count is 1.',
 		id: '638a4d49a44f4fa4b0deca28',
 		index: 509,
@@ -3275,7 +3256,7 @@ const traits: Trait[] = [
 		name: 'Final Blow',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Power increases by 45% when use count is 1.',
 		id: '638a4d49a44f4fa4b0deca24',
 		index: 510,
@@ -3283,7 +3264,7 @@ const traits: Trait[] = [
 		name: 'Last Strike',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 3%.',
 		id: '638a4d49a44f4fa4b0deca21',
 		index: 511,
@@ -3291,7 +3272,7 @@ const traits: Trait[] = [
 		name: 'Count Compress',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 5%.',
 		id: '638a4d49a44f4fa4b0deca25',
 		index: 512,
@@ -3299,7 +3280,7 @@ const traits: Trait[] = [
 		name: 'Count Compress+',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 7%.',
 		id: '638a4d49a44f4fa4b0deca27',
 		index: 513,
@@ -3326,7 +3307,7 @@ const traits: Trait[] = [
 		name: 'Force Final',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 10%.',
 		id: '638a4d49a44f4fa4b0deca26',
 		index: 514,
@@ -3334,7 +3315,7 @@ const traits: Trait[] = [
 		name: 'One Time End',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases item power by maximum use count x 2%.',
 		id: '638a4d49a44f4fa4b0deca2d',
 		index: 515,
@@ -3342,7 +3323,7 @@ const traits: Trait[] = [
 		name: 'Count Bonus',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases item power by maximum use count x 3%.',
 		id: '638a4d49a44f4fa4b0deca2c',
 		index: 516,
@@ -3350,7 +3331,7 @@ const traits: Trait[] = [
 		name: 'Count Bonus+',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases item power by maximum use count x 5%.',
 		id: '638a4d49a44f4fa4b0deca34',
 		index: 517,
@@ -3375,7 +3356,7 @@ const traits: Trait[] = [
 		name: 'Count Boost',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases item power by maximum use count x 7%.',
 		id: '638a4d49a44f4fa4b0deca3b',
 		index: 518,
@@ -3383,7 +3364,7 @@ const traits: Trait[] = [
 		name: 'Enhance with Count',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces WT after using item by 10%. Power is decreased slightly.',
 		id: '638a4d49a44f4fa4b0deca2a',
 		index: 541,
@@ -3391,7 +3372,7 @@ const traits: Trait[] = [
 		name: 'Fast Use',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces WT after using item by 20%. Power is decreased a small amount.',
 		id: '638a4d49a44f4fa4b0deca2b',
 		index: 542,
@@ -3399,7 +3380,7 @@ const traits: Trait[] = [
 		name: 'Fast Use+',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces WT after using item by 30%. Power is decreased a small amount.',
 		id: '638a4d49a44f4fa4b0deca2f',
 		index: 543,
@@ -3424,7 +3405,7 @@ const traits: Trait[] = [
 		name: 'Sonic Throw',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces WT after using item by 50%.',
 		id: '638a4d49a44f4fa4b0deca2e',
 		index: 544,
@@ -3432,7 +3413,7 @@ const traits: Trait[] = [
 		name: 'Mach Throw',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Wait time after using item increases a little, but power increases a little too.',
 		id: '638a4d49a44f4fa4b0deca30',
 		index: 545,
@@ -3440,7 +3421,7 @@ const traits: Trait[] = [
 		name: 'Power Throw',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Wait time after using item increases, but power increases too.',
 		id: '638a4d49a44f4fa4b0deca33',
 		index: 546,
@@ -3448,7 +3429,7 @@ const traits: Trait[] = [
 		name: 'Power Throw+',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Wait time after using item increases a lot, but power increases a lot too.',
 		id: '638a4d49a44f4fa4b0deca35',
 		index: 547,
@@ -3474,7 +3455,7 @@ const traits: Trait[] = [
 		name: 'Strong Throw',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases item power by a small amount proportional to wait time after using item.',
 		id: '638a4d49a44f4fa4b0deca32',
 		index: 548,
@@ -3482,7 +3463,7 @@ const traits: Trait[] = [
 		name: 'Wait Time Enhance',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases item power by a decent amount proportional to wait time after using item.',
 		id: '638a4d49a44f4fa4b0deca31',
 		index: 549,
@@ -3490,7 +3471,7 @@ const traits: Trait[] = [
 		name: 'Wait Time Enhance+',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases item power proportional to wait time after using item.',
 		id: '638a4d49a44f4fa4b0deca37',
 		index: 550,
@@ -3517,7 +3498,7 @@ const traits: Trait[] = [
 		name: 'Charge Item',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Item size increases by 1 level, equipment cost increases by 5.',
 		id: '638a4d49a44f4fa4b0deca3a',
 		index: 571,
@@ -3525,7 +3506,7 @@ const traits: Trait[] = [
 		name: 'Size+',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Item size increases by 2 levels, equipment cost increases by 10.',
 		id: '638a4d49a44f4fa4b0deca3e',
 		index: 572,
@@ -3533,7 +3514,7 @@ const traits: Trait[] = [
 		name: 'Jumbo Size',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Item size decreases by 1 level, equipment cost decreases by 10.',
 		id: '638a4d49a44f4fa4b0deca38',
 		index: 573,
@@ -3541,7 +3522,7 @@ const traits: Trait[] = [
 		name: 'Size -',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Item size decreases by 2 levels, equipment cost decreases by 20.',
 		id: '638a4d49a44f4fa4b0deca39',
 		index: 574,
@@ -3549,7 +3530,7 @@ const traits: Trait[] = [
 		name: 'Mini Size',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases item effect by a decent amount as size increases.',
 		id: '638a4d49a44f4fa4b0deca36',
 		index: 575,
@@ -3557,7 +3538,7 @@ const traits: Trait[] = [
 		name: 'Size Enhance',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases item effect as size increases.',
 		id: '638a4d49a44f4fa4b0deca3c',
 		index: 576,
@@ -3565,7 +3546,7 @@ const traits: Trait[] = [
 		name: 'Size Super Enhance',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases item effect by a large amount as size increases.',
 		id: '638a4d49a44f4fa4b0deca4b',
 		index: 577,
@@ -3590,7 +3571,7 @@ const traits: Trait[] = [
 		name: 'Crush Dimension',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces equipment cost of usable item by 5.',
 		id: '638a4d49a44f4fa4b0deca3d',
 		index: 578,
@@ -3598,7 +3579,7 @@ const traits: Trait[] = [
 		name: 'Kind of Light',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces equipment cost of usable item by 8.',
 		id: '638a4d49a44f4fa4b0deca3f',
 		index: 579,
@@ -3606,7 +3587,7 @@ const traits: Trait[] = [
 		name: 'Light',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces equipment cost of usable item by 12.',
 		id: '638a4d49a44f4fa4b0deca46',
 		index: 580,
@@ -3631,7 +3612,7 @@ const traits: Trait[] = [
 		name: 'Easy to Handle',
 	},
 	{
-		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces equipment cost of usable item by 20.',
 		id: '638a4d49a44f4fa4b0deca43',
 		index: 581,
@@ -3656,7 +3637,7 @@ const traits: Trait[] = [
 		name: 'Accustoms Quickly',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Zeal factor enhances the material it resides in. Effect: Increases HP and attack.',
 		id: '638a4d49a44f4fa4b0deca47',
 		index: 592,
@@ -3664,7 +3645,7 @@ const traits: Trait[] = [
 		name: 'Zeal Factor',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Happy heart enhances the material it resides in. Effect: Increases MP and defense.',
 		id: '638a4d49a44f4fa4b0deca40',
 		index: 593,
@@ -3672,7 +3653,7 @@ const traits: Trait[] = [
 		name: 'Happy Heart',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Cunning wit enhances the material it resides in. Effect: Increases critical bonus and accuracy.',
 		id: '638a4d49a44f4fa4b0deca42',
 		index: 594,
@@ -3680,7 +3661,7 @@ const traits: Trait[] = [
 		name: 'Cunning Wit',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Splendid glory enhances the material it resides in. Effect: Increases WT delay resistance and Break resistance.',
 		id: '638a4d49a44f4fa4b0deca44',
@@ -3689,7 +3670,7 @@ const traits: Trait[] = [
 		name: 'Splendid Glory',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Benevolent light enhances the material it resides in. Effect: Provides damage reversal and immunity to all ailments.',
 		id: '638a4d49a44f4fa4b0deca48',
@@ -3698,7 +3679,7 @@ const traits: Trait[] = [
 		name: 'Benevolent Light',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Wild instinct enhances the material it resides in. Effect: Increases speed, reduces wait time after using skills.',
 		id: '638a4d49a44f4fa4b0deca41',
@@ -3707,7 +3688,7 @@ const traits: Trait[] = [
 		name: 'Wild Instinct',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Persistent faith enhances the material it resides in. Effect: Provides HP regeneration and chance to avoid KO.',
 		id: '638a4d49a44f4fa4b0deca45',
@@ -3716,7 +3697,7 @@ const traits: Trait[] = [
 		name: 'Persistent Faith',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Guiding intuition enhances the material it resides in. Effect: Increases critical hit rate, has a chance to shorten wait time.',
 		id: '638a4d49a44f4fa4b0deca4a',
@@ -3725,7 +3706,7 @@ const traits: Trait[] = [
 		name: 'Guide Intuition',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Empty world enhances the material it resides in. Effect: Provides damage conversion, reduces physical damage taken.',
 		id: '638a4d49a44f4fa4b0deca49',
@@ -3734,7 +3715,7 @@ const traits: Trait[] = [
 		name: 'Empty World',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Power of madness enhances the material it resides in. Effect: Greatly increases attack power, lose lots of HP each turn.',
 		id: '638a4d49a44f4fa4b0deca4c',
@@ -3743,7 +3724,7 @@ const traits: Trait[] = [
 		name: 'Power of Madness',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Burning passion enhances the material it resides in. Effect: Increases all stats by 15, bestows fire and ice resistance.',
 		id: '638a4d49a44f4fa4b0deca4e',
@@ -3752,7 +3733,7 @@ const traits: Trait[] = [
 		name: 'Burning Passion',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Unwavering spirit enhances the material it resides in. Effect: Increases all stats by 15, bestows lightning and physical resistance.',
 		id: '638a4d49a44f4fa4b0deca4d',
@@ -3761,7 +3742,7 @@ const traits: Trait[] = [
 		name: 'Unwavering Spirit',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Fog of illusion enhances the material it resides in. Effect: Swaps HP and MP, adds evasion chance.',
 		id: '638a4d49a44f4fa4b0deca4f',
 		index: 604,
@@ -3769,7 +3750,7 @@ const traits: Trait[] = [
 		name: 'Fog of Illusion',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Bonds of belief enhances the material it resides in. Effect: Increases assist effect, provides damage conversion.',
 		id: '638a4d49a44f4fa4b0deca5a',
@@ -3778,7 +3759,7 @@ const traits: Trait[] = [
 		name: 'Bonds of Belief',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Hammer of justice enhances the material it resides in. Effect: Greatly increases skill power, adds Break value.',
 		id: '638a4d49a44f4fa4b0deca52',
@@ -3787,7 +3768,7 @@ const traits: Trait[] = [
 		name: 'Hammer of Justice',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Dreadful king enhances the material it resides in. Effect: Causes additional damage and status effects.',
 		id: '638a4d49a44f4fa4b0deca51',
@@ -3796,7 +3777,7 @@ const traits: Trait[] = [
 		name: 'Dreadful King',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Unceasing desire enhances the material it resides in. Effect: Absorbs a portion of damage dealt.',
 		id: '638a4d49a44f4fa4b0deca55',
 		index: 608,
@@ -3804,7 +3785,7 @@ const traits: Trait[] = [
 		name: 'Unceasing Desire',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Pursuit of knowledge enhances the material it resides in. Effect: Causes additional damage.',
 		id: '638a4d49a44f4fa4b0deca53',
 		index: 609,
@@ -3812,7 +3793,7 @@ const traits: Trait[] = [
 		name: 'Pursuit of Knowledge',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Star of expectation enhances the material it resides in. Effect: Provides enhancement proportional to level.',
 		id: '638a4d49a44f4fa4b0deca50',
@@ -3821,7 +3802,7 @@ const traits: Trait[] = [
 		name: 'Star of Expectation',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Ray of hope enhances the material it resides in. Effect: Increases maximum HP, provides automatic KO revival.',
 		id: '638a4d49a44f4fa4b0deca57',
@@ -3830,7 +3811,7 @@ const traits: Trait[] = [
 		name: 'Ray of Hope',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Awakening courage enhances the material it resides in. Effect: Provides a bonus against powerful foes and bosses.',
 		id: '638a4d49a44f4fa4b0deca54',
@@ -3839,7 +3820,7 @@ const traits: Trait[] = [
 		name: 'Awakening Courage',
 	},
 	{
-		categories: ['EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Kind soul enhances the material it resides in. Effect: Provides a Burst Mode bonus and gauge fill rate increase.',
 		id: '638a4d49a44f4fa4b0deca58',
@@ -3848,7 +3829,7 @@ const traits: Trait[] = [
 		name: 'Kind Soul',
 	},
 	{
-		categories: ['ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Indomitable soul enhances the material it resides in. Effect: Provides Break resistance and greatly increases speed of recovering from Break.',
 		id: '638a4d49a44f4fa4b0deca59',
@@ -3857,7 +3838,7 @@ const traits: Trait[] = [
 		name: 'Indomitable Soul',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attacks cause 7% additional damage, and increases skill power by 15%.',
 		id: '638a4d49a44f4fa4b0deca56',
 		index: 659,
@@ -3865,7 +3846,7 @@ const traits: Trait[] = [
 		name: 'Changing Attack',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attacks cause 15% additional damage, and increases skill power by 10%.',
 		id: '638a4d49a44f4fa4b0deca5e',
 		index: 660,
@@ -3873,7 +3854,7 @@ const traits: Trait[] = [
 		name: 'Avidya Attack',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attacks cause 15% additional damage, and increases skill power by 15%.',
 		id: '638a4d49a44f4fa4b0deca5c',
 		index: 661,
@@ -3881,7 +3862,7 @@ const traits: Trait[] = [
 		name: 'Barrage Attack',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attacks cause 20% additional damage, and increases skill power by 25%.',
 		id: '638a4d49a44f4fa4b0deca5b',
 		index: 662,
@@ -3889,7 +3870,7 @@ const traits: Trait[] = [
 		name: 'Skillful Attack',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attacks cause 15% additional damage, and increases skill power by 20%.',
 		id: '638a4d49a44f4fa4b0deca5d',
 		index: 663,
@@ -3897,7 +3878,7 @@ const traits: Trait[] = [
 		name: 'Persistent Attack',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Attacks cause between 1 - 50% additional damage.',
 		id: '638a4d49a44f4fa4b0deca5f',
 		index: 664,
@@ -3905,7 +3886,7 @@ const traits: Trait[] = [
 		name: 'Deadly Attack',
 	},
 	{
-		categories: ['HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Item automatically activates when the user's HP falls below 20% in battle. Consumes MP.",
 		id: '638a4d49a44f4fa4b0deca61',
 		index: 677,
@@ -3913,7 +3894,7 @@ const traits: Trait[] = [
 		name: 'Auto Activate 20%',
 	},
 	{
-		categories: ['HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Item automatically activates when the user's HP falls below 30% in battle. Consumes MP.",
 		id: '638a4d49a44f4fa4b0deca60',
 		index: 678,
@@ -3921,7 +3902,7 @@ const traits: Trait[] = [
 		name: 'Auto Activate 30%',
 	},
 	{
-		categories: ['HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Item automatically activates when the user's HP falls below 40% in battle. Consumes MP.",
 		id: '638a4d49a44f4fa4b0deca63',
 		index: 679,
@@ -3929,7 +3910,7 @@ const traits: Trait[] = [
 		name: 'Auto Activate 50%',
 	},
 	{
-		categories: ['HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Item automatically activates when the user's HP falls below 50% in battle.",
 		id: '638a4d49a44f4fa4b0deca62',
 		index: 680,
@@ -3937,7 +3918,7 @@ const traits: Trait[] = [
 		name: 'Auto Use',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Effect: Increases item power by 25%, and makes its effect non-attribute. Non-attribute is not affected by any resistances or weaknesses.',
 		id: '638a4d49a44f4fa4b0deca67',
@@ -3946,7 +3927,7 @@ const traits: Trait[] = [
 		name: 'No Attribute',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Has a high chance to inflict Poison when dealing damage.',
 		id: '638a4d49a44f4fa4b0deca68',
 		index: 682,
@@ -3954,7 +3935,7 @@ const traits: Trait[] = [
 		name: 'Poison Mist',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Restores some of the target's HP, and also recovers from Poison.",
 		id: '638a4d49a44f4fa4b0deca6a',
 		index: 683,
@@ -3962,7 +3943,7 @@ const traits: Trait[] = [
 		name: 'Slime Compound',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			"Effect: Temporarily increases all of the target's stats. They will also automatically revive on their next turn after being KO'd.",
 		id: '638a4d49a44f4fa4b0deca66',
@@ -3971,7 +3952,7 @@ const traits: Trait[] = [
 		name: 'False Flower',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			"Effect: Pushes back the target's turn a little. This effect diminishes with each use until the target takes another turn.",
 		id: '638a4d49a44f4fa4b0deca64',
@@ -3980,7 +3961,7 @@ const traits: Trait[] = [
 		name: 'Electrified',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Heat causes continuous damage. The effect is small.',
 		id: '638a4d49a44f4fa4b0deca65',
 		index: 686,
@@ -3988,7 +3969,7 @@ const traits: Trait[] = [
 		name: 'Carries Heat',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Cold reduces the target's speed, and also has a low chance of inflicting Slow.",
 		id: '638a4d49a44f4fa4b0deca69',
 		index: 687,
@@ -3996,7 +3977,7 @@ const traits: Trait[] = [
 		name: 'Carries Cold',
 	},
 	{
-		categories: ['ACCESSORY', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases all stats by 8.',
 		id: '638a4d49a44f4fa4b0deca6b',
 		index: 688,
@@ -4004,7 +3985,7 @@ const traits: Trait[] = [
 		name: 'Dark Matter',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Puni and magical creatures.',
 		id: '638a4d49a44f4fa4b0deca6c',
 		index: 689,
@@ -4012,7 +3993,7 @@ const traits: Trait[] = [
 		name: 'Ancient Seal',
 	},
 	{
-		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Reduces skill power by 10%, but also reduces MP consumption by 30%.',
 		id: '638a4d49a44f4fa4b0deca71',
 		index: 690,
@@ -4020,7 +4001,7 @@ const traits: Trait[] = [
 		name: 'Absorbs Light',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Reduces the target's defense and speed.",
 		id: '638a4d49a44f4fa4b0deca6f',
 		index: 691,
@@ -4028,7 +4009,7 @@ const traits: Trait[] = [
 		name: 'Stinks',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Restores Break value to the target. Also reduces wait time after turns by a small amount.',
 		id: '638a4d49a44f4fa4b0deca6e',
 		index: 692,
@@ -4036,7 +4017,7 @@ const traits: Trait[] = [
 		name: 'Sunny Scent',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack by 7, and attacks cause a small amount of additional damage.',
 		id: '638a4d49a44f4fa4b0deca6d',
 		index: 693,
@@ -4044,7 +4025,7 @@ const traits: Trait[] = [
 		name: 'Cutting Thread',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: The target recovers a small amount of HP, and also recovers from Weak.',
 		id: '638a4d49a44f4fa4b0deca72',
 		index: 694,
@@ -4052,7 +4033,7 @@ const traits: Trait[] = [
 		name: 'Kirchen Bell Special',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: "Effect: Increases the target's evasion rate. This effect lasts 5 turns.",
 		id: '638a4d49a44f4fa4b0deca75',
 		index: 695,
@@ -4060,7 +4041,7 @@ const traits: Trait[] = [
 		name: 'Flickering Light',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack item effect by 5%, and also has a chance to cause Weak.',
 		id: '638a4d49a44f4fa4b0deca70',
 		index: 696,
@@ -4068,7 +4049,7 @@ const traits: Trait[] = [
 		name: 'Unidentified',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: The target recovers a small amount of HP, and also recovers from Curse.',
 		id: '638a4d49a44f4fa4b0deca76',
 		index: 697,
@@ -4085,7 +4066,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Price when selling to shops increases quite a lot.',
@@ -4095,7 +4075,7 @@ const traits: Trait[] = [
 		name: 'Golden Radiance',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases attack item effect by 15%.',
 		id: '638a4d49a44f4fa4b0deca73',
 		index: 699,
@@ -4103,7 +4083,7 @@ const traits: Trait[] = [
 		name: 'Super Fine',
 	},
 	{
-		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases defense by 10, and also causes a decent amount of HP recovery each turn.',
 		id: '638a4d49a44f4fa4b0deca74',
 		index: 700,
@@ -4111,7 +4091,7 @@ const traits: Trait[] = [
 		name: 'Mutated Material',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases recovery item effect by 30%, but increases equipment cost by 5.',
 		id: '638a4d49a44f4fa4b0deca77',
 		index: 701,
@@ -4119,7 +4099,7 @@ const traits: Trait[] = [
 		name: 'Special Ingredient',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			"Effect: Increases the target's maximum HP during battle, and also reduces the effectiveness of status ailments. The effect is small.",
 		id: '638a4d49a44f4fa4b0deca7b',
@@ -4128,7 +4108,7 @@ const traits: Trait[] = [
 		name: 'Secret of Health',
 	},
 	{
-		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases critical hit rate, and also increases damage dealt to Broken targets.',
 		id: '638a4d49a44f4fa4b0deca79',
 		index: 703,
@@ -4136,7 +4116,7 @@ const traits: Trait[] = [
 		name: 'Power of Faith',
 	},
 	{
-		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: The target recovers from Poison and No Heal ailments.',
 		id: '638a4d49a44f4fa4b0deca7a',
 		index: 704,
@@ -4153,7 +4133,6 @@ const traits: Trait[] = [
 			'HEAL_ITEM',
 			'WEAPON',
 			'EXPLORATION',
-			'MACHINE',
 			'SYNTHESIS',
 		],
 		description: 'Effect: Increases price when selling to shops.',
@@ -4163,7 +4142,7 @@ const traits: Trait[] = [
 		name: 'Rainbow Radiance',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases damage dealt to Demon and Undead enemies.',
 		id: '638a4d49a44f4fa4b0deca7c',
 		index: 706,
@@ -4171,7 +4150,7 @@ const traits: Trait[] = [
 		name: 'Wards Evil',
 	},
 	{
-		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
 			'Effect: Increases damage dealt to Broken targets by 20%, and a portion of damage dealt is absorbed to recover HP.',
 		id: '638a4d49a44f4fa4b0deca7e',
@@ -4180,7 +4159,7 @@ const traits: Trait[] = [
 		name: 'Demon Soul',
 	},
 	{
-		categories: ['WEAPON', 'EXPLORATION', 'MACHINE', 'SYNTHESIS'],
+		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description: 'Effect: Increases all stats by 15, and also increases skill power by 20%.',
 		id: '638a4d49a44f4fa4b0deca7d',
 		index: 708,
@@ -4188,5 +4167,4 @@ const traits: Trait[] = [
 		name: 'Dragon Soul',
 	},
 ];
-
 export default traits;
