@@ -8,7 +8,10 @@ const RecordWrapper: FC<RecordWrapperProps> = ({ children, className }) => {
 	return (
 		<motion.article
 			{...getFramerFadeUp(0, 10, 0.1)}
-			className={clsx(className, 'card bg-base-100 shadow-primary grid w-full grow-0 shadow-lg')}
+			className={clsx(
+				className,
+				'card bg-base-100 shadow-primary relative grid w-full grow-0 overflow-hidden shadow-lg',
+			)}
 		>
 			<div className='card-body'>{children}</div>
 		</motion.article>

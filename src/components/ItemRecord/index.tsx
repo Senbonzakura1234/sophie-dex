@@ -6,14 +6,23 @@ import type { FC } from 'react';
 import RecordHead from '../RecordHead';
 import RecordWrapper from '../RecordWrapper/RecordWrapper';
 import Color from './Color';
+import Level from './Level';
 import RelatedCategories from './RelatedCategories';
 
-const ItemRecord: FC<ItemRecordProps> = ({ record: { name, index, id, color, relatedCategories } }) => {
+const ItemRecord: FC<ItemRecordProps> = ({ record: { name, index, id, color, relatedCategories, level } }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 
 	return (
 		<RecordWrapper className={clsx({ hidden: !isReady })}>
-			<RecordHead id={id} isCurrentRecord={securedIdQuery.id === id} name={name} pathname={pathname} />
+			<RecordHead
+				id={id}
+				isCurrentRecord={securedIdQuery.id === id}
+				name={name}
+				pathname={pathname}
+				pageName='Item'
+			/>
+
+			<Level level={level} />
 
 			<span className='text-sm'>index: {index}</span>
 

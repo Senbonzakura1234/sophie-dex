@@ -11,7 +11,13 @@ const EffectRecord: FC<EffectRecordProps> = ({ record: { name, description, inde
 
 	return (
 		<RecordWrapper className={clsx({ hidden: !isReady })}>
-			<RecordHead id={id} isCurrentRecord={securedIdQuery.id === id} name={name} pathname={pathname} />
+			<RecordHead
+				id={id}
+				isCurrentRecord={securedIdQuery.id === id}
+				name={name}
+				pathname={pathname}
+				pageName='Effect'
+			/>
 
 			<span className='text-sm'>index: {index}</span>
 

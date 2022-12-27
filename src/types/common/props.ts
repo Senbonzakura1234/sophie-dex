@@ -75,6 +75,7 @@ export type ResetFilterProps = {
 } & IsPaginateOnlyProps;
 
 export type ColorProps = { color: COLOR };
+export type LevelProps = { level: number };
 
 export type REDProps = ColorProps;
 export type BLUEProps = ColorProps;
@@ -111,7 +112,7 @@ export type SearchInputProps = {
 };
 
 export type RecordWrapperProps = ChildrenProps & ClassNameProps;
-export type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pathname: string };
+export type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pathname: string } & PageNameProps;
 
 export type ScrollToTopProps = {
 	scrollableBottomReached: boolean;

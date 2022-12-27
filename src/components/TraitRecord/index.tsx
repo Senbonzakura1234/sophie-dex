@@ -12,7 +12,13 @@ const TraitRecord: FC<TraitRecordProps> = ({ record: { name, description, index,
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 	return (
 		<RecordWrapper className={clsx({ hidden: !isReady })}>
-			<RecordHead id={id} isCurrentRecord={securedIdQuery.id === id} name={name} pathname={pathname} />
+			<RecordHead
+				id={id}
+				isCurrentRecord={securedIdQuery.id === id}
+				name={name}
+				pathname={pathname}
+				pageName='Trait'
+			/>
 
 			<span className='text-sm'>index: {index}</span>
 

@@ -1,32 +1,34 @@
 import { DocumentChartBarIcon, HomeIcon } from '@heroicons/react/24/outline';
-import { ArrowLeftOnRectangleIcon, LinkIcon } from '@heroicons/react/24/solid';
+import { LinkIcon } from '@heroicons/react/24/solid';
 import type { RecordHeadProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import Link from 'next/link';
 import type { FC } from 'react';
 
-const RecordHead: FC<RecordHeadProps> = ({ id, isCurrentRecord, pathname, name }) => {
+const RecordHead: FC<RecordHeadProps> = ({ id, isCurrentRecord, pathname, name, pageName }) => {
 	return (
 		<>
 			{isCurrentRecord && (
-				<div className='card-actions mb-2 place-content-between'>
-					<Link
-						href={{ pathname: '/' }}
-						as={{ pathname: '/' }}
-						className='btn btn-sm btn-outline btn-square gap-2 font-bold capitalize'
-						aria-label='Go to homepage'
-					>
-						<HomeIcon className='my-auto h-4 w-4' />
-					</Link>
-					<Link
-						href={{ pathname }}
-						as={{ pathname }}
-						className='btn btn-outline btn-sm gap-2 font-bold capitalize'
-						aria-label='Back to search'
-					>
-						<ArrowLeftOnRectangleIcon className='my-auto h-4 w-4' />
-						<span className='hidden 2xl:inline'>Back to search</span>
-					</Link>
+				<div className='breadcrumbs text-sm'>
+					<ul>
+						<li className='font-bold'>
+							<Link
+								href={{ pathname: '/' }}
+								as={{ pathname: '/' }}
+								className='flex gap-1'
+								aria-label='Go to homepage'
+							>
+								<HomeIcon className='h-4 w-4' />
+								<span className='hidden md:inline'>Home</span>
+							</Link>
+						</li>
+						<li className='font-bold'>
+							<Link href={{ pathname }} as={{ pathname }} aria-label='Back to search'>
+								{pageName}s
+							</Link>
+						</li>
+						<li>{name}</li>
+					</ul>
 				</div>
 			)}
 
