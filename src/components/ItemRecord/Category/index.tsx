@@ -14,26 +14,35 @@ const Category: FC<CategoryProps> = ({ category }) => {
 	);
 
 	return (
-		<div className='flex max-w-fit flex-wrap gap-2'>
-			<div className='font-bold !shadow-none'>Category: </div>
-			<button
-				onClick={() => {
-					if (!isBtnDisabled) updateQuery({ category, page: null, limit: null });
-				}}
-				aria-label={`Filter ${categoryMap.get(category)?.name} Item`}
-				role='navigation'
-				disabled={!isReady}
+		<>
+			<div className='flex max-w-fit flex-wrap gap-2'>
+				<div className='font-bold !shadow-none'>Category: </div>
+				<button
+					onClick={() => {
+						if (!isBtnDisabled) updateQuery({ category, page: null, limit: null });
+					}}
+					aria-label={`Filter ${categoryMap.get(category)?.name} Item`}
+					role='navigation'
+					disabled={!isReady}
+					className={clsx(
+						{
+							'!no-animation !cursor-default !border-slate-300 !bg-slate-300 !text-slate-900': isBtnDisabled,
+						},
+						'btn btn-xs btn-outline gap-1 font-extrabold capitalize shadow-md shadow-slate-600',
+					)}
+				>
+					<div className={clsx('font-atelier', categoryMap.get(category)?.className)}></div>
+					{categoryMap.get(category)?.name}
+				</button>
+			</div>
+
+			<div
 				className={clsx(
-					{
-						'!no-animation !cursor-default !border-slate-300 !bg-slate-300 !text-slate-900': isBtnDisabled,
-					},
-					'btn btn-xs btn-outline gap-1 font-extrabold capitalize shadow-md shadow-slate-600',
+					'font-atelier absolute bottom-10 right-10 w-10 text-center text-lg text-slate-50 md:text-4xl',
+					categoryMap.get(category)?.className,
 				)}
-			>
-				<div className={clsx('font-atelier', categoryMap.get(category)?.className)}></div>
-				{categoryMap.get(category)?.name}
-			</button>
-		</div>
+			></div>
+		</>
 	);
 };
 

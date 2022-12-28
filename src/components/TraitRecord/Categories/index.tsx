@@ -16,16 +16,7 @@ const Categories: FC<CategoriesProps> = ({ categories }) => {
 			{[...categoryMap]
 				.filter(([c]) => !hideCategoryOnTrait.includes(c))
 				.map(([code, { className, name }], key) => (
-					<div
-						className={clsx(
-							{
-								'2xl:tooltip-primary': securedQuery.category !== code && isClickAble(code),
-							},
-							'2xl:tooltip 2xl:tooltip-bottom',
-						)}
-						data-tip={name}
-						key={key}
-					>
+					<div className='2xl:tooltip 2xl:tooltip-bottom' data-tip={name} key={key}>
 						<button
 							disabled={!isClickAble(code)}
 							aria-label={`Filter by ${name}`}

@@ -54,7 +54,7 @@ const FilterControl: FC<FilterControlProps> = ({
 
 			<motion.section
 				{...getFramerFadeUp(0, 10, 0.1)}
-				className={clsx({ '!z-20': isPaginateOnly }, 'container relative z-30 mx-auto max-2xl:px-4')}
+				className={clsx({ '!z-30': isPaginateOnly }, 'container relative z-40 mx-auto max-2xl:px-4')}
 			>
 				<nav
 					className={clsx(
@@ -73,7 +73,7 @@ const FilterControl: FC<FilterControlProps> = ({
 							'hidden font-extrabold',
 						)}
 					>
-						FIlter Control:
+						Filter Control:
 					</h2>
 
 					<SortControl pageName={pageName} isPaginateOnly={isPaginateOnly} />

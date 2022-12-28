@@ -9,7 +9,7 @@ const RecordWrapper: FC<RecordWrapperProps> = ({ children, className, color }) =
 		{...getFramerFadeUp(0, 10, 0.1)}
 		className={clsx(
 			{
-				'to-base-100 shadow-primary': !color,
+				'shadow-primary to-base-100': !color,
 				'to-blue-500 shadow-blue-500': color === 'BLUE',
 				'to-green-500 shadow-green-500': color === 'GREEN',
 				'to-red-500 shadow-red-500': color === 'RED',
