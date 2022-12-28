@@ -35,7 +35,7 @@ const ListLayout: FC<ListLayoutProps> = ({
 			<FilterControl pageName={pageName} page={page} totalPage={totalPage} limit={limit} totalRecord={totalRecord} />
 		)}
 
-		<section className='container mx-auto grid grow auto-rows-fr gap-6 px-3 pt-3 pb-9 2xl:grid-cols-2'>
+		<section className='container mx-auto grid grow gap-6 max-2xl:px-4 2xl:grid-cols-2'>
 			<ListPlaceHolder limit={defaultLimit} isSuccess={isSuccess} isError={isError} />
 			{children}
 		</section>

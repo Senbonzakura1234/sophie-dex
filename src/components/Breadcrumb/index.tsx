@@ -25,7 +25,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 									className={clsx(
 										{
 											'link-hover text-primary hover:text-primary-focus': pathname !== '/',
-											'no-animation cursor-default': pathname === '/',
+											'no-animation !cursor-default !no-underline': pathname === '/',
 										},
 										'link gap-1',
 									)}
@@ -68,19 +68,9 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 
 			<motion.div className={clsx({ hidden: !isShowAuthor })} {...getFramerFadeUp(0.2)}>
 				<Link
-					href={{
-						protocol: 'https',
-						hostname: 'github',
-						host: 'github.com',
-						pathname: APP_AUTHOR,
-					}}
 					target='_blank'
-					as={{
-						protocol: 'https',
-						hostname: 'github',
-						host: 'github.com',
-						pathname: APP_AUTHOR,
-					}}
+					href={{ protocol: 'https', hostname: 'github', host: 'github.com', pathname: APP_AUTHOR }}
+					prefetch={false}
 					aria-label={`github@${APP_AUTHOR}`}
 					className='btn btn-ghost h-auto min-h-0 gap-2 rounded-full bg-white fill-black py-3 capitalize text-black shadow-lg shadow-black hover:bg-black hover:fill-white hover:text-white hover:shadow hover:shadow-slate-700'
 				>

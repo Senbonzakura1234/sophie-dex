@@ -26,6 +26,7 @@
 		display: flex !important;
 		flex-direction: column;
 		height: 100vh;
+		gap: theme('spacing.6');
 	}
 	.atelier__book::before {
 		content: '\ea0f';

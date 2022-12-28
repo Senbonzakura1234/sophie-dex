@@ -41,7 +41,7 @@ const FilterControl: FC<FilterControlProps> = ({
 		<>
 			<motion.section
 				{...getFramerFadeUp(0, 10, 0.1)}
-				className={clsx({ hidden: isPaginateOnly }, 'container mx-auto px-3 pt-6 pb-3')}
+				className={clsx({ hidden: isPaginateOnly }, 'container mx-auto max-2xl:px-4')}
 			>
 				<SearchInput
 					performSearch={performSearch}
@@ -54,7 +54,7 @@ const FilterControl: FC<FilterControlProps> = ({
 
 			<motion.section
 				{...getFramerFadeUp(0, 10, 0.1)}
-				className={clsx({ '!z-20 mb-9': isPaginateOnly }, 'container relative z-30 mx-auto p-3')}
+				className={clsx({ '!z-20': isPaginateOnly }, 'container relative z-30 mx-auto max-2xl:px-4')}
 			>
 				<nav
 					className={clsx(
@@ -65,6 +65,17 @@ const FilterControl: FC<FilterControlProps> = ({
 						'card bg-base-100 shadow-primary flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-lg',
 					)}
 				>
+					<h2
+						className={clsx(
+							{
+								'max-2xl:block': !isPaginateOnly,
+							},
+							'hidden font-extrabold',
+						)}
+					>
+						FIlter Control:
+					</h2>
+
 					<SortControl pageName={pageName} isPaginateOnly={isPaginateOnly} />
 
 					<div className={clsx({ hidden: isPaginateOnly }, 'flex flex-wrap gap-2')}>

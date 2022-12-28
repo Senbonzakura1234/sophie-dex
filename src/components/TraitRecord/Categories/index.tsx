@@ -12,7 +12,7 @@ const Categories: FC<CategoriesProps> = ({ categories }) => {
 	const isClickAble = useCallback((code: CATEGORY) => categories.includes(code) && isReady, [isReady, categories]);
 
 	return (
-		<nav className='mb-7 flex max-w-fit flex-wrap gap-2'>
+		<nav className='mb-2 flex max-w-fit flex-wrap gap-2'>
 			{[...categoryMap]
 				.filter(([c]) => !hideCategoryOnTrait.includes(c))
 				.map(([code, { className, name }], key) => (

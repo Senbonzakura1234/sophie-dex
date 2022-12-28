@@ -16,7 +16,7 @@ const ItemRecord: FC<ItemRecordProps> = ({
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 
 	return (
-		<RecordWrapper className={clsx({ hidden: !isReady })}>
+		<RecordWrapper className={clsx({ hidden: !isReady })} color={color}>
 			<RecordHead
 				id={id}
 				isCurrentRecord={securedIdQuery.id === id}
@@ -25,7 +25,7 @@ const ItemRecord: FC<ItemRecordProps> = ({
 				pageName='Item'
 			/>
 
-			<Level level={level} color={color} />
+			<Level level={level} />
 
 			<span className='text-sm'>index: {index}</span>
 

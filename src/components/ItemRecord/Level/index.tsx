@@ -1,23 +1,10 @@
 import type { LevelProps } from '@root/types/common/props';
-import clsx from 'clsx';
 import type { FC } from 'react';
 
-const Level: FC<LevelProps> = ({ level, color }) => (
-	<div
-		className={clsx(
-			{
-				'bg-blue-500 text-slate-50': color === 'BLUE',
-				'bg-green-500 text-slate-50': color === 'GREEN',
-				'bg-red-500 text-slate-50': color === 'RED',
-				'bg-slate-300 text-slate-900': color === 'WHITE',
-				'bg-yellow-400 text-slate-50': color === 'YELLOW',
-			},
-			'absolute -right-36 -top-20 flex aspect-square h-40 w-80 rotate-[50deg] text-center shadow-inner',
-		)}
-	>
-		<div className='grid h-full w-full rotate-[-50deg] place-content-center gap-1'>
-			<div className='relative top-7 right-7 text-sm font-extrabold leading-[0.5]'>Lv. {level}</div>
-		</div>
+const Level: FC<LevelProps> = ({ level }) => (
+	<div className='absolute top-9 right-10 grid gap-1 font-extrabold leading-[0.5] text-slate-50'>
+		<div className='text-center text-xs md:text-lg'>Lv</div>
+		<div className='text-lg md:text-4xl'>{level}</div>
 	</div>
 );
 

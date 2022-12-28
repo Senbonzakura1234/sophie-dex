@@ -29,7 +29,7 @@ export const categoryMap = new Map<CATEGORY, { name: string; className: UnicodeC
 	['MACHINE', { name: 'Machine', className: 'atelier__category-neutralizers' }],
 ]);
 
-const colorMap = ['RED', 'BLUE', 'GREEN', 'YELLOW', 'WHITE'] satisfies COLOR[];
+export const colorMap = ['RED', 'BLUE', 'GREEN', 'YELLOW', 'WHITE'] satisfies COLOR[];
 
 export const RelatedCategorySelectList = [
 	{ value: null, label: '------------' },
@@ -82,26 +82,53 @@ export const categorySelectList = [
 
 export const ColorSelectList = [
 	defaultSelect,
-	...colorMap.map(color => ({ label: <span className='capitalize'>{color.toLocaleLowerCase()}</span>, value: color })),
+	...colorMap.map(color => ({
+		label: <span className='capitalize'>{color.toLocaleLowerCase()}</span>,
+		value: color,
+		icon: (
+			<div
+				className={clsx(
+					{
+						'bg-blue-500 shadow-blue-500': color === 'BLUE',
+						'bg-green-500 shadow-green-500': color === 'GREEN',
+						'bg-red-500 shadow-red-500': color === 'RED',
+						'bg-slate-500 shadow-slate-500': color === 'WHITE',
+						'bg-yellow-400 shadow-yellow-400': color === 'YELLOW',
+					},
+					'h-4 w-4 rounded-full',
+				)}
+			></div>
+		),
+	})),
 ] satisfies ColorSelected[];
 
-export const RecordPlaceHolder: FC<RecordPlaceHolderProps> = ({ isSuccess, isError }) => (
+export const RecordPlaceHolder: FC<RecordPlaceHolderProps> = ({ isSuccess, isError, color }) => (
 	<motion.div
 		{...getFramerFadeUp(0, 10, 0.1)}
-		className={clsx({ hidden: isSuccess || isError }, 'card bg-base-100 h-[300px] w-full animate-pulse')}
+		className={clsx(
+			{
+				hidden: isSuccess || isError,
+				'to-base-100 shadow-primary': !color,
+				'to-blue-500 shadow-blue-500': color === 'BLUE',
+				'to-green-500 shadow-green-500': color === 'GREEN',
+				'to-red-500 shadow-red-500': color === 'RED',
+				'to-slate-500 shadow-slate-500': color === 'WHITE',
+				'to-yellow-400 shadow-yellow-400': color === 'YELLOW',
+			},
+			'card from-base-100 via-base-100 shadow-primary h-60 w-full animate-pulse bg-gradient-to-r shadow-lg',
+		)}
 	/>
 );
 
-export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ limit, isSuccess, isError }) =>
-	isError ? null : (
-		<>
-			{Array(limit)
-				.fill(0)
-				.map((_, k) => (
-					<RecordPlaceHolder key={k} isSuccess={isSuccess} isError={isError} />
-				))}
-		</>
-	);
+export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ limit, isSuccess, isError }) => (
+	<>
+		{Array(limit)
+			.fill(0)
+			.map((_, k) => (
+				<RecordPlaceHolder key={k} isSuccess={isSuccess} isError={isError} />
+			))}
+	</>
+);
 
 export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ isSuccess, isPaginateOnly, isError }) => (
 	<>
@@ -109,14 +136,14 @@ export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ is
 			{...getFramerFadeUp(0, 10, 0.1)}
 			className={clsx(
 				{ hidden: isSuccess || isError || isPaginateOnly },
-				'container mx-auto w-full animate-pulse px-3 pb-3 pt-6',
+				'container mx-auto w-full animate-pulse max-2xl:px-4',
 			)}
 		>
 			<div className='card bg-base-100 shadow-primary ml-auto h-[50px] w-full rounded-full shadow-lg md:w-1/4 md:min-w-[300px]'></div>
 		</motion.div>
 		<motion.div
 			{...getFramerFadeUp(0, 10, 0.1)}
-			className={clsx({ hidden: isSuccess || isError }, 'container mx-auto w-full animate-pulse p-3')}
+			className={clsx({ hidden: isSuccess || isError }, 'container mx-auto w-full animate-pulse max-2xl:px-4')}
 		>
 			<div className='card bg-base-100 shadow-primary h-[60px] w-full shadow-lg' />
 		</motion.div>

@@ -24,9 +24,9 @@ const ColorFilter: FC<ColorFilterProps> = ({
 			list={ColorSelectList}
 			setValue={setColorSelected}
 			value={colorSelected}
-			className='my-auto w-28'
-			useCustomIcon={false}
-			withIcon={false}
+			className='my-auto w-32'
+			useCustomIcon
+			withIcon
 		/>
 	</div>
 );

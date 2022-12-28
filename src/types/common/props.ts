@@ -62,14 +62,8 @@ export type ResetFilterProps = {
 } & IsPaginateOnlyProps;
 
 export type ColorProps = { color: COLOR };
-export type LevelProps = { level: number } & ColorProps;
+export type LevelProps = { level: number };
 export type CategoryProps = { category: CATEGORY };
-
-export type REDProps = ColorProps;
-export type BLUEProps = ColorProps;
-export type GREENProps = ColorProps;
-export type YELLOWProps = ColorProps;
-export type WHITEProps = ColorProps;
 
 export type RelatedCategoriesProps = { relatedCategories: RelatedCategories[] };
 
@@ -98,14 +92,14 @@ export type SearchInputProps = {
 	isSearchValueValid: boolean;
 };
 
-export type RecordWrapperProps = ChildrenProps & ClassNameProps;
+export type RecordWrapperProps = ChildrenProps & ClassNameProps & Partial<ColorProps>;
 export type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pathname: string } & PageNameProps;
 
 export type ScrollToTopProps = { scrollableBottomReached: boolean; scrollPosition: number } & RefProps<HTMLDivElement>;
 
 export type ScrollWrapperProps = ChildrenProps & ClassNameProps & RefProps<HTMLDivElement>;
 
-export type RecordPlaceHolderProps = FetchStateProps;
+export type RecordPlaceHolderProps = FetchStateProps & Partial<ColorProps>;
 export type ListPlaceHolderProps = { limit: number } & FetchStateProps;
 export type FilterControlPlaceHolderProps = FetchStateProps & IsPaginateOnlyProps;
 
