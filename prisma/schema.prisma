@@ -1,6 +1,14 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+enum RecipeType {
+   BEGINNER_RECIPES
+   GROWTH_RECIPES
+   HOPE_RECIPES
+   DREAM_RECIPES
+   MYSTERY_RECIPES
+}
+
 enum COLOR {
    GREEN
    BLUE
@@ -111,4 +119,5 @@ model Item {
    relatedCategories RelatedCategories[]
    category          CATEGORY
    level             Int
+   recipeType        RecipeType?
 }

@@ -12,6 +12,7 @@ const items: Item[] = [
 			{ count: 10, name: 'PLANT' },
 			{ count: 10, name: 'MEDICINE_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -24,6 +25,7 @@ const items: Item[] = [
 			{ count: 15, name: 'PLANT' },
 			{ count: 5, name: 'WATER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -36,6 +38,7 @@ const items: Item[] = [
 			{ count: 10, name: 'PLANT' },
 			{ count: 10, name: 'POISON_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -49,6 +52,7 @@ const items: Item[] = [
 			{ count: 10, name: 'SECRET_POWER' },
 			{ count: 15, name: 'MEDICINE_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -61,6 +65,7 @@ const items: Item[] = [
 			{ count: 5, name: 'PLANT' },
 			{ count: 10, name: 'FUEL' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -73,6 +78,7 @@ const items: Item[] = [
 			{ count: 20, name: 'PLANT' },
 			{ count: 5, name: 'SECRET_POWER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -86,6 +92,7 @@ const items: Item[] = [
 			{ count: 15, name: 'THREAD' },
 			{ count: 10, name: 'FUEL' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -98,6 +105,7 @@ const items: Item[] = [
 			{ count: 10, name: 'WOOD' },
 			{ count: 5, name: 'PLANT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -110,6 +118,7 @@ const items: Item[] = [
 			{ count: 20, name: 'WOOD' },
 			{ count: 10, name: 'PLANT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -122,6 +131,7 @@ const items: Item[] = [
 			{ count: 10, name: 'PLANT' },
 			{ count: 20, name: 'MEDICINE_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -134,6 +144,7 @@ const items: Item[] = [
 			{ count: 15, name: 'PLANT' },
 			{ count: 25, name: 'MEDICINE_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -146,6 +157,7 @@ const items: Item[] = [
 			{ count: 30, name: 'PLANT' },
 			{ count: 30, name: 'MEDICINE_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -158,6 +170,7 @@ const items: Item[] = [
 			{ count: 40, name: 'PLANT' },
 			{ count: 30, name: 'ELIXIR' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -171,6 +184,7 @@ const items: Item[] = [
 			{ count: 50, name: 'MEDICINE_MAT' },
 			{ count: 50, name: 'ELIXIR' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -184,6 +198,7 @@ const items: Item[] = [
 			{ count: 40, name: 'POISON_MAT' },
 			{ count: 40, name: 'SECRET_POWER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -193,6 +208,7 @@ const items: Item[] = [
 		level: 7,
 		name: 'Aizen Ore',
 		relatedCategories: [{ count: 10, name: 'ORE' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -202,6 +218,7 @@ const items: Item[] = [
 		level: 9,
 		name: 'Raiden Ore',
 		relatedCategories: [{ count: 10, name: 'ORE' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -211,6 +228,7 @@ const items: Item[] = [
 		level: 9,
 		name: 'Kupulf Ore',
 		relatedCategories: [{ count: 15, name: 'ORE' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -223,6 +241,7 @@ const items: Item[] = [
 			{ count: 10, name: 'ORE' },
 			{ count: 5, name: 'GUNPOWDER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -235,6 +254,7 @@ const items: Item[] = [
 			{ count: 10, name: 'ORE' },
 			{ count: 5, name: 'GEM' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -247,6 +267,7 @@ const items: Item[] = [
 			{ count: 20, name: 'ORE' },
 			{ count: 10, name: 'METAL' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -260,6 +281,7 @@ const items: Item[] = [
 			{ count: 20, name: 'POISON_MAT' },
 			{ count: 15, name: 'FUEL' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -272,6 +294,7 @@ const items: Item[] = [
 			{ count: 10, name: 'CLAY' },
 			{ count: 20, name: 'MEDICINE_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -281,6 +304,7 @@ const items: Item[] = [
 		level: 9,
 		name: 'Lakebottom Soil',
 		relatedCategories: [{ count: 15, name: 'CLAY' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -290,6 +314,7 @@ const items: Item[] = [
 		level: 11,
 		name: 'Seabed Soil',
 		relatedCategories: [{ count: 25, name: 'CLAY' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -303,6 +328,7 @@ const items: Item[] = [
 			{ count: 10, name: 'CLAY' },
 			{ count: 5, name: 'SECRET_POWER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -315,6 +341,7 @@ const items: Item[] = [
 			{ count: 15, name: 'ORE' },
 			{ count: 15, name: 'CLAY' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -327,6 +354,7 @@ const items: Item[] = [
 			{ count: 25, name: 'ORE' },
 			{ count: 5, name: 'PLANT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -340,6 +368,7 @@ const items: Item[] = [
 			{ count: 20, name: 'CLAY' },
 			{ count: 15, name: 'METAL' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -352,6 +381,7 @@ const items: Item[] = [
 			{ count: 15, name: 'ORE' },
 			{ count: 20, name: 'THREAD' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -364,6 +394,7 @@ const items: Item[] = [
 			{ count: 35, name: 'ORE' },
 			{ count: 15, name: 'GEM' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -376,6 +407,7 @@ const items: Item[] = [
 			{ count: 40, name: 'ORE' },
 			{ count: 25, name: 'GEM' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -388,6 +420,7 @@ const items: Item[] = [
 			{ count: 35, name: 'ORE' },
 			{ count: 15, name: 'SECRET_POWER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -402,6 +435,7 @@ const items: Item[] = [
 			{ count: 20, name: 'ELIXIR' },
 			{ count: 30, name: 'SECRET_POWER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -414,6 +448,7 @@ const items: Item[] = [
 			{ count: 10, name: 'ANIMAL' },
 			{ count: 10, name: 'THREAD' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -426,6 +461,7 @@ const items: Item[] = [
 			{ count: 15, name: 'ANIMAL' },
 			{ count: 5, name: 'MEDICINE_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -439,6 +475,7 @@ const items: Item[] = [
 			{ count: 10, name: 'INGREDIENT' },
 			{ count: 5, name: 'MEDICINE_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -451,6 +488,7 @@ const items: Item[] = [
 			{ count: 20, name: 'ANIMAL' },
 			{ count: 10, name: 'THREAD' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -463,6 +501,7 @@ const items: Item[] = [
 			{ count: 30, name: 'ANIMAL' },
 			{ count: 20, name: 'THREAD' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -472,6 +511,7 @@ const items: Item[] = [
 		level: 10,
 		name: 'Silver Web',
 		relatedCategories: [{ count: 20, name: 'THREAD' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -481,6 +521,7 @@ const items: Item[] = [
 		level: 30,
 		name: 'Gold Steel Web',
 		relatedCategories: [{ count: 35, name: 'THREAD' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -494,6 +535,7 @@ const items: Item[] = [
 			{ count: 30, name: 'MEDICINE_MAT' },
 			{ count: 20, name: 'ELIXIR' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -503,6 +545,7 @@ const items: Item[] = [
 		level: 1,
 		name: 'Well Water',
 		relatedCategories: [{ count: 20, name: 'WATER' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -512,6 +555,7 @@ const items: Item[] = [
 		level: 8,
 		name: 'Good Water',
 		relatedCategories: [{ count: 25, name: 'WATER' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -524,6 +568,7 @@ const items: Item[] = [
 			{ count: 25, name: 'INGREDIENT' },
 			{ count: 15, name: 'WATER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -536,6 +581,7 @@ const items: Item[] = [
 			{ count: 30, name: 'WATER' },
 			{ count: 10, name: 'SECRET_POWER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -549,6 +595,7 @@ const items: Item[] = [
 			{ count: 10, name: 'WATER' },
 			{ count: 15, name: 'POISON_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -561,6 +608,7 @@ const items: Item[] = [
 			{ count: 15, name: 'WATER' },
 			{ count: 25, name: 'POISON_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -573,6 +621,7 @@ const items: Item[] = [
 			{ count: 10, name: 'WATER' },
 			{ count: 5, name: 'MEDICINE_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -586,6 +635,7 @@ const items: Item[] = [
 			{ count: 35, name: 'SECRET_POWER' },
 			{ count: 30, name: 'MEDICINE_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -599,6 +649,7 @@ const items: Item[] = [
 			{ count: 40, name: 'ELIXIR' },
 			{ count: 40, name: 'POISON_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -611,6 +662,7 @@ const items: Item[] = [
 			{ count: 20, name: 'WATER' },
 			{ count: 5, name: 'SECRET_POWER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -623,6 +675,7 @@ const items: Item[] = [
 			{ count: 5, name: 'INGREDIENT' },
 			{ count: 5, name: 'SECRET_POWER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -635,6 +688,7 @@ const items: Item[] = [
 			{ count: 10, name: 'INGREDIENT' },
 			{ count: 20, name: 'SECRET_POWER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -647,6 +701,7 @@ const items: Item[] = [
 			{ count: 15, name: 'INGREDIENT' },
 			{ count: 10, name: 'PLANT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -660,6 +715,7 @@ const items: Item[] = [
 			{ count: 15, name: 'PLANT' },
 			{ count: 15, name: 'GUNPOWDER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -672,6 +728,7 @@ const items: Item[] = [
 			{ count: 15, name: 'INGREDIENT' },
 			{ count: 10, name: 'PLANT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -684,6 +741,7 @@ const items: Item[] = [
 			{ count: 20, name: 'INGREDIENT' },
 			{ count: 20, name: 'GUNPOWDER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -696,6 +754,7 @@ const items: Item[] = [
 			{ count: 15, name: 'INGREDIENT' },
 			{ count: 5, name: 'PLANT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -708,6 +767,7 @@ const items: Item[] = [
 			{ count: 20, name: 'INGREDIENT' },
 			{ count: 5, name: 'METAL' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -720,6 +780,7 @@ const items: Item[] = [
 			{ count: 15, name: 'INGREDIENT' },
 			{ count: 10, name: 'GUNPOWDER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -733,6 +794,7 @@ const items: Item[] = [
 			{ count: 15, name: 'FUEL' },
 			{ count: 20, name: 'MEDICINE_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -745,6 +807,7 @@ const items: Item[] = [
 			{ count: 15, name: 'INGREDIENT' },
 			{ count: 10, name: 'PLANT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -757,6 +820,7 @@ const items: Item[] = [
 			{ count: 20, name: 'INGREDIENT' },
 			{ count: 15, name: 'PLANT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -769,6 +833,7 @@ const items: Item[] = [
 			{ count: 10, name: 'PAPER' },
 			{ count: 5, name: 'FUEL' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -778,6 +843,7 @@ const items: Item[] = [
 		level: 9,
 		name: 'Natural Oil',
 		relatedCategories: [{ count: 20, name: 'FUEL' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -787,6 +853,7 @@ const items: Item[] = [
 		level: 13,
 		name: 'Zafloa Oil',
 		relatedCategories: [{ count: 35, name: 'FUEL' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -799,6 +866,7 @@ const items: Item[] = [
 			{ count: 15, name: 'PAPER' },
 			{ count: 10, name: 'FUEL' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -811,6 +879,7 @@ const items: Item[] = [
 			{ count: 20, name: 'PAPER' },
 			{ count: 15, name: 'FUEL' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -824,6 +893,7 @@ const items: Item[] = [
 			{ count: 20, name: 'FUEL' },
 			{ count: 5, name: 'MAGIC_ITEM' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -836,6 +906,7 @@ const items: Item[] = [
 			{ count: 15, name: 'GEM' },
 			{ count: 5, name: 'MEDICINE_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -848,6 +919,7 @@ const items: Item[] = [
 			{ count: 20, name: 'GEM' },
 			{ count: 15, name: 'MEDICINE_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -860,6 +932,7 @@ const items: Item[] = [
 			{ count: 25, name: 'GEM' },
 			{ count: 10, name: 'ORE' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -872,6 +945,7 @@ const items: Item[] = [
 			{ count: 30, name: 'ELIXIR' },
 			{ count: 25, name: 'GUNPOWDER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -884,6 +958,7 @@ const items: Item[] = [
 			{ count: 35, name: 'ELIXIR' },
 			{ count: 30, name: 'GUNPOWDER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -896,6 +971,7 @@ const items: Item[] = [
 			{ count: 10, name: 'GEM' },
 			{ count: 5, name: 'ORE' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -909,6 +985,7 @@ const items: Item[] = [
 			{ count: 10, name: 'ORE' },
 			{ count: 5, name: 'SECRET_POWER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -921,6 +998,7 @@ const items: Item[] = [
 			{ count: 25, name: 'SECRET_POWER' },
 			{ count: 10, name: 'GEM' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -933,6 +1011,7 @@ const items: Item[] = [
 			{ count: 30, name: 'SECRET_POWER' },
 			{ count: 25, name: 'ELIXIR' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -945,6 +1024,7 @@ const items: Item[] = [
 			{ count: 15, name: 'GEM' },
 			{ count: 10, name: 'POISON_MAT' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -958,6 +1038,7 @@ const items: Item[] = [
 			{ count: 30, name: 'SECRET_POWER' },
 			{ count: 25, name: 'ELIXIR' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -967,6 +1048,7 @@ const items: Item[] = [
 		level: 43,
 		name: 'Forgotten Wood',
 		relatedCategories: [{ count: 50, name: 'WOOD' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -976,6 +1058,7 @@ const items: Item[] = [
 		level: 40,
 		name: 'Forgotten Gem',
 		relatedCategories: [{ count: 50, name: 'GEM' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -985,6 +1068,7 @@ const items: Item[] = [
 		level: 41,
 		name: 'Forgotten Ore',
 		relatedCategories: [{ count: 50, name: 'ORE' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -994,6 +1078,7 @@ const items: Item[] = [
 		level: 43,
 		name: 'Forgotten Part',
 		relatedCategories: [{ count: 50, name: 'METAL' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1003,6 +1088,7 @@ const items: Item[] = [
 		level: 3,
 		name: 'Useless Fragment',
 		relatedCategories: [{ count: 10, name: 'ELIXIR' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1012,6 +1098,7 @@ const items: Item[] = [
 		level: 3,
 		name: 'Burnt Fragment',
 		relatedCategories: [{ count: 10, name: 'ELIXIR' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1021,6 +1108,7 @@ const items: Item[] = [
 		level: 3,
 		name: 'Stinky Fragment',
 		relatedCategories: [{ count: 10, name: 'ELIXIR' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1030,6 +1118,7 @@ const items: Item[] = [
 		level: 3,
 		name: 'Pretty Fragment',
 		relatedCategories: [{ count: 10, name: 'ELIXIR' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1042,6 +1131,7 @@ const items: Item[] = [
 			{ count: 5, name: 'ELIXIR' },
 			{ count: 5, name: 'MAGIC_ITEM' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1051,6 +1141,7 @@ const items: Item[] = [
 		level: 28,
 		name: 'Haze Grass Petal',
 		relatedCategories: [{ count: 30, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1060,6 +1151,7 @@ const items: Item[] = [
 		level: 38,
 		name: 'Eternity Scale',
 		relatedCategories: [{ count: 30, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1073,6 +1165,7 @@ const items: Item[] = [
 			{ count: 15, name: 'FUEL' },
 			{ count: 10, name: 'MAGIC_ITEM' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1086,6 +1179,7 @@ const items: Item[] = [
 			{ count: 10, name: 'FUEL' },
 			{ count: 10, name: 'PAPER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1099,6 +1193,7 @@ const items: Item[] = [
 			{ count: 20, name: 'FUEL' },
 			{ count: 15, name: 'SECRET_POWER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1112,6 +1207,7 @@ const items: Item[] = [
 			{ count: 15, name: 'FUEL' },
 			{ count: 20, name: 'SECRET_POWER' },
 		],
+		recipeType: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1121,6 +1217,7 @@ const items: Item[] = [
 		level: 4,
 		name: 'Uni Bag',
 		relatedCategories: [{ count: 10, name: 'BOMB' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1130,6 +1227,7 @@ const items: Item[] = [
 		level: 10,
 		name: 'Bomb',
 		relatedCategories: [{ count: 20, name: 'BOMB' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1139,6 +1237,7 @@ const items: Item[] = [
 		level: 12,
 		name: 'Ice Bomb',
 		relatedCategories: [{ count: 15, name: 'BOMB' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1148,6 +1247,7 @@ const items: Item[] = [
 		level: 14,
 		name: 'Lightning Bomb',
 		relatedCategories: [{ count: 15, name: 'BOMB' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1157,6 +1257,7 @@ const items: Item[] = [
 		level: 15,
 		name: 'Craft',
 		relatedCategories: [{ count: 15, name: 'BOMB' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1166,6 +1267,7 @@ const items: Item[] = [
 		level: 26,
 		name: 'Ori Bomb',
 		relatedCategories: [{ count: 30, name: 'BOMB' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1175,6 +1277,7 @@ const items: Item[] = [
 		level: 30,
 		name: 'Stahl Ice Bomb',
 		relatedCategories: [{ count: 25, name: 'BOMB' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1184,6 +1287,7 @@ const items: Item[] = [
 		level: 35,
 		name: 'Lightning Crystal',
 		relatedCategories: [{ count: 25, name: 'BOMB' }],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1193,6 +1297,7 @@ const items: Item[] = [
 		level: 20,
 		name: 'Puni Missile',
 		relatedCategories: [{ count: 20, name: 'BOMB' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1205,6 +1310,7 @@ const items: Item[] = [
 			{ count: 15, name: 'BOMB' },
 			{ count: 10, name: 'MAGIC_ITEM' },
 		],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1217,6 +1323,7 @@ const items: Item[] = [
 			{ count: 30, name: 'BOMB' },
 			{ count: 25, name: 'MAGIC_ITEM' },
 		],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1226,6 +1333,7 @@ const items: Item[] = [
 		level: 31,
 		name: "Magician's Flute",
 		relatedCategories: [{ count: 30, name: 'MAGIC_ITEM' }],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1238,6 +1346,7 @@ const items: Item[] = [
 			{ count: 30, name: 'BOMB' },
 			{ count: 20, name: 'MAGIC_ITEM' },
 		],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1250,6 +1359,7 @@ const items: Item[] = [
 			{ count: 40, name: 'BOMB' },
 			{ count: 30, name: 'MAGIC_ITEM' },
 		],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1259,6 +1369,7 @@ const items: Item[] = [
 		level: 48,
 		name: 'Necromancer Flute',
 		relatedCategories: [{ count: 35, name: 'MAGIC_ITEM' }],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1268,6 +1379,7 @@ const items: Item[] = [
 		level: 1,
 		name: 'Berg Medicine',
 		relatedCategories: [{ count: 10, name: 'MEDICINE' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1277,6 +1389,7 @@ const items: Item[] = [
 		level: 10,
 		name: 'Refuel Bottle',
 		relatedCategories: [{ count: 15, name: 'MEDICINE' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1286,6 +1399,7 @@ const items: Item[] = [
 		level: 39,
 		name: 'Breezy Aroma',
 		relatedCategories: [{ count: 15, name: 'MEDICINE' }],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1298,6 +1412,7 @@ const items: Item[] = [
 			{ count: 20, name: 'MEDICINE' },
 			{ count: 5, name: 'SECRET_POWER' },
 		],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1310,6 +1425,7 @@ const items: Item[] = [
 			{ count: 25, name: 'MEDICINE' },
 			{ count: 25, name: 'ELIXIR' },
 		],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1322,6 +1438,7 @@ const items: Item[] = [
 			{ count: 10, name: 'FOOD' },
 			{ count: 10, name: 'SWEETS' },
 		],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1334,6 +1451,7 @@ const items: Item[] = [
 			{ count: 15, name: 'FOOD' },
 			{ count: 10, name: 'SWEETS' },
 		],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1347,6 +1465,7 @@ const items: Item[] = [
 			{ count: 15, name: 'SWEETS' },
 			{ count: 5, name: 'SECRET_POWER' },
 		],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1359,6 +1478,7 @@ const items: Item[] = [
 			{ count: 35, name: 'FOOD' },
 			{ count: 30, name: 'SWEETS' },
 		],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1371,6 +1491,7 @@ const items: Item[] = [
 			{ count: 30, name: 'FOOD' },
 			{ count: 10, name: 'SECRET_POWER' },
 		],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1384,6 +1505,7 @@ const items: Item[] = [
 			{ count: 15, name: 'SWEETS' },
 			{ count: 5, name: 'GEM' },
 		],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1393,6 +1515,7 @@ const items: Item[] = [
 		level: 29,
 		name: 'Plain Waffle',
 		relatedCategories: [{ count: 20, name: 'FOOD' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1402,6 +1525,7 @@ const items: Item[] = [
 		level: 9,
 		name: 'Bagel Sandwich',
 		relatedCategories: [{ count: 20, name: 'FOOD' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1411,6 +1535,7 @@ const items: Item[] = [
 		level: 24,
 		name: 'Supreme Hot Milk',
 		relatedCategories: [{ count: 25, name: 'FOOD' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1420,6 +1545,7 @@ const items: Item[] = [
 		level: 12,
 		name: 'Honey Syrup',
 		relatedCategories: [{ count: 30, name: 'MEDICINE' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1429,6 +1555,7 @@ const items: Item[] = [
 		level: 35,
 		name: "Angel's Whisper",
 		relatedCategories: [{ count: 20, name: 'MAGIC_ITEM' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1438,6 +1565,7 @@ const items: Item[] = [
 		level: 40,
 		name: 'Warding Incense',
 		relatedCategories: [{ count: 10, name: 'MEDICINE' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'DE_BUFF_ITEM',
@@ -1447,6 +1575,7 @@ const items: Item[] = [
 		level: 12,
 		name: 'Bottled Misfortune',
 		relatedCategories: [{ count: 20, name: 'MEDICINE' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1456,6 +1585,7 @@ const items: Item[] = [
 		level: 33,
 		name: 'Spirit Weave Cloth',
 		relatedCategories: [{ count: 15, name: 'CLOTH' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1465,6 +1595,7 @@ const items: Item[] = [
 		level: 35,
 		name: 'Fire Dragon Medicine',
 		relatedCategories: [{ count: 25, name: 'MEDICINE' }],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1477,6 +1608,7 @@ const items: Item[] = [
 			{ count: 30, name: 'MAGIC_ITEM' },
 			{ count: 10, name: 'PAPER' },
 		],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'DE_BUFF_ITEM',
@@ -1486,6 +1618,7 @@ const items: Item[] = [
 		level: 16,
 		name: "Imp's Mischief",
 		relatedCategories: [{ count: 25, name: 'MAGIC_ITEM' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1495,6 +1628,7 @@ const items: Item[] = [
 		level: 46,
 		name: "Hero's Medicine",
 		relatedCategories: [{ count: 25, name: 'MEDICINE' }],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'DE_BUFF_ITEM',
@@ -1507,6 +1641,7 @@ const items: Item[] = [
 			{ count: 40, name: 'MAGIC_ITEM' },
 			{ count: 20, name: 'PAPER' },
 		],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'EXPLORATION',
@@ -1516,6 +1651,7 @@ const items: Item[] = [
 		level: 9,
 		name: 'Wonder Stimulant',
 		relatedCategories: [{ count: 20, name: 'MEDICINE' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'EXPLORATION',
@@ -1525,6 +1661,7 @@ const items: Item[] = [
 		level: 25,
 		name: 'Fairy Guide',
 		relatedCategories: [{ count: 30, name: 'MAGIC_ITEM' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'EXPLORATION',
@@ -1537,6 +1674,7 @@ const items: Item[] = [
 			{ count: 25, name: 'MAGIC_ITEM' },
 			{ count: 15, name: 'WOOD' },
 		],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'EXPLORATION',
@@ -1546,6 +1684,7 @@ const items: Item[] = [
 		level: 20,
 		name: 'Clear Drops',
 		relatedCategories: [{ count: 20, name: 'MAGIC_ITEM' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'EXPLORATION',
@@ -1558,6 +1697,7 @@ const items: Item[] = [
 			{ count: 10, name: 'MAGIC_ITEM' },
 			{ count: 10, name: 'ANIMAL' },
 		],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'EXPLORATION',
@@ -1567,6 +1707,7 @@ const items: Item[] = [
 		level: 18,
 		name: "Traveler's Shoes",
 		relatedCategories: [{ count: 10, name: 'CLOTH' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'EXPLORATION',
@@ -1576,6 +1717,7 @@ const items: Item[] = [
 		level: 22,
 		name: 'Deluxe Backpack',
 		relatedCategories: [{ count: 20, name: 'CLOTH' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'EXPLORATION',
@@ -1585,6 +1727,7 @@ const items: Item[] = [
 		level: 20,
 		name: 'Emergency Bag',
 		relatedCategories: [{ count: 25, name: 'MAGIC_ITEM' }],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'EXPLORATION',
@@ -1594,6 +1737,7 @@ const items: Item[] = [
 		level: 16,
 		name: 'Gathering Gloves',
 		relatedCategories: [{ count: 5, name: 'CLOTH' }],
+		recipeType: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -1603,6 +1747,7 @@ const items: Item[] = [
 		level: 12,
 		name: "Victor's Charm",
 		relatedCategories: [{ count: 10, name: 'MAGIC_ITEM' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'EXPLORATION',
@@ -1612,6 +1757,7 @@ const items: Item[] = [
 		level: 17,
 		name: 'Training Charm',
 		relatedCategories: [{ count: 15, name: 'MAGIC_ITEM' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'EXPLORATION',
@@ -1624,6 +1770,7 @@ const items: Item[] = [
 			{ count: 20, name: 'MAGIC_ITEM' },
 			{ count: 15, name: 'PAPER' },
 		],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'EXPLORATION',
@@ -1633,6 +1780,7 @@ const items: Item[] = [
 		level: 21,
 		name: 'Heart Pendant',
 		relatedCategories: [{ count: 25, name: 'METAL' }],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1642,6 +1790,7 @@ const items: Item[] = [
 		level: 2,
 		name: 'Neutralizer R',
 		relatedCategories: [{ count: 25, name: 'NEUTRALIZER' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1651,6 +1800,7 @@ const items: Item[] = [
 		level: 2,
 		name: 'Neutralizer B',
 		relatedCategories: [{ count: 25, name: 'NEUTRALIZER' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1660,6 +1810,7 @@ const items: Item[] = [
 		level: 2,
 		name: 'Neutralizer G',
 		relatedCategories: [{ count: 25, name: 'NEUTRALIZER' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1669,6 +1820,7 @@ const items: Item[] = [
 		level: 2,
 		name: 'Neutralizer Y',
 		relatedCategories: [{ count: 25, name: 'NEUTRALIZER' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1678,6 +1830,7 @@ const items: Item[] = [
 		level: 20,
 		name: 'Pure Water',
 		relatedCategories: [{ count: 50, name: 'WATER' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1690,6 +1843,7 @@ const items: Item[] = [
 			{ count: 30, name: 'WATER' },
 			{ count: 20, name: 'SECRET_POWER' },
 		],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1702,6 +1856,7 @@ const items: Item[] = [
 			{ count: 15, name: 'INGREDIENT' },
 			{ count: 5, name: 'MEDICINE_MAT' },
 		],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1714,6 +1869,7 @@ const items: Item[] = [
 			{ count: 20, name: 'INGREDIENT' },
 			{ count: 15, name: 'GUNPOWDER' },
 		],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1723,6 +1879,7 @@ const items: Item[] = [
 		level: 6,
 		name: 'Honey',
 		relatedCategories: [{ count: 25, name: 'INGREDIENT' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1736,6 +1893,7 @@ const items: Item[] = [
 			{ count: 20, name: 'GUNPOWDER' },
 			{ count: 10, name: 'POISON_MAT' },
 		],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1748,6 +1906,7 @@ const items: Item[] = [
 			{ count: 30, name: 'MEDICINE_MAT' },
 			{ count: 20, name: 'POISON_MAT' },
 		],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1760,6 +1919,7 @@ const items: Item[] = [
 			{ count: 40, name: 'PAPER' },
 			{ count: 20, name: 'FUEL' },
 		],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1772,6 +1932,7 @@ const items: Item[] = [
 			{ count: 35, name: 'FUEL' },
 			{ count: 10, name: 'WATER' },
 		],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1781,6 +1942,7 @@ const items: Item[] = [
 		level: 25,
 		name: 'Flame Powder',
 		relatedCategories: [{ count: 40, name: 'GUNPOWDER' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1790,6 +1952,7 @@ const items: Item[] = [
 		level: 25,
 		name: 'Blitzlite',
 		relatedCategories: [{ count: 30, name: 'METAL' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1802,6 +1965,7 @@ const items: Item[] = [
 			{ count: 35, name: 'METAL' },
 			{ count: 15, name: 'SECRET_POWER' },
 		],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1814,6 +1978,7 @@ const items: Item[] = [
 			{ count: 40, name: 'CLAY' },
 			{ count: 10, name: 'ELIXIR' },
 		],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1826,6 +1991,7 @@ const items: Item[] = [
 			{ count: 45, name: 'THREAD' },
 			{ count: 10, name: 'METAL' },
 		],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1835,6 +2001,7 @@ const items: Item[] = [
 		level: 9,
 		name: 'Spruce',
 		relatedCategories: [{ count: 30, name: 'WOOD' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1847,6 +2014,7 @@ const items: Item[] = [
 			{ count: 15, name: 'WEAPON_MAT' },
 			{ count: 10, name: 'METAL' },
 		],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1859,6 +2027,7 @@ const items: Item[] = [
 			{ count: 25, name: 'WEAPON_MAT' },
 			{ count: 15, name: 'METAL' },
 		],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1871,6 +2040,7 @@ const items: Item[] = [
 			{ count: 30, name: 'WEAPON_MAT' },
 			{ count: 20, name: 'METAL' },
 		],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1883,6 +2053,7 @@ const items: Item[] = [
 			{ count: 35, name: 'WEAPON_MAT' },
 			{ count: 25, name: 'METAL' },
 		],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1895,6 +2066,7 @@ const items: Item[] = [
 			{ count: 40, name: 'WEAPON_MAT' },
 			{ count: 30, name: 'METAL' },
 		],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1907,6 +2079,7 @@ const items: Item[] = [
 			{ count: 45, name: 'WEAPON_MAT' },
 			{ count: 35, name: 'METAL' },
 		],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1919,6 +2092,7 @@ const items: Item[] = [
 			{ count: 20, name: 'ARMOR_MAT' },
 			{ count: 20, name: 'CLOTH' },
 		],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1931,6 +2105,7 @@ const items: Item[] = [
 			{ count: 25, name: 'ARMOR_MAT' },
 			{ count: 25, name: 'CLOTH' },
 		],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1943,6 +2118,7 @@ const items: Item[] = [
 			{ count: 30, name: 'ARMOR_MAT' },
 			{ count: 30, name: 'CLOTH' },
 		],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1955,6 +2131,7 @@ const items: Item[] = [
 			{ count: 35, name: 'ARMOR_MAT' },
 			{ count: 35, name: 'CLOTH' },
 		],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1967,6 +2144,7 @@ const items: Item[] = [
 			{ count: 40, name: 'ARMOR_MAT' },
 			{ count: 40, name: 'CLOTH' },
 		],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1979,6 +2157,7 @@ const items: Item[] = [
 			{ count: 45, name: 'ARMOR_MAT' },
 			{ count: 45, name: 'CLOTH' },
 		],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1991,6 +2170,7 @@ const items: Item[] = [
 			{ count: 30, name: 'METAL' },
 			{ count: 20, name: 'GEM' },
 		],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2000,6 +2180,7 @@ const items: Item[] = [
 		level: 25,
 		name: 'Noble Sapphire',
 		relatedCategories: [{ count: 40, name: 'GEM' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2014,6 +2195,7 @@ const items: Item[] = [
 			{ count: 40, name: 'FUEL' },
 			{ count: 40, name: 'ORE' },
 		],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2026,6 +2208,7 @@ const items: Item[] = [
 			{ count: 25, name: 'GEM' },
 			{ count: 10, name: 'SECRET_POWER' },
 		],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2035,6 +2218,7 @@ const items: Item[] = [
 		level: 27,
 		name: 'Compass of Hades',
 		relatedCategories: [{ count: 20, name: 'IMPORTANT' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2049,6 +2233,7 @@ const items: Item[] = [
 			{ count: 35, name: 'ELIXIR' },
 			{ count: 35, name: 'NEUTRALIZER' },
 		],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2063,6 +2248,7 @@ const items: Item[] = [
 			{ count: 99, name: 'ELIXIR' },
 			{ count: 99, name: 'SECRET_POWER' },
 		],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2077,6 +2263,7 @@ const items: Item[] = [
 			{ count: 40, name: 'MEDICINE_MAT' },
 			{ count: 40, name: 'NEUTRALIZER' },
 		],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2090,6 +2277,7 @@ const items: Item[] = [
 			{ count: 10, name: 'WATER' },
 			{ count: 5, name: 'METAL' },
 		],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2099,6 +2287,7 @@ const items: Item[] = [
 		level: 25,
 		name: 'Fertile Soil',
 		relatedCategories: [{ count: 20, name: 'CLAY' }],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2108,6 +2297,7 @@ const items: Item[] = [
 		level: 24,
 		name: 'Precise Parts',
 		relatedCategories: [{ count: 40, name: 'METAL' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'MACHINE',
@@ -2117,6 +2307,7 @@ const items: Item[] = [
 		level: 4,
 		name: "Grandma's Cauldron",
 		relatedCategories: [{ count: 5, name: 'IMPORTANT' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'MACHINE',
@@ -2126,6 +2317,7 @@ const items: Item[] = [
 		level: 4,
 		name: 'Practice Cauldron',
 		relatedCategories: [{ count: 5, name: 'IMPORTANT' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'MACHINE',
@@ -2135,6 +2327,7 @@ const items: Item[] = [
 		level: 14,
 		name: 'Tuned Cauldron',
 		relatedCategories: [{ count: 15, name: 'IMPORTANT' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'MACHINE',
@@ -2144,6 +2337,7 @@ const items: Item[] = [
 		level: 17,
 		name: 'Expert Cauldron',
 		relatedCategories: [{ count: 20, name: 'IMPORTANT' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'MACHINE',
@@ -2153,6 +2347,7 @@ const items: Item[] = [
 		level: 23,
 		name: 'Fairy Cauldron',
 		relatedCategories: [{ count: 25, name: 'IMPORTANT' }],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'MACHINE',
@@ -2162,6 +2357,7 @@ const items: Item[] = [
 		level: 28,
 		name: 'Ancient Cauldron',
 		relatedCategories: [{ count: 30, name: 'IMPORTANT' }],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'MACHINE',
@@ -2171,6 +2367,7 @@ const items: Item[] = [
 		level: 10,
 		name: "Teacher's Cauldron",
 		relatedCategories: [{ count: 15, name: 'IMPORTANT' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'MACHINE',
@@ -2180,6 +2377,7 @@ const items: Item[] = [
 		level: 32,
 		name: "Hermit's Cauldron",
 		relatedCategories: [{ count: 30, name: 'IMPORTANT' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'MACHINE',
@@ -2189,6 +2387,7 @@ const items: Item[] = [
 		level: 50,
 		name: 'Miraculous Cauldron',
 		relatedCategories: [{ count: 45, name: 'IMPORTANT' }],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'MACHINE',
@@ -2198,6 +2397,7 @@ const items: Item[] = [
 		level: 18,
 		name: 'Eye of Mercury',
 		relatedCategories: [{ count: 20, name: 'MAGIC_ITEM' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'WEAPON',
@@ -2207,6 +2407,7 @@ const items: Item[] = [
 		level: 6,
 		name: 'Starting Staff',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2216,6 +2417,7 @@ const items: Item[] = [
 		level: 14,
 		name: 'Flourish Heart',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2225,6 +2427,7 @@ const items: Item[] = [
 		level: 24,
 		name: 'Wandering Staff',
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2234,6 +2437,7 @@ const items: Item[] = [
 		level: 32,
 		name: 'Prosper Heart',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2243,6 +2447,7 @@ const items: Item[] = [
 		level: 42,
 		name: 'Eternal Cycle Staff',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2252,6 +2457,7 @@ const items: Item[] = [
 		level: 7,
 		name: 'Moon Caller',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2261,6 +2467,7 @@ const items: Item[] = [
 		level: 15,
 		name: 'Aura Bangle',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2270,6 +2477,7 @@ const items: Item[] = [
 		level: 25,
 		name: 'Cosmo Caller',
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2279,6 +2487,7 @@ const items: Item[] = [
 		level: 34,
 		name: 'Arch Bangle',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2288,6 +2497,7 @@ const items: Item[] = [
 		level: 39,
 		name: 'Bright Night',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2297,6 +2507,7 @@ const items: Item[] = [
 		level: 8,
 		name: 'Formal Rapier',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2306,6 +2517,7 @@ const items: Item[] = [
 		level: 18,
 		name: 'Brave Rapier',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2315,6 +2527,7 @@ const items: Item[] = [
 		level: 28,
 		name: "Knight's Rapier",
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2324,6 +2537,7 @@ const items: Item[] = [
 		level: 34,
 		name: "Hero's Rapier",
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2333,6 +2547,7 @@ const items: Item[] = [
 		level: 40,
 		name: "Monika's Estoc",
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2342,6 +2557,7 @@ const items: Item[] = [
 		level: 5,
 		name: 'Earth Shovel',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2351,6 +2567,7 @@ const items: Item[] = [
 		level: 13,
 		name: 'Idle Shovel',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2360,6 +2577,7 @@ const items: Item[] = [
 		level: 23,
 		name: "Heaven's Shovel",
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2369,6 +2587,7 @@ const items: Item[] = [
 		level: 33,
 		name: 'Shovel of Hope',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2378,6 +2597,7 @@ const items: Item[] = [
 		level: 43,
 		name: 'Bountiful Harvester',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2387,6 +2607,7 @@ const items: Item[] = [
 		level: 9,
 		name: 'Knight Blade',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2396,6 +2617,7 @@ const items: Item[] = [
 		level: 18,
 		name: 'Breaker',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2405,6 +2627,7 @@ const items: Item[] = [
 		level: 24,
 		name: 'Paladin Blade',
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2414,6 +2637,7 @@ const items: Item[] = [
 		level: 34,
 		name: 'Banisher',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2423,6 +2647,7 @@ const items: Item[] = [
 		level: 44,
 		name: 'Evandeit',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2432,6 +2657,7 @@ const items: Item[] = [
 		level: 10,
 		name: 'Demon Slayer',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2441,6 +2667,7 @@ const items: Item[] = [
 		level: 18,
 		name: 'Dark Light',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2450,6 +2677,7 @@ const items: Item[] = [
 		level: 25,
 		name: 'Demon God Slayer',
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2459,6 +2687,7 @@ const items: Item[] = [
 		level: 35,
 		name: 'True Dark Light',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2468,6 +2697,7 @@ const items: Item[] = [
 		level: 45,
 		name: 'Light of Dawn',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2477,6 +2707,7 @@ const items: Item[] = [
 		level: 9,
 		name: 'Steel Gauntlet',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2486,6 +2717,7 @@ const items: Item[] = [
 		level: 19,
 		name: 'Roaring Thunder',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2495,6 +2727,7 @@ const items: Item[] = [
 		level: 26,
 		name: 'Puni Gauntlet',
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2504,6 +2737,7 @@ const items: Item[] = [
 		level: 35,
 		name: 'Resplendent Frost',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2513,6 +2747,7 @@ const items: Item[] = [
 		level: 38,
 		name: 'Devouring Flame',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2522,6 +2757,7 @@ const items: Item[] = [
 		level: 8,
 		name: 'Metal Bullets',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2531,6 +2767,7 @@ const items: Item[] = [
 		level: 18,
 		name: 'Piercing Bullets',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2540,6 +2777,7 @@ const items: Item[] = [
 		level: 24,
 		name: 'Crystal Bullets',
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2549,6 +2787,7 @@ const items: Item[] = [
 		level: 34,
 		name: 'Diamant',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2558,6 +2797,7 @@ const items: Item[] = [
 		level: 39,
 		name: 'Wild Cat',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2567,6 +2807,7 @@ const items: Item[] = [
 		level: 10,
 		name: "Maiden's Spear",
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2576,6 +2817,7 @@ const items: Item[] = [
 		level: 18,
 		name: 'Madcat Spear',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2585,6 +2827,7 @@ const items: Item[] = [
 		level: 24,
 		name: "Lady's Spear",
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2594,6 +2837,7 @@ const items: Item[] = [
 		level: 29,
 		name: 'White Panther',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2603,6 +2847,7 @@ const items: Item[] = [
 		level: 39,
 		name: 'Vivid Spear',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2612,6 +2857,7 @@ const items: Item[] = [
 		level: 6,
 		name: "Traveler's Vest",
 		relatedCategories: [{ count: 5, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2621,6 +2867,7 @@ const items: Item[] = [
 		level: 11,
 		name: 'Plate Vest',
 		relatedCategories: [{ count: 10, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2630,6 +2877,7 @@ const items: Item[] = [
 		level: 28,
 		name: 'Gold Jacket',
 		relatedCategories: [{ count: 15, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2639,6 +2887,7 @@ const items: Item[] = [
 		level: 34,
 		name: 'Colorful Vest',
 		relatedCategories: [{ count: 20, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2648,6 +2897,7 @@ const items: Item[] = [
 		level: 38,
 		name: 'Aegis Jacket',
 		relatedCategories: [{ count: 25, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2657,6 +2907,7 @@ const items: Item[] = [
 		level: 43,
 		name: 'Alchemy Vest',
 		relatedCategories: [{ count: 30, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2666,6 +2917,7 @@ const items: Item[] = [
 		level: 8,
 		name: 'Hard Coat',
 		relatedCategories: [{ count: 5, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2675,6 +2927,7 @@ const items: Item[] = [
 		level: 14,
 		name: 'Plate Coat',
 		relatedCategories: [{ count: 10, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2684,6 +2937,7 @@ const items: Item[] = [
 		level: 19,
 		name: 'Farden Coat',
 		relatedCategories: [{ count: 15, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2693,6 +2947,7 @@ const items: Item[] = [
 		level: 25,
 		name: 'Reactive Coat',
 		relatedCategories: [{ count: 20, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2702,6 +2957,7 @@ const items: Item[] = [
 		level: 40,
 		name: 'Dragonscale Coat',
 		relatedCategories: [{ count: 25, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2711,6 +2967,7 @@ const items: Item[] = [
 		level: 45,
 		name: 'Ancient Coat',
 		relatedCategories: [{ count: 30, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2720,6 +2977,7 @@ const items: Item[] = [
 		level: 3,
 		name: 'First Shirt',
 		relatedCategories: [{ count: 5, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2729,6 +2987,7 @@ const items: Item[] = [
 		level: 8,
 		name: 'Mixed Fur Shirt',
 		relatedCategories: [{ count: 10, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2738,6 +2997,7 @@ const items: Item[] = [
 		level: 14,
 		name: "Wanderer's Shirt",
 		relatedCategories: [{ count: 15, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2747,6 +3007,7 @@ const items: Item[] = [
 		level: 21,
 		name: 'Weightless Shirt',
 		relatedCategories: [{ count: 20, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2756,6 +3017,7 @@ const items: Item[] = [
 		level: 25,
 		name: 'Natural Clothes',
 		relatedCategories: [{ count: 25, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2765,6 +3027,7 @@ const items: Item[] = [
 		level: 35,
 		name: 'Full Metal Shirt',
 		relatedCategories: [{ count: 30, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2774,6 +3037,7 @@ const items: Item[] = [
 		level: 32,
 		name: 'Paraselene Clothes',
 		relatedCategories: [{ count: 35, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2783,6 +3047,7 @@ const items: Item[] = [
 		level: 41,
 		name: 'Alchemy Mantle',
 		relatedCategories: [{ count: 40, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2792,6 +3057,7 @@ const items: Item[] = [
 		level: 29,
 		name: 'Soft Armor',
 		relatedCategories: [{ count: 45, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2801,6 +3067,7 @@ const items: Item[] = [
 		level: 32,
 		name: 'Tight Shirt',
 		relatedCategories: [{ count: 45, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2810,6 +3077,7 @@ const items: Item[] = [
 		level: 37,
 		name: 'Bridal Blouse',
 		relatedCategories: [{ count: 50, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2819,6 +3087,7 @@ const items: Item[] = [
 		level: 42,
 		name: 'Resurrection Wear',
 		relatedCategories: [{ count: 50, name: 'ARMOR' }],
+		recipeType: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -2828,6 +3097,7 @@ const items: Item[] = [
 		level: 35,
 		name: 'Life Bangle',
 		relatedCategories: [{ count: 10, name: 'ACCESSORY' }],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -2837,6 +3107,7 @@ const items: Item[] = [
 		level: 27,
 		name: 'White-Hot Headband',
 		relatedCategories: [{ count: 10, name: 'ACCESSORY' }],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -2846,6 +3117,7 @@ const items: Item[] = [
 		level: 21,
 		name: 'Angel Ribbon',
 		relatedCategories: [{ count: 15, name: 'ACCESSORY' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -2855,6 +3127,7 @@ const items: Item[] = [
 		level: 24,
 		name: 'Feather Ornament',
 		relatedCategories: [{ count: 20, name: 'ACCESSORY' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -2864,6 +3137,7 @@ const items: Item[] = [
 		level: 33,
 		name: 'Spirit Earrings',
 		relatedCategories: [{ count: 25, name: 'ACCESSORY' }],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -2873,6 +3147,7 @@ const items: Item[] = [
 		level: 40,
 		name: 'Ambrosia Garland',
 		relatedCategories: [{ count: 30, name: 'ACCESSORY' }],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -2882,6 +3157,7 @@ const items: Item[] = [
 		level: 13,
 		name: 'Meister Mittens',
 		relatedCategories: [{ count: 15, name: 'ACCESSORY' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -2891,6 +3167,7 @@ const items: Item[] = [
 		level: 23,
 		name: "Mind's Eye Monocle",
 		relatedCategories: [{ count: 20, name: 'ACCESSORY' }],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -2900,6 +3177,7 @@ const items: Item[] = [
 		level: 19,
 		name: 'Monochrome Glasses',
 		relatedCategories: [{ count: 25, name: 'ACCESSORY' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -2909,6 +3187,7 @@ const items: Item[] = [
 		level: 36,
 		name: 'Chronicle Mark',
 		relatedCategories: [{ count: 30, name: 'ACCESSORY' }],
+		recipeType: 'DREAM_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -2918,6 +3197,7 @@ const items: Item[] = [
 		level: 41,
 		name: 'Time Control Hourglass',
 		relatedCategories: [{ count: 35, name: 'ACCESSORY' }],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -2927,6 +3207,7 @@ const items: Item[] = [
 		level: 16,
 		name: 'Friendly Persona',
 		relatedCategories: [{ count: 20, name: 'ACCESSORY' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -2936,6 +3217,7 @@ const items: Item[] = [
 		level: 29,
 		name: 'Hustle Belt',
 		relatedCategories: [{ count: 15, name: 'ACCESSORY' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -2945,6 +3227,7 @@ const items: Item[] = [
 		level: 38,
 		name: 'Element Guard',
 		relatedCategories: [{ count: 35, name: 'ACCESSORY' }],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -2954,6 +3237,7 @@ const items: Item[] = [
 		level: 30,
 		name: 'Gunade Ring',
 		relatedCategories: [{ count: 30, name: 'ACCESSORY' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'KEY_ITEM',
@@ -2963,6 +3247,7 @@ const items: Item[] = [
 		level: 1,
 		name: "Plachta's Core",
 		relatedCategories: [{ count: 20, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -2972,6 +3257,7 @@ const items: Item[] = [
 		level: 1,
 		name: "Plachta's Clothes",
 		relatedCategories: [{ count: 20, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -2981,6 +3267,7 @@ const items: Item[] = [
 		level: 12,
 		name: 'Soul Stone',
 		relatedCategories: [{ count: 10, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2990,6 +3277,7 @@ const items: Item[] = [
 		level: 20,
 		name: 'Spirit Needle',
 		relatedCategories: [{ count: 15, name: 'IMPORTANT' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2999,6 +3287,7 @@ const items: Item[] = [
 		level: 41,
 		name: 'Key of Truth',
 		relatedCategories: [{ count: 50, name: 'IMPORTANT' }],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3011,6 +3300,7 @@ const items: Item[] = [
 			{ count: 30, name: 'METAL' },
 			{ count: 20, name: 'MAGIC_ITEM' },
 		],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'ACCESSORY',
@@ -3020,6 +3310,7 @@ const items: Item[] = [
 		level: 19,
 		name: 'Ares Brooch',
 		relatedCategories: [{ count: 40, name: 'ACCESSORY' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3029,6 +3320,7 @@ const items: Item[] = [
 		level: 1,
 		name: 'Plachta Doll',
 		relatedCategories: [{ count: 40, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3038,6 +3330,7 @@ const items: Item[] = [
 		level: 1,
 		name: 'Music Box of Memory',
 		relatedCategories: [{ count: 40, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3047,6 +3340,7 @@ const items: Item[] = [
 		level: 16,
 		name: 'Puppeteer String',
 		relatedCategories: [{ count: 25, name: 'THREAD' }],
+		recipeType: 'BEGINNER_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3056,6 +3350,7 @@ const items: Item[] = [
 		level: 17,
 		name: "Sage's Soil",
 		relatedCategories: [{ count: 30, name: 'CLAY' }],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3065,6 +3360,7 @@ const items: Item[] = [
 		level: 7,
 		name: 'Prototype Fertilizer',
 		relatedCategories: [{ count: 30, name: 'IMPORTANT' }],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3074,6 +3370,7 @@ const items: Item[] = [
 		level: 1,
 		name: 'Date Ticket',
 		relatedCategories: [{ count: 5, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -3083,6 +3380,7 @@ const items: Item[] = [
 		level: 2,
 		name: 'Moisture Grass',
 		relatedCategories: [{ count: 50, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3092,6 +3390,7 @@ const items: Item[] = [
 		level: 48,
 		name: "Sage's Emblem",
 		relatedCategories: [{ count: 50, name: 'IMPORTANT' }],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3101,6 +3400,7 @@ const items: Item[] = [
 		level: 40,
 		name: 'Atelier Tent',
 		relatedCategories: [{ count: 50, name: 'IMPORTANT' }],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3110,6 +3410,7 @@ const items: Item[] = [
 		level: 1,
 		name: 'Old Certificate',
 		relatedCategories: [{ count: 5, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3119,6 +3420,7 @@ const items: Item[] = [
 		level: 1,
 		name: 'Old Clothing',
 		relatedCategories: [{ count: 5, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3128,6 +3430,7 @@ const items: Item[] = [
 		level: 1,
 		name: "Grandma's Clothes",
 		relatedCategories: [{ count: 25, name: 'IMPORTANT' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3141,6 +3444,7 @@ const items: Item[] = [
 			{ count: 25, name: 'WOOD' },
 			{ count: 10, name: 'FUEL' },
 		],
+		recipeType: 'HOPE_RECIPES',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3153,6 +3457,7 @@ const items: Item[] = [
 			{ count: 40, name: 'CLOTH' },
 			{ count: 30, name: 'SECRET_POWER' },
 		],
+		recipeType: 'MYSTERY_RECIPES',
 	},
 	{
 		category: 'BOOK',
@@ -3162,6 +3467,7 @@ const items: Item[] = [
 		level: 8,
 		name: 'Gathering Buddy',
 		relatedCategories: [{ count: 5, name: 'IMPORTANT' }],
+		recipeType: 'GROWTH_RECIPES',
 	},
 	{
 		category: 'BOOK',
@@ -3171,6 +3477,7 @@ const items: Item[] = [
 		level: 10,
 		name: 'Eternal Brilliance',
 		relatedCategories: [{ count: 10, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'BOOK',
@@ -3180,6 +3487,7 @@ const items: Item[] = [
 		level: 11,
 		name: 'Soul Techniques',
 		relatedCategories: [{ count: 15, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'BOOK',
@@ -3189,6 +3497,7 @@ const items: Item[] = [
 		level: 13,
 		name: 'Alchemic Drive Guide',
 		relatedCategories: [{ count: 20, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'BOOK',
@@ -3198,6 +3507,7 @@ const items: Item[] = [
 		level: 20,
 		name: 'Blessing of the Sun',
 		relatedCategories: [{ count: 25, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'BOOK',
@@ -3207,6 +3517,7 @@ const items: Item[] = [
 		level: 22,
 		name: 'Recipe of Origin',
 		relatedCategories: [{ count: 30, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'BOOK',
@@ -3216,6 +3527,7 @@ const items: Item[] = [
 		level: 22,
 		name: "Puppeteer's Tools",
 		relatedCategories: [{ count: 35, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 	{
 		category: 'BOOK',
@@ -3225,6 +3537,7 @@ const items: Item[] = [
 		level: 28,
 		name: "Alchemist's Book",
 		relatedCategories: [{ count: 40, name: 'IMPORTANT' }],
+		recipeType: null,
 	},
 ];
 
