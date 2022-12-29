@@ -8,10 +8,11 @@ import RecordWrapper from '../RecordWrapper/RecordWrapper';
 import Category from './Category';
 import Color from './Color';
 import Level from './Level';
+import RecipeType from './RecipeType';
 import RelatedCategories from './RelatedCategories';
 
 const ItemRecord: FC<ItemRecordProps> = ({
-	record: { name, index, id, color, relatedCategories, level, category },
+	record: { name, index, id, color, relatedCategories, level, category, recipeType },
 }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 
@@ -28,6 +29,8 @@ const ItemRecord: FC<ItemRecordProps> = ({
 			<Level level={level} />
 
 			<span className='text-sm'>index: {index}</span>
+
+			{recipeType ? <RecipeType recipeType={recipeType} /> : null}
 
 			<Category category={category} />
 

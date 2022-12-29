@@ -1,4 +1,4 @@
-import type { CATEGORY, COLOR, Effect, Item, MergeTrait, RelatedCategories, Trait } from '@prisma/client';
+import type { CATEGORY, COLOR, Effect, Item, MergeTrait, RECIPE_TYPE, RelatedCategories, Trait } from '@prisma/client';
 import type { Maybe } from '@trpc/server';
 import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
 import type { ReactNode, RefObject } from 'react';
@@ -45,6 +45,7 @@ export type GoToPageSelectProps = { totalPage: number };
 export type ResetFilterProps = IsPaginateOnlyProps;
 
 export type ColorProps = { color: COLOR };
+export type RecipeTypeProps = { recipeType: RECIPE_TYPE };
 export type LevelProps = { level: number };
 export type CategoryProps = { category: CATEGORY };
 
