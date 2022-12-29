@@ -1,5 +1,6 @@
 import ItemRecord from '@root/components/ItemRecord';
 import DetailLayout from '@root/components/Layout/DetailLayout';
+import { colorTailwindMap } from '@root/components/SubComponent';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import { trpc } from '@root/utils/trpc';
 import type { NextPage } from 'next';
@@ -24,9 +25,17 @@ const ItemDetail: NextPage = () => {
 				!isLoading && isSuccess ? (
 					<Head>
 						<title>{data.name}</title>
+
 						<meta
 							name='description'
 							content={data.relatedCategories.map(c => `${c.name} (${c.count})`).join(', ')}
+						/>
+
+						<meta
+							name='theme-color'
+							property='og:theme-color'
+							key='theme-color'
+							content={colorTailwindMap[data.color]}
 						/>
 					</Head>
 				) : null

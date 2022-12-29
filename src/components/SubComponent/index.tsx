@@ -10,6 +10,7 @@ import type { UnicodeClass } from '@root/types/fonts/atelier';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import type { FC } from 'react';
+import colors from 'tailwindcss/colors';
 
 export const hideCategoryOnTrait: Readonly<CATEGORY[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
 
@@ -30,6 +31,14 @@ export const categoryMap = new Map<CATEGORY, { name: string; className: UnicodeC
 ]);
 
 export const colorMap = ['RED', 'BLUE', 'GREEN', 'YELLOW', 'WHITE'] satisfies COLOR[];
+
+export const colorTailwindMap: { [key in COLOR]: string } = {
+	BLUE: colors.blue[500],
+	GREEN: colors.green[500],
+	RED: colors.red[500],
+	WHITE: colors.slate[500],
+	YELLOW: colors.yellow[400],
+};
 
 export const RelatedCategorySelectList = [
 	{ value: null, label: '------------' },
