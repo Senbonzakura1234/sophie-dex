@@ -1,4 +1,4 @@
-import type { CATEGORY, COLOR, RecipeType } from '@prisma/client';
+import type { CATEGORY, COLOR, RECIPE_TYPE } from '@prisma/client';
 import { getFramerFadeUp } from '@root/animations';
 import { defaultLimit } from '@root/constants';
 import type { SelectOptionItem } from '@root/types/common';
@@ -38,7 +38,7 @@ const recipeTypeMap = [
 	'HOPE_RECIPES',
 	'DREAM_RECIPES',
 	'MYSTERY_RECIPES',
-] satisfies RecipeType[];
+] satisfies RECIPE_TYPE[];
 
 export const defaultSelect = {
 	value: null,
@@ -97,7 +97,7 @@ export const RecipeTypeSelectList = [
 			></div>
 		),
 	})),
-] satisfies SelectOptionItem<RecipeType | null>[];
+] satisfies SelectOptionItem<RECIPE_TYPE | null>[];
 
 export const RecordPlaceHolder: FC<RecordPlaceHolderProps> = ({ isSuccess, isError, color }) => (
 	<motion.div

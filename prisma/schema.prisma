@@ -1,7 +1,7 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-enum RecipeType {
+enum RECIPE_TYPE {
    BEGINNER_RECIPES
    GROWTH_RECIPES
    HOPE_RECIPES
@@ -119,5 +119,5 @@ model Item {
    relatedCategories RelatedCategories[]
    category          CATEGORY
    level             Int
-   recipeType        RecipeType?
+   recipeType        RECIPE_TYPE?
 }
