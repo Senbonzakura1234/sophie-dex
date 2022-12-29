@@ -1,7 +1,7 @@
 import { idRegex } from '@root/constants';
 import { z } from 'zod';
 
-import { categoryList, colorList, relatedCategoryList } from '../model';
+import { categoryList, colorList, recipeTypeList, relatedCategoryList } from '../model';
 
 const positiveIntSchema = z.coerce.number().positive();
 
@@ -11,6 +11,7 @@ const directionSchema = z.enum(['asc', 'desc']).nullish().catch(null).default(nu
 const relatedCategorySchema = z.enum(relatedCategoryList).nullish().catch(null).default(null);
 const categorySchema = z.enum(categoryList).nullish().catch(null).default(null);
 const colorSchema = z.enum(colorList).nullish().catch(null).default(null);
+const recipeTypeSchema = z.enum(recipeTypeList).nullish().catch(null).default(null);
 const idSchema = z.string().regex(idRegex).nullish().catch(null).default(null);
 const pageSchema = positiveIntSchema.nullish().catch(null).default(null);
 
@@ -21,6 +22,7 @@ export const searchQueryValidator = z.object({
 	relatedCategory: relatedCategorySchema,
 	category: categorySchema,
 	color: colorSchema,
+	recipeType: recipeTypeSchema,
 	page: pageSchema,
 });
 

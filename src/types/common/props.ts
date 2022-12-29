@@ -37,6 +37,7 @@ export type SortControlProps = PageNameProps & IsPaginateOnlyProps;
 
 export type ColorFilterProps = PageNameProps;
 export type CategoryFilterProps = PageNameProps;
+export type RecipeTypeFilterProps = PageNameProps;
 
 export type PaginateProps = { page: number; totalPage: number };
 export type GoToPageSelectProps = { totalPage: number };

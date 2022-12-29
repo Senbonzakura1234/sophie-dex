@@ -1,6 +1,6 @@
 import type { COLOR } from '@prisma/client';
 import SelectOption from '@root/components/SelectOption';
-import { ColorSelectList, defaultSelect } from '@root/components/SubComponent';
+import { colorDefaultSelect, colorSelectList } from '@root/components/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { ColorFilterProps } from '@root/types/common/props';
@@ -12,7 +12,7 @@ const ColorFilter: FC<ColorFilterProps> = ({ pageName }) => {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();
 
 	const defaultColor = useMemo(
-		() => ColorSelectList.find(({ value }) => value === securedQuery.color) ?? defaultSelect,
+		() => colorSelectList.find(({ value }) => value === securedQuery.color) ?? colorDefaultSelect,
 		[securedQuery.color],
 	);
 
@@ -23,25 +23,20 @@ const ColorFilter: FC<ColorFilterProps> = ({ pageName }) => {
 	);
 
 	return (
-		<div
+		<SelectOption<COLOR | null>
+			list={colorSelectList}
+			setValue={setColorSelected}
+			value={colorSelected}
 			className={clsx(
 				{
-					flex: pageName === 'Item',
+					block: pageName === 'Item',
 					hidden: pageName !== 'Item',
 				},
-				'grow gap-2 2xl:grow-0',
+				'my-auto w-2/3 min-w-fit sm:w-32',
 			)}
-		>
-			<small className='my-auto text-sm font-bold'>Color:</small>
-			<SelectOption<COLOR | null>
-				list={ColorSelectList}
-				setValue={setColorSelected}
-				value={colorSelected}
-				className='my-auto w-32'
-				useCustomIcon
-				withIcon
-			/>
-		</div>
+			useCustomIcon
+			withIcon
+		/>
 	);
 };
 

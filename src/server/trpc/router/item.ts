@@ -7,7 +7,7 @@ import { TRPCError } from '@trpc/server';
 
 export const itemRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Item>> => {
-		const { search, sortBy, direction, color, relatedCategory, page, category } = { ...input };
+		const { search, sortBy, direction, color, relatedCategory, page, category, recipeType } = { ...input };
 
 		const pageInt = page ?? 1;
 
@@ -16,6 +16,7 @@ export const itemRouter = router({
 			AND: [
 				...(relatedCategory ? [{ relatedCategories: { some: { name: { equals: relatedCategory } } } }] : []),
 				...(color ? [{ color: { equals: color } }] : []),
+				...(recipeType ? [{ recipeType: { equals: recipeType } }] : []),
 				...(category ? [{ category: { equals: category } }] : []),
 			],
 		} satisfies Prisma.ItemWhereInput;

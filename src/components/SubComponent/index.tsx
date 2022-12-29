@@ -40,14 +40,26 @@ const recipeTypeMap = [
 	'MYSTERY_RECIPES',
 ] satisfies RECIPE_TYPE[];
 
-export const defaultSelect = {
+export const categoryDefaultSelect = {
 	value: null,
-	label: '----------',
+	label: 'Category',
+	icon: <span className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />,
+};
+
+export const colorDefaultSelect = {
+	value: null,
+	label: 'Color',
+	icon: <span className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />,
+};
+
+export const recipeTypeDefaultSelect = {
+	value: null,
+	label: 'Recipe type',
 	icon: <span className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />,
 };
 
 export const categorySelectList = [
-	defaultSelect,
+	categoryDefaultSelect,
 	...[...categoryMap].map(([code, { name, className }]) => ({
 		label: name,
 		value: code,
@@ -55,13 +67,13 @@ export const categorySelectList = [
 	})),
 ] satisfies SelectOptionItem<CATEGORY | null>[];
 
-export const ColorSelectList = [
-	defaultSelect,
+export const colorSelectList = [
+	colorDefaultSelect,
 	...colorMap.map(color => ({
 		label: <span className='capitalize'>{color.toLocaleLowerCase()}</span>,
 		value: color,
 		icon: (
-			<div
+			<span
 				className={clsx(
 					{
 						'bg-blue-500 shadow-blue-500': color === 'BLUE',
@@ -72,18 +84,19 @@ export const ColorSelectList = [
 					},
 					'h-4 w-4 rounded-full',
 				)}
-			></div>
+				aria-hidden='true'
+			/>
 		),
 	})),
 ] satisfies SelectOptionItem<COLOR | null>[];
 
-export const RecipeTypeSelectList = [
-	defaultSelect,
+export const recipeTypeSelectList = [
+	recipeTypeDefaultSelect,
 	...recipeTypeMap.map(recipeType => ({
 		label: <span className='capitalize'>{recipeType.toLocaleLowerCase().replaceAll('_', ' ')}</span>,
 		value: recipeType,
 		icon: (
-			<div
+			<span
 				className={clsx(
 					{
 						'bg-red-500 shadow-red-500': recipeType === 'BEGINNER_RECIPES',
@@ -94,7 +107,8 @@ export const RecipeTypeSelectList = [
 					},
 					'h-4 w-4 rounded-full',
 				)}
-			></div>
+				aria-hidden='true'
+			/>
 		),
 	})),
 ] satisfies SelectOptionItem<RECIPE_TYPE | null>[];

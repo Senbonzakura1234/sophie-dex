@@ -9,6 +9,7 @@ import { useMemo } from 'react';
 import CategoryFilter from './CategoryFilter';
 import ColorFilter from './ColorFilter';
 import Paginate from './Paginate';
+import RecipeTypeFilter from './RecipeTypeFilter';
 import ResetFilter from './ResetFilter';
 import SearchInput from './SearchInput';
 import SortControl from './SortControl';
@@ -64,6 +65,7 @@ const FilterControl: FC<FilterControlProps> = ({
 					<SortControl pageName={pageName} isPaginateOnly={isPaginateOnly} />
 
 					<div className={clsx({ hidden: isPaginateOnly }, 'flex flex-wrap gap-2')}>
+						<RecipeTypeFilter pageName={pageName} />
 						<ColorFilter pageName={pageName} />
 						<CategoryFilter pageName={pageName} />
 					</div>

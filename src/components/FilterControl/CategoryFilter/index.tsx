@@ -1,6 +1,6 @@
 import type { CATEGORY } from '@prisma/client';
 import SelectOption from '@root/components/SelectOption';
-import { categorySelectList, defaultSelect } from '@root/components/SubComponent';
+import { categoryDefaultSelect, categorySelectList } from '@root/components/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { CategoryFilterProps } from '@root/types/common/props';
@@ -12,7 +12,7 @@ const CategoryFilter: FC<CategoryFilterProps> = ({ pageName }) => {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();
 
 	const defaultCate = useMemo(
-		() => categorySelectList.find(({ value }) => value === securedQuery.category) ?? defaultSelect,
+		() => categorySelectList.find(({ value }) => value === securedQuery.category) ?? categoryDefaultSelect,
 		[securedQuery.category],
 	);
 
@@ -23,26 +23,21 @@ const CategoryFilter: FC<CategoryFilterProps> = ({ pageName }) => {
 	);
 
 	return (
-		<div
+		<SelectOption<CATEGORY | null>
+			list={categorySelectList}
+			setValue={setCateSelected}
+			value={cateSelected}
 			className={clsx(
 				{
-					flex: pageName !== 'Effect',
+					block: pageName !== 'Effect',
 					hidden: pageName === 'Effect',
 				},
-				'grow gap-2 2xl:grow-0',
+				'my-auto w-2/3 min-w-fit sm:w-[10.25rem]',
 			)}
-		>
-			<small className='my-auto text-sm font-bold'>Category:</small>
-			<SelectOption<CATEGORY | null>
-				list={categorySelectList}
-				setValue={setCateSelected}
-				value={cateSelected}
-				className='my-auto w-[10.25rem]'
-				useCustomIcon={true}
-				withIcon={true}
-				useAtelierFont={true}
-			/>
-		</div>
+			useCustomIcon={true}
+			withIcon={true}
+			useAtelierFont={true}
+		/>
 	);
 };
 
