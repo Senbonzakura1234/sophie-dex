@@ -1,7 +1,7 @@
-import type { CATEGORY, COLOR } from '@prisma/client';
+import type { CATEGORY, COLOR, RecipeType } from '@prisma/client';
 import { getFramerFadeUp } from '@root/animations';
 import { defaultLimit } from '@root/constants';
-import type { CateSelected, ColorSelected } from '@root/types/common';
+import type { SelectOptionItem } from '@root/types/common';
 import type {
 	FilterControlPlaceHolderProps,
 	ListPlaceHolderProps,
@@ -11,7 +11,6 @@ import type { UnicodeClass } from '@root/types/fonts/atelier';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import type { FC } from 'react';
-import colors from 'tailwindcss/colors';
 
 export const hideCategoryOnTrait: Readonly<CATEGORY[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
 
@@ -31,15 +30,15 @@ export const categoryMap = new Map<CATEGORY, { name: string; className: UnicodeC
 	['MACHINE', { name: 'Machine', className: 'atelier__category-neutralizers' }],
 ]);
 
-export const colorMap = ['RED', 'BLUE', 'GREEN', 'YELLOW', 'WHITE'] satisfies COLOR[];
+const colorMap = ['RED', 'BLUE', 'GREEN', 'YELLOW', 'WHITE'] satisfies COLOR[];
 
-export const colorTailwindMap: { [key in COLOR]: string } = {
-	BLUE: colors.blue[500],
-	GREEN: colors.green[500],
-	RED: colors.red[500],
-	WHITE: colors.slate[500],
-	YELLOW: colors.yellow[400],
-};
+const recipeTypeMap = [
+	'BEGINNER_RECIPES',
+	'GROWTH_RECIPES',
+	'HOPE_RECIPES',
+	'DREAM_RECIPES',
+	'MYSTERY_RECIPES',
+] satisfies RecipeType[];
 
 export const defaultSelect = {
 	value: null,
@@ -54,7 +53,7 @@ export const categorySelectList = [
 		value: code,
 		icon: <span className={`h-4 w-4 2xl:h-5 2xl:w-5 ${className}`} aria-hidden='true' />,
 	})),
-] satisfies CateSelected[];
+] satisfies SelectOptionItem<CATEGORY | null>[];
 
 export const ColorSelectList = [
 	defaultSelect,
@@ -76,7 +75,29 @@ export const ColorSelectList = [
 			></div>
 		),
 	})),
-] satisfies ColorSelected[];
+] satisfies SelectOptionItem<COLOR | null>[];
+
+export const RecipeTypeSelectList = [
+	defaultSelect,
+	...recipeTypeMap.map(recipeType => ({
+		label: <span className='capitalize'>{recipeType.toLocaleLowerCase().replaceAll('_', ' ')}</span>,
+		value: recipeType,
+		icon: (
+			<div
+				className={clsx(
+					{
+						'bg-red-500 shadow-red-500': recipeType === 'BEGINNER_RECIPES',
+						'bg-blue-500 shadow-blue-500': recipeType === 'GROWTH_RECIPES',
+						'bg-green-500 shadow-green-500': recipeType === 'HOPE_RECIPES',
+						'bg-yellow-400 shadow-yellow-400': recipeType === 'DREAM_RECIPES',
+						'bg-slate-500 shadow-slate-500': recipeType === 'MYSTERY_RECIPES',
+					},
+					'h-4 w-4 rounded-full',
+				)}
+			></div>
+		),
+	})),
+] satisfies SelectOptionItem<RecipeType | null>[];
 
 export const RecordPlaceHolder: FC<RecordPlaceHolderProps> = ({ isSuccess, isError, color }) => (
 	<motion.div

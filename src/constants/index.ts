@@ -1,5 +1,7 @@
+import type { COLOR } from '@prisma/client';
 import type { PageName } from '@root/types/common';
 import type { ListRecord } from '@root/types/model';
+import colors from 'tailwindcss/colors';
 
 export const APP_NAME = 'Sophie Dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book - Wiki';
@@ -14,3 +16,11 @@ export function getDefaultListRecord<T>(): ListRecord<T> {
 export const idRegex = /^[0-9A-F]{24}$/i;
 
 export const pageNameList = ['Effect', 'Item', 'Trait'] as const satisfies Readonly<PageName[]>;
+
+export const colorTailwindMap: { [key in COLOR]: string } = {
+	BLUE: colors.blue[500],
+	GREEN: colors.green[500],
+	RED: colors.red[500],
+	WHITE: colors.slate[500],
+	YELLOW: colors.yellow[400],
+};

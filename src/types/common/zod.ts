@@ -1,7 +1,7 @@
 import { idRegex } from '@root/constants';
 import { z } from 'zod';
 
-import { categoryList, colorMap, relatedCategoryList } from '../model';
+import { categoryList, colorList, relatedCategoryList } from '../model';
 
 const positiveIntSchema = z.coerce.number().positive();
 
@@ -10,7 +10,7 @@ const sortBySchema = z.enum(['index', 'name', 'level']).nullish().catch(null).de
 const directionSchema = z.enum(['asc', 'desc']).nullish().catch(null).default(null);
 const relatedCategorySchema = z.enum(relatedCategoryList).nullish().catch(null).default(null);
 const categorySchema = z.enum(categoryList).nullish().catch(null).default(null);
-const colorSchema = z.enum(colorMap).nullish().catch(null).default(null);
+const colorSchema = z.enum(colorList).nullish().catch(null).default(null);
 const idSchema = z.string().regex(idRegex).nullish().catch(null).default(null);
 const pageSchema = positiveIntSchema.nullish().catch(null).default(null);
 

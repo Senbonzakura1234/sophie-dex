@@ -1,6 +1,6 @@
 import ItemRecord from '@root/components/ItemRecord';
 import DetailLayout from '@root/components/Layout/DetailLayout';
-import { colorTailwindMap } from '@root/components/SubComponent';
+import { colorTailwindMap } from '@root/constants';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import { trpc } from '@root/utils/trpc';
 import type { NextPage } from 'next';

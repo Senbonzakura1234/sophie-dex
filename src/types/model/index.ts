@@ -8,7 +8,7 @@ export const ColorDisplay = {
 	RED: 'Red',
 } as const satisfies Readonly<{ [color in COLOR]: string }>;
 
-export const colorMap = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW'] as const satisfies Readonly<COLOR[]>;
+export const colorList = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW'] as const satisfies Readonly<COLOR[]>;
 
 export type ColorDisplay = typeof ColorDisplay[keyof typeof ColorDisplay];
 
