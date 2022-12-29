@@ -3,7 +3,6 @@ import FilterControl from '@root/components/FilterControl';
 import PageFooter from '@root/components/PageFooter';
 import PageTitle from '@root/components/PageTitle';
 import { FilterControlPlaceHolder, ListPlaceHolder } from '@root/components/SubComponent';
-import { defaultLimit } from '@root/constants';
 import type { ListLayoutProps } from '@root/types/common/props';
 import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
@@ -16,7 +15,6 @@ const ListLayout: FC<ListLayoutProps> = ({
 	errorMessage,
 	isError,
 	isSuccess,
-	limit,
 	page,
 	totalPage,
 	totalRecord,
@@ -31,12 +29,10 @@ const ListLayout: FC<ListLayoutProps> = ({
 
 		<FilterControlPlaceHolder isSuccess={isSuccess} isError={isError} />
 
-		{isSuccess && (
-			<FilterControl pageName={pageName} page={page} totalPage={totalPage} limit={limit} totalRecord={totalRecord} />
-		)}
+		{isSuccess && <FilterControl pageName={pageName} page={page} totalPage={totalPage} totalRecord={totalRecord} />}
 
 		<section className='container mx-auto grid grow gap-6 max-2xl:px-4 2xl:grid-cols-2'>
-			<ListPlaceHolder limit={defaultLimit} isSuccess={isSuccess} isError={isError} />
+			<ListPlaceHolder isSuccess={isSuccess} isError={isError} />
 			{children}
 		</section>
 
@@ -47,7 +43,6 @@ const ListLayout: FC<ListLayoutProps> = ({
 				pageName={pageName}
 				page={page}
 				totalPage={totalPage}
-				limit={limit}
 				totalRecord={totalRecord}
 				isPaginateOnly
 			/>

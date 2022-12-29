@@ -99,7 +99,6 @@ export const categoryList = [
 export type ListRecord<T> = {
 	records: T[];
 	page: number | null;
-	limit: number | null;
 	totalRecord: number;
 	totalPage: number;
 };

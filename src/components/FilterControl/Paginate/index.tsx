@@ -4,26 +4,18 @@ import {
 	ChevronLeftIcon,
 	ChevronRightIcon,
 } from '@heroicons/react/24/solid';
-import SelectOption from '@root/components/SelectOption';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { GoToPage } from '@root/types/common';
 import type { PaginateProps } from '@root/types/common/props';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
-const Paginate: FC<PaginateProps> = ({ page, totalPage, goToPage, setGoToPage }) => {
+import GoToPageSelect from './GoToPageSelect';
+
+const Paginate: FC<PaginateProps> = ({ page, totalPage }) => {
 	const { isReady, updateQuery } = useSearchQuery();
 
 	const isPreviousDisable = useMemo(() => !isReady || page <= 1, [isReady, page]);
 	const isNextDisable = useMemo(() => !isReady || page >= totalPage, [isReady, page, totalPage]);
-
-	const pageList: GoToPage[] = useMemo(
-		() =>
-			Array(totalPage)
-				.fill(0)
-				.map((_, i) => ({ value: i + 1, label: `Page ${i + 1}` })),
-		[totalPage],
-	);
 
 	return (
 		<div className='form-control'>
@@ -54,13 +46,7 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage, goToPage, setGoToPage })
 					<ChevronLeftIcon width={16} height={16} />
 				</button>
 
-				<SelectOption<number | null>
-					list={pageList}
-					setValue={setGoToPage}
-					value={goToPage}
-					className='my-auto w-[7.5rem]'
-					withIcon
-				/>
+				<GoToPageSelect totalPage={totalPage} />
 
 				<button
 					role='navigation'

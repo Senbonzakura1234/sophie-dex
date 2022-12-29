@@ -1,6 +1,5 @@
 import ListLayout from '@root/components/Layout/ListLayout';
 import TraitRecord from '@root/components/TraitRecord';
-import { defaultLimit } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import { trpc } from '@root/utils/trpc';
 import { type NextPage } from 'next';
@@ -22,7 +21,6 @@ const Traits: NextPage = () => {
 			pageName='Trait'
 			page={data?.page ?? 1}
 			totalPage={data?.totalPage ?? 0}
-			limit={data?.limit ?? defaultLimit}
 			totalRecord={data?.totalRecord ?? 0}
 		>
 			{!isLoading && isSuccess && data.records.map(trait => <TraitRecord key={trait.id} record={trait} />)}

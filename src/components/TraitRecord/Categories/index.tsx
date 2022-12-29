@@ -29,11 +29,7 @@ const Categories: FC<CategoriesProps> = ({ categories }) => {
 							)}
 							onClick={() => {
 								if (isClickAble(code))
-									updateQuery({
-										page: null,
-										limit: null,
-										category: securedQuery.category === code ? null : code,
-									});
+									updateQuery({ page: null, category: securedQuery.category === code ? null : code });
 							}}
 						>
 							<div className={clsx(className, 'font-atelier w-5 text-lg 2xl:w-6 2xl:text-xl')} />

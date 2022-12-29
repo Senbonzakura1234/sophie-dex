@@ -3,16 +3,7 @@ import type { Maybe } from '@trpc/server';
 import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
 import type { ReactNode, RefObject } from 'react';
 
-import type {
-	FilterData,
-	GoToPage,
-	PageName,
-	SelectOptionItem,
-	SetFilterData,
-	SetGoToPage,
-	SetSearchInput,
-	SetSelectOptionItem,
-} from '.';
+import type { PageName, SelectOptionItem, SetSelectOptionItem } from '.';
 
 export type ClassNameProps = { className?: string };
 export type ChildrenProps = { children?: ReactNode };
@@ -38,28 +29,19 @@ export type TraitRecordProps = RecordProps<Trait>;
 export type FilterControlProps = {
 	page: number;
 	totalPage: number;
-	limit: number;
 	totalRecord: number;
 } & PageNameProps &
 	IsPaginateOnlyProps;
 
 export type SortControlProps = PageNameProps & IsPaginateOnlyProps;
 
-export type ApplyFilterProps = { filterData: FilterData; isCanApplyFilter: boolean };
+export type ColorFilterProps = PageNameProps;
+export type CategoryFilterProps = PageNameProps;
 
-export type SelectFilterProps = { filterData: FilterData; setFilterData: SetFilterData };
+export type PaginateProps = { page: number; totalPage: number };
+export type GoToPageSelectProps = { totalPage: number };
 
-export type ColorFilterProps = SelectFilterProps & PageNameProps;
-export type RelatedCategoryFilterProps = SelectFilterProps & PageNameProps;
-export type CategoryFilterProps = SelectFilterProps & PageNameProps;
-
-export type PaginateProps = { page: number; totalPage: number; goToPage: GoToPage; setGoToPage: SetGoToPage };
-
-export type ResetFilterProps = {
-	setFilterData: SetFilterData;
-	setGoToPage: SetGoToPage;
-	setSearchValue: SetSearchInput;
-} & IsPaginateOnlyProps;
+export type ResetFilterProps = IsPaginateOnlyProps;
 
 export type ColorProps = { color: COLOR };
 export type LevelProps = { level: number };
@@ -84,14 +66,6 @@ export type RootLayoutProps = ChildrenProps;
 
 export type PageTitleProps = PageNameProps;
 
-export type SearchInputProps = {
-	searchInput: string;
-	setSearchValue: SetSearchInput;
-	performSearch: () => void;
-	resetSearch: () => void;
-	isSearchValueValid: boolean;
-};
-
 export type RecordWrapperProps = ChildrenProps & ClassNameProps & Partial<ColorProps>;
 export type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pathname: string } & PageNameProps;
 
@@ -100,7 +74,7 @@ export type ScrollToTopProps = { scrollableBottomReached: boolean; scrollPositio
 export type ScrollWrapperProps = ChildrenProps & ClassNameProps & RefProps<HTMLDivElement>;
 
 export type RecordPlaceHolderProps = FetchStateProps & Partial<ColorProps>;
-export type ListPlaceHolderProps = { limit: number } & FetchStateProps;
+export type ListPlaceHolderProps = FetchStateProps;
 export type FilterControlPlaceHolderProps = FetchStateProps & IsPaginateOnlyProps;
 
 export type CategoriesProps = { categories: CATEGORY[] };

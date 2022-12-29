@@ -1,13 +1,5 @@
-import type { FilterData, GoToPage, SetFilterData, SetGoToPage, SetSearchInput } from '.';
+import type { SetSearchInput } from '.';
 import type { IdQuery, SearchQuery } from './zod';
-
-export type UseFilterControl = () => {
-	filterData: FilterData;
-	setFilterData: SetFilterData;
-	isCanApplyFilter: boolean;
-};
-
-export type UseGoToPageControl = () => { goToPage: GoToPage; setGoToPage: SetGoToPage };
 
 export type UseSearchInput = () => {
 	searchInput: string;

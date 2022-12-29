@@ -15,15 +15,15 @@ export const useSearchInput: UseSearchInput = () => {
 	const isSearchValueValid = useMemo(() => searchInput.length > 0, [searchInput.length]);
 
 	const performSearch = useCallback(() => {
-		if (isSearchValueValid) updateQuery({ search: searchValue, page: null, limit: null });
+		if (isSearchValueValid) updateQuery({ search: searchValue, page: null });
 	}, [isSearchValueValid, searchValue, updateQuery]);
 
 	const resetSearch = useCallback(() => {
 		if (isSearchValueValid) {
 			setSearchValue(() => null);
-			updateQuery({ search: null, page: null, limit: null });
+			if (searchValue === securedQuery.search) updateQuery({ search: null, page: null });
 		}
-	}, [isSearchValueValid, updateQuery]);
+	}, [isSearchValueValid, searchValue, securedQuery.search, updateQuery]);
 
 	useEffect(() => {
 		setSearchValue(() => defaultSearchValue);

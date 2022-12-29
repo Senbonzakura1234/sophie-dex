@@ -19,7 +19,7 @@ const Category: FC<CategoryProps> = ({ category }) => {
 				<div className='font-bold !shadow-none'>Category: </div>
 				<button
 					onClick={() => {
-						if (!isBtnDisabled) updateQuery({ category, page: null, limit: null });
+						if (!isBtnDisabled) updateQuery({ category, page: null });
 					}}
 					aria-label={`Filter ${categoryMap.get(category)?.name} Item`}
 					role='navigation'

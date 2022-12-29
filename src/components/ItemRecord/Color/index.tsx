@@ -15,7 +15,7 @@ const Color: FC<ColorProps> = ({ color }) => {
 
 			<button
 				onClick={() => {
-					if (!isBtnDisabled) updateQuery({ color, page: null, limit: null });
+					if (!isBtnDisabled) updateQuery({ color, page: null });
 				}}
 				role='navigation'
 				aria-label={`Filter ${color} Item`}

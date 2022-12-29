@@ -1,6 +1,7 @@
 import type { CATEGORY, COLOR } from '@prisma/client';
 import { getFramerFadeUp } from '@root/animations';
-import type { cateSelected, ColorSelected, RelatedCateSelected } from '@root/types/common';
+import { defaultLimit } from '@root/constants';
+import type { CateSelected, ColorSelected } from '@root/types/common';
 import type {
 	FilterControlPlaceHolderProps,
 	ListPlaceHolderProps,
@@ -40,40 +41,6 @@ export const colorTailwindMap: { [key in COLOR]: string } = {
 	YELLOW: colors.yellow[400],
 };
 
-export const RelatedCategorySelectList = [
-	{ value: null, label: '------------' },
-	{ value: 'PLANT', label: 'Plant' },
-	{ value: 'MEDICINE_MAT', label: 'Medicine Mat' },
-	{ value: 'WATER', label: 'Water' },
-	{ value: 'IMPORTANT', label: 'Important' },
-	{ value: 'BOMB', label: 'Bomb' },
-	{ value: 'MEDICINE', label: 'Medicine' },
-	{ value: 'FOOD', label: 'Food' },
-	{ value: 'SWEETS', label: 'Sweets' },
-	{ value: 'CLOTH', label: 'Cloth' },
-	{ value: 'NEUTRALIZER', label: 'Neutralizer' },
-	{ value: 'WEAPON_MAT', label: 'Weapon Mat' },
-	{ value: 'ARMOR_MAT', label: 'Armor Mat' },
-	{ value: 'WEAPON', label: 'Weapon' },
-	{ value: 'ARMOR', label: 'Armor' },
-	{ value: 'ACCESSORY', label: 'Accessory' },
-	{ value: 'POISON_MAT', label: 'Poison Mat' },
-	{ value: 'SECRET_POWER', label: 'Secret Power' },
-	{ value: 'FUEL', label: 'Fuel' },
-	{ value: 'THREAD', label: 'Thread' },
-	{ value: 'WOOD', label: 'Wood' },
-	{ value: 'ELIXIR', label: 'Elixir' },
-	{ value: 'ORE', label: 'Ore' },
-	{ value: 'GUNPOWDER', label: 'Gunpowder' },
-	{ value: 'GEM', label: 'Gem' },
-	{ value: 'METAL', label: 'Metal' },
-	{ value: 'CLAY', label: 'Clay' },
-	{ value: 'ANIMAL', label: 'Animal' },
-	{ value: 'INGREDIENT', label: 'Ingredient' },
-	{ value: 'PAPER', label: 'Paper' },
-	{ value: 'MAGIC_ITEM', label: 'Magic Item' },
-] satisfies RelatedCateSelected[];
-
 export const defaultSelect = {
 	value: null,
 	label: '----------',
@@ -87,7 +54,7 @@ export const categorySelectList = [
 		value: code,
 		icon: <span className={`h-4 w-4 2xl:h-5 2xl:w-5 ${className}`} aria-hidden='true' />,
 	})),
-] satisfies cateSelected[];
+] satisfies CateSelected[];
 
 export const ColorSelectList = [
 	defaultSelect,
@@ -129,9 +96,9 @@ export const RecordPlaceHolder: FC<RecordPlaceHolderProps> = ({ isSuccess, isErr
 	/>
 );
 
-export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ limit, isSuccess, isError }) => (
+export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ isSuccess, isError }) => (
 	<>
-		{Array(limit)
+		{Array(defaultLimit)
 			.fill(0)
 			.map((_, k) => (
 				<RecordPlaceHolder key={k} isSuccess={isSuccess} isError={isError} />

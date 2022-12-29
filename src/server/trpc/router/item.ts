@@ -7,10 +7,9 @@ import { TRPCError } from '@trpc/server';
 
 export const itemRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Item>> => {
-		const { search, sortBy, direction, color, relatedCategory, page, limit, category } = { ...input };
+		const { search, sortBy, direction, color, relatedCategory, page, category } = { ...input };
 
 		const pageInt = page ?? 1;
-		const limitInt = limit ?? defaultLimit;
 
 		const where = {
 			...(search ? { name: { contains: search, mode: 'insensitive' } } : {}),
@@ -27,8 +26,8 @@ export const itemRouter = router({
 				ctx.prisma.item.findMany({
 					where,
 					orderBy: { [sortBy ?? 'index']: direction ?? 'asc' },
-					skip: (pageInt - 1) * limitInt,
-					take: limitInt,
+					skip: (pageInt - 1) * defaultLimit,
+					take: defaultLimit,
 				}),
 			])
 			.catch(error => {
@@ -37,7 +36,7 @@ export const itemRouter = router({
 				throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Some Thing When Wrong On The Server.' });
 			});
 
-		return { records, page, limit, totalRecord, totalPage: Math.ceil(totalRecord / limitInt) };
+		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}),
 
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }): Promise<Item> => {

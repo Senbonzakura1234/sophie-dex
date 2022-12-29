@@ -13,7 +13,7 @@ const RelatedCategories: FC<RelatedCategoriesProps> = ({ relatedCategories }) =>
 				<a
 					onClick={e => {
 						e.preventDefault();
-						if (isReady) updateQuery({ relatedCategory: c.name, page: null, limit: null });
+						if (isReady) updateQuery({ relatedCategory: c.name, page: null });
 					}}
 					aria-label={RelatedCategoryDisplay[c.name]}
 					key={k}

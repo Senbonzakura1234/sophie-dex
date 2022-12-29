@@ -13,7 +13,6 @@ const categorySchema = z.enum(categoryList).nullish().catch(null).default(null);
 const colorSchema = z.enum(colorMap).nullish().catch(null).default(null);
 const idSchema = z.string().regex(idRegex).nullish().catch(null).default(null);
 const pageSchema = positiveIntSchema.nullish().catch(null).default(null);
-const limitSchema = positiveIntSchema.nullish().catch(null).default(null);
 
 export const searchQueryValidator = z.object({
 	search: searchSchema,
@@ -23,7 +22,6 @@ export const searchQueryValidator = z.object({
 	category: categorySchema,
 	color: colorSchema,
 	page: pageSchema,
-	limit: limitSchema,
 });
 
 export type SearchQuery = z.infer<typeof searchQueryValidator>;
