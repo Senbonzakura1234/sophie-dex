@@ -18,7 +18,7 @@ const RelatedCategories: FC<RelatedCategoriesProps> = ({ relatedCategories }) =>
 					aria-label={RelatedCategoryDisplay[c.name]}
 					key={k}
 					className={clsx(
-						{ 'link link-hover text-accent-content italic': c.name !== securedQuery.relatedCategory },
+						{ 'link link-hover text-neutral/90 italic': c.name !== securedQuery.relatedCategory },
 						'font-serif text-xs capitalize italic',
 					)}
 				>

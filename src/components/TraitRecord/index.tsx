@@ -21,9 +21,9 @@ const TraitRecord: FC<TraitRecordProps> = ({ record: { name, description, index,
 				pageName='Trait'
 			/>
 
-			<span className='text-sm'>index: {index}</span>
+			<div className='text-sm'>index: {index}</div>
 
-			<span className='font-serif text-lg 2xl:h-16'>{description}</span>
+			<div className='text-lg'>{description}</div>
 
 			<Categories categories={categories} />
 

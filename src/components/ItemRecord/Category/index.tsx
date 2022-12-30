@@ -28,7 +28,7 @@ const Category: FC<CategoryProps> = ({ category }) => {
 						{
 							'!no-animation !cursor-default !border-slate-300 !bg-slate-300 !text-slate-900': isBtnDisabled,
 						},
-						'btn btn-xs btn-outline gap-1 font-extrabold capitalize shadow-md shadow-slate-600',
+						'btn btn-xs btn-accent gap-1 font-extrabold capitalize',
 					)}
 				>
 					<div className={clsx('font-atelier', categoryMap.get(category)?.className)}></div>

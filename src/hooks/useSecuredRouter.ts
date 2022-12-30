@@ -1,7 +1,7 @@
 import type { UseIdQuery, UseSearchQuery } from '@root/types/common/hook';
 import type { IdQuery, SearchQuery } from '@root/types/common/zod';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
-import { parseSecuredQuery } from '@root/utils/helper';
+import { parseSecuredQuery } from '@root/utils/client';
 import { useRouter } from 'next/router';
 import { useCallback, useMemo } from 'react';
 

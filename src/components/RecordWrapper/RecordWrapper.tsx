@@ -20,7 +20,7 @@ const RecordWrapper: FC<RecordWrapperProps> = ({ children, className, color }) =
 			'card from-base-100 via-base-100 relative grid w-full grow-0 bg-gradient-to-r shadow-lg',
 		)}
 	>
-		<div className='card-body'>{children}</div>
+		<div className='card-body gap-3'>{children}</div>
 	</motion.article>
 );
 

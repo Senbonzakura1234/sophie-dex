@@ -3,7 +3,7 @@ import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';
-import { TRPCError } from '@trpc/server';
+import { InvalidRecordIdError, onQueryDBError, RecordNotFoundError } from '@root/utils/server';
 
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Trait>> => {
@@ -11,17 +11,18 @@ export const traitRouter = router({
 
 		const pageInt = page ?? 1;
 
-		const where = {
-			...(search
-				? {
-						OR: [
-							{ name: { contains: search, mode: 'insensitive' } },
-							{ description: { contains: search, mode: 'insensitive' } },
-						],
-				  }
-				: {}),
-			...(category ? { AND: [{ categories: { has: category } }] } : {}),
-		} satisfies Prisma.TraitWhereInput;
+		const OR: Prisma.TraitWhereInput[] | undefined = search
+			? [
+					{ name: { contains: search, mode: 'insensitive' } },
+					{ description: { contains: search, mode: 'insensitive' } },
+			  ]
+			: undefined;
+
+		const AND: Prisma.TraitWhereInput[] = [];
+
+		if (category) AND.push({ categories: { has: category } });
+
+		const where = { OR, AND } satisfies Prisma.TraitWhereInput;
 
 		const [totalRecord, records] = await ctx.prisma
 			.$transaction([
@@ -33,11 +34,7 @@ export const traitRouter = router({
 					take: defaultLimit,
 				}),
 			])
-			.catch(error => {
-				console.log({ error });
-
-				throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Some Thing When Wrong On The Server.' });
-			});
+			.catch(onQueryDBError);
 
 		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}),
@@ -45,16 +42,12 @@ export const traitRouter = router({
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }): Promise<Trait> => {
 		const { id } = input;
 
-		if (!id) throw new TRPCError({ code: 'BAD_REQUEST', message: 'Invalid Record Id.' });
+		if (!id) throw InvalidRecordIdError();
 
-		const record = await ctx.prisma.trait.findFirst({ where: { id } }).catch(error => {
-			console.log({ error });
-
-			throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Some Thing When Wrong On The Server.' });
-		});
+		const record = await ctx.prisma.trait.findFirst({ where: { id } }).catch(onQueryDBError);
 
 		if (record) return record;
 
-		throw new TRPCError({ code: 'NOT_FOUND', message: 'Record not found.', cause: `Record id: ${id}` });
+		throw RecordNotFoundError(id);
 	}),
 });

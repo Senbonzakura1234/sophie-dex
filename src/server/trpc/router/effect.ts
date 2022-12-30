@@ -3,7 +3,7 @@ import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/trpc/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';
-import { TRPCError } from '@trpc/server';
+import { InvalidRecordIdError, onQueryDBError, RecordNotFoundError } from '@root/utils/server';
 
 export const effectRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Effect>> => {
@@ -11,16 +11,14 @@ export const effectRouter = router({
 
 		const pageInt = page ?? 1;
 
-		const where = {
-			...(search
-				? {
-						OR: [
-							{ name: { contains: search, mode: 'insensitive' } },
-							{ description: { contains: search, mode: 'insensitive' } },
-						],
-				  }
-				: {}),
-		} satisfies Prisma.EffectWhereInput;
+		const OR: Prisma.EffectWhereInput[] | undefined = search
+			? [
+					{ name: { contains: search, mode: 'insensitive' } },
+					{ description: { contains: search, mode: 'insensitive' } },
+			  ]
+			: undefined;
+
+		const where = { OR } satisfies Prisma.EffectWhereInput;
 
 		const [totalRecord, records] = await ctx.prisma
 			.$transaction([
@@ -32,11 +30,7 @@ export const effectRouter = router({
 					take: defaultLimit,
 				}),
 			])
-			.catch(error => {
-				console.log({ error });
-
-				throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Some Thing When Wrong On The Server.' });
-			});
+			.catch(onQueryDBError);
 
 		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}),
@@ -44,16 +38,12 @@ export const effectRouter = router({
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }): Promise<Effect> => {
 		const { id } = input;
 
-		if (!id) throw new TRPCError({ code: 'BAD_REQUEST', message: 'Invalid Record Id.' });
+		if (!id) throw InvalidRecordIdError();
 
-		const record = await ctx.prisma.effect.findFirst({ where: { id } }).catch(error => {
-			console.log({ error });
-
-			throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Some Thing When Wrong On The Server.' });
-		});
+		const record = await ctx.prisma.effect.findFirst({ where: { id } }).catch(onQueryDBError);
 
 		if (record) return record;
 
-		throw new TRPCError({ code: 'NOT_FOUND', message: 'Record not found.', cause: `Record id: ${id}` });
+		throw RecordNotFoundError(id);
 	}),
 });
