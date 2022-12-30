@@ -75,7 +75,7 @@ type RelatedCategories {
 }
 
 type MergeTraitItem {
-   id          String
+   id          String @db.ObjectId
    index       Int
    name        String
    description String
@@ -83,6 +83,13 @@ type MergeTraitItem {
 
 type MergeTrait {
    consist MergeTraitItem[]
+}
+
+type TraitPresent {
+   id          String @db.ObjectId
+   index       Int
+   name        String
+   description String
 }
 
 generator client {
@@ -115,9 +122,11 @@ model Item {
    id                String              @id @default(auto()) @map("_id") @db.ObjectId
    index             Int
    name              String
+   description       String?
    color             COLOR
    relatedCategories RelatedCategories[]
    category          CATEGORY
    level             Int
    recipeType        RECIPE_TYPE?
+   traitPresent      TraitPresent?
 }

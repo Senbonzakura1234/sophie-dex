@@ -13,6 +13,9 @@ const items: Item[] = [
 			{ count: 10, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
+		description:
+			'Location: Pilgram Road, Flower Garden, Rocky Grove, Scar of the Land.<clcaiqscn000008jwhfw85ia7>Hunt: Mandragora, White Root, Alraune, Kimmoch, Single Horn.<clcaiqscn000008jwhfw85ia7>Rumor: Greatly grown Magic Grass.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -26,6 +29,9 @@ const items: Item[] = [
 			{ count: 5, name: 'WATER' },
 		],
 		recipeType: null,
+		description:
+			'Location: Pilgram Road, Flower Garden, Verdant Hill, Underground lake.<clcaiqscn000008jwhfw85ia7>Hunt: White Root, Alraune, Kimmoch.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -39,6 +45,14 @@ const items: Item[] = [
 			{ count: 10, name: 'POISON_MAT' },
 		],
 		recipeType: null,
+		description:
+			'Location: Gathering of Beast, Puzzzling Path, Foggy Woodland, Mountain Boundary, Forest of fairies, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt: Kimmoch, Nightshade, Sorcerer Titus.',
+		traitPresent: {
+			description: 'Effect: Has a high chance to inflict Poison when dealing damage.',
+			id: '638a4d49a44f4fa4b0deca68',
+			index: 682,
+			name: 'Poison Mist',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -53,6 +67,9 @@ const items: Item[] = [
 			{ count: 15, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
+		description:
+			'Location: Rocky Grove, Gate of trees, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt: Kimmoch, Nightshade, Sorcerer Titus.<clcaiqscn000008jwhfw85ia7>Rumor: Herbs great for medicine.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -66,6 +83,9 @@ const items: Item[] = [
 			{ count: 10, name: 'FUEL' },
 		],
 		recipeType: null,
+		description:
+			'Location: Chick Woods, lisure Plaza, Fungal garden, Rocky Mountain, Dead Tree Wasteland.<clcaiqscn000008jwhfw85ia7>Hunt: White Root, Araune, Kimmoch.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -79,6 +99,9 @@ const items: Item[] = [
 			{ count: 5, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
+		description:
+			'Location: Funal Garden, Foggy Woodland, Forest of Faries.<clcaiqscn000008jwhfw85ia7>Hunt: White Root, Alraunem, Starfish.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -93,6 +116,9 @@ const items: Item[] = [
 			{ count: 10, name: 'FUEL' },
 		],
 		recipeType: null,
+		description:
+			'Location: Rocky Mountain, Verdant Hill, Scar of the land.<clcaiqscn000008jwhfw85ia7>Hunt: White Root, Alraunem, Starfish.<clcaiqscn000008jwhfw85ia7>Rumor: Cotton Disliked by dragon.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -106,6 +132,9 @@ const items: Item[] = [
 			{ count: 5, name: 'PLANT' },
 		],
 		recipeType: null,
+		description:
+			"Location: Gate of Trees, Three Bridge Spring, Small Islet, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Hunt: White Root, Alraunem, Starfish.<clcaiqscn000008jwhfw85ia7>Rumor: Remnant of a Past Sea?.",
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -119,6 +148,8 @@ const items: Item[] = [
 			{ count: 10, name: 'PLANT' },
 		],
 		recipeType: null,
+		description: 'Location: Gathering of Beast, Rocky Grove, Gate of Trees, Foggy Woodland, Forest of Faries.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -132,6 +163,8 @@ const items: Item[] = [
 			{ count: 20, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
+		description: 'Location: Small Islet, Moon Sun Mor (Unlock after Oskar event).',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -145,6 +178,14 @@ const items: Item[] = [
 			{ count: 25, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
+		description:
+			"Location: Gate of Tress, Three Bridge Spring, Silent Lakeside, Prospector's Strand, Underground Lake  (Unlock after Oskar event).",
+		traitPresent: {
+			description: "Effect: Restores some of the target's HP, and also recovers from Poison.",
+			id: '638a4d49a44f4fa4b0deca6a',
+			index: 683,
+			name: 'Slime Compound',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -158,6 +199,8 @@ const items: Item[] = [
 			{ count: 30, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
+		description: 'Location: Underground Lake  (Unlock after Oskar event).',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -171,6 +214,8 @@ const items: Item[] = [
 			{ count: 30, name: 'ELIXIR' },
 		],
 		recipeType: null,
+		description: 'Location: Forest of Faries  (Unlock after Oskar final event).',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -185,6 +230,13 @@ const items: Item[] = [
 			{ count: 50, name: 'ELIXIR' },
 		],
 		recipeType: null,
+		description: 'Location: Fairy Forest (Rumor only).<clcaiqscn000008jwhfw85ia7>Rumor: Flower looking in silence..',
+		traitPresent: {
+			description: 'Effect: Maximum HP increases by 25.',
+			id: '638a4d47a44f4fa4b0dec9a5',
+			index: 193,
+			name: 'Full of Life',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -199,6 +251,15 @@ const items: Item[] = [
 			{ count: 40, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
+		description:
+			'<clcaiqscn000008jwhfw85ia7>Hunt: Kimmoch, Nightshade, Sealed Demon Lord, Sorcerer Titus, Light Elemental.',
+		traitPresent: {
+			description:
+				"Effect: Temporarily increases all of the target's stats. They will also automatically revive on their next turn after being KO'd.",
+			id: '638a4d49a44f4fa4b0deca66',
+			index: 684,
+			name: 'False Flower',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -209,6 +270,9 @@ const items: Item[] = [
 		name: 'Aizen Ore',
 		relatedCategories: [{ count: 10, name: 'ORE' }],
 		recipeType: null,
+		description:
+			'Location: Merbert Farm, Enlightened Mountain, Underground Lake.<clcaiqscn000008jwhfw85ia7>Hunt: Magic Book, Gargolye, Apostle, Mini Demon.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -219,6 +283,15 @@ const items: Item[] = [
 		name: 'Raiden Ore',
 		relatedCategories: [{ count: 10, name: 'ORE' }],
 		recipeType: null,
+		description:
+			'Location: Flower Garden, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt: Punipuni?, Magic book, Book Familiar, Mini Demon, Tricker.',
+		traitPresent: {
+			description:
+				"Effect: Pushes back the target's turn a little. This effect diminishes with each use until the target takes another turn.",
+			id: '638a4d49a44f4fa4b0deca64',
+			index: 685,
+			name: 'Electrified',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -229,6 +302,9 @@ const items: Item[] = [
 		name: 'Kupulf Ore',
 		relatedCategories: [{ count: 15, name: 'ORE' }],
 		recipeType: null,
+		description:
+			'Location: Flower Garden, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt: Punipuni?, Magic book, Book Familiar, Mini Demon, Tricker, Devil Horn, Sealed Demon.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -242,6 +318,14 @@ const items: Item[] = [
 			{ count: 5, name: 'GUNPOWDER' },
 		],
 		recipeType: null,
+		description:
+			'Location: Pilgrim Road, Merbert Farm, Enlightened Mountain, Moon Sun Mor.<clcaiqscn000008jwhfw85ia7>Hunt: Magic Book, Gargolye, Apostle, Mini Demon.',
+		traitPresent: {
+			description: 'Effect: Heat causes continuous damage. The effect is small.',
+			id: '638a4d49a44f4fa4b0deca65',
+			index: 686,
+			name: 'Carries Heat',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -255,6 +339,14 @@ const items: Item[] = [
 			{ count: 5, name: 'GEM' },
 		],
 		recipeType: null,
+		description:
+			"Location: Gate of Trees, Three Bridge Spring, Silent Lakeside, Merbert Farm, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Hunt: Punipuni?, Book Familiar, Tricker.",
+		traitPresent: {
+			description: "Effect: Cold reduces the target's speed, and also has a low chance of inflicting Slow.",
+			id: '638a4d49a44f4fa4b0deca69',
+			index: 687,
+			name: 'Carries Cold',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -268,6 +360,9 @@ const items: Item[] = [
 			{ count: 10, name: 'METAL' },
 		],
 		recipeType: null,
+		description:
+			'Location: Scar of the Land,  Enlightend Mountain.<clcaiqscn000008jwhfw85ia7>Hunt: Devil Horn, Sealed Demon Lord.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -282,6 +377,14 @@ const items: Item[] = [
 			{ count: 15, name: 'FUEL' },
 		],
 		recipeType: null,
+		description:
+			'Location: Fertile Shore, Husk Forest, Sealed Temple, Underground lake.<clcaiqscn000008jwhfw85ia7>Hunt: Devil Horn, Sealed Demon Lord.',
+		traitPresent: {
+			description: 'Effect: Increases all stats by 8.',
+			id: '638a4d49a44f4fa4b0deca6b',
+			index: 688,
+			name: 'Dark Matter',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -295,6 +398,9 @@ const items: Item[] = [
 			{ count: 20, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
+		description:
+			'Location: Merbert Farm, Three Bridge Spring, Dead Tree Wasteland, Waterside Ruins, Prospectors Strand.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -305,6 +411,9 @@ const items: Item[] = [
 		name: 'Lakebottom Soil',
 		relatedCategories: [{ count: 15, name: 'CLAY' }],
 		recipeType: null,
+		description:
+			'Location: Calm Banks, Fertile Shore, Underground Lake,.<clcaiqscn000008jwhfw85ia7>Hunt: Island Fish, Isanasius.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -315,6 +424,9 @@ const items: Item[] = [
 		name: 'Seabed Soil',
 		relatedCategories: [{ count: 25, name: 'CLAY' }],
 		recipeType: null,
+		description:
+			'<clcaiqscn000008jwhfw85ia7>Hunt: Grand Ocean.<clcaiqscn000008jwhfw85ia7>Rumor: Remnant of a Past Sea?.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -329,6 +441,14 @@ const items: Item[] = [
 			{ count: 5, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
+		description:
+			'Location: Moon Sun Moor, City of the lost, Sealed temple.<clcaiqscn000008jwhfw85ia7>Hunt: Gargoyle, Apostle.',
+		traitPresent: {
+			description: 'Effect: Increases damage dealt to Puni and magical creatures.',
+			id: '638a4d49a44f4fa4b0deca6c',
+			index: 689,
+			name: 'Ancient Seal',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -342,6 +462,9 @@ const items: Item[] = [
 			{ count: 15, name: 'CLAY' },
 		],
 		recipeType: null,
+		description:
+			'Location: Forgotten nursery, Small islet, City of the Lost, Fallen Palace.<clcaiqscn000008jwhfw85ia7>Hunt: Gargoyle, Apostle.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -355,6 +478,9 @@ const items: Item[] = [
 			{ count: 5, name: 'PLANT' },
 		],
 		recipeType: null,
+		description:
+			'Location: Waterside ruins, Fallen Palace, Forgotten Nursery.<clcaiqscn000008jwhfw85ia7>Hunt: Magic Book, Mini Demon Dragonaire, Magmacius.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -369,6 +495,9 @@ const items: Item[] = [
 			{ count: 15, name: 'METAL' },
 		],
 		recipeType: null,
+		description:
+			'Location: Silent Lakeside, Sealed Temple, Fallen Palace, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt: Punipuni? Book familiar Tricker.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -382,6 +511,9 @@ const items: Item[] = [
 			{ count: 20, name: 'THREAD' },
 		],
 		recipeType: null,
+		description:
+			'Location: Mountain Boundary, Husk Forest, Scar of the land, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt: Heavenly Bird, Dragonaire, Magmacius.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -395,6 +527,14 @@ const items: Item[] = [
 			{ count: 15, name: 'GEM' },
 		],
 		recipeType: null,
+		description:
+			'Location: Mountain Boundary, Underground Lake, Fallen Palace.<clcaiqscn000008jwhfw85ia7>Hunt: Living grimoire.',
+		traitPresent: {
+			description: 'Effect: Reduces skill power by 10%, but also reduces MP consumption by 30%.',
+			id: '638a4d49a44f4fa4b0deca71',
+			index: 690,
+			name: 'Absorbs Light',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -408,6 +548,8 @@ const items: Item[] = [
 			{ count: 25, name: 'GEM' },
 		],
 		recipeType: null,
+		description: 'Location: Dead Tree, Small Islet.<clcaiqscn000008jwhfw85ia7>Hunt: Dragonaire, Magmacius.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -421,6 +563,9 @@ const items: Item[] = [
 			{ count: 15, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
+		description:
+			'Location: Fertile Shore, Underground Lake.<clcaiqscn000008jwhfw85ia7>Hunt: Sealed Demon Lord, Wind Elemental, Light Elemental.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -436,6 +581,9 @@ const items: Item[] = [
 			{ count: 30, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
+		description:
+			'Location: Scar of the land (Big Cystal).<clcaiqscn000008jwhfw85ia7>Hunt: Wind Elemental, Light Elemental.<clcaiqscn000008jwhfw85ia7>Rumor: Crystal Bless By Spirits.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -449,6 +597,9 @@ const items: Item[] = [
 			{ count: 10, name: 'THREAD' },
 		],
 		recipeType: null,
+		description:
+			'Location: Blessed Forest, Liesure Plaza, Funal Garden, Enlightened Mountain.<clcaiqscn000008jwhfw85ia7>Hunt: Ardra, Kaiser Pigeon, Saber Claw, Gustaf, Rok, Heavenly bird.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -462,6 +613,9 @@ const items: Item[] = [
 			{ count: 5, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
+		description:
+			'Location: Open Ruins, Fungal Gardens, Husk Forest, Moon Sun Mor.<clcaiqscn000008jwhfw85ia7>Hunt: Mini Demon, Ardra, Chimera Beast, Lightning, Fang, Twin Header, Island Fish, Single Horn.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -476,6 +630,13 @@ const items: Item[] = [
 			{ count: 5, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
+		description: '<clcaiqscn000008jwhfw85ia7>Hunt: Island Fish, Signle Horn, Star Fish, Isanasius, Grand Ocean.',
+		traitPresent: {
+			description: "Effect: Reduces the target's defense and speed.",
+			id: '638a4d49a44f4fa4b0deca6f',
+			index: 691,
+			name: 'Stinks',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -489,6 +650,9 @@ const items: Item[] = [
 			{ count: 10, name: 'THREAD' },
 		],
 		recipeType: null,
+		description:
+			'<clcaiqscn000008jwhfw85ia7>Hunt: Mini Demon, Ardra, Chimera Beast, Lightning, Fang, Twin Header, Island Fish, Single Horn.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -502,6 +666,15 @@ const items: Item[] = [
 			{ count: 20, name: 'THREAD' },
 		],
 		recipeType: null,
+		description:
+			'<clcaiqscn000008jwhfw85ia7>Hunt: Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning, Fang , Twin Header, Silent Beast, Crimson Fang Dragonaire, Magmacius, Wind Elemental.',
+		traitPresent: {
+			description:
+				'Effect: Restores Break value to the target. Also reduces wait time after turns by a small amount.',
+			id: '638a4d49a44f4fa4b0deca6e',
+			index: 692,
+			name: 'Sunny Scent',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -512,6 +685,9 @@ const items: Item[] = [
 		name: 'Silver Web',
 		relatedCategories: [{ count: 20, name: 'THREAD' }],
 		recipeType: null,
+		description:
+			'Location: Flower Garden, Underground Lake, Forgotten Nursery, Sealed temple.<clcaiqscn000008jwhfw85ia7>Hunt: Kaiser Pigeon, Saber Claw, Gusaf, Fang.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -522,6 +698,14 @@ const items: Item[] = [
 		name: 'Gold Steel Web',
 		relatedCategories: [{ count: 35, name: 'THREAD' }],
 		recipeType: null,
+		description:
+			'<clcaiqscn000008jwhfw85ia7>Hunt: Wise, Spirit, Rok, Twin Header, Sorcerer Titus, Ifritter, Tempestus, Wind Elemental.<clcaiqscn000008jwhfw85ia7>Rumor: Gold Strong Thread.',
+		traitPresent: {
+			description: 'Effect: Increases attack by 7, and attacks cause a small amount of additional damage.',
+			id: '638a4d49a44f4fa4b0deca6d',
+			index: 693,
+			name: 'Cutting Thread',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -536,6 +720,9 @@ const items: Item[] = [
 			{ count: 20, name: 'ELIXIR' },
 		],
 		recipeType: null,
+		description:
+			'<clcaiqscn000008jwhfw85ia7>Hunt: Wise Spirit, Rok, Twin Header, Sorcer Titus, Ifritter, Tempestus, Dragonaire, Mamacius, Sun Destroyer Yasuk, Moon Eater Durak..',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -546,6 +733,8 @@ const items: Item[] = [
 		name: 'Well Water',
 		relatedCategories: [{ count: 20, name: 'WATER' }],
 		recipeType: null,
+		description: "Location: Calm Banks, Small Islet, Prospector's Strand, Underground Lake.",
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -556,6 +745,9 @@ const items: Item[] = [
 		name: 'Good Water',
 		relatedCategories: [{ count: 25, name: 'WATER' }],
 		recipeType: null,
+		description:
+			'Location: Calm Banks, Underwater Lake.<clcaiqscn000008jwhfw85ia7>Rumor: Pure and Clean Spring water.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -569,6 +761,13 @@ const items: Item[] = [
 			{ count: 15, name: 'WATER' },
 		],
 		recipeType: null,
+		description: 'Location: Bought.',
+		traitPresent: {
+			description: 'Effect: The target recovers a small amount of HP, and also recovers from Weak.',
+			id: '638a4d49a44f4fa4b0deca72',
+			index: 694,
+			name: 'Kirchen Bell Special',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -582,6 +781,13 @@ const items: Item[] = [
 			{ count: 10, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
+		description: 'Location: Fertile Shore, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt: Dragonaire, Magmacius.',
+		traitPresent: {
+			description: "Effect: Increases the target's evasion rate. This effect lasts 5 turns.",
+			id: '638a4d49a44f4fa4b0deca75',
+			index: 695,
+			name: 'Flickering Light',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -596,6 +802,9 @@ const items: Item[] = [
 			{ count: 15, name: 'POISON_MAT' },
 		],
 		recipeType: null,
+		description:
+			'Location: Waterside Ruins, Sealed temple, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt: Dragonaire, Magmacius.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -609,6 +818,9 @@ const items: Item[] = [
 			{ count: 25, name: 'POISON_MAT' },
 		],
 		recipeType: null,
+		description:
+			'Location: Forgotten Nursery, Waterside, Ruins, Small Islet,.<clcaiqscn000008jwhfw85ia7>Hunt: Black Puni, Punipuni? Kaiser pigeonm Saber claw, Gustaf, Lightning, Silent Beast.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -622,6 +834,8 @@ const items: Item[] = [
 			{ count: 5, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
+		description: '<clcaiqscn000008jwhfw85ia7>Hunt: Blue Puni, Green Puni, Red Puni, Gold Puni, Black Puni.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -636,6 +850,13 @@ const items: Item[] = [
 			{ count: 30, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
+		description: '<clcaiqscn000008jwhfw85ia7>Hunt: Rainbow Puni, Admiral Puni, Slead Demon Lord.',
+		traitPresent: {
+			description: 'Effect: Increases attack item effect by 5%, and also has a chance to cause Weak.',
+			id: '638a4d49a44f4fa4b0deca70',
+			index: 696,
+			name: 'Unidentified',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -650,6 +871,9 @@ const items: Item[] = [
 			{ count: 40, name: 'POISON_MAT' },
 		],
 		recipeType: null,
+		description:
+			'<clcaiqscn000008jwhfw85ia7>Hunt: Wise Spirit, rok, Twin Header, Sorcer Titus, Ifritter, Tempestus, Dragonaire, Magmacius, Sun Destroyer Yasuk, Moon Destroyer Durak.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -663,6 +887,13 @@ const items: Item[] = [
 			{ count: 5, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
+		description: '<clcaiqscn000008jwhfw85ia7>Hunt: Haunt Unliving King.',
+		traitPresent: {
+			description: 'Effect: The target recovers a small amount of HP, and also recovers from Curse.',
+			id: '638a4d49a44f4fa4b0deca76',
+			index: 697,
+			name: 'Purifying Water',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -676,6 +907,8 @@ const items: Item[] = [
 			{ count: 5, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
+		description: '<clcaiqscn000008jwhfw85ia7>Hunt: Blue Puni, Green Puni, Red Puni, Gold Puni, Black Puni.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -689,6 +922,14 @@ const items: Item[] = [
 			{ count: 20, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
+		description:
+			'<clcaiqscn000008jwhfw85ia7>Hunt: Blue Puni, Green Puni, Red Puni, Gold Puni, Punipuni? Super Puni, Admiral Puni.',
+		traitPresent: {
+			description: 'Effect: Price when selling to shops increases quite a lot.',
+			id: '638a4d49a44f4fa4b0deca78',
+			index: 698,
+			name: 'Golden Radiance',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -702,6 +943,9 @@ const items: Item[] = [
 			{ count: 10, name: 'PLANT' },
 		],
 		recipeType: null,
+		description:
+			'Location: Chick Woods, Blessed Forest, Green Ruins, Puzzling Path, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt: Madragora, Single Horn.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -716,6 +960,9 @@ const items: Item[] = [
 			{ count: 15, name: 'GUNPOWDER' },
 		],
 		recipeType: null,
+		description:
+			'Location: Blessed Forest, Green Ruins, Puzzling Path, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt: White Root, Alraune, Kimmoch.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -729,6 +976,8 @@ const items: Item[] = [
 			{ count: 10, name: 'PLANT' },
 		],
 		recipeType: null,
+		description: 'Location: Merbert Farm, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt: Mandragora, Single Horn.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -742,6 +991,9 @@ const items: Item[] = [
 			{ count: 20, name: 'GUNPOWDER' },
 		],
 		recipeType: null,
+		description:
+			'Location: Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt: Mandragora, Single Horn.<clcaiqscn000008jwhfw85ia7>Rumor: Stash of High Grade Flour.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -755,6 +1007,9 @@ const items: Item[] = [
 			{ count: 5, name: 'PLANT' },
 		],
 		recipeType: null,
+		description:
+			'Location: Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt: Kimmoch, Nightshade, Sorcerer Titus.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -768,6 +1023,14 @@ const items: Item[] = [
 			{ count: 5, name: 'METAL' },
 		],
 		recipeType: null,
+		description:
+			'Location: Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt: Kimmoch, Nightshade, Sorcerer Titus.',
+		traitPresent: {
+			description: 'Effect: Increases defense by 10, and also causes a decent amount of HP recovery each turn.',
+			id: '638a4d49a44f4fa4b0deca74',
+			index: 700,
+			name: 'Mutated Material',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -781,6 +1044,9 @@ const items: Item[] = [
 			{ count: 10, name: 'GUNPOWDER' },
 		],
 		recipeType: null,
+		description:
+			'Location: Blessed Forest, Leaisure Plaza, Green Ruins, gate of trees.<clcaiqscn000008jwhfw85ia7>Hunt: Mini Demon, Ardra, Chimera Beast.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -795,6 +1061,9 @@ const items: Item[] = [
 			{ count: 20, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
+		description:
+			'Location: Chickk Woods, Green RUins.<clcaiqscn000008jwhfw85ia7>Hunt: Kaiser Pigeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Rumor: Strange Miniature Eggs.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -808,6 +1077,8 @@ const items: Item[] = [
 			{ count: 10, name: 'PLANT' },
 		],
 		recipeType: null,
+		description: 'Location: Merbert Farm, Flower Garden, Open Ruins, Verdant Hilld.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -821,6 +1092,14 @@ const items: Item[] = [
 			{ count: 15, name: 'PLANT' },
 		],
 		recipeType: null,
+		description:
+			'Location: Open Ruins, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt: White Root, Alraune, Star fish.<clcaiqscn000008jwhfw85ia7>Rumor: Fruit that gives strength.',
+		traitPresent: {
+			description: 'Effect: Increases recovery item effect by 30%, but increases equipment cost by 5.',
+			id: '638a4d49a44f4fa4b0deca77',
+			index: 701,
+			name: 'Special Ingredient',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -834,6 +1113,9 @@ const items: Item[] = [
 			{ count: 5, name: 'FUEL' },
 		],
 		recipeType: null,
+		description:
+			'Location: Flower Garden, Forgotten Nursery, Fallen Palace, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt: Magic Book, Book Familiar, living Grimoire, Forbidden Codex.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -844,6 +1126,8 @@ const items: Item[] = [
 		name: 'Natural Oil',
 		relatedCategories: [{ count: 20, name: 'FUEL' }],
 		recipeType: null,
+		description: '<clcaiqscn000008jwhfw85ia7>Hunt: Mini Demon, Ardra, Chimera Beast.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -854,6 +1138,15 @@ const items: Item[] = [
 		name: 'Zafloa Oil',
 		relatedCategories: [{ count: 35, name: 'FUEL' }],
 		recipeType: null,
+		description:
+			'<clcaiqscn000008jwhfw85ia7>Hunt: Kaiser Pengeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Rumor: Vivldy Colored Oil.',
+		traitPresent: {
+			description:
+				"Effect: Increases the target's maximum HP during battle, and also reduces the effectiveness of status ailments. The effect is small.",
+			id: '638a4d49a44f4fa4b0deca7b',
+			index: 702,
+			name: 'Secret of Health',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -867,6 +1160,8 @@ const items: Item[] = [
 			{ count: 10, name: 'FUEL' },
 		],
 		recipeType: null,
+		description: '<clcaiqscn000008jwhfw85ia7>Hunt: Haunt, Unliving King.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -880,6 +1175,8 @@ const items: Item[] = [
 			{ count: 15, name: 'FUEL' },
 		],
 		recipeType: null,
+		description: '<clcaiqscn000008jwhfw85ia7>Hunt: Haunt, Unliving King.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -894,6 +1191,13 @@ const items: Item[] = [
 			{ count: 5, name: 'MAGIC_ITEM' },
 		],
 		recipeType: null,
+		description: '<clcaiqscn000008jwhfw85ia7>Hunt: Lich Ordser, Haunt, Sealed Demon Lord, Unliving King.',
+		traitPresent: {
+			description: 'Effect: Increases critical hit rate, and also increases damage dealt to Broken targets.',
+			id: '638a4d49a44f4fa4b0deca79',
+			index: 703,
+			name: 'Power of Faith',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -907,6 +1211,9 @@ const items: Item[] = [
 			{ count: 5, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
+		description:
+			"Location: Calm Banks, Silent Lakeside, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Hunt: Kaiser Pigeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Rumor: Shell Like Gemstone.",
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -920,6 +1227,14 @@ const items: Item[] = [
 			{ count: 15, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
+		description:
+			'Location: Underwater Lake.<clcaiqscn000008jwhfw85ia7>Hunt: Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning Silent Beast, Isanasius.<clcaiqscn000008jwhfw85ia7>Rumor: Chalk White Shells.',
+		traitPresent: {
+			description: 'Effect: The target recovers from Poison and No Heal ailments.',
+			id: '638a4d49a44f4fa4b0deca7a',
+			index: 704,
+			name: 'Medicine Compound',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -933,6 +1248,9 @@ const items: Item[] = [
 			{ count: 10, name: 'ORE' },
 		],
 		recipeType: null,
+		description:
+			'Location: Merbert Farm, Sealed Temple, Underground Lake, Scar of the land.<clcaiqscn000008jwhfw85ia7>Hunt: Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning Silent Beast.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -946,6 +1264,9 @@ const items: Item[] = [
 			{ count: 25, name: 'GUNPOWDER' },
 		],
 		recipeType: null,
+		description:
+			'Location: Sun Moon Moor.<clcaiqscn000008jwhfw85ia7>Hunt: Heavenly Bird, Draagonaire, Magmacius.<clcaiqscn000008jwhfw85ia7>Rumor: A Shattered Star?.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -959,6 +1280,9 @@ const items: Item[] = [
 			{ count: 30, name: 'GUNPOWDER' },
 		],
 		recipeType: null,
+		description:
+			'Location: Sealed Temple, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt: Crimson Fang, Dragonaire, Magmacius.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -972,6 +1296,9 @@ const items: Item[] = [
 			{ count: 5, name: 'ORE' },
 		],
 		recipeType: null,
+		description:
+			'Location: Rocky Mountain, Mountain Boundary, Dead Tree Wasteland, Scard of the land.<clcaiqscn000008jwhfw85ia7>Hunt: Magic book, Book of Familiar, Ghost, Scarlady, Gentle Phantom, Funny Face, Dark Maiden.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -986,6 +1313,9 @@ const items: Item[] = [
 			{ count: 5, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
+		description:
+			'Location: Moon Sun Moor, Fallen Palace, Forgotten Nursery.<clcaiqscn000008jwhfw85ia7>Hunt: Forbidden Codex, Lich Order, Wise Spirit, Rok, twin Header, Sorcer Titus, Ifritter, Tempestus, Wind Elemental.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -999,6 +1329,9 @@ const items: Item[] = [
 			{ count: 10, name: 'GEM' },
 		],
 		recipeType: null,
+		description:
+			'Location: Moon Sun Moor, City of the Lost, Forgotten NUrsery, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt: Ghost, Scarlady, Gentle Phantom, Haunt, Lich, Shadow, Death Inquisitor, Archlich.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1012,6 +1345,9 @@ const items: Item[] = [
 			{ count: 25, name: 'ELIXIR' },
 		],
 		recipeType: null,
+		description:
+			'<clcaiqscn000008jwhfw85ia7>Hunt: Sealed Demon Lord, Wind Elemental, Light Elemental.<clcaiqscn000008jwhfw85ia7>Rumor: Faintly Shining Ore.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1025,6 +1361,15 @@ const items: Item[] = [
 			{ count: 10, name: 'POISON_MAT' },
 		],
 		recipeType: null,
+		description:
+			'<clcaiqscn000008jwhfw85ia7>Hunt: Devil Horn, Sealed Demon Lord, Flare Demon, Thunderous, Hell gate, Great Demon.',
+		traitPresent: {
+			description:
+				'Effect: Increases damage dealt to Broken targets by 20%, and a portion of damage dealt is absorbed to recover HP.',
+			id: '638a4d49a44f4fa4b0deca7e',
+			index: 707,
+			name: 'Demon Soul',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -1039,6 +1384,8 @@ const items: Item[] = [
 			{ count: 25, name: 'ELIXIR' },
 		],
 		recipeType: null,
+		description: '<clcaiqscn000008jwhfw85ia7>Hunt: Dragonaire, Magmacius, Sun Destroyer Yasuk, Moon Eater Durakk.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1049,6 +1396,8 @@ const items: Item[] = [
 		name: 'Forgotten Wood',
 		relatedCategories: [{ count: 50, name: 'WOOD' }],
 		recipeType: null,
+		description: '<clcaiqscn000008jwhfw85ia7>Hunt: Kimmoch, Nightshade, Sorcerer Titus, Light Elemental.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1059,6 +1408,9 @@ const items: Item[] = [
 		name: 'Forgotten Gem',
 		relatedCategories: [{ count: 50, name: 'GEM' }],
 		recipeType: null,
+		description:
+			'<clcaiqscn000008jwhfw85ia7>Hunt: Wise Spirit, Rok, Twin Header, Grand Ocean, Sorcerer Titus, Ifritter, Tempestus, Dragonaire, Magmacius, Light Elemental.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1069,6 +1421,8 @@ const items: Item[] = [
 		name: 'Forgotten Ore',
 		relatedCategories: [{ count: 50, name: 'ORE' }],
 		recipeType: null,
+		description: '<clcaiqscn000008jwhfw85ia7>Hunt: Devil Horn, Sealed Demon Lord, Dragonaire, magmacius.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1079,6 +1433,9 @@ const items: Item[] = [
 		name: 'Forgotten Part',
 		relatedCategories: [{ count: 50, name: 'METAL' }],
 		recipeType: null,
+		description:
+			'<clcaiqscn000008jwhfw85ia7>Hunt: Wise Spirit, Rok, Twin header, Sorcerer Titus, ifritter, Tempestus.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1089,6 +1446,8 @@ const items: Item[] = [
 		name: 'Useless Fragment',
 		relatedCategories: [{ count: 10, name: 'ELIXIR' }],
 		recipeType: null,
+		description: 'Location: Moon Sun Mor, Fallen Palace, Soul Space.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1099,6 +1458,8 @@ const items: Item[] = [
 		name: 'Burnt Fragment',
 		relatedCategories: [{ count: 10, name: 'ELIXIR' }],
 		recipeType: null,
+		description: 'Location: Flower Garden Sealed Temple, Soul Space.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1109,6 +1470,8 @@ const items: Item[] = [
 		name: 'Stinky Fragment',
 		relatedCategories: [{ count: 10, name: 'ELIXIR' }],
 		recipeType: null,
+		description: 'Location: Forgotten Nursery, Sealed Temple, Soul Space.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1119,6 +1482,14 @@ const items: Item[] = [
 		name: 'Pretty Fragment',
 		relatedCategories: [{ count: 10, name: 'ELIXIR' }],
 		recipeType: null,
+		description:
+			'Location: Small Islet, Fallen Palace, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt: Dragonaire, Magmacius.',
+		traitPresent: {
+			description: 'Effect: Increases damage dealt to monsters created through magic and alchemy.',
+			id: '638a4d48a44f4fa4b0deca0d',
+			index: 427,
+			name: 'Magical Slayer',
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -1132,6 +1503,8 @@ const items: Item[] = [
 			{ count: 5, name: 'MAGIC_ITEM' },
 		],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1142,6 +1515,8 @@ const items: Item[] = [
 		name: 'Haze Grass Petal',
 		relatedCategories: [{ count: 30, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: 'Obtain throw event.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1152,6 +1527,8 @@ const items: Item[] = [
 		name: 'Eternity Scale',
 		relatedCategories: [{ count: 30, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: 'Obtain throw event.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1166,6 +1543,8 @@ const items: Item[] = [
 			{ count: 10, name: 'MAGIC_ITEM' },
 		],
 		recipeType: null,
+		description: 'Location: Library of All Creation.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1180,6 +1559,8 @@ const items: Item[] = [
 			{ count: 10, name: 'PAPER' },
 		],
 		recipeType: null,
+		description: 'Location: Library of All Creation.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1194,6 +1575,8 @@ const items: Item[] = [
 			{ count: 15, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
+		description: 'Location: Library of All Creation.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1208,6 +1591,8 @@ const items: Item[] = [
 			{ count: 20, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
+		description: 'Location: Library of All Creation.',
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1218,6 +1603,8 @@ const items: Item[] = [
 		name: 'Uni Bag',
 		relatedCategories: [{ count: 10, name: 'BOMB' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1228,6 +1615,8 @@ const items: Item[] = [
 		name: 'Bomb',
 		relatedCategories: [{ count: 20, name: 'BOMB' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1238,6 +1627,8 @@ const items: Item[] = [
 		name: 'Ice Bomb',
 		relatedCategories: [{ count: 15, name: 'BOMB' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1248,6 +1639,8 @@ const items: Item[] = [
 		name: 'Lightning Bomb',
 		relatedCategories: [{ count: 15, name: 'BOMB' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1258,6 +1651,8 @@ const items: Item[] = [
 		name: 'Craft',
 		relatedCategories: [{ count: 15, name: 'BOMB' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1268,6 +1663,8 @@ const items: Item[] = [
 		name: 'Ori Bomb',
 		relatedCategories: [{ count: 30, name: 'BOMB' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1278,6 +1675,8 @@ const items: Item[] = [
 		name: 'Stahl Ice Bomb',
 		relatedCategories: [{ count: 25, name: 'BOMB' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1288,6 +1687,8 @@ const items: Item[] = [
 		name: 'Lightning Crystal',
 		relatedCategories: [{ count: 25, name: 'BOMB' }],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1298,6 +1699,8 @@ const items: Item[] = [
 		name: 'Puni Missile',
 		relatedCategories: [{ count: 20, name: 'BOMB' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1311,6 +1714,8 @@ const items: Item[] = [
 			{ count: 10, name: 'MAGIC_ITEM' },
 		],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1324,6 +1729,8 @@ const items: Item[] = [
 			{ count: 25, name: 'MAGIC_ITEM' },
 		],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1334,6 +1741,8 @@ const items: Item[] = [
 		name: "Magician's Flute",
 		relatedCategories: [{ count: 30, name: 'MAGIC_ITEM' }],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1347,6 +1756,8 @@ const items: Item[] = [
 			{ count: 20, name: 'MAGIC_ITEM' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1360,6 +1771,8 @@ const items: Item[] = [
 			{ count: 30, name: 'MAGIC_ITEM' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1370,6 +1783,8 @@ const items: Item[] = [
 		name: 'Necromancer Flute',
 		relatedCategories: [{ count: 35, name: 'MAGIC_ITEM' }],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1380,6 +1795,8 @@ const items: Item[] = [
 		name: 'Berg Medicine',
 		relatedCategories: [{ count: 10, name: 'MEDICINE' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1390,6 +1807,8 @@ const items: Item[] = [
 		name: 'Refuel Bottle',
 		relatedCategories: [{ count: 15, name: 'MEDICINE' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1400,6 +1819,8 @@ const items: Item[] = [
 		name: 'Breezy Aroma',
 		relatedCategories: [{ count: 15, name: 'MEDICINE' }],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1413,6 +1834,8 @@ const items: Item[] = [
 			{ count: 5, name: 'SECRET_POWER' },
 		],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1426,6 +1849,8 @@ const items: Item[] = [
 			{ count: 25, name: 'ELIXIR' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1439,6 +1864,8 @@ const items: Item[] = [
 			{ count: 10, name: 'SWEETS' },
 		],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1452,6 +1879,8 @@ const items: Item[] = [
 			{ count: 10, name: 'SWEETS' },
 		],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1466,6 +1895,8 @@ const items: Item[] = [
 			{ count: 5, name: 'SECRET_POWER' },
 		],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1479,6 +1910,8 @@ const items: Item[] = [
 			{ count: 30, name: 'SWEETS' },
 		],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1492,6 +1925,8 @@ const items: Item[] = [
 			{ count: 10, name: 'SECRET_POWER' },
 		],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1506,6 +1941,8 @@ const items: Item[] = [
 			{ count: 5, name: 'GEM' },
 		],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1516,6 +1953,8 @@ const items: Item[] = [
 		name: 'Plain Waffle',
 		relatedCategories: [{ count: 20, name: 'FOOD' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1526,6 +1965,8 @@ const items: Item[] = [
 		name: 'Bagel Sandwich',
 		relatedCategories: [{ count: 20, name: 'FOOD' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1536,6 +1977,8 @@ const items: Item[] = [
 		name: 'Supreme Hot Milk',
 		relatedCategories: [{ count: 25, name: 'FOOD' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1546,6 +1989,8 @@ const items: Item[] = [
 		name: 'Honey Syrup',
 		relatedCategories: [{ count: 30, name: 'MEDICINE' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1556,6 +2001,8 @@ const items: Item[] = [
 		name: "Angel's Whisper",
 		relatedCategories: [{ count: 20, name: 'MAGIC_ITEM' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1566,6 +2013,8 @@ const items: Item[] = [
 		name: 'Warding Incense',
 		relatedCategories: [{ count: 10, name: 'MEDICINE' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'DE_BUFF_ITEM',
@@ -1576,6 +2025,8 @@ const items: Item[] = [
 		name: 'Bottled Misfortune',
 		relatedCategories: [{ count: 20, name: 'MEDICINE' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1586,6 +2037,8 @@ const items: Item[] = [
 		name: 'Spirit Weave Cloth',
 		relatedCategories: [{ count: 15, name: 'CLOTH' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1596,6 +2049,8 @@ const items: Item[] = [
 		name: 'Fire Dragon Medicine',
 		relatedCategories: [{ count: 25, name: 'MEDICINE' }],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1609,6 +2064,8 @@ const items: Item[] = [
 			{ count: 10, name: 'PAPER' },
 		],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'DE_BUFF_ITEM',
@@ -1619,6 +2076,8 @@ const items: Item[] = [
 		name: "Imp's Mischief",
 		relatedCategories: [{ count: 25, name: 'MAGIC_ITEM' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1629,6 +2088,8 @@ const items: Item[] = [
 		name: "Hero's Medicine",
 		relatedCategories: [{ count: 25, name: 'MEDICINE' }],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'DE_BUFF_ITEM',
@@ -1642,6 +2103,8 @@ const items: Item[] = [
 			{ count: 20, name: 'PAPER' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -1652,6 +2115,8 @@ const items: Item[] = [
 		name: 'Wonder Stimulant',
 		relatedCategories: [{ count: 20, name: 'MEDICINE' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -1662,6 +2127,8 @@ const items: Item[] = [
 		name: 'Fairy Guide',
 		relatedCategories: [{ count: 30, name: 'MAGIC_ITEM' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -1675,6 +2142,8 @@ const items: Item[] = [
 			{ count: 15, name: 'WOOD' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -1685,6 +2154,8 @@ const items: Item[] = [
 		name: 'Clear Drops',
 		relatedCategories: [{ count: 20, name: 'MAGIC_ITEM' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -1698,6 +2169,8 @@ const items: Item[] = [
 			{ count: 10, name: 'ANIMAL' },
 		],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -1708,6 +2181,8 @@ const items: Item[] = [
 		name: "Traveler's Shoes",
 		relatedCategories: [{ count: 10, name: 'CLOTH' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -1718,6 +2193,8 @@ const items: Item[] = [
 		name: 'Deluxe Backpack',
 		relatedCategories: [{ count: 20, name: 'CLOTH' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -1728,6 +2205,8 @@ const items: Item[] = [
 		name: 'Emergency Bag',
 		relatedCategories: [{ count: 25, name: 'MAGIC_ITEM' }],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -1738,6 +2217,8 @@ const items: Item[] = [
 		name: 'Gathering Gloves',
 		relatedCategories: [{ count: 5, name: 'CLOTH' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -1748,6 +2229,8 @@ const items: Item[] = [
 		name: "Victor's Charm",
 		relatedCategories: [{ count: 10, name: 'MAGIC_ITEM' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -1758,6 +2241,8 @@ const items: Item[] = [
 		name: 'Training Charm',
 		relatedCategories: [{ count: 15, name: 'MAGIC_ITEM' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -1771,6 +2256,8 @@ const items: Item[] = [
 			{ count: 15, name: 'PAPER' },
 		],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -1781,6 +2268,8 @@ const items: Item[] = [
 		name: 'Heart Pendant',
 		relatedCategories: [{ count: 25, name: 'METAL' }],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1791,6 +2280,8 @@ const items: Item[] = [
 		name: 'Neutralizer R',
 		relatedCategories: [{ count: 25, name: 'NEUTRALIZER' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1801,6 +2292,8 @@ const items: Item[] = [
 		name: 'Neutralizer B',
 		relatedCategories: [{ count: 25, name: 'NEUTRALIZER' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1811,6 +2304,8 @@ const items: Item[] = [
 		name: 'Neutralizer G',
 		relatedCategories: [{ count: 25, name: 'NEUTRALIZER' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1821,6 +2316,8 @@ const items: Item[] = [
 		name: 'Neutralizer Y',
 		relatedCategories: [{ count: 25, name: 'NEUTRALIZER' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1831,6 +2328,8 @@ const items: Item[] = [
 		name: 'Pure Water',
 		relatedCategories: [{ count: 50, name: 'WATER' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1844,6 +2343,8 @@ const items: Item[] = [
 			{ count: 20, name: 'SECRET_POWER' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1857,6 +2358,8 @@ const items: Item[] = [
 			{ count: 5, name: 'MEDICINE_MAT' },
 		],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1870,6 +2373,8 @@ const items: Item[] = [
 			{ count: 15, name: 'GUNPOWDER' },
 		],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1880,6 +2385,8 @@ const items: Item[] = [
 		name: 'Honey',
 		relatedCategories: [{ count: 25, name: 'INGREDIENT' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1894,6 +2401,8 @@ const items: Item[] = [
 			{ count: 10, name: 'POISON_MAT' },
 		],
 		recipeType: 'HOPE_RECIPES',
+		description: 'Location: Bought at Marguerite, Synthsized (Hope).',
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1907,6 +2416,8 @@ const items: Item[] = [
 			{ count: 20, name: 'POISON_MAT' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1920,6 +2431,8 @@ const items: Item[] = [
 			{ count: 20, name: 'FUEL' },
 		],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1933,6 +2446,8 @@ const items: Item[] = [
 			{ count: 10, name: 'WATER' },
 		],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1943,6 +2458,8 @@ const items: Item[] = [
 		name: 'Flame Powder',
 		relatedCategories: [{ count: 40, name: 'GUNPOWDER' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1953,6 +2470,8 @@ const items: Item[] = [
 		name: 'Blitzlite',
 		relatedCategories: [{ count: 30, name: 'METAL' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1966,6 +2485,8 @@ const items: Item[] = [
 			{ count: 15, name: 'SECRET_POWER' },
 		],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1979,6 +2500,8 @@ const items: Item[] = [
 			{ count: 10, name: 'ELIXIR' },
 		],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -1992,6 +2515,8 @@ const items: Item[] = [
 			{ count: 10, name: 'METAL' },
 		],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2002,6 +2527,8 @@ const items: Item[] = [
 		name: 'Spruce',
 		relatedCategories: [{ count: 30, name: 'WOOD' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2015,6 +2542,8 @@ const items: Item[] = [
 			{ count: 10, name: 'METAL' },
 		],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2028,6 +2557,8 @@ const items: Item[] = [
 			{ count: 15, name: 'METAL' },
 		],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2041,6 +2572,8 @@ const items: Item[] = [
 			{ count: 20, name: 'METAL' },
 		],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2054,6 +2587,8 @@ const items: Item[] = [
 			{ count: 25, name: 'METAL' },
 		],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2067,6 +2602,8 @@ const items: Item[] = [
 			{ count: 30, name: 'METAL' },
 		],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2080,6 +2617,8 @@ const items: Item[] = [
 			{ count: 35, name: 'METAL' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2093,6 +2632,8 @@ const items: Item[] = [
 			{ count: 20, name: 'CLOTH' },
 		],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2106,6 +2647,8 @@ const items: Item[] = [
 			{ count: 25, name: 'CLOTH' },
 		],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2119,6 +2662,8 @@ const items: Item[] = [
 			{ count: 30, name: 'CLOTH' },
 		],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2132,6 +2677,8 @@ const items: Item[] = [
 			{ count: 35, name: 'CLOTH' },
 		],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2145,6 +2692,8 @@ const items: Item[] = [
 			{ count: 40, name: 'CLOTH' },
 		],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2158,6 +2707,8 @@ const items: Item[] = [
 			{ count: 45, name: 'CLOTH' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2171,6 +2722,8 @@ const items: Item[] = [
 			{ count: 20, name: 'GEM' },
 		],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2181,6 +2734,8 @@ const items: Item[] = [
 		name: 'Noble Sapphire',
 		relatedCategories: [{ count: 40, name: 'GEM' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2196,6 +2751,8 @@ const items: Item[] = [
 			{ count: 40, name: 'ORE' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2209,6 +2766,8 @@ const items: Item[] = [
 			{ count: 10, name: 'SECRET_POWER' },
 		],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2219,6 +2778,8 @@ const items: Item[] = [
 		name: 'Compass of Hades',
 		relatedCategories: [{ count: 20, name: 'IMPORTANT' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2234,6 +2795,8 @@ const items: Item[] = [
 			{ count: 35, name: 'NEUTRALIZER' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2249,6 +2812,8 @@ const items: Item[] = [
 			{ count: 99, name: 'SECRET_POWER' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2264,6 +2829,8 @@ const items: Item[] = [
 			{ count: 40, name: 'NEUTRALIZER' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2278,6 +2845,8 @@ const items: Item[] = [
 			{ count: 5, name: 'METAL' },
 		],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2288,6 +2857,8 @@ const items: Item[] = [
 		name: 'Fertile Soil',
 		relatedCategories: [{ count: 20, name: 'CLAY' }],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2298,6 +2869,8 @@ const items: Item[] = [
 		name: 'Precise Parts',
 		relatedCategories: [{ count: 40, name: 'METAL' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'MACHINE',
@@ -2308,6 +2881,8 @@ const items: Item[] = [
 		name: "Grandma's Cauldron",
 		relatedCategories: [{ count: 5, name: 'IMPORTANT' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'MACHINE',
@@ -2318,6 +2893,8 @@ const items: Item[] = [
 		name: 'Practice Cauldron',
 		relatedCategories: [{ count: 5, name: 'IMPORTANT' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'MACHINE',
@@ -2328,6 +2905,8 @@ const items: Item[] = [
 		name: 'Tuned Cauldron',
 		relatedCategories: [{ count: 15, name: 'IMPORTANT' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'MACHINE',
@@ -2338,6 +2917,8 @@ const items: Item[] = [
 		name: 'Expert Cauldron',
 		relatedCategories: [{ count: 20, name: 'IMPORTANT' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'MACHINE',
@@ -2348,6 +2929,8 @@ const items: Item[] = [
 		name: 'Fairy Cauldron',
 		relatedCategories: [{ count: 25, name: 'IMPORTANT' }],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'MACHINE',
@@ -2358,6 +2941,8 @@ const items: Item[] = [
 		name: 'Ancient Cauldron',
 		relatedCategories: [{ count: 30, name: 'IMPORTANT' }],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'MACHINE',
@@ -2368,6 +2953,8 @@ const items: Item[] = [
 		name: "Teacher's Cauldron",
 		relatedCategories: [{ count: 15, name: 'IMPORTANT' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'MACHINE',
@@ -2378,6 +2965,8 @@ const items: Item[] = [
 		name: "Hermit's Cauldron",
 		relatedCategories: [{ count: 30, name: 'IMPORTANT' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'MACHINE',
@@ -2388,6 +2977,8 @@ const items: Item[] = [
 		name: 'Miraculous Cauldron',
 		relatedCategories: [{ count: 45, name: 'IMPORTANT' }],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'MACHINE',
@@ -2398,6 +2989,8 @@ const items: Item[] = [
 		name: 'Eye of Mercury',
 		relatedCategories: [{ count: 20, name: 'MAGIC_ITEM' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2408,6 +3001,8 @@ const items: Item[] = [
 		name: 'Starting Staff',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2418,6 +3013,8 @@ const items: Item[] = [
 		name: 'Flourish Heart',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2428,6 +3025,8 @@ const items: Item[] = [
 		name: 'Wandering Staff',
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2438,6 +3037,8 @@ const items: Item[] = [
 		name: 'Prosper Heart',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2448,6 +3049,8 @@ const items: Item[] = [
 		name: 'Eternal Cycle Staff',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2458,6 +3061,8 @@ const items: Item[] = [
 		name: 'Moon Caller',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2468,6 +3073,8 @@ const items: Item[] = [
 		name: 'Aura Bangle',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2478,6 +3085,8 @@ const items: Item[] = [
 		name: 'Cosmo Caller',
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2488,6 +3097,8 @@ const items: Item[] = [
 		name: 'Arch Bangle',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2498,6 +3109,8 @@ const items: Item[] = [
 		name: 'Bright Night',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2508,6 +3121,8 @@ const items: Item[] = [
 		name: 'Formal Rapier',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2518,6 +3133,8 @@ const items: Item[] = [
 		name: 'Brave Rapier',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2528,6 +3145,8 @@ const items: Item[] = [
 		name: "Knight's Rapier",
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2538,6 +3157,8 @@ const items: Item[] = [
 		name: "Hero's Rapier",
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2548,6 +3169,8 @@ const items: Item[] = [
 		name: "Monika's Estoc",
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2558,6 +3181,8 @@ const items: Item[] = [
 		name: 'Earth Shovel',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2568,6 +3193,8 @@ const items: Item[] = [
 		name: 'Idle Shovel',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2578,6 +3205,8 @@ const items: Item[] = [
 		name: "Heaven's Shovel",
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2588,6 +3217,8 @@ const items: Item[] = [
 		name: 'Shovel of Hope',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2598,6 +3229,8 @@ const items: Item[] = [
 		name: 'Bountiful Harvester',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2608,6 +3241,8 @@ const items: Item[] = [
 		name: 'Knight Blade',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2618,6 +3253,8 @@ const items: Item[] = [
 		name: 'Breaker',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2628,6 +3265,8 @@ const items: Item[] = [
 		name: 'Paladin Blade',
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2638,6 +3277,8 @@ const items: Item[] = [
 		name: 'Banisher',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2648,6 +3289,8 @@ const items: Item[] = [
 		name: 'Evandeit',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2658,6 +3301,8 @@ const items: Item[] = [
 		name: 'Demon Slayer',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2668,6 +3313,8 @@ const items: Item[] = [
 		name: 'Dark Light',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2678,6 +3325,8 @@ const items: Item[] = [
 		name: 'Demon God Slayer',
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2688,6 +3337,8 @@ const items: Item[] = [
 		name: 'True Dark Light',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2698,6 +3349,8 @@ const items: Item[] = [
 		name: 'Light of Dawn',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2708,6 +3361,8 @@ const items: Item[] = [
 		name: 'Steel Gauntlet',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2718,6 +3373,8 @@ const items: Item[] = [
 		name: 'Roaring Thunder',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2728,6 +3385,8 @@ const items: Item[] = [
 		name: 'Puni Gauntlet',
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2738,6 +3397,8 @@ const items: Item[] = [
 		name: 'Resplendent Frost',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2748,6 +3409,8 @@ const items: Item[] = [
 		name: 'Devouring Flame',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2758,6 +3421,8 @@ const items: Item[] = [
 		name: 'Metal Bullets',
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2768,6 +3433,8 @@ const items: Item[] = [
 		name: 'Piercing Bullets',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2778,6 +3445,8 @@ const items: Item[] = [
 		name: 'Crystal Bullets',
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2788,6 +3457,8 @@ const items: Item[] = [
 		name: 'Diamant',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2798,6 +3469,8 @@ const items: Item[] = [
 		name: 'Wild Cat',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2808,6 +3481,8 @@ const items: Item[] = [
 		name: "Maiden's Spear",
 		relatedCategories: [{ count: 10, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2818,6 +3493,8 @@ const items: Item[] = [
 		name: 'Madcat Spear',
 		relatedCategories: [{ count: 15, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2828,6 +3505,8 @@ const items: Item[] = [
 		name: "Lady's Spear",
 		relatedCategories: [{ count: 20, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2838,6 +3517,8 @@ const items: Item[] = [
 		name: 'White Panther',
 		relatedCategories: [{ count: 25, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2848,6 +3529,8 @@ const items: Item[] = [
 		name: 'Vivid Spear',
 		relatedCategories: [{ count: 30, name: 'WEAPON' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2858,6 +3541,8 @@ const items: Item[] = [
 		name: "Traveler's Vest",
 		relatedCategories: [{ count: 5, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2868,6 +3553,8 @@ const items: Item[] = [
 		name: 'Plate Vest',
 		relatedCategories: [{ count: 10, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2878,6 +3565,8 @@ const items: Item[] = [
 		name: 'Gold Jacket',
 		relatedCategories: [{ count: 15, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2888,6 +3577,8 @@ const items: Item[] = [
 		name: 'Colorful Vest',
 		relatedCategories: [{ count: 20, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2898,6 +3589,8 @@ const items: Item[] = [
 		name: 'Aegis Jacket',
 		relatedCategories: [{ count: 25, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2908,6 +3601,8 @@ const items: Item[] = [
 		name: 'Alchemy Vest',
 		relatedCategories: [{ count: 30, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2918,6 +3613,8 @@ const items: Item[] = [
 		name: 'Hard Coat',
 		relatedCategories: [{ count: 5, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2928,6 +3625,8 @@ const items: Item[] = [
 		name: 'Plate Coat',
 		relatedCategories: [{ count: 10, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2938,6 +3637,8 @@ const items: Item[] = [
 		name: 'Farden Coat',
 		relatedCategories: [{ count: 15, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2948,6 +3649,8 @@ const items: Item[] = [
 		name: 'Reactive Coat',
 		relatedCategories: [{ count: 20, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2958,6 +3661,8 @@ const items: Item[] = [
 		name: 'Dragonscale Coat',
 		relatedCategories: [{ count: 25, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2968,6 +3673,8 @@ const items: Item[] = [
 		name: 'Ancient Coat',
 		relatedCategories: [{ count: 30, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2978,6 +3685,8 @@ const items: Item[] = [
 		name: 'First Shirt',
 		relatedCategories: [{ count: 5, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2988,6 +3697,8 @@ const items: Item[] = [
 		name: 'Mixed Fur Shirt',
 		relatedCategories: [{ count: 10, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -2998,6 +3709,8 @@ const items: Item[] = [
 		name: "Wanderer's Shirt",
 		relatedCategories: [{ count: 15, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3008,6 +3721,8 @@ const items: Item[] = [
 		name: 'Weightless Shirt',
 		relatedCategories: [{ count: 20, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3018,6 +3733,8 @@ const items: Item[] = [
 		name: 'Natural Clothes',
 		relatedCategories: [{ count: 25, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3028,6 +3745,8 @@ const items: Item[] = [
 		name: 'Full Metal Shirt',
 		relatedCategories: [{ count: 30, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3038,6 +3757,8 @@ const items: Item[] = [
 		name: 'Paraselene Clothes',
 		relatedCategories: [{ count: 35, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3048,6 +3769,8 @@ const items: Item[] = [
 		name: 'Alchemy Mantle',
 		relatedCategories: [{ count: 40, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3058,6 +3781,8 @@ const items: Item[] = [
 		name: 'Soft Armor',
 		relatedCategories: [{ count: 45, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3068,6 +3793,8 @@ const items: Item[] = [
 		name: 'Tight Shirt',
 		relatedCategories: [{ count: 45, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3078,6 +3805,8 @@ const items: Item[] = [
 		name: 'Bridal Blouse',
 		relatedCategories: [{ count: 50, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3088,6 +3817,8 @@ const items: Item[] = [
 		name: 'Resurrection Wear',
 		relatedCategories: [{ count: 50, name: 'ARMOR' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3098,6 +3829,8 @@ const items: Item[] = [
 		name: 'Life Bangle',
 		relatedCategories: [{ count: 10, name: 'ACCESSORY' }],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3108,6 +3841,8 @@ const items: Item[] = [
 		name: 'White-Hot Headband',
 		relatedCategories: [{ count: 10, name: 'ACCESSORY' }],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3118,6 +3853,8 @@ const items: Item[] = [
 		name: 'Angel Ribbon',
 		relatedCategories: [{ count: 15, name: 'ACCESSORY' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3128,6 +3865,8 @@ const items: Item[] = [
 		name: 'Feather Ornament',
 		relatedCategories: [{ count: 20, name: 'ACCESSORY' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3138,6 +3877,8 @@ const items: Item[] = [
 		name: 'Spirit Earrings',
 		relatedCategories: [{ count: 25, name: 'ACCESSORY' }],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3148,6 +3889,8 @@ const items: Item[] = [
 		name: 'Ambrosia Garland',
 		relatedCategories: [{ count: 30, name: 'ACCESSORY' }],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3158,6 +3901,8 @@ const items: Item[] = [
 		name: 'Meister Mittens',
 		relatedCategories: [{ count: 15, name: 'ACCESSORY' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3168,6 +3913,8 @@ const items: Item[] = [
 		name: "Mind's Eye Monocle",
 		relatedCategories: [{ count: 20, name: 'ACCESSORY' }],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3178,6 +3925,8 @@ const items: Item[] = [
 		name: 'Monochrome Glasses',
 		relatedCategories: [{ count: 25, name: 'ACCESSORY' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3188,6 +3937,8 @@ const items: Item[] = [
 		name: 'Chronicle Mark',
 		relatedCategories: [{ count: 30, name: 'ACCESSORY' }],
 		recipeType: 'DREAM_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3198,6 +3949,8 @@ const items: Item[] = [
 		name: 'Time Control Hourglass',
 		relatedCategories: [{ count: 35, name: 'ACCESSORY' }],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3208,6 +3961,8 @@ const items: Item[] = [
 		name: 'Friendly Persona',
 		relatedCategories: [{ count: 20, name: 'ACCESSORY' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3218,6 +3973,8 @@ const items: Item[] = [
 		name: 'Hustle Belt',
 		relatedCategories: [{ count: 15, name: 'ACCESSORY' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3228,6 +3985,8 @@ const items: Item[] = [
 		name: 'Element Guard',
 		relatedCategories: [{ count: 35, name: 'ACCESSORY' }],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3238,6 +3997,8 @@ const items: Item[] = [
 		name: 'Gunade Ring',
 		relatedCategories: [{ count: 30, name: 'ACCESSORY' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3248,6 +4009,8 @@ const items: Item[] = [
 		name: "Plachta's Core",
 		relatedCategories: [{ count: 20, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3258,6 +4021,8 @@ const items: Item[] = [
 		name: "Plachta's Clothes",
 		relatedCategories: [{ count: 20, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -3268,6 +4033,8 @@ const items: Item[] = [
 		name: 'Soul Stone',
 		relatedCategories: [{ count: 10, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: 'Obtain throw event.',
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3278,6 +4045,8 @@ const items: Item[] = [
 		name: 'Spirit Needle',
 		relatedCategories: [{ count: 15, name: 'IMPORTANT' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3288,6 +4057,8 @@ const items: Item[] = [
 		name: 'Key of Truth',
 		relatedCategories: [{ count: 50, name: 'IMPORTANT' }],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3301,6 +4072,8 @@ const items: Item[] = [
 			{ count: 20, name: 'MAGIC_ITEM' },
 		],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3311,6 +4084,8 @@ const items: Item[] = [
 		name: 'Ares Brooch',
 		relatedCategories: [{ count: 40, name: 'ACCESSORY' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3321,6 +4096,8 @@ const items: Item[] = [
 		name: 'Plachta Doll',
 		relatedCategories: [{ count: 40, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3331,6 +4108,8 @@ const items: Item[] = [
 		name: 'Music Box of Memory',
 		relatedCategories: [{ count: 40, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3341,6 +4120,8 @@ const items: Item[] = [
 		name: 'Puppeteer String',
 		relatedCategories: [{ count: 25, name: 'THREAD' }],
 		recipeType: 'BEGINNER_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3351,6 +4132,8 @@ const items: Item[] = [
 		name: "Sage's Soil",
 		relatedCategories: [{ count: 30, name: 'CLAY' }],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3361,6 +4144,8 @@ const items: Item[] = [
 		name: 'Prototype Fertilizer',
 		relatedCategories: [{ count: 30, name: 'IMPORTANT' }],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3371,6 +4156,8 @@ const items: Item[] = [
 		name: 'Date Ticket',
 		relatedCategories: [{ count: 5, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: 'Obtain throw event.',
+		traitPresent: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -3381,6 +4168,8 @@ const items: Item[] = [
 		name: 'Moisture Grass',
 		relatedCategories: [{ count: 50, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: 'Obtain throw event.',
+		traitPresent: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3391,6 +4180,8 @@ const items: Item[] = [
 		name: "Sage's Emblem",
 		relatedCategories: [{ count: 50, name: 'IMPORTANT' }],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3401,6 +4192,8 @@ const items: Item[] = [
 		name: 'Atelier Tent',
 		relatedCategories: [{ count: 50, name: 'IMPORTANT' }],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3411,6 +4204,8 @@ const items: Item[] = [
 		name: 'Old Certificate',
 		relatedCategories: [{ count: 5, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3421,6 +4216,8 @@ const items: Item[] = [
 		name: 'Old Clothing',
 		relatedCategories: [{ count: 5, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3431,6 +4228,8 @@ const items: Item[] = [
 		name: "Grandma's Clothes",
 		relatedCategories: [{ count: 25, name: 'IMPORTANT' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3445,6 +4244,8 @@ const items: Item[] = [
 			{ count: 10, name: 'FUEL' },
 		],
 		recipeType: 'HOPE_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3458,6 +4259,8 @@ const items: Item[] = [
 			{ count: 30, name: 'SECRET_POWER' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'BOOK',
@@ -3468,6 +4271,8 @@ const items: Item[] = [
 		name: 'Gathering Buddy',
 		relatedCategories: [{ count: 5, name: 'IMPORTANT' }],
 		recipeType: 'GROWTH_RECIPES',
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'BOOK',
@@ -3478,6 +4283,8 @@ const items: Item[] = [
 		name: 'Eternal Brilliance',
 		relatedCategories: [{ count: 10, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'BOOK',
@@ -3488,6 +4295,8 @@ const items: Item[] = [
 		name: 'Soul Techniques',
 		relatedCategories: [{ count: 15, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'BOOK',
@@ -3498,6 +4307,8 @@ const items: Item[] = [
 		name: 'Alchemic Drive Guide',
 		relatedCategories: [{ count: 20, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'BOOK',
@@ -3508,6 +4319,8 @@ const items: Item[] = [
 		name: 'Blessing of the Sun',
 		relatedCategories: [{ count: 25, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'BOOK',
@@ -3518,6 +4331,8 @@ const items: Item[] = [
 		name: 'Recipe of Origin',
 		relatedCategories: [{ count: 30, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'BOOK',
@@ -3528,6 +4343,8 @@ const items: Item[] = [
 		name: "Puppeteer's Tools",
 		relatedCategories: [{ count: 35, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 	{
 		category: 'BOOK',
@@ -3538,6 +4355,8 @@ const items: Item[] = [
 		name: "Alchemist's Book",
 		relatedCategories: [{ count: 40, name: 'IMPORTANT' }],
 		recipeType: null,
+		description: null,
+		traitPresent: null,
 	},
 ];
 
