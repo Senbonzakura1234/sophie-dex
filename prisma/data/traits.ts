@@ -12,7 +12,7 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Price when selling to shops decreases a little, but also decreases duplication price.',
+		description: 'Price when selling to shops decreases a little, but also decreases duplication price.',
 		id: '638a4d47a44f4fa4b0dec965',
 		index: 0,
 		mergeFrom: [],
@@ -30,7 +30,7 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Price when selling to shops decreases quite a bit, but also decreases duplication price.',
+		description: 'Price when selling to shops decreases quite a bit, but also decreases duplication price.',
 		id: '638a4d47a44f4fa4b0dec96a',
 		index: 1,
 		mergeFrom: [],
@@ -48,7 +48,7 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Price when selling to shops decreases quite a lot, but also decreases duplication price.',
+		description: 'Price when selling to shops decreases quite a lot, but also decreases duplication price.',
 		id: '638a4d47a44f4fa4b0dec968',
 		index: 2,
 		mergeFrom: [],
@@ -66,26 +66,14 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Price when selling to shops decreases quite a lot, but also decreases duplication price.',
+		description: 'Price when selling to shops decreases quite a lot, but also decreases duplication price.',
 		id: '638a4d47a44f4fa4b0dec963',
 		index: 3,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Effect: Price when selling to shops decreases a little, but also decreases duplication price.',
-						id: '638a4d47a44f4fa4b0dec965',
-						index: 0,
-						name: 'Low Price',
-					},
-					{
-						description:
-							'Effect: Price when selling to shops decreases quite a bit, but also decreases duplication price.',
-						id: '638a4d47a44f4fa4b0dec96a',
-						index: 1,
-						name: 'Low Price+',
-					},
+					{ id: '638a4d47a44f4fa4b0dec965', index: 0, name: 'Low Price' },
+					{ id: '638a4d47a44f4fa4b0dec96a', index: 1, name: 'Low Price+' },
 				],
 			},
 		],
@@ -103,26 +91,14 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Price when selling to shops decreases massively, but also decreases duplication price.',
+		description: 'Price when selling to shops decreases massively, but also decreases duplication price.',
 		id: '638a4d47a44f4fa4b0dec96b',
 		index: 4,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Effect: Price when selling to shops decreases quite a bit, but also decreases duplication price.',
-						id: '638a4d47a44f4fa4b0dec96a',
-						index: 1,
-						name: 'Low Price+',
-					},
-					{
-						description:
-							'Effect: Price when selling to shops decreases quite a lot, but also decreases duplication price.',
-						id: '638a4d47a44f4fa4b0dec968',
-						index: 2,
-						name: 'Low Price++',
-					},
+					{ id: '638a4d47a44f4fa4b0dec96a', index: 1, name: 'Low Price+' },
+					{ id: '638a4d47a44f4fa4b0dec968', index: 2, name: 'Low Price++' },
 				],
 			},
 		],
@@ -140,26 +116,14 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Price when selling to shops plummets, but also decreases duplication price.',
+		description: 'Price when selling to shops plummets, but also decreases duplication price.',
 		id: '638a4d47a44f4fa4b0dec969',
 		index: 5,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Effect: Price when selling to shops decreases quite a lot, but also decreases duplication price.',
-						id: '638a4d47a44f4fa4b0dec963',
-						index: 3,
-						name: 'Common Item',
-					},
-					{
-						description:
-							'Effect: Price when selling to shops decreases massively, but also decreases duplication price.',
-						id: '638a4d47a44f4fa4b0dec96b',
-						index: 4,
-						name: 'Mass Produced',
-					},
+					{ id: '638a4d47a44f4fa4b0dec963', index: 3, name: 'Common Item' },
+					{ id: '638a4d47a44f4fa4b0dec96b', index: 4, name: 'Mass Produced' },
 				],
 			},
 		],
@@ -177,7 +141,7 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Price when selling to shops increases a little.',
+		description: 'Price when selling to shops increases a little.',
 		id: '638a4d47a44f4fa4b0dec967',
 		index: 6,
 		mergeFrom: [],
@@ -195,7 +159,7 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Price when selling to shops increases quite a bit.',
+		description: 'Price when selling to shops increases quite a bit.',
 		id: '638a4d47a44f4fa4b0dec962',
 		index: 7,
 		mergeFrom: [],
@@ -213,7 +177,7 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Price when selling to shops increases quite a lot.',
+		description: 'Price when selling to shops increases quite a lot.',
 		id: '638a4d47a44f4fa4b0dec966',
 		index: 8,
 		mergeFrom: [],
@@ -231,24 +195,14 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Price when selling to shops increases quite a lot.',
+		description: 'Price when selling to shops increases quite a lot.',
 		id: '638a4d47a44f4fa4b0dec96e',
 		index: 9,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Price when selling to shops increases a little.',
-						id: '638a4d47a44f4fa4b0dec967',
-						index: 6,
-						name: 'High Price',
-					},
-					{
-						description: 'Effect: Price when selling to shops increases quite a bit.',
-						id: '638a4d47a44f4fa4b0dec962',
-						index: 7,
-						name: 'High Price+',
-					},
+					{ id: '638a4d47a44f4fa4b0dec967', index: 6, name: 'High Price' },
+					{ id: '638a4d47a44f4fa4b0dec962', index: 7, name: 'High Price+' },
 				],
 			},
 		],
@@ -266,24 +220,14 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Price when selling to shops increases massively.',
+		description: 'Price when selling to shops increases massively.',
 		id: '638a4d47a44f4fa4b0dec96d',
 		index: 10,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Price when selling to shops increases quite a bit.',
-						id: '638a4d47a44f4fa4b0dec962',
-						index: 7,
-						name: 'High Price+',
-					},
-					{
-						description: 'Effect: Price when selling to shops increases quite a lot.',
-						id: '638a4d47a44f4fa4b0dec966',
-						index: 8,
-						name: 'High Price++',
-					},
+					{ id: '638a4d47a44f4fa4b0dec962', index: 7, name: 'High Price+' },
+					{ id: '638a4d47a44f4fa4b0dec966', index: 8, name: 'High Price++' },
 				],
 			},
 		],
@@ -301,24 +245,14 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Price when selling to shops skyrockets.',
+		description: 'Price when selling to shops skyrockets.',
 		id: '638a4d47a44f4fa4b0dec964',
 		index: 11,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Price when selling to shops increases quite a lot.',
-						id: '638a4d47a44f4fa4b0dec96e',
-						index: 9,
-						name: 'High Class',
-					},
-					{
-						description: 'Effect: Price when selling to shops increases massively.',
-						id: '638a4d47a44f4fa4b0dec96d',
-						index: 10,
-						name: 'Rare Item',
-					},
+					{ id: '638a4d47a44f4fa4b0dec96e', index: 9, name: 'High Class' },
+					{ id: '638a4d47a44f4fa4b0dec96d', index: 10, name: 'Rare Item' },
 				],
 			},
 		],
@@ -336,7 +270,7 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Increases item quality by 10% when this trait is transferred.',
+		description: 'Increases item quality by 10% when this trait is transferred.',
 		id: '638a4d47a44f4fa4b0dec982',
 		index: 12,
 		mergeFrom: [],
@@ -354,7 +288,7 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Increases item quality by 15% when this trait is transferred.',
+		description: 'Increases item quality by 15% when this trait is transferred.',
 		id: '638a4d47a44f4fa4b0dec970',
 		index: 13,
 		mergeFrom: [],
@@ -372,7 +306,7 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Increases item quality by 20% when this trait is transferred.',
+		description: 'Increases item quality by 20% when this trait is transferred.',
 		id: '638a4d47a44f4fa4b0dec972',
 		index: 14,
 		mergeFrom: [],
@@ -390,24 +324,14 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Increases item quality by 20% when this trait is transferred.',
+		description: 'Increases item quality by 20% when this trait is transferred.',
 		id: '638a4d47a44f4fa4b0dec973',
 		index: 15,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases item quality by 10% when this trait is transferred.',
-						id: '638a4d47a44f4fa4b0dec982',
-						index: 12,
-						name: 'Quality Up',
-					},
-					{
-						description: 'Effect: Increases item quality by 15% when this trait is transferred.',
-						id: '638a4d47a44f4fa4b0dec970',
-						index: 13,
-						name: 'Quality Up+',
-					},
+					{ id: '638a4d47a44f4fa4b0dec982', index: 12, name: 'Quality Up' },
+					{ id: '638a4d47a44f4fa4b0dec970', index: 13, name: 'Quality Up+' },
 				],
 			},
 		],
@@ -425,24 +349,14 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Increases item quality by 30% when this trait is transferred.',
+		description: 'Increases item quality by 30% when this trait is transferred.',
 		id: '638a4d47a44f4fa4b0dec97e',
 		index: 16,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases item quality by 15% when this trait is transferred.',
-						id: '638a4d47a44f4fa4b0dec970',
-						index: 13,
-						name: 'Quality Up+',
-					},
-					{
-						description: 'Effect: Increases item quality by 20% when this trait is transferred.',
-						id: '638a4d47a44f4fa4b0dec972',
-						index: 14,
-						name: 'Quality Up++',
-					},
+					{ id: '638a4d47a44f4fa4b0dec970', index: 13, name: 'Quality Up+' },
+					{ id: '638a4d47a44f4fa4b0dec972', index: 14, name: 'Quality Up++' },
 				],
 			},
 		],
@@ -460,24 +374,14 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Increases item quality by 50% when this trait is transferred.',
+		description: 'Increases item quality by 50% when this trait is transferred.',
 		id: '638a4d47a44f4fa4b0dec971',
 		index: 17,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases item quality by 20% when this trait is transferred.',
-						id: '638a4d47a44f4fa4b0dec973',
-						index: 15,
-						name: 'Well Made',
-					},
-					{
-						description: 'Effect: Increases item quality by 30% when this trait is transferred.',
-						id: '638a4d47a44f4fa4b0dec97e',
-						index: 16,
-						name: 'Pro Perfection',
-					},
+					{ id: '638a4d47a44f4fa4b0dec973', index: 15, name: 'Well Made' },
+					{ id: '638a4d47a44f4fa4b0dec97e', index: 16, name: 'Pro Perfection' },
 				],
 			},
 		],
@@ -485,7 +389,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack item effect by 5%.',
+		description: 'Increases attack item effect by 5%.',
 		id: '638a4d47a44f4fa4b0dec96c',
 		index: 52,
 		mergeFrom: [],
@@ -493,7 +397,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack item effect by 7%.',
+		description: 'Increases attack item effect by 7%.',
 		id: '638a4d47a44f4fa4b0dec96f',
 		index: 53,
 		mergeFrom: [],
@@ -501,7 +405,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack item effect by 10%.',
+		description: 'Increases attack item effect by 10%.',
 		id: '638a4d47a44f4fa4b0dec984',
 		index: 54,
 		mergeFrom: [],
@@ -509,24 +413,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack item effect by 12%.',
+		description: 'Increases attack item effect by 12%.',
 		id: '638a4d47a44f4fa4b0dec974',
 		index: 55,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases attack item effect by 5%.',
-						id: '638a4d47a44f4fa4b0dec96c',
-						index: 52,
-						name: 'Destruction Up',
-					},
-					{
-						description: 'Effect: Increases attack item effect by 7%.',
-						id: '638a4d47a44f4fa4b0dec96f',
-						index: 53,
-						name: 'Destruction Up+',
-					},
+					{ id: '638a4d47a44f4fa4b0dec96c', index: 52, name: 'Destruction Up' },
+					{ id: '638a4d47a44f4fa4b0dec96f', index: 53, name: 'Destruction Up+' },
 				],
 			},
 		],
@@ -534,24 +428,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack item effect by 17%.',
+		description: 'Increases attack item effect by 17%.',
 		id: '638a4d47a44f4fa4b0dec977',
 		index: 56,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases attack item effect by 7%.',
-						id: '638a4d47a44f4fa4b0dec96f',
-						index: 53,
-						name: 'Destruction Up+',
-					},
-					{
-						description: 'Effect: Increases attack item effect by 10%.',
-						id: '638a4d47a44f4fa4b0dec984',
-						index: 54,
-						name: 'Destruction Up++',
-					},
+					{ id: '638a4d47a44f4fa4b0dec96f', index: 53, name: 'Destruction Up+' },
+					{ id: '638a4d47a44f4fa4b0dec984', index: 54, name: 'Destruction Up++' },
 				],
 			},
 		],
@@ -559,24 +443,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack item effect by 30%.',
+		description: 'Increases attack item effect by 30%.',
 		id: '638a4d47a44f4fa4b0dec975',
 		index: 57,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases attack item effect by 12%.',
-						id: '638a4d47a44f4fa4b0dec974',
-						index: 55,
-						name: 'Big Destruction',
-					},
-					{
-						description: 'Effect: Increases attack item effect by 17%.',
-						id: '638a4d47a44f4fa4b0dec977',
-						index: 56,
-						name: 'Intense Destruction',
-					},
+					{ id: '638a4d47a44f4fa4b0dec974', index: 55, name: 'Big Destruction' },
+					{ id: '638a4d47a44f4fa4b0dec977', index: 56, name: 'Intense Destruction' },
 				],
 			},
 		],
@@ -584,7 +458,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack item effect by 40%.',
+		description: 'Increases attack item effect by 40%.',
 		id: '638a4d47a44f4fa4b0dec979',
 		index: 58,
 		mergeFrom: [],
@@ -592,7 +466,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attack item enhanced by a small, fixed amount. Lower power equals stronger enhancement.',
+		description: 'Attack item enhanced by a small, fixed amount. Lower power equals stronger enhancement.',
 		id: '638a4d47a44f4fa4b0dec978',
 		index: 59,
 		mergeFrom: [],
@@ -600,7 +474,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.',
+		description: 'Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.',
 		id: '638a4d47a44f4fa4b0dec976',
 		index: 60,
 		mergeFrom: [],
@@ -608,7 +482,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.',
+		description: 'Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.',
 		id: '638a4d47a44f4fa4b0dec97b',
 		index: 61,
 		mergeFrom: [],
@@ -616,26 +490,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.',
+		description: 'Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.',
 		id: '638a4d47a44f4fa4b0dec981',
 		index: 62,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Effect: Attack item enhanced by a small, fixed amount. Lower power equals stronger enhancement.',
-						id: '638a4d47a44f4fa4b0dec978',
-						index: 59,
-						name: 'Fixed Power',
-					},
-					{
-						description:
-							'Effect: Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.',
-						id: '638a4d47a44f4fa4b0dec976',
-						index: 60,
-						name: 'Fixed Power+',
-					},
+					{ id: '638a4d47a44f4fa4b0dec978', index: 59, name: 'Fixed Power' },
+					{ id: '638a4d47a44f4fa4b0dec976', index: 60, name: 'Fixed Power+' },
 				],
 			},
 		],
@@ -643,26 +505,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.',
+		description: 'Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.',
 		id: '638a4d47a44f4fa4b0dec97a',
 		index: 63,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Effect: Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.',
-						id: '638a4d47a44f4fa4b0dec976',
-						index: 60,
-						name: 'Fixed Power+',
-					},
-					{
-						description:
-							'Effect: Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.',
-						id: '638a4d47a44f4fa4b0dec97b',
-						index: 61,
-						name: 'Fixed Power++',
-					},
+					{ id: '638a4d47a44f4fa4b0dec976', index: 60, name: 'Fixed Power+' },
+					{ id: '638a4d47a44f4fa4b0dec97b', index: 61, name: 'Fixed Power++' },
 				],
 			},
 		],
@@ -670,26 +520,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attack item enhanced by a huge, fixed amount. Lower power equals stronger enhancement.',
+		description: 'Attack item enhanced by a huge, fixed amount. Lower power equals stronger enhancement.',
 		id: '638a4d47a44f4fa4b0dec9a4',
 		index: 64,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Effect: Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.',
-						id: '638a4d47a44f4fa4b0dec981',
-						index: 62,
-						name: 'Pain in Numbers',
-					},
-					{
-						description:
-							'Effect: Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.',
-						id: '638a4d47a44f4fa4b0dec97a',
-						index: 63,
-						name: 'Damage in Numbers',
-					},
+					{ id: '638a4d47a44f4fa4b0dec981', index: 62, name: 'Pain in Numbers' },
+					{ id: '638a4d47a44f4fa4b0dec97a', index: 63, name: 'Damage in Numbers' },
 				],
 			},
 		],
@@ -697,8 +535,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description:
-			'Effect: Attack item enhanced by a ridiculous, fixed amount. This increase scales with the original value.',
+		description: 'Attack item enhanced by a ridiculous, fixed amount. This increase scales with the original value.',
 		id: '638a4d47a44f4fa4b0dec97c',
 		index: 65,
 		mergeFrom: [],
@@ -706,7 +543,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attacks cause 5% additional damage, and increases skill power by 5%.',
+		description: 'Attacks cause 5% additional damage, and increases skill power by 5%.',
 		id: '638a4d47a44f4fa4b0dec97f',
 		index: 66,
 		mergeFrom: [],
@@ -714,7 +551,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attacks cause 7% additional damage, and increases skill power by 7%.',
+		description: 'Attacks cause 7% additional damage, and increases skill power by 7%.',
 		id: '638a4d47a44f4fa4b0dec980',
 		index: 67,
 		mergeFrom: [],
@@ -722,7 +559,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attacks cause 10% additional damage, and increases skill power by 10%.',
+		description: 'Attacks cause 10% additional damage, and increases skill power by 10%.',
 		id: '638a4d47a44f4fa4b0dec97d',
 		index: 68,
 		mergeFrom: [],
@@ -730,7 +567,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases recovery item effect by 10%.',
+		description: 'Increases recovery item effect by 10%.',
 		id: '638a4d47a44f4fa4b0dec9a1',
 		index: 103,
 		mergeFrom: [],
@@ -738,7 +575,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases recovery item effect by 15%.',
+		description: 'Increases recovery item effect by 15%.',
 		id: '638a4d47a44f4fa4b0dec983',
 		index: 104,
 		mergeFrom: [],
@@ -746,7 +583,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases recovery item effect by 20%.',
+		description: 'Increases recovery item effect by 20%.',
 		id: '638a4d47a44f4fa4b0dec985',
 		index: 105,
 		mergeFrom: [],
@@ -754,24 +591,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases recovery item effect by 25%.',
+		description: 'Increases recovery item effect by 25%.',
 		id: '638a4d47a44f4fa4b0dec995',
 		index: 106,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases recovery item effect by 10%.',
-						id: '638a4d47a44f4fa4b0dec9a1',
-						index: 103,
-						name: 'Recovery Up',
-					},
-					{
-						description: 'Effect: Increases recovery item effect by 15%.',
-						id: '638a4d47a44f4fa4b0dec983',
-						index: 104,
-						name: 'Recovery Up+',
-					},
+					{ id: '638a4d47a44f4fa4b0dec9a1', index: 103, name: 'Recovery Up' },
+					{ id: '638a4d47a44f4fa4b0dec983', index: 104, name: 'Recovery Up+' },
 				],
 			},
 		],
@@ -779,24 +606,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases recovery item effect by 35%.',
+		description: 'Increases recovery item effect by 35%.',
 		id: '638a4d47a44f4fa4b0dec986',
 		index: 107,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases recovery item effect by 15%.',
-						id: '638a4d47a44f4fa4b0dec983',
-						index: 104,
-						name: 'Recovery Up+',
-					},
-					{
-						description: 'Effect: Increases recovery item effect by 20%.',
-						id: '638a4d47a44f4fa4b0dec985',
-						index: 105,
-						name: 'Recovery Up++',
-					},
+					{ id: '638a4d47a44f4fa4b0dec983', index: 104, name: 'Recovery Up+' },
+					{ id: '638a4d47a44f4fa4b0dec985', index: 105, name: 'Recovery Up++' },
 				],
 			},
 		],
@@ -804,24 +621,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases recovery item effect by 50%.',
+		description: 'Increases recovery item effect by 50%.',
 		id: '638a4d47a44f4fa4b0dec997',
 		index: 108,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases recovery item effect by 25%.',
-						id: '638a4d47a44f4fa4b0dec995',
-						index: 106,
-						name: 'Big Recovery',
-					},
-					{
-						description: 'Effect: Increases recovery item effect by 35%.',
-						id: '638a4d47a44f4fa4b0dec986',
-						index: 107,
-						name: 'Intense Recovery',
-					},
+					{ id: '638a4d47a44f4fa4b0dec995', index: 106, name: 'Big Recovery' },
+					{ id: '638a4d47a44f4fa4b0dec986', index: 107, name: 'Intense Recovery' },
 				],
 			},
 		],
@@ -829,7 +636,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases recovery item effect by 40%.',
+		description: 'Increases recovery item effect by 40%.',
 		id: '638a4d47a44f4fa4b0dec988',
 		index: 109,
 		mergeFrom: [],
@@ -837,7 +644,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Recovery item enhanced by a tiny, fixed amount. Lower power equals stronger effect.',
+		description: 'Recovery item enhanced by a tiny, fixed amount. Lower power equals stronger effect.',
 		id: '638a4d47a44f4fa4b0dec989',
 		index: 110,
 		mergeFrom: [],
@@ -845,7 +652,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.',
+		description: 'Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.',
 		id: '638a4d47a44f4fa4b0dec987',
 		index: 111,
 		mergeFrom: [],
@@ -853,7 +660,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Recovery item enhanced by a fixed amount. Lower power equals stronger effect.',
+		description: 'Recovery item enhanced by a fixed amount. Lower power equals stronger effect.',
 		id: '638a4d47a44f4fa4b0dec98a',
 		index: 112,
 		mergeFrom: [],
@@ -861,26 +668,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.',
+		description: 'Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.',
 		id: '638a4d47a44f4fa4b0dec98d',
 		index: 113,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Effect: Recovery item enhanced by a tiny, fixed amount. Lower power equals stronger effect.',
-						id: '638a4d47a44f4fa4b0dec989',
-						index: 110,
-						name: 'Fixed Recovery',
-					},
-					{
-						description:
-							'Effect: Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.',
-						id: '638a4d47a44f4fa4b0dec987',
-						index: 111,
-						name: 'Fixed Recovery+',
-					},
+					{ id: '638a4d47a44f4fa4b0dec989', index: 110, name: 'Fixed Recovery' },
+					{ id: '638a4d47a44f4fa4b0dec987', index: 111, name: 'Fixed Recovery+' },
 				],
 			},
 		],
@@ -888,25 +683,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Recovery item enhanced by a fixed amount. Lower power equals stronger effect.',
+		description: 'Recovery item enhanced by a fixed amount. Lower power equals stronger effect.',
 		id: '638a4d47a44f4fa4b0dec98b',
 		index: 114,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Effect: Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.',
-						id: '638a4d47a44f4fa4b0dec987',
-						index: 111,
-						name: 'Fixed Recovery+',
-					},
-					{
-						description: 'Effect: Recovery item enhanced by a fixed amount. Lower power equals stronger effect.',
-						id: '638a4d47a44f4fa4b0dec98a',
-						index: 112,
-						name: 'Fixed Recovery++',
-					},
+					{ id: '638a4d47a44f4fa4b0dec987', index: 111, name: 'Fixed Recovery+' },
+					{ id: '638a4d47a44f4fa4b0dec98a', index: 112, name: 'Fixed Recovery++' },
 				],
 			},
 		],
@@ -914,25 +698,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Recovery item enhanced by a large, fixed amount. Lower power equals stronger effect.',
+		description: 'Recovery item enhanced by a large, fixed amount. Lower power equals stronger effect.',
 		id: '638a4d47a44f4fa4b0dec993',
 		index: 115,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Effect: Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.',
-						id: '638a4d47a44f4fa4b0dec98d',
-						index: 113,
-						name: 'Medicine Enhance',
-					},
-					{
-						description: 'Effect: Recovery item enhanced by a fixed amount. Lower power equals stronger effect.',
-						id: '638a4d47a44f4fa4b0dec98b',
-						index: 114,
-						name: 'Big Medicine Enhance',
-					},
+					{ id: '638a4d47a44f4fa4b0dec98d', index: 113, name: 'Medicine Enhance' },
+					{ id: '638a4d47a44f4fa4b0dec98b', index: 114, name: 'Big Medicine Enhance' },
 				],
 			},
 		],
@@ -941,7 +714,7 @@ const traits: Trait[] = [
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Effect: Recovery item enhanced by a ridiculous, fixed amount. This increase scales with the original value.',
+			'Recovery item enhanced by a ridiculous, fixed amount. This increase scales with the original value.',
 		id: '638a4d47a44f4fa4b0dec98c',
 		index: 116,
 		mergeFrom: [],
@@ -949,7 +722,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Gives item a 15% chance to critical hit.',
+		description: 'Gives item a 15% chance to critical hit.',
 		id: '638a4d47a44f4fa4b0dec990',
 		index: 145,
 		mergeFrom: [],
@@ -957,7 +730,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Gives item a 25% chance to critical hit.',
+		description: 'Gives item a 25% chance to critical hit.',
 		id: '638a4d47a44f4fa4b0dec98f',
 		index: 146,
 		mergeFrom: [],
@@ -965,7 +738,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Gives item a 35% chance to critical hit.',
+		description: 'Gives item a 35% chance to critical hit.',
 		id: '638a4d47a44f4fa4b0dec991',
 		index: 147,
 		mergeFrom: [],
@@ -973,24 +746,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Gives item a 50% chance to critical hit.',
+		description: 'Gives item a 50% chance to critical hit.',
 		id: '638a4d47a44f4fa4b0dec98e',
 		index: 148,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Gives item a 15% chance to critical hit.',
-						id: '638a4d47a44f4fa4b0dec990',
-						index: 145,
-						name: 'Critical',
-					},
-					{
-						description: 'Effect: Gives item a 25% chance to critical hit.',
-						id: '638a4d47a44f4fa4b0dec98f',
-						index: 146,
-						name: 'Critical+',
-					},
+					{ id: '638a4d47a44f4fa4b0dec990', index: 145, name: 'Critical' },
+					{ id: '638a4d47a44f4fa4b0dec98f', index: 146, name: 'Critical+' },
 				],
 			},
 		],
@@ -998,24 +761,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Item will always critical hit.',
+		description: 'Item will always critical hit.',
 		id: '638a4d47a44f4fa4b0dec992',
 		index: 149,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Gives item a 25% chance to critical hit.',
-						id: '638a4d47a44f4fa4b0dec98f',
-						index: 146,
-						name: 'Critical+',
-					},
-					{
-						description: 'Effect: Gives item a 35% chance to critical hit.',
-						id: '638a4d47a44f4fa4b0dec991',
-						index: 147,
-						name: 'Critical++',
-					},
+					{ id: '638a4d47a44f4fa4b0dec98f', index: 146, name: 'Critical+' },
+					{ id: '638a4d47a44f4fa4b0dec991', index: 147, name: 'Critical++' },
 				],
 			},
 		],
@@ -1023,24 +776,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Item will always critical hit, and KO target (bosses excluded).',
+		description: 'Item will always critical hit, and KO target (bosses excluded).',
 		id: '638a4d47a44f4fa4b0dec994',
 		index: 150,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Gives item a 50% chance to critical hit.',
-						id: '638a4d47a44f4fa4b0dec98e',
-						index: 148,
-						name: 'Critical Finish',
-					},
-					{
-						description: 'Effect: Item will always critical hit.',
-						id: '638a4d47a44f4fa4b0dec992',
-						index: 149,
-						name: 'Always Critical',
-					},
+					{ id: '638a4d47a44f4fa4b0dec98e', index: 148, name: 'Critical Finish' },
+					{ id: '638a4d47a44f4fa4b0dec992', index: 149, name: 'Always Critical' },
 				],
 			},
 		],
@@ -1048,7 +791,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces item number variation slightly, making it easier to score higher numbers.',
+		description: 'Reduces item number variation slightly, making it easier to score higher numbers.',
 		id: '638a4d47a44f4fa4b0dec998',
 		index: 151,
 		mergeFrom: [],
@@ -1056,7 +799,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces item number variation a little, making it easier to score higher numbers.',
+		description: 'Reduces item number variation a little, making it easier to score higher numbers.',
 		id: '638a4d47a44f4fa4b0dec996',
 		index: 152,
 		mergeFrom: [],
@@ -1064,7 +807,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces item number variation, making it easier to score higher numbers.',
+		description: 'Reduces item number variation, making it easier to score higher numbers.',
 		id: '638a4d47a44f4fa4b0dec999',
 		index: 153,
 		mergeFrom: [],
@@ -1072,26 +815,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces item number variation, making it easier to score higher numbers.',
+		description: 'Reduces item number variation, making it easier to score higher numbers.',
 		id: '638a4d47a44f4fa4b0dec9a8',
 		index: 154,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Effect: Reduces item number variation slightly, making it easier to score higher numbers.',
-						id: '638a4d47a44f4fa4b0dec998',
-						index: 151,
-						name: 'Stable Effect',
-					},
-					{
-						description:
-							'Effect: Reduces item number variation a little, making it easier to score higher numbers.',
-						id: '638a4d47a44f4fa4b0dec996',
-						index: 152,
-						name: 'Stable Effect+',
-					},
+					{ id: '638a4d47a44f4fa4b0dec998', index: 151, name: 'Stable Effect' },
+					{ id: '638a4d47a44f4fa4b0dec996', index: 152, name: 'Stable Effect+' },
 				],
 			},
 		],
@@ -1099,25 +830,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Halves item number variation, making it easier to score higher numbers.',
+		description: 'Halves item number variation, making it easier to score higher numbers.',
 		id: '638a4d48a44f4fa4b0dec9ca',
 		index: 155,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Effect: Reduces item number variation a little, making it easier to score higher numbers.',
-						id: '638a4d47a44f4fa4b0dec996',
-						index: 152,
-						name: 'Stable Effect+',
-					},
-					{
-						description: 'Effect: Reduces item number variation, making it easier to score higher numbers.',
-						id: '638a4d47a44f4fa4b0dec999',
-						index: 153,
-						name: 'Stable Effect++',
-					},
+					{ id: '638a4d47a44f4fa4b0dec996', index: 152, name: 'Stable Effect+' },
+					{ id: '638a4d47a44f4fa4b0dec999', index: 153, name: 'Stable Effect++' },
 				],
 			},
 		],
@@ -1125,24 +845,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Stabilizes item number variation, making it far easier to score higher numbers.',
+		description: 'Stabilizes item number variation, making it far easier to score higher numbers.',
 		id: '638a4d47a44f4fa4b0dec99d',
 		index: 156,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Reduces item number variation, making it easier to score higher numbers.',
-						id: '638a4d47a44f4fa4b0dec9a8',
-						index: 154,
-						name: 'Stability Emphasis',
-					},
-					{
-						description: 'Effect: Halves item number variation, making it easier to score higher numbers.',
-						id: '638a4d48a44f4fa4b0dec9ca',
-						index: 155,
-						name: 'Solid Effect',
-					},
+					{ id: '638a4d47a44f4fa4b0dec9a8', index: 154, name: 'Stability Emphasis' },
+					{ id: '638a4d48a44f4fa4b0dec9ca', index: 155, name: 'Solid Effect' },
 				],
 			},
 		],
@@ -1150,7 +860,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases item use count by 1. Power is reduced a little.',
+		description: 'Increases item use count by 1. Power is reduced a little.',
 		id: '638a4d47a44f4fa4b0dec99a',
 		index: 172,
 		mergeFrom: [],
@@ -1158,7 +868,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases item use count by 2. Power is reduced slightly.',
+		description: 'Increases item use count by 2. Power is reduced slightly.',
 		id: '638a4d47a44f4fa4b0dec99b',
 		index: 173,
 		mergeFrom: [],
@@ -1166,24 +876,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases item use count by 3.',
+		description: 'Increases item use count by 3.',
 		id: '638a4d47a44f4fa4b0dec9a0',
 		index: 174,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases item use count by 1. Power is reduced a little.',
-						id: '638a4d47a44f4fa4b0dec99a',
-						index: 172,
-						name: 'Use Count +1',
-					},
-					{
-						description: 'Effect: Increases item use count by 2. Power is reduced slightly.',
-						id: '638a4d47a44f4fa4b0dec99b',
-						index: 173,
-						name: 'Use Count +2',
-					},
+					{ id: '638a4d47a44f4fa4b0dec99a', index: 172, name: 'Use Count +1' },
+					{ id: '638a4d47a44f4fa4b0dec99b', index: 173, name: 'Use Count +2' },
 				],
 			},
 		],
@@ -1191,7 +891,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces item use count by 1. Power is increased a little.',
+		description: 'Reduces item use count by 1. Power is increased a little.',
 		id: '638a4d47a44f4fa4b0dec99c',
 		index: 175,
 		mergeFrom: [],
@@ -1199,7 +899,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces item use count by 2. Power is increased.',
+		description: 'Reduces item use count by 2. Power is increased.',
 		id: '638a4d47a44f4fa4b0dec99f',
 		index: 176,
 		mergeFrom: [],
@@ -1207,24 +907,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces item use count by 5. Power is massively increased.',
+		description: 'Reduces item use count by 5. Power is massively increased.',
 		id: '638a4d47a44f4fa4b0dec9a3',
 		index: 177,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Reduces item use count by 1. Power is increased a little.',
-						id: '638a4d47a44f4fa4b0dec99c',
-						index: 175,
-						name: 'Use Count -1',
-					},
-					{
-						description: 'Effect: Reduces item use count by 2. Power is increased.',
-						id: '638a4d47a44f4fa4b0dec99f',
-						index: 176,
-						name: 'Use Count -2',
-					},
+					{ id: '638a4d47a44f4fa4b0dec99c', index: 175, name: 'Use Count -1' },
+					{ id: '638a4d47a44f4fa4b0dec99f', index: 176, name: 'Use Count -2' },
 				],
 			},
 		],
@@ -1232,7 +922,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 10.',
+		description: 'Bestows a maximum HP increase. Maximum HP increases by 10.',
 		id: '638a4d47a44f4fa4b0dec99e',
 		index: 190,
 		mergeFrom: [],
@@ -1240,7 +930,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 15.',
+		description: 'Bestows a maximum HP increase. Maximum HP increases by 15.',
 		id: '638a4d48a44f4fa4b0dec9cd',
 		index: 191,
 		mergeFrom: [],
@@ -1248,7 +938,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 25.',
+		description: 'Bestows a maximum HP increase. Maximum HP increases by 25.',
 		id: '638a4d47a44f4fa4b0dec9a2',
 		index: 192,
 		mergeFrom: [],
@@ -1256,24 +946,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Maximum HP increases by 25.',
+		description: 'Maximum HP increases by 25.',
 		id: '638a4d47a44f4fa4b0dec9a5',
 		index: 193,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 10.',
-						id: '638a4d47a44f4fa4b0dec99e',
-						index: 190,
-						name: 'HP Enhance',
-					},
-					{
-						description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 15.',
-						id: '638a4d48a44f4fa4b0dec9cd',
-						index: 191,
-						name: 'HP Boost',
-					},
+					{ id: '638a4d47a44f4fa4b0dec99e', index: 190, name: 'HP Enhance' },
+					{ id: '638a4d48a44f4fa4b0dec9cd', index: 191, name: 'HP Boost' },
 				],
 			},
 		],
@@ -1281,24 +961,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Revive from KO, and also removes 3 status ailments.',
+		description: 'Revive from KO, and also removes 3 status ailments.',
 		id: '638a4d49a44f4fa4b0deca80',
 		index: 193,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 10.',
-						id: '638a4d47a44f4fa4b0dec99e',
-						index: 190,
-						name: 'HP Enhance',
-					},
-					{
-						description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 15.',
-						id: '638a4d48a44f4fa4b0dec9cd',
-						index: 191,
-						name: 'HP Boost',
-					},
+					{ id: '638a4d47a44f4fa4b0dec99e', index: 190, name: 'HP Enhance' },
+					{ id: '638a4d48a44f4fa4b0dec9cd', index: 191, name: 'HP Boost' },
 				],
 			},
 		],
@@ -1306,24 +976,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Maximum HP increases by 40.',
+		description: 'Maximum HP increases by 40.',
 		id: '638a4d47a44f4fa4b0dec9a9',
 		index: 194,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 15.',
-						id: '638a4d48a44f4fa4b0dec9cd',
-						index: 191,
-						name: 'HP Boost',
-					},
-					{
-						description: 'Bestows a maximum HP increase. Effect: Maximum HP increases by 25.',
-						id: '638a4d47a44f4fa4b0dec9a2',
-						index: 192,
-						name: 'HP Super Enhance',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9cd', index: 191, name: 'HP Boost' },
+					{ id: '638a4d47a44f4fa4b0dec9a2', index: 192, name: 'HP Super Enhance' },
 				],
 			},
 		],
@@ -1331,24 +991,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Maximum HP increases by 70.',
+		description: 'Maximum HP increases by 70.',
 		id: '638a4d48a44f4fa4b0dec9b0',
 		index: 195,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Maximum HP increases by 25.',
-						id: '638a4d47a44f4fa4b0dec9a5',
-						index: 193,
-						name: 'Full of Life',
-					},
-					{
-						description: 'Effect: Maximum HP increases by 40.',
-						id: '638a4d47a44f4fa4b0dec9a9',
-						index: 194,
-						name: 'Overflowing Life',
-					},
+					{ id: '638a4d47a44f4fa4b0dec9a5', index: 193, name: 'Full of Life' },
+					{ id: '638a4d47a44f4fa4b0dec9a9', index: 194, name: 'Overflowing Life' },
 				],
 			},
 		],
@@ -1356,7 +1006,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 10.',
+		description: 'Bestows a maximum MP increase. Maximum MP increases by 10.',
 		id: '638a4d47a44f4fa4b0dec9a6',
 		index: 196,
 		mergeFrom: [],
@@ -1364,7 +1014,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 15.',
+		description: 'Bestows a maximum MP increase. Maximum MP increases by 15.',
 		id: '638a4d47a44f4fa4b0dec9a7',
 		index: 197,
 		mergeFrom: [],
@@ -1372,7 +1022,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 25.',
+		description: 'Bestows a maximum MP increase. Maximum MP increases by 25.',
 		id: '638a4d47a44f4fa4b0dec9aa',
 		index: 198,
 		mergeFrom: [],
@@ -1380,24 +1030,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Maximum MP increases by 25.',
+		description: 'Maximum MP increases by 25.',
 		id: '638a4d47a44f4fa4b0dec9ad',
 		index: 199,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 10.',
-						id: '638a4d47a44f4fa4b0dec9a6',
-						index: 196,
-						name: 'MP Enhance',
-					},
-					{
-						description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 15.',
-						id: '638a4d47a44f4fa4b0dec9a7',
-						index: 197,
-						name: 'MP Boost',
-					},
+					{ id: '638a4d47a44f4fa4b0dec9a6', index: 196, name: 'MP Enhance' },
+					{ id: '638a4d47a44f4fa4b0dec9a7', index: 197, name: 'MP Boost' },
 				],
 			},
 		],
@@ -1405,24 +1045,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Maximum MP increases by 40.',
+		description: 'Maximum MP increases by 40.',
 		id: '638a4d47a44f4fa4b0dec9ab',
 		index: 200,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 15.',
-						id: '638a4d47a44f4fa4b0dec9a7',
-						index: 197,
-						name: 'MP Boost',
-					},
-					{
-						description: 'Bestows a maximum MP increase. Effect: Maximum MP increases by 25.',
-						id: '638a4d47a44f4fa4b0dec9aa',
-						index: 198,
-						name: 'MP Super Enhance',
-					},
+					{ id: '638a4d47a44f4fa4b0dec9a7', index: 197, name: 'MP Boost' },
+					{ id: '638a4d47a44f4fa4b0dec9aa', index: 198, name: 'MP Super Enhance' },
 				],
 			},
 		],
@@ -1430,24 +1060,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Maximum MP increases by 70.',
+		description: 'Maximum MP increases by 70.',
 		id: '638a4d48a44f4fa4b0dec9b4',
 		index: 201,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Maximum MP increases by 25.',
-						id: '638a4d47a44f4fa4b0dec9ad',
-						index: 199,
-						name: "Magician's Wisdom",
-					},
-					{
-						description: 'Effect: Maximum MP increases by 40.',
-						id: '638a4d47a44f4fa4b0dec9ab',
-						index: 200,
-						name: "Grand Magician's Wisdom",
-					},
+					{ id: '638a4d47a44f4fa4b0dec9ad', index: 199, name: "Magician's Wisdom" },
+					{ id: '638a4d47a44f4fa4b0dec9ab', index: 200, name: "Grand Magician's Wisdom" },
 				],
 			},
 		],
@@ -1455,7 +1075,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 5.',
+		description: 'Bestows a maximum LP increase. Maximum LP increases by 5.',
 		id: '638a4d47a44f4fa4b0dec9ac',
 		index: 202,
 		mergeFrom: [],
@@ -1463,7 +1083,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 7.',
+		description: 'Bestows a maximum LP increase. Maximum LP increases by 7.',
 		id: '638a4d47a44f4fa4b0dec9ae',
 		index: 203,
 		mergeFrom: [],
@@ -1471,7 +1091,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 10.',
+		description: 'Bestows a maximum LP increase. Maximum LP increases by 10.',
 		id: '638a4d48a44f4fa4b0dec9af',
 		index: 204,
 		mergeFrom: [],
@@ -1479,24 +1099,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Maximum LP increases by 12.',
+		description: 'Maximum LP increases by 12.',
 		id: '638a4d48a44f4fa4b0dec9ba',
 		index: 205,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 5.',
-						id: '638a4d47a44f4fa4b0dec9ac',
-						index: 202,
-						name: 'LP Enhance',
-					},
-					{
-						description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 7.',
-						id: '638a4d47a44f4fa4b0dec9ae',
-						index: 203,
-						name: 'LP Boost',
-					},
+					{ id: '638a4d47a44f4fa4b0dec9ac', index: 202, name: 'LP Enhance' },
+					{ id: '638a4d47a44f4fa4b0dec9ae', index: 203, name: 'LP Boost' },
 				],
 			},
 		],
@@ -1504,24 +1114,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Maximum LP increases by 17.',
+		description: 'Maximum LP increases by 17.',
 		id: '638a4d48a44f4fa4b0dec9b1',
 		index: 206,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 7.',
-						id: '638a4d47a44f4fa4b0dec9ae',
-						index: 203,
-						name: 'LP Boost',
-					},
-					{
-						description: 'Bestows a maximum LP increase. Effect: Maximum LP increases by 10.',
-						id: '638a4d48a44f4fa4b0dec9af',
-						index: 204,
-						name: 'LP Super Enhance',
-					},
+					{ id: '638a4d47a44f4fa4b0dec9ae', index: 203, name: 'LP Boost' },
+					{ id: '638a4d48a44f4fa4b0dec9af', index: 204, name: 'LP Super Enhance' },
 				],
 			},
 		],
@@ -1529,24 +1129,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Maximum LP increases by 30.',
+		description: 'Maximum LP increases by 30.',
 		id: '638a4d48a44f4fa4b0dec9b5',
 		index: 207,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Maximum LP increases by 12.',
-						id: '638a4d48a44f4fa4b0dec9ba',
-						index: 205,
-						name: 'Full of Stamina',
-					},
-					{
-						description: 'Effect: Maximum LP increases by 17.',
-						id: '638a4d48a44f4fa4b0dec9b1',
-						index: 206,
-						name: 'Unabating Stamina',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9ba', index: 205, name: 'Full of Stamina' },
+					{ id: '638a4d48a44f4fa4b0dec9b1', index: 206, name: 'Unabating Stamina' },
 				],
 			},
 		],
@@ -1554,24 +1144,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Maximum HP and MP increases by 15.',
+		description: 'Maximum HP and MP increases by 15.',
 		id: '638a4d48a44f4fa4b0dec9b7',
 		index: 208,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Maximum HP increases by 25.',
-						id: '638a4d47a44f4fa4b0dec9a5',
-						index: 193,
-						name: 'Full of Life',
-					},
-					{
-						description: 'Effect: Maximum MP increases by 25.',
-						id: '638a4d47a44f4fa4b0dec9ad',
-						index: 199,
-						name: "Magician's Wisdom",
-					},
+					{ id: '638a4d47a44f4fa4b0dec9a5', index: 193, name: 'Full of Life' },
+					{ id: '638a4d47a44f4fa4b0dec9ad', index: 199, name: "Magician's Wisdom" },
 				],
 			},
 		],
@@ -1579,24 +1159,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Maximum HP and MP increases by 25.',
+		description: 'Maximum HP and MP increases by 25.',
 		id: '638a4d48a44f4fa4b0dec9b2',
 		index: 209,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Maximum HP increases by 40.',
-						id: '638a4d47a44f4fa4b0dec9a9',
-						index: 194,
-						name: 'Overflowing Life',
-					},
-					{
-						description: 'Effect: Maximum MP increases by 40.',
-						id: '638a4d47a44f4fa4b0dec9ab',
-						index: 200,
-						name: "Grand Magician's Wisdom",
-					},
+					{ id: '638a4d47a44f4fa4b0dec9a9', index: 194, name: 'Overflowing Life' },
+					{ id: '638a4d47a44f4fa4b0dec9ab', index: 200, name: "Grand Magician's Wisdom" },
 				],
 			},
 		],
@@ -1604,24 +1174,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Maximum HP and MP increases by 40.',
+		description: 'Maximum HP and MP increases by 40.',
 		id: '638a4d48a44f4fa4b0dec9b8',
 		index: 210,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Maximum HP increases by 70.',
-						id: '638a4d48a44f4fa4b0dec9b0',
-						index: 195,
-						name: 'Power of Life',
-					},
-					{
-						description: 'Effect: Maximum MP increases by 70.',
-						id: '638a4d48a44f4fa4b0dec9b4',
-						index: 201,
-						name: 'Wisdom of the Gods',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9b0', index: 195, name: 'Power of Life' },
+					{ id: '638a4d48a44f4fa4b0dec9b4', index: 201, name: 'Wisdom of the Gods' },
 				],
 			},
 		],
@@ -1629,7 +1189,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows a stat boost. Effect: Increases base stats by 5%.',
+		description: 'Bestows a stat boost. Increases base stats by 5%.',
 		id: '638a4d48a44f4fa4b0dec9b3',
 		index: 211,
 		mergeFrom: [],
@@ -1637,7 +1197,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows a stat boost. Effect: Increases base stats by 6%.',
+		description: 'Bestows a stat boost. Increases base stats by 6%.',
 		id: '638a4d48a44f4fa4b0dec9b6',
 		index: 212,
 		mergeFrom: [],
@@ -1645,7 +1205,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows a stat boost. Effect: Increases base stats by 7%.',
+		description: 'Bestows a stat boost. Increases base stats by 7%.',
 		id: '638a4d48a44f4fa4b0dec9bc',
 		index: 213,
 		mergeFrom: [],
@@ -1653,24 +1213,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases base stats by 10%.',
+		description: 'Increases base stats by 10%.',
 		id: '638a4d48a44f4fa4b0dec9b9',
 		index: 214,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Bestows a stat boost. Effect: Increases base stats by 5%.',
-						id: '638a4d48a44f4fa4b0dec9b3',
-						index: 211,
-						name: 'Parameters +5%',
-					},
-					{
-						description: 'Bestows a stat boost. Effect: Increases base stats by 6%.',
-						id: '638a4d48a44f4fa4b0dec9b6',
-						index: 212,
-						name: 'Parameters +6%',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9b3', index: 211, name: 'Parameters +5%' },
+					{ id: '638a4d48a44f4fa4b0dec9b6', index: 212, name: 'Parameters +6%' },
 				],
 			},
 		],
@@ -1678,24 +1228,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases base stats by 12%.',
+		description: 'Increases base stats by 12%.',
 		id: '638a4d48a44f4fa4b0dec9be',
 		index: 215,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Bestows a stat boost. Effect: Increases base stats by 6%.',
-						id: '638a4d48a44f4fa4b0dec9b6',
-						index: 212,
-						name: 'Parameters +6%',
-					},
-					{
-						description: 'Bestows a stat boost. Effect: Increases base stats by 7%.',
-						id: '638a4d48a44f4fa4b0dec9bc',
-						index: 213,
-						name: 'Parameters +7%',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9b6', index: 212, name: 'Parameters +6%' },
+					{ id: '638a4d48a44f4fa4b0dec9bc', index: 213, name: 'Parameters +7%' },
 				],
 			},
 		],
@@ -1703,24 +1243,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases base stats by 15%.',
+		description: 'Increases base stats by 15%.',
 		id: '638a4d48a44f4fa4b0dec9bb',
 		index: 216,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases base stats by 10%.',
-						id: '638a4d48a44f4fa4b0dec9b9',
-						index: 214,
-						name: 'Enhance the Body',
-					},
-					{
-						description: 'Effect: Increases base stats by 12%.',
-						id: '638a4d48a44f4fa4b0dec9be',
-						index: 215,
-						name: 'Draw Out Power',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9b9', index: 214, name: 'Enhance the Body' },
+					{ id: '638a4d48a44f4fa4b0dec9be', index: 215, name: 'Draw Out Power' },
 				],
 			},
 		],
@@ -1728,7 +1258,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases base stats by 20%.',
+		description: 'Increases base stats by 20%.',
 		id: '638a4d48a44f4fa4b0dec9c0',
 		index: 217,
 		mergeFrom: [],
@@ -1736,7 +1266,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Enhances weapon attack power. Effect: Increases attack power by 7.',
+		description: 'Enhances weapon attack power. Increases attack power by 7.',
 		id: '638a4d48a44f4fa4b0dec9d3',
 		index: 218,
 		mergeFrom: [],
@@ -1744,7 +1274,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Enhances weapon attack power. Effect: Increases attack power by 10.',
+		description: 'Enhances weapon attack power. Increases attack power by 10.',
 		id: '638a4d48a44f4fa4b0dec9bf',
 		index: 219,
 		mergeFrom: [],
@@ -1752,7 +1282,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Enhances weapon attack power. Effect: Increases attack power by 15.',
+		description: 'Enhances weapon attack power. Increases attack power by 15.',
 		id: '638a4d48a44f4fa4b0dec9bd',
 		index: 220,
 		mergeFrom: [],
@@ -1760,24 +1290,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack power by 15.',
+		description: 'Increases attack power by 15.',
 		id: '638a4d48a44f4fa4b0dec9c5',
 		index: 221,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Enhances weapon attack power. Effect: Increases attack power by 7.',
-						id: '638a4d48a44f4fa4b0dec9d3',
-						index: 218,
-						name: 'Attack Enhance',
-					},
-					{
-						description: 'Enhances weapon attack power. Effect: Increases attack power by 10.',
-						id: '638a4d48a44f4fa4b0dec9bf',
-						index: 219,
-						name: 'Attack Boost',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9d3', index: 218, name: 'Attack Enhance' },
+					{ id: '638a4d48a44f4fa4b0dec9bf', index: 219, name: 'Attack Boost' },
 				],
 			},
 		],
@@ -1785,24 +1305,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack power by 25.',
+		description: 'Increases attack power by 25.',
 		id: '638a4d48a44f4fa4b0dec9c3',
 		index: 222,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Enhances weapon attack power. Effect: Increases attack power by 10.',
-						id: '638a4d48a44f4fa4b0dec9bf',
-						index: 219,
-						name: 'Attack Boost',
-					},
-					{
-						description: 'Enhances weapon attack power. Effect: Increases attack power by 15.',
-						id: '638a4d48a44f4fa4b0dec9bd',
-						index: 220,
-						name: 'Attack Super Enhance',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9bf', index: 219, name: 'Attack Boost' },
+					{ id: '638a4d48a44f4fa4b0dec9bd', index: 220, name: 'Attack Super Enhance' },
 				],
 			},
 		],
@@ -1810,24 +1320,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack power by 40.',
+		description: 'Increases attack power by 40.',
 		id: '638a4d48a44f4fa4b0dec9c4',
 		index: 223,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases attack power by 15.',
-						id: '638a4d48a44f4fa4b0dec9c5',
-						index: 221,
-						name: 'Power of Beasts',
-					},
-					{
-						description: 'Effect: Increases attack power by 25.',
-						id: '638a4d48a44f4fa4b0dec9c3',
-						index: 222,
-						name: 'Power of Destruction',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9c5', index: 221, name: 'Power of Beasts' },
+					{ id: '638a4d48a44f4fa4b0dec9c3', index: 222, name: 'Power of Destruction' },
 				],
 			},
 		],
@@ -1835,7 +1335,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Enhances armor defense. Effect: Increases defense by 7.',
+		description: 'Enhances armor defense. Increases defense by 7.',
 		id: '638a4d48a44f4fa4b0dec9c1',
 		index: 224,
 		mergeFrom: [],
@@ -1843,7 +1343,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Enhances armor defense. Effect: Increases defense by 10.',
+		description: 'Enhances armor defense. Increases defense by 10.',
 		id: '638a4d48a44f4fa4b0dec9c2',
 		index: 225,
 		mergeFrom: [],
@@ -1851,7 +1351,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Enhances armor defense. Effect: Increases defense by 15.',
+		description: 'Enhances armor defense. Increases defense by 15.',
 		id: '638a4d48a44f4fa4b0dec9c6',
 		index: 226,
 		mergeFrom: [],
@@ -1859,24 +1359,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases defense by 15.',
+		description: 'Increases defense by 15.',
 		id: '638a4d48a44f4fa4b0dec9c8',
 		index: 227,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Enhances armor defense. Effect: Increases defense by 7.',
-						id: '638a4d48a44f4fa4b0dec9c1',
-						index: 224,
-						name: 'Defense Enhance',
-					},
-					{
-						description: 'Enhances armor defense. Effect: Increases defense by 10.',
-						id: '638a4d48a44f4fa4b0dec9c2',
-						index: 225,
-						name: 'Defense Boost',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9c1', index: 224, name: 'Defense Enhance' },
+					{ id: '638a4d48a44f4fa4b0dec9c2', index: 225, name: 'Defense Boost' },
 				],
 			},
 		],
@@ -1884,24 +1374,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases defense by 25.',
+		description: 'Increases defense by 25.',
 		id: '638a4d48a44f4fa4b0dec9cc',
 		index: 228,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Enhances armor defense. Effect: Increases defense by 10.',
-						id: '638a4d48a44f4fa4b0dec9c2',
-						index: 225,
-						name: 'Defense Boost',
-					},
-					{
-						description: 'Enhances armor defense. Effect: Increases defense by 15.',
-						id: '638a4d48a44f4fa4b0dec9c6',
-						index: 226,
-						name: 'Defense Super Enhance',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9c2', index: 225, name: 'Defense Boost' },
+					{ id: '638a4d48a44f4fa4b0dec9c6', index: 226, name: 'Defense Super Enhance' },
 				],
 			},
 		],
@@ -1909,24 +1389,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases defense by 40.',
+		description: 'Increases defense by 40.',
 		id: '638a4d48a44f4fa4b0dec9cb',
 		index: 229,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases defense by 15.',
-						id: '638a4d48a44f4fa4b0dec9c8',
-						index: 227,
-						name: 'Steel Defense',
-					},
-					{
-						description: 'Effect: Increases defense by 25.',
-						id: '638a4d48a44f4fa4b0dec9cc',
-						index: 228,
-						name: 'Diamond Defense',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9c8', index: 227, name: 'Steel Defense' },
+					{ id: '638a4d48a44f4fa4b0dec9cc', index: 228, name: 'Diamond Defense' },
 				],
 			},
 		],
@@ -1934,7 +1404,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Accessories with this will increase speed. Effect: Increases speed by 7.',
+		description: 'Accessories with this will increase speed. Increases speed by 7.',
 		id: '638a4d48a44f4fa4b0dec9c7',
 		index: 230,
 		mergeFrom: [],
@@ -1942,7 +1412,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Accessories with this will increase speed. Effect: Increases speed by 10.',
+		description: 'Accessories with this will increase speed. Increases speed by 10.',
 		id: '638a4d48a44f4fa4b0dec9c9',
 		index: 231,
 		mergeFrom: [],
@@ -1950,7 +1420,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Accessories with this will increase speed. Effect: Increases speed by 15.',
+		description: 'Accessories with this will increase speed. Increases speed by 15.',
 		id: '638a4d48a44f4fa4b0dec9d0',
 		index: 232,
 		mergeFrom: [],
@@ -1958,24 +1428,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases speed by 15.',
+		description: 'Increases speed by 15.',
 		id: '638a4d48a44f4fa4b0dec9cf',
 		index: 233,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Accessories with this will increase speed. Effect: Increases speed by 7.',
-						id: '638a4d48a44f4fa4b0dec9c7',
-						index: 230,
-						name: 'Speed Enhance',
-					},
-					{
-						description: 'Accessories with this will increase speed. Effect: Increases speed by 10.',
-						id: '638a4d48a44f4fa4b0dec9c9',
-						index: 231,
-						name: 'Speed Boost',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9c7', index: 230, name: 'Speed Enhance' },
+					{ id: '638a4d48a44f4fa4b0dec9c9', index: 231, name: 'Speed Boost' },
 				],
 			},
 		],
@@ -1983,24 +1443,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases speed by 25.',
+		description: 'Increases speed by 25.',
 		id: '638a4d48a44f4fa4b0dec9d1',
 		index: 234,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Accessories with this will increase speed. Effect: Increases speed by 10.',
-						id: '638a4d48a44f4fa4b0dec9c9',
-						index: 231,
-						name: 'Speed Boost',
-					},
-					{
-						description: 'Accessories with this will increase speed. Effect: Increases speed by 15.',
-						id: '638a4d48a44f4fa4b0dec9d0',
-						index: 232,
-						name: 'Speed Super Enhance',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9c9', index: 231, name: 'Speed Boost' },
+					{ id: '638a4d48a44f4fa4b0dec9d0', index: 232, name: 'Speed Super Enhance' },
 				],
 			},
 		],
@@ -2008,24 +1458,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases speed by 40.',
+		description: 'Increases speed by 40.',
 		id: '638a4d48a44f4fa4b0dec9ce',
 		index: 235,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases speed by 15.',
-						id: '638a4d48a44f4fa4b0dec9cf',
-						index: 233,
-						name: 'Speed of Skanda',
-					},
-					{
-						description: 'Effect: Increases speed by 25.',
-						id: '638a4d48a44f4fa4b0dec9d1',
-						index: 234,
-						name: 'Speed of Gods',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9cf', index: 233, name: 'Speed of Skanda' },
+					{ id: '638a4d48a44f4fa4b0dec9d1', index: 234, name: 'Speed of Gods' },
 				],
 			},
 		],
@@ -2033,24 +1473,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack & defense by 5.',
+		description: 'Increases attack & defense by 5.',
 		id: '638a4d48a44f4fa4b0dec9d8',
 		index: 236,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Enhances weapon attack power. Effect: Increases attack power by 7.',
-						id: '638a4d48a44f4fa4b0dec9d3',
-						index: 218,
-						name: 'Attack Enhance',
-					},
-					{
-						description: 'Enhances armor defense. Effect: Increases defense by 7.',
-						id: '638a4d48a44f4fa4b0dec9c1',
-						index: 224,
-						name: 'Defense Enhance',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9d3', index: 218, name: 'Attack Enhance' },
+					{ id: '638a4d48a44f4fa4b0dec9c1', index: 224, name: 'Defense Enhance' },
 				],
 			},
 		],
@@ -2058,24 +1488,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack & speed by 5.',
+		description: 'Increases attack & speed by 5.',
 		id: '638a4d48a44f4fa4b0dec9d4',
 		index: 237,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Enhances weapon attack power. Effect: Increases attack power by 7.',
-						id: '638a4d48a44f4fa4b0dec9d3',
-						index: 218,
-						name: 'Attack Enhance',
-					},
-					{
-						description: 'Accessories with this will increase speed. Effect: Increases speed by 7.',
-						id: '638a4d48a44f4fa4b0dec9c7',
-						index: 230,
-						name: 'Speed Enhance',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9d3', index: 218, name: 'Attack Enhance' },
+					{ id: '638a4d48a44f4fa4b0dec9c7', index: 230, name: 'Speed Enhance' },
 				],
 			},
 		],
@@ -2083,24 +1503,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases defense & speed by 5.',
+		description: 'Increases defense & speed by 5.',
 		id: '638a4d48a44f4fa4b0dec9d6',
 		index: 238,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Enhances armor defense. Effect: Increases defense by 7.',
-						id: '638a4d48a44f4fa4b0dec9c1',
-						index: 224,
-						name: 'Defense Enhance',
-					},
-					{
-						description: 'Accessories with this will increase speed. Effect: Increases speed by 7.',
-						id: '638a4d48a44f4fa4b0dec9c7',
-						index: 230,
-						name: 'Speed Enhance',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9c1', index: 224, name: 'Defense Enhance' },
+					{ id: '638a4d48a44f4fa4b0dec9c7', index: 230, name: 'Speed Enhance' },
 				],
 			},
 		],
@@ -2108,56 +1518,26 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases all stats by 5.',
+		description: 'Increases all stats by 5.',
 		id: '638a4d48a44f4fa4b0dec9d5',
 		index: 239,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases attack & defense by 5.',
-						id: '638a4d48a44f4fa4b0dec9d8',
-						index: 236,
-						name: 'ATK DEF Enhance',
-					},
-					{
-						description: 'Effect: Increases attack & speed by 5.',
-						id: '638a4d48a44f4fa4b0dec9d4',
-						index: 237,
-						name: 'ATK SPD Enhance',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9d8', index: 236, name: 'ATK DEF Enhance' },
+					{ id: '638a4d48a44f4fa4b0dec9d4', index: 237, name: 'ATK SPD Enhance' },
 				],
 			},
 			{
 				consist: [
-					{
-						description: 'Effect: Increases attack & defense by 5.',
-						id: '638a4d48a44f4fa4b0dec9d8',
-						index: 236,
-						name: 'ATK DEF Enhance',
-					},
-					{
-						description: 'Effect: Increases defense & speed by 5.',
-						id: '638a4d48a44f4fa4b0dec9d6',
-						index: 238,
-						name: 'DEF SPD Enhance',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9d8', index: 236, name: 'ATK DEF Enhance' },
+					{ id: '638a4d48a44f4fa4b0dec9d6', index: 238, name: 'DEF SPD Enhance' },
 				],
 			},
 			{
 				consist: [
-					{
-						description: 'Effect: Increases attack & speed by 5.',
-						id: '638a4d48a44f4fa4b0dec9d4',
-						index: 237,
-						name: 'ATK SPD Enhance',
-					},
-					{
-						description: 'Effect: Increases defense & speed by 5.',
-						id: '638a4d48a44f4fa4b0dec9d6',
-						index: 238,
-						name: 'DEF SPD Enhance',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9d4', index: 237, name: 'ATK SPD Enhance' },
+					{ id: '638a4d48a44f4fa4b0dec9d6', index: 238, name: 'DEF SPD Enhance' },
 				],
 			},
 		],
@@ -2165,24 +1545,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack & defense by 7.',
+		description: 'Increases attack & defense by 7.',
 		id: '638a4d48a44f4fa4b0dec9d2',
 		index: 240,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Enhances weapon attack power. Effect: Increases attack power by 10.',
-						id: '638a4d48a44f4fa4b0dec9bf',
-						index: 219,
-						name: 'Attack Boost',
-					},
-					{
-						description: 'Enhances armor defense. Effect: Increases defense by 10.',
-						id: '638a4d48a44f4fa4b0dec9c2',
-						index: 225,
-						name: 'Defense Boost',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9bf', index: 219, name: 'Attack Boost' },
+					{ id: '638a4d48a44f4fa4b0dec9c2', index: 225, name: 'Defense Boost' },
 				],
 			},
 		],
@@ -2190,24 +1560,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack & speed by 7.',
+		description: 'Increases attack & speed by 7.',
 		id: '638a4d48a44f4fa4b0dec9db',
 		index: 241,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Enhances weapon attack power. Effect: Increases attack power by 10.',
-						id: '638a4d48a44f4fa4b0dec9bf',
-						index: 219,
-						name: 'Attack Boost',
-					},
-					{
-						description: 'Accessories with this will increase speed. Effect: Increases speed by 10.',
-						id: '638a4d48a44f4fa4b0dec9c9',
-						index: 231,
-						name: 'Speed Boost',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9bf', index: 219, name: 'Attack Boost' },
+					{ id: '638a4d48a44f4fa4b0dec9c9', index: 231, name: 'Speed Boost' },
 				],
 			},
 		],
@@ -2215,24 +1575,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases defense & speed by 7.',
+		description: 'Increases defense & speed by 7.',
 		id: '638a4d48a44f4fa4b0dec9d9',
 		index: 242,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Enhances armor defense. Effect: Increases defense by 10.',
-						id: '638a4d48a44f4fa4b0dec9c2',
-						index: 225,
-						name: 'Defense Boost',
-					},
-					{
-						description: 'Accessories with this will increase speed. Effect: Increases speed by 10.',
-						id: '638a4d48a44f4fa4b0dec9c9',
-						index: 231,
-						name: 'Speed Boost',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9c2', index: 225, name: 'Defense Boost' },
+					{ id: '638a4d48a44f4fa4b0dec9c9', index: 231, name: 'Speed Boost' },
 				],
 			},
 		],
@@ -2240,56 +1590,26 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases all stats by 7.',
+		description: 'Increases all stats by 7.',
 		id: '638a4d48a44f4fa4b0dec9e4',
 		index: 243,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases attack & defense by 7.',
-						id: '638a4d48a44f4fa4b0dec9d2',
-						index: 240,
-						name: 'ATK DEF Boost',
-					},
-					{
-						description: 'Effect: Increases attack & speed by 7.',
-						id: '638a4d48a44f4fa4b0dec9db',
-						index: 241,
-						name: 'ATK SPD Boost',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9d2', index: 240, name: 'ATK DEF Boost' },
+					{ id: '638a4d48a44f4fa4b0dec9db', index: 241, name: 'ATK SPD Boost' },
 				],
 			},
 			{
 				consist: [
-					{
-						description: 'Effect: Increases attack & defense by 7.',
-						id: '638a4d48a44f4fa4b0dec9d2',
-						index: 240,
-						name: 'ATK DEF Boost',
-					},
-					{
-						description: 'Effect: Increases defense & speed by 7.',
-						id: '638a4d48a44f4fa4b0dec9d9',
-						index: 242,
-						name: 'DEF SPD Boost',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9d2', index: 240, name: 'ATK DEF Boost' },
+					{ id: '638a4d48a44f4fa4b0dec9d9', index: 242, name: 'DEF SPD Boost' },
 				],
 			},
 			{
 				consist: [
-					{
-						description: 'Effect: Increases attack & speed by 7.',
-						id: '638a4d48a44f4fa4b0dec9db',
-						index: 241,
-						name: 'ATK SPD Boost',
-					},
-					{
-						description: 'Effect: Increases defense & speed by 7.',
-						id: '638a4d48a44f4fa4b0dec9d9',
-						index: 242,
-						name: 'DEF SPD Boost',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9db', index: 241, name: 'ATK SPD Boost' },
+					{ id: '638a4d48a44f4fa4b0dec9d9', index: 242, name: 'DEF SPD Boost' },
 				],
 			},
 		],
@@ -2297,24 +1617,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases all stats except resistances by 10.',
+		description: 'Increases all stats except resistances by 10.',
 		id: '638a4d48a44f4fa4b0dec9d7',
 		index: 244,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases all stats by 5.',
-						id: '638a4d48a44f4fa4b0dec9d5',
-						index: 239,
-						name: 'All Stat Enhance',
-					},
-					{
-						description: 'Effect: Increases all stats by 7.',
-						id: '638a4d48a44f4fa4b0dec9e4',
-						index: 243,
-						name: 'All Stat Boost',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9d5', index: 239, name: 'All Stat Enhance' },
+					{ id: '638a4d48a44f4fa4b0dec9e4', index: 243, name: 'All Stat Boost' },
 				],
 			},
 		],
@@ -2322,24 +1632,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases all stats except resistances by 25.',
+		description: 'Increases all stats except resistances by 25.',
 		id: '638a4d48a44f4fa4b0dec9da',
 		index: 245,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases all stats by 7.',
-						id: '638a4d48a44f4fa4b0dec9e4',
-						index: 243,
-						name: 'All Stat Boost',
-					},
-					{
-						description: 'Effect: Increases all stats except resistances by 10.',
-						id: '638a4d48a44f4fa4b0dec9d7',
-						index: 244,
-						name: 'All Stat Super Enhance',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9e4', index: 243, name: 'All Stat Boost' },
+					{ id: '638a4d48a44f4fa4b0dec9d7', index: 244, name: 'All Stat Super Enhance' },
 				],
 			},
 		],
@@ -2347,7 +1647,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases maximum HP and MP by 50.',
+		description: 'Increases maximum HP and MP by 50.',
 		id: '638a4d48a44f4fa4b0dec9dd',
 		index: 246,
 		mergeFrom: [],
@@ -2355,7 +1655,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases defense by 30, and increases all base stats by 15%.',
+		description: 'Increases defense by 30, and increases all base stats by 15%.',
 		id: '638a4d48a44f4fa4b0dec9dc',
 		index: 247,
 		mergeFrom: [],
@@ -2363,7 +1663,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 10%.',
+		description: 'Bestows reduced MP consumption effect. Reduces MP consumption of skills by 10%.',
 		id: '638a4d48a44f4fa4b0dec9de',
 		index: 298,
 		mergeFrom: [],
@@ -2371,7 +1671,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 15%.',
+		description: 'Bestows reduced MP consumption effect. Reduces MP consumption of skills by 15%.',
 		id: '638a4d48a44f4fa4b0dec9e0',
 		index: 299,
 		mergeFrom: [],
@@ -2379,7 +1679,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 20%.',
+		description: 'Bestows reduced MP consumption effect. Reduces MP consumption of skills by 20%.',
 		id: '638a4d48a44f4fa4b0dec9e1',
 		index: 300,
 		mergeFrom: [],
@@ -2387,26 +1687,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces MP consumption of skills by 20%.',
+		description: 'Reduces MP consumption of skills by 20%.',
 		id: '638a4d48a44f4fa4b0dec9df',
 		index: 301,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 10%.',
-						id: '638a4d48a44f4fa4b0dec9de',
-						index: 298,
-						name: 'Consume MP -10%',
-					},
-					{
-						description:
-							'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 15%.',
-						id: '638a4d48a44f4fa4b0dec9e0',
-						index: 299,
-						name: 'Consume MP -15%',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9de', index: 298, name: 'Consume MP -10%' },
+					{ id: '638a4d48a44f4fa4b0dec9e0', index: 299, name: 'Consume MP -15%' },
 				],
 			},
 		],
@@ -2414,26 +1702,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces MP consumption of skills by 30%.',
+		description: 'Reduces MP consumption of skills by 30%.',
 		id: '638a4d48a44f4fa4b0dec9e7',
 		index: 302,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 15%.',
-						id: '638a4d48a44f4fa4b0dec9e0',
-						index: 299,
-						name: 'Consume MP -15%',
-					},
-					{
-						description:
-							'Bestows reduced MP consumption effect. Effect: Reduces MP consumption of skills by 20%.',
-						id: '638a4d48a44f4fa4b0dec9e1',
-						index: 300,
-						name: 'Consume MP -20%',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9e0', index: 299, name: 'Consume MP -15%' },
+					{ id: '638a4d48a44f4fa4b0dec9e1', index: 300, name: 'Consume MP -20%' },
 				],
 			},
 		],
@@ -2441,24 +1717,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces MP consumption of skills by 50%.',
+		description: 'Reduces MP consumption of skills by 50%.',
 		id: '638a4d48a44f4fa4b0dec9e3',
 		index: 303,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Reduces MP consumption of skills by 20%.',
-						id: '638a4d48a44f4fa4b0dec9df',
-						index: 301,
-						name: 'Cut MP Consume',
-					},
-					{
-						description: 'Effect: Reduces MP consumption of skills by 30%.',
-						id: '638a4d48a44f4fa4b0dec9e7',
-						index: 302,
-						name: 'Compact MP Consume',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9df', index: 301, name: 'Cut MP Consume' },
+					{ id: '638a4d48a44f4fa4b0dec9e7', index: 302, name: 'Compact MP Consume' },
 				],
 			},
 		],
@@ -2466,7 +1732,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 5%.',
+		description: 'Bestows increased skill power effect. Increases skill power and MP consumption by 5%.',
 		id: '638a4d48a44f4fa4b0dec9e2',
 		index: 304,
 		mergeFrom: [],
@@ -2474,7 +1740,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 7%.',
+		description: 'Bestows increased skill power effect. Increases skill power and MP consumption by 7%.',
 		id: '638a4d48a44f4fa4b0dec9e5',
 		index: 305,
 		mergeFrom: [],
@@ -2482,7 +1748,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 10%.',
+		description: 'Bestows increased skill power effect. Increases skill power and MP consumption by 10%.',
 		id: '638a4d48a44f4fa4b0dec9e6',
 		index: 306,
 		mergeFrom: [],
@@ -2490,26 +1756,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases skill power and MP consumption by 12%.',
+		description: 'Increases skill power and MP consumption by 12%.',
 		id: '638a4d48a44f4fa4b0dec9ee',
 		index: 307,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 5%.',
-						id: '638a4d48a44f4fa4b0dec9e2',
-						index: 304,
-						name: 'Skill Power +5%',
-					},
-					{
-						description:
-							'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 7%.',
-						id: '638a4d48a44f4fa4b0dec9e5',
-						index: 305,
-						name: 'Skill Power +7%',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9e2', index: 304, name: 'Skill Power +5%' },
+					{ id: '638a4d48a44f4fa4b0dec9e5', index: 305, name: 'Skill Power +7%' },
 				],
 			},
 		],
@@ -2517,26 +1771,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases skill power and MP consumption by 17%.',
+		description: 'Increases skill power and MP consumption by 17%.',
 		id: '638a4d48a44f4fa4b0dec9eb',
 		index: 308,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 7%.',
-						id: '638a4d48a44f4fa4b0dec9e5',
-						index: 305,
-						name: 'Skill Power +7%',
-					},
-					{
-						description:
-							'Bestows increased skill power effect. Effect: Increases skill power and MP consumption by 10%.',
-						id: '638a4d48a44f4fa4b0dec9e6',
-						index: 306,
-						name: 'Skill Power +10%',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9e5', index: 305, name: 'Skill Power +7%' },
+					{ id: '638a4d48a44f4fa4b0dec9e6', index: 306, name: 'Skill Power +10%' },
 				],
 			},
 		],
@@ -2544,24 +1786,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases skill power and MP consumption by 30%.',
+		description: 'Increases skill power and MP consumption by 30%.',
 		id: '638a4d48a44f4fa4b0dec9ef',
 		index: 309,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases skill power and MP consumption by 12%.',
-						id: '638a4d48a44f4fa4b0dec9ee',
-						index: 307,
-						name: 'Skill Enhance',
-					},
-					{
-						description: 'Effect: Increases skill power and MP consumption by 17%.',
-						id: '638a4d48a44f4fa4b0dec9eb',
-						index: 308,
-						name: 'Skill Boost',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9ee', index: 307, name: 'Skill Enhance' },
+					{ id: '638a4d48a44f4fa4b0dec9eb', index: 308, name: 'Skill Boost' },
 				],
 			},
 		],
@@ -2569,24 +1801,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases skill power by 7%, and reduces MP consumption by 7%.',
+		description: 'Increases skill power by 7%, and reduces MP consumption by 7%.',
 		id: '638a4d48a44f4fa4b0dec9f1',
 		index: 310,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Reduces MP consumption of skills by 20%.',
-						id: '638a4d48a44f4fa4b0dec9df',
-						index: 301,
-						name: 'Cut MP Consume',
-					},
-					{
-						description: 'Effect: Increases skill power and MP consumption by 12%.',
-						id: '638a4d48a44f4fa4b0dec9ee',
-						index: 307,
-						name: 'Skill Enhance',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9df', index: 301, name: 'Cut MP Consume' },
+					{ id: '638a4d48a44f4fa4b0dec9ee', index: 307, name: 'Skill Enhance' },
 				],
 			},
 		],
@@ -2594,24 +1816,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases skill power by 10%, and reduces MP consumption by 10%.',
+		description: 'Increases skill power by 10%, and reduces MP consumption by 10%.',
 		id: '638a4d48a44f4fa4b0dec9f2',
 		index: 311,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Reduces MP consumption of skills by 30%.',
-						id: '638a4d48a44f4fa4b0dec9e7',
-						index: 302,
-						name: 'Compact MP Consume',
-					},
-					{
-						description: 'Effect: Increases skill power and MP consumption by 17%.',
-						id: '638a4d48a44f4fa4b0dec9eb',
-						index: 308,
-						name: 'Skill Boost',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9e7', index: 302, name: 'Compact MP Consume' },
+					{ id: '638a4d48a44f4fa4b0dec9eb', index: 308, name: 'Skill Boost' },
 				],
 			},
 		],
@@ -2619,24 +1831,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases skill power by 15%, and reduces MP consumption by 15%.',
+		description: 'Increases skill power by 15%, and reduces MP consumption by 15%.',
 		id: '638a4d48a44f4fa4b0dec9ed',
 		index: 312,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Reduces MP consumption of skills by 50%.',
-						id: '638a4d48a44f4fa4b0dec9e3',
-						index: 303,
-						name: 'Halve MP Consume',
-					},
-					{
-						description: 'Effect: Increases skill power and MP consumption by 30%.',
-						id: '638a4d48a44f4fa4b0dec9ef',
-						index: 309,
-						name: 'Skill Super Enhance',
-					},
+					{ id: '638a4d48a44f4fa4b0dec9e3', index: 303, name: 'Halve MP Consume' },
+					{ id: '638a4d48a44f4fa4b0dec9ef', index: 309, name: 'Skill Super Enhance' },
 				],
 			},
 		],
@@ -2644,7 +1846,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases skill power by 25%, and reduces MP consumption by 25%.',
+		description: 'Increases skill power by 25%, and reduces MP consumption by 25%.',
 		id: '638a4d48a44f4fa4b0dec9e8',
 		index: 313,
 		mergeFrom: [],
@@ -2652,7 +1854,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases skill power by 35%, and reduces MP consumption by 35%.',
+		description: 'Increases skill power by 35%, and reduces MP consumption by 35%.',
 		id: '638a4d48a44f4fa4b0dec9ec',
 		index: 314,
 		mergeFrom: [],
@@ -2660,7 +1862,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Massively increases the target's level.",
+		description: "Massively increases the target's level.",
 		id: '638a4d48a44f4fa4b0dec9e9',
 		index: 349,
 		mergeFrom: [],
@@ -2668,7 +1870,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Massively increases the target's attack power.",
+		description: "Massively increases the target's attack power.",
 		id: '638a4d48a44f4fa4b0dec9f0',
 		index: 350,
 		mergeFrom: [],
@@ -2676,7 +1878,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Massively increases the target's defense.",
+		description: "Massively increases the target's defense.",
 		id: '638a4d48a44f4fa4b0dec9ea',
 		index: 351,
 		mergeFrom: [],
@@ -2684,7 +1886,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Massively increases the target's speed.",
+		description: "Massively increases the target's speed.",
 		id: '638a4d48a44f4fa4b0dec9f3',
 		index: 352,
 		mergeFrom: [],
@@ -2692,7 +1894,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Has a chance to inflict Sleep when dealing damage.',
+		description: 'Has a chance to inflict Sleep when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9f4',
 		index: 365,
 		mergeFrom: [],
@@ -2700,7 +1902,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Has a chance to inflict Poison when dealing damage.',
+		description: 'Has a chance to inflict Poison when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9f5',
 		index: 366,
 		mergeFrom: [],
@@ -2708,7 +1910,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Has a chance to inflict Slow when dealing damage.',
+		description: 'Has a chance to inflict Slow when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9f6',
 		index: 367,
 		mergeFrom: [],
@@ -2716,7 +1918,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Has a chance to inflict Curse when dealing damage.',
+		description: 'Has a chance to inflict Curse when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9fa',
 		index: 368,
 		mergeFrom: [],
@@ -2724,7 +1926,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Has a chance to inflict Blind when dealing damage.',
+		description: 'Has a chance to inflict Blind when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9fb',
 		index: 369,
 		mergeFrom: [],
@@ -2732,7 +1934,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Has a chance to inflict Weak when dealing damage.',
+		description: 'Has a chance to inflict Weak when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9f8',
 		index: 370,
 		mergeFrom: [],
@@ -2740,7 +1942,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Has a chance to inflict No Heal when dealing damage.',
+		description: 'Has a chance to inflict No Heal when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9f7',
 		index: 371,
 		mergeFrom: [],
@@ -2748,7 +1950,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Has a chance to inflict Seal when dealing damage.',
+		description: 'Has a chance to inflict Seal when dealing damage.',
 		id: '638a4d48a44f4fa4b0dec9fc',
 		index: 372,
 		mergeFrom: [],
@@ -2756,7 +1958,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Massively reduces the target's level, reducing all stats and damage dealt.",
+		description: "Massively reduces the target's level, reducing all stats and damage dealt.",
 		id: '638a4d48a44f4fa4b0dec9f9',
 		index: 373,
 		mergeFrom: [],
@@ -2764,7 +1966,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Massively reduces the target's attack power.",
+		description: "Massively reduces the target's attack power.",
 		id: '638a4d48a44f4fa4b0dec9fd',
 		index: 374,
 		mergeFrom: [],
@@ -2772,7 +1974,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Massively reduces the target's defense.",
+		description: "Massively reduces the target's defense.",
 		id: '638a4d48a44f4fa4b0dec9fe',
 		index: 375,
 		mergeFrom: [],
@@ -2780,7 +1982,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Massively reduces the target's speed.",
+		description: "Massively reduces the target's speed.",
 		id: '638a4d48a44f4fa4b0dec9ff',
 		index: 376,
 		mergeFrom: [],
@@ -2788,7 +1990,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Absorb 3% of damage dealt through attacks to restore your own HP.',
+		description: 'Absorb 3% of damage dealt through attacks to restore your own HP.',
 		id: '638a4d48a44f4fa4b0deca02',
 		index: 401,
 		mergeFrom: [],
@@ -2796,7 +1998,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Absorb 5% of damage dealt through attacks to restore your own HP.',
+		description: 'Absorb 5% of damage dealt through attacks to restore your own HP.',
 		id: '638a4d48a44f4fa4b0deca03',
 		index: 402,
 		mergeFrom: [],
@@ -2804,7 +2006,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Absorb 7% of damage dealt through attacks to restore your own HP.',
+		description: 'Absorb 7% of damage dealt through attacks to restore your own HP.',
 		id: '638a4d48a44f4fa4b0deca01',
 		index: 403,
 		mergeFrom: [],
@@ -2812,24 +2014,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Absorb 7% of damage dealt through attacks to restore your own HP.',
+		description: 'Absorb 7% of damage dealt through attacks to restore your own HP.',
 		id: '638a4d48a44f4fa4b0deca05',
 		index: 404,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Absorb 3% of damage dealt through attacks to restore your own HP.',
-						id: '638a4d48a44f4fa4b0deca02',
-						index: 401,
-						name: 'Damage Absorb',
-					},
-					{
-						description: 'Effect: Absorb 5% of damage dealt through attacks to restore your own HP.',
-						id: '638a4d48a44f4fa4b0deca03',
-						index: 402,
-						name: 'Damage Absorb+',
-					},
+					{ id: '638a4d48a44f4fa4b0deca02', index: 401, name: 'Damage Absorb' },
+					{ id: '638a4d48a44f4fa4b0deca03', index: 402, name: 'Damage Absorb+' },
 				],
 			},
 		],
@@ -2837,24 +2029,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Absorb 10% of damage dealt through attacks to restore your own HP.',
+		description: 'Absorb 10% of damage dealt through attacks to restore your own HP.',
 		id: '638a4d48a44f4fa4b0deca06',
 		index: 405,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Absorb 5% of damage dealt through attacks to restore your own HP.',
-						id: '638a4d48a44f4fa4b0deca03',
-						index: 402,
-						name: 'Damage Absorb+',
-					},
-					{
-						description: 'Effect: Absorb 7% of damage dealt through attacks to restore your own HP.',
-						id: '638a4d48a44f4fa4b0deca01',
-						index: 403,
-						name: 'Damage Absorb++',
-					},
+					{ id: '638a4d48a44f4fa4b0deca03', index: 402, name: 'Damage Absorb+' },
+					{ id: '638a4d48a44f4fa4b0deca01', index: 403, name: 'Damage Absorb++' },
 				],
 			},
 		],
@@ -2862,24 +2044,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Absorb 15% of damage dealt through attacks to restore your own HP.',
+		description: 'Absorb 15% of damage dealt through attacks to restore your own HP.',
 		id: '638a4d48a44f4fa4b0deca07',
 		index: 406,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Absorb 7% of damage dealt through attacks to restore your own HP.',
-						id: '638a4d48a44f4fa4b0deca05',
-						index: 404,
-						name: 'HP Absorb',
-					},
-					{
-						description: 'Effect: Absorb 10% of damage dealt through attacks to restore your own HP.',
-						id: '638a4d48a44f4fa4b0deca06',
-						index: 405,
-						name: 'Steal Life',
-					},
+					{ id: '638a4d48a44f4fa4b0deca05', index: 404, name: 'HP Absorb' },
+					{ id: '638a4d48a44f4fa4b0deca06', index: 405, name: 'Steal Life' },
 				],
 			},
 		],
@@ -2888,7 +2060,7 @@ const traits: Trait[] = [
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Effect: Increases attack power by 20, and absorb 10% of damage dealt through attacks to restore your own HP.',
+			'Increases attack power by 20, and absorb 10% of damage dealt through attacks to restore your own HP.',
 		id: '638a4d48a44f4fa4b0deca00',
 		index: 407,
 		mergeFrom: [],
@@ -2896,7 +2068,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Slag type enemies.',
+		description: 'Increases damage dealt to Slag type enemies.',
 		id: '638a4d48a44f4fa4b0deca04',
 		index: 422,
 		mergeFrom: [],
@@ -2904,7 +2076,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Plant and Spirit type enemies.',
+		description: 'Increases damage dealt to Plant and Spirit type enemies.',
 		id: '638a4d48a44f4fa4b0deca08',
 		index: 423,
 		mergeFrom: [],
@@ -2912,7 +2084,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Animal and Beast type enemies.',
+		description: 'Increases damage dealt to Animal and Beast type enemies.',
 		id: '638a4d48a44f4fa4b0deca09',
 		index: 424,
 		mergeFrom: [],
@@ -2920,7 +2092,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Demon type enemies.',
+		description: 'Increases damage dealt to Demon type enemies.',
 		id: '638a4d48a44f4fa4b0deca0a',
 		index: 425,
 		mergeFrom: [],
@@ -2928,7 +2100,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Dragon type enemies.',
+		description: 'Increases damage dealt to Dragon type enemies.',
 		id: '638a4d48a44f4fa4b0deca0b',
 		index: 426,
 		mergeFrom: [],
@@ -2936,7 +2108,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to monsters created through magic and alchemy.',
+		description: 'Increases damage dealt to monsters created through magic and alchemy.',
 		id: '638a4d48a44f4fa4b0deca0d',
 		index: 427,
 		mergeFrom: [],
@@ -2944,7 +2116,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Puni type enemies.',
+		description: 'Increases damage dealt to Puni type enemies.',
 		id: '638a4d48a44f4fa4b0deca0f',
 		index: 428,
 		mergeFrom: [],
@@ -2952,7 +2124,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Undead type enemies.',
+		description: 'Increases damage dealt to Undead type enemies.',
 		id: '638a4d48a44f4fa4b0deca0c',
 		index: 429,
 		mergeFrom: [],
@@ -2960,7 +2132,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Broken targets by 10%.',
+		description: 'Increases damage dealt to Broken targets by 10%.',
 		id: '638a4d48a44f4fa4b0deca0e',
 		index: 446,
 		mergeFrom: [],
@@ -2968,7 +2140,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Broken targets by 20%.',
+		description: 'Increases damage dealt to Broken targets by 20%.',
 		id: '638a4d48a44f4fa4b0deca11',
 		index: 447,
 		mergeFrom: [],
@@ -2976,7 +2148,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Broken targets by 30%.',
+		description: 'Increases damage dealt to Broken targets by 30%.',
 		id: '638a4d48a44f4fa4b0deca12',
 		index: 448,
 		mergeFrom: [],
@@ -2984,24 +2156,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Broken targets by 30%.',
+		description: 'Increases damage dealt to Broken targets by 30%.',
 		id: '638a4d48a44f4fa4b0deca16',
 		index: 449,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases damage dealt to Broken targets by 10%.',
-						id: '638a4d48a44f4fa4b0deca0e',
-						index: 446,
-						name: 'Enhance Finisher',
-					},
-					{
-						description: 'Effect: Increases damage dealt to Broken targets by 20%.',
-						id: '638a4d48a44f4fa4b0deca11',
-						index: 447,
-						name: 'Enhance Finisher+',
-					},
+					{ id: '638a4d48a44f4fa4b0deca0e', index: 446, name: 'Enhance Finisher' },
+					{ id: '638a4d48a44f4fa4b0deca11', index: 447, name: 'Enhance Finisher+' },
 				],
 			},
 		],
@@ -3009,24 +2171,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Broken targets by 40%.',
+		description: 'Increases damage dealt to Broken targets by 40%.',
 		id: '638a4d48a44f4fa4b0deca19',
 		index: 450,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases damage dealt to Broken targets by 20%.',
-						id: '638a4d48a44f4fa4b0deca11',
-						index: 447,
-						name: 'Enhance Finisher+',
-					},
-					{
-						description: 'Effect: Increases damage dealt to Broken targets by 30%.',
-						id: '638a4d48a44f4fa4b0deca12',
-						index: 448,
-						name: 'Enhance Finisher++',
-					},
+					{ id: '638a4d48a44f4fa4b0deca11', index: 447, name: 'Enhance Finisher+' },
+					{ id: '638a4d48a44f4fa4b0deca12', index: 448, name: 'Enhance Finisher++' },
 				],
 			},
 		],
@@ -3034,24 +2186,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Broken targets by 60%.',
+		description: 'Increases damage dealt to Broken targets by 60%.',
 		id: '638a4d48a44f4fa4b0deca1b',
 		index: 451,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases damage dealt to Broken targets by 30%.',
-						id: '638a4d48a44f4fa4b0deca16',
-						index: 449,
-						name: 'Merciless Blow',
-					},
-					{
-						description: 'Effect: Increases damage dealt to Broken targets by 40%.',
-						id: '638a4d48a44f4fa4b0deca19',
-						index: 450,
-						name: 'Relentless Blow',
-					},
+					{ id: '638a4d48a44f4fa4b0deca16', index: 449, name: 'Merciless Blow' },
+					{ id: '638a4d48a44f4fa4b0deca19', index: 450, name: 'Relentless Blow' },
 				],
 			},
 		],
@@ -3059,7 +2201,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Enhances item effect according to strength of traits present.',
+		description: 'Enhances item effect according to strength of traits present.',
 		id: '638a4d48a44f4fa4b0deca17',
 		index: 464,
 		mergeFrom: [],
@@ -3067,7 +2209,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Greatly enhances item effect according to strength of traits present.',
+		description: 'Greatly enhances item effect according to strength of traits present.',
 		id: '638a4d48a44f4fa4b0deca10',
 		index: 465,
 		mergeFrom: [],
@@ -3075,24 +2217,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Massively enhances item effect according to strength of traits present.',
+		description: 'Massively enhances item effect according to strength of traits present.',
 		id: '638a4d49a44f4fa4b0deca1c',
 		index: 466,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Enhances item effect according to strength of traits present.',
-						id: '638a4d48a44f4fa4b0deca17',
-						index: 464,
-						name: 'Trait Enhance',
-					},
-					{
-						description: 'Effect: Greatly enhances item effect according to strength of traits present.',
-						id: '638a4d48a44f4fa4b0deca10',
-						index: 465,
-						name: 'Trait Enhance+',
-					},
+					{ id: '638a4d48a44f4fa4b0deca17', index: 464, name: 'Trait Enhance' },
+					{ id: '638a4d48a44f4fa4b0deca10', index: 465, name: 'Trait Enhance+' },
 				],
 			},
 		],
@@ -3101,7 +2233,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Effect: Enhances item effect according to strength of traits present. Stronger traits equal ridiculously greater enhancement.',
+			'Enhances item effect according to strength of traits present. Stronger traits equal ridiculously greater enhancement.',
 		id: '638a4d48a44f4fa4b0deca13',
 		index: 467,
 		mergeFrom: [],
@@ -3109,7 +2241,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Power increases by number of targets in effect area x 5%.',
+		description: 'Power increases by number of targets in effect area x 5%.',
 		id: '638a4d48a44f4fa4b0deca14',
 		index: 480,
 		mergeFrom: [],
@@ -3117,7 +2249,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Power increases by number of targets in effect area x 10%.',
+		description: 'Power increases by number of targets in effect area x 10%.',
 		id: '638a4d48a44f4fa4b0deca15',
 		index: 481,
 		mergeFrom: [],
@@ -3125,24 +2257,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Power increases by number of targets in effect area x 15%.',
+		description: 'Power increases by number of targets in effect area x 15%.',
 		id: '638a4d49a44f4fa4b0deca1f',
 		index: 482,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Power increases by number of targets in effect area x 5%.',
-						id: '638a4d48a44f4fa4b0deca14',
-						index: 480,
-						name: 'Area Bonus',
-					},
-					{
-						description: 'Effect: Power increases by number of targets in effect area x 10%.',
-						id: '638a4d48a44f4fa4b0deca15',
-						index: 481,
-						name: 'Area Bonus+',
-					},
+					{ id: '638a4d48a44f4fa4b0deca14', index: 480, name: 'Area Bonus' },
+					{ id: '638a4d48a44f4fa4b0deca15', index: 481, name: 'Area Bonus+' },
 				],
 			},
 		],
@@ -3150,7 +2272,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Power increases by number of targets in effect area x 20%.',
+		description: 'Power increases by number of targets in effect area x 20%.',
 		id: '638a4d48a44f4fa4b0deca1a',
 		index: 483,
 		mergeFrom: [],
@@ -3158,7 +2280,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Power increases by 10 / number of targets in effect area %.',
+		description: 'Power increases by 10 / number of targets in effect area %.',
 		id: '638a4d48a44f4fa4b0deca18',
 		index: 484,
 		mergeFrom: [],
@@ -3166,7 +2288,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Power increases by 15 / number of targets in effect area %.',
+		description: 'Power increases by 15 / number of targets in effect area %.',
 		id: '638a4d49a44f4fa4b0deca22',
 		index: 485,
 		mergeFrom: [],
@@ -3174,24 +2296,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Power increases by 20 / number of targets in effect area %.',
+		description: 'Power increases by 20 / number of targets in effect area %.',
 		id: '638a4d49a44f4fa4b0deca20',
 		index: 486,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Power increases by 10 / number of targets in effect area %.',
-						id: '638a4d48a44f4fa4b0deca18',
-						index: 484,
-						name: 'Fewer Bonus',
-					},
-					{
-						description: 'Effect: Power increases by 15 / number of targets in effect area %.',
-						id: '638a4d49a44f4fa4b0deca22',
-						index: 485,
-						name: 'Fewer Bonus+',
-					},
+					{ id: '638a4d48a44f4fa4b0deca18', index: 484, name: 'Fewer Bonus' },
+					{ id: '638a4d49a44f4fa4b0deca22', index: 485, name: 'Fewer Bonus+' },
 				],
 			},
 		],
@@ -3199,7 +2311,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Power increases by 30 / number of targets in effect area %.',
+		description: 'Power increases by 30 / number of targets in effect area %.',
 		id: '638a4d49a44f4fa4b0deca1e',
 		index: 487,
 		mergeFrom: [],
@@ -3208,7 +2320,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Effect: Power increases by 20 / number of targets in effect area % + number of targets in effect area x 10%.',
+			'Power increases by 20 / number of targets in effect area % + number of targets in effect area x 10%.',
 		id: '638a4d49a44f4fa4b0deca1d',
 		index: 488,
 		mergeFrom: [],
@@ -3216,7 +2328,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Power increases by 10% when use count is 1.',
+		description: 'Power increases by 10% when use count is 1.',
 		id: '638a4d49a44f4fa4b0deca29',
 		index: 507,
 		mergeFrom: [],
@@ -3224,7 +2336,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Power increases by 20% when use count is 1.',
+		description: 'Power increases by 20% when use count is 1.',
 		id: '638a4d49a44f4fa4b0deca23',
 		index: 508,
 		mergeFrom: [],
@@ -3232,24 +2344,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Power increases by 30% when use count is 1.',
+		description: 'Power increases by 30% when use count is 1.',
 		id: '638a4d49a44f4fa4b0deca28',
 		index: 509,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Power increases by 10% when use count is 1.',
-						id: '638a4d49a44f4fa4b0deca29',
-						index: 507,
-						name: 'Enhance Last',
-					},
-					{
-						description: 'Effect: Power increases by 20% when use count is 1.',
-						id: '638a4d49a44f4fa4b0deca23',
-						index: 508,
-						name: 'Enhance Last+',
-					},
+					{ id: '638a4d49a44f4fa4b0deca29', index: 507, name: 'Enhance Last' },
+					{ id: '638a4d49a44f4fa4b0deca23', index: 508, name: 'Enhance Last+' },
 				],
 			},
 		],
@@ -3257,7 +2359,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Power increases by 45% when use count is 1.',
+		description: 'Power increases by 45% when use count is 1.',
 		id: '638a4d49a44f4fa4b0deca24',
 		index: 510,
 		mergeFrom: [],
@@ -3265,7 +2367,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 3%.',
+		description: 'Completely consumes item in 1 use during battle, but increases power by use count x 3%.',
 		id: '638a4d49a44f4fa4b0deca21',
 		index: 511,
 		mergeFrom: [],
@@ -3273,7 +2375,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 5%.',
+		description: 'Completely consumes item in 1 use during battle, but increases power by use count x 5%.',
 		id: '638a4d49a44f4fa4b0deca25',
 		index: 512,
 		mergeFrom: [],
@@ -3281,26 +2383,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 7%.',
+		description: 'Completely consumes item in 1 use during battle, but increases power by use count x 7%.',
 		id: '638a4d49a44f4fa4b0deca27',
 		index: 513,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 3%.',
-						id: '638a4d49a44f4fa4b0deca21',
-						index: 511,
-						name: 'Count Compress',
-					},
-					{
-						description:
-							'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 5%.',
-						id: '638a4d49a44f4fa4b0deca25',
-						index: 512,
-						name: 'Count Compress+',
-					},
+					{ id: '638a4d49a44f4fa4b0deca21', index: 511, name: 'Count Compress' },
+					{ id: '638a4d49a44f4fa4b0deca25', index: 512, name: 'Count Compress+' },
 				],
 			},
 		],
@@ -3308,7 +2398,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Completely consumes item in 1 use during battle, but increases power by use count x 10%.',
+		description: 'Completely consumes item in 1 use during battle, but increases power by use count x 10%.',
 		id: '638a4d49a44f4fa4b0deca26',
 		index: 514,
 		mergeFrom: [],
@@ -3316,7 +2406,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases item power by maximum use count x 2%.',
+		description: 'Increases item power by maximum use count x 2%.',
 		id: '638a4d49a44f4fa4b0deca2d',
 		index: 515,
 		mergeFrom: [],
@@ -3324,7 +2414,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases item power by maximum use count x 3%.',
+		description: 'Increases item power by maximum use count x 3%.',
 		id: '638a4d49a44f4fa4b0deca2c',
 		index: 516,
 		mergeFrom: [],
@@ -3332,24 +2422,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases item power by maximum use count x 5%.',
+		description: 'Increases item power by maximum use count x 5%.',
 		id: '638a4d49a44f4fa4b0deca34',
 		index: 517,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases item power by maximum use count x 2%.',
-						id: '638a4d49a44f4fa4b0deca2d',
-						index: 515,
-						name: 'Count Bonus',
-					},
-					{
-						description: 'Effect: Increases item power by maximum use count x 3%.',
-						id: '638a4d49a44f4fa4b0deca2c',
-						index: 516,
-						name: 'Count Bonus+',
-					},
+					{ id: '638a4d49a44f4fa4b0deca2d', index: 515, name: 'Count Bonus' },
+					{ id: '638a4d49a44f4fa4b0deca2c', index: 516, name: 'Count Bonus+' },
 				],
 			},
 		],
@@ -3357,7 +2437,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases item power by maximum use count x 7%.',
+		description: 'Increases item power by maximum use count x 7%.',
 		id: '638a4d49a44f4fa4b0deca3b',
 		index: 518,
 		mergeFrom: [],
@@ -3365,7 +2445,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces WT after using item by 10%. Power is decreased slightly.',
+		description: 'Reduces WT after using item by 10%. Power is decreased slightly.',
 		id: '638a4d49a44f4fa4b0deca2a',
 		index: 541,
 		mergeFrom: [],
@@ -3373,7 +2453,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces WT after using item by 20%. Power is decreased a small amount.',
+		description: 'Reduces WT after using item by 20%. Power is decreased a small amount.',
 		id: '638a4d49a44f4fa4b0deca2b',
 		index: 542,
 		mergeFrom: [],
@@ -3381,24 +2461,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces WT after using item by 30%. Power is decreased a small amount.',
+		description: 'Reduces WT after using item by 30%. Power is decreased a small amount.',
 		id: '638a4d49a44f4fa4b0deca2f',
 		index: 543,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Reduces WT after using item by 10%. Power is decreased slightly.',
-						id: '638a4d49a44f4fa4b0deca2a',
-						index: 541,
-						name: 'Fast Use',
-					},
-					{
-						description: 'Effect: Reduces WT after using item by 20%. Power is decreased a small amount.',
-						id: '638a4d49a44f4fa4b0deca2b',
-						index: 542,
-						name: 'Fast Use+',
-					},
+					{ id: '638a4d49a44f4fa4b0deca2a', index: 541, name: 'Fast Use' },
+					{ id: '638a4d49a44f4fa4b0deca2b', index: 542, name: 'Fast Use+' },
 				],
 			},
 		],
@@ -3406,7 +2476,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces WT after using item by 50%.',
+		description: 'Reduces WT after using item by 50%.',
 		id: '638a4d49a44f4fa4b0deca2e',
 		index: 544,
 		mergeFrom: [],
@@ -3414,7 +2484,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Wait time after using item increases a little, but power increases a little too.',
+		description: 'Wait time after using item increases a little, but power increases a little too.',
 		id: '638a4d49a44f4fa4b0deca30',
 		index: 545,
 		mergeFrom: [],
@@ -3422,7 +2492,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Wait time after using item increases, but power increases too.',
+		description: 'Wait time after using item increases, but power increases too.',
 		id: '638a4d49a44f4fa4b0deca33',
 		index: 546,
 		mergeFrom: [],
@@ -3430,25 +2500,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Wait time after using item increases a lot, but power increases a lot too.',
+		description: 'Wait time after using item increases a lot, but power increases a lot too.',
 		id: '638a4d49a44f4fa4b0deca35',
 		index: 547,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Effect: Wait time after using item increases a little, but power increases a little too.',
-						id: '638a4d49a44f4fa4b0deca30',
-						index: 545,
-						name: 'Power Throw',
-					},
-					{
-						description: 'Effect: Wait time after using item increases, but power increases too.',
-						id: '638a4d49a44f4fa4b0deca33',
-						index: 546,
-						name: 'Power Throw+',
-					},
+					{ id: '638a4d49a44f4fa4b0deca30', index: 545, name: 'Power Throw' },
+					{ id: '638a4d49a44f4fa4b0deca33', index: 546, name: 'Power Throw+' },
 				],
 			},
 		],
@@ -3456,7 +2515,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases item power by a small amount proportional to wait time after using item.',
+		description: 'Increases item power by a small amount proportional to wait time after using item.',
 		id: '638a4d49a44f4fa4b0deca32',
 		index: 548,
 		mergeFrom: [],
@@ -3464,7 +2523,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases item power by a decent amount proportional to wait time after using item.',
+		description: 'Increases item power by a decent amount proportional to wait time after using item.',
 		id: '638a4d49a44f4fa4b0deca31',
 		index: 549,
 		mergeFrom: [],
@@ -3472,26 +2531,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases item power proportional to wait time after using item.',
+		description: 'Increases item power proportional to wait time after using item.',
 		id: '638a4d49a44f4fa4b0deca37',
 		index: 550,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description:
-							'Effect: Increases item power by a small amount proportional to wait time after using item.',
-						id: '638a4d49a44f4fa4b0deca32',
-						index: 548,
-						name: 'Wait Time Enhance',
-					},
-					{
-						description:
-							'Effect: Increases item power by a decent amount proportional to wait time after using item.',
-						id: '638a4d49a44f4fa4b0deca31',
-						index: 549,
-						name: 'Wait Time Enhance+',
-					},
+					{ id: '638a4d49a44f4fa4b0deca32', index: 548, name: 'Wait Time Enhance' },
+					{ id: '638a4d49a44f4fa4b0deca31', index: 549, name: 'Wait Time Enhance+' },
 				],
 			},
 		],
@@ -3499,7 +2546,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Item size increases by 1 level, equipment cost increases by 5.',
+		description: 'Item size increases by 1 level, equipment cost increases by 5.',
 		id: '638a4d49a44f4fa4b0deca3a',
 		index: 571,
 		mergeFrom: [],
@@ -3507,7 +2554,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Item size increases by 2 levels, equipment cost increases by 10.',
+		description: 'Item size increases by 2 levels, equipment cost increases by 10.',
 		id: '638a4d49a44f4fa4b0deca3e',
 		index: 572,
 		mergeFrom: [],
@@ -3515,7 +2562,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Item size decreases by 1 level, equipment cost decreases by 10.',
+		description: 'Item size decreases by 1 level, equipment cost decreases by 10.',
 		id: '638a4d49a44f4fa4b0deca38',
 		index: 573,
 		mergeFrom: [],
@@ -3523,7 +2570,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Item size decreases by 2 levels, equipment cost decreases by 20.',
+		description: 'Item size decreases by 2 levels, equipment cost decreases by 20.',
 		id: '638a4d49a44f4fa4b0deca39',
 		index: 574,
 		mergeFrom: [],
@@ -3531,7 +2578,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases item effect by a decent amount as size increases.',
+		description: 'Increases item effect by a decent amount as size increases.',
 		id: '638a4d49a44f4fa4b0deca36',
 		index: 575,
 		mergeFrom: [],
@@ -3539,7 +2586,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases item effect as size increases.',
+		description: 'Increases item effect as size increases.',
 		id: '638a4d49a44f4fa4b0deca3c',
 		index: 576,
 		mergeFrom: [],
@@ -3547,24 +2594,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases item effect by a large amount as size increases.',
+		description: 'Increases item effect by a large amount as size increases.',
 		id: '638a4d49a44f4fa4b0deca4b',
 		index: 577,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Increases item effect by a decent amount as size increases.',
-						id: '638a4d49a44f4fa4b0deca36',
-						index: 575,
-						name: 'Size Enhance',
-					},
-					{
-						description: 'Effect: Increases item effect as size increases.',
-						id: '638a4d49a44f4fa4b0deca3c',
-						index: 576,
-						name: 'Size Super Enhance',
-					},
+					{ id: '638a4d49a44f4fa4b0deca36', index: 575, name: 'Size Enhance' },
+					{ id: '638a4d49a44f4fa4b0deca3c', index: 576, name: 'Size Super Enhance' },
 				],
 			},
 		],
@@ -3572,7 +2609,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces equipment cost of usable item by 5.',
+		description: 'Reduces equipment cost of usable item by 5.',
 		id: '638a4d49a44f4fa4b0deca3d',
 		index: 578,
 		mergeFrom: [],
@@ -3580,7 +2617,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces equipment cost of usable item by 8.',
+		description: 'Reduces equipment cost of usable item by 8.',
 		id: '638a4d49a44f4fa4b0deca3f',
 		index: 579,
 		mergeFrom: [],
@@ -3588,24 +2625,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces equipment cost of usable item by 12.',
+		description: 'Reduces equipment cost of usable item by 12.',
 		id: '638a4d49a44f4fa4b0deca46',
 		index: 580,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Reduces equipment cost of usable item by 5.',
-						id: '638a4d49a44f4fa4b0deca3d',
-						index: 578,
-						name: 'Kind of Light',
-					},
-					{
-						description: 'Effect: Reduces equipment cost of usable item by 8.',
-						id: '638a4d49a44f4fa4b0deca3f',
-						index: 579,
-						name: 'Light',
-					},
+					{ id: '638a4d49a44f4fa4b0deca3d', index: 578, name: 'Kind of Light' },
+					{ id: '638a4d49a44f4fa4b0deca3f', index: 579, name: 'Light' },
 				],
 			},
 		],
@@ -3613,24 +2640,14 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces equipment cost of usable item by 20.',
+		description: 'Reduces equipment cost of usable item by 20.',
 		id: '638a4d49a44f4fa4b0deca43',
 		index: 581,
 		mergeFrom: [
 			{
 				consist: [
-					{
-						description: 'Effect: Reduces equipment cost of usable item by 8.',
-						id: '638a4d49a44f4fa4b0deca3f',
-						index: 579,
-						name: 'Light',
-					},
-					{
-						description: 'Effect: Reduces equipment cost of usable item by 12.',
-						id: '638a4d49a44f4fa4b0deca46',
-						index: 580,
-						name: 'Easy to Handle',
-					},
+					{ id: '638a4d49a44f4fa4b0deca3f', index: 579, name: 'Light' },
+					{ id: '638a4d49a44f4fa4b0deca46', index: 580, name: 'Easy to Handle' },
 				],
 			},
 		],
@@ -3638,7 +2655,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Zeal factor enhances the material it resides in. Effect: Increases HP and attack.',
+		description: 'Zeal factor enhances the material it resides in. Increases HP and attack.',
 		id: '638a4d49a44f4fa4b0deca47',
 		index: 592,
 		mergeFrom: [],
@@ -3646,7 +2663,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Happy heart enhances the material it resides in. Effect: Increases MP and defense.',
+		description: 'Happy heart enhances the material it resides in. Increases MP and defense.',
 		id: '638a4d49a44f4fa4b0deca40',
 		index: 593,
 		mergeFrom: [],
@@ -3654,7 +2671,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Cunning wit enhances the material it resides in. Effect: Increases critical bonus and accuracy.',
+		description: 'Cunning wit enhances the material it resides in. Increases critical bonus and accuracy.',
 		id: '638a4d49a44f4fa4b0deca42',
 		index: 594,
 		mergeFrom: [],
@@ -3663,7 +2680,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Splendid glory enhances the material it resides in. Effect: Increases WT delay resistance and Break resistance.',
+			'Splendid glory enhances the material it resides in. Increases WT delay resistance and Break resistance.',
 		id: '638a4d49a44f4fa4b0deca44',
 		index: 595,
 		mergeFrom: [],
@@ -3672,7 +2689,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Benevolent light enhances the material it resides in. Effect: Provides damage reversal and immunity to all ailments.',
+			'Benevolent light enhances the material it resides in. Provides damage reversal and immunity to all ailments.',
 		id: '638a4d49a44f4fa4b0deca48',
 		index: 596,
 		mergeFrom: [],
@@ -3681,7 +2698,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Wild instinct enhances the material it resides in. Effect: Increases speed, reduces wait time after using skills.',
+			'Wild instinct enhances the material it resides in. Increases speed, reduces wait time after using skills.',
 		id: '638a4d49a44f4fa4b0deca41',
 		index: 597,
 		mergeFrom: [],
@@ -3690,7 +2707,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Persistent faith enhances the material it resides in. Effect: Provides HP regeneration and chance to avoid KO.',
+			'Persistent faith enhances the material it resides in. Provides HP regeneration and chance to avoid KO.',
 		id: '638a4d49a44f4fa4b0deca45',
 		index: 598,
 		mergeFrom: [],
@@ -3699,7 +2716,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Guiding intuition enhances the material it resides in. Effect: Increases critical hit rate, has a chance to shorten wait time.',
+			'Guiding intuition enhances the material it resides in. Increases critical hit rate, has a chance to shorten wait time.',
 		id: '638a4d49a44f4fa4b0deca4a',
 		index: 599,
 		mergeFrom: [],
@@ -3708,7 +2725,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Empty world enhances the material it resides in. Effect: Provides damage conversion, reduces physical damage taken.',
+			'Empty world enhances the material it resides in. Provides damage conversion, reduces physical damage taken.',
 		id: '638a4d49a44f4fa4b0deca49',
 		index: 600,
 		mergeFrom: [],
@@ -3717,7 +2734,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Power of madness enhances the material it resides in. Effect: Greatly increases attack power, lose lots of HP each turn.',
+			'Power of madness enhances the material it resides in. Greatly increases attack power, lose lots of HP each turn.',
 		id: '638a4d49a44f4fa4b0deca4c',
 		index: 601,
 		mergeFrom: [],
@@ -3726,7 +2743,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Burning passion enhances the material it resides in. Effect: Increases all stats by 15, bestows fire and ice resistance.',
+			'Burning passion enhances the material it resides in. Increases all stats by 15, bestows fire and ice resistance.',
 		id: '638a4d49a44f4fa4b0deca4e',
 		index: 602,
 		mergeFrom: [],
@@ -3735,7 +2752,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Unwavering spirit enhances the material it resides in. Effect: Increases all stats by 15, bestows lightning and physical resistance.',
+			'Unwavering spirit enhances the material it resides in. Increases all stats by 15, bestows lightning and physical resistance.',
 		id: '638a4d49a44f4fa4b0deca4d',
 		index: 603,
 		mergeFrom: [],
@@ -3743,7 +2760,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Fog of illusion enhances the material it resides in. Effect: Swaps HP and MP, adds evasion chance.',
+		description: 'Fog of illusion enhances the material it resides in. Swaps HP and MP, adds evasion chance.',
 		id: '638a4d49a44f4fa4b0deca4f',
 		index: 604,
 		mergeFrom: [],
@@ -3752,7 +2769,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Bonds of belief enhances the material it resides in. Effect: Increases assist effect, provides damage conversion.',
+			'Bonds of belief enhances the material it resides in. Increases assist effect, provides damage conversion.',
 		id: '638a4d49a44f4fa4b0deca5a',
 		index: 605,
 		mergeFrom: [],
@@ -3761,7 +2778,7 @@ const traits: Trait[] = [
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Hammer of justice enhances the material it resides in. Effect: Greatly increases skill power, adds Break value.',
+			'Hammer of justice enhances the material it resides in. Greatly increases skill power, adds Break value.',
 		id: '638a4d49a44f4fa4b0deca52',
 		index: 606,
 		mergeFrom: [],
@@ -3769,8 +2786,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description:
-			'Dreadful king enhances the material it resides in. Effect: Causes additional damage and status effects.',
+		description: 'Dreadful king enhances the material it resides in. Causes additional damage and status effects.',
 		id: '638a4d49a44f4fa4b0deca51',
 		index: 607,
 		mergeFrom: [],
@@ -3778,7 +2794,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Unceasing desire enhances the material it resides in. Effect: Absorbs a portion of damage dealt.',
+		description: 'Unceasing desire enhances the material it resides in. Absorbs a portion of damage dealt.',
 		id: '638a4d49a44f4fa4b0deca55',
 		index: 608,
 		mergeFrom: [],
@@ -3786,7 +2802,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Pursuit of knowledge enhances the material it resides in. Effect: Causes additional damage.',
+		description: 'Pursuit of knowledge enhances the material it resides in. Causes additional damage.',
 		id: '638a4d49a44f4fa4b0deca53',
 		index: 609,
 		mergeFrom: [],
@@ -3795,7 +2811,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Star of expectation enhances the material it resides in. Effect: Provides enhancement proportional to level.',
+			'Star of expectation enhances the material it resides in. Provides enhancement proportional to level.',
 		id: '638a4d49a44f4fa4b0deca50',
 		index: 610,
 		mergeFrom: [],
@@ -3804,7 +2820,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Ray of hope enhances the material it resides in. Effect: Increases maximum HP, provides automatic KO revival.',
+			'Ray of hope enhances the material it resides in. Increases maximum HP, provides automatic KO revival.',
 		id: '638a4d49a44f4fa4b0deca57',
 		index: 611,
 		mergeFrom: [],
@@ -3813,7 +2829,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Awakening courage enhances the material it resides in. Effect: Provides a bonus against powerful foes and bosses.',
+			'Awakening courage enhances the material it resides in. Provides a bonus against powerful foes and bosses.',
 		id: '638a4d49a44f4fa4b0deca54',
 		index: 612,
 		mergeFrom: [],
@@ -3822,7 +2838,7 @@ const traits: Trait[] = [
 	{
 		categories: ['EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Kind soul enhances the material it resides in. Effect: Provides a Burst Mode bonus and gauge fill rate increase.',
+			'Kind soul enhances the material it resides in. Provides a Burst Mode bonus and gauge fill rate increase.',
 		id: '638a4d49a44f4fa4b0deca58',
 		index: 613,
 		mergeFrom: [],
@@ -3831,7 +2847,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Indomitable soul enhances the material it resides in. Effect: Provides Break resistance and greatly increases speed of recovering from Break.',
+			'Indomitable soul enhances the material it resides in. Provides Break resistance and greatly increases speed of recovering from Break.',
 		id: '638a4d49a44f4fa4b0deca59',
 		index: 614,
 		mergeFrom: [],
@@ -3839,7 +2855,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attacks cause 7% additional damage, and increases skill power by 15%.',
+		description: 'Attacks cause 7% additional damage, and increases skill power by 15%.',
 		id: '638a4d49a44f4fa4b0deca56',
 		index: 659,
 		mergeFrom: [],
@@ -3847,7 +2863,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attacks cause 15% additional damage, and increases skill power by 10%.',
+		description: 'Attacks cause 15% additional damage, and increases skill power by 10%.',
 		id: '638a4d49a44f4fa4b0deca5e',
 		index: 660,
 		mergeFrom: [],
@@ -3855,7 +2871,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attacks cause 15% additional damage, and increases skill power by 15%.',
+		description: 'Attacks cause 15% additional damage, and increases skill power by 15%.',
 		id: '638a4d49a44f4fa4b0deca5c',
 		index: 661,
 		mergeFrom: [],
@@ -3863,7 +2879,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attacks cause 20% additional damage, and increases skill power by 25%.',
+		description: 'Attacks cause 20% additional damage, and increases skill power by 25%.',
 		id: '638a4d49a44f4fa4b0deca5b',
 		index: 662,
 		mergeFrom: [],
@@ -3871,7 +2887,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attacks cause 15% additional damage, and increases skill power by 20%.',
+		description: 'Attacks cause 15% additional damage, and increases skill power by 20%.',
 		id: '638a4d49a44f4fa4b0deca5d',
 		index: 663,
 		mergeFrom: [],
@@ -3879,7 +2895,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Attacks cause between 1 - 50% additional damage.',
+		description: 'Attacks cause between 1 - 50% additional damage.',
 		id: '638a4d49a44f4fa4b0deca5f',
 		index: 664,
 		mergeFrom: [],
@@ -3887,7 +2903,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Item automatically activates when the user's HP falls below 20% in battle. Consumes MP.",
+		description: "Item automatically activates when the user's HP falls below 20% in battle. Consumes MP.",
 		id: '638a4d49a44f4fa4b0deca61',
 		index: 677,
 		mergeFrom: [],
@@ -3895,7 +2911,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Item automatically activates when the user's HP falls below 30% in battle. Consumes MP.",
+		description: "Item automatically activates when the user's HP falls below 30% in battle. Consumes MP.",
 		id: '638a4d49a44f4fa4b0deca60',
 		index: 678,
 		mergeFrom: [],
@@ -3903,7 +2919,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Item automatically activates when the user's HP falls below 40% in battle. Consumes MP.",
+		description: "Item automatically activates when the user's HP falls below 40% in battle. Consumes MP.",
 		id: '638a4d49a44f4fa4b0deca63',
 		index: 679,
 		mergeFrom: [],
@@ -3911,7 +2927,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Item automatically activates when the user's HP falls below 50% in battle.",
+		description: "Item automatically activates when the user's HP falls below 50% in battle.",
 		id: '638a4d49a44f4fa4b0deca62',
 		index: 680,
 		mergeFrom: [],
@@ -3920,7 +2936,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Effect: Increases item power by 25%, and makes its effect non-attribute. Non-attribute is not affected by any resistances or weaknesses.',
+			'Increases item power by 25%, and makes its effect non-attribute. Non-attribute is not affected by any resistances or weaknesses.',
 		id: '638a4d49a44f4fa4b0deca67',
 		index: 681,
 		mergeFrom: [],
@@ -3928,7 +2944,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Has a high chance to inflict Poison when dealing damage.',
+		description: 'Has a high chance to inflict Poison when dealing damage.',
 		id: '638a4d49a44f4fa4b0deca68',
 		index: 682,
 		mergeFrom: [],
@@ -3936,7 +2952,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Restores some of the target's HP, and also recovers from Poison.",
+		description: "Restores some of the target's HP, and also recovers from Poison.",
 		id: '638a4d49a44f4fa4b0deca6a',
 		index: 683,
 		mergeFrom: [],
@@ -3945,7 +2961,7 @@ const traits: Trait[] = [
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			"Effect: Temporarily increases all of the target's stats. They will also automatically revive on their next turn after being KO'd.",
+			"Temporarily increases all of the target's stats. They will also automatically revive on their next turn after being KO'd.",
 		id: '638a4d49a44f4fa4b0deca66',
 		index: 684,
 		mergeFrom: [],
@@ -3954,7 +2970,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			"Effect: Pushes back the target's turn a little. This effect diminishes with each use until the target takes another turn.",
+			"Pushes back the target's turn a little. This effect diminishes with each use until the target takes another turn.",
 		id: '638a4d49a44f4fa4b0deca64',
 		index: 685,
 		mergeFrom: [],
@@ -3962,7 +2978,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Heat causes continuous damage. The effect is small.',
+		description: 'Heat causes continuous damage. The effect is small.',
 		id: '638a4d49a44f4fa4b0deca65',
 		index: 686,
 		mergeFrom: [],
@@ -3970,7 +2986,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Cold reduces the target's speed, and also has a low chance of inflicting Slow.",
+		description: "Cold reduces the target's speed, and also has a low chance of inflicting Slow.",
 		id: '638a4d49a44f4fa4b0deca69',
 		index: 687,
 		mergeFrom: [],
@@ -3978,7 +2994,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases all stats by 8.',
+		description: 'Increases all stats by 8.',
 		id: '638a4d49a44f4fa4b0deca6b',
 		index: 688,
 		mergeFrom: [],
@@ -3986,7 +3002,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Puni and magical creatures.',
+		description: 'Increases damage dealt to Puni and magical creatures.',
 		id: '638a4d49a44f4fa4b0deca6c',
 		index: 689,
 		mergeFrom: [],
@@ -3994,7 +3010,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Reduces skill power by 10%, but also reduces MP consumption by 30%.',
+		description: 'Reduces skill power by 10%, but also reduces MP consumption by 30%.',
 		id: '638a4d49a44f4fa4b0deca71',
 		index: 690,
 		mergeFrom: [],
@@ -4002,7 +3018,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Reduces the target's defense and speed.",
+		description: "Reduces the target's defense and speed.",
 		id: '638a4d49a44f4fa4b0deca6f',
 		index: 691,
 		mergeFrom: [],
@@ -4010,7 +3026,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Restores Break value to the target. Also reduces wait time after turns by a small amount.',
+		description: 'Restores Break value to the target. Also reduces wait time after turns by a small amount.',
 		id: '638a4d49a44f4fa4b0deca6e',
 		index: 692,
 		mergeFrom: [],
@@ -4018,7 +3034,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack by 7, and attacks cause a small amount of additional damage.',
+		description: 'Increases attack by 7, and attacks cause a small amount of additional damage.',
 		id: '638a4d49a44f4fa4b0deca6d',
 		index: 693,
 		mergeFrom: [],
@@ -4026,7 +3042,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: The target recovers a small amount of HP, and also recovers from Weak.',
+		description: 'The target recovers a small amount of HP, and also recovers from Weak.',
 		id: '638a4d49a44f4fa4b0deca72',
 		index: 694,
 		mergeFrom: [],
@@ -4034,7 +3050,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: "Effect: Increases the target's evasion rate. This effect lasts 5 turns.",
+		description: "Increases the target's evasion rate. This effect lasts 5 turns.",
 		id: '638a4d49a44f4fa4b0deca75',
 		index: 695,
 		mergeFrom: [],
@@ -4042,7 +3058,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack item effect by 5%, and also has a chance to cause Weak.',
+		description: 'Increases attack item effect by 5%, and also has a chance to cause Weak.',
 		id: '638a4d49a44f4fa4b0deca70',
 		index: 696,
 		mergeFrom: [],
@@ -4050,7 +3066,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: The target recovers a small amount of HP, and also recovers from Curse.',
+		description: 'The target recovers a small amount of HP, and also recovers from Curse.',
 		id: '638a4d49a44f4fa4b0deca76',
 		index: 697,
 		mergeFrom: [],
@@ -4068,7 +3084,7 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Price when selling to shops increases quite a lot.',
+		description: 'Price when selling to shops increases quite a lot.',
 		id: '638a4d49a44f4fa4b0deca78',
 		index: 698,
 		mergeFrom: [],
@@ -4076,7 +3092,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases attack item effect by 15%.',
+		description: 'Increases attack item effect by 15%.',
 		id: '638a4d49a44f4fa4b0deca73',
 		index: 699,
 		mergeFrom: [],
@@ -4084,7 +3100,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases defense by 10, and also causes a decent amount of HP recovery each turn.',
+		description: 'Increases defense by 10, and also causes a decent amount of HP recovery each turn.',
 		id: '638a4d49a44f4fa4b0deca74',
 		index: 700,
 		mergeFrom: [],
@@ -4092,7 +3108,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases recovery item effect by 30%, but increases equipment cost by 5.',
+		description: 'Increases recovery item effect by 30%, but increases equipment cost by 5.',
 		id: '638a4d49a44f4fa4b0deca77',
 		index: 701,
 		mergeFrom: [],
@@ -4101,7 +3117,7 @@ const traits: Trait[] = [
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			"Effect: Increases the target's maximum HP during battle, and also reduces the effectiveness of status ailments. The effect is small.",
+			"Increases the target's maximum HP during battle, and also reduces the effectiveness of status ailments. The effect is small.",
 		id: '638a4d49a44f4fa4b0deca7b',
 		index: 702,
 		mergeFrom: [],
@@ -4109,7 +3125,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases critical hit rate, and also increases damage dealt to Broken targets.',
+		description: 'Increases critical hit rate, and also increases damage dealt to Broken targets.',
 		id: '638a4d49a44f4fa4b0deca79',
 		index: 703,
 		mergeFrom: [],
@@ -4117,7 +3133,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: The target recovers from Poison and No Heal ailments.',
+		description: 'The target recovers from Poison and No Heal ailments.',
 		id: '638a4d49a44f4fa4b0deca7a',
 		index: 704,
 		mergeFrom: [],
@@ -4135,7 +3151,7 @@ const traits: Trait[] = [
 			'EXPLORATION',
 			'SYNTHESIS',
 		],
-		description: 'Effect: Increases price when selling to shops.',
+		description: 'Increases price when selling to shops.',
 		id: '638a4d49a44f4fa4b0deca7f',
 		index: 705,
 		mergeFrom: [],
@@ -4143,7 +3159,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases damage dealt to Demon and Undead enemies.',
+		description: 'Increases damage dealt to Demon and Undead enemies.',
 		id: '638a4d49a44f4fa4b0deca7c',
 		index: 706,
 		mergeFrom: [],
@@ -4152,7 +3168,7 @@ const traits: Trait[] = [
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
 		description:
-			'Effect: Increases damage dealt to Broken targets by 20%, and a portion of damage dealt is absorbed to recover HP.',
+			'Increases damage dealt to Broken targets by 20%, and a portion of damage dealt is absorbed to recover HP.',
 		id: '638a4d49a44f4fa4b0deca7e',
 		index: 707,
 		mergeFrom: [],
@@ -4160,7 +3176,7 @@ const traits: Trait[] = [
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
-		description: 'Effect: Increases all stats by 15, and also increases skill power by 20%.',
+		description: 'Increases all stats by 15, and also increases skill power by 20%.',
 		id: '638a4d49a44f4fa4b0deca7d',
 		index: 708,
 		mergeFrom: [],

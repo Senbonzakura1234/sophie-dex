@@ -74,22 +74,14 @@ type RelatedCategories {
    count Int
 }
 
-type MergeTraitItem {
-   id          String @db.ObjectId
-   index       Int
-   name        String
-   description String
+type TRAIT_LINK {
+   id    String @db.ObjectId
+   index Int
+   name  String
 }
 
 type MergeTrait {
-   consist MergeTraitItem[]
-}
-
-type TraitPresent {
-   id          String @db.ObjectId
-   index       Int
-   name        String
-   description String
+   consist TRAIT_LINK[]
 }
 
 generator client {
@@ -128,5 +120,5 @@ model Item {
    category          CATEGORY
    level             Int
    recipeType        RECIPE_TYPE?
-   traitPresent      TraitPresent?
+   traitPresent      TRAIT_LINK?
 }

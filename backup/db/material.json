@@ -1,574 +1,569 @@
 [
 	{
-		"description": "Location: Pilgram Road, Flower Garden, Rocky Grove, Scar of the Land.<clcaiqscn000008jwhfw85ia7>Hunt: Mandragora, White Root, Alraune, Kimmoch, Single Horn.<clcaiqscn000008jwhfw85ia7>Rumor: Greatly grown Magic Grass.",
+		"description": "Pilgram Road, Flower Garden, Rocky Grove, Scar of the Land.<clcaiqscn000008jwhfw85ia7>Mandragora, White Root, Alraune, Kimmoch, Single Horn.<clcaiqscn000008jwhfw85ia7>Greatly grown Magic Grass.",
 		"name": "Magic Grass",
 		"trait": null
 	},
 	{
-		"description": "Location: Pilgram Road, Flower Garden, Verdant Hill, Underground lake.<clcaiqscn000008jwhfw85ia7>Hunt: White Root, Alraune, Kimmoch.",
+		"description": "Pilgram Road, Flower Garden, Verdant Hill, Underground lake.<clcaiqscn000008jwhfw85ia7>White Root, Alraune, Kimmoch.",
 		"name": "Cobalt Grass",
 		"trait": null
 	},
 	{
-		"description": "Location: Gathering of Beast, Puzzzling Path, Foggy Woodland, Mountain Boundary, Forest of fairies, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt: Kimmoch, Nightshade, Sorcerer Titus.",
+		"description": "Gathering of Beast, Puzzzling Path, Foggy Woodland, Mountain Boundary, Forest of fairies, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Kimmoch, Nightshade, Sorcerer Titus.",
 		"name": "Fairy Poison Grass",
 		"trait": {
-			"description": "Effect: Has a high chance to inflict Poison when dealing damage.",
+			"description": "Has a high chance to inflict Poison when dealing damage.",
 			"id": "638a4d49a44f4fa4b0deca68",
 			"index": 682,
 			"name": "Poison Mist"
 		}
 	},
 	{
-		"description": "Location: Rocky Grove, Gate of trees, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt: Kimmoch, Nightshade, Sorcerer Titus.<clcaiqscn000008jwhfw85ia7>Rumor: Herbs great for medicine.",
+		"description": "Rocky Grove, Gate of trees, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Kimmoch, Nightshade, Sorcerer Titus.<clcaiqscn000008jwhfw85ia7>Herbs great for medicine.",
 		"name": "Mystic Herb",
 		"trait": null
 	},
 	{
-		"description": "Location: Chick Woods, lisure Plaza, Fungal garden, Rocky Mountain, Dead Tree Wasteland.<clcaiqscn000008jwhfw85ia7>Hunt: White Root, Araune, Kimmoch.",
+		"description": "Chick Woods, lisure Plaza, Fungal garden, Rocky Mountain, Dead Tree Wasteland.<clcaiqscn000008jwhfw85ia7>White Root, Araune, Kimmoch.",
 		"name": "Sunset Grass",
 		"trait": null
 	},
 	{
-		"description": "Location: Funal Garden, Foggy Woodland, Forest of Faries.<clcaiqscn000008jwhfw85ia7>Hunt: White Root, Alraunem, Starfish.",
+		"description": "Funal Garden, Foggy Woodland, Forest of Faries.<clcaiqscn000008jwhfw85ia7>White Root, Alraunem, Starfish.",
 		"name": "Five Day Vine",
 		"trait": null
 	},
 	{
-		"description": "Location: Rocky Mountain, Verdant Hill, Scar of the land.<clcaiqscn000008jwhfw85ia7>Hunt: White Root, Alraunem, Starfish.<clcaiqscn000008jwhfw85ia7>Rumor: Cotton Disliked by dragon.",
+		"description": "Rocky Mountain, Verdant Hill, Scar of the land.<clcaiqscn000008jwhfw85ia7>White Root, Alraunem, Starfish.<clcaiqscn000008jwhfw85ia7>Cotton Disliked by dragon.",
 		"name": "Mountain Cotton",
 		"trait": null
 	},
 	{
-		"description": "Location: Gate of Trees, Three Bridge Spring, Small Islet, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Hunt: White Root, Alraunem, Starfish.<clcaiqscn000008jwhfw85ia7>Rumor: Remnant of a Past Sea?.",
+		"description": "Gate of Trees, Three Bridge Spring, Small Islet, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>White Root, Alraunem, Starfish.<clcaiqscn000008jwhfw85ia7>Remnant of a Past Sea?.",
 		"name": "Mossy Driftwood",
 		"trait": null
 	},
 	{
-		"description": "Location: Gathering of Beast, Rocky Grove, Gate of Trees, Foggy Woodland, Forest of Faries.",
+		"description": "Gathering of Beast, Rocky Grove, Gate of Trees, Foggy Woodland, Forest of Faries.",
 		"name": "Kifa",
 		"trait": null
 	},
 	{
-		"description": "Location: Small Islet, Moon Sun Mor (Unlock after Oskar event).",
+		"description": "Small Islet, Moon Sun Mor (Unlock after Oskar event).",
 		"name": "Altare",
 		"trait": null
 	},
 	{
-		"description": "Location: Gate of Tress, Three Bridge Spring, Silent Lakeside, Prospector's Strand, Underground Lake  (Unlock after Oskar event).",
+		"description": "Gate of Tress, Three Bridge Spring, Silent Lakeside, Prospector's Strand, Underground Lake  (Unlock after Oskar event).",
 		"name": "Crimson Herb",
 		"trait": {
-			"description": "Effect: Restores some of the target's HP, and also recovers from Poison.",
+			"description": "Restores some of the target's HP, and also recovers from Poison.",
 			"id": "638a4d49a44f4fa4b0deca6a",
 			"index": 683,
 			"name": "Slime Compound"
 		}
 	},
 	{
-		"description": "Location: Underground Lake  (Unlock after Oskar event).",
+		"description": "Underground Lake  (Unlock after Oskar event).",
 		"name": "Princess Grass",
 		"trait": null
 	},
 	{
-		"description": "Location: Forest of Faries  (Unlock after Oskar final event).",
+		"description": "Forest of Faries  (Unlock after Oskar final event).",
 		"name": "Eternal Blossom",
 		"trait": null
 	},
 	{
-		"description": "Location: Fairy Forest (Rumor only).<clcaiqscn000008jwhfw85ia7>Rumor: Flower looking in silence..",
+		"description": "Fairy Forest (Rumor only).<clcaiqscn000008jwhfw85ia7>Flower looking in silence..",
 		"name": "Dunkelheit",
 		"trait": {
-			"description": "Effect: Maximum HP increases by 25.",
+			"description": "Maximum HP increases by 25.",
 			"id": "638a4d47a44f4fa4b0dec9a5",
 			"index": 193,
 			"name": "Full of Life"
 		}
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Kimmoch, Nightshade, Sealed Demon Lord, Sorcerer Titus, Light Elemental.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Kimmoch, Nightshade, Sealed Demon Lord, Sorcerer Titus, Light Elemental.",
 		"name": "Dunkelstern",
 		"trait": {
-			"description": "Effect: Temporarily increases all of the target's stats. They will also automatically revive on their next turn after being KO'd.",
+			"description": "Temporarily increases all of the target's stats. They will also automatically revive on their next turn after being KO'd.",
 			"id": "638a4d49a44f4fa4b0deca66",
 			"index": 684,
 			"name": "False Flower"
 		}
 	},
 	{
-		"description": "Location: Merbert Farm, Enlightened Mountain, Underground Lake.<clcaiqscn000008jwhfw85ia7>Hunt: Magic Book, Gargolye, Apostle, Mini Demon.",
+		"description": "Merbert Farm, Enlightened Mountain, Underground Lake.<clcaiqscn000008jwhfw85ia7>Magic Book, Gargolye, Apostle, Mini Demon.",
 		"name": "Aizen Ore",
 		"trait": null
 	},
 	{
-		"description": "Location: Flower Garden, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt: Punipuni?, Magic book, Book Familiar, Mini Demon, Tricker.",
+		"description": "Flower Garden, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Punipuni?, Magic book, Book Familiar, Mini Demon, Tricker.",
 		"name": "Raiden Ore",
 		"trait": {
-			"description": "Effect: Pushes back the target's turn a little. This effect diminishes with each use until the target takes another turn.",
+			"description": "Pushes back the target's turn a little. This effect diminishes with each use until the target takes another turn.",
 			"id": "638a4d49a44f4fa4b0deca64",
 			"index": 685,
 			"name": "Electrified"
 		}
 	},
 	{
-		"description": "Location: Flower Garden, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt: Punipuni?, Magic book, Book Familiar, Mini Demon, Tricker, Devil Horn, Sealed Demon.",
+		"description": "Flower Garden, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Punipuni?, Magic book, Book Familiar, Mini Demon, Tricker, Devil Horn, Sealed Demon.",
 		"name": "Kupulf Ore",
 		"trait": null
 	},
 	{
-		"description": "Location: Pilgrim Road, Merbert Farm, Enlightened Mountain, Moon Sun Mor.<clcaiqscn000008jwhfw85ia7>Hunt: Magic Book, Gargolye, Apostle, Mini Demon.",
+		"description": "Pilgrim Road, Merbert Farm, Enlightened Mountain, Moon Sun Mor.<clcaiqscn000008jwhfw85ia7>Magic Book, Gargolye, Apostle, Mini Demon.",
 		"name": "Kaen Stone",
 		"trait": {
-			"description": "Effect: Heat causes continuous damage. The effect is small.",
+			"description": "Heat causes continuous damage. The effect is small.",
 			"id": "638a4d49a44f4fa4b0deca65",
 			"index": 686,
 			"name": "Carries Heat"
 		}
 	},
 	{
-		"description": "Location: Gate of Trees, Three Bridge Spring, Silent Lakeside, Merbert Farm, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Hunt: Punipuni?, Book Familiar, Tricker.",
+		"description": "Gate of Trees, Three Bridge Spring, Silent Lakeside, Merbert Farm, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Punipuni?, Book Familiar, Tricker.",
 		"name": "Hakurei Stone",
 		"trait": {
-			"description": "Effect: Cold reduces the target's speed, and also has a low chance of inflicting Slow.",
+			"description": "Cold reduces the target's speed, and also has a low chance of inflicting Slow.",
 			"id": "638a4d49a44f4fa4b0deca69",
 			"index": 687,
 			"name": "Carries Cold"
 		}
 	},
 	{
-		"description": "Location: Scar of the Land,  Enlightend Mountain.<clcaiqscn000008jwhfw85ia7>Hunt: Devil Horn, Sealed Demon Lord.",
+		"description": "Scar of the Land,  Enlightend Mountain.<clcaiqscn000008jwhfw85ia7>Devil Horn, Sealed Demon Lord.",
 		"name": "Spirit Stone",
 		"trait": null
 	},
 	{
-		"description": "Location: Fertile Shore, Husk Forest, Sealed Temple, Underground lake.<clcaiqscn000008jwhfw85ia7>Hunt: Devil Horn, Sealed Demon Lord.",
+		"description": "Fertile Shore, Husk Forest, Sealed Temple, Underground lake.<clcaiqscn000008jwhfw85ia7>Devil Horn, Sealed Demon Lord.",
 		"name": "Black Orb",
 		"trait": {
-			"description": "Effect: Increases all stats by 8.",
+			"description": "Increases all stats by 8.",
 			"id": "638a4d49a44f4fa4b0deca6b",
 			"index": 688,
 			"name": "Dark Matter"
 		}
 	},
 	{
-		"description": "Location: Merbert Farm, Three Bridge Spring, Dead Tree Wasteland, Waterside Ruins, Prospectors Strand.",
+		"description": "Merbert Farm, Three Bridge Spring, Dead Tree Wasteland, Waterside Ruins, Prospectors Strand.",
 		"name": "Fairy Ball",
 		"trait": null
 	},
 	{
-		"description": "Location: Calm Banks, Fertile Shore, Underground Lake,.<clcaiqscn000008jwhfw85ia7>Hunt: Island Fish, Isanasius.",
+		"description": "Calm Banks, Fertile Shore, Underground Lake,.<clcaiqscn000008jwhfw85ia7>Island Fish, Isanasius.",
 		"name": "Lakebottom Soil",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Grand Ocean.<clcaiqscn000008jwhfw85ia7>Rumor: Remnant of a Past Sea?.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Grand Ocean.<clcaiqscn000008jwhfw85ia7>Remnant of a Past Sea?.",
 		"name": "Seabed Soil",
 		"trait": null
 	},
 	{
-		"description": "Location: Moon Sun Moor, City of the lost, Sealed temple.<clcaiqscn000008jwhfw85ia7>Hunt: Gargoyle, Apostle.",
+		"description": "Moon Sun Moor, City of the lost, Sealed temple.<clcaiqscn000008jwhfw85ia7>Gargoyle, Apostle.",
 		"name": "Ancient Tablet",
 		"trait": {
-			"description": "Effect: Increases damage dealt to Puni and magical creatures.",
+			"description": "Increases damage dealt to Puni and magical creatures.",
 			"id": "638a4d49a44f4fa4b0deca6c",
 			"index": 689,
 			"name": "Ancient Seal"
 		}
 	},
 	{
-		"description": "Location: Forgotten nursery, Small islet, City of the Lost, Fallen Palace.<clcaiqscn000008jwhfw85ia7>Hunt: Gargoyle, Apostle.",
+		"description": "Forgotten nursery, Small islet, City of the Lost, Fallen Palace.<clcaiqscn000008jwhfw85ia7>Gargoyle, Apostle.",
 		"name": "Broken Stone",
 		"trait": null
 	},
 	{
-		"description": "Location: Waterside ruins, Fallen Palace, Forgotten Nursery.<clcaiqscn000008jwhfw85ia7>Hunt: Magic Book, Mini Demon Dragonaire, Magmacius.",
+		"description": "Waterside ruins, Fallen Palace, Forgotten Nursery.<clcaiqscn000008jwhfw85ia7>Magic Book, Mini Demon Dragonaire, Magmacius.",
 		"name": "Ancient Pillar",
 		"trait": null
 	},
 	{
-		"description": "Location: Silent Lakeside, Sealed Temple, Fallen Palace, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt: Punipuni? Book familiar Tricker.",
+		"description": "Silent Lakeside, Sealed Temple, Fallen Palace, Soul Space.<clcaiqscn000008jwhfw85ia7>Punipuni? Book familiar Tricker.",
 		"name": "Smoldering Stone",
 		"trait": null
 	},
 	{
-		"description": "Location: Mountain Boundary, Husk Forest, Scar of the land, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt: Heavenly Bird, Dragonaire, Magmacius.",
+		"description": "Mountain Boundary, Husk Forest, Scar of the land, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Heavenly Bird, Dragonaire, Magmacius.",
 		"name": "Fardenlite",
 		"trait": null
 	},
 	{
-		"description": "Location: Mountain Boundary, Underground Lake, Fallen Palace.<clcaiqscn000008jwhfw85ia7>Hunt: Living grimoire.",
+		"description": "Mountain Boundary, Underground Lake, Fallen Palace.<clcaiqscn000008jwhfw85ia7>Living grimoire.",
 		"name": "Night Crystal",
 		"trait": {
-			"description": "Effect: Reduces skill power by 10%, but also reduces MP consumption by 30%.",
+			"description": "Reduces skill power by 10%, but also reduces MP consumption by 30%.",
 			"id": "638a4d49a44f4fa4b0deca71",
 			"index": 690,
 			"name": "Absorbs Light"
 		}
 	},
 	{
-		"description": "Location: Dead Tree, Small Islet.<clcaiqscn000008jwhfw85ia7>Hunt: Dragonaire, Magmacius.",
+		"description": "Dead Tree, Small Islet.<clcaiqscn000008jwhfw85ia7>Dragonaire, Magmacius.",
 		"name": "Shining Ore",
 		"trait": null
 	},
 	{
-		"description": "Location: Fertile Shore, Underground Lake.<clcaiqscn000008jwhfw85ia7>Hunt: Sealed Demon Lord, Wind Elemental, Light Elemental.",
+		"description": "Fertile Shore, Underground Lake.<clcaiqscn000008jwhfw85ia7>Sealed Demon Lord, Wind Elemental, Light Elemental.",
 		"name": "Silver Crystal",
 		"trait": null
 	},
 	{
-		"description": "Location: Scar of the land (Big Cystal).<clcaiqscn000008jwhfw85ia7>Hunt: Wind Elemental, Light Elemental.<clcaiqscn000008jwhfw85ia7>Rumor: Crystal Bless By Spirits.",
+		"description": "Scar of the land (Big Cystal).<clcaiqscn000008jwhfw85ia7>Wind Elemental, Light Elemental.<clcaiqscn000008jwhfw85ia7>Crystal Bless By Spirits.",
 		"name": "Spirit Crystal",
 		"trait": null
 	},
 	{
-		"description": "Location: Blessed Forest, Liesure Plaza, Funal Garden, Enlightened Mountain.<clcaiqscn000008jwhfw85ia7>Hunt: Ardra, Kaiser Pigeon, Saber Claw, Gustaf, Rok, Heavenly bird.",
+		"description": "Blessed Forest, Liesure Plaza, Funal Garden, Enlightened Mountain.<clcaiqscn000008jwhfw85ia7>Ardra, Kaiser Pigeon, Saber Claw, Gustaf, Rok, Heavenly bird.",
 		"name": "Monster Feather",
 		"trait": null
 	},
 	{
-		"description": "Location: Open Ruins, Fungal Gardens, Husk Forest, Moon Sun Mor.<clcaiqscn000008jwhfw85ia7>Hunt: Mini Demon, Ardra, Chimera Beast, Lightning, Fang, Twin Header, Island Fish, Single Horn.",
+		"description": "Open Ruins, Fungal Gardens, Husk Forest, Moon Sun Mor.<clcaiqscn000008jwhfw85ia7>Mini Demon, Ardra, Chimera Beast, Lightning, Fang, Twin Header, Island Fish, Single Horn.",
 		"name": "Strong Bone",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Island Fish, Signle Horn, Star Fish, Isanasius, Grand Ocean.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Island Fish, Signle Horn, Star Fish, Isanasius, Grand Ocean.",
 		"name": "Island Fish Fin",
 		"trait": {
-			"description": "Effect: Reduces the target's defense and speed.",
+			"description": "Reduces the target's defense and speed.",
 			"id": "638a4d49a44f4fa4b0deca6f",
 			"index": 691,
 			"name": "Stinks"
 		}
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Mini Demon, Ardra, Chimera Beast, Lightning, Fang, Twin Header, Island Fish, Single Horn.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Mini Demon, Ardra, Chimera Beast, Lightning, Fang, Twin Header, Island Fish, Single Horn.",
 		"name": "Animal Fur",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning, Fang , Twin Header, Silent Beast, Crimson Fang Dragonaire, Magmacius, Wind Elemental.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning, Fang , Twin Header, Silent Beast, Crimson Fang Dragonaire, Magmacius, Wind Elemental.",
 		"name": "Dawn Fur",
 		"trait": {
-			"description": "Effect: Restores Break value to the target. Also reduces wait time after turns by a small amount.",
+			"description": "Restores Break value to the target. Also reduces wait time after turns by a small amount.",
 			"id": "638a4d49a44f4fa4b0deca6e",
 			"index": 692,
 			"name": "Sunny Scent"
 		}
 	},
 	{
-		"description": "Location: Flower Garden, Underground Lake, Forgotten Nursery, Sealed temple.<clcaiqscn000008jwhfw85ia7>Hunt: Kaiser Pigeon, Saber Claw, Gusaf, Fang.",
+		"description": "Flower Garden, Underground Lake, Forgotten Nursery, Sealed temple.<clcaiqscn000008jwhfw85ia7>Kaiser Pigeon, Saber Claw, Gusaf, Fang.",
 		"name": "Silver Web",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Wise, Spirit, Rok, Twin Header, Sorcerer Titus, Ifritter, Tempestus, Wind Elemental.<clcaiqscn000008jwhfw85ia7>Rumor: Gold Strong Thread.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Wise, Spirit, Rok, Twin Header, Sorcerer Titus, Ifritter, Tempestus, Wind Elemental.<clcaiqscn000008jwhfw85ia7>Gold Strong Thread.",
 		"name": "Gold Steel Web",
 		"trait": {
-			"description": "Effect: Increases attack by 7, and attacks cause a small amount of additional damage.",
+			"description": "Increases attack by 7, and attacks cause a small amount of additional damage.",
 			"id": "638a4d49a44f4fa4b0deca6d",
 			"index": 693,
 			"name": "Cutting Thread"
 		}
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Wise Spirit, Rok, Twin Header, Sorcer Titus, Ifritter, Tempestus, Dragonaire, Mamacius, Sun Destroyer Yasuk, Moon Eater Durak..",
+		"description": "<clcaiqscn000008jwhfw85ia7>Wise Spirit, Rok, Twin Header, Sorcer Titus, Ifritter, Tempestus, Dragonaire, Mamacius, Sun Destroyer Yasuk, Moon Eater Durak..",
 		"name": "Dragon Scale",
 		"trait": null
 	},
 	{
-		"description": "Location: Calm Banks, Small Islet, Prospector's Strand, Underground Lake.",
+		"description": "Calm Banks, Small Islet, Prospector's Strand, Underground Lake.",
 		"name": "Well Water",
 		"trait": null
 	},
 	{
-		"description": "Location: Calm Banks, Underwater Lake.<clcaiqscn000008jwhfw85ia7>Rumor: Pure and Clean Spring water.",
+		"description": "Calm Banks, Underwater Lake.<clcaiqscn000008jwhfw85ia7>Pure and Clean Spring water.",
 		"name": "Good Water",
 		"trait": null
 	},
 	{
-		"description": "Location: Bought.",
+		"description": "",
 		"name": "Kirchen Milk",
 		"trait": {
-			"description": "Effect: The target recovers a small amount of HP, and also recovers from Weak.",
+			"description": "The target recovers a small amount of HP, and also recovers from Weak.",
 			"id": "638a4d49a44f4fa4b0deca72",
 			"index": 694,
 			"name": "Kirchen Bell Special"
 		}
 	},
 	{
-		"description": "Location: Fertile Shore, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt: Dragonaire, Magmacius.",
+		"description": "Fertile Shore, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Dragonaire, Magmacius.",
 		"name": "Luminous Water",
 		"trait": {
-			"description": "Effect: Increases the target's evasion rate. This effect lasts 5 turns.",
+			"description": "Increases the target's evasion rate. This effect lasts 5 turns.",
 			"id": "638a4d49a44f4fa4b0deca75",
 			"index": 695,
 			"name": "Flickering Light"
 		}
 	},
 	{
-		"description": "Location: Waterside Ruins, Sealed temple, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt: Dragonaire, Magmacius.",
+		"description": "Waterside Ruins, Sealed temple, Soul Space.<clcaiqscn000008jwhfw85ia7>Dragonaire, Magmacius.",
 		"name": "Nitro Water",
 		"trait": null
 	},
 	{
-		"description": "Location: Forgotten Nursery, Waterside, Ruins, Small Islet,.<clcaiqscn000008jwhfw85ia7>Hunt: Black Puni, Punipuni? Kaiser pigeonm Saber claw, Gustaf, Lightning, Silent Beast.",
+		"description": "Forgotten Nursery, Waterside, Ruins, Small Islet,.<clcaiqscn000008jwhfw85ia7>Black Puni, Punipuni? Kaiser pigeonm Saber claw, Gustaf, Lightning, Silent Beast.",
 		"name": "Suspicious Liquid",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Blue Puni, Green Puni, Red Puni, Gold Puni, Black Puni.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Blue Puni, Green Puni, Red Puni, Gold Puni, Black Puni.",
 		"name": "Puni Fluid",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Rainbow Puni, Admiral Puni, Slead Demon Lord.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Rainbow Puni, Admiral Puni, Slead Demon Lord.",
 		"name": "Rainbow Puni Fluid",
 		"trait": {
-			"description": "Effect: Increases attack item effect by 5%, and also has a chance to cause Weak.",
+			"description": "Increases attack item effect by 5%, and also has a chance to cause Weak.",
 			"id": "638a4d49a44f4fa4b0deca70",
 			"index": 696,
 			"name": "Unidentified"
 		}
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Wise Spirit, rok, Twin Header, Sorcer Titus, Ifritter, Tempestus, Dragonaire, Magmacius, Sun Destroyer Yasuk, Moon Destroyer Durak.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Wise Spirit, rok, Twin Header, Sorcer Titus, Ifritter, Tempestus, Dragonaire, Magmacius, Sun Destroyer Yasuk, Moon Destroyer Durak.",
 		"name": "Dragon Bloodstone",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Haunt Unliving King.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Haunt Unliving King.",
 		"name": "Holy Water",
 		"trait": {
-			"description": "Effect: The target recovers a small amount of HP, and also recovers from Curse.",
+			"description": "The target recovers a small amount of HP, and also recovers from Curse.",
 			"id": "638a4d49a44f4fa4b0deca76",
 			"index": 697,
 			"name": "Purifying Water"
 		}
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Blue Puni, Green Puni, Red Puni, Gold Puni, Black Puni.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Blue Puni, Green Puni, Red Puni, Gold Puni, Black Puni.",
 		"name": "Puniball",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Blue Puni, Green Puni, Red Puni, Gold Puni, Punipuni? Super Puni, Admiral Puni.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Blue Puni, Green Puni, Red Puni, Gold Puni, Punipuni? Super Puni, Admiral Puni.",
 		"name": "Golden Puniball",
 		"trait": {
-			"description": "Effect: Price when selling to shops increases quite a lot.",
+			"description": "Price when selling to shops increases quite a lot.",
 			"id": "638a4d49a44f4fa4b0deca78",
 			"index": 698,
 			"name": "Golden Radiance"
 		}
 	},
 	{
-		"description": "Location: Chick Woods, Blessed Forest, Green Ruins, Puzzling Path, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt: Madragora, Single Horn.",
+		"description": "Chick Woods, Blessed Forest, Green Ruins, Puzzling Path, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Madragora, Single Horn.",
 		"name": "Uni",
 		"trait": null
 	},
 	{
-		"description": "Location: Blessed Forest, Green Ruins, Puzzling Path, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt: White Root, Alraune, Kimmoch.",
+		"description": "Blessed Forest, Green Ruins, Puzzling Path, Sealed Temple.<clcaiqscn000008jwhfw85ia7>White Root, Alraune, Kimmoch.",
 		"name": "Red Uni",
 		"trait": null
 	},
 	{
-		"description": "Location: Merbert Farm, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt: Mandragora, Single Horn.",
+		"description": "Merbert Farm, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Mandragora, Single Horn.",
 		"name": "Ramel Wheat",
 		"trait": null
 	},
 	{
-		"description": "Location: Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt: Mandragora, Single Horn.<clcaiqscn000008jwhfw85ia7>Rumor: Stash of High Grade Flour.",
+		"description": "Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Mandragora, Single Horn.<clcaiqscn000008jwhfw85ia7>Stash of High Grade Flour.",
 		"name": "Weiss Powder",
 		"trait": null
 	},
 	{
-		"description": "Location: Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt: Kimmoch, Nightshade, Sorcerer Titus.",
+		"description": "Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Kimmoch, Nightshade, Sorcerer Titus.",
 		"name": "Soil Potato",
 		"trait": null
 	},
 	{
-		"description": "Location: Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt: Kimmoch, Nightshade, Sorcerer Titus.",
+		"description": "Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Kimmoch, Nightshade, Sorcerer Titus.",
 		"name": "Silver Potato",
 		"trait": {
-			"description": "Effect: Increases defense by 10, and also causes a decent amount of HP recovery each turn.",
+			"description": "Increases defense by 10, and also causes a decent amount of HP recovery each turn.",
 			"id": "638a4d49a44f4fa4b0deca74",
 			"index": 700,
 			"name": "Mutated Material"
 		}
 	},
 	{
-		"description": "Location: Blessed Forest, Leaisure Plaza, Green Ruins, gate of trees.<clcaiqscn000008jwhfw85ia7>Hunt: Mini Demon, Ardra, Chimera Beast.",
+		"description": "Blessed Forest, Leaisure Plaza, Green Ruins, gate of trees.<clcaiqscn000008jwhfw85ia7>Mini Demon, Ardra, Chimera Beast.",
 		"name": "Beehive",
 		"trait": null
 	},
 	{
-		"description": "Location: Chickk Woods, Green RUins.<clcaiqscn000008jwhfw85ia7>Hunt: Kaiser Pigeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Rumor: Strange Miniature Eggs.",
+		"description": "Chickk Woods, Green RUins.<clcaiqscn000008jwhfw85ia7>Kaiser Pigeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Strange Miniature Eggs.",
 		"name": "Unknown Egg",
 		"trait": null
 	},
 	{
-		"description": "Location: Merbert Farm, Flower Garden, Open Ruins, Verdant Hilld.",
+		"description": "Merbert Farm, Flower Garden, Open Ruins, Verdant Hilld.",
 		"name": "Whimsy Strawberry",
 		"trait": null
 	},
 	{
-		"description": "Location: Open Ruins, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt: White Root, Alraune, Star fish.<clcaiqscn000008jwhfw85ia7>Rumor: Fruit that gives strength.",
+		"description": "Open Ruins, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>White Root, Alraune, Star fish.<clcaiqscn000008jwhfw85ia7>Fruit that gives strength.",
 		"name": "Bursting Berry",
 		"trait": {
-			"description": "Effect: Increases recovery item effect by 30%, but increases equipment cost by 5.",
+			"description": "Increases recovery item effect by 30%, but increases equipment cost by 5.",
 			"id": "638a4d49a44f4fa4b0deca77",
 			"index": 701,
 			"name": "Special Ingredient"
 		}
 	},
 	{
-		"description": "Location: Flower Garden, Forgotten Nursery, Fallen Palace, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt: Magic Book, Book Familiar, living Grimoire, Forbidden Codex.",
+		"description": "Flower Garden, Forgotten Nursery, Fallen Palace, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Magic Book, Book Familiar, living Grimoire, Forbidden Codex.",
 		"name": "Paper Scrap",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Mini Demon, Ardra, Chimera Beast.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Mini Demon, Ardra, Chimera Beast.",
 		"name": "Natural Oil",
 		"trait": null
 	},
 	{
-		"description": "Location: Bought at Marguerite, Synthsized (Hope).",
-		"name": "Natural Yeast",
-		"trait": null
-	},
-	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Kaiser Pengeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Rumor: Vivldy Colored Oil.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Kaiser Pengeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Vivldy Colored Oil.",
 		"name": "Zafloa Oil",
 		"trait": {
-			"description": "Effect: Increases the target's maximum HP during battle, and also reduces the effectiveness of status ailments. The effect is small.",
+			"description": "Increases the target's maximum HP during battle, and also reduces the effectiveness of status ailments. The effect is small.",
 			"id": "638a4d49a44f4fa4b0deca7b",
 			"index": 702,
 			"name": "Secret of Health"
 		}
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Haunt, Unliving King.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Haunt, Unliving King.",
 		"name": "Church Talisman",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Haunt, Unliving King.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Haunt, Unliving King.",
 		"name": "High Class Talisman",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Lich Ordser, Haunt, Sealed Demon Lord, Unliving King.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Lich Ordser, Haunt, Sealed Demon Lord, Unliving King.",
 		"name": "Pious Talisman",
 		"trait": {
-			"description": "Effect: Increases critical hit rate, and also increases damage dealt to Broken targets.",
+			"description": "Increases critical hit rate, and also increases damage dealt to Broken targets.",
 			"id": "638a4d49a44f4fa4b0deca79",
 			"index": 703,
 			"name": "Power of Faith"
 		}
 	},
 	{
-		"description": "Location: Calm Banks, Silent Lakeside, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Hunt: Kaiser Pigeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Rumor: Shell Like Gemstone.",
+		"description": "Calm Banks, Silent Lakeside, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Kaiser Pigeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Shell Like Gemstone.",
 		"name": "Pretty Shell",
 		"trait": null
 	},
 	{
-		"description": "Location: Underwater Lake.<clcaiqscn000008jwhfw85ia7>Hunt: Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning Silent Beast, Isanasius.<clcaiqscn000008jwhfw85ia7>Rumor: Chalk White Shells.",
+		"description": "Underwater Lake.<clcaiqscn000008jwhfw85ia7>Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning Silent Beast, Isanasius.<clcaiqscn000008jwhfw85ia7>Chalk White Shells.",
 		"name": "Pelem Shell",
 		"trait": {
-			"description": "Effect: The target recovers from Poison and No Heal ailments.",
+			"description": "The target recovers from Poison and No Heal ailments.",
 			"id": "638a4d49a44f4fa4b0deca7a",
 			"index": 704,
 			"name": "Medicine Compound"
 		}
 	},
 	{
-		"description": "Location: Merbert Farm, Sealed Temple, Underground Lake, Scar of the land.<clcaiqscn000008jwhfw85ia7>Hunt: Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning Silent Beast.",
+		"description": "Merbert Farm, Sealed Temple, Underground Lake, Scar of the land.<clcaiqscn000008jwhfw85ia7>Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning Silent Beast.",
 		"name": "Blue Steel Stone",
 		"trait": null
 	},
 	{
-		"description": "Location: Sun Moon Moor.<clcaiqscn000008jwhfw85ia7>Hunt: Heavenly Bird, Draagonaire, Magmacius.<clcaiqscn000008jwhfw85ia7>Rumor: A Shattered Star?.",
+		"description": "Sun Moon Moor.<clcaiqscn000008jwhfw85ia7>Heavenly Bird, Draagonaire, Magmacius.<clcaiqscn000008jwhfw85ia7>A Shattered Star?.",
 		"name": "Star Powder",
 		"trait": null
 	},
 	{
-		"description": "Location: Sealed Temple, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt: Crimson Fang, Dragonaire, Magmacius.",
+		"description": "Sealed Temple, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Crimson Fang, Dragonaire, Magmacius.",
 		"name": "Sun Powder",
 		"trait": null
 	},
 	{
-		"description": "Location: Rocky Mountain, Mountain Boundary, Dead Tree Wasteland, Scard of the land.<clcaiqscn000008jwhfw85ia7>Hunt: Magic book, Book of Familiar, Ghost, Scarlady, Gentle Phantom, Funny Face, Dark Maiden.",
+		"description": "Rocky Mountain, Mountain Boundary, Dead Tree Wasteland, Scard of the land.<clcaiqscn000008jwhfw85ia7>Magic book, Book of Familiar, Ghost, Scarlady, Gentle Phantom, Funny Face, Dark Maiden.",
 		"name": "Crystal Shard",
 		"trait": null
 	},
 	{
-		"description": "Location: Moon Sun Moor, Fallen Palace, Forgotten Nursery.<clcaiqscn000008jwhfw85ia7>Hunt: Forbidden Codex, Lich Order, Wise Spirit, Rok, twin Header, Sorcer Titus, Ifritter, Tempestus, Wind Elemental.",
+		"description": "Moon Sun Moor, Fallen Palace, Forgotten Nursery.<clcaiqscn000008jwhfw85ia7>Forbidden Codex, Lich Order, Wise Spirit, Rok, twin Header, Sorcer Titus, Ifritter, Tempestus, Wind Elemental.",
 		"name": "Rainbow Crystal",
 		"trait": null
 	},
 	{
-		"description": "Location: Moon Sun Moor, City of the Lost, Forgotten NUrsery, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt: Ghost, Scarlady, Gentle Phantom, Haunt, Lich, Shadow, Death Inquisitor, Archlich.",
+		"description": "Moon Sun Moor, City of the Lost, Forgotten NUrsery, Soul Space.<clcaiqscn000008jwhfw85ia7>Ghost, Scarlady, Gentle Phantom, Haunt, Lich, Shadow, Death Inquisitor, Archlich.",
 		"name": "Pendeloch",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Sealed Demon Lord, Wind Elemental, Light Elemental.<clcaiqscn000008jwhfw85ia7>Rumor: Faintly Shining Ore.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Sealed Demon Lord, Wind Elemental, Light Elemental.<clcaiqscn000008jwhfw85ia7>Faintly Shining Ore.",
 		"name": "Pendegrune",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Devil Horn, Sealed Demon Lord, Flare Demon, Thunderous, Hell gate, Great Demon.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Devil Horn, Sealed Demon Lord, Flare Demon, Thunderous, Hell gate, Great Demon.",
 		"name": "Evil Core",
 		"trait": {
-			"description": "Effect: Increases damage dealt to Broken targets by 20%, and a portion of damage dealt is absorbed to recover HP.",
+			"description": "Increases damage dealt to Broken targets by 20%, and a portion of damage dealt is absorbed to recover HP.",
 			"id": "638a4d49a44f4fa4b0deca7e",
 			"index": 707,
 			"name": "Demon Soul"
 		}
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Dragonaire, Magmacius, Sun Destroyer Yasuk, Moon Eater Durakk.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Dragonaire, Magmacius, Sun Destroyer Yasuk, Moon Eater Durakk.",
 		"name": "Dragon Heart",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Kimmoch, Nightshade, Sorcerer Titus, Light Elemental.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Kimmoch, Nightshade, Sorcerer Titus, Light Elemental.",
 		"name": "Forgotten Wood",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Wise Spirit, Rok, Twin Header, Grand Ocean, Sorcerer Titus, Ifritter, Tempestus, Dragonaire, Magmacius, Light Elemental.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Wise Spirit, Rok, Twin Header, Grand Ocean, Sorcerer Titus, Ifritter, Tempestus, Dragonaire, Magmacius, Light Elemental.",
 		"name": "Forgotten Gem",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Devil Horn, Sealed Demon Lord, Dragonaire, magmacius.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Devil Horn, Sealed Demon Lord, Dragonaire, magmacius.",
 		"name": "Forgotten Ore",
 		"trait": null
 	},
 	{
-		"description": "<clcaiqscn000008jwhfw85ia7>Hunt: Wise Spirit, Rok, Twin header, Sorcerer Titus, ifritter, Tempestus.",
+		"description": "<clcaiqscn000008jwhfw85ia7>Wise Spirit, Rok, Twin header, Sorcerer Titus, ifritter, Tempestus.",
 		"name": "Forgotten Part",
 		"trait": null
 	},
 	{
-		"description": "Location: Moon Sun Mor, Fallen Palace, Soul Space.",
+		"description": "Moon Sun Mor, Fallen Palace, Soul Space.",
 		"name": "Useless Fragment",
 		"trait": null
 	},
 	{
-		"description": "Location: Flower Garden Sealed Temple, Soul Space.",
+		"description": "Flower Garden Sealed Temple, Soul Space.",
 		"name": "Burnt Fragment",
 		"trait": null
 	},
 	{
-		"description": "Location: Forgotten Nursery, Sealed Temple, Soul Space.",
+		"description": "Forgotten Nursery, Sealed Temple, Soul Space.",
 		"name": "Stinky Fragment",
 		"trait": null
 	},
 	{
-		"description": "Location: Small Islet, Fallen Palace, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt: Dragonaire, Magmacius.",
+		"description": "Small Islet, Fallen Palace, Soul Space.<clcaiqscn000008jwhfw85ia7>Dragonaire, Magmacius.",
 		"name": "Pretty Fragment",
 		"trait": {
-			"description": "Effect: Increases damage dealt to monsters created through magic and alchemy.",
+			"description": "Increases damage dealt to monsters created through magic and alchemy.",
 			"id": "638a4d48a44f4fa4b0deca0d",
 			"index": 427,
 			"name": "Magical Slayer"
@@ -585,22 +580,22 @@
 		"trait": null
 	},
 	{
-		"description": "Location: Library of All Creation.",
+		"description": "Library of All Creation.",
 		"name": "Magic Page",
 		"trait": null
 	},
 	{
-		"description": "Location: Library of All Creation.",
+		"description": "Library of All Creation.",
 		"name": "Torn Grimoire",
 		"trait": null
 	},
 	{
-		"description": "Location: Library of All Creation.",
+		"description": "Library of All Creation.",
 		"name": "Unknown Knowledge Scrap",
 		"trait": null
 	},
 	{
-		"description": "Location: Library of All Creation.",
+		"description": "Library of All Creation.",
 		"name": "Sealed Knowledge Scrap",
 		"trait": null
 	},

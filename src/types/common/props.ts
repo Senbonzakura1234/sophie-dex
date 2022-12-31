@@ -7,7 +7,7 @@ import type {
 	RECIPE_TYPE,
 	RelatedCategories,
 	Trait,
-	TraitPresent,
+	TRAIT_LINK,
 } from '@prisma/client';
 import type { Maybe } from '@trpc/server';
 import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
@@ -59,7 +59,7 @@ export type RecipeTypeProps = { recipeType: RECIPE_TYPE };
 export type DescriptionProps = { description: string };
 export type LevelProps = { level: number };
 export type CategoryProps = { category: CATEGORY };
-export type TraitPresentProps = { traitPresent: TraitPresent };
+export type TraitPresentProps = { traitPresent: TRAIT_LINK };
 
 export type RelatedCategoriesProps = { relatedCategories: RelatedCategories[] };
 

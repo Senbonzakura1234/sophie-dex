@@ -16,7 +16,6 @@ export const itemRouter = router({
 					{ name: { contains: search, mode: 'insensitive' } },
 					{ description: { contains: search, mode: 'insensitive' } },
 					{ traitPresent: { is: { name: { contains: search, mode: 'insensitive' } } } },
-					{ traitPresent: { is: { description: { contains: search, mode: 'insensitive' } } } },
 			  ]
 			: undefined;
 
