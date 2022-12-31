@@ -17,7 +17,7 @@ enum COLOR {
    RED
 }
 
-enum RELATED_CATEGORY {
+enum RELATED_CATEGORY_ENUM {
    PLANT
    MEDICINE_MAT
    WATER
@@ -69,8 +69,8 @@ enum CATEGORY {
    SYNTHESIS
 }
 
-type RelatedCategories {
-   name  RELATED_CATEGORY
+type RELATED_CATEGORY {
+   name  RELATED_CATEGORY_ENUM
    count Int
 }
 
@@ -80,7 +80,7 @@ type TRAIT_LINK {
    name  String
 }
 
-type MergeTrait {
+type MERGE_TRAIT {
    consist TRAIT_LINK[]
 }
 
@@ -102,21 +102,21 @@ model Effect {
 }
 
 model Trait {
-   id          String       @id @default(auto()) @map("_id") @db.ObjectId
+   id          String        @id @default(auto()) @map("_id") @db.ObjectId
    index       Int
    name        String
    description String
    categories  CATEGORY[]
-   mergeFrom   MergeTrait[]
+   mergeFrom   MERGE_TRAIT[]
 }
 
 model Item {
-   id                String              @id @default(auto()) @map("_id") @db.ObjectId
+   id                String             @id @default(auto()) @map("_id") @db.ObjectId
    index             Int
    name              String
    description       String?
    color             COLOR
-   relatedCategories RelatedCategories[]
+   relatedCategories RELATED_CATEGORY[]
    category          CATEGORY
    level             Int
    recipeType        RECIPE_TYPE?

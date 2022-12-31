@@ -3,9 +3,9 @@ import type {
 	COLOR,
 	Effect,
 	Item,
-	MergeTrait,
+	MERGE_TRAIT,
 	RECIPE_TYPE,
-	RelatedCategories,
+	RELATED_CATEGORY,
 	Trait,
 	TRAIT_LINK,
 } from '@prisma/client';
@@ -61,7 +61,7 @@ export type LevelProps = { level: number };
 export type CategoryProps = { category: CATEGORY };
 export type TraitPresentProps = { traitPresent: TRAIT_LINK };
 
-export type RelatedCategoriesProps = { relatedCategories: RelatedCategories[] };
+export type RelatedCategoriesProps = { relatedCategories: RELATED_CATEGORY[] };
 
 export type DefaultLayoutProps = ChildrenProps & PageNameProps;
 
@@ -93,7 +93,7 @@ export type FilterControlPlaceHolderProps = FetchStateProps & IsPaginateOnlyProp
 
 export type CategoriesProps = { categories: CATEGORY[] };
 
-export type TraitMergeListProps = { mergeFrom: MergeTrait[] };
+export type TraitMergeListProps = { mergeFrom: MERGE_TRAIT[] };
 
 export type SelectOptionProps<V> = {
 	value: SelectOptionItem<V>;

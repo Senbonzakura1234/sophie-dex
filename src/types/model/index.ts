@@ -1,4 +1,4 @@
-import type { CATEGORY, COLOR, RECIPE_TYPE, RELATED_CATEGORY } from '@prisma/client';
+import type { CATEGORY, COLOR, RECIPE_TYPE, RELATED_CATEGORY_ENUM } from '@prisma/client';
 
 export const colorList = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW'] as const satisfies Readonly<COLOR[]>;
 
@@ -41,7 +41,7 @@ export const RelatedCategoryDisplay = {
 	INGREDIENT: 'Ingredient',
 	PAPER: 'Paper',
 	MAGIC_ITEM: 'Magic Item',
-} as const satisfies Readonly<{ [relatedCategory in RELATED_CATEGORY]: string }>;
+} as const satisfies Readonly<{ [relatedCategory in RELATED_CATEGORY_ENUM]: string }>;
 
 export const relatedCategoryList = [
 	'PLANT',
@@ -74,7 +74,7 @@ export const relatedCategoryList = [
 	'INGREDIENT',
 	'PAPER',
 	'MAGIC_ITEM',
-] as const satisfies Readonly<RELATED_CATEGORY[]>;
+] as const satisfies Readonly<RELATED_CATEGORY_ENUM[]>;
 
 export type RelatedCategoryDisplay = typeof RelatedCategoryDisplay[keyof typeof RelatedCategoryDisplay];
 
