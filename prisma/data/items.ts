@@ -14,7 +14,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Pilgram Road, Flower Garden, Rocky Grove, Scar of the Land.<clcaiqscn000008jwhfw85ia7>Mandragora, White Root, Alraune, Kimmoch, Single Horn.<clcaiqscn000008jwhfw85ia7>Greatly grown Magic Grass.',
+			'Location:<clcbr2xjm000008jngnabd04t>Pilgram Road, Flower Garden, Rocky Grove, Scar of the Land.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Mandragora, White Root, Alraune, Kimmoch, Single Horn.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Greatly grown Magic Grass.',
 		traitPresent: null,
 	},
 	{
@@ -30,7 +30,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Pilgram Road, Flower Garden, Verdant Hill, Underground lake.<clcaiqscn000008jwhfw85ia7>White Root, Alraune, Kimmoch.',
+			'Location:<clcbr2xjm000008jngnabd04t>Pilgram Road, Flower Garden, Verdant Hill, Underground lake.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>White Root, Alraune, Kimmoch.',
 		traitPresent: null,
 	},
 	{
@@ -46,12 +46,8 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Gathering of Beast, Puzzzling Path, Foggy Woodland, Mountain Boundary, Forest of fairies, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Kimmoch, Nightshade, Sorcerer Titus.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca68',
-			index: 682,
-			name: 'Poison Mist',
-		},
+			'Location:<clcbr2xjm000008jngnabd04t>Gathering of Beast, Puzzzling Path, Foggy Woodland, Mountain Boundary, Forest of fairies, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Kimmoch, Nightshade, Sorcerer Titus.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca68', index: 682, name: 'Poison Mist' },
 	},
 	{
 		category: 'MATERIAL',
@@ -67,7 +63,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Rocky Grove, Gate of trees, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Kimmoch, Nightshade, Sorcerer Titus.<clcaiqscn000008jwhfw85ia7>Herbs great for medicine.',
+			'Location:<clcbr2xjm000008jngnabd04t>Rocky Grove, Gate of trees, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Kimmoch, Nightshade, Sorcerer Titus.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Herbs great for medicine.',
 		traitPresent: null,
 	},
 	{
@@ -83,7 +79,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Chick Woods, lisure Plaza, Fungal garden, Rocky Mountain, Dead Tree Wasteland.<clcaiqscn000008jwhfw85ia7>White Root, Araune, Kimmoch.',
+			'Location:<clcbr2xjm000008jngnabd04t>Chick Woods, lisure Plaza, Fungal garden, Rocky Mountain, Dead Tree Wasteland.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>White Root, Araune, Kimmoch.',
 		traitPresent: null,
 	},
 	{
@@ -99,7 +95,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Funal Garden, Foggy Woodland, Forest of Faries.<clcaiqscn000008jwhfw85ia7>White Root, Alraunem, Starfish.',
+			'Location:<clcbr2xjm000008jngnabd04t>Funal Garden, Foggy Woodland, Forest of Faries.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>White Root, Alraunem, Starfish.',
 		traitPresent: null,
 	},
 	{
@@ -116,7 +112,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Rocky Mountain, Verdant Hill, Scar of the land.<clcaiqscn000008jwhfw85ia7>White Root, Alraunem, Starfish.<clcaiqscn000008jwhfw85ia7>Cotton Disliked by dragon.',
+			'Location:<clcbr2xjm000008jngnabd04t>Rocky Mountain, Verdant Hill, Scar of the land.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>White Root, Alraunem, Starfish.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Cotton Disliked by dragon.',
 		traitPresent: null,
 	},
 	{
@@ -132,7 +128,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			"Gate of Trees, Three Bridge Spring, Small Islet, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>White Root, Alraunem, Starfish.<clcaiqscn000008jwhfw85ia7>Remnant of a Past Sea?.",
+			"Location:<clcbr2xjm000008jngnabd04t>Gate of Trees, Three Bridge Spring, Small Islet, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>White Root, Alraunem, Starfish.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Remnant of a Past Sea?.",
 		traitPresent: null,
 	},
 	{
@@ -147,7 +143,8 @@ const items: Item[] = [
 			{ count: 10, name: 'PLANT' },
 		],
 		recipeType: null,
-		description: 'Gathering of Beast, Rocky Grove, Gate of Trees, Foggy Woodland, Forest of Faries.',
+		description:
+			'Location:<clcbr2xjm000008jngnabd04t>Gathering of Beast, Rocky Grove, Gate of Trees, Foggy Woodland, Forest of Faries.',
 		traitPresent: null,
 	},
 	{
@@ -162,7 +159,7 @@ const items: Item[] = [
 			{ count: 20, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
-		description: 'Small Islet, Moon Sun Mor (Unlock after Oskar event).',
+		description: 'Location:<clcbr2xjm000008jngnabd04t>Small Islet, Moon Sun Mor (Unlock after Oskar event).',
 		traitPresent: null,
 	},
 	{
@@ -178,12 +175,8 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			"Gate of Tress, Three Bridge Spring, Silent Lakeside, Prospector's Strand, Underground Lake  (Unlock after Oskar event).",
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca6a',
-			index: 683,
-			name: 'Slime Compound',
-		},
+			"Location:<clcbr2xjm000008jngnabd04t>Gate of Tress, Three Bridge Spring, Silent Lakeside, Prospector's Strand, Underground Lake  (Unlock after Oskar event).",
+		traitPresent: { id: '638a4d49a44f4fa4b0deca6a', index: 683, name: 'Slime Compound' },
 	},
 	{
 		category: 'MATERIAL',
@@ -197,7 +190,7 @@ const items: Item[] = [
 			{ count: 30, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
-		description: 'Underground Lake  (Unlock after Oskar event).',
+		description: 'Location:<clcbr2xjm000008jngnabd04t>Underground Lake  (Unlock after Oskar event).',
 		traitPresent: null,
 	},
 	{
@@ -212,7 +205,7 @@ const items: Item[] = [
 			{ count: 30, name: 'ELIXIR' },
 		],
 		recipeType: null,
-		description: 'Forest of Faries  (Unlock after Oskar final event).',
+		description: 'Location:<clcbr2xjm000008jngnabd04t>Forest of Faries  (Unlock after Oskar final event).',
 		traitPresent: null,
 	},
 	{
@@ -228,12 +221,9 @@ const items: Item[] = [
 			{ count: 50, name: 'ELIXIR' },
 		],
 		recipeType: null,
-		description: 'Fairy Forest (Rumor only).<clcaiqscn000008jwhfw85ia7>Flower looking in silence..',
-		traitPresent: {
-			id: '638a4d47a44f4fa4b0dec9a5',
-			index: 193,
-			name: 'Full of Life',
-		},
+		description:
+			'Location:<clcbr2xjm000008jngnabd04t>Fairy Forest (Rumor only).<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Flower looking in silence..',
+		traitPresent: { id: '638a4d47a44f4fa4b0dec9a5', index: 193, name: 'Full of Life' },
 	},
 	{
 		category: 'MATERIAL',
@@ -249,12 +239,8 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'<clcaiqscn000008jwhfw85ia7>Kimmoch, Nightshade, Sealed Demon Lord, Sorcerer Titus, Light Elemental.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca66',
-			index: 684,
-			name: 'False Flower',
-		},
+			'Hunt:<clcbr2xjm000008jngnabd04t>Kimmoch, Nightshade, Sealed Demon Lord, Sorcerer Titus, Light Elemental.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca66', index: 684, name: 'False Flower' },
 	},
 	{
 		category: 'MATERIAL',
@@ -266,7 +252,7 @@ const items: Item[] = [
 		relatedCategories: [{ count: 10, name: 'ORE' }],
 		recipeType: null,
 		description:
-			'Merbert Farm, Enlightened Mountain, Underground Lake.<clcaiqscn000008jwhfw85ia7>Magic Book, Gargolye, Apostle, Mini Demon.',
+			'Location:<clcbr2xjm000008jngnabd04t>Merbert Farm, Enlightened Mountain, Underground Lake.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Magic Book, Gargolye, Apostle, Mini Demon.',
 		traitPresent: null,
 	},
 	{
@@ -279,12 +265,8 @@ const items: Item[] = [
 		relatedCategories: [{ count: 10, name: 'ORE' }],
 		recipeType: null,
 		description:
-			'Flower Garden, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Punipuni?, Magic book, Book Familiar, Mini Demon, Tricker.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca64',
-			index: 685,
-			name: 'Electrified',
-		},
+			'Location:<clcbr2xjm000008jngnabd04t>Flower Garden, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Punipuni?, Magic book, Book Familiar, Mini Demon, Tricker.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca64', index: 685, name: 'Electrified' },
 	},
 	{
 		category: 'MATERIAL',
@@ -296,7 +278,7 @@ const items: Item[] = [
 		relatedCategories: [{ count: 15, name: 'ORE' }],
 		recipeType: null,
 		description:
-			'Flower Garden, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Punipuni?, Magic book, Book Familiar, Mini Demon, Tricker, Devil Horn, Sealed Demon.',
+			'Location:<clcbr2xjm000008jngnabd04t>Flower Garden, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Punipuni?, Magic book, Book Familiar, Mini Demon, Tricker, Devil Horn, Sealed Demon.',
 		traitPresent: null,
 	},
 	{
@@ -312,12 +294,8 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Pilgrim Road, Merbert Farm, Enlightened Mountain, Moon Sun Mor.<clcaiqscn000008jwhfw85ia7>Magic Book, Gargolye, Apostle, Mini Demon.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca65',
-			index: 686,
-			name: 'Carries Heat',
-		},
+			'Location:<clcbr2xjm000008jngnabd04t>Pilgrim Road, Merbert Farm, Enlightened Mountain, Moon Sun Mor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Magic Book, Gargolye, Apostle, Mini Demon.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca65', index: 686, name: 'Carries Heat' },
 	},
 	{
 		category: 'MATERIAL',
@@ -332,12 +310,8 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			"Gate of Trees, Three Bridge Spring, Silent Lakeside, Merbert Farm, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Punipuni?, Book Familiar, Tricker.",
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca69',
-			index: 687,
-			name: 'Carries Cold',
-		},
+			"Location:<clcbr2xjm000008jngnabd04t>Gate of Trees, Three Bridge Spring, Silent Lakeside, Merbert Farm, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Punipuni?, Book Familiar, Tricker.",
+		traitPresent: { id: '638a4d49a44f4fa4b0deca69', index: 687, name: 'Carries Cold' },
 	},
 	{
 		category: 'MATERIAL',
@@ -351,7 +325,8 @@ const items: Item[] = [
 			{ count: 10, name: 'METAL' },
 		],
 		recipeType: null,
-		description: 'Scar of the Land,  Enlightend Mountain.<clcaiqscn000008jwhfw85ia7>Devil Horn, Sealed Demon Lord.',
+		description:
+			'Location:<clcbr2xjm000008jngnabd04t>Scar of the Land,  Enlightend Mountain.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Devil Horn, Sealed Demon Lord.',
 		traitPresent: null,
 	},
 	{
@@ -368,12 +343,8 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Fertile Shore, Husk Forest, Sealed Temple, Underground lake.<clcaiqscn000008jwhfw85ia7>Devil Horn, Sealed Demon Lord.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca6b',
-			index: 688,
-			name: 'Dark Matter',
-		},
+			'Location:<clcbr2xjm000008jngnabd04t>Fertile Shore, Husk Forest, Sealed Temple, Underground lake.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Devil Horn, Sealed Demon Lord.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca6b', index: 688, name: 'Dark Matter' },
 	},
 	{
 		category: 'MATERIAL',
@@ -387,7 +358,8 @@ const items: Item[] = [
 			{ count: 20, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
-		description: 'Merbert Farm, Three Bridge Spring, Dead Tree Wasteland, Waterside Ruins, Prospectors Strand.',
+		description:
+			'Location:<clcbr2xjm000008jngnabd04t>Merbert Farm, Three Bridge Spring, Dead Tree Wasteland, Waterside Ruins, Prospectors Strand.',
 		traitPresent: null,
 	},
 	{
@@ -399,7 +371,8 @@ const items: Item[] = [
 		name: 'Lakebottom Soil',
 		relatedCategories: [{ count: 15, name: 'CLAY' }],
 		recipeType: null,
-		description: 'Calm Banks, Fertile Shore, Underground Lake,.<clcaiqscn000008jwhfw85ia7>Island Fish, Isanasius.',
+		description:
+			'Location:<clcbr2xjm000008jngnabd04t>Calm Banks, Fertile Shore, Underground Lake,.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Island Fish, Isanasius.',
 		traitPresent: null,
 	},
 	{
@@ -411,7 +384,8 @@ const items: Item[] = [
 		name: 'Seabed Soil',
 		relatedCategories: [{ count: 25, name: 'CLAY' }],
 		recipeType: null,
-		description: '<clcaiqscn000008jwhfw85ia7>Grand Ocean.<clcaiqscn000008jwhfw85ia7>Remnant of a Past Sea?.',
+		description:
+			'Hunt:<clcbr2xjm000008jngnabd04t>Grand Ocean.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Remnant of a Past Sea?.',
 		traitPresent: null,
 	},
 	{
@@ -427,12 +401,9 @@ const items: Item[] = [
 			{ count: 5, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
-		description: 'Moon Sun Moor, City of the lost, Sealed temple.<clcaiqscn000008jwhfw85ia7>Gargoyle, Apostle.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca6c',
-			index: 689,
-			name: 'Ancient Seal',
-		},
+		description:
+			'Location:<clcbr2xjm000008jngnabd04t>Moon Sun Moor, City of the lost, Sealed temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Gargoyle, Apostle.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca6c', index: 689, name: 'Ancient Seal' },
 	},
 	{
 		category: 'MATERIAL',
@@ -447,7 +418,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Forgotten nursery, Small islet, City of the Lost, Fallen Palace.<clcaiqscn000008jwhfw85ia7>Gargoyle, Apostle.',
+			'Location:<clcbr2xjm000008jngnabd04t>Forgotten nursery, Small islet, City of the Lost, Fallen Palace.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Gargoyle, Apostle.',
 		traitPresent: null,
 	},
 	{
@@ -463,7 +434,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Waterside ruins, Fallen Palace, Forgotten Nursery.<clcaiqscn000008jwhfw85ia7>Magic Book, Mini Demon Dragonaire, Magmacius.',
+			'Location:<clcbr2xjm000008jngnabd04t>Waterside ruins, Fallen Palace, Forgotten Nursery.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Magic Book, Mini Demon Dragonaire, Magmacius.',
 		traitPresent: null,
 	},
 	{
@@ -480,7 +451,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Silent Lakeside, Sealed Temple, Fallen Palace, Soul Space.<clcaiqscn000008jwhfw85ia7>Punipuni? Book familiar Tricker.',
+			'Location:<clcbr2xjm000008jngnabd04t>Silent Lakeside, Sealed Temple, Fallen Palace, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Punipuni? Book familiar Tricker.',
 		traitPresent: null,
 	},
 	{
@@ -496,7 +467,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Mountain Boundary, Husk Forest, Scar of the land, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Heavenly Bird, Dragonaire, Magmacius.',
+			'Location:<clcbr2xjm000008jngnabd04t>Mountain Boundary, Husk Forest, Scar of the land, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Heavenly Bird, Dragonaire, Magmacius.',
 		traitPresent: null,
 	},
 	{
@@ -511,12 +482,9 @@ const items: Item[] = [
 			{ count: 15, name: 'GEM' },
 		],
 		recipeType: null,
-		description: 'Mountain Boundary, Underground Lake, Fallen Palace.<clcaiqscn000008jwhfw85ia7>Living grimoire.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca71',
-			index: 690,
-			name: 'Absorbs Light',
-		},
+		description:
+			'Location:<clcbr2xjm000008jngnabd04t>Mountain Boundary, Underground Lake, Fallen Palace.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Living grimoire.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca71', index: 690, name: 'Absorbs Light' },
 	},
 	{
 		category: 'MATERIAL',
@@ -530,7 +498,8 @@ const items: Item[] = [
 			{ count: 25, name: 'GEM' },
 		],
 		recipeType: null,
-		description: 'Dead Tree, Small Islet.<clcaiqscn000008jwhfw85ia7>Dragonaire, Magmacius.',
+		description:
+			'Location:<clcbr2xjm000008jngnabd04t>Dead Tree, Small Islet.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Dragonaire, Magmacius.',
 		traitPresent: null,
 	},
 	{
@@ -546,7 +515,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Fertile Shore, Underground Lake.<clcaiqscn000008jwhfw85ia7>Sealed Demon Lord, Wind Elemental, Light Elemental.',
+			'Location:<clcbr2xjm000008jngnabd04t>Fertile Shore, Underground Lake.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Sealed Demon Lord, Wind Elemental, Light Elemental.',
 		traitPresent: null,
 	},
 	{
@@ -564,7 +533,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Scar of the land (Big Cystal).<clcaiqscn000008jwhfw85ia7>Wind Elemental, Light Elemental.<clcaiqscn000008jwhfw85ia7>Crystal Bless By Spirits.',
+			'Location:<clcbr2xjm000008jngnabd04t>Scar of the land (Big Cystal).<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Wind Elemental, Light Elemental.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Crystal Bless By Spirits.',
 		traitPresent: null,
 	},
 	{
@@ -580,7 +549,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Blessed Forest, Liesure Plaza, Funal Garden, Enlightened Mountain.<clcaiqscn000008jwhfw85ia7>Ardra, Kaiser Pigeon, Saber Claw, Gustaf, Rok, Heavenly bird.',
+			'Location:<clcbr2xjm000008jngnabd04t>Blessed Forest, Liesure Plaza, Funal Garden, Enlightened Mountain.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Ardra, Kaiser Pigeon, Saber Claw, Gustaf, Rok, Heavenly bird.',
 		traitPresent: null,
 	},
 	{
@@ -596,7 +565,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Open Ruins, Fungal Gardens, Husk Forest, Moon Sun Mor.<clcaiqscn000008jwhfw85ia7>Mini Demon, Ardra, Chimera Beast, Lightning, Fang, Twin Header, Island Fish, Single Horn.',
+			'Location:<clcbr2xjm000008jngnabd04t>Open Ruins, Fungal Gardens, Husk Forest, Moon Sun Mor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Mini Demon, Ardra, Chimera Beast, Lightning, Fang, Twin Header, Island Fish, Single Horn.',
 		traitPresent: null,
 	},
 	{
@@ -612,12 +581,8 @@ const items: Item[] = [
 			{ count: 5, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
-		description: '<clcaiqscn000008jwhfw85ia7>Island Fish, Signle Horn, Star Fish, Isanasius, Grand Ocean.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca6f',
-			index: 691,
-			name: 'Stinks',
-		},
+		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Island Fish, Signle Horn, Star Fish, Isanasius, Grand Ocean.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca6f', index: 691, name: 'Stinks' },
 	},
 	{
 		category: 'MATERIAL',
@@ -632,7 +597,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'<clcaiqscn000008jwhfw85ia7>Mini Demon, Ardra, Chimera Beast, Lightning, Fang, Twin Header, Island Fish, Single Horn.',
+			'Hunt:<clcbr2xjm000008jngnabd04t>Mini Demon, Ardra, Chimera Beast, Lightning, Fang, Twin Header, Island Fish, Single Horn.',
 		traitPresent: null,
 	},
 	{
@@ -648,12 +613,8 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'<clcaiqscn000008jwhfw85ia7>Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning, Fang , Twin Header, Silent Beast, Crimson Fang Dragonaire, Magmacius, Wind Elemental.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca6e',
-			index: 692,
-			name: 'Sunny Scent',
-		},
+			'Hunt:<clcbr2xjm000008jngnabd04t>Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning, Fang , Twin Header, Silent Beast, Crimson Fang Dragonaire, Magmacius, Wind Elemental.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca6e', index: 692, name: 'Sunny Scent' },
 	},
 	{
 		category: 'MATERIAL',
@@ -665,7 +626,7 @@ const items: Item[] = [
 		relatedCategories: [{ count: 20, name: 'THREAD' }],
 		recipeType: null,
 		description:
-			'Flower Garden, Underground Lake, Forgotten Nursery, Sealed temple.<clcaiqscn000008jwhfw85ia7>Kaiser Pigeon, Saber Claw, Gusaf, Fang.',
+			'Location:<clcbr2xjm000008jngnabd04t>Flower Garden, Underground Lake, Forgotten Nursery, Sealed temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Kaiser Pigeon, Saber Claw, Gusaf, Fang.',
 		traitPresent: null,
 	},
 	{
@@ -678,12 +639,8 @@ const items: Item[] = [
 		relatedCategories: [{ count: 35, name: 'THREAD' }],
 		recipeType: null,
 		description:
-			'<clcaiqscn000008jwhfw85ia7>Wise, Spirit, Rok, Twin Header, Sorcerer Titus, Ifritter, Tempestus, Wind Elemental.<clcaiqscn000008jwhfw85ia7>Gold Strong Thread.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca6d',
-			index: 693,
-			name: 'Cutting Thread',
-		},
+			'Hunt:<clcbr2xjm000008jngnabd04t>Wise, Spirit, Rok, Twin Header, Sorcerer Titus, Ifritter, Tempestus, Wind Elemental.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Gold Strong Thread.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca6d', index: 693, name: 'Cutting Thread' },
 	},
 	{
 		category: 'MATERIAL',
@@ -699,7 +656,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'<clcaiqscn000008jwhfw85ia7>Wise Spirit, Rok, Twin Header, Sorcer Titus, Ifritter, Tempestus, Dragonaire, Mamacius, Sun Destroyer Yasuk, Moon Eater Durak..',
+			'Hunt:<clcbr2xjm000008jngnabd04t>Wise Spirit, Rok, Twin Header, Sorcer Titus, Ifritter, Tempestus, Dragonaire, Mamacius, Sun Destroyer Yasuk, Moon Eater Durak..',
 		traitPresent: null,
 	},
 	{
@@ -711,7 +668,8 @@ const items: Item[] = [
 		name: 'Well Water',
 		relatedCategories: [{ count: 20, name: 'WATER' }],
 		recipeType: null,
-		description: "Calm Banks, Small Islet, Prospector's Strand, Underground Lake.",
+		description:
+			"Location:<clcbr2xjm000008jngnabd04t>Calm Banks, Small Islet, Prospector's Strand, Underground Lake.",
 		traitPresent: null,
 	},
 	{
@@ -723,7 +681,8 @@ const items: Item[] = [
 		name: 'Good Water',
 		relatedCategories: [{ count: 25, name: 'WATER' }],
 		recipeType: null,
-		description: 'Calm Banks, Underwater Lake.<clcaiqscn000008jwhfw85ia7>Pure and Clean Spring water.',
+		description:
+			'Location:<clcbr2xjm000008jngnabd04t>Calm Banks, Underwater Lake.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Pure and Clean Spring water.',
 		traitPresent: null,
 	},
 	{
@@ -738,12 +697,8 @@ const items: Item[] = [
 			{ count: 15, name: 'WATER' },
 		],
 		recipeType: null,
-		description: null,
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca72',
-			index: 694,
-			name: 'Kirchen Bell Special',
-		},
+		description: 'Location:<clcbr2xjm000008jngnabd04t>Bought.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca72', index: 694, name: 'Kirchen Bell Special' },
 	},
 	{
 		category: 'MATERIAL',
@@ -757,12 +712,9 @@ const items: Item[] = [
 			{ count: 10, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
-		description: 'Fertile Shore, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Dragonaire, Magmacius.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca75',
-			index: 695,
-			name: 'Flickering Light',
-		},
+		description:
+			'Location:<clcbr2xjm000008jngnabd04t>Fertile Shore, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Dragonaire, Magmacius.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca75', index: 695, name: 'Flickering Light' },
 	},
 	{
 		category: 'MATERIAL',
@@ -777,7 +729,8 @@ const items: Item[] = [
 			{ count: 15, name: 'POISON_MAT' },
 		],
 		recipeType: null,
-		description: 'Waterside Ruins, Sealed temple, Soul Space.<clcaiqscn000008jwhfw85ia7>Dragonaire, Magmacius.',
+		description:
+			'Location:<clcbr2xjm000008jngnabd04t>Waterside Ruins, Sealed temple, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Dragonaire, Magmacius.',
 		traitPresent: null,
 	},
 	{
@@ -793,7 +746,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Forgotten Nursery, Waterside, Ruins, Small Islet,.<clcaiqscn000008jwhfw85ia7>Black Puni, Punipuni? Kaiser pigeonm Saber claw, Gustaf, Lightning, Silent Beast.',
+			'Location:<clcbr2xjm000008jngnabd04t>Forgotten Nursery, Waterside, Ruins, Small Islet,.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Black Puni, Punipuni? Kaiser pigeonm Saber claw, Gustaf, Lightning, Silent Beast.',
 		traitPresent: null,
 	},
 	{
@@ -808,7 +761,7 @@ const items: Item[] = [
 			{ count: 5, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
-		description: '<clcaiqscn000008jwhfw85ia7>Blue Puni, Green Puni, Red Puni, Gold Puni, Black Puni.',
+		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Blue Puni, Green Puni, Red Puni, Gold Puni, Black Puni.',
 		traitPresent: null,
 	},
 	{
@@ -824,12 +777,8 @@ const items: Item[] = [
 			{ count: 30, name: 'MEDICINE_MAT' },
 		],
 		recipeType: null,
-		description: '<clcaiqscn000008jwhfw85ia7>Rainbow Puni, Admiral Puni, Slead Demon Lord.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca70',
-			index: 696,
-			name: 'Unidentified',
-		},
+		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Rainbow Puni, Admiral Puni, Slead Demon Lord.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca70', index: 696, name: 'Unidentified' },
 	},
 	{
 		category: 'MATERIAL',
@@ -845,7 +794,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'<clcaiqscn000008jwhfw85ia7>Wise Spirit, rok, Twin Header, Sorcer Titus, Ifritter, Tempestus, Dragonaire, Magmacius, Sun Destroyer Yasuk, Moon Destroyer Durak.',
+			'Hunt:<clcbr2xjm000008jngnabd04t>Wise Spirit, rok, Twin Header, Sorcer Titus, Ifritter, Tempestus, Dragonaire, Magmacius, Sun Destroyer Yasuk, Moon Destroyer Durak.',
 		traitPresent: null,
 	},
 	{
@@ -860,12 +809,8 @@ const items: Item[] = [
 			{ count: 5, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
-		description: '<clcaiqscn000008jwhfw85ia7>Haunt Unliving King.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca76',
-			index: 697,
-			name: 'Purifying Water',
-		},
+		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Haunt Unliving King.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca76', index: 697, name: 'Purifying Water' },
 	},
 	{
 		category: 'MATERIAL',
@@ -879,7 +824,7 @@ const items: Item[] = [
 			{ count: 5, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
-		description: '<clcaiqscn000008jwhfw85ia7>Blue Puni, Green Puni, Red Puni, Gold Puni, Black Puni.',
+		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Blue Puni, Green Puni, Red Puni, Gold Puni, Black Puni.',
 		traitPresent: null,
 	},
 	{
@@ -895,12 +840,8 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'<clcaiqscn000008jwhfw85ia7>Blue Puni, Green Puni, Red Puni, Gold Puni, Punipuni? Super Puni, Admiral Puni.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca78',
-			index: 698,
-			name: 'Golden Radiance',
-		},
+			'Hunt:<clcbr2xjm000008jngnabd04t>Blue Puni, Green Puni, Red Puni, Gold Puni, Punipuni? Super Puni, Admiral Puni.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca78', index: 698, name: 'Golden Radiance' },
 	},
 	{
 		category: 'MATERIAL',
@@ -915,7 +856,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Chick Woods, Blessed Forest, Green Ruins, Puzzling Path, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Madragora, Single Horn.',
+			'Location:<clcbr2xjm000008jngnabd04t>Chick Woods, Blessed Forest, Green Ruins, Puzzling Path, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Madragora, Single Horn.',
 		traitPresent: null,
 	},
 	{
@@ -932,7 +873,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Blessed Forest, Green Ruins, Puzzling Path, Sealed Temple.<clcaiqscn000008jwhfw85ia7>White Root, Alraune, Kimmoch.',
+			'Location:<clcbr2xjm000008jngnabd04t>Blessed Forest, Green Ruins, Puzzling Path, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>White Root, Alraune, Kimmoch.',
 		traitPresent: null,
 	},
 	{
@@ -947,7 +888,8 @@ const items: Item[] = [
 			{ count: 10, name: 'PLANT' },
 		],
 		recipeType: null,
-		description: 'Merbert Farm, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Mandragora, Single Horn.',
+		description:
+			'Location:<clcbr2xjm000008jngnabd04t>Merbert Farm, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Mandragora, Single Horn.',
 		traitPresent: null,
 	},
 	{
@@ -963,7 +905,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Mandragora, Single Horn.<clcaiqscn000008jwhfw85ia7>Stash of High Grade Flour.',
+			'Location:<clcbr2xjm000008jngnabd04t>Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Mandragora, Single Horn.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Stash of High Grade Flour.',
 		traitPresent: null,
 	},
 	{
@@ -979,7 +921,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Kimmoch, Nightshade, Sorcerer Titus.',
+			'Location:<clcbr2xjm000008jngnabd04t>Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Kimmoch, Nightshade, Sorcerer Titus.',
 		traitPresent: null,
 	},
 	{
@@ -995,12 +937,8 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Kimmoch, Nightshade, Sorcerer Titus.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca74',
-			index: 700,
-			name: 'Mutated Material',
-		},
+			'Location:<clcbr2xjm000008jngnabd04t>Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Kimmoch, Nightshade, Sorcerer Titus.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca74', index: 700, name: 'Mutated Material' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1015,7 +953,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Blessed Forest, Leaisure Plaza, Green Ruins, gate of trees.<clcaiqscn000008jwhfw85ia7>Mini Demon, Ardra, Chimera Beast.',
+			'Location:<clcbr2xjm000008jngnabd04t>Blessed Forest, Leaisure Plaza, Green Ruins, gate of trees.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Mini Demon, Ardra, Chimera Beast.',
 		traitPresent: null,
 	},
 	{
@@ -1032,7 +970,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Chickk Woods, Green RUins.<clcaiqscn000008jwhfw85ia7>Kaiser Pigeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Strange Miniature Eggs.',
+			'Location:<clcbr2xjm000008jngnabd04t>Chickk Woods, Green RUins.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Kaiser Pigeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Strange Miniature Eggs.',
 		traitPresent: null,
 	},
 	{
@@ -1047,7 +985,7 @@ const items: Item[] = [
 			{ count: 10, name: 'PLANT' },
 		],
 		recipeType: null,
-		description: 'Merbert Farm, Flower Garden, Open Ruins, Verdant Hilld.',
+		description: 'Location:<clcbr2xjm000008jngnabd04t>Merbert Farm, Flower Garden, Open Ruins, Verdant Hilld.',
 		traitPresent: null,
 	},
 	{
@@ -1063,12 +1001,8 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Open Ruins, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>White Root, Alraune, Star fish.<clcaiqscn000008jwhfw85ia7>Fruit that gives strength.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca77',
-			index: 701,
-			name: 'Special Ingredient',
-		},
+			'Location:<clcbr2xjm000008jngnabd04t>Open Ruins, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>White Root, Alraune, Star fish.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Fruit that gives strength.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca77', index: 701, name: 'Special Ingredient' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1083,7 +1017,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Flower Garden, Forgotten Nursery, Fallen Palace, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Magic Book, Book Familiar, living Grimoire, Forbidden Codex.',
+			'Location:<clcbr2xjm000008jngnabd04t>Flower Garden, Forgotten Nursery, Fallen Palace, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Magic Book, Book Familiar, living Grimoire, Forbidden Codex.',
 		traitPresent: null,
 	},
 	{
@@ -1095,7 +1029,7 @@ const items: Item[] = [
 		name: 'Natural Oil',
 		relatedCategories: [{ count: 20, name: 'FUEL' }],
 		recipeType: null,
-		description: '<clcaiqscn000008jwhfw85ia7>Mini Demon, Ardra, Chimera Beast.',
+		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Mini Demon, Ardra, Chimera Beast.',
 		traitPresent: null,
 	},
 	{
@@ -1108,12 +1042,8 @@ const items: Item[] = [
 		relatedCategories: [{ count: 35, name: 'FUEL' }],
 		recipeType: null,
 		description:
-			'<clcaiqscn000008jwhfw85ia7>Kaiser Pengeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Vivldy Colored Oil.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca7b',
-			index: 702,
-			name: 'Secret of Health',
-		},
+			'Hunt:<clcbr2xjm000008jngnabd04t>Kaiser Pengeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Vivldy Colored Oil.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca7b', index: 702, name: 'Secret of Health' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1127,7 +1057,7 @@ const items: Item[] = [
 			{ count: 10, name: 'FUEL' },
 		],
 		recipeType: null,
-		description: '<clcaiqscn000008jwhfw85ia7>Haunt, Unliving King.',
+		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Haunt, Unliving King.',
 		traitPresent: null,
 	},
 	{
@@ -1142,7 +1072,7 @@ const items: Item[] = [
 			{ count: 15, name: 'FUEL' },
 		],
 		recipeType: null,
-		description: '<clcaiqscn000008jwhfw85ia7>Haunt, Unliving King.',
+		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Haunt, Unliving King.',
 		traitPresent: null,
 	},
 	{
@@ -1158,12 +1088,8 @@ const items: Item[] = [
 			{ count: 5, name: 'MAGIC_ITEM' },
 		],
 		recipeType: null,
-		description: '<clcaiqscn000008jwhfw85ia7>Lich Ordser, Haunt, Sealed Demon Lord, Unliving King.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca79',
-			index: 703,
-			name: 'Power of Faith',
-		},
+		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Lich Ordser, Haunt, Sealed Demon Lord, Unliving King.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca79', index: 703, name: 'Power of Faith' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1178,7 +1104,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			"Calm Banks, Silent Lakeside, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Kaiser Pigeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Shell Like Gemstone.",
+			"Location:<clcbr2xjm000008jngnabd04t>Calm Banks, Silent Lakeside, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Kaiser Pigeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Shell Like Gemstone.",
 		traitPresent: null,
 	},
 	{
@@ -1194,12 +1120,8 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Underwater Lake.<clcaiqscn000008jwhfw85ia7>Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning Silent Beast, Isanasius.<clcaiqscn000008jwhfw85ia7>Chalk White Shells.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca7a',
-			index: 704,
-			name: 'Medicine Compound',
-		},
+			'Location:<clcbr2xjm000008jngnabd04t>Underwater Lake.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning Silent Beast, Isanasius.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Chalk White Shells.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca7a', index: 704, name: 'Medicine Compound' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1214,7 +1136,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Merbert Farm, Sealed Temple, Underground Lake, Scar of the land.<clcaiqscn000008jwhfw85ia7>Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning Silent Beast.',
+			'Location:<clcbr2xjm000008jngnabd04t>Merbert Farm, Sealed Temple, Underground Lake, Scar of the land.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning Silent Beast.',
 		traitPresent: null,
 	},
 	{
@@ -1230,7 +1152,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Sun Moon Moor.<clcaiqscn000008jwhfw85ia7>Heavenly Bird, Draagonaire, Magmacius.<clcaiqscn000008jwhfw85ia7>A Shattered Star?.',
+			'Location:<clcbr2xjm000008jngnabd04t>Sun Moon Moor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Heavenly Bird, Draagonaire, Magmacius.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>A Shattered Star?.',
 		traitPresent: null,
 	},
 	{
@@ -1245,7 +1167,8 @@ const items: Item[] = [
 			{ count: 30, name: 'GUNPOWDER' },
 		],
 		recipeType: null,
-		description: 'Sealed Temple, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Crimson Fang, Dragonaire, Magmacius.',
+		description:
+			'Location:<clcbr2xjm000008jngnabd04t>Sealed Temple, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Crimson Fang, Dragonaire, Magmacius.',
 		traitPresent: null,
 	},
 	{
@@ -1261,7 +1184,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Rocky Mountain, Mountain Boundary, Dead Tree Wasteland, Scard of the land.<clcaiqscn000008jwhfw85ia7>Magic book, Book of Familiar, Ghost, Scarlady, Gentle Phantom, Funny Face, Dark Maiden.',
+			'Location:<clcbr2xjm000008jngnabd04t>Rocky Mountain, Mountain Boundary, Dead Tree Wasteland, Scard of the land.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Magic book, Book of Familiar, Ghost, Scarlady, Gentle Phantom, Funny Face, Dark Maiden.',
 		traitPresent: null,
 	},
 	{
@@ -1278,7 +1201,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Moon Sun Moor, Fallen Palace, Forgotten Nursery.<clcaiqscn000008jwhfw85ia7>Forbidden Codex, Lich Order, Wise Spirit, Rok, twin Header, Sorcer Titus, Ifritter, Tempestus, Wind Elemental.',
+			'Location:<clcbr2xjm000008jngnabd04t>Moon Sun Moor, Fallen Palace, Forgotten Nursery.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Forbidden Codex, Lich Order, Wise Spirit, Rok, twin Header, Sorcer Titus, Ifritter, Tempestus, Wind Elemental.',
 		traitPresent: null,
 	},
 	{
@@ -1294,7 +1217,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'Moon Sun Moor, City of the Lost, Forgotten NUrsery, Soul Space.<clcaiqscn000008jwhfw85ia7>Ghost, Scarlady, Gentle Phantom, Haunt, Lich, Shadow, Death Inquisitor, Archlich.',
+			'Location:<clcbr2xjm000008jngnabd04t>Moon Sun Moor, City of the Lost, Forgotten NUrsery, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Ghost, Scarlady, Gentle Phantom, Haunt, Lich, Shadow, Death Inquisitor, Archlich.',
 		traitPresent: null,
 	},
 	{
@@ -1310,7 +1233,7 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'<clcaiqscn000008jwhfw85ia7>Sealed Demon Lord, Wind Elemental, Light Elemental.<clcaiqscn000008jwhfw85ia7>Faintly Shining Ore.',
+			'Hunt:<clcbr2xjm000008jngnabd04t>Sealed Demon Lord, Wind Elemental, Light Elemental.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Faintly Shining Ore.',
 		traitPresent: null,
 	},
 	{
@@ -1326,12 +1249,8 @@ const items: Item[] = [
 		],
 		recipeType: null,
 		description:
-			'<clcaiqscn000008jwhfw85ia7>Devil Horn, Sealed Demon Lord, Flare Demon, Thunderous, Hell gate, Great Demon.',
-		traitPresent: {
-			id: '638a4d49a44f4fa4b0deca7e',
-			index: 707,
-			name: 'Demon Soul',
-		},
+			'Hunt:<clcbr2xjm000008jngnabd04t>Devil Horn, Sealed Demon Lord, Flare Demon, Thunderous, Hell gate, Great Demon.',
+		traitPresent: { id: '638a4d49a44f4fa4b0deca7e', index: 707, name: 'Demon Soul' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1346,7 +1265,7 @@ const items: Item[] = [
 			{ count: 25, name: 'ELIXIR' },
 		],
 		recipeType: null,
-		description: '<clcaiqscn000008jwhfw85ia7>Dragonaire, Magmacius, Sun Destroyer Yasuk, Moon Eater Durakk.',
+		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Dragonaire, Magmacius, Sun Destroyer Yasuk, Moon Eater Durakk.',
 		traitPresent: null,
 	},
 	{
@@ -1358,7 +1277,7 @@ const items: Item[] = [
 		name: 'Forgotten Wood',
 		relatedCategories: [{ count: 50, name: 'WOOD' }],
 		recipeType: null,
-		description: '<clcaiqscn000008jwhfw85ia7>Kimmoch, Nightshade, Sorcerer Titus, Light Elemental.',
+		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Kimmoch, Nightshade, Sorcerer Titus, Light Elemental.',
 		traitPresent: null,
 	},
 	{
@@ -1371,7 +1290,7 @@ const items: Item[] = [
 		relatedCategories: [{ count: 50, name: 'GEM' }],
 		recipeType: null,
 		description:
-			'<clcaiqscn000008jwhfw85ia7>Wise Spirit, Rok, Twin Header, Grand Ocean, Sorcerer Titus, Ifritter, Tempestus, Dragonaire, Magmacius, Light Elemental.',
+			'Hunt:<clcbr2xjm000008jngnabd04t>Wise Spirit, Rok, Twin Header, Grand Ocean, Sorcerer Titus, Ifritter, Tempestus, Dragonaire, Magmacius, Light Elemental.',
 		traitPresent: null,
 	},
 	{
@@ -1383,7 +1302,7 @@ const items: Item[] = [
 		name: 'Forgotten Ore',
 		relatedCategories: [{ count: 50, name: 'ORE' }],
 		recipeType: null,
-		description: '<clcaiqscn000008jwhfw85ia7>Devil Horn, Sealed Demon Lord, Dragonaire, magmacius.',
+		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Devil Horn, Sealed Demon Lord, Dragonaire, magmacius.',
 		traitPresent: null,
 	},
 	{
@@ -1395,7 +1314,8 @@ const items: Item[] = [
 		name: 'Forgotten Part',
 		relatedCategories: [{ count: 50, name: 'METAL' }],
 		recipeType: null,
-		description: '<clcaiqscn000008jwhfw85ia7>Wise Spirit, Rok, Twin header, Sorcerer Titus, ifritter, Tempestus.',
+		description:
+			'Hunt:<clcbr2xjm000008jngnabd04t>Wise Spirit, Rok, Twin header, Sorcerer Titus, ifritter, Tempestus.',
 		traitPresent: null,
 	},
 	{
@@ -1407,7 +1327,7 @@ const items: Item[] = [
 		name: 'Useless Fragment',
 		relatedCategories: [{ count: 10, name: 'ELIXIR' }],
 		recipeType: null,
-		description: 'Moon Sun Mor, Fallen Palace, Soul Space.',
+		description: 'Location:<clcbr2xjm000008jngnabd04t>Moon Sun Mor, Fallen Palace, Soul Space.',
 		traitPresent: null,
 	},
 	{
@@ -1419,7 +1339,7 @@ const items: Item[] = [
 		name: 'Burnt Fragment',
 		relatedCategories: [{ count: 10, name: 'ELIXIR' }],
 		recipeType: null,
-		description: 'Flower Garden Sealed Temple, Soul Space.',
+		description: 'Location:<clcbr2xjm000008jngnabd04t>Flower Garden Sealed Temple, Soul Space.',
 		traitPresent: null,
 	},
 	{
@@ -1431,7 +1351,7 @@ const items: Item[] = [
 		name: 'Stinky Fragment',
 		relatedCategories: [{ count: 10, name: 'ELIXIR' }],
 		recipeType: null,
-		description: 'Forgotten Nursery, Sealed Temple, Soul Space.',
+		description: 'Location:<clcbr2xjm000008jngnabd04t>Forgotten Nursery, Sealed Temple, Soul Space.',
 		traitPresent: null,
 	},
 	{
@@ -1443,12 +1363,9 @@ const items: Item[] = [
 		name: 'Pretty Fragment',
 		relatedCategories: [{ count: 10, name: 'ELIXIR' }],
 		recipeType: null,
-		description: 'Small Islet, Fallen Palace, Soul Space.<clcaiqscn000008jwhfw85ia7>Dragonaire, Magmacius.',
-		traitPresent: {
-			id: '638a4d48a44f4fa4b0deca0d',
-			index: 427,
-			name: 'Magical Slayer',
-		},
+		description:
+			'Location:<clcbr2xjm000008jngnabd04t>Small Islet, Fallen Palace, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Dragonaire, Magmacius.',
+		traitPresent: { id: '638a4d48a44f4fa4b0deca0d', index: 427, name: 'Magical Slayer' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1502,7 +1419,7 @@ const items: Item[] = [
 			{ count: 10, name: 'MAGIC_ITEM' },
 		],
 		recipeType: null,
-		description: 'Library of All Creation.',
+		description: 'Location:<clcbr2xjm000008jngnabd04t>Library of All Creation.',
 		traitPresent: null,
 	},
 	{
@@ -1518,7 +1435,7 @@ const items: Item[] = [
 			{ count: 10, name: 'PAPER' },
 		],
 		recipeType: null,
-		description: 'Library of All Creation.',
+		description: 'Location:<clcbr2xjm000008jngnabd04t>Library of All Creation.',
 		traitPresent: null,
 	},
 	{
@@ -1534,7 +1451,7 @@ const items: Item[] = [
 			{ count: 15, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
-		description: 'Library of All Creation.',
+		description: 'Location:<clcbr2xjm000008jngnabd04t>Library of All Creation.',
 		traitPresent: null,
 	},
 	{
@@ -1550,7 +1467,7 @@ const items: Item[] = [
 			{ count: 20, name: 'SECRET_POWER' },
 		],
 		recipeType: null,
-		description: 'Library of All Creation.',
+		description: 'Location:<clcbr2xjm000008jngnabd04t>Library of All Creation.',
 		traitPresent: null,
 	},
 	{
@@ -2023,7 +1940,7 @@ const items: Item[] = [
 			{ count: 10, name: 'PAPER' },
 		],
 		recipeType: 'GROWTH_RECIPES',
-		description: null,
+		description: 'Shop:<clcbr2xjm000008jngnabd04t>:Elise',
 		traitPresent: null,
 	},
 	{
@@ -2062,7 +1979,7 @@ const items: Item[] = [
 			{ count: 20, name: 'PAPER' },
 		],
 		recipeType: 'MYSTERY_RECIPES',
-		description: null,
+		description: 'Shop:<clcbr2xjm000008jngnabd04t>:Elise',
 		traitPresent: null,
 	},
 	{
@@ -2360,7 +2277,7 @@ const items: Item[] = [
 			{ count: 10, name: 'POISON_MAT' },
 		],
 		recipeType: 'HOPE_RECIPES',
-		description: null,
+		description: 'Location:<clcbr2xjm000008jngnabd04t>Bought at Marguerite, Synthsized (Hope).',
 		traitPresent: null,
 	},
 	{
@@ -2390,7 +2307,7 @@ const items: Item[] = [
 			{ count: 20, name: 'FUEL' },
 		],
 		recipeType: 'BEGINNER_RECIPES',
-		description: null,
+		description: 'Shop:<clcbr2xjm000008jngnabd04t>:Elise',
 		traitPresent: null,
 	},
 	{

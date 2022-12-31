@@ -26,3 +26,4 @@ export const colorTailwindMap: { [key in COLOR]: string } = {
 };
 
 export const specialSeparator = '<clcaiqscn000008jwhfw85ia7>';
+export const specialPrefix = '<clcbr2xjm000008jngnabd04t>';
