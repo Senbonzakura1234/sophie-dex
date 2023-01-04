@@ -4,7 +4,7 @@ import Link from 'next/link';
 import type { FC } from 'react';
 
 const TraitMergeList: FC<TraitMergeListProps> = ({ mergeFrom }) => (
-	<nav className='relative z-50 flex flex-wrap gap-2'>
+	<nav className='relative z-50 mb-3 flex flex-wrap gap-2'>
 		<h5 className={clsx({ hidden: mergeFrom.length <= 0 }, 'my-auto font-extrabold')}>Merge from:</h5>
 		{mergeFrom.map(({ consist }, key) => (
 			<div className='btn-group basis-auto' key={key}>

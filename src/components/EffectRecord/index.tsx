@@ -21,7 +21,7 @@ const EffectRecord: FC<EffectRecordProps> = ({ record: { name, description, inde
 
 			<div className='text-sm'>index: {index}</div>
 
-			<div className='text-lg'>{description}</div>
+			<p className='text-lg'>{description}</p>
 		</RecordWrapper>
 	);
 };

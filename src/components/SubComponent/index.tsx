@@ -1,16 +1,29 @@
 import type { CATEGORY, COLOR, RECIPE_TYPE } from '@prisma/client';
 import { getFramerFadeUp } from '@root/animations';
-import { defaultLimit } from '@root/constants';
+import {
+	defaultLimit,
+	prefixEffectLinkRecord,
+	prefixItemLinkRecord,
+	prefixItemLinkSearch,
+	prefixMisc,
+	prefixTraitLinkRecord,
+} from '@root/constants';
 import type { SelectOptionItem } from '@root/types/common';
 import type {
 	FilterControlPlaceHolderProps,
 	ListPlaceHolderProps,
+	RecipeIdeaKeyProps,
 	RecordPlaceHolderProps,
+	SpecialHyperLinkProps,
 } from '@root/types/common/props';
+import { genericRelatedCategorySchema, hyperLinkValidator } from '@root/types/common/zod';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
+import { RelatedCategoryDisplay } from '@root/types/model';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import type { FC } from 'react';
+import { useMemo } from 'react';
 
 export const hideCategoryOnTrait: Readonly<CATEGORY[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
 
@@ -160,3 +173,47 @@ export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ is
 		</motion.div>
 	</>
 );
+
+export const SpecialHyperLink: FC<SpecialHyperLinkProps> = ({ input, path }) => {
+	const inputParse = useMemo(() => {
+		try {
+			return JSON.parse(input);
+		} catch (error) {
+			console.log({ error });
+		}
+	}, [input]);
+
+	const record = useMemo(() => hyperLinkValidator.safeParse(inputParse), [inputParse]);
+
+	const search = useMemo(() => genericRelatedCategorySchema.safeParse(inputParse), [inputParse]);
+
+	return record.success ? (
+		<Link className='link link-info font-bold' href={{ pathname: `${path}/${record.data.id}` }}>
+			{record.data.name}
+		</Link>
+	) : search.success ? (
+		<Link className='link link-neutral font-bold' href={{ pathname: path, query: { relatedCategory: search.data } }}>
+			{RelatedCategoryDisplay[search.data]}
+		</Link>
+	) : null;
+};
+
+export const RecipeIdeaKey: FC<RecipeIdeaKeyProps> = ({ input }) => {
+	console.log(input);
+
+	if (input.startsWith(prefixMisc)) return <span className='font-bold'>{input.replaceAll(prefixMisc, '')}</span>;
+
+	if (input.startsWith(prefixItemLinkSearch))
+		return <SpecialHyperLink input={input.replaceAll(prefixItemLinkSearch, '')} path='/items' />;
+
+	if (input.startsWith(prefixItemLinkRecord))
+		return <SpecialHyperLink input={input.replaceAll(prefixItemLinkRecord, '')} path='/items' />;
+
+	if (input.startsWith(prefixTraitLinkRecord))
+		return <SpecialHyperLink input={input.replaceAll(prefixTraitLinkRecord, '')} path='/traits' />;
+
+	if (input.startsWith(prefixEffectLinkRecord))
+		return <SpecialHyperLink input={input.replaceAll(prefixEffectLinkRecord, '')} path='/effects' />;
+
+	return null;
+};

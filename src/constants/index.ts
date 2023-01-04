@@ -33,3 +33,4 @@ export const prefixItemLinkSearch = 'HyperLink:Item:Search:';
 export const prefixItemLinkRecord = 'HyperLink:Item:Record:';
 export const prefixEffectLinkRecord = 'HyperLink:Effect:Record:';
 export const prefixTraitLinkRecord = 'HyperLink:Trait:Record:';
+export const prefixMisc = 'Misc:';

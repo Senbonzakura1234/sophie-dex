@@ -23,11 +23,11 @@ const TraitRecord: FC<TraitRecordProps> = ({ record: { name, description, index,
 
 			<div className='text-sm'>index: {index}</div>
 
-			<div className='text-lg'>{description}</div>
-
-			<Categories categories={categories} />
+			<p className='text-lg'>{description}</p>
 
 			<TraitMergeList mergeFrom={mergeFrom} />
+
+			<Categories categories={categories} />
 		</RecordWrapper>
 	);
 };

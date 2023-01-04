@@ -8,7 +8,7 @@ const RelatedCategories: FC<RelatedCategoriesProps> = ({ relatedCategories }) =>
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();
 
 	return (
-		<div className='flex flex-wrap gap-2'>
+		<div className='mt-auto flex flex-wrap gap-2'>
 			{relatedCategories.map((c, k) => (
 				<a
 					onClick={e => {

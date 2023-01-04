@@ -1606,7 +1606,7 @@ const items: Item[] = [
 		description: null,
 		traitPresent: null,
 		recipeIdea:
-			'<clch0v6nl000008kx92vp1sw7>Misc:Performing Synthesis<clch0v6nl000008kx92vp1sw7> & Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:WATER<clch0v6nl000008kx92vp1sw7>',
+			'<clch0v6nl000008kx92vp1sw7>Misc:Performing Synthesis<clch0v6nl000008kx92vp1sw7> & Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:"WATER"<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -2159,7 +2159,7 @@ const items: Item[] = [
 		description: null,
 		traitPresent: null,
 		recipeIdea:
-			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:MEDICINE<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Trait:Record:{"name":"Size+","id":"638a4d49a44f4fa4b0deca3a"}<clch0v6nl000008kx92vp1sw7>',
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:"MEDICINE"<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Trait:Record:{"name":"Size+","id":"638a4d49a44f4fa4b0deca3a"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'EXPLORATION',
@@ -2855,7 +2855,7 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
-		recipeIdea: 'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:ACCESSORY<clch0v6nl000008kx92vp1sw7>',
+		recipeIdea: 'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:"ACCESSORY"<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -4107,7 +4107,7 @@ const items: Item[] = [
 		description: null,
 		traitPresent: null,
 		recipeIdea:
-			'Use <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:BOMB<clch0v6nl000008kx92vp1sw7>, <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:MAGIC_ITEM<clch0v6nl000008kx92vp1sw7>, And <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:MEDICINE<clch0v6nl000008kx92vp1sw7>',
+			'Use <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:"BOMB"<clch0v6nl000008kx92vp1sw7>, <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:"MAGIC_ITEM"<clch0v6nl000008kx92vp1sw7>, And <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:"MEDICINE"<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ACCESSORY',
