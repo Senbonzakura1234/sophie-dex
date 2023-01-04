@@ -27,3 +27,9 @@ export const colorTailwindMap: { [key in COLOR]: string } = {
 
 export const specialSeparator = '<clcaiqscn000008jwhfw85ia7>';
 export const specialPrefix = '<clcbr2xjm000008jngnabd04t>';
+export const hyperLinkSeparator = '<clch0v6nl000008kx92vp1sw7>';
+
+export const prefixItemLinkSearch = 'HyperLink:Item:Search:';
+export const prefixItemLinkRecord = 'HyperLink:Item:Record:';
+export const prefixEffectLinkRecord = 'HyperLink:Effect:Record:';
+export const prefixTraitLinkRecord = 'HyperLink:Trait:Record:';

@@ -120,5 +120,6 @@ model Item {
    category          CATEGORY
    level             Int
    recipeType        RECIPE_TYPE?
+   recipeIdea        String?
    traitPresent      TRAIT_LINK?
 }

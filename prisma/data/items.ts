@@ -16,6 +16,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Pilgram Road, Flower Garden, Rocky Grove, Scar of the Land.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Mandragora, White Root, Alraune, Kimmoch, Single Horn.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Greatly grown Magic Grass.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -32,6 +33,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Pilgram Road, Flower Garden, Verdant Hill, Underground lake.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>White Root, Alraune, Kimmoch.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -48,6 +50,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Gathering of Beast, Puzzzling Path, Foggy Woodland, Mountain Boundary, Forest of fairies, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Kimmoch, Nightshade, Sorcerer Titus.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca68', index: 682, name: 'Poison Mist' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -65,6 +68,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Rocky Grove, Gate of trees, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Kimmoch, Nightshade, Sorcerer Titus.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Herbs great for medicine.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -81,6 +85,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Chick Woods, lisure Plaza, Fungal garden, Rocky Mountain, Dead Tree Wasteland.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>White Root, Araune, Kimmoch.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -97,6 +102,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Funal Garden, Foggy Woodland, Forest of Faries.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>White Root, Alraunem, Starfish.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -114,6 +120,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Rocky Mountain, Verdant Hill, Scar of the land.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>White Root, Alraunem, Starfish.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Cotton Disliked by dragon.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -130,6 +137,7 @@ const items: Item[] = [
 		description:
 			"Location:<clcbr2xjm000008jngnabd04t>Gate of Trees, Three Bridge Spring, Small Islet, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>White Root, Alraunem, Starfish.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Remnant of a Past Sea?.",
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -146,6 +154,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Gathering of Beast, Rocky Grove, Gate of Trees, Foggy Woodland, Forest of Faries.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -161,6 +170,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Location:<clcbr2xjm000008jngnabd04t>Small Islet, Moon Sun Mor (Unlock after Oskar event).',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -177,6 +187,7 @@ const items: Item[] = [
 		description:
 			"Location:<clcbr2xjm000008jngnabd04t>Gate of Tress, Three Bridge Spring, Silent Lakeside, Prospector's Strand, Underground Lake  (Unlock after Oskar event).",
 		traitPresent: { id: '638a4d49a44f4fa4b0deca6a', index: 683, name: 'Slime Compound' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -192,6 +203,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Location:<clcbr2xjm000008jngnabd04t>Underground Lake  (Unlock after Oskar event).',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -207,6 +219,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Location:<clcbr2xjm000008jngnabd04t>Forest of Faries  (Unlock after Oskar final event).',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -224,6 +237,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Fairy Forest (Rumor only).<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Flower looking in silence..',
 		traitPresent: { id: '638a4d47a44f4fa4b0dec9a5', index: 193, name: 'Full of Life' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -241,6 +255,7 @@ const items: Item[] = [
 		description:
 			'Hunt:<clcbr2xjm000008jngnabd04t>Kimmoch, Nightshade, Sealed Demon Lord, Sorcerer Titus, Light Elemental.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca66', index: 684, name: 'False Flower' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -254,6 +269,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Merbert Farm, Enlightened Mountain, Underground Lake.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Magic Book, Gargolye, Apostle, Mini Demon.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -267,6 +283,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Flower Garden, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Punipuni?, Magic book, Book Familiar, Mini Demon, Tricker.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca64', index: 685, name: 'Electrified' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -280,6 +297,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Flower Garden, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Punipuni?, Magic book, Book Familiar, Mini Demon, Tricker, Devil Horn, Sealed Demon.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -296,6 +314,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Pilgrim Road, Merbert Farm, Enlightened Mountain, Moon Sun Mor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Magic Book, Gargolye, Apostle, Mini Demon.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca65', index: 686, name: 'Carries Heat' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -312,6 +331,7 @@ const items: Item[] = [
 		description:
 			"Location:<clcbr2xjm000008jngnabd04t>Gate of Trees, Three Bridge Spring, Silent Lakeside, Merbert Farm, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Punipuni?, Book Familiar, Tricker.",
 		traitPresent: { id: '638a4d49a44f4fa4b0deca69', index: 687, name: 'Carries Cold' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -328,6 +348,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Scar of the Land,  Enlightend Mountain.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Devil Horn, Sealed Demon Lord.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -345,6 +366,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Fertile Shore, Husk Forest, Sealed Temple, Underground lake.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Devil Horn, Sealed Demon Lord.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca6b', index: 688, name: 'Dark Matter' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -361,6 +383,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Merbert Farm, Three Bridge Spring, Dead Tree Wasteland, Waterside Ruins, Prospectors Strand.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -374,6 +397,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Calm Banks, Fertile Shore, Underground Lake,.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Island Fish, Isanasius.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -387,6 +411,7 @@ const items: Item[] = [
 		description:
 			'Hunt:<clcbr2xjm000008jngnabd04t>Grand Ocean.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Remnant of a Past Sea?.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -404,6 +429,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Moon Sun Moor, City of the lost, Sealed temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Gargoyle, Apostle.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca6c', index: 689, name: 'Ancient Seal' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -420,6 +446,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Forgotten nursery, Small islet, City of the Lost, Fallen Palace.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Gargoyle, Apostle.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -436,6 +463,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Waterside ruins, Fallen Palace, Forgotten Nursery.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Magic Book, Mini Demon Dragonaire, Magmacius.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -453,6 +481,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Silent Lakeside, Sealed Temple, Fallen Palace, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Punipuni? Book familiar Tricker.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -469,6 +498,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Mountain Boundary, Husk Forest, Scar of the land, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Heavenly Bird, Dragonaire, Magmacius.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -485,6 +515,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Mountain Boundary, Underground Lake, Fallen Palace.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Living grimoire.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca71', index: 690, name: 'Absorbs Light' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -501,6 +532,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Dead Tree, Small Islet.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Dragonaire, Magmacius.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -517,6 +549,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Fertile Shore, Underground Lake.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Sealed Demon Lord, Wind Elemental, Light Elemental.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -535,6 +568,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Scar of the land (Big Cystal).<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Wind Elemental, Light Elemental.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Crystal Bless By Spirits.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -551,6 +585,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Blessed Forest, Liesure Plaza, Funal Garden, Enlightened Mountain.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Ardra, Kaiser Pigeon, Saber Claw, Gustaf, Rok, Heavenly bird.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -567,6 +602,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Open Ruins, Fungal Gardens, Husk Forest, Moon Sun Mor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Mini Demon, Ardra, Chimera Beast, Lightning, Fang, Twin Header, Island Fish, Single Horn.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -583,6 +619,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Island Fish, Signle Horn, Star Fish, Isanasius, Grand Ocean.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca6f', index: 691, name: 'Stinks' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -599,6 +636,7 @@ const items: Item[] = [
 		description:
 			'Hunt:<clcbr2xjm000008jngnabd04t>Mini Demon, Ardra, Chimera Beast, Lightning, Fang, Twin Header, Island Fish, Single Horn.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -615,6 +653,7 @@ const items: Item[] = [
 		description:
 			'Hunt:<clcbr2xjm000008jngnabd04t>Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning, Fang , Twin Header, Silent Beast, Crimson Fang Dragonaire, Magmacius, Wind Elemental.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca6e', index: 692, name: 'Sunny Scent' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -628,6 +667,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Flower Garden, Underground Lake, Forgotten Nursery, Sealed temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Kaiser Pigeon, Saber Claw, Gusaf, Fang.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -641,6 +681,7 @@ const items: Item[] = [
 		description:
 			'Hunt:<clcbr2xjm000008jngnabd04t>Wise, Spirit, Rok, Twin Header, Sorcerer Titus, Ifritter, Tempestus, Wind Elemental.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Gold Strong Thread.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca6d', index: 693, name: 'Cutting Thread' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -658,6 +699,7 @@ const items: Item[] = [
 		description:
 			'Hunt:<clcbr2xjm000008jngnabd04t>Wise Spirit, Rok, Twin Header, Sorcer Titus, Ifritter, Tempestus, Dragonaire, Mamacius, Sun Destroyer Yasuk, Moon Eater Durak..',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -671,6 +713,7 @@ const items: Item[] = [
 		description:
 			"Location:<clcbr2xjm000008jngnabd04t>Calm Banks, Small Islet, Prospector's Strand, Underground Lake.",
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -684,6 +727,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Calm Banks, Underwater Lake.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Pure and Clean Spring water.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -699,6 +743,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Location:<clcbr2xjm000008jngnabd04t>Bought.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca72', index: 694, name: 'Kirchen Bell Special' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -715,6 +760,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Fertile Shore, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Dragonaire, Magmacius.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca75', index: 695, name: 'Flickering Light' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -732,6 +778,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Waterside Ruins, Sealed temple, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Dragonaire, Magmacius.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -748,6 +795,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Forgotten Nursery, Waterside, Ruins, Small Islet,.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Black Puni, Punipuni? Kaiser pigeonm Saber claw, Gustaf, Lightning, Silent Beast.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -763,6 +811,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Blue Puni, Green Puni, Red Puni, Gold Puni, Black Puni.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -779,6 +828,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Rainbow Puni, Admiral Puni, Slead Demon Lord.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca70', index: 696, name: 'Unidentified' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -796,6 +846,7 @@ const items: Item[] = [
 		description:
 			'Hunt:<clcbr2xjm000008jngnabd04t>Wise Spirit, rok, Twin Header, Sorcer Titus, Ifritter, Tempestus, Dragonaire, Magmacius, Sun Destroyer Yasuk, Moon Destroyer Durak.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -811,6 +862,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Haunt Unliving King.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca76', index: 697, name: 'Purifying Water' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -826,6 +878,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Blue Puni, Green Puni, Red Puni, Gold Puni, Black Puni.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -842,6 +895,7 @@ const items: Item[] = [
 		description:
 			'Hunt:<clcbr2xjm000008jngnabd04t>Blue Puni, Green Puni, Red Puni, Gold Puni, Punipuni? Super Puni, Admiral Puni.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca78', index: 698, name: 'Golden Radiance' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -858,6 +912,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Chick Woods, Blessed Forest, Green Ruins, Puzzling Path, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Madragora, Single Horn.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -875,6 +930,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Blessed Forest, Green Ruins, Puzzling Path, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>White Root, Alraune, Kimmoch.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -891,6 +947,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Merbert Farm, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Mandragora, Single Horn.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -907,6 +964,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Mandragora, Single Horn.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Stash of High Grade Flour.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -923,6 +981,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Kimmoch, Nightshade, Sorcerer Titus.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -939,6 +998,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Gathering Of Beast, Puzzling Path, Forest of Fairies.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Kimmoch, Nightshade, Sorcerer Titus.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca74', index: 700, name: 'Mutated Material' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -955,6 +1015,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Blessed Forest, Leaisure Plaza, Green Ruins, gate of trees.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Mini Demon, Ardra, Chimera Beast.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -972,6 +1033,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Chickk Woods, Green RUins.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Kaiser Pigeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Strange Miniature Eggs.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -987,6 +1049,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Location:<clcbr2xjm000008jngnabd04t>Merbert Farm, Flower Garden, Open Ruins, Verdant Hilld.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1003,6 +1066,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Open Ruins, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>White Root, Alraune, Star fish.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Fruit that gives strength.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca77', index: 701, name: 'Special Ingredient' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1019,6 +1083,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Flower Garden, Forgotten Nursery, Fallen Palace, Sealed Temple.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Magic Book, Book Familiar, living Grimoire, Forbidden Codex.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1031,6 +1096,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Mini Demon, Ardra, Chimera Beast.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1044,6 +1110,7 @@ const items: Item[] = [
 		description:
 			'Hunt:<clcbr2xjm000008jngnabd04t>Kaiser Pengeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Vivldy Colored Oil.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca7b', index: 702, name: 'Secret of Health' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1059,6 +1126,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Haunt, Unliving King.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1074,6 +1142,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Haunt, Unliving King.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1090,6 +1159,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Lich Ordser, Haunt, Sealed Demon Lord, Unliving King.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca79', index: 703, name: 'Power of Faith' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1106,6 +1176,7 @@ const items: Item[] = [
 		description:
 			"Location:<clcbr2xjm000008jngnabd04t>Calm Banks, Silent Lakeside, Prospector's Strand.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Kaiser Pigeon, Saber Claw, Gustaf, Fang.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Shell Like Gemstone.",
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1122,6 +1193,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Underwater Lake.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning Silent Beast, Isanasius.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Chalk White Shells.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca7a', index: 704, name: 'Medicine Compound' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1138,6 +1210,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Merbert Farm, Sealed Temple, Underground Lake, Scar of the land.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Black Puni, Kaiser Pigeon, Saber Claw, Gustaf, Lightning Silent Beast.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1154,6 +1227,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Sun Moon Moor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Heavenly Bird, Draagonaire, Magmacius.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>A Shattered Star?.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1170,6 +1244,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Sealed Temple, Moon Sun Moor.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Crimson Fang, Dragonaire, Magmacius.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1186,6 +1261,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Rocky Mountain, Mountain Boundary, Dead Tree Wasteland, Scard of the land.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Magic book, Book of Familiar, Ghost, Scarlady, Gentle Phantom, Funny Face, Dark Maiden.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1203,6 +1279,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Moon Sun Moor, Fallen Palace, Forgotten Nursery.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Forbidden Codex, Lich Order, Wise Spirit, Rok, twin Header, Sorcer Titus, Ifritter, Tempestus, Wind Elemental.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1219,6 +1296,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Moon Sun Moor, City of the Lost, Forgotten NUrsery, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Ghost, Scarlady, Gentle Phantom, Haunt, Lich, Shadow, Death Inquisitor, Archlich.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1235,6 +1313,7 @@ const items: Item[] = [
 		description:
 			'Hunt:<clcbr2xjm000008jngnabd04t>Sealed Demon Lord, Wind Elemental, Light Elemental.<clcaiqscn000008jwhfw85ia7>Rumor:<clcbr2xjm000008jngnabd04t>Faintly Shining Ore.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1251,6 +1330,7 @@ const items: Item[] = [
 		description:
 			'Hunt:<clcbr2xjm000008jngnabd04t>Devil Horn, Sealed Demon Lord, Flare Demon, Thunderous, Hell gate, Great Demon.',
 		traitPresent: { id: '638a4d49a44f4fa4b0deca7e', index: 707, name: 'Demon Soul' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1267,6 +1347,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Dragonaire, Magmacius, Sun Destroyer Yasuk, Moon Eater Durakk.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1279,6 +1360,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Kimmoch, Nightshade, Sorcerer Titus, Light Elemental.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1292,6 +1374,7 @@ const items: Item[] = [
 		description:
 			'Hunt:<clcbr2xjm000008jngnabd04t>Wise Spirit, Rok, Twin Header, Grand Ocean, Sorcerer Titus, Ifritter, Tempestus, Dragonaire, Magmacius, Light Elemental.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1304,6 +1387,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Hunt:<clcbr2xjm000008jngnabd04t>Devil Horn, Sealed Demon Lord, Dragonaire, magmacius.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1317,6 +1401,7 @@ const items: Item[] = [
 		description:
 			'Hunt:<clcbr2xjm000008jngnabd04t>Wise Spirit, Rok, Twin header, Sorcerer Titus, ifritter, Tempestus.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1329,6 +1414,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Location:<clcbr2xjm000008jngnabd04t>Moon Sun Mor, Fallen Palace, Soul Space.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1341,6 +1427,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Location:<clcbr2xjm000008jngnabd04t>Flower Garden Sealed Temple, Soul Space.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1353,6 +1440,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Location:<clcbr2xjm000008jngnabd04t>Forgotten Nursery, Sealed Temple, Soul Space.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1366,6 +1454,7 @@ const items: Item[] = [
 		description:
 			'Location:<clcbr2xjm000008jngnabd04t>Small Islet, Fallen Palace, Soul Space.<clcaiqscn000008jwhfw85ia7>Hunt:<clcbr2xjm000008jngnabd04t>Dragonaire, Magmacius.',
 		traitPresent: { id: '638a4d48a44f4fa4b0deca0d', index: 427, name: 'Magical Slayer' },
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1381,6 +1470,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1393,6 +1483,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Obtain throw event.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1405,6 +1496,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Obtain throw event.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1421,6 +1513,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Location:<clcbr2xjm000008jngnabd04t>Library of All Creation.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1437,6 +1530,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Location:<clcbr2xjm000008jngnabd04t>Library of All Creation.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1453,6 +1547,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Location:<clcbr2xjm000008jngnabd04t>Library of All Creation.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -1469,6 +1564,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Location:<clcbr2xjm000008jngnabd04t>Library of All Creation.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1481,6 +1577,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Gather <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Uni","id":"638a47ba92862c8448344934"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1493,6 +1591,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Hunt <clch0v6nl000008kx92vp1sw7>Misc:Monsters<clch0v6nl000008kx92vp1sw7> & <clch0v6nl000008kx92vp1sw7>Misc:Complete Request<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1505,6 +1605,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'<clch0v6nl000008kx92vp1sw7>Misc:Performing Synthesis<clch0v6nl000008kx92vp1sw7> & Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:WATER<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1517,6 +1619,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Raiden Ore","id":"638a47b992862c8448344911"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1529,6 +1633,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Uni Bag","id":"638a47ba92862c844834495c"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Effect:Record:{"name":"Explodes","id":"638a46a8b522a2845a830f62"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1541,6 +1647,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Bomb","id":"638a47ba92862c8448344963"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Effect:Record:{"name":"Blue Flames","id":"638a46a9b522a2845a830fc1"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1553,6 +1661,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Use <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Ice Bomb","id":"638a47ba92862c8448344960"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1565,6 +1675,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Encounter <clch0v6nl000008kx92vp1sw7>Misc:Night Thunderstorm<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Prospectors Strand<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1577,6 +1689,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Get Hit by <clch0v6nl000008kx92vp1sw7>Misc:Puni Press<clch0v6nl000008kx92vp1sw7> Skill from any <clch0v6nl000008kx92vp1sw7>Misc:Puni Monsters<clch0v6nl000008kx92vp1sw7> in Combat',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1592,6 +1706,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Investigate <clch0v6nl000008kx92vp1sw7>Misc:Silent Bedroom<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Moon Sun Moor<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1607,6 +1723,7 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Taking Damage from Combat',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1619,6 +1736,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Talk to the NPC at the conner of <clch0v6nl000008kx92vp1sw7>Misc:Book Shop<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1634,6 +1753,7 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Hunt <clch0v6nl000008kx92vp1sw7>Misc:Light Elemental<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1649,6 +1769,7 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Accept 5 Time-Limited Request, let them Expire and then Cancel them',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1661,6 +1782,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Talk to the NPC at <clch0v6nl000008kx92vp1sw7>Misc:Nearby Forest<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Night<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1673,6 +1796,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Berg Medicine","id":"638a47ba92862c844834497f"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1685,6 +1810,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Investigate <clch0v6nl000008kx92vp1sw7>Misc:Pond<clch0v6nl000008kx92vp1sw7> in <clch0v6nl000008kx92vp1sw7>Misc:Forgotten Nursery<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1697,6 +1824,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Investigating <clch0v6nl000008kx92vp1sw7>Misc:Hill<clch0v6nl000008kx92vp1sw7> at the <clch0v6nl000008kx92vp1sw7>Misc:Front of Atelier<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1712,6 +1841,7 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Get LP Reach 0',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1727,6 +1857,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Dunkelheit","id":"638a47b992862c844834490e"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1742,6 +1874,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Gather <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Ramel Wheat","id":"638a47ba92862c8448344937"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1757,6 +1891,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Gather <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Well Water","id":"638a47b992862c8448344927"}<clch0v6nl000008kx92vp1sw7> From Outside well',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1773,6 +1909,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Hunt <clch0v6nl000008kx92vp1sw7>Misc:Green Puni<clch0v6nl000008kx92vp1sw7>, <clch0v6nl000008kx92vp1sw7>Misc:Red Puni<clch0v6nl000008kx92vp1sw7> & <clch0v6nl000008kx92vp1sw7>Misc:Black Puni<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1788,6 +1926,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Natural Yeast","id":"638a47bb92862c84483449b7"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Trait:Record:{"name":"Sunny Scent","id":"638a4d49a44f4fa4b0deca6e"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1803,6 +1943,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Pure Water","id":"638a47bb92862c84483449b2"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Trait:Record:{"name":"Secret of Health","id":"638a4d49a44f4fa4b0deca7b"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1819,6 +1961,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Honey","id":"638a47bb92862c84483449b8"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Trait:Record:{"name":"Kirchen Bell Special","id":"638a4d49a44f4fa4b0deca72"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1831,6 +1975,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Supreme Hot Milk","id":"638a47ba92862c8448344992"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Effect:Record:{"name":"Hot","id":"638a46a8b522a2845a830f5c"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1843,6 +1989,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain or Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Ramel Flour","id":"638a47bb92862c84483449bb"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1855,6 +2003,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Buy <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Kirchen Milk","id":"638a47b992862c844834492b"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -1867,6 +2017,7 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: '<clch0v6nl000008kx92vp1sw7>Mics:Tess<clch0v6nl000008kx92vp1sw7> Event',
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1879,6 +2030,7 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Hunt <clch0v6nl000008kx92vp1sw7>Misc:Unliving King<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1891,6 +2043,7 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: ' <clch0v6nl000008kx92vp1sw7>Mics:Julio<clch0v6nl000008kx92vp1sw7> Event',
 	},
 	{
 		category: 'DE_BUFF_ITEM',
@@ -1903,6 +2056,7 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Lose a Battle',
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1915,6 +2069,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Puni Jelly","id":"638a47ba92862c8448344983"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Effect:Record:{"name":"Activate Division","id":"638a46aab522a2845a831002"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1927,6 +2083,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Dragon Bloodstone","id":"638a47ba92862c8448344933"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ATK_ITEM',
@@ -1942,6 +2100,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: 'Shop:<clcbr2xjm000008jngnabd04t>:Elise',
 		traitPresent: null,
+		recipeIdea:
+			'Friendly with the <clch0v6nl000008kx92vp1sw7>Misc:Artisans (Harol, Leon, Cory, Logy)<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'DE_BUFF_ITEM',
@@ -1954,6 +2114,7 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Loot Chest Dropped From <clch0v6nl000008kx92vp1sw7>Misc:Monsters<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -1966,6 +2127,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Investigate <clch0v6nl000008kx92vp1sw7>Misc:Ruins<clch0v6nl000008kx92vp1sw7> at the <clch0v6nl000008kx92vp1sw7>Misc:Blue Sky Altar<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Fallen Palace<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'DE_BUFF_ITEM',
@@ -1981,6 +2144,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: 'Shop:<clcbr2xjm000008jngnabd04t>:Elise',
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Codex of Creation","id":"638a47bb92862c844834499a"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Effect:Record:{"name":"Steal Lots of Life","id":"638a46a9b522a2845a830faa"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'EXPLORATION',
@@ -1993,6 +2158,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:MEDICINE<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Trait:Record:{"name":"Size+","id":"638a4d49a44f4fa4b0deca3a"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'EXPLORATION',
@@ -2005,6 +2172,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Spruce","id":"638a47bb92862c84483449c3"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Trait:Record:{"name":"Flickering Light","id":"638a4d49a44f4fa4b0deca75"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'EXPLORATION',
@@ -2020,6 +2189,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Refuel Bottle","id":"638a47ba92862c8448344979"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Effect:Record:{"name":"Auto Activate 50%","id":"638a46aab522a2845a830ff9"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'EXPLORATION',
@@ -2032,6 +2203,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Alchemy Drops","id":"638a47ba92862c8448344987"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Effect:Record:{"name":"Super Sweet","id":"638a46a8b522a2845a830f5f"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'EXPLORATION',
@@ -2047,6 +2220,7 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Hunt <clch0v6nl000008kx92vp1sw7>Misc:Kaiser Pigeon<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'EXPLORATION',
@@ -2059,6 +2233,7 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Explore 5 Areas',
 	},
 	{
 		category: 'EXPLORATION',
@@ -2071,6 +2246,7 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Gathering 10 Items continuously',
 	},
 	{
 		category: 'EXPLORATION',
@@ -2083,6 +2259,7 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Run away from Combat',
 	},
 	{
 		category: 'EXPLORATION',
@@ -2095,6 +2272,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'EXPLORATION',
@@ -2107,6 +2285,7 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Win A Battle at Low HP',
 	},
 	{
 		category: 'EXPLORATION',
@@ -2119,6 +2298,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Investigate the <clch0v6nl000008kx92vp1sw7>Misc:Furnace<clch0v6nl000008kx92vp1sw7> at the <clch0v6nl000008kx92vp1sw7>Misc:Blacksmith<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'EXPLORATION',
@@ -2134,6 +2315,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Buy <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Pious Talisman","id":"638a47ba92862c844834496c"}<clch0v6nl000008kx92vp1sw7> from <clch0v6nl000008kx92vp1sw7>Mics:Pamela<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'EXPLORATION',
@@ -2146,6 +2329,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Investigate <clch0v6nl000008kx92vp1sw7>Misc:Bridge<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Waterside Ruins<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2158,6 +2343,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Gather <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Red Uni","id":"638a47ba92862c8448344938"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2170,6 +2357,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Investigate <clch0v6nl000008kx92vp1sw7>Misc:Fountain<clch0v6nl000008kx92vp1sw7> at the <clch0v6nl000008kx92vp1sw7>Misc:Plaza<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2182,6 +2371,7 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Buy & Sell 300 Cole of Items',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2194,6 +2384,7 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Exploration and Hunting <clch0v6nl000008kx92vp1sw7>Misc:Monsters<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2206,6 +2397,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Gather <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Luminous Water","id":"638a47b992862c844834492e"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2221,6 +2414,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Investigate the <clch0v6nl000008kx92vp1sw7>Misc:Small Island<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Small Islet<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2236,6 +2431,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Whimsy Strawberry","id":"638a47ba92862c8448344942"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2251,6 +2448,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Investigate <clch0v6nl000008kx92vp1sw7>Misc:South Wheat Field<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Merbert Farm<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2263,6 +2462,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Gather <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Beehive","id":"638a47ba92862c844834493f"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2279,6 +2480,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: 'Location:<clcbr2xjm000008jngnabd04t>Bought at Marguerite, Synthsized (Hope).',
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Bagel Sandwich","id":"638a47ba92862c8448344984"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Effect:Record:{"name":"Fluffy","id":"638a46a8b522a2845a830f68"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2294,6 +2497,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Getting Hit by <clch0v6nl000008kx92vp1sw7>Misc:Life Powder Skill<clch0v6nl000008kx92vp1sw7> in Combat or Gather in <clch0v6nl000008kx92vp1sw7>Misc:Forest of Fairies<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2309,6 +2514,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: 'Shop:<clcbr2xjm000008jngnabd04t>:Elise',
 		traitPresent: null,
+		recipeIdea:
+			'Investigate <clch0v6nl000008kx92vp1sw7>Misc:Bookshelf<clch0v6nl000008kx92vp1sw7> in the <clch0v6nl000008kx92vp1sw7>Misc:Book Shop<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2324,6 +2531,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Investigate <clch0v6nl000008kx92vp1sw7>Misc:Ancient Kitchen<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Forgotten Nursery<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2336,6 +2545,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Black Orb","id":"638a47b992862c844834491d"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2348,6 +2559,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Get attacked by <clch0v6nl000008kx92vp1sw7>Misc:Lightning Skill<clch0v6nl000008kx92vp1sw7> in Combat',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2363,6 +2576,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Investigate <clch0v6nl000008kx92vp1sw7>Misc:Prayerless Altar<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Small Islet<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2378,6 +2593,7 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Talk to <clch0v6nl000008kx92vp1sw7>Misc:Fritz<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2393,6 +2609,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Silver Web","id":"638a47b992862c844834492a"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2405,6 +2623,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Gather <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Kifa","id":"638a47b992862c8448344906"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2420,6 +2640,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Hunt <clch0v6nl000008kx92vp1sw7>Misc:Beast<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Merbert Farm<clch0v6nl000008kx92vp1sw7> & <clch0v6nl000008kx92vp1sw7>Misc:Complete Request<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2435,6 +2657,7 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Perform Synthesis & Use Items in Combat',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2450,6 +2673,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Hunting <clch0v6nl000008kx92vp1sw7>Misc:Monsters<clch0v6nl000008kx92vp1sw7> & Crafting <clch0v6nl000008kx92vp1sw7>Misc:Weapons<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2465,6 +2690,7 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Perform Synthesis & Get thanks gifts',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2480,6 +2706,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Ingot","id":"638a47bb92862c84483449c4"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Trait:Record:{"name":"Golden Radiance","id":"638a4d49a44f4fa4b0deca78"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2495,6 +2723,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Spirit Crystal","id":"638a47ba92862c8448344931"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2510,6 +2740,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Gather <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Animal Fur","id":"638a47b992862c8448344924"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2525,6 +2757,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Cloth","id":"638a47bb92862c84483449c8"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Trait:Record:{"name":"Carries Heat","id":"638a4d49a44f4fa4b0deca65"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2540,6 +2774,7 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: '<clch0v6nl000008kx92vp1sw7>Mics:Leon<clch0v6nl000008kx92vp1sw7> Event',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2555,6 +2790,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Angel\'s Whisper","id":"638a47bb92862c8448344998"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Effect:Record:{"name":"Soul Awakening","id":"638a46adb522a2845a831135"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2570,6 +2807,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Adal Cloth","id":"638a47bb92862c84483449ce"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Trait:Record:{"name":"High Class","id":"638a4d47a44f4fa4b0dec96e"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2585,6 +2824,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Rainbow Puni Fluid","id":"638a47ba92862c8448344932"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2600,6 +2841,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Silver Crystal","id":"638a47b992862c844834491c"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2612,6 +2855,7 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:ACCESSORY<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2629,6 +2873,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Hunt <clch0v6nl000008kx92vp1sw7>Misc:Yasuk<clch0v6nl000008kx92vp1sw7> and <clch0v6nl000008kx92vp1sw7>Misc:Dorak<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2644,6 +2890,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Talk to the NPC at <clch0v6nl000008kx92vp1sw7>Misc:Street<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Night<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2656,6 +2904,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Spirit Needle","id":"638a47bc92862c8448344a41"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2673,6 +2923,7 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Hunt <clch0v6nl000008kx92vp1sw7>Misc:Magmacius<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2690,6 +2941,7 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Raise <clch0v6nl000008kx92vp1sw7>Misc:Synthesis Level<clch0v6nl000008kx92vp1sw7> to 45',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2707,6 +2959,7 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: '<clch0v6nl000008kx92vp1sw7>Mics:Monika<clch0v6nl000008kx92vp1sw7> Quest',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2723,6 +2976,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Good Water","id":"638a47b992862c8448344928"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2735,6 +2990,7 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: '<clch0v6nl000008kx92vp1sw7>Mics:Oskar<clch0v6nl000008kx92vp1sw7> Quest',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -2747,6 +3003,7 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: '<clch0v6nl000008kx92vp1sw7>Mics:Cory<clch0v6nl000008kx92vp1sw7> Event',
 	},
 	{
 		category: 'MACHINE',
@@ -2759,6 +3016,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Ice Bomb","id":"638a47ba92862c8448344960"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'MACHINE',
@@ -2771,6 +3030,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Buy <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Practice Cauldron","id":"638a47bb92862c84483449d9"}<clch0v6nl000008kx92vp1sw7> from <clch0v6nl000008kx92vp1sw7>Mics:Cory<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'MACHINE',
@@ -2783,6 +3044,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Tuned Cauldron","id":"638a47bb92862c84483449ec"}<clch0v6nl000008kx92vp1sw7> at the <clch0v6nl000008kx92vp1sw7>Misc:Final Area<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Underground Lake<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'MACHINE',
@@ -2795,6 +3058,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Expert Cauldron","id":"638a47bb92862c84483449db"}<clch0v6nl000008kx92vp1sw7> in <clch0v6nl000008kx92vp1sw7>Misc:Silent Bedroom<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Sun Moon Mor<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'MACHINE',
@@ -2807,6 +3072,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Fairy Cauldron","id":"638a47bb92862c84483449dc"}<clch0v6nl000008kx92vp1sw7> at the <clch0v6nl000008kx92vp1sw7>Misc:Forest of Fairies<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'MACHINE',
@@ -2819,6 +3086,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Ancient Cauldron","id":"638a47bb92862c84483449dd"}<clch0v6nl000008kx92vp1sw7> at the <clch0v6nl000008kx92vp1sw7>Misc:Library of All Creation<clch0v6nl000008kx92vp1sw7> after Defeat <clch0v6nl000008kx92vp1sw7>Mics:Luard<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'MACHINE',
@@ -2831,6 +3100,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Buy <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Teacher\'s Cauldron","id":"638a47bb92862c84483449df"}<clch0v6nl000008kx92vp1sw7> from <clch0v6nl000008kx92vp1sw7>Mics:Cory<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'MACHINE',
@@ -2843,6 +3114,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Buy <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Hermit\'s Cauldron","id":"638a47bb92862c84483449e3"}<clch0v6nl000008kx92vp1sw7> from <clch0v6nl000008kx92vp1sw7>Mics:Tess<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'MACHINE',
@@ -2855,6 +3128,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Obtain <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Miraculous Cauldron","id":"638a47bb92862c84483449e4"}<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Final Area of DLC map<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'MACHINE',
@@ -2867,6 +3142,7 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Unlocked through <clch0v6nl000008kx92vp1sw7>Misc:Story Progress<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'WEAPON',
@@ -2879,6 +3155,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2891,6 +3168,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2903,6 +3181,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2915,6 +3194,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2927,6 +3207,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2939,6 +3220,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2951,6 +3233,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2963,6 +3246,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2975,6 +3259,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2987,6 +3272,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -2999,6 +3285,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3011,6 +3298,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3023,6 +3311,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3035,6 +3324,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3047,6 +3337,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3059,6 +3350,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3071,6 +3363,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3083,6 +3376,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3095,6 +3389,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3107,6 +3402,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3119,6 +3415,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3131,6 +3428,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3143,6 +3441,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3155,6 +3454,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3167,6 +3467,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3179,6 +3480,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3191,6 +3493,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3203,6 +3506,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3215,6 +3519,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3227,6 +3532,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3239,6 +3545,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3251,6 +3558,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3263,6 +3571,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3275,6 +3584,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3287,6 +3597,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3299,6 +3610,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3311,6 +3623,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3323,6 +3636,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3335,6 +3649,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3347,6 +3662,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3359,6 +3675,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3371,6 +3688,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3383,6 +3701,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3395,6 +3714,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'WEAPON',
@@ -3407,6 +3727,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3419,6 +3740,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3431,6 +3753,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3443,6 +3766,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3455,6 +3779,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3467,6 +3792,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3479,6 +3805,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3491,6 +3818,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3503,6 +3831,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3515,6 +3844,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3527,6 +3857,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3539,6 +3870,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3551,6 +3883,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3563,6 +3896,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3575,6 +3909,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3587,6 +3922,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3599,6 +3935,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3611,6 +3948,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3623,6 +3961,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3635,6 +3974,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3647,6 +3987,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3659,6 +4000,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3671,6 +4013,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3683,6 +4026,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ARMOR',
@@ -3695,6 +4039,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'ACCESSORY',
@@ -3707,6 +4052,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Use 100 LP to traveling around the <clch0v6nl000008kx92vp1sw7>Misc:World Map<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ACCESSORY',
@@ -3719,6 +4066,7 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Hunt <clch0v6nl000008kx92vp1sw7>Misc:Really Strong Monsters<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ACCESSORY',
@@ -3731,6 +4079,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Gold Thread","id":"638a47bb92862c84483449c1"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Trait:Record:{"name":"Purifying Water","id":"638a4d49a44f4fa4b0deca76"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ACCESSORY',
@@ -3743,6 +4093,7 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Hunt <clch0v6nl000008kx92vp1sw7>Misc:Saber Claw<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ACCESSORY',
@@ -3755,6 +4106,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Use <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:BOMB<clch0v6nl000008kx92vp1sw7>, <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:MAGIC_ITEM<clch0v6nl000008kx92vp1sw7>, And <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Search:MEDICINE<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ACCESSORY',
@@ -3767,6 +4120,7 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Hunt <clch0v6nl000008kx92vp1sw7>Misc:Dark Maiden<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ACCESSORY',
@@ -3779,6 +4133,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Simple Sweets","id":"638a47ba92862c844834497e"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Effect:Record:{"name":"Salty","id":"638a46a9b522a2845a830f7e"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ACCESSORY',
@@ -3791,6 +4147,7 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Inflict <clch0v6nl000008kx92vp1sw7>Misc:Weak<clch0v6nl000008kx92vp1sw7> on Enemies in Combat',
 	},
 	{
 		category: 'ACCESSORY',
@@ -3803,6 +4160,8 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			"Use <clch0v6nl000008kx92vp1sw7>Mics:Monika<clch0v6nl000008kx92vp1sw7>'s <clch0v6nl000008kx92vp1sw7>Misc:Light Edge<clch0v6nl000008kx92vp1sw7> and <clch0v6nl000008kx92vp1sw7>Misc:Brave Heart<clch0v6nl000008kx92vp1sw7> Skills.",
 	},
 	{
 		category: 'ACCESSORY',
@@ -3815,6 +4174,8 @@ const items: Item[] = [
 		recipeType: 'DREAM_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Synthesize <clch0v6nl000008kx92vp1sw7>HyperLink:Item:Record:{"name":"Noble Sapphire","id":"638a47bb92862c84483449d0"}<clch0v6nl000008kx92vp1sw7> with <clch0v6nl000008kx92vp1sw7>HyperLink:Trait:Record:{"name":"Ancient Seal","id":"638a4d49a44f4fa4b0deca6c"}<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ACCESSORY',
@@ -3827,6 +4188,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Investigate <clch0v6nl000008kx92vp1sw7>Misc:Clock<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Clock Shop<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ACCESSORY',
@@ -3839,6 +4202,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			"Hunt <clch0v6nl000008kx92vp1sw7>Misc:Silent Beast<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Prospector's Strand<clch0v6nl000008kx92vp1sw7>",
 	},
 	{
 		category: 'ACCESSORY',
@@ -3851,6 +4216,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Investigate <clch0v6nl000008kx92vp1sw7>Misc:Drilled Scar<clch0v6nl000008kx92vp1sw7> at the <clch0v6nl000008kx92vp1sw7>Misc:Scar of the Land<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ACCESSORY',
@@ -3863,6 +4230,8 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Use <clch0v6nl000008kx92vp1sw7>Mics:Sophie<clch0v6nl000008kx92vp1sw7> <clch0v6nl000008kx92vp1sw7>Misc:Special Guard Skill<clch0v6nl000008kx92vp1sw7> <clch0v6nl000008kx92vp1sw7>Misc:Positive Release<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ACCESSORY',
@@ -3875,6 +4244,8 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Buy <clch0v6nl000008kx92vp1sw7>Misc:Gunade Ring<clch0v6nl000008kx92vp1sw7> from <clch0v6nl000008kx92vp1sw7>Mics:Tess<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3887,6 +4258,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3899,6 +4271,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -3911,6 +4284,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Obtain throw event.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3923,6 +4297,7 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: '<clch0v6nl000008kx92vp1sw7>Mics:Julio<clch0v6nl000008kx92vp1sw7> Event',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3935,6 +4310,7 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Unlocked through <clch0v6nl000008kx92vp1sw7>Misc:Story Progress<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3950,6 +4326,7 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Unlocked through <clch0v6nl000008kx92vp1sw7>Misc:Story Progress<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'ACCESSORY',
@@ -3962,6 +4339,7 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: '<clch0v6nl000008kx92vp1sw7>Mics:Leon<clch0v6nl000008kx92vp1sw7> Event',
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3974,6 +4352,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -3986,6 +4365,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -3998,6 +4378,8 @@ const items: Item[] = [
 		recipeType: 'BEGINNER_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea:
+			'Investigate a <clch0v6nl000008kx92vp1sw7>Misc:House<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Night<clch0v6nl000008kx92vp1sw7> at <clch0v6nl000008kx92vp1sw7>Misc:Pilgrim Road<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -4010,6 +4392,7 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: '<clch0v6nl000008kx92vp1sw7>Misc:Fritz<clch0v6nl000008kx92vp1sw7> Event',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -4022,6 +4405,7 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Unlocked through <clch0v6nl000008kx92vp1sw7>Misc:Story Progress<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'KEY_ITEM',
@@ -4034,6 +4418,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Obtain throw event.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'MATERIAL',
@@ -4046,6 +4431,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: 'Obtain throw event.',
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -4058,6 +4444,7 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Unlocked through <clch0v6nl000008kx92vp1sw7>Misc:Story Progress<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'KEY_ITEM',
@@ -4070,6 +4457,7 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Unlocked through <clch0v6nl000008kx92vp1sw7>Misc:Story Progress<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'KEY_ITEM',
@@ -4082,6 +4470,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -4094,6 +4483,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -4106,6 +4496,7 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Unlocked through <clch0v6nl000008kx92vp1sw7>Misc:Story Progress<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -4122,6 +4513,7 @@ const items: Item[] = [
 		recipeType: 'HOPE_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Unlocked through <clch0v6nl000008kx92vp1sw7>Misc:Story Progress<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'SYNTHESIS',
@@ -4137,6 +4529,7 @@ const items: Item[] = [
 		recipeType: 'MYSTERY_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Unlocked through <clch0v6nl000008kx92vp1sw7>Misc:Story Progress<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'BOOK',
@@ -4149,6 +4542,7 @@ const items: Item[] = [
 		recipeType: 'GROWTH_RECIPES',
 		description: null,
 		traitPresent: null,
+		recipeIdea: 'Unlocked through <clch0v6nl000008kx92vp1sw7>Misc:Story Progress<clch0v6nl000008kx92vp1sw7>',
 	},
 	{
 		category: 'BOOK',
@@ -4161,6 +4555,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'BOOK',
@@ -4173,6 +4568,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'BOOK',
@@ -4185,6 +4581,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'BOOK',
@@ -4197,6 +4594,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'BOOK',
@@ -4209,6 +4607,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'BOOK',
@@ -4221,6 +4620,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 	{
 		category: 'BOOK',
@@ -4233,6 +4633,7 @@ const items: Item[] = [
 		recipeType: null,
 		description: null,
 		traitPresent: null,
+		recipeIdea: null,
 	},
 ];
 
