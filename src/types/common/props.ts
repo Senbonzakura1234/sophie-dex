@@ -17,7 +17,7 @@ import type { PageName, SelectOptionItem, SetSelectOptionItem } from '.';
 
 export type ClassNameProps = { className?: string };
 export type ChildrenProps = { children?: ReactNode };
-export type RefProps<E> = { refObject: RefObject<E> };
+export type RefProps<E> = { refObject?: RefObject<E> };
 export type PageNameProps = { pageName: PageName };
 export type IsSuccessProps = { isSuccess: boolean };
 export type IsErrorProps = { isError: boolean };
@@ -84,9 +84,9 @@ export type PageTitleProps = PageNameProps;
 export type RecordWrapperProps = ChildrenProps & ClassNameProps & Partial<ColorProps>;
 export type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pathname: string } & PageNameProps;
 
-export type ScrollToTopProps = { scrollableBottomReached: boolean; scrollPosition: number } & RefProps<HTMLDivElement>;
+export type ScrollToTopProps = { isShow: boolean; scrollPosition: number } & RefProps<HTMLDivElement>;
 
-export type ScrollWrapperProps = ChildrenProps & ClassNameProps & RefProps<HTMLDivElement>;
+export type ScrollWrapperProps = ChildrenProps & ClassNameProps & { enableScrollTop?: boolean };
 
 export type RecordPlaceHolderProps = FetchStateProps & Partial<ColorProps>;
 export type ListPlaceHolderProps = FetchStateProps;

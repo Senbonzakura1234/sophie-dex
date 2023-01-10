@@ -3,44 +3,48 @@ import type { ScrollToTopProps } from '@root/types/common/props';
 import type { FC } from 'react';
 import { useCallback, useState } from 'react';
 
-import FadeWrapper from '../Animations/FadeWrapper';
+import FadeWrapper from '../../Animations/FadeWrapper';
 
-const ScrollToTop: FC<ScrollToTopProps> = ({ scrollableBottomReached, refObject: ref, scrollPosition }) => {
+const ScrollToTop: FC<ScrollToTopProps> = ({ isShow, refObject: ref, scrollPosition }) => {
 	const [isScrolling, setIsScrolling] = useState(false);
 
 	const scrollToTop = useCallback(() => {
-		if (!isScrolling && scrollableBottomReached) {
+		if (!isScrolling && isShow) {
 			let position = scrollPosition;
 			setIsScrolling(() => true);
 			const interval = setInterval(() => {
+				if (!ref?.current) return;
+
 				position = position * 0.8;
 
-				if (ref.current)
+				if (position > 1) {
 					ref.current.scrollTo({
 						top: position,
 						behavior: 'smooth',
 					});
 
-				if (position <= 1) {
-					clearInterval(interval);
-					setIsScrolling(() => false);
-					if (ref.current && position > 0)
-						ref.current.scrollTo({
-							top: 0,
-							behavior: 'smooth',
-						});
+					return;
 				}
+
+				clearInterval(interval);
+				setIsScrolling(() => false);
+
+				if (position > 0)
+					ref.current.scrollTo({
+						top: 0,
+						behavior: 'smooth',
+					});
 			}, 1);
 		}
-	}, [isScrolling, scrollPosition, scrollableBottomReached, ref]);
+	}, [isScrolling, scrollPosition, isShow, ref]);
 
 	return (
-		<FadeWrapper show={scrollableBottomReached} isTransForm>
+		<FadeWrapper show={isShow} isTransForm>
 			<div className='fixed inset-x-1/2 bottom-3 z-30 flex -translate-x-1/2 place-content-center lg:left-auto lg:right-12 lg:bottom-6'>
 				<button
 					className='btn btn-primary btn-circle text-white'
 					aria-label='Back To Top'
-					disabled={isScrolling || !scrollableBottomReached}
+					disabled={isScrolling || !isShow}
 					onClick={scrollToTop}
 				>
 					<ArrowUpOnSquareIcon className='h4 h-4' />
