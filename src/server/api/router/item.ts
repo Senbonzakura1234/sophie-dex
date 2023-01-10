@@ -1,6 +1,6 @@
 import type { Item, Prisma } from '@prisma/client';
 import { defaultLimit } from '@root/constants';
-import { publicProcedure, router } from '@root/server/trpc/trpc';
+import { publicProcedure, router } from '@root/server/api/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';
 import { InvalidRecordIdError, onQueryDBError, RecordNotFoundError } from '@root/utils/server';

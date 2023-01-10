@@ -1,5 +1,4 @@
-import { router } from '@root/server/trpc/trpc';
-
+import { router } from '../trpc';
 import { effectRouter } from './effect';
 import { itemRouter } from './item';
 import { traitRouter } from './trait';

@@ -1,29 +1,33 @@
-import type { Effect, Prisma } from '@prisma/client';
+import type { Prisma, Trait } from '@prisma/client';
 import { defaultLimit } from '@root/constants';
-import { publicProcedure, router } from '@root/server/trpc/trpc';
+import { publicProcedure, router } from '@root/server/api/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';
 import { InvalidRecordIdError, onQueryDBError, RecordNotFoundError } from '@root/utils/server';
 
-export const effectRouter = router({
-	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Effect>> => {
-		const { search, sortBy, direction, page } = { ...input };
+export const traitRouter = router({
+	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Trait>> => {
+		const { search, sortBy, direction, category, page } = { ...input };
 
 		const pageInt = page ?? 1;
 
-		const OR: Prisma.EffectWhereInput[] | undefined = search
+		const OR: Prisma.TraitWhereInput[] | undefined = search
 			? [
 					{ name: { contains: search, mode: 'insensitive' } },
 					{ description: { contains: search, mode: 'insensitive' } },
 			  ]
 			: undefined;
 
-		const where = { OR } satisfies Prisma.EffectWhereInput;
+		const AND: Prisma.TraitWhereInput[] = [];
+
+		if (category) AND.push({ categories: { has: category } });
+
+		const where = { OR, AND } satisfies Prisma.TraitWhereInput;
 
 		const [totalRecord, records] = await ctx.prisma
 			.$transaction([
-				ctx.prisma.effect.count({ where }),
-				ctx.prisma.effect.findMany({
+				ctx.prisma.trait.count({ where }),
+				ctx.prisma.trait.findMany({
 					where,
 					orderBy: { [!!sortBy && sortBy !== 'level' ? sortBy : 'index']: direction ?? 'asc' },
 					skip: (pageInt - 1) * defaultLimit,
@@ -35,12 +39,12 @@ export const effectRouter = router({
 		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}),
 
-	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }): Promise<Effect> => {
+	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }): Promise<Trait> => {
 		const { id } = input;
 
 		if (!id) throw InvalidRecordIdError();
 
-		const record = await ctx.prisma.effect.findFirst({ where: { id } }).catch(onQueryDBError);
+		const record = await ctx.prisma.trait.findFirst({ where: { id } }).catch(onQueryDBError);
 
 		if (record) return record;
 
