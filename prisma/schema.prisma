@@ -84,6 +84,14 @@ type MERGE_TRAIT {
    consist TRAIT_LINK[]
 }
 
+type ITEM_DESCRIPTION {
+   hunt     String?
+   location String?
+   rumor    String?
+   special  String?
+   shop     String?
+}
+
 generator client {
    provider        = "prisma-client-js"
    previewFeatures = ["orderByNulls"]
@@ -114,7 +122,7 @@ model Item {
    id                String             @id @default(auto()) @map("_id") @db.ObjectId
    index             Int
    name              String
-   description       String?
+   description       ITEM_DESCRIPTION?
    color             COLOR
    relatedCategories RELATED_CATEGORY[]
    category          CATEGORY

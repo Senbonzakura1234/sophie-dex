@@ -3,6 +3,7 @@ import type {
 	COLOR,
 	Effect,
 	Item,
+	ITEM_DESCRIPTION,
 	MERGE_TRAIT,
 	RECIPE_TYPE,
 	RELATED_CATEGORY,
@@ -57,7 +58,7 @@ export type ResetFilterProps = IsPaginateOnlyProps;
 export type ColorProps = { color: COLOR };
 export type RecipeTypeProps = { recipeType: RECIPE_TYPE };
 export type RecipeIdeaProps = { recipeIdea: string[] };
-export type DescriptionProps = { description: string };
+export type DescriptionProps = { description: ITEM_DESCRIPTION };
 export type LevelProps = { level: number };
 export type CategoryProps = { category: CATEGORY };
 export type TraitPresentProps = { traitPresent: TRAIT_LINK };
