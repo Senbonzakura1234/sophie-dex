@@ -10,7 +10,7 @@ const getBaseUrl = () => {
 	return `http://localhost:${process.env.PORT ?? 3000}`; // dev SSR should use localhost
 };
 
-export const trpc = createTRPCNext<AppRouter>({
+export const apiContext = createTRPCNext<AppRouter>({
 	config() {
 		return {
 			transformer: superjson,
