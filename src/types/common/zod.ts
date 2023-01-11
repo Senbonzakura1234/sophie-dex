@@ -36,6 +36,25 @@ export const idQueryValidator = z.object({ id: idSchema });
 
 export type IdQuery = z.infer<typeof idQueryValidator>;
 
-export const hyperLinkValidator = z.object({ id: genericIdSchema, name: genericStringSchema });
+export const miscContentValidator = z.object({
+	content: genericStringSchema,
+});
+
+const hyperLinkMeta = z.union([
+	z.object({
+		type: z.literal('search'),
+		search: z.object({ relatedCategory: genericRelatedCategorySchema }),
+	}),
+	z.object({
+		type: z.literal('record'),
+		id: genericIdSchema,
+		name: genericStringSchema,
+	}),
+]);
+
+export const hyperLinkValidator = z.object({
+	path: z.enum(['/items', '/traits', '/effects']),
+	meta: hyperLinkMeta,
+});
 
 export type HyperLink = z.infer<typeof hyperLinkValidator>;

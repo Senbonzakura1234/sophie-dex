@@ -29,8 +29,8 @@ export const specialSeparator = '<clcaiqscn000008jwhfw85ia7>';
 export const specialPrefix = '<clcbr2xjm000008jngnabd04t>';
 export const hyperLinkSeparator = '<clch0v6nl000008kx92vp1sw7>';
 
-export const prefixItemLinkSearch = 'HyperLink:Item:Search:';
-export const prefixItemLinkRecord = 'HyperLink:Item:Record:';
-export const prefixEffectLinkRecord = 'HyperLink:Effect:Record:';
-export const prefixTraitLinkRecord = 'HyperLink:Trait:Record:';
-export const prefixMisc = 'Misc:';
+export const prefixItemLinkSearch = 'HyperLink:Item:Search:' as const;
+export const prefixItemLinkRecord = 'HyperLink:Item:Record:' as const;
+export const prefixEffectLinkRecord = 'HyperLink:Effect:Record:' as const;
+export const prefixTraitLinkRecord = 'HyperLink:Trait:Record:' as const;
+export const prefixMisc = 'Misc:' as const;

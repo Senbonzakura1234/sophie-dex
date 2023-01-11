@@ -1,6 +1,12 @@
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
 
-export const PageName = { EFFECT: 'Effect', ITEM: 'Item', TRAIT: 'Trait', HOME: 'Atelier Dex' } as const;
+export const PageName = {
+	HOME: 'Atelier Dex',
+	EFFECT: 'Effect',
+	ITEM: 'Item',
+	TRAIT: 'Trait',
+	RUMOR: 'Rumor',
+} as const;
 
 export type PageName = typeof PageName[keyof typeof PageName];
 

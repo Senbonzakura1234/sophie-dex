@@ -56,7 +56,7 @@ export type ResetFilterProps = IsPaginateOnlyProps;
 
 export type ColorProps = { color: COLOR };
 export type RecipeTypeProps = { recipeType: RECIPE_TYPE };
-export type RecipeIdeaProps = { recipeIdea: string };
+export type RecipeIdeaProps = { recipeIdea: string[] };
 export type DescriptionProps = { description: string };
 export type LevelProps = { level: number };
 export type CategoryProps = { category: CATEGORY };
@@ -92,7 +92,6 @@ export type RecordPlaceHolderProps = FetchStateProps & Partial<ColorProps>;
 export type ListPlaceHolderProps = FetchStateProps;
 export type FilterControlPlaceHolderProps = FetchStateProps & IsPaginateOnlyProps;
 
-export type SpecialHyperLinkProps = { input: string; path: string };
 export type RecipeIdeaKeyProps = { input: string };
 
 export type CategoriesProps = { categories: CATEGORY[] };

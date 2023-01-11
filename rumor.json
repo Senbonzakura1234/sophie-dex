@@ -1,0 +1,82 @@
+[
+	{
+		"description": "Star Powder",
+		"location": "Moon Sun Moor",
+		"name": "A Shattered Star?"
+	},
+	{
+		"description": "Ramel Wheat with Low Price ++ trait",
+		"location": "Merbert Farm",
+		"name": "Care to Taste Some Wheat?"
+	},
+	{
+		"description": "Pelem Shell",
+		"location": "Underground Lake",
+		"name": "Chalk White Shell"
+	},
+	{
+		"description": "Mountain Cotton with Dragon Slayer trait",
+		"location": "Verdant Hill",
+		"name": "Cotton Disliked by Dragons"
+	},
+	{
+		"description": "Spirit Crystal",
+		"location": "Scar of the Land - Pierced Ruins",
+		"name": "Crystal Blessed by Spirits"
+	},
+	{
+		"description": "Uni with Enhance Finisher ++ trait",
+		"location": "Chick Woods",
+		"name": "Downpour of Uni"
+	},
+	{
+		"description": "Hakurei Stone with Jumbo Size trait",
+		"location": "Verdant Hill - Icy Cave",
+		"name": "Enormous Hakurei Stones"
+	},
+	{
+		"description": "Dunkelheit",
+		"location": "Forest of Fairies",
+		"name": "Flower Blooming in Silence"
+	},
+	{
+		"description": "Bursting Berries with Special Ingredient and Parameters +7% traits",
+		"location": "Open Ruins",
+		"name": "Fruit that Gives Strength"
+	},
+	{
+		"description": "Gold Steel Web",
+		"location": "Forgotten Nursery - Masterless Gazebo",
+		"name": "Golden Strong Thread"
+	},
+	{
+		"description": "Good Water with Quality Up ++ trait",
+		"location": "Small Islet",
+		"name": "Pure and Clear Spring Water"
+	},
+	{
+		"description": "Seabed Soil",
+		"location": "Prospector's Strand - Shore of Treasures",
+		"name": "Remnant of a Past Sea?"
+	},
+	{
+		"description": "Pretty Shell with High Price ++ trait",
+		"location": "Calm Banks",
+		"name": "Shells Like Gemstones"
+	},
+	{
+		"description": "Weiss Powder with Super Fine trait",
+		"location": "Sealed Temple",
+		"name": "Stash of High Grade Flour?"
+	},
+	{
+		"description": "Fairy Poison Grass that increases the body's recovery",
+		"location": "Puzzling Path",
+		"name": "Thin Line Between Poison and Medicine"
+	},
+	{
+		"description": "Zafloa Oil with Secret of Health trait",
+		"location": "Fallen Palace - Inverse Entrance, Upside Down Corridor, Opposite Living Room",
+		"name": "Vividly Colored Oil"
+	}
+]

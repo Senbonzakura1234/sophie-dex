@@ -1,22 +1,14 @@
 import type { CATEGORY, COLOR, RECIPE_TYPE } from '@prisma/client';
 import { getFramerFadeUp } from '@root/animations';
-import {
-	defaultLimit,
-	prefixEffectLinkRecord,
-	prefixItemLinkRecord,
-	prefixItemLinkSearch,
-	prefixMisc,
-	prefixTraitLinkRecord,
-} from '@root/constants';
+import { defaultLimit } from '@root/constants';
 import type { SelectOptionItem } from '@root/types/common';
 import type {
 	FilterControlPlaceHolderProps,
 	ListPlaceHolderProps,
 	RecipeIdeaKeyProps,
 	RecordPlaceHolderProps,
-	SpecialHyperLinkProps,
 } from '@root/types/common/props';
-import { genericRelatedCategorySchema, hyperLinkValidator } from '@root/types/common/zod';
+import { hyperLinkValidator, miscContentValidator } from '@root/types/common/zod';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 import { RelatedCategoryDisplay } from '@root/types/model';
 import clsx from 'clsx';
@@ -174,7 +166,7 @@ export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ is
 	</>
 );
 
-export const SpecialHyperLink: FC<SpecialHyperLinkProps> = ({ input, path }) => {
+export const RecipeIdeaKey: FC<RecipeIdeaKeyProps> = ({ input }) => {
 	const inputParse = useMemo(() => {
 		try {
 			return JSON.parse(input);
@@ -183,37 +175,36 @@ export const SpecialHyperLink: FC<SpecialHyperLinkProps> = ({ input, path }) => 
 		}
 	}, [input]);
 
-	const record = useMemo(() => hyperLinkValidator.safeParse(inputParse), [inputParse]);
+	const misc = useMemo(() => miscContentValidator.safeParse(inputParse), [inputParse]);
 
-	const search = useMemo(() => genericRelatedCategorySchema.safeParse(inputParse), [inputParse]);
+	const hyperLink = useMemo(() => hyperLinkValidator.safeParse(inputParse), [inputParse]);
 
-	return record.success ? (
-		<Link className='link link-info font-bold' href={{ pathname: `${path}/${record.data.id}` }}>
-			{record.data.name}
-		</Link>
-	) : search.success ? (
-		<Link className='link link-neutral font-bold' href={{ pathname: path, query: { relatedCategory: search.data } }}>
-			{RelatedCategoryDisplay[search.data]}
-		</Link>
-	) : null;
-};
+	if (misc.success) return <span className='font-bold'>{misc.data.content}</span>;
 
-export const RecipeIdeaKey: FC<RecipeIdeaKeyProps> = ({ input }) => {
-	console.log(input);
+	if (!hyperLink.success) return <>{input}</>;
 
-	if (input.startsWith(prefixMisc)) return <span className='font-bold'>{input.replaceAll(prefixMisc, '')}</span>;
+	if (hyperLink.data.meta.type === 'record')
+		return (
+			<>
+				{hyperLink.data.path.replace('/', '').replace('s', '')}&nbsp;
+				<Link
+					className='link link-info font-bold'
+					href={{ pathname: `${hyperLink.data.path}/${hyperLink.data.meta.id}` }}
+				>
+					{hyperLink.data.meta.name}
+				</Link>
+			</>
+		);
 
-	if (input.startsWith(prefixItemLinkSearch))
-		return <SpecialHyperLink input={input.replaceAll(prefixItemLinkSearch, '')} path='/items' />;
+	if (hyperLink.data.meta.type === 'search')
+		return (
+			<Link
+				className='link link-neutral font-bold'
+				href={{ pathname: hyperLink.data.path, query: hyperLink.data.meta.search }}
+			>
+				{RelatedCategoryDisplay[hyperLink.data.meta.search.relatedCategory]}
+			</Link>
+		);
 
-	if (input.startsWith(prefixItemLinkRecord))
-		return <SpecialHyperLink input={input.replaceAll(prefixItemLinkRecord, '')} path='/items' />;
-
-	if (input.startsWith(prefixTraitLinkRecord))
-		return <SpecialHyperLink input={input.replaceAll(prefixTraitLinkRecord, '')} path='/traits' />;
-
-	if (input.startsWith(prefixEffectLinkRecord))
-		return <SpecialHyperLink input={input.replaceAll(prefixEffectLinkRecord, '')} path='/effects' />;
-
-	return null;
+	return <>{input}</>;
 };
