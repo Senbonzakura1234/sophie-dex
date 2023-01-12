@@ -22,7 +22,7 @@ export const rumorRouter = router({
 
 		if (rumorType) AND.push({ rumorType: { equals: rumorType } });
 
-		const where = { OR } satisfies Prisma.RumorWhereInput;
+		const where = { OR, AND } satisfies Prisma.RumorWhereInput;
 
 		const [totalRecord, records] = await ctx.prisma
 			.$transaction([
@@ -30,7 +30,7 @@ export const rumorRouter = router({
 				ctx.prisma.rumor.findMany({
 					where,
 					orderBy: {
-						[!!sortBy && sortBy !== 'price' && sortBy !== 'level' ? sortBy : 'index']: direction ?? 'asc',
+						[!!sortBy && sortBy !== 'index' && sortBy !== 'level' ? sortBy : 'price']: direction ?? 'asc',
 					},
 					skip: (pageInt - 1) * defaultLimit,
 					take: defaultLimit,

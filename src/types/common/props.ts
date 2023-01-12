@@ -7,6 +7,7 @@ import type {
 	MERGE_TRAIT,
 	RECIPE_TYPE,
 	RELATED_CATEGORY,
+	Rumor,
 	Trait,
 	TRAIT_LINK,
 } from '@prisma/client';
@@ -36,6 +37,7 @@ export type CircleDividerProps = ClassNameProps;
 export type EffectRecordProps = RecordProps<Effect>;
 export type ItemRecordProps = RecordProps<Item>;
 export type TraitRecordProps = RecordProps<Trait>;
+export type RumorRecordProps = RecordProps<Rumor>;
 
 export type FilterControlProps = {
 	page: number;
@@ -55,10 +57,11 @@ export type PaginateProps = { page: number; totalPage: number };
 export type GoToPageSelectProps = { totalPage: number };
 
 export type ResetFilterProps = IsPaginateOnlyProps;
+export type RecordFieldWithHyperLinkProps = { inputArr: string[]; label: string } & ClassNameProps;
+export type KeyContentPartProps = { input: string };
 
 export type ColorProps = { color: COLOR };
 export type RecipeTypeProps = { recipeType: RECIPE_TYPE };
-export type RecipeIdeaProps = { recipeIdea: string[] };
 export type DescriptionProps = { description: ITEM_DESCRIPTION };
 export type LevelProps = { level: number };
 export type CategoryProps = { category: CATEGORY };
@@ -93,8 +96,6 @@ export type ScrollWrapperProps = ChildrenProps & ClassNameProps & { enableScroll
 export type RecordPlaceHolderProps = FetchStateProps & Partial<ColorProps>;
 export type ListPlaceHolderProps = FetchStateProps;
 export type FilterControlPlaceHolderProps = FetchStateProps & IsPaginateOnlyProps;
-
-export type RecipeIdeaKeyProps = { input: string };
 
 export type CategoriesProps = { categories: CATEGORY[] };
 

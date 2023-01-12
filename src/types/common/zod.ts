@@ -45,7 +45,7 @@ export const miscContentValidator = z.object({
 const hyperLinkMeta = z.union([
 	z.object({
 		type: z.literal('search'),
-		search: z.object({ relatedCategory: genericRelatedCategorySchema }),
+		search: searchQueryValidator,
 	}),
 	z.object({
 		type: z.literal('record'),
@@ -55,7 +55,7 @@ const hyperLinkMeta = z.union([
 ]);
 
 export const hyperLinkValidator = z.object({
-	path: z.enum(['/items', '/traits', '/effects']),
+	path: z.enum(['/items', '/traits', '/effects', '/rumors']),
 	meta: hyperLinkMeta,
 });
 

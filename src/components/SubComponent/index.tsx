@@ -5,17 +5,12 @@ import type { SelectOptionItem } from '@root/types/common';
 import type {
 	FilterControlPlaceHolderProps,
 	ListPlaceHolderProps,
-	RecipeIdeaKeyProps,
 	RecordPlaceHolderProps,
 } from '@root/types/common/props';
-import { hyperLinkValidator, miscContentValidator } from '@root/types/common/zod';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
-import { RelatedCategoryDisplay } from '@root/types/model';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import type { FC } from 'react';
-import { useMemo } from 'react';
 
 export const hideCategoryOnTrait: Readonly<CATEGORY[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
 
@@ -185,46 +180,3 @@ export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ is
 		</motion.div>
 	</>
 );
-
-export const RecipeIdeaKey: FC<RecipeIdeaKeyProps> = ({ input }) => {
-	const inputParse = useMemo(() => {
-		try {
-			return JSON.parse(input);
-		} catch (error) {
-			console.log({ error });
-		}
-	}, [input]);
-
-	const misc = useMemo(() => miscContentValidator.safeParse(inputParse), [inputParse]);
-
-	const hyperLink = useMemo(() => hyperLinkValidator.safeParse(inputParse), [inputParse]);
-
-	if (misc.success) return <span className='font-bold'>{misc.data.content}</span>;
-
-	if (!hyperLink.success) return <>{input}</>;
-
-	if (hyperLink.data.meta.type === 'record')
-		return (
-			<>
-				{hyperLink.data.path.replace('/', '').replace('s', '')}&nbsp;
-				<Link
-					className='link link-info font-bold'
-					href={{ pathname: `${hyperLink.data.path}/${hyperLink.data.meta.id}` }}
-				>
-					{hyperLink.data.meta.name}
-				</Link>
-			</>
-		);
-
-	if (hyperLink.data.meta.type === 'search')
-		return (
-			<Link
-				className='link link-neutral font-bold'
-				href={{ pathname: hyperLink.data.path, query: hyperLink.data.meta.search }}
-			>
-				{RelatedCategoryDisplay[hyperLink.data.meta.search.relatedCategory]}
-			</Link>
-		);
-
-	return <>{input}</>;
-};

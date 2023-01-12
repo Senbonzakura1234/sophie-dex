@@ -17,7 +17,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 	return (
 		<>
 			<motion.div className='flex w-full' {...getFramerFadeUp(0.2)}>
-				<nav className='card card-compact bg-base-100 shadow-primary mx-auto w-64 max-w-full py-1 shadow-lg 2xl:w-2/5'>
+				<nav className='card card-compact bg-base-100 shadow-primary mx-auto w-[17rem] max-w-full py-1 shadow-lg 2xl:w-2/5'>
 					<div className='breadcrumbs mx-auto text-xs font-extrabold 2xl:text-base'>
 						<ul className='gap-1 font-serif font-extrabold'>
 							<li>
@@ -57,7 +57,9 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 											<LinkIcon className='hidden h-4 w-4 2xl:block' />
 											{n}
 										</Link>
-										{i < 2 && <CircleDivider className='bg-base-300 h-2 w-2' />}
+										{i < pageNameList.length - 1 && (
+											<CircleDivider className='bg-base-300 h-1 w-1 sm:h-2 sm:w-2' />
+										)}
 									</Fragment>
 								))}
 							</li>

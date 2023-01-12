@@ -35,9 +35,9 @@ const CategoryFilter: FC<CategoryFilterProps> = ({ pageName }) => {
 				},
 				'my-auto w-2/3 min-w-fit sm:w-[10.25rem]',
 			)}
-			useCustomIcon={true}
-			withIcon={true}
-			useAtelierFont={true}
+			useCustomIcon
+			withIcon
+			useAtelierFont
 		/>
 	);
 };

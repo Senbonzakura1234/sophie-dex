@@ -36,6 +36,7 @@ const RumorTypeFilter: FC<RumorTypeFilterProps> = ({ pageName }) => {
 			)}
 			useCustomIcon
 			withIcon
+			useAtelierFont
 		/>
 	);
 };
