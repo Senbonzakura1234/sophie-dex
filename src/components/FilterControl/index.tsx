@@ -11,6 +11,7 @@ import ColorFilter from './ColorFilter';
 import Paginate from './Paginate';
 import RecipeTypeFilter from './RecipeTypeFilter';
 import ResetFilter from './ResetFilter';
+import RumorTypeFilter from './RumorTypeFilter';
 import SearchInput from './SearchInput';
 import SortControl from './SortControl';
 
@@ -68,6 +69,7 @@ const FilterControl: FC<FilterControlProps> = ({
 						<RecipeTypeFilter pageName={pageName} />
 						<ColorFilter pageName={pageName} />
 						<CategoryFilter pageName={pageName} />
+						<RumorTypeFilter pageName={pageName} />
 					</div>
 
 					<div className={clsx({ hidden: isPaginateOnly }, 'text-neutral my-auto text-xs font-semibold')}>

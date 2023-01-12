@@ -15,7 +15,7 @@ export function getDefaultListRecord<T>(): ListRecord<T> {
 
 export const idRegex = /^[0-9A-F]{24}$/i;
 
-export const pageNameList = ['Effect', 'Item', 'Trait'] as const satisfies Readonly<PageName[]>;
+export const pageNameList = ['Effect', 'Item', 'Trait', 'Rumor'] as const satisfies Readonly<PageName[]>;
 
 export const colorTailwindMap: { [key in COLOR]: string } = {
 	BLUE: colors.blue[500],

@@ -3,6 +3,7 @@ import SelectOption from '@root/components/SelectOption';
 import { categoryDefaultSelect, categorySelectList } from '@root/components/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import type { PageName } from '@root/types/common';
 import type { CategoryFilterProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
@@ -29,8 +30,8 @@ const CategoryFilter: FC<CategoryFilterProps> = ({ pageName }) => {
 			value={cateSelected}
 			className={clsx(
 				{
-					block: pageName !== 'Effect',
-					hidden: pageName === 'Effect',
+					block: !(['Effect', 'Rumor', 'Atelier Dex'] as PageName[]).includes(pageName),
+					hidden: (['Effect', 'Rumor', 'Atelier Dex'] as PageName[]).includes(pageName),
 				},
 				'my-auto w-2/3 min-w-fit sm:w-[10.25rem]',
 			)}
