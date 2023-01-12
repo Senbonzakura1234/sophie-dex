@@ -25,7 +25,9 @@ export const effectRouter = router({
 				ctx.prisma.effect.count({ where }),
 				ctx.prisma.effect.findMany({
 					where,
-					orderBy: { [!!sortBy && sortBy !== 'level' ? sortBy : 'index']: direction ?? 'asc' },
+					orderBy: {
+						[!!sortBy && sortBy !== 'price' && sortBy !== 'level' ? sortBy : 'index']: direction ?? 'asc',
+					},
 					skip: (pageInt - 1) * defaultLimit,
 					take: defaultLimit,
 				}),

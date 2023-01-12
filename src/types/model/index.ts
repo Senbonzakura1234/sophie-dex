@@ -1,6 +1,8 @@
-import type { CATEGORY, COLOR, RECIPE_TYPE, RELATED_CATEGORY_ENUM } from '@prisma/client';
+import type { CATEGORY, COLOR, RECIPE_TYPE, RELATED_CATEGORY_ENUM, RUMOR_TYPE } from '@prisma/client';
 
 export const colorList = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW'] as const satisfies Readonly<COLOR[]>;
+
+export const rumorTypeList = ['MATERIAL', 'MONSTER'] as const satisfies Readonly<RUMOR_TYPE[]>;
 
 export const recipeTypeList = [
 	'BEGINNER_RECIPES',

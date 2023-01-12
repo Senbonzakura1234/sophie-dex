@@ -1,4 +1,4 @@
-import type { CATEGORY, COLOR, RECIPE_TYPE } from '@prisma/client';
+import type { CATEGORY, COLOR, RECIPE_TYPE, RUMOR_TYPE } from '@prisma/client';
 import { getFramerFadeUp } from '@root/animations';
 import { defaultLimit } from '@root/constants';
 import type { SelectOptionItem } from '@root/types/common';
@@ -35,6 +35,11 @@ export const categoryMap = new Map<CATEGORY, { name: string; className: UnicodeC
 	['MACHINE', { name: 'Machine', className: 'atelier__category-neutralizers' }],
 ]);
 
+export const rumorTypeMap = new Map<RUMOR_TYPE, { className: UnicodeClass }>([
+	['MATERIAL', { className: 'atelier__material' }],
+	['MONSTER', { className: 'atelier__race-puni' }],
+]);
+
 const colorMap = ['RED', 'BLUE', 'GREEN', 'YELLOW', 'WHITE'] satisfies COLOR[];
 
 const recipeTypeMap = [
@@ -63,6 +68,12 @@ export const recipeTypeDefaultSelect = {
 	icon: <span className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />,
 };
 
+export const rumorTypeDefaultSelect = {
+	value: null,
+	label: 'Rumor type',
+	icon: <span className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />,
+};
+
 export const categorySelectList = [
 	categoryDefaultSelect,
 	...[...categoryMap].map(([code, { name, className }]) => ({
@@ -71,6 +82,15 @@ export const categorySelectList = [
 		icon: <span className={`h-4 w-4 2xl:h-5 2xl:w-5 ${className}`} aria-hidden='true' />,
 	})),
 ] satisfies SelectOptionItem<CATEGORY | null>[];
+
+export const rumorTypeSelectList = [
+	rumorTypeDefaultSelect,
+	...[...rumorTypeMap].map(([code, { className }]) => ({
+		label: <span className='capitalize'>{code.toLowerCase()}</span>,
+		value: code,
+		icon: <span className={`h-4 w-4 2xl:h-5 2xl:w-5 ${className}`} aria-hidden='true' />,
+	})),
+] satisfies SelectOptionItem<RUMOR_TYPE | null>[];
 
 export const colorSelectList = [
 	colorDefaultSelect,

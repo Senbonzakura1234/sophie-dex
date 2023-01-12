@@ -1,33 +1,33 @@
-import type { Prisma, Trait } from '@prisma/client';
+import type { Prisma, Rumor } from '@prisma/client';
 import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';
 import { InvalidRecordIdError, onQueryDBError, RecordNotFoundError } from '@root/utils/server';
 
-export const traitRouter = router({
-	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Trait>> => {
-		const { search, sortBy, direction, category, page } = { ...input };
+export const rumorRouter = router({
+	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Rumor>> => {
+		const { search, sortBy, direction, page, rumorType } = { ...input };
 
 		const pageInt = page ?? 1;
 
-		const OR: Prisma.TraitWhereInput[] | undefined = search
+		const OR: Prisma.RumorWhereInput[] | undefined = search
 			? [
 					{ name: { contains: search, mode: 'insensitive' } },
-					{ description: { contains: search, mode: 'insensitive' } },
+					{ location: { contains: search, mode: 'insensitive' } },
 			  ]
 			: undefined;
 
-		const AND: Prisma.TraitWhereInput[] = [];
+		const AND: Prisma.RumorWhereInput[] = [];
 
-		if (category) AND.push({ categories: { has: category } });
+		if (rumorType) AND.push({ rumorType: { equals: rumorType } });
 
-		const where = { OR, AND } satisfies Prisma.TraitWhereInput;
+		const where = { OR } satisfies Prisma.RumorWhereInput;
 
 		const [totalRecord, records] = await ctx.prisma
 			.$transaction([
-				ctx.prisma.trait.count({ where }),
-				ctx.prisma.trait.findMany({
+				ctx.prisma.rumor.count({ where }),
+				ctx.prisma.rumor.findMany({
 					where,
 					orderBy: {
 						[!!sortBy && sortBy !== 'price' && sortBy !== 'level' ? sortBy : 'index']: direction ?? 'asc',
@@ -41,12 +41,12 @@ export const traitRouter = router({
 		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}),
 
-	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }): Promise<Trait> => {
+	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }): Promise<Rumor> => {
 		const { id } = input;
 
 		if (!id) throw InvalidRecordIdError();
 
-		const record = await ctx.prisma.trait.findFirst({ where: { id } }).catch(onQueryDBError);
+		const record = await ctx.prisma.rumor.findFirst({ where: { id } }).catch(onQueryDBError);
 
 		if (record) return record;
 
