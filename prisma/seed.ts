@@ -2,6 +2,7 @@ import { PrismaClient } from '@prisma/client';
 
 import effects from './data/effects';
 import items from './data/items';
+import rumors from './data/rumors';
 import traits from './data/traits';
 
 const prisma = new PrismaClient();
@@ -17,6 +18,10 @@ async function seed() {
 
 	items.forEach(async item => {
 		await prisma.item.create({ data: item });
+	});
+
+	rumors.forEach(async rumor => {
+		await prisma.rumor.create({ data: rumor });
 	});
 }
 

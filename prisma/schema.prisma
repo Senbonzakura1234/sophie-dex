@@ -69,6 +69,11 @@ enum CATEGORY {
    SYNTHESIS
 }
 
+enum RUMOR_TYPE {
+   MONSTER
+   MATERIAL
+}
+
 type RELATED_CATEGORY {
    name  RELATED_CATEGORY_ENUM
    count Int
@@ -130,4 +135,13 @@ model Item {
    recipeType        RECIPE_TYPE?
    recipeIdea        String[]
    traitPresent      TRAIT_LINK?
+}
+
+model Rumor {
+   id          String     @id @default(auto()) @map("_id") @db.ObjectId
+   name        String
+   description String[]
+   location    String
+   price       Int
+   rumorType   RUMOR_TYPE
 }

@@ -6,14 +6,29 @@ const mapName: Record<number, string> = {
 	1: 'backup/db/export/item.json',
 	2: 'backup/db/export/trait.json',
 	3: 'backup/db/export/effect.json',
+	4: 'backup/db/export/rumor.json',
 };
 
 async function seed() {
 	await Promise.all(
 		(
-			await prisma.$transaction([prisma.item.findMany(), prisma.trait.findMany(), prisma.effect.findMany()])
+			await prisma.$transaction([
+				prisma.item.findMany(),
+				prisma.trait.findMany(),
+				prisma.effect.findMany(),
+				prisma.rumor.findMany(),
+			])
 		).map(async (res, index) => {
-			await writeFile(mapName[index + 1] ?? '', JSON.stringify(res.sort((a, b) => a.index - b.index)));
+			await writeFile(
+				mapName[index + 1] ?? '',
+				JSON.stringify(
+					res.sort((a, b) => {
+						if ('index' in a && 'index' in b) return a.index - b.index;
+						if ('price' in a && 'price' in b) return a.price - b.price;
+						return 0;
+					}),
+				),
+			);
 		}),
 	);
 }
