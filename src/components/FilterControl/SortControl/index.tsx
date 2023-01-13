@@ -9,10 +9,10 @@ const SortControl: FC<SortControlProps> = ({ pageName, isPaginateOnly }) => {
 
 	const { sortBy, direction } = useMemo(
 		() => ({
-			sortBy: securedQuery.sortBy || 'index',
+			sortBy: securedQuery.sortBy || (pageName === 'Rumor' ? 'price' : 'index'),
 			direction: securedQuery.direction || 'asc',
 		}),
-		[securedQuery.direction, securedQuery.sortBy],
+		[pageName, securedQuery.direction, securedQuery.sortBy],
 	);
 
 	return (
@@ -24,7 +24,7 @@ const SortControl: FC<SortControlProps> = ({ pageName, isPaginateOnly }) => {
 					<button
 						role='navigation'
 						aria-label='Sort By Index'
-						disabled={!isReady}
+						disabled={!isReady || pageName === 'Rumor'}
 						onClick={() => {
 							if (sortBy !== 'index') updateQuery({ sortBy: 'index', direction: 'asc' });
 						}}
@@ -32,6 +32,7 @@ const SortControl: FC<SortControlProps> = ({ pageName, isPaginateOnly }) => {
 							{
 								'btn-active btn-primary text-slate-50': sortBy === 'index',
 								'btn-ghost border-accent': sortBy !== 'index',
+								hidden: pageName === 'Rumor',
 							},
 							'btn btn-xs border-y-2 border-r-0 capitalize',
 						)}
@@ -41,7 +42,26 @@ const SortControl: FC<SortControlProps> = ({ pageName, isPaginateOnly }) => {
 
 					<button
 						role='navigation'
-						aria-label='Sort By Name'
+						aria-label='Sort By Price'
+						disabled={!isReady || pageName !== 'Rumor'}
+						onClick={() => {
+							if (sortBy !== 'price') updateQuery({ sortBy: 'price', direction: 'asc' });
+						}}
+						className={clsx(
+							{
+								'btn-active btn-primary text-slate-50': sortBy === 'price',
+								'btn-ghost border-accent': sortBy !== 'price',
+								hidden: pageName !== 'Rumor',
+							},
+							'btn btn-xs rounded-l-md border-y-2 border-r-0 capitalize',
+						)}
+					>
+						Price
+					</button>
+
+					<button
+						role='navigation'
+						aria-label='Sort By Level'
 						disabled={!isReady || pageName !== 'Item'}
 						onClick={() => {
 							if (sortBy !== 'level') updateQuery({ sortBy: 'level', direction: 'asc' });

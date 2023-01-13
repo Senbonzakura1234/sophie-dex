@@ -6,6 +6,9 @@ import type { FC } from 'react';
 import RecordFieldWithHyperLink from '../RecordFieldWithHyperLink';
 import RecordHead from '../RecordHead';
 import RecordWrapper from '../RecordWrapper/RecordWrapper';
+import Location from './Location';
+import Price from './Price';
+import RumorType from './RumorType';
 
 const RumorRecord: FC<RumorRecordProps> = ({ record: { name, id, description, location, price, rumorType } }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
@@ -20,7 +23,13 @@ const RumorRecord: FC<RumorRecordProps> = ({ record: { name, id, description, lo
 				pageName='Rumor'
 			/>
 
-			{description ? <RecordFieldWithHyperLink inputArr={description} label='Description' /> : null}
+			<Price price={price} />
+
+			<RecordFieldWithHyperLink inputArr={description} label='Description' />
+
+			<Location location={location} />
+
+			<RumorType rumorType={rumorType} />
 		</RecordWrapper>
 	);
 };

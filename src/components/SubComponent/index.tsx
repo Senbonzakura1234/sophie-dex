@@ -30,9 +30,9 @@ export const categoryMap = new Map<CATEGORY, { name: string; className: UnicodeC
 	['MACHINE', { name: 'Machine', className: 'atelier__category-neutralizers' }],
 ]);
 
-export const rumorTypeMap = new Map<RUMOR_TYPE, { className: UnicodeClass }>([
-	['MATERIAL', { className: 'atelier__material' }],
-	['MONSTER', { className: 'atelier__race-puni' }],
+export const rumorTypeMap = new Map<RUMOR_TYPE, { name: Capitalize<Lowercase<RUMOR_TYPE>>; className: UnicodeClass }>([
+	['MATERIAL', { className: 'atelier__material', name: 'Material' }],
+	['MONSTER', { className: 'atelier__race-puni', name: 'Monster' }],
 ]);
 
 const colorMap = ['RED', 'BLUE', 'GREEN', 'YELLOW', 'WHITE'] satisfies COLOR[];
@@ -80,8 +80,8 @@ export const categorySelectList = [
 
 export const rumorTypeSelectList = [
 	rumorTypeDefaultSelect,
-	...[...rumorTypeMap].map(([code, { className }]) => ({
-		label: <span className='capitalize'>{code.toLowerCase()}</span>,
+	...[...rumorTypeMap].map(([code, { className, name }]) => ({
+		label: <span>{name}</span>,
 		value: code,
 		icon: <span className={`h-4 w-4 2xl:h-5 2xl:w-5 ${className}`} aria-hidden='true' />,
 	})),

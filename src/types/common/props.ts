@@ -8,6 +8,7 @@ import type {
 	RECIPE_TYPE,
 	RELATED_CATEGORY,
 	Rumor,
+	RUMOR_TYPE,
 	Trait,
 	TRAIT_LINK,
 } from '@prisma/client';
@@ -66,8 +67,11 @@ export type DescriptionProps = { description: ITEM_DESCRIPTION };
 export type LevelProps = { level: number };
 export type CategoryProps = { category: CATEGORY };
 export type TraitPresentProps = { traitPresent: TRAIT_LINK };
-
 export type RelatedCategoriesProps = { relatedCategories: RELATED_CATEGORY[] };
+
+export type LocationProps = { location: string };
+export type PriceProps = { price: number };
+export type RumorTypeProps = { rumorType: RUMOR_TYPE };
 
 export type DefaultLayoutProps = ChildrenProps & PageNameProps;
 
