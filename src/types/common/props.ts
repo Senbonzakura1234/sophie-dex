@@ -2,6 +2,7 @@ import type {
 	CATEGORY,
 	COLOR,
 	Effect,
+	HYPER_LINK,
 	Item,
 	ITEM_DESCRIPTION,
 	MERGE_TRAIT,
@@ -10,7 +11,6 @@ import type {
 	Rumor,
 	RUMOR_TYPE,
 	Trait,
-	TRAIT_LINK,
 } from '@prisma/client';
 import type { Maybe } from '@trpc/server';
 import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
@@ -66,7 +66,7 @@ export type RecipeTypeProps = { recipeType: RECIPE_TYPE };
 export type DescriptionProps = { description: ITEM_DESCRIPTION };
 export type LevelProps = { level: number };
 export type CategoryProps = { category: CATEGORY };
-export type TraitPresentProps = { traitPresent: TRAIT_LINK };
+export type TraitPresentProps = { traitPresent: HYPER_LINK };
 export type RelatedCategoriesProps = { relatedCategories: RELATED_CATEGORY[] };
 
 export type LocationProps = { location: string };

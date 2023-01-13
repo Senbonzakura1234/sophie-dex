@@ -79,14 +79,14 @@ type RELATED_CATEGORY {
    count Int
 }
 
-type TRAIT_LINK {
+type HYPER_LINK {
    id    String @db.ObjectId
    index Int
    name  String
 }
 
 type MERGE_TRAIT {
-   consist TRAIT_LINK[]
+   consist HYPER_LINK[]
 }
 
 type ITEM_DESCRIPTION {
@@ -134,7 +134,7 @@ model Item {
    level             Int
    recipeType        RECIPE_TYPE?
    recipeIdea        String[]
-   traitPresent      TRAIT_LINK?
+   traitPresent      HYPER_LINK?
 }
 
 model Rumor {
