@@ -2093,6 +2093,7 @@ const items: Item[] = [
 		level: 12,
 		name: 'Ice Bomb',
 		recipeIdea: [
+			'',
 			'{"content":"Performing Synthesis"}',
 			' & Obtain ',
 			'{"table":"ITEM","meta":{"type":"SEARCH","search":{"relatedCategory":"WATER"}}}',

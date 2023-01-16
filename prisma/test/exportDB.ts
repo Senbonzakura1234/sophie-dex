@@ -2,12 +2,12 @@ import { PrismaClient } from '@prisma/client';
 import { writeFile } from 'fs/promises';
 
 const prisma = new PrismaClient();
-const mapName: Record<number, string> = {
-	1: 'backup/db/export/item.json',
-	2: 'backup/db/export/trait.json',
-	3: 'backup/db/export/effect.json',
-	4: 'backup/db/export/rumor.json',
-};
+const mapName: Readonly<Record<number, string>> = {
+	0: 'backup/export/item.json',
+	1: 'backup/export/trait.json',
+	2: 'backup/export/effect.json',
+	3: 'backup/export/rumor.json',
+} as const;
 
 async function seed() {
 	await Promise.all(
@@ -19,8 +19,10 @@ async function seed() {
 				prisma.rumor.findMany(),
 			])
 		).map(async (res, index) => {
+			const fileName = mapName[index];
+			if (!fileName) return;
 			await writeFile(
-				mapName[index + 1] ?? '',
+				fileName,
 				JSON.stringify(
 					res.sort((a, b) => {
 						if ('index' in a && 'index' in b) return a.index - b.index;

@@ -24,7 +24,7 @@ const KeyContentPart: FC<KeyContentPartProps> = ({ input }) => {
 	if (hyperLink.data.meta.type === 'RECORD')
 		return (
 			<>
-				{hyperLink.data.table}&nbsp;
+				<span className='capitalize'>{hyperLink.data.table.toLowerCase()}</span>&nbsp;
 				<Link
 					className='link link-info font-bold'
 					href={{ pathname: `/${hyperLink.data.table.toLowerCase()}s/${hyperLink.data.meta.id}` }}
