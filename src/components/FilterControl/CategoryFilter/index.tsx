@@ -30,8 +30,8 @@ const CategoryFilter: FC<CategoryFilterProps> = ({ pageName }) => {
 			value={cateSelected}
 			className={clsx(
 				{
-					block: !(['Effect', 'Rumor', 'Atelier Dex'] as PageName[]).includes(pageName),
-					hidden: (['Effect', 'Rumor', 'Atelier Dex'] as PageName[]).includes(pageName),
+					block: !(['Effect', 'Rumor', 'Home'] as PageName[]).includes(pageName),
+					hidden: (['Effect', 'Rumor', 'Home'] as PageName[]).includes(pageName),
 				},
 				'my-auto w-2/3 min-w-fit sm:w-[10.25rem]',
 			)}

@@ -1,5 +1,4 @@
 import type { COLOR, TABLE } from '@prisma/client';
-import type { PageName } from '@root/types/common';
 import type { ListRecord } from '@root/types/model';
 import colors from 'tailwindcss/colors';
 
@@ -15,7 +14,6 @@ export function getDefaultListRecord<T>(): ListRecord<T> {
 
 export const idRegex = /^[0-9A-F]{24}$/i;
 
-export const pageNameList = ['Effect', 'Item', 'Trait', 'Rumor'] as const satisfies Readonly<PageName[]>;
 export const tableList = ['EFFECT', 'ITEM', 'TRAIT', 'RUMOR'] as const satisfies Readonly<TABLE[]>;
 
 export const colorTailwindMap: { [key in COLOR]: string } = {

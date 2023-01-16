@@ -1,6 +1,6 @@
 import { HomeIcon, LinkIcon } from '@heroicons/react/24/solid';
 import { getFramerFadeUp } from '@root/animations';
-import { APP_AUTHOR, pageNameList } from '@root/constants';
+import { APP_AUTHOR, tableList } from '@root/constants';
 import type { BreadcrumbProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
@@ -37,8 +37,9 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 									<span className='hidden 2xl:inline'>Home</span>
 								</Link>
 							</li>
+
 							<li className='flex gap-2 before:!m-0 2xl:gap-3'>
-								{pageNameList.map((n, i) => (
+								{tableList.map((n, i) => (
 									<Fragment key={n}>
 										<Link
 											className={clsx(
@@ -57,7 +58,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 											<LinkIcon className='hidden h-4 w-4 2xl:block' />
 											{n}
 										</Link>
-										{i < pageNameList.length - 1 && (
+										{i < tableList.length - 1 && (
 											<CircleDivider className='bg-base-300 h-1 w-1 sm:h-2 sm:w-2' />
 										)}
 									</Fragment>

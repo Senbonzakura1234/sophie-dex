@@ -13,8 +13,8 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => (
 	<section
 		className={clsx(
 			{
-				'h-1/3 min-h-[300px]': pageName !== 'Atelier Dex',
-				'h-full': pageName === 'Atelier Dex',
+				'h-1/3 min-h-[300px]': pageName !== 'Home',
+				'h-full': pageName === 'Home',
 			},
 			'relative w-full overflow-hidden shadow-inner',
 		)}
@@ -26,7 +26,7 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => (
 			src={topBg}
 			alt='sophie'
 			sizes='100vh'
-			priority={pageName !== 'Atelier Dex'}
+			priority={pageName !== 'Home'}
 		/>
 
 		<div className='absolute inset-0 z-10 bg-slate-700/30' />
@@ -39,22 +39,22 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => (
 				<Image
 					className={clsx(
 						{
-							hidden: pageName !== 'Atelier Dex',
-							block: pageName === 'Atelier Dex',
+							hidden: pageName !== 'Home',
+							block: pageName === 'Home',
 						},
 						'mx-auto',
 					)}
 					src={sophieLogo}
 					alt={pageName}
-					priority={pageName === 'Atelier Dex'}
+					priority={pageName === 'Home'}
 					sizes='30vw'
 				/>
 
 				<div
 					className={clsx(
 						{
-							hidden: pageName === 'Atelier Dex',
-							block: pageName !== 'Atelier Dex',
+							hidden: pageName === 'Home',
+							block: pageName !== 'Home',
 						},
 						'tracking-widest text-slate-50',
 					)}
@@ -63,7 +63,7 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => (
 				</div>
 			</motion.div>
 
-			<Breadcrumb isShowAuthor={pageName === 'Atelier Dex'} />
+			<Breadcrumb isShowAuthor={pageName === 'Home'} />
 		</div>
 	</section>
 );
