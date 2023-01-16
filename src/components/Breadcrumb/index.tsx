@@ -49,14 +49,14 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 													'no-animation !cursor-default !no-underline':
 														pathname === `/${n.toLowerCase()}s`,
 												},
-												'link gap-1',
+												'link gap-1 capitalize',
 											)}
 											href={{ pathname: `/${n.toLowerCase()}s` }}
 											as={{ pathname: `/${n.toLowerCase()}s` }}
 											aria-label={`Go to ${i} Search`}
 										>
 											<LinkIcon className='hidden h-4 w-4 2xl:block' />
-											{n}
+											{n.toLowerCase()}
 										</Link>
 										{i < tableList.length - 1 && (
 											<CircleDivider className='bg-base-300 h-1 w-1 sm:h-2 sm:w-2' />
