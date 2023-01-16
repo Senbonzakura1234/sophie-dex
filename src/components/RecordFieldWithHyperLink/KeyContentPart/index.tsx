@@ -37,15 +37,17 @@ const KeyContentPart: FC<KeyContentPartProps> = ({ input }) => {
 	if (hyperLink.data.meta.type === 'SEARCH')
 		return (
 			<Link
-				className='link link-neutral font-bold capitalize'
+				className='link link-info font-bold capitalize'
 				href={{ pathname: `/${hyperLink.data.table.toLowerCase()}s`, query: hyperLink.data.meta.search }}
 			>
-				{Object.values(hyperLink.data.meta.search).map((s, key) => (
-					<Fragment key={key}>
-						{key > 0 ? ', ' : ''}
-						{s?.toString().replaceAll('_', ' ').toLowerCase()}
-					</Fragment>
-				))}
+				{Object.values(hyperLink.data.meta.search)
+					.filter(Boolean)
+					.map((s, key) => (
+						<Fragment key={key}>
+							{key > 0 ? ', ' : ''}
+							{s?.toString().replaceAll('_', ' ').toLowerCase()}
+						</Fragment>
+					))}
 			</Link>
 		);
 
