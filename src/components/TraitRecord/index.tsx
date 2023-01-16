@@ -1,10 +1,10 @@
+import RecordHead from '@root/components/RecordHead';
+import RecordWrapper from '@root/components/RecordWrapper';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { TraitRecordProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 
-import RecordHead from '../RecordHead';
-import RecordWrapper from '../RecordWrapper/RecordWrapper';
 import Categories from './Categories';
 import TraitMergeList from './TraitMergeList';
 

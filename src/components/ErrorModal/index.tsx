@@ -1,11 +1,10 @@
+import FadeWrapper from '@root/components/Animations/FadeWrapper';
 import type { ErrorModalProps } from '@root/types/common/props';
 import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
 import clsx from 'clsx';
 import Link from 'next/link';
 import type { FC } from 'react';
 import { useMemo } from 'react';
-
-import FadeWrapper from '../Animations/FadeWrapper';
 
 const ErrorModal: FC<ErrorModalProps> = ({ isError, errorData, errorMessage }) => {
 	const { error, message }: { error: DefaultErrorData; message: string } = useMemo(

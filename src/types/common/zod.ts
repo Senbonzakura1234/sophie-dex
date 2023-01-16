@@ -1,7 +1,6 @@
 import { idRegex, tableList } from '@root/constants';
+import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
 import { z } from 'zod';
-
-import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '../model';
 
 const positiveIntSchema = z.coerce.number().positive();
 

@@ -1,8 +1,7 @@
 import bottomBg from '@root/assets/images/bottom.jpg';
+import Breadcrumb from '@root/components/Breadcrumb';
 import Image from 'next/image';
 import type { FC } from 'react';
-
-import Breadcrumb from '../Breadcrumb';
 
 const PageFooter: FC = () => (
 	<section className='2xl:h1/4 relative h-1/3 min-h-[300px] w-full overflow-hidden shadow-inner'>

@@ -1,9 +1,8 @@
 import { Listbox } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/24/solid';
+import FadeWrapper from '@root/components/Animations/FadeWrapper';
 import type { SelectOptionProps } from '@root/types/common/props';
 import clsx from 'clsx';
-
-import FadeWrapper from '../Animations/FadeWrapper';
 
 const SelectOption = <V extends string | number | null>({
 	list,

@@ -1,11 +1,11 @@
+import RecordFieldWithHyperLink from '@root/components/RecordFieldWithHyperLink';
+import RecordHead from '@root/components/RecordHead';
+import RecordWrapper from '@root/components/RecordWrapper';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { ItemRecordProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 
-import RecordFieldWithHyperLink from '../RecordFieldWithHyperLink';
-import RecordHead from '../RecordHead';
-import RecordWrapper from '../RecordWrapper/RecordWrapper';
 import Category from './Category';
 import Color from './Color';
 import Description from './Description';

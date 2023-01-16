@@ -1,10 +1,9 @@
+import RecordHead from '@root/components/RecordHead';
+import RecordWrapper from '@root/components/RecordWrapper';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { EffectRecordProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
-
-import RecordHead from '../RecordHead';
-import RecordWrapper from '../RecordWrapper/RecordWrapper';
 
 const EffectRecord: FC<EffectRecordProps> = ({ record: { name, description, index, id } }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
