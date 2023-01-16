@@ -66,7 +66,7 @@ const items: Item[] = [
 			{ count: 10, name: 'PLANT' },
 			{ count: 10, name: 'POISON_MAT' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca68', index: 682, name: 'Poison Mist' },
+		traitPresent: { table: 'TRAIT', meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca68', name: 'Poison Mist' } },
 	},
 	{
 		category: 'MATERIAL',
@@ -245,7 +245,10 @@ const items: Item[] = [
 			{ count: 15, name: 'PLANT' },
 			{ count: 25, name: 'MEDICINE_MAT' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca6a', index: 683, name: 'Slime Compound' },
+		traitPresent: {
+			table: 'TRAIT',
+			meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca6a', name: 'Slime Compound' },
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -312,7 +315,7 @@ const items: Item[] = [
 			{ count: 50, name: 'MEDICINE_MAT' },
 			{ count: 50, name: 'ELIXIR' },
 		],
-		traitPresent: { id: '638a4d47a44f4fa4b0dec9a5', index: 193, name: 'Full of Life' },
+		traitPresent: { table: 'TRAIT', meta: { type: 'RECORD', id: '638a4d47a44f4fa4b0dec9a5', name: 'Full of Life' } },
 	},
 	{
 		category: 'MATERIAL',
@@ -335,7 +338,7 @@ const items: Item[] = [
 			{ count: 40, name: 'POISON_MAT' },
 			{ count: 40, name: 'SECRET_POWER' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca66', index: 684, name: 'False Flower' },
+		traitPresent: { table: 'TRAIT', meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca66', name: 'False Flower' } },
 	},
 	{
 		category: 'MATERIAL',
@@ -373,7 +376,7 @@ const items: Item[] = [
 		recipeIdea: [],
 		recipeType: null,
 		relatedCategories: [{ count: 10, name: 'ORE' }],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca64', index: 685, name: 'Electrified' },
+		traitPresent: { table: 'TRAIT', meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca64', name: 'Electrified' } },
 	},
 	{
 		category: 'MATERIAL',
@@ -414,7 +417,7 @@ const items: Item[] = [
 			{ count: 10, name: 'ORE' },
 			{ count: 5, name: 'GUNPOWDER' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca65', index: 686, name: 'Carries Heat' },
+		traitPresent: { table: 'TRAIT', meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca65', name: 'Carries Heat' } },
 	},
 	{
 		category: 'MATERIAL',
@@ -436,7 +439,7 @@ const items: Item[] = [
 			{ count: 10, name: 'ORE' },
 			{ count: 5, name: 'GEM' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca69', index: 687, name: 'Carries Cold' },
+		traitPresent: { table: 'TRAIT', meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca69', name: 'Carries Cold' } },
 	},
 	{
 		category: 'MATERIAL',
@@ -481,7 +484,7 @@ const items: Item[] = [
 			{ count: 20, name: 'POISON_MAT' },
 			{ count: 15, name: 'FUEL' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca6b', index: 688, name: 'Dark Matter' },
+		traitPresent: { table: 'TRAIT', meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca6b', name: 'Dark Matter' } },
 	},
 	{
 		category: 'MATERIAL',
@@ -564,7 +567,7 @@ const items: Item[] = [
 			{ count: 10, name: 'CLAY' },
 			{ count: 5, name: 'SECRET_POWER' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca6c', index: 689, name: 'Ancient Seal' },
+		traitPresent: { table: 'TRAIT', meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca6c', name: 'Ancient Seal' } },
 	},
 	{
 		category: 'MATERIAL',
@@ -675,7 +678,7 @@ const items: Item[] = [
 			{ count: 35, name: 'ORE' },
 			{ count: 15, name: 'GEM' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca71', index: 690, name: 'Absorbs Light' },
+		traitPresent: { table: 'TRAIT', meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca71', name: 'Absorbs Light' } },
 	},
 	{
 		category: 'MATERIAL',
@@ -810,7 +813,7 @@ const items: Item[] = [
 			{ count: 10, name: 'INGREDIENT' },
 			{ count: 5, name: 'MEDICINE_MAT' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca6f', index: 691, name: 'Stinks' },
+		traitPresent: { table: 'TRAIT', meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca6f', name: 'Stinks' } },
 	},
 	{
 		category: 'MATERIAL',
@@ -854,7 +857,7 @@ const items: Item[] = [
 			{ count: 30, name: 'ANIMAL' },
 			{ count: 20, name: 'THREAD' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca6e', index: 692, name: 'Sunny Scent' },
+		traitPresent: { table: 'TRAIT', meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca6e', name: 'Sunny Scent' } },
 	},
 	{
 		category: 'MATERIAL',
@@ -892,7 +895,10 @@ const items: Item[] = [
 		recipeIdea: [],
 		recipeType: null,
 		relatedCategories: [{ count: 35, name: 'THREAD' }],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca6d', index: 693, name: 'Cutting Thread' },
+		traitPresent: {
+			table: 'TRAIT',
+			meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca6d', name: 'Cutting Thread' },
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -982,7 +988,10 @@ const items: Item[] = [
 			{ count: 25, name: 'INGREDIENT' },
 			{ count: 15, name: 'WATER' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca72', index: 694, name: 'Kirchen Bell Special' },
+		traitPresent: {
+			table: 'TRAIT',
+			meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca72', name: 'Kirchen Bell Special' },
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -1004,7 +1013,10 @@ const items: Item[] = [
 			{ count: 30, name: 'WATER' },
 			{ count: 10, name: 'SECRET_POWER' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca75', index: 695, name: 'Flickering Light' },
+		traitPresent: {
+			table: 'TRAIT',
+			meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca75', name: 'Flickering Light' },
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -1094,7 +1106,7 @@ const items: Item[] = [
 			{ count: 35, name: 'SECRET_POWER' },
 			{ count: 30, name: 'MEDICINE_MAT' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca70', index: 696, name: 'Unidentified' },
+		traitPresent: { table: 'TRAIT', meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca70', name: 'Unidentified' } },
 	},
 	{
 		category: 'MATERIAL',
@@ -1133,7 +1145,10 @@ const items: Item[] = [
 			{ count: 20, name: 'WATER' },
 			{ count: 5, name: 'SECRET_POWER' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca76', index: 697, name: 'Purifying Water' },
+		traitPresent: {
+			table: 'TRAIT',
+			meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca76', name: 'Purifying Water' },
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -1177,7 +1192,10 @@ const items: Item[] = [
 			{ count: 10, name: 'INGREDIENT' },
 			{ count: 20, name: 'SECRET_POWER' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca78', index: 698, name: 'Golden Radiance' },
+		traitPresent: {
+			table: 'TRAIT',
+			meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca78', name: 'Golden Radiance' },
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -1310,7 +1328,10 @@ const items: Item[] = [
 			{ count: 20, name: 'INGREDIENT' },
 			{ count: 5, name: 'METAL' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca74', index: 700, name: 'Mutated Material' },
+		traitPresent: {
+			table: 'TRAIT',
+			meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca74', name: 'Mutated Material' },
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -1399,7 +1420,10 @@ const items: Item[] = [
 			{ count: 20, name: 'INGREDIENT' },
 			{ count: 15, name: 'PLANT' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca77', index: 701, name: 'Special Ingredient' },
+		traitPresent: {
+			table: 'TRAIT',
+			meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca77', name: 'Special Ingredient' },
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -1459,7 +1483,10 @@ const items: Item[] = [
 		recipeIdea: [],
 		recipeType: null,
 		relatedCategories: [{ count: 35, name: 'FUEL' }],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca7b', index: 702, name: 'Secret of Health' },
+		traitPresent: {
+			table: 'TRAIT',
+			meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca7b', name: 'Secret of Health' },
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -1514,7 +1541,10 @@ const items: Item[] = [
 			{ count: 20, name: 'FUEL' },
 			{ count: 5, name: 'MAGIC_ITEM' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca79', index: 703, name: 'Power of Faith' },
+		traitPresent: {
+			table: 'TRAIT',
+			meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca79', name: 'Power of Faith' },
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -1558,7 +1588,10 @@ const items: Item[] = [
 			{ count: 20, name: 'GEM' },
 			{ count: 15, name: 'MEDICINE_MAT' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca7a', index: 704, name: 'Medicine Compound' },
+		traitPresent: {
+			table: 'TRAIT',
+			meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca7a', name: 'Medicine Compound' },
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -1735,7 +1768,7 @@ const items: Item[] = [
 			{ count: 15, name: 'GEM' },
 			{ count: 10, name: 'POISON_MAT' },
 		],
-		traitPresent: { id: '638a4d49a44f4fa4b0deca7e', index: 707, name: 'Demon Soul' },
+		traitPresent: { table: 'TRAIT', meta: { type: 'RECORD', id: '638a4d49a44f4fa4b0deca7e', name: 'Demon Soul' } },
 	},
 	{
 		category: 'MATERIAL',
@@ -1910,7 +1943,10 @@ const items: Item[] = [
 		recipeIdea: [],
 		recipeType: null,
 		relatedCategories: [{ count: 10, name: 'ELIXIR' }],
-		traitPresent: { id: '638a4d48a44f4fa4b0deca0d', index: 427, name: 'Magical Slayer' },
+		traitPresent: {
+			table: 'TRAIT',
+			meta: { type: 'RECORD', id: '638a4d48a44f4fa4b0deca0d', name: 'Magical Slayer' },
+		},
 	},
 	{
 		category: 'MATERIAL',
@@ -2030,10 +2066,7 @@ const items: Item[] = [
 		index: 142,
 		level: 4,
 		name: 'Uni Bag',
-		recipeIdea: [
-			'Gather ',
-			'{"path":"/items","meta":{"type":"record","name":"Uni","id":"638a47ba92862c8448344934"}}',
-		],
+		recipeIdea: ['Gather ', '{"table":"ITEM","meta":{"type":"RECORD","name":"Uni","id":"638a47ba92862c8448344934"}}'],
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: [{ count: 10, name: 'BOMB' }],
 		traitPresent: null,
@@ -2062,7 +2095,7 @@ const items: Item[] = [
 		recipeIdea: [
 			'{"content":"Performing Synthesis"}',
 			' & Obtain ',
-			'{"path":"/items","meta":{"type":"search","search":{"relatedCategory":"WATER"}}}',
+			'{"table":"ITEM","meta":{"type":"SEARCH","search":{"relatedCategory":"WATER"}}}',
 		],
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: [{ count: 15, name: 'BOMB' }],
@@ -2078,7 +2111,7 @@ const items: Item[] = [
 		name: 'Lightning Bomb',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Raiden Ore","id":"638a47b992862c8448344911"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Raiden Ore","id":"638a47b992862c8448344911"}}',
 		],
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: [{ count: 15, name: 'BOMB' }],
@@ -2094,9 +2127,9 @@ const items: Item[] = [
 		name: 'Craft',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Uni Bag","id":"638a47ba92862c844834495c"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Uni Bag","id":"638a47ba92862c844834495c"}}',
 			' with ',
-			'{"path":"/effects","meta":{"type":"record","name":"Explodes","id":"638a46a8b522a2845a830f62"}}',
+			'{"table":"EFFECT","meta":{"type":"RECORD","name":"Explodes","id":"638a46a8b522a2845a830f62"}}',
 		],
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: [{ count: 15, name: 'BOMB' }],
@@ -2112,9 +2145,9 @@ const items: Item[] = [
 		name: 'Ori Bomb',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Bomb","id":"638a47ba92862c8448344963"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Bomb","id":"638a47ba92862c8448344963"}}',
 			' with ',
-			'{"path":"/effects","meta":{"type":"record","name":"Blue Flames","id":"638a46a9b522a2845a830fc1"}}',
+			'{"table":"EFFECT","meta":{"type":"RECORD","name":"Blue Flames","id":"638a46a9b522a2845a830fc1"}}',
 		],
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: [{ count: 30, name: 'BOMB' }],
@@ -2130,7 +2163,7 @@ const items: Item[] = [
 		name: 'Stahl Ice Bomb',
 		recipeIdea: [
 			'Use ',
-			'{"path":"/items","meta":{"type":"record","name":"Ice Bomb","id":"638a47ba92862c8448344960"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Ice Bomb","id":"638a47ba92862c8448344960"}}',
 		],
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: [{ count: 25, name: 'BOMB' }],
@@ -2268,7 +2301,7 @@ const items: Item[] = [
 		name: 'Berg Medicine',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Berg Medicine","id":"638a47ba92862c844834497f"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Berg Medicine","id":"638a47ba92862c844834497f"}}',
 		],
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: [{ count: 10, name: 'MEDICINE' }],
@@ -2326,7 +2359,7 @@ const items: Item[] = [
 		name: 'Mystery Elixir',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Dunkelheit","id":"638a47b992862c844834490e"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Dunkelheit","id":"638a47b992862c844834490e"}}',
 		],
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: [
@@ -2345,7 +2378,7 @@ const items: Item[] = [
 		name: 'Simple Sweets',
 		recipeIdea: [
 			'Gather ',
-			'{"path":"/items","meta":{"type":"record","name":"Ramel Wheat","id":"638a47ba92862c8448344937"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Ramel Wheat","id":"638a47ba92862c8448344937"}}',
 		],
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: [
@@ -2364,7 +2397,7 @@ const items: Item[] = [
 		name: 'Sotea',
 		recipeIdea: [
 			'Gather ',
-			'{"path":"/items","meta":{"type":"record","name":"Well Water","id":"638a47b992862c8448344927"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Well Water","id":"638a47b992862c8448344927"}}',
 			' From Outside well',
 		],
 		recipeType: 'BEGINNER_RECIPES',
@@ -2408,9 +2441,9 @@ const items: Item[] = [
 		name: 'Sofinancier',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Natural Yeast","id":"638a47bb92862c84483449b7"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Natural Yeast","id":"638a47bb92862c84483449b7"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","name":"Sunny Scent","id":"638a4d49a44f4fa4b0deca6e"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","name":"Sunny Scent","id":"638a4d49a44f4fa4b0deca6e"}}',
 		],
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: [
@@ -2429,9 +2462,9 @@ const items: Item[] = [
 		name: 'Piro Sotea',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Pure Water","id":"638a47bb92862c84483449b2"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Pure Water","id":"638a47bb92862c84483449b2"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","name":"Secret of Health","id":"638a4d49a44f4fa4b0deca7b"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","name":"Secret of Health","id":"638a4d49a44f4fa4b0deca7b"}}',
 		],
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: [
@@ -2450,9 +2483,9 @@ const items: Item[] = [
 		name: 'Alchemy Drops',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Honey","id":"638a47bb92862c84483449b8"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Honey","id":"638a47bb92862c84483449b8"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","name":"Kirchen Bell Special","id":"638a4d49a44f4fa4b0deca72"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","name":"Kirchen Bell Special","id":"638a4d49a44f4fa4b0deca72"}}',
 		],
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: [
@@ -2472,9 +2505,9 @@ const items: Item[] = [
 		name: 'Plain Waffle',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Supreme Hot Milk","id":"638a47ba92862c8448344992"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Supreme Hot Milk","id":"638a47ba92862c8448344992"}}',
 			' with ',
-			'{"path":"/effects","meta":{"type":"record","name":"Hot","id":"638a46a8b522a2845a830f5c"}}',
+			'{"table":"EFFECT","meta":{"type":"RECORD","name":"Hot","id":"638a46a8b522a2845a830f5c"}}',
 		],
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: [{ count: 20, name: 'FOOD' }],
@@ -2490,7 +2523,7 @@ const items: Item[] = [
 		name: 'Bagel Sandwich',
 		recipeIdea: [
 			'Obtain or Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Ramel Flour","id":"638a47bb92862c84483449bb"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Ramel Flour","id":"638a47bb92862c84483449bb"}}',
 		],
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: [{ count: 20, name: 'FOOD' }],
@@ -2506,7 +2539,7 @@ const items: Item[] = [
 		name: 'Supreme Hot Milk',
 		recipeIdea: [
 			'Buy ',
-			'{"path":"/items","meta":{"type":"record","name":"Kirchen Milk","id":"638a47b992862c844834492b"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Kirchen Milk","id":"638a47b992862c844834492b"}}',
 		],
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: [{ count: 25, name: 'FOOD' }],
@@ -2574,9 +2607,9 @@ const items: Item[] = [
 		name: 'Spirit Weave Cloth',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Puni Jelly","id":"638a47ba92862c8448344983"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Puni Jelly","id":"638a47ba92862c8448344983"}}',
 			' with ',
-			'{"path":"/effects","meta":{"type":"record","name":"Activate Division","id":"638a46aab522a2845a831002"}}',
+			'{"table":"EFFECT","meta":{"type":"RECORD","name":"Activate Division","id":"638a46aab522a2845a831002"}}',
 		],
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: [{ count: 15, name: 'CLOTH' }],
@@ -2592,7 +2625,7 @@ const items: Item[] = [
 		name: 'Fire Dragon Medicine',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Dragon Bloodstone","id":"638a47ba92862c8448344933"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Dragon Bloodstone","id":"638a47ba92862c8448344933"}}',
 		],
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: [{ count: 25, name: 'MEDICINE' }],
@@ -2657,9 +2690,9 @@ const items: Item[] = [
 		name: 'Sealing Book',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Codex of Creation","id":"638a47bb92862c844834499a"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Codex of Creation","id":"638a47bb92862c844834499a"}}',
 			' with ',
-			'{"path":"/effects","meta":{"type":"record","name":"Steal Lots of Life","id":"638a46a9b522a2845a830faa"}}',
+			'{"table":"EFFECT","meta":{"type":"RECORD","name":"Steal Lots of Life","id":"638a46a9b522a2845a830faa"}}',
 		],
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: [
@@ -2678,9 +2711,9 @@ const items: Item[] = [
 		name: 'Wonder Stimulant',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"search","search":{"relatedCategory":"MEDICINE"}}}',
+			'{"table":"ITEM","meta":{"type":"SEARCH","search":{"relatedCategory":"MEDICINE"}}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","name":"Size+","id":"638a4d49a44f4fa4b0deca3a"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","name":"Size+","id":"638a4d49a44f4fa4b0deca3a"}}',
 		],
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: [{ count: 20, name: 'MEDICINE' }],
@@ -2696,9 +2729,9 @@ const items: Item[] = [
 		name: 'Fairy Guide',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Spruce","id":"638a47bb92862c84483449c3"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Spruce","id":"638a47bb92862c84483449c3"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","name":"Flickering Light","id":"638a4d49a44f4fa4b0deca75"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","name":"Flickering Light","id":"638a4d49a44f4fa4b0deca75"}}',
 		],
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: [{ count: 30, name: 'MAGIC_ITEM' }],
@@ -2714,9 +2747,9 @@ const items: Item[] = [
 		name: 'Living Cart',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Refuel Bottle","id":"638a47ba92862c8448344979"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Refuel Bottle","id":"638a47ba92862c8448344979"}}',
 			' with ',
-			'{"path":"/effects","meta":{"type":"record","name":"Auto Activate 50%","id":"638a46aab522a2845a830ff9"}}',
+			'{"table":"EFFECT","meta":{"type":"RECORD","name":"Auto Activate 50%","id":"638a46aab522a2845a830ff9"}}',
 		],
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: [
@@ -2735,9 +2768,9 @@ const items: Item[] = [
 		name: 'Clear Drops',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Alchemy Drops","id":"638a47ba92862c8448344987"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Alchemy Drops","id":"638a47ba92862c8448344987"}}',
 			' with ',
-			'{"path":"/effects","meta":{"type":"record","name":"Super Sweet","id":"638a46a8b522a2845a830f5f"}}',
+			'{"table":"EFFECT","meta":{"type":"RECORD","name":"Super Sweet","id":"638a46a8b522a2845a830f5f"}}',
 		],
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: [{ count: 20, name: 'MAGIC_ITEM' }],
@@ -2847,7 +2880,7 @@ const items: Item[] = [
 		name: 'Warding Charm',
 		recipeIdea: [
 			'Buy ',
-			'{"path":"/items","meta":{"type":"record","name":"Pious Talisman","id":"638a47ba92862c844834496c"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Pious Talisman","id":"638a47ba92862c844834496c"}}',
 			' from ',
 			'{"content":"Pamela"}',
 		],
@@ -2881,7 +2914,7 @@ const items: Item[] = [
 		name: 'Neutralizer R',
 		recipeIdea: [
 			'Gather ',
-			'{"path":"/items","meta":{"type":"record","name":"Red Uni","id":"638a47ba92862c8448344938"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Red Uni","id":"638a47ba92862c8448344938"}}',
 		],
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: [{ count: 25, name: 'NEUTRALIZER' }],
@@ -2936,7 +2969,7 @@ const items: Item[] = [
 		name: 'Pure Water',
 		recipeIdea: [
 			'Gather ',
-			'{"path":"/items","meta":{"type":"record","name":"Luminous Water","id":"638a47b992862c844834492e"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Luminous Water","id":"638a47b992862c844834492e"}}',
 		],
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: [{ count: 50, name: 'WATER' }],
@@ -2968,7 +3001,7 @@ const items: Item[] = [
 		name: 'Apcol',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Whimsy Strawberry","id":"638a47ba92862c8448344942"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Whimsy Strawberry","id":"638a47ba92862c8448344942"}}',
 		],
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: [
@@ -3003,7 +3036,7 @@ const items: Item[] = [
 		name: 'Honey',
 		recipeIdea: [
 			'Gather ',
-			'{"path":"/items","meta":{"type":"record","name":"Beehive","id":"638a47ba92862c844834493f"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Beehive","id":"638a47ba92862c844834493f"}}',
 		],
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: [{ count: 25, name: 'INGREDIENT' }],
@@ -3025,9 +3058,9 @@ const items: Item[] = [
 		name: 'Natural Yeast',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Bagel Sandwich","id":"638a47ba92862c8448344984"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Bagel Sandwich","id":"638a47ba92862c8448344984"}}',
 			' with ',
-			'{"path":"/effects","meta":{"type":"record","name":"Fluffy","id":"638a46a8b522a2845a830f68"}}',
+			'{"table":"EFFECT","meta":{"type":"RECORD","name":"Fluffy","id":"638a46a8b522a2845a830f68"}}',
 		],
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: [
@@ -3101,7 +3134,7 @@ const items: Item[] = [
 		name: 'Flame Powder',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Black Orb","id":"638a47b992862c844834491d"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Black Orb","id":"638a47b992862c844834491d"}}',
 		],
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: [{ count: 40, name: 'GUNPOWDER' }],
@@ -3162,7 +3195,7 @@ const items: Item[] = [
 		name: 'Gold Thread',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Silver Web","id":"638a47b992862c844834492a"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Silver Web","id":"638a47b992862c844834492a"}}',
 		],
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: [
@@ -3181,7 +3214,7 @@ const items: Item[] = [
 		name: 'Spruce',
 		recipeIdea: [
 			'Gather ',
-			'{"path":"/items","meta":{"type":"record","name":"Kifa","id":"638a47b992862c8448344906"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Kifa","id":"638a47b992862c8448344906"}}',
 		],
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: [{ count: 30, name: 'WOOD' }],
@@ -3268,9 +3301,9 @@ const items: Item[] = [
 		name: 'Golt Aizen',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Ingot","id":"638a47bb92862c84483449c4"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Ingot","id":"638a47bb92862c84483449c4"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","name":"Golden Radiance","id":"638a4d49a44f4fa4b0deca78"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","name":"Golden Radiance","id":"638a4d49a44f4fa4b0deca78"}}',
 		],
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: [
@@ -3289,7 +3322,7 @@ const items: Item[] = [
 		name: 'Harmonium',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Spirit Crystal","id":"638a47ba92862c8448344931"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Spirit Crystal","id":"638a47ba92862c8448344931"}}',
 		],
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: [
@@ -3308,7 +3341,7 @@ const items: Item[] = [
 		name: 'Cloth',
 		recipeIdea: [
 			'Gather ',
-			'{"path":"/items","meta":{"type":"record","name":"Animal Fur","id":"638a47b992862c8448344924"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Animal Fur","id":"638a47b992862c8448344924"}}',
 		],
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: [
@@ -3327,9 +3360,9 @@ const items: Item[] = [
 		name: 'Mofcott',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Cloth","id":"638a47bb92862c84483449c8"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Cloth","id":"638a47bb92862c84483449c8"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","name":"Carries Heat","id":"638a4d49a44f4fa4b0deca65"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","name":"Carries Heat","id":"638a4d49a44f4fa4b0deca65"}}',
 		],
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: [
@@ -3364,9 +3397,9 @@ const items: Item[] = [
 		name: 'Flugel',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Angel\'s Whisper","id":"638a47bb92862c8448344998"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Angel\'s Whisper","id":"638a47bb92862c8448344998"}}',
 			' with ',
-			'{"path":"/effects","meta":{"type":"record","name":"Soul Awakening","id":"638a46adb522a2845a831135"}}',
+			'{"table":"EFFECT","meta":{"type":"RECORD","name":"Soul Awakening","id":"638a46adb522a2845a831135"}}',
 		],
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: [
@@ -3385,9 +3418,9 @@ const items: Item[] = [
 		name: 'Fairheit',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Adal Cloth","id":"638a47bb92862c84483449ce"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Adal Cloth","id":"638a47bb92862c84483449ce"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","name":"High Class","id":"638a4d47a44f4fa4b0dec96e"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","name":"High Class","id":"638a4d47a44f4fa4b0dec96e"}}',
 		],
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: [
@@ -3406,7 +3439,7 @@ const items: Item[] = [
 		name: 'Velvetis',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Rainbow Puni Fluid","id":"638a47ba92862c8448344932"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Rainbow Puni Fluid","id":"638a47ba92862c8448344932"}}',
 		],
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: [
@@ -3425,7 +3458,7 @@ const items: Item[] = [
 		name: 'Snowflake Crystal',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Silver Crystal","id":"638a47b992862c844834491c"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Silver Crystal","id":"638a47b992862c844834491c"}}',
 		],
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: [
@@ -3442,10 +3475,7 @@ const items: Item[] = [
 		index: 452,
 		level: 25,
 		name: 'Noble Sapphire',
-		recipeIdea: [
-			'Synthesize ',
-			'{"path":"/items","meta":{"type":"search","search":{"relatedCategory":"ACCESSORY"}}}',
-		],
+		recipeIdea: ['Synthesize ', '{"table":"ITEM","meta":{"type":"SEARCH","search":{"relatedCategory":"ACCESSORY"}}}'],
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: [{ count: 40, name: 'GEM' }],
 		traitPresent: null,
@@ -3494,7 +3524,7 @@ const items: Item[] = [
 		name: 'Compass of Hades',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Spirit Needle","id":"638a47bc92862c8448344a41"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Spirit Needle","id":"638a47bc92862c8448344a41"}}',
 		],
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: [{ count: 20, name: 'IMPORTANT' }],
@@ -3564,7 +3594,7 @@ const items: Item[] = [
 		name: 'Mineral Extract',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Good Water","id":"638a47b992862c8448344928"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Good Water","id":"638a47b992862c8448344928"}}',
 		],
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: [
@@ -3610,7 +3640,7 @@ const items: Item[] = [
 		name: "Grandma's Cauldron",
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Ice Bomb","id":"638a47ba92862c8448344960"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Ice Bomb","id":"638a47ba92862c8448344960"}}',
 		],
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: [{ count: 5, name: 'IMPORTANT' }],
@@ -3626,7 +3656,7 @@ const items: Item[] = [
 		name: 'Practice Cauldron',
 		recipeIdea: [
 			'Buy ',
-			'{"path":"/items","meta":{"type":"record","name":"Practice Cauldron","id":"638a47bb92862c84483449d9"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Practice Cauldron","id":"638a47bb92862c84483449d9"}}',
 			' from ',
 			'{"content":"Cory"}',
 		],
@@ -3644,7 +3674,7 @@ const items: Item[] = [
 		name: 'Tuned Cauldron',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Tuned Cauldron","id":"638a47bb92862c84483449ec"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Tuned Cauldron","id":"638a47bb92862c84483449ec"}}',
 			' at the ',
 			'{"content":"Final Area"}',
 			' at ',
@@ -3664,7 +3694,7 @@ const items: Item[] = [
 		name: 'Expert Cauldron',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Expert Cauldron","id":"638a47bb92862c84483449db"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Expert Cauldron","id":"638a47bb92862c84483449db"}}',
 			' in ',
 			'{"content":"Silent Bedroom"}',
 			' at ',
@@ -3684,7 +3714,7 @@ const items: Item[] = [
 		name: 'Fairy Cauldron',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Fairy Cauldron","id":"638a47bb92862c84483449dc"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Fairy Cauldron","id":"638a47bb92862c84483449dc"}}',
 			' at the ',
 			'{"content":"Forest of Fairies"}',
 		],
@@ -3702,7 +3732,7 @@ const items: Item[] = [
 		name: 'Ancient Cauldron',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Ancient Cauldron","id":"638a47bb92862c84483449dd"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Ancient Cauldron","id":"638a47bb92862c84483449dd"}}',
 			' at the ',
 			'{"content":"Library of All Creation"}',
 			' after Defeat ',
@@ -3722,7 +3752,7 @@ const items: Item[] = [
 		name: "Teacher's Cauldron",
 		recipeIdea: [
 			'Buy ',
-			'{"path":"/items","meta":{"type":"record","name":"Teacher\'s Cauldron","id":"638a47bb92862c84483449df"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Teacher\'s Cauldron","id":"638a47bb92862c84483449df"}}',
 			' from ',
 			'{"content":"Cory"}',
 		],
@@ -3740,7 +3770,7 @@ const items: Item[] = [
 		name: "Hermit's Cauldron",
 		recipeIdea: [
 			'Buy ',
-			'{"path":"/items","meta":{"type":"record","name":"Hermit\'s Cauldron","id":"638a47bb92862c84483449e3"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Hermit\'s Cauldron","id":"638a47bb92862c84483449e3"}}',
 			' from ',
 			'{"content":"Tess"}',
 		],
@@ -3758,7 +3788,7 @@ const items: Item[] = [
 		name: 'Miraculous Cauldron',
 		recipeIdea: [
 			'Obtain ',
-			'{"path":"/items","meta":{"type":"record","name":"Miraculous Cauldron","id":"638a47bb92862c84483449e4"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Miraculous Cauldron","id":"638a47bb92862c84483449e4"}}',
 			' at ',
 			'{"content":"Final Area of DLC map"}',
 		],
@@ -4712,9 +4742,9 @@ const items: Item[] = [
 		name: 'Angel Ribbon',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Gold Thread","id":"638a47bb92862c84483449c1"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Gold Thread","id":"638a47bb92862c84483449c1"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","name":"Purifying Water","id":"638a4d49a44f4fa4b0deca76"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","name":"Purifying Water","id":"638a4d49a44f4fa4b0deca76"}}',
 		],
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: [{ count: 15, name: 'ACCESSORY' }],
@@ -4743,11 +4773,11 @@ const items: Item[] = [
 		name: 'Spirit Earrings',
 		recipeIdea: [
 			'Use ',
-			'{"path":"/items","meta":{"type":"search","search":{"relatedCategory":"BOMB"}}}',
+			'{"table":"ITEM","meta":{"type":"SEARCH","search":{"relatedCategory":"BOMB"}}}',
 			', ',
-			'{"path":"/items","meta":{"type":"search","search":{"relatedCategory":"MAGIC_ITEM"}}}',
+			'{"table":"ITEM","meta":{"type":"SEARCH","search":{"relatedCategory":"MAGIC_ITEM"}}}',
 			', And ',
-			'{"path":"/items","meta":{"type":"search","search":{"relatedCategory":"MEDICINE"}}}',
+			'{"table":"ITEM","meta":{"type":"SEARCH","search":{"relatedCategory":"MEDICINE"}}}',
 			' in combat',
 		],
 		recipeType: 'DREAM_RECIPES',
@@ -4777,9 +4807,9 @@ const items: Item[] = [
 		name: 'Meister Mittens',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Simple Sweets","id":"638a47ba92862c844834497e"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Simple Sweets","id":"638a47ba92862c844834497e"}}',
 			' with ',
-			'{"path":"/effects","meta":{"type":"record","name":"Salty","id":"638a46a9b522a2845a830f7e"}}',
+			'{"table":"EFFECT","meta":{"type":"RECORD","name":"Salty","id":"638a46a9b522a2845a830f7e"}}',
 		],
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: [{ count: 15, name: 'ACCESSORY' }],
@@ -4829,9 +4859,9 @@ const items: Item[] = [
 		name: 'Chronicle Mark',
 		recipeIdea: [
 			'Synthesize ',
-			'{"path":"/items","meta":{"type":"record","name":"Noble Sapphire","id":"638a47bb92862c84483449d0"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","name":"Noble Sapphire","id":"638a47bb92862c84483449d0"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","name":"Ancient Seal","id":"638a4d49a44f4fa4b0deca6c"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","name":"Ancient Seal","id":"638a4d49a44f4fa4b0deca6c"}}',
 		],
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: [{ count: 30, name: 'ACCESSORY' }],
@@ -5284,4 +5314,5 @@ const items: Item[] = [
 		traitPresent: null,
 	},
 ];
+
 export default items;

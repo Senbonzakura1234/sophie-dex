@@ -4,7 +4,7 @@ import { writeFile } from 'fs/promises';
 const prisma = new PrismaClient();
 
 async function seed() {
-	await writeFile('output.json', JSON.stringify({}));
+	await writeFile('out.json', JSON.stringify({}));
 }
 
 seed()

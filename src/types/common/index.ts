@@ -1,14 +1,7 @@
+import type { TABLE } from '@prisma/client';
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
 
-export const PageName = {
-	HOME: 'Atelier Dex',
-	EFFECT: 'Effect',
-	ITEM: 'Item',
-	TRAIT: 'Trait',
-	RUMOR: 'Rumor',
-} as const;
-
-export type PageName = typeof PageName[keyof typeof PageName];
+export type PageName = 'Atelier Dex' | Capitalize<Lowercase<TABLE>>;
 
 export type SelectOptionItem<V> = { value: V; label?: ReactNode; icon?: ReactNode };
 export type SetSelectOptionItem<V> = Dispatch<SetStateAction<SelectOptionItem<V>>>;

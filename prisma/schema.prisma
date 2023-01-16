@@ -1,6 +1,13 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+enum TABLE {
+   RUMOR
+   ITEM
+   TRAIT
+   EFFECT
+}
+
 enum RECIPE_TYPE {
    BEGINNER_RECIPES
    GROWTH_RECIPES
@@ -79,10 +86,19 @@ type RELATED_CATEGORY {
    count Int
 }
 
+enum HYPER_LINK_TYPE {
+   RECORD
+}
+
+type HYPER_LINK_META {
+   type HYPER_LINK_TYPE
+   id   String          @db.ObjectId
+   name String
+}
+
 type HYPER_LINK {
-   id    String @db.ObjectId
-   index Int
-   name  String
+   meta  HYPER_LINK_META
+   table TABLE
 }
 
 type MERGE_TRAIT {

@@ -21,24 +21,24 @@ const KeyContentPart: FC<KeyContentPartProps> = ({ input }) => {
 
 	if (!hyperLink.success) return <>{input}</>;
 
-	if (hyperLink.data.meta.type === 'record')
+	if (hyperLink.data.meta.type === 'RECORD')
 		return (
 			<>
-				{hyperLink.data.path.replace('/', '').replace('s', '')}&nbsp;
+				{hyperLink.data.table}&nbsp;
 				<Link
 					className='link link-info font-bold'
-					href={{ pathname: `${hyperLink.data.path}/${hyperLink.data.meta.id}` }}
+					href={{ pathname: `/${hyperLink.data.table.toLowerCase()}s/${hyperLink.data.meta.id}` }}
 				>
 					{hyperLink.data.meta.name}
 				</Link>
 			</>
 		);
 
-	if (hyperLink.data.meta.type === 'search')
+	if (hyperLink.data.meta.type === 'SEARCH')
 		return (
 			<Link
 				className='link link-neutral font-bold capitalize'
-				href={{ pathname: hyperLink.data.path, query: hyperLink.data.meta.search }}
+				href={{ pathname: `/${hyperLink.data.table.toLowerCase()}s`, query: hyperLink.data.meta.search }}
 			>
 				{Object.values(hyperLink.data.meta.search).map((s, key) => (
 					<Fragment key={key}>

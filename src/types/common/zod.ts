@@ -1,4 +1,4 @@
-import { idRegex } from '@root/constants';
+import { idRegex, tableList } from '@root/constants';
 import { z } from 'zod';
 
 import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '../model';
@@ -44,18 +44,18 @@ export const miscContentValidator = z.object({
 
 const hyperLinkMeta = z.union([
 	z.object({
-		type: z.literal('search'),
+		type: z.literal('SEARCH'),
 		search: searchQueryValidator,
 	}),
 	z.object({
-		type: z.literal('record'),
+		type: z.literal('RECORD'),
 		id: genericIdSchema,
 		name: genericStringSchema,
 	}),
 ]);
 
 export const hyperLinkValidator = z.object({
-	path: z.enum(['/items', '/traits', '/effects', '/rumors']),
+	table: z.enum(tableList),
 	meta: hyperLinkMeta,
 });
 
