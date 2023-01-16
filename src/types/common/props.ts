@@ -102,6 +102,7 @@ export type ListPlaceHolderProps = FetchStateProps;
 export type FilterControlPlaceHolderProps = FetchStateProps & IsPaginateOnlyProps;
 
 export type CategoriesProps = { categories: CATEGORY[] };
+export type ItemPresentProps = { itemPresent: HYPER_LINK };
 
 export type TraitMergeListProps = { mergeFrom: MERGE_TRAIT[] };
 

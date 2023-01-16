@@ -6,9 +6,12 @@ import clsx from 'clsx';
 import type { FC } from 'react';
 
 import Categories from './Categories';
+import ItemPresent from './ItemPresent';
 import TraitMergeList from './TraitMergeList';
 
-const TraitRecord: FC<TraitRecordProps> = ({ record: { name, description, index, categories, mergeFrom, id } }) => {
+const TraitRecord: FC<TraitRecordProps> = ({
+	record: { name, description, index, categories, mergeFrom, id, itemPresent },
+}) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 
 	return (
@@ -26,6 +29,8 @@ const TraitRecord: FC<TraitRecordProps> = ({ record: { name, description, index,
 			<p className='text-lg'>{description}</p>
 
 			<TraitMergeList mergeFrom={mergeFrom} />
+
+			{itemPresent ? <ItemPresent itemPresent={itemPresent} /> : null}
 
 			<Categories categories={categories} />
 		</RecordWrapper>

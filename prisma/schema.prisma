@@ -137,6 +137,7 @@ model Trait {
    description String
    categories  CATEGORY[]
    mergeFrom   MERGE_TRAIT[]
+   itemPresent HYPER_LINK?
 }
 
 model Item {
