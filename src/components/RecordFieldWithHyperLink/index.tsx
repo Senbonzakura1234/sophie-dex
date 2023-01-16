@@ -6,7 +6,10 @@ import KeyContentPart from './KeyContentPart';
 
 const RecordFieldWithHyperLink: FC<RecordFieldWithHyperLinkProps> = ({ inputArr, label, className }) => {
 	const processedIdea: ReactNode[] = useMemo(
-		() => inputArr.map((input, index) => (index % 2 === 0 ? input : <KeyContentPart key={index} input={input} />)),
+		() =>
+			inputArr.map((input, index) =>
+				index % 2 === 0 ? input : <KeyContentPart key={index} input={input} showLabel />,
+			),
 		[inputArr],
 	);
 

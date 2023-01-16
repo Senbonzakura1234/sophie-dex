@@ -59,7 +59,7 @@ export type GoToPageSelectProps = { totalPage: number };
 
 export type ResetFilterProps = IsPaginateOnlyProps;
 export type RecordFieldWithHyperLinkProps = { inputArr: string[]; label: string } & ClassNameProps;
-export type KeyContentPartProps = { input: string };
+export type KeyContentPartProps = { input: string; showLabel?: boolean };
 
 export type ColorProps = { color: COLOR };
 export type RecipeTypeProps = { recipeType: RECIPE_TYPE };

@@ -4,9 +4,9 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47b992862c8448344910","name":"Magic Grass"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47b992862c8448344910","name":"Magic Grass"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","id":"638a4d49a44f4fa4b0deca3e","name":"Jumbo Size"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","id":"638a4d49a44f4fa4b0deca3e","name":"Jumbo Size"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb83a',
 		location: 'Pilgrim Road',
@@ -17,9 +17,9 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47ba92862c8448344934","name":"Uni"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47ba92862c8448344934","name":"Uni"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","id":"638a4d48a44f4fa4b0deca12","name":"Enhance Finisher++"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","id":"638a4d48a44f4fa4b0deca12","name":"Enhance Finisher++"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb838',
 		location: 'Chick Woods',
@@ -38,9 +38,9 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47ba92862c8448344937","name":"Ramel Wheat"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47ba92862c8448344937","name":"Ramel Wheat"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","id":"638a4d47a44f4fa4b0dec968","name":"Low Price++"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","id":"638a4d47a44f4fa4b0dec968","name":"Low Price++"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb839',
 		location: 'Merbert Farm',
@@ -51,7 +51,7 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47ba92862c8448344940","name":"Bursting Berry"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47ba92862c8448344940","name":"Bursting Berry"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb83c',
 		location: 'Open Ruins',
@@ -62,7 +62,7 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47b992862c8448344917","name":"Seabed Soil"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47b992862c8448344917","name":"Seabed Soil"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb83e',
 		location: "Prospector's Strand - Shore of Treasures",
@@ -73,7 +73,7 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47ba92862c844834493e","name":"Unknown Egg"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47ba92862c844834493e","name":"Unknown Egg"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb841',
 		location: 'Green Ruins',
@@ -84,9 +84,9 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47b992862c8448344906","name":"Kifa"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47b992862c8448344906","name":"Kifa"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","id":"638a4d48a44f4fa4b0dec9fa","name":"Inflict Curse"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","id":"638a4d48a44f4fa4b0dec9fa","name":"Inflict Curse"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb840',
 		location: 'Gathering of Beasts',
@@ -97,9 +97,9 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47ba92862c844834493b","name":"Zafloa Oil"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47ba92862c844834493b","name":"Zafloa Oil"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","id":"638a4d49a44f4fa4b0deca7b","name":"Secret of Health"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","id":"638a4d49a44f4fa4b0deca7b","name":"Secret of Health"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb842',
 		location: 'Fallen Palace - Inverse Entrance, Upside Down Corridor, Opposite Living Room',
@@ -110,9 +110,9 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47ba92862c8448344942","name":"Whimsy Strawberry"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47ba92862c8448344942","name":"Whimsy Strawberry"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","id":"638a4d47a44f4fa4b0dec999","name":"Stable Effect++"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","id":"638a4d47a44f4fa4b0dec999","name":"Stable Effect++"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb843',
 		location: 'Flower Garden',
@@ -123,7 +123,7 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47b992862c8448344905","name":"Fairy Poison Grass"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47b992862c8448344905","name":"Fairy Poison Grass"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb83f',
 		location: 'Puzzling Path',
@@ -134,9 +134,9 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47b992862c8448344903","name":"Mossy Driftwood"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47b992862c8448344903","name":"Mossy Driftwood"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","id":"638a4d48a44f4fa4b0dec9f4","name":"Inflict Sleep"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","id":"638a4d48a44f4fa4b0dec9f4","name":"Inflict Sleep"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb83d',
 		location: 'Three Bridge Springs',
@@ -147,9 +147,9 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47b992862c8448344912","name":"Hakurei Stone"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47b992862c8448344912","name":"Hakurei Stone"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","id":"638a4d49a44f4fa4b0deca3e","name":"Jumbo Size"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","id":"638a4d49a44f4fa4b0deca3e","name":"Jumbo Size"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb846',
 		location: 'Verdant Hill - Icy Cave',
@@ -160,9 +160,9 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47b992862c844834490a","name":"Mystic Herb"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47b992862c844834490a","name":"Mystic Herb"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","id":"638a4d47a44f4fa4b0dec991","name":"Critical++"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","id":"638a4d47a44f4fa4b0dec991","name":"Critical++"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb844',
 		location: 'Rocky Grove',
@@ -190,7 +190,7 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47ba92862c844834494b","name":"Pelem Shell"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47ba92862c844834494b","name":"Pelem Shell"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb847',
 		location: 'Underground Lake',
@@ -201,9 +201,9 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47b992862c8448344928","name":"Good Water"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47b992862c8448344928","name":"Good Water"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","id":"638a4d47a44f4fa4b0dec972","name":"Quality Up++"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","id":"638a4d47a44f4fa4b0dec972","name":"Quality Up++"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb84a',
 		location: 'Small Islet',
@@ -214,9 +214,9 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47b992862c8448344909","name":"Mountain Cotton"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47b992862c8448344909","name":"Mountain Cotton"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","id":"638a4d48a44f4fa4b0deca0b","name":"Dragon Slayer"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","id":"638a4d48a44f4fa4b0deca0b","name":"Dragon Slayer"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb845',
 		location: 'Verdant Hill',
@@ -227,9 +227,9 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47ba92862c8448344939","name":"Weiss Powder"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47ba92862c8448344939","name":"Weiss Powder"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","id":"638a4d49a44f4fa4b0deca73","name":"Super Fine"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","id":"638a4d49a44f4fa4b0deca73","name":"Super Fine"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb84c',
 		location: 'Sealed Temple',
@@ -248,9 +248,9 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47ba92862c8448344945","name":"Pretty Shell"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47ba92862c8448344945","name":"Pretty Shell"}}',
 			' with ',
-			'{"path":"/traits","meta":{"type":"record","id":"638a4d47a44f4fa4b0dec966","name":"High Price++"}}',
+			'{"table":"TRAIT","meta":{"type":"RECORD","id":"638a4d47a44f4fa4b0dec966","name":"High Price++"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb84b',
 		location: 'Calm Banks',
@@ -277,7 +277,7 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47ba92862c8448344944","name":"Gold Steel Web"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47ba92862c8448344944","name":"Gold Steel Web"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb84e',
 		location: 'Forgotten Nursery - Masterless Gazebo',
@@ -288,13 +288,11 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47ba92862c844834493b","name":"Zafloa Oil"}}',
-			' with ',
-			'{"path":"/traits","meta":{"type":"record","id":"638a4d49a44f4fa4b0deca7b","name":"Secret of Health"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47ba92862c844834494e","name":"Pendegrune"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb860',
-		location: 'Soul Space - Edge of Pitch Darkness',
 		name: 'Faintly Shining Ore',
+		location: 'Soul Space - Edge of Pitch Darkness',
 		price: 600,
 		rumorType: 'MATERIAL',
 	},
@@ -341,7 +339,7 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47ba92862c8448344949","name":"Star Powder"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47ba92862c8448344949","name":"Star Powder"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb856',
 		location: 'Moon Sun Moor',
@@ -376,7 +374,7 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47ba92862c8448344931","name":"Spirit Crystal"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47ba92862c8448344931","name":"Spirit Crystal"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb85e',
 		location: 'Scar of the Land - Pierced Ruins',
@@ -419,7 +417,7 @@ const rumors: Rumor[] = [
 	{
 		description: [
 			'Provide ',
-			'{"path":"/items","meta":{"type":"record","id":"638a47b992862c844834490e","name":"Dunkelheit"}}',
+			'{"table":"ITEM","meta":{"type":"RECORD","id":"638a47b992862c844834490e","name":"Dunkelheit"}}',
 		],
 		id: '63bfbf04c3cd1c76194cb85d',
 		location: 'Forest of Fairies',
