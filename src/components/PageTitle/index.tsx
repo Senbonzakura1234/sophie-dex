@@ -30,7 +30,7 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => (
 
 		<div className='absolute inset-0 z-10 bg-slate-700/30' />
 
-		<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-9 px-4 pt-5 2xl:gap-6'>
+		<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-4 px-4 pt-5 xl:gap-9 2xl:gap-6'>
 			<motion.div
 				{...getFramerFadeUp(0.1)}
 				className='text-secondary text-shadow-dark w-full text-center font-serif text-5xl font-bold xl:text-6xl 2xl:text-7xl'
@@ -46,7 +46,7 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => (
 					src={sophieLogo}
 					alt={pageName}
 					priority={pageName === 'Home'}
-					sizes='30vw'
+					sizes='80vw'
 				/>
 
 				<div
