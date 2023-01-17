@@ -26,6 +26,7 @@
 		"shardulm94.trailing-spaces",
 		"pflannery.vscode-versionlens",
 		"vscode-icons-team.vscode-icons",
-		"redhat.vscode-yaml"
+		"redhat.vscode-yaml",
+		"moalamri.inline-fold"
 	]
 }
