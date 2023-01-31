@@ -13,6 +13,8 @@ const EffectDetail: NextPage = () => {
 		refetchOnWindowFocus: false,
 	});
 
+	console.log(process.env.VERCEL_URL);
+
 	return (
 		<DetailLayout
 			isError={isError}
