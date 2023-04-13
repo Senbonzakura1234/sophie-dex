@@ -1,6 +1,7 @@
 import { ArrowUpOnSquareIcon } from '@heroicons/react/24/solid';
-import FadeWrapper from '@root/components/Animations/FadeWrapper';
+import { getFramerFadeUp } from '@root/animations';
 import type { ScrollToTopProps } from '@root/types/common/props';
+import { AnimatePresence, domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import type { FC } from 'react';
 import { useCallback, useState } from 'react';
 
@@ -38,18 +39,25 @@ const ScrollToTop: FC<ScrollToTopProps> = ({ isShow, refObject: ref, scrollPosit
 	}, [isScrolling, scrollPosition, isShow, ref]);
 
 	return (
-		<FadeWrapper show={isShow} isTransForm>
-			<div className='fixed inset-x-1/2 bottom-3 z-30 flex -translate-x-1/2 place-content-center lg:left-auto lg:right-12 lg:bottom-6'>
-				<button
-					className='btn btn-primary btn-circle text-white'
-					aria-label='Back To Top'
-					disabled={isScrolling || !isShow}
-					onClick={scrollToTop}
-				>
-					<ArrowUpOnSquareIcon className='h4 h-4' />
-				</button>
-			</div>
-		</FadeWrapper>
+		<LazyMotion features={domAnimation} strict>
+			<AnimatePresence>
+				{isShow ? (
+					<motion.div
+						{...getFramerFadeUp()}
+						className='fixed inset-x-1/2 bottom-3 z-30 flex -translate-x-1/2 place-content-center lg:left-auto lg:right-12 lg:bottom-6'
+					>
+						<button
+							className='btn btn-primary btn-circle text-white'
+							aria-label='Back To Top'
+							disabled={isScrolling || !isShow}
+							onClick={scrollToTop}
+						>
+							<ArrowUpOnSquareIcon className='h4 h-4' />
+						</button>
+					</motion.div>
+				) : null}
+			</AnimatePresence>
+		</LazyMotion>
 	);
 };
 

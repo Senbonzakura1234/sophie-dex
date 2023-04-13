@@ -1,5 +1,5 @@
 import { HomeIcon, LinkIcon } from '@heroicons/react/24/solid';
-import { getFramerFadeUp } from '@root/animations';
+import { getFramerInViewFadeUp } from '@root/animations';
 import CircleDivider from '@root/components/CircleDivider';
 import { APP_AUTHOR, tableList } from '@root/constants';
 import type { BreadcrumbProps } from '@root/types/common/props';
@@ -15,7 +15,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 
 	return (
 		<LazyMotion features={domAnimation} strict>
-			<motion.div className='flex w-full' {...getFramerFadeUp()}>
+			<motion.div className='flex w-full' {...getFramerInViewFadeUp(0.1)}>
 				<nav className='card card-compact bg-base-100 shadow-primary mx-auto w-[17rem] max-w-full py-1 shadow-lg 2xl:w-2/5'>
 					<div className='breadcrumbs mx-auto text-xs font-extrabold 2xl:text-base'>
 						<ul className='gap-1 font-serif font-extrabold'>
@@ -68,7 +68,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 				</nav>
 			</motion.div>
 
-			<motion.div className={clsx({ hidden: !isShowAuthor })} {...getFramerFadeUp(0.1)}>
+			<motion.div className={clsx({ hidden: !isShowAuthor })} {...getFramerInViewFadeUp(0.2)}>
 				<Link
 					target='_blank'
 					href={{ protocol: 'https', hostname: 'github', host: 'github.com', pathname: APP_AUTHOR }}

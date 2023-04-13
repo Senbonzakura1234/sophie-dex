@@ -1,4 +1,4 @@
-import { getFramerFadeUp } from '@root/animations';
+import { getFramerInViewFadeUp } from '@root/animations';
 import sophieLogo from '@root/assets/images/sophie-logo.png';
 import topBg from '@root/assets/images/top.jpg';
 import Breadcrumb from '@root/components/Breadcrumb';
@@ -33,7 +33,7 @@ const PageTitle: FC<PageTitleProps> = ({ pageName }) => (
 		<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-4 px-4 pt-5 xl:gap-9 2xl:gap-6'>
 			<LazyMotion features={domAnimation} strict>
 				<motion.div
-					{...getFramerFadeUp(0.1)}
+					{...getFramerInViewFadeUp()}
 					className='text-secondary text-shadow-dark w-full text-center font-serif text-5xl font-bold xl:text-6xl 2xl:text-7xl'
 				>
 					<Image

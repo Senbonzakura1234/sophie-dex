@@ -1,6 +1,5 @@
 import ErrorModal from '@root/components/ErrorModal';
 import type { DetailLayoutProps } from '@root/types/common/props';
-import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 import type { FC } from 'react';
 
@@ -17,9 +16,7 @@ const DetailLayout: FC<DetailLayoutProps> = ({ pageName, children, extraHead, is
 			<div className='w-[800px] max-w-full'>{children}</div>
 		</section>
 
-		<AnimatePresence>
-			{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
-		</AnimatePresence>
+		{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
 	</>
 );
 

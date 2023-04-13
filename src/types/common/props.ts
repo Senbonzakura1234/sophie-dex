@@ -29,8 +29,6 @@ export type IsPaginateOnlyProps = { isPaginateOnly?: boolean };
 
 export type RecordProps<T> = { record: T | undefined };
 
-export type FadeWrapperProps = { children: ReactNode; show?: boolean; appear?: boolean; isTransForm?: boolean };
-
 export type BreadcrumbProps = { isShowAuthor: boolean };
 
 export type CircleDividerProps = ClassNameProps;

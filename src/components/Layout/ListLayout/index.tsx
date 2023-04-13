@@ -4,7 +4,6 @@ import PageFooter from '@root/components/PageFooter';
 import PageTitle from '@root/components/PageTitle';
 import { FilterControlPlaceHolder, ListPlaceHolder } from '@root/components/SubComponent';
 import type { ListLayoutProps } from '@root/types/common/props';
-import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 import type { FC } from 'react';
 
@@ -50,9 +49,7 @@ const ListLayout: FC<ListLayoutProps> = ({
 
 		<PageFooter />
 
-		<AnimatePresence>
-			{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
-		</AnimatePresence>
+		{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
 	</>
 );
 
