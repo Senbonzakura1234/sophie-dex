@@ -4,7 +4,7 @@ import { Fragment, useMemo } from 'react';
 
 import KeyContentPart from './KeyContentPart';
 
-export type RecordFieldWithHyperLinkProps = { inputArr: string[]; label: string } & ClassNameProps;
+type RecordFieldWithHyperLinkProps = { inputArr: string[]; label: string } & ClassNameProps;
 
 const RecordFieldWithHyperLink: FC<RecordFieldWithHyperLinkProps> = ({ inputArr, label, className }) => {
 	const processedIdea: ReactNode[] = useMemo(

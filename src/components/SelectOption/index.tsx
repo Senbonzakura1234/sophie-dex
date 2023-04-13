@@ -6,7 +6,7 @@ import type { ClassNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { AnimatePresence, domAnimation, LazyMotion, m as motion } from 'framer-motion';
 
-export type SelectOptionProps<V> = {
+type SelectOptionProps<V> = {
 	value: SelectOptionItem<V>;
 	list: SelectOptionItem<V>[];
 	setValue: SetSelectOptionItem<V>;

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import type { FC } from 'react';
 import { Fragment, useMemo } from 'react';
 
-export type KeyContentPartProps = { input: string; showLabel?: boolean; pathToKey?: string };
+type KeyContentPartProps = { input: string; showLabel?: boolean; pathToKey?: string };
 
 const KeyContentPart: FC<KeyContentPartProps> = ({ input, showLabel, pathToKey }) => {
 	const inputParse = useMemo(() => {

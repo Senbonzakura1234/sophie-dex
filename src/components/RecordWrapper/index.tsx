@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { AnimatePresence, domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import type { FC } from 'react';
 
-export type RecordWrapperProps = ChildrenProps & ClassNameProps & { color?: COLOR } & IsSuccessProps;
+type RecordWrapperProps = ChildrenProps & ClassNameProps & { color?: COLOR } & IsSuccessProps;
 
 const RecordWrapper: FC<RecordWrapperProps> = ({ children, className, color, isSuccess }) => (
 	<LazyMotion features={domAnimation} strict>
