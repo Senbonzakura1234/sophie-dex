@@ -1,8 +1,10 @@
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { SortControlProps } from '@root/types/common/props';
+import type { IsPaginateOnlyProps, PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
+
+type SortControlProps = PageNameProps & IsPaginateOnlyProps;
 
 const SortControl: FC<SortControlProps> = ({ pageName, isPaginateOnly }) => {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();

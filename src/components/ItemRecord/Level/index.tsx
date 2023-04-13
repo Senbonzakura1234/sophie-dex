@@ -1,5 +1,6 @@
-import type { LevelProps } from '@root/types/common/props';
 import type { FC } from 'react';
+
+type LevelProps = { level: number };
 
 const Level: FC<LevelProps> = ({ level }) => (
 	<div className='absolute top-9 right-10 grid w-10 place-content-center gap-1 text-center font-extrabold leading-[0.5] text-slate-50'>

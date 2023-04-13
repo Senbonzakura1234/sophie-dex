@@ -1,6 +1,8 @@
+import type { ITEM_DESCRIPTION } from '@prisma/client';
 import KeyContentPart from '@root/components/RecordFieldWithHyperLink/KeyContentPart';
-import type { DescriptionProps } from '@root/types/common/props';
 import type { FC } from 'react';
+
+type DescriptionProps = { description: ITEM_DESCRIPTION };
 
 const Description: FC<DescriptionProps> = ({ description }) => (
 	<ul className='max-w-fit list-disc pl-8 text-lg sm:max-w-[60%]'>

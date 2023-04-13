@@ -1,8 +1,10 @@
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { ResetFilterProps } from '@root/types/common/props';
+import type { IsPaginateOnlyProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
+
+type ResetFilterProps = IsPaginateOnlyProps;
 
 const ResetFilter: FC<ResetFilterProps> = ({ isPaginateOnly }) => {
 	const { resetQuery, isReady, securedQuery } = useSearchQuery();

@@ -1,8 +1,10 @@
+import type { COLOR } from '@prisma/client';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { ColorProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
+
+type ColorProps = { color: COLOR };
 
 const Color: FC<ColorProps> = ({ color }) => {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();

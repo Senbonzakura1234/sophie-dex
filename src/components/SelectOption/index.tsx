@@ -1,9 +1,19 @@
 import { Listbox } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/24/solid';
 import { getFramerFadeUp } from '@root/animations';
-import type { SelectOptionProps } from '@root/types/common/props';
+import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
+import type { ClassNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { AnimatePresence, domAnimation, LazyMotion, m as motion } from 'framer-motion';
+
+export type SelectOptionProps<V> = {
+	value: SelectOptionItem<V>;
+	list: SelectOptionItem<V>[];
+	setValue: SetSelectOptionItem<V>;
+	withIcon?: boolean;
+	useCustomIcon?: boolean;
+	useAtelierFont?: boolean;
+} & ClassNameProps;
 
 const SelectOption = <V extends string | number | null>({
 	list,

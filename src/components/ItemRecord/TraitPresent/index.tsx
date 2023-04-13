@@ -1,7 +1,9 @@
 import { DocumentChartBarIcon } from '@heroicons/react/24/solid';
-import type { TraitPresentProps } from '@root/types/common/props';
+import type { HYPER_LINK } from '@prisma/client';
 import Link from 'next/link';
 import type { FC } from 'react';
+
+type TraitPresentProps = { traitPresent: HYPER_LINK };
 
 const TraitPresent: FC<TraitPresentProps> = ({
 	traitPresent: {

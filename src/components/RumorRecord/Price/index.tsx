@@ -1,5 +1,6 @@
-import type { PriceProps } from '@root/types/common/props';
 import type { FC } from 'react';
+
+type PriceProps = { price: number };
 
 const Price: FC<PriceProps> = ({ price }) => {
 	return (

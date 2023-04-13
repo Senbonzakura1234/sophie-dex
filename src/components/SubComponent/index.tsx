@@ -2,15 +2,15 @@ import type { CATEGORY, COLOR, RECIPE_TYPE, RUMOR_TYPE } from '@prisma/client';
 import { getFramerInViewFadeUp } from '@root/animations';
 import { defaultLimit } from '@root/constants';
 import type { SelectOptionItem } from '@root/types/common';
-import type {
-	FilterControlPlaceHolderProps,
-	ListPlaceHolderProps,
-	RecordPlaceHolderProps,
-} from '@root/types/common/props';
+import type { FetchStateProps, IsPaginateOnlyProps } from '@root/types/common/props';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 import clsx from 'clsx';
 import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import type { FC } from 'react';
+
+type FilterControlPlaceHolderProps = FetchStateProps & IsPaginateOnlyProps;
+type RecordPlaceHolderProps = FetchStateProps & { color?: COLOR };
+type ListPlaceHolderProps = FetchStateProps;
 
 export const hideCategoryOnTrait: Readonly<CATEGORY[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
 

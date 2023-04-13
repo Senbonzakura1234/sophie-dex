@@ -1,12 +1,15 @@
+import type { Trait } from '@prisma/client';
 import RecordHead from '@root/components/RecordHead';
 import RecordWrapper from '@root/components/RecordWrapper';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
-import type { TraitRecordProps } from '@root/types/common/props';
+import type { RecordProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
 import Categories from './Categories';
 import ItemPresent from './ItemPresent';
 import TraitMergeList from './TraitMergeList';
+
+type TraitRecordProps = RecordProps<Trait>;
 
 const TraitRecord: FC<TraitRecordProps> = ({ record }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();

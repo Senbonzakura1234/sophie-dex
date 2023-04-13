@@ -2,13 +2,14 @@ import { HomeIcon, LinkIcon } from '@heroicons/react/24/solid';
 import { getFramerInViewFadeUp } from '@root/animations';
 import CircleDivider from '@root/components/CircleDivider';
 import { APP_AUTHOR, tableList } from '@root/constants';
-import type { BreadcrumbProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import type { FC } from 'react';
 import { Fragment } from 'react';
+
+type BreadcrumbProps = { isShowAuthor: boolean };
 
 const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 	const { pathname } = useRouter();

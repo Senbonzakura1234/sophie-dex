@@ -1,8 +1,10 @@
+import type { RECIPE_TYPE } from '@prisma/client';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { RecipeTypeProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
+
+type RecipeTypeProps = { recipeType: RECIPE_TYPE };
 
 const RecipeType: FC<RecipeTypeProps> = ({ recipeType }) => {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();

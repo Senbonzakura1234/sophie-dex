@@ -2,9 +2,10 @@ import SelectOption from '@root/components/SelectOption';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { SelectOptionItem } from '@root/types/common';
-import type { GoToPageSelectProps } from '@root/types/common/props';
 import type { FC } from 'react';
 import { useMemo } from 'react';
+
+type GoToPageSelectProps = { totalPage: number };
 
 const GoToPageSelect: FC<GoToPageSelectProps> = ({ totalPage }) => {
 	const { securedQuery, isReady, updateQuery } = useSearchQuery();

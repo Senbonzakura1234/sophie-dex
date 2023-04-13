@@ -1,8 +1,10 @@
+import type { RELATED_CATEGORY } from '@prisma/client';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { RelatedCategoriesProps } from '@root/types/common/props';
 import { RelatedCategoryDisplay } from '@root/types/model';
 import clsx from 'clsx';
 import type { FC } from 'react';
+
+type RelatedCategoriesProps = { relatedCategories: RELATED_CATEGORY[] };
 
 const RelatedCategories: FC<RelatedCategoriesProps> = ({ relatedCategories }) => {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();

@@ -5,9 +5,10 @@ import {
 	ChevronRightIcon,
 } from '@heroicons/react/24/solid';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { PaginateProps } from '@root/types/common/props';
 import type { FC } from 'react';
 import { useMemo } from 'react';
+
+type PaginateProps = { page: number; totalPage: number };
 
 import GoToPageSelect from './GoToPageSelect';
 

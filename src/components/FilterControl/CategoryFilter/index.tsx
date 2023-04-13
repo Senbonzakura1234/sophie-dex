@@ -4,10 +4,12 @@ import { categoryDefaultSelect, categorySelectList } from '@root/components/SubC
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { PageName } from '@root/types/common';
-import type { CategoryFilterProps } from '@root/types/common/props';
+import type { PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
+
+type CategoryFilterProps = PageNameProps;
 
 const CategoryFilter: FC<CategoryFilterProps> = ({ pageName }) => {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();

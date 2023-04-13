@@ -1,7 +1,9 @@
 import { DocumentChartBarIcon } from '@heroicons/react/24/solid';
-import type { ItemPresentProps } from '@root/types/common/props';
+import type { HYPER_LINK } from '@prisma/client';
 import Link from 'next/link';
 import type { FC } from 'react';
+
+type ItemPresentProps = { itemPresent: HYPER_LINK };
 
 const ItemPresent: FC<ItemPresentProps> = ({
 	itemPresent: {

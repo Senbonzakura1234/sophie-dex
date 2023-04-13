@@ -1,9 +1,11 @@
+import type { CATEGORY } from '@prisma/client';
 import { categoryMap } from '@root/components/SubComponent';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { CategoryProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
+
+type CategoryProps = { category: CATEGORY };
 
 const Category: FC<CategoryProps> = ({ category }) => {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();

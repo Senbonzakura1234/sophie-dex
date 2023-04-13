@@ -1,7 +1,9 @@
 import ErrorModal from '@root/components/ErrorModal';
-import type { DetailLayoutProps } from '@root/types/common/props';
+import type { DefaultLayoutProps, ErrorResultProps } from '@root/types/common/props';
 import Head from 'next/head';
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
+
+type DetailLayoutProps = DefaultLayoutProps & { extraHead?: ReactNode } & ErrorResultProps;
 
 const DetailLayout: FC<DetailLayoutProps> = ({ pageName, children, extraHead, isError, errorData, errorMessage }) => (
 	<>

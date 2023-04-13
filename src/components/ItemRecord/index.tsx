@@ -1,8 +1,9 @@
+import type { Item } from '@prisma/client';
 import RecordFieldWithHyperLink from '@root/components/RecordFieldWithHyperLink';
 import RecordHead from '@root/components/RecordHead';
 import RecordWrapper from '@root/components/RecordWrapper';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
-import type { ItemRecordProps } from '@root/types/common/props';
+import type { RecordProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
 import Category from './Category';
@@ -12,6 +13,8 @@ import Level from './Level';
 import RecipeType from './RecipeType';
 import RelatedCategories from './RelatedCategories';
 import TraitPresent from './TraitPresent';
+
+type ItemRecordProps = RecordProps<Item>;
 
 const ItemRecord: FC<ItemRecordProps> = ({ record }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();

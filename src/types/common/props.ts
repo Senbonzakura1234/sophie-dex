@@ -1,22 +1,8 @@
-import type {
-	CATEGORY,
-	COLOR,
-	Effect,
-	HYPER_LINK,
-	Item,
-	ITEM_DESCRIPTION,
-	MERGE_TRAIT,
-	RECIPE_TYPE,
-	RELATED_CATEGORY,
-	Rumor,
-	RUMOR_TYPE,
-	Trait,
-} from '@prisma/client';
 import type { Maybe } from '@trpc/server';
 import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
 import type { ReactNode, RefObject } from 'react';
 
-import type { PageName, SelectOptionItem, SetSelectOptionItem } from '.';
+import type { PageName } from '.';
 
 export type ClassNameProps = { className?: string };
 export type ChildrenProps = { children?: ReactNode };
@@ -28,89 +14,9 @@ export type FetchStateProps = IsErrorProps & IsSuccessProps;
 export type IsPaginateOnlyProps = { isPaginateOnly?: boolean };
 
 export type RecordProps<T> = { record: T | undefined };
-
-export type BreadcrumbProps = { isShowAuthor: boolean };
-
-export type CircleDividerProps = ClassNameProps;
-
-export type EffectRecordProps = RecordProps<Effect>;
-export type ItemRecordProps = RecordProps<Item>;
-export type TraitRecordProps = RecordProps<Trait>;
-export type RumorRecordProps = RecordProps<Rumor>;
-
-export type FilterControlProps = {
-	page: number;
-	totalPage: number;
-	totalRecord: number;
-} & PageNameProps &
-	IsPaginateOnlyProps;
-
-export type SortControlProps = PageNameProps & IsPaginateOnlyProps;
-
-export type ColorFilterProps = PageNameProps;
-export type CategoryFilterProps = PageNameProps;
-export type RecipeTypeFilterProps = PageNameProps;
-export type RumorTypeFilterProps = PageNameProps;
-
-export type PaginateProps = { page: number; totalPage: number };
-export type GoToPageSelectProps = { totalPage: number };
-
-export type ResetFilterProps = IsPaginateOnlyProps;
-export type RecordFieldWithHyperLinkProps = { inputArr: string[]; label: string } & ClassNameProps;
-export type KeyContentPartProps = { input: string; showLabel?: boolean; pathToKey?: string };
-
-export type ColorProps = { color: COLOR };
-export type RecipeTypeProps = { recipeType: RECIPE_TYPE };
-export type DescriptionProps = { description: ITEM_DESCRIPTION };
-export type LevelProps = { level: number };
-export type CategoryProps = { category: CATEGORY };
-export type TraitPresentProps = { traitPresent: HYPER_LINK };
-export type RelatedCategoriesProps = { relatedCategories: RELATED_CATEGORY[] };
-
-export type LocationProps = { location: string };
-export type PriceProps = { price: number };
-export type RumorTypeProps = { rumorType: RUMOR_TYPE };
-
 export type DefaultLayoutProps = ChildrenProps & PageNameProps;
-
 export type ErrorResultProps = {
 	isError: boolean;
 	errorData: Maybe<DefaultErrorData>;
 	errorMessage: string | undefined;
 };
-
-export type DetailLayoutProps = DefaultLayoutProps & { extraHead?: ReactNode } & ErrorResultProps;
-export type ListLayoutProps = DefaultLayoutProps &
-	ErrorResultProps &
-	Omit<FilterControlProps, 'pageName' | 'isPaginateOnly'> &
-	IsSuccessProps;
-export type RootLayoutProps = ChildrenProps;
-
-export type PageTitleProps = PageNameProps;
-
-export type RecordWrapperProps = ChildrenProps & ClassNameProps & Partial<ColorProps> & IsSuccessProps;
-export type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pathname: string } & PageNameProps;
-
-export type ScrollToTopProps = { isShow: boolean; scrollPosition: number } & RefProps<HTMLDivElement>;
-
-export type ScrollWrapperProps = ChildrenProps & ClassNameProps & { enableScrollTop?: boolean };
-
-export type RecordPlaceHolderProps = FetchStateProps & Partial<ColorProps>;
-export type ListPlaceHolderProps = FetchStateProps;
-export type FilterControlPlaceHolderProps = FetchStateProps & IsPaginateOnlyProps;
-
-export type CategoriesProps = { categories: CATEGORY[] };
-export type ItemPresentProps = { itemPresent: HYPER_LINK };
-
-export type TraitMergeListProps = { mergeFrom: MERGE_TRAIT[] };
-
-export type SelectOptionProps<V> = {
-	value: SelectOptionItem<V>;
-	list: SelectOptionItem<V>[];
-	setValue: SetSelectOptionItem<V>;
-	withIcon?: boolean;
-	useCustomIcon?: boolean;
-	useAtelierFont?: boolean;
-} & ClassNameProps;
-
-export type ErrorModalProps = ErrorResultProps;

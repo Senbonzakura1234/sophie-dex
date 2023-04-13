@@ -1,8 +1,10 @@
-import type { TraitMergeListProps } from '@root/types/common/props';
+import type { MERGE_TRAIT } from '@prisma/client';
 import clsx from 'clsx';
 import Link from 'next/link';
 import type { FC } from 'react';
 import { Fragment } from 'react';
+
+type TraitMergeListProps = { mergeFrom: MERGE_TRAIT[] };
 
 const TraitMergeList: FC<TraitMergeListProps> = ({ mergeFrom }) => (
 	<nav className='relative z-50 flex flex-wrap gap-2'>

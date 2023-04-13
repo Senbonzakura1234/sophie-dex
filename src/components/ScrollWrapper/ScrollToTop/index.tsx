@@ -1,9 +1,11 @@
 import { ArrowUpOnSquareIcon } from '@heroicons/react/24/solid';
 import { getFramerFadeUp } from '@root/animations';
-import type { ScrollToTopProps } from '@root/types/common/props';
+import type { RefProps } from '@root/types/common/props';
 import { AnimatePresence, domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import type { FC } from 'react';
 import { useCallback, useState } from 'react';
+
+type ScrollToTopProps = { isShow: boolean; scrollPosition: number } & RefProps<HTMLDivElement>;
 
 const ScrollToTop: FC<ScrollToTopProps> = ({ isShow, refObject: ref, scrollPosition }) => {
 	const [isScrolling, setIsScrolling] = useState(false);

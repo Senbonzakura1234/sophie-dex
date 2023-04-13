@@ -1,11 +1,13 @@
 import { getFramerFade, getFramerFadeUp } from '@root/animations';
-import type { ErrorModalProps } from '@root/types/common/props';
+import type { ErrorResultProps } from '@root/types/common/props';
 import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
 import clsx from 'clsx';
 import { AnimatePresence, domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import Link from 'next/link';
 import type { FC } from 'react';
 import { useMemo } from 'react';
+
+type ErrorModalProps = ErrorResultProps;
 
 const ErrorModal: FC<ErrorModalProps> = ({ isError, errorData, errorMessage }) => {
 	const { error, message }: { error: DefaultErrorData; message: string } = useMemo(

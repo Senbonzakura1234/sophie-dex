@@ -1,10 +1,12 @@
 import { Root, Scrollbar, Thumb, Viewport } from '@radix-ui/react-scroll-area';
-import type { ScrollWrapperProps } from '@root/types/common/props';
+import type { ChildrenProps, ClassNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import useScrollableRef from 'use-scrollable-ref';
 
 import ScrollToTop from './ScrollToTop';
+
+type ScrollWrapperProps = ChildrenProps & ClassNameProps & { enableScrollTop?: boolean };
 
 const ScrollWrapper: FC<ScrollWrapperProps> = ({ children, className, enableScrollTop }) => {
 	const { scrollableRef, scrollPosition, scrollableBottomReached, scrollHeight } = useScrollableRef({

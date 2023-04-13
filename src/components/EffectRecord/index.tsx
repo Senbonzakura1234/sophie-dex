@@ -1,8 +1,11 @@
+import type { Effect } from '@prisma/client';
 import RecordHead from '@root/components/RecordHead';
 import RecordWrapper from '@root/components/RecordWrapper';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
-import type { EffectRecordProps } from '@root/types/common/props';
+import type { RecordProps } from '@root/types/common/props';
 import type { FC } from 'react';
+
+type EffectRecordProps = RecordProps<Effect>;
 
 const EffectRecord: FC<EffectRecordProps> = ({ record }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();

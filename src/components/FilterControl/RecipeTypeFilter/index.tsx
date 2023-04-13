@@ -3,10 +3,12 @@ import SelectOption from '@root/components/SelectOption';
 import { recipeTypeDefaultSelect, recipeTypeSelectList } from '@root/components/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { RecipeTypeFilterProps } from '@root/types/common/props';
+import type { PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
+
+type RecipeTypeFilterProps = PageNameProps;
 
 const RecipeTypeFilter: FC<RecipeTypeFilterProps> = ({ pageName }) => {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();

@@ -3,10 +3,12 @@ import SelectOption from '@root/components/SelectOption';
 import { colorDefaultSelect, colorSelectList } from '@root/components/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { ColorFilterProps } from '@root/types/common/props';
+import type { PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
+
+type ColorFilterProps = PageNameProps;
 
 const ColorFilter: FC<ColorFilterProps> = ({ pageName }) => {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();

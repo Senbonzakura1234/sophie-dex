@@ -1,9 +1,10 @@
 import { env } from '@root/env/client.mjs';
-import type { KeyContentPartProps } from '@root/types/common/props';
 import { hyperLinkValidator, miscContentValidator } from '@root/types/common/zod';
 import Link from 'next/link';
 import type { FC } from 'react';
 import { Fragment, useMemo } from 'react';
+
+export type KeyContentPartProps = { input: string; showLabel?: boolean; pathToKey?: string };
 
 const KeyContentPart: FC<KeyContentPartProps> = ({ input, showLabel, pathToKey }) => {
 	const inputParse = useMemo(() => {
@@ -12,7 +13,7 @@ const KeyContentPart: FC<KeyContentPartProps> = ({ input, showLabel, pathToKey }
 		} catch (error) {
 			env.NEXT_PUBLIC_NODE_ENV === 'development' && console.log({ error, pathToKey });
 		}
-	}, [input]);
+	}, [input, pathToKey]);
 
 	const misc = useMemo(() => miscContentValidator.safeParse(inputParse), [inputParse]);
 

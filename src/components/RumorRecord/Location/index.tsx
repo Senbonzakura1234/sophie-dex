@@ -1,5 +1,6 @@
-import type { LocationProps } from '@root/types/common/props';
 import type { FC } from 'react';
+
+type LocationProps = { location: string };
 
 const Location: FC<LocationProps> = ({ location }) => {
 	return (
