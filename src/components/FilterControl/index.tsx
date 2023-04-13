@@ -2,7 +2,7 @@ import { getFramerFadeUp } from '@root/animations';
 import { defaultLimit } from '@root/constants';
 import type { FilterControlProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
+import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
@@ -31,7 +31,7 @@ const FilterControl: FC<FilterControlProps> = ({
 	);
 
 	return (
-		<>
+		<LazyMotion features={domAnimation} strict>
 			<motion.section
 				{...getFramerFadeUp(0, 10, 0.1)}
 				className={clsx({ hidden: isPaginateOnly }, 'container mx-auto max-2xl:px-4')}
@@ -81,7 +81,7 @@ const FilterControl: FC<FilterControlProps> = ({
 					<ResetFilter isPaginateOnly={isPaginateOnly} />
 				</nav>
 			</motion.section>
-		</>
+		</LazyMotion>
 	);
 };
 

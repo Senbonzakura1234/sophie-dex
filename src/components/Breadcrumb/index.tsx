@@ -4,7 +4,7 @@ import CircleDivider from '@root/components/CircleDivider';
 import { APP_AUTHOR, tableList } from '@root/constants';
 import type { BreadcrumbProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
+import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import type { FC } from 'react';
@@ -14,7 +14,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 	const { pathname } = useRouter();
 
 	return (
-		<>
+		<LazyMotion features={domAnimation} strict>
 			<motion.div className='flex w-full' {...getFramerFadeUp(0.2)}>
 				<nav className='card card-compact bg-base-100 shadow-primary mx-auto w-[17rem] max-w-full py-1 shadow-lg 2xl:w-2/5'>
 					<div className='breadcrumbs mx-auto text-xs font-extrabold 2xl:text-base'>
@@ -86,7 +86,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 					{APP_AUTHOR}
 				</Link>
 			</motion.div>
-		</>
+		</LazyMotion>
 	);
 };
 

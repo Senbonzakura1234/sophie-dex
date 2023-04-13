@@ -9,7 +9,7 @@ import type {
 } from '@root/types/common/props';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
+import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import type { FC } from 'react';
 
 export const hideCategoryOnTrait: Readonly<CATEGORY[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
@@ -134,21 +134,23 @@ export const recipeTypeSelectList = [
 ] satisfies SelectOptionItem<RECIPE_TYPE | null>[];
 
 export const RecordPlaceHolder: FC<RecordPlaceHolderProps> = ({ isSuccess, isError, color }) => (
-	<motion.div
-		{...getFramerFadeUp(0, 10, 0.1)}
-		className={clsx(
-			{
-				hidden: isSuccess || isError,
-				'to-base-100 shadow-primary': !color,
-				'to-blue-500 shadow-blue-500': color === 'BLUE',
-				'to-green-500 shadow-green-500': color === 'GREEN',
-				'to-red-500 shadow-red-500': color === 'RED',
-				'to-slate-500 shadow-slate-500': color === 'WHITE',
-				'to-yellow-400 shadow-yellow-400': color === 'YELLOW',
-			},
-			'card from-base-100 via-base-100 shadow-primary h-60 w-full animate-pulse bg-gradient-to-r shadow-lg',
-		)}
-	/>
+	<LazyMotion features={domAnimation} strict>
+		<motion.div
+			{...getFramerFadeUp(0, 10, 0.1)}
+			className={clsx(
+				{
+					hidden: isSuccess || isError,
+					'to-base-100 shadow-primary': !color,
+					'to-blue-500 shadow-blue-500': color === 'BLUE',
+					'to-green-500 shadow-green-500': color === 'GREEN',
+					'to-red-500 shadow-red-500': color === 'RED',
+					'to-slate-500 shadow-slate-500': color === 'WHITE',
+					'to-yellow-400 shadow-yellow-400': color === 'YELLOW',
+				},
+				'card from-base-100 via-base-100 shadow-primary h-60 w-full animate-pulse bg-gradient-to-r shadow-lg',
+			)}
+		/>
+	</LazyMotion>
 );
 
 export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ isSuccess, isError }) => (
@@ -162,7 +164,7 @@ export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ isSuccess, isError }
 );
 
 export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ isSuccess, isPaginateOnly, isError }) => (
-	<>
+	<LazyMotion features={domAnimation} strict>
 		<motion.div
 			{...getFramerFadeUp(0, 10, 0.1)}
 			className={clsx(
@@ -178,5 +180,5 @@ export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ is
 		>
 			<div className='card bg-base-100 shadow-primary h-[60px] w-full shadow-lg' />
 		</motion.div>
-	</>
+	</LazyMotion>
 );
