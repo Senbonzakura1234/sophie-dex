@@ -1,8 +1,15 @@
-import type { SearchInput } from '@root/types/common';
-import type { UseSearchInput } from '@root/types/common/hook';
+import type { SearchInput, SetSearchInput } from '@root/types/common';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { useSearchQuery } from './useSecuredRouter';
+
+type UseSearchInput = () => {
+	searchInput: string;
+	setSearchValue: SetSearchInput;
+	performSearch: () => void;
+	resetSearch: () => void;
+	isSearchValueValid: boolean;
+};
 
 export const useSearchInput: UseSearchInput = () => {
 	const { securedQuery, updateQuery } = useSearchQuery();
