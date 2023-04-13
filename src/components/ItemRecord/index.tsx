@@ -3,7 +3,6 @@ import RecordHead from '@root/components/RecordHead';
 import RecordWrapper from '@root/components/RecordWrapper';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { ItemRecordProps } from '@root/types/common/props';
-import clsx from 'clsx';
 import type { FC } from 'react';
 
 import Category from './Category';
@@ -14,52 +13,42 @@ import RecipeType from './RecipeType';
 import RelatedCategories from './RelatedCategories';
 import TraitPresent from './TraitPresent';
 
-const ItemRecord: FC<ItemRecordProps> = ({
-	record: {
-		name,
-		index,
-		id,
-		color,
-		relatedCategories,
-		level,
-		category,
-		recipeType,
-		description,
-		traitPresent,
-		recipeIdea,
-	},
-}) => {
+const ItemRecord: FC<ItemRecordProps> = ({ record }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 
 	return (
-		<RecordWrapper className={clsx({ hidden: !isReady })} color={color}>
-			<RecordHead
-				id={id}
-				isCurrentRecord={securedIdQuery.id === id}
-				name={name}
-				pathname={pathname}
-				pageName='Item'
-			/>
+		<RecordWrapper isSuccess={!!record && isReady} color={record?.color}>
+			{record ? (
+				<>
+					<RecordHead
+						id={record.id}
+						isCurrentRecord={securedIdQuery.id === record.id}
+						name={record.name}
+						pathname={pathname}
+						pageName='Item'
+					/>
 
-			<Level level={level} />
+					<Level level={record.level} />
 
-			<div className='text-sm'>index: {index}</div>
+					<div className='text-sm'>index: {record.index}</div>
 
-			{recipeType ? <RecipeType recipeType={recipeType} /> : null}
+					{record.recipeType ? <RecipeType recipeType={record.recipeType} /> : null}
 
-			<Category category={category} />
+					<Category category={record.category} />
 
-			<Color color={color} />
+					<Color color={record.color} />
 
-			{recipeIdea ? (
-				<RecordFieldWithHyperLink inputArr={recipeIdea} label='Idea' className='sm:max-w-[50%]' />
+					{record.recipeIdea ? (
+						<RecordFieldWithHyperLink inputArr={record.recipeIdea} label='Idea' className='sm:max-w-[50%]' />
+					) : null}
+
+					{record.description ? <Description description={record.description} /> : null}
+
+					{record.traitPresent ? <TraitPresent traitPresent={record.traitPresent} /> : null}
+
+					<RelatedCategories relatedCategories={record.relatedCategories} />
+				</>
 			) : null}
-
-			{description ? <Description description={description} /> : null}
-
-			{traitPresent ? <TraitPresent traitPresent={traitPresent} /> : null}
-
-			<RelatedCategories relatedCategories={relatedCategories} />
 		</RecordWrapper>
 	);
 };

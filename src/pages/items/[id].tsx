@@ -17,7 +17,6 @@ const ItemDetail: NextPage = () => {
 	return (
 		<DetailLayout
 			isError={isError}
-			isSuccess={!isLoading && isSuccess}
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Item'
@@ -41,7 +40,7 @@ const ItemDetail: NextPage = () => {
 				) : null
 			}
 		>
-			{!isLoading && isSuccess && <ItemRecord record={data} />}
+			<ItemRecord record={data} />
 		</DetailLayout>
 	);
 };

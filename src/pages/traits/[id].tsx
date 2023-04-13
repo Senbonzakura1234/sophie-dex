@@ -16,7 +16,6 @@ const TraitDetail: NextPage = () => {
 	return (
 		<DetailLayout
 			isError={isError}
-			isSuccess={!isLoading && isSuccess}
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Trait'
@@ -29,7 +28,7 @@ const TraitDetail: NextPage = () => {
 				) : null
 			}
 		>
-			{!isLoading && isSuccess && <TraitRecord record={data} />}
+			<TraitRecord record={data} />
 		</DetailLayout>
 	);
 };

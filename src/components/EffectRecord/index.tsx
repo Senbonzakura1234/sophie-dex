@@ -2,25 +2,28 @@ import RecordHead from '@root/components/RecordHead';
 import RecordWrapper from '@root/components/RecordWrapper';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { EffectRecordProps } from '@root/types/common/props';
-import clsx from 'clsx';
 import type { FC } from 'react';
 
-const EffectRecord: FC<EffectRecordProps> = ({ record: { name, description, index, id } }) => {
+const EffectRecord: FC<EffectRecordProps> = ({ record }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 
 	return (
-		<RecordWrapper className={clsx({ hidden: !isReady })}>
-			<RecordHead
-				id={id}
-				isCurrentRecord={securedIdQuery.id === id}
-				name={name}
-				pathname={pathname}
-				pageName='Effect'
-			/>
+		<RecordWrapper isSuccess={!!record && isReady}>
+			{record ? (
+				<>
+					<RecordHead
+						id={record.id}
+						isCurrentRecord={securedIdQuery.id === record.id}
+						name={record.name}
+						pathname={pathname}
+						pageName='Effect'
+					/>
 
-			<div className='text-sm'>index: {index}</div>
+					<div className='text-sm'>index: {record.index}</div>
 
-			<p className='text-lg'>{description}</p>
+					<p className='text-lg'>{record.description}</p>
+				</>
+			) : null}
 		</RecordWrapper>
 	);
 };

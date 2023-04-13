@@ -1,15 +1,16 @@
+import { env } from '@root/env/client.mjs';
 import type { KeyContentPartProps } from '@root/types/common/props';
 import { hyperLinkValidator, miscContentValidator } from '@root/types/common/zod';
 import Link from 'next/link';
 import type { FC } from 'react';
 import { Fragment, useMemo } from 'react';
 
-const KeyContentPart: FC<KeyContentPartProps> = ({ input, showLabel }) => {
+const KeyContentPart: FC<KeyContentPartProps> = ({ input, showLabel, pathToKey }) => {
 	const inputParse = useMemo(() => {
 		try {
 			return JSON.parse(input);
 		} catch (error) {
-			console.log({ error });
+			env.NEXT_PUBLIC_NODE_ENV === 'development' && console.log({ error, pathToKey });
 		}
 	}, [input]);
 

@@ -8,7 +8,11 @@ const RecordFieldWithHyperLink: FC<RecordFieldWithHyperLinkProps> = ({ inputArr,
 	const processedIdea: ReactNode[] = useMemo(
 		() =>
 			inputArr.map((input, index) =>
-				index % 2 === 0 ? input : <KeyContentPart key={index} input={input} showLabel />,
+				index % 2 === 0 ? (
+					input
+				) : (
+					<KeyContentPart key={index} input={input} showLabel pathToKey='RecordFieldWithHyperLink' />
+				),
 			),
 		[inputArr],
 	);

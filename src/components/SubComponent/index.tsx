@@ -136,7 +136,7 @@ export const recipeTypeSelectList = [
 export const RecordPlaceHolder: FC<RecordPlaceHolderProps> = ({ isSuccess, isError, color }) => (
 	<LazyMotion features={domAnimation} strict>
 		<motion.div
-			{...getFramerFadeUp(0, 10)}
+			{...getFramerFadeUp()}
 			className={clsx(
 				{
 					hidden: isSuccess || isError,
@@ -166,7 +166,7 @@ export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ isSuccess, isError }
 export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ isSuccess, isPaginateOnly, isError }) => (
 	<LazyMotion features={domAnimation} strict>
 		<motion.div
-			{...getFramerFadeUp(0, 10)}
+			{...getFramerFadeUp()}
 			className={clsx(
 				{ hidden: isSuccess || isError || isPaginateOnly },
 				'container mx-auto w-full animate-pulse max-2xl:px-4',
@@ -175,7 +175,7 @@ export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ is
 			<div className='card bg-base-100 shadow-primary ml-auto h-[50px] w-full rounded-full shadow-lg md:w-1/4 md:min-w-[300px]'></div>
 		</motion.div>
 		<motion.div
-			{...getFramerFadeUp(0, 10)}
+			{...getFramerFadeUp()}
 			className={clsx({ hidden: isSuccess || isError }, 'container mx-auto w-full animate-pulse max-2xl:px-4')}
 		>
 			<div className='card bg-base-100 shadow-primary h-[60px] w-full shadow-lg' />

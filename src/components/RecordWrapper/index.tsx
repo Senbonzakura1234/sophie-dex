@@ -1,13 +1,13 @@
 import { getFramerFadeUp } from '@root/animations';
 import type { RecordWrapperProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
+import { AnimatePresence, domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import type { FC } from 'react';
 
-const RecordWrapper: FC<RecordWrapperProps> = ({ children, className, color }) => (
+const RecordWrapper: FC<RecordWrapperProps> = ({ children, className, color, isSuccess }) => (
 	<LazyMotion features={domAnimation} strict>
 		<motion.article
-			{...getFramerFadeUp(0, 10)}
+			{...getFramerFadeUp()}
 			className={clsx(
 				{
 					'shadow-primary to-base-100': !color,
@@ -21,7 +21,15 @@ const RecordWrapper: FC<RecordWrapperProps> = ({ children, className, color }) =
 				'card from-base-100 via-base-100 relative grid w-full grow-0 bg-gradient-to-r shadow-lg',
 			)}
 		>
-			<div className='card-body flex flex-col gap-3'>{children}</div>
+			<AnimatePresence>
+				{isSuccess ? (
+					<motion.div {...getFramerFadeUp()} className='card-body flex flex-col gap-3'>
+						{children}
+					</motion.div>
+				) : (
+					<motion.div {...getFramerFadeUp()} className='card-body flex h-60 animate-pulse' />
+				)}
+			</AnimatePresence>
 		</motion.article>
 	</LazyMotion>
 );

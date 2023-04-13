@@ -16,7 +16,6 @@ const RumorDetail: NextPage = () => {
 	return (
 		<DetailLayout
 			isError={isError}
-			isSuccess={!isLoading && isSuccess}
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Rumor'
@@ -28,7 +27,7 @@ const RumorDetail: NextPage = () => {
 				) : null
 			}
 		>
-			{!isLoading && isSuccess && <RumorRecord record={data} />}
+			<RumorRecord record={data} />
 		</DetailLayout>
 	);
 };

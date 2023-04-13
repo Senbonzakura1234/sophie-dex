@@ -16,7 +16,6 @@ const EffectDetail: NextPage = () => {
 	return (
 		<DetailLayout
 			isError={isError}
-			isSuccess={!isLoading && isSuccess}
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Effect'
@@ -29,7 +28,7 @@ const EffectDetail: NextPage = () => {
 				) : null
 			}
 		>
-			{!isLoading && isSuccess && <EffectRecord record={data} />}
+			<EffectRecord record={data} />
 		</DetailLayout>
 	);
 };

@@ -27,7 +27,7 @@ export type IsErrorProps = { isError: boolean };
 export type FetchStateProps = IsErrorProps & IsSuccessProps;
 export type IsPaginateOnlyProps = { isPaginateOnly?: boolean };
 
-export type RecordProps<T> = { record: T };
+export type RecordProps<T> = { record: T | undefined };
 
 export type FadeWrapperProps = { children: ReactNode; show?: boolean; appear?: boolean; isTransForm?: boolean };
 
@@ -59,7 +59,7 @@ export type GoToPageSelectProps = { totalPage: number };
 
 export type ResetFilterProps = IsPaginateOnlyProps;
 export type RecordFieldWithHyperLinkProps = { inputArr: string[]; label: string } & ClassNameProps;
-export type KeyContentPartProps = { input: string; showLabel?: boolean };
+export type KeyContentPartProps = { input: string; showLabel?: boolean; pathToKey?: string };
 
 export type ColorProps = { color: COLOR };
 export type RecipeTypeProps = { recipeType: RECIPE_TYPE };
@@ -81,7 +81,7 @@ export type ErrorResultProps = {
 	errorMessage: string | undefined;
 };
 
-export type DetailLayoutProps = DefaultLayoutProps & { extraHead?: ReactNode } & ErrorResultProps & IsSuccessProps;
+export type DetailLayoutProps = DefaultLayoutProps & { extraHead?: ReactNode } & ErrorResultProps;
 export type ListLayoutProps = DefaultLayoutProps &
 	ErrorResultProps &
 	Omit<FilterControlProps, 'pageName' | 'isPaginateOnly'> &
@@ -90,7 +90,7 @@ export type RootLayoutProps = ChildrenProps;
 
 export type PageTitleProps = PageNameProps;
 
-export type RecordWrapperProps = ChildrenProps & ClassNameProps & Partial<ColorProps>;
+export type RecordWrapperProps = ChildrenProps & ClassNameProps & Partial<ColorProps> & IsSuccessProps;
 export type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pathname: string } & PageNameProps;
 
 export type ScrollToTopProps = { isShow: boolean; scrollPosition: number } & RefProps<HTMLDivElement>;

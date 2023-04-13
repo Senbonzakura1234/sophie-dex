@@ -3,33 +3,36 @@ import RecordHead from '@root/components/RecordHead';
 import RecordWrapper from '@root/components/RecordWrapper';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { RumorRecordProps } from '@root/types/common/props';
-import clsx from 'clsx';
 import type { FC } from 'react';
 
 import Location from './Location';
 import Price from './Price';
 import RumorType from './RumorType';
 
-const RumorRecord: FC<RumorRecordProps> = ({ record: { name, id, description, location, price, rumorType } }) => {
+const RumorRecord: FC<RumorRecordProps> = ({ record }) => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 
 	return (
-		<RecordWrapper className={clsx({ hidden: !isReady })}>
-			<RecordHead
-				id={id}
-				isCurrentRecord={securedIdQuery.id === id}
-				name={name}
-				pathname={pathname}
-				pageName='Rumor'
-			/>
+		<RecordWrapper isSuccess={!!record && isReady}>
+			{record ? (
+				<>
+					<RecordHead
+						id={record.id}
+						isCurrentRecord={securedIdQuery.id === record.id}
+						name={record.name}
+						pathname={pathname}
+						pageName='Rumor'
+					/>
 
-			<Price price={price} />
+					<Price price={record.price} />
 
-			<RecordFieldWithHyperLink inputArr={description} label='Description' />
+					<RecordFieldWithHyperLink inputArr={record.description} label='Description' />
 
-			<Location location={location} />
+					<Location location={record.location} />
 
-			<RumorType rumorType={rumorType} />
+					<RumorType rumorType={record.rumorType} />
+				</>
+			) : null}
 		</RecordWrapper>
 	);
 };
