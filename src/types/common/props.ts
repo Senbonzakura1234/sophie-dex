@@ -12,6 +12,11 @@ export type IsSuccessProps = { isSuccess: boolean };
 export type IsErrorProps = { isError: boolean };
 export type FetchStateProps = IsErrorProps & IsSuccessProps;
 export type IsPaginateOnlyProps = { isPaginateOnly?: boolean };
+export type PageControlProps = {
+	page: number;
+	totalPage: number;
+	totalRecord: number;
+};
 
 export type RecordProps<T> = { record: T | undefined };
 export type DefaultLayoutProps = ChildrenProps & PageNameProps;

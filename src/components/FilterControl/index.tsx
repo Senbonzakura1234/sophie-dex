@@ -1,6 +1,6 @@
 import { getFramerInViewFadeUp } from '@root/animations';
 import { defaultLimit } from '@root/constants';
-import type { IsPaginateOnlyProps, PageNameProps } from '@root/types/common/props';
+import type { IsPaginateOnlyProps, PageControlProps, PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import type { FC } from 'react';
@@ -15,12 +15,7 @@ import RumorTypeFilter from './RumorTypeFilter';
 import SearchInput from './SearchInput';
 import SortControl from './SortControl';
 
-export type FilterControlProps = {
-	page: number;
-	totalPage: number;
-	totalRecord: number;
-} & PageNameProps &
-	IsPaginateOnlyProps;
+type FilterControlProps = PageControlProps & PageNameProps & IsPaginateOnlyProps;
 
 const FilterControl: FC<FilterControlProps> = ({
 	page = 1,

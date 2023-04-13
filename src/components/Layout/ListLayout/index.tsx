@@ -1,17 +1,13 @@
 import ErrorModal from '@root/components/ErrorModal';
-import type { FilterControlProps } from '@root/components/FilterControl';
 import FilterControl from '@root/components/FilterControl';
 import PageFooter from '@root/components/PageFooter';
 import PageTitle from '@root/components/PageTitle';
 import { FilterControlPlaceHolder, ListPlaceHolder } from '@root/components/SubComponent';
-import type { DefaultLayoutProps, ErrorResultProps, IsSuccessProps } from '@root/types/common/props';
+import type { DefaultLayoutProps, ErrorResultProps, IsSuccessProps, PageControlProps } from '@root/types/common/props';
 import Head from 'next/head';
 import type { FC } from 'react';
 
-type ListLayoutProps = DefaultLayoutProps &
-	ErrorResultProps &
-	Omit<FilterControlProps, 'pageName' | 'isPaginateOnly'> &
-	IsSuccessProps;
+type ListLayoutProps = DefaultLayoutProps & ErrorResultProps & PageControlProps & IsSuccessProps;
 
 const ListLayout: FC<ListLayoutProps> = ({
 	pageName,
