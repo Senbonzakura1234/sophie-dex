@@ -2,7 +2,8 @@ import ErrorModal from '@root/components/ErrorModal';
 import FilterControl from '@root/components/FilterControl';
 import PageFooter from '@root/components/PageFooter';
 import PageTitle from '@root/components/PageTitle';
-import { FilterControlPlaceHolder, ListPlaceHolder } from '@root/components/SubComponent';
+import SearchControl from '@root/components/SearchControl';
+import { ListPlaceHolder } from '@root/components/SubComponent';
 import type { DefaultLayoutProps, ErrorResultProps, IsSuccessProps, PageControlProps } from '@root/types/common/props';
 import Head from 'next/head';
 import type { FC } from 'react';
@@ -28,26 +29,29 @@ const ListLayout: FC<ListLayoutProps> = ({
 
 		<PageTitle pageName={pageName} />
 
-		<FilterControlPlaceHolder isSuccess={isSuccess} isError={isError} />
+		<SearchControl isSuccess={isSuccess} />
 
-		{isSuccess && <FilterControl pageName={pageName} page={page} totalPage={totalPage} totalRecord={totalRecord} />}
+		<FilterControl
+			pageName={pageName}
+			page={page}
+			totalPage={totalPage}
+			totalRecord={totalRecord}
+			isSuccess={isSuccess}
+		/>
 
 		<section className='container mx-auto grid grow gap-6 max-2xl:px-4 2xl:grid-cols-2'>
 			<ListPlaceHolder isSuccess={isSuccess} isError={isError} />
 			{children}
 		</section>
 
-		<FilterControlPlaceHolder isSuccess={isSuccess} isPaginateOnly isError={isError} />
-
-		{isSuccess && (
-			<FilterControl
-				pageName={pageName}
-				page={page}
-				totalPage={totalPage}
-				totalRecord={totalRecord}
-				isPaginateOnly
-			/>
-		)}
+		<FilterControl
+			pageName={pageName}
+			page={page}
+			totalPage={totalPage}
+			totalRecord={totalRecord}
+			isSuccess={isSuccess}
+			isBottomFilter
+		/>
 
 		<PageFooter />
 

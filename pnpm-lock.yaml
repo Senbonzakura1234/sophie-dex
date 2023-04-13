@@ -58,9 +58,6 @@ dependencies:
   superjson:
     specifier: 1.9.1
     version: 1.9.1
-  use-scrollable-ref:
-    specifier: ^1.0.2
-    version: 1.0.2(react-dom@18.2.0)(react@18.2.0)
   zod:
     specifier: ^3.20.2
     version: 3.20.2
@@ -3670,7 +3667,7 @@ packages:
     dependencies:
       universalify: 2.0.0
     optionalDependencies:
-      graceful-fs: registry.npmjs.org/graceful-fs@4.2.10
+      graceful-fs: registry.npmjs.org/graceful-fs@4.2.11
     dev: false
 
   /jsonpointer@5.0.1:
@@ -5075,16 +5072,6 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.1.1
-
-  /use-scrollable-ref@1.0.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-zTa30hE2v+qMULZDJWITGP/No/56Q1uwKfPYiaGHga5fA13H9O67F0FS3jqavYSX++pofc7TpWl+U8FaGHHxFQ==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
 
   /use-sync-external-store@1.2.0(react@18.2.0):
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
@@ -6612,18 +6599,11 @@ packages:
     version: 11.12.0
     engines: {node: '>=4'}
 
-  registry.npmjs.org/graceful-fs@4.2.10:
-    resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.10.tgz}
-    name: graceful-fs
-    version: 4.2.10
-    requiresBuild: true
-    dev: false
-    optional: true
-
   registry.npmjs.org/graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz}
     name: graceful-fs
     version: 4.2.11
+    requiresBuild: true
     dev: false
 
   registry.npmjs.org/has-flag@3.0.0:

@@ -7,7 +7,7 @@ const SearchInput: FC = () => {
 	const { performSearch, searchInput, setSearchValue, isSearchValueValid, resetSearch } = useSearchInput();
 
 	return (
-		<div className='card bg-base-100 shadow-primary relative ml-auto flex w-full flex-row gap-3 rounded-full py-[9px] px-5 shadow-lg md:w-1/4 md:min-w-[300px]'>
+		<>
 			<input
 				value={searchInput}
 				onChange={e => setSearchValue(() => e.target.value)}
@@ -40,7 +40,7 @@ const SearchInput: FC = () => {
 			>
 				<MagnifyingGlassIcon width={22} height={22} />
 			</button>
-		</div>
+		</>
 	);
 };
 

@@ -1,27 +1,28 @@
-import { getFramerInViewFadeUp } from '@root/animations';
+import { getFramerFadeUp, getFramerInViewFadeUp } from '@root/animations';
 import { defaultLimit } from '@root/constants';
-import type { IsPaginateOnlyProps, PageControlProps, PageNameProps } from '@root/types/common/props';
+import type { IsBottomFilterProps, IsSuccessProps, PageControlProps, PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
+import AnimationWrapper from '../AnimationWrapper';
 import CategoryFilter from './CategoryFilter';
 import ColorFilter from './ColorFilter';
 import Paginate from './Paginate';
 import RecipeTypeFilter from './RecipeTypeFilter';
 import ResetFilter from './ResetFilter';
 import RumorTypeFilter from './RumorTypeFilter';
-import SearchInput from './SearchInput';
 import SortControl from './SortControl';
 
-type FilterControlProps = PageControlProps & PageNameProps & IsPaginateOnlyProps;
+type FilterControlProps = PageControlProps & PageNameProps & IsBottomFilterProps & IsSuccessProps;
 
 const FilterControl: FC<FilterControlProps> = ({
 	page = 1,
 	totalPage = 0,
 	totalRecord = 0,
-	isPaginateOnly,
+	isBottomFilter,
+	isSuccess,
 	pageName,
 }) => {
 	const { from, to } = useMemo(
@@ -33,57 +34,52 @@ const FilterControl: FC<FilterControlProps> = ({
 	);
 
 	return (
-		<LazyMotion features={domAnimation} strict>
-			<motion.section
-				{...getFramerInViewFadeUp()}
-				className={clsx({ hidden: isPaginateOnly }, 'container mx-auto max-2xl:px-4')}
-			>
-				<SearchInput />
-			</motion.section>
-
-			<motion.section
-				{...getFramerInViewFadeUp()}
-				className={clsx({ '!z-30': isPaginateOnly }, 'container relative z-40 mx-auto max-2xl:px-4')}
-			>
-				<nav
-					className={clsx(
-						{
-							'2xl:place-content-end': !isPaginateOnly,
-							'place-content-center': isPaginateOnly,
-						},
-						'card bg-base-100 shadow-primary flex w-full flex-row flex-wrap gap-3 py-3 px-5 shadow-lg',
-					)}
-				>
-					<h2
+		<section className={clsx({ '!z-30': isBottomFilter }, 'container relative z-40 mx-auto max-2xl:px-4')}>
+			<LazyMotion features={domAnimation} strict>
+				<motion.nav {...getFramerInViewFadeUp()} className='card bg-base-100 shadow-primary shadow-lg'>
+					<AnimationWrapper
+						show={isSuccess}
+						options={getFramerFadeUp(0, 10)}
 						className={clsx(
 							{
-								'max-2xl:block': !isPaginateOnly,
+								'2xl:place-content-end': !isBottomFilter,
+								'place-content-center': isBottomFilter,
 							},
-							'hidden font-extrabold',
+							'flex w-full flex-row flex-wrap gap-3 py-3 px-5',
 						)}
+						placeholder={<motion.div {...getFramerFadeUp(0, 10)} className='h-[60px] w-full animate-pulse' />}
 					>
-						Filter Control:
-					</h2>
+						<h2
+							className={clsx(
+								{
+									'max-2xl:block': !isBottomFilter,
+								},
+								'hidden font-extrabold',
+							)}
+						>
+							Filter Control:
+						</h2>
 
-					<SortControl pageName={pageName} isPaginateOnly={isPaginateOnly} />
+						<SortControl pageName={pageName} isBottomFilter={isBottomFilter} />
 
-					<div className={clsx({ hidden: isPaginateOnly }, 'flex flex-wrap gap-2')}>
-						<RecipeTypeFilter pageName={pageName} />
-						<ColorFilter pageName={pageName} />
-						<CategoryFilter pageName={pageName} />
-						<RumorTypeFilter pageName={pageName} />
-					</div>
+						<div className={clsx({ hidden: isBottomFilter }, 'flex flex-wrap gap-2')}>
+							<RecipeTypeFilter pageName={pageName} />
+							<ColorFilter pageName={pageName} />
+							<CategoryFilter pageName={pageName} />
+							<RumorTypeFilter pageName={pageName} />
+						</div>
 
-					<div className={clsx({ hidden: isPaginateOnly }, 'text-neutral my-auto text-xs font-semibold')}>
-						{from} - {to} of {totalRecord} {pageName.toLocaleLowerCase()}s
-					</div>
+						<div className={clsx({ hidden: isBottomFilter }, 'text-neutral my-auto text-xs font-semibold')}>
+							{from} - {to} of {totalRecord} {pageName.toLocaleLowerCase()}s
+						</div>
 
-					<Paginate page={page} totalPage={totalPage} />
+						<Paginate page={page} totalPage={totalPage} />
 
-					<ResetFilter isPaginateOnly={isPaginateOnly} />
-				</nav>
-			</motion.section>
-		</LazyMotion>
+						<ResetFilter isBottomFilter={isBottomFilter} />
+					</AnimationWrapper>
+				</motion.nav>
+			</LazyMotion>
+		</section>
 	);
 };
 

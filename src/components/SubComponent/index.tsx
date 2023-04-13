@@ -1,15 +1,13 @@
 import type { CATEGORY, COLOR, RECIPE_TYPE, RUMOR_TYPE } from '@prisma/client';
-import { getFramerInViewFadeUp } from '@root/animations';
+import { getFramerFadeUp } from '@root/animations';
 import { defaultLimit } from '@root/constants';
 import type { SelectOptionItem } from '@root/types/common';
-import type { FetchStateProps, IsPaginateOnlyProps } from '@root/types/common/props';
+import type { FetchStateProps } from '@root/types/common/props';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 import clsx from 'clsx';
 import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import type { FC } from 'react';
 
-type FilterControlPlaceHolderProps = FetchStateProps & IsPaginateOnlyProps;
-type RecordPlaceHolderProps = FetchStateProps & { color?: COLOR };
 type ListPlaceHolderProps = FetchStateProps;
 
 export const hideCategoryOnTrait: Readonly<CATEGORY[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
@@ -133,52 +131,19 @@ export const recipeTypeSelectList = [
 	})),
 ] satisfies SelectOptionItem<RECIPE_TYPE | null>[];
 
-export const RecordPlaceHolder: FC<RecordPlaceHolderProps> = ({ isSuccess, isError, color }) => (
-	<LazyMotion features={domAnimation} strict>
-		<motion.div
-			{...getFramerInViewFadeUp()}
-			className={clsx(
-				{
-					hidden: isSuccess || isError,
-					'to-base-100 shadow-primary': !color,
-					'to-blue-500 shadow-blue-500': color === 'BLUE',
-					'to-green-500 shadow-green-500': color === 'GREEN',
-					'to-red-500 shadow-red-500': color === 'RED',
-					'to-slate-500 shadow-slate-500': color === 'WHITE',
-					'to-yellow-400 shadow-yellow-400': color === 'YELLOW',
-				},
-				'card from-base-100 via-base-100 shadow-primary h-60 w-full animate-pulse bg-gradient-to-r shadow-lg',
-			)}
-		/>
-	</LazyMotion>
-);
-
 export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ isSuccess, isError }) => (
-	<>
+	<LazyMotion features={domAnimation} strict>
 		{Array(defaultLimit)
 			.fill(0)
 			.map((_, k) => (
-				<RecordPlaceHolder key={k} isSuccess={isSuccess} isError={isError} />
+				<motion.div
+					key={k}
+					{...getFramerFadeUp()}
+					className={clsx(
+						{ hidden: isSuccess || isError },
+						'card from-base-100 via-base-100 shadow-primary to-base-100 h-60 w-full animate-pulse bg-gradient-to-r shadow-lg',
+					)}
+				/>
 			))}
-	</>
-);
-
-export const FilterControlPlaceHolder: FC<FilterControlPlaceHolderProps> = ({ isSuccess, isPaginateOnly, isError }) => (
-	<LazyMotion features={domAnimation} strict>
-		<motion.div
-			{...getFramerInViewFadeUp()}
-			className={clsx(
-				{ hidden: isSuccess || isError || isPaginateOnly },
-				'container mx-auto w-full animate-pulse max-2xl:px-4',
-			)}
-		>
-			<div className='card bg-base-100 shadow-primary ml-auto h-[50px] w-full rounded-full shadow-lg md:w-1/4 md:min-w-[300px]'></div>
-		</motion.div>
-		<motion.div
-			{...getFramerInViewFadeUp()}
-			className={clsx({ hidden: isSuccess || isError }, 'container mx-auto w-full animate-pulse max-2xl:px-4')}
-		>
-			<div className='card bg-base-100 shadow-primary h-[60px] w-full shadow-lg' />
-		</motion.div>
 	</LazyMotion>
 );

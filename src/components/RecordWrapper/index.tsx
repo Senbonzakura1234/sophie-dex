@@ -2,8 +2,10 @@ import type { COLOR } from '@prisma/client';
 import { getFramerInViewFadeUp } from '@root/animations';
 import type { ChildrenProps, ClassNameProps, IsSuccessProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import { AnimatePresence, domAnimation, LazyMotion, m as motion } from 'framer-motion';
+import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import type { FC } from 'react';
+
+import AnimationWrapper from '../AnimationWrapper';
 
 type RecordWrapperProps = ChildrenProps & ClassNameProps & { color?: COLOR } & IsSuccessProps;
 
@@ -24,15 +26,14 @@ const RecordWrapper: FC<RecordWrapperProps> = ({ children, className, color, isS
 				'card from-base-100 via-base-100 relative grid w-full grow-0 bg-gradient-to-r shadow-lg',
 			)}
 		>
-			<AnimatePresence>
-				{isSuccess ? (
-					<motion.div {...getFramerInViewFadeUp()} className='card-body flex flex-col gap-3'>
-						{children}
-					</motion.div>
-				) : (
-					<motion.div {...getFramerInViewFadeUp()} className='card-body flex h-60 animate-pulse' />
-				)}
-			</AnimatePresence>
+			<AnimationWrapper
+				show={isSuccess}
+				options={getFramerInViewFadeUp()}
+				className='card-body flex flex-col gap-3'
+				placeholder={<motion.div {...getFramerInViewFadeUp()} className='card-body flex h-60 animate-pulse' />}
+			>
+				{children}
+			</AnimationWrapper>
 		</motion.article>
 	</LazyMotion>
 );

@@ -11,7 +11,7 @@ export type PageNameProps = { pageName: PageName };
 export type IsSuccessProps = { isSuccess: boolean };
 export type IsErrorProps = { isError: boolean };
 export type FetchStateProps = IsErrorProps & IsSuccessProps;
-export type IsPaginateOnlyProps = { isPaginateOnly?: boolean };
+export type IsBottomFilterProps = { isBottomFilter?: boolean };
 export type PageControlProps = {
 	page: number;
 	totalPage: number;

@@ -1,12 +1,12 @@
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { IsPaginateOnlyProps } from '@root/types/common/props';
+import type { IsBottomFilterProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
-type ResetFilterProps = IsPaginateOnlyProps;
+type ResetFilterProps = IsBottomFilterProps;
 
-const ResetFilter: FC<ResetFilterProps> = ({ isPaginateOnly }) => {
+const ResetFilter: FC<ResetFilterProps> = ({ isBottomFilter: isBottomFilter }) => {
 	const { resetQuery, isReady, securedQuery } = useSearchQuery();
 
 	const isDisable = useMemo(
@@ -18,7 +18,7 @@ const ResetFilter: FC<ResetFilterProps> = ({ isPaginateOnly }) => {
 
 	return (
 		<button
-			className={clsx({ hidden: isPaginateOnly }, 'btn btn-xs my-auto gap-1 capitalize')}
+			className={clsx({ hidden: isBottomFilter }, 'btn btn-xs my-auto gap-1 capitalize')}
 			role='navigation'
 			disabled={isDisable}
 			onClick={() => !isDisable && resetQuery()}

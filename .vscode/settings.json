@@ -108,7 +108,7 @@
 			"overrides": "constant"
 		},
 		{
-			"extensions": ["animation", "animations"],
+			"extensions": ["AnimationWrapper"],
 			"format": "svg",
 			"icon": "theme",
 			"overrides": "constant"

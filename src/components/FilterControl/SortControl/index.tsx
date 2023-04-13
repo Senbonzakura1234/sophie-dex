@@ -1,12 +1,12 @@
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { IsPaginateOnlyProps, PageNameProps } from '@root/types/common/props';
+import type { IsBottomFilterProps, PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
-type SortControlProps = PageNameProps & IsPaginateOnlyProps;
+type SortControlProps = PageNameProps & IsBottomFilterProps;
 
-const SortControl: FC<SortControlProps> = ({ pageName, isPaginateOnly }) => {
+const SortControl: FC<SortControlProps> = ({ pageName, isBottomFilter: isBottomFilter }) => {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const { sortBy, direction } = useMemo(
@@ -19,7 +19,7 @@ const SortControl: FC<SortControlProps> = ({ pageName, isPaginateOnly }) => {
 
 	return (
 		<>
-			<div className={clsx({ hidden: isPaginateOnly }, 'my-auto flex w-full flex-wrap gap-2 2xl:w-auto')}>
+			<div className={clsx({ hidden: isBottomFilter }, 'my-auto flex w-full flex-wrap gap-2 2xl:w-auto')}>
 				<small className='my-auto text-sm font-bold'>Sort:</small>
 
 				<div className='input-group w-auto'>
@@ -100,7 +100,7 @@ const SortControl: FC<SortControlProps> = ({ pageName, isPaginateOnly }) => {
 				</div>
 			</div>
 
-			<div className={clsx({ hidden: isPaginateOnly }, 'my-auto flex w-full flex-wrap gap-2 2xl:w-auto')}>
+			<div className={clsx({ hidden: isBottomFilter }, 'my-auto flex w-full flex-wrap gap-2 2xl:w-auto')}>
 				<small className='my-auto text-sm font-bold'>Direction:</small>
 
 				<div className='input-group w-auto'>
