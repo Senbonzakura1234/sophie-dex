@@ -7,7 +7,7 @@ import type { FC } from 'react';
 const RecordWrapper: FC<RecordWrapperProps> = ({ children, className, color }) => (
 	<LazyMotion features={domAnimation} strict>
 		<motion.article
-			{...getFramerFadeUp(0, 10, 0.1)}
+			{...getFramerFadeUp(0, 10)}
 			className={clsx(
 				{
 					'shadow-primary to-base-100': !color,

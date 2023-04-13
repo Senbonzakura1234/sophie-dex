@@ -33,14 +33,14 @@ const FilterControl: FC<FilterControlProps> = ({
 	return (
 		<LazyMotion features={domAnimation} strict>
 			<motion.section
-				{...getFramerFadeUp(0, 10, 0.1)}
+				{...getFramerFadeUp(0, 10)}
 				className={clsx({ hidden: isPaginateOnly }, 'container mx-auto max-2xl:px-4')}
 			>
 				<SearchInput />
 			</motion.section>
 
 			<motion.section
-				{...getFramerFadeUp(0, 10, 0.1)}
+				{...getFramerFadeUp(0, 10)}
 				className={clsx({ '!z-30': isPaginateOnly }, 'container relative z-40 mx-auto max-2xl:px-4')}
 			>
 				<nav
