@@ -1,11 +1,10 @@
 import type { COLOR } from '@prisma/client';
 import { getFramerInViewFadeUp } from '@root/animations';
+import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { ChildrenProps, ClassNameProps, IsSuccessProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import type { FC } from 'react';
-
-import AnimationWrapper from '../AnimationWrapper';
 
 type RecordWrapperProps = ChildrenProps & ClassNameProps & { color?: COLOR } & IsSuccessProps;
 

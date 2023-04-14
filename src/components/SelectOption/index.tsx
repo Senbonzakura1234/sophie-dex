@@ -1,12 +1,11 @@
 import { Listbox } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/24/solid';
 import { getFramerFadeUp } from '@root/animations';
+import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
 import type { ClassNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { domAnimation, LazyMotion } from 'framer-motion';
-
-import AnimationWrapper from '../AnimationWrapper';
 
 type SelectOptionProps<V> = {
 	value: SelectOptionItem<V>;

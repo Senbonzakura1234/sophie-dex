@@ -1,9 +1,9 @@
 import { getFramerFadeUp, getFramerInViewFadeUp } from '@root/animations';
+import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { IsSuccessProps } from '@root/types/common/props';
 import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import type { FC } from 'react';
 
-import AnimationWrapper from '../AnimationWrapper';
 import SearchInput from './SearchInput';
 
 type SearchControlProps = IsSuccessProps;

@@ -1,4 +1,5 @@
 import { getFramerFade, getFramerFadeUp } from '@root/animations';
+import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { ErrorResultProps } from '@root/types/common/props';
 import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
 import clsx from 'clsx';
@@ -6,8 +7,6 @@ import { m as motion } from 'framer-motion';
 import Link from 'next/link';
 import type { FC } from 'react';
 import { useMemo } from 'react';
-
-import AnimationWrapper from '../AnimationWrapper';
 
 type ErrorModalProps = ErrorResultProps;
 

@@ -1,4 +1,5 @@
 import { getFramerFadeUp, getFramerInViewFadeUp } from '@root/animations';
+import AnimationWrapper from '@root/components/AnimationWrapper';
 import { defaultLimit } from '@root/constants';
 import type { IsBottomFilterProps, IsSuccessProps, PageControlProps, PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
@@ -6,7 +7,6 @@ import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
-import AnimationWrapper from '../AnimationWrapper';
 import CategoryFilter from './CategoryFilter';
 import ColorFilter from './ColorFilter';
 import Paginate from './Paginate';
