@@ -3,7 +3,7 @@ import AnimationWrapper from '@root/components/AnimationWrapper';
 import { defaultLimit } from '@root/constants';
 import type { IsBottomFilterProps, IsSuccessProps, PageControlProps, PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
+import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import type { FC } from 'react';
 import { useMemo } from 'react';
 
@@ -45,7 +45,7 @@ const FilterControl: FC<FilterControlProps> = ({
 								'2xl:place-content-end': !isBottomFilter,
 								'place-content-center': isBottomFilter,
 							},
-							'flex w-full flex-row flex-wrap gap-3 py-3 px-5',
+							'flex w-full flex-row flex-wrap gap-3 px-5 py-3',
 						)}
 						placeholder={<motion.div {...getFramerFadeUp(0, 10)} className='h-[60px] w-full animate-pulse' />}
 					>

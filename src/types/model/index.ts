@@ -78,7 +78,7 @@ export const relatedCategoryList = [
 	'MAGIC_ITEM',
 ] as const satisfies Readonly<RELATED_CATEGORY_ENUM[]>;
 
-export type RelatedCategoryDisplay = typeof RelatedCategoryDisplay[keyof typeof RelatedCategoryDisplay];
+export type RelatedCategoryDisplay = (typeof RelatedCategoryDisplay)[keyof typeof RelatedCategoryDisplay];
 
 export const categoryList = [
 	'ACCESSORY',

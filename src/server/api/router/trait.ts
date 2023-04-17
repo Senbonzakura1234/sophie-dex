@@ -3,7 +3,7 @@ import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';
-import { InvalidRecordIdError, onQueryDBError, RecordNotFoundError } from '@root/utils/server';
+import { InvalidRecordIdError, RecordNotFoundError, onQueryDBError } from '@root/utils/server';
 
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Trait>> => {

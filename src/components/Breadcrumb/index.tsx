@@ -3,7 +3,7 @@ import { getFramerInViewFadeUp } from '@root/animations';
 import CircleDivider from '@root/components/CircleDivider';
 import { APP_AUTHOR, tableList } from '@root/constants';
 import clsx from 'clsx';
-import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
+import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import type { FC } from 'react';

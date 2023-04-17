@@ -1,7 +1,7 @@
 import { getFramerFadeUp, getFramerInViewFadeUp } from '@root/animations';
 import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { IsSuccessProps } from '@root/types/common/props';
-import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
+import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import type { FC } from 'react';
 
 import SearchInput from './SearchInput';
@@ -17,7 +17,7 @@ const SearchControl: FC<SearchControlProps> = ({ isSuccess }) => (
 			>
 				<AnimationWrapper
 					show={isSuccess}
-					className='relative flex w-full flex-row gap-3 py-[9px] px-5'
+					className='relative flex w-full flex-row gap-3 px-5 py-[9px]'
 					options={getFramerFadeUp(0, 10)}
 					placeholder={<motion.div {...getFramerFadeUp(0, 10)} className='flex h-[50px] w-full animate-pulse' />}
 				>

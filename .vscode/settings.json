@@ -30,11 +30,10 @@
 	"editor.formatOnSave": true,
 	"editor.formatOnSaveMode": "file",
 	"editor.rulers": [120],
-	"eslint.alwaysShowStatus": true,
 	"eslint.codeActionsOnSave.mode": "all",
 	"eslint.format.enable": true,
 	"eslint.lintTask.enable": true,
-	"eslint.packageManager": "yarn",
+	"eslint.packageManager": "pnpm",
 	"files.associations": {
 		"*.eslintrc": "json",
 		"*.json": "json",

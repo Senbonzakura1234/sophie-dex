@@ -74,7 +74,7 @@ const SortControl: FC<SortControlProps> = ({ pageName, isBottomFilter: isBottomF
 								'btn-ghost border-accent': sortBy !== 'level',
 								hidden: pageName !== 'Item',
 							},
-							'btn btn-xs border-y-2 border-x-0 capitalize',
+							'btn btn-xs border-x-0 border-y-2 capitalize',
 						)}
 					>
 						Level

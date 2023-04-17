@@ -4,7 +4,7 @@ import topBg from '@root/assets/images/top.jpg';
 import Breadcrumb from '@root/components/Breadcrumb';
 import type { PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
+import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import Image from 'next/image';
 import type { FC } from 'react';
 

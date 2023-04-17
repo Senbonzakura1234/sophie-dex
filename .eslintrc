@@ -51,7 +51,7 @@
 			"parserOptions": {
 				"project": "./tsconfig.json"
 			},
-			"plugins": ["@typescript-eslint", "react", "import", "unused-imports", "tailwindcss", "simple-import-sort"],
+			"plugins": ["@typescript-eslint", "react", "import", "unused-imports", "tailwindcss"],
 			"rules": {
 				"@typescript-eslint/comma-dangle": "off",
 				"@typescript-eslint/consistent-type-imports": "warn",
@@ -88,8 +88,16 @@
 				"react/destructuring-assignment": "off",
 				"react/jsx-props-no-spreading": "off",
 				"react/require-default-props": "off",
-				"simple-import-sort/exports": "warn",
-				"simple-import-sort/imports": "warn",
+				"sort-imports": [
+					"warn",
+					{
+						"allowSeparatedGroups": true,
+						"ignoreCase": false,
+						"ignoreDeclarationSort": true,
+						"ignoreMemberSort": false,
+						"memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+					}
+				],
 				"tailwindcss/classnames-order": [
 					"warn",
 					{

@@ -5,7 +5,7 @@ import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
 import type { ClassNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import { domAnimation, LazyMotion } from 'framer-motion';
+import { LazyMotion, domAnimation } from 'framer-motion';
 
 type SelectOptionProps<V> = {
 	value: SelectOptionItem<V>;

@@ -5,7 +5,7 @@ import type { SelectOptionItem } from '@root/types/common';
 import type { FetchStateProps } from '@root/types/common/props';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 import clsx from 'clsx';
-import { domAnimation, LazyMotion, m as motion } from 'framer-motion';
+import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import type { FC } from 'react';
 
 type ListPlaceHolderProps = FetchStateProps;
