@@ -115,7 +115,7 @@ type ITEM_DESCRIPTION {
 
 generator client {
    provider        = "prisma-client-js"
-   previewFeatures = ["orderByNulls"]
+   previewFeatures = ["orderByNulls", "jsonProtocol"]
 }
 
 datasource db {

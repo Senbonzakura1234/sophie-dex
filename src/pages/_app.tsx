@@ -1,4 +1,5 @@
 import '@root/styles/globals.css';
+import '@total-typescript/ts-reset';
 
 import RootLayout from '@root/components/Layout/RootLayout';
 import { apiContext } from '@root/utils/trpc';
