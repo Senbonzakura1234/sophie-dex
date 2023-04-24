@@ -14,7 +14,7 @@ export const rumorRouter = router({
 		const OR: Prisma.RumorWhereInput[] | undefined = search
 			? [
 					{ name: { contains: search, mode: 'insensitive' } },
-					{ location: { contains: search, mode: 'insensitive' } },
+					{ keyWords: { contains: search, mode: 'insensitive' } },
 			  ]
 			: undefined;
 

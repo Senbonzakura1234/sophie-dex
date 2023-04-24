@@ -159,6 +159,7 @@ model Effect {
    index       Int
    name        String
    description String
+   keyWords    String
 }
 
 model Trait {
@@ -169,6 +170,7 @@ model Trait {
    categories  CATEGORY[]
    mergeFrom   MERGE_TRAIT[]
    itemPresent HYPER_LINK_RECORD?
+   keyWords    String
 }
 
 model Item {
@@ -183,6 +185,7 @@ model Item {
    recipeType        RECIPE_TYPE?
    recipeIdea        HYPER_LINK_MAP?
    traitPresent      HYPER_LINK_RECORD?
+   keyWords          String
 }
 
 model Rumor {
@@ -192,4 +195,5 @@ model Rumor {
    location    String
    price       Int
    rumorType   RUMOR_TYPE
+   keyWords    String
 }

@@ -15,6 +15,7 @@ export const effectRouter = router({
 			? [
 					{ name: { contains: search, mode: 'insensitive' } },
 					{ description: { contains: search, mode: 'insensitive' } },
+					{ keyWords: { contains: search, mode: 'insensitive' } },
 			  ]
 			: undefined;
 
