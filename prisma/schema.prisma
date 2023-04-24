@@ -165,15 +165,15 @@ type HYPER_LINK_RECORD {
 }
 
 enum SORT_BY {
-   INDEX
-   NAME
-   LEVEL
-   PRICE
+   index
+   name
+   level
+   price
 }
 
 enum SORT_DIRECTION {
-   ASC
-   DESC
+   asc
+   desc
 }
 
 type SEARCH_QUERY {

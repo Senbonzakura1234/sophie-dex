@@ -30,7 +30,7 @@ export const rumorRouter = router({
 				ctx.prisma.rumor.findMany({
 					where,
 					orderBy: {
-						[!!sortBy && sortBy !== 'INDEX' && sortBy !== 'LEVEL' ? sortBy : 'PRICE']: direction ?? 'ASC',
+						[!!sortBy && sortBy !== 'index' && sortBy !== 'level' ? sortBy : 'price']: direction ?? 'asc',
 					},
 					skip: (pageInt - 1) * defaultLimit,
 					take: defaultLimit,

@@ -36,7 +36,7 @@ export const itemRouter = router({
 				ctx.prisma.item.count({ where }),
 				ctx.prisma.item.findMany({
 					where,
-					orderBy: { [!!sortBy && sortBy !== 'PRICE' ? sortBy : 'INDEX']: direction ?? 'ASC' },
+					orderBy: { [!!sortBy && sortBy !== 'price' ? sortBy : 'index']: direction ?? 'asc' },
 					skip: (pageInt - 1) * defaultLimit,
 					take: defaultLimit,
 				}),

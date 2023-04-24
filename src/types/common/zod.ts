@@ -8,8 +8,8 @@ const genericStringSchema = z.string();
 const genericIdSchema = genericStringSchema.regex(idRegex);
 
 const searchSchema = genericStringSchema.nullish().catch(null).default(null);
-const sortBySchema = z.enum(['INDEX', 'NAME', 'LEVEL', 'PRICE']).nullish().catch(null).default(null);
-const directionSchema = z.enum(['ASC', 'DESC']).nullish().catch(null).default(null);
+const sortBySchema = z.enum(['index', 'name', 'level', 'price']).nullish().catch(null).default(null);
+const directionSchema = z.enum(['asc', 'desc']).nullish().catch(null).default(null);
 const relatedCategorySchema = z.enum(relatedCategoryList).nullish().catch(null).default(null);
 const categorySchema = z.enum(categoryList).nullish().catch(null).default(null);
 const colorSchema = z.enum(colorList).nullish().catch(null).default(null);
@@ -64,3 +64,14 @@ export const hyperLinkValidator = z.object({
 });
 
 export type HyperLink = z.infer<typeof hyperLinkValidator>;
+
+export const hyperLinkRecordValidator = z.object({
+	id: genericIdSchema,
+	name: genericStringSchema,
+	table: z.enum(tableList),
+});
+
+export const hyperLinkSearchValidator = z.object({
+	searchQuery: searchQueryValidator,
+	table: z.enum(tableList),
+});

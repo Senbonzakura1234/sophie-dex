@@ -1,11 +1,11 @@
 import type { Rumor } from '@prisma/client';
-import RecordFieldWithHyperLink from '@root/components/RecordFieldWithHyperLink';
 import RecordHead from '@root/components/RecordHead';
 import RecordWrapper from '@root/components/RecordWrapper';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { RecordProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
+import Description from './Description';
 import Location from './Location';
 import Price from './Price';
 import RumorType from './RumorType';
@@ -29,7 +29,7 @@ const RumorRecord: FC<RumorRecordProps> = ({ record }) => {
 
 					<Price price={record.price} />
 
-					<RecordFieldWithHyperLink inputArr={record.description} label='Description' />
+					<Description description={record.newDescription} />
 
 					<Location location={record.location} />
 
