@@ -194,7 +194,7 @@ type HYPER_LINK_SEARCH {
 }
 
 type HYPER_LINK_MAP {
-   contentText      String
+   contentText      String[]
    linkRecordMap    HYPER_LINK_RECORD[]
    linkSearchMap    HYPER_LINK_SEARCH[]
    highlightTextMap HIGHLIGHT_TEXT[]

@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 
 async function seed() {
 	const data: Rumor[] = rumors.map(({ description, ...rest }) => {
-		let contentText = '';
+		const contentText: string[] = [];
 		const linkRecordMap: HYPER_LINK_RECORD[] = [];
 		const linkSearchMap: HYPER_LINK_SEARCH[] = [];
 		const highlightTextMap: HIGHLIGHT_TEXT[] = [];
@@ -20,32 +20,32 @@ async function seed() {
 				if (resultLink.success) {
 					const res = resultLink.data;
 					if (res.meta.type === 'RECORD') {
+						contentText.push(`linkRecordMap-${linkRecordMap.length}`);
 						linkRecordMap.push({
 							id: res.meta.id,
 							name: res.meta.name,
 							table: res.table,
 						});
-						contentText += `@{linkRecordMap-${linkRecordMap.length - 1}}`;
 						return;
 					} else {
+						contentText.push(`linkSearchMap-${linkSearchMap.length}`);
 						linkSearchMap.push({
 							table: res.table,
 							searchQuery: res.meta.search,
 						});
-						contentText += `@{linkSearchMap-${linkRecordMap.length - 1}}`;
 						return;
 					}
 				}
 				const resultText = highlightTextValidator.safeParse(data);
 
 				if (resultText.success) {
+					contentText.push(`highlightTextMap-${highlightTextMap.length}`);
 					highlightTextMap.push(resultText.data);
-					contentText += `@{highlightTextMap-${highlightTextMap.length - 1}}`;
 					return;
 				}
-				contentText += element;
+				contentText.push(element);
 			} catch (error) {
-				contentText += element;
+				contentText.push(element);
 			}
 		});
 
