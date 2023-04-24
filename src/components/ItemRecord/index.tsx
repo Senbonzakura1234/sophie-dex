@@ -1,5 +1,4 @@
 import type { Item } from '@prisma/client';
-import RecordFieldWithHyperLink from '@root/components/RecordFieldWithHyperLink';
 import RecordHead from '@root/components/RecordHead';
 import RecordWrapper from '@root/components/RecordWrapper';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
@@ -10,6 +9,7 @@ import Category from './Category';
 import Color from './Color';
 import Description from './Description';
 import Level from './Level';
+import RecipeIdea from './RecipeIdea';
 import RecipeType from './RecipeType';
 import RelatedCategories from './RelatedCategories';
 import TraitPresent from './TraitPresent';
@@ -41,8 +41,8 @@ const ItemRecord: FC<ItemRecordProps> = ({ record }) => {
 
 					<Color color={record.color} />
 
-					{record.recipeIdea ? (
-						<RecordFieldWithHyperLink inputArr={record.recipeIdea} label='Idea' className='sm:max-w-[50%]' />
+					{record.newRecipeIdea ? (
+						<RecipeIdea recipeIdea={record.newRecipeIdea} className='sm:max-w-[50%]' />
 					) : null}
 
 					{record.description ? <Description description={record.description} /> : null}

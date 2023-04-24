@@ -109,10 +109,52 @@ type MERGE_TRAIT {
    consist HYPER_LINK[]
 }
 
+type HYPER_LINK_RECORD {
+   id    String @db.ObjectId
+   name  String
+   table TABLE
+}
+
+enum SORT_BY {
+   index
+   name
+   level
+   price
+}
+
+enum SORT_DIRECTION {
+   asc
+   desc
+}
+
+type SEARCH_QUERY {
+   search          String?
+   sortBy          SORT_BY?
+   direction       SORT_DIRECTION?
+   relatedCategory RELATED_CATEGORY_ENUM?
+   category        CATEGORY?
+   color           COLOR?
+   rumorType       RUMOR_TYPE?
+   recipeType      RECIPE_TYPE?
+   page            Int?
+}
+
+type HYPER_LINK_SEARCH {
+   searchQuery SEARCH_QUERY
+   table       TABLE
+}
+
+type HYPER_LINK_MAP {
+   contentText      String[]
+   linkRecordMap    HYPER_LINK_RECORD[]
+   linkSearchMap    HYPER_LINK_SEARCH[]
+   highlightTextMap HIGHLIGHT_TEXT[]
+}
+
 type ITEM_DESCRIPTION {
    hunt     String?
    location String?
-   rumor    String?
+   rumor    HYPER_LINK_RECORD?
    special  String?
    shop     String?
 }
@@ -156,48 +198,7 @@ model Item {
    recipeType        RECIPE_TYPE?
    recipeIdea        String[]
    traitPresent      HYPER_LINK?
-}
-
-type HYPER_LINK_RECORD {
-   id    String @db.ObjectId
-   name  String
-   table TABLE
-}
-
-enum SORT_BY {
-   index
-   name
-   level
-   price
-}
-
-enum SORT_DIRECTION {
-   asc
-   desc
-}
-
-type SEARCH_QUERY {
-   search          String?
-   sortBy          SORT_BY?
-   direction       SORT_DIRECTION?
-   relatedCategory RELATED_CATEGORY_ENUM?
-   category        CATEGORY?
-   color           COLOR?
-   rumorType       RUMOR_TYPE?
-   recipeType      RECIPE_TYPE?
-   page            Int?
-}
-
-type HYPER_LINK_SEARCH {
-   searchQuery SEARCH_QUERY
-   table       TABLE
-}
-
-type HYPER_LINK_MAP {
-   contentText      String[]
-   linkRecordMap    HYPER_LINK_RECORD[]
-   linkSearchMap    HYPER_LINK_SEARCH[]
-   highlightTextMap HIGHLIGHT_TEXT[]
+   newRecipeIdea     HYPER_LINK_MAP?
 }
 
 model Rumor {
