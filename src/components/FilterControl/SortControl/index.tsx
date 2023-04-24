@@ -11,8 +11,8 @@ const SortControl: FC<SortControlProps> = ({ pageName, isBottomFilter: isBottomF
 
 	const { sortBy, direction } = useMemo(
 		() => ({
-			sortBy: securedQuery.sortBy || (pageName === 'Rumor' ? 'price' : 'index'),
-			direction: securedQuery.direction || 'asc',
+			sortBy: securedQuery.sortBy || (pageName === 'Rumor' ? 'PRICE' : 'INDEX'),
+			direction: securedQuery.direction || 'ASC',
 		}),
 		[pageName, securedQuery.direction, securedQuery.sortBy],
 	);
@@ -28,12 +28,12 @@ const SortControl: FC<SortControlProps> = ({ pageName, isBottomFilter: isBottomF
 						aria-label='Sort By Index'
 						disabled={!isReady || pageName === 'Rumor'}
 						onClick={() => {
-							if (sortBy !== 'index') updateQuery({ sortBy: 'index', direction: 'asc' });
+							if (sortBy !== 'INDEX') updateQuery({ sortBy: 'INDEX', direction: 'ASC' });
 						}}
 						className={clsx(
 							{
-								'btn-active btn-primary text-slate-50': sortBy === 'index',
-								'btn-ghost border-accent': sortBy !== 'index',
+								'btn-active btn-primary text-slate-50': sortBy === 'INDEX',
+								'btn-ghost border-accent': sortBy !== 'INDEX',
 								hidden: pageName === 'Rumor',
 							},
 							'btn btn-xs border-y-2 border-r-0 capitalize',
@@ -47,12 +47,12 @@ const SortControl: FC<SortControlProps> = ({ pageName, isBottomFilter: isBottomF
 						aria-label='Sort By Price'
 						disabled={!isReady || pageName !== 'Rumor'}
 						onClick={() => {
-							if (sortBy !== 'price') updateQuery({ sortBy: 'price', direction: 'asc' });
+							if (sortBy !== 'PRICE') updateQuery({ sortBy: 'PRICE', direction: 'ASC' });
 						}}
 						className={clsx(
 							{
-								'btn-active btn-primary text-slate-50': sortBy === 'price',
-								'btn-ghost border-accent': sortBy !== 'price',
+								'btn-active btn-primary text-slate-50': sortBy === 'PRICE',
+								'btn-ghost border-accent': sortBy !== 'PRICE',
 								hidden: pageName !== 'Rumor',
 							},
 							'btn btn-xs rounded-l-md border-y-2 border-r-0 capitalize',
@@ -66,12 +66,12 @@ const SortControl: FC<SortControlProps> = ({ pageName, isBottomFilter: isBottomF
 						aria-label='Sort By Level'
 						disabled={!isReady || pageName !== 'Item'}
 						onClick={() => {
-							if (sortBy !== 'level') updateQuery({ sortBy: 'level', direction: 'asc' });
+							if (sortBy !== 'LEVEL') updateQuery({ sortBy: 'LEVEL', direction: 'ASC' });
 						}}
 						className={clsx(
 							{
-								'btn-active btn-primary no-animation cursor-default text-slate-50': sortBy === 'level',
-								'btn-ghost border-accent': sortBy !== 'level',
+								'btn-active btn-primary no-animation cursor-default text-slate-50': sortBy === 'LEVEL',
+								'btn-ghost border-accent': sortBy !== 'LEVEL',
 								hidden: pageName !== 'Item',
 							},
 							'btn btn-xs border-x-0 border-y-2 capitalize',
@@ -85,12 +85,12 @@ const SortControl: FC<SortControlProps> = ({ pageName, isBottomFilter: isBottomF
 						aria-label='Sort By Name'
 						disabled={!isReady}
 						onClick={() => {
-							if (sortBy !== 'name') updateQuery({ sortBy: 'name', direction: 'asc' });
+							if (sortBy !== 'NAME') updateQuery({ sortBy: 'NAME', direction: 'ASC' });
 						}}
 						className={clsx(
 							{
-								'btn-active btn-primary text-slate-50': sortBy === 'name',
-								'btn-ghost border-accent': sortBy !== 'name',
+								'btn-active btn-primary text-slate-50': sortBy === 'NAME',
+								'btn-ghost border-accent': sortBy !== 'NAME',
 							},
 							'btn btn-xs border-y-2 border-l-0 capitalize',
 						)}
@@ -109,12 +109,12 @@ const SortControl: FC<SortControlProps> = ({ pageName, isBottomFilter: isBottomF
 						aria-label='Sort Ascending'
 						disabled={!isReady}
 						onClick={() => {
-							if (direction !== 'asc') updateQuery({ direction: 'asc' });
+							if (direction !== 'ASC') updateQuery({ direction: 'ASC' });
 						}}
 						className={clsx(
 							{
-								'btn-active btn-primary no-animation cursor-default text-slate-50': direction === 'asc',
-								'btn-ghost border-accent': direction !== 'asc',
+								'btn-active btn-primary no-animation cursor-default text-slate-50': direction === 'ASC',
+								'btn-ghost border-accent': direction !== 'ASC',
 							},
 							'btn btn-xs border-y-2 border-r-0',
 						)}
@@ -127,12 +127,12 @@ const SortControl: FC<SortControlProps> = ({ pageName, isBottomFilter: isBottomF
 						aria-label='Sort Descending'
 						disabled={!isReady}
 						onClick={() => {
-							if (direction !== 'desc') updateQuery({ direction: 'desc' });
+							if (direction !== 'DESC') updateQuery({ direction: 'DESC' });
 						}}
 						className={clsx(
 							{
-								'btn-active btn-primary text-slate-50': direction === 'desc',
-								'btn-ghost border-accent': direction !== 'desc',
+								'btn-active btn-primary text-slate-50': direction === 'DESC',
+								'btn-ghost border-accent': direction !== 'DESC',
 							},
 							'btn btn-xs border-y-2 border-l-0',
 						)}

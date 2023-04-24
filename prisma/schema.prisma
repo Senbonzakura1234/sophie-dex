@@ -101,6 +101,10 @@ type HYPER_LINK {
    table TABLE
 }
 
+type HIGHLIGHT_TEXT {
+   content String
+}
+
 type MERGE_TRAIT {
    consist HYPER_LINK[]
 }
@@ -115,7 +119,7 @@ type ITEM_DESCRIPTION {
 
 generator client {
    provider        = "prisma-client-js"
-   previewFeatures = ["orderByNulls", "jsonProtocol"]
+   previewFeatures = ["orderByNulls"]
 }
 
 datasource db {
@@ -154,11 +158,49 @@ model Item {
    traitPresent      HYPER_LINK?
 }
 
+type HYPER_LINK_RECORD {
+   id    String @db.ObjectId
+   name  String
+   table TABLE
+}
+
+enum SORT_BY {
+   INDEX
+   NAME
+   LEVEL
+   PRICE
+}
+
+enum SORT_DIRECTION {
+   ASC
+   DESC
+}
+
+type HYPER_LINK_SEARCH {
+   search          String?
+   sortBy          SORT_BY?
+   direction       SORT_DIRECTION?
+   relatedCategory RELATED_CATEGORY_ENUM?
+   category        CATEGORY?
+   color           COLOR?
+   rumorType       RUMOR_TYPE?
+   recipeType      RECIPE_TYPE?
+   page            Int?
+}
+
+type HYPER_LINK_MAP {
+   contentText      String
+   linkRecordMap    HYPER_LINK_RECORD[]
+   linkSearchMap    HYPER_LINK_SEARCH[]
+   highlightTextMap HIGHLIGHT_TEXT[]
+}
+
 model Rumor {
-   id          String     @id @default(auto()) @map("_id") @db.ObjectId
-   name        String
-   description String[]
-   location    String
-   price       Int
-   rumorType   RUMOR_TYPE
+   id             String         @id @default(auto()) @map("_id") @db.ObjectId
+   name           String
+   description    String[]
+   location       String
+   price          Int
+   rumorType      RUMOR_TYPE
+   newDescription HYPER_LINK_MAP
 }

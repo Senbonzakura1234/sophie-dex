@@ -6,17 +6,16 @@ const positiveIntSchema = z.coerce.number().positive();
 
 const genericStringSchema = z.string();
 const genericIdSchema = genericStringSchema.regex(idRegex);
-export const genericRelatedCategorySchema = z.enum(relatedCategoryList);
 
 const searchSchema = genericStringSchema.nullish().catch(null).default(null);
-const sortBySchema = z.enum(['index', 'name', 'level', 'price']).nullish().catch(null).default(null);
-const directionSchema = z.enum(['asc', 'desc']).nullish().catch(null).default(null);
-export const relatedCategorySchema = genericRelatedCategorySchema.nullish().catch(null).default(null);
+const sortBySchema = z.enum(['INDEX', 'NAME', 'LEVEL', 'PRICE']).nullish().catch(null).default(null);
+const directionSchema = z.enum(['ASC', 'DESC']).nullish().catch(null).default(null);
+const relatedCategorySchema = z.enum(relatedCategoryList).nullish().catch(null).default(null);
 const categorySchema = z.enum(categoryList).nullish().catch(null).default(null);
 const colorSchema = z.enum(colorList).nullish().catch(null).default(null);
 const rumorTypeSchema = z.enum(rumorTypeList).nullish().catch(null).default(null);
 const recipeTypeSchema = z.enum(recipeTypeList).nullish().catch(null).default(null);
-export const idSchema = genericIdSchema.nullish().catch(null).default(null);
+const idSchema = genericIdSchema.nullish().catch(null).default(null);
 const pageSchema = positiveIntSchema.nullish().catch(null).default(null);
 
 export const searchQueryValidator = z.object({
@@ -52,6 +51,12 @@ const hyperLinkMeta = z.union([
 		name: genericStringSchema,
 	}),
 ]);
+
+export const highlightTextValidator = z.object({
+	content: z.string(),
+});
+
+export type HighlightText = z.infer<typeof highlightTextValidator>;
 
 export const hyperLinkValidator = z.object({
 	table: z.enum(tableList),
