@@ -16,7 +16,6 @@ export const itemRouter = router({
 					{ name: { contains: search, mode: 'insensitive' } },
 					{ description: { is: { location: { contains: search, mode: 'insensitive' } } } },
 					{ description: { is: { hunt: { contains: search, mode: 'insensitive' } } } },
-					{ description: { is: { rumor: { contains: search, mode: 'insensitive' } } } },
 					{ description: { is: { shop: { contains: search, mode: 'insensitive' } } } },
 					{ description: { is: { special: { contains: search, mode: 'insensitive' } } } },
 			  ]

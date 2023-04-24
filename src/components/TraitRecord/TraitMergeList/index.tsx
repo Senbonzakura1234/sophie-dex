@@ -12,7 +12,7 @@ const TraitMergeList: FC<TraitMergeListProps> = ({ mergeFrom }) => (
 
 		{mergeFrom.map(({ consist }, key) => (
 			<div className='btn-group basis-auto' key={key}>
-				{consist.map(({ table, meta: { name, id } }, key) => (
+				{consist.map(({ table, name, id }, key) => (
 					<Fragment key={key}>
 						{key > 0 ? (
 							<button className='btn btn-xs btn-primary !bg-primary/50 !border-primary/50 no-animation'>

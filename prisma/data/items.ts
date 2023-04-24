@@ -69,7 +69,7 @@ const items: Item[] = [
 			{ count: 10, name: 'PLANT' },
 			{ count: 10, name: 'POISON_MAT' },
 		],
-		traitPresent: { meta: { id: '638a4d49a44f4fa4b0deca68', name: 'Poison Mist', type: 'RECORD' }, table: 'TRAIT' },
+		traitPresent: { id: '638a4d49a44f4fa4b0deca68', name: 'Poison Mist', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -256,10 +256,7 @@ const items: Item[] = [
 			{ count: 15, name: 'PLANT' },
 			{ count: 25, name: 'MEDICINE_MAT' },
 		],
-		traitPresent: {
-			meta: { id: '638a4d49a44f4fa4b0deca6a', name: 'Slime Compound', type: 'RECORD' },
-			table: 'TRAIT',
-		},
+		traitPresent: { id: '638a4d49a44f4fa4b0deca6a', name: 'Slime Compound', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -329,7 +326,7 @@ const items: Item[] = [
 			{ count: 50, name: 'MEDICINE_MAT' },
 			{ count: 50, name: 'ELIXIR' },
 		],
-		traitPresent: { meta: { id: '638a4d47a44f4fa4b0dec9a5', name: 'Full of Life', type: 'RECORD' }, table: 'TRAIT' },
+		traitPresent: { id: '638a4d47a44f4fa4b0dec9a5', name: 'Full of Life', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -353,7 +350,7 @@ const items: Item[] = [
 			{ count: 40, name: 'POISON_MAT' },
 			{ count: 40, name: 'SECRET_POWER' },
 		],
-		traitPresent: { meta: { id: '638a4d49a44f4fa4b0deca66', name: 'False Flower', type: 'RECORD' }, table: 'TRAIT' },
+		traitPresent: { id: '638a4d49a44f4fa4b0deca66', name: 'False Flower', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -393,7 +390,7 @@ const items: Item[] = [
 		recipeIdea: [],
 		recipeType: null,
 		relatedCategories: [{ count: 10, name: 'ORE' }],
-		traitPresent: { meta: { id: '638a4d49a44f4fa4b0deca64', name: 'Electrified', type: 'RECORD' }, table: 'TRAIT' },
+		traitPresent: { id: '638a4d49a44f4fa4b0deca64', name: 'Electrified', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -436,7 +433,7 @@ const items: Item[] = [
 			{ count: 10, name: 'ORE' },
 			{ count: 5, name: 'GUNPOWDER' },
 		],
-		traitPresent: { meta: { id: '638a4d49a44f4fa4b0deca65', name: 'Carries Heat', type: 'RECORD' }, table: 'TRAIT' },
+		traitPresent: { id: '638a4d49a44f4fa4b0deca65', name: 'Carries Heat', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -459,7 +456,7 @@ const items: Item[] = [
 			{ count: 10, name: 'ORE' },
 			{ count: 5, name: 'GEM' },
 		],
-		traitPresent: { meta: { id: '638a4d49a44f4fa4b0deca69', name: 'Carries Cold', type: 'RECORD' }, table: 'TRAIT' },
+		traitPresent: { id: '638a4d49a44f4fa4b0deca69', name: 'Carries Cold', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -506,7 +503,7 @@ const items: Item[] = [
 			{ count: 20, name: 'POISON_MAT' },
 			{ count: 15, name: 'FUEL' },
 		],
-		traitPresent: { meta: { id: '638a4d49a44f4fa4b0deca6b', name: 'Dark Matter', type: 'RECORD' }, table: 'TRAIT' },
+		traitPresent: { id: '638a4d49a44f4fa4b0deca6b', name: 'Dark Matter', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -593,7 +590,7 @@ const items: Item[] = [
 			{ count: 10, name: 'CLAY' },
 			{ count: 5, name: 'SECRET_POWER' },
 		],
-		traitPresent: { meta: { id: '638a4d49a44f4fa4b0deca6c', name: 'Ancient Seal', type: 'RECORD' }, table: 'TRAIT' },
+		traitPresent: { id: '638a4d49a44f4fa4b0deca6c', name: 'Ancient Seal', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -709,7 +706,7 @@ const items: Item[] = [
 			{ count: 35, name: 'ORE' },
 			{ count: 15, name: 'GEM' },
 		],
-		traitPresent: { meta: { id: '638a4d49a44f4fa4b0deca71', name: 'Absorbs Light', type: 'RECORD' }, table: 'TRAIT' },
+		traitPresent: { id: '638a4d49a44f4fa4b0deca71', name: 'Absorbs Light', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -850,7 +847,7 @@ const items: Item[] = [
 			{ count: 10, name: 'INGREDIENT' },
 			{ count: 5, name: 'MEDICINE_MAT' },
 		],
-		traitPresent: { meta: { id: '638a4d49a44f4fa4b0deca6f', name: 'Stinks', type: 'RECORD' }, table: 'TRAIT' },
+		traitPresent: { id: '638a4d49a44f4fa4b0deca6f', name: 'Stinks', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -896,7 +893,7 @@ const items: Item[] = [
 			{ count: 30, name: 'ANIMAL' },
 			{ count: 20, name: 'THREAD' },
 		],
-		traitPresent: { meta: { id: '638a4d49a44f4fa4b0deca6e', name: 'Sunny Scent', type: 'RECORD' }, table: 'TRAIT' },
+		traitPresent: { id: '638a4d49a44f4fa4b0deca6e', name: 'Sunny Scent', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -936,10 +933,7 @@ const items: Item[] = [
 		recipeIdea: [],
 		recipeType: null,
 		relatedCategories: [{ count: 35, name: 'THREAD' }],
-		traitPresent: {
-			meta: { id: '638a4d49a44f4fa4b0deca6d', name: 'Cutting Thread', type: 'RECORD' },
-			table: 'TRAIT',
-		},
+		traitPresent: { id: '638a4d49a44f4fa4b0deca6d', name: 'Cutting Thread', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1039,10 +1033,7 @@ const items: Item[] = [
 			{ count: 25, name: 'INGREDIENT' },
 			{ count: 15, name: 'WATER' },
 		],
-		traitPresent: {
-			meta: { id: '638a4d49a44f4fa4b0deca72', name: 'Kirchen Bell Special', type: 'RECORD' },
-			table: 'TRAIT',
-		},
+		traitPresent: { id: '638a4d49a44f4fa4b0deca72', name: 'Kirchen Bell Special', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1065,10 +1056,7 @@ const items: Item[] = [
 			{ count: 30, name: 'WATER' },
 			{ count: 10, name: 'SECRET_POWER' },
 		],
-		traitPresent: {
-			meta: { id: '638a4d49a44f4fa4b0deca75', name: 'Flickering Light', type: 'RECORD' },
-			table: 'TRAIT',
-		},
+		traitPresent: { id: '638a4d49a44f4fa4b0deca75', name: 'Flickering Light', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1162,7 +1150,7 @@ const items: Item[] = [
 			{ count: 35, name: 'SECRET_POWER' },
 			{ count: 30, name: 'MEDICINE_MAT' },
 		],
-		traitPresent: { meta: { id: '638a4d49a44f4fa4b0deca70', name: 'Unidentified', type: 'RECORD' }, table: 'TRAIT' },
+		traitPresent: { id: '638a4d49a44f4fa4b0deca70', name: 'Unidentified', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1203,10 +1191,7 @@ const items: Item[] = [
 			{ count: 20, name: 'WATER' },
 			{ count: 5, name: 'SECRET_POWER' },
 		],
-		traitPresent: {
-			meta: { id: '638a4d49a44f4fa4b0deca76', name: 'Purifying Water', type: 'RECORD' },
-			table: 'TRAIT',
-		},
+		traitPresent: { id: '638a4d49a44f4fa4b0deca76', name: 'Purifying Water', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1252,10 +1237,7 @@ const items: Item[] = [
 			{ count: 10, name: 'INGREDIENT' },
 			{ count: 20, name: 'SECRET_POWER' },
 		],
-		traitPresent: {
-			meta: { id: '638a4d49a44f4fa4b0deca78', name: 'Golden Radiance', type: 'RECORD' },
-			table: 'TRAIT',
-		},
+		traitPresent: { id: '638a4d49a44f4fa4b0deca78', name: 'Golden Radiance', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1394,10 +1376,7 @@ const items: Item[] = [
 			{ count: 20, name: 'INGREDIENT' },
 			{ count: 5, name: 'METAL' },
 		],
-		traitPresent: {
-			meta: { id: '638a4d49a44f4fa4b0deca74', name: 'Mutated Material', type: 'RECORD' },
-			table: 'TRAIT',
-		},
+		traitPresent: { id: '638a4d49a44f4fa4b0deca74', name: 'Mutated Material', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1490,10 +1469,7 @@ const items: Item[] = [
 			{ count: 20, name: 'INGREDIENT' },
 			{ count: 15, name: 'PLANT' },
 		],
-		traitPresent: {
-			meta: { id: '638a4d49a44f4fa4b0deca77', name: 'Special Ingredient', type: 'RECORD' },
-			table: 'TRAIT',
-		},
+		traitPresent: { id: '638a4d49a44f4fa4b0deca77', name: 'Special Ingredient', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1556,10 +1532,7 @@ const items: Item[] = [
 		recipeIdea: [],
 		recipeType: null,
 		relatedCategories: [{ count: 35, name: 'FUEL' }],
-		traitPresent: {
-			meta: { id: '638a4d49a44f4fa4b0deca7b', name: 'Secret of Health', type: 'RECORD' },
-			table: 'TRAIT',
-		},
+		traitPresent: { id: '638a4d49a44f4fa4b0deca7b', name: 'Secret of Health', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1617,10 +1590,7 @@ const items: Item[] = [
 			{ count: 20, name: 'FUEL' },
 			{ count: 5, name: 'MAGIC_ITEM' },
 		],
-		traitPresent: {
-			meta: { id: '638a4d49a44f4fa4b0deca79', name: 'Power of Faith', type: 'RECORD' },
-			table: 'TRAIT',
-		},
+		traitPresent: { id: '638a4d49a44f4fa4b0deca79', name: 'Power of Faith', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1666,10 +1636,7 @@ const items: Item[] = [
 			{ count: 20, name: 'GEM' },
 			{ count: 15, name: 'MEDICINE_MAT' },
 		],
-		traitPresent: {
-			meta: { id: '638a4d49a44f4fa4b0deca7a', name: 'Medicine Compound', type: 'RECORD' },
-			table: 'TRAIT',
-		},
+		traitPresent: { id: '638a4d49a44f4fa4b0deca7a', name: 'Medicine Compound', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -1854,7 +1821,7 @@ const items: Item[] = [
 			{ count: 15, name: 'GEM' },
 			{ count: 10, name: 'POISON_MAT' },
 		],
-		traitPresent: { meta: { id: '638a4d49a44f4fa4b0deca7e', name: 'Demon Soul', type: 'RECORD' }, table: 'TRAIT' },
+		traitPresent: { id: '638a4d49a44f4fa4b0deca7e', name: 'Demon Soul', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',
@@ -2038,10 +2005,7 @@ const items: Item[] = [
 		recipeIdea: [],
 		recipeType: null,
 		relatedCategories: [{ count: 10, name: 'ELIXIR' }],
-		traitPresent: {
-			meta: { id: '638a4d48a44f4fa4b0deca0d', name: 'Magical Slayer', type: 'RECORD' },
-			table: 'TRAIT',
-		},
+		traitPresent: { id: '638a4d48a44f4fa4b0deca0d', name: 'Magical Slayer', table: 'TRAIT' },
 	},
 	{
 		category: 'MATERIAL',

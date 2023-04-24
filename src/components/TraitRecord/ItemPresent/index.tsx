@@ -1,16 +1,11 @@
 import { DocumentChartBarIcon } from '@heroicons/react/24/solid';
-import type { HYPER_LINK } from '@prisma/client';
+import type { HYPER_LINK_RECORD } from '@prisma/client';
 import Link from 'next/link';
 import type { FC } from 'react';
 
-type ItemPresentProps = { itemPresent: HYPER_LINK };
+type ItemPresentProps = { itemPresent: HYPER_LINK_RECORD };
 
-const ItemPresent: FC<ItemPresentProps> = ({
-	itemPresent: {
-		table,
-		meta: { id, name },
-	},
-}) => {
+const ItemPresent: FC<ItemPresentProps> = ({ itemPresent: { table, id, name } }) => {
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
 			<div className='font-bold capitalize'>{table.toLowerCase()}: </div>

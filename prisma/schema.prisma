@@ -106,7 +106,7 @@ type HIGHLIGHT_TEXT {
 }
 
 type MERGE_TRAIT {
-   consist HYPER_LINK[]
+   consist HYPER_LINK_RECORD[]
 }
 
 type HYPER_LINK_RECORD {
@@ -177,13 +177,13 @@ model Effect {
 }
 
 model Trait {
-   id          String        @id @default(auto()) @map("_id") @db.ObjectId
+   id          String             @id @default(auto()) @map("_id") @db.ObjectId
    index       Int
    name        String
    description String
    categories  CATEGORY[]
    mergeFrom   MERGE_TRAIT[]
-   itemPresent HYPER_LINK?
+   itemPresent HYPER_LINK_RECORD?
 }
 
 model Item {
@@ -197,7 +197,7 @@ model Item {
    level             Int
    recipeType        RECIPE_TYPE?
    recipeIdea        String[]
-   traitPresent      HYPER_LINK?
+   traitPresent      HYPER_LINK_RECORD?
    newRecipeIdea     HYPER_LINK_MAP?
 }
 
