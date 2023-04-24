@@ -29,7 +29,8 @@ async function seed() {
 						return;
 					} else {
 						linkSearchMap.push({
-							...res.meta.search,
+							table: res.table,
+							searchQuery: res.meta.search,
 						});
 						contentText += `@{linkSearchMap-${linkRecordMap.length - 1}}`;
 						return;

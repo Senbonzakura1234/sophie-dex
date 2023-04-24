@@ -176,7 +176,7 @@ enum SORT_DIRECTION {
    DESC
 }
 
-type HYPER_LINK_SEARCH {
+type SEARCH_QUERY {
    search          String?
    sortBy          SORT_BY?
    direction       SORT_DIRECTION?
@@ -186,6 +186,11 @@ type HYPER_LINK_SEARCH {
    rumorType       RUMOR_TYPE?
    recipeType      RECIPE_TYPE?
    page            Int?
+}
+
+type HYPER_LINK_SEARCH {
+   searchQuery SEARCH_QUERY
+   table       TABLE
 }
 
 type HYPER_LINK_MAP {
