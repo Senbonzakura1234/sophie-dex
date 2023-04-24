@@ -36,34 +36,11 @@ export const idQueryValidator = z.object({ id: idSchema });
 
 export type IdQuery = z.infer<typeof idQueryValidator>;
 
-export const miscContentValidator = z.object({
-	content: genericStringSchema,
-});
-
-const hyperLinkMeta = z.union([
-	z.object({
-		type: z.literal('SEARCH'),
-		search: searchQueryValidator,
-	}),
-	z.object({
-		type: z.literal('RECORD'),
-		id: genericIdSchema,
-		name: genericStringSchema,
-	}),
-]);
-
 export const highlightTextValidator = z.object({
 	content: z.string(),
 });
 
 export type HighlightText = z.infer<typeof highlightTextValidator>;
-
-export const hyperLinkValidator = z.object({
-	table: z.enum(tableList),
-	meta: hyperLinkMeta,
-});
-
-export type HyperLink = z.infer<typeof hyperLinkValidator>;
 
 export const hyperLinkRecordValidator = z.object({
 	id: genericIdSchema,

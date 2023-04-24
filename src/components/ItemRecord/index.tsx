@@ -41,9 +41,7 @@ const ItemRecord: FC<ItemRecordProps> = ({ record }) => {
 
 					<Color color={record.color} />
 
-					{record.newRecipeIdea ? (
-						<RecipeIdea recipeIdea={record.newRecipeIdea} className='sm:max-w-[50%]' />
-					) : null}
+					{record.recipeIdea ? <RecipeIdea recipeIdea={record.recipeIdea} className='sm:max-w-[50%]' /> : null}
 
 					{record.description ? <Description description={record.description} /> : null}
 

@@ -14,8 +14,6 @@ export const itemRouter = router({
 		const OR: Prisma.ItemWhereInput[] | undefined = search
 			? [
 					{ name: { contains: search, mode: 'insensitive' } },
-					{ description: { is: { location: { contains: search, mode: 'insensitive' } } } },
-					{ description: { is: { hunt: { contains: search, mode: 'insensitive' } } } },
 					{ description: { is: { shop: { contains: search, mode: 'insensitive' } } } },
 					{ description: { is: { special: { contains: search, mode: 'insensitive' } } } },
 			  ]

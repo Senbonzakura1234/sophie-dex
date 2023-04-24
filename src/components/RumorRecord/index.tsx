@@ -29,7 +29,7 @@ const RumorRecord: FC<RumorRecordProps> = ({ record }) => {
 
 					<Price price={record.price} />
 
-					<Description description={record.newDescription} />
+					<Description description={record.description} />
 
 					<Location location={record.location} />
 
