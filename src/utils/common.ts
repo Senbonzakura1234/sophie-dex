@@ -1,9 +1,7 @@
-export async function tryCatchHandler<Return = unknown>(
-	promise: Promise<Return>,
-): Promise<[Awaited<Return>, null] | [null, string]> {
+export async function tryCatchHandler<Return = unknown>(promise: Promise<Return>) {
 	try {
-		return [await promise, null];
+		return { data: await promise, isSuccess: true as const, error: null };
 	} catch (error) {
-		return [null, error instanceof Error ? error.message : 'Unknown error'];
+		return { data: null, isSuccess: false as const, error };
 	}
 }

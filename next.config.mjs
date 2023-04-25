@@ -12,9 +12,12 @@ const pwaConfig = withPWA({
 	sw: 'service-worker.gen.js',
 	register: true,
 	cacheStartUrl: true,
+	dynamicStartUrl: false,
 	cacheOnFrontEndNav: true,
 	cleanupOutdatedCaches: true,
 	disable: process.env.NODE_ENV === 'development',
+	skipWaiting: true,
+	reloadOnOnline: true,
 });
 
 const config = pwaConfig({

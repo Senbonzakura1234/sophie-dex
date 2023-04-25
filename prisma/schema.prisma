@@ -1,19 +1,23 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-enum TABLE {
-   RUMOR
-   ITEM
-   TRAIT
-   EFFECT
-}
+enum CATEGORY {
+   ACCESSORY
+   ARMOR
+   ATK_ITEM
+   BUFF_ITEM
+   DE_BUFF_ITEM
+   HEAL_ITEM
+   WEAPON
 
-enum RECIPE_TYPE {
-   BEGINNER_RECIPES
-   GROWTH_RECIPES
-   HOPE_RECIPES
-   DREAM_RECIPES
-   MYSTERY_RECIPES
+   MATERIAL
+   BOOK
+
+   EXPLORATION
+   MACHINE
+   KEY_ITEM
+
+   SYNTHESIS
 }
 
 enum COLOR {
@@ -22,6 +26,14 @@ enum COLOR {
    WHITE
    YELLOW
    RED
+}
+
+enum RECIPE_TYPE {
+   BEGINNER_RECIPES
+   GROWTH_RECIPES
+   HOPE_RECIPES
+   DREAM_RECIPES
+   MYSTERY_RECIPES
 }
 
 enum RELATED_CATEGORY_ENUM {
@@ -57,25 +69,6 @@ enum RELATED_CATEGORY_ENUM {
    MAGIC_ITEM
 }
 
-enum CATEGORY {
-   ACCESSORY
-   ARMOR
-   ATK_ITEM
-   BUFF_ITEM
-   DE_BUFF_ITEM
-   HEAL_ITEM
-   WEAPON
-
-   MATERIAL
-   BOOK
-
-   EXPLORATION
-   MACHINE
-   KEY_ITEM
-
-   SYNTHESIS
-}
-
 enum RUMOR_TYPE {
    MONSTER
    MATERIAL
@@ -93,35 +86,21 @@ enum SORT_DIRECTION {
    desc
 }
 
-type RELATED_CATEGORY {
-   name  RELATED_CATEGORY_ENUM
-   count Int
+enum TABLE {
+   RUMOR
+   ITEM
+   TRAIT
+   EFFECT
 }
 
 type HIGHLIGHT_TEXT {
    content String
 }
 
-type MERGE_TRAIT {
-   consist HYPER_LINK_RECORD[]
-}
-
 type HYPER_LINK_RECORD {
    id    String @db.ObjectId
    name  String
    table TABLE
-}
-
-type SEARCH_QUERY {
-   search          String?
-   sortBy          SORT_BY?
-   direction       SORT_DIRECTION?
-   relatedCategory RELATED_CATEGORY_ENUM?
-   category        CATEGORY?
-   color           COLOR?
-   rumorType       RUMOR_TYPE?
-   recipeType      RECIPE_TYPE?
-   page            Int?
 }
 
 type HYPER_LINK_SEARCH {
@@ -144,6 +123,27 @@ type ITEM_DESCRIPTION {
    shop     String?
 }
 
+type MERGE_TRAIT {
+   consist HYPER_LINK_RECORD[]
+}
+
+type RELATED_CATEGORY {
+   name  RELATED_CATEGORY_ENUM
+   count Int
+}
+
+type SEARCH_QUERY {
+   search          String?
+   sortBy          SORT_BY?
+   direction       SORT_DIRECTION?
+   relatedCategory RELATED_CATEGORY_ENUM?
+   category        CATEGORY?
+   color           COLOR?
+   rumorType       RUMOR_TYPE?
+   recipeType      RECIPE_TYPE?
+   page            Int?
+}
+
 generator client {
    provider        = "prisma-client-js"
    previewFeatures = ["orderByNulls"]
@@ -159,17 +159,6 @@ model Effect {
    index       Int
    name        String
    description String
-   keyWords    String
-}
-
-model Trait {
-   id          String             @id @default(auto()) @map("_id") @db.ObjectId
-   index       Int
-   name        String
-   description String
-   categories  CATEGORY[]
-   mergeFrom   MERGE_TRAIT[]
-   itemPresent HYPER_LINK_RECORD?
    keyWords    String
 }
 
@@ -195,5 +184,16 @@ model Rumor {
    location    String
    price       Int
    rumorType   RUMOR_TYPE
+   keyWords    String
+}
+
+model Trait {
+   id          String             @id @default(auto()) @map("_id") @db.ObjectId
+   index       Int
+   name        String
+   description String
+   categories  CATEGORY[]
+   mergeFrom   MERGE_TRAIT[]
+   itemPresent HYPER_LINK_RECORD?
    keyWords    String
 }

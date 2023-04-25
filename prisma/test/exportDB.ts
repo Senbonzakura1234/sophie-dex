@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client';
+import { tryCatchHandler } from '@root/utils/common';
 import { writeFile } from 'fs/promises';
 
 const prisma = new PrismaClient();
@@ -10,29 +11,47 @@ const mapName: Readonly<Record<number, string>> = {
 } as const;
 
 async function seed() {
-	await Promise.all(
-		(
-			await prisma.$transaction([
-				prisma.item.findMany(),
-				prisma.trait.findMany(),
-				prisma.effect.findMany(),
-				prisma.rumor.findMany(),
-			])
-		).map(async (res, index) => {
-			const fileName = mapName[index];
-			if (!fileName) return;
-			await writeFile(
-				fileName,
-				JSON.stringify(
-					res.sort((a, b) => {
-						if ('index' in a && 'index' in b) return a.index - b.index;
-						if ('price' in a && 'price' in b) return a.price - b.price;
-						return 0;
-					}),
-				),
-			);
-		}),
+	const {
+		data: transactionsData,
+		error: transactionsError,
+		isSuccess: transactionsIsSuccess,
+	} = await tryCatchHandler(
+		prisma.$transaction([
+			prisma.item.findMany(),
+			prisma.trait.findMany(),
+			prisma.effect.findMany(),
+			prisma.rumor.findMany(),
+		]),
 	);
+
+	if (!transactionsIsSuccess) return console.log(transactionsError);
+
+	const { isSuccess, error } = await tryCatchHandler(
+		Promise.all(
+			transactionsData.map(async (res, index) => {
+				const fileName = mapName[index];
+
+				if (!fileName) return;
+
+				const { isSuccess: writeFileIsSuccess, error: writeFileError } = await tryCatchHandler(
+					writeFile(
+						fileName,
+						JSON.stringify(
+							res.sort((a, b) => {
+								if ('index' in a && 'index' in b) return a.index - b.index;
+								if ('price' in a && 'price' in b) return a.price - b.price;
+								return 0;
+							}),
+						),
+					),
+				);
+
+				if (!writeFileIsSuccess) console.log(writeFileError);
+			}),
+		),
+	);
+
+	if (!isSuccess) console.log(error);
 }
 
 seed()
@@ -41,5 +60,7 @@ seed()
 		process.exit(1);
 	})
 	.finally(async () => {
-		await prisma.$disconnect();
+		const { error, isSuccess } = await tryCatchHandler(prisma.$disconnect());
+
+		if (!isSuccess) console.log(error);
 	});

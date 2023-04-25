@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 
+import { tryCatchHandler } from '@root/utils/common';
 import effects from './data/effects';
 import items from './data/items';
 import rumors from './data/rumors';
@@ -9,19 +10,23 @@ const prisma = new PrismaClient();
 
 async function seed() {
 	effects.forEach(async effect => {
-		await prisma.effect.create({ data: effect });
+		const { error, isSuccess: success } = await tryCatchHandler(prisma.effect.create({ data: effect }));
+		if (!success) return console.log(error);
 	});
 
 	traits.forEach(async trait => {
-		await prisma.trait.create({ data: trait });
+		const { error, isSuccess: success } = await tryCatchHandler(prisma.trait.create({ data: trait }));
+		if (!success) console.log(error);
 	});
 
 	items.forEach(async item => {
-		await prisma.item.create({ data: item });
+		const { error, isSuccess: success } = await tryCatchHandler(prisma.item.create({ data: item }));
+		if (!success) console.log(error);
 	});
 
 	rumors.forEach(async rumor => {
-		await prisma.rumor.create({ data: rumor });
+		const { error, isSuccess: success } = await tryCatchHandler(prisma.rumor.create({ data: rumor }));
+		if (!success) console.log(error);
 	});
 }
 
@@ -31,5 +36,6 @@ seed()
 		process.exit(1);
 	})
 	.finally(async () => {
-		await prisma.$disconnect();
+		const { error, isSuccess: success } = await tryCatchHandler(prisma.$disconnect());
+		if (!success) console.log(error);
 	});

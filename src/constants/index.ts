@@ -1,5 +1,4 @@
 import type { COLOR, TABLE } from '@prisma/client';
-import type { ListRecord } from '@root/types/model';
 import colors from 'tailwindcss/colors';
 
 export const APP_NAME = 'Sophie Dex';
@@ -8,9 +7,6 @@ export const APP_KEYWORD = 'Atelier, Wiki, Sophie, Mysterious, DX';
 
 export const APP_AUTHOR = 'Senbonzakura1234';
 export const defaultLimit = 20;
-export function getDefaultListRecord<T>(): ListRecord<T> {
-	return { page: 1, records: [], totalPage: 0, totalRecord: 0 };
-}
 
 export const idRegex = /^[0-9A-F]{24}$/i;
 
