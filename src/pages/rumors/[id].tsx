@@ -19,15 +19,15 @@ const RumorDetail: NextPage = () => {
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Rumor'
-			extraHead={
-				!isLoading && isSuccess ? (
-					<Head>
-						<title>{data.name}</title>
-					</Head>
-				) : null
-			}
+			rawData={data}
+			extraFlag={isSuccess && !isLoading}
+			extraHead={({ name }) => (
+				<Head>
+					<title>{name}</title>
+				</Head>
+			)}
 		>
-			<RumorRecord record={data} />
+			{props => <RumorRecord {...props} />}
 		</DetailLayout>
 	);
 };

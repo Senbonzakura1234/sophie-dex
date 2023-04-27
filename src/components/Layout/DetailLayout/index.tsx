@@ -1,25 +1,55 @@
 import ErrorModal from '@root/components/ErrorModal';
+import type { MaybeData, RenderFunction } from '@root/types/common';
 import type { DefaultLayoutProps, ErrorResultProps } from '@root/types/common/props';
 import Head from 'next/head';
-import type { FC, ReactNode } from 'react';
+import { useMemo } from 'react';
 
-type DetailLayoutProps = DefaultLayoutProps & { extraHead?: ReactNode } & ErrorResultProps;
+type DetailLayoutProps<TData = unknown> = DefaultLayoutProps &
+	ErrorResultProps & {
+		extraHead?: RenderFunction<NonNullable<TData>>;
+		children?: RenderFunction<MaybeData<TData>>;
+		extraFlag?: boolean;
+		rawData: TData | undefined;
+	};
 
-const DetailLayout: FC<DetailLayoutProps> = ({ pageName, children, extraHead, isError, errorData, errorMessage }) => (
-	<>
-		<Head>
-			<title>{pageName}</title>
-			<meta name='description' content={`${pageName} Record`} />
-		</Head>
+function DetailLayout<TData = unknown>({
+	pageName,
+	children,
+	extraHead,
+	isError,
+	errorData,
+	errorMessage,
+	extraFlag,
+	rawData,
+}: DetailLayoutProps<TData>) {
+	const result: MaybeData<TData> = useMemo(
+		() =>
+			!!rawData && !extraFlag
+				? { data: rawData, isDataReady: true as const }
+				: { data: undefined, isDataReady: false as const },
+		[extraFlag, rawData],
+	);
 
-		{extraHead}
+	const renderChild = useMemo(() => (children ? children(result) : null), [children, result]);
 
-		<section className='grid h-full w-full grid-cols-1 place-content-center gap-4 p-2 2xl:grid-cols-none'>
-			<div className='w-[800px] max-w-full'>{children}</div>
-		</section>
+	const renderExtraHead = useMemo(() => (rawData && extraHead ? extraHead(rawData) : null), [rawData, extraHead]);
 
-		{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
-	</>
-);
+	return (
+		<>
+			<Head>
+				<title>{pageName}</title>
+				<meta name='description' content={`${pageName} Record`} />
+			</Head>
+
+			{renderExtraHead}
+
+			<section className='grid h-full w-full grid-cols-1 place-content-center gap-4 p-2 2xl:grid-cols-none'>
+				<div className='w-[800px] max-w-full'>{renderChild}</div>
+			</section>
+
+			{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
+		</>
+	);
+}
 
 export default DetailLayout;

@@ -20,27 +20,19 @@ const ItemDetail: NextPage = () => {
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Item'
-			extraHead={
-				!isLoading && isSuccess ? (
-					<Head>
-						<title>{data.name}</title>
+			rawData={data}
+			extraFlag={isSuccess && !isLoading}
+			extraHead={({ name, relatedCategories, color }) => (
+				<Head>
+					<title>{name}</title>
 
-						<meta
-							name='description'
-							content={data.relatedCategories.map(c => `${c.name} (${c.count})`).join(', ')}
-						/>
+					<meta name='description' content={relatedCategories.map(c => `${c.name} (${c.count})`).join(', ')} />
 
-						<meta
-							name='theme-color'
-							property='og:theme-color'
-							key='theme-color'
-							content={colorTailwindMap[data.color]}
-						/>
-					</Head>
-				) : null
-			}
+					<meta name='theme-color' property='og:theme-color' key='theme-color' content={colorTailwindMap[color]} />
+				</Head>
+			)}
 		>
-			<ItemRecord record={data} />
+			{props => <ItemRecord {...props} />}
 		</DetailLayout>
 	);
 };

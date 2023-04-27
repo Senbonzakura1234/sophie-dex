@@ -15,15 +15,13 @@ const Traits: NextPage = () => {
 	return (
 		<ListLayout
 			isError={isError}
-			isSuccess={!isLoading && isSuccess}
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Trait'
-			page={data?.page ?? 1}
-			totalPage={data?.totalPage ?? 0}
-			totalRecord={data?.totalRecord ?? 0}
+			rawData={data}
+			extraFlag={isLoading || !isSuccess}
 		>
-			{!isLoading && isSuccess && data.records.map(trait => <TraitRecord key={trait.id} record={trait} />)}
+			{props => props.data.map((rumor, key) => <TraitRecord key={key} {...rumor} />)}
 		</ListLayout>
 	);
 };

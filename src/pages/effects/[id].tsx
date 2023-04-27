@@ -19,16 +19,16 @@ const EffectDetail: NextPage = () => {
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Effect'
-			extraHead={
-				!isLoading && isSuccess ? (
-					<Head>
-						<title>{data.name}</title>
-						<meta name='description' content={data.description} />
-					</Head>
-				) : null
-			}
+			rawData={data}
+			extraFlag={isSuccess && !isLoading}
+			extraHead={({ name, description }) => (
+				<Head>
+					<title>{name}</title>
+					<meta name='description' content={description} />
+				</Head>
+			)}
 		>
-			<EffectRecord record={data} />
+			{props => <EffectRecord {...props} />}
 		</DetailLayout>
 	);
 };

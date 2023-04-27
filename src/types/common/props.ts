@@ -2,7 +2,7 @@ import type { Maybe } from '@trpc/server';
 import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
 import type { ReactNode, RefObject } from 'react';
 
-import type { PageName } from '.';
+import type { MaybeData, PageName } from '.';
 
 export type ClassNameProps = { className?: string };
 export type ChildrenProps = { children?: ReactNode };
@@ -18,8 +18,8 @@ export type PageControlProps = {
 	totalRecord: number;
 };
 
-export type RecordProps<T> = { record: T | undefined };
-export type DefaultLayoutProps = ChildrenProps & PageNameProps;
+export type RecordProps<TRecord> = MaybeData<TRecord>;
+export type DefaultLayoutProps = PageNameProps;
 export type ErrorResultProps = {
 	isError: boolean;
 	errorData: Maybe<DefaultErrorData>;

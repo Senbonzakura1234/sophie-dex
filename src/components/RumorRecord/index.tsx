@@ -5,6 +5,7 @@ import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { RecordProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
+import { nullableHandle } from '@root/utils/common';
 import Description from './Description';
 import Location from './Location';
 import Price from './Price';
@@ -12,30 +13,30 @@ import RumorType from './RumorType';
 
 type RumorRecordProps = RecordProps<Rumor>;
 
-const RumorRecord: FC<RumorRecordProps> = ({ record }) => {
+const RumorRecord: FC<RumorRecordProps> = props => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 
 	return (
-		<RecordWrapper isSuccess={!!record && isReady}>
-			{record ? (
+		<RecordWrapper {...nullableHandle(props, !isReady)}>
+			{({ description, id, location, name, price, rumorType }) => (
 				<>
 					<RecordHead
-						id={record.id}
-						isCurrentRecord={securedIdQuery.id === record.id}
-						name={record.name}
+						id={id}
+						isCurrentRecord={securedIdQuery.id === id}
+						name={name}
 						pathname={pathname}
 						pageName='Rumor'
 					/>
 
-					<Price price={record.price} />
+					<Price price={price} />
 
-					<Description description={record.description} />
+					<Description description={description} />
 
-					<Location location={record.location} />
+					<Location location={location} />
 
-					<RumorType rumorType={record.rumorType} />
+					<RumorType rumorType={rumorType} />
 				</>
-			) : null}
+			)}
 		</RecordWrapper>
 	);
 };

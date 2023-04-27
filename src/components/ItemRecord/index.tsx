@@ -5,6 +5,7 @@ import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { RecordProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
+import { nullableHandle } from '@root/utils/common';
 import Category from './Category';
 import Color from './Color';
 import Description from './Description';
@@ -16,40 +17,52 @@ import TraitPresent from './TraitPresent';
 
 type ItemRecordProps = RecordProps<Item>;
 
-const ItemRecord: FC<ItemRecordProps> = ({ record }) => {
+const ItemRecord: FC<ItemRecordProps> = props => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 
 	return (
-		<RecordWrapper isSuccess={!!record && isReady} color={record?.color}>
-			{record ? (
+		<RecordWrapper {...nullableHandle(props, !isReady)} color={props.data?.color}>
+			{({
+				category,
+				color,
+				description,
+				id,
+				index,
+				level,
+				name,
+				recipeIdea,
+				recipeType,
+				relatedCategories,
+				traitPresent,
+			}) => (
 				<>
 					<RecordHead
-						id={record.id}
-						isCurrentRecord={securedIdQuery.id === record.id}
-						name={record.name}
+						id={id}
+						isCurrentRecord={securedIdQuery.id === id}
+						name={name}
 						pathname={pathname}
 						pageName='Item'
 					/>
 
-					<Level level={record.level} />
+					<Level level={level} />
 
-					<div className='text-sm'>index: {record.index}</div>
+					<div className='text-sm'>index: {index}</div>
 
-					{record.recipeType ? <RecipeType recipeType={record.recipeType} /> : null}
+					{recipeType ? <RecipeType recipeType={recipeType} /> : null}
 
-					<Category category={record.category} />
+					<Category category={category} />
 
-					<Color color={record.color} />
+					<Color color={color} />
 
-					{record.recipeIdea ? <RecipeIdea recipeIdea={record.recipeIdea} className='sm:max-w-[50%]' /> : null}
+					{recipeIdea ? <RecipeIdea recipeIdea={recipeIdea} className='sm:max-w-[50%]' /> : null}
 
-					{record.description ? <Description description={record.description} /> : null}
+					{description ? <Description description={description} /> : null}
 
-					{record.traitPresent ? <TraitPresent traitPresent={record.traitPresent} /> : null}
+					{traitPresent ? <TraitPresent traitPresent={traitPresent} /> : null}
 
-					<RelatedCategories relatedCategories={record.relatedCategories} />
+					<RelatedCategories relatedCategories={relatedCategories} />
 				</>
-			) : null}
+			)}
 		</RecordWrapper>
 	);
 };

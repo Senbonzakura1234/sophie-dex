@@ -15,15 +15,13 @@ const Effects: NextPage = () => {
 	return (
 		<ListLayout
 			isError={isError}
-			isSuccess={!isLoading && isSuccess}
 			errorData={error?.data}
 			errorMessage={error?.message}
 			pageName='Effect'
-			page={data?.page ?? 1}
-			totalPage={data?.totalPage ?? 0}
-			totalRecord={data?.totalRecord ?? 0}
+			rawData={data}
+			extraFlag={isLoading || !isSuccess}
 		>
-			{!isLoading && isSuccess && data.records.map(effect => <EffectRecord key={effect.id} record={effect} />)}
+			{props => props.data.map((rumor, key) => <EffectRecord key={key} {...rumor} />)}
 		</ListLayout>
 	);
 };

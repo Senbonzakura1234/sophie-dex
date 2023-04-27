@@ -5,38 +5,39 @@ import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { RecordProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
+import { nullableHandle } from '@root/utils/common';
 import Categories from './Categories';
 import ItemPresent from './ItemPresent';
 import TraitMergeList from './TraitMergeList';
 
 type TraitRecordProps = RecordProps<Trait>;
 
-const TraitRecord: FC<TraitRecordProps> = ({ record }) => {
+const TraitRecord: FC<TraitRecordProps> = props => {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 
 	return (
-		<RecordWrapper isSuccess={!!record && isReady}>
-			{record ? (
+		<RecordWrapper {...nullableHandle(props, !isReady)}>
+			{({ id, categories, description, index, itemPresent, mergeFrom, name }) => (
 				<>
 					<RecordHead
-						id={record.id}
-						isCurrentRecord={securedIdQuery.id === record.id}
-						name={record.name}
+						id={id}
+						isCurrentRecord={securedIdQuery.id === id}
+						name={name}
 						pathname={pathname}
 						pageName='Trait'
 					/>
 
-					<div className='text-sm'>index: {record.index}</div>
+					<div className='text-sm'>index: {index}</div>
 
-					<p className='text-lg'>{record.description}</p>
+					<p className='text-lg'>{description}</p>
 
-					<TraitMergeList mergeFrom={record.mergeFrom} />
+					<TraitMergeList mergeFrom={mergeFrom} />
 
-					{record.itemPresent ? <ItemPresent itemPresent={record.itemPresent} /> : null}
+					{itemPresent ? <ItemPresent itemPresent={itemPresent} /> : null}
 
-					<Categories categories={record.categories} />
+					<Categories categories={categories} />
 				</>
-			) : null}
+			)}
 		</RecordWrapper>
 	);
 };

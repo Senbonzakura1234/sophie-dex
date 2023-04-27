@@ -3,60 +3,91 @@ import FilterControl from '@root/components/FilterControl';
 import PageFooter from '@root/components/PageFooter';
 import PageTitle from '@root/components/PageTitle';
 import SearchControl from '@root/components/SearchControl';
-import { ListPlaceHolder } from '@root/components/SubComponent';
-import type { DefaultLayoutProps, ErrorResultProps, IsSuccessProps, PageControlProps } from '@root/types/common/props';
+import { defaultLimit } from '@root/constants';
+import type { MaybeData, MaybeListData, RenderFunction } from '@root/types/common';
+import type { DefaultLayoutProps, ErrorResultProps } from '@root/types/common/props';
+import type { ListRecord } from '@root/types/model';
 import Head from 'next/head';
-import type { FC } from 'react';
+import { useMemo } from 'react';
 
-type ListLayoutProps = DefaultLayoutProps & ErrorResultProps & PageControlProps & IsSuccessProps;
+type ListLayoutProps<TData = unknown> = DefaultLayoutProps &
+	ErrorResultProps & {
+		children?: RenderFunction<MaybeListData<TData>>;
+		extraFlag?: boolean;
+		rawData: ListRecord<TData> | undefined;
+	};
 
-const ListLayout: FC<ListLayoutProps> = ({
+function ListLayout<TData = unknown>({
 	pageName,
 	children,
 	errorData,
 	errorMessage,
 	isError,
-	isSuccess,
-	page,
-	totalPage,
-	totalRecord,
-}) => (
-	<>
-		<Head>
-			<title>{pageName}</title>
-			<meta name='description' content={`${pageName} List`} />
-		</Head>
+	extraFlag,
+	rawData,
+}: ListLayoutProps<TData>) {
+	const { data, isDataReady }: MaybeData<ListRecord<TData>> = useMemo(
+		() =>
+			!!rawData && !extraFlag
+				? { data: rawData, isDataReady: true as const }
+				: { data: undefined, isDataReady: false as const },
+		[extraFlag, rawData],
+	);
 
-		<PageTitle pageName={pageName} />
+	const { page, totalPage, totalRecord } = useMemo(
+		() => (isDataReady ? data : { page: 1, totalPage: 0, totalRecord: 0 }),
+		[data, isDataReady],
+	);
 
-		<SearchControl isSuccess={isSuccess} />
+	const listData: MaybeListData<TData> = useMemo(
+		() =>
+			isDataReady
+				? { data: data.records.map(r => ({ data: r, isDataReady: true as const })) }
+				: {
+						data: Array(defaultLimit)
+							.fill(0)
+							.map(() => ({ data: undefined, isDataReady: false as const })),
+				  },
+		[data?.records, isDataReady],
+	);
 
-		<FilterControl
-			pageName={pageName}
-			page={page}
-			totalPage={totalPage}
-			totalRecord={totalRecord}
-			isSuccess={isSuccess}
-		/>
+	const renderChild = useMemo(() => (children ? children(listData) : null), [children, listData]);
 
-		<section className='container mx-auto grid grow gap-6 max-2xl:px-4 2xl:grid-cols-2'>
-			<ListPlaceHolder isSuccess={isSuccess} isError={isError} />
-			{children}
-		</section>
+	return (
+		<>
+			<Head>
+				<title>{pageName}</title>
+				<meta name='description' content={`${pageName} List`} />
+			</Head>
 
-		<FilterControl
-			pageName={pageName}
-			page={page}
-			totalPage={totalPage}
-			totalRecord={totalRecord}
-			isSuccess={isSuccess}
-			isBottomFilter
-		/>
+			<PageTitle pageName={pageName} />
 
-		<PageFooter />
+			<SearchControl isSuccess={isDataReady} />
 
-		{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
-	</>
-);
+			<FilterControl
+				pageName={pageName}
+				page={page || 1}
+				totalPage={totalPage}
+				totalRecord={totalRecord}
+				isSuccess={isDataReady}
+			/>
+
+			<section className='container mx-auto grid grow gap-6 max-2xl:px-4 2xl:grid-cols-2'>{renderChild}</section>
+
+			<FilterControl
+				pageName={pageName}
+				page={page || 1}
+				totalPage={totalPage}
+				totalRecord={totalRecord}
+				isSuccess={isDataReady}
+				isBottomFilter
+			/>
+
+			<PageFooter />
+
+			{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
+		</>
+	);
+}
 
 export default ListLayout;

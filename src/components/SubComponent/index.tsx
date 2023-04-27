@@ -1,14 +1,12 @@
 import type { CATEGORY, COLOR, RECIPE_TYPE, RUMOR_TYPE } from '@prisma/client';
-import { getFramerFadeUp } from '@root/animations';
-import { defaultLimit } from '@root/constants';
+import { getFramerInViewFadeUp } from '@root/animations';
 import type { SelectOptionItem } from '@root/types/common';
-import type { FetchStateProps } from '@root/types/common/props';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 import clsx from 'clsx';
-import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import type { FC } from 'react';
 
-type ListPlaceHolderProps = FetchStateProps;
+export { clsx };
 
 export const hideCategoryOnTrait: Readonly<CATEGORY[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
 
@@ -131,19 +129,25 @@ export const recipeTypeSelectList = [
 	})),
 ] satisfies SelectOptionItem<RECIPE_TYPE | null>[];
 
-export const ListPlaceHolder: FC<ListPlaceHolderProps> = ({ isSuccess, isError }) => (
-	<LazyMotion features={domAnimation} strict>
-		{Array(defaultLimit)
-			.fill(0)
-			.map((_, k) => (
-				<motion.div
-					key={k}
-					{...getFramerFadeUp()}
-					className={clsx(
-						{ hidden: isSuccess || isError },
-						'card from-base-100 via-base-100 shadow-primary to-base-100 h-60 w-full animate-pulse bg-gradient-to-r shadow-lg',
-					)}
-				/>
-			))}
-	</LazyMotion>
+export const RecordPlaceholder: FC = () => (
+	<motion.div {...getFramerInViewFadeUp()} className='card-body flex h-60 animate-pulse gap-3'>
+		<div className='flex flex-row items-center gap-3'>
+			<div className='h-4 w-4 rounded-full bg-slate-300'></div>
+			<div className='h-5 w-60 rounded bg-slate-300'></div>
+		</div>
+
+		<div className='h-[14px] w-16 rounded bg-slate-300' />
+
+		<div className='grid gap-[10px]'>
+			<div className='grid grid-cols-3 gap-4'>
+				<div className='col-span-2 h-[18px] rounded bg-slate-300'></div>
+				<div className='col-span-1 h-[18px] rounded bg-slate-300'></div>
+			</div>
+			<div className='h-[18px] w-full rounded bg-slate-300' />
+			<div className='grid grid-cols-2 gap-4'>
+				<div className='col-span-1 h-[18px] rounded bg-slate-300'></div>
+				<div className='col-span-1 h-[18px] rounded bg-slate-300'></div>
+			</div>
+		</div>
+	</motion.div>
 );
