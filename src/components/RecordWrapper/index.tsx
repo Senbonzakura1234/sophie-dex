@@ -1,17 +1,20 @@
 import type { COLOR } from '@prisma/client';
 import { getFramerInViewFadeUp } from '@root/animations';
 import AnimationWrapper from '@root/components/AnimationWrapper';
+import { RecordPlaceholder } from '@root/components/SubComponent';
+import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { MaybeData, RenderFunction } from '@root/types/common';
-import type { ClassNameProps } from '@root/types/common/props';
+import type { ClassNameProps, PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import { useMemo } from 'react';
-import { RecordPlaceholder } from '../SubComponent';
+import RecordHead from './RecordHead';
 
-type RecordWrapperProps<TData = unknown> = ClassNameProps & {
-	color?: COLOR;
-	children?: RenderFunction<TData>;
-} & MaybeData<TData>;
+type RecordWrapperProps<TRecord extends { id: string; name: string }> = ClassNameProps &
+	PageNameProps & {
+		color?: COLOR;
+		children?: RenderFunction<TRecord>;
+	} & MaybeData<TRecord>;
 
 function RecordWrapper<TRecord extends { id: string; name: string }>({
 	children,
@@ -19,10 +22,11 @@ function RecordWrapper<TRecord extends { id: string; name: string }>({
 	color,
 	isDataReady,
 	data,
+	pageName,
 }: RecordWrapperProps<TRecord>) {
-	const renderChild = useMemo(() => {
-		return isDataReady && children ? children(data) : null;
-	}, [isDataReady, data, children]);
+	const { isReady, securedIdQuery, pathname } = useIdQuery();
+
+	const renderChild = useMemo(() => (isDataReady && children ? children(data) : null), [isDataReady, data, children]);
 
 	return (
 		<LazyMotion features={domAnimation} strict>
@@ -47,6 +51,16 @@ function RecordWrapper<TRecord extends { id: string; name: string }>({
 					className='card-body flex flex-col gap-3'
 					placeholder={<RecordPlaceholder />}
 				>
+					{isDataReady && isReady ? (
+						<RecordHead
+							id={data.id}
+							isCurrentRecord={securedIdQuery.id === data.id}
+							name={data.name}
+							pathname={pathname}
+							pageName={pageName}
+						/>
+					) : null}
+
 					{renderChild}
 				</AnimationWrapper>
 			</motion.article>

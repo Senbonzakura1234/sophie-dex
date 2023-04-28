@@ -1,7 +1,5 @@
 import type { Trait } from '@prisma/client';
-import RecordHead from '@root/components/RecordHead';
 import RecordWrapper from '@root/components/RecordWrapper';
-import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { RecordProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
@@ -12,34 +10,22 @@ import TraitMergeList from './TraitMergeList';
 
 type TraitRecordProps = RecordProps<Trait>;
 
-const TraitRecord: FC<TraitRecordProps> = props => {
-	const { isReady, securedIdQuery, pathname } = useIdQuery();
+const TraitRecord: FC<TraitRecordProps> = props => (
+	<RecordWrapper {...nullableHandle(props)} pageName='Trait'>
+		{({ categories, description, index, itemPresent, mergeFrom }) => (
+			<>
+				<div className='text-sm'>index: {index}</div>
 
-	return (
-		<RecordWrapper {...nullableHandle(props, !isReady)}>
-			{({ id, categories, description, index, itemPresent, mergeFrom, name }) => (
-				<>
-					<RecordHead
-						id={id}
-						isCurrentRecord={securedIdQuery.id === id}
-						name={name}
-						pathname={pathname}
-						pageName='Trait'
-					/>
+				<p className='text-lg'>{description}</p>
 
-					<div className='text-sm'>index: {index}</div>
+				<TraitMergeList mergeFrom={mergeFrom} />
 
-					<p className='text-lg'>{description}</p>
+				{itemPresent ? <ItemPresent itemPresent={itemPresent} /> : null}
 
-					<TraitMergeList mergeFrom={mergeFrom} />
-
-					{itemPresent ? <ItemPresent itemPresent={itemPresent} /> : null}
-
-					<Categories categories={categories} />
-				</>
-			)}
-		</RecordWrapper>
-	);
-};
+				<Categories categories={categories} />
+			</>
+		)}
+	</RecordWrapper>
+);
 
 export default TraitRecord;

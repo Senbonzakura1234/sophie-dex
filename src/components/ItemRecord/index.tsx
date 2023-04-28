@@ -1,7 +1,5 @@
 import type { Item } from '@prisma/client';
-import RecordHead from '@root/components/RecordHead';
 import RecordWrapper from '@root/components/RecordWrapper';
-import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { RecordProps } from '@root/types/common/props';
 import type { FC } from 'react';
 
@@ -17,54 +15,30 @@ import TraitPresent from './TraitPresent';
 
 type ItemRecordProps = RecordProps<Item>;
 
-const ItemRecord: FC<ItemRecordProps> = props => {
-	const { isReady, securedIdQuery, pathname } = useIdQuery();
+const ItemRecord: FC<ItemRecordProps> = props => (
+	<RecordWrapper {...nullableHandle(props)} color={props.data?.color} pageName='Item'>
+		{({ category, color, description, index, level, recipeIdea, recipeType, relatedCategories, traitPresent }) => (
+			<>
+				<Level level={level} />
 
-	return (
-		<RecordWrapper {...nullableHandle(props, !isReady)} color={props.data?.color}>
-			{({
-				category,
-				color,
-				description,
-				id,
-				index,
-				level,
-				name,
-				recipeIdea,
-				recipeType,
-				relatedCategories,
-				traitPresent,
-			}) => (
-				<>
-					<RecordHead
-						id={id}
-						isCurrentRecord={securedIdQuery.id === id}
-						name={name}
-						pathname={pathname}
-						pageName='Item'
-					/>
+				<div className='text-sm'>index: {index}</div>
 
-					<Level level={level} />
+				{recipeType ? <RecipeType recipeType={recipeType} /> : null}
 
-					<div className='text-sm'>index: {index}</div>
+				<Category category={category} />
 
-					{recipeType ? <RecipeType recipeType={recipeType} /> : null}
+				<Color color={color} />
 
-					<Category category={category} />
+				{recipeIdea ? <RecipeIdea recipeIdea={recipeIdea} className='sm:max-w-[50%]' /> : null}
 
-					<Color color={color} />
+				{description ? <Description description={description} /> : null}
 
-					{recipeIdea ? <RecipeIdea recipeIdea={recipeIdea} className='sm:max-w-[50%]' /> : null}
+				{traitPresent ? <TraitPresent traitPresent={traitPresent} /> : null}
 
-					{description ? <Description description={description} /> : null}
-
-					{traitPresent ? <TraitPresent traitPresent={traitPresent} /> : null}
-
-					<RelatedCategories relatedCategories={relatedCategories} />
-				</>
-			)}
-		</RecordWrapper>
-	);
-};
+				<RelatedCategories relatedCategories={relatedCategories} />
+			</>
+		)}
+	</RecordWrapper>
+);
 
 export default ItemRecord;
