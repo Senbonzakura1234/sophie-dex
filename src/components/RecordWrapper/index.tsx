@@ -26,7 +26,10 @@ function RecordWrapper<TRecord extends { id: string; name: string }>({
 }: RecordWrapperProps<TRecord>) {
 	const { isReady, securedIdQuery, pathname } = useIdQuery();
 
-	const renderChild = useMemo(() => (isDataReady && children ? children(data) : null), [isDataReady, data, children]);
+	const renderChild = useMemo(
+		() => (isDataReady && isReady && children ? children(data) : null),
+		[isDataReady, isReady, children, data],
+	);
 
 	return (
 		<LazyMotion features={domAnimation} strict>
