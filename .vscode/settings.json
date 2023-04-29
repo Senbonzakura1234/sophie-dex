@@ -9,6 +9,7 @@
 		"headlessui",
 		"heroicons",
 		"meruru",
+		"nextjs",
 		"pnpx",
 		"ryza",
 		"Senbonzakura",
@@ -79,6 +80,13 @@
 			"format": "svg",
 			"icon": "tsconfig_official",
 			"overrides": "tsbuildinfo"
+		},
+		{
+			"extensions": ["env.mjs"],
+			"filename": true,
+			"format": "svg",
+			"icon": "config",
+			"overrides": "mjs"
 		}
 	],
 	"vsicons.associations.folders": [
@@ -87,12 +95,6 @@
 			"format": "svg",
 			"icon": "images",
 			"overrides": "splash_screens"
-		},
-		{
-			"extensions": ["env"],
-			"format": "svg",
-			"icon": "config",
-			"overrides": "env"
 		},
 		{
 			"extensions": ["backups", "backup"],

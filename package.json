@@ -35,6 +35,7 @@
 		"@heroicons/react": "^2.0.17",
 		"@prisma/client": "^4.13.0",
 		"@radix-ui/react-scroll-area": "^1.0.3",
+		"@t3-oss/env-nextjs": "^0.2.2",
 		"@tailwindcss/typography": "^0.5.9",
 		"@tanstack/react-query": "^4.29.3",
 		"@trpc/client": "^10.20.0",
