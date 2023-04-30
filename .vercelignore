@@ -1,0 +1,8 @@
+.vscode
+backup
+prisma/data
+prisma/test
+prisma/seed.ts
+.editorconfig
+LICENSE
+README.md
