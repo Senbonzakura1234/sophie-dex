@@ -8,7 +8,7 @@ import Head from 'next/head';
 
 const ItemDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
-	const { data, isSuccess, isLoading, isError, error } = apiContext.item.getOne.useQuery(securedIdQuery, {
+	const { data, isError, error } = apiContext.item.getOne.useQuery(securedIdQuery, {
 		retry: 2,
 		enabled: isReady,
 		refetchOnWindowFocus: false,
@@ -21,7 +21,6 @@ const ItemDetail: NextPage = () => {
 			errorMessage={error?.message}
 			pageName='Item'
 			rawData={data}
-			extraFlag={isSuccess && !isLoading}
 			extraHead={({ name, relatedCategories, color }) => (
 				<Head>
 					<title>{name}</title>

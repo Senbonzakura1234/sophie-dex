@@ -2,6 +2,10 @@ import { idRegex, tableList } from '@root/constants';
 import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
 import { z } from 'zod';
 
+const nodeEnvSchema = z.enum(['development', 'test', 'production']);
+
+export type NodeEnv = z.infer<typeof nodeEnvSchema>;
+
 const positiveIntSchema = z.coerce.number().positive();
 
 const genericStringSchema = z.string();

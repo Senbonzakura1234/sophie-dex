@@ -7,7 +7,7 @@ import Head from 'next/head';
 
 const EffectDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
-	const { data, isSuccess, isLoading, isError, error } = apiContext.effect.getOne.useQuery(securedIdQuery, {
+	const { data, isError, error } = apiContext.effect.getOne.useQuery(securedIdQuery, {
 		retry: 2,
 		enabled: isReady,
 		refetchOnWindowFocus: false,
@@ -20,7 +20,6 @@ const EffectDetail: NextPage = () => {
 			errorMessage={error?.message}
 			pageName='Effect'
 			rawData={data}
-			extraFlag={isSuccess && !isLoading}
 			extraHead={({ name, description }) => (
 				<Head>
 					<title>{name}</title>

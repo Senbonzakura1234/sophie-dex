@@ -7,7 +7,7 @@ import Head from 'next/head';
 
 const RumorDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
-	const { data, isSuccess, isLoading, isError, error } = apiContext.rumor.getOne.useQuery(securedIdQuery, {
+	const { data, isError, error } = apiContext.rumor.getOne.useQuery(securedIdQuery, {
 		retry: 2,
 		enabled: isReady,
 		refetchOnWindowFocus: false,
@@ -20,7 +20,6 @@ const RumorDetail: NextPage = () => {
 			errorMessage={error?.message}
 			pageName='Rumor'
 			rawData={data}
-			extraFlag={isSuccess && !isLoading}
 			extraHead={({ name }) => (
 				<Head>
 					<title>{name}</title>

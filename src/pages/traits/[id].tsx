@@ -7,7 +7,7 @@ import Head from 'next/head';
 
 const TraitDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
-	const { data, isSuccess, isLoading, isError, error } = apiContext.trait.getOne.useQuery(securedIdQuery, {
+	const { data, isError, error } = apiContext.trait.getOne.useQuery(securedIdQuery, {
 		retry: 2,
 		enabled: isReady,
 		refetchOnWindowFocus: false,
@@ -20,7 +20,6 @@ const TraitDetail: NextPage = () => {
 			errorMessage={error?.message}
 			pageName='Trait'
 			rawData={data}
-			extraFlag={isSuccess && !isLoading}
 			extraHead={({ name, description }) => (
 				<Head>
 					<title>{name}</title>

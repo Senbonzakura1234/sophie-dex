@@ -23,7 +23,6 @@ const SearchInput: FC = () => {
 				role='navigation'
 				aria-label='Reset search query'
 				onClick={() => resetSearch()}
-				disabled={!isSearchValueValid}
 				className={clsx(
 					{ 'opacity-0': !isSearchValueValid },
 					'btn btn-ghost btn-sm btn-circle my-auto border-0 hover:bg-transparent',

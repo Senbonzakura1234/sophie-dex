@@ -3,6 +3,7 @@ import { httpBatchLink, loggerLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
 import type { inferRouterInputs, inferRouterOutputs } from '@trpc/server';
 import superjson from 'superjson';
+import { evnIs } from './common';
 import { env } from './env.mjs';
 
 const getBaseUrl = () => {
@@ -17,9 +18,7 @@ export const apiContext = createTRPCNext<AppRouter>({
 			transformer: superjson,
 			links: [
 				loggerLink({
-					enabled: opts =>
-						env.NEXT_PUBLIC_NODE_ENV === 'development' ||
-						(opts.direction === 'down' && opts.result instanceof Error),
+					enabled: opts => evnIs('development') || (opts.direction === 'down' && opts.result instanceof Error),
 				}),
 				httpBatchLink({ url: `${getBaseUrl()}/api/trpc` }),
 			],

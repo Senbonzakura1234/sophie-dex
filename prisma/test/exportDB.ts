@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import { tryCatchHandler } from '@root/utils/common';
+import { evnIs, tryCatchHandler } from '@root/utils/common';
 import { writeFile } from 'fs/promises';
 
 const prisma = new PrismaClient();
@@ -11,11 +11,7 @@ const mapName: Readonly<Record<number, string>> = {
 } as const;
 
 async function seed() {
-	const {
-		data: transactionsData,
-		error: transactionsError,
-		isSuccess: transactionsIsSuccess,
-	} = await tryCatchHandler(
+	const { data: transactionsData, isSuccess: transactionsIsSuccess } = await tryCatchHandler(
 		prisma.$transaction([
 			prisma.item.findMany(),
 			prisma.trait.findMany(),
@@ -24,16 +20,16 @@ async function seed() {
 		]),
 	);
 
-	if (!transactionsIsSuccess) return console.log(transactionsError);
+	if (!transactionsIsSuccess) return;
 
-	const { isSuccess, error } = await tryCatchHandler(
+	return await tryCatchHandler(
 		Promise.all(
 			transactionsData.map(async (res, index) => {
 				const fileName = mapName[index];
 
 				if (!fileName) return;
 
-				const { isSuccess: writeFileIsSuccess, error: writeFileError } = await tryCatchHandler(
+				return await tryCatchHandler(
 					writeFile(
 						fileName,
 						JSON.stringify(
@@ -45,22 +41,14 @@ async function seed() {
 						),
 					),
 				);
-
-				if (!writeFileIsSuccess) console.log(writeFileError);
 			}),
 		),
 	);
-
-	if (!isSuccess) console.log(error);
 }
 
 seed()
 	.catch(e => {
-		console.error(e);
+		if (evnIs('development')) console.error(e);
 		process.exit(1);
 	})
-	.finally(async () => {
-		const { error, isSuccess } = await tryCatchHandler(prisma.$disconnect());
-
-		if (!isSuccess) console.log(error);
-	});
+	.finally(async () => await tryCatchHandler(prisma.$disconnect()));

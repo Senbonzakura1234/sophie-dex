@@ -21,16 +21,15 @@ export const useSearchInput: UseSearchInput = () => {
 	const searchInput = useMemo(() => searchValue || '', [searchValue]);
 	const isSearchValueValid = useMemo(() => searchInput.length > 0, [searchInput.length]);
 
-	const performSearch = useCallback(() => {
-		if (isSearchValueValid) updateQuery({ search: searchValue, page: null });
-	}, [isSearchValueValid, searchValue, updateQuery]);
+	const performSearch = useCallback(
+		() => updateQuery({ search: searchValue, page: null }),
+		[searchValue, updateQuery],
+	);
 
 	const resetSearch = useCallback(() => {
-		if (isSearchValueValid) {
-			setSearchValue(() => null);
-			if (searchValue === securedQuery.search) updateQuery({ search: null, page: null });
-		}
-	}, [isSearchValueValid, searchValue, securedQuery.search, updateQuery]);
+		setSearchValue(() => null);
+		if (searchValue === securedQuery.search) updateQuery({ search: null, page: null });
+	}, [searchValue, securedQuery.search, updateQuery]);
 
 	useEffect(() => {
 		setSearchValue(() => defaultSearchValue);

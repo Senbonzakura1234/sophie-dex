@@ -8,7 +8,6 @@ type DetailLayoutProps<TData = unknown> = DefaultLayoutProps &
 	ErrorResultProps & {
 		extraHead?: RenderFunction<NonNullable<TData>>;
 		children?: RenderFunction<MaybeData<TData>>;
-		extraFlag?: boolean;
 		rawData: TData | undefined;
 	};
 
@@ -19,15 +18,12 @@ function DetailLayout<TData = unknown>({
 	isError,
 	errorData,
 	errorMessage,
-	extraFlag,
 	rawData,
 }: DetailLayoutProps<TData>) {
 	const result: MaybeData<TData> = useMemo(
 		() =>
-			!!rawData && !extraFlag
-				? { data: rawData, isDataReady: true as const }
-				: { data: undefined, isDataReady: false as const },
-		[extraFlag, rawData],
+			!!rawData ? { data: rawData, isDataReady: true as const } : { data: undefined, isDataReady: false as const },
+		[rawData],
 	);
 
 	const renderChild = useMemo(() => (children ? children(result) : null), [children, result]);

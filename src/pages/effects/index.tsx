@@ -6,7 +6,7 @@ import { type NextPage } from 'next';
 
 const Effects: NextPage = () => {
 	const { securedQuery, isReady } = useSearchQuery();
-	const { data, isSuccess, isLoading, isError, error } = apiContext.effect.getAll.useQuery(securedQuery, {
+	const { data, isError, error } = apiContext.effect.getAll.useQuery(securedQuery, {
 		retry: 2,
 		enabled: isReady,
 		refetchOnWindowFocus: false,
@@ -19,7 +19,6 @@ const Effects: NextPage = () => {
 			errorMessage={error?.message}
 			pageName='Effect'
 			rawData={data}
-			extraFlag={isLoading || !isSuccess}
 		>
 			{props => props.data.map((rumor, key) => <EffectRecord key={key} {...rumor} />)}
 		</ListLayout>

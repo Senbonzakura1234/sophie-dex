@@ -1,7 +1,8 @@
 import { TRPCError } from '@trpc/server';
+import { evnIs } from './common';
 
 export const onQueryDBError = (error: unknown) => {
-	console.log({ error });
+	if (evnIs('development')) console.error(error);
 
 	throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Some Thing When Wrong On The Server.' });
 };

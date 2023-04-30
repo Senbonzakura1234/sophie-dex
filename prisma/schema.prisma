@@ -146,7 +146,7 @@ type SEARCH_QUERY {
 
 generator client {
    provider        = "prisma-client-js"
-   previewFeatures = ["orderByNulls"]
+   previewFeatures = ["orderByNulls", "jsonProtocol"]
 }
 
 datasource db {

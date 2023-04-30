@@ -13,7 +13,6 @@ import { useMemo } from 'react';
 type ListLayoutProps<TData = unknown> = DefaultLayoutProps &
 	ErrorResultProps & {
 		children?: RenderFunction<MaybeListData<TData>>;
-		extraFlag?: boolean;
 		rawData: ListRecord<TData> | undefined;
 	};
 
@@ -23,15 +22,12 @@ function ListLayout<TData = unknown>({
 	errorData,
 	errorMessage,
 	isError,
-	extraFlag,
 	rawData,
 }: ListLayoutProps<TData>) {
 	const { data, isDataReady }: MaybeData<ListRecord<TData>> = useMemo(
 		() =>
-			!!rawData && !extraFlag
-				? { data: rawData, isDataReady: true as const }
-				: { data: undefined, isDataReady: false as const },
-		[extraFlag, rawData],
+			!!rawData ? { data: rawData, isDataReady: true as const } : { data: undefined, isDataReady: false as const },
+		[rawData],
 	);
 
 	const { page, totalPage, totalRecord } = useMemo(
