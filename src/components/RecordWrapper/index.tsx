@@ -47,7 +47,7 @@ function RecordWrapper<TRecord extends { id: string; name: string }>({
 			>
 				<AnimationWrapper
 					show={isDataReady}
-					options={getFramerInViewFadeUp(0, 50, 3)}
+					options={getFramerInViewFadeUp(0, 50, 1)}
 					className='card-body flex flex-col gap-3'
 					placeholder={<RecordPlaceholder />}
 				>

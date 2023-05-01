@@ -156,16 +156,17 @@ datasource db {
 
 model Effect {
    id          String @id @default(auto()) @map("_id") @db.ObjectId
-   index       Int
    name        String
-   description String
    keyWords    String
+   index       Int
+   description String
 }
 
 model Item {
    id                String             @id @default(auto()) @map("_id") @db.ObjectId
-   index             Int
    name              String
+   keyWords          String
+   index             Int
    description       ITEM_DESCRIPTION
    color             COLOR
    relatedCategories RELATED_CATEGORY[]
@@ -174,26 +175,25 @@ model Item {
    recipeType        RECIPE_TYPE?
    recipeIdea        HYPER_LINK_MAP?
    traitPresent      HYPER_LINK_RECORD?
-   keyWords          String
 }
 
 model Rumor {
    id          String         @id @default(auto()) @map("_id") @db.ObjectId
    name        String
+   keyWords    String
    description HYPER_LINK_MAP
    location    String
    price       Int
    rumorType   RUMOR_TYPE
-   keyWords    String
 }
 
 model Trait {
    id          String             @id @default(auto()) @map("_id") @db.ObjectId
-   index       Int
    name        String
+   keyWords    String
+   index       Int
    description String
    categories  CATEGORY[]
    mergeFrom   MERGE_TRAIT[]
    itemPresent HYPER_LINK_RECORD?
-   keyWords    String
 }

@@ -48,48 +48,47 @@ const SelectOption = <V extends string | number | null>({
 					<LazyMotion features={domAnimation} strict>
 						<AnimationWrapper options={getFramerFadeUp(0, 20)} className='absolute z-10 mt-1 w-full' show={open}>
 							<Listbox.Options className='legacy-scroll-area h-full max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm'>
-								{list.map((item, key) => (
-									<Listbox.Option
-										key={key}
-										className={({ active }) =>
-											clsx(
-												{
-													'bg-primary/10 text-primary': active,
-													'pl-10': withIcon || useCustomIcon,
-													'pl-4': !withIcon && !useCustomIcon,
-												},
-												'relative cursor-default select-none py-2  pr-4',
-											)
-										}
-										value={item}
-									>
-										<span
-											className={clsx(
-												{
-													'font-bold': item.value === value.value,
-												},
-												'2xl:text-md block truncate text-sm',
-											)}
+								{list.map((item, key) => {
+									const isSelected = item.value === value.value || (key === 0 && value.value == null);
+
+									return (
+										<Listbox.Option
+											key={key}
+											className={({ active }) =>
+												clsx(
+													{
+														'bg-primary/10 text-primary': active,
+														'pl-10': withIcon || useCustomIcon,
+														'pl-4': !withIcon && !useCustomIcon,
+													},
+													'relative cursor-default select-none py-2  pr-4',
+												)
+											}
+											value={item}
 										>
-											{item.label}
-										</span>
-										{(item.value === value.value && withIcon) || useCustomIcon ? (
 											<span
-												className={clsx(
-													{ 'font-atelier': useAtelierFont },
-													{ 'text-primary': !useCustomIcon },
-													' absolute inset-y-0 left-0 flex items-center pl-3',
-												)}
+												className={clsx({ 'font-bold': isSelected }, '2xl:text-md block truncate text-sm')}
 											>
-												{useCustomIcon ? (
-													item.icon
-												) : (
-													<CheckIcon className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />
-												)}
+												{item.label}
 											</span>
-										) : null}
-									</Listbox.Option>
-								))}
+											{(isSelected && withIcon) || useCustomIcon ? (
+												<span
+													className={clsx(
+														{ 'font-atelier': useAtelierFont },
+														{ 'text-primary': !useCustomIcon },
+														' absolute inset-y-0 left-0 flex items-center pl-3',
+													)}
+												>
+													{useCustomIcon ? (
+														item.icon
+													) : (
+														<CheckIcon className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />
+													)}
+												</span>
+											) : null}
+										</Listbox.Option>
+									);
+								})}
 							</Listbox.Options>
 						</AnimationWrapper>
 					</LazyMotion>

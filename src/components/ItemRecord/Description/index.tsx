@@ -5,7 +5,7 @@ import type { FC } from 'react';
 type DescriptionProps = { description: ITEM_DESCRIPTION };
 
 const Description: FC<DescriptionProps> = ({ description }) => (
-	<ul className='max-w-fit list-disc pl-8 text-lg sm:max-w-[60%]'>
+	<ul className='max-w-fit list-disc pl-8 text-lg sm:max-w-[80%]'>
 		{Object.entries(description).map(([key, value]) =>
 			!value || (Array.isArray(value) && !value.length) ? null : (
 				<li key={key}>

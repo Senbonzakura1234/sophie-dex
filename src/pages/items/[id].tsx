@@ -4,7 +4,6 @@ import { colorTailwindMap } from '@root/constants';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import { apiContext } from '@root/utils/trpc';
 import type { NextPage } from 'next';
-import Head from 'next/head';
 
 const ItemDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
@@ -21,14 +20,8 @@ const ItemDetail: NextPage = () => {
 			errorMessage={error?.message}
 			pageName='Item'
 			rawData={data}
-			extraHead={({ name, relatedCategories, color }) => (
-				<Head>
-					<title>{name}</title>
-
-					<meta name='description' content={relatedCategories.map(c => `${c.name} (${c.count})`).join(', ')} />
-
-					<meta name='theme-color' property='og:theme-color' key='theme-color' content={colorTailwindMap[color]} />
-				</Head>
+			extraHead={({ color }) => (
+				<meta name='theme-color' property='og:theme-color' key='theme-color' content={colorTailwindMap[color]} />
 			)}
 		>
 			{props => <ItemRecord {...props} />}

@@ -6,25 +6,26 @@ import SearchControl from '@root/components/SearchControl';
 import { defaultLimit } from '@root/constants';
 import type { MaybeData, MaybeListData, RenderFunction } from '@root/types/common';
 import type { DefaultLayoutProps, ErrorResultProps } from '@root/types/common/props';
-import type { ListRecord } from '@root/types/model';
+import type { CommonRecord, ListRecord } from '@root/types/model';
+import clsx from 'clsx';
 import Head from 'next/head';
 import { useMemo } from 'react';
 
-type ListLayoutProps<TData = unknown> = DefaultLayoutProps &
+type ListLayoutProps<TRecord extends CommonRecord> = DefaultLayoutProps &
 	ErrorResultProps & {
-		children?: RenderFunction<MaybeListData<TData>>;
-		rawData: ListRecord<TData> | undefined;
+		children?: RenderFunction<MaybeListData<TRecord>>;
+		rawData: ListRecord<TRecord> | undefined;
 	};
 
-function ListLayout<TData = unknown>({
+function ListLayout<TRecord extends CommonRecord>({
 	pageName,
 	children,
 	errorData,
 	errorMessage,
 	isError,
 	rawData,
-}: ListLayoutProps<TData>) {
-	const { data, isDataReady }: MaybeData<ListRecord<TData>> = useMemo(
+}: ListLayoutProps<TRecord>) {
+	const { data, isDataReady }: MaybeData<ListRecord<TRecord>> = useMemo(
 		() =>
 			!!rawData ? { data: rawData, isDataReady: true as const } : { data: undefined, isDataReady: false as const },
 		[rawData],
@@ -35,7 +36,7 @@ function ListLayout<TData = unknown>({
 		[data, isDataReady],
 	);
 
-	const listData: MaybeListData<TData> = useMemo(
+	const listData: MaybeListData<TRecord> = useMemo(
 		() =>
 			isDataReady
 				? { data: data.records.map(r => ({ data: r, isDataReady: true as const })) }
@@ -53,7 +54,8 @@ function ListLayout<TData = unknown>({
 		<>
 			<Head>
 				<title>{pageName}</title>
-				<meta name='description' content={`${pageName} List`} />
+				<meta name='og:title' content={pageName} key='title' />
+				<meta name='description' content={`${pageName} Record`} key='description' />
 			</Head>
 
 			<PageTitle pageName={pageName} />
@@ -68,7 +70,13 @@ function ListLayout<TData = unknown>({
 				isSuccess={isDataReady}
 			/>
 
-			<section className='container mx-auto grid grow gap-6 max-2xl:px-4 2xl:grid-cols-2'>{renderChild}</section>
+			<section
+				className={clsx('container mx-auto grid grow gap-6 max-2xl:px-4', {
+					'2xl:grid-cols-2': pageName !== 'Item',
+				})}
+			>
+				{renderChild}
+			</section>
 
 			<FilterControl
 				pageName={pageName}

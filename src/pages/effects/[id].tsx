@@ -3,7 +3,6 @@ import DetailLayout from '@root/components/Layout/DetailLayout';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import { apiContext } from '@root/utils/trpc';
 import type { NextPage } from 'next';
-import Head from 'next/head';
 
 const EffectDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
@@ -20,12 +19,6 @@ const EffectDetail: NextPage = () => {
 			errorMessage={error?.message}
 			pageName='Effect'
 			rawData={data}
-			extraHead={({ name, keyWords }) => (
-				<Head>
-					<title>{name}</title>
-					<meta name='description' content={keyWords} />
-				</Head>
-			)}
 		>
 			{props => <EffectRecord {...props} />}
 		</DetailLayout>

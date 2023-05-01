@@ -96,8 +96,14 @@ export const categoryList = [
 	'SYNTHESIS',
 ] as const satisfies Readonly<CATEGORY[]>;
 
-export type ListRecord<TData = unknown> = {
-	records: TData[];
+export type CommonRecord = {
+	id: string;
+	name: string;
+	keyWords: string;
+};
+
+export type ListRecord<TRecord extends CommonRecord> = {
+	records: TRecord[];
 	page: number | null;
 	totalRecord: number;
 	totalPage: number;

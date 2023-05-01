@@ -3,7 +3,6 @@ import RumorRecord from '@root/components/RumorRecord';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import { apiContext } from '@root/utils/trpc';
 import type { NextPage } from 'next';
-import Head from 'next/head';
 
 const RumorDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
@@ -20,11 +19,6 @@ const RumorDetail: NextPage = () => {
 			errorMessage={error?.message}
 			pageName='Rumor'
 			rawData={data}
-			extraHead={({ name }) => (
-				<Head>
-					<title>{name}</title>
-				</Head>
-			)}
 		>
 			{props => <RumorRecord {...props} />}
 		</DetailLayout>

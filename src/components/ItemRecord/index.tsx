@@ -29,7 +29,7 @@ const ItemRecord: FC<ItemRecordProps> = props => (
 
 				<Color color={color} />
 
-				{recipeIdea ? <RecipeIdea recipeIdea={recipeIdea} className='sm:max-w-[50%]' /> : null}
+				{recipeIdea ? <RecipeIdea recipeIdea={recipeIdea} /> : null}
 
 				{description ? <Description description={description} /> : null}
 

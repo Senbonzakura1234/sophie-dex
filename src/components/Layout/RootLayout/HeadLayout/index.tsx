@@ -5,10 +5,10 @@ import type { FC } from 'react';
 const HeadLayout: FC = () => (
 	<Head>
 		<title>{APP_NAME}</title>
-		<meta name='description' content={APP_DESCRIPTION} />
 		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 		<link rel='icon' href='/favicon.ico' />
-		<meta name='keywords' content={APP_KEYWORD} />
+		<meta name='description' content={APP_DESCRIPTION} key='description' />
+		<meta name='keywords' content={APP_KEYWORD} key='keywords' />
 		<meta name='author' content={APP_AUTHOR} />
 		<link rel='manifest' href='/manifest.json' />
 		<meta name='theme-color' property='og:theme-color' key='theme-color' content='#e0a82e' />

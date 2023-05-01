@@ -3,7 +3,6 @@ import TraitRecord from '@root/components/TraitRecord';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import { apiContext } from '@root/utils/trpc';
 import type { NextPage } from 'next';
-import Head from 'next/head';
 
 const TraitDetail: NextPage = () => {
 	const { isReady, securedIdQuery } = useIdQuery();
@@ -20,12 +19,6 @@ const TraitDetail: NextPage = () => {
 			errorMessage={error?.message}
 			pageName='Trait'
 			rawData={data}
-			extraHead={({ name, description }) => (
-				<Head>
-					<title>{name}</title>
-					<meta name='description' content={description} />
-				</Head>
-			)}
 		>
 			{props => <TraitRecord {...props} />}
 		</DetailLayout>
