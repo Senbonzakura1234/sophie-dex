@@ -1,13 +1,13 @@
 import { getFramerFadeUp, getFramerInViewFadeUp } from '@root/animations';
 import AnimationWrapper from '@root/components/AnimationWrapper';
-import type { IsSuccessProps } from '@root/types/common/props';
+import type { IsDataReadyProps } from '@root/types/common/props';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 
 import SearchInput from './SearchInput';
 
-type SearchControlProps = IsSuccessProps;
+type SearchControlProps = IsDataReadyProps;
 
-export default function SearchControl({ isSuccess }: SearchControlProps) {
+export default function SearchControl({ isDataReady }: SearchControlProps) {
 	return (
 		<section className='container mx-auto max-2xl:px-4'>
 			<LazyMotion features={domAnimation} strict>
@@ -16,7 +16,7 @@ export default function SearchControl({ isSuccess }: SearchControlProps) {
 					className='card bg-base-100 shadow-primary ml-auto overflow-hidden rounded-full shadow-lg md:w-1/4 md:min-w-[300px]'
 				>
 					<AnimationWrapper
-						show={isSuccess}
+						show={isDataReady}
 						className='relative flex w-full flex-row gap-3 px-5 py-[9px]'
 						options={getFramerFadeUp(0, 10)}
 						placeholder={

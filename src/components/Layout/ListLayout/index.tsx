@@ -60,14 +60,14 @@ export default function ListLayout<TRecord extends CommonRecord>({
 
 			<PageTitle pageName={pageName} />
 
-			<SearchControl isSuccess={isDataReady} />
+			<SearchControl isDataReady={isDataReady} />
 
 			<FilterControl
 				pageName={pageName}
 				page={page || 1}
 				totalPage={totalPage}
 				totalRecord={totalRecord}
-				isSuccess={isDataReady}
+				isDataReady={isDataReady}
 			/>
 
 			<section
@@ -83,7 +83,7 @@ export default function ListLayout<TRecord extends CommonRecord>({
 				page={page || 1}
 				totalPage={totalPage}
 				totalRecord={totalRecord}
-				isSuccess={isDataReady}
+				isDataReady={isDataReady}
 				isBottomFilter
 			/>
 

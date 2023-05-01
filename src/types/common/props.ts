@@ -9,9 +9,8 @@ export type ClassNameProps = { className?: string };
 export type ChildrenProps = { children?: ReactNode };
 export type RefProps<E> = { refObject?: RefObject<E> };
 export type PageNameProps = { pageName: PageName };
-export type IsSuccessProps = { isSuccess: boolean };
+export type IsDataReadyProps = { isDataReady: boolean };
 export type IsErrorProps = { isError: boolean };
-export type FetchStateProps = IsErrorProps & IsSuccessProps;
 export type IsBottomFilterProps = { isBottomFilter?: boolean };
 export type PageControlProps = {
 	page: number;

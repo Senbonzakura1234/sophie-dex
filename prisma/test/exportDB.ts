@@ -11,7 +11,7 @@ const mapName: Readonly<Record<number, string>> = {
 } as const;
 
 async function seed() {
-	const { data: transactionsData, isSuccess: transactionsIsSuccess } = await tryCatchHandler(
+	const { data, isSuccess } = await tryCatchHandler(
 		prisma.$transaction([
 			prisma.item.findMany(),
 			prisma.trait.findMany(),
@@ -20,11 +20,11 @@ async function seed() {
 		]),
 	);
 
-	if (!transactionsIsSuccess) return;
+	if (!isSuccess) return;
 
 	return await tryCatchHandler(
 		Promise.all(
-			transactionsData.map(async (res, index) => {
+			data.map(async (res, index) => {
 				const fileName = mapName[index];
 
 				if (!fileName) return;

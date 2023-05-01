@@ -1,7 +1,7 @@
 import { getFramerFadeUp, getFramerInViewFadeUp } from '@root/animations';
 import AnimationWrapper from '@root/components/AnimationWrapper';
 import { defaultLimit } from '@root/constants';
-import type { IsBottomFilterProps, IsSuccessProps, PageControlProps, PageNameProps } from '@root/types/common/props';
+import type { IsBottomFilterProps, IsDataReadyProps, PageControlProps, PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import { useMemo } from 'react';
@@ -14,14 +14,14 @@ import ResetFilter from './ResetFilter';
 import RumorTypeFilter from './RumorTypeFilter';
 import SortControl from './SortControl';
 
-type FilterControlProps = PageControlProps & PageNameProps & IsBottomFilterProps & IsSuccessProps;
+type FilterControlProps = PageControlProps & PageNameProps & IsBottomFilterProps & IsDataReadyProps;
 
 export default function FilterControl({
 	page = 1,
 	totalPage = 0,
 	totalRecord = 0,
 	isBottomFilter,
-	isSuccess,
+	isDataReady,
 	pageName,
 }: FilterControlProps) {
 	const { from, to } = useMemo(
@@ -37,7 +37,7 @@ export default function FilterControl({
 			<LazyMotion features={domAnimation} strict>
 				<motion.nav {...getFramerInViewFadeUp()} className='card bg-base-100 shadow-primary shadow-lg'>
 					<AnimationWrapper
-						show={isSuccess}
+						show={isDataReady}
 						options={getFramerFadeUp(0, 10)}
 						className={clsx(
 							{
