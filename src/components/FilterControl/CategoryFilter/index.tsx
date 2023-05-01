@@ -6,12 +6,11 @@ import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { PageName } from '@root/types/common';
 import type { PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import type { FC } from 'react';
 import { useMemo } from 'react';
 
 type CategoryFilterProps = PageNameProps;
 
-const CategoryFilter: FC<CategoryFilterProps> = ({ pageName }) => {
+export default function CategoryFilter({ pageName }: CategoryFilterProps) {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();
 
 	const defaultCate = useMemo(
@@ -42,6 +41,4 @@ const CategoryFilter: FC<CategoryFilterProps> = ({ pageName }) => {
 			useAtelierFont
 		/>
 	);
-};
-
-export default CategoryFilter;
+}

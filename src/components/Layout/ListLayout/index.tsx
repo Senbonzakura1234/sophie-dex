@@ -17,7 +17,7 @@ type ListLayoutProps<TRecord extends CommonRecord> = DefaultLayoutProps &
 		rawData: ListRecord<TRecord> | undefined;
 	};
 
-function ListLayout<TRecord extends CommonRecord>({
+export default function ListLayout<TRecord extends CommonRecord>({
 	pageName,
 	children,
 	errorData,
@@ -93,5 +93,3 @@ function ListLayout<TRecord extends CommonRecord>({
 		</>
 	);
 }
-
-export default ListLayout;

@@ -12,7 +12,7 @@ type DetailLayoutProps<TRecord extends CommonRecord> = DefaultLayoutProps &
 		rawData: TRecord | undefined;
 	};
 
-function DetailLayout<TRecord extends CommonRecord>({
+export default function DetailLayout<TRecord extends CommonRecord>({
 	pageName,
 	children,
 	extraHead,
@@ -59,5 +59,3 @@ function DetailLayout<TRecord extends CommonRecord>({
 		</>
 	);
 }
-
-export default DetailLayout;

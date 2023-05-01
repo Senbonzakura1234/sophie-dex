@@ -5,12 +5,11 @@ import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import type { FC } from 'react';
 import { useMemo } from 'react';
 
 type ColorFilterProps = PageNameProps;
 
-const ColorFilter: FC<ColorFilterProps> = ({ pageName }) => {
+export default function ColorFilter({ pageName }: ColorFilterProps) {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();
 
 	const defaultColor = useMemo(
@@ -40,6 +39,4 @@ const ColorFilter: FC<ColorFilterProps> = ({ pageName }) => {
 			withIcon
 		/>
 	);
-};
-
-export default ColorFilter;
+}

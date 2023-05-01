@@ -8,7 +8,7 @@ import ScrollToTop from './ScrollToTop';
 
 type ScrollWrapperProps = ChildrenProps & ClassNameProps & { enableScrollTop?: boolean };
 
-const ScrollWrapper = ({ children, className, enableScrollTop }: ScrollWrapperProps) => {
+export default function ScrollWrapper({ children, className, enableScrollTop }: ScrollWrapperProps) {
 	const scrollableRef = useRef<HTMLDivElement>(null);
 
 	const [isShowScrollTop, setIsShowScrollTop] = useState(false);
@@ -39,6 +39,4 @@ const ScrollWrapper = ({ children, className, enableScrollTop }: ScrollWrapperPr
 			{enableScrollTop && <ScrollToTop isShow={isShowScrollTop} refObject={scrollableRef} />}
 		</Root>
 	);
-};
-
-export default ScrollWrapper;
+}

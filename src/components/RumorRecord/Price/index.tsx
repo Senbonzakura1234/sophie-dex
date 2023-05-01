@@ -1,8 +1,6 @@
-import type { FC } from 'react';
-
 type PriceProps = { price: number };
 
-const Price: FC<PriceProps> = ({ price }) => {
+export default function Price({ price }: PriceProps) {
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
 			<div className='font-bold'>Price: </div>
@@ -12,6 +10,4 @@ const Price: FC<PriceProps> = ({ price }) => {
 			</div>
 		</div>
 	);
-};
-
-export default Price;
+}

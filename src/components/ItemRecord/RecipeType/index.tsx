@@ -1,12 +1,11 @@
 import type { RECIPE_TYPE } from '@prisma/client';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import clsx from 'clsx';
-import type { FC } from 'react';
 import { useMemo } from 'react';
 
 type RecipeTypeProps = { recipeType: RECIPE_TYPE };
 
-const RecipeType: FC<RecipeTypeProps> = ({ recipeType }) => {
+export default function RecipeType({ recipeType }: RecipeTypeProps) {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const isBtnDisabled = useMemo(
@@ -55,6 +54,4 @@ const RecipeType: FC<RecipeTypeProps> = ({ recipeType }) => {
 			</button>
 		</div>
 	);
-};
-
-export default RecipeType;
+}

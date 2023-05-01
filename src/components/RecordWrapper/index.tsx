@@ -16,7 +16,7 @@ type RecordWrapperProps<TRecord extends { id: string; name: string }> = ClassNam
 		children?: RenderFunction<TRecord>;
 	} & MaybeData<TRecord>;
 
-function RecordWrapper<TRecord extends { id: string; name: string }>({
+export default function RecordWrapper<TRecord extends { id: string; name: string }>({
 	children,
 	className,
 	color,
@@ -67,5 +67,3 @@ function RecordWrapper<TRecord extends { id: string; name: string }>({
 		</LazyMotion>
 	);
 }
-
-export default RecordWrapper;

@@ -5,12 +5,11 @@ import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
 import clsx from 'clsx';
 import { m as motion } from 'framer-motion';
 import Link from 'next/link';
-import type { FC } from 'react';
 import { useMemo } from 'react';
 
 type ErrorModalProps = ErrorResultProps;
 
-const ErrorModal: FC<ErrorModalProps> = ({ isError, errorData, errorMessage }) => {
+export default function ErrorModal({ isError, errorData, errorMessage }: ErrorModalProps) {
 	const { error, message }: { error: DefaultErrorData; message: string } = useMemo(
 		() => ({
 			error: errorData ?? {
@@ -53,6 +52,4 @@ const ErrorModal: FC<ErrorModalProps> = ({ isError, errorData, errorMessage }) =
 			</motion.div>
 		</AnimationWrapper>
 	);
-};
-
-export default ErrorModal;
+}

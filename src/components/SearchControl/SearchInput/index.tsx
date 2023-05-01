@@ -1,9 +1,8 @@
 import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import { useSearchInput } from '@root/hooks/useSearchInput';
 import clsx from 'clsx';
-import type { FC } from 'react';
 
-const SearchInput: FC = () => {
+export default function SearchInput() {
 	const { performSearch, searchInput, setSearchValue, isSearchValueValid, resetSearch } = useSearchInput();
 
 	return (
@@ -41,6 +40,4 @@ const SearchInput: FC = () => {
 			</button>
 		</>
 	);
-};
-
-export default SearchInput;
+}

@@ -2,14 +2,13 @@ import type { HIGHLIGHT_TEXT, HYPER_LINK_RECORD, HYPER_LINK_SEARCH } from '@pris
 import type { ClassNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import Link from 'next/link';
-import type { FC } from 'react';
 import { useMemo } from 'react';
 
 type HyperlinkProps = {
 	input: HIGHLIGHT_TEXT | HYPER_LINK_RECORD | HYPER_LINK_SEARCH;
 } & ClassNameProps;
 
-const Hyperlink: FC<HyperlinkProps> = ({ input, className }) => {
+export default function Hyperlink({ input, className }: HyperlinkProps) {
 	const { href, label } = useMemo(() => {
 		if ('content' in input) return { label: input.content };
 
@@ -35,6 +34,4 @@ const Hyperlink: FC<HyperlinkProps> = ({ input, className }) => {
 			{label}
 		</Link>
 	);
-};
-
-export default Hyperlink;
+}

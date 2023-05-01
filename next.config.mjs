@@ -16,7 +16,7 @@ const pwaConfig = withPWA({
 	dynamicStartUrl: false,
 	cacheOnFrontEndNav: true,
 	cleanupOutdatedCaches: true,
-	disable: env.NODE_ENV === 'development',
+	disable: env.NEXT_PUBLIC_NODE_ENV === 'development',
 	skipWaiting: true,
 	reloadOnOnline: true,
 });

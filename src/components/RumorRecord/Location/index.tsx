@@ -1,8 +1,6 @@
-import type { FC } from 'react';
-
 type LocationProps = { location: string };
 
-const Location: FC<LocationProps> = ({ location }) => {
+export default function Location({ location }: LocationProps) {
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
 			<div className='font-bold'>Location: </div>
@@ -10,6 +8,4 @@ const Location: FC<LocationProps> = ({ location }) => {
 			<div>{location}</div>
 		</div>
 	);
-};
-
-export default Location;
+}

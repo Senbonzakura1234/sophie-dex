@@ -1,12 +1,11 @@
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { IsBottomFilterProps, PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import type { FC } from 'react';
 import { useMemo } from 'react';
 
 type SortControlProps = PageNameProps & IsBottomFilterProps;
 
-const SortControl: FC<SortControlProps> = ({ pageName, isBottomFilter: isBottomFilter }) => {
+export default function SortControl({ pageName, isBottomFilter: isBottomFilter }: SortControlProps) {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const { sortBy, direction } = useMemo(
@@ -143,6 +142,4 @@ const SortControl: FC<SortControlProps> = ({ pageName, isBottomFilter: isBottomF
 			</div>
 		</>
 	);
-};
-
-export default SortControl;
+}

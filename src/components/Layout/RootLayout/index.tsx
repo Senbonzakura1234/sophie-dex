@@ -1,12 +1,11 @@
 import ScrollWrapper from '@root/components/ScrollWrapper';
 import type { ChildrenProps } from '@root/types/common/props';
-import type { FC } from 'react';
 
 import HeadLayout from './HeadLayout';
 
 type RootLayoutProps = ChildrenProps;
 
-const RootLayout: FC<RootLayoutProps> = ({ children }) => {
+export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<main>
 			<HeadLayout />
@@ -16,6 +15,4 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
 			</ScrollWrapper>
 		</main>
 	);
-};
-
-export default RootLayout;
+}

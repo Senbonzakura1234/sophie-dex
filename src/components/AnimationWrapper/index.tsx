@@ -11,18 +11,25 @@ type AnimationWrapperProps = {
 } & ChildrenProps &
 	ClassNameProps;
 
-const AnimationWrapper = ({ className, children, options, initial, show, placeholder }: AnimationWrapperProps) => (
-	<LazyMotion features={domAnimation} strict>
-		<AnimatePresence initial={initial}>
-			{show ? (
-				<motion.div className={className} {...options}>
-					{children}
-				</motion.div>
-			) : (
-				placeholder || null
-			)}
-		</AnimatePresence>
-	</LazyMotion>
-);
-
-export default AnimationWrapper;
+export default function AnimationWrapper({
+	className,
+	children,
+	options,
+	initial,
+	show,
+	placeholder,
+}: AnimationWrapperProps) {
+	return (
+		<LazyMotion features={domAnimation} strict>
+			<AnimatePresence initial={initial}>
+				{show ? (
+					<motion.div className={className} {...options}>
+						{children}
+					</motion.div>
+				) : (
+					placeholder || null
+				)}
+			</AnimatePresence>
+		</LazyMotion>
+	);
+}

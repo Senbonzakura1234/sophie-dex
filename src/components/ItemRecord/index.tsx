@@ -1,7 +1,6 @@
 import type { Item } from '@prisma/client';
 import RecordWrapper from '@root/components/RecordWrapper';
 import type { RecordProps } from '@root/types/common/props';
-import type { FC } from 'react';
 
 import { nullableHandle } from '@root/utils/common';
 import Category from './Category';
@@ -15,30 +14,30 @@ import TraitPresent from './TraitPresent';
 
 type ItemRecordProps = RecordProps<Item>;
 
-const ItemRecord: FC<ItemRecordProps> = props => (
-	<RecordWrapper {...nullableHandle(props)} color={props.data?.color} pageName='Item'>
-		{({ category, color, description, index, level, recipeIdea, recipeType, relatedCategories, traitPresent }) => (
-			<>
-				<Level level={level} />
+export default function ItemRecord(props: ItemRecordProps) {
+	return (
+		<RecordWrapper {...nullableHandle(props)} color={props.data?.color} pageName='Item'>
+			{({ category, color, description, index, level, recipeIdea, recipeType, relatedCategories, traitPresent }) => (
+				<>
+					<Level level={level} />
 
-				<div className='text-sm'>index: {index}</div>
+					<div className='text-sm'>index: {index}</div>
 
-				{recipeType ? <RecipeType recipeType={recipeType} /> : null}
+					{recipeType ? <RecipeType recipeType={recipeType} /> : null}
 
-				<Category category={category} />
+					<Category category={category} />
 
-				<Color color={color} />
+					<Color color={color} />
 
-				{recipeIdea ? <RecipeIdea recipeIdea={recipeIdea} /> : null}
+					{recipeIdea ? <RecipeIdea recipeIdea={recipeIdea} /> : null}
 
-				{description ? <Description description={description} /> : null}
+					{description ? <Description description={description} /> : null}
 
-				{traitPresent ? <TraitPresent traitPresent={traitPresent} /> : null}
+					{traitPresent ? <TraitPresent traitPresent={traitPresent} /> : null}
 
-				<RelatedCategories relatedCategories={relatedCategories} />
-			</>
-		)}
-	</RecordWrapper>
-);
-
-export default ItemRecord;
+					<RelatedCategories relatedCategories={relatedCategories} />
+				</>
+			)}
+		</RecordWrapper>
+	);
+}

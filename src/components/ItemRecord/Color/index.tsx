@@ -1,12 +1,11 @@
 import type { COLOR } from '@prisma/client';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import clsx from 'clsx';
-import type { FC } from 'react';
 import { useMemo } from 'react';
 
 type ColorProps = { color: COLOR };
 
-const Color: FC<ColorProps> = ({ color }) => {
+export default function Color({ color }: ColorProps) {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const isBtnDisabled = useMemo(() => !isReady || securedQuery.color === color, [color, isReady, securedQuery.color]);
@@ -48,6 +47,4 @@ const Color: FC<ColorProps> = ({ color }) => {
 			</button>
 		</div>
 	);
-};
-
-export default Color;
+}

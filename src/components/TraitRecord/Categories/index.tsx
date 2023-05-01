@@ -2,12 +2,11 @@ import type { CATEGORY } from '@prisma/client';
 import { categoryMap, hideCategoryOnTrait } from '@root/components/SubComponent';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import clsx from 'clsx';
-import type { FC } from 'react';
 import { useCallback } from 'react';
 
 type CategoriesProps = { categories: CATEGORY[] };
 
-const Categories: FC<CategoriesProps> = ({ categories }) => {
+function Categories({ categories }: CategoriesProps) {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();
 
 	const isClickAble = useCallback((code: CATEGORY) => categories.includes(code) && isReady, [isReady, categories]);
@@ -39,6 +38,6 @@ const Categories: FC<CategoriesProps> = ({ categories }) => {
 				))}
 		</nav>
 	);
-};
+}
 
 export default Categories;

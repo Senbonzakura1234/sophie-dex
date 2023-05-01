@@ -4,7 +4,6 @@ import { defaultLimit } from '@root/constants';
 import type { IsBottomFilterProps, IsSuccessProps, PageControlProps, PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
-import type { FC } from 'react';
 import { useMemo } from 'react';
 
 import CategoryFilter from './CategoryFilter';
@@ -17,14 +16,14 @@ import SortControl from './SortControl';
 
 type FilterControlProps = PageControlProps & PageNameProps & IsBottomFilterProps & IsSuccessProps;
 
-const FilterControl: FC<FilterControlProps> = ({
+export default function FilterControl({
 	page = 1,
 	totalPage = 0,
 	totalRecord = 0,
 	isBottomFilter,
 	isSuccess,
 	pageName,
-}) => {
+}: FilterControlProps) {
 	const { from, to } = useMemo(
 		() => ({
 			from: (page - 1) * defaultLimit + 1,
@@ -81,6 +80,4 @@ const FilterControl: FC<FilterControlProps> = ({
 			</LazyMotion>
 		</section>
 	);
-};
-
-export default FilterControl;
+}

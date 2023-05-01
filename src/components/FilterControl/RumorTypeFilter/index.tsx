@@ -5,12 +5,11 @@ import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import type { FC } from 'react';
 import { useMemo } from 'react';
 
 type RumorTypeFilterProps = PageNameProps;
 
-const RumorTypeFilter: FC<RumorTypeFilterProps> = ({ pageName }) => {
+export default function RumorTypeFilter({ pageName }: RumorTypeFilterProps) {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();
 
 	const defaultRumorType = useMemo(
@@ -41,6 +40,4 @@ const RumorTypeFilter: FC<RumorTypeFilterProps> = ({ pageName }) => {
 			useAtelierFont
 		/>
 	);
-};
-
-export default RumorTypeFilter;
+}

@@ -5,12 +5,11 @@ import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { PageNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import type { FC } from 'react';
 import { useMemo } from 'react';
 
 type RecipeTypeFilterProps = PageNameProps;
 
-const RecipeTypeFilter: FC<RecipeTypeFilterProps> = ({ pageName }) => {
+export default function RecipeTypeFilter({ pageName }: RecipeTypeFilterProps) {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();
 
 	const defaultRecipeType = useMemo(
@@ -40,6 +39,4 @@ const RecipeTypeFilter: FC<RecipeTypeFilterProps> = ({ pageName }) => {
 			withIcon
 		/>
 	);
-};
-
-export default RecipeTypeFilter;
+}

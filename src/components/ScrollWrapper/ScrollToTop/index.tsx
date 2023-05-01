@@ -6,7 +6,7 @@ import { useCallback } from 'react';
 
 type ScrollToTopProps = { isShow: boolean } & RefProps<HTMLDivElement>;
 
-const ScrollToTop = ({ isShow, refObject }: ScrollToTopProps) => {
+export default function ScrollToTop({ isShow, refObject }: ScrollToTopProps) {
 	const scrollToTop = useCallback(
 		() => refObject?.current && isShow && refObject.current.scrollTo({ top: 0, behavior: 'smooth' }),
 		[isShow, refObject],
@@ -29,6 +29,4 @@ const ScrollToTop = ({ isShow, refObject }: ScrollToTopProps) => {
 			</button>
 		</AnimationWrapper>
 	);
-};
-
-export default ScrollToTop;
+}

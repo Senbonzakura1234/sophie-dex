@@ -6,12 +6,11 @@ import clsx from 'clsx';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import type { FC } from 'react';
 import { Fragment } from 'react';
 
 type BreadcrumbProps = { isShowAuthor: boolean };
 
-const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
+export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 	const { pathname } = useRouter();
 
 	return (
@@ -89,6 +88,4 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ isShowAuthor }) => {
 			</motion.div>
 		</LazyMotion>
 	);
-};
-
-export default Breadcrumb;
+}

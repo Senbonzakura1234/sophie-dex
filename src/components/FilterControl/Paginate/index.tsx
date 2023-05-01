@@ -5,14 +5,13 @@ import {
 	ChevronRightIcon,
 } from '@heroicons/react/24/solid';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { FC } from 'react';
 import { useMemo } from 'react';
 
 type PaginateProps = { page: number; totalPage: number };
 
 import GoToPageSelect from './GoToPageSelect';
 
-const Paginate: FC<PaginateProps> = ({ page, totalPage }) => {
+export default function Paginate({ page, totalPage }: PaginateProps) {
 	const { isReady, updateQuery } = useSearchQuery();
 
 	const isPreviousDisable = useMemo(() => !isReady || page <= 1, [isReady, page]);
@@ -77,6 +76,4 @@ const Paginate: FC<PaginateProps> = ({ page, totalPage }) => {
 			</div>
 		</div>
 	);
-};
-
-export default Paginate;
+}

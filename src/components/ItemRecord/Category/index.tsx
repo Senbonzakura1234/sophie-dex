@@ -2,12 +2,11 @@ import type { CATEGORY } from '@prisma/client';
 import { categoryMap } from '@root/components/SubComponent';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import clsx from 'clsx';
-import type { FC } from 'react';
 import { useMemo } from 'react';
 
 type CategoryProps = { category: CATEGORY };
 
-const Category: FC<CategoryProps> = ({ category }) => {
+export default function Category({ category }: CategoryProps) {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const isBtnDisabled = useMemo(
@@ -46,6 +45,4 @@ const Category: FC<CategoryProps> = ({ category }) => {
 			></div>
 		</>
 	);
-};
-
-export default Category;
+}

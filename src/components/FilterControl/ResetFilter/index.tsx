@@ -1,12 +1,11 @@
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { IsBottomFilterProps } from '@root/types/common/props';
 import clsx from 'clsx';
-import type { FC } from 'react';
 import { useMemo } from 'react';
 
 type ResetFilterProps = IsBottomFilterProps;
 
-const ResetFilter: FC<ResetFilterProps> = ({ isBottomFilter: isBottomFilter }) => {
+export default function ResetFilter({ isBottomFilter: isBottomFilter }: ResetFilterProps) {
 	const { resetQuery, isReady, securedQuery } = useSearchQuery();
 
 	const isDisable = useMemo(
@@ -27,6 +26,4 @@ const ResetFilter: FC<ResetFilterProps> = ({ isBottomFilter: isBottomFilter }) =
 			Reset
 		</button>
 	);
-};
-
-export default ResetFilter;
+}

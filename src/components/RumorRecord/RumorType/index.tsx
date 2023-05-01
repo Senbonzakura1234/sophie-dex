@@ -2,12 +2,11 @@ import type { RUMOR_TYPE } from '@prisma/client';
 import { rumorTypeMap } from '@root/components/SubComponent';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import clsx from 'clsx';
-import type { FC } from 'react';
 import { useMemo } from 'react';
 
 type RumorTypeProps = { rumorType: RUMOR_TYPE };
 
-const RumorType: FC<RumorTypeProps> = ({ rumorType }) => {
+export default function RumorType({ rumorType }: RumorTypeProps) {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const isBtnDisabled = useMemo(
@@ -53,6 +52,4 @@ const RumorType: FC<RumorTypeProps> = ({ rumorType }) => {
 			></div>
 		</>
 	);
-};
-
-export default RumorType;
+}
