@@ -1,5 +1,5 @@
 import type { HYPER_LINK_MAP } from '@prisma/client';
-import NewHyperlink from '@root/components/NewHyperlink';
+import Hyperlink from '@root/components/Hyperlink';
 import type { FC } from 'react';
 import { Fragment } from 'react';
 
@@ -25,7 +25,7 @@ const Description: FC<DescriptionProps> = ({
 					data = highlightTextMap[parseInt(text.replace('highlightTextMap-', ''))];
 
 				return data ? (
-					<NewHyperlink key={key} input={data} className='link link-info' />
+					<Hyperlink key={key} input={data} className='link link-info' />
 				) : (
 					<Fragment key={key}>{text}</Fragment>
 				);

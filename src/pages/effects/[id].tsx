@@ -20,10 +20,10 @@ const EffectDetail: NextPage = () => {
 			errorMessage={error?.message}
 			pageName='Effect'
 			rawData={data}
-			extraHead={({ name, description }) => (
+			extraHead={({ name, keyWords }) => (
 				<Head>
 					<title>{name}</title>
-					<meta name='description' content={description} />
+					<meta name='description' content={keyWords} />
 				</Head>
 			)}
 		>

@@ -1,5 +1,5 @@
 import type { ITEM_DESCRIPTION } from '@prisma/client';
-import NewHyperlink from '@root/components/NewHyperlink';
+import Hyperlink from '@root/components/Hyperlink';
 import type { FC } from 'react';
 
 type DescriptionProps = { description: ITEM_DESCRIPTION };
@@ -16,7 +16,7 @@ const Description: FC<DescriptionProps> = ({ description }) => (
 					) : Array.isArray(value) ? (
 						<span className='font-bold'>{value.join(', ')}</span>
 					) : (
-						<NewHyperlink input={value} className='link link-info' />
+						<Hyperlink input={value} className='link link-info' />
 					)}
 				</li>
 			),

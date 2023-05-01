@@ -1,5 +1,5 @@
-import type { HYPER_LINK_MAP } from '@prisma/client';
-import NewHyperlink from '@root/components/NewHyperlink';
+import type { HIGHLIGHT_TEXT, HYPER_LINK_MAP, HYPER_LINK_RECORD, HYPER_LINK_SEARCH } from '@prisma/client';
+import Hyperlink from '@root/components/Hyperlink';
 import type { ClassNameProps } from '@root/types/common/props';
 import type { FC } from 'react';
 import { Fragment } from 'react';
@@ -17,7 +17,7 @@ const RecipeIdea: FC<RecipeIdeaProps> = ({
 
 		<span className='text-lg'>
 			{contentText.map((text, key) => {
-				let data = undefined;
+				let data: HYPER_LINK_RECORD | HIGHLIGHT_TEXT | HYPER_LINK_SEARCH | undefined = undefined;
 
 				if (text.includes('linkRecordMap-')) data = linkRecordMap[parseInt(text.replace('linkRecordMap-', ''))];
 
@@ -27,7 +27,7 @@ const RecipeIdea: FC<RecipeIdeaProps> = ({
 					data = highlightTextMap[parseInt(text.replace('highlightTextMap-', ''))];
 
 				return data ? (
-					<NewHyperlink key={key} input={data} className='link link-info' />
+					<Hyperlink key={key} input={data} className='link link-info' />
 				) : (
 					<Fragment key={key}>{text}</Fragment>
 				);

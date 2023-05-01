@@ -24,12 +24,9 @@ function RecordWrapper<TRecord extends { id: string; name: string }>({
 	data,
 	pageName,
 }: RecordWrapperProps<TRecord>) {
-	const { isReady, securedIdQuery, pathname } = useIdQuery();
+	const { securedIdQuery, pathname } = useIdQuery();
 
-	const renderChild = useMemo(
-		() => (isDataReady && isReady && children ? children(data) : null),
-		[isDataReady, isReady, children, data],
-	);
+	const renderChild = useMemo(() => (isDataReady && children ? children(data) : null), [isDataReady, children, data]);
 
 	return (
 		<LazyMotion features={domAnimation} strict>
@@ -50,11 +47,11 @@ function RecordWrapper<TRecord extends { id: string; name: string }>({
 			>
 				<AnimationWrapper
 					show={isDataReady}
-					options={getFramerInViewFadeUp()}
+					options={getFramerInViewFadeUp(0, 50, 3)}
 					className='card-body flex flex-col gap-3'
 					placeholder={<RecordPlaceholder />}
 				>
-					{isDataReady && isReady ? (
+					{isDataReady ? (
 						<RecordHead
 							id={data.id}
 							isCurrentRecord={securedIdQuery.id === data.id}
