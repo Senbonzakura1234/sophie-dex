@@ -19,3 +19,6 @@ export const colorTailwindMap: { [key in COLOR]: string } = {
 	WHITE: colors.slate[500],
 	YELLOW: colors.yellow[400],
 };
+
+export const MAXIMUM_PULL_LENGTH = 240;
+export const REFRESH_THRESHOLD = 180;
