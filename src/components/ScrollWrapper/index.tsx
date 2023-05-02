@@ -2,6 +2,7 @@ import { Root, Scrollbar, Thumb, Viewport } from '@radix-ui/react-scroll-area';
 import type { ChildrenProps, ClassNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import { useScroll } from 'framer-motion';
+import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
 
 import ScrollToTop from './ScrollToTop';
@@ -10,6 +11,8 @@ type ScrollWrapperProps = ChildrenProps & ClassNameProps & { enableScrollTop?: b
 
 export default function ScrollWrapper({ children, className, enableScrollTop }: ScrollWrapperProps) {
 	const scrollableRef = useRef<HTMLDivElement>(null);
+
+	const { pathname, query } = useRouter();
 
 	const [isShowScrollTop, setIsShowScrollTop] = useState(false);
 
@@ -22,6 +25,10 @@ export default function ScrollWrapper({ children, className, enableScrollTop }: 
 			if (e <= 0.6 && isShowScrollTop) return setIsShowScrollTop(false);
 		});
 	}, [isShowScrollTop, scrollYProgress]);
+
+	useEffect(() => {
+		if (scrollableRef?.current && enableScrollTop) scrollableRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+	}, [enableScrollTop, pathname, query, scrollableRef]);
 
 	return (
 		<Root className={clsx('scroll-area-root', className)} type='scroll'>

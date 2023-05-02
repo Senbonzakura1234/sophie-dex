@@ -3,18 +3,18 @@ import { useCallback, useEffect, useState } from 'react';
 
 type UsePullToRefresh = ({ onRefresh }: { onRefresh: () => void }) => {
 	isRefreshing: boolean;
-	pullLength: number;
+	pullPosition: number;
 };
 
 export const usePullToRefresh: UsePullToRefresh = ({ onRefresh }) => {
-	const [pullStartPoint, setPullStartPoint] = useState(0);
-	const [pullLength, setPullLength] = useState(0);
+	const [pullStartPosition, setPullStartPosition] = useState(0);
+	const [pullPosition, setPullPosition] = useState(0);
 	const [isRefreshing, setIsRefreshing] = useState(false);
 
 	const onPullStart = useCallback(({ targetTouches }: TouchEvent) => {
 		const touch = targetTouches[0];
 
-		if (touch) return setPullStartPoint(touch.screenY);
+		if (touch) return setPullStartPosition(touch.screenY);
 	}, []);
 
 	const onPulling = useCallback(
@@ -23,22 +23,22 @@ export const usePullToRefresh: UsePullToRefresh = ({ onRefresh }) => {
 
 			if (!touch) return;
 
-			const currentPullLength = pullStartPoint < touch.screenY ? Math.abs(touch.screenY - pullStartPoint) : 0;
+			const currentPullLength = pullStartPosition < touch.screenY ? Math.abs(touch.screenY - pullStartPosition) : 0;
 
-			if (currentPullLength <= MAXIMUM_PULL_LENGTH) return setPullLength(() => currentPullLength);
+			if (currentPullLength <= MAXIMUM_PULL_LENGTH) return setPullPosition(() => currentPullLength);
 		},
-		[pullStartPoint],
+		[pullStartPosition],
 	);
 
 	const onEndPull = useCallback(() => {
-		setPullStartPoint(() => 0);
-		setPullLength(() => 0);
+		setPullStartPosition(() => 0);
+		setPullPosition(() => 0);
 
-		if (pullLength < REFRESH_THRESHOLD) return;
+		if (pullPosition < REFRESH_THRESHOLD) return;
 
 		setIsRefreshing(() => true);
 		setTimeout(onRefresh);
-	}, [onRefresh, pullLength]);
+	}, [onRefresh, pullPosition]);
 
 	useEffect(() => {
 		if (typeof window === 'undefined') return;
@@ -54,5 +54,5 @@ export const usePullToRefresh: UsePullToRefresh = ({ onRefresh }) => {
 		};
 	}, [onEndPull, onPulling, onPullStart]);
 
-	return { isRefreshing, pullLength };
+	return { isRefreshing, pullPosition };
 };
