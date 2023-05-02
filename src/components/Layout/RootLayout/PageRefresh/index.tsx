@@ -1,9 +1,8 @@
 import { ArrowPathIcon } from '@heroicons/react/24/solid';
-import { REFRESH_THRESHOLD } from '@root/constants';
-import { usePullToRefresh } from '@root/hooks/usePullToRefresh';
 import clsx from 'clsx';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import { useRouter } from 'next/router';
+import { DEFAULT_REFRESH_THRESHOLD, usePullToRefresh } from 'use-pull-to-refresh';
 
 export default function PageRefresh() {
 	const { isReady, reload } = useRouter();
@@ -16,7 +15,7 @@ export default function PageRefresh() {
 				initial={{ opacity: 0, top: 0 }}
 				animate={{
 					opacity: isRefreshing || pullPosition > 0 ? 1 : 0,
-					top: (isRefreshing ? REFRESH_THRESHOLD : pullPosition) / 3,
+					top: (isRefreshing ? DEFAULT_REFRESH_THRESHOLD : pullPosition) / 3,
 				}}
 				className='fixed inset-x-1/2 z-30 aspect-square h-8 w-8 -translate-x-1/2 rounded-full bg-slate-50 p-2'
 			>
