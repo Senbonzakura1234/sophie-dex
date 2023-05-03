@@ -59,8 +59,8 @@ dependencies:
     specifier: 1.9.1
     version: registry.npmjs.org/superjson@1.9.1
   use-pull-to-refresh:
-    specifier: ^1.1.1
-    version: registry.npmjs.org/use-pull-to-refresh@1.1.1
+    specifier: ^1.4.0
+    version: registry.npmjs.org/use-pull-to-refresh@1.4.0
   zod:
     specifier: ^3.21.4
     version: registry.npmjs.org/zod@3.21.4
@@ -2687,12 +2687,6 @@ packages:
     resolution: {integrity: sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/node/-/node-18.15.11.tgz}
     name: '@types/node'
     version: 18.15.11
-
-  registry.npmjs.org/@types/node@18.16.3:
-    resolution: {integrity: sha512-OPs5WnnT1xkCBiuQrZA4+YAV4HEJejmHneyraIaxsbev5yCEr6KMwINNFP9wQeFIw8FWcoTqF3vQsa5CDaI+8Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/node/-/node-18.16.3.tgz}
-    name: '@types/node'
-    version: 18.16.3
-    dev: false
 
   registry.npmjs.org/@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz}
@@ -7340,12 +7334,11 @@ packages:
     dependencies:
       punycode: registry.npmjs.org/punycode@2.3.0
 
-  registry.npmjs.org/use-pull-to-refresh@1.1.1:
-    resolution: {integrity: sha512-T0KXxdH8MdpUONkKTVChYCiyv2brWyBdLWMGX3uaKGl/Zdc2T23riwMeci0Nir2j0eplgHgdiAjg9BLu49zMHw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/use-pull-to-refresh/-/use-pull-to-refresh-1.1.1.tgz}
+  registry.npmjs.org/use-pull-to-refresh@1.4.0:
+    resolution: {integrity: sha512-AzSglD8wjf00ScaEIZWo3i9Sj+KyH7FjNNZNJ0mJ96SaLtEOdLHywE/qkCsbjXYEja+HjBssyPBgV8JEXN8Weg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/use-pull-to-refresh/-/use-pull-to-refresh-1.4.0.tgz}
     name: use-pull-to-refresh
-    version: 1.1.1
+    version: 1.4.0
     dependencies:
-      '@types/node': registry.npmjs.org/@types/node@18.16.3
       react: registry.npmjs.org/react@18.2.0
     dev: false
 

@@ -7,7 +7,7 @@ import { DEFAULT_REFRESH_THRESHOLD, usePullToRefresh } from 'use-pull-to-refresh
 export default function PageRefresh() {
 	const { isReady, reload } = useRouter();
 
-	const { isRefreshing, pullPosition } = usePullToRefresh({ onRefresh: () => isReady && reload() });
+	const { isRefreshing, pullPosition } = usePullToRefresh({ onRefresh: reload, isDisabled: !isReady });
 
 	return (
 		<LazyMotion features={domAnimation} strict>
