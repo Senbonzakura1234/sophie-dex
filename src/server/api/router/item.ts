@@ -1,9 +1,20 @@
-import type { Item, Prisma } from '@prisma/client';
 import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
+import type { Item } from '@root/server/db/schema';
+import { items } from '@root/server/db/schema';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';
-import { InvalidRecordIdError, RecordNotFoundError, onQueryDBError } from '@root/utils/server';
+import {
+	ANYQuery,
+	CountQuery,
+	DirectionQueryMap,
+	InvalidRecordIdError,
+	RecordNotFoundError,
+	onQueryDBError,
+	processDBListResult,
+} from '@root/utils/server';
+import type { SQL } from 'drizzle-orm';
+import { and, eq, ilike, or } from 'drizzle-orm';
 
 export const itemRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Item>> => {
@@ -11,32 +22,24 @@ export const itemRouter = router({
 
 		const pageInt = page ?? 1;
 
-		const OR: Prisma.ItemWhereInput[] | undefined = search
-			? [
-					{ name: { contains: search, mode: 'insensitive' } },
-					{ keyWords: { contains: search, mode: 'insensitive' } },
-			  ]
-			: undefined;
+		const OR: SQL[] = search ? [ilike(items.name, `%${search}%`), ilike(items.keyWords, `%${search}%`)] : [];
 
-		const AND: Prisma.ItemWhereInput[] = [];
+		const AND: SQL[] = [];
 
-		if (relatedCategory) AND.push({ relatedCategories: { some: { name: { equals: relatedCategory } } } });
-		if (color) AND.push({ color: { equals: color } });
-		if (recipeType) AND.push({ recipeType: { equals: recipeType } });
-		if (category) AND.push({ category: { equals: category } });
+		if (relatedCategory) AND.push(ANYQuery(items.relatedCategories.name, relatedCategory));
+		if (color) AND.push(eq(items.color, color));
+		if (recipeType) AND.push(eq(items.recipeType, recipeType));
+		if (category) AND.push(eq(items.category, category));
 
-		const where = { OR, AND } satisfies Prisma.ItemWhereInput;
-
-		const [totalRecord, records] = await ctx.prisma
-			.$transaction([
-				ctx.prisma.item.count({ where }),
-				ctx.prisma.item.findMany({
-					where,
-					orderBy: { [!!sortBy && sortBy !== 'price' ? sortBy : 'index']: direction ?? 'asc' },
-					skip: (pageInt - 1) * defaultLimit,
-					take: defaultLimit,
-				}),
-			])
+		const [totalRecord, records] = await ctx.db
+			.select({ totalCount: CountQuery, record: items })
+			.from(items)
+			.where(or(...OR))
+			.where(and(...AND))
+			.orderBy(DirectionQueryMap[direction ?? 'asc'](items[!!sortBy && sortBy !== 'price' ? sortBy : 'index']))
+			.limit(defaultLimit)
+			.offset((pageInt - 1) * defaultLimit)
+			.then(processDBListResult)
 			.catch(onQueryDBError);
 
 		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
@@ -47,7 +50,12 @@ export const itemRouter = router({
 
 		if (!id) throw InvalidRecordIdError();
 
-		const record = await ctx.prisma.item.findFirst({ where: { id } }).catch(onQueryDBError);
+		const record = await ctx.db
+			.select()
+			.from(items)
+			.where(eq(items.id, id))
+			.then(([res]) => res)
+			.catch(onQueryDBError);
 
 		if (record) return record;
 

@@ -1,9 +1,9 @@
-import type { RUMOR_TYPE } from '@prisma/client';
 import SelectOption from '@root/components/SelectOption';
 import { rumorTypeDefaultSelect, rumorTypeSelectList } from '@root/components/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { PageNameProps } from '@root/types/common/props';
+import type { RumorTypeEnum } from '@root/types/common/zod';
 import clsx from 'clsx';
 import { useMemo } from 'react';
 
@@ -17,14 +17,14 @@ export default function RumorTypeFilter({ pageName }: RumorTypeFilterProps) {
 		[securedQuery.rumorType],
 	);
 
-	const [rumorTypeSelected, setRumorTypeSelected] = useQueryOnChange<RUMOR_TYPE | null>(
+	const [rumorTypeSelected, setRumorTypeSelected] = useQueryOnChange<RumorTypeEnum | null>(
 		defaultRumorType,
 		rumorType => updateQuery({ page: null, rumorType }),
 		isReady,
 	);
 
 	return (
-		<SelectOption<RUMOR_TYPE | null>
+		<SelectOption<RumorTypeEnum | null>
 			list={rumorTypeSelectList}
 			setValue={setRumorTypeSelected}
 			value={rumorTypeSelected}

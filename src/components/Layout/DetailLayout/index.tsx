@@ -52,7 +52,7 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 			) : null}
 
 			<section className='grid h-full w-full grid-cols-1 place-content-center gap-4 p-2 2xl:grid-cols-none'>
-				<div className='w-[800px] max-w-full'>{renderChild}</div>
+				<div className='mx-auto w-[800px] max-w-full'>{renderChild}</div>
 			</section>
 
 			{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}

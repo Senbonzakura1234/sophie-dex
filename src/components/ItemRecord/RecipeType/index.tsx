@@ -1,9 +1,9 @@
-import type { RECIPE_TYPE } from '@prisma/client';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import type { RecipeTypeEnum } from '@root/types/common/zod';
 import clsx from 'clsx';
 import { useMemo } from 'react';
 
-type RecipeTypeProps = { recipeType: RECIPE_TYPE };
+type RecipeTypeProps = { recipeType: RecipeTypeEnum };
 
 export default function RecipeType({ recipeType }: RecipeTypeProps) {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();

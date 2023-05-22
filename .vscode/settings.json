@@ -1,6 +1,6 @@
 {
 	"cSpell.diagnosticLevel": "Hint",
-	"cSpell.ignorePaths": ["**/node_modules/**", "**/.vscode/extensions.json", ".env", "**/dist/**", "**/prisma/**"],
+	"cSpell.ignorePaths": ["**/node_modules/**", "**/.vscode/extensions.json", ".env", "**/dist/**"],
 	"cSpell.words": [
 		"clsx",
 		"daisyui",
@@ -8,6 +8,7 @@
 		"gsap",
 		"headlessui",
 		"heroicons",
+		"ilike",
 		"meruru",
 		"nextjs",
 		"pnpx",
@@ -48,13 +49,6 @@
 			"filename": true,
 			"format": "svg",
 			"icon": "trpc",
-			"overrides": "ts"
-		},
-		{
-			"extensions": ["seed.ts", "seed", "prisma.ts", "prisma"],
-			"filename": true,
-			"format": "svg",
-			"icon": "prisma",
 			"overrides": "ts"
 		},
 		{

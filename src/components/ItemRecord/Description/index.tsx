@@ -1,7 +1,7 @@
-import type { ITEM_DESCRIPTION } from '@prisma/client';
 import Hyperlink from '@root/components/Hyperlink';
+import type { ItemDescription } from '@root/server/db/schema';
 
-type DescriptionProps = { description: ITEM_DESCRIPTION };
+type DescriptionProps = { description: ItemDescription };
 
 export default function Description({ description }: DescriptionProps) {
 	return (

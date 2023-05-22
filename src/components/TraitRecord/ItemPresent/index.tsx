@@ -1,8 +1,8 @@
 import { DocumentChartBarIcon } from '@heroicons/react/24/solid';
-import type { HYPER_LINK_RECORD } from '@prisma/client';
+import type { HyperLinkRecord } from '@root/server/db/schema';
 import Link from 'next/link';
 
-type ItemPresentProps = { itemPresent: HYPER_LINK_RECORD };
+type ItemPresentProps = { itemPresent: HyperLinkRecord };
 
 function ItemPresent({ itemPresent: { table, id, name } }: ItemPresentProps) {
 	return (

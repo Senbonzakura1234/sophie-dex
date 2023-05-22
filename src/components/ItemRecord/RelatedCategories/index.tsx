@@ -1,29 +1,29 @@
-import type { RELATED_CATEGORY } from '@prisma/client';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import type { RelatedCategoryEnum } from '@root/types/common/zod';
 import { RelatedCategoryDisplay } from '@root/types/model';
 import clsx from 'clsx';
 
-type RelatedCategoriesProps = { relatedCategories: RELATED_CATEGORY[] };
+type RelatedCategoriesProps = { relatedCategories: RelatedCategoryEnum[] };
 
 export default function RelatedCategories({ relatedCategories }: RelatedCategoriesProps) {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();
 
 	return (
 		<div className='mt-auto flex flex-wrap gap-2'>
-			{relatedCategories.map((c, k) => (
+			{relatedCategories.map((r, k) => (
 				<a
 					onClick={e => {
 						e.preventDefault();
-						if (isReady) updateQuery({ relatedCategory: c.name, page: null });
+						if (isReady) updateQuery({ relatedCategory: r, page: null });
 					}}
-					aria-label={RelatedCategoryDisplay[c.name]}
+					aria-label={RelatedCategoryDisplay[r]}
 					key={k}
 					className={clsx(
-						{ 'link link-hover text-neutral/90 italic': c.name !== securedQuery.relatedCategory },
+						{ 'link link-hover text-neutral/90 italic': r !== securedQuery.relatedCategory },
 						'font-serif text-xs capitalize italic',
 					)}
 				>
-					{RelatedCategoryDisplay[c.name]} ({c.count})
+					{RelatedCategoryDisplay[r]}
 				</a>
 			))}
 		</div>

@@ -1,9 +1,20 @@
-import type { Prisma, Trait } from '@prisma/client';
 import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
+import type { Trait } from '@root/server/db/schema';
+import { traits } from '@root/server/db/schema';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';
-import { InvalidRecordIdError, RecordNotFoundError, onQueryDBError } from '@root/utils/server';
+import {
+	ANYQuery,
+	CountQuery,
+	DirectionQueryMap,
+	InvalidRecordIdError,
+	RecordNotFoundError,
+	onQueryDBError,
+	processDBListResult,
+} from '@root/utils/server';
+import type { SQL } from 'drizzle-orm';
+import { and, eq, ilike, or } from 'drizzle-orm';
 
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Trait>> => {
@@ -11,32 +22,31 @@ export const traitRouter = router({
 
 		const pageInt = page ?? 1;
 
-		const OR: Prisma.TraitWhereInput[] | undefined = search
+		const OR: SQL[] = search
 			? [
-					{ name: { contains: search, mode: 'insensitive' } },
-					{ description: { contains: search, mode: 'insensitive' } },
-					{ keyWords: { contains: search, mode: 'insensitive' } },
+					ilike(traits.name, `%${search}%`),
+					ilike(traits.description, `%${search}%`),
+					ilike(traits.keyWords, `%${search}%`),
 			  ]
-			: undefined;
+			: [];
 
-		const AND: Prisma.TraitWhereInput[] = [];
+		const AND: SQL[] = [];
 
-		if (category) AND.push({ categories: { has: category } });
+		if (category) AND.push(ANYQuery(traits.categories.name, category));
 
-		const where = { OR, AND } satisfies Prisma.TraitWhereInput;
-
-		const [totalRecord, records] = await ctx.prisma
-			.$transaction([
-				ctx.prisma.trait.count({ where }),
-				ctx.prisma.trait.findMany({
-					where,
-					orderBy: {
-						[!!sortBy && sortBy !== 'price' && sortBy !== 'level' ? sortBy : 'index']: direction ?? 'asc',
-					},
-					skip: (pageInt - 1) * defaultLimit,
-					take: defaultLimit,
-				}),
-			])
+		const [totalRecord, records] = await ctx.db
+			.select({ totalCount: CountQuery, record: traits })
+			.from(traits)
+			.where(or(...OR))
+			.where(and(...AND))
+			.orderBy(
+				DirectionQueryMap[direction ?? 'asc'](
+					traits[!!sortBy && sortBy !== 'price' && sortBy !== 'level' ? sortBy : 'index'],
+				),
+			)
+			.limit(defaultLimit)
+			.offset((pageInt - 1) * defaultLimit)
+			.then(processDBListResult)
 			.catch(onQueryDBError);
 
 		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
@@ -47,7 +57,12 @@ export const traitRouter = router({
 
 		if (!id) throw InvalidRecordIdError();
 
-		const record = await ctx.prisma.trait.findFirst({ where: { id } }).catch(onQueryDBError);
+		const record = await ctx.db
+			.select()
+			.from(traits)
+			.where(eq(traits.id, id))
+			.then(([res]) => res)
+			.catch(onQueryDBError);
 
 		if (record) return record;
 

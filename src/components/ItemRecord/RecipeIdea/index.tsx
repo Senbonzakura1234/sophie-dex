@@ -1,30 +1,22 @@
-import type { HIGHLIGHT_TEXT, HYPER_LINK_MAP, HYPER_LINK_RECORD, HYPER_LINK_SEARCH } from '@prisma/client';
 import Hyperlink from '@root/components/Hyperlink';
+import type { HighlightText, HyperLinkMap, HyperLinkRecord, HyperLinkSearch } from '@root/server/db/schema';
 import type { ClassNameProps } from '@root/types/common/props';
 import { Fragment } from 'react';
 
 type RecipeIdeaProps = {
-	recipeIdea: HYPER_LINK_MAP;
+	recipeIdea: HyperLinkMap;
 } & ClassNameProps;
 
-export default function RecipeIdea({
-	recipeIdea: { contentText, highlightTextMap, linkRecordMap, linkSearchMap },
-	className,
-}: RecipeIdeaProps) {
+export default function RecipeIdea({ recipeIdea: { contentText, contentData }, className }: RecipeIdeaProps) {
 	return (
 		<div className={className}>
 			<span className='font-bold'>RecipeIdea:&nbsp;&nbsp;</span>
 
 			<span className='text-lg'>
 				{contentText.map((text, key) => {
-					let data: HYPER_LINK_RECORD | HIGHLIGHT_TEXT | HYPER_LINK_SEARCH | undefined = undefined;
+					let data: HighlightText | HyperLinkRecord | HyperLinkSearch | undefined = undefined;
 
-					if (text.includes('linkRecordMap-')) data = linkRecordMap[parseInt(text.replace('linkRecordMap-', ''))];
-
-					if (text.includes('linkSearchMap-')) data = linkSearchMap[parseInt(text.replace('linkSearchMap-', ''))];
-
-					if (text.includes('highlightTextMap-'))
-						data = highlightTextMap[parseInt(text.replace('highlightTextMap-', ''))];
+					if (text.includes('keyMap-')) data = contentData[parseInt(text.replace('keyMap-', ''))];
 
 					return data ? (
 						<Hyperlink key={key} input={data} className='link link-info' />

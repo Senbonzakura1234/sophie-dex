@@ -12,6 +12,7 @@
 		"module": "esnext",
 		"moduleResolution": "node",
 		"noEmit": true,
+		"noErrorTruncation": true,
 		"noUncheckedIndexedAccess": true,
 		"paths": {
 			"@root": ["./src"],
