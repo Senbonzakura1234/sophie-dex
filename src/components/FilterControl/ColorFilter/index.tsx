@@ -1,9 +1,9 @@
-import type { COLOR } from '@prisma/client';
 import SelectOption from '@root/components/SelectOption';
 import { colorDefaultSelect, colorSelectList } from '@root/components/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { PageNameProps } from '@root/types/common/props';
+import type { ColorEnum } from '@root/types/common/zod';
 import clsx from 'clsx';
 import { useMemo } from 'react';
 
@@ -17,14 +17,14 @@ export default function ColorFilter({ pageName }: ColorFilterProps) {
 		[securedQuery.color],
 	);
 
-	const [colorSelected, setColorSelected] = useQueryOnChange<COLOR | null>(
+	const [colorSelected, setColorSelected] = useQueryOnChange<ColorEnum | null>(
 		defaultColor,
 		color => updateQuery({ page: null, color }),
 		isReady,
 	);
 
 	return (
-		<SelectOption<COLOR | null>
+		<SelectOption<ColorEnum | null>
 			list={colorSelectList}
 			setValue={setColorSelected}
 			value={colorSelected}

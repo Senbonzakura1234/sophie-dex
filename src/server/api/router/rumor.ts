@@ -1,9 +1,19 @@
-import type { Prisma, Rumor } from '@prisma/client';
 import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
+import type { Rumor } from '@root/server/db/schema';
+import { rumors } from '@root/server/db/schema';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';
-import { InvalidRecordIdError, RecordNotFoundError, onQueryDBError } from '@root/utils/server';
+import {
+	CountQuery,
+	DirectionQueryMap,
+	InvalidRecordIdError,
+	RecordNotFoundError,
+	onQueryDBError,
+	processDBListResult,
+} from '@root/utils/server';
+import type { SQL } from 'drizzle-orm';
+import { and, eq, ilike, or } from 'drizzle-orm';
 
 export const rumorRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Rumor>> => {
@@ -11,31 +21,25 @@ export const rumorRouter = router({
 
 		const pageInt = page ?? 1;
 
-		const OR: Prisma.RumorWhereInput[] | undefined = search
-			? [
-					{ name: { contains: search, mode: 'insensitive' } },
-					{ keyWords: { contains: search, mode: 'insensitive' } },
-			  ]
-			: undefined;
+		const OR: SQL[] = search ? [ilike(rumors.name, `%${search}%`), ilike(rumors.keyWords, `%${search}%`)] : [];
 
-		const AND: Prisma.RumorWhereInput[] = [];
+		const AND: SQL[] = [];
 
-		if (rumorType) AND.push({ rumorType: { equals: rumorType } });
+		if (rumorType) AND.push(eq(rumors.rumorType, rumorType));
 
-		const where = { OR, AND } satisfies Prisma.RumorWhereInput;
-
-		const [totalRecord, records] = await ctx.prisma
-			.$transaction([
-				ctx.prisma.rumor.count({ where }),
-				ctx.prisma.rumor.findMany({
-					where,
-					orderBy: {
-						[!!sortBy && sortBy !== 'index' && sortBy !== 'level' ? sortBy : 'price']: direction ?? 'asc',
-					},
-					skip: (pageInt - 1) * defaultLimit,
-					take: defaultLimit,
-				}),
-			])
+		const [totalRecord, records] = await ctx.db
+			.select({ totalCount: CountQuery, record: rumors })
+			.from(rumors)
+			.where(or(...OR))
+			.where(and(...AND))
+			.orderBy(
+				DirectionQueryMap[direction ?? 'asc'](
+					rumors[!!sortBy && sortBy !== 'index' && sortBy !== 'level' ? sortBy : 'price'],
+				),
+			)
+			.limit(defaultLimit)
+			.offset((pageInt - 1) * defaultLimit)
+			.then(processDBListResult)
 			.catch(onQueryDBError);
 
 		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
@@ -46,7 +50,12 @@ export const rumorRouter = router({
 
 		if (!id) throw InvalidRecordIdError();
 
-		const record = await ctx.prisma.rumor.findFirst({ where: { id } }).catch(onQueryDBError);
+		const record = await ctx.db
+			.select()
+			.from(rumors)
+			.where(eq(rumors.id, id))
+			.then(([res]) => res)
+			.catch(onQueryDBError);
 
 		if (record) return record;
 

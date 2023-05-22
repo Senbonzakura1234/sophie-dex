@@ -1,9 +1,19 @@
-import type { Effect, Prisma } from '@prisma/client';
 import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
+import type { Effect } from '@root/server/db/schema';
+import { effects } from '@root/server/db/schema';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ListRecord } from '@root/types/model';
-import { InvalidRecordIdError, RecordNotFoundError, onQueryDBError } from '@root/utils/server';
+import {
+	CountQuery,
+	DirectionQueryMap,
+	InvalidRecordIdError,
+	RecordNotFoundError,
+	onQueryDBError,
+	processDBListResult,
+} from '@root/utils/server';
+import type { SQL } from 'drizzle-orm';
+import { eq, ilike, or } from 'drizzle-orm';
 
 export const effectRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Effect>> => {
@@ -11,28 +21,26 @@ export const effectRouter = router({
 
 		const pageInt = page ?? 1;
 
-		const OR: Prisma.EffectWhereInput[] | undefined = search
+		const OR: SQL[] = search
 			? [
-					{ name: { contains: search, mode: 'insensitive' } },
-					{ description: { contains: search, mode: 'insensitive' } },
-					{ keyWords: { contains: search, mode: 'insensitive' } },
+					ilike(effects.name, `%${search}%`),
+					ilike(effects.description, `%${search}%`),
+					ilike(effects.keyWords, `%${search}%`),
 			  ]
-			: undefined;
+			: [];
 
-		const where = { OR } satisfies Prisma.EffectWhereInput;
-
-		const [totalRecord, records] = await ctx.prisma
-			.$transaction([
-				ctx.prisma.effect.count({ where }),
-				ctx.prisma.effect.findMany({
-					where,
-					orderBy: {
-						[!!sortBy && sortBy !== 'price' && sortBy !== 'level' ? sortBy : 'index']: direction ?? 'asc',
-					},
-					skip: (pageInt - 1) * defaultLimit,
-					take: defaultLimit,
-				}),
-			])
+		const [totalRecord, records] = await ctx.db
+			.select({ totalCount: CountQuery, record: effects })
+			.from(effects)
+			.where(or(...OR))
+			.orderBy(
+				DirectionQueryMap[direction ?? 'asc'](
+					effects[!!sortBy && sortBy !== 'price' && sortBy !== 'level' ? sortBy : 'index'],
+				),
+			)
+			.limit(defaultLimit)
+			.offset((pageInt - 1) * defaultLimit)
+			.then(processDBListResult)
 			.catch(onQueryDBError);
 
 		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
@@ -43,7 +51,12 @@ export const effectRouter = router({
 
 		if (!id) throw InvalidRecordIdError();
 
-		const record = await ctx.prisma.effect.findFirst({ where: { id } }).catch(onQueryDBError);
+		const record = await ctx.db
+			.select()
+			.from(effects)
+			.where(eq(effects.id, id))
+			.then(([res]) => res)
+			.catch(onQueryDBError);
 
 		if (record) return record;
 

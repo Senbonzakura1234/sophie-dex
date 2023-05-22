@@ -1,11 +1,11 @@
-import type { HIGHLIGHT_TEXT, HYPER_LINK_RECORD, HYPER_LINK_SEARCH } from '@prisma/client';
+import type { HighlightText, HyperLinkRecord, HyperLinkSearch } from '@root/server/db/schema';
 import type { ClassNameProps } from '@root/types/common/props';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useMemo } from 'react';
 
 type HyperlinkProps = {
-	input: HIGHLIGHT_TEXT | HYPER_LINK_RECORD | HYPER_LINK_SEARCH;
+	input: HighlightText | HyperLinkRecord | HyperLinkSearch;
 } & ClassNameProps;
 
 export default function Hyperlink({ input, className }: HyperlinkProps) {

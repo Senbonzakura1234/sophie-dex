@@ -1,14 +1,12 @@
-import type { HYPER_LINK_MAP } from '@prisma/client';
 import Hyperlink from '@root/components/Hyperlink';
+import type { HyperLinkMap } from '@root/server/db/schema';
 import { Fragment } from 'react';
 
 type DescriptionProps = {
-	description: HYPER_LINK_MAP;
+	description: HyperLinkMap;
 };
 
-export default function Description({
-	description: { contentText, highlightTextMap, linkRecordMap, linkSearchMap },
-}: DescriptionProps) {
+export default function Description({ description: { contentText, contentData } }: DescriptionProps) {
 	return (
 		<div>
 			<span className='font-bold'>Description:&nbsp;&nbsp;</span>
@@ -17,12 +15,7 @@ export default function Description({
 				{contentText.map((text, key) => {
 					let data = undefined;
 
-					if (text.includes('linkRecordMap-')) data = linkRecordMap[parseInt(text.replace('linkRecordMap-', ''))];
-
-					if (text.includes('linkSearchMap-')) data = linkSearchMap[parseInt(text.replace('linkSearchMap-', ''))];
-
-					if (text.includes('highlightTextMap-'))
-						data = highlightTextMap[parseInt(text.replace('highlightTextMap-', ''))];
+					if (text.includes('keyMap-')) data = contentData[parseInt(text.replace('keyMap-', ''))];
 
 					return data ? (
 						<Hyperlink key={key} input={data} className='link link-info' />

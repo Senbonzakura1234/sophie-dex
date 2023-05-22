@@ -1,4 +1,4 @@
-import type { COLOR, TABLE } from '@prisma/client';
+import type { ColorEnum } from '@root/types/common/zod';
 import colors from 'tailwindcss/colors';
 
 export const APP_NAME = 'Sophie Dex';
@@ -10,9 +10,9 @@ export const defaultLimit = 20;
 
 export const idRegex = /^[0-9A-F]{24}$/i;
 
-export const tableList = ['EFFECT', 'ITEM', 'TRAIT', 'RUMOR'] as const satisfies Readonly<TABLE[]>;
+export const tableList = ['EFFECT', 'ITEM', 'TRAIT', 'RUMOR'] as const;
 
-export const colorTailwindMap: { [key in COLOR]: string } = {
+export const colorTailwindMap: { [key in ColorEnum]: string } = {
 	BLUE: colors.blue[500],
 	GREEN: colors.green[500],
 	RED: colors.red[500],

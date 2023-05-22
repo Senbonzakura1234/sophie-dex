@@ -5,7 +5,6 @@ A wiki page created for [Atelier Sophie DX](https://store.steampowered.com/app/1
 ## Tech Stack
 
 -  [Next.js](https://nextjs.org)
--  [Prisma](https://prisma.io)
 -  [Tailwind CSS](https://tailwindcss.com)
 -  [tRPC](https://trpc.io)
 

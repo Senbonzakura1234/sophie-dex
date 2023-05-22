@@ -1,15 +1,15 @@
-import type { CATEGORY } from '@prisma/client';
 import { categoryMap, hideCategoryOnTrait } from '@root/components/SubComponent';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import type { CategoryEnum } from '@root/types/common/zod';
 import clsx from 'clsx';
 import { useCallback } from 'react';
 
-type CategoriesProps = { categories: CATEGORY[] };
+type CategoriesProps = { categories: CategoryEnum[] };
 
 function Categories({ categories }: CategoriesProps) {
 	const { securedQuery, updateQuery, isReady } = useSearchQuery();
 
-	const isClickAble = useCallback((code: CATEGORY) => categories.includes(code) && isReady, [isReady, categories]);
+	const isClickAble = useCallback((code: CategoryEnum) => categories.includes(code) && isReady, [isReady, categories]);
 
 	return (
 		<nav className='mt-auto flex max-w-fit flex-wrap gap-2 pt-3'>

@@ -1,7 +1,7 @@
-import type { Rumor } from '@prisma/client';
 import RecordWrapper from '@root/components/RecordWrapper';
 import type { RecordProps } from '@root/types/common/props';
 
+import type { Rumor } from '@root/server/db/schema';
 import { nullableHandle } from '@root/utils/common';
 import Description from './Description';
 import Location from './Location';

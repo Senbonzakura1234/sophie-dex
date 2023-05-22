@@ -1,10 +1,10 @@
-import type { COLOR } from '@prisma/client';
 import { getFramerInViewFadeUp } from '@root/animations';
 import AnimationWrapper from '@root/components/AnimationWrapper';
 import { RecordPlaceholder } from '@root/components/SubComponent';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { MaybeData, RenderFunction } from '@root/types/common';
 import type { ClassNameProps, PageNameProps } from '@root/types/common/props';
+import type { ColorEnum } from '@root/types/common/zod';
 import clsx from 'clsx';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import { useMemo } from 'react';
@@ -12,7 +12,7 @@ import RecordHead from './RecordHead';
 
 type RecordWrapperProps<TRecord extends { id: string; name: string }> = ClassNameProps &
 	PageNameProps & {
-		color?: COLOR;
+		color?: ColorEnum;
 		children?: RenderFunction<TRecord>;
 	} & MaybeData<TRecord>;
 

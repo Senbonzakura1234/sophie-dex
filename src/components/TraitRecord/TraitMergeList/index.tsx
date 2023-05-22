@@ -1,18 +1,18 @@
-import type { MERGE_TRAIT } from '@prisma/client';
+import type { HyperLinkRecord } from '@root/server/db/schema';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { Fragment } from 'react';
 
-type TraitMergeListProps = { mergeFrom: MERGE_TRAIT[] };
+type TraitMergeListProps = { mergeFrom: HyperLinkRecord[][] };
 
 export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 	return (
 		<nav className='relative z-50 flex flex-wrap gap-2'>
 			<h5 className={clsx({ hidden: mergeFrom.length <= 0 }, 'my-auto font-extrabold')}>Merge from:</h5>
 
-			{mergeFrom.map(({ consist }, key) => (
+			{mergeFrom.map((traitRecords, key) => (
 				<div className='btn-group basis-auto' key={key}>
-					{consist.map(({ table, name, id }, key) => (
+					{traitRecords.map(({ table, name, id }, key) => (
 						<Fragment key={key}>
 							{key > 0 ? (
 								<button className='btn btn-xs btn-primary !bg-primary/50 !border-primary/50 no-animation'>

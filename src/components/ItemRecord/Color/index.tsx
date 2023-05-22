@@ -1,9 +1,9 @@
-import type { COLOR } from '@prisma/client';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import type { ColorEnum } from '@root/types/common/zod';
 import clsx from 'clsx';
 import { useMemo } from 'react';
 
-type ColorProps = { color: COLOR };
+type ColorProps = { color: ColorEnum };
 
 export default function Color({ color }: ColorProps) {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();

@@ -1,4 +1,4 @@
-import { prisma } from '@root/server/db/prisma';
+import { db } from '@root/server/db';
 import { type inferAsyncReturnType } from '@trpc/server';
 import { type CreateNextContextOptions } from '@trpc/server/adapters/next';
 
@@ -12,7 +12,7 @@ type CreateContextOptions = Record<string, never>;
  * - trpc's `createSSGHelpers` where we don't have req/res
  * @see https://create.t3.gg/en/usage/trpc#-servertrpccontextts
  **/
-export const createContextInner = async (_: CreateContextOptions) => ({ prisma });
+export const createContextInner = async (_: CreateContextOptions) => ({ db });
 
 /**
  * This is the actual context you'll use in your router

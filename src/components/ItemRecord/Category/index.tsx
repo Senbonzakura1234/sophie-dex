@@ -1,10 +1,10 @@
-import type { CATEGORY } from '@prisma/client';
 import { categoryMap } from '@root/components/SubComponent';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import type { CategoryEnum } from '@root/types/common/zod';
 import clsx from 'clsx';
 import { useMemo } from 'react';
 
-type CategoryProps = { category: CATEGORY };
+type CategoryProps = { category: CategoryEnum };
 
 export default function Category({ category }: CategoryProps) {
 	const { isReady, updateQuery, securedQuery } = useSearchQuery();

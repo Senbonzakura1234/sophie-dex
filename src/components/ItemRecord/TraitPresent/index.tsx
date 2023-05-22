@@ -1,8 +1,8 @@
 import { DocumentChartBarIcon } from '@heroicons/react/24/solid';
-import type { HYPER_LINK_RECORD } from '@prisma/client';
+import type { HyperLinkRecord } from '@root/server/db/schema';
 import Link from 'next/link';
 
-type TraitPresentProps = { traitPresent: HYPER_LINK_RECORD };
+type TraitPresentProps = { traitPresent: HyperLinkRecord };
 
 export default function TraitPresent({ traitPresent: { table, id, name } }: TraitPresentProps) {
 	return (

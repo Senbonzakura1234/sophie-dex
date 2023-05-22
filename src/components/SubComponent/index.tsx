@@ -1,15 +1,15 @@
-import type { CATEGORY, COLOR, RECIPE_TYPE, RUMOR_TYPE } from '@prisma/client';
 import { getFramerInViewFadeUp } from '@root/animations';
 import type { SelectOptionItem } from '@root/types/common';
+import type { CategoryEnum, ColorEnum, RecipeTypeEnum, RumorTypeEnum } from '@root/types/common/zod';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
 import clsx from 'clsx';
 import { m as motion } from 'framer-motion';
 
 export { clsx };
 
-export const hideCategoryOnTrait: Readonly<CATEGORY[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
+export const hideCategoryOnTrait: Readonly<CategoryEnum[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
 
-export const categoryMap = new Map<CATEGORY, { name: string; className: UnicodeClass }>([
+export const categoryMap = new Map<CategoryEnum, { name: string; className: UnicodeClass }>([
 	['MATERIAL', { name: 'Material', className: 'atelier__material' }],
 	['SYNTHESIS', { name: 'Synthesis', className: 'atelier__type-synthesis' }],
 	['WEAPON', { name: 'Weapon', className: 'atelier__type-weapon' }],
@@ -25,12 +25,15 @@ export const categoryMap = new Map<CATEGORY, { name: string; className: UnicodeC
 	['MACHINE', { name: 'Machine', className: 'atelier__category-neutralizers' }],
 ]);
 
-export const rumorTypeMap = new Map<RUMOR_TYPE, { name: Capitalize<Lowercase<RUMOR_TYPE>>; className: UnicodeClass }>([
+export const rumorTypeMap = new Map<
+	RumorTypeEnum,
+	{ name: Capitalize<Lowercase<RumorTypeEnum>>; className: UnicodeClass }
+>([
 	['MATERIAL', { className: 'atelier__material', name: 'Material' }],
 	['MONSTER', { className: 'atelier__race-puni', name: 'Monster' }],
 ]);
 
-const colorMap = ['RED', 'BLUE', 'GREEN', 'YELLOW', 'WHITE'] satisfies COLOR[];
+const colorMap = ['RED', 'BLUE', 'GREEN', 'YELLOW', 'WHITE'] satisfies ColorEnum[];
 
 const recipeTypeMap = [
 	'BEGINNER_RECIPES',
@@ -38,7 +41,7 @@ const recipeTypeMap = [
 	'HOPE_RECIPES',
 	'DREAM_RECIPES',
 	'MYSTERY_RECIPES',
-] satisfies RECIPE_TYPE[];
+] satisfies RecipeTypeEnum[];
 
 export const categoryDefaultSelect = {
 	value: null,
@@ -71,7 +74,7 @@ export const categorySelectList = [
 		value: code,
 		icon: <span className={`h-4 w-4 2xl:h-5 2xl:w-5 ${className}`} aria-hidden='true' />,
 	})),
-] satisfies SelectOptionItem<CATEGORY | null>[];
+] satisfies SelectOptionItem<CategoryEnum | null>[];
 
 export const rumorTypeSelectList = [
 	rumorTypeDefaultSelect,
@@ -80,7 +83,7 @@ export const rumorTypeSelectList = [
 		value: code,
 		icon: <span className={`h-4 w-4 2xl:h-5 2xl:w-5 ${className}`} aria-hidden='true' />,
 	})),
-] satisfies SelectOptionItem<RUMOR_TYPE | null>[];
+] satisfies SelectOptionItem<RumorTypeEnum | null>[];
 
 export const colorSelectList = [
 	colorDefaultSelect,
@@ -103,7 +106,7 @@ export const colorSelectList = [
 			/>
 		),
 	})),
-] satisfies SelectOptionItem<COLOR | null>[];
+] satisfies SelectOptionItem<ColorEnum | null>[];
 
 export const recipeTypeSelectList = [
 	recipeTypeDefaultSelect,
@@ -126,7 +129,7 @@ export const recipeTypeSelectList = [
 			/>
 		),
 	})),
-] satisfies SelectOptionItem<RECIPE_TYPE | null>[];
+] satisfies SelectOptionItem<RecipeTypeEnum | null>[];
 
 export function RecordPlaceholder() {
 	return (
