@@ -1,5 +1,11 @@
-import { tableList } from '@root/constants';
-import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
+import {
+	categoryList,
+	colorList,
+	recipeTypeList,
+	relatedCategoryList,
+	rumorTypeList,
+	tableList,
+} from '@root/types/model';
 import { z } from 'zod';
 
 const nodeEnvSchema = z.enum(['development', 'test', 'production']);

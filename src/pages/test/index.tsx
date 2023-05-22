@@ -6,7 +6,7 @@ import { type NextPage } from 'next';
 const Tests: NextPage = () => {
 	const { securedQuery, isReady } = useSearchQuery();
 	const { data, isError, error } = apiContext.test.test.useQuery(securedQuery, {
-		retry: 2,
+		retry: false,
 		enabled: isReady,
 		refetchOnWindowFocus: false,
 	});

@@ -1,4 +1,4 @@
-import type { RelatedCategoryEnum } from '../common/zod';
+export const tableList = ['EFFECT', 'ITEM', 'TRAIT', 'RUMOR'] as const;
 
 export const colorList = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW'] as const;
 
@@ -60,39 +60,6 @@ export const relatedCategoryList = [
 	'PAPER',
 	'MAGIC_ITEM',
 ] as const;
-
-export const RelatedCategoryDisplay = {
-	PLANT: 'Plant',
-	MEDICINE_MAT: 'Medicine Mat',
-	WATER: 'Water',
-	IMPORTANT: 'Important',
-	BOMB: 'Bomb',
-	MEDICINE: 'Medicine',
-	FOOD: 'Food',
-	SWEETS: 'Sweets',
-	CLOTH: 'Cloth',
-	NEUTRALIZER: 'Neutralizer',
-	WEAPON_MAT: 'Weapon Mat',
-	ARMOR_MAT: 'Armor Mat',
-	WEAPON: 'Weapon',
-	ARMOR: 'Armor',
-	ACCESSORY: 'Accessory',
-	POISON_MAT: 'Poison Mat',
-	SECRET_POWER: 'Secret Power',
-	FUEL: 'Fuel',
-	THREAD: 'Thread',
-	WOOD: 'Wood',
-	ELIXIR: 'Elixir',
-	ORE: 'Ore',
-	GUNPOWDER: 'Gunpowder',
-	GEM: 'Gem',
-	METAL: 'Metal',
-	CLAY: 'Clay',
-	ANIMAL: 'Animal',
-	INGREDIENT: 'Ingredient',
-	PAPER: 'Paper',
-	MAGIC_ITEM: 'Magic Item',
-} as const satisfies Readonly<{ [relatedCategory in RelatedCategoryEnum]: string }>;
 
 export type CommonRecord = {
 	id: string;

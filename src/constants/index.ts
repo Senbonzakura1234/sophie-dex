@@ -10,8 +10,6 @@ export const defaultLimit = 20;
 
 export const idRegex = /^[0-9A-F]{24}$/i;
 
-export const tableList = ['EFFECT', 'ITEM', 'TRAIT', 'RUMOR'] as const;
-
 export const colorTailwindMap: { [key in ColorEnum]: string } = {
 	BLUE: colors.blue[500],
 	GREEN: colors.green[500],

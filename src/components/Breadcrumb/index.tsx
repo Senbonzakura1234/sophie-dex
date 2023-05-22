@@ -1,7 +1,8 @@
 import { HomeIcon, LinkIcon } from '@heroicons/react/24/solid';
 import { getFramerInViewFadeUp } from '@root/animations';
 import CircleDivider from '@root/components/CircleDivider';
-import { APP_AUTHOR, tableList } from '@root/constants';
+import { APP_AUTHOR } from '@root/constants';
+import { tableList } from '@root/types/model';
 import clsx from 'clsx';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import Link from 'next/link';
