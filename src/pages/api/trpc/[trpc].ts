@@ -3,6 +3,8 @@ import { appRouter } from '@root/server/api/router/_app';
 import { evnIs } from '@root/utils/common';
 import { createNextApiHandler } from '@trpc/server/adapters/next';
 
+export const runtime = 'edge';
+
 // export API handler
 export default createNextApiHandler({
 	router: appRouter,
