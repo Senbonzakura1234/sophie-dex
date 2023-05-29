@@ -1,10 +1,14 @@
 import { publicProcedure, router } from '@root/server/api/trpc';
 import { searchQueryValidator } from '@root/types/common/zod';
+import { evnIs } from '@root/utils/common';
+import { ForbiddenError } from '@root/utils/server';
 
 export const testRouter = router({
 	test: publicProcedure.input(searchQueryValidator).query(async ({}) => {
-		// if (evnIs('production')) throw ForbiddenError();
+		if (evnIs('production')) throw ForbiddenError();
+
 		// const page = 21;
+
 		// const data = await db
 		// 	.select()
 		// 	.from(items)
@@ -12,6 +16,7 @@ export const testRouter = router({
 		// 	.orderBy(asc(items.name))
 		// 	.limit(8)
 		// 	.offset((page - 1) * 8);
+
 		// await Promise.all(
 		// 	data.map(async ({ recipeIdea, id }) => {
 		// 		if (!recipeIdea) return;
@@ -25,9 +30,11 @@ export const testRouter = router({
 		// 				return newKey;
 		// 			}),
 		// 		};
+
 		// 		await db.update(items).set({ recipeIdea: newRecipeIdea }).where(eq(items.id, id));
 		// 	}),
 		// );
+
 		// return { status: 'OK' };
 	}),
 });
