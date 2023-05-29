@@ -1,5 +1,9 @@
 import { publicProcedure, router } from '@root/server/api/trpc';
+import { db } from '@root/server/db';
+import { effects, items, rumors, traits } from '@root/server/db/schema';
+import type { ExportDBData } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
+import { getBaseUrl } from '@root/utils/client';
 import { evnIs } from '@root/utils/common';
 import { ForbiddenError } from '@root/utils/server';
 
@@ -7,34 +11,28 @@ export const testRouter = router({
 	test: publicProcedure.input(searchQueryValidator).query(async ({}) => {
 		if (evnIs('production')) throw ForbiddenError();
 
-		// const page = 21;
+		const [effectsRes, itemsRes, rumorsRes, traitsRes] = await Promise.all([
+			db.select().from(effects),
+			db.select().from(items),
+			db.select().from(rumors),
+			db.select().from(traits),
+		]);
 
-		// const data = await db
-		// 	.select()
-		// 	.from(items)
-		// 	.where(isNotNull(items.recipeIdea))
-		// 	.orderBy(asc(items.name))
-		// 	.limit(8)
-		// 	.offset((page - 1) * 8);
+		const response = await fetch(`${getBaseUrl()}/api/export`, {
+			method: 'POST',
+			mode: 'same-origin',
+			credentials: 'same-origin',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				effects: effectsRes,
+				items: itemsRes,
+				rumors: rumorsRes,
+				traits: traitsRes,
+			} satisfies ExportDBData),
+		});
 
-		// await Promise.all(
-		// 	data.map(async ({ recipeIdea, id }) => {
-		// 		if (!recipeIdea) return;
-		// 		let count = 0;
-		// 		const newRecipeIdea = {
-		// 			...recipeIdea,
-		// 			contentText: recipeIdea.contentText.map(t => {
-		// 				if (!t.includes('keyMap-')) return t;
-		// 				const newKey = `keyMap-${count}`;
-		// 				count++;
-		// 				return newKey;
-		// 			}),
-		// 		};
-
-		// 		await db.update(items).set({ recipeIdea: newRecipeIdea }).where(eq(items.id, id));
-		// 	}),
-		// );
-
-		// return { status: 'OK' };
+		return await response.json();
 	}),
 });

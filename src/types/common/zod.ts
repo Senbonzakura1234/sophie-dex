@@ -82,3 +82,12 @@ export const hyperLinkSearchValidator = z.object({
 	searchQuery: searchQueryValidator,
 	table: genericTableEnumSchema,
 });
+
+export const exportDBDataValidator = z.object({
+	effects: z.array(z.unknown()),
+	items: z.array(z.unknown()),
+	rumors: z.array(z.unknown()),
+	traits: z.array(z.unknown()),
+});
+
+export type ExportDBData = z.infer<typeof exportDBDataValidator>;

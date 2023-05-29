@@ -8,7 +8,7 @@ export const env = createEnv({
 	client: {
 		NEXT_PUBLIC_NODE_ENV: nodeEnvSchema.optional(),
 		NEXT_PUBLIC_PORT: z.coerce.number().nonnegative().catch(3000),
-		NEXT_PUBLIC_VERCEL_URL: z.coerce.number().nonnegative().catch(3000),
+		NEXT_PUBLIC_VERCEL_URL: z.string().optional(),
 	},
 	runtimeEnv: {
 		SUPABASE_POSTGRES_URL: process.env.SUPABASE_POSTGRES_URL,
