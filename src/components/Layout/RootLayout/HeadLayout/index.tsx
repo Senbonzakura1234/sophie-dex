@@ -1,4 +1,5 @@
 import { APP_AUTHOR, APP_DESCRIPTION, APP_KEYWORD, APP_NAME } from '@root/constants';
+import { getBaseUrl } from '@root/utils/client';
 import Head from 'next/head';
 
 export default function HeadLayout() {
@@ -14,14 +15,15 @@ export default function HeadLayout() {
 			<meta name='theme-color' property='og:theme-color' key='theme-color' content='#e0a82e' />
 
 			{/* Twitter */}
-			<meta property='twitter:image' content='/assets/icons/icon-512x512.png' />
-			<meta property='twitter:card' content='/assets/images/sophie-logo.png' />
+			<meta property='twitter:image' content={`${getBaseUrl()}/assets/icons/icon-512x512.png`} />
+			<meta property='twitter:card' content={`${getBaseUrl()}/assets/images/sophie-logo.png`} />
 			<meta property='twitter:title' content={APP_NAME} />
+			<meta property='twitter:description' content={APP_DESCRIPTION} />
 
-			<meta property='og:image' content='/assets/images/sophie-logo.png' />
+			<meta property='og:image' content={`${getBaseUrl()}/assets/images/sophie-logo.png`} />
 			<meta property='og:title' content={APP_NAME} />
 			<meta property='og:description' content={APP_DESCRIPTION} />
-			<meta property='og:url' content='https://sophie-dex.vercel.app/' />
+			<meta property='og:url' content={getBaseUrl()} />
 
 			<link rel='apple-touch-icon' href='/assets/splash_screens/icon.png' />
 
