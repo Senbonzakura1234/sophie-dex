@@ -7,11 +7,11 @@ import { useMemo } from 'react';
 type RumorTypeProps = { rumorType: RumorTypeEnum };
 
 export default function RumorType({ rumorType }: RumorTypeProps) {
-	const { isReady, updateQuery, securedQuery } = useSearchQuery();
+	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const isBtnDisabled = useMemo(
-		() => !isReady || securedQuery.rumorType === rumorType,
-		[isReady, rumorType, securedQuery.rumorType],
+		() => !isRouterReady || securedQuery.rumorType === rumorType,
+		[isRouterReady, rumorType, securedQuery.rumorType],
 	);
 
 	return (
@@ -24,7 +24,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 					}}
 					aria-label={`Filter ${rumorTypeMap.get(rumorType)?.name} Rumor`}
 					role='navigation'
-					disabled={!isReady}
+					disabled={!isRouterReady}
 					className={clsx(
 						{
 							'!no-animation !cursor-default': isBtnDisabled,
@@ -36,7 +36,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 							'!border-red-500 !bg-red-500': isBtnDisabled && rumorType === 'MONSTER',
 							'border-red-500 bg-red-500 hover:border-red-600 hover:bg-red-600': rumorType === 'MONSTER',
 						},
-						'btn btn-xs gap-1 font-extrabold capitalize !text-slate-50',
+						'btn-xs btn gap-1 font-extrabold capitalize !text-slate-50',
 					)}
 				>
 					<div className={clsx('font-atelier', rumorTypeMap.get(rumorType)?.className)}></div>
@@ -46,7 +46,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 
 			<div
 				className={clsx(
-					'font-atelier absolute bottom-10 right-10 w-10 text-center text-lg text-slate-50 md:text-4xl',
+					'absolute bottom-10 right-10 w-10 text-center font-atelier text-lg text-slate-50 md:text-4xl',
 					rumorTypeMap.get(rumorType)?.className,
 				)}
 			></div>

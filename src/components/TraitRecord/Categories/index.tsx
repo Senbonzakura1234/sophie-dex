@@ -7,9 +7,12 @@ import { useCallback } from 'react';
 type CategoriesProps = { categories: CategoryEnum[] };
 
 function Categories({ categories }: CategoriesProps) {
-	const { securedQuery, updateQuery, isReady } = useSearchQuery();
+	const { securedQuery, updateQuery, isRouterReady } = useSearchQuery();
 
-	const isClickAble = useCallback((code: CategoryEnum) => categories.includes(code) && isReady, [isReady, categories]);
+	const isClickAble = useCallback(
+		(code: CategoryEnum) => categories.includes(code) && isRouterReady,
+		[isRouterReady, categories],
+	);
 
 	return (
 		<nav className='mt-auto flex max-w-fit flex-wrap gap-2 pt-3'>
@@ -25,14 +28,14 @@ function Categories({ categories }: CategoriesProps) {
 								{
 									'btn-primary text-slate-50': securedQuery.category !== code && isClickAble(code),
 								},
-								'btn btn-sm 2xl:btn-md rounded-3xl',
+								'btn-sm btn rounded-3xl 2xl:btn-md',
 							)}
 							onClick={() => {
 								if (isClickAble(code))
 									updateQuery({ page: null, category: securedQuery.category === code ? null : code });
 							}}
 						>
-							<div className={clsx(className, 'font-atelier w-5 text-lg 2xl:w-6 2xl:text-xl')} />
+							<div className={clsx(className, 'w-5 font-atelier text-lg 2xl:w-6 2xl:text-xl')} />
 						</button>
 					</div>
 				))}

@@ -6,18 +6,18 @@ import { useMemo } from 'react';
 type ResetFilterProps = IsBottomFilterProps;
 
 export default function ResetFilter({ isBottomFilter: isBottomFilter }: ResetFilterProps) {
-	const { resetQuery, isReady, securedQuery } = useSearchQuery();
+	const { resetQuery, isRouterReady, securedQuery } = useSearchQuery();
 
 	const isDisable = useMemo(
 		() =>
 			!Object.values(securedQuery ?? {}).some(value => typeof value === 'string' || typeof value === 'number') &&
-			isReady,
-		[isReady, securedQuery],
+			isRouterReady,
+		[isRouterReady, securedQuery],
 	);
 
 	return (
 		<button
-			className={clsx({ hidden: isBottomFilter }, 'btn btn-xs my-auto gap-1 capitalize')}
+			className={clsx({ hidden: isBottomFilter }, 'btn-xs btn my-auto gap-1 capitalize')}
 			role='navigation'
 			disabled={isDisable}
 			onClick={() => !isDisable && resetQuery()}

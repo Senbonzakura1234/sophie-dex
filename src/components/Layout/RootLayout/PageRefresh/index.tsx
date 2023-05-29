@@ -1,4 +1,5 @@
 import { ArrowPathIcon } from '@heroicons/react/24/solid';
+import { useRouterReady } from '@root/hooks/useRouterReady';
 import clsx from 'clsx';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import { useRouter } from 'next/router';
@@ -7,7 +8,9 @@ import { DEFAULT_REFRESH_THRESHOLD, usePullToRefresh } from 'use-pull-to-refresh
 export default function PageRefresh() {
 	const { isReady, reload } = useRouter();
 
-	const { isRefreshing, pullPosition } = usePullToRefresh({ onRefresh: reload, isDisabled: !isReady });
+	const isRouterReady = useRouterReady(isReady);
+
+	const { isRefreshing, pullPosition } = usePullToRefresh({ onRefresh: reload, isDisabled: !isRouterReady });
 
 	return (
 		<LazyMotion features={domAnimation} strict>
@@ -24,7 +27,7 @@ export default function PageRefresh() {
 					initial={{ rotate: 0 }}
 					animate={{ rotate: pullPosition }}
 				>
-					<ArrowPathIcon className='text-primary h-full w-full' />
+					<ArrowPathIcon className='h-full w-full text-primary' />
 				</motion.div>
 			</motion.div>
 		</LazyMotion>

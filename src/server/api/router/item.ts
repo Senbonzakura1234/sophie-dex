@@ -1,5 +1,6 @@
 import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
+import { db } from '@root/server/db';
 import type { Item } from '@root/server/db/schema';
 import { items } from '@root/server/db/schema';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
@@ -17,7 +18,7 @@ import type { SQL } from 'drizzle-orm';
 import { and, eq, ilike, or } from 'drizzle-orm';
 
 export const itemRouter = router({
-	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Item>> => {
+	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Item>> => {
 		const { search, sortBy, direction, color, relatedCategory, page, category, recipeType } = { ...input };
 
 		const pageInt = page ?? 1;
@@ -31,7 +32,7 @@ export const itemRouter = router({
 		if (recipeType) AND.push(eq(items.recipeType, recipeType));
 		if (category) AND.push(eq(items.category, category));
 
-		const [totalRecord, records] = await ctx.db
+		const [totalRecord, records] = await db
 			.select({ totalCount: CountQuery, record: items })
 			.from(items)
 			.where(or(...OR))
@@ -45,12 +46,12 @@ export const itemRouter = router({
 		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}),
 
-	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }): Promise<Item> => {
+	getOne: publicProcedure.input(idQueryValidator).query(async ({ input }): Promise<Item> => {
 		const { id } = input;
 
 		if (!id) throw InvalidRecordIdError();
 
-		const record = await ctx.db
+		const record = await db
 			.select()
 			.from(items)
 			.where(eq(items.id, id))

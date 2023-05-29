@@ -10,7 +10,7 @@ import { useMemo } from 'react';
 type RecipeTypeFilterProps = PageNameProps;
 
 export default function RecipeTypeFilter({ pageName }: RecipeTypeFilterProps) {
-	const { securedQuery, updateQuery, isReady } = useSearchQuery();
+	const { securedQuery, updateQuery, isRouterReady } = useSearchQuery();
 
 	const defaultRecipeType = useMemo(
 		() => recipeTypeSelectList.find(({ value }) => value === securedQuery.recipeType) ?? recipeTypeDefaultSelect,
@@ -20,7 +20,7 @@ export default function RecipeTypeFilter({ pageName }: RecipeTypeFilterProps) {
 	const [recipeTypeSelected, setRecipeTypeSelected] = useQueryOnChange<RecipeTypeEnum | null>(
 		defaultRecipeType,
 		recipeType => updateQuery({ page: null, recipeType }),
-		isReady,
+		isRouterReady,
 	);
 
 	return (

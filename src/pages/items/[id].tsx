@@ -6,10 +6,10 @@ import { apiContext } from '@root/utils/trpc';
 import type { NextPage } from 'next';
 
 const ItemDetail: NextPage = () => {
-	const { isReady, securedIdQuery } = useIdQuery();
+	const { isRouterReady, securedIdQuery } = useIdQuery();
 	const { data, isError, error } = apiContext.item.getOne.useQuery(securedIdQuery, {
 		retry: 2,
-		enabled: isReady,
+		enabled: isRouterReady,
 		refetchOnWindowFocus: false,
 	});
 

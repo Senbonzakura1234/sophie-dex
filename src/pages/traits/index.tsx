@@ -5,10 +5,10 @@ import { apiContext } from '@root/utils/trpc';
 import { type NextPage } from 'next';
 
 const Traits: NextPage = () => {
-	const { securedQuery, isReady } = useSearchQuery();
+	const { securedQuery, isRouterReady } = useSearchQuery();
 	const { data, isError, error } = apiContext.trait.getAll.useQuery(securedQuery, {
 		retry: 2,
-		enabled: isReady,
+		enabled: isRouterReady,
 		refetchOnWindowFocus: false,
 	});
 

@@ -6,9 +6,12 @@ import { useMemo } from 'react';
 type ColorProps = { color: ColorEnum };
 
 export default function Color({ color }: ColorProps) {
-	const { isReady, updateQuery, securedQuery } = useSearchQuery();
+	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
 
-	const isBtnDisabled = useMemo(() => !isReady || securedQuery.color === color, [color, isReady, securedQuery.color]);
+	const isBtnDisabled = useMemo(
+		() => !isRouterReady || securedQuery.color === color,
+		[color, isRouterReady, securedQuery.color],
+	);
 
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
@@ -20,7 +23,7 @@ export default function Color({ color }: ColorProps) {
 				}}
 				role='navigation'
 				aria-label={`Filter ${color} Item`}
-				disabled={!isReady}
+				disabled={!isRouterReady}
 				className={clsx(
 					{
 						'!no-animation !cursor-default': isBtnDisabled,
@@ -40,7 +43,7 @@ export default function Color({ color }: ColorProps) {
 						'!border-yellow-400 !bg-yellow-400': isBtnDisabled && color === 'YELLOW',
 						'border-yellow-400 bg-yellow-400 hover:border-yellow-500 hover:bg-yellow-500': color === 'YELLOW',
 					},
-					'btn btn-xs font-extrabold capitalize !text-slate-50',
+					'btn-xs btn font-extrabold capitalize !text-slate-50',
 				)}
 			>
 				{color.toLowerCase()}

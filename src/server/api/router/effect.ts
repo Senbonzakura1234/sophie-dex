@@ -1,5 +1,6 @@
 import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
+import { db } from '@root/server/db';
 import type { Effect } from '@root/server/db/schema';
 import { effects } from '@root/server/db/schema';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
@@ -16,7 +17,7 @@ import type { SQL } from 'drizzle-orm';
 import { eq, ilike, or } from 'drizzle-orm';
 
 export const effectRouter = router({
-	getAll: publicProcedure.input(searchQueryValidator).query(async ({ ctx, input }): Promise<ListRecord<Effect>> => {
+	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Effect>> => {
 		const { search, sortBy, direction, page } = { ...input };
 
 		const pageInt = page ?? 1;
@@ -29,7 +30,7 @@ export const effectRouter = router({
 			  ]
 			: [];
 
-		const [totalRecord, records] = await ctx.db
+		const [totalRecord, records] = await db
 			.select({ totalCount: CountQuery, record: effects })
 			.from(effects)
 			.where(or(...OR))
@@ -46,12 +47,12 @@ export const effectRouter = router({
 		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}),
 
-	getOne: publicProcedure.input(idQueryValidator).query(async ({ ctx, input }): Promise<Effect> => {
+	getOne: publicProcedure.input(idQueryValidator).query(async ({ input }): Promise<Effect> => {
 		const { id } = input;
 
 		if (!id) throw InvalidRecordIdError();
 
-		const record = await ctx.db
+		const record = await db
 			.select()
 			.from(effects)
 			.where(eq(effects.id, id))

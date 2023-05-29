@@ -10,7 +10,7 @@ import { useMemo } from 'react';
 type ColorFilterProps = PageNameProps;
 
 export default function ColorFilter({ pageName }: ColorFilterProps) {
-	const { securedQuery, updateQuery, isReady } = useSearchQuery();
+	const { securedQuery, updateQuery, isRouterReady } = useSearchQuery();
 
 	const defaultColor = useMemo(
 		() => colorSelectList.find(({ value }) => value === securedQuery.color) ?? colorDefaultSelect,
@@ -20,7 +20,7 @@ export default function ColorFilter({ pageName }: ColorFilterProps) {
 	const [colorSelected, setColorSelected] = useQueryOnChange<ColorEnum | null>(
 		defaultColor,
 		color => updateQuery({ page: null, color }),
-		isReady,
+		isRouterReady,
 	);
 
 	return (

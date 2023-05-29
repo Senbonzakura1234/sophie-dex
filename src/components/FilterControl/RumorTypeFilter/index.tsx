@@ -10,7 +10,7 @@ import { useMemo } from 'react';
 type RumorTypeFilterProps = PageNameProps;
 
 export default function RumorTypeFilter({ pageName }: RumorTypeFilterProps) {
-	const { securedQuery, updateQuery, isReady } = useSearchQuery();
+	const { securedQuery, updateQuery, isRouterReady } = useSearchQuery();
 
 	const defaultRumorType = useMemo(
 		() => rumorTypeSelectList.find(({ value }) => value === securedQuery.rumorType) ?? rumorTypeDefaultSelect,
@@ -20,7 +20,7 @@ export default function RumorTypeFilter({ pageName }: RumorTypeFilterProps) {
 	const [rumorTypeSelected, setRumorTypeSelected] = useQueryOnChange<RumorTypeEnum | null>(
 		defaultRumorType,
 		rumorType => updateQuery({ page: null, rumorType }),
-		isReady,
+		isRouterReady,
 	);
 
 	return (

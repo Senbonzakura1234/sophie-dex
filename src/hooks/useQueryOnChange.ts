@@ -4,7 +4,7 @@ import { useCallback, useMemo } from 'react';
 export function useQueryOnChange<V>(
 	defaultValue: SelectOptionItem<V>,
 	onChange: (value: V) => void,
-	isReady: boolean,
+	isRouterReady: boolean,
 ): readonly [SelectOptionItem<V>, SetSelectOptionItem<V>] {
 	const state = useMemo(() => defaultValue, [defaultValue]);
 
@@ -12,9 +12,9 @@ export function useQueryOnChange<V>(
 		s => {
 			const cur = typeof s === 'function' ? s(state) : s;
 
-			if (isReady && cur.value !== state.value) onChange(cur.value);
+			if (isRouterReady && cur.value !== state.value) onChange(cur.value);
 		},
-		[state, isReady, onChange],
+		[state, isRouterReady, onChange],
 	);
 
 	return [state, setState] as const;

@@ -7,11 +7,11 @@ import { useMemo } from 'react';
 type CategoryProps = { category: CategoryEnum };
 
 export default function Category({ category }: CategoryProps) {
-	const { isReady, updateQuery, securedQuery } = useSearchQuery();
+	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const isBtnDisabled = useMemo(
-		() => !isReady || securedQuery.category === category,
-		[category, isReady, securedQuery.category],
+		() => !isRouterReady || securedQuery.category === category,
+		[category, isRouterReady, securedQuery.category],
 	);
 
 	return (
@@ -24,12 +24,12 @@ export default function Category({ category }: CategoryProps) {
 					}}
 					aria-label={`Filter ${categoryMap.get(category)?.name} Item`}
 					role='navigation'
-					disabled={!isReady}
+					disabled={!isRouterReady}
 					className={clsx(
 						{
 							'!no-animation !cursor-default !border-slate-300 !bg-slate-300 !text-slate-900': isBtnDisabled,
 						},
-						'btn btn-xs btn-accent gap-1 font-extrabold capitalize',
+						'btn-accent btn-xs btn gap-1 font-extrabold capitalize',
 					)}
 				>
 					<div className={clsx('font-atelier', categoryMap.get(category)?.className)}></div>
@@ -39,7 +39,7 @@ export default function Category({ category }: CategoryProps) {
 
 			<div
 				className={clsx(
-					'font-atelier absolute bottom-10 right-10 w-10 text-center text-lg text-slate-50 md:text-4xl',
+					'absolute bottom-10 right-10 w-10 text-center font-atelier text-lg text-slate-50 md:text-4xl',
 					categoryMap.get(category)?.className,
 				)}
 			></div>

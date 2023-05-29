@@ -11,7 +11,7 @@ import { useMemo } from 'react';
 type CategoryFilterProps = PageNameProps;
 
 export default function CategoryFilter({ pageName }: CategoryFilterProps) {
-	const { securedQuery, updateQuery, isReady } = useSearchQuery();
+	const { securedQuery, updateQuery, isRouterReady } = useSearchQuery();
 
 	const defaultCate = useMemo(
 		() => categorySelectList.find(({ value }) => value === securedQuery.category) ?? categoryDefaultSelect,
@@ -21,7 +21,7 @@ export default function CategoryFilter({ pageName }: CategoryFilterProps) {
 	const [cateSelected, setCateSelected] = useQueryOnChange<CategoryEnum | null>(
 		defaultCate,
 		category => updateQuery({ page: null, category }),
-		isReady,
+		isRouterReady,
 	);
 
 	return (

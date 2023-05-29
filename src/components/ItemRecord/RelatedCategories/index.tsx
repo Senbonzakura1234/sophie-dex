@@ -5,7 +5,7 @@ import clsx from 'clsx';
 type RelatedCategoriesProps = { relatedCategories: RelatedCategoryEnum[] };
 
 export default function RelatedCategories({ relatedCategories }: RelatedCategoriesProps) {
-	const { isReady, updateQuery, securedQuery } = useSearchQuery();
+	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const formatRelateCategory = (r: RelatedCategoryEnum) => r.replaceAll('_', ' ').toLocaleLowerCase();
 
@@ -15,7 +15,7 @@ export default function RelatedCategories({ relatedCategories }: RelatedCategori
 				<a
 					onClick={e => {
 						e.preventDefault();
-						if (isReady) updateQuery({ relatedCategory: r, page: null });
+						if (isRouterReady) updateQuery({ relatedCategory: r, page: null });
 					}}
 					aria-label={formatRelateCategory(r)}
 					key={k}

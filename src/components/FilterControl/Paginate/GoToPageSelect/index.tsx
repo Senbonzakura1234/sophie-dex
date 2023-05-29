@@ -7,7 +7,7 @@ import { useMemo } from 'react';
 type GoToPageSelectProps = { totalPage: number };
 
 export default function GoToPageSelect({ totalPage }: GoToPageSelectProps) {
-	const { securedQuery, isReady, updateQuery } = useSearchQuery();
+	const { securedQuery, isRouterReady, updateQuery } = useSearchQuery();
 
 	const pageList: SelectOptionItem<number | null>[] = useMemo(
 		() =>
@@ -23,7 +23,7 @@ export default function GoToPageSelect({ totalPage }: GoToPageSelectProps) {
 			label: `Page ${securedQuery.page ?? '1'}`,
 		},
 		page => updateQuery({ page }),
-		isReady,
+		isRouterReady,
 	);
 
 	return (

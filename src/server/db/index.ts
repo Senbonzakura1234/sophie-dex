@@ -1,11 +1,6 @@
 import { evnIs } from '@root/utils/common';
-import { env } from '@root/utils/env.mjs';
 
-import { drizzle } from 'drizzle-orm/node-postgres';
-import { Pool } from 'pg';
+import { sql } from '@vercel/postgres';
+import { drizzle } from 'drizzle-orm/vercel-postgres';
 
-const pool = new Pool({
-	connectionString: env.SUPABASE_POSTGRES_URL,
-});
-
-export const db = drizzle(pool, { logger: !evnIs('production') });
+export const db = drizzle(sql, { logger: !evnIs('production') });

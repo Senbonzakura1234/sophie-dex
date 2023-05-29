@@ -6,11 +6,11 @@ import { useMemo } from 'react';
 type RecipeTypeProps = { recipeType: RecipeTypeEnum };
 
 export default function RecipeType({ recipeType }: RecipeTypeProps) {
-	const { isReady, updateQuery, securedQuery } = useSearchQuery();
+	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const isBtnDisabled = useMemo(
-		() => !isReady || securedQuery.recipeType === recipeType,
-		[recipeType, isReady, securedQuery.recipeType],
+		() => !isRouterReady || securedQuery.recipeType === recipeType,
+		[recipeType, isRouterReady, securedQuery.recipeType],
 	);
 
 	return (
@@ -23,7 +23,7 @@ export default function RecipeType({ recipeType }: RecipeTypeProps) {
 				}}
 				role='navigation'
 				aria-label={`Filter ${recipeType} Item`}
-				disabled={!isReady}
+				disabled={!isRouterReady}
 				className={clsx(
 					{
 						'!no-animation !cursor-default': isBtnDisabled,
@@ -47,7 +47,7 @@ export default function RecipeType({ recipeType }: RecipeTypeProps) {
 						'border-slate-500 bg-slate-500 hover:border-slate-600 hover:bg-slate-600':
 							recipeType === 'MYSTERY_RECIPES',
 					},
-					'btn btn-xs font-extrabold capitalize !text-slate-50',
+					'btn-xs btn font-extrabold capitalize !text-slate-50',
 				)}
 			>
 				{recipeType.toLowerCase().replaceAll('_', ' ')}
