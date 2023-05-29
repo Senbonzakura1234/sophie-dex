@@ -13,6 +13,16 @@ export default function HeadLayout() {
 			<link rel='manifest' href='/manifest.json' />
 			<meta name='theme-color' property='og:theme-color' key='theme-color' content='#e0a82e' />
 
+			{/* Twitter */}
+			<meta property='twitter:image' content='/assets/icons/icon-512x512.png' />
+			<meta property='twitter:card' content='/assets/images/sophie-logo.png' />
+			<meta property='twitter:title' content={APP_NAME} />
+
+			<meta property='og:image' content='/assets/images/sophie-logo.png' />
+			<meta property='og:title' content={APP_NAME} />
+			<meta property='og:description' content={APP_DESCRIPTION} />
+			<meta property='og:url' content='https://sophie-dex.vercel.app/' />
+
 			<link rel='apple-touch-icon' href='/assets/splash_screens/icon.png' />
 
 			<link
