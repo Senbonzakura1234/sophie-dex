@@ -20,7 +20,7 @@ export default function ScrollToTop({ isShow, refObject }: ScrollToTopProps) {
 			className='fixed inset-x-1/2 bottom-6 z-30 flex -translate-x-1/2 place-content-center lg:bottom-6 lg:left-auto lg:right-12'
 		>
 			<button
-				className='btn btn-primary btn-circle text-white'
+				className='btn-primary btn-circle btn text-white'
 				aria-label='Back To Top'
 				disabled={!isShow}
 				onClick={scrollToTop}

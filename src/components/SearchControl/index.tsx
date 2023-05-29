@@ -13,7 +13,7 @@ export default function SearchControl({ isDataReady }: SearchControlProps) {
 			<LazyMotion features={domAnimation} strict>
 				<motion.div
 					{...getFramerInViewFadeUp()}
-					className='card bg-base-100 shadow-primary ml-auto overflow-hidden rounded-full shadow-lg md:w-1/4 md:min-w-[300px]'
+					className='card ml-auto overflow-hidden rounded-full bg-base-100 shadow-lg shadow-primary md:w-1/4 md:min-w-[300px]'
 				>
 					<AnimationWrapper
 						show={isDataReady}

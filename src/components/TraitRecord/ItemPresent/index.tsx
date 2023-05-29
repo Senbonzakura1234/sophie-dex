@@ -14,7 +14,7 @@ function ItemPresent({ itemPresent: { table, id, name } }: ItemPresentProps) {
 				as={{ pathname: `/${table.toLowerCase()}s/${id}` }}
 				role='navigation'
 				aria-label={name}
-				className='link link-hover'
+				className='link-hover link'
 			>
 				<span className='flex gap-1 font-serif font-bold'>
 					<DocumentChartBarIcon className='my-auto h-4 w-4' />

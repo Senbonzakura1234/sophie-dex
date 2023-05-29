@@ -36,7 +36,7 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 				<LazyMotion features={domAnimation} strict>
 					<motion.div
 						{...getFramerInViewFadeUp()}
-						className='text-secondary text-shadow-dark w-full text-center font-serif text-5xl font-bold xl:text-6xl 2xl:text-7xl'
+						className='text-shadow-dark w-full text-center font-serif text-5xl font-bold text-secondary xl:text-6xl 2xl:text-7xl'
 					>
 						<Image
 							className={clsx(

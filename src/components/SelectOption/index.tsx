@@ -35,7 +35,7 @@ export default function SelectOption<V extends string | number | null>({
 								{
 									'cursor-not-allowed opacity-50': list.length <= 1,
 								},
-								'focus-visible:border-primary-focus focus-visible:ring-offset-secondary-focus relative w-full cursor-pointer rounded-lg bg-white py-2 pl-3 pr-10 text-left text-xs shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 2xl:text-sm',
+								'relative w-full cursor-pointer rounded-lg bg-white py-2 pl-3 pr-10 text-left text-xs shadow-lg focus:outline-none focus-visible:border-primary-focus focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-focus 2xl:text-sm',
 							)}
 						>
 							<span className='flex gap-2 truncate pl-1 font-bold'>

@@ -24,7 +24,7 @@ export default function SearchInput() {
 				onClick={() => resetSearch()}
 				className={clsx(
 					{ 'opacity-0': !isSearchValueValid },
-					'btn btn-ghost btn-sm btn-circle my-auto border-0 hover:bg-transparent',
+					'btn-ghost btn-sm btn-circle btn my-auto border-0 hover:bg-transparent',
 				)}
 			>
 				<XMarkIcon width={18} height={18} />
@@ -34,7 +34,7 @@ export default function SearchInput() {
 				role='navigation'
 				aria-label='Apply search query'
 				onClick={() => performSearch()}
-				className='btn btn-ghost btn-sm btn-circle my-auto border-0 hover:bg-transparent'
+				className='btn-ghost btn-sm btn-circle btn my-auto border-0 hover:bg-transparent'
 			>
 				<MagnifyingGlassIcon width={22} height={22} />
 			</button>

@@ -42,7 +42,7 @@ export default function RecordWrapper<TRecord extends { id: string; name: string
 						'to-yellow-400 shadow-yellow-400': color === 'YELLOW',
 					},
 					className,
-					'card from-base-100 via-base-100 relative grid w-full grow-0 overflow-hidden bg-gradient-to-r shadow-lg',
+					'card relative grid w-full grow-0 overflow-hidden bg-gradient-to-r from-base-100 via-base-100 shadow-lg',
 				)}
 			>
 				<AnimationWrapper

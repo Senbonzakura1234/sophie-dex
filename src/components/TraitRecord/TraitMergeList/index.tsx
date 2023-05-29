@@ -15,7 +15,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 					{traitRecords.map(({ table, name, id }, key) => (
 						<Fragment key={key}>
 							{key > 0 ? (
-								<button className='btn btn-xs btn-primary !bg-primary/50 !border-primary/50 no-animation'>
+								<button className='btn-primary no-animation btn-xs btn !border-primary/50 !bg-primary/50'>
 									<svg
 										aria-hidden='true'
 										viewBox='0 0 16 16'
@@ -32,7 +32,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 							) : null}
 
 							<Link
-								className='btn btn-xs capitalize'
+								className='btn-xs btn capitalize'
 								href={{ pathname: `/${table.toLowerCase()}s/${id}` }}
 								as={{ pathname: `/${table.toLowerCase()}s/${id}` }}
 								key={id}

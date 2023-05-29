@@ -34,7 +34,7 @@ export default function ErrorModal({ isError, errorData, errorMessage }: ErrorMo
 						'text-blue-700': error.httpStatus < 500,
 						'text-red-600': error.httpStatus >= 500,
 					},
-					'card bg-base-100 aspect-video w-full shadow-lg shadow-current md:w-[600px]',
+					'card aspect-video w-full bg-base-100 shadow-lg shadow-current md:w-[600px]',
 				)}
 			>
 				<div className='card-body place-content-center text-center font-serif'>
@@ -44,7 +44,7 @@ export default function ErrorModal({ isError, errorData, errorMessage }: ErrorMo
 					</div>
 
 					<div>
-						<Link href='/' as='/' className='link link-hover text-base-content text-sm'>
+						<Link href='/' as='/' className='link-hover link text-sm text-base-content'>
 							Back to home
 						</Link>
 					</div>

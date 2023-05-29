@@ -1,11 +1,10 @@
 import { appRouter } from '@root/server/api/router/_app';
 import { evnIs } from '@root/utils/common';
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch';
+import type { ServerRuntime } from 'next';
 import type { NextRequest } from 'next/server';
 
-export const config = {
-	runtime: 'edge',
-};
+export const runtime: ServerRuntime = 'edge';
 
 // export API handler
 export default async function handler(req: NextRequest) {

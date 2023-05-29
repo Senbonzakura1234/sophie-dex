@@ -35,7 +35,7 @@ export default function FilterControl({
 	return (
 		<section className={clsx({ '!z-30': isBottomFilter }, 'container relative z-40 mx-auto max-2xl:px-4')}>
 			<LazyMotion features={domAnimation} strict>
-				<motion.nav {...getFramerInViewFadeUp()} className='card bg-base-100 shadow-primary shadow-lg'>
+				<motion.nav {...getFramerInViewFadeUp()} className='card bg-base-100 shadow-lg shadow-primary'>
 					<AnimationWrapper
 						show={isDataReady}
 						options={getFramerFadeUp(0, 10)}
@@ -68,7 +68,7 @@ export default function FilterControl({
 							<RumorTypeFilter pageName={pageName} />
 						</div>
 
-						<div className={clsx({ hidden: isBottomFilter }, 'text-neutral my-auto text-xs font-semibold')}>
+						<div className={clsx({ hidden: isBottomFilter }, 'my-auto text-xs font-semibold text-neutral')}>
 							{from} - {to} of {totalRecord} {pageName.toLocaleLowerCase()}s
 						</div>
 

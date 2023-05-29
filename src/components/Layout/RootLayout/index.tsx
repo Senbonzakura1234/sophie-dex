@@ -13,7 +13,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
 			<PageRefresh />
 
-			<ScrollWrapper className='bg-base-200 h-screen w-screen !antialiased' enableScrollTop>
+			<ScrollWrapper className='h-screen w-screen bg-base-200 !antialiased' enableScrollTop>
 				{children}
 			</ScrollWrapper>
 		</main>
