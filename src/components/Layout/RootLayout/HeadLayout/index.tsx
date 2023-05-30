@@ -15,12 +15,12 @@ export default function HeadLayout() {
 			<meta name='theme-color' property='og:theme-color' key='theme-color' content='#e0a82e' />
 
 			{/* Twitter */}
-			<meta property='twitter:image' content={`${getBaseUrl()}/assets/icons/icon-512x512.png`} />
-			<meta property='twitter:card' content={`${getBaseUrl()}/assets/images/sophie-logo.png`} />
+			<meta property='twitter:image' content={`${getBaseUrl()}/api/assets/thumbnail`} />
+			<meta property='twitter:card' content={`${getBaseUrl()}/api/assets/thumbnail`} />
 			<meta property='twitter:title' content={APP_NAME} />
 			<meta property='twitter:description' content={APP_DESCRIPTION} />
 
-			<meta property='og:image' content={`${getBaseUrl()}/assets/images/sophie-logo.png`} />
+			<meta property='og:image' content={`${getBaseUrl()}/api/assets/thumbnail`} />
 			<meta property='og:title' content={APP_NAME} />
 			<meta property='og:description' content={APP_DESCRIPTION} />
 			<meta property='og:url' content={getBaseUrl()} />
