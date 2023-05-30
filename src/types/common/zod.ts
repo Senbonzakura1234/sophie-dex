@@ -8,9 +8,8 @@ import {
 } from '@root/types/model';
 import { z } from 'zod';
 
-const nodeEnvSchema = z.enum(['development', 'test', 'production']);
-
-export type NodeEnv = z.infer<typeof nodeEnvSchema>;
+export const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']);
+export type NodeEnv = z.infer<typeof nodeEnumEnvSchema>;
 
 const positiveIntSchema = z.coerce.number().positive();
 

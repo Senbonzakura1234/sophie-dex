@@ -1,10 +1,13 @@
 import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { db } from '@root/server/db';
+import { neonDB } from '@root/server/db/neon';
 import type { Effect } from '@root/server/db/schema';
 import { effects } from '@root/server/db/schema';
+import { vercelDB } from '@root/server/db/vercel';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
-import type { ListRecord } from '@root/types/model';
+import type { GetListRecords, GetRecord, ListRecord } from '@root/types/model';
+import { evnIs } from '@root/utils/common';
+import { env } from '@root/utils/env.mjs';
 import {
 	CountQuery,
 	DirectionQueryMap,
@@ -16,48 +19,58 @@ import {
 import type { SQL } from 'drizzle-orm';
 import { eq, ilike, or } from 'drizzle-orm';
 
+const getEffect: GetRecord<Effect> = (db, id) =>
+	db
+		.select()
+		.from(effects)
+		.where(eq(effects.id, id))
+		.then(([res]) => res);
+
+const getALLEffects: GetListRecords<Effect> = async (db, { search, sortBy, direction, page }) => {
+	const pageInt = page ?? 1;
+
+	const OR: SQL[] = search
+		? [
+				ilike(effects.name, `%${search}%`),
+				ilike(effects.description, `%${search}%`),
+				ilike(effects.keyWords, `%${search}%`),
+		  ]
+		: [];
+
+	return await db
+		.select({ totalCount: CountQuery, record: effects })
+		.from(effects)
+		.where(or(...OR))
+		.orderBy(
+			DirectionQueryMap[direction ?? 'asc'](
+				effects[!!sortBy && sortBy !== 'price' && sortBy !== 'level' ? sortBy : 'index'],
+			),
+		)
+		.limit(defaultLimit)
+		.offset((pageInt - 1) * defaultLimit)
+
+		.then(processDBListResult);
+};
+
 export const effectRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Effect>> => {
-		const { search, sortBy, direction, page } = { ...input };
+		const [totalRecord, records] = await getALLEffects(vercelDB, input).catch(async error => {
+			if (env.USE_BACKUP_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
+			if (!evnIs('production')) console.error(error);
+			return await getALLEffects(neonDB, input).catch(onQueryDBError);
+		});
 
-		const pageInt = page ?? 1;
-
-		const OR: SQL[] = search
-			? [
-					ilike(effects.name, `%${search}%`),
-					ilike(effects.description, `%${search}%`),
-					ilike(effects.keyWords, `%${search}%`),
-			  ]
-			: [];
-
-		const [totalRecord, records] = await db
-			.select({ totalCount: CountQuery, record: effects })
-			.from(effects)
-			.where(or(...OR))
-			.orderBy(
-				DirectionQueryMap[direction ?? 'asc'](
-					effects[!!sortBy && sortBy !== 'price' && sortBy !== 'level' ? sortBy : 'index'],
-				),
-			)
-			.limit(defaultLimit)
-			.offset((pageInt - 1) * defaultLimit)
-			.then(processDBListResult)
-			.catch(onQueryDBError);
-
-		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
+		return { records, page: input.page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}),
 
-	getOne: publicProcedure.input(idQueryValidator).query(async ({ input }): Promise<Effect> => {
-		const { id } = input;
-
+	getOne: publicProcedure.input(idQueryValidator).query(async ({ input: { id } }): Promise<Effect> => {
 		if (!id) throw InvalidRecordIdError();
 
-		const record = await db
-			.select()
-			.from(effects)
-			.where(eq(effects.id, id))
-			.then(([res]) => res)
-			.catch(onQueryDBError);
+		const record = await getEffect(vercelDB, id).catch(async error => {
+			if (env.USE_BACKUP_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
+			if (!evnIs('production')) console.error(error);
+			return await getEffect(neonDB, id).catch(onQueryDBError);
+		});
 
 		if (record) return record;
 

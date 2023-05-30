@@ -7,6 +7,9 @@ dependencies:
   '@heroicons/react':
     specifier: ^2.0.18
     version: registry.npmjs.org/@heroicons/react@2.0.18(react@18.2.0)
+  '@neondatabase/serverless':
+    specifier: ^0.4.9
+    version: registry.npmjs.org/@neondatabase/serverless@0.4.9
   '@radix-ui/react-scroll-area':
     specifier: ^1.0.4
     version: registry.npmjs.org/@radix-ui/react-scroll-area@1.0.4(@types/react-dom@18.2.4)(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0)
@@ -42,7 +45,7 @@ dependencies:
     version: registry.npmjs.org/daisyui@2.51.6(autoprefixer@10.4.14)(postcss@8.4.23)
   drizzle-orm:
     specifier: ^0.26.1
-    version: registry.npmjs.org/drizzle-orm@0.26.1(@vercel/postgres@0.3.0)(postgres@3.3.4)
+    version: registry.npmjs.org/drizzle-orm@0.26.1(@neondatabase/serverless@0.4.9)(@vercel/postgres@0.3.0)(postgres@3.3.4)
   framer-motion:
     specifier: ^10.12.16
     version: registry.npmjs.org/framer-motion@10.12.16(react-dom@18.2.0)(react@18.2.0)
@@ -2038,6 +2041,14 @@ packages:
       '@types/pg': registry.npmjs.org/@types/pg@8.10.1
     dev: false
 
+  registry.npmjs.org/@neondatabase/serverless@0.4.9:
+    resolution: {integrity: sha512-JJvap8zh7GLfTIEyzYeSE6NeWjZxpcsW3nWR7P6EnfXcyI71vVo6SFr+XCTISgfJNpdofV9udkPEKV7DAYKo5w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@neondatabase/serverless/-/serverless-0.4.9.tgz}
+    name: '@neondatabase/serverless'
+    version: 0.4.9
+    dependencies:
+      '@types/pg': registry.npmjs.org/@types/pg@8.6.6
+    dev: false
+
   registry.npmjs.org/@next/env@13.4.4:
     resolution: {integrity: sha512-q/y7VZj/9YpgzDe64Zi6rY1xPizx80JjlU2BTevlajtaE3w1LqweH1gGgxou2N7hdFosXHjGrI4OUvtFXXhGLg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@next/env/-/env-13.4.4.tgz}
     name: '@next/env'
@@ -2696,6 +2707,16 @@ packages:
       '@types/node': registry.npmjs.org/@types/node@20.2.5
       pg-protocol: registry.npmjs.org/pg-protocol@1.6.0
       pg-types: registry.npmjs.org/pg-types@4.0.1
+    dev: false
+
+  registry.npmjs.org/@types/pg@8.6.6:
+    resolution: {integrity: sha512-O2xNmXebtwVekJDD+02udOncjVcMZQuTEQEMpKJ0ZRf5E7/9JJX3izhKUcUifBkyKpljyUM6BTgy2trmviKlpw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/pg/-/pg-8.6.6.tgz}
+    name: '@types/pg'
+    version: 8.6.6
+    dependencies:
+      '@types/node': registry.npmjs.org/@types/node@20.2.5
+      pg-protocol: registry.npmjs.org/pg-protocol@1.6.0
+      pg-types: registry.npmjs.org/pg-types@2.2.0
     dev: false
 
   registry.npmjs.org/@types/prop-types@15.7.5:
@@ -4027,7 +4048,7 @@ packages:
       - supports-color
     dev: true
 
-  registry.npmjs.org/drizzle-orm@0.26.1(@vercel/postgres@0.3.0)(postgres@3.3.4):
+  registry.npmjs.org/drizzle-orm@0.26.1(@neondatabase/serverless@0.4.9)(@vercel/postgres@0.3.0)(postgres@3.3.4):
     resolution: {integrity: sha512-PgHPBJ4BUi/xWEjBbaYo4eiVC7hIwPtSEAVO3QuGMzLV+YwD2jPyV2Y7nvP1jHZlA4IV9wLmkcpicBO/255XFg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/drizzle-orm/-/drizzle-orm-0.26.1.tgz}
     id: registry.npmjs.org/drizzle-orm/0.26.1
     name: drizzle-orm
@@ -4089,6 +4110,7 @@ packages:
       sqlite3:
         optional: true
     dependencies:
+      '@neondatabase/serverless': registry.npmjs.org/@neondatabase/serverless@0.4.9
       '@vercel/postgres': registry.npmjs.org/@vercel/postgres@0.3.0
       postgres: registry.npmjs.org/postgres@3.3.4
     dev: false
@@ -6867,6 +6889,19 @@ packages:
     version: 1.6.0
     dev: false
 
+  registry.npmjs.org/pg-types@2.2.0:
+    resolution: {integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/pg-types/-/pg-types-2.2.0.tgz}
+    name: pg-types
+    version: 2.2.0
+    engines: {node: '>=4'}
+    dependencies:
+      pg-int8: registry.npmjs.org/pg-int8@1.0.1
+      postgres-array: registry.npmjs.org/postgres-array@2.0.0
+      postgres-bytea: registry.npmjs.org/postgres-bytea@1.0.0
+      postgres-date: registry.npmjs.org/postgres-date@1.0.7
+      postgres-interval: registry.npmjs.org/postgres-interval@1.2.0
+    dev: false
+
   registry.npmjs.org/pg-types@4.0.1:
     resolution: {integrity: sha512-hRCSDuLII9/LE3smys1hRHcu5QGcLs9ggT7I/TCs0IE+2Eesxi9+9RWAAwZ0yaGjxoWICF/YHLOEjydGujoJ+g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/pg-types/-/pg-types-4.0.1.tgz}
     name: pg-types
@@ -7038,11 +7073,25 @@ packages:
       picocolors: registry.npmjs.org/picocolors@1.0.0
       source-map-js: registry.npmjs.org/source-map-js@1.0.2
 
+  registry.npmjs.org/postgres-array@2.0.0:
+    resolution: {integrity: sha512-VpZrUqU5A69eQyW2c5CA1jtLecCsN2U/bD6VilrFDWq5+5UIEVO7nazS3TEcHf1zuPYO/sqGvUvW62g86RXZuA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/postgres-array/-/postgres-array-2.0.0.tgz}
+    name: postgres-array
+    version: 2.0.0
+    engines: {node: '>=4'}
+    dev: false
+
   registry.npmjs.org/postgres-array@3.0.2:
     resolution: {integrity: sha512-6faShkdFugNQCLwucjPcY5ARoW1SlbnrZjmGl0IrrqewpvxvhSLHimCVzqeuULCbG0fQv7Dtk1yDbG3xv7Veog==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/postgres-array/-/postgres-array-3.0.2.tgz}
     name: postgres-array
     version: 3.0.2
     engines: {node: '>=12'}
+    dev: false
+
+  registry.npmjs.org/postgres-bytea@1.0.0:
+    resolution: {integrity: sha512-xy3pmLuQqRBZBXDULy7KbaitYqLcmxigw14Q5sj8QBVLqEwXfeybIKVWiqAXTlcvdvb0+xkOtDbfQMOf4lST1w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/postgres-bytea/-/postgres-bytea-1.0.0.tgz}
+    name: postgres-bytea
+    version: 1.0.0
+    engines: {node: '>=0.10.0'}
     dev: false
 
   registry.npmjs.org/postgres-bytea@3.0.0:
@@ -7054,11 +7103,27 @@ packages:
       obuf: registry.npmjs.org/obuf@1.1.2
     dev: false
 
+  registry.npmjs.org/postgres-date@1.0.7:
+    resolution: {integrity: sha512-suDmjLVQg78nMK2UZ454hAG+OAW+HQPZ6n++TNDUX+L0+uUlLywnoxJKDou51Zm+zTCjrCl0Nq6J9C5hP9vK/Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/postgres-date/-/postgres-date-1.0.7.tgz}
+    name: postgres-date
+    version: 1.0.7
+    engines: {node: '>=0.10.0'}
+    dev: false
+
   registry.npmjs.org/postgres-date@2.0.1:
     resolution: {integrity: sha512-YtMKdsDt5Ojv1wQRvUhnyDJNSr2dGIC96mQVKz7xufp07nfuFONzdaowrMHjlAzY6GDLd4f+LUHHAAM1h4MdUw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/postgres-date/-/postgres-date-2.0.1.tgz}
     name: postgres-date
     version: 2.0.1
     engines: {node: '>=12'}
+    dev: false
+
+  registry.npmjs.org/postgres-interval@1.2.0:
+    resolution: {integrity: sha512-9ZhXKM/rw350N1ovuWHbGxnGh/SNJ4cnxHiM0rxE4VN41wsg8P8zWn9hv/buK00RP4WvlOyr/RBDiptyxVbkZQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/postgres-interval/-/postgres-interval-1.2.0.tgz}
+    name: postgres-interval
+    version: 1.2.0
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      xtend: registry.npmjs.org/xtend@4.0.2
     dev: false
 
   registry.npmjs.org/postgres-interval@3.0.0:
@@ -8607,6 +8672,13 @@ packages:
     dependencies:
       bufferutil: registry.npmjs.org/bufferutil@4.0.7
       utf-8-validate: registry.npmjs.org/utf-8-validate@6.0.3
+    dev: false
+
+  registry.npmjs.org/xtend@4.0.2:
+    resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz}
+    name: xtend
+    version: 4.0.2
+    engines: {node: '>=0.4'}
     dev: false
 
   registry.npmjs.org/yallist@3.1.1:

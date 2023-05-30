@@ -13,7 +13,6 @@
 		"michelefenu.json2typescript",
 		"bierner.markdown-preview-github-styles",
 		"pkief.material-product-icons",
-		"willstakayama.vscode-nextjs-snippets",
 		"sdras.night-owl",
 		"ibm.output-colorizer",
 		"christian-kohler.path-intellisense",
@@ -25,6 +24,9 @@
 		"shardulm94.trailing-spaces",
 		"pflannery.vscode-versionlens",
 		"vscode-icons-team.vscode-icons",
-		"redhat.vscode-yaml"
+		"redhat.vscode-yaml",
+		"formulahendry.auto-close-tag",
+		"aaron-bond.better-comments",
+		"oderwat.indent-rainbow"
 	]
 }

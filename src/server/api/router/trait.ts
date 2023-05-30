@@ -1,10 +1,13 @@
 import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { db } from '@root/server/db';
+import { neonDB } from '@root/server/db/neon';
 import type { Trait } from '@root/server/db/schema';
 import { traits } from '@root/server/db/schema';
+import { vercelDB } from '@root/server/db/vercel';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
-import type { ListRecord } from '@root/types/model';
+import type { GetListRecords, GetRecord, ListRecord } from '@root/types/model';
+import { evnIs } from '@root/utils/common';
+import { env } from '@root/utils/env.mjs';
 import {
 	ANYQuery,
 	CountQuery,
@@ -17,53 +20,62 @@ import {
 import type { SQL } from 'drizzle-orm';
 import { and, eq, ilike, or } from 'drizzle-orm';
 
+const getTrait: GetRecord<Trait> = (db, id) =>
+	db
+		.select()
+		.from(traits)
+		.where(eq(traits.id, id))
+		.then(([res]) => res);
+
+const getALLTraits: GetListRecords<Trait> = async (db, { search, sortBy, direction, category, page }) => {
+	const pageInt = page ?? 1;
+
+	const OR: SQL[] = search
+		? [
+				ilike(traits.name, `%${search}%`),
+				ilike(traits.description, `%${search}%`),
+				ilike(traits.keyWords, `%${search}%`),
+		  ]
+		: [];
+
+	const AND: SQL[] = [];
+
+	if (category) AND.push(ANYQuery(traits.categories.name, category));
+
+	return await db
+		.select({ totalCount: CountQuery, record: traits })
+		.from(traits)
+		.where(or(...OR))
+		.where(and(...AND))
+		.orderBy(
+			DirectionQueryMap[direction ?? 'asc'](
+				traits[!!sortBy && sortBy !== 'price' && sortBy !== 'level' ? sortBy : 'index'],
+			),
+		)
+		.limit(defaultLimit)
+		.offset((pageInt - 1) * defaultLimit)
+		.then(processDBListResult);
+};
+
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Trait>> => {
-		const { search, sortBy, direction, category, page } = { ...input };
+		const [totalRecord, records] = await getALLTraits(vercelDB, input).catch(async error => {
+			if (env.USE_BACKUP_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
+			if (!evnIs('production')) console.error(error);
+			return await getALLTraits(neonDB, input).catch(onQueryDBError);
+		});
 
-		const pageInt = page ?? 1;
-
-		const OR: SQL[] = search
-			? [
-					ilike(traits.name, `%${search}%`),
-					ilike(traits.description, `%${search}%`),
-					ilike(traits.keyWords, `%${search}%`),
-			  ]
-			: [];
-
-		const AND: SQL[] = [];
-
-		if (category) AND.push(ANYQuery(traits.categories.name, category));
-
-		const [totalRecord, records] = await db
-			.select({ totalCount: CountQuery, record: traits })
-			.from(traits)
-			.where(or(...OR))
-			.where(and(...AND))
-			.orderBy(
-				DirectionQueryMap[direction ?? 'asc'](
-					traits[!!sortBy && sortBy !== 'price' && sortBy !== 'level' ? sortBy : 'index'],
-				),
-			)
-			.limit(defaultLimit)
-			.offset((pageInt - 1) * defaultLimit)
-			.then(processDBListResult)
-			.catch(onQueryDBError);
-
-		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
+		return { records, page: input.page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}),
 
-	getOne: publicProcedure.input(idQueryValidator).query(async ({ input }): Promise<Trait> => {
-		const { id } = input;
-
+	getOne: publicProcedure.input(idQueryValidator).query(async ({ input: { id } }): Promise<Trait> => {
 		if (!id) throw InvalidRecordIdError();
 
-		const record = await db
-			.select()
-			.from(traits)
-			.where(eq(traits.id, id))
-			.then(([res]) => res)
-			.catch(onQueryDBError);
+		const record = await getTrait(vercelDB, id).catch(async error => {
+			if (env.USE_BACKUP_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
+			if (!evnIs('production')) console.error(error);
+			return await getTrait(neonDB, id).catch(onQueryDBError);
+		});
 
 		if (record) return record;
 
