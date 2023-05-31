@@ -18,7 +18,7 @@ const ItemDetail: NextPage = () => {
 			isError={isError}
 			errorData={error?.data}
 			errorMessage={error?.message}
-			pageName='Item'
+			pageName='item'
 			rawData={data}
 			extraHead={({ color }) => (
 				<meta name='theme-color' property='og:theme-color' key='theme-color' content={colorTailwindMap[color]} />

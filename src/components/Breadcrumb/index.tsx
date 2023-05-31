@@ -44,19 +44,17 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 										<Link
 											className={clsx(
 												{
-													'link-hover text-primary hover:text-primary-focus':
-														pathname !== `/${n.toLowerCase()}s`,
-													'no-animation !cursor-default !no-underline':
-														pathname === `/${n.toLowerCase()}s`,
+													'link-hover text-primary hover:text-primary-focus': pathname !== `/${n}s`,
+													'no-animation !cursor-default !no-underline': pathname === `/${n}s`,
 												},
 												'link gap-1 capitalize',
 											)}
-											href={{ pathname: `/${n.toLowerCase()}s` }}
-											as={{ pathname: `/${n.toLowerCase()}s` }}
+											href={{ pathname: `/${n}s` }}
+											as={{ pathname: `/${n}s` }}
 											aria-label={`Go to ${i} Search`}
 										>
 											<LinkIcon className='hidden h-4 w-4 2xl:block' />
-											{n.toLowerCase()}
+											{n}
 										</Link>
 										{i < tableList.length - 1 && (
 											<CircleDivider className='h-1 w-1 bg-base-300 sm:h-2 sm:w-2' />

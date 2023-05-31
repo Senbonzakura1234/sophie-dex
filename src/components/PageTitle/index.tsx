@@ -14,8 +14,8 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 		<section
 			className={clsx(
 				{
-					'h-1/3 min-h-[300px]': pageName !== 'Home',
-					'h-full': pageName === 'Home',
+					'h-1/3 min-h-[300px]': pageName !== 'home',
+					'h-full': pageName === 'home',
 				},
 				'relative w-full overflow-hidden shadow-inner',
 			)}
@@ -27,7 +27,7 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 				src={topBg}
 				alt='sophie'
 				sizes='100vh'
-				priority={pageName !== 'Home'}
+				priority={pageName !== 'home'}
 			/>
 
 			<div className='absolute inset-0 z-10 bg-slate-700/30' />
@@ -41,22 +41,22 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 						<Image
 							className={clsx(
 								{
-									hidden: pageName !== 'Home',
-									block: pageName === 'Home',
+									hidden: pageName !== 'home',
+									block: pageName === 'home',
 								},
 								'mx-auto',
 							)}
 							src={sophieLogo}
 							alt={pageName}
-							priority={pageName === 'Home'}
+							priority={pageName === 'home'}
 							sizes='80vw'
 						/>
 
 						<div
 							className={clsx(
 								{
-									hidden: pageName === 'Home',
-									block: pageName !== 'Home',
+									hidden: pageName === 'home',
+									block: pageName !== 'home',
 								},
 								'tracking-widest text-slate-50',
 							)}
@@ -65,7 +65,7 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 						</div>
 					</motion.div>
 				</LazyMotion>
-				<Breadcrumb isShowAuthor={pageName === 'Home'} />
+				<Breadcrumb isShowAuthor={pageName === 'home'} />
 			</div>
 		</section>
 	);

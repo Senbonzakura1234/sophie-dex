@@ -30,8 +30,8 @@ export default function RumorTypeFilter({ pageName }: RumorTypeFilterProps) {
 			value={rumorTypeSelected}
 			className={clsx(
 				{
-					block: pageName === 'Rumor',
-					hidden: pageName !== 'Rumor',
+					block: pageName === 'rumor',
+					hidden: pageName !== 'rumor',
 				},
 				'my-auto w-2/3 min-w-fit sm:w-48',
 			)}

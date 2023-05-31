@@ -17,7 +17,7 @@ const EffectDetail: NextPage = () => {
 			isError={isError}
 			errorData={error?.data}
 			errorMessage={error?.message}
-			pageName='Effect'
+			pageName='effect'
 			rawData={data}
 		>
 			{props => <EffectRecord {...props} />}

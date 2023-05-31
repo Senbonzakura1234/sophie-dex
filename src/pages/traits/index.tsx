@@ -17,7 +17,7 @@ const Traits: NextPage = () => {
 			isError={isError}
 			errorData={error?.data}
 			errorMessage={error?.message}
-			pageName='Trait'
+			pageName='trait'
 			rawData={data}
 		>
 			{props => props.data.map((rumor, key) => <TraitRecord key={key} {...rumor} />)}

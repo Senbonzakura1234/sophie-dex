@@ -19,12 +19,12 @@ export default function Hyperlink({ input, className }: HyperlinkProps) {
 					.map((s, key) => `${key > 0 ? ', ' : ''}${s?.toString().replaceAll('_', ' ').toLowerCase()}`)
 					.join(),
 				href: {
-					pathname: `/${input.table.toLowerCase()}s`,
+					pathname: `/${input.table}s`,
 					query: input.searchQuery,
 				},
 			};
 
-		return { label: input.name, href: { pathname: `/${input.table.toLowerCase()}s/${input.id}` } };
+		return { label: input.name, href: { pathname: `/${input.table}s/${input.id}` } };
 	}, [input]);
 
 	if (!href) return <span className='font-bold capitalize'>{label}</span>;

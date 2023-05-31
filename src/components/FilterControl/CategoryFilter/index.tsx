@@ -28,15 +28,15 @@ export default function CategoryFilter({ pageName }: CategoryFilterProps) {
 		<SelectOption<CategoryEnum | null>
 			list={categorySelectList.filter(
 				c =>
-					pageName !== 'Trait' ||
+					pageName !== 'trait' ||
 					!(['MATERIAL', 'KEY_ITEM', 'BOOK', 'MACHINE'] as (CategoryEnum | null)[]).includes(c.value),
 			)}
 			setValue={setCateSelected}
 			value={cateSelected}
 			className={clsx(
 				{
-					block: !(['Effect', 'Rumor', 'Home'] as PageName[]).includes(pageName),
-					hidden: (['Effect', 'Rumor', 'Home'] as PageName[]).includes(pageName),
+					block: !(['effect', 'rumor', 'home'] as PageName[]).includes(pageName),
+					hidden: (['effect', 'rumor', 'home'] as PageName[]).includes(pageName),
 				},
 				'my-auto w-2/3 min-w-fit sm:w-[10.25rem]',
 			)}

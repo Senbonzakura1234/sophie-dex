@@ -17,7 +17,7 @@ const Items: NextPage = () => {
 			isError={isError}
 			errorData={error?.data}
 			errorMessage={error?.message}
-			pageName='Item'
+			pageName='item'
 			rawData={data}
 		>
 			{props => props.data.map((rumor, key) => <ItemRecord key={key} {...rumor} />)}

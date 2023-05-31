@@ -10,7 +10,7 @@ export default function SortControl({ pageName, isBottomFilter: isBottomFilter }
 
 	const { sortBy, direction } = useMemo(
 		() => ({
-			sortBy: securedQuery.sortBy || (pageName === 'Rumor' ? 'price' : 'index'),
+			sortBy: securedQuery.sortBy || (pageName === 'rumor' ? 'price' : 'index'),
 			direction: securedQuery.direction || 'asc',
 		}),
 		[pageName, securedQuery.direction, securedQuery.sortBy],
@@ -25,7 +25,7 @@ export default function SortControl({ pageName, isBottomFilter: isBottomFilter }
 					<button
 						role='navigation'
 						aria-label='Sort By Index'
-						disabled={!isRouterReady || pageName === 'Rumor'}
+						disabled={!isRouterReady || pageName === 'rumor'}
 						onClick={() => {
 							if (sortBy !== 'index') updateQuery({ sortBy: 'index', direction: 'asc' });
 						}}
@@ -33,7 +33,7 @@ export default function SortControl({ pageName, isBottomFilter: isBottomFilter }
 							{
 								'btn-active btn-primary text-slate-50': sortBy === 'index',
 								'btn-ghost border-accent': sortBy !== 'index',
-								hidden: pageName === 'Rumor',
+								hidden: pageName === 'rumor',
 							},
 							'btn-xs btn border-y-2 border-r-0 capitalize',
 						)}
@@ -44,7 +44,7 @@ export default function SortControl({ pageName, isBottomFilter: isBottomFilter }
 					<button
 						role='navigation'
 						aria-label='Sort By Price'
-						disabled={!isRouterReady || pageName !== 'Rumor'}
+						disabled={!isRouterReady || pageName !== 'rumor'}
 						onClick={() => {
 							if (sortBy !== 'price') updateQuery({ sortBy: 'price', direction: 'asc' });
 						}}
@@ -52,7 +52,7 @@ export default function SortControl({ pageName, isBottomFilter: isBottomFilter }
 							{
 								'btn-active btn-primary text-slate-50': sortBy === 'price',
 								'btn-ghost border-accent': sortBy !== 'price',
-								hidden: pageName !== 'Rumor',
+								hidden: pageName !== 'rumor',
 							},
 							'btn-xs btn rounded-l-md border-y-2 border-r-0 capitalize',
 						)}
@@ -63,7 +63,7 @@ export default function SortControl({ pageName, isBottomFilter: isBottomFilter }
 					<button
 						role='navigation'
 						aria-label='Sort By Level'
-						disabled={!isRouterReady || pageName !== 'Item'}
+						disabled={!isRouterReady || pageName !== 'item'}
 						onClick={() => {
 							if (sortBy !== 'level') updateQuery({ sortBy: 'level', direction: 'asc' });
 						}}
@@ -71,7 +71,7 @@ export default function SortControl({ pageName, isBottomFilter: isBottomFilter }
 							{
 								'btn-active btn-primary no-animation cursor-default text-slate-50': sortBy === 'level',
 								'btn-ghost border-accent': sortBy !== 'level',
-								hidden: pageName !== 'Item',
+								hidden: pageName !== 'item',
 							},
 							'btn-xs btn border-x-0 border-y-2 capitalize',
 						)}

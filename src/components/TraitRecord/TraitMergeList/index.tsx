@@ -33,8 +33,8 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 
 							<Link
 								className='btn-xs btn capitalize'
-								href={{ pathname: `/${table.toLowerCase()}s/${id}` }}
-								as={{ pathname: `/${table.toLowerCase()}s/${id}` }}
+								href={{ pathname: `/${table}s/${id}` }}
+								as={{ pathname: `/${table}s/${id}` }}
 								key={id}
 							>
 								{name}

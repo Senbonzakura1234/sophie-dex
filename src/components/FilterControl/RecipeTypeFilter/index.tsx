@@ -30,8 +30,8 @@ export default function RecipeTypeFilter({ pageName }: RecipeTypeFilterProps) {
 			value={recipeTypeSelected}
 			className={clsx(
 				{
-					block: pageName === 'Item',
-					hidden: pageName !== 'Item',
+					block: pageName === 'item',
+					hidden: pageName !== 'item',
 				},
 				'my-auto w-2/3 min-w-fit sm:w-48',
 			)}

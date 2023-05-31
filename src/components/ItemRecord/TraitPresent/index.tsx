@@ -7,11 +7,11 @@ type TraitPresentProps = { traitPresent: HyperLinkRecord };
 export default function TraitPresent({ traitPresent: { table, id, name } }: TraitPresentProps) {
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
-			<div className='font-bold capitalize'>{table.toLowerCase()}: </div>
+			<div className='font-bold capitalize'>{table}: </div>
 
 			<Link
-				href={{ pathname: `/${table.toLowerCase()}s/${id}` }}
-				as={{ pathname: `/${table.toLowerCase()}s/${id}` }}
+				href={{ pathname: `/${table}s/${id}` }}
+				as={{ pathname: `/${table}s/${id}` }}
 				role='navigation'
 				aria-label={name}
 				className='link-hover link'

@@ -2,7 +2,7 @@ import type { NeonDatabase } from 'drizzle-orm/neon-serverless';
 import type { VercelPgDatabase } from 'drizzle-orm/vercel-postgres';
 import type { IdQuery, SearchQuery } from '../common/zod';
 
-export const tableList = ['EFFECT', 'ITEM', 'TRAIT', 'RUMOR'] as const;
+export const tableList = ['effect', 'item', 'trait', 'rumor'] as const;
 
 export const colorList = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW'] as const;
 
