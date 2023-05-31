@@ -4,6 +4,7 @@ import type { ReactNode, RefObject } from 'react';
 
 import type { MaybeData, PageName } from '.';
 import type { CommonRecord } from '../model';
+import type { TableEnum } from './zod';
 
 export type ClassNameProps = { className?: string };
 export type ChildrenProps = { children?: ReactNode };
@@ -18,7 +19,7 @@ export type PageControlProps = {
 };
 
 export type RecordProps<TRecord extends CommonRecord> = MaybeData<TRecord>;
-export type DefaultLayoutProps = PageNameProps;
+export type DefaultLayoutProps = { pageName: TableEnum };
 export type ErrorResultProps = {
 	isError: boolean;
 	errorData: Maybe<DefaultErrorData>;

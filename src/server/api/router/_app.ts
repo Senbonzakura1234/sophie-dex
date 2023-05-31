@@ -3,7 +3,6 @@ import { router } from '@root/server/api/trpc';
 import { effectRouter } from './effect';
 import { itemRouter } from './item';
 import { rumorRouter } from './rumor';
-import { testRouter } from './test';
 import { traitRouter } from './trait';
 
 export const appRouter = router({
@@ -11,7 +10,6 @@ export const appRouter = router({
 	item: itemRouter,
 	trait: traitRouter,
 	rumor: rumorRouter,
-	test: testRouter,
 });
 
 export const severAPIProvider = appRouter.createCaller({});
