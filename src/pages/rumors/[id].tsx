@@ -7,7 +7,7 @@ import type { NextPage } from 'next';
 const RumorDetail: NextPage = () => {
 	const { isRouterReady, securedIdQuery } = useIdQuery();
 	const { data, isError, error } = apiContext.rumor.getOne.useQuery(securedIdQuery, {
-		retry: 2,
+		retry: 1,
 		enabled: isRouterReady,
 		refetchOnWindowFocus: false,
 	});

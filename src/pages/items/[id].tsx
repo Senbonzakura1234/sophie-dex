@@ -8,7 +8,7 @@ import type { NextPage } from 'next';
 const ItemDetail: NextPage = () => {
 	const { isRouterReady, securedIdQuery } = useIdQuery();
 	const { data, isError, error } = apiContext.item.getOne.useQuery(securedIdQuery, {
-		retry: 2,
+		retry: 1,
 		enabled: isRouterReady,
 		refetchOnWindowFocus: false,
 	});

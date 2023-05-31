@@ -7,7 +7,7 @@ import { type NextPage } from 'next';
 const Effects: NextPage = () => {
 	const { securedQuery, isRouterReady } = useSearchQuery();
 	const { data, isError, error } = apiContext.effect.getAll.useQuery(securedQuery, {
-		retry: 2,
+		retry: 1,
 		enabled: isRouterReady,
 		refetchOnWindowFocus: false,
 	});

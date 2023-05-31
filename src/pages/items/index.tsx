@@ -7,7 +7,7 @@ import { type NextPage } from 'next';
 const Items: NextPage = () => {
 	const { securedQuery, isRouterReady } = useSearchQuery();
 	const { data, isError, error } = apiContext.item.getAll.useQuery(securedQuery, {
-		retry: 2,
+		retry: 1,
 		enabled: isRouterReady,
 		refetchOnWindowFocus: false,
 	});

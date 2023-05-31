@@ -8,7 +8,7 @@ const TraitDetail: NextPage = () => {
 	const { isRouterReady, securedIdQuery } = useIdQuery();
 
 	const { data, isError, error } = apiContext.trait.getOne.useQuery(securedIdQuery, {
-		retry: 2,
+		retry: 1,
 		enabled: isRouterReady,
 		refetchOnWindowFocus: false,
 	});

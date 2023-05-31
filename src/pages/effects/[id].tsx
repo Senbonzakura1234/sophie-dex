@@ -7,7 +7,7 @@ import type { NextPage } from 'next';
 const EffectDetail: NextPage = () => {
 	const { isRouterReady, securedIdQuery } = useIdQuery();
 	const { data, isError, error } = apiContext.effect.getOne.useQuery(securedIdQuery, {
-		retry: 2,
+		retry: 1,
 		enabled: isRouterReady,
 		refetchOnWindowFocus: false,
 	});
