@@ -26,7 +26,11 @@ export default function CategoryFilter({ pageName }: CategoryFilterProps) {
 
 	return (
 		<SelectOption<CategoryEnum | null>
-			list={categorySelectList}
+			list={categorySelectList.filter(
+				c =>
+					pageName !== 'Trait' ||
+					!(['MATERIAL', 'KEY_ITEM', 'BOOK', 'MACHINE'] as (CategoryEnum | null)[]).includes(c.value),
+			)}
 			setValue={setCateSelected}
 			value={cateSelected}
 			className={clsx(

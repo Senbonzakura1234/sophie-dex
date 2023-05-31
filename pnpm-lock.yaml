@@ -44,8 +44,8 @@ dependencies:
     specifier: ^2.51.6
     version: registry.npmjs.org/daisyui@2.51.6(autoprefixer@10.4.14)(postcss@8.4.23)
   drizzle-orm:
-    specifier: ^0.26.1
-    version: registry.npmjs.org/drizzle-orm@0.26.1(@neondatabase/serverless@0.4.9)(@vercel/postgres@0.3.0)(postgres@3.3.4)
+    specifier: ^0.26.3
+    version: registry.npmjs.org/drizzle-orm@0.26.3(@neondatabase/serverless@0.4.9)(@vercel/postgres@0.3.0)(postgres@3.3.4)
   framer-motion:
     specifier: ^10.12.16
     version: registry.npmjs.org/framer-motion@10.12.16(react-dom@18.2.0)(react@18.2.0)
@@ -3475,6 +3475,19 @@ packages:
       node-releases: registry.npmjs.org/node-releases@2.0.12
       update-browserslist-db: registry.npmjs.org/update-browserslist-db@1.0.11(browserslist@4.21.5)
 
+  registry.npmjs.org/browserslist@4.21.7:
+    resolution: {integrity: sha512-BauCXrQ7I2ftSqd2mvKHGo85XR0u7Ru3C/Hxsy/0TkfCtjrmAbPdzLGasmoiBxplpDXlPvdjX9u7srIMfgasNA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/browserslist/-/browserslist-4.21.7.tgz}
+    name: browserslist
+    version: 4.21.7
+    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
+    hasBin: true
+    dependencies:
+      caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001492
+      electron-to-chromium: registry.npmjs.org/electron-to-chromium@1.4.414
+      node-releases: registry.npmjs.org/node-releases@2.0.12
+      update-browserslist-db: registry.npmjs.org/update-browserslist-db@1.0.11(browserslist@4.21.7)
+    dev: false
+
   registry.npmjs.org/buffer-from@1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz}
     name: buffer-from
@@ -3554,6 +3567,12 @@ packages:
     resolution: {integrity: sha512-x1mgZEXK8jHIfAxm+xgdpHpk50IN3z3q3zP261/WS+uvePxW8izXuCu6AHz0lkuYTlATDehiZ/tNyYBdSQsOUQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001489.tgz}
     name: caniuse-lite
     version: 1.0.30001489
+
+  registry.npmjs.org/caniuse-lite@1.0.30001492:
+    resolution: {integrity: sha512-2efF8SAZwgAX1FJr87KWhvuJxnGJKOnctQa8xLOskAXNXq8oiuqgl6u1kk3fFpsp3GgvzlRjiK1sl63hNtFADw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001492.tgz}
+    name: caniuse-lite
+    version: 1.0.30001492
+    dev: false
 
   registry.npmjs.org/chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/chalk/-/chalk-2.4.2.tgz}
@@ -4048,16 +4067,17 @@ packages:
       - supports-color
     dev: true
 
-  registry.npmjs.org/drizzle-orm@0.26.1(@neondatabase/serverless@0.4.9)(@vercel/postgres@0.3.0)(postgres@3.3.4):
-    resolution: {integrity: sha512-PgHPBJ4BUi/xWEjBbaYo4eiVC7hIwPtSEAVO3QuGMzLV+YwD2jPyV2Y7nvP1jHZlA4IV9wLmkcpicBO/255XFg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/drizzle-orm/-/drizzle-orm-0.26.1.tgz}
-    id: registry.npmjs.org/drizzle-orm/0.26.1
+  registry.npmjs.org/drizzle-orm@0.26.3(@neondatabase/serverless@0.4.9)(@vercel/postgres@0.3.0)(postgres@3.3.4):
+    resolution: {integrity: sha512-KefTFAXxFtBmDRZWgM71ucxUuDvNEiPgv0lg7qAPEfrQVfyzSz0ukUfNz2Ck4Pro6PEmYFJmA6oNQwwgENkk7g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/drizzle-orm/-/drizzle-orm-0.26.3.tgz}
+    id: registry.npmjs.org/drizzle-orm/0.26.3
     name: drizzle-orm
-    version: 0.26.1
+    version: 0.26.3
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
       '@libsql/client': '*'
       '@neondatabase/serverless': '>=0.1'
+      '@opentelemetry/api': ^1.4.1
       '@planetscale/database': '>=1'
       '@types/better-sqlite3': '*'
       '@types/pg': '*'
@@ -4080,6 +4100,8 @@ packages:
       '@libsql/client':
         optional: true
       '@neondatabase/serverless':
+        optional: true
+      '@opentelemetry/api':
         optional: true
       '@planetscale/database':
         optional: true
@@ -4128,6 +4150,12 @@ packages:
     resolution: {integrity: sha512-5VXLW4Qw89vM2WTICHua/y8v7fKGDRVa2VPOtBB9IpLvW316B+xd8yD1wTmLPY2ot/00P/qt87xdolj4aG/Lzg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.411.tgz}
     name: electron-to-chromium
     version: 1.4.411
+
+  registry.npmjs.org/electron-to-chromium@1.4.414:
+    resolution: {integrity: sha512-RRuCvP6ekngVh2SAJaOKT/hxqc9JAsK+Pe0hP5tGQIfonU2Zy9gMGdJ+mBdyl/vNucMG6gkXYtuM4H/1giws5w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.414.tgz}
+    name: electron-to-chromium
+    version: 1.4.414
+    dev: false
 
   registry.npmjs.org/emoji-regex@9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz}
@@ -8250,6 +8278,20 @@ packages:
       escalade: registry.npmjs.org/escalade@3.1.1
       picocolors: registry.npmjs.org/picocolors@1.0.0
 
+  registry.npmjs.org/update-browserslist-db@1.0.11(browserslist@4.21.7):
+    resolution: {integrity: sha512-dCwEFf0/oT85M1fHBg4F0jtLwJrutGoHSQXCh7u4o2t1drG+c0a9Flnqww6XUKSfQMPpJBRjU8d4RXB09qtvaA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.0.11.tgz}
+    id: registry.npmjs.org/update-browserslist-db/1.0.11
+    name: update-browserslist-db
+    version: 1.0.11
+    hasBin: true
+    peerDependencies:
+      browserslist: '>= 4.21.0'
+    dependencies:
+      browserslist: registry.npmjs.org/browserslist@4.21.7
+      escalade: registry.npmjs.org/escalade@3.1.1
+      picocolors: registry.npmjs.org/picocolors@1.0.0
+    dev: false
+
   registry.npmjs.org/uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/uri-js/-/uri-js-4.4.1.tgz}
     name: uri-js
@@ -8378,7 +8420,7 @@ packages:
       '@webassemblyjs/wasm-parser': registry.npmjs.org/@webassemblyjs/wasm-parser@1.11.6
       acorn: registry.npmjs.org/acorn@8.8.2
       acorn-import-assertions: registry.npmjs.org/acorn-import-assertions@1.9.0(acorn@8.8.2)
-      browserslist: registry.npmjs.org/browserslist@4.21.5
+      browserslist: registry.npmjs.org/browserslist@4.21.7
       chrome-trace-event: registry.npmjs.org/chrome-trace-event@1.0.3
       enhanced-resolve: registry.npmjs.org/enhanced-resolve@5.14.1
       es-module-lexer: registry.npmjs.org/es-module-lexer@1.2.1

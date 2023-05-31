@@ -19,7 +19,8 @@ export const RecordNotFoundError = (id: string) =>
 export const ForbiddenError = () =>
 	new TRPCError({ code: 'FORBIDDEN', message: 'You are not allow to see this page.' });
 
-export const ANYQuery = (column: AnyColumn['name'], value: string | number): SQL => sql`${value}=ANY("${column}")`;
+export const ANYQuery = (column: AnyColumn['name'], value: string | number): SQL =>
+	sql.raw(`'${value}'=ANY(${column})`);
 export const CountQuery: SQL<number> = sql<number>`count(*) over()`;
 
 export const DirectionQueryMap = {

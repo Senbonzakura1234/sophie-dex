@@ -43,7 +43,7 @@
 		"@vercel/postgres": "^0.3.0",
 		"clsx": "^1.2.1",
 		"daisyui": "^2.51.6",
-		"drizzle-orm": "^0.26.1",
+		"drizzle-orm": "^0.26.3",
 		"framer-motion": "^10.12.16",
 		"next": "13.4.4",
 		"next-pwa": "^5.6.0",
