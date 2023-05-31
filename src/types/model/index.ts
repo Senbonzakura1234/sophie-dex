@@ -80,7 +80,9 @@ export type ListRecord<TRecord extends CommonRecord> = {
 	totalPage: number;
 };
 
-type DBDriver<TSchema extends Record<string, never>> = VercelPgDatabase<TSchema> | NeonDatabase<TSchema>;
+export type DBDriver<TSchema extends Record<string, never> = Record<string, never>> =
+	| VercelPgDatabase<TSchema>
+	| NeonDatabase<TSchema>;
 
 export type GetRecord<TRecord extends CommonRecord, TSchema extends Record<string, never> = Record<string, never>> = (
 	db: DBDriver<TSchema>,

@@ -8,6 +8,9 @@ import {
 } from '@root/types/model';
 import { z } from 'zod';
 
+export const dbListEnumSchema = z.enum(['NEON_DB', 'VERCEL_DB']);
+export type DBListEnum = z.infer<typeof dbListEnumSchema>;
+
 export const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']);
 export type NodeEnv = z.infer<typeof nodeEnumEnvSchema>;
 

@@ -1,6 +1,6 @@
 import { publicProcedure, router } from '@root/server/api/trpc';
+import { primaryDB } from '@root/server/db';
 import { effects, items, rumors, traits } from '@root/server/db/schema';
-import { vercelDB } from '@root/server/db/vercel';
 import type { ExportDBData } from '@root/types/common/zod';
 import { getBaseUrl } from '@root/utils/client';
 import { evnIs } from '@root/utils/common';
@@ -12,10 +12,10 @@ export const testRouter = router({
 		if (evnIs('production')) throw ForbiddenError();
 
 		const [effectsRes, itemsRes, rumorsRes, traitsRes] = await Promise.all([
-			vercelDB.select().from(effects),
-			vercelDB.select().from(items),
-			vercelDB.select().from(rumors),
-			vercelDB.select().from(traits),
+			primaryDB.select().from(effects),
+			primaryDB.select().from(items),
+			primaryDB.select().from(rumors),
+			primaryDB.select().from(traits),
 		]);
 
 		const response = await fetch(`${getBaseUrl()}/api/export`, {

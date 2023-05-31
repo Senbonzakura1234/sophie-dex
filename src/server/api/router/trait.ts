@@ -1,9 +1,8 @@
 import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { neonDB } from '@root/server/db/neon';
+import { primaryDB, secondaryDB } from '@root/server/db';
 import type { Trait } from '@root/server/db/schema';
 import { traits } from '@root/server/db/schema';
-import { vercelDB } from '@root/server/db/vercel';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { GetListRecords, GetRecord, ListRecord } from '@root/types/model';
 import { evnIs } from '@root/utils/common';
@@ -59,10 +58,10 @@ const getALLTraits: GetListRecords<Trait> = async (db, { search, sortBy, directi
 
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Trait>> => {
-		const [totalRecord, records] = await getALLTraits(vercelDB, input).catch(async error => {
-			if (env.USE_BACKUP_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
+		const [totalRecord, records] = await getALLTraits(primaryDB, input).catch(async error => {
+			if (env.USE_SECONDARY_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
 			if (!evnIs('production')) console.error(error);
-			return await getALLTraits(neonDB, input).catch(onQueryDBError);
+			return await getALLTraits(secondaryDB, input).catch(onQueryDBError);
 		});
 
 		return { records, page: input.page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
@@ -71,10 +70,10 @@ export const traitRouter = router({
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ input: { id } }): Promise<Trait> => {
 		if (!id) throw InvalidRecordIdError();
 
-		const record = await getTrait(vercelDB, id).catch(async error => {
-			if (env.USE_BACKUP_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
+		const record = await getTrait(primaryDB, id).catch(async error => {
+			if (env.USE_SECONDARY_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
 			if (!evnIs('production')) console.error(error);
-			return await getTrait(neonDB, id).catch(onQueryDBError);
+			return await getTrait(secondaryDB, id).catch(onQueryDBError);
 		});
 
 		if (record) return record;

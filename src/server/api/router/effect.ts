@@ -1,9 +1,8 @@
 import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { neonDB } from '@root/server/db/neon';
+import { primaryDB, secondaryDB } from '@root/server/db';
 import type { Effect } from '@root/server/db/schema';
 import { effects } from '@root/server/db/schema';
-import { vercelDB } from '@root/server/db/vercel';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { GetListRecords, GetRecord, ListRecord } from '@root/types/model';
 import { evnIs } from '@root/utils/common';
@@ -54,10 +53,10 @@ const getALLEffects: GetListRecords<Effect> = async (db, { search, sortBy, direc
 
 export const effectRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Effect>> => {
-		const [totalRecord, records] = await getALLEffects(vercelDB, input).catch(async error => {
-			if (env.USE_BACKUP_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
+		const [totalRecord, records] = await getALLEffects(primaryDB, input).catch(async error => {
+			if (env.USE_SECONDARY_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
 			if (!evnIs('production')) console.error(error);
-			return await getALLEffects(neonDB, input).catch(onQueryDBError);
+			return await getALLEffects(secondaryDB, input).catch(onQueryDBError);
 		});
 
 		return { records, page: input.page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
@@ -66,10 +65,10 @@ export const effectRouter = router({
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ input: { id } }): Promise<Effect> => {
 		if (!id) throw InvalidRecordIdError();
 
-		const record = await getEffect(vercelDB, id).catch(async error => {
-			if (env.USE_BACKUP_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
+		const record = await getEffect(primaryDB, id).catch(async error => {
+			if (env.USE_SECONDARY_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
 			if (!evnIs('production')) console.error(error);
-			return await getEffect(neonDB, id).catch(onQueryDBError);
+			return await getEffect(secondaryDB, id).catch(onQueryDBError);
 		});
 
 		if (record) return record;

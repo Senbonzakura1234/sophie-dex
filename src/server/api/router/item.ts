@@ -1,9 +1,8 @@
 import { defaultLimit } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { neonDB } from '@root/server/db/neon';
+import { primaryDB, secondaryDB } from '@root/server/db';
 import type { Item } from '@root/server/db/schema';
 import { items } from '@root/server/db/schema';
-import { vercelDB } from '@root/server/db/vercel';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { GetListRecords, GetRecord, ListRecord } from '@root/types/model';
 import { evnIs } from '@root/utils/common';
@@ -55,10 +54,10 @@ const getALLItems: GetListRecords<Item> = async (
 
 export const itemRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Item>> => {
-		const [totalRecord, records] = await getALLItems(vercelDB, input).catch(async error => {
-			if (env.USE_BACKUP_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
+		const [totalRecord, records] = await getALLItems(primaryDB, input).catch(async error => {
+			if (env.USE_SECONDARY_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
 			if (!evnIs('production')) console.error(error);
-			return await getALLItems(neonDB, input).catch(onQueryDBError);
+			return await getALLItems(secondaryDB, input).catch(onQueryDBError);
 		});
 
 		return { records, page: input.page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
@@ -67,10 +66,10 @@ export const itemRouter = router({
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ input: { id } }): Promise<Item> => {
 		if (!id) throw InvalidRecordIdError();
 
-		const record = await getItem(vercelDB, id).catch(async error => {
-			if (env.USE_BACKUP_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
+		const record = await getItem(primaryDB, id).catch(async error => {
+			if (env.USE_SECONDARY_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
 			if (!evnIs('production')) console.error(error);
-			return await getItem(neonDB, id).catch(onQueryDBError);
+			return await getItem(secondaryDB, id).catch(onQueryDBError);
 		});
 
 		if (record) return record;
