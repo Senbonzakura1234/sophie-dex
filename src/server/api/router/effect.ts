@@ -9,9 +9,9 @@ import { evnIs } from '@root/utils/common';
 import { env } from '@root/utils/env.mjs';
 import {
 	CountQuery,
-	DirectionMap,
 	InvalidRecordIdError,
 	RecordNotFoundError,
+	getDirection,
 	getSortField,
 	onQueryDBError,
 	processDBListResult,
@@ -40,7 +40,7 @@ const getALLEffects: GetListRecords<Effect> = (db, { search, sortBy, direction, 
 					: []),
 			),
 		)
-		.orderBy(DirectionMap[direction ?? 'asc'](effects[getSortField(['index', 'name'], 'index', sortBy)]))
+		.orderBy(getDirection(direction)(effects[getSortField(['index', 'name'], 'index', sortBy)]))
 		.limit(defaultLimit)
 		.offset(((page ?? 1) - 1) * defaultLimit)
 		.then(processDBListResult);

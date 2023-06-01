@@ -26,7 +26,7 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 				placeholder='blur'
 				src={topBg}
 				alt='sophie'
-				sizes='100vh'
+				sizes='50vh'
 				priority={pageName !== 'home'}
 			/>
 
@@ -49,7 +49,7 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 							src={sophieLogo}
 							alt={pageName}
 							priority={pageName === 'home'}
-							sizes='80vw'
+							sizes='40vw'
 						/>
 
 						<div

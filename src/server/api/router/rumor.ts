@@ -9,9 +9,9 @@ import { evnIs } from '@root/utils/common';
 import { env } from '@root/utils/env.mjs';
 import {
 	CountQuery,
-	DirectionMap,
 	InvalidRecordIdError,
 	RecordNotFoundError,
+	getDirection,
 	getSortField,
 	onQueryDBError,
 	processDBListResult,
@@ -38,7 +38,7 @@ const getALLRumors: GetListRecords<Rumor> = async (db, { search, sortBy, directi
 		.from(rumors)
 		.where(or(...OR))
 		.where(and(...AND))
-		.orderBy(DirectionMap[direction ?? 'asc'](rumors[getSortField(['price', 'name'], 'price', sortBy)]))
+		.orderBy(getDirection(direction)(rumors[getSortField(['price', 'name'], 'price', sortBy)]))
 		.limit(defaultLimit)
 		.offset(((page ?? 1) - 1) * defaultLimit)
 		.then(processDBListResult);

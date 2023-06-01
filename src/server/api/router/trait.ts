@@ -10,9 +10,9 @@ import { env } from '@root/utils/env.mjs';
 import {
 	ANYQuery,
 	CountQuery,
-	DirectionMap,
 	InvalidRecordIdError,
 	RecordNotFoundError,
+	getDirection,
 	getSortField,
 	onQueryDBError,
 	processDBListResult,
@@ -45,7 +45,7 @@ const getALLTraits: GetListRecords<Trait> = async (db, { search, sortBy, directi
 		.from(traits)
 		.where(or(...OR))
 		.where(and(...AND))
-		.orderBy(DirectionMap[direction ?? 'asc'](traits[getSortField(['index', 'name'], 'index', sortBy)]))
+		.orderBy(getDirection(direction)(traits[getSortField(['index', 'name'], 'index', sortBy)]))
 		.limit(defaultLimit)
 		.offset(((page ?? 1) - 1) * defaultLimit)
 		.then(processDBListResult);

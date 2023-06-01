@@ -10,9 +10,9 @@ import { env } from '@root/utils/env.mjs';
 import {
 	ANYQuery,
 	CountQuery,
-	DirectionMap,
 	InvalidRecordIdError,
 	RecordNotFoundError,
+	getDirection,
 	getSortField,
 	onQueryDBError,
 	processDBListResult,
@@ -45,7 +45,7 @@ const getALLItems: GetListRecords<Item> = async (
 		.from(items)
 		.where(or(...OR))
 		.where(and(...AND))
-		.orderBy(DirectionMap[direction ?? 'asc'](items[getSortField(['index', 'level', 'name'], 'index', sortBy)]))
+		.orderBy(getDirection(direction)(items[getSortField(['index', 'level', 'name'], 'index', sortBy)]))
 		.limit(defaultLimit)
 		.offset(((page ?? 1) - 1) * defaultLimit)
 		.then(processDBListResult);
