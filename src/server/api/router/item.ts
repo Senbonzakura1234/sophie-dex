@@ -10,9 +10,10 @@ import { env } from '@root/utils/env.mjs';
 import {
 	ANYQuery,
 	CountQuery,
-	DirectionQueryMap,
+	DirectionMap,
 	InvalidRecordIdError,
 	RecordNotFoundError,
+	getSortField,
 	onQueryDBError,
 	processDBListResult,
 } from '@root/utils/server';
@@ -30,8 +31,6 @@ const getALLItems: GetListRecords<Item> = async (
 	db,
 	{ search, sortBy, direction, color, relatedCategory, page, category, recipeType },
 ) => {
-	const pageInt = page ?? 1;
-
 	const OR: SQL[] = search ? [ilike(items.name, `%${search}%`), ilike(items.keyWords, `%${search}%`)] : [];
 
 	const AND: SQL[] = [];
@@ -42,13 +41,13 @@ const getALLItems: GetListRecords<Item> = async (
 	if (category) AND.push(eq(items.category, category));
 
 	return await db
-		.select({ totalCount: CountQuery, record: items })
+		.select({ totalRecord: CountQuery, record: items })
 		.from(items)
 		.where(or(...OR))
 		.where(and(...AND))
-		.orderBy(DirectionQueryMap[direction ?? 'asc'](items[!!sortBy && sortBy !== 'price' ? sortBy : 'index']))
+		.orderBy(DirectionMap[direction ?? 'asc'](items[getSortField(['index', 'level', 'name'], 'index', sortBy)]))
 		.limit(defaultLimit)
-		.offset((pageInt - 1) * defaultLimit)
+		.offset(((page ?? 1) - 1) * defaultLimit)
 		.then(processDBListResult);
 };
 

@@ -12,7 +12,4 @@ export const appRouter = router({
 	rumor: rumorRouter,
 });
 
-export const severAPIProvider = appRouter.createCaller({});
-
-// export type definition of API
 export type AppRouter = typeof appRouter;

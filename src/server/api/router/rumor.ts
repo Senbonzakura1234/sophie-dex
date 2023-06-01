@@ -9,9 +9,10 @@ import { evnIs } from '@root/utils/common';
 import { env } from '@root/utils/env.mjs';
 import {
 	CountQuery,
-	DirectionQueryMap,
+	DirectionMap,
 	InvalidRecordIdError,
 	RecordNotFoundError,
+	getSortField,
 	onQueryDBError,
 	processDBListResult,
 } from '@root/utils/server';
@@ -26,8 +27,6 @@ const getRumor: GetRecord<Rumor> = (db, id) =>
 		.then(([res]) => res);
 
 const getALLRumors: GetListRecords<Rumor> = async (db, { search, sortBy, direction, page, rumorType }) => {
-	const pageInt = page ?? 1;
-
 	const OR: SQL[] = search ? [ilike(rumors.name, `%${search}%`), ilike(rumors.keyWords, `%${search}%`)] : [];
 
 	const AND: SQL[] = [];
@@ -35,17 +34,13 @@ const getALLRumors: GetListRecords<Rumor> = async (db, { search, sortBy, directi
 	if (rumorType) AND.push(eq(rumors.rumorType, rumorType));
 
 	return await db
-		.select({ totalCount: CountQuery, record: rumors })
+		.select({ totalRecord: CountQuery, record: rumors })
 		.from(rumors)
 		.where(or(...OR))
 		.where(and(...AND))
-		.orderBy(
-			DirectionQueryMap[direction ?? 'asc'](
-				rumors[!!sortBy && sortBy !== 'index' && sortBy !== 'level' ? sortBy : 'price'],
-			),
-		)
+		.orderBy(DirectionMap[direction ?? 'asc'](rumors[getSortField(['price', 'name'], 'price', sortBy)]))
 		.limit(defaultLimit)
-		.offset((pageInt - 1) * defaultLimit)
+		.offset(((page ?? 1) - 1) * defaultLimit)
 		.then(processDBListResult);
 };
 

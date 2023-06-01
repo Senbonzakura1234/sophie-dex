@@ -9,13 +9,13 @@ import { evnIs } from '@root/utils/common';
 import { env } from '@root/utils/env.mjs';
 import {
 	CountQuery,
-	DirectionQueryMap,
+	DirectionMap,
 	InvalidRecordIdError,
 	RecordNotFoundError,
+	getSortField,
 	onQueryDBError,
 	processDBListResult,
 } from '@root/utils/server';
-import type { SQL } from 'drizzle-orm';
 import { eq, ilike, or } from 'drizzle-orm';
 
 const getEffect: GetRecord<Effect> = (db, id) =>
@@ -25,31 +25,25 @@ const getEffect: GetRecord<Effect> = (db, id) =>
 		.where(eq(effects.id, id))
 		.then(([res]) => res);
 
-const getALLEffects: GetListRecords<Effect> = async (db, { search, sortBy, direction, page }) => {
-	const pageInt = page ?? 1;
-
-	const OR: SQL[] = search
-		? [
-				ilike(effects.name, `%${search}%`),
-				ilike(effects.description, `%${search}%`),
-				ilike(effects.keyWords, `%${search}%`),
-		  ]
-		: [];
-
-	return await db
-		.select({ totalCount: CountQuery, record: effects })
+const getALLEffects: GetListRecords<Effect> = (db, { search, sortBy, direction, page }) =>
+	db
+		.select({ totalRecord: CountQuery, record: effects })
 		.from(effects)
-		.where(or(...OR))
-		.orderBy(
-			DirectionQueryMap[direction ?? 'asc'](
-				effects[!!sortBy && sortBy !== 'price' && sortBy !== 'level' ? sortBy : 'index'],
+		.where(
+			or(
+				...(search
+					? [
+							ilike(effects.name, `%${search}%`),
+							ilike(effects.description, `%${search}%`),
+							ilike(effects.keyWords, `%${search}%`),
+					  ]
+					: []),
 			),
 		)
+		.orderBy(DirectionMap[direction ?? 'asc'](effects[getSortField(['index', 'name'], 'index', sortBy)]))
 		.limit(defaultLimit)
-		.offset((pageInt - 1) * defaultLimit)
-
+		.offset(((page ?? 1) - 1) * defaultLimit)
 		.then(processDBListResult);
-};
 
 export const effectRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Effect>> => {

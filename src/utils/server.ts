@@ -2,8 +2,9 @@ import { TRPCError } from '@trpc/server';
 import type { AnyColumn, SQL } from 'drizzle-orm';
 import { asc, desc, sql } from 'drizzle-orm';
 
+import type { SortByEnum } from '@root/types/common/zod';
 import type { CommonRecord, DBListResult } from '@root/types/model';
-import { evnIs } from './common';
+import { evnIs, improvedInclude } from './common';
 
 export const onQueryDBError = (error: unknown) => {
 	if (evnIs('development')) console.error(error);
@@ -23,10 +24,16 @@ export const ANYQuery = (column: AnyColumn['name'], value: string | number): SQL
 	sql.raw(`'${value}'=ANY(${column})`);
 export const CountQuery: SQL<number> = sql<number>`count(*) over()`;
 
-export const DirectionQueryMap = {
+export const DirectionMap = {
 	asc: asc,
 	desc: desc,
 } as const;
 
 export const processDBListResult = <TRecord extends CommonRecord>(dbResult: DBListResult<TRecord>) =>
-	[dbResult[0]?.totalCount || 0, dbResult.map(({ record }) => record)] as const;
+	[dbResult[0]?.totalRecord || 0, dbResult.map(({ record }) => record)] as const;
+
+export const getSortField = <TSearch extends Readonly<SortByEnum>>(
+	allowedSortField: Readonly<TSearch[]>,
+	defaultSortField: TSearch,
+	search: unknown,
+) => (improvedInclude(allowedSortField, search) ? search : defaultSortField);

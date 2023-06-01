@@ -71,7 +71,7 @@ export type CommonRecord = {
 	keyWords: string;
 };
 
-export type DBListResult<TRecord extends CommonRecord> = { totalCount: number; record: TRecord }[];
+export type DBListResult<TRecord extends CommonRecord> = { totalRecord: number; record: TRecord }[];
 
 export type ListRecord<TRecord extends CommonRecord> = {
 	records: TRecord[];

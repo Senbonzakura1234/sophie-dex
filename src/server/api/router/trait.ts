@@ -10,9 +10,10 @@ import { env } from '@root/utils/env.mjs';
 import {
 	ANYQuery,
 	CountQuery,
-	DirectionQueryMap,
+	DirectionMap,
 	InvalidRecordIdError,
 	RecordNotFoundError,
+	getSortField,
 	onQueryDBError,
 	processDBListResult,
 } from '@root/utils/server';
@@ -27,8 +28,6 @@ const getTrait: GetRecord<Trait> = (db, id) =>
 		.then(([res]) => res);
 
 const getALLTraits: GetListRecords<Trait> = async (db, { search, sortBy, direction, category, page }) => {
-	const pageInt = page ?? 1;
-
 	const OR: SQL[] = search
 		? [
 				ilike(traits.name, `%${search}%`),
@@ -42,17 +41,13 @@ const getALLTraits: GetListRecords<Trait> = async (db, { search, sortBy, directi
 	if (category) AND.push(ANYQuery(traits.categories.name, category));
 
 	return await db
-		.select({ totalCount: CountQuery, record: traits })
+		.select({ totalRecord: CountQuery, record: traits })
 		.from(traits)
 		.where(or(...OR))
 		.where(and(...AND))
-		.orderBy(
-			DirectionQueryMap[direction ?? 'asc'](
-				traits[!!sortBy && sortBy !== 'price' && sortBy !== 'level' ? sortBy : 'index'],
-			),
-		)
+		.orderBy(DirectionMap[direction ?? 'asc'](traits[getSortField(['index', 'name'], 'index', sortBy)]))
 		.limit(defaultLimit)
-		.offset((pageInt - 1) * defaultLimit)
+		.offset(((page ?? 1) - 1) * defaultLimit)
 		.then(processDBListResult);
 };
 

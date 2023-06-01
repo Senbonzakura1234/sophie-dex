@@ -17,3 +17,8 @@ export async function tryCatchHandler<TReturn = unknown>(promise: Promise<TRetur
 		return { data: null, isSuccess: false as const, error };
 	}
 }
+
+export const improvedInclude = <TSearch extends Readonly<string | number>>(
+	arr: Readonly<TSearch[]>,
+	search: unknown,
+): search is TSearch => arr.includes(search as TSearch);
