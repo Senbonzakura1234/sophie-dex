@@ -11,7 +11,7 @@ export default function PageFooter() {
 				placeholder='blur'
 				src={bottomBg}
 				alt='sophie'
-				sizes='50vh'
+				sizes='40vh'
 				priority={false}
 			/>
 

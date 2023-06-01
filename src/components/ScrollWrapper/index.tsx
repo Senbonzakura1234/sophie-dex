@@ -20,7 +20,8 @@ export default function ScrollWrapper({ children, className, enableScrollTop }: 
 
 	useEffect(() => {
 		scrollYProgress.on('change', e => {
-			if (!scrollableRef.current || scrollableRef.current.scrollHeight < 1500) return;
+			if (!scrollableRef.current || scrollableRef.current.scrollHeight < 2 * scrollableRef.current.offsetHeight)
+				return setIsShowScrollTop(false);
 			if (e > 0.6 && !isShowScrollTop) return setIsShowScrollTop(true);
 			if (e <= 0.6 && isShowScrollTop) return setIsShowScrollTop(false);
 		});

@@ -26,7 +26,7 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 				placeholder='blur'
 				src={topBg}
 				alt='sophie'
-				sizes='50vh'
+				sizes='40vh'
 				priority={pageName !== 'home'}
 			/>
 
@@ -49,7 +49,7 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 							src={sophieLogo}
 							alt={pageName}
 							priority={pageName === 'home'}
-							sizes='40vw'
+							sizes='30vw'
 						/>
 
 						<div
@@ -58,7 +58,7 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 									hidden: pageName === 'home',
 									block: pageName !== 'home',
 								},
-								'tracking-widest text-slate-50',
+								'capitalize tracking-widest text-slate-50',
 							)}
 						>
 							{pageName}

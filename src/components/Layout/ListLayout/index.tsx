@@ -48,7 +48,7 @@ export default function ListLayout<TRecord extends CommonRecord>({
 		[data?.records, isDataReady],
 	);
 
-	const renderChild = useMemo(() => (children ? children(listData) : null), [children, listData]);
+	const renderChild = useMemo(() => (children && !isError ? children(listData) : null), [children, isError, listData]);
 
 	return (
 		<>
