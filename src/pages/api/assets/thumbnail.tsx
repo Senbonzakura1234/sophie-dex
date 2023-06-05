@@ -32,7 +32,7 @@ export default function Image() {
 				}}
 			>
 				<img
-					src={`${getBaseUrl()}/assets/images/sophie-logo.png`}
+					src={`${getBaseUrl()}/assets/images/sophie-logo.webp`}
 					alt={alt}
 					style={{ objectFit: 'cover' }}
 					width='100%'

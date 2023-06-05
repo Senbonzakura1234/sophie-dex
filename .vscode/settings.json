@@ -24,7 +24,8 @@
 		"trpc",
 		"tsbuildinfo",
 		"tsconfigs",
-		"vsicons"
+		"vsicons",
+		"webp"
 	],
 	"css.lint.unknownAtRules": "ignore",
 	"editor.codeActionsOnSave": {

@@ -1,5 +1,6 @@
-import bottomBg from '@root/assets/images/bottom.jpg';
+import bottomBg from '@root/assets/images/bottom.webp';
 import Breadcrumb from '@root/components/Breadcrumb';
+import { getBaseUrl } from '@root/utils/client';
 import Image from 'next/image';
 
 export default function PageFooter() {
@@ -11,8 +12,9 @@ export default function PageFooter() {
 				placeholder='blur'
 				src={bottomBg}
 				alt='sophie'
-				sizes='40vh'
+				sizes='50vh'
 				priority={false}
+				data-url={`${getBaseUrl(true)}/assets/images/bottom.jpg`}
 			/>
 
 			<div className='absolute inset-0 z-10 bg-slate-700/30' />

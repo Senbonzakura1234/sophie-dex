@@ -1,8 +1,9 @@
 import { getFramerInViewFadeUp } from '@root/animations';
-import sophieLogo from '@root/assets/images/sophie-logo.png';
-import topBg from '@root/assets/images/top.jpg';
+import sophieLogo from '@root/assets/images/sophie-logo.webp';
+import topBg from '@root/assets/images/top.webp';
 import Breadcrumb from '@root/components/Breadcrumb';
 import type { PageNameProps } from '@root/types/common/props';
+import { getBaseUrl } from '@root/utils/client';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -21,8 +22,9 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 				placeholder='blur'
 				src={topBg}
 				alt='sophie'
-				sizes='40vh'
+				sizes='50vh'
 				priority={pageName !== 'home'}
+				data-url={`${getBaseUrl(true)}/assets/images/top.jpg`}
 			/>
 
 			<div className='absolute inset-0 z-10 bg-slate-700/30' />
@@ -38,7 +40,8 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 							src={sophieLogo}
 							alt={pageName}
 							priority={pageName === 'home'}
-							sizes='30vw'
+							sizes='50vw'
+							data-url={`${getBaseUrl(true)}/assets/images/sophie-logo.png`}
 						/>
 
 						<div className={`capitalize tracking-widest text-slate-50 ${pageName === 'home' && 'hidden'}`}>
