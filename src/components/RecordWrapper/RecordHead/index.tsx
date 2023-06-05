@@ -8,23 +8,28 @@ type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pat
 
 export default function RecordHead({ id, isCurrentRecord, pathname, name, pageName }: RecordHeadProps) {
 	return (
-		<>
+		<div>
 			{isCurrentRecord && (
 				<div className='breadcrumbs text-sm'>
 					<ul>
-						<li className='font-bold'>
+						<li>
 							<Link
 								href={{ pathname: '/' }}
 								as={{ pathname: '/' }}
-								className='flex gap-1'
+								className='flex gap-1 font-bold'
 								aria-label='Go to homepage'
 							>
 								<HomeIcon className='h-4 w-4' />
 								<span className='hidden md:inline'>Home</span>
 							</Link>
 						</li>
-						<li className='font-bold'>
-							<Link href={{ pathname }} as={{ pathname }} aria-label='Back to search'>
+						<li>
+							<Link
+								href={{ pathname }}
+								className='font-bold capitalize'
+								as={{ pathname }}
+								aria-label='Back to search'
+							>
 								{pageName}s
 							</Link>
 						</li>
@@ -50,6 +55,6 @@ export default function RecordHead({ id, isCurrentRecord, pathname, name, pageNa
 					</span>
 				</Link>
 			</div>
-		</>
+		</div>
 	);
 }

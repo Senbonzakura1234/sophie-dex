@@ -1,6 +1,6 @@
 import { getFramerInViewFadeUp } from '@root/animations';
 import AnimationWrapper from '@root/components/AnimationWrapper';
-import { RecordPlaceholder } from '@root/components/SubComponent';
+import { RecordPlaceholder } from '@root/components/RecordPlaceholder';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { MaybeData, RenderFunction } from '@root/types/common';
 import type { ClassNameProps, PageNameProps } from '@root/types/common/props';

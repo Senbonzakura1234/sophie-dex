@@ -43,8 +43,7 @@ const getALLItems: GetListRecords<Item> = async (
 	return await db
 		.select({ totalRecord: CountQuery, record: items })
 		.from(items)
-		.where(or(...OR))
-		.where(and(...AND))
+		.where(and(or(...OR), ...AND))
 		.orderBy(getDirection(direction)(items[getSortField(['index', 'level', 'name'], 'index', sortBy)]))
 		.limit(defaultLimit)
 		.offset(((page ?? 1) - 1) * defaultLimit)

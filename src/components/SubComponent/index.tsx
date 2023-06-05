@@ -1,11 +1,7 @@
-import { getFramerInViewFadeUp } from '@root/animations';
+import { colorTailwindMap, recipeTypeColorMap } from '@root/constants';
 import type { SelectOptionItem } from '@root/types/common';
 import type { CategoryEnum, ColorEnum, RecipeTypeEnum, RumorTypeEnum } from '@root/types/common/zod';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
-import clsx from 'clsx';
-import { m as motion } from 'framer-motion';
-
-export { clsx };
 
 export const hideCategoryOnTrait: Readonly<CategoryEnum[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
 
@@ -92,16 +88,8 @@ export const colorSelectList = [
 		value: color,
 		icon: (
 			<span
-				className={clsx(
-					{
-						'bg-blue-500 shadow-blue-500': color === 'BLUE',
-						'bg-green-500 shadow-green-500': color === 'GREEN',
-						'bg-red-500 shadow-red-500': color === 'RED',
-						'bg-slate-500 shadow-slate-500': color === 'WHITE',
-						'bg-yellow-400 shadow-yellow-400': color === 'YELLOW',
-					},
-					'h-4 w-4 rounded-full',
-				)}
+				style={{ color: colorTailwindMap[color] }}
+				className='h-4 w-4 rounded-full bg-current shadow-current'
 				aria-hidden='true'
 			/>
 		),
@@ -115,43 +103,10 @@ export const recipeTypeSelectList = [
 		value: recipeType,
 		icon: (
 			<span
-				className={clsx(
-					{
-						'bg-red-500 shadow-red-500': recipeType === 'BEGINNER_RECIPES',
-						'bg-blue-500 shadow-blue-500': recipeType === 'GROWTH_RECIPES',
-						'bg-green-500 shadow-green-500': recipeType === 'HOPE_RECIPES',
-						'bg-yellow-400 shadow-yellow-400': recipeType === 'DREAM_RECIPES',
-						'bg-slate-500 shadow-slate-500': recipeType === 'MYSTERY_RECIPES',
-					},
-					'h-4 w-4 rounded-full',
-				)}
+				style={{ color: recipeTypeColorMap[recipeType] }}
+				className='h-4 w-4 rounded-full bg-current shadow-current'
 				aria-hidden='true'
 			/>
 		),
 	})),
 ] satisfies SelectOptionItem<RecipeTypeEnum | null>[];
-
-export function RecordPlaceholder() {
-	return (
-		<motion.div {...getFramerInViewFadeUp()} className='card-body flex h-60 animate-pulse gap-3'>
-			<div className='flex flex-row items-center gap-3'>
-				<div className='h-4 w-4 rounded-full bg-slate-300'></div>
-				<div className='h-5 w-60 rounded bg-slate-300'></div>
-			</div>
-
-			<div className='h-[14px] w-16 rounded bg-slate-300' />
-
-			<div className='grid gap-[10px]'>
-				<div className='grid grid-cols-3 gap-4'>
-					<div className='col-span-2 h-[18px] rounded bg-slate-300'></div>
-					<div className='col-span-1 h-[18px] rounded bg-slate-300'></div>
-				</div>
-				<div className='h-[18px] w-full rounded bg-slate-300' />
-				<div className='grid grid-cols-2 gap-4'>
-					<div className='col-span-1 h-[18px] rounded bg-slate-300'></div>
-					<div className='col-span-1 h-[18px] rounded bg-slate-300'></div>
-				</div>
-			</div>
-		</motion.div>
-	);
-}

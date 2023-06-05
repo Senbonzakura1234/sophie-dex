@@ -5,7 +5,7 @@ import Head from 'next/head';
 export default function HeadLayout() {
 	return (
 		<Head>
-			<title>{APP_NAME}</title>
+			<title>{`${APP_NAME} | ${APP_DESCRIPTION}`}</title>
 			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 			<link rel='icon' href='/favicon.ico' />
 			<meta name='description' content={APP_DESCRIPTION} key='description' />
@@ -20,10 +20,15 @@ export default function HeadLayout() {
 			<meta property='twitter:title' content={APP_NAME} />
 			<meta property='twitter:description' content={APP_DESCRIPTION} />
 
+			{/* Others */}
 			<meta property='og:image' content={`${getBaseUrl()}/api/assets/thumbnail`} />
 			<meta property='og:title' content={APP_NAME} />
 			<meta property='og:description' content={APP_DESCRIPTION} />
 			<meta property='og:url' content={getBaseUrl()} />
+
+			{/* Google */}
+			<meta name='robots' content='all' />
+			<meta name='google' content='notranslate' />
 
 			<link rel='apple-touch-icon' href='/assets/splash_screens/icon.png' />
 

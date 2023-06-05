@@ -80,14 +80,13 @@ export const traits = pgTable('traits', {
 	itemPresent: jsonb('itemPresent').$type<HyperLinkRecord>(),
 });
 
-// Record
 export type Effect = InferModel<typeof effects>;
 export type Item = InferModel<typeof items>;
 export type Rumor = InferModel<typeof rumors>;
 export type Trait = InferModel<typeof traits>;
 
-// Insert
-export type InsertEffect = InferModel<typeof effects, 'insert'>;
-export type InsertItem = InferModel<typeof items, 'insert'>;
-export type InsertRumor = InferModel<typeof rumors, 'insert'>;
-export type InsertTrait = InferModel<typeof traits, 'insert'>;
+const schema = { effects, items, rumors, traits };
+
+export type Schema = typeof schema;
+
+export default schema;

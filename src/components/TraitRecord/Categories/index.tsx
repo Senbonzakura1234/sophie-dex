@@ -15,7 +15,7 @@ function Categories({ categories }: CategoriesProps) {
 	);
 
 	return (
-		<nav className='mt-auto flex max-w-fit flex-wrap gap-2 pt-3'>
+		<nav className='mt-auto flex max-w-fit flex-wrap gap-2 2xl:pt-3'>
 			{[...categoryMap]
 				.filter(([c]) => !hideCategoryOnTrait.includes(c))
 				.map(([code, { className, name }], key) => (

@@ -7,8 +7,8 @@ type TraitMergeListProps = { mergeFrom: HyperLinkRecord[][] };
 
 export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 	return (
-		<nav className='relative z-50 flex flex-wrap gap-2'>
-			<h5 className={clsx({ hidden: mergeFrom.length <= 0 }, 'my-auto font-extrabold')}>Merge from:</h5>
+		<nav className={clsx('relative z-50 flex flex-wrap gap-2', { 'max-2xl:hidden': mergeFrom.length <= 0 })}>
+			<h5 className={clsx('my-auto font-extrabold', { hidden: mergeFrom.length <= 0 })}>Merge from:</h5>
 
 			{mergeFrom.map((traitRecords, key) => (
 				<div className='btn-group basis-auto' key={key}>

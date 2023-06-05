@@ -8,13 +8,7 @@ type EffectRecordProps = RecordProps<Effect>;
 export default function EffectRecord(props: EffectRecordProps) {
 	return (
 		<RecordWrapper {...nullableHandle(props)} pageName='effect'>
-			{({ description, index }) => (
-				<>
-					<div className='text-sm'>index: {index}</div>
-
-					<p className='text-lg'>{description}</p>
-				</>
-			)}
+			{({ description }) => <p className='text-lg'>{description}</p>}
 		</RecordWrapper>
 	);
 }

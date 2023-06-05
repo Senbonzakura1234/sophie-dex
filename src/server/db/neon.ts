@@ -1,9 +1,9 @@
 import { Pool } from '@neondatabase/serverless';
+import { evnIs } from '@root/utils/common';
 import { env } from '@root/utils/env.mjs';
 import { drizzle } from 'drizzle-orm/neon-serverless';
 
-import { evnIs } from '@root/utils/common';
-import * as schema from './schema';
+import schema from './schema';
 
 let neonDBConnection: Pool;
 

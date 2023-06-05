@@ -1,8 +1,7 @@
+import type { Schema } from '@root/server/db/schema';
+import type { IdQuery, SearchQuery } from '@root/types/common/zod';
 import type { NeonDatabase } from 'drizzle-orm/neon-serverless';
 import type { VercelPgDatabase } from 'drizzle-orm/vercel-postgres';
-import type { IdQuery, SearchQuery } from '../common/zod';
-
-import type * as schema from '@root/server/db/schema';
 
 export const tableList = ['effect', 'item', 'trait', 'rumor'] as const;
 
@@ -82,7 +81,7 @@ export type ListRecord<TRecord extends CommonRecord> = {
 	totalPage: number;
 };
 
-export type DBDriver = VercelPgDatabase<typeof schema> | NeonDatabase<typeof schema>;
+export type DBDriver = VercelPgDatabase<Schema> | NeonDatabase<Schema>;
 
 export type GetRecord<TRecord extends CommonRecord> = (
 	db: DBDriver,

@@ -17,11 +17,9 @@ type ItemRecordProps = RecordProps<Item>;
 export default function ItemRecord(props: ItemRecordProps) {
 	return (
 		<RecordWrapper {...nullableHandle(props)} color={props.data?.color} pageName='item'>
-			{({ category, color, description, index, level, recipeIdea, recipeType, relatedCategories, traitPresent }) => (
+			{({ category, color, description, level, recipeIdea, recipeType, relatedCategories, traitPresent }) => (
 				<>
 					<Level level={level} />
-
-					<div className='text-sm'>index: {index}</div>
 
 					{recipeType ? <RecipeType recipeType={recipeType} /> : null}
 

@@ -68,9 +68,7 @@ export const idQueryValidator = z.object({ id: idSchema });
 
 export type IdQuery = z.infer<typeof idQueryValidator>;
 
-export const highlightTextValidator = z.object({
-	content: z.string(),
-});
+export const highlightTextValidator = z.object({ content: z.string() });
 
 export type HighlightText = z.infer<typeof highlightTextValidator>;
 
@@ -80,10 +78,7 @@ export const hyperLinkRecordValidator = z.object({
 	table: genericTableEnumSchema,
 });
 
-export const hyperLinkSearchValidator = z.object({
-	searchQuery: searchQueryValidator,
-	table: genericTableEnumSchema,
-});
+export const hyperLinkSearchValidator = z.object({ searchQuery: searchQueryValidator, table: genericTableEnumSchema });
 
 export const exportDBDataValidator = z.object({
 	effects: z.array(z.unknown()),

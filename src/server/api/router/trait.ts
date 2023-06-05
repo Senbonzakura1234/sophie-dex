@@ -28,6 +28,8 @@ const getTrait: GetRecord<Trait> = (db, id) =>
 		.then(([res]) => res);
 
 const getALLTraits: GetListRecords<Trait> = async (db, { search, sortBy, direction, category, page }) => {
+	console.log(search);
+
 	const OR: SQL[] = search
 		? [
 				ilike(traits.name, `%${search}%`),
@@ -36,6 +38,8 @@ const getALLTraits: GetListRecords<Trait> = async (db, { search, sortBy, directi
 		  ]
 		: [];
 
+	console.log(OR);
+
 	const AND: SQL[] = [];
 
 	if (category) AND.push(ANYQuery(traits.categories.name, category));
@@ -43,8 +47,7 @@ const getALLTraits: GetListRecords<Trait> = async (db, { search, sortBy, directi
 	return await db
 		.select({ totalRecord: CountQuery, record: traits })
 		.from(traits)
-		.where(or(...OR))
-		.where(and(...AND))
+		.where(and(or(...OR), ...AND))
 		.orderBy(getDirection(direction)(traits[getSortField(['index', 'name'], 'index', sortBy)]))
 		.limit(defaultLimit)
 		.offset(((page ?? 1) - 1) * defaultLimit)

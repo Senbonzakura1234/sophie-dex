@@ -72,6 +72,7 @@ export default function ListLayout<TRecord extends CommonRecord>({
 
 			<section
 				className={clsx('container mx-auto grid grow gap-6 max-2xl:px-4', {
+					'grid-cols-2': pageName === 'effect',
 					'2xl:grid-cols-2': pageName !== 'item',
 				})}
 			>

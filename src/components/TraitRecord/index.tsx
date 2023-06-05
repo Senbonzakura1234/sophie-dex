@@ -12,10 +12,8 @@ type TraitRecordProps = RecordProps<Trait>;
 export default function TraitRecord(props: TraitRecordProps) {
 	return (
 		<RecordWrapper {...nullableHandle(props)} pageName='trait'>
-			{({ categories, description, index, itemPresent, mergeFrom }) => (
+			{({ categories, description, itemPresent, mergeFrom }) => (
 				<>
-					<div className='text-sm'>index: {index}</div>
-
 					<p className='text-lg'>{description}</p>
 
 					<TraitMergeList mergeFrom={mergeFrom} />

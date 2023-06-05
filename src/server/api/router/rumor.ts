@@ -36,8 +36,7 @@ const getALLRumors: GetListRecords<Rumor> = async (db, { search, sortBy, directi
 	return await db
 		.select({ totalRecord: CountQuery, record: rumors })
 		.from(rumors)
-		.where(or(...OR))
-		.where(and(...AND))
+		.where(and(or(...OR), ...AND))
 		.orderBy(getDirection(direction)(rumors[getSortField(['price', 'name'], 'price', sortBy)]))
 		.limit(defaultLimit)
 		.offset(((page ?? 1) - 1) * defaultLimit)
