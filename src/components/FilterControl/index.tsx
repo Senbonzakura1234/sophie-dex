@@ -6,13 +6,30 @@ import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import { useMemo } from 'react';
 
 import type { TableEnum } from '@root/types/common/zod';
-import CategoryFilter from './CategoryFilter';
-import ColorFilter from './ColorFilter';
-import Paginate from './Paginate';
-import RecipeTypeFilter from './RecipeTypeFilter';
-import ResetFilter from './ResetFilter';
-import RumorTypeFilter from './RumorTypeFilter';
-import SortControl from './SortControl';
+
+import dynamic from 'next/dynamic';
+
+const CategoryFilter = dynamic(() => import('./CategoryFilter'), {
+	loading: () => <div className='h-8 w-40 animate-pulse rounded 2xl:h-9' />,
+});
+const ColorFilter = dynamic(() => import('./ColorFilter'), {
+	loading: () => <div className='h-8 w-40 animate-pulse rounded 2xl:h-9' />,
+});
+const Paginate = dynamic(() => import('./Paginate'), {
+	loading: () => <div className='h-8 w-[280px] animate-pulse rounded 2xl:h-9' />,
+});
+const RecipeTypeFilter = dynamic(() => import('./RecipeTypeFilter'), {
+	loading: () => <div className='h-8 w-40 animate-pulse rounded 2xl:h-9' />,
+});
+const ResetFilter = dynamic(() => import('./ResetFilter'), {
+	loading: () => <div className='my-auto h-6 w-[52px] animate-pulse rounded' />,
+});
+const RumorTypeFilter = dynamic(() => import('./RumorTypeFilter'), {
+	loading: () => <div className='h-8 w-40 animate-pulse rounded 2xl:h-9' />,
+});
+const SortControl = dynamic(() => import('./SortControl'), {
+	loading: () => <div className='w- my-auto h-6 animate-pulse rounded' />,
+});
 
 type FilterControlProps = PageControlProps & IsBottomFilterProps & IsDataReadyProps & { pageName: TableEnum };
 

@@ -3,9 +3,18 @@ import type { RecordProps } from '@root/types/common/props';
 
 import type { Trait } from '@root/server/db/schema';
 import { nullableHandle } from '@root/utils/common';
-import Categories from './Categories';
-import ItemPresent from './ItemPresent';
-import TraitMergeList from './TraitMergeList';
+
+import dynamic from 'next/dynamic';
+
+const Categories = dynamic(() => import('./Categories'), {
+	loading: () => <div className='h-8 w-40 max-w-full animate-pulse rounded' />,
+});
+const ItemPresent = dynamic(() => import('./ItemPresent'), {
+	loading: () => <div className='h-6 w-40 max-w-full animate-pulse rounded' />,
+});
+const TraitMergeList = dynamic(() => import('./TraitMergeList'), {
+	loading: () => <div className='h-6 w-40 max-w-full animate-pulse rounded' />,
+});
 
 type TraitRecordProps = RecordProps<Trait>;
 

@@ -8,7 +8,12 @@ import type { ClassNameProps, PageNameProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import { useMemo } from 'react';
-import RecordHead from './RecordHead';
+
+import dynamic from 'next/dynamic';
+
+const RecordHead = dynamic(() => import('./RecordHead'), {
+	loading: () => <div className='h-7 w-40 max-w-full animate-pulse rounded' />,
+});
 
 type RecordWrapperProps<TRecord extends { id: string; name: string }> = ClassNameProps &
 	PageNameProps & {
@@ -41,7 +46,7 @@ export default function RecordWrapper<TRecord extends { id: string; name: string
 			>
 				<AnimationWrapper
 					show={isDataReady}
-					options={getFramerInViewFadeUp(0, 50, 1)}
+					options={getFramerInViewFadeUp()}
 					className='card-body flex flex-col gap-3 text-base-content'
 					placeholder={<RecordPlaceholder />}
 				>

@@ -31,7 +31,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 					style={{ color: rumorTypeColorMap[rumorType].secondary }}
 				>
 					<div className='flex gap-1 font-extrabold capitalize text-slate-50'>
-						<div className={`font-atelier ${rumorTypeMap.get(rumorType)?.className}`}></div>
+						<div className={`font-atelier ${rumorTypeMap.get(rumorType)?.className}`} />
 						{rumorTypeMap.get(rumorType)?.name}
 					</div>
 				</button>
@@ -41,7 +41,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 				className={`absolute bottom-10 right-10 w-10 text-center font-atelier text-lg text-slate-50 md:text-4xl ${
 					rumorTypeMap.get(rumorType)?.className
 				}`}
-			></div>
+			/>
 		</>
 	);
 }

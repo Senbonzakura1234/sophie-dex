@@ -21,6 +21,7 @@
 		}
 	},
 	"scripts": {
+		"build:local": "del .next && next build",
 		"build": "next build",
 		"dev": "next dev",
 		"lint": "next lint",

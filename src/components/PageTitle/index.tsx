@@ -1,11 +1,14 @@
 import { getFramerInViewFadeUp } from '@root/animations';
 import sophieLogo from '@root/assets/images/sophie-logo.webp';
 import topBg from '@root/assets/images/top.webp';
-import Breadcrumb from '@root/components/Breadcrumb';
 import type { PageNameProps } from '@root/types/common/props';
 import { getBaseUrl } from '@root/utils/client';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import Image from 'next/image';
+
+import dynamic from 'next/dynamic';
+
+const Breadcrumb = dynamic(() => import('@root/components/Breadcrumb'));
 
 type PageTitleProps = PageNameProps;
 

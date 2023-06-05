@@ -1,6 +1,4 @@
-import ErrorModal from '@root/components/ErrorModal';
 import FilterControl from '@root/components/FilterControl';
-import PageFooter from '@root/components/PageFooter';
 import PageTitle from '@root/components/PageTitle';
 import SearchControl from '@root/components/SearchControl';
 import { defaultLimit } from '@root/constants';
@@ -9,6 +7,11 @@ import type { DefaultLayoutProps, ErrorResultProps } from '@root/types/common/pr
 import type { CommonRecord, ListRecord } from '@root/types/model';
 import Head from 'next/head';
 import { useMemo } from 'react';
+
+import dynamic from 'next/dynamic';
+
+const ErrorModal = dynamic(() => import('@root/components/ErrorModal'));
+const PageFooter = dynamic(() => import('@root/components/PageFooter'));
 
 type ListLayoutProps<TRecord extends CommonRecord> = DefaultLayoutProps &
 	ErrorResultProps & {

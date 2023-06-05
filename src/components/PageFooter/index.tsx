@@ -1,7 +1,10 @@
 import bottomBg from '@root/assets/images/bottom.webp';
-import Breadcrumb from '@root/components/Breadcrumb';
 import { getBaseUrl } from '@root/utils/client';
 import Image from 'next/image';
+
+import dynamic from 'next/dynamic';
+
+const Breadcrumb = dynamic(() => import('@root/components/Breadcrumb'));
 
 export default function PageFooter() {
 	return (

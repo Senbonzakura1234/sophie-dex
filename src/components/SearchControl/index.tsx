@@ -3,7 +3,9 @@ import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { IsDataReadyProps } from '@root/types/common/props';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 
-import SearchInput from './SearchInput';
+import dynamic from 'next/dynamic';
+
+const SearchInput = dynamic(() => import('./SearchInput'));
 
 type SearchControlProps = IsDataReadyProps;
 

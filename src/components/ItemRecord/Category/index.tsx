@@ -28,7 +28,7 @@ export default function Category({ category }: CategoryProps) {
 						isBtnDisabled && 'no-animation cursor-default !border-slate-300 !bg-slate-300 !text-slate-900'
 					}`}
 				>
-					<div className={`font-atelier ${categoryMap.get(category)?.className}`}></div>
+					<div className={`font-atelier ${categoryMap.get(category)?.className}`} />
 					{categoryMap.get(category)?.name}
 				</button>
 			</div>
@@ -37,7 +37,7 @@ export default function Category({ category }: CategoryProps) {
 				className={`absolute bottom-10 right-10 w-10 text-center font-atelier text-lg text-slate-50 md:text-4xl ${
 					categoryMap.get(category)?.className
 				}`}
-			></div>
+			/>
 		</>
 	);
 }
