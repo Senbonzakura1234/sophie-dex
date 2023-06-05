@@ -1,20 +1,11 @@
 import RecordWrapper from '@root/components/RecordWrapper';
-import type { RecordProps } from '@root/types/common/props';
-
 import type { Trait } from '@root/server/db/schema';
+import type { RecordProps } from '@root/types/common/props';
 import { nullableHandle } from '@root/utils/common';
 
-import dynamic from 'next/dynamic';
-
-const Categories = dynamic(() => import('./Categories'), {
-	loading: () => <div className='h-8 w-40 max-w-full animate-pulse rounded' />,
-});
-const ItemPresent = dynamic(() => import('./ItemPresent'), {
-	loading: () => <div className='h-6 w-40 max-w-full animate-pulse rounded' />,
-});
-const TraitMergeList = dynamic(() => import('./TraitMergeList'), {
-	loading: () => <div className='h-6 w-40 max-w-full animate-pulse rounded' />,
-});
+import Categories from './Categories';
+import ItemPresent from './ItemPresent';
+import TraitMergeList from './TraitMergeList';
 
 type TraitRecordProps = RecordProps<Trait>;
 

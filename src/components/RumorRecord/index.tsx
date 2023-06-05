@@ -1,23 +1,12 @@
 import RecordWrapper from '@root/components/RecordWrapper';
-import type { RecordProps } from '@root/types/common/props';
-
 import type { Rumor } from '@root/server/db/schema';
+import type { RecordProps } from '@root/types/common/props';
 import { nullableHandle } from '@root/utils/common';
 
-import dynamic from 'next/dynamic';
-
-const Description = dynamic(() => import('./Description'), {
-	loading: () => <div className='h-7 w-40 max-w-full animate-pulse rounded' />,
-});
-const Location = dynamic(() => import('./Location'), {
-	loading: () => <div className='h-6 w-40 max-w-full animate-pulse rounded' />,
-});
-const Price = dynamic(() => import('./Price'), {
-	loading: () => <div className='h-6 w-40 max-w-full animate-pulse rounded' />,
-});
-const RumorType = dynamic(() => import('./RumorType'), {
-	loading: () => <div className='h-6 w-40 max-w-full animate-pulse rounded' />,
-});
+import Description from './Description';
+import Location from './Location';
+import Price from './Price';
+import RumorType from './RumorType';
 
 type RumorRecordProps = RecordProps<Rumor>;
 
