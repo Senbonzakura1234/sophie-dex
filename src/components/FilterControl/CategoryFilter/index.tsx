@@ -5,7 +5,6 @@ import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { PageName } from '@root/types/common';
 import type { PageNameProps } from '@root/types/common/props';
 import type { CategoryEnum } from '@root/types/common/zod';
-import clsx from 'clsx';
 import { useMemo } from 'react';
 
 type CategoryFilterProps = PageNameProps;
@@ -33,13 +32,9 @@ export default function CategoryFilter({ pageName }: CategoryFilterProps) {
 			)}
 			setValue={setCateSelected}
 			value={cateSelected}
-			className={clsx(
-				{
-					block: !(['effect', 'rumor', 'home'] as PageName[]).includes(pageName),
-					hidden: (['effect', 'rumor', 'home'] as PageName[]).includes(pageName),
-				},
-				'my-auto w-2/3 min-w-fit sm:w-[10.25rem]',
-			)}
+			className={`my-auto w-2/3 min-w-fit sm:w-[10.25rem] ${
+				(['effect', 'rumor', 'home'] as PageName[]).includes(pageName) && 'hidden'
+			}`}
 			useCustomIcon
 			withIcon
 			useAtelierFont

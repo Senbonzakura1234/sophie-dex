@@ -37,9 +37,6 @@ dependencies:
   '@vercel/postgres':
     specifier: ^0.3.0
     version: registry.npmjs.org/@vercel/postgres@0.3.0
-  clsx:
-    specifier: ^1.2.1
-    version: registry.npmjs.org/clsx@1.2.1
   daisyui:
     specifier: ^2.52.0
     version: registry.npmjs.org/daisyui@2.52.0(autoprefixer@10.4.14)(postcss@8.4.24)
@@ -1511,13 +1508,6 @@ packages:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz}
     name: client-only
     version: 0.0.1
-    dev: false
-
-  registry.npmjs.org/clsx@1.2.1:
-    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz}
-    name: clsx
-    version: 1.2.1
-    engines: {node: '>=6'}
     dev: false
 
   registry.npmjs.org/color-convert@2.0.1:

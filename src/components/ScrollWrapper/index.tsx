@@ -1,6 +1,5 @@
 import { Root, Scrollbar, Thumb, Viewport } from '@radix-ui/react-scroll-area';
 import type { ChildrenProps, ClassNameProps } from '@root/types/common/props';
-import clsx from 'clsx';
 import { useScroll } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
@@ -32,7 +31,7 @@ export default function ScrollWrapper({ children, className, enableScrollTop }: 
 	}, [enableScrollTop, pathname, query, scrollableRef]);
 
 	return (
-		<Root className={clsx('scroll-area-root', className)} type='scroll'>
+		<Root className={`scroll-area-root ${className}`} type='scroll'>
 			<Viewport
 				className='scroll-area-viewport scroll-wrapper scroll-wrapper-horizontal relative h-full w-full'
 				ref={scrollableRef}

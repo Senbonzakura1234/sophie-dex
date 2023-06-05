@@ -1,7 +1,6 @@
 import { DocumentChartBarIcon, HomeIcon } from '@heroicons/react/24/outline';
 import { LinkIcon } from '@heroicons/react/24/solid';
 import type { PageNameProps } from '@root/types/common/props';
-import clsx from 'clsx';
 import Link from 'next/link';
 
 type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pathname: string } & PageNameProps;
@@ -42,15 +41,12 @@ export default function RecordHead({ id, isCurrentRecord, pathname, name, pageNa
 				<Link
 					href={{ pathname: `${pathname}/${id}` }}
 					as={{ pathname: `${pathname}/${id}` }}
-					className={clsx({
-						['link link-hover']: !isCurrentRecord,
-						'pointer-events-none cursor-default': isCurrentRecord,
-					})}
+					className={isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'}
 					aria-label={name}
 				>
 					<span className='flex gap-2 font-serif'>
-						<LinkIcon className={clsx({ hidden: isCurrentRecord }, 'my-auto h-4 w-4')} />
-						<DocumentChartBarIcon className={clsx({ hidden: !isCurrentRecord }, 'my-auto h-4 w-4')} />
+						<LinkIcon className={`my-auto h-4 w-4 ${isCurrentRecord && 'hidden'}`} />
+						<DocumentChartBarIcon className={`my-auto h-4 w-4 ${!isCurrentRecord && 'hidden'}`} />
 						{name}
 					</span>
 				</Link>

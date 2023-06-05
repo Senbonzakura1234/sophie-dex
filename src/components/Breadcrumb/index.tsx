@@ -3,7 +3,6 @@ import { getFramerInViewFadeUp } from '@root/animations';
 import CircleDivider from '@root/components/CircleDivider';
 import { APP_AUTHOR } from '@root/constants';
 import { tableList } from '@root/types/model';
-import clsx from 'clsx';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -22,13 +21,11 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 						<ul className='gap-1 font-serif font-extrabold'>
 							<li>
 								<Link
-									className={clsx(
-										{
-											'link-hover text-primary hover:text-primary-focus': pathname !== '/',
-											'no-animation !cursor-default !no-underline': pathname === '/',
-										},
-										'link gap-1',
-									)}
+									className={`link gap-1 ${
+										pathname === '/'
+											? 'no-animation !cursor-default !no-underline'
+											: 'link-hover text-primary hover:text-primary-focus'
+									}`}
 									href={{ pathname: '/' }}
 									as={{ pathname: '/' }}
 									aria-label='Go to homepage'
@@ -42,13 +39,11 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 								{tableList.map((n, i) => (
 									<Fragment key={n}>
 										<Link
-											className={clsx(
-												{
-													'link-hover text-primary hover:text-primary-focus': pathname !== `/${n}s`,
-													'no-animation !cursor-default !no-underline': pathname === `/${n}s`,
-												},
-												'link gap-1 capitalize',
-											)}
+											className={`link gap-1 capitalize ${
+												pathname === `/${n}s`
+													? 'no-animation !cursor-default !no-underline'
+													: 'link-hover text-primary hover:text-primary-focus'
+											}`}
 											href={{ pathname: `/${n}s` }}
 											as={{ pathname: `/${n}s` }}
 											aria-label={`Go to ${i} Search`}
@@ -67,7 +62,7 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 				</nav>
 			</motion.div>
 
-			<motion.div className={clsx({ hidden: !isShowAuthor })} {...getFramerInViewFadeUp(0.2)}>
+			<motion.div className={!isShowAuthor ? 'hidden' : ''} {...getFramerInViewFadeUp(0.2)}>
 				<Link
 					target='_blank'
 					href={{ protocol: 'https', hostname: 'github', host: 'github.com', pathname: APP_AUTHOR }}

@@ -1,6 +1,6 @@
+import { colorFilterMap } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { ColorEnum } from '@root/types/common/zod';
-import clsx from 'clsx';
 import { useMemo } from 'react';
 
 type ColorProps = { color: ColorEnum };
@@ -24,29 +24,10 @@ export default function Color({ color }: ColorProps) {
 				role='navigation'
 				aria-label={`Filter ${color} Item`}
 				disabled={!isRouterReady}
-				className={clsx(
-					{
-						'!no-animation !cursor-default': isBtnDisabled,
-
-						'!border-blue-500 !bg-blue-500': isBtnDisabled && color === 'BLUE',
-						'border-blue-500 bg-blue-500 hover:border-blue-600 hover:bg-blue-600': color === 'BLUE',
-
-						'!border-green-500 !bg-green-500': isBtnDisabled && color === 'GREEN',
-						'border-green-500 bg-green-500 hover:border-green-600 hover:bg-green-600': color === 'GREEN',
-
-						'!border-red-500 !bg-red-500': isBtnDisabled && color === 'RED',
-						'border-red-500 bg-red-500 hover:border-red-600 hover:bg-red-600': color === 'RED',
-
-						'!border-slate-500 !bg-slate-500': isBtnDisabled && color === 'WHITE',
-						'border-slate-500 bg-slate-500 hover:border-slate-600 hover:bg-slate-600': color === 'WHITE',
-
-						'!border-yellow-400 !bg-yellow-400': isBtnDisabled && color === 'YELLOW',
-						'border-yellow-400 bg-yellow-400 hover:border-yellow-500 hover:bg-yellow-500': color === 'YELLOW',
-					},
-					'btn-xs btn font-extrabold capitalize !text-slate-50',
-				)}
+				className='btn-xs btn !border-current !bg-current opacity-80 hover:opacity-100'
+				style={{ color: colorFilterMap[color].secondary }}
 			>
-				{color.toLowerCase()}
+				<span className='font-extrabold capitalize text-slate-50'>{color.toLowerCase()}</span>
 			</button>
 		</div>
 	);

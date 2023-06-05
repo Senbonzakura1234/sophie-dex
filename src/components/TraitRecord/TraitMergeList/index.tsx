@@ -1,5 +1,4 @@
 import type { HyperLinkRecord } from '@root/server/db/schema';
-import clsx from 'clsx';
 import Link from 'next/link';
 import { Fragment } from 'react';
 
@@ -7,8 +6,8 @@ type TraitMergeListProps = { mergeFrom: HyperLinkRecord[][] };
 
 export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 	return (
-		<nav className={clsx('relative z-50 flex flex-wrap gap-2', { 'max-2xl:hidden': mergeFrom.length <= 0 })}>
-			<h5 className={clsx('my-auto font-extrabold', { hidden: mergeFrom.length <= 0 })}>Merge from:</h5>
+		<nav className={`relative z-50 flex flex-wrap gap-2 ${mergeFrom.length <= 0 && 'max-xl:hidden'}`}>
+			<h5 className={`my-auto font-extrabold ${mergeFrom.length <= 0 && 'hidden'}`}>Merge from:</h5>
 
 			{mergeFrom.map((traitRecords, key) => (
 				<div className='btn-group basis-auto' key={key}>

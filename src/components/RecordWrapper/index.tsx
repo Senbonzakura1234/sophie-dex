@@ -1,11 +1,11 @@
 import { getFramerInViewFadeUp } from '@root/animations';
 import AnimationWrapper from '@root/components/AnimationWrapper';
 import { RecordPlaceholder } from '@root/components/RecordPlaceholder';
+import { colorFilterMap } from '@root/constants';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { MaybeData, RenderFunction } from '@root/types/common';
 import type { ClassNameProps, PageNameProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
-import clsx from 'clsx';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import { useMemo } from 'react';
 import RecordHead from './RecordHead';
@@ -32,23 +32,17 @@ export default function RecordWrapper<TRecord extends { id: string; name: string
 		<LazyMotion features={domAnimation} strict>
 			<motion.article
 				{...getFramerInViewFadeUp()}
-				className={clsx(
-					{
-						'shadow-primary to-base-100': !color,
-						'to-blue-500 shadow-blue-500': color === 'BLUE',
-						'to-green-500 shadow-green-500': color === 'GREEN',
-						'to-red-500 shadow-red-500': color === 'RED',
-						'to-slate-500 shadow-slate-500': color === 'WHITE',
-						'to-yellow-400 shadow-yellow-400': color === 'YELLOW',
-					},
-					className,
-					'card relative grid w-full grow-0 overflow-hidden bg-gradient-to-r from-base-100 via-base-100 shadow-lg',
-				)}
+				className={`card relative grid w-full grow-0 overflow-hidden shadow-lg ${
+					!!color
+						? 'bg-gradient-to-r from-base-100 via-base-100 to-current shadow-current'
+						: 'bg-base-100 shadow-primary'
+				} ${className}`}
+				style={color ? { color: colorFilterMap[color].primary } : undefined}
 			>
 				<AnimationWrapper
 					show={isDataReady}
 					options={getFramerInViewFadeUp(0, 50, 1)}
-					className='card-body flex flex-col gap-3'
+					className='card-body flex flex-col gap-3 text-base-content'
 					placeholder={<RecordPlaceholder />}
 				>
 					{isDataReady ? (

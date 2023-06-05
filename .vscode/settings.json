@@ -2,7 +2,6 @@
 	"cSpell.diagnosticLevel": "Hint",
 	"cSpell.ignorePaths": ["**/node_modules/**", "**/.vscode/extensions.json", ".env", "**/dist/**"],
 	"cSpell.words": [
-		"clsx",
 		"daisyui",
 		"escha",
 		"gsap",

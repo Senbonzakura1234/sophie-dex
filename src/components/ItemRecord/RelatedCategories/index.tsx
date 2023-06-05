@@ -1,6 +1,5 @@
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { RelatedCategoryEnum } from '@root/types/common/zod';
-import clsx from 'clsx';
 
 type RelatedCategoriesProps = { relatedCategories: RelatedCategoryEnum[] };
 
@@ -19,10 +18,9 @@ export default function RelatedCategories({ relatedCategories }: RelatedCategori
 					}}
 					aria-label={formatRelateCategory(r)}
 					key={k}
-					className={clsx(
-						{ 'link link-hover text-neutral/90 italic': r !== securedQuery.relatedCategory },
-						'font-serif text-xs capitalize italic',
-					)}
+					className={`font-serif text-xs capitalize italic ${
+						r !== securedQuery.relatedCategory && 'link-hover link italic text-neutral/90'
+					}`}
 				>
 					{formatRelateCategory(r)}
 				</a>

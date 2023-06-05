@@ -1,4 +1,4 @@
-import { colorTailwindMap, recipeTypeColorMap } from '@root/constants';
+import { colorFilterMap, recipeTypeColorMap } from '@root/constants';
 import type { SelectOptionItem } from '@root/types/common';
 import type { CategoryEnum, ColorEnum, RecipeTypeEnum, RumorTypeEnum } from '@root/types/common/zod';
 import type { UnicodeClass } from '@root/types/fonts/atelier';
@@ -88,7 +88,7 @@ export const colorSelectList = [
 		value: color,
 		icon: (
 			<span
-				style={{ color: colorTailwindMap[color] }}
+				style={{ color: colorFilterMap[color].primary }}
 				className='h-4 w-4 rounded-full bg-current shadow-current'
 				aria-hidden='true'
 			/>
@@ -103,7 +103,7 @@ export const recipeTypeSelectList = [
 		value: recipeType,
 		icon: (
 			<span
-				style={{ color: recipeTypeColorMap[recipeType] }}
+				style={{ color: recipeTypeColorMap[recipeType].primary }}
 				className='h-4 w-4 rounded-full bg-current shadow-current'
 				aria-hidden='true'
 			/>

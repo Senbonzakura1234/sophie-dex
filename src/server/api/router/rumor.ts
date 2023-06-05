@@ -1,4 +1,4 @@
-import { defaultLimit } from '@root/constants';
+import { defaultLimit, sortByMap } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
 import { primaryDB, secondaryDB } from '@root/server/db';
 import type { Rumor } from '@root/server/db/schema';
@@ -37,7 +37,7 @@ const getALLRumors: GetListRecords<Rumor> = async (db, { search, sortBy, directi
 		.select({ totalRecord: CountQuery, record: rumors })
 		.from(rumors)
 		.where(and(or(...OR), ...AND))
-		.orderBy(getDirection(direction)(rumors[getSortField(['price', 'name'], 'price', sortBy)]))
+		.orderBy(getDirection(direction)(rumors[getSortField(sortByMap.rumor, 'price', sortBy)]))
 		.limit(defaultLimit)
 		.offset(((page ?? 1) - 1) * defaultLimit)
 		.then(processDBListResult);

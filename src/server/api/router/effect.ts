@@ -1,4 +1,4 @@
-import { defaultLimit } from '@root/constants';
+import { defaultLimit, sortByMap } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
 import { primaryDB, secondaryDB } from '@root/server/db';
 import type { Effect } from '@root/server/db/schema';
@@ -40,7 +40,7 @@ const getALLEffects: GetListRecords<Effect> = (db, { search, sortBy, direction, 
 					: []),
 			),
 		)
-		.orderBy(getDirection(direction)(effects[getSortField(['index', 'name'], 'index', sortBy)]))
+		.orderBy(getDirection(direction)(effects[getSortField(sortByMap.effect, 'index', sortBy)]))
 		.limit(defaultLimit)
 		.offset(((page ?? 1) - 1) * defaultLimit)
 		.then(processDBListResult);

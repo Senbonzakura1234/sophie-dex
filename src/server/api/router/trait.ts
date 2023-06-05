@@ -1,4 +1,4 @@
-import { defaultLimit } from '@root/constants';
+import { defaultLimit, sortByMap } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
 import { primaryDB, secondaryDB } from '@root/server/db';
 import type { Trait } from '@root/server/db/schema';
@@ -48,7 +48,7 @@ const getALLTraits: GetListRecords<Trait> = async (db, { search, sortBy, directi
 		.select({ totalRecord: CountQuery, record: traits })
 		.from(traits)
 		.where(and(or(...OR), ...AND))
-		.orderBy(getDirection(direction)(traits[getSortField(['index', 'name'], 'index', sortBy)]))
+		.orderBy(getDirection(direction)(traits[getSortField(sortByMap.trait, 'index', sortBy)]))
 		.limit(defaultLimit)
 		.offset(((page ?? 1) - 1) * defaultLimit)
 		.then(processDBListResult);

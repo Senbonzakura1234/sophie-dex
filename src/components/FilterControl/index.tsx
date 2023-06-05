@@ -1,11 +1,11 @@
 import { getFramerFadeUp, getFramerInViewFadeUp } from '@root/animations';
 import AnimationWrapper from '@root/components/AnimationWrapper';
 import { defaultLimit } from '@root/constants';
-import type { IsBottomFilterProps, IsDataReadyProps, PageControlProps, PageNameProps } from '@root/types/common/props';
-import clsx from 'clsx';
+import type { IsBottomFilterProps, IsDataReadyProps, PageControlProps } from '@root/types/common/props';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import { useMemo } from 'react';
 
+import type { TableEnum } from '@root/types/common/zod';
 import CategoryFilter from './CategoryFilter';
 import ColorFilter from './ColorFilter';
 import Paginate from './Paginate';
@@ -14,7 +14,7 @@ import ResetFilter from './ResetFilter';
 import RumorTypeFilter from './RumorTypeFilter';
 import SortControl from './SortControl';
 
-type FilterControlProps = PageControlProps & PageNameProps & IsBottomFilterProps & IsDataReadyProps;
+type FilterControlProps = PageControlProps & IsBottomFilterProps & IsDataReadyProps & { pageName: TableEnum };
 
 export default function FilterControl({
 	page = 1,
@@ -33,42 +33,29 @@ export default function FilterControl({
 	);
 
 	return (
-		<section className={clsx({ '!z-30': isBottomFilter }, 'container relative z-40 mx-auto max-2xl:px-4')}>
+		<section className={`container relative z-40 mx-auto max-2xl:px-4 ${isBottomFilter && '!z-30'}`}>
 			<LazyMotion features={domAnimation} strict>
 				<motion.nav {...getFramerInViewFadeUp()} className='card bg-base-100 shadow-lg shadow-primary'>
 					<AnimationWrapper
 						show={isDataReady}
 						options={getFramerFadeUp(0, 10)}
-						className={clsx(
-							{
-								'2xl:place-content-end': !isBottomFilter,
-								'place-content-center': isBottomFilter,
-							},
-							'flex w-full flex-row flex-wrap gap-3 px-5 py-3',
-						)}
+						className={`flex w-full flex-row flex-wrap gap-3 px-5 py-3 ${
+							isBottomFilter ? 'place-content-center' : '2xl:place-content-end'
+						}`}
 						placeholder={<motion.div {...getFramerFadeUp(0, 10)} className='h-[60px] w-full animate-pulse' />}
 					>
-						<h2
-							className={clsx(
-								{
-									'max-2xl:block': !isBottomFilter,
-								},
-								'hidden font-extrabold',
-							)}
-						>
-							Filter Control:
-						</h2>
+						<h2 className={`hidden font-extrabold ${!isBottomFilter && 'max-2xl:block'}`}>Filter Control:</h2>
 
 						<SortControl pageName={pageName} isBottomFilter={isBottomFilter} />
 
-						<div className={clsx({ hidden: isBottomFilter }, 'flex flex-wrap gap-2')}>
+						<div className={`flex flex-wrap gap-2 ${isBottomFilter && 'hidden'}`}>
 							<RecipeTypeFilter pageName={pageName} />
 							<ColorFilter pageName={pageName} />
 							<CategoryFilter pageName={pageName} />
 							<RumorTypeFilter pageName={pageName} />
 						</div>
 
-						<div className={clsx({ hidden: isBottomFilter }, 'my-auto text-xs font-semibold text-neutral')}>
+						<div className={`my-auto text-xs font-semibold text-neutral ${isBottomFilter && 'hidden'}`}>
 							{from} - {to} of {totalRecord} {pageName.toLocaleLowerCase()}s
 						</div>
 

@@ -4,7 +4,6 @@ import { getFramerFadeUp } from '@root/animations';
 import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
 import type { ClassNameProps } from '@root/types/common/props';
-import clsx from 'clsx';
 import { LazyMotion, domAnimation } from 'framer-motion';
 
 type SelectOptionProps<V> = {
@@ -31,15 +30,12 @@ export default function SelectOption<V extends string | number | null>({
 				{({ open }) => (
 					<div className='relative'>
 						<Listbox.Button
-							className={clsx(
-								{
-									'cursor-not-allowed opacity-50': list.length <= 1,
-								},
-								'relative w-full cursor-pointer rounded-lg bg-white py-2 pl-3 pr-10 text-left text-xs shadow-lg focus:outline-none focus-visible:border-primary-focus focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-focus 2xl:text-sm',
-							)}
+							className={`relative w-full cursor-pointer rounded-lg bg-white py-2 pl-3 pr-10 text-left text-xs shadow-lg focus:outline-none focus-visible:border-primary-focus focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-focus 2xl:text-sm ${
+								list.length <= 1 && 'cursor-not-allowed opacity-50'
+							}`}
 						>
 							<span className='flex gap-2 truncate pl-1 font-bold'>
-								<span className={clsx({ 'font-atelier': useAtelierFont })}>{withIcon && value.icon}</span>
+								<span className={useAtelierFont ? 'font-atelier' : ''}>{withIcon && value.icon}</span>
 								{value.label}
 							</span>
 							<span className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2'>
@@ -60,32 +56,20 @@ export default function SelectOption<V extends string | number | null>({
 											<Listbox.Option
 												key={key}
 												className={({ active }) =>
-													clsx(
-														{
-															'bg-primary/10 text-primary': active,
-															'pl-10': withIcon || useCustomIcon,
-															'pl-4': !withIcon && !useCustomIcon,
-														},
-														'relative cursor-default select-none py-2  pr-4',
-													)
+													`relative cursor-default select-none py-2 pr-4 ${
+														active && 'bg-primary/10 text-primary'
+													} ${withIcon || useCustomIcon ? 'pl-10' : 'pl-4'}`
 												}
 												value={item}
 											>
-												<span
-													className={clsx(
-														{ 'font-bold': isSelected },
-														'2xl:text-md block truncate text-sm',
-													)}
-												>
+												<span className={`2xl:text-md block truncate text-sm ${isSelected && 'font-bold'}`}>
 													{item.label}
 												</span>
 												{(isSelected && withIcon) || useCustomIcon ? (
 													<span
-														className={clsx(
-															{ 'font-atelier': useAtelierFont },
-															{ 'text-primary': !useCustomIcon },
-															' absolute inset-y-0 left-0 flex items-center pl-3',
-														)}
+														className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
+															useAtelierFont && 'font-atelier'
+														} ${!useCustomIcon && 'text-primary'}`}
 													>
 														{useCustomIcon ? (
 															item.icon

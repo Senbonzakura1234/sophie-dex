@@ -4,7 +4,6 @@ import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { PageNameProps } from '@root/types/common/props';
 import type { RecipeTypeEnum } from '@root/types/common/zod';
-import clsx from 'clsx';
 import { useMemo } from 'react';
 
 type RecipeTypeFilterProps = PageNameProps;
@@ -28,13 +27,7 @@ export default function RecipeTypeFilter({ pageName }: RecipeTypeFilterProps) {
 			list={recipeTypeSelectList}
 			setValue={setRecipeTypeSelected}
 			value={recipeTypeSelected}
-			className={clsx(
-				{
-					block: pageName === 'item',
-					hidden: pageName !== 'item',
-				},
-				'my-auto w-2/3 min-w-fit sm:w-48',
-			)}
+			className={`my-auto w-2/3 min-w-fit sm:w-48 ${pageName !== 'item' && 'hidden'}`}
 			useCustomIcon
 			withIcon
 		/>

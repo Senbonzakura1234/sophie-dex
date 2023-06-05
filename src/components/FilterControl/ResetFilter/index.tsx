@@ -1,6 +1,5 @@
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { IsBottomFilterProps } from '@root/types/common/props';
-import clsx from 'clsx';
 import { useMemo } from 'react';
 
 type ResetFilterProps = IsBottomFilterProps;
@@ -17,7 +16,7 @@ export default function ResetFilter({ isBottomFilter: isBottomFilter }: ResetFil
 
 	return (
 		<button
-			className={clsx({ hidden: isBottomFilter }, 'btn-xs btn my-auto gap-1 capitalize')}
+			className={`btn-xs btn my-auto gap-1 capitalize ${isBottomFilter && 'hidden'}`}
 			role='navigation'
 			disabled={isDisable}
 			onClick={() => !isDisable && resetQuery()}

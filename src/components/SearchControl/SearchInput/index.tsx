@@ -1,6 +1,5 @@
 import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import { useSearchInput } from '@root/hooks/useSearchInput';
-import clsx from 'clsx';
 
 export default function SearchInput() {
 	const { performSearch, searchInput, setSearchValue, isSearchValueValid, resetSearch } = useSearchInput();
@@ -22,10 +21,9 @@ export default function SearchInput() {
 				role='navigation'
 				aria-label='Reset search query'
 				onClick={() => resetSearch()}
-				className={clsx(
-					{ 'opacity-0': !isSearchValueValid },
-					'btn-ghost btn-sm btn-circle btn my-auto border-0 hover:bg-transparent',
-				)}
+				className={`btn-ghost btn-sm btn-circle btn my-auto border-0 hover:bg-transparent ${
+					!isSearchValueValid && 'opacity-0'
+				}`}
 			>
 				<XMarkIcon width={18} height={18} />
 			</button>

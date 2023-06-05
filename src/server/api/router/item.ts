@@ -1,4 +1,4 @@
-import { defaultLimit } from '@root/constants';
+import { defaultLimit, sortByMap } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
 import { primaryDB, secondaryDB } from '@root/server/db';
 import type { Item } from '@root/server/db/schema';
@@ -44,7 +44,7 @@ const getALLItems: GetListRecords<Item> = async (
 		.select({ totalRecord: CountQuery, record: items })
 		.from(items)
 		.where(and(or(...OR), ...AND))
-		.orderBy(getDirection(direction)(items[getSortField(['index', 'level', 'name'], 'index', sortBy)]))
+		.orderBy(getDirection(direction)(items[getSortField(sortByMap.item, 'index', sortBy)]))
 		.limit(defaultLimit)
 		.offset(((page ?? 1) - 1) * defaultLimit)
 		.then(processDBListResult);

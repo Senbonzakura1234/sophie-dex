@@ -7,7 +7,6 @@ import { defaultLimit } from '@root/constants';
 import type { MaybeData, MaybeListData, RenderFunction } from '@root/types/common';
 import type { DefaultLayoutProps, ErrorResultProps } from '@root/types/common/props';
 import type { CommonRecord, ListRecord } from '@root/types/model';
-import clsx from 'clsx';
 import Head from 'next/head';
 import { useMemo } from 'react';
 
@@ -71,10 +70,7 @@ export default function ListLayout<TRecord extends CommonRecord>({
 			/>
 
 			<section
-				className={clsx('container mx-auto grid grow gap-6 max-2xl:px-4', {
-					'grid-cols-2': pageName === 'effect',
-					'2xl:grid-cols-2': pageName !== 'item',
-				})}
+				className={`container mx-auto grid grow gap-6 max-2xl:px-4 ${pageName !== 'item' && 'lg:grid-cols-2'}`}
 			>
 				{renderChild}
 			</section>
