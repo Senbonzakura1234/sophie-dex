@@ -35,7 +35,8 @@ export default function Image() {
 					src={`${getBaseUrl()}/assets/images/sophie-logo.webp`}
 					alt={alt}
 					style={{ objectFit: 'cover' }}
-					width='100%'
+					width={736}
+					height={303}
 				/>
 			</div>
 		),
