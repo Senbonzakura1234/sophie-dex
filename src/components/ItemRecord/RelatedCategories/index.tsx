@@ -11,17 +11,17 @@ export default function RelatedCategories({ relatedCategories }: RelatedCategori
 
 	return (
 		<div className='mt-auto flex flex-wrap gap-2'>
-			{relatedCategories.map((r, k) => (
+			{relatedCategories.map((relatedCategory, k) => (
 				<Link
-					aria-label={formatRelateCategory(r)}
+					aria-label={formatRelateCategory(relatedCategory)}
 					key={k}
 					className={`font-serif text-xs capitalize italic ${
-						r !== securedQuery.relatedCategory && 'link-hover link italic text-neutral/90'
+						relatedCategory !== securedQuery.relatedCategory && 'link-hover link italic text-neutral/90'
 					}`}
-					href={{ query: { relatedCategory: r } }}
-					as={{ query: { relatedCategory: r } }}
+					href={{ query: { relatedCategory } }}
+					as={{ query: { relatedCategory } }}
 				>
-					{formatRelateCategory(r)}
+					{formatRelateCategory(relatedCategory)}
 				</Link>
 			))}
 		</div>
