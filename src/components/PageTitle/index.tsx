@@ -23,7 +23,7 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 				placeholder='blur'
 				src={topBg}
 				alt='sophie'
-				sizes={pageName !== 'home' ? '50vw' : undefined}
+				sizes={pageName !== 'home' ? '50vw' : '100vw'}
 				priority={pageName !== 'home'}
 				data-url={`${getBaseUrl(true)}/assets/images/top.jpg`}
 			/>
