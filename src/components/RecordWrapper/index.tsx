@@ -4,7 +4,7 @@ import { RecordPlaceholder } from '@root/components/RecordPlaceholder';
 import { colorFilterMap } from '@root/constants';
 import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { MaybeData, RenderFunction } from '@root/types/common';
-import type { ClassNameProps, PageNameProps } from '@root/types/common/props';
+import type { ClassNameProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import { useMemo } from 'react';
@@ -15,11 +15,10 @@ const RecordHead = dynamic(() => import('./RecordHead'), {
 	loading: () => <div className='h-7 w-40 max-w-full animate-pulse rounded' />,
 });
 
-type RecordWrapperProps<TRecord extends { id: string; name: string }> = ClassNameProps &
-	PageNameProps & {
-		color?: ColorEnum;
-		children?: RenderFunction<TRecord>;
-	} & MaybeData<TRecord>;
+type RecordWrapperProps<TRecord extends { id: string; name: string }> = ClassNameProps & {
+	color?: ColorEnum;
+	children?: RenderFunction<TRecord>;
+} & MaybeData<TRecord>;
 
 export default function RecordWrapper<TRecord extends { id: string; name: string }>({
 	children,
@@ -27,7 +26,6 @@ export default function RecordWrapper<TRecord extends { id: string; name: string
 	color,
 	isDataReady,
 	data,
-	pageName,
 }: RecordWrapperProps<TRecord>) {
 	const { securedIdQuery, pathname } = useIdQuery();
 
@@ -56,7 +54,6 @@ export default function RecordWrapper<TRecord extends { id: string; name: string
 							isCurrentRecord={securedIdQuery.id === data.id}
 							name={data.name}
 							pathname={pathname}
-							pageName={pageName}
 						/>
 					) : null}
 

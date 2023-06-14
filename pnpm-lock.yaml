@@ -62,8 +62,8 @@ dependencies:
     specifier: 1.12.3
     version: registry.npmjs.org/superjson@1.12.3
   use-pull-to-refresh:
-    specifier: ^2.0.1
-    version: registry.npmjs.org/use-pull-to-refresh@2.0.1
+    specifier: ^2.0.2
+    version: registry.npmjs.org/use-pull-to-refresh@2.0.2
   zod:
     specifier: ^3.21.4
     version: registry.npmjs.org/zod@3.21.4
@@ -7775,10 +7775,10 @@ packages:
     dependencies:
       punycode: registry.npmjs.org/punycode@2.3.0
 
-  registry.npmjs.org/use-pull-to-refresh@2.0.1:
-    resolution: {integrity: sha512-MygRSyKCYBAa4PJC8ACXN/k0gLVbiihA++ny4jSu3822+eiK+lx4SWCx3XWeHJNIMPfxt8rO7//9T+8TYddnzw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/use-pull-to-refresh/-/use-pull-to-refresh-2.0.1.tgz}
+  registry.npmjs.org/use-pull-to-refresh@2.0.2:
+    resolution: {integrity: sha512-Qiq9mv8PspoBYS3TVii/09K57Nez8liaOQcLcpDq4skTZkFaRA3M3VhX33B232JLRpI5ty0ZkR2RNCQ1OCZhtw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/use-pull-to-refresh/-/use-pull-to-refresh-2.0.2.tgz}
     name: use-pull-to-refresh
-    version: 2.0.1
+    version: 2.0.2
     dependencies:
       react: registry.npmjs.org/react@18.2.0
     dev: false

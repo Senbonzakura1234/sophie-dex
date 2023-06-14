@@ -8,14 +8,14 @@ const Breadcrumb = dynamic(() => import('@root/components/Breadcrumb'));
 
 export default function PageFooter() {
 	return (
-		<section className='2xl:h1/4 relative h-1/3 min-h-[300px] w-full overflow-hidden shadow-inner'>
+		<section className='relative min-h-[300px] w-full overflow-hidden shadow-inner'>
 			<Image
 				className='object-cover'
 				fill
 				placeholder='blur'
 				src={bottomBg}
 				alt='sophie'
-				sizes='50vh'
+				sizes='50vw'
 				priority={false}
 				data-url={`${getBaseUrl(true)}/assets/images/bottom.jpg`}
 			/>

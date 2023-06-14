@@ -8,6 +8,7 @@ import type { CommonRecord, ListRecord } from '@root/types/model';
 import Head from 'next/head';
 import { useMemo } from 'react';
 
+import ScrollWrapper from '@root/components/ScrollWrapper';
 import dynamic from 'next/dynamic';
 
 const ErrorModal = dynamic(() => import('@root/components/ErrorModal'));
@@ -53,7 +54,7 @@ export default function ListLayout<TRecord extends CommonRecord>({
 	const renderChild = useMemo(() => (children && !isError ? children(listData) : null), [children, isError, listData]);
 
 	return (
-		<>
+		<ScrollWrapper className='h-screen w-screen bg-base-200 !antialiased' enableScrollTop>
 			<Head>
 				<title>{pageName}</title>
 				<meta name='og:title' content={pageName} key='title' />
@@ -90,6 +91,6 @@ export default function ListLayout<TRecord extends CommonRecord>({
 			<PageFooter />
 
 			{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
-		</>
+		</ScrollWrapper>
 	);
 }

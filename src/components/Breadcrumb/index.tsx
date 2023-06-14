@@ -39,10 +39,8 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 								{tableList.map((n, i) => (
 									<Fragment key={n}>
 										<Link
-											className={`link gap-1 capitalize ${
-												pathname === `/${n}s`
-													? 'no-animation !cursor-default !no-underline'
-													: 'link-hover text-primary hover:text-primary-focus'
+											className={`link-hover link gap-1 capitalize  ${
+												!pathname.startsWith(`/${n}s`) && 'text-primary hover:text-primary-focus'
 											}`}
 											href={{ pathname: `/${n}s` }}
 											as={{ pathname: `/${n}s` }}

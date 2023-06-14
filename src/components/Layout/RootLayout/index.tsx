@@ -1,4 +1,3 @@
-import ScrollWrapper from '@root/components/ScrollWrapper';
 import type { ChildrenProps } from '@root/types/common/props';
 
 import HeadLayout from './HeadLayout';
@@ -13,9 +12,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
 			<PageRefresh />
 
-			<ScrollWrapper className='h-screen w-screen bg-base-200 !antialiased' enableScrollTop>
-				{children}
-			</ScrollWrapper>
+			{children}
 		</main>
 	);
 }

@@ -1,24 +1,13 @@
 {
 	"name": "sophie-dex",
-	"version": "3.0.0",
-	"private": true,
+	"version": "4.0.0",
+	"private": false,
+	"license": "MIT",
 	"author": "Senbonzakura1234 <anhdungpham090@gmail.com>",
 	"description": "A wiki page created for Atelier Sophie DX",
 	"repository": {
-		"github": {
-			"type": "git",
-			"url": {
-				"https": "https://github.com/Senbonzakura1234/sophie-dex.git",
-				"ssh": "git@github.com:Senbonzakura1234/sophie-dex.git"
-			}
-		},
-		"gitlab": {
-			"type": "git",
-			"url": {
-				"https": "https://gitlab.com/Senbonzakura1234/sophie-dex.git",
-				"ssh": "git@gitlab.com:Senbonzakura1234/sophie-dex.git"
-			}
-		}
+		"url": "https://github.com/Senbonzakura1234/sophie-dex.git",
+		"type": "git"
 	},
 	"scripts": {
 		"build:local": "del .next && next build",
@@ -50,7 +39,7 @@
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"superjson": "1.12.3",
-		"use-pull-to-refresh": "^2.0.1",
+		"use-pull-to-refresh": "^2.0.2",
 		"zod": "^3.21.4"
 	},
 	"devDependencies": {

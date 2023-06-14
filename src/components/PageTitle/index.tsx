@@ -15,9 +15,7 @@ type PageTitleProps = PageNameProps;
 export default function PageTitle({ pageName }: PageTitleProps) {
 	return (
 		<section
-			className={`relative w-full overflow-hidden shadow-inner ${
-				pageName === 'home' ? 'h-full' : 'h-1/3 min-h-[300px]'
-			}`}
+			className={`relative w-full overflow-hidden shadow-inner ${pageName === 'home' ? 'h-full' : 'min-h-[300px]'}`}
 		>
 			<Image
 				className='object-cover'
@@ -25,7 +23,7 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 				placeholder='blur'
 				src={topBg}
 				alt='sophie'
-				sizes='50vh'
+				sizes={pageName !== 'home' ? '50vw' : undefined}
 				priority={pageName !== 'home'}
 				data-url={`${getBaseUrl(true)}/assets/images/top.jpg`}
 			/>
@@ -39,11 +37,11 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 						className='text-shadow-dark w-full text-center font-serif text-5xl font-bold text-secondary xl:text-6xl 2xl:text-7xl'
 					>
 						<Image
-							className={`mx-auto ${pageName !== 'home' && 'hidden'}`}
+							className={`mx-auto w-[700px] max-w-full ${pageName !== 'home' && 'hidden'}`}
 							src={sophieLogo}
 							alt={pageName}
 							priority={pageName === 'home'}
-							sizes='50vw'
+							width={700}
 							data-url={`${getBaseUrl(true)}/assets/images/sophie-logo.png`}
 						/>
 
