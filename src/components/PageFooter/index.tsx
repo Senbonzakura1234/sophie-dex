@@ -16,7 +16,6 @@ export default function PageFooter() {
 				src={bottomBg}
 				alt='sophie'
 				sizes='50vw'
-				priority={false}
 				data-url={`${getBaseUrl(true)}/assets/images/bottom.jpg`}
 			/>
 
