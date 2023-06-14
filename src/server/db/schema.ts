@@ -39,7 +39,7 @@ export type HyperLinkMap = {
 export const effects = pgTable('effects', {
 	id: uuid('id').primaryKey(),
 	name: varchar('name', { length: 256 }).notNull(),
-	keyWords: varchar('keyWords', { length: 256 }).notNull(),
+	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	index: smallint('index').notNull(),
 	description: varchar('description', { length: 256 }).notNull(),
 });
@@ -47,37 +47,37 @@ export const effects = pgTable('effects', {
 export const items = pgTable('items', {
 	id: uuid('id').primaryKey(),
 	name: varchar('name', { length: 256 }).notNull(),
-	keyWords: varchar('keyWords', { length: 256 }).notNull(),
+	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	index: smallint('index').notNull(),
 	description: jsonb('description').$type<ItemDescription>().notNull(),
 	color: varchar('color', { enum: colorList, length: 100 }).notNull(),
-	relatedCategories: varchar('relatedCategories', { enum: relatedCategoryList, length: 100 }).array().notNull(),
+	relatedCategories: varchar('related_categories', { enum: relatedCategoryList, length: 100 }).array().notNull(),
 	category: varchar('category', { enum: categoryList, length: 100 }).notNull(),
 	level: smallint('level').notNull(),
-	recipeType: varchar('recipeType', { enum: recipeTypeList, length: 100 }),
-	recipeIdea: jsonb('recipeIdea').$type<HyperLinkMap>(),
-	traitPresent: jsonb('traitPresent').$type<HyperLinkRecord>(),
+	recipeType: varchar('recipe_type', { enum: recipeTypeList, length: 100 }),
+	recipeIdea: jsonb('recipe_idea').$type<HyperLinkMap>(),
+	traitPresent: jsonb('trait_present').$type<HyperLinkRecord>(),
 });
 
 export const rumors = pgTable('rumors', {
 	id: uuid('id').primaryKey(),
 	name: varchar('name', { length: 256 }).notNull(),
-	keyWords: varchar('keyWords', { length: 256 }).notNull(),
+	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	description: jsonb('description').$type<HyperLinkMap>().notNull(),
 	location: varchar('location', { length: 256 }).notNull(),
 	price: smallint('price').notNull(),
-	rumorType: varchar('rumorType', { enum: rumorTypeList, length: 100 }).notNull(),
+	rumorType: varchar('rumor_type', { enum: rumorTypeList, length: 100 }).notNull(),
 });
 
 export const traits = pgTable('traits', {
 	id: uuid('id').primaryKey(),
 	name: varchar('name', { length: 256 }).notNull(),
-	keyWords: varchar('keyWords', { length: 256 }).notNull(),
+	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	index: smallint('index').notNull(),
 	description: varchar('description', { length: 256 }).notNull(),
 	categories: varchar('categories', { enum: categoryList, length: 100 }).array().notNull(),
-	mergeFrom: jsonb('mergeFrom').$type<HyperLinkRecord>().array(2).array().notNull(),
-	itemPresent: jsonb('itemPresent').$type<HyperLinkRecord>(),
+	mergeFrom: jsonb('merge_from').$type<HyperLinkRecord>().array(2).array().notNull(),
+	itemPresent: jsonb('item_present').$type<HyperLinkRecord>(),
 });
 
 export type Effect = InferModel<typeof effects>;
