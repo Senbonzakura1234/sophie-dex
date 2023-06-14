@@ -28,8 +28,6 @@ const getTrait: GetRecord<Trait> = (db, id) =>
 		.then(([res]) => res);
 
 const getALLTraits: GetListRecords<Trait> = async (db, { search, sortBy, direction, category, page }) => {
-	console.log(search);
-
 	const OR: SQL[] = search
 		? [
 				ilike(traits.name, `%${search}%`),
@@ -37,8 +35,6 @@ const getALLTraits: GetListRecords<Trait> = async (db, { search, sortBy, directi
 				ilike(traits.keyWords, `%${search}%`),
 		  ]
 		: [];
-
-	console.log(OR);
 
 	const AND: SQL[] = [];
 
