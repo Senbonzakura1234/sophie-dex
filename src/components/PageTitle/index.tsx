@@ -24,7 +24,7 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 				src={topBg}
 				alt='sophie'
 				sizes={pageName !== 'home' ? '50vw' : '100vw'}
-				priority={pageName !== 'home'}
+				priority={false}
 				data-url={`${getBaseUrl(true)}/assets/images/top.jpg`}
 			/>
 
