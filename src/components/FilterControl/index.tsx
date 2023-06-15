@@ -77,7 +77,7 @@ export default function FilterControl({
 
 					<Paginate page={page} totalPage={totalPage} />
 
-					{isBottomFilter ? <ResetFilter /> : null}
+					{!isBottomFilter ? <ResetFilter /> : null}
 				</div>
 			</nav>
 		</section>
