@@ -23,6 +23,7 @@ export default function ScrollWrapper({ children, className, enableScrollTop }: 
 
 	useEffect(() => {
 		scrollYProgress.on('change', e => {
+			if (!enableScrollTop) return;
 			if (!scrollableRef.current || scrollableRef.current.scrollHeight < 2 * scrollableRef.current.offsetHeight)
 				return setIsShowScrollTop(false);
 
@@ -31,7 +32,7 @@ export default function ScrollWrapper({ children, className, enableScrollTop }: 
 			if (e > 0.6 && !isShowScrollTop) return setIsShowScrollTop(true);
 			if (e <= 0.6 && isShowScrollTop) return setIsShowScrollTop(false);
 		});
-	}, [isShowScrollTop, scrollYProgress]);
+	}, [enableScrollTop, isShowScrollTop, scrollYProgress]);
 
 	useEffect(() => {
 		if (scrollableRef?.current && enableScrollTop) scrollableRef.current.scrollTo({ top: 0, behavior: 'smooth' });
@@ -39,7 +40,7 @@ export default function ScrollWrapper({ children, className, enableScrollTop }: 
 
 	return (
 		<>
-			<PageRefresh isDisabled={isDisabledPullToRefresh} />
+			{enableScrollTop ? <PageRefresh isDisabled={isDisabledPullToRefresh} /> : null}
 
 			<Root className={`scroll-area-root ${className}`} type='scroll'>
 				<Viewport
@@ -53,7 +54,7 @@ export default function ScrollWrapper({ children, className, enableScrollTop }: 
 					<Thumb className='scroll-area-thumb' />
 				</Scrollbar>
 
-				{enableScrollTop && <ScrollToTop isShow={isShowScrollTop} refObject={scrollableRef} />}
+				{enableScrollTop ? <ScrollToTop isShow={isShowScrollTop} refObject={scrollableRef} /> : null}
 			</Root>
 		</>
 	);

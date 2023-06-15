@@ -1,9 +1,14 @@
 {
 	"name": "sophie-dex",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"private": false,
 	"license": "MIT",
-	"author": "Senbonzakura1234 <anhdungpham090@gmail.com>",
+	"author": {
+		"name": "Senbonzakura1234",
+		"email": "anhdungpham090@gmail.com",
+		"url": "https://github.com/Senbonzakura1234"
+	},
+	"homepage": "https://sophie-dex.vercel.app",
 	"description": "A wiki page created for Atelier Sophie DX",
 	"repository": {
 		"url": "https://github.com/Senbonzakura1234/sophie-dex.git",

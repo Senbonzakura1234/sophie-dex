@@ -3,6 +3,7 @@ import { getBaseUrl } from '@root/utils/client';
 import Image from 'next/image';
 
 import dynamic from 'next/dynamic';
+import AppVersion from '../AppVersion';
 
 const Breadcrumb = dynamic(() => import('@root/components/Breadcrumb'));
 
@@ -24,6 +25,8 @@ export default function PageFooter() {
 			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-3 px-4 pt-5 2xl:gap-6'>
 				<Breadcrumb isShowAuthor={true} />
 			</div>
+
+			<AppVersion />
 		</section>
 	);
 }
