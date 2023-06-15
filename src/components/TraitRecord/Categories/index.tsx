@@ -1,17 +1,13 @@
 import { categoryMap, hideCategoryOnTrait } from '@root/components/SubComponent';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { CategoryEnum } from '@root/types/common/zod';
-import { useCallback } from 'react';
 
 type CategoriesProps = { categories: CategoryEnum[] };
 
 function Categories({ categories }: CategoriesProps) {
 	const { securedQuery, updateQuery, isRouterReady } = useSearchQuery();
 
-	const isClickAble = useCallback(
-		(code: CategoryEnum) => categories.includes(code) && isRouterReady,
-		[isRouterReady, categories],
-	);
+	const isClickAble = (code: CategoryEnum) => categories.includes(code) && isRouterReady;
 
 	return (
 		<nav className='mt-auto flex max-w-fit flex-wrap gap-2 2xl:pt-3'>

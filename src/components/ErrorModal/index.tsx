@@ -1,27 +1,17 @@
 import { getFramerFade, getFramerFadeUp } from '@root/animations';
 import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { ErrorResultProps } from '@root/types/common/props';
-import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
 import { m as motion } from 'framer-motion';
 import Link from 'next/link';
-import { useMemo } from 'react';
 
 type ErrorModalProps = ErrorResultProps;
 
-export default function ErrorModal({ isError, errorData, errorMessage }: ErrorModalProps) {
-	const {
-		error: { httpStatus },
-		message,
-	}: { error: DefaultErrorData; message: string } = useMemo(
-		() => ({
-			error: errorData ?? {
-				code: 'INTERNAL_SERVER_ERROR',
-				httpStatus: 400,
-			},
-			message: errorMessage || 'Unknown Error Occur In System',
-		}),
-		[errorData, errorMessage],
-	);
+export default function ErrorModal({
+	isError,
+	errorData,
+	errorMessage = 'Unknown Error Occur In System',
+}: ErrorModalProps) {
+	const httpStatus = errorData ? errorData.httpStatus : 400;
 
 	return (
 		<AnimationWrapper
@@ -38,7 +28,7 @@ export default function ErrorModal({ isError, errorData, errorMessage }: ErrorMo
 				<div className='card-body place-content-center text-center font-serif'>
 					<div className='grid gap-1'>
 						<h1 className='font-mono text-7xl tracking-widest md:text-9xl'>{httpStatus}</h1>
-						<span className='font-semibold md:text-2xl'>{message}</span>
+						<span className='font-semibold md:text-2xl'>{errorMessage}</span>
 					</div>
 
 					<div>

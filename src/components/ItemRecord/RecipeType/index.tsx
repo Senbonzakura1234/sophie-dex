@@ -1,17 +1,13 @@
 import { recipeTypeColorMap } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { RecipeTypeEnum } from '@root/types/common/zod';
-import { useMemo } from 'react';
 
 type RecipeTypeProps = { recipeType: RecipeTypeEnum };
 
 export default function RecipeType({ recipeType }: RecipeTypeProps) {
 	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
 
-	const isBtnDisabled = useMemo(
-		() => !isRouterReady || securedQuery.recipeType === recipeType,
-		[recipeType, isRouterReady, securedQuery.recipeType],
-	);
+	const isBtnDisabled = !isRouterReady || securedQuery.recipeType === recipeType;
 
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>

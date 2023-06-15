@@ -1,17 +1,13 @@
 import { categoryMap } from '@root/components/SubComponent';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { CategoryEnum } from '@root/types/common/zod';
-import { useMemo } from 'react';
 
 type CategoryProps = { category: CategoryEnum };
 
 export default function Category({ category }: CategoryProps) {
 	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
 
-	const isBtnDisabled = useMemo(
-		() => !isRouterReady || securedQuery.category === category,
-		[category, isRouterReady, securedQuery.category],
-	);
+	const isBtnDisabled = !isRouterReady || securedQuery.category === category;
 
 	return (
 		<>

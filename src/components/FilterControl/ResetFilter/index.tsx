@@ -8,9 +8,7 @@ export default function ResetFilter({ isBottomFilter: isBottomFilter }: ResetFil
 	const { resetQuery, isRouterReady, securedQuery } = useSearchQuery();
 
 	const isDisable = useMemo(
-		() =>
-			!Object.values(securedQuery ?? {}).some(value => typeof value === 'string' || typeof value === 'number') &&
-			isRouterReady,
+		() => !Object.values(securedQuery ?? {}).some(value => value !== null) && isRouterReady,
 		[isRouterReady, securedQuery],
 	);
 

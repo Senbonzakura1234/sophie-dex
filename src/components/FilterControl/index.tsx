@@ -3,7 +3,6 @@ import AnimationWrapper from '@root/components/AnimationWrapper';
 import { defaultLimit } from '@root/constants';
 import type { IsBottomFilterProps, IsDataReadyProps, PageControlProps } from '@root/types/common/props';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
-import { useMemo } from 'react';
 
 import type { TableEnum } from '@root/types/common/zod';
 
@@ -41,13 +40,8 @@ export default function FilterControl({
 	isDataReady,
 	pageName,
 }: FilterControlProps) {
-	const { from, to } = useMemo(
-		() => ({
-			from: (page - 1) * defaultLimit + 1,
-			to: page * defaultLimit > totalRecord ? totalRecord : page * defaultLimit,
-		}),
-		[page, totalRecord],
-	);
+	const from = (page - 1) * defaultLimit + 1;
+	const to = page * defaultLimit > totalRecord ? totalRecord : page * defaultLimit;
 
 	return (
 		<section className={`container relative z-40 mx-auto max-2xl:px-4 ${isBottomFilter && '!z-30'}`}>

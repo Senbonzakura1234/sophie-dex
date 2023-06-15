@@ -2,17 +2,13 @@ import { rumorTypeMap } from '@root/components/SubComponent';
 import { rumorTypeColorMap } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { RumorTypeEnum } from '@root/types/common/zod';
-import { useMemo } from 'react';
 
 type RumorTypeProps = { rumorType: RumorTypeEnum };
 
 export default function RumorType({ rumorType }: RumorTypeProps) {
 	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
 
-	const isBtnDisabled = useMemo(
-		() => !isRouterReady || securedQuery.rumorType === rumorType,
-		[isRouterReady, rumorType, securedQuery.rumorType],
-	);
+	const isBtnDisabled = !isRouterReady || securedQuery.rumorType === rumorType;
 
 	return (
 		<>

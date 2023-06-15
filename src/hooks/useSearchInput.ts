@@ -1,5 +1,5 @@
 import type { SearchInput, SetSearchInput } from '@root/types/common';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useSearchQuery } from './useSecuredRouter';
 
@@ -14,22 +14,17 @@ type UseSearchInput = () => {
 export const useSearchInput: UseSearchInput = () => {
 	const { securedQuery, updateQuery } = useSearchQuery();
 
-	const defaultSearchValue = useMemo(() => securedQuery.search ?? null, [securedQuery.search]);
-
+	const defaultSearchValue = securedQuery.search ?? null;
 	const [searchValue, setSearchValue] = useState<SearchInput>(defaultSearchValue);
 
-	const searchInput = useMemo(() => searchValue || '', [searchValue]);
-	const isSearchValueValid = useMemo(() => searchInput.length > 0, [searchInput.length]);
+	const searchInput = searchValue || '';
+	const isSearchValueValid = searchInput.length > 0;
 
-	const performSearch = useCallback(
-		() => updateQuery({ search: searchValue, page: null }),
-		[searchValue, updateQuery],
-	);
-
-	const resetSearch = useCallback(() => {
+	const performSearch = () => updateQuery({ search: searchValue, page: null });
+	const resetSearch = () => {
 		setSearchValue(() => null);
 		if (searchValue === securedQuery.search) updateQuery({ search: null, page: null });
-	}, [searchValue, securedQuery.search, updateQuery]);
+	};
 
 	useEffect(() => {
 		setSearchValue(() => defaultSearchValue);

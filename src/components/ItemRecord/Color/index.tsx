@@ -1,17 +1,13 @@
 import { colorFilterMap } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { ColorEnum } from '@root/types/common/zod';
-import { useMemo } from 'react';
 
 type ColorProps = { color: ColorEnum };
 
 export default function Color({ color }: ColorProps) {
 	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
 
-	const isBtnDisabled = useMemo(
-		() => !isRouterReady || securedQuery.color === color,
-		[color, isRouterReady, securedQuery.color],
-	);
+	const isBtnDisabled = !isRouterReady || securedQuery.color === color;
 
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>

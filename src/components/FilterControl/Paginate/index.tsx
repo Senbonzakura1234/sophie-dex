@@ -5,7 +5,6 @@ import {
 	ChevronRightIcon,
 } from '@heroicons/react/24/solid';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import { useMemo } from 'react';
 
 type PaginateProps = { page: number; totalPage: number };
 
@@ -14,8 +13,8 @@ import GoToPageSelect from './GoToPageSelect';
 export default function Paginate({ page, totalPage }: PaginateProps) {
 	const { isRouterReady, updateQuery } = useSearchQuery();
 
-	const isPreviousDisable = useMemo(() => !isRouterReady || page <= 1, [isRouterReady, page]);
-	const isNextDisable = useMemo(() => !isRouterReady || page >= totalPage, [isRouterReady, page, totalPage]);
+	const isPreviousDisable = !isRouterReady || page <= 1;
+	const isNextDisable = !isRouterReady || page >= totalPage;
 
 	return (
 		<div className='form-control'>

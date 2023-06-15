@@ -27,13 +27,13 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 	errorMessage,
 	rawData,
 }: DetailLayoutProps<TRecord>) {
-	const result: MaybeData<TRecord> = useMemo(
-		() =>
-			!!rawData ? { data: rawData, isDataReady: true as const } : { data: undefined, isDataReady: false as const },
-		[rawData],
-	);
+	const renderChild = useMemo(() => {
+		const result = !!rawData
+			? { data: rawData, isDataReady: true as const }
+			: { data: undefined, isDataReady: false as const };
 
-	const renderChild = useMemo(() => (children ? children(result) : null), [children, result]);
+		return children ? children(result) : null;
+	}, [children, rawData]);
 
 	const renderExtraHead = useMemo(() => (rawData && extraHead ? extraHead(rawData) : null), [rawData, extraHead]);
 

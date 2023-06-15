@@ -2,7 +2,6 @@ import { sortByMap } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { IsBottomFilterProps } from '@root/types/common/props';
 import type { TableEnum } from '@root/types/common/zod';
-import { useMemo } from 'react';
 import SortBtn from './SortBtn';
 
 type SortControlProps = IsBottomFilterProps & { pageName: TableEnum };
@@ -10,15 +9,9 @@ type SortControlProps = IsBottomFilterProps & { pageName: TableEnum };
 export default function SortControl({ pageName, isBottomFilter: isBottomFilter }: SortControlProps) {
 	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
 
-	const { sortBy, direction } = useMemo(
-		() => ({
-			sortBy: securedQuery.sortBy || (pageName === 'rumor' ? 'price' : 'index'),
-			direction: securedQuery.direction || 'asc',
-		}),
-		[pageName, securedQuery.direction, securedQuery.sortBy],
-	);
-
-	const sortFieldList = useMemo(() => sortByMap[pageName], [pageName]);
+	const sortBy = securedQuery.sortBy || (pageName === 'rumor' ? 'price' : 'index');
+	const direction = securedQuery.direction || 'asc';
+	const sortFieldList = sortByMap[pageName];
 
 	return (
 		<>
