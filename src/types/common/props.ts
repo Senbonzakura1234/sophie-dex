@@ -11,7 +11,6 @@ export type ChildrenProps = { children?: ReactNode };
 export type RefProps<E> = { refObject?: RefObject<E> };
 export type PageNameProps = { pageName: PageName };
 export type IsDataReadyProps = { isDataReady: boolean };
-export type IsBottomFilterProps = { isBottomFilter?: boolean };
 export type PageControlProps = {
 	page: number;
 	totalPage: number;

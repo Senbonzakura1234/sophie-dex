@@ -2,7 +2,6 @@ import SelectOption from '@root/components/SelectOption';
 import { categoryDefaultSelect, categorySelectList } from '@root/components/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { PageName } from '@root/types/common';
 import type { PageNameProps } from '@root/types/common/props';
 import type { CategoryEnum } from '@root/types/common/zod';
 import { useMemo } from 'react';
@@ -32,9 +31,7 @@ export default function CategoryFilter({ pageName }: CategoryFilterProps) {
 			)}
 			setValue={setCateSelected}
 			value={cateSelected}
-			className={`my-auto w-2/3 min-w-fit sm:w-[10.25rem] ${
-				(['effect', 'rumor', 'home'] as PageName[]).includes(pageName) && 'hidden'
-			}`}
+			className='my-auto w-2/3 min-w-fit sm:w-[10.25rem]'
 			useCustomIcon
 			withIcon
 			useAtelierFont

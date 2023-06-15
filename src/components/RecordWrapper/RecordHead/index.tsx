@@ -5,6 +5,8 @@ import Link from 'next/link';
 type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pathname: string };
 
 export default function RecordHead({ id, isCurrentRecord, pathname, name }: RecordHeadProps) {
+	const Icon = isCurrentRecord ? DocumentChartBarIcon : LinkIcon;
+
 	return (
 		<div className='card-title'>
 			<Link
@@ -14,8 +16,7 @@ export default function RecordHead({ id, isCurrentRecord, pathname, name }: Reco
 				aria-label={name}
 			>
 				<span className='flex gap-2 font-serif'>
-					<LinkIcon className={`my-auto h-4 w-4 ${isCurrentRecord && 'hidden'}`} />
-					<DocumentChartBarIcon className={`my-auto h-4 w-4 ${!isCurrentRecord && 'hidden'}`} />
+					<Icon className='my-auto h-4 w-4' />
 					{name}
 				</span>
 			</Link>

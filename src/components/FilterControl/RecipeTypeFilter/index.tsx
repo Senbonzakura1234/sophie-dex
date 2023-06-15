@@ -2,13 +2,10 @@ import SelectOption from '@root/components/SelectOption';
 import { recipeTypeDefaultSelect, recipeTypeSelectList } from '@root/components/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { PageNameProps } from '@root/types/common/props';
 import type { RecipeTypeEnum } from '@root/types/common/zod';
 import { useMemo } from 'react';
 
-type RecipeTypeFilterProps = PageNameProps;
-
-export default function RecipeTypeFilter({ pageName }: RecipeTypeFilterProps) {
+export default function RecipeTypeFilter() {
 	const { securedQuery, updateQuery, isRouterReady } = useSearchQuery();
 
 	const defaultRecipeType = useMemo(
@@ -27,7 +24,7 @@ export default function RecipeTypeFilter({ pageName }: RecipeTypeFilterProps) {
 			list={recipeTypeSelectList}
 			setValue={setRecipeTypeSelected}
 			value={recipeTypeSelected}
-			className={`my-auto w-2/3 min-w-fit sm:w-48 ${pageName !== 'item' && 'hidden'}`}
+			className='my-auto w-2/3 min-w-fit sm:w-48'
 			useCustomIcon
 			withIcon
 		/>

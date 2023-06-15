@@ -1,5 +1,6 @@
 import FilterControl from '@root/components/FilterControl';
 import PageTitle from '@root/components/PageTitle';
+import ScrollWrapper from '@root/components/ScrollWrapper';
 import SearchControl from '@root/components/SearchControl';
 import { defaultLimit } from '@root/constants';
 import type { MaybeData, MaybeListData, RenderFunction } from '@root/types/common';
@@ -8,7 +9,6 @@ import type { CommonRecord, ListRecord } from '@root/types/model';
 import Head from 'next/head';
 import { useMemo } from 'react';
 
-import ScrollWrapper from '@root/components/ScrollWrapper';
 import dynamic from 'next/dynamic';
 
 const ErrorModal = dynamic(() => import('@root/components/ErrorModal'));
@@ -63,18 +63,12 @@ export default function ListLayout<TRecord extends CommonRecord>({
 
 			<PageTitle pageName={pageName} />
 
-			<SearchControl isDataReady={isDataReady} />
+			<SearchControl />
 
-			<FilterControl
-				pageName={pageName}
-				page={page || 1}
-				totalPage={totalPage}
-				totalRecord={totalRecord}
-				isDataReady={isDataReady}
-			/>
+			<FilterControl pageName={pageName} page={page || 1} totalPage={totalPage} totalRecord={totalRecord} />
 
 			<section
-				className={`container mx-auto grid grow gap-6 max-2xl:px-4 ${pageName !== 'item' && 'lg:grid-cols-2'}`}
+				className={`container mx-auto mb-auto grid gap-6 max-2xl:px-4 ${pageName !== 'item' && 'lg:grid-cols-2'}`}
 			>
 				{renderChild}
 			</section>
@@ -84,7 +78,6 @@ export default function ListLayout<TRecord extends CommonRecord>({
 				page={page || 1}
 				totalPage={totalPage}
 				totalRecord={totalRecord}
-				isDataReady={isDataReady}
 				isBottomFilter
 			/>
 

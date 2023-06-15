@@ -1,7 +1,6 @@
-import { getFramerFade, getFramerFadeUp } from '@root/animations';
+import { getFramerFade } from '@root/animations';
 import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { ErrorResultProps } from '@root/types/common/props';
-import { m as motion } from 'framer-motion';
 import Link from 'next/link';
 
 type ErrorModalProps = ErrorResultProps;
@@ -19,8 +18,7 @@ export default function ErrorModal({
 			options={getFramerFade()}
 			className='absolute inset-0 z-50 grid grid-cols-1 place-content-center bg-slate-900/50 p-2 md:grid-cols-none'
 		>
-			<motion.div
-				{...getFramerFadeUp()}
+			<div
 				className={`card aspect-video w-full bg-base-100 shadow-lg shadow-current md:w-[600px] ${
 					httpStatus >= 500 ? 'text-red-600' : 'text-blue-700'
 				}`}
@@ -37,7 +35,7 @@ export default function ErrorModal({
 						</Link>
 					</div>
 				</div>
-			</motion.div>
+			</div>
 		</AnimationWrapper>
 	);
 }

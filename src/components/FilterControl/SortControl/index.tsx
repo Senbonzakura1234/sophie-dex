@@ -1,12 +1,11 @@
 import { sortByMap } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { IsBottomFilterProps } from '@root/types/common/props';
 import type { TableEnum } from '@root/types/common/zod';
 import SortBtn from './SortBtn';
 
-type SortControlProps = IsBottomFilterProps & { pageName: TableEnum };
+type SortControlProps = { pageName: TableEnum };
 
-export default function SortControl({ pageName, isBottomFilter: isBottomFilter }: SortControlProps) {
+export default function SortControl({ pageName }: SortControlProps) {
 	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const sortBy = securedQuery.sortBy || (pageName === 'rumor' ? 'price' : 'index');
@@ -15,7 +14,7 @@ export default function SortControl({ pageName, isBottomFilter: isBottomFilter }
 
 	return (
 		<>
-			<div className={`my-auto flex w-full flex-wrap gap-2 2xl:w-auto ${isBottomFilter && 'hidden'}`}>
+			<div className='my-auto flex w-full flex-wrap gap-2 2xl:w-auto'>
 				<small className='my-auto text-sm font-bold'>Sort:</small>
 
 				<div className='input-group w-auto'>
@@ -31,7 +30,7 @@ export default function SortControl({ pageName, isBottomFilter: isBottomFilter }
 				</div>
 			</div>
 
-			<div className={`my-auto flex w-full flex-wrap gap-2 2xl:w-auto ${isBottomFilter && 'hidden'}`}>
+			<div className='my-auto flex w-full flex-wrap gap-2 2xl:w-auto'>
 				<small className='my-auto text-sm font-bold'>Direction:</small>
 
 				<div className='input-group w-auto'>
