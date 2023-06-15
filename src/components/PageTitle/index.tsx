@@ -23,6 +23,7 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 				alt='sophie'
 				sizes={!isHomePage ? '50vw' : '100vw'}
 				data-url={`${getBaseUrl(true)}/assets/images/top.jpg`}
+				priority={!isHomePage}
 			/>
 
 			<div className='absolute inset-0 z-10 bg-slate-700/30' />
