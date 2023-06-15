@@ -4,7 +4,9 @@ import { useScroll } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
 
-import ScrollToTop from './ScrollToTop';
+import dynamic from 'next/dynamic';
+
+const ScrollToTop = dynamic(() => import('./ScrollToTop'));
 
 type ScrollWrapperProps = ChildrenProps & ClassNameProps & { enableScrollTop?: boolean };
 

@@ -1,7 +1,9 @@
 import type { ChildrenProps } from '@root/types/common/props';
+import dynamic from 'next/dynamic';
 
 import HeadLayout from './HeadLayout';
-import PageRefresh from './PageRefresh';
+
+const PageRefresh = dynamic(() => import('./PageRefresh'));
 
 type RootLayoutProps = ChildrenProps;
 
