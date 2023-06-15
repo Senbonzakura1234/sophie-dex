@@ -6,14 +6,16 @@ import { usePullToRefresh } from 'use-pull-to-refresh';
 
 const refreshThreshold = 200;
 
-export default function PageRefresh() {
+export type PageRefreshProps = { isDisabled?: boolean };
+
+export default function PageRefresh({ isDisabled = false }: PageRefreshProps) {
 	const { isReady, reload } = useRouter();
 
 	const isRouterReady = useRouterReady(isReady);
 
 	const { isRefreshing, pullPosition } = usePullToRefresh({
 		onRefresh: reload,
-		isDisabled: !isRouterReady,
+		isDisabled: !isRouterReady || isDisabled,
 		maximumPullLength: 300,
 		refreshThreshold,
 	});

@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import dynamic from 'next/dynamic';
 
+const PageRefresh = dynamic(() => import('@root/components/PageRefresh'));
 const ScrollToTop = dynamic(() => import('./ScrollToTop'));
 
 type ScrollWrapperProps = ChildrenProps & ClassNameProps & { enableScrollTop?: boolean };
@@ -16,6 +17,7 @@ export default function ScrollWrapper({ children, className, enableScrollTop }: 
 	const { pathname, query } = useRouter();
 
 	const [isShowScrollTop, setIsShowScrollTop] = useState(false);
+	const [isDisabledPullToRefresh, setIsDisabledPullToRefresh] = useState(false);
 
 	const { scrollYProgress } = useScroll({ container: scrollableRef });
 
@@ -23,6 +25,9 @@ export default function ScrollWrapper({ children, className, enableScrollTop }: 
 		scrollYProgress.on('change', e => {
 			if (!scrollableRef.current || scrollableRef.current.scrollHeight < 2 * scrollableRef.current.offsetHeight)
 				return setIsShowScrollTop(false);
+
+			if (e === 0) setIsDisabledPullToRefresh(false);
+			if (e > 0) setIsDisabledPullToRefresh(true);
 			if (e > 0.6 && !isShowScrollTop) return setIsShowScrollTop(true);
 			if (e <= 0.6 && isShowScrollTop) return setIsShowScrollTop(false);
 		});
@@ -33,19 +38,23 @@ export default function ScrollWrapper({ children, className, enableScrollTop }: 
 	}, [enableScrollTop, pathname, query, scrollableRef]);
 
 	return (
-		<Root className={`scroll-area-root ${className}`} type='scroll'>
-			<Viewport
-				className='scroll-area-viewport scroll-wrapper scroll-wrapper-horizontal relative h-full w-full'
-				ref={scrollableRef}
-			>
-				{children}
-			</Viewport>
+		<>
+			<PageRefresh isDisabled={isDisabledPullToRefresh} />
 
-			<Scrollbar className='scroll-area-scrollbar' orientation='vertical'>
-				<Thumb className='scroll-area-thumb' />
-			</Scrollbar>
+			<Root className={`scroll-area-root ${className}`} type='scroll'>
+				<Viewport
+					className='scroll-area-viewport scroll-wrapper scroll-wrapper-horizontal relative h-full w-full'
+					ref={scrollableRef}
+				>
+					{children}
+				</Viewport>
 
-			{enableScrollTop && <ScrollToTop isShow={isShowScrollTop} refObject={scrollableRef} />}
-		</Root>
+				<Scrollbar className='scroll-area-scrollbar' orientation='vertical'>
+					<Thumb className='scroll-area-thumb' />
+				</Scrollbar>
+
+				{enableScrollTop && <ScrollToTop isShow={isShowScrollTop} refObject={scrollableRef} />}
+			</Root>
+		</>
 	);
 }
