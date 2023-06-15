@@ -17,7 +17,7 @@ export default function SortControl({ pageName }: SortControlProps) {
 			<div className='my-auto flex w-full flex-wrap gap-2 2xl:w-auto'>
 				<small className='my-auto text-sm font-bold'>Sort:</small>
 
-				<div className='input-group w-auto'>
+				<div className='join w-auto'>
 					{sortFieldList.map(sortField => (
 						<SortBtn
 							key={sortField}
@@ -33,7 +33,7 @@ export default function SortControl({ pageName }: SortControlProps) {
 			<div className='my-auto flex w-full flex-wrap gap-2 2xl:w-auto'>
 				<small className='my-auto text-sm font-bold'>Direction:</small>
 
-				<div className='input-group w-auto'>
+				<div className='join w-auto'>
 					{(['asc', 'desc'] as const).map(dir => (
 						<SortBtn
 							key={dir}

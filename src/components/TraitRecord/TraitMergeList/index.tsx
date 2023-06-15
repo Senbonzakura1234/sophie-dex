@@ -10,11 +10,11 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 			<h5 className={`my-auto font-extrabold ${mergeFrom.length <= 0 && 'hidden'}`}>Merge from:</h5>
 
 			{mergeFrom.map((traitRecords, key) => (
-				<div className='btn-group basis-auto' key={key}>
+				<div className='join basis-auto' key={key}>
 					{traitRecords.map(({ table, name, id }, key) => (
 						<Fragment key={key}>
 							{key > 0 ? (
-								<button className='btn-primary no-animation btn-xs btn !border-primary/50 !bg-primary/50'>
+								<button className='btn-primary no-animation btn-xs join-item btn !border-primary/50 !bg-primary/50'>
 									<svg
 										aria-hidden='true'
 										viewBox='0 0 16 16'
@@ -31,7 +31,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 							) : null}
 
 							<Link
-								className='btn-xs btn capitalize'
+								className='btn-xs join-item btn capitalize'
 								href={{ pathname: `/${table}s/${id}` }}
 								as={{ pathname: `/${table}s/${id}` }}
 								key={id}

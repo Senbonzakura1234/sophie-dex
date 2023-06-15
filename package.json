@@ -1,6 +1,6 @@
 {
 	"name": "sophie-dex",
-	"version": "4.0.3",
+	"version": "5.0.0",
 	"private": false,
 	"license": "MIT",
 	"author": {
@@ -36,7 +36,6 @@
 		"@trpc/react-query": "^10.29.1",
 		"@trpc/server": "^10.29.1",
 		"@vercel/postgres": "^0.3.0",
-		"daisyui": "^2.52.0",
 		"drizzle-orm": "^0.26.5",
 		"framer-motion": "^10.12.16",
 		"next": "13.4.4",
@@ -56,6 +55,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.59.8",
 		"@typescript-eslint/parser": "^5.59.8",
 		"autoprefixer": "^10.4.14",
+		"daisyui": "^3.1.0",
 		"drizzle-kit": "^0.18.1",
 		"eslint": "^8.42.0",
 		"eslint-config-next": "13.4.4",

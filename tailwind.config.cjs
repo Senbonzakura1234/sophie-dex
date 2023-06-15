@@ -21,7 +21,7 @@ module.exports = {
 	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 	daisyui: {
 		/** @type {import('@root/types/common/tailwind').TailwindTheme} */
-		themes: ['bumblebee'],
+		themes: ['fantasy'],
 		// darkTheme: 'dracula',
 	},
 	darkMode: 'class',

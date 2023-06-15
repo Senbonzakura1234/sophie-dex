@@ -19,7 +19,7 @@ export default function SortBtn<TValue extends string | number>({
 			onClick={() => {
 				if (!isActive) onUpdateQuery(value);
 			}}
-			className={`btn-xs btn border-y-2 capitalize ${
+			className={`btn-xs join-item btn border-y-2 capitalize ${
 				isActive ? 'btn-primary btn-active no-animation cursor-default text-slate-50' : 'btn-ghost border-accent'
 			}`}
 		>

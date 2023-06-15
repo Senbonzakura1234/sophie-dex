@@ -12,7 +12,7 @@ export default function HeadLayout() {
 			<meta name='keywords' content={APP_KEYWORD} key='keywords' />
 			<meta name='author' content={APP_AUTHOR} />
 			<link rel='manifest' href='/manifest.json' />
-			<meta name='theme-color' property='og:theme-color' key='theme-color' content='#e0a82e' />
+			<meta name='theme-color' property='og:theme-color' key='theme-color' content='#6e0b75' />
 
 			{/* Twitter */}
 			<meta property='twitter:image' content={`${getBaseUrl()}/api/assets/thumbnail`} />
