@@ -77,7 +77,9 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 						{APP_AUTHOR}
 					</Link>
 
-					<small className='block font-bold text-slate-300'>{APP_VERSION}</small>
+					<small className='mx-auto block rounded-xl bg-slate-800/80 px-3 font-bold text-slate-300'>
+						{APP_VERSION}
+					</small>
 				</div>
 			)}
 		</>

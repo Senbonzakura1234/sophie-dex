@@ -17,7 +17,7 @@ export default function ScrollToTop({ isShow, refObject }: ScrollToTopProps) {
 			initial={false}
 			options={getFramerFadeUp(0.2, 24)}
 			show={isShow}
-			className='fixed inset-x-1/2 bottom-6 z-30 flex -translate-x-1/2 place-content-center lg:bottom-6 lg:left-auto lg:right-12'
+			className='fixed bottom-6 right-6 z-30 flex place-content-center'
 		>
 			<button
 				className='btn-primary btn-circle btn text-white'
