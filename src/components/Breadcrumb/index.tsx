@@ -1,6 +1,6 @@
 import { HomeIcon, LinkIcon } from '@heroicons/react/24/solid';
 import CircleDivider from '@root/components/CircleDivider';
-import { APP_AUTHOR } from '@root/constants';
+import { APP_AUTHOR, APP_VERSION } from '@root/constants';
 import { tableList } from '@root/types/model';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -59,7 +59,7 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 			</div>
 
 			{isShowAuthor && (
-				<div>
+				<div className='grid gap-3 text-center'>
 					<Link
 						target='_blank'
 						href={{ protocol: 'https', hostname: 'github', host: 'github.com', pathname: APP_AUTHOR }}
@@ -76,6 +76,8 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 						</svg>
 						{APP_AUTHOR}
 					</Link>
+
+					<small className='block font-bold text-slate-300'>{APP_VERSION}</small>
 				</div>
 			)}
 		</>

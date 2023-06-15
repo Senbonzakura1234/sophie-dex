@@ -25,15 +25,15 @@ export default function PageRefresh({ isDisabled = false }: PageRefreshProps) {
 			<motion.div
 				initial={{ opacity: 0, top: 0 }}
 				animate={{
-					opacity: isRefreshing || pullPosition > 0 ? 1 : 0,
-					top: (isRefreshing ? refreshThreshold : pullPosition) / 3,
+					opacity: (isRefreshing || pullPosition > 0) && !isDisabled ? 1 : 0,
+					top: isDisabled ? 0 : (isRefreshing ? refreshThreshold : pullPosition) / 3,
 				}}
 				className='fixed inset-x-1/2 z-30 aspect-square h-8 w-8 -translate-x-1/2 rounded-full bg-slate-50 p-2'
 			>
 				<motion.div
-					className={`h-full w-full ${isRefreshing && 'animate-spin'}`}
+					className={`h-full w-full ${!isDisabled && isRefreshing && 'animate-spin'}`}
 					initial={{ rotate: 0 }}
-					animate={{ rotate: pullPosition }}
+					animate={{ rotate: isDisabled ? 0 : pullPosition }}
 				>
 					<ArrowPathIcon className='h-full w-full text-primary' />
 				</motion.div>
