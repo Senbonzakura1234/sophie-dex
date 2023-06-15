@@ -54,7 +54,7 @@ export default function ListLayout<TRecord extends CommonRecord>({
 	const renderChild = useMemo(() => (children && !isError ? children(listData) : null), [children, isError, listData]);
 
 	return (
-		<ScrollWrapper className='h-screen w-screen bg-base-200 !antialiased' enableScrollTop>
+		<ScrollWrapper className='h-screen w-screen bg-base-200 !antialiased' enableScrollTop enablePageRefresh>
 			<Head>
 				<title>{pageName}</title>
 				<meta name='og:title' content={pageName} key='title' />

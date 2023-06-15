@@ -38,7 +38,7 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 	const renderExtraHead = useMemo(() => (rawData && extraHead ? extraHead(rawData) : null), [rawData, extraHead]);
 
 	return (
-		<ScrollWrapper className='h-screen w-screen bg-base-200 !antialiased' enableScrollTop>
+		<ScrollWrapper className='h-screen w-screen bg-base-200 !antialiased' enableScrollTop enablePageRefresh>
 			<Head>
 				<title>{pageName}</title>
 				<meta name='og:title' content={pageName} key='title' />
