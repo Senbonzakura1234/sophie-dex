@@ -1,4 +1,5 @@
-import { HomeIcon, LinkIcon } from '@heroicons/react/24/solid';
+import HomeIcon from '@root/assets/icons/solid/HomeIcon';
+import LinkIcon from '@root/assets/icons/solid/LinkIcon';
 import CircleDivider from '@root/components/CircleDivider';
 import { APP_AUTHOR, APP_VERSION } from '@root/constants';
 import { tableList } from '@root/types/model';
@@ -47,9 +48,9 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 											<LinkIcon className='hidden h-4 w-4 2xl:block' />
 											{n}
 										</Link>
-										{i < tableList.length - 1 && (
+										{i < tableList.length - 1 ? (
 											<CircleDivider className='h-1 w-1 bg-base-300 sm:h-2 sm:w-2' />
-										)}
+										) : null}
 									</Fragment>
 								))}
 							</li>
@@ -58,7 +59,7 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 				</nav>
 			</div>
 
-			{isShowAuthor && (
+			{isShowAuthor ? (
 				<div className='grid gap-3 text-center'>
 					<Link
 						target='_blank'
@@ -81,7 +82,7 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 						{APP_VERSION}
 					</small>
 				</div>
-			)}
+			) : null}
 		</>
 	);
 }

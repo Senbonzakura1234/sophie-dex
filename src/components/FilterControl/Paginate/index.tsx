@@ -1,14 +1,12 @@
-import {
-	ChevronDoubleLeftIcon,
-	ChevronDoubleRightIcon,
-	ChevronLeftIcon,
-	ChevronRightIcon,
-} from '@heroicons/react/24/solid';
+import ChevronDoubleLeftIcon from '@root/assets/icons/solid/ChevronDoubleLeftIcon';
+import ChevronDoubleRightIcon from '@root/assets/icons/solid/ChevronDoubleRightIcon';
+import ChevronLeftIcon from '@root/assets/icons/solid/ChevronLeftIcon';
+import ChevronRightIcon from '@root/assets/icons/solid/ChevronRightIcon';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 
-type PaginateProps = { page: number; totalPage: number };
-
 import GoToPageSelect from './GoToPageSelect';
+
+type PaginateProps = { page: number; totalPage: number };
 
 export default function Paginate({ page, totalPage }: PaginateProps) {
 	const { isRouterReady, updateQuery } = useSearchQuery();

@@ -1,6 +1,7 @@
 import { Listbox } from '@headlessui/react';
-import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/24/solid';
 import { getFramerFadeUp } from '@root/animations';
+import CheckIcon from '@root/assets/icons/solid/CheckIcon';
+import ChevronUpDownIcon from '@root/assets/icons/solid/ChevronUpDownIcon';
 import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
 import type { ClassNameProps } from '@root/types/common/props';

@@ -1,6 +1,6 @@
 import type { Maybe } from '@trpc/server';
 import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
-import type { ReactNode, RefObject } from 'react';
+import type { ReactNode, RefObject, SVGProps } from 'react';
 
 import type { MaybeData, PageName } from '.';
 import type { CommonRecord } from '../model';
@@ -24,3 +24,5 @@ export type ErrorResultProps = {
 	errorData: Maybe<DefaultErrorData>;
 	errorMessage: string | undefined;
 };
+
+export type IconProps = SVGProps<SVGSVGElement>;

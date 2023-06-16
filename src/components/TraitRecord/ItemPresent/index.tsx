@@ -1,4 +1,4 @@
-import { DocumentChartBarIcon } from '@heroicons/react/24/solid';
+import DocumentChartBarIcon from '@root/assets/icons/solid/DocumentChartBarIcon';
 import type { HyperLinkRecord } from '@root/server/db/schema';
 import Link from 'next/link';
 

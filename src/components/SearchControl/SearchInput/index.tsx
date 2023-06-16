@@ -1,4 +1,5 @@
-import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/solid';
+import MagnifyingGlassIcon from '@root/assets/icons/solid/MagnifyingGlassIcon';
+import XMarkIcon from '@root/assets/icons/solid/XMarkIcon';
 import { useSearchInput } from '@root/hooks/useSearchInput';
 
 export default function SearchInput() {

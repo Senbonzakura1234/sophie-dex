@@ -1,4 +1,4 @@
-import { ArrowPathIcon } from '@heroicons/react/24/solid';
+import ArrowPathIcon from '@root/assets/icons/solid/ArrowPathIcon';
 import { useRouterReady } from '@root/hooks/useRouterReady';
 import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import { useRouter } from 'next/router';

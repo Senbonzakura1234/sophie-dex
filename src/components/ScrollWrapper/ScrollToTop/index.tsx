@@ -1,5 +1,5 @@
-import { ArrowUpOnSquareIcon } from '@heroicons/react/24/solid';
 import { getFramerFadeUp } from '@root/animations';
+import ArrowUpOnSquareIcon from '@root/assets/icons/solid/ArrowUpOnSquareIcon';
 import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { RefProps } from '@root/types/common/props';
 import { useCallback } from 'react';

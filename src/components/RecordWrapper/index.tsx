@@ -29,7 +29,7 @@ export default function RecordWrapper<TRecord extends { id: string; name: string
 
 	return (
 		<article
-			className={`card relative mb-auto h-full 2xl:max-h-80 w-full overflow-hidden shadow-lg ${
+			className={`card relative mb-auto h-full w-full overflow-hidden shadow-lg 2xl:max-h-80 ${
 				!!color
 					? 'bg-gradient-to-r from-base-100 via-base-100 to-current shadow-current'
 					: 'bg-base-100 shadow-primary'

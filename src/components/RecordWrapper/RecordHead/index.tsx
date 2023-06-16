@@ -1,5 +1,5 @@
-import { DocumentChartBarIcon } from '@heroicons/react/24/outline';
-import { LinkIcon } from '@heroicons/react/24/solid';
+import DocumentChartBarIcon from '@root/assets/icons/outline/DocumentChartBarIcon';
+import LinkIcon from '@root/assets/icons/solid/LinkIcon';
 import Link from 'next/link';
 
 type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pathname: string };
