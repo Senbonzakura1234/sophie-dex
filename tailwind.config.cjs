@@ -18,7 +18,7 @@ module.exports = {
 			stroke: { ['none']: 'none' },
 		},
 	},
-	plugins: [require('@tailwindcss/typography'), require('daisyui')],
+	plugins: [require('daisyui')],
 	daisyui: {
 		/** @type {import('@root/types/common/tailwind').TailwindTheme} */
 		themes: ['fantasy'],

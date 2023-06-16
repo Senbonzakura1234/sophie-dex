@@ -6,7 +6,6 @@
 !process.env.SKIP_ENV_VALIDATION && (await import('./src/utils/env.mjs'));
 
 import withPWA from 'next-pwa';
-import packageJson from './package.json' assert { type: 'json' };
 import { env } from './src/utils/env.mjs';
 
 const pwaConfig = withPWA({
@@ -28,11 +27,6 @@ const config = pwaConfig({
 	reactStrictMode: true,
 	swcMinify: true,
 	i18n: { locales: ['en'], defaultLocale: 'en' },
-	publicRuntimeConfig: {
-		appId: packageJson.name,
-		version: packageJson.version,
-		author: packageJson.author,
-	},
 });
 
 export default config;

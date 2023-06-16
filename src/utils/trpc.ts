@@ -8,6 +8,15 @@ import { evnIs } from './common';
 export const apiContext = createTRPCNext<AppRouter>({
 	config() {
 		return {
+			queryClientConfig: {
+				defaultOptions: {
+					queries: {
+						retry: evnIs('production') ? 2 : 1,
+						refetchOnWindowFocus: evnIs('production'),
+						refetchOnReconnect: evnIs('production'),
+					},
+				},
+			},
 			transformer: superjson,
 			links: [
 				loggerLink({

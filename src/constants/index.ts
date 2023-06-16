@@ -1,12 +1,11 @@
-import { NEXT_CONFIG } from '@root/configs/nextConfig';
 import type { ColorEnum, RecipeTypeEnum, RumorTypeEnum, SortByEnum, TableEnum } from '@root/types/common/zod';
 import colors from 'tailwindcss/colors';
 
 export const APP_NAME = 'Sophie Dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book DX - Wiki';
 export const APP_KEYWORD = 'Atelier, Wiki, Sophie, Mysterious, DX';
-export const APP_AUTHOR = NEXT_CONFIG.author.name;
-export const APP_VERSION = `${NEXT_CONFIG.appId}@${NEXT_CONFIG.version}`;
+export const APP_AUTHOR = 'Senbonzakura1234';
+export const APP_VERSION = `${APP_NAME.replaceAll(' ', '-').toLowerCase()}@5.1.0`;
 
 export const defaultLimit = 20;
 

@@ -1,6 +1,6 @@
 {
 	"name": "sophie-dex",
-	"version": "5.0.0",
+	"version": "5.1.0",
 	"private": false,
 	"license": "MIT",
 	"author": {
@@ -45,7 +45,6 @@
 		"zod": "^3.21.4"
 	},
 	"devDependencies": {
-		"@tailwindcss/typography": "^0.5.9",
 		"@total-typescript/ts-reset": "^0.4.2",
 		"@types/next-pwa": "^5.6.4",
 		"@types/node": "^20.3.1",

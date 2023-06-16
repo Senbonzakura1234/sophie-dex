@@ -5,13 +5,8 @@ import { apiContext } from '@root/utils/trpc';
 import type { NextPage } from 'next';
 
 const TraitDetail: NextPage = () => {
-	const { isRouterReady, securedIdQuery } = useIdQuery();
-
-	const { data, isError, error } = apiContext.trait.getOne.useQuery(securedIdQuery, {
-		retry: 1,
-		enabled: isRouterReady,
-		refetchOnWindowFocus: false,
-	});
+	const { securedIdQuery } = useIdQuery();
+	const { data, isError, error } = apiContext.trait.getOne.useQuery(securedIdQuery);
 
 	return (
 		<DetailLayout

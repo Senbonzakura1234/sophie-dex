@@ -5,12 +5,8 @@ import { apiContext } from '@root/utils/trpc';
 import { type NextPage } from 'next';
 
 const Items: NextPage = () => {
-	const { securedQuery, isRouterReady } = useSearchQuery();
-	const { data, isError, error } = apiContext.item.getAll.useQuery(securedQuery, {
-		retry: 1,
-		enabled: isRouterReady,
-		refetchOnWindowFocus: false,
-	});
+	const { securedQuery } = useSearchQuery();
+	const { data, isError, error } = apiContext.item.getAll.useQuery(securedQuery);
 
 	return (
 		<ListLayout

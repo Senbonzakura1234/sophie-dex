@@ -6,7 +6,7 @@ export default function Price({ price }: PriceProps) {
 			<div className='font-bold'>Price: </div>
 
 			<div className='font-bold'>
-				<span className='badge-primary badge text-slate-50'>{price}</span> cole
+				<span className='badge badge-primary text-slate-50'>{price}</span> cole
 			</div>
 		</div>
 	);
