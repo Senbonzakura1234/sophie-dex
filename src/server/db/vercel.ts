@@ -9,13 +9,11 @@ let vercelDBConnection: typeof sql;
 if (evnIs('production')) {
 	vercelDBConnection = sql;
 } else {
-	const connection = global as typeof globalThis & {
-		vercelDBConnection: typeof sql;
-	};
+	const globalObj = global as typeof globalThis & { vercelDBConnection: typeof sql };
 
-	if (!connection.vercelDBConnection) connection.vercelDBConnection = sql;
+	if (!globalObj.vercelDBConnection) globalObj.vercelDBConnection = sql;
 
-	vercelDBConnection = connection.vercelDBConnection;
+	vercelDBConnection = globalObj.vercelDBConnection;
 }
 
 const vercelDB = drizzle(vercelDBConnection, { schema, logger: !evnIs('production') });

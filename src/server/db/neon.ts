@@ -1,6 +1,5 @@
 import { Pool } from '@neondatabase/serverless';
 import { evnIs } from '@root/utils/common';
-import { env } from '@root/utils/env.mjs';
 import { drizzle } from 'drizzle-orm/neon-serverless';
 
 import schema from './schema';
@@ -8,16 +7,13 @@ import schema from './schema';
 let neonDBConnection: Pool;
 
 if (evnIs('production')) {
-	neonDBConnection = new Pool({ connectionString: env.NEON_POSTGRES_URL });
+	neonDBConnection = new Pool();
 } else {
-	const connection = global as typeof globalThis & {
-		neonDBConnection: Pool;
-	};
+	const globalObj = global as typeof globalThis & { neonDBConnection: Pool };
 
-	if (!connection.neonDBConnection)
-		connection.neonDBConnection = new Pool({ connectionString: env.NEON_POSTGRES_URL });
+	if (!globalObj.neonDBConnection) globalObj.neonDBConnection = new Pool();
 
-	neonDBConnection = connection.neonDBConnection;
+	neonDBConnection = globalObj.neonDBConnection;
 }
 
 const neonDb = drizzle(neonDBConnection, { schema, logger: !evnIs('production') });

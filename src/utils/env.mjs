@@ -9,7 +9,6 @@ export const env = createEnv({
 		PRIMARY_DB: dbListEnumSchema,
 		SECONDARY_DB: dbListEnumSchema,
 
-		NEON_POSTGRES_URL: z.string().nonempty(),
 		SUPABASE_POSTGRES_URL: z.string().nonempty(),
 	},
 	client: {
@@ -21,7 +20,6 @@ export const env = createEnv({
 		PRIMARY_DB: process.env.PRIMARY_DB,
 		SECONDARY_DB: process.env.SECONDARY_DB,
 
-		NEON_POSTGRES_URL: process.env.NEON_POSTGRES_URL,
 		SUPABASE_POSTGRES_URL: process.env.SUPABASE_POSTGRES_URL,
 
 		NEXT_PUBLIC_NODE_ENV: process.env.NODE_ENV,
