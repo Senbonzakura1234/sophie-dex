@@ -2,8 +2,8 @@ import FilterControl from '@root/components/FilterControl';
 import PageTitle from '@root/components/PageTitle';
 import ScrollWrapper from '@root/components/ScrollWrapper';
 import SearchControl from '@root/components/SearchControl';
-import { defaultLimit } from '@root/constants';
-import type { MaybeData, MaybeListData, RenderFunction } from '@root/types/common';
+import { defaultListData } from '@root/constants';
+import type { MaybeListData, RenderFunction } from '@root/types/common';
 import type { DefaultLayoutProps, ErrorResultProps } from '@root/types/common/props';
 import type { CommonRecord, ListRecord } from '@root/types/model';
 import Head from 'next/head';
@@ -28,26 +28,21 @@ export default function ListLayout<TRecord extends CommonRecord>({
 	isError,
 	rawData,
 }: ListLayoutProps<TRecord>) {
-	const { data, isDataReady }: MaybeData<ListRecord<TRecord>> = useMemo(
-		() =>
-			!!rawData ? { data: rawData, isDataReady: true as const } : { data: undefined, isDataReady: false as const },
-		[rawData],
-	);
+	const { data, isDataReady } = !!rawData
+		? { data: rawData, isDataReady: true as const }
+		: { data: undefined, isDataReady: false as const };
 
-	const { page, totalPage, totalRecord } = useMemo(
-		() => (isDataReady ? data : { page: 1, totalPage: 0, totalRecord: 0 }),
-		[data, isDataReady],
-	);
+	const { page, totalPage, totalRecord } = {
+		page: isDataReady ? data.page : 1,
+		totalPage: isDataReady ? data.totalPage : 0,
+		totalRecord: isDataReady ? data.totalRecord : 0,
+	};
 
 	const listData: MaybeListData<TRecord> = useMemo(
 		() =>
 			isDataReady
 				? { data: data.records.map(r => ({ data: r, isDataReady: true as const })) }
-				: {
-						data: Array(defaultLimit)
-							.fill(0)
-							.map(() => ({ data: undefined, isDataReady: false as const })),
-				  },
+				: { data: defaultListData },
 		[data?.records, isDataReady],
 	);
 

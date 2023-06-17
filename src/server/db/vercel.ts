@@ -6,16 +6,16 @@ import schema from './schema';
 
 let vercelDBConnection: typeof sql;
 
-if (process.env.NODE_ENV === 'production') {
+if (evnIs('production')) {
 	vercelDBConnection = sql;
 } else {
-	const vercelDBGlobalConnection = global as typeof globalThis & {
+	const connection = global as typeof globalThis & {
 		vercelDBConnection: typeof sql;
 	};
 
-	if (!vercelDBGlobalConnection.vercelDBConnection) vercelDBGlobalConnection.vercelDBConnection = sql;
+	if (!connection.vercelDBConnection) connection.vercelDBConnection = sql;
 
-	vercelDBConnection = vercelDBGlobalConnection.vercelDBConnection;
+	vercelDBConnection = connection.vercelDBConnection;
 }
 
 const vercelDB = drizzle(vercelDBConnection, { schema, logger: !evnIs('production') });

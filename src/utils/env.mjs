@@ -2,14 +2,12 @@ import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
 
 const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']);
-const useBackupDBEnumSchema = z.enum(['DISABLED', 'ENABLED']);
 const dbListEnumSchema = z.enum(['NEON_DB', 'VERCEL_DB']);
 
 export const env = createEnv({
 	server: {
 		PRIMARY_DB: dbListEnumSchema,
 		SECONDARY_DB: dbListEnumSchema,
-		USE_SECONDARY_DB_ON_ERROR: useBackupDBEnumSchema,
 
 		NEON_POSTGRES_URL: z.string().nonempty(),
 		SUPABASE_POSTGRES_URL: z.string().nonempty(),
@@ -22,7 +20,6 @@ export const env = createEnv({
 	runtimeEnv: {
 		PRIMARY_DB: process.env.PRIMARY_DB,
 		SECONDARY_DB: process.env.SECONDARY_DB,
-		USE_SECONDARY_DB_ON_ERROR: process.env.USE_SECONDARY_DB_ON_ERROR,
 
 		NEON_POSTGRES_URL: process.env.NEON_POSTGRES_URL,
 		SUPABASE_POSTGRES_URL: process.env.SUPABASE_POSTGRES_URL,

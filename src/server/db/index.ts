@@ -4,4 +4,4 @@ import vercelDB from './vercel';
 
 const dbMap = { NEON_DB: neonDB, VERCEL_DB: vercelDB } as const;
 
-export const [primaryDB, secondaryDB] = [dbMap[env.PRIMARY_DB], dbMap[env.SECONDARY_DB]] as const;
+export const db = dbMap[env.PRIMARY_DB];

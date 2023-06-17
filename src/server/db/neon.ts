@@ -7,17 +7,17 @@ import schema from './schema';
 
 let neonDBConnection: Pool;
 
-if (process.env.NODE_ENV === 'production') {
+if (evnIs('production')) {
 	neonDBConnection = new Pool({ connectionString: env.NEON_POSTGRES_URL });
 } else {
-	const neonDBGlobalConnection = global as typeof globalThis & {
+	const connection = global as typeof globalThis & {
 		neonDBConnection: Pool;
 	};
 
-	if (!neonDBGlobalConnection.neonDBConnection)
-		neonDBGlobalConnection.neonDBConnection = new Pool({ connectionString: env.NEON_POSTGRES_URL });
+	if (!connection.neonDBConnection)
+		connection.neonDBConnection = new Pool({ connectionString: env.NEON_POSTGRES_URL });
 
-	neonDBConnection = neonDBGlobalConnection.neonDBConnection;
+	neonDBConnection = connection.neonDBConnection;
 }
 
 const neonDb = drizzle(neonDBConnection, { schema, logger: !evnIs('production') });

@@ -1,12 +1,10 @@
 import { defaultLimit, sortByMap } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { primaryDB, secondaryDB } from '@root/server/db';
+import { db } from '@root/server/db';
 import type { Trait } from '@root/server/db/schema';
 import { traits } from '@root/server/db/schema';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
-import type { GetListRecords, GetRecord, ListRecord } from '@root/types/model';
-import { evnIs } from '@root/utils/common';
-import { env } from '@root/utils/env.mjs';
+import type { ListRecord } from '@root/types/model';
 import {
 	ANYQuery,
 	CountQuery,
@@ -20,57 +18,40 @@ import {
 import type { SQL } from 'drizzle-orm';
 import { and, eq, ilike, or } from 'drizzle-orm';
 
-const getTrait: GetRecord<Trait> = (db, id) =>
-	db
-		.select()
-		.from(traits)
-		.where(eq(traits.id, id))
-		.then(([res]) => res);
-
-const getALLTraits: GetListRecords<Trait> = async (db, { search, sortBy, direction, category, page }) => {
-	const OR: SQL[] = search
-		? [
-				ilike(traits.name, `%${search}%`),
-				ilike(traits.description, `%${search}%`),
-				ilike(traits.keyWords, `%${search}%`),
-		  ]
-		: [];
-
-	const AND: SQL[] = [];
-
-	if (category) AND.push(ANYQuery(traits.categories.name, category));
-
-	return await db
-		.select({ totalRecord: CountQuery, record: traits })
-		.from(traits)
-		.where(and(or(...OR), ...AND))
-		.orderBy(getDirection(direction)(traits[getSortField(sortByMap.trait, 'index', sortBy)]))
-		.limit(defaultLimit)
-		.offset(((page ?? 1) - 1) * defaultLimit)
-		.then(processDBListResult);
-};
-
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Trait>> => {
-		const [totalRecord, records] = await getALLTraits(primaryDB, input).catch(async error => {
-			if (env.USE_SECONDARY_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
-			if (!evnIs('production')) console.error(error);
-			return await getALLTraits(secondaryDB, input).catch(onQueryDBError);
-		});
+		const { search, sortBy, direction, category, page } = input;
 
-		return { records, page: input.page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
+		const OR: SQL[] = search
+			? [
+					ilike(traits.name, `%${search}%`),
+					ilike(traits.description, `%${search}%`),
+					ilike(traits.keyWords, `%${search}%`),
+			  ]
+			: [];
+
+		const AND: SQL[] = [];
+		if (category) AND.push(ANYQuery(traits.categories.name, category));
+
+		const [totalRecord, records] = await db
+			.select({ totalRecord: CountQuery, record: traits })
+			.from(traits)
+			.where(and(or(...OR), ...AND))
+			.orderBy(getDirection(direction)(traits[getSortField(sortByMap.trait, 'index', sortBy)]))
+			.limit(defaultLimit)
+			.offset(((page ?? 1) - 1) * defaultLimit)
+			.then(processDBListResult)
+			.catch(onQueryDBError);
+
+		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}),
 
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ input: { id } }): Promise<Trait> => {
 		if (!id) throw InvalidRecordIdError();
 
-		const record = await getTrait(primaryDB, id).catch(async error => {
-			if (env.USE_SECONDARY_DB_ON_ERROR === 'DISABLED') return onQueryDBError(error);
-			if (!evnIs('production')) console.error(error);
-			return await getTrait(secondaryDB, id).catch(onQueryDBError);
-		});
+		const recordResult = await db.select().from(traits).where(eq(traits.id, id)).catch(onQueryDBError);
 
-		if (record) return record;
+		if (recordResult[0]) return recordResult[0];
 
 		throw RecordNotFoundError(id);
 	}),

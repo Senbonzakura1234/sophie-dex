@@ -1,5 +1,4 @@
 import type { Schema } from '@root/server/db/schema';
-import type { IdQuery, SearchQuery } from '@root/types/common/zod';
 import type { NeonDatabase } from 'drizzle-orm/neon-serverless';
 import type { VercelPgDatabase } from 'drizzle-orm/vercel-postgres';
 
@@ -82,13 +81,3 @@ export type ListRecord<TRecord extends CommonRecord> = {
 };
 
 export type DBDriver = VercelPgDatabase<Schema> | NeonDatabase<Schema>;
-
-export type GetRecord<TRecord extends CommonRecord> = (
-	db: DBDriver,
-	id: NonNullable<IdQuery['id']>,
-) => Promise<TRecord | undefined>;
-
-export type GetListRecords<TRecord extends CommonRecord> = (
-	db: DBDriver,
-	input: SearchQuery,
-) => Promise<Readonly<[number, TRecord[]]>>;
