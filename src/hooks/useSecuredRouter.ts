@@ -1,6 +1,5 @@
 import type { IdQuery, SearchQuery } from '@root/types/common/zod';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
-import { parseSecuredQuery } from '@root/utils/client';
 import { useRouter } from 'next/router';
 import { useCallback, useMemo } from 'react';
 import { useRouterReady } from './useRouterReady';
@@ -10,6 +9,19 @@ type UseSearchQuery = () => {
 	securedQuery: Partial<SearchQuery>;
 	updateQuery: (nextQuery: Partial<SearchQuery>) => void;
 	resetQuery: () => void;
+};
+
+const parseSecuredQuery = (input: Record<string, number | string | null>): string => {
+	const arrQuery: string[] = [];
+
+	for (const key in input) {
+		if (Object.prototype.hasOwnProperty.call(input, key)) {
+			const element = input[key];
+			if (element) arrQuery.push(`${key}=${element}`);
+		}
+	}
+
+	return arrQuery.length > 0 ? `?${arrQuery.join('&')}` : '';
 };
 
 export const useSearchQuery: UseSearchQuery = () => {

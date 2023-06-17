@@ -1,5 +1,5 @@
 import bottomBg from '@root/assets/images/bottom.webp';
-import { getBaseUrl } from '@root/utils/client';
+import { getBaseUrl } from '@root/utils/common';
 import Image from 'next/image';
 
 import dynamic from 'next/dynamic';

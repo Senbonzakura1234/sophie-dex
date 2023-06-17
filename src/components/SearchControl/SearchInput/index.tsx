@@ -9,7 +9,7 @@ export default function SearchInput() {
 		<>
 			<input
 				value={searchInput}
-				onChange={e => setSearchValue(() => e.target.value)}
+				onChange={e => setSearchValue(e.target.value)}
 				onKeyUp={e => {
 					if (e.key === 'Enter') performSearch();
 				}}
@@ -21,7 +21,7 @@ export default function SearchInput() {
 			<button
 				role='navigation'
 				aria-label='Reset search query'
-				onClick={() => resetSearch()}
+				onClick={resetSearch}
 				className={`btn-ghost btn-sm btn-circle btn my-auto border-0 hover:bg-transparent ${
 					!isSearchValueValid && 'opacity-0'
 				}`}

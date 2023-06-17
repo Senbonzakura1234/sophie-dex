@@ -1,5 +1,5 @@
 import { APP_AUTHOR, APP_DESCRIPTION, APP_KEYWORD, APP_NAME } from '@root/constants';
-import { getBaseUrl } from '@root/utils/client';
+import { getBaseUrl } from '@root/utils/common';
 import Head from 'next/head';
 
 export default function HeadLayout() {

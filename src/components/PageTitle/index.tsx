@@ -1,7 +1,7 @@
 import sophieLogo from '@root/assets/images/sophie-logo.webp';
 import topBg from '@root/assets/images/top.webp';
 import type { PageNameProps } from '@root/types/common/props';
-import { getBaseUrl } from '@root/utils/client';
+import { getBaseUrl } from '@root/utils/common';
 import Image from 'next/image';
 
 import dynamic from 'next/dynamic';

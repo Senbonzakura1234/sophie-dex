@@ -2,7 +2,7 @@ import { Root, Scrollbar, Thumb, Viewport } from '@radix-ui/react-scroll-area';
 import type { ChildrenProps, ClassNameProps } from '@root/types/common/props';
 import { useScroll } from 'framer-motion';
 import { useRouter } from 'next/router';
-import { useDebugValue, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import dynamic from 'next/dynamic';
 
@@ -42,8 +42,6 @@ export default function ScrollWrapper({ children, className, enableScrollTop, en
 	useEffect(() => {
 		if (scrollableRef?.current && enableScrollTop) scrollableRef.current.scrollTo({ top: 0, behavior: 'smooth' });
 	}, [enableScrollTop, pathname, query, scrollableRef]);
-
-	useDebugValue(isDisabledPullToRefresh);
 
 	return (
 		<>

@@ -2,8 +2,7 @@ import { type AppRouter } from '@root/server/api/router/_app';
 import { httpBatchLink, loggerLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
 import superjson from 'superjson';
-import { getBaseUrl } from './client';
-import { evnIs } from './common';
+import { evnIs, getBaseUrl } from './common';
 
 export const apiContext = createTRPCNext<AppRouter>({
 	config() {
