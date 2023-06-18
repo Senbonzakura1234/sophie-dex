@@ -17,11 +17,12 @@ export const InvalidRecordIdError = () => new TRPCError({ code: 'BAD_REQUEST', m
 export const RecordNotFoundError = (id: string) =>
 	new TRPCError({ code: 'NOT_FOUND', message: 'Record not found.', cause: `Record id: ${id}` });
 
-export const ANYQuery = (column: AnyColumn['name'], value: string | number) => sql.raw(`'${value}'=ANY(${column})`);
+export const ANYQuery = (column: AnyColumn['name'], value: string | number) =>
+	sql`${value} = ANY(${sql.identifier(column)})`;
+
 export const CountQuery = sql<number>`count(*) over()`;
 
 const DirectionMap = { asc, desc } as const;
-
 export const getDirection = (direction: DirectionEnum | null) => (direction ? DirectionMap[direction] : asc);
 
 export const getSortField = <TSearch extends Readonly<SortByEnum>>(

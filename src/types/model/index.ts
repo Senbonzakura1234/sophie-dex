@@ -1,7 +1,3 @@
-import type { Schema } from '@root/server/db/schema';
-import type { NeonDatabase } from 'drizzle-orm/neon-serverless';
-import type { VercelPgDatabase } from 'drizzle-orm/vercel-postgres';
-
 export const tableList = ['effect', 'item', 'trait', 'rumor'] as const;
 
 export const colorList = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW'] as const;
@@ -65,11 +61,7 @@ export const relatedCategoryList = [
 	'MAGIC_ITEM',
 ] as const;
 
-export type CommonRecord = {
-	id: string;
-	name: string;
-	keyWords: string;
-};
+export type CommonRecord = { id: string; name: string; keyWords: string };
 
 export type DBListResult<TRecord extends CommonRecord> = { totalRecord: number; record: TRecord }[];
 
@@ -79,5 +71,3 @@ export type ListRecord<TRecord extends CommonRecord> = {
 	totalRecord: number;
 	totalPage: number;
 };
-
-export type DBDriver = VercelPgDatabase<Schema> | NeonDatabase<Schema>;

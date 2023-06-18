@@ -8,10 +8,10 @@ import dynamic from 'next/dynamic';
 
 const Breadcrumb = dynamic(() => import('@root/components/Breadcrumb'));
 
-type PageTitleProps = PageNameProps;
+type PageTitleProps = Partial<PageNameProps>;
 
 export default function PageTitle({ pageName }: PageTitleProps) {
-	const isHomePage = pageName === 'home';
+	const isHomePage = typeof pageName === 'undefined';
 
 	return (
 		<section className={`relative w-full overflow-hidden shadow-inner ${isHomePage ? 'h-full' : 'min-h-[300px]'}`}>
@@ -21,7 +21,7 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 				placeholder='blur'
 				src={topBg}
 				alt='sophie'
-				sizes={!isHomePage ? '50vw' : '100vw'}
+				sizes={isHomePage ? '100vw' : '50vw'}
 				data-url={`${getBaseUrl(true)}/assets/images/top.jpg`}
 				priority={!isHomePage}
 			/>
@@ -34,7 +34,7 @@ export default function PageTitle({ pageName }: PageTitleProps) {
 						<Image
 							className='mx-auto w-[700px] max-w-full'
 							src={sophieLogo}
-							alt={pageName}
+							alt={pageName ?? 'home'}
 							priority={isHomePage}
 							width={700}
 							data-url={`${getBaseUrl(true)}/assets/images/sophie-logo.png`}

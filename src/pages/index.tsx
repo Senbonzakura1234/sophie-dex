@@ -9,7 +9,7 @@ const Home: NextPage = () => (
 	<>
 		<PageRefresh />
 		<div className='h-screen w-screen bg-base-200 !antialiased'>
-			<PageTitle pageName='home' />
+			<PageTitle />
 		</div>
 	</>
 );

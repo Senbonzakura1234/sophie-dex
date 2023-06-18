@@ -1,7 +1,6 @@
 import { defaultLimit } from '@root/constants';
-import type { PageControlProps } from '@root/types/common/props';
+import type { PageControlProps, PageNameProps } from '@root/types/common/props';
 
-import type { TableEnum } from '@root/types/common/zod';
 import { improvedInclude } from '@root/utils/common';
 
 import dynamic from 'next/dynamic';
@@ -28,7 +27,7 @@ const SortControl = dynamic(() => import('./SortControl'), {
 	loading: () => <div className='w- my-auto h-6 animate-pulse rounded' />,
 });
 
-type FilterControlProps = PageControlProps & { isBottomFilter?: boolean } & { pageName: TableEnum };
+type FilterControlProps = PageControlProps & PageNameProps & { isBottomFilter?: boolean };
 
 export default function FilterControl({
 	page = 1,

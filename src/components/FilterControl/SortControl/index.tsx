@@ -1,9 +1,9 @@
 import { sortByMap } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { TableEnum } from '@root/types/common/zod';
+import type { PageNameProps } from '@root/types/common/props';
 import SortBtn from './SortBtn';
 
-type SortControlProps = { pageName: TableEnum };
+type SortControlProps = PageNameProps;
 
 export default function SortControl({ pageName }: SortControlProps) {
 	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
