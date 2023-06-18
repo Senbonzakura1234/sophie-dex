@@ -1,8 +1,8 @@
 import { defaultLimit } from '@root/constants';
-import type { PageName } from '@root/types/common';
 import type { PageControlProps } from '@root/types/common/props';
 
 import type { TableEnum } from '@root/types/common/zod';
+import { improvedInclude } from '@root/utils/common';
 
 import dynamic from 'next/dynamic';
 
@@ -55,9 +55,7 @@ export default function FilterControl({
 							<SortControl pageName={pageName} />
 
 							<div className='flex flex-wrap gap-2'>
-								{(['trait', 'item'] as PageName[]).includes(pageName) ? (
-									<CategoryFilter pageName={pageName} />
-								) : null}
+								{improvedInclude(['trait', 'item'], pageName) ? <CategoryFilter pageName={pageName} /> : null}
 
 								{pageName === 'item' ? (
 									<>

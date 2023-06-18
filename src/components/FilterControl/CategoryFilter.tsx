@@ -4,6 +4,7 @@ import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { PageNameProps } from '@root/types/common/props';
 import type { CategoryEnum } from '@root/types/common/zod';
+import { improvedInclude } from '@root/utils/common';
 import { useMemo } from 'react';
 
 type CategoryFilterProps = PageNameProps;
@@ -25,9 +26,7 @@ export default function CategoryFilter({ pageName }: CategoryFilterProps) {
 	return (
 		<SelectOption<CategoryEnum | null>
 			list={categorySelectList.filter(
-				c =>
-					pageName !== 'trait' ||
-					!(['MATERIAL', 'KEY_ITEM', 'BOOK', 'MACHINE'] as (CategoryEnum | null)[]).includes(c.value),
+				c => pageName !== 'trait' || !improvedInclude(['MATERIAL', 'KEY_ITEM', 'BOOK', 'MACHINE'], c.value),
 			)}
 			setValue={setCateSelected}
 			value={cateSelected}
