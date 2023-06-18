@@ -1,6 +1,6 @@
-import { getFramerFade } from '@root/animations';
 import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { ErrorResultProps } from '@root/types/common/props';
+import { getFramerFade } from '@root/utils/animations';
 import Link from 'next/link';
 
 type ErrorModalProps = ErrorResultProps;

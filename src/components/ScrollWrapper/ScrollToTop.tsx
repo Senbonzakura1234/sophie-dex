@@ -1,7 +1,7 @@
-import { getFramerFadeUp } from '@root/animations';
 import ArrowUpOnSquareIcon from '@root/assets/icons/solid/ArrowUpOnSquareIcon';
 import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { RefProps } from '@root/types/common/props';
+import { getFramerFadeUp } from '@root/utils/animations';
 import { useCallback } from 'react';
 
 type ScrollToTopProps = { isShow: boolean } & RefProps<HTMLDivElement>;
