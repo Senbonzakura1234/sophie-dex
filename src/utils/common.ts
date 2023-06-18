@@ -4,11 +4,10 @@ import { env } from './env.mjs';
 
 export const evnIs = (nodeEnv: NodeEnv) => env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
 
-export function nullableHandle<TData = unknown>({ data, isDataReady }: MaybeData<TData>) {
-	return isDataReady ? { data, isDataReady: true as const } : { data: undefined, isDataReady: false as const };
-}
+export const nullableHandle = <TData = unknown>({ data, isDataReady }: MaybeData<TData>) =>
+	isDataReady ? { data, isDataReady: true as const } : { data: undefined, isDataReady: false as const };
 
-export async function tryCatchHandler<TReturn = unknown>(promise: Promise<TReturn>) {
+export const tryCatchHandler = async <TReturn = unknown>(promise: Promise<TReturn>) => {
 	try {
 		return { data: await promise, isSuccess: true as const, error: null };
 	} catch (error) {
@@ -16,7 +15,9 @@ export async function tryCatchHandler<TReturn = unknown>(promise: Promise<TRetur
 
 		return { data: null, isSuccess: false as const, error };
 	}
-}
+};
+
+export const createArray = <TFill>(len = 0, fill: TFill) => Array(len).fill(fill) as TFill[];
 
 export const getBaseUrl = (isClient?: boolean) => {
 	if (typeof window !== 'undefined' && !isClient) return ''; // browser should use relative url

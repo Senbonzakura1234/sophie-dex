@@ -2,6 +2,7 @@ import SelectOption from '@root/components/SelectOption';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { SelectOptionItem } from '@root/types/common';
+import { createArray } from '@root/utils/common';
 import { useMemo } from 'react';
 
 type GoToPageSelectProps = { totalPage: number };
@@ -10,10 +11,7 @@ export default function GoToPageSelect({ totalPage }: GoToPageSelectProps) {
 	const { securedQuery, isRouterReady, updateQuery } = useSearchQuery();
 
 	const pageList: SelectOptionItem<number | null>[] = useMemo(
-		() =>
-			Array(totalPage)
-				.fill(0)
-				.map((_, i) => ({ value: i + 1, label: `Page ${i + 1}` })),
+		() => createArray(totalPage, 0).map((_, i) => ({ value: i + 1, label: `Page ${i + 1}` })),
 		[totalPage],
 	);
 

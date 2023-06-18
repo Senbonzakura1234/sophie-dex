@@ -1,4 +1,5 @@
 import type { ColorEnum, RecipeTypeEnum, RumorTypeEnum, SortByEnum, TableEnum } from '@root/types/common/zod';
+import { createArray } from '@root/utils/common';
 import colors from 'tailwindcss/colors';
 
 export const APP_NAME = 'Sophie Dex';
@@ -8,9 +9,7 @@ export const APP_AUTHOR = 'Senbonzakura1234';
 export const APP_VERSION = 'sophie-dex@5.1.3';
 
 export const defaultLimit = 20;
-export const defaultListData = Array(defaultLimit)
-	.fill(0)
-	.map(() => ({ data: undefined, isDataReady: false as const }));
+export const defaultListData = createArray(defaultLimit, { data: undefined, isDataReady: false as const });
 
 export const colorFilterMap = {
 	BLUE: { primary: colors.blue[500], secondary: colors.blue[600] },
