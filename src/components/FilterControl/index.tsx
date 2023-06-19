@@ -1,7 +1,7 @@
 import { defaultLimit } from '@root/constants';
 import type { PageControlProps, PageNameProps } from '@root/types/common/props';
 
-import { improvedInclude } from '@root/utils/common';
+import { formatRecordCount, improvedInclude } from '@root/utils/common';
 
 import dynamic from 'next/dynamic';
 
@@ -36,8 +36,9 @@ export default function FilterControl({
 	isBottomFilter,
 	pageName,
 }: FilterControlProps) {
-	const from = (page - 1) * defaultLimit + 1;
-	const to = page * defaultLimit > totalRecord ? totalRecord : page * defaultLimit;
+	const fromFormatted = formatRecordCount((page - 1) * defaultLimit + 1);
+	const toFormatted = formatRecordCount(page * defaultLimit > totalRecord ? totalRecord : page * defaultLimit);
+	const totalRecordFormatted = formatRecordCount(totalRecord);
 
 	return (
 		<section className={`container relative z-40 mx-auto max-2xl:px-4 ${isBottomFilter && '!z-30'}`}>
@@ -47,27 +48,31 @@ export default function FilterControl({
 						isBottomFilter ? 'place-content-center' : '2xl:place-content-end'
 					}`}
 				>
-					<h2 className={`hidden font-extrabold ${!isBottomFilter && 'max-2xl:block'}`}>Filter Control:</h2>
+					<h2 className={`hidden w-full font-extrabold ${!isBottomFilter && 'max-2xl:block'}`}>Filter Control:</h2>
 
 					{!isBottomFilter ? (
 						<>
 							<SortControl pageName={pageName} />
 
-							<div className='flex flex-wrap gap-2'>
-								{improvedInclude(['trait', 'item'], pageName) ? <CategoryFilter pageName={pageName} /> : null}
+							{pageName !== 'effect' ? (
+								<div className='flex flex-wrap gap-2'>
+									{improvedInclude(['trait', 'item'], pageName) ? (
+										<CategoryFilter pageName={pageName} />
+									) : null}
 
-								{pageName === 'item' ? (
-									<>
-										<ColorFilter />
-										<RecipeTypeFilter />
-									</>
-								) : null}
+									{pageName === 'item' ? (
+										<>
+											<ColorFilter />
+											<RecipeTypeFilter />
+										</>
+									) : null}
 
-								{pageName === 'rumor' ? <RumorTypeFilter /> : null}
-							</div>
+									{pageName === 'rumor' ? <RumorTypeFilter /> : null}
+								</div>
+							) : null}
 
-							<div className='my-auto text-xs font-semibold text-neutral'>
-								{from} - {to} of {totalRecord} {pageName.toLocaleLowerCase()}s
+							<div className='my-auto min-w-[145px] gap-1 text-xs font-semibold text-neutral'>
+								{fromFormatted} - {toFormatted} of {totalRecordFormatted} {pageName.toLocaleLowerCase()}s
 							</div>
 						</>
 					) : null}

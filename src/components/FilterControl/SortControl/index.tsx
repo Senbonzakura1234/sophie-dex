@@ -14,7 +14,7 @@ export default function SortControl({ pageName }: SortControlProps) {
 
 	return (
 		<>
-			<div className='my-auto flex w-full flex-wrap gap-2 2xl:w-auto'>
+			<div className='my-auto flex flex-wrap gap-2'>
 				<small className='my-auto text-sm font-bold'>Sort:</small>
 
 				<div className='join w-auto'>
@@ -30,7 +30,7 @@ export default function SortControl({ pageName }: SortControlProps) {
 				</div>
 			</div>
 
-			<div className='my-auto flex w-full flex-wrap gap-2 2xl:w-auto'>
+			<div className='my-auto flex flex-wrap gap-2'>
 				<small className='my-auto text-sm font-bold'>Direction:</small>
 
 				<div className='join w-auto'>

@@ -29,3 +29,5 @@ export const improvedInclude = <TSearch extends Readonly<string | number>>(
 	arr: Readonly<TSearch[]>,
 	search: unknown,
 ): search is TSearch => arr.includes(search as TSearch);
+
+export const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 3 }).format;
