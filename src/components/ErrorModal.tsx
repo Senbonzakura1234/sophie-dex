@@ -30,7 +30,13 @@ export default function ErrorModal({
 					</div>
 
 					<div>
-						<Link href='/' as='/' className='link-hover link text-sm text-base-content'>
+						<Link
+							aria-label='Back to home'
+							className='link-hover link text-sm text-base-content'
+							href='/'
+							replace
+							role='navigation'
+						>
 							Back to home
 						</Link>
 					</div>

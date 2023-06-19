@@ -10,10 +10,11 @@ export default function RecordHead({ id, isCurrentRecord, pathname, name }: Reco
 	return (
 		<div className='card-title'>
 			<Link
-				href={{ pathname: `${pathname}/${id}` }}
-				as={{ pathname: `${pathname}/${id}` }}
 				className={isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'}
+				href={{ pathname: `${pathname}/${id}` }}
 				aria-label={name}
+				prefetch={false}
+				role='navigation'
 			>
 				<span className='flex gap-2 font-serif'>
 					<Icon className='my-auto h-4 w-4' />

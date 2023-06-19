@@ -30,7 +30,13 @@ export default function Hyperlink({ input, className }: HyperlinkProps) {
 	if (!href) return <span className='font-bold capitalize'>{label}</span>;
 
 	return (
-		<Link className={`font-bold capitalize ${className}`} href={href}>
+		<Link
+			aria-label={label}
+			className={`font-bold capitalize ${className}`}
+			href={href}
+			prefetch={false}
+			role='navigation'
+		>
 			{label}
 		</Link>
 	);

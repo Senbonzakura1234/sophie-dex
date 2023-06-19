@@ -14,12 +14,13 @@ export default function RelatedCategories({ relatedCategories }: RelatedCategori
 			{relatedCategories.map((relatedCategory, k) => (
 				<Link
 					aria-label={formatRelateCategory(relatedCategory)}
-					key={k}
 					className={`font-serif text-xs capitalize italic ${
 						relatedCategory !== securedQuery.relatedCategory && 'link-hover link italic text-neutral/90'
 					}`}
 					href={{ query: { relatedCategory } }}
-					as={{ query: { relatedCategory } }}
+					key={k}
+					prefetch={false}
+					role='navigation'
 				>
 					{formatRelateCategory(relatedCategory)}
 				</Link>

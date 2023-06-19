@@ -20,14 +20,14 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 						<ul className='gap-1 font-serif font-extrabold'>
 							<li>
 								<Link
+									aria-label='Go to homepage'
 									className={`link gap-1 ${
 										pathname === '/'
 											? 'no-animation !cursor-default !no-underline'
 											: 'link-hover text-primary hover:text-primary-focus'
 									}`}
 									href={{ pathname: '/' }}
-									as={{ pathname: '/' }}
-									aria-label='Go to homepage'
+									role='navigation'
 								>
 									<HomeIcon className='h-4 w-4' />
 									<span className='hidden 2xl:inline'>Home</span>
@@ -38,12 +38,12 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 								{tableList.map((n, i) => (
 									<Fragment key={n}>
 										<Link
+											aria-label={`Go to ${i} Search`}
 											className={`link-hover link gap-1 capitalize  ${
 												!pathname.startsWith(`/${n}s`) && 'text-primary hover:text-primary-focus'
 											}`}
 											href={{ pathname: `/${n}s` }}
-											as={{ pathname: `/${n}s` }}
-											aria-label={`Go to ${i} Search`}
+											role='navigation'
 										>
 											<LinkIcon className='hidden h-4 w-4 2xl:block' />
 											{n}
@@ -62,11 +62,12 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 			{isShowAuthor ? (
 				<div className='grid gap-3 text-center'>
 					<Link
-						target='_blank'
-						href={{ protocol: 'https', hostname: 'github', host: 'github.com', pathname: APP_AUTHOR }}
-						prefetch={false}
 						aria-label={`github@${APP_AUTHOR}`}
 						className='btn-ghost btn h-auto min-h-0 gap-2 rounded-full bg-white fill-black py-2 capitalize text-black shadow-lg shadow-black hover:bg-black hover:fill-white hover:text-white hover:shadow hover:shadow-slate-700 max-lg:text-xs lg:py-3'
+						href={{ protocol: 'https', hostname: 'github', host: 'github.com', pathname: APP_AUTHOR }}
+						prefetch={false}
+						role='navigation'
+						target='_blank'
 					>
 						<svg className='my-auto h-4 w-4' viewBox='0 0 98 96' xmlns='http://www.w3.org/2000/svg'>
 							<path
