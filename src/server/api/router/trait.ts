@@ -33,17 +33,15 @@ export const traitRouter = router({
 		const AND: SQL[] = [];
 		if (category) AND.push(ANYQuery(traits.categories.name, category));
 
-		const [totalRecord, records] = await db
+		return await db
 			.select({ totalRecord: CountQuery, record: traits })
 			.from(traits)
 			.where(and(or(...OR), ...AND))
 			.orderBy(getDirection(direction)(traits[getSortField(sortByMap.trait, 'index', sortBy)]))
 			.limit(defaultLimit)
 			.offset(((page ?? 1) - 1) * defaultLimit)
-			.then(processDBListResult)
+			.then(res => processDBListResult(res, page))
 			.catch(onQueryDBError);
-
-		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}),
 
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ input: { id } }): Promise<Trait> => {

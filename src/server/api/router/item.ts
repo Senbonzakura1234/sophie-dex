@@ -30,17 +30,15 @@ export const itemRouter = router({
 		if (recipeType) AND.push(eq(items.recipeType, recipeType));
 		if (category) AND.push(eq(items.category, category));
 
-		const [totalRecord, records] = await db
+		return await db
 			.select({ totalRecord: CountQuery, record: items })
 			.from(items)
 			.where(and(or(...OR), ...AND))
 			.orderBy(getDirection(direction)(items[getSortField(sortByMap.item, 'index', sortBy)]))
 			.limit(defaultLimit)
 			.offset(((page ?? 1) - 1) * defaultLimit)
-			.then(processDBListResult)
+			.then(res => processDBListResult(res, page))
 			.catch(onQueryDBError);
-
-		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}),
 
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ input: { id } }): Promise<Item> => {

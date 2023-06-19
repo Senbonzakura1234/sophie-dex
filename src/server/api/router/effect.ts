@@ -20,7 +20,7 @@ export const effectRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Effect>> => {
 		const { search, sortBy, direction, page } = input;
 
-		const [totalRecord, records] = await db
+		return await db
 			.select({ totalRecord: CountQuery, record: effects })
 			.from(effects)
 			.where(
@@ -37,10 +37,8 @@ export const effectRouter = router({
 			.orderBy(getDirection(direction)(effects[getSortField(sortByMap.effect, 'index', sortBy)]))
 			.limit(defaultLimit)
 			.offset(((page ?? 1) - 1) * defaultLimit)
-			.then(processDBListResult)
+			.then(res => processDBListResult(res, page))
 			.catch(onQueryDBError);
-
-		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}),
 
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ input: { id } }): Promise<Effect> => {

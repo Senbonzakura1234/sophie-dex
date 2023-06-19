@@ -26,17 +26,15 @@ export const rumorRouter = router({
 		const AND: SQL[] = [];
 		if (rumorType) AND.push(eq(rumors.rumorType, rumorType));
 
-		const [totalRecord, records] = await db
+		return await db
 			.select({ totalRecord: CountQuery, record: rumors })
 			.from(rumors)
 			.where(and(or(...OR), ...AND))
 			.orderBy(getDirection(direction)(rumors[getSortField(sortByMap.rumor, 'price', sortBy)]))
 			.limit(defaultLimit)
 			.offset(((page ?? 1) - 1) * defaultLimit)
-			.then(processDBListResult)
+			.then(res => processDBListResult(res, page))
 			.catch(onQueryDBError);
-
-		return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}),
 
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ input: { id } }): Promise<Rumor> => {

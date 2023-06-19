@@ -2,8 +2,9 @@ import { TRPCError } from '@trpc/server';
 import type { AnyColumn } from 'drizzle-orm';
 import { asc, desc, sql } from 'drizzle-orm';
 
+import { defaultLimit } from '@root/constants';
 import type { DirectionEnum, SortByEnum } from '@root/types/common/zod';
-import type { CommonRecord, DBListResult } from '@root/types/model';
+import type { CommonRecord, DBListResult, ListRecord } from '@root/types/model';
 import { evnIs, improvedInclude } from './common';
 
 export const onQueryDBError = (error: unknown) => {
@@ -31,5 +32,11 @@ export const getSortField = <TSearch extends Readonly<SortByEnum>>(
 	search: SortByEnum | null,
 ) => (improvedInclude(allowedSortField, search) ? search : defaultSortField);
 
-export const processDBListResult = <TRecord extends CommonRecord>(dbResult: DBListResult<TRecord>) =>
-	[dbResult[0]?.totalRecord ?? 0, dbResult.map(({ record }) => record)] as const;
+export const processDBListResult = <TRecord extends CommonRecord>(
+	dbResult: DBListResult<TRecord>,
+	page: number | null,
+): ListRecord<TRecord> => {
+	const [totalRecord, records] = [dbResult[0]?.totalRecord ?? 0, dbResult.map(({ record }) => record)] as const;
+
+	return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
+};
