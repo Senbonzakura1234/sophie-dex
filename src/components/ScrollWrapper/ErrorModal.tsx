@@ -3,23 +3,28 @@ import type { ErrorResultProps } from '@root/types/common/props';
 import { getFramerFade } from '@root/utils/animations';
 import Link from 'next/link';
 
-type ErrorModalProps = ErrorResultProps;
+type ErrorModalProps = Omit<ErrorResultProps, 'isError'> & {
+	isShow: boolean;
+	onCloseModal: () => void;
+};
 
 export default function ErrorModal({
-	isError,
+	isShow,
 	errorData,
 	errorMessage = 'Unknown Error Occur In System',
+	onCloseModal,
 }: ErrorModalProps) {
 	const httpStatus = errorData ? errorData.httpStatus : 400;
 
 	return (
 		<AnimationWrapper
-			show={isError}
+			show={isShow}
 			options={getFramerFade()}
-			className='absolute inset-0 z-50 grid grid-cols-1 place-content-center bg-slate-900/50 p-2 md:grid-cols-none'
+			className='absolute inset-0 z-50 grid cursor-pointer grid-cols-1 place-content-center bg-slate-900/50 p-2 md:grid-cols-none'
+			onClick={onCloseModal}
 		>
 			<div
-				className={`card aspect-video w-full bg-base-100 shadow-lg shadow-current md:w-[600px] ${
+				className={`card aspect-video w-full cursor-default bg-base-100 shadow-lg shadow-current md:w-[600px] ${
 					httpStatus >= 500 ? 'text-red-600' : 'text-blue-700'
 				}`}
 			>

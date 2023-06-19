@@ -1,5 +1,5 @@
 import { Root, Scrollbar, Thumb, Viewport } from '@radix-ui/react-scroll-area';
-import type { ChildrenProps, ClassNameProps } from '@root/types/common/props';
+import type { ChildrenProps, ClassNameProps, ErrorResultProps } from '@root/types/common/props';
 import { useScroll } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
@@ -7,15 +7,27 @@ import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 
 const PageRefresh = dynamic(() => import('@root/components/PageRefresh'));
+const ErrorModal = dynamic(() => import('./ErrorModal'));
 const ScrollToTop = dynamic(() => import('./ScrollToTop'));
 
-type ScrollWrapperProps = ChildrenProps & ClassNameProps & { enableScrollTop?: boolean; enablePageRefresh?: boolean };
+type ScrollWrapperProps = ChildrenProps &
+	ClassNameProps &
+	ErrorResultProps & { enableScrollTop?: boolean; enablePageRefresh?: boolean };
 
-export default function ScrollWrapper({ children, className, enableScrollTop, enablePageRefresh }: ScrollWrapperProps) {
+export default function ScrollWrapper({
+	children,
+	className,
+	enableScrollTop,
+	enablePageRefresh,
+	errorData,
+	errorMessage,
+	isError,
+}: ScrollWrapperProps) {
 	const scrollableRef = useRef<HTMLDivElement>(null);
 
 	const { pathname, query } = useRouter();
 
+	const [isErrorModalOpen, setIsErrorModalOpen] = useState(true);
 	const [isShowScrollTop, setIsShowScrollTop] = useState(false);
 	const [isDisabledPullToRefresh, setIsDisabledPullToRefresh] = useState(false);
 
@@ -49,10 +61,18 @@ export default function ScrollWrapper({ children, className, enableScrollTop, en
 
 			<Root className={`scroll-area-root ${className}`} type='scroll'>
 				<Viewport
-					className='scroll-area-viewport scroll-wrapper scroll-wrapper-horizontal relative h-full w-full'
+					className={`scroll-area-viewport scroll-wrapper scroll-wrapper-horizontal relative h-full w-full ${
+						isError && isErrorModalOpen && '!overflow-hidden'
+					}`}
 					ref={scrollableRef}
 				>
 					{children}
+					<ErrorModal
+						errorData={errorData}
+						errorMessage={errorMessage}
+						isShow={isError && isErrorModalOpen}
+						onCloseModal={() => setIsErrorModalOpen(false)}
+					/>
 				</Viewport>
 
 				<Scrollbar className='scroll-area-scrollbar' orientation='vertical'>

@@ -1,5 +1,5 @@
-import type { ChildrenProps, ClassNameProps } from '@root/types/common/props';
-import type { AnimationProps } from 'framer-motion';
+import type { ChildrenProps } from '@root/types/common/props';
+import type { AnimationProps, HTMLMotionProps } from 'framer-motion';
 import { AnimatePresence, LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import type { ReactNode } from 'react';
 
@@ -9,21 +9,21 @@ type AnimationWrapperProps = {
 	options: AnimationProps;
 	placeholder?: ReactNode;
 } & ChildrenProps &
-	ClassNameProps;
+	HTMLMotionProps<'div'>;
 
 export default function AnimationWrapper({
-	className,
 	children,
 	options,
 	initial,
 	show,
 	placeholder,
+	...divProps
 }: AnimationWrapperProps) {
 	return (
 		<LazyMotion features={domAnimation} strict>
 			<AnimatePresence initial={initial}>
 				{show ? (
-					<motion.div className={className} {...options}>
+					<motion.div {...options} {...divProps}>
 						{children}
 					</motion.div>
 				) : (

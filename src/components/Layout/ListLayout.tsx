@@ -11,7 +11,6 @@ import { useMemo } from 'react';
 
 import dynamic from 'next/dynamic';
 
-const ErrorModal = dynamic(() => import('@root/components/ErrorModal'));
 const PageFooter = dynamic(() => import('@root/components/PageFooter'));
 
 type ListLayoutProps<TRecord extends CommonRecord> = DefaultLayoutProps &
@@ -49,7 +48,14 @@ export default function ListLayout<TRecord extends CommonRecord>({
 	const renderChild = useMemo(() => (children && !isError ? children(listData) : null), [children, isError, listData]);
 
 	return (
-		<ScrollWrapper className='h-screen w-screen bg-base-200 !antialiased' enableScrollTop enablePageRefresh>
+		<ScrollWrapper
+			className='h-screen w-screen bg-base-200 !antialiased'
+			errorData={errorData}
+			errorMessage={errorMessage}
+			isError={isError}
+			enableScrollTop
+			enablePageRefresh
+		>
 			<Head>
 				<title>{pageName}</title>
 				<meta name='og:title' content={pageName} key='title' />
@@ -77,8 +83,6 @@ export default function ListLayout<TRecord extends CommonRecord>({
 			/>
 
 			<PageFooter />
-
-			{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
 		</ScrollWrapper>
 	);
 }

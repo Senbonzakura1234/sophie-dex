@@ -8,7 +8,6 @@ import { useMemo } from 'react';
 import ScrollWrapper from '@root/components/ScrollWrapper';
 import dynamic from 'next/dynamic';
 
-const ErrorModal = dynamic(() => import('@root/components/ErrorModal'));
 const PageFooter = dynamic(() => import('@root/components/PageFooter'));
 
 type DetailLayoutProps<TRecord extends CommonRecord> = DefaultLayoutProps &
@@ -38,7 +37,14 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 	const renderExtraHead = useMemo(() => (rawData && extraHead ? extraHead(rawData) : null), [rawData, extraHead]);
 
 	return (
-		<ScrollWrapper className='h-screen w-screen bg-base-200 !antialiased' enableScrollTop enablePageRefresh>
+		<ScrollWrapper
+			errorData={errorData}
+			errorMessage={errorMessage}
+			isError={isError}
+			className='h-screen w-screen bg-base-200 !antialiased'
+			enableScrollTop
+			enablePageRefresh
+		>
 			<Head>
 				<title>{pageName}</title>
 				<meta name='og:title' content={pageName} key='title' />
@@ -64,8 +70,6 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 			</section>
 
 			<PageFooter />
-
-			{isError ? <ErrorModal errorData={errorData} errorMessage={errorMessage} isError={true} /> : null}
 		</ScrollWrapper>
 	);
 }
