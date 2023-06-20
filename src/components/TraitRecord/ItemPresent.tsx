@@ -9,7 +9,12 @@ function ItemPresent({ itemPresent: { table, id, name } }: ItemPresentProps) {
 		<div className='flex max-w-fit flex-wrap gap-2'>
 			<div className='font-bold capitalize'>{table}: </div>
 
-			<Link aria-label={name} className='link-hover link' href={{ pathname: `/${table}s/${id}` }} role='navigation'>
+			<Link
+				aria-label={name}
+				className='link-hover link'
+				href={{ pathname: `/${table}s/[id]`, query: { id } }}
+				role='navigation'
+			>
 				<span className='flex gap-1 font-serif font-bold'>
 					<DocumentChartBarIcon className='my-auto h-4 w-4' />
 					{name}

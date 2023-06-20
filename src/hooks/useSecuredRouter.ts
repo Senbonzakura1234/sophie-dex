@@ -1,4 +1,4 @@
-import type { IdQuery, SearchQuery } from '@root/types/common/zod';
+import type { IdQuery, SearchQuery, TableEnum } from '@root/types/common/zod';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import { useRouter } from 'next/router';
 import { useCallback, useMemo } from 'react';
@@ -7,7 +7,7 @@ import { useRouterReady } from './useRouterReady';
 type UseSearchQuery = () => {
 	isRouterReady: boolean;
 	securedQuery: Partial<SearchQuery>;
-	updateQuery: (nextQuery: Partial<SearchQuery>) => void;
+	updateQuery: (nextQuery: Partial<SearchQuery>, pageName: TableEnum) => void;
 	resetQuery: () => void;
 };
 
@@ -22,7 +22,7 @@ const parseQuery = (query: Partial<SearchQuery>) => {
 };
 
 export const useSearchQuery: UseSearchQuery = () => {
-	const { query, isReady, push, pathname } = useRouter();
+	const { query, isReady, push } = useRouter();
 
 	const isRouterReady = useRouterReady(isReady);
 
@@ -33,27 +33,24 @@ export const useSearchQuery: UseSearchQuery = () => {
 	}, [query]);
 
 	const updateQuery = useCallback(
-		(nextQuery: Partial<SearchQuery>) => {
+		(nextQuery: Partial<SearchQuery>, pageName: TableEnum) => {
 			if (isRouterReady)
-				push({
-					pathname: pathname.replaceAll('[id]', ''),
-					query: parseQuery({ ...securedQuery, page: null, ...nextQuery }),
-				});
+				push({ pathname: `/${pageName}`, query: parseQuery({ ...securedQuery, page: null, ...nextQuery }) });
 		},
-		[isRouterReady, push, pathname, securedQuery],
+		[isRouterReady, push, securedQuery],
 	);
 
 	const resetQuery = useCallback(() => {
-		if (isRouterReady) push({ pathname: pathname.replaceAll('[id]', ''), query: {} });
-	}, [isRouterReady, pathname, push]);
+		if (isRouterReady) push({ query: {} });
+	}, [isRouterReady, push]);
 
 	return { securedQuery, isRouterReady, updateQuery, resetQuery };
 };
 
-type UseIdQuery = () => { isRouterReady: boolean; pathname: string; securedIdQuery: Partial<IdQuery> };
+type UseIdQuery = () => { isRouterReady: boolean; securedIdQuery: Partial<IdQuery> };
 
 export const useIdQuery: UseIdQuery = () => {
-	const { query, isReady, pathname } = useRouter();
+	const { query, isReady } = useRouter();
 
 	const isRouterReady = useRouterReady(isReady);
 
@@ -63,5 +60,5 @@ export const useIdQuery: UseIdQuery = () => {
 		return result.success ? query : {};
 	}, [query]);
 
-	return { securedIdQuery, isRouterReady: isRouterReady, pathname: pathname.replaceAll('/[id]', '') };
+	return { securedIdQuery, isRouterReady: isRouterReady };
 };

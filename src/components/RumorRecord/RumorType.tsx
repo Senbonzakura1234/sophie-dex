@@ -16,7 +16,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 				<div className='font-bold !shadow-none'>Category: </div>
 				<button
 					onClick={() => {
-						if (!isBtnDisabled) updateQuery({ rumorType });
+						if (!isBtnDisabled) updateQuery({ rumorType }, 'rumor');
 					}}
 					aria-label={`Filter ${rumorTypeMap.get(rumorType)?.name} Rumor`}
 					role='navigation'

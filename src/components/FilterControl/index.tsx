@@ -62,12 +62,12 @@ export default function FilterControl({
 
 									{pageName === 'item' ? (
 										<>
-											<ColorFilter />
-											<RecipeTypeFilter />
+											<ColorFilter pageName={pageName} />
+											<RecipeTypeFilter pageName={pageName} />
 										</>
 									) : null}
 
-									{pageName === 'rumor' ? <RumorTypeFilter /> : null}
+									{pageName === 'rumor' ? <RumorTypeFilter pageName={pageName} /> : null}
 								</div>
 							) : null}
 
@@ -77,7 +77,7 @@ export default function FilterControl({
 						</>
 					) : null}
 
-					<Paginate page={page} totalPage={totalPage} />
+					<Paginate page={page} totalPage={totalPage} pageName={pageName} />
 
 					{!isBottomFilter ? <ResetFilter /> : null}
 				</div>

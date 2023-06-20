@@ -15,7 +15,7 @@ export default function Category({ category }: CategoryProps) {
 				<div className='font-bold !shadow-none'>Category: </div>
 				<button
 					onClick={() => {
-						if (!isBtnDisabled) updateQuery({ category });
+						if (!isBtnDisabled) updateQuery({ category }, 'item');
 					}}
 					aria-label={`Filter ${categoryMap.get(category)?.name} Item`}
 					role='navigation'

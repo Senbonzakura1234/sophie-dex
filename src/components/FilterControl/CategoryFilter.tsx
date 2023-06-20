@@ -19,7 +19,7 @@ export default function CategoryFilter({ pageName }: CategoryFilterProps) {
 
 	const [cateSelected, setCateSelected] = useQueryOnChange<CategoryEnum | null>(
 		defaultCate,
-		category => updateQuery({ category }),
+		category => updateQuery({ category }, pageName),
 		isRouterReady,
 	);
 

@@ -23,7 +23,8 @@ function Categories({ categories }: CategoriesProps) {
 								securedQuery.category !== code && isClickAble(code) && 'btn-primary text-slate-50'
 							}`}
 							onClick={() => {
-								if (isClickAble(code)) updateQuery({ category: securedQuery.category === code ? null : code });
+								if (isClickAble(code))
+									updateQuery({ category: securedQuery.category === code ? null : code }, 'trait');
 							}}
 						>
 							<div className={`w-5 font-atelier text-lg 2xl:w-6 2xl:text-xl ${className}`} />

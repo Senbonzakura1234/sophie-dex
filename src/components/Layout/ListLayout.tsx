@@ -64,7 +64,7 @@ export default function ListLayout<TRecord extends CommonRecord>({
 
 			<PageTitle pageName={pageName} />
 
-			<SearchControl />
+			<SearchControl pageName={pageName} />
 
 			<FilterControl pageName={pageName} page={page || 1} totalPage={totalPage} totalRecord={totalRecord} />
 

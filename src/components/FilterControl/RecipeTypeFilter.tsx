@@ -2,10 +2,13 @@ import SelectOption from '@root/components/SelectOption';
 import { recipeTypeDefaultSelect, recipeTypeSelectList } from '@root/components/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import type { PageNameProps } from '@root/types/common/props';
 import type { RecipeTypeEnum } from '@root/types/common/zod';
 import { useMemo } from 'react';
 
-export default function RecipeTypeFilter() {
+type RecipeTypeFilterProps = PageNameProps;
+
+export default function RecipeTypeFilter({ pageName }: RecipeTypeFilterProps) {
 	const { securedQuery, updateQuery, isRouterReady } = useSearchQuery();
 
 	const defaultRecipeType = useMemo(
@@ -15,7 +18,7 @@ export default function RecipeTypeFilter() {
 
 	const [recipeTypeSelected, setRecipeTypeSelected] = useQueryOnChange<RecipeTypeEnum | null>(
 		defaultRecipeType,
-		recipeType => updateQuery({ recipeType }),
+		recipeType => updateQuery({ recipeType }, pageName),
 		isRouterReady,
 	);
 

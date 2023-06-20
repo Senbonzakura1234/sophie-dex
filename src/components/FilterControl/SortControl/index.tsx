@@ -24,7 +24,7 @@ export default function SortControl({ pageName }: SortControlProps) {
 							isActive={sortBy === sortField}
 							disabled={!isRouterReady}
 							value={sortField}
-							onUpdateQuery={value => updateQuery({ sortBy: value, direction: 'asc' })}
+							onUpdateQuery={value => updateQuery({ sortBy: value, direction: 'asc' }, pageName)}
 						/>
 					))}
 				</div>
@@ -40,7 +40,7 @@ export default function SortControl({ pageName }: SortControlProps) {
 							isActive={dir === direction}
 							disabled={!isRouterReady}
 							value={dir}
-							onUpdateQuery={value => updateQuery({ direction: value })}
+							onUpdateQuery={value => updateQuery({ direction: value }, pageName)}
 						/>
 					))}
 				</div>

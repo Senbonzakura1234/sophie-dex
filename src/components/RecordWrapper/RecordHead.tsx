@@ -1,17 +1,23 @@
 import DocumentChartBarIcon from '@root/assets/icons/outline/DocumentChartBarIcon';
 import LinkIcon from '@root/assets/icons/solid/LinkIcon';
+import { useIdQuery } from '@root/hooks/useSecuredRouter';
+import type { PageNameProps } from '@root/types/common/props';
 import Link from 'next/link';
 
-type RecordHeadProps = { name: string; id: string; isCurrentRecord: boolean; pathname: string };
+type RecordHeadProps = PageNameProps & { name: string; id: string };
 
-export default function RecordHead({ id, isCurrentRecord, pathname, name }: RecordHeadProps) {
+export default function RecordHead({ id, name, pageName }: RecordHeadProps) {
+	const { securedIdQuery } = useIdQuery();
+
+	const isCurrentRecord = securedIdQuery.id === id;
+
 	const Icon = isCurrentRecord ? DocumentChartBarIcon : LinkIcon;
 
 	return (
 		<div className='card-title'>
 			<Link
 				className={isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'}
-				href={{ pathname: `${pathname}/${id}` }}
+				href={{ pathname: `/${pageName}s/[id]`, query: { id } }}
 				aria-label={name}
 				role='navigation'
 			>

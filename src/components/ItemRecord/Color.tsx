@@ -15,7 +15,7 @@ export default function Color({ color }: ColorProps) {
 
 			<button
 				onClick={() => {
-					if (!isBtnDisabled) updateQuery({ color });
+					if (!isBtnDisabled) updateQuery({ color }, 'item');
 				}}
 				role='navigation'
 				aria-label={`Filter ${color} Item`}
