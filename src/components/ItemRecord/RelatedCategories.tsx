@@ -19,7 +19,6 @@ export default function RelatedCategories({ relatedCategories }: RelatedCategori
 					}`}
 					href={{ query: { relatedCategory } }}
 					key={k}
-					prefetch={false}
 					role='navigation'
 				>
 					{formatRelateCategory(relatedCategory)}

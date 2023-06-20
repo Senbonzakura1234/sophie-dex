@@ -35,7 +35,6 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 								className='btn-xs join-item btn capitalize'
 								href={{ pathname: `/${table}s/${id}` }}
 								key={id}
-								prefetch={false}
 								role='navigation'
 							>
 								{name}

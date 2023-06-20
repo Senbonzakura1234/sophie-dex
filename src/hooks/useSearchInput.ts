@@ -27,10 +27,10 @@ export const useSearchInput: UseSearchInput = () => {
 		searchInput,
 		setSearchValue,
 		isSearchValueValid: searchInput.length > 0,
-		performSearch: () => updateQuery({ search: searchValue, page: null }),
+		performSearch: () => updateQuery({ search: searchValue }),
 		resetSearch: () => {
 			setSearchValue(null);
-			if (searchValue === securedQuery.search) updateQuery({ search: null, page: null });
+			if (searchValue === securedQuery.search) updateQuery({ search: null });
 		},
 	};
 };

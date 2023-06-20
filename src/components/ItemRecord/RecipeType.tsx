@@ -15,7 +15,7 @@ export default function RecipeType({ recipeType }: RecipeTypeProps) {
 
 			<button
 				onClick={() => {
-					if (!isBtnDisabled) updateQuery({ recipeType, page: null });
+					if (!isBtnDisabled) updateQuery({ recipeType });
 				}}
 				role='navigation'
 				aria-label={`Filter ${recipeType} Item`}

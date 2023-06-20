@@ -103,12 +103,6 @@
 			"format": "svg",
 			"icon": "binary",
 			"overrides": "constant"
-		},
-		{
-			"extensions": ["AnimationWrapper"],
-			"format": "svg",
-			"icon": "theme",
-			"overrides": "constant"
 		}
 	],
 	"vsicons.presets.tsOfficial": true

@@ -15,7 +15,7 @@ export default function Category({ category }: CategoryProps) {
 				<div className='font-bold !shadow-none'>Category: </div>
 				<button
 					onClick={() => {
-						if (!isBtnDisabled) updateQuery({ category, page: null });
+						if (!isBtnDisabled) updateQuery({ category });
 					}}
 					aria-label={`Filter ${categoryMap.get(category)?.name} Item`}
 					role='navigation'
@@ -30,7 +30,7 @@ export default function Category({ category }: CategoryProps) {
 			</div>
 
 			<div
-				className={`absolute bottom-10 right-10 w-10 text-center font-atelier text-lg text-slate-50 md:text-4xl ${
+				className={`absolute bottom-5 right-5 w-10 text-center font-atelier text-lg text-slate-50 sm:bottom-10 sm:right-10 md:text-4xl ${
 					categoryMap.get(category)?.className
 				}`}
 			/>

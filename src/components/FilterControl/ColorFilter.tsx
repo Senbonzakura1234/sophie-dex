@@ -15,7 +15,7 @@ export default function ColorFilter() {
 
 	const [colorSelected, setColorSelected] = useQueryOnChange<ColorEnum | null>(
 		defaultColor,
-		color => updateQuery({ page: null, color }),
+		color => updateQuery({ color }),
 		isRouterReady,
 	);
 

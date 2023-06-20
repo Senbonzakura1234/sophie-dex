@@ -11,17 +11,14 @@ type UseSearchQuery = () => {
 	resetQuery: () => void;
 };
 
-const parseSecuredQuery = (input: Record<string, number | string | null>): string => {
-	const arrQuery: string[] = [];
-
-	for (const key in input) {
-		if (Object.prototype.hasOwnProperty.call(input, key)) {
-			const element = input[key];
-			if (element) arrQuery.push(`${key}=${element}`);
-		}
+const parseQuery = (query: Partial<SearchQuery>) => {
+	for (const key in query) {
+		if (!Object.prototype.hasOwnProperty.call(query, key)) continue;
+		const element = query[key as keyof typeof query];
+		if (!element) delete query[key as keyof typeof query];
 	}
 
-	return arrQuery.length > 0 ? `?${arrQuery.join('&')}` : '';
+	return query;
 };
 
 export const useSearchQuery: UseSearchQuery = () => {
@@ -37,15 +34,17 @@ export const useSearchQuery: UseSearchQuery = () => {
 
 	const updateQuery = useCallback(
 		(nextQuery: Partial<SearchQuery>) => {
-			const parseQuery = parseSecuredQuery({ ...securedQuery, ...nextQuery });
-
-			if (isRouterReady) push(`${pathname.replaceAll('[id]', '')}${parseQuery}`, undefined, {});
+			if (isRouterReady)
+				push({
+					pathname: pathname.replaceAll('[id]', ''),
+					query: parseQuery({ ...securedQuery, page: null, ...nextQuery }),
+				});
 		},
 		[isRouterReady, push, pathname, securedQuery],
 	);
 
 	const resetQuery = useCallback(() => {
-		if (isRouterReady) push(`${pathname.replaceAll('[id]', '')}`, undefined, {});
+		if (isRouterReady) push({ pathname: pathname.replaceAll('[id]', ''), query: {} });
 	}, [isRouterReady, pathname, push]);
 
 	return { securedQuery, isRouterReady, updateQuery, resetQuery };

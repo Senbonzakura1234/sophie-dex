@@ -15,7 +15,7 @@ export default function RecipeTypeFilter() {
 
 	const [recipeTypeSelected, setRecipeTypeSelected] = useQueryOnChange<RecipeTypeEnum | null>(
 		defaultRecipeType,
-		recipeType => updateQuery({ page: null, recipeType }),
+		recipeType => updateQuery({ recipeType }),
 		isRouterReady,
 	);
 

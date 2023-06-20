@@ -15,7 +15,7 @@ export default function RumorTypeFilter() {
 
 	const [rumorTypeSelected, setRumorTypeSelected] = useQueryOnChange<RumorTypeEnum | null>(
 		defaultRumorType,
-		rumorType => updateQuery({ page: null, rumorType }),
+		rumorType => updateQuery({ rumorType }),
 		isRouterReady,
 	);
 

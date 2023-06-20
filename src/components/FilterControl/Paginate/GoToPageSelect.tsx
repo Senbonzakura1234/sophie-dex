@@ -11,14 +11,26 @@ export default function GoToPageSelect({ totalPage }: GoToPageSelectProps) {
 	const { securedQuery, isRouterReady, updateQuery } = useSearchQuery();
 
 	const pageList: SelectOptionItem<number | null>[] = useMemo(
-		() => createArray(totalPage, 0).map((_, i) => ({ value: i + 1, label: `Page ${i + 1}` })),
+		() =>
+			createArray(totalPage, 0).map((_, i) => ({
+				value: i + 1,
+				label: (
+					<>
+						<span className='max-sm:hidden'>Page </span> {i + 1}
+					</>
+				),
+			})),
 		[totalPage],
 	);
 
 	const [goToPage, setGoToPage] = useQueryOnChange<number | null>(
 		{
 			value: securedQuery.page ?? null,
-			label: `Page ${securedQuery.page ?? '1'}`,
+			label: (
+				<>
+					<span className='max-sm:hidden'>Page </span> {securedQuery.page ?? '1'}
+				</>
+			),
 		},
 		page => updateQuery({ page }),
 		isRouterReady,
@@ -29,7 +41,7 @@ export default function GoToPageSelect({ totalPage }: GoToPageSelectProps) {
 			list={pageList}
 			setValue={setGoToPage}
 			value={goToPage}
-			className='my-auto w-[7.5rem]'
+			className='my-auto w-20 sm:w-[7.5rem]'
 			withIcon
 		/>
 	);

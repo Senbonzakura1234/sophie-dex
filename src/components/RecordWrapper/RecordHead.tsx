@@ -13,7 +13,6 @@ export default function RecordHead({ id, isCurrentRecord, pathname, name }: Reco
 				className={isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'}
 				href={{ pathname: `${pathname}/${id}` }}
 				aria-label={name}
-				prefetch={false}
 				role='navigation'
 			>
 				<span className='flex gap-2 font-serif'>
