@@ -22,7 +22,7 @@
 		"start": "next start",
 		"lint:fix": "eslint --ext .js,.jsx,.ts,.tsx,.json . --fix",
 		"build-types": "tsc --noEmit --pretty",
-		"generate": "drizzle-kit generate:pg"
+		"generate": "drizzle-kit generate:pg --schema ./src/server/db/schema.ts"
 	},
 	"dependencies": {
 		"@headlessui/react": "^1.7.15",
