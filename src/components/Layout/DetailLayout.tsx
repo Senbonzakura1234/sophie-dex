@@ -18,7 +18,7 @@ type DetailLayoutProps<TRecord extends CommonRecord> = DefaultLayoutProps &
 	};
 
 export default function DetailLayout<TRecord extends CommonRecord>({
-	pageName,
+	moduleId,
 	children,
 	extraHead,
 	isError,
@@ -46,15 +46,15 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 			enablePageRefresh
 		>
 			<Head>
-				<title>{pageName}</title>
-				<meta name='og:title' content={pageName} key='title' />
-				<meta name='description' content={`${pageName} Record`} key='description' />
+				<title>{moduleId}</title>
+				<meta name='og:title' content={moduleId} key='title' />
+				<meta name='description' content={`${moduleId} Record`} key='description' />
 			</Head>
 
 			{rawData ? (
 				<Head>
 					<title>
-						{rawData.name} | {pageName}
+						{rawData.name} | {moduleId}
 					</title>
 					<meta name='og:title' content={rawData.name} key='title' />
 					<meta name='description' content={rawData.keyWords} key='description' />
@@ -63,10 +63,10 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 				</Head>
 			) : null}
 
-			<PageTitle pageName={pageName} />
+			<PageTitle moduleId={moduleId} />
 
 			<section className='grid h-full w-full grid-cols-1 place-content-center gap-4 p-2 2xl:grid-cols-none'>
-				<div className={`mx-auto max-w-full ${pageName === 'item' ? 'w-[900px]' : 'w-[700px]'}`}>{renderChild}</div>
+				<div className={`mx-auto max-w-full ${moduleId === 'item' ? 'w-[900px]' : 'w-[700px]'}`}>{renderChild}</div>
 			</section>
 
 			<PageFooter />

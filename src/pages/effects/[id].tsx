@@ -13,7 +13,7 @@ const EffectDetail: NextPage = () => {
 			isError={isError}
 			errorData={error?.data}
 			errorMessage={error?.message}
-			pageName='effect'
+			moduleId='effect'
 			rawData={data}
 		>
 			{props => <EffectRecord {...props} />}

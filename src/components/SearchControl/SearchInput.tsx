@@ -1,12 +1,12 @@
 import MagnifyingGlassIcon from '@root/assets/icons/solid/MagnifyingGlassIcon';
 import XMarkIcon from '@root/assets/icons/solid/XMarkIcon';
 import { useSearchInput } from '@root/hooks/useSearchInput';
-import type { PageNameProps } from '@root/types/common/props';
+import type { ModuleIdProps } from '@root/types/common/props';
 
-type SearchInputProps = PageNameProps;
+type SearchInputProps = ModuleIdProps;
 
-export default function SearchInput({ pageName }: SearchInputProps) {
-	const { performSearch, searchInput, setSearchValue, isSearchValueValid, resetSearch } = useSearchInput(pageName);
+export default function SearchInput({ moduleId }: SearchInputProps) {
+	const { performSearch, searchInput, setSearchValue, isSearchValueValid, resetSearch } = useSearchInput(moduleId);
 
 	return (
 		<>

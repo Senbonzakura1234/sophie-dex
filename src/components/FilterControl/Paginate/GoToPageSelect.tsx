@@ -2,13 +2,13 @@ import SelectOption from '@root/components/SelectOption';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { SelectOptionItem } from '@root/types/common';
-import type { PageNameProps } from '@root/types/common/props';
+import type { ModuleIdProps } from '@root/types/common/props';
 import { createArray } from '@root/utils/common';
 import { useMemo } from 'react';
 
-type GoToPageSelectProps = { totalPage: number } & PageNameProps;
+type GoToPageSelectProps = { totalPage: number } & ModuleIdProps;
 
-export default function GoToPageSelect({ totalPage, pageName }: GoToPageSelectProps) {
+export default function GoToPageSelect({ totalPage, moduleId }: GoToPageSelectProps) {
 	const { securedQuery, isRouterReady, updateQuery } = useSearchQuery();
 
 	const pageList: SelectOptionItem<number | null>[] = useMemo(
@@ -33,7 +33,7 @@ export default function GoToPageSelect({ totalPage, pageName }: GoToPageSelectPr
 				</>
 			),
 		},
-		page => updateQuery({ page }, pageName),
+		page => updateQuery({ page }, moduleId),
 		isRouterReady,
 	);
 

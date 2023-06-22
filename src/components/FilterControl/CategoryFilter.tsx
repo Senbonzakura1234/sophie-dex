@@ -2,14 +2,14 @@ import SelectOption from '@root/components/SelectOption';
 import { categoryDefaultSelect, categorySelectList } from '@root/components/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { PageNameProps } from '@root/types/common/props';
+import type { ModuleIdProps } from '@root/types/common/props';
 import type { CategoryEnum } from '@root/types/common/zod';
 import { improvedInclude } from '@root/utils/common';
 import { useMemo } from 'react';
 
-type CategoryFilterProps = PageNameProps;
+type CategoryFilterProps = ModuleIdProps;
 
-export default function CategoryFilter({ pageName }: CategoryFilterProps) {
+export default function CategoryFilter({ moduleId }: CategoryFilterProps) {
 	const { securedQuery, updateQuery, isRouterReady } = useSearchQuery();
 
 	const defaultCate = useMemo(
@@ -19,14 +19,14 @@ export default function CategoryFilter({ pageName }: CategoryFilterProps) {
 
 	const [cateSelected, setCateSelected] = useQueryOnChange<CategoryEnum | null>(
 		defaultCate,
-		category => updateQuery({ category }, pageName),
+		category => updateQuery({ category }, moduleId),
 		isRouterReady,
 	);
 
 	return (
 		<SelectOption<CategoryEnum | null>
 			list={categorySelectList.filter(
-				c => pageName !== 'trait' || !improvedInclude(['MATERIAL', 'KEY_ITEM', 'BOOK', 'MACHINE'], c.value),
+				c => moduleId !== 'trait' || !improvedInclude(['MATERIAL', 'KEY_ITEM', 'BOOK', 'MACHINE'], c.value),
 			)}
 			setValue={setCateSelected}
 			value={cateSelected}

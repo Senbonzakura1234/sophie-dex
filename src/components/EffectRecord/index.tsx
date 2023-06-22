@@ -7,7 +7,7 @@ type EffectRecordProps = RecordProps<Effect>;
 
 export default function EffectRecord(props: EffectRecordProps) {
 	return (
-		<RecordWrapper {...nullableHandle(props)} pageName='effect'>
+		<RecordWrapper {...nullableHandle(props)} moduleId='effect'>
 			{({ description }) => <p className='text-lg'>{description}</p>}
 		</RecordWrapper>
 	);

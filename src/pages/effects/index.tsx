@@ -13,7 +13,7 @@ const Effects: NextPage = () => {
 			isError={isError}
 			errorData={error?.data}
 			errorMessage={error?.message}
-			pageName='effect'
+			moduleId='effect'
 			rawData={data}
 		>
 			{props => props.data.map((rumor, key) => <EffectRecord key={key} {...rumor} />)}

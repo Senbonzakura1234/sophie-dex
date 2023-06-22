@@ -1,6 +1,6 @@
 import { colorFilterMap } from '@root/constants';
 import type { MaybeData, RenderFunction } from '@root/types/common';
-import type { ClassNameProps, PageNameProps } from '@root/types/common/props';
+import type { ClassNameProps, ModuleIdProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
 import { useMemo } from 'react';
 
@@ -11,7 +11,7 @@ const RecordHead = dynamic(() => import('./RecordHead'), {
 });
 
 type RecordWrapperProps<TRecord extends { id: string; name: string }> = ClassNameProps &
-	PageNameProps & {
+	ModuleIdProps & {
 		color?: ColorEnum;
 		children?: RenderFunction<TRecord>;
 	} & MaybeData<TRecord>;
@@ -21,7 +21,7 @@ export default function RecordWrapper<TRecord extends { id: string; name: string
 	className,
 	color,
 	isDataReady,
-	pageName,
+	moduleId,
 	data,
 }: RecordWrapperProps<TRecord>) {
 	const renderChild = useMemo(() => (isDataReady && children ? children(data) : null), [isDataReady, children, data]);
@@ -36,7 +36,7 @@ export default function RecordWrapper<TRecord extends { id: string; name: string
 			style={color ? { color: colorFilterMap[color].primary } : undefined}
 		>
 			<div className={`card-body flex flex-col gap-3 text-base-content ${!isDataReady && 'min-h-[270px]'}`}>
-				{isDataReady ? <RecordHead id={data.id} name={data.name} pageName={pageName} /> : null}
+				{isDataReady ? <RecordHead id={data.id} name={data.name} moduleId={moduleId} /> : null}
 
 				{renderChild}
 			</div>

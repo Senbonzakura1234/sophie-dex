@@ -13,7 +13,7 @@ const RumorDetail: NextPage = () => {
 			isError={isError}
 			errorData={error?.data}
 			errorMessage={error?.message}
-			pageName='rumor'
+			moduleId='rumor'
 			rawData={data}
 		>
 			{props => <RumorRecord {...props} />}

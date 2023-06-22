@@ -2,13 +2,13 @@ import SelectOption from '@root/components/SelectOption';
 import { rumorTypeDefaultSelect, rumorTypeSelectList } from '@root/components/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { PageNameProps } from '@root/types/common/props';
+import type { ModuleIdProps } from '@root/types/common/props';
 import type { RumorTypeEnum } from '@root/types/common/zod';
 import { useMemo } from 'react';
 
-type RumorTypeFilterProps = PageNameProps;
+type RumorTypeFilterProps = ModuleIdProps;
 
-export default function RumorTypeFilter({ pageName }: RumorTypeFilterProps) {
+export default function RumorTypeFilter({ moduleId }: RumorTypeFilterProps) {
 	const { securedQuery, updateQuery, isRouterReady } = useSearchQuery();
 
 	const defaultRumorType = useMemo(
@@ -18,7 +18,7 @@ export default function RumorTypeFilter({ pageName }: RumorTypeFilterProps) {
 
 	const [rumorTypeSelected, setRumorTypeSelected] = useQueryOnChange<RumorTypeEnum | null>(
 		defaultRumorType,
-		rumorType => updateQuery({ rumorType }, pageName),
+		rumorType => updateQuery({ rumorType }, moduleId),
 		isRouterReady,
 	);
 

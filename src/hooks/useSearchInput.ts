@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import type { TableEnum } from '@root/types/common/zod';
 import { useSearchQuery } from './useSecuredRouter';
 
-type UseSearchInput = (pageName: TableEnum) => {
+type UseSearchInput = (moduleId: TableEnum) => {
 	searchInput: string;
 	setSearchValue: SetSearchInput;
 	isSearchValueValid: boolean;
@@ -12,7 +12,7 @@ type UseSearchInput = (pageName: TableEnum) => {
 	resetSearch: () => void;
 };
 
-export const useSearchInput: UseSearchInput = pageName => {
+export const useSearchInput: UseSearchInput = moduleId => {
 	const { securedQuery, updateQuery } = useSearchQuery();
 
 	const defaultSearchValue = securedQuery.search ?? null;
@@ -28,10 +28,10 @@ export const useSearchInput: UseSearchInput = pageName => {
 		searchInput,
 		setSearchValue,
 		isSearchValueValid: searchInput.length > 0,
-		performSearch: () => updateQuery({ search: searchValue }, pageName),
+		performSearch: () => updateQuery({ search: searchValue }, moduleId),
 		resetSearch: () => {
 			setSearchValue(null);
-			if (searchValue === securedQuery.search) updateQuery({ search: null }, pageName);
+			if (searchValue === securedQuery.search) updateQuery({ search: null }, moduleId);
 		},
 	};
 };

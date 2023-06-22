@@ -14,7 +14,7 @@ const ItemDetail: NextPage = () => {
 			isError={isError}
 			errorData={error?.data}
 			errorMessage={error?.message}
-			pageName='item'
+			moduleId='item'
 			rawData={data}
 			extraHead={({ color }) => (
 				<meta

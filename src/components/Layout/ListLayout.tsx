@@ -20,7 +20,7 @@ type ListLayoutProps<TRecord extends CommonRecord> = DefaultLayoutProps &
 	};
 
 export default function ListLayout<TRecord extends CommonRecord>({
-	pageName,
+	moduleId,
 	children,
 	errorData,
 	errorMessage,
@@ -57,25 +57,25 @@ export default function ListLayout<TRecord extends CommonRecord>({
 			enablePageRefresh
 		>
 			<Head>
-				<title>{pageName}</title>
-				<meta name='og:title' content={pageName} key='title' />
-				<meta name='description' content={`${pageName} Record`} key='description' />
+				<title>{moduleId}</title>
+				<meta name='og:title' content={moduleId} key='title' />
+				<meta name='description' content={`${moduleId} Record`} key='description' />
 			</Head>
 
-			<PageTitle pageName={pageName} />
+			<PageTitle moduleId={moduleId} />
 
-			<SearchControl pageName={pageName} />
+			<SearchControl moduleId={moduleId} />
 
-			<FilterControl pageName={pageName} page={page || 1} totalPage={totalPage} totalRecord={totalRecord} />
+			<FilterControl moduleId={moduleId} page={page || 1} totalPage={totalPage} totalRecord={totalRecord} />
 
 			<section
-				className={`container mx-auto mb-auto grid gap-6 max-2xl:px-4 ${pageName !== 'item' && 'lg:grid-cols-2'}`}
+				className={`container mx-auto mb-auto grid gap-6 max-2xl:px-4 ${moduleId !== 'item' && 'lg:grid-cols-2'}`}
 			>
 				{renderChild}
 			</section>
 
 			<FilterControl
-				pageName={pageName}
+				moduleId={moduleId}
 				page={page || 1}
 				totalPage={totalPage}
 				totalRecord={totalRecord}

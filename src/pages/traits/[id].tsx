@@ -13,7 +13,7 @@ const TraitDetail: NextPage = () => {
 			isError={isError}
 			errorData={error?.data}
 			errorMessage={error?.message}
-			pageName='trait'
+			moduleId='trait'
 			rawData={data}
 		>
 			{props => <TraitRecord {...props} />}

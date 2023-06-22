@@ -2,13 +2,13 @@ import SelectOption from '@root/components/SelectOption';
 import { colorDefaultSelect, colorSelectList } from '@root/components/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { PageNameProps } from '@root/types/common/props';
+import type { ModuleIdProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
 import { useMemo } from 'react';
 
-type ColorFilterProps = PageNameProps;
+type ColorFilterProps = ModuleIdProps;
 
-export default function ColorFilter({ pageName }: ColorFilterProps) {
+export default function ColorFilter({ moduleId }: ColorFilterProps) {
 	const { securedQuery, updateQuery, isRouterReady } = useSearchQuery();
 
 	const defaultColor = useMemo(
@@ -18,7 +18,7 @@ export default function ColorFilter({ pageName }: ColorFilterProps) {
 
 	const [colorSelected, setColorSelected] = useQueryOnChange<ColorEnum | null>(
 		defaultColor,
-		color => updateQuery({ color }, pageName),
+		color => updateQuery({ color }, moduleId),
 		isRouterReady,
 	);
 

@@ -7,7 +7,7 @@ import { useRouterReady } from './useRouterReady';
 type UseSearchQuery = () => {
 	isRouterReady: boolean;
 	securedQuery: Partial<SearchQuery>;
-	updateQuery: (nextQuery: Partial<SearchQuery>, pageName: TableEnum) => void;
+	updateQuery: (nextQuery: Partial<SearchQuery>, moduleId: TableEnum) => void;
 	resetQuery: () => void;
 };
 
@@ -33,9 +33,9 @@ export const useSearchQuery: UseSearchQuery = () => {
 	}, [query]);
 
 	const updateQuery = useCallback(
-		(nextQuery: Partial<SearchQuery>, pageName: TableEnum) => {
+		(nextQuery: Partial<SearchQuery>, moduleId: TableEnum) => {
 			if (isRouterReady)
-				push({ pathname: `/${pageName}`, query: parseQuery({ ...securedQuery, page: null, ...nextQuery }) });
+				push({ pathname: `/${moduleId}`, query: parseQuery({ ...securedQuery, page: null, ...nextQuery }) });
 		},
 		[isRouterReady, push, securedQuery],
 	);
@@ -60,5 +60,5 @@ export const useIdQuery: UseIdQuery = () => {
 		return result.success ? query : {};
 	}, [query]);
 
-	return { securedIdQuery, isRouterReady: isRouterReady };
+	return { securedIdQuery, isRouterReady };
 };

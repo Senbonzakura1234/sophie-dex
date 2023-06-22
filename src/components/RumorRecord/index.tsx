@@ -12,7 +12,7 @@ type RumorRecordProps = RecordProps<Rumor>;
 
 export default function RumorRecord(props: RumorRecordProps) {
 	return (
-		<RecordWrapper {...nullableHandle(props)} pageName='rumor'>
+		<RecordWrapper {...nullableHandle(props)} moduleId='rumor'>
 			{({ description, location, price, rumorType }) => (
 				<>
 					<Price price={price} />
