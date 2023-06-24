@@ -12,7 +12,7 @@ export default function TraitPresent({ traitPresent: { table: moduleId, id, name
 			<Link
 				aria-label={name}
 				className='link-hover link'
-				href={{ pathname: `/${moduleId}s/[id]`, query: { id } }}
+				href={{ pathname: `/${moduleId}/[id]`, query: { id } }}
 				role='navigation'
 			>
 				<span className='flex gap-1 font-serif font-bold'>

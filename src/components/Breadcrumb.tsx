@@ -40,9 +40,9 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 										<Link
 											aria-label={`Go to ${i} Search`}
 											className={`link-hover link gap-1 capitalize  ${
-												!pathname.startsWith(`/${n}s`) && 'text-primary hover:text-primary-focus'
+												!pathname.startsWith(`/${n}`) && 'text-primary hover:text-primary-focus'
 											}`}
-											href={{ pathname: `/${n}s` }}
+											href={{ pathname: `/${n}` }}
 											role='navigation'
 										>
 											<LinkIcon className='hidden h-4 w-4 2xl:block' />

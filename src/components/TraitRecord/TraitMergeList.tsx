@@ -33,7 +33,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 							<Link
 								aria-label={name}
 								className='btn-xs join-item btn capitalize'
-								href={{ pathname: `/${moduleId}s/[id]`, query: { id } }}
+								href={{ pathname: `/${moduleId}/[id]`, query: { id } }}
 								key={id}
 								role='navigation'
 							>

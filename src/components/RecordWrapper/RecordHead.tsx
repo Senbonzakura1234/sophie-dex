@@ -17,7 +17,7 @@ export default function RecordHead({ id, name, moduleId }: RecordHeadProps) {
 		<div className='card-title'>
 			<Link
 				className={isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'}
-				href={{ pathname: `/${moduleId}s/[id]`, query: { id } }}
+				href={{ pathname: `/${moduleId}/[id]`, query: { id } }}
 				aria-label={name}
 				role='navigation'
 			>
