@@ -6,7 +6,7 @@ export const APP_NAME = 'Sophie Dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book DX - Wiki';
 export const APP_KEYWORD = 'Atelier, Wiki, Sophie, Mysterious, DX';
 export const APP_AUTHOR = 'Senbonzakura1234';
-export const APP_VERSION = 'sophie-dex@5.1.3';
+export const APP_VERSION = 'sophie-dex@6.0.0';
 
 export const defaultLimit = 20;
 export const defaultListData = createArray(defaultLimit, { data: undefined, isDataReady: false as const });

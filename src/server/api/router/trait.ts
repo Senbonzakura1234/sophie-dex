@@ -1,6 +1,6 @@
 import { defaultLimit, sortByMap } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { db } from '@root/server/db';
+import { db, getListTraitDefault, getTraitRecord } from '@root/server/db';
 import type { Trait } from '@root/server/db/schema';
 import { traits } from '@root/server/db/schema';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
@@ -16,7 +16,7 @@ import {
 	processDBListResult,
 } from '@root/utils/server';
 import type { SQL } from 'drizzle-orm';
-import { and, eq, ilike, or } from 'drizzle-orm';
+import { and, ilike, or } from 'drizzle-orm';
 
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Trait>> => {
@@ -33,6 +33,12 @@ export const traitRouter = router({
 		const AND: SQL[] = [];
 		if (category) AND.push(ANYQuery(traits.categories.name, category));
 
+		if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
+			return await getListTraitDefault
+				.execute({ offset: ((page ?? 1) - 1) * defaultLimit })
+				.then(res => processDBListResult(res, page))
+				.catch(onQueryDBError);
+
 		return await db
 			.select({ totalRecord: CountQuery, record: traits })
 			.from(traits)
@@ -47,7 +53,7 @@ export const traitRouter = router({
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ input: { id } }): Promise<Trait> => {
 		if (!id) throw InvalidRecordIdError();
 
-		const recordResult = await db.select().from(traits).where(eq(traits.id, id)).catch(onQueryDBError);
+		const recordResult = await getTraitRecord.execute({ id }).catch(onQueryDBError);
 
 		if (recordResult[0]) return recordResult[0];
 

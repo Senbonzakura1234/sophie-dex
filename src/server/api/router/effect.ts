@@ -1,6 +1,6 @@
 import { defaultLimit, sortByMap } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { db } from '@root/server/db';
+import { db, getEffectRecord, getListEffectDefault } from '@root/server/db';
 import type { Effect } from '@root/server/db/schema';
 import { effects } from '@root/server/db/schema';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
@@ -14,11 +14,17 @@ import {
 	onQueryDBError,
 	processDBListResult,
 } from '@root/utils/server';
-import { eq, ilike, or } from 'drizzle-orm';
+import { ilike, or } from 'drizzle-orm';
 
 export const effectRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Effect>> => {
 		const { search, sortBy, direction, page } = input;
+
+		if (!search && !sortBy && !direction)
+			return await getListEffectDefault
+				.execute({ offset: ((page ?? 1) - 1) * defaultLimit })
+				.then(res => processDBListResult(res, page))
+				.catch(onQueryDBError);
 
 		return await db
 			.select({ totalRecord: CountQuery, record: effects })
@@ -44,7 +50,7 @@ export const effectRouter = router({
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ input: { id } }): Promise<Effect> => {
 		if (!id) throw InvalidRecordIdError();
 
-		const recordResult = await db.select().from(effects).where(eq(effects.id, id)).catch(onQueryDBError);
+		const recordResult = await getEffectRecord.execute({ id }).catch(onQueryDBError);
 
 		if (recordResult[0]) return recordResult[0];
 

@@ -1,6 +1,6 @@
 import { defaultLimit, sortByMap } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { db } from '@root/server/db';
+import { db, getItemRecord, getListItemDefault } from '@root/server/db';
 import type { Item } from '@root/server/db/schema';
 import { items } from '@root/server/db/schema';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
@@ -30,6 +30,12 @@ export const itemRouter = router({
 		if (recipeType) AND.push(eq(items.recipeType, recipeType));
 		if (category) AND.push(eq(items.category, category));
 
+		if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
+			return await getListItemDefault
+				.execute({ offset: ((page ?? 1) - 1) * defaultLimit })
+				.then(res => processDBListResult(res, page))
+				.catch(onQueryDBError);
+
 		return await db
 			.select({ totalRecord: CountQuery, record: items })
 			.from(items)
@@ -44,7 +50,7 @@ export const itemRouter = router({
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ input: { id } }): Promise<Item> => {
 		if (!id) throw InvalidRecordIdError();
 
-		const recordResult = await db.select().from(items).where(eq(items.id, id)).catch(onQueryDBError);
+		const recordResult = await getItemRecord.execute({ id }).catch(onQueryDBError);
 
 		if (recordResult[0]) return recordResult[0];
 

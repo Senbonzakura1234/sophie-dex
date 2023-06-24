@@ -1,6 +1,6 @@
 import { defaultLimit, sortByMap } from '@root/constants';
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { db } from '@root/server/db';
+import { db, getListRumorDefault, getRumorRecord } from '@root/server/db';
 import type { Rumor } from '@root/server/db/schema';
 import { rumors } from '@root/server/db/schema';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
@@ -26,6 +26,12 @@ export const rumorRouter = router({
 		const AND: SQL[] = [];
 		if (rumorType) AND.push(eq(rumors.rumorType, rumorType));
 
+		if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
+			return await getListRumorDefault
+				.execute({ offset: ((page ?? 1) - 1) * defaultLimit })
+				.then(res => processDBListResult(res, page))
+				.catch(onQueryDBError);
+
 		return await db
 			.select({ totalRecord: CountQuery, record: rumors })
 			.from(rumors)
@@ -40,7 +46,7 @@ export const rumorRouter = router({
 	getOne: publicProcedure.input(idQueryValidator).query(async ({ input: { id } }): Promise<Rumor> => {
 		if (!id) throw InvalidRecordIdError();
 
-		const recordResult = await db.select().from(rumors).where(eq(rumors.id, id)).catch(onQueryDBError);
+		const recordResult = await getRumorRecord.execute({ id }).catch(onQueryDBError);
 
 		if (recordResult[0]) return recordResult[0];
 
