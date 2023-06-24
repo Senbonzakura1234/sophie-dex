@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import dynamic from 'next/dynamic';
 
-const PageRefresh = dynamic(() => import('@root/components/PageRefresh'));
+const PageRefresh = dynamic(() => import('@root/components/ui/PageRefresh'));
 const ErrorModal = dynamic(() => import('./ErrorModal'));
 const ScrollToTop = dynamic(() => import('./ScrollToTop'));
 

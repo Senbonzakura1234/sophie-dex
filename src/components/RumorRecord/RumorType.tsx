@@ -1,4 +1,4 @@
-import { rumorTypeMap } from '@root/components/SubComponent';
+import { rumorTypeMap } from '@root/components/ui/SubComponent';
 import { rumorTypeColorMap } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { RumorTypeEnum } from '@root/types/common/zod';

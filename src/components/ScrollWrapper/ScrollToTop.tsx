@@ -1,8 +1,11 @@
 import ArrowUpOnSquareIcon from '@root/assets/icons/solid/ArrowUpOnSquareIcon';
-import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { RefProps } from '@root/types/common/props';
 import { getFramerFadeUp } from '@root/utils/animations';
 import { useCallback } from 'react';
+
+import dynamic from 'next/dynamic';
+
+const AnimationWrapper = dynamic(() => import('@root/components/ui/AnimationWrapper'));
 
 type ScrollToTopProps = { isShow: boolean } & RefProps<HTMLDivElement>;
 

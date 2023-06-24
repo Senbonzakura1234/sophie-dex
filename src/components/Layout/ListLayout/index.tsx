@@ -1,5 +1,4 @@
 import FilterControl from '@root/components/FilterControl';
-import PageTitle from '@root/components/PageTitle';
 import ScrollWrapper from '@root/components/ScrollWrapper';
 import SearchControl from '@root/components/SearchControl';
 import { defaultListData } from '@root/constants';
@@ -8,10 +7,11 @@ import type { DefaultLayoutProps, ErrorResultProps } from '@root/types/common/pr
 import type { CommonRecord, ListRecord } from '@root/types/model';
 import Head from 'next/head';
 import { useMemo } from 'react';
+import PageTitle from '../PageTitle';
 
 import dynamic from 'next/dynamic';
 
-const PageFooter = dynamic(() => import('@root/components/PageFooter'));
+const PageFooter = dynamic(() => import('../PageFooter'));
 
 type ListLayoutProps<TRecord extends CommonRecord> = DefaultLayoutProps &
 	ErrorResultProps & {

@@ -1,11 +1,14 @@
 import { Listbox } from '@headlessui/react';
 import CheckIcon from '@root/assets/icons/solid/CheckIcon';
 import ChevronUpDownIcon from '@root/assets/icons/solid/ChevronUpDownIcon';
-import AnimationWrapper from '@root/components/AnimationWrapper';
 import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
 import type { ClassNameProps } from '@root/types/common/props';
 import { getFramerFadeUp } from '@root/utils/animations';
 import { LazyMotion, domAnimation } from 'framer-motion';
+
+import dynamic from 'next/dynamic';
+
+const AnimationWrapper = dynamic(() => import('@root/components/ui/AnimationWrapper'));
 
 type SelectOptionProps<V> = {
 	value: SelectOptionItem<V>;

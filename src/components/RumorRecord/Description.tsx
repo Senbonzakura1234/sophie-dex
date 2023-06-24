@@ -1,4 +1,4 @@
-import Hyperlink from '@root/components/Hyperlink';
+import Hyperlink from '@root/components/ui/Hyperlink';
 import type { HyperLinkMap } from '@root/server/db/schema';
 import { Fragment } from 'react';
 

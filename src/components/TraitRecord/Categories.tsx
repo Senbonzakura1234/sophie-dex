@@ -1,4 +1,4 @@
-import { categoryMap, hideCategoryOnTrait } from '@root/components/SubComponent';
+import { categoryMap, hideCategoryOnTrait } from '@root/components/ui/SubComponent';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { CategoryEnum } from '@root/types/common/zod';
 

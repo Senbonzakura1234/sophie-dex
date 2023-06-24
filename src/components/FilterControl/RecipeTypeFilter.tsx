@@ -1,5 +1,5 @@
-import SelectOption from '@root/components/SelectOption';
-import { recipeTypeDefaultSelect, recipeTypeSelectList } from '@root/components/SubComponent';
+import SelectOption from '@root/components/ui/SelectOption';
+import { recipeTypeDefaultSelect, recipeTypeSelectList } from '@root/components/ui/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { ModuleIdProps } from '@root/types/common/props';

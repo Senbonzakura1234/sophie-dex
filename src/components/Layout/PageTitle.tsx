@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import dynamic from 'next/dynamic';
 
-const Breadcrumb = dynamic(() => import('@root/components/Breadcrumb'));
+const Breadcrumb = dynamic(() => import('./Breadcrumb'));
 
 type PageTitleProps = Partial<ModuleIdProps>;
 
