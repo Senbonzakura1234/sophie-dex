@@ -1,10 +1,10 @@
 import {
 	categoryList,
 	colorList,
+	moduleIdList,
 	recipeTypeList,
 	relatedCategoryList,
 	rumorTypeList,
-	tableList,
 } from '@root/types/model';
 import { z } from 'zod';
 
@@ -18,8 +18,8 @@ const positiveIntSchema = z.coerce.number().positive();
 
 const genericStringSchema = z.string();
 
-const genericTableEnumSchema = z.enum(tableList);
-export type TableEnum = z.infer<typeof genericTableEnumSchema>;
+const genericModuleIdEnumSchema = z.enum(moduleIdList);
+export type ModuleIdEnum = z.infer<typeof genericModuleIdEnumSchema>;
 
 const genericSortByEnumSchema = z.enum(['index', 'name', 'level', 'price']);
 export type SortByEnum = z.infer<typeof genericSortByEnumSchema>;
@@ -71,14 +71,6 @@ export type IdQuery = z.infer<typeof idQueryValidator>;
 export const highlightTextValidator = z.object({ content: z.string() });
 
 export type HighlightText = z.infer<typeof highlightTextValidator>;
-
-export const hyperLinkRecordValidator = z.object({
-	id: genericIdSchema,
-	name: genericStringSchema,
-	table: genericTableEnumSchema,
-});
-
-export const hyperLinkSearchValidator = z.object({ searchQuery: searchQueryValidator, table: genericTableEnumSchema });
 
 export const exportDBDataValidator = z.object({
 	effects: z.array(z.unknown()),

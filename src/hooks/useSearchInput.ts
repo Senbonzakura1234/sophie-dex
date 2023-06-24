@@ -1,10 +1,10 @@
 import type { SearchInput, SetSearchInput } from '@root/types/common';
 import { useEffect, useState } from 'react';
 
-import type { TableEnum } from '@root/types/common/zod';
+import type { ModuleIdEnum } from '@root/types/common/zod';
 import { useSearchQuery } from './useSecuredRouter';
 
-type UseSearchInput = (moduleId: TableEnum) => {
+type UseSearchInput = (moduleId: ModuleIdEnum) => {
 	searchInput: string;
 	setSearchValue: SetSearchInput;
 	isSearchValueValid: boolean;

@@ -2,7 +2,7 @@ import HomeIcon from '@root/assets/icons/solid/HomeIcon';
 import LinkIcon from '@root/assets/icons/solid/LinkIcon';
 import CircleDivider from '@root/components/CircleDivider';
 import { APP_AUTHOR, APP_VERSION } from '@root/constants';
-import { tableList } from '@root/types/model';
+import { moduleIdList } from '@root/types/model';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Fragment } from 'react';
@@ -35,7 +35,7 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 							</li>
 
 							<li className='flex gap-2 before:!m-0 2xl:gap-3'>
-								{tableList.map((n, i) => (
+								{moduleIdList.map((n, i) => (
 									<Fragment key={n}>
 										<Link
 											aria-label={`Go to ${i} Search`}
@@ -48,7 +48,7 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 											<LinkIcon className='hidden h-4 w-4 2xl:block' />
 											{n}
 										</Link>
-										{i < tableList.length - 1 ? (
+										{i < moduleIdList.length - 1 ? (
 											<CircleDivider className='h-1 w-1 bg-base-300 sm:h-2 sm:w-2' />
 										) : null}
 									</Fragment>

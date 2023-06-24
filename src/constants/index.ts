@@ -1,4 +1,4 @@
-import type { ColorEnum, RecipeTypeEnum, RumorTypeEnum, SortByEnum, TableEnum } from '@root/types/common/zod';
+import type { ColorEnum, ModuleIdEnum, RecipeTypeEnum, RumorTypeEnum, SortByEnum } from '@root/types/common/zod';
 import { createArray } from '@root/utils/common';
 import colors from 'tailwindcss/colors';
 
@@ -37,4 +37,4 @@ export const sortByMap = {
 	item: ['index', 'level', 'name'],
 	rumor: ['price', 'name'],
 	trait: ['index', 'name'],
-} as const satisfies Record<TableEnum, Readonly<SortByEnum[]>>;
+} as const satisfies Record<ModuleIdEnum, Readonly<SortByEnum[]>>;

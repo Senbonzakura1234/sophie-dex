@@ -1,4 +1,4 @@
-import type { RelatedCategoryEnum, SearchQuery, TableEnum } from '@root/types/common/zod';
+import type { ModuleIdEnum, RelatedCategoryEnum, SearchQuery } from '@root/types/common/zod';
 import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
 import type { InferModel } from 'drizzle-orm';
 import { jsonb, pgTable, smallint, uuid, varchar } from 'drizzle-orm/pg-core';
@@ -6,12 +6,12 @@ import { jsonb, pgTable, smallint, uuid, varchar } from 'drizzle-orm/pg-core';
 export type HyperLinkRecord = {
 	id: string;
 	name: string;
-	table: TableEnum;
+	table: ModuleIdEnum;
 };
 
 export type HyperLinkSearch = {
 	searchQuery: SearchQuery;
-	table: TableEnum;
+	table: ModuleIdEnum;
 };
 
 export type HighlightText = {

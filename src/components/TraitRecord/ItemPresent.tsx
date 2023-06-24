@@ -4,15 +4,15 @@ import Link from 'next/link';
 
 type ItemPresentProps = { itemPresent: HyperLinkRecord };
 
-function ItemPresent({ itemPresent: { table, id, name } }: ItemPresentProps) {
+function ItemPresent({ itemPresent: { table: moduleId, id, name } }: ItemPresentProps) {
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
-			<div className='font-bold capitalize'>{table}: </div>
+			<div className='font-bold capitalize'>{moduleId}: </div>
 
 			<Link
 				aria-label={name}
 				className='link-hover link'
-				href={{ pathname: `/${table}s/[id]`, query: { id } }}
+				href={{ pathname: `/${moduleId}s/[id]`, query: { id } }}
 				role='navigation'
 			>
 				<span className='flex gap-1 font-serif font-bold'>

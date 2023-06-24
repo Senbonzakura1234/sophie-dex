@@ -18,10 +18,7 @@ export default function Hyperlink({ input, className }: HyperlinkProps) {
 					.filter(Boolean)
 					.map((s, key) => `${key > 0 ? ', ' : ''}${s?.toString().replaceAll('_', ' ').toLowerCase()}`)
 					.join(),
-				href: {
-					pathname: `/${input.table}s`,
-					query: input.searchQuery,
-				},
+				href: { pathname: `/${input.table}s`, query: input.searchQuery },
 			};
 
 		return { label: input.name, href: { pathname: `/${input.table}s/[id]`, query: { id: `${input.id}` } } };

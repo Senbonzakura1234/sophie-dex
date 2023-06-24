@@ -4,12 +4,12 @@ import type { ReactNode, RefObject, SVGProps } from 'react';
 
 import type { MaybeData } from '.';
 import type { CommonRecord } from '../model';
-import type { TableEnum } from './zod';
+import type { ModuleIdEnum } from './zod';
 
 export type ClassNameProps = { className?: string };
 export type ChildrenProps = { children?: ReactNode };
 export type RefProps<E> = { refObject?: RefObject<E> };
-export type ModuleIdProps = { moduleId: TableEnum };
+export type ModuleIdProps = { moduleId: ModuleIdEnum };
 export type IsDataReadyProps = { isDataReady: boolean };
 export type PageControlProps = { page: number; totalPage: number; totalRecord: number };
 

@@ -1,4 +1,4 @@
-export const tableList = ['effect', 'item', 'trait', 'rumor'] as const;
+export const moduleIdList = ['effect', 'item', 'trait', 'rumor'] as const;
 
 export const colorList = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW'] as const;
 

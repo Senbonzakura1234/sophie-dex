@@ -1,4 +1,4 @@
-import type { IdQuery, SearchQuery, TableEnum } from '@root/types/common/zod';
+import type { IdQuery, ModuleIdEnum, SearchQuery } from '@root/types/common/zod';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import { useRouter } from 'next/router';
 import { useCallback, useMemo } from 'react';
@@ -7,7 +7,7 @@ import { useRouterReady } from './useRouterReady';
 type UseSearchQuery = () => {
 	isRouterReady: boolean;
 	securedQuery: Partial<SearchQuery>;
-	updateQuery: (nextQuery: Partial<SearchQuery>, moduleId: TableEnum) => void;
+	updateQuery: (nextQuery: Partial<SearchQuery>, moduleId: ModuleIdEnum) => void;
 	resetQuery: () => void;
 };
 
@@ -33,7 +33,7 @@ export const useSearchQuery: UseSearchQuery = () => {
 	}, [query]);
 
 	const updateQuery = useCallback(
-		(nextQuery: Partial<SearchQuery>, moduleId: TableEnum) => {
+		(nextQuery: Partial<SearchQuery>, moduleId: ModuleIdEnum) => {
 			if (isRouterReady)
 				push({ pathname: `/${moduleId}`, query: parseQuery({ ...securedQuery, page: null, ...nextQuery }) });
 		},
