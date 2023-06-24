@@ -1,10 +1,7 @@
+import { AnimationWrapper } from '@root/components/ui/dynamic';
 import type { ErrorResultProps } from '@root/types/common/props';
 import { getFramerFade } from '@root/utils/animations';
 import Link from 'next/link';
-
-import dynamic from 'next/dynamic';
-
-const AnimationWrapper = dynamic(() => import('@root/components/ui/AnimationWrapper'));
 
 type ErrorModalProps = Omit<ErrorResultProps, 'isError'> & {
 	isShow: boolean;

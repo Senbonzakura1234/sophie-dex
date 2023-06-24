@@ -1,6 +1,6 @@
 import HomeIcon from '@root/assets/icons/solid/HomeIcon';
 import LinkIcon from '@root/assets/icons/solid/LinkIcon';
-import CircleDivider from '@root/components/ui/CircleDivider';
+import CircleDivider from '@root/components/ui/static/CircleDivider';
 import { APP_AUTHOR, APP_VERSION } from '@root/constants';
 import { moduleIdList } from '@root/types/model';
 import Link from 'next/link';

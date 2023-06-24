@@ -1,8 +1,5 @@
+import { PageRefresh } from '@root/components/ui/dynamic';
 import PageTitle from '../PageTitle';
-
-import dynamic from 'next/dynamic';
-
-const PageRefresh = dynamic(() => import('@root/components/ui/PageRefresh'));
 
 export default function HomeLayout() {
 	return (

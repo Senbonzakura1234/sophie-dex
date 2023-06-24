@@ -1,4 +1,4 @@
-import Hyperlink from '@root/components/ui/Hyperlink';
+import { Hyperlink } from '@root/components/ui/dynamic';
 import type { ItemDescription } from '@root/server/db/schema';
 
 type DescriptionProps = { description: ItemDescription };

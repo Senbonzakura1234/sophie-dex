@@ -1,4 +1,4 @@
-import SelectOption from '@root/components/ui/SelectOption';
+import SelectOption from '@root/components/ui/static/SelectOption';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
 import type { SelectOptionItem } from '@root/types/common';

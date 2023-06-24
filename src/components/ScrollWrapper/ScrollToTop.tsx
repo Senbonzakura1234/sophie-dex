@@ -3,9 +3,7 @@ import type { RefProps } from '@root/types/common/props';
 import { getFramerFadeUp } from '@root/utils/animations';
 import { useCallback } from 'react';
 
-import dynamic from 'next/dynamic';
-
-const AnimationWrapper = dynamic(() => import('@root/components/ui/AnimationWrapper'));
+import { AnimationWrapper } from '@root/components/ui/dynamic';
 
 type ScrollToTopProps = { isShow: boolean } & RefProps<HTMLDivElement>;
 
