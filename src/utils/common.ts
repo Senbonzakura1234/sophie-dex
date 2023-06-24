@@ -31,3 +31,6 @@ export const improvedInclude = <TSearch extends Readonly<string | number>>(
 ): search is TSearch => arr.includes(search as TSearch);
 
 export const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 3 }).format;
+
+export const capitalize = (input: string) =>
+	input.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase());

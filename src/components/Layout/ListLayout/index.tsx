@@ -9,6 +9,7 @@ import Head from 'next/head';
 import { useMemo } from 'react';
 import PageTitle from '../PageTitle';
 
+import { capitalize } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 
 const PageFooter = dynamic(() => import('../PageFooter'));
@@ -27,6 +28,8 @@ export default function ListLayout<TRecord extends CommonRecord>({
 	isError,
 	rawData,
 }: ListLayoutProps<TRecord>) {
+	const title = capitalize(moduleId);
+
 	const { data, isDataReady } = !!rawData
 		? { data: rawData, isDataReady: true as const }
 		: { data: undefined, isDataReady: false as const };
@@ -57,9 +60,9 @@ export default function ListLayout<TRecord extends CommonRecord>({
 			enablePageRefresh
 		>
 			<Head>
-				<title>{moduleId}</title>
-				<meta name='og:title' content={moduleId} key='title' />
-				<meta name='description' content={`${moduleId} Record`} key='description' />
+				<title>{title}</title>
+				<meta name='og:title' content={title} key='title' />
+				<meta name='description' content={`${title} Record`} key='description' />
 			</Head>
 
 			<PageTitle moduleId={moduleId} />

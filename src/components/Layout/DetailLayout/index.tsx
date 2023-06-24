@@ -6,6 +6,7 @@ import { useMemo } from 'react';
 import PageTitle from '../PageTitle';
 
 import ScrollWrapper from '@root/components/ScrollWrapper';
+import { capitalize } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 
 const PageFooter = dynamic(() => import('../PageFooter'));
@@ -26,6 +27,8 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 	errorMessage,
 	rawData,
 }: DetailLayoutProps<TRecord>) {
+	const title = capitalize(moduleId);
+
 	const renderChild = useMemo(() => {
 		const result = !!rawData
 			? { data: rawData, isDataReady: true as const }
@@ -46,15 +49,15 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 			enablePageRefresh
 		>
 			<Head>
-				<title>{moduleId}</title>
-				<meta name='og:title' content={moduleId} key='title' />
-				<meta name='description' content={`${moduleId} Record`} key='description' />
+				<title>{title}</title>
+				<meta name='og:title' content={title} key='title' />
+				<meta name='description' content={`${title} Record`} key='description' />
 			</Head>
 
 			{rawData ? (
 				<Head>
 					<title>
-						{rawData.name} | {moduleId}
+						{rawData.name} | {title}
 					</title>
 					<meta name='og:title' content={rawData.name} key='title' />
 					<meta name='description' content={rawData.keyWords} key='description' />
