@@ -19,11 +19,11 @@ export default function ItemRecord(props: ItemRecordProps) {
 		<RecordWrapper {...nullableHandle(props)} color={props.data?.color} moduleId='item'>
 			{({ category, color, description, level, recipeIdea, recipeType, relatedCategories, traitPresent }) => (
 				<>
-					<Level level={level} />
+					<Level level={level} color={color} />
 
 					{recipeType ? <RecipeType recipeType={recipeType} /> : null}
 
-					<Category category={category} />
+					<Category color={color} category={category} />
 
 					<Color color={color} />
 

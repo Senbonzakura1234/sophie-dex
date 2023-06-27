@@ -8,7 +8,7 @@ export const APP_KEYWORD = 'Atelier, Wiki, Sophie, Mysterious, DX';
 export const APP_AUTHOR = 'Senbonzakura1234';
 export const APP_VERSION = 'sophie-dex@6.0.0';
 
-export const defaultLimit = 20;
+export const defaultLimit = 16;
 export const defaultListData = createArray(defaultLimit, { data: undefined, isDataReady: false as const });
 
 export const colorFilterMap = {
@@ -16,7 +16,7 @@ export const colorFilterMap = {
 	GREEN: { primary: colors.green[500], secondary: colors.green[600] },
 	RED: { primary: colors.red[500], secondary: colors.red[600] },
 	WHITE: { primary: colors.slate[500], secondary: colors.slate[600] },
-	YELLOW: { primary: colors.yellow[400], secondary: colors.yellow[500] },
+	YELLOW: { primary: colors.yellow[500], secondary: colors.yellow[600] },
 } as const satisfies Record<ColorEnum, { primary: string; secondary: string }>;
 
 export const recipeTypeColorMap = {

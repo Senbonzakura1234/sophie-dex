@@ -15,7 +15,8 @@ export default function PageFooter() {
 				placeholder='blur'
 				src={bottomBg}
 				alt='sophie'
-				sizes='50vw'
+				sizes='100vw'
+				quality={1}
 				data-url={`${getBaseUrl(true)}/assets/images/bottom.jpg`}
 			/>
 

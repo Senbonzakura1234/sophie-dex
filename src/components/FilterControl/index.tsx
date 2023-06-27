@@ -41,14 +41,16 @@ export default function FilterControl({
 	const totalRecordFormatted = formatRecordCount(totalRecord);
 
 	return (
-		<section className={`container relative z-40 mx-auto max-2xl:px-4 ${isBottomFilter && '!z-30'}`}>
+		<section className={`container relative z-40 mx-auto max-2xl:px-4 ${isBottomFilter ? '!z-30' : ''}`}>
 			<nav className='card bg-base-100 shadow-lg shadow-primary'>
 				<div
 					className={`flex w-full flex-row flex-wrap gap-3 px-5 py-3 ${
 						isBottomFilter ? 'place-content-center' : '2xl:place-content-end'
 					}`}
 				>
-					<h2 className={`hidden w-full font-extrabold ${!isBottomFilter && 'max-2xl:block'}`}>Filter Control:</h2>
+					<h2 className={`hidden w-full font-extrabold ${!isBottomFilter ? 'max-2xl:block' : ''}`}>
+						Filter Control:
+					</h2>
 
 					{!isBottomFilter ? (
 						<>

@@ -72,7 +72,9 @@ export default function ListLayout<TRecord extends CommonRecord>({
 			<FilterControl moduleId={moduleId} page={page || 1} totalPage={totalPage} totalRecord={totalRecord} />
 
 			<section
-				className={`container mx-auto mb-auto grid gap-6 max-2xl:px-4 ${moduleId !== 'item' && 'lg:grid-cols-2'}`}
+				className={`container mx-auto mb-auto grid gap-6 max-2xl:px-4 ${
+					moduleId !== 'item' ? 'lg:grid-cols-2' : 'xl:grid-cols-2'
+				}`}
 			>
 				{renderChild}
 			</section>

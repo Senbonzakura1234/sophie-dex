@@ -22,7 +22,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 					role='navigation'
 					disabled={!isRouterReady}
 					className={`btn-xs btn !border-current !bg-current opacity-80 hover:opacity-100 ${
-						isBtnDisabled && '!no-animation !cursor-default hover:opacity-80'
+						isBtnDisabled ? '!no-animation !cursor-default hover:opacity-80' : ''
 					}`}
 					style={{ color: rumorTypeColorMap[rumorType].secondary }}
 				>

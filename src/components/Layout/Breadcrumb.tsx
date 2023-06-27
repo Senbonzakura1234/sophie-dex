@@ -3,11 +3,14 @@ import LinkIcon from '@root/assets/icons/solid/LinkIcon';
 import CircleDivider from '@root/components/ui/static/CircleDivider';
 import { APP_AUTHOR, APP_VERSION } from '@root/constants';
 import { moduleIdList } from '@root/types/model';
+import { Roboto_Slab } from 'next/font/google';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Fragment } from 'react';
 
 type BreadcrumbProps = { isShowAuthor: boolean };
+
+const robotoSlab = Roboto_Slab({ weight: ['800'], subsets: ['latin'] });
 
 export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 	const { pathname } = useRouter();
@@ -16,8 +19,8 @@ export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
 		<>
 			<div className='flex w-full'>
 				<nav className='card card-compact mx-auto w-[17rem] max-w-full bg-base-100 py-1 shadow-lg shadow-primary 2xl:w-2/5'>
-					<div className='breadcrumbs mx-auto text-xs font-extrabold 2xl:text-base'>
-						<ul className='gap-1 font-serif font-extrabold'>
+					<div className='breadcrumbs mx-auto text-xs 2xl:text-base'>
+						<ul className={`${robotoSlab.className} gap-1`}>
 							<li>
 								<Link
 									aria-label='Go to homepage'

@@ -20,8 +20,8 @@ function Categories({ categories }: CategoriesProps) {
 							aria-label={`Filter by ${name}`}
 							role='navigation'
 							className={`btn-sm btn rounded-3xl 2xl:btn-md ${
-								securedQuery.category !== code && isClickAble(code) && 'btn-primary text-slate-50'
-							}`}
+								securedQuery.category !== code && isClickAble(code) ? 'btn-primary text-slate-50' : ''
+							} ${securedQuery.category === code ? 'btn-accent text-slate-50' : ''}`}
 							onClick={() => {
 								if (isClickAble(code))
 									updateQuery({ category: securedQuery.category === code ? null : code }, 'trait');

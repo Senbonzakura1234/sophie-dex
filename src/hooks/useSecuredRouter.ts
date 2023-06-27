@@ -1,5 +1,6 @@
 import type { IdQuery, ModuleIdEnum, SearchQuery } from '@root/types/common/zod';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
+import { parseQuery } from '@root/utils/common';
 import { useRouter } from 'next/router';
 import { useCallback, useMemo } from 'react';
 import { useRouterReady } from './useRouterReady';
@@ -9,16 +10,6 @@ type UseSearchQuery = () => {
 	securedQuery: Partial<SearchQuery>;
 	updateQuery: (nextQuery: Partial<SearchQuery>, moduleId: ModuleIdEnum) => void;
 	resetQuery: () => void;
-};
-
-const parseQuery = (query: Partial<SearchQuery>) => {
-	for (const key in query) {
-		if (!Object.prototype.hasOwnProperty.call(query, key)) continue;
-		const element = query[key as keyof typeof query];
-		if (!element) delete query[key as keyof typeof query];
-	}
-
-	return query;
 };
 
 export const useSearchQuery: UseSearchQuery = () => {

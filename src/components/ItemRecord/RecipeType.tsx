@@ -14,15 +14,15 @@ export default function RecipeType({ recipeType }: RecipeTypeProps) {
 			<div className='font-bold'>Recipe type: </div>
 
 			<button
+				aria-label={`Filter ${recipeType} Item`}
+				disabled={!isRouterReady}
+				className={`btn-xs btn !border-current !bg-current opacity-80 hover:opacity-100 ${
+					isBtnDisabled ? '!no-animation !cursor-default !opacity-80' : ''
+				}`}
 				onClick={() => {
 					if (!isBtnDisabled) updateQuery({ recipeType }, 'item');
 				}}
 				role='navigation'
-				aria-label={`Filter ${recipeType} Item`}
-				disabled={!isRouterReady}
-				className={`btn-xs btn !border-current !bg-current opacity-80 hover:opacity-100 ${
-					isBtnDisabled && '!no-animation !cursor-default !opacity-80'
-				}`}
 				style={{ color: recipeTypeColorMap[recipeType].secondary }}
 			>
 				<span className='font-extrabold capitalize text-slate-50'>

@@ -1,5 +1,6 @@
 import type { HighlightText, HyperLinkRecord, HyperLinkSearch } from '@root/server/db/schema';
 import type { ClassNameProps } from '@root/types/common/props';
+import { parseQuery } from '@root/utils/common';
 import Link from 'next/link';
 import { useMemo } from 'react';
 import type { UrlObject } from 'url';
@@ -12,14 +13,17 @@ export default function Hyperlink({ input, className }: HyperlinkProps) {
 	const { href, label }: { href?: UrlObject; label: string } = useMemo(() => {
 		if ('content' in input) return { label: input.content };
 
-		if ('searchQuery' in input)
+		if ('searchQuery' in input) {
+			const query = parseQuery(input.searchQuery);
+
 			return {
-				label: Object.values(input.searchQuery)
+				label: Object.values(query)
 					.filter(Boolean)
 					.map((s, key) => `${key > 0 ? ', ' : ''}${s?.toString().replaceAll('_', ' ').toLowerCase()}`)
 					.join(),
-				href: { pathname: `/${input.table}`, query: input.searchQuery },
+				href: { pathname: `/${input.table}`, query },
 			};
+		}
 
 		return { label: input.name, href: { pathname: `/${input.table}/[id]`, query: { id: `${input.id}` } } };
 	}, [input]);

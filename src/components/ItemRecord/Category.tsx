@@ -1,13 +1,22 @@
 import { categoryMap } from '@root/components/ui/SubComponent';
 import { useSearchQuery } from '@root/hooks/useSecuredRouter';
-import type { CategoryEnum } from '@root/types/common/zod';
+import type { TextShadowMap } from '@root/types/common/tailwind';
+import type { CategoryEnum, ColorEnum } from '@root/types/common/zod';
 
-type CategoryProps = { category: CategoryEnum };
+type CategoryProps = { category: CategoryEnum; color: ColorEnum };
 
-export default function Category({ category }: CategoryProps) {
+export default function Category({ category, color }: CategoryProps) {
 	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
 
 	const isBtnDisabled = !isRouterReady || securedQuery.category === category;
+
+	const className = {
+		BLUE: 'app-text-shadow-BLUE',
+		GREEN: 'app-text-shadow-GREEN',
+		RED: 'app-text-shadow-RED',
+		WHITE: 'app-text-shadow-WHITE',
+		YELLOW: 'app-text-shadow-YELLOW',
+	} satisfies TextShadowMap;
 
 	return (
 		<>
@@ -21,7 +30,7 @@ export default function Category({ category }: CategoryProps) {
 					role='navigation'
 					disabled={!isRouterReady}
 					className={`btn-accent btn-xs btn gap-1 font-extrabold capitalize ${
-						isBtnDisabled && 'no-animation cursor-default !border-slate-300 !bg-slate-300 !text-slate-900'
+						isBtnDisabled ? 'no-animation cursor-default !border-slate-300 !bg-slate-300 !text-slate-900' : ''
 					}`}
 				>
 					<div className={`font-atelier ${categoryMap.get(category)?.className}`} />
@@ -30,9 +39,9 @@ export default function Category({ category }: CategoryProps) {
 			</div>
 
 			<div
-				className={`absolute bottom-5 right-5 w-10 text-center font-atelier text-lg text-slate-50 sm:bottom-10 sm:right-10 md:text-4xl ${
+				className={`absolute bottom-8 right-8 w-10 text-center font-atelier text-lg text-slate-50 md:text-4xl ${
 					categoryMap.get(category)?.className
-				}`}
+				} ${className[color]}`}
 			/>
 		</>
 	);

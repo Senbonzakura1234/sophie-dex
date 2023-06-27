@@ -32,11 +32,11 @@ export default function SelectOption<V extends string | number | null>({
 					<div className='relative'>
 						<Listbox.Button
 							className={`relative w-full cursor-pointer rounded-lg bg-white py-2 pl-3 pr-10 text-left text-xs shadow-lg focus:outline-none focus-visible:border-primary-focus focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-focus 2xl:text-sm ${
-								list.length <= 1 && 'cursor-not-allowed opacity-50'
+								list.length <= 1 ? 'cursor-not-allowed opacity-50' : ''
 							}`}
 						>
 							<span className='flex gap-2 truncate pl-1 font-bold'>
-								<span className={useAtelierFont ? 'font-atelier' : ''}>{withIcon && value.icon}</span>
+								<span className={useAtelierFont ? 'font-atelier' : ''}>{withIcon ? value.icon : null}</span>
 								{value.label}
 							</span>
 							<span className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2'>
@@ -58,7 +58,7 @@ export default function SelectOption<V extends string | number | null>({
 												key={key}
 												className={({ active }) =>
 													`relative cursor-default select-none py-2 pr-4 ${
-														active && 'bg-primary/10 text-primary'
+														active ? 'bg-primary/10 text-primary' : ''
 													} ${withIcon || useCustomIcon ? 'pl-10' : 'pl-4'}`
 												}
 												value={item}
@@ -69,8 +69,8 @@ export default function SelectOption<V extends string | number | null>({
 												{(isSelected && withIcon) || useCustomIcon ? (
 													<span
 														className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
-															useAtelierFont && 'font-atelier'
-														} ${!useCustomIcon && 'text-primary'}`}
+															useAtelierFont ? 'font-atelier' : ''
+														} ${!useCustomIcon ? 'text-primary' : ''}`}
 													>
 														{useCustomIcon ? (
 															item.icon

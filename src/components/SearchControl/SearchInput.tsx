@@ -21,16 +21,16 @@ export default function SearchInput({ moduleId }: SearchInputProps) {
 				className='input input-sm my-auto grow p-0 !outline-none'
 			/>
 
-			<button
-				role='navigation'
-				aria-label='Reset search query'
-				onClick={resetSearch}
-				className={`btn-ghost btn-sm btn-circle btn my-auto border-0 hover:bg-transparent ${
-					!isSearchValueValid && 'opacity-0'
-				}`}
-			>
-				<XMarkIcon width={18} height={18} />
-			</button>
+			{isSearchValueValid ? (
+				<button
+					role='navigation'
+					aria-label='Reset search query'
+					onClick={resetSearch}
+					className='btn-ghost btn-sm btn-circle btn my-auto border-0 hover:bg-transparent'
+				>
+					<XMarkIcon width={18} height={18} />
+				</button>
+			) : null}
 
 			<button
 				role='navigation'

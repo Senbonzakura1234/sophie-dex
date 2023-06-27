@@ -1,6 +1,5 @@
 import ArrowPathIcon from '@root/assets/icons/solid/ArrowPathIcon';
 import { useRouterReady } from '@root/hooks/useRouterReady';
-import { LazyMotion, domAnimation, m as motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { usePullToRefresh } from 'use-pull-to-refresh';
 
@@ -21,23 +20,19 @@ export default function PageRefresh({ isDisabled = false }: PageRefreshProps) {
 	});
 
 	return (
-		<LazyMotion features={domAnimation} strict>
-			<motion.div
-				initial={{ opacity: 0, top: 0 }}
-				animate={{
-					opacity: (isRefreshing || pullPosition > 0) && !isDisabled ? 1 : 0,
-					top: isDisabled ? 0 : (isRefreshing ? refreshThreshold : pullPosition) / 3,
-				}}
-				className='fixed inset-x-1/2 z-30 aspect-square h-8 w-8 -translate-x-1/2 rounded-full bg-slate-50 p-2'
+		<div
+			style={{
+				opacity: (isRefreshing || pullPosition > 0) && !isDisabled ? 1 : 0,
+				top: isDisabled ? 0 : (isRefreshing ? refreshThreshold : pullPosition) / 3,
+			}}
+			className='fixed inset-x-1/2 z-30 aspect-square h-8 w-8 -translate-x-1/2 rounded-full bg-slate-50 p-2 transition-opacity'
+		>
+			<div
+				style={{ rotate: `${isDisabled ? 0 : pullPosition}deg` }}
+				className={`h-full w-full transition-[rotate] ${!isDisabled && isRefreshing ? 'animate-spin' : ''}`}
 			>
-				<motion.div
-					className={`h-full w-full ${!isDisabled && isRefreshing && 'animate-spin'}`}
-					initial={{ rotate: 0 }}
-					animate={{ rotate: isDisabled ? 0 : pullPosition }}
-				>
-					<ArrowPathIcon className='h-full w-full text-primary' />
-				</motion.div>
-			</motion.div>
-		</LazyMotion>
+				<ArrowPathIcon className='h-full w-full text-primary' />
+			</div>
+		</div>
 	);
 }

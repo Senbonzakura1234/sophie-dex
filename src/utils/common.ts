@@ -1,5 +1,5 @@
 import type { MaybeData } from '@root/types/common';
-import type { NodeEnv } from '@root/types/common/zod';
+import type { NodeEnv, SearchQuery } from '@root/types/common/zod';
 import { env } from './env.mjs';
 
 export const evnIs = (nodeEnv: NodeEnv) => env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
@@ -34,3 +34,13 @@ export const formatRecordCount = new Intl.NumberFormat('en-US', { minimumInteger
 
 export const capitalize = (input: string) =>
 	input.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase());
+
+export const parseQuery = (query: Partial<SearchQuery>) => {
+	for (const key in query) {
+		if (!Object.prototype.hasOwnProperty.call(query, key)) continue;
+		const element = query[key as keyof typeof query];
+		if (!element) delete query[key as keyof typeof query];
+	}
+
+	return query;
+};

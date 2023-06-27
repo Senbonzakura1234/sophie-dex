@@ -5,7 +5,7 @@ type DescriptionProps = { description: ItemDescription };
 
 export default function Description({ description }: DescriptionProps) {
 	return (
-		<ul className='max-w-fit list-disc pl-8 text-lg sm:max-w-[80%]'>
+		<ul className='max-w-[90%] list-disc pl-8 text-lg'>
 			{Object.entries(description).map(([key, value]) =>
 				!value || (Array.isArray(value) && !value.length) ? null : (
 					<li key={key}>
@@ -16,7 +16,7 @@ export default function Description({ description }: DescriptionProps) {
 						) : Array.isArray(value) ? (
 							<span className='font-bold'>{value.join(', ')}</span>
 						) : (
-							<Hyperlink input={value} className='link-info link' />
+							<Hyperlink input={value} className='link-accent link visited:link-primary' />
 						)}
 					</li>
 				),
