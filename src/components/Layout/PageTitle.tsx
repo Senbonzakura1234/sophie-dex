@@ -5,10 +5,8 @@ import { getBaseUrl } from '@root/utils/common';
 import Image from 'next/image';
 
 import dynamic from 'next/dynamic';
-import { Roboto_Slab } from 'next/font/google';
 
 const Breadcrumb = dynamic(() => import('./Breadcrumb'));
-const robotoSlab = Roboto_Slab({ weight: ['700'], subsets: ['latin'] });
 
 type PageTitleProps = Partial<ModuleIdProps>;
 
@@ -44,14 +42,12 @@ export default function PageTitle({ moduleId }: PageTitleProps) {
 							data-url={`${getBaseUrl(true)}/assets/images/sophie-logo.png`}
 						/>
 					) : (
-						<div
-							className={`${robotoSlab.className} text-5xl capitalize tracking-widest text-slate-50 text-shadow-dark xl:text-6xl 2xl:text-7xl`}
-						>
+						<div className='font-roboto text-5xl font-bold capitalize tracking-widest text-slate-50 text-shadow-dark xl:text-6xl 2xl:text-7xl'>
 							{moduleId}
 						</div>
 					)}
 				</div>
-				<Breadcrumb isShowAuthor={isHomePage} />
+				<Breadcrumb isShowAuthor={isHomePage} moduleId={moduleId} />
 			</div>
 		</section>
 	);

@@ -6,7 +6,7 @@ export const APP_NAME = 'Sophie Dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book DX - Wiki';
 export const APP_KEYWORD = 'Atelier, Wiki, Sophie, Mysterious, DX';
 export const APP_AUTHOR = 'Senbonzakura1234';
-export const APP_VERSION = 'sophie-dex@7.1.1';
+export const APP_VERSION = 'sophie-dex@7.3.0';
 
 export const defaultLimit = 16;
 export const defaultListData = createArray(defaultLimit, { data: undefined, isDataReady: false as const });
@@ -31,6 +31,11 @@ export const rumorTypeColorMap = {
 	MONSTER: colorFilterMap['RED'],
 	MATERIAL: colorFilterMap['GREEN'],
 } as const satisfies Record<RumorTypeEnum, (typeof colorFilterMap)[keyof typeof colorFilterMap]>;
+
+export const rumorColorMap = {
+	MONSTER: 'RED',
+	MATERIAL: 'GREEN',
+} as const satisfies Record<RumorTypeEnum, ColorEnum>;
 
 export const sortByMap = {
 	effect: ['index', 'name'],

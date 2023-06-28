@@ -10,6 +10,11 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 
 	const isBtnDisabled = !isRouterReady || securedQuery.rumorType === rumorType;
 
+	const className = {
+		MATERIAL: 'app-text-shadow-GREEN',
+		MONSTER: 'app-text-shadow-RED',
+	} satisfies Record<RumorTypeEnum, string>;
+
 	return (
 		<>
 			<div className='flex max-w-fit flex-wrap gap-2'>
@@ -34,9 +39,9 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 			</div>
 
 			<div
-				className={`absolute bottom-10 right-10 w-10 text-center font-atelier text-lg text-slate-50 md:text-4xl ${
+				className={`absolute bottom-8 right-8 w-10 text-center font-atelier text-lg text-slate-50 md:text-4xl ${
 					rumorTypeMap.get(rumorType)?.className
-				}`}
+				} ${className[rumorType]}`}
 			/>
 		</>
 	);

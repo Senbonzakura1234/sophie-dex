@@ -28,17 +28,19 @@ export default function RecordWrapper<TRecord extends { id: string; name: string
 
 	return (
 		<article
-			className={`card relative mb-auto h-full w-full overflow-hidden p-1 shadow-lg 2xl:max-h-96 ${
-				!!color ? 'bg-current shadow-current' : 'bg-gradient-to-r from-accent to-primary/80 shadow-primary'
+			className={`card relative mb-auto h-full w-full overflow-hidden p-1.5 shadow-lg 2xl:max-h-96 ${
+				!!color
+					? 'bg-gradient-to-r from-current to-current shadow-base-content'
+					: 'bg-gradient-to-r from-accent to-primary shadow-primary'
 			} ${className}`}
 			style={color ? { color: colorFilterMap[color].primary } : undefined}
 		>
 			<div
-				className={`card-body flex flex-col gap-3 rounded-xl bg-base-100 p-7 text-base-content ${
+				className={`card-body flex flex-col gap-3 rounded-xl bg-base-100 p-[1.625rem] text-base-content shadow-inner shadow-base-content ${
 					!isDataReady ? 'min-h-[270px]' : ''
 				}`}
 			>
-				{isDataReady ? <RecordHead id={data.id} name={data.name} moduleId={moduleId} color={color} /> : null}
+				{isDataReady ? <RecordHead id={data.id} name={data.name} moduleId={moduleId} /> : null}
 
 				{renderChild}
 			</div>

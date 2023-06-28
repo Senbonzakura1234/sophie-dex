@@ -2,55 +2,44 @@ import HomeIcon from '@root/assets/icons/solid/HomeIcon';
 import LinkIcon from '@root/assets/icons/solid/LinkIcon';
 import CircleDivider from '@root/components/ui/static/CircleDivider';
 import { APP_AUTHOR, APP_VERSION } from '@root/constants';
+import type { ModuleIdProps } from '@root/types/common/props';
 import { moduleIdList } from '@root/types/model';
-import { Roboto_Slab } from 'next/font/google';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { Fragment } from 'react';
+import LinkItem from './LinkItem';
 
-type BreadcrumbProps = { isShowAuthor: boolean };
+type BreadcrumbProps = { isShowAuthor: boolean } & Partial<ModuleIdProps>;
 
-const robotoSlab = Roboto_Slab({ weight: ['800'], subsets: ['latin'] });
-
-export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
-	const { pathname } = useRouter();
-
+export default function Breadcrumb({ isShowAuthor, moduleId }: BreadcrumbProps) {
 	return (
 		<>
 			<div className='flex w-full'>
 				<nav className='card card-compact mx-auto w-[17rem] max-w-full bg-base-100 py-1 shadow-lg shadow-primary 2xl:w-2/5'>
 					<div className='breadcrumbs mx-auto text-xs 2xl:text-base'>
-						<ul className={`${robotoSlab.className} gap-1`}>
+						<ul className='gap-1 font-roboto font-extrabold'>
 							<li>
-								<Link
+								<LinkItem
 									aria-label='Go to homepage'
-									className={`link gap-1 ${
-										pathname === '/'
-											? 'no-animation !cursor-default !no-underline'
-											: 'link-hover text-primary hover:text-primary-focus'
-									}`}
 									href={{ pathname: '/' }}
-									role='navigation'
+									icon={<HomeIcon className='h-4 w-4' />}
+									isActive={!moduleId}
 								>
-									<HomeIcon className='h-4 w-4' />
-									<span className='hidden 2xl:inline'>Home</span>
-								</Link>
+									Home
+								</LinkItem>
 							</li>
 
 							<li className='flex gap-2 before:!m-0 2xl:gap-3'>
-								{moduleIdList.map((n, i) => (
-									<Fragment key={n}>
-										<Link
+								{moduleIdList.map((m, i) => (
+									<Fragment key={m}>
+										<LinkItem
 											aria-label={`Go to ${i} Search`}
-											className={`link-hover link gap-1 capitalize  ${
-												!pathname.startsWith(`/${n}`) && 'text-primary hover:text-primary-focus'
-											}`}
-											href={{ pathname: `/${n}` }}
-											role='navigation'
+											href={{ pathname: `/${m}` }}
+											icon={<LinkIcon className='hidden h-4 w-4 2xl:block' />}
+											isActive={m === moduleId}
 										>
-											<LinkIcon className='hidden h-4 w-4 2xl:block' />
-											{n}
-										</Link>
+											{m}
+										</LinkItem>
+
 										{i < moduleIdList.length - 1 ? (
 											<CircleDivider className='h-1 w-1 bg-base-300 sm:h-2 sm:w-2' />
 										) : null}

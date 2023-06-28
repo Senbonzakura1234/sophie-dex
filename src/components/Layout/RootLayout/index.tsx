@@ -1,15 +1,17 @@
 import type { ChildrenProps } from '@root/types/common/props';
-import { Rubik } from 'next/font/google';
+import { Roboto_Slab, Rubik } from 'next/font/google';
+import localFont from 'next/font/local';
 import HeadLayout from './HeadLayout';
 
 const rubik = Rubik({ subsets: ['latin'] });
-// const monoton = Monoton({ display: 'swap', weight: '400'  });
+const robotoSlab = Roboto_Slab({ weight: ['600', '700', '800'], subsets: ['latin'], variable: '--font-roboto' });
+const fontAtelier = localFont({ src: './Atelier.woff2', preload: true, variable: '--font-atelier' });
 
 type RootLayoutProps = ChildrenProps;
 
 export default function RootLayout({ children }: RootLayoutProps) {
 	return (
-		<main className={rubik.className}>
+		<main className={`${rubik.className} ${fontAtelier.variable} ${robotoSlab.variable}`}>
 			<HeadLayout />
 			{children}
 		</main>

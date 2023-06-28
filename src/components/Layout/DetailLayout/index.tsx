@@ -72,7 +72,7 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 				<div className={`mx-auto max-w-full ${moduleId === 'item' ? 'w-[900px]' : 'w-[700px]'}`}>{renderChild}</div>
 			</section>
 
-			<PageFooter />
+			<PageFooter moduleId={moduleId} />
 		</ScrollWrapper>
 	);
 }

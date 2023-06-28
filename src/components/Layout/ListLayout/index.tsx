@@ -87,7 +87,7 @@ export default function ListLayout<TRecord extends CommonRecord>({
 				isBottomFilter
 			/>
 
-			<PageFooter />
+			<PageFooter moduleId={moduleId} />
 		</ScrollWrapper>
 	);
 }

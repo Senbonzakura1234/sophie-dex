@@ -4,7 +4,10 @@ const tailwindPlugin = require('tailwindcss/plugin');
 module.exports = {
 	content: ['./src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
-		fontFamily: { atelier: ['Atelier'] },
+		fontFamily: {
+			atelier: ['var(--font-atelier)'],
+			roboto: ['var(--font-roboto)'],
+		},
 		extend: {
 			gridTemplateRows: { layoutMobile: '64px minmax(auto, 1fr)', layoutDesktop: '72px minmax(auto, 1fr)' },
 			gridTemplateColumns: {

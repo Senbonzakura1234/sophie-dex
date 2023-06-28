@@ -18,7 +18,7 @@ export default function Description({ description: { contentText, contentData } 
 					if (text.includes('keyMap-')) data = contentData[parseInt(text.replace('keyMap-', ''))];
 
 					return data ? (
-						<Hyperlink key={key} input={data} className='link-accent link visited:link-primary' />
+						<Hyperlink key={key} input={data} className='link-primary link visited:link-accent' />
 					) : (
 						<Fragment key={key}>{text}</Fragment>
 					);

@@ -1,10 +1,9 @@
 import { AnimationWrapper } from '@root/components/ui/dynamic';
 import type { ErrorResultProps } from '@root/types/common/props';
 import { getFramerFade } from '@root/utils/animations';
-import { Monoton, Roboto_Slab } from 'next/font/google';
+import { Monoton } from 'next/font/google';
 import Link from 'next/link';
 
-const robotoSlab = Roboto_Slab({ weight: ['400', '600'], subsets: ['latin'] });
 const monoton = Monoton({ weight: '400', subsets: ['latin'] });
 
 type ErrorModalProps = Omit<ErrorResultProps, 'isError'> & {
@@ -32,7 +31,7 @@ export default function ErrorModal({
 					httpStatus >= 500 ? 'text-red-600' : 'text-blue-700'
 				}`}
 			>
-				<div className={`card-body place-content-center text-center ${robotoSlab.className}`}>
+				<div className='card-body place-content-center text-center font-roboto'>
 					<div className='grid gap-1'>
 						<h1 className={`${monoton.className} text-7xl tracking-widest md:text-9xl`}>{httpStatus}</h1>
 						<span className='font-semibold md:text-2xl'>{errorMessage}</span>

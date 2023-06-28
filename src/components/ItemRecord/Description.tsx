@@ -16,7 +16,7 @@ export default function Description({ description }: DescriptionProps) {
 						) : Array.isArray(value) ? (
 							<span className='font-bold'>{value.join(', ')}</span>
 						) : (
-							<Hyperlink input={value} className='link-accent link visited:link-primary' />
+							<Hyperlink input={value} className='link-primary link visited:link-accent' />
 						)}
 					</li>
 				),
