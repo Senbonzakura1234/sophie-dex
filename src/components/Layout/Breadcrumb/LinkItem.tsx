@@ -20,7 +20,7 @@ export default function LinkItem({ isActive, icon, children, ...rest }: LinkItem
 			{...rest}
 		>
 			{icon}
-			<span className='hidden 2xl:inline'>{children}</span>
+			<span>{children}</span>
 		</Link>
 	);
 }

@@ -14,7 +14,7 @@ export default function Breadcrumb({ isShowAuthor, moduleId }: BreadcrumbProps) 
 	return (
 		<>
 			<div className='flex w-full'>
-				<nav className='card card-compact mx-auto w-[17rem] max-w-full bg-base-100 py-1 shadow-lg shadow-primary 2xl:w-2/5'>
+				<nav className='card mx-auto w-[90%] max-w-md bg-base-100 px-2 py-1 shadow-lg shadow-primary 2xl:w-2/5 2xl:max-w-none'>
 					<div className='breadcrumbs mx-auto text-xs 2xl:text-base'>
 						<ul className='gap-1 font-roboto font-extrabold'>
 							<li>
@@ -34,7 +34,7 @@ export default function Breadcrumb({ isShowAuthor, moduleId }: BreadcrumbProps) 
 										<LinkItem
 											aria-label={`Go to ${i} Search`}
 											href={{ pathname: `/${m}` }}
-											icon={<LinkIcon className='hidden h-4 w-4 2xl:block' />}
+											icon={<LinkIcon className='hidden h-4 w-4 2xl:inline' />}
 											isActive={m === moduleId}
 										>
 											{m}

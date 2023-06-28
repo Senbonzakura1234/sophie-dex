@@ -22,7 +22,7 @@ export default function PageTitle({ moduleId }: PageTitleProps) {
 				fill
 				sizes='100vw'
 				src={topBg}
-				quality={1}
+				quality={50}
 				placeholder='blur'
 				priority={!isHomePage}
 			/>
@@ -37,7 +37,7 @@ export default function PageTitle({ moduleId }: PageTitleProps) {
 							src={sophieLogo}
 							alt={moduleId ?? 'home'}
 							priority={isHomePage}
-							quality={1}
+							quality={50}
 							width={700}
 							data-url={`${getBaseUrl(true)}/assets/images/sophie-logo.png`}
 						/>

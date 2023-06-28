@@ -19,7 +19,7 @@ export default function PageFooter({ moduleId }: PageFooterProps) {
 				src={bottomBg}
 				alt='sophie'
 				sizes='100vw'
-				quality={1}
+				quality={10}
 				data-url={`${getBaseUrl(true)}/assets/images/bottom.jpg`}
 			/>
 
