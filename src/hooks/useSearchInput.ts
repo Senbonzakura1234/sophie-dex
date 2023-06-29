@@ -30,8 +30,8 @@ export const useSearchInput: UseSearchInput = moduleId => {
 		isSearchValueValid: searchInput.length > 0,
 		performSearch: () => updateQuery({ search: searchValue }, moduleId),
 		resetSearch: () => {
+			if (searchValue === securedQuery.search) return updateQuery({ search: null }, moduleId);
 			setSearchValue(null);
-			if (searchValue === securedQuery.search) updateQuery({ search: null }, moduleId);
 		},
 	};
 };
