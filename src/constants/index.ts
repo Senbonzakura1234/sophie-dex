@@ -1,4 +1,3 @@
-import type { ErrorResultProps } from '@root/types/common/props';
 import type { ColorEnum, ModuleIdEnum, RecipeTypeEnum, RumorTypeEnum, SortByEnum } from '@root/types/common/zod';
 import { createArray } from '@root/utils/common';
 import colors from 'tailwindcss/colors';
@@ -7,7 +6,7 @@ export const APP_NAME = 'Sophie Dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book DX - Wiki';
 export const APP_KEYWORD = 'Atelier, Wiki, Sophie, Mysterious, DX';
 export const APP_AUTHOR = 'Senbonzakura1234';
-export const APP_VERSION = 'sophie-dex@7.3.1';
+export const APP_VERSION = 'sophie-dex@7.5.1';
 
 export const defaultLimit = 16;
 export const defaultListData = createArray(defaultLimit, { data: undefined, isDataReady: false as const });
@@ -44,11 +43,3 @@ export const sortByMap = {
 	rumor: ['price', 'name'],
 	trait: ['index', 'name'],
 } as const satisfies Record<ModuleIdEnum, Readonly<SortByEnum[]>>;
-
-export const errorMap = {
-	400: { errorData: { code: 'BAD_REQUEST', httpStatus: 400 }, errorMessage: 'Bad Request' },
-	403: { errorData: { code: 'FORBIDDEN', httpStatus: 403 }, errorMessage: 'You Are Not Allowed To See This Page' },
-	404: { errorData: { code: 'NOT_FOUND', httpStatus: 404 }, errorMessage: 'Page Not Found' },
-	405: { errorData: { code: 'METHOD_NOT_SUPPORTED', httpStatus: 405 }, errorMessage: 'Method Not Supported' },
-	500: { errorData: { code: 'INTERNAL_SERVER_ERROR', httpStatus: 400 }, errorMessage: 'An Error Occurred On Server' },
-} as const satisfies Record<number, Omit<ErrorResultProps, 'isError'>>;
