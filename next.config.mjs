@@ -5,11 +5,26 @@
  */
 !process.env.SKIP_ENV_VALIDATION && (await import('./src/utils/env.mjs'));
 
+/** @type {(import("@root/types/common/zod").ModuleIdEnum)[]} */
+const moduleIdList = ['effect', 'item', 'rumor', 'trait'];
+
 /** @type {import("next").NextConfig} */
 const config = {
 	reactStrictMode: true,
 	swcMinify: true,
 	i18n: { locales: ['en'], defaultLocale: 'en' },
+	redirects: async () => [
+		...moduleIdList.map(moduleId => ({
+			source: `/${moduleId}s`,
+			destination: `/${moduleId}`,
+			permanent: true,
+		})),
+		...moduleIdList.map(moduleId => ({
+			source: `/${moduleId}s/:id`,
+			destination: `/${moduleId}/:id`,
+			permanent: false,
+		})),
+	],
 };
 
 export default config;
