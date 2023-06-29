@@ -1,5 +1,5 @@
 import { Root, Scrollbar, Thumb, Viewport } from '@radix-ui/react-scroll-area';
-import { PageRefresh } from '@root/components/ui/dynamic';
+import { ErrorModal, PageRefresh } from '@root/components/ui/dynamic';
 import type { ChildrenProps, ClassNameProps, ErrorResultProps } from '@root/types/common/props';
 import { useScroll } from 'framer-motion';
 import { useRouter } from 'next/router';
@@ -7,7 +7,6 @@ import { useEffect, useRef, useState } from 'react';
 
 import dynamic from 'next/dynamic';
 
-const ErrorModal = dynamic(() => import('./ErrorModal'));
 const ScrollToTop = dynamic(() => import('./ScrollToTop'));
 
 type ScrollWrapperProps = ChildrenProps &

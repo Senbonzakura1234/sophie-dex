@@ -14,7 +14,7 @@ type ErrorModalProps = Omit<ErrorResultProps, 'isError'> & {
 export default function ErrorModal({
 	isShow,
 	errorData,
-	errorMessage = 'Unknown Error Occur In System',
+	errorMessage = 'Unknown Error Occur In Server',
 	onCloseModal,
 }: ErrorModalProps) {
 	const httpStatus = errorData ? errorData.httpStatus : 400;

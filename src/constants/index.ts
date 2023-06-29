@@ -1,3 +1,4 @@
+import type { ErrorResultProps } from '@root/types/common/props';
 import type { ColorEnum, ModuleIdEnum, RecipeTypeEnum, RumorTypeEnum, SortByEnum } from '@root/types/common/zod';
 import { createArray } from '@root/utils/common';
 import colors from 'tailwindcss/colors';
@@ -43,3 +44,11 @@ export const sortByMap = {
 	rumor: ['price', 'name'],
 	trait: ['index', 'name'],
 } as const satisfies Record<ModuleIdEnum, Readonly<SortByEnum[]>>;
+
+export const errorMap = {
+	400: { errorData: { code: 'BAD_REQUEST', httpStatus: 400 }, errorMessage: 'Bad Request' },
+	403: { errorData: { code: 'FORBIDDEN', httpStatus: 403 }, errorMessage: 'You Are Not Allowed To See This Page' },
+	404: { errorData: { code: 'NOT_FOUND', httpStatus: 404 }, errorMessage: 'Page Not Found' },
+	405: { errorData: { code: 'METHOD_NOT_SUPPORTED', httpStatus: 405 }, errorMessage: 'Method Not Supported' },
+	500: { errorData: { code: 'INTERNAL_SERVER_ERROR', httpStatus: 400 }, errorMessage: 'An Error Occurred On Server' },
+} as const satisfies Record<number, Omit<ErrorResultProps, 'isError'>>;
