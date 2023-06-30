@@ -12,18 +12,13 @@ const moduleIdList = ['effect', 'item', 'rumor', 'trait'];
 const config = {
 	reactStrictMode: true,
 	swcMinify: true,
-	i18n: { locales: ['en'], defaultLocale: 'en' },
 	redirects: async () => [
-		...moduleIdList.map(moduleId => ({
-			source: `/${moduleId}s`,
-			destination: `/${moduleId}`,
-			permanent: true,
-		})),
-		...moduleIdList.map(moduleId => ({
-			source: `/${moduleId}s/:id`,
-			destination: `/${moduleId}/:id`,
-			permanent: false,
-		})),
+		...moduleIdList
+			.map(moduleId => [
+				{ source: `/${moduleId}s`, destination: `/${moduleId}`, permanent: true },
+				{ source: `/${moduleId}s/:id`, destination: `/${moduleId}/:id`, permanent: false },
+			])
+			.flat(),
 	],
 };
 

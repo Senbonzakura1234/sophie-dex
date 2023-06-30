@@ -1,3 +1,6 @@
+import type { PreparedQuery, PreparedQueryConfig } from 'drizzle-orm/pg-core';
+import type { ModuleIdEnum } from '../common/zod';
+
 export const moduleIdList = ['effect', 'item', 'trait', 'rumor'] as const;
 
 export const colorList = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW'] as const;
@@ -71,3 +74,5 @@ export type ListRecord<TRecord extends CommonRecord> = {
 	totalRecord: number;
 	totalPage: number;
 };
+
+export type ExportDBQueriesMap = Record<ModuleIdEnum, PreparedQuery<PreparedQueryConfig & { execute: unknown[] }>>;

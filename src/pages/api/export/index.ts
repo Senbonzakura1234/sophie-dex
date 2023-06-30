@@ -1,4 +1,4 @@
-import { exportDBDataValidator } from '@root/types/common/zod';
+import { exportDBQueriesMap } from '@root/server/db';
 import { evnIs } from '@root/utils/common';
 import { writeFile } from 'fs/promises';
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -6,14 +6,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 	if (evnIs('production')) return res.status(403).json({ error: 'forbidden' });
 
-	if (req.method === 'POST') {
-		console.log('export');
-		const result = exportDBDataValidator.safeParse(req.body);
-		if (!result.success) return res.status(400).json({ error: 'invalid data input' });
-
+	if (req.method === 'GET') {
 		await Promise.all(
-			Object.entries(result.data).map(async ([key, value]) => {
-				await writeFile(`backup/export/${key}.json`, JSON.stringify(value));
+			Object.entries(exportDBQueriesMap).map(async ([table, query]) => {
+				const result = await query.execute();
+
+				await writeFile(`backup/export/${table}.json`, JSON.stringify(result));
 			}),
 		);
 

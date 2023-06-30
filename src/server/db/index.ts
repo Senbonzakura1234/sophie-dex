@@ -1,4 +1,5 @@
 import { defaultLimit } from '@root/constants';
+import type { ExportDBQueriesMap } from '@root/types/model';
 import { env } from '@root/utils/env.mjs';
 import { CountQuery } from '@root/utils/server';
 import { asc, eq, placeholder } from 'drizzle-orm';
@@ -65,3 +66,15 @@ export const getListTraitDefault = db
 	.limit(defaultLimit)
 	.offset(placeholder('offset'))
 	.prepare('getListTraitDefault');
+
+const exportEffects = db.select().from(effects).prepare('exportEffects');
+const exportItems = db.select().from(items).prepare('exportItems');
+const exportRumors = db.select().from(rumors).prepare('exportRumors');
+const exportTrait = db.select().from(traits).prepare('exportTraits');
+
+export const exportDBQueriesMap: ExportDBQueriesMap = {
+	effect: exportEffects,
+	item: exportItems,
+	rumor: exportRumors,
+	trait: exportTrait,
+};
