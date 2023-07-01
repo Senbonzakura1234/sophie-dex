@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 			Object.entries(exportDBQueriesMap).map(async ([table, query]) => {
 				const result = await query.execute();
 
-				await writeFile(`backup/export/${table}.json`, JSON.stringify(result));
+				await writeFile(`backup/export/${table}.json`, JSON.stringify(result, null, 2));
 			}),
 		);
 
