@@ -3,20 +3,11 @@ import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorType
 import type { InferModel } from 'drizzle-orm';
 import { jsonb, pgTable, smallint, uuid, varchar } from 'drizzle-orm/pg-core';
 
-export type HyperLinkRecord = {
-	id: string;
-	name: string;
-	table: ModuleIdEnum;
-};
+export type HyperLinkRecord = { id: string; name: string; table: ModuleIdEnum };
 
-export type HyperLinkSearch = {
-	searchQuery: SearchQuery;
-	table: ModuleIdEnum;
-};
+export type HyperLinkSearch = { searchQuery: SearchQuery; table: ModuleIdEnum };
 
-export type HighlightText = {
-	content: string;
-};
+export type HighlightText = { content: string };
 
 export type ItemDescription = {
 	hunt: string[];
@@ -26,10 +17,7 @@ export type ItemDescription = {
 	shop: string | null;
 };
 
-export type RelatedCategory = {
-	name: RelatedCategoryEnum;
-	count: number;
-};
+export type RelatedCategory = { name: RelatedCategoryEnum; count: number };
 
 export type HyperLinkMap = {
 	contentText: string[];

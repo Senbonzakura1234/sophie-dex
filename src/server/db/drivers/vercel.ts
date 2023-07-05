@@ -1,8 +1,7 @@
+import schema from '@root/server/db/schema';
 import { evnIs } from '@root/utils/common';
 import { sql } from '@vercel/postgres';
 import { drizzle } from 'drizzle-orm/vercel-postgres';
-
-import schema from './schema';
 
 let vercelDBConnection: typeof sql;
 

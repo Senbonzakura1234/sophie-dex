@@ -1,11 +1,11 @@
 import { defaultLimit } from '@root/constants';
+import neonDB from '@root/server/db/drivers/neon';
+import vercelDB from '@root/server/db/drivers/vercel';
+import { effects, items, rumors, traits } from '@root/server/db/schema';
 import type { ExportDBQueriesMap } from '@root/types/model';
 import { env } from '@root/utils/env.mjs';
 import { CountQuery } from '@root/utils/server';
 import { asc, eq, placeholder } from 'drizzle-orm';
-import neonDB from './neon';
-import { effects, items, rumors, traits } from './schema';
-import vercelDB from './vercel';
 
 const dbMap = { NEON_DB: neonDB, VERCEL_DB: vercelDB } as const;
 
