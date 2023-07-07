@@ -41,6 +41,9 @@ dependencies:
   drizzle-orm:
     specifier: ^0.27.0
     version: registry.npmjs.org/drizzle-orm@0.27.0(@neondatabase/serverless@0.4.24)(@vercel/postgres@0.4.0)(pg@8.11.1)
+  framer-motion:
+    specifier: ^10.12.18
+    version: registry.npmjs.org/framer-motion@10.12.18(react-dom@18.2.0)(react@18.2.0)
   next:
     specifier: 13.4.8
     version: registry.npmjs.org/next@13.4.8(react-dom@18.2.0)(react@18.2.0)
@@ -169,6 +172,23 @@ packages:
     name: '@drizzle-team/studio'
     version: 0.0.1
     dev: true
+
+  registry.npmjs.org/@emotion/is-prop-valid@0.8.8:
+    resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz}
+    name: '@emotion/is-prop-valid'
+    version: 0.8.8
+    requiresBuild: true
+    dependencies:
+      '@emotion/memoize': registry.npmjs.org/@emotion/memoize@0.7.4
+    dev: false
+    optional: true
+
+  registry.npmjs.org/@emotion/memoize@0.7.4:
+    resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@emotion/memoize/-/memoize-0.7.4.tgz}
+    name: '@emotion/memoize'
+    version: 0.7.4
+    dev: false
+    optional: true
 
   registry.npmjs.org/@esbuild-kit/core-utils@3.1.0:
     resolution: {integrity: sha512-Uuk8RpCg/7fdHSceR1M6XbSZFSuMrxcePFuGgyvsBn+u339dk5OeL4jv2EojwTN2st/unJGsVm4qHWjWNmJ/tw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@esbuild-kit/core-utils/-/core-utils-3.1.0.tgz}
@@ -3266,6 +3286,27 @@ packages:
     name: fraction.js
     version: 4.2.0
     dev: true
+
+  registry.npmjs.org/framer-motion@10.12.18(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-cfhiUpPbj+0eEWKjuD+5cz5cMqH71xOtMxGiS/cSGfHn2OlHIEAqFnFyzEMENw5PxWR9bMVhatzzpD6lexmHZQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/framer-motion/-/framer-motion-10.12.18.tgz}
+    id: registry.npmjs.org/framer-motion/10.12.18
+    name: framer-motion
+    version: 10.12.18
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      react: registry.npmjs.org/react@18.2.0
+      react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      tslib: registry.npmjs.org/tslib@2.6.0
+    optionalDependencies:
+      '@emotion/is-prop-valid': registry.npmjs.org/@emotion/is-prop-valid@0.8.8
+    dev: false
 
   registry.npmjs.org/fs-constants@1.0.0:
     resolution: {integrity: sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/fs-constants/-/fs-constants-1.0.0.tgz}
