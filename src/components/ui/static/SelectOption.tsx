@@ -1,11 +1,8 @@
 import { Listbox } from '@headlessui/react';
 import CheckIcon from '@root/assets/icons/solid/CheckIcon';
 import ChevronUpDownIcon from '@root/assets/icons/solid/ChevronUpDownIcon';
-import { AnimationWrapper } from '@root/components/ui/dynamic';
 import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
 import type { ClassNameProps } from '@root/types/common/props';
-import { getFramerFadeUp } from '@root/utils/animations';
-import { LazyMotion, domAnimation } from 'framer-motion';
 
 type SelectOptionProps<V> = {
 	value: SelectOptionItem<V>;
@@ -43,48 +40,46 @@ export default function SelectOption<V extends string | number | null>({
 								<ChevronUpDownIcon className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />
 							</span>
 						</Listbox.Button>
-						<LazyMotion features={domAnimation} strict>
-							<AnimationWrapper
-								options={getFramerFadeUp(0, 20)}
-								className='absolute z-10 mt-1 w-full'
-								show={open}
-							>
-								<Listbox.Options className='legacy-scroll-area h-full max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm'>
-									{list.map((item, key) => {
-										const isSelected = item.value === value.value || (key === 0 && value.value == null);
+						<div
+							className={`absolute z-10 mt-1 w-full transition-[opacity,margin] duration-500 ${
+								open ? 'opacity-1' : 'mt-5 opacity-0'
+							}`}
+						>
+							<Listbox.Options className='legacy-scroll-area h-full max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm'>
+								{list.map((item, key) => {
+									const isSelected = item.value === value.value || (key === 0 && value.value == null);
 
-										return (
-											<Listbox.Option
-												key={key}
-												className={({ active }) =>
-													`relative cursor-default select-none py-2 pr-4 ${
-														active ? 'bg-primary/10 text-primary' : ''
-													} ${withIcon || useCustomIcon ? 'pl-10' : 'pl-4'}`
-												}
-												value={item}
-											>
-												<span className={`2xl:text-md block truncate text-sm ${isSelected && 'font-bold'}`}>
-													{item.label}
+									return (
+										<Listbox.Option
+											key={key}
+											className={({ active }) =>
+												`relative cursor-default select-none py-2 pr-4 ${
+													active ? 'bg-primary/10 text-primary' : ''
+												} ${withIcon || useCustomIcon ? 'pl-10' : 'pl-4'}`
+											}
+											value={item}
+										>
+											<span className={`2xl:text-md block truncate text-sm ${isSelected && 'font-bold'}`}>
+												{item.label}
+											</span>
+											{(isSelected && withIcon) || useCustomIcon ? (
+												<span
+													className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
+														useAtelierFont ? 'font-atelier' : ''
+													} ${!useCustomIcon ? 'text-primary' : ''}`}
+												>
+													{useCustomIcon ? (
+														item.icon
+													) : (
+														<CheckIcon className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />
+													)}
 												</span>
-												{(isSelected && withIcon) || useCustomIcon ? (
-													<span
-														className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
-															useAtelierFont ? 'font-atelier' : ''
-														} ${!useCustomIcon ? 'text-primary' : ''}`}
-													>
-														{useCustomIcon ? (
-															item.icon
-														) : (
-															<CheckIcon className='h-4 w-4 2xl:h-5 2xl:w-5' aria-hidden='true' />
-														)}
-													</span>
-												) : null}
-											</Listbox.Option>
-										);
-									})}
-								</Listbox.Options>
-							</AnimationWrapper>
-						</LazyMotion>
+											) : null}
+										</Listbox.Option>
+									);
+								})}
+							</Listbox.Options>
+						</div>
 					</div>
 				)}
 			</Listbox>

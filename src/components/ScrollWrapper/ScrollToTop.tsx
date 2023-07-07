@@ -1,9 +1,6 @@
 import ArrowUpOnSquareIcon from '@root/assets/icons/solid/ArrowUpOnSquareIcon';
 import type { RefProps } from '@root/types/common/props';
-import { getFramerFadeUp } from '@root/utils/animations';
 import { useCallback } from 'react';
-
-import { AnimationWrapper } from '@root/components/ui/dynamic';
 
 type ScrollToTopProps = { isShow: boolean } & RefProps<HTMLDivElement>;
 
@@ -14,11 +11,10 @@ export default function ScrollToTop({ isShow, refObject }: ScrollToTopProps) {
 	);
 
 	return (
-		<AnimationWrapper
-			initial={false}
-			options={getFramerFadeUp(0.2, 24)}
-			show={isShow}
-			className='fixed bottom-6 right-6 z-30 flex place-content-center'
+		<div
+			className={`fixed right-6 z-30 flex place-content-center transition-[opacity,bottom] duration-500 ${
+				isShow ? 'opacity-1 bottom-6' : 'bottom-0 opacity-0'
+			}`}
 		>
 			<button
 				className='btn-primary btn-circle btn text-white'
@@ -28,6 +24,6 @@ export default function ScrollToTop({ isShow, refObject }: ScrollToTopProps) {
 			>
 				<ArrowUpOnSquareIcon className='h4 h-4' />
 			</button>
-		</AnimationWrapper>
+		</div>
 	);
 }
