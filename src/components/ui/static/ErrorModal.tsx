@@ -17,7 +17,7 @@ export default function ErrorModal({
 	return (
 		<Modal
 			{...sharedModalProps}
-			className={`grid cursor-default select-none place-content-center gap-1 text-center shadow-current ${
+			className={`grid cursor-default select-none place-content-center gap-1 text-center shadow-md shadow-current ${
 				httpStatus >= 500 ? 'text-red-600' : 'text-blue-700'
 			}`}
 		>
