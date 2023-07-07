@@ -22,3 +22,4 @@ export type ErrorResultProps = {
 };
 
 export type IconProps = SVGProps<SVGSVGElement>;
+export type SharedModalProps = { isShow?: boolean; onClose?: () => void };

@@ -6,8 +6,8 @@ import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
 
 import dynamic from 'next/dynamic';
+import ErrorModal from '../ui/static/ErrorModal';
 
-const ErrorModal = dynamic(() => import('./ErrorModal'));
 const ScrollToTop = dynamic(() => import('./ScrollToTop'));
 
 type ScrollWrapperProps = ChildrenProps &
@@ -71,7 +71,7 @@ export default function ScrollWrapper({
 						errorData={errorData}
 						errorMessage={errorMessage}
 						isShow={isError && isErrorModalOpen}
-						onCloseModal={() => setIsErrorModalOpen(false)}
+						onClose={() => setIsErrorModalOpen(false)}
 					/>
 				</Viewport>
 
