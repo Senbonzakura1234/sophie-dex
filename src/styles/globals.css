@@ -2,26 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-	font-family: 'Atelier';
-	font-style: normal;
-	src: local(''), url('/fonts/Atelier.woff2') format('woff2');
-}
-
 @layer base {
 	html,
 	body {
-		overflow: hidden;
+		@apply overflow-hidden;
 	}
 }
 
-@layer components {
-	.scroll-wrapper > div {
-		display: flex !important;
-		flex-direction: column;
-		height: 100vh;
-		@apply gap-6;
+@layer utilities {
+	@media (min-width: theme('screens.lg')) {
+		.legacy-scroll-area::-webkit-scrollbar {
+			@apply w-1 h-1;
+		}
+
+		.legacy-scroll-area::-webkit-scrollbar-track {
+			@apply rounded-3xl transition-all bg-transparent;
+		}
+
+		.legacy-scroll-area::-webkit-scrollbar-thumb {
+			@apply rounded-2xl transition-all bg-base-content opacity-50;
+		}
 	}
+
+	.scroll-wrapper > div {
+		@apply !flex gap-6 flex-col h-screen;
+	}
+
+	.scroll-area-root {
+		@apply overflow-hidden;
+	}
+
+	.scroll-area-viewport {
+		@apply h-full w-full;
+	}
+
+	.scroll-area-scrollbar {
+		@apply bg-transparent p-0.5 select-none touch-none flex z-30 data-[orientation=vertical]:w-2 data-[orientation=horizontal]:h-2 data-[orientation=horizontal]:flex-col;
+	}
+
+	.scroll-area-thumb {
+		@apply transition-opacity relative rounded opacity-50 bg-base-content flex-[1];
+	}
+
+	.scroll-area-thumb::before {
+		@apply content-[''] absolute top-1/2 left-1/2 w-full h-full min-w-[3rem] min-h-12 translate-x-1/2;
+	}
+
+	.scroll-area-scrollbar:hover .scroll-area-thumb {
+		@apply opacity-100;
+	}
+
+	.scroll-area-corner {
+		@apply bg-base-content;
+	}
+
 	.atelier__book::before {
 		content: '\ea0f';
 	}
@@ -300,87 +334,5 @@
 	}
 	.atelier__wind::before {
 		content: '\ea6b';
-	}
-}
-
-@layer utilities {
-	@media (min-width: theme('screens.lg')) {
-		.legacy-scroll-area::-webkit-scrollbar {
-			width: theme('spacing.1');
-			height: theme('spacing.1');
-		}
-
-		.legacy-scroll-area::-webkit-scrollbar-track {
-			border-radius: theme('borderRadius.3xl');
-			transition: theme('transitionProperty.all') 300ms;
-			background: transparent;
-		}
-
-		.legacy-scroll-area::-webkit-scrollbar-thumb {
-			border-radius: theme('borderRadius.2xl');
-			transition: theme('transitionProperty.all') 300ms;
-			background: theme('backgroundColor.base-content');
-			opacity: 0.5;
-		}
-	}
-
-	.scroll-area-root {
-		overflow: hidden;
-		--scrollbar-size: 10px;
-	}
-
-	.scroll-area-viewport {
-		width: 100%;
-		height: 100%;
-	}
-
-	.scroll-area-scrollbar {
-		z-index: theme('zIndex.30');
-		display: flex;
-		/* ensures no selection */
-		user-select: none;
-		/* disable browser handling of all panning and zooming gestures on touch devices */
-		touch-action: none;
-		padding: 2px;
-		background: transparent;
-	}
-
-	.scroll-area-scrollbar[data-orientation='vertical'] {
-		width: theme('spacing.2');
-	}
-
-	.scroll-area-scrollbar[data-orientation='horizontal'] {
-		flex-direction: column;
-		height: theme('spacing.2');
-	}
-
-	.scroll-area-thumb {
-		flex: 1;
-		background: theme('colors.base-content');
-		opacity: 0.5;
-		border-radius: theme('spacing.1');
-		position: relative;
-		transition: opacity 160ms ease-out;
-	}
-
-	/* increase target size for touch devices https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */
-	.scroll-area-thumb::before {
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 100%;
-		height: 100%;
-		min-width: 44px;
-		min-height: 44px;
-	}
-
-	.scroll-area-scrollbar:hover .scroll-area-thumb {
-		opacity: 1;
-	}
-
-	.scroll-area-corner {
-		background: theme('colors.base-content');
 	}
 }
