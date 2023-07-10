@@ -1,13 +1,13 @@
 import { Root, Scrollbar, Thumb, Viewport } from '@radix-ui/react-scroll-area';
 import { PageRefresh } from '@root/components/ui/dynamic';
+import ErrorModal from '@root/components/ui/static/ErrorModal';
+import type { OnScroll } from '@root/hooks/useScroll';
+import { useScroll } from '@root/hooks/useScroll';
 import type { ChildrenProps, ClassNameProps, ErrorResultProps } from '@root/types/common/props';
-import { useScroll } from 'framer-motion';
 import { useRouter } from 'next/router';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import dynamic from 'next/dynamic';
-import ErrorModal from '../ui/static/ErrorModal';
-
 const ScrollToTop = dynamic(() => import('./ScrollToTop'));
 
 type ScrollWrapperProps = ChildrenProps &
@@ -31,25 +31,23 @@ export default function ScrollWrapper({
 	const [isShowScrollTop, setIsShowScrollTop] = useState(false);
 	const [isDisabledPullToRefresh, setIsDisabledPullToRefresh] = useState(false);
 
-	const { scrollYProgress } = useScroll({ container: scrollableRef });
-
-	useEffect(() => {
-		scrollYProgress.on('change', e => {
+	const onScroll: OnScroll<HTMLDivElement> = useCallback(
+		(scrollPosition, scrollElement) => {
 			if (enablePageRefresh) {
-				if (e === 0) setIsDisabledPullToRefresh(false);
-				if (e > 0) setIsDisabledPullToRefresh(true);
+				if (scrollPosition === 0) setIsDisabledPullToRefresh(false);
+				if (scrollPosition > 0) setIsDisabledPullToRefresh(true);
 			}
 
-			if (enableScrollTop) {
-				if (!scrollableRef.current || scrollableRef.current.scrollHeight < 2 * scrollableRef.current.offsetHeight)
-					return setIsShowScrollTop(false);
-				if (e > 0.6 && !isShowScrollTop) return setIsShowScrollTop(true);
-				if (e <= 0.6 && isShowScrollTop) return setIsShowScrollTop(false);
-			}
-		});
+			if (!enableScrollTop) return;
 
-		return () => scrollYProgress.clearListeners();
-	}, [enablePageRefresh, enableScrollTop, isShowScrollTop, scrollYProgress]);
+			if (scrollElement.scrollHeight < 2 * scrollElement.offsetHeight) return setIsShowScrollTop(false);
+			if (scrollPosition > 0.6 && !isShowScrollTop) return setIsShowScrollTop(true);
+			if (scrollPosition <= 0.6 && isShowScrollTop) return setIsShowScrollTop(false);
+		},
+		[enablePageRefresh, enableScrollTop, isShowScrollTop],
+	);
+
+	useScroll({ scrollableRef, onScroll });
 
 	useEffect(() => {
 		if (scrollableRef?.current && enableScrollTop) scrollableRef.current.scrollTo({ top: 0, behavior: 'smooth' });

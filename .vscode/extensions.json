@@ -8,7 +8,6 @@
 		"donjayamanne.githistory",
 		"eamodio.gitlens",
 		"ecmel.vscode-html-css",
-		"zignd.html-css-class-completion",
 		"k--kato.intellij-idea-keybindings",
 		"michelefenu.json2typescript",
 		"bierner.markdown-preview-github-styles",
@@ -26,6 +25,7 @@
 		"vscode-icons-team.vscode-icons",
 		"redhat.vscode-yaml",
 		"formulahendry.auto-close-tag",
-		"aaron-bond.better-comments"
+		"aaron-bond.better-comments",
+		"vunguyentuan.vscode-css-variables"
 	]
 }

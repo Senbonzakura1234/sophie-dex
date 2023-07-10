@@ -4,16 +4,9 @@ const tailwindPlugin = require('tailwindcss/plugin');
 module.exports = {
 	content: ['./src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
-		fontFamily: {
-			atelier: ['var(--font-atelier)'],
-			roboto: ['var(--font-roboto)'],
-		},
+		fontFamily: { atelier: ['var(--font-atelier)'], roboto: ['var(--font-roboto)'] },
 		extend: {
-			gridTemplateRows: { layoutMobile: '64px minmax(auto, 1fr)', layoutDesktop: '72px minmax(auto, 1fr)' },
-			gridTemplateColumns: {
-				searchBar: 'repeat(auto-fill, minmax(22rem, 1fr))',
-				traitMergeList: 'repeat(auto-fit, minmax(14rem, 1fr))',
-			},
+			gridTemplateColumns: { traitMergeList: 'repeat(auto-fit, minmax(14rem, 1fr))' },
 			fill: { none: 'none' },
 			stroke: { none: 'none' },
 		},
@@ -54,7 +47,6 @@ module.exports = {
 	daisyui: {
 		/** @type {import('@root/types/common/tailwind').TailwindTheme} */
 		themes: ['fantasy'],
-		// darkTheme: 'dracula',
 	},
 	darkMode: 'class',
 };

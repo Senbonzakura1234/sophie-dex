@@ -10,3 +10,5 @@ export type SetSelectOptionItem<V> = Dispatch<SetStateAction<SelectOptionItem<V>
 
 export type SearchInput = string | null;
 export type SetSearchInput = Dispatch<SetStateAction<SearchInput>>;
+
+export type LooseAutocomplete<TSuggest extends string, TString extends string> = TSuggest | Omit<TString, TSuggest>;
