@@ -27,7 +27,7 @@ export default function PageTitle({ moduleId }: PageTitleProps) {
 				priority={!isHomePage}
 			/>
 
-			<div className='absolute inset-0 z-10 bg-slate-700/30' />
+			<div className='absolute inset-0 z-10 bg-gradient-to-r from-primary/20 to-slate-700/20' />
 
 			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-4 px-4 pt-5 xl:gap-9 2xl:gap-6'>
 				<div className='w-full text-center'>

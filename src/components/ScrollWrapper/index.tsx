@@ -33,10 +33,7 @@ export default function ScrollWrapper({
 
 	const onScroll: OnScroll<HTMLDivElement> = useCallback(
 		(scrollPosition, scrollElement) => {
-			if (enablePageRefresh) {
-				if (scrollPosition === 0) setIsDisabledPullToRefresh(false);
-				if (scrollPosition > 0) setIsDisabledPullToRefresh(true);
-			}
+			if (enablePageRefresh) setIsDisabledPullToRefresh(scrollPosition > 0);
 
 			if (!enableScrollTop) return;
 

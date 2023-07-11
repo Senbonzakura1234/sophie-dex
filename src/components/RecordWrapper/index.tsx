@@ -2,6 +2,7 @@ import { colorFilterMap } from '@root/constants';
 import type { MaybeData, RenderFunction } from '@root/types/common';
 import type { ClassNameProps, ModuleIdProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
+import type { CommonRecord } from '@root/types/model';
 import { useMemo } from 'react';
 
 import dynamic from 'next/dynamic';
@@ -10,13 +11,13 @@ const RecordHead = dynamic(() => import('./RecordHead'), {
 	loading: () => <div className='h-7 w-40 max-w-full animate-pulse rounded' />,
 });
 
-type RecordWrapperProps<TRecord extends { id: string; name: string }> = ClassNameProps &
+type RecordWrapperProps<TRecord extends CommonRecord> = ClassNameProps &
 	ModuleIdProps & {
 		color?: ColorEnum;
 		children?: RenderFunction<TRecord>;
 	} & MaybeData<TRecord>;
 
-export default function RecordWrapper<TRecord extends { id: string; name: string }>({
+export default function RecordWrapper<TRecord extends CommonRecord>({
 	children,
 	className,
 	color,

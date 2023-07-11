@@ -3,11 +3,9 @@ import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorType
 import type { InferModel } from 'drizzle-orm';
 import { jsonb, pgTable, smallint, uuid, varchar } from 'drizzle-orm/pg-core';
 
-export type HyperLinkRecord = { id: string; name: string; table: ModuleIdEnum };
-
-export type HyperLinkSearch = { searchQuery: SearchQuery; table: ModuleIdEnum };
-
 export type HighlightText = { content: string };
+export type HyperLinkRecord = { id: string; name: string; table: ModuleIdEnum };
+export type HyperLinkSearch = { searchQuery: SearchQuery; table: ModuleIdEnum };
 
 export type ItemDescription = {
 	hunt: string[];
@@ -17,40 +15,43 @@ export type ItemDescription = {
 	shop: string | null;
 };
 
-export type RelatedCategory = { name: RelatedCategoryEnum; count: number };
+export type RelatedCategory = { count: number; name: RelatedCategoryEnum };
 
 export type HyperLinkMap = {
+	contentData: (HighlightText | HyperLinkRecord | HyperLinkSearch)[];
 	contentText: string[];
-	contentData: (HyperLinkRecord | HyperLinkSearch | HighlightText)[];
 };
 
 export const effects = pgTable('effects', {
 	id: uuid('id').primaryKey(),
-	name: varchar('name', { length: 256 }).notNull(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
+	name: varchar('name', { length: 256 }).notNull(),
+
 	index: smallint('index').notNull(),
 	description: varchar('description', { length: 256 }).notNull(),
 });
 
 export const items = pgTable('items', {
 	id: uuid('id').primaryKey(),
-	name: varchar('name', { length: 256 }).notNull(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
-	index: smallint('index').notNull(),
-	description: jsonb('description').$type<ItemDescription>().notNull(),
-	color: varchar('color', { enum: colorList, length: 100 }).notNull(),
-	relatedCategories: varchar('related_categories', { enum: relatedCategoryList, length: 100 }).array().notNull(),
+	name: varchar('name', { length: 256 }).notNull(),
+
 	category: varchar('category', { enum: categoryList, length: 100 }).notNull(),
+	color: varchar('color', { enum: colorList, length: 100 }).notNull(),
+	description: jsonb('description').$type<ItemDescription>().notNull(),
+	index: smallint('index').notNull(),
 	level: smallint('level').notNull(),
-	recipeType: varchar('recipe_type', { enum: recipeTypeList, length: 100 }),
 	recipeIdea: jsonb('recipe_idea').$type<HyperLinkMap>(),
+	recipeType: varchar('recipe_type', { enum: recipeTypeList, length: 100 }),
+	relatedCategories: varchar('related_categories', { enum: relatedCategoryList, length: 100 }).array().notNull(),
 	traitPresent: jsonb('trait_present').$type<HyperLinkRecord>(),
 });
 
 export const rumors = pgTable('rumors', {
 	id: uuid('id').primaryKey(),
-	name: varchar('name', { length: 256 }).notNull(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
+	name: varchar('name', { length: 256 }).notNull(),
+
 	description: jsonb('description').$type<HyperLinkMap>().notNull(),
 	location: varchar('location', { length: 256 }).notNull(),
 	price: smallint('price').notNull(),
@@ -59,13 +60,14 @@ export const rumors = pgTable('rumors', {
 
 export const traits = pgTable('traits', {
 	id: uuid('id').primaryKey(),
-	name: varchar('name', { length: 256 }).notNull(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
-	index: smallint('index').notNull(),
-	description: varchar('description', { length: 256 }).notNull(),
+	name: varchar('name', { length: 256 }).notNull(),
+
 	categories: varchar('categories', { enum: categoryList, length: 100 }).array().notNull(),
-	mergeFrom: jsonb('merge_from').$type<HyperLinkRecord>().array(2).array().notNull(),
+	description: varchar('description', { length: 256 }).notNull(),
+	index: smallint('index').notNull(),
 	itemPresent: jsonb('item_present').$type<HyperLinkRecord>(),
+	mergeFrom: jsonb('merge_from').$type<HyperLinkRecord>().array(2).array().notNull(),
 });
 
 export type Effect = InferModel<typeof effects>;

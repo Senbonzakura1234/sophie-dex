@@ -64,15 +64,15 @@ export const relatedCategoryList = [
 	'MAGIC_ITEM',
 ] as const;
 
-export type CommonRecord = { id: string; name: string; keyWords: string };
+export type CommonRecord = { id: string; keyWords: string; name: string };
 
-export type DBListResult<TRecord extends CommonRecord> = { totalRecord: number; record: TRecord }[];
+export type DBListResult<TRecord extends CommonRecord> = { record: TRecord; totalRecord: number }[];
 
 export type ListRecord<TRecord extends CommonRecord> = {
-	records: TRecord[];
 	page: number | null;
-	totalRecord: number;
+	records: TRecord[];
 	totalPage: number;
+	totalRecord: number;
 };
 
 export type ExportDBQueriesMap = Record<ModuleIdEnum, PreparedQuery<PreparedQueryConfig & { execute: unknown[] }>>;

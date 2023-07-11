@@ -12,7 +12,7 @@ import PageTitle from '../PageTitle';
 import { capitalize } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 
-const PageFooter = dynamic(() => import('../PageFooter'));
+const PageFooter = dynamic(() => import('../PageFooter'), { ssr: false });
 
 type ListLayoutProps<TRecord extends CommonRecord> = DefaultLayoutProps &
 	ErrorResultProps & {

@@ -9,7 +9,7 @@ import ScrollWrapper from '@root/components/ScrollWrapper';
 import { capitalize } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 
-const PageFooter = dynamic(() => import('../PageFooter'));
+const PageFooter = dynamic(() => import('../PageFooter'), { ssr: false });
 
 type DetailLayoutProps<TRecord extends CommonRecord> = DefaultLayoutProps &
 	ErrorResultProps & {
