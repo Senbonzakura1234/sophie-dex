@@ -1,12 +1,28 @@
 import DetailLayout from '@root/components/Layout/DetailLayout';
 import RumorRecord from '@root/components/RumorRecord';
-import { useIdQuery } from '@root/hooks/useSecuredRouter';
+import { appRouter } from '@root/server/api/router/_app';
+import { getAllRumorIds } from '@root/server/db';
 import { apiContext } from '@root/utils/trpc';
-import type { NextPage } from 'next';
+import { createServerSideHelpers } from '@trpc/react-query/server';
+import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next';
 
-const RumorDetail: NextPage = () => {
-	const { securedIdQuery } = useIdQuery();
-	const { data, isError, error } = apiContext.rumor.getOne.useQuery(securedIdQuery);
+export const getStaticPaths: GetStaticPaths = async () => {
+	const rumorIds = await getAllRumorIds.execute();
+
+	return { paths: rumorIds.map(({ id }) => ({ params: { id } })), fallback: 'blocking' };
+};
+
+export const getStaticProps = async ({ params }: GetStaticPropsContext<{ id: string }>) => {
+	const helpers = createServerSideHelpers({ router: appRouter, ctx: {} });
+	const id = params?.id;
+
+	await helpers.rumor.getOne.prefetch({ id });
+
+	return { props: { trpcState: helpers.dehydrate(), id }, revalidate: 100 };
+};
+
+export default function RumorDetail({ id }: InferGetStaticPropsType<typeof getStaticProps>) {
+	const { data, isError, error } = apiContext.rumor.getOne.useQuery({ id });
 
 	return (
 		<DetailLayout
@@ -19,6 +35,4 @@ const RumorDetail: NextPage = () => {
 			{props => <RumorRecord {...props} />}
 		</DetailLayout>
 	);
-};
-
-export default RumorDetail;
+}

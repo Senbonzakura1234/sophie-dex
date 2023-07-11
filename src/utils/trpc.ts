@@ -10,7 +10,8 @@ export const apiContext = createTRPCNext<AppRouter>({
 				defaultOptions: {
 					queries: {
 						retry: evnIs('production') ? 2 : 1,
-						refetchOnWindowFocus: evnIs('production'),
+						refetchOnWindowFocus: false,
+						refetchOnMount: false,
 						refetchOnReconnect: evnIs('production'),
 					},
 				},
@@ -23,5 +24,5 @@ export const apiContext = createTRPCNext<AppRouter>({
 			],
 		};
 	},
-	ssr: true,
+	ssr: false,
 });

@@ -78,3 +78,8 @@ export const exportDBQueriesMap: ExportDBQueriesMap = {
 	rumor: exportRumors,
 	trait: exportTrait,
 };
+
+export const getAllEffectIds = db.select({ id: effects.id }).from(effects).prepare('getAllEffectIds');
+export const getAllItemIds = db.select({ id: items.id }).from(items).prepare('getAllItemIds');
+export const getAllRumorIds = db.select({ id: rumors.id }).from(rumors).prepare('getAllRumorIds');
+export const getAllTraitIds = db.select({ id: traits.id }).from(traits).prepare('getAllTraitIds');

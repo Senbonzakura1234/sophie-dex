@@ -38,12 +38,10 @@ export const useSearchQuery: UseSearchQuery = () => {
 	return { securedQuery, isRouterReady, updateQuery, resetQuery };
 };
 
-type UseIdQuery = () => { isRouterReady: boolean; securedIdQuery: Partial<IdQuery> };
+type UseIdQuery = () => { securedIdQuery: Partial<IdQuery> };
 
 export const useIdQuery: UseIdQuery = () => {
-	const { query, isReady } = useRouter();
-
-	const isRouterReady = useRouterReady(isReady);
+	const { query } = useRouter();
 
 	const securedIdQuery: Partial<IdQuery> = useMemo(() => {
 		const result = idQueryValidator.safeParse(query);
@@ -51,5 +49,5 @@ export const useIdQuery: UseIdQuery = () => {
 		return result.success ? query : {};
 	}, [query]);
 
-	return { securedIdQuery, isRouterReady };
+	return { securedIdQuery };
 };
