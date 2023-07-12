@@ -1,15 +1,13 @@
 import DocumentChartBarIcon from '@root/assets/icons/outline/DocumentChartBarIcon';
 import LinkIcon from '@root/assets/icons/solid/LinkIcon';
-import { useIdQuery } from '@root/hooks/useSecuredRouter';
 import type { ModuleIdProps } from '@root/types/common/props';
+import type { CommonRecord } from '@root/types/model';
 import Link from 'next/link';
 
-type RecordHeadProps = ModuleIdProps & { name: string; id: string };
+type RecordHeadProps = ModuleIdProps & Omit<CommonRecord, 'keyWords'> & { currentId: string | undefined };
 
-export default function RecordHead({ id, name, moduleId }: RecordHeadProps) {
-	const { securedIdQuery } = useIdQuery();
-
-	const isCurrentRecord = securedIdQuery.id === id;
+export default function RecordHead({ currentId, id, name, moduleId }: RecordHeadProps) {
+	const isCurrentRecord = currentId === id;
 
 	const Icon = isCurrentRecord ? DocumentChartBarIcon : LinkIcon;
 

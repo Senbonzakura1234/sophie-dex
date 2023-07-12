@@ -12,11 +12,11 @@ import RecipeType from './RecipeType';
 import RelatedCategories from './RelatedCategories';
 import TraitPresent from './TraitPresent';
 
-type ItemRecordProps = RecordProps<Item>;
+type ItemRecordProps = RecordProps<Item> & { currentId: string | undefined };
 
-export default function ItemRecord(props: ItemRecordProps) {
+export default function ItemRecord({ currentId, ...props }: ItemRecordProps) {
 	return (
-		<RecordWrapper {...nullableHandle(props)} color={props.data?.color} moduleId='item'>
+		<RecordWrapper {...nullableHandle(props)} color={props.data?.color} currentId={currentId} moduleId='item'>
 			{({ category, color, description, level, recipeIdea, recipeType, relatedCategories, traitPresent }) => (
 				<>
 					<Level level={level} color={color} />

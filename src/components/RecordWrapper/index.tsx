@@ -15,15 +15,17 @@ type RecordWrapperProps<TRecord extends CommonRecord> = ClassNameProps &
 	ModuleIdProps & {
 		color?: ColorEnum;
 		children?: RenderFunction<TRecord>;
+		currentId?: string;
 	} & MaybeData<TRecord>;
 
 export default function RecordWrapper<TRecord extends CommonRecord>({
 	children,
 	className,
 	color,
+	currentId,
+	data,
 	isDataReady,
 	moduleId,
-	data,
 }: RecordWrapperProps<TRecord>) {
 	const renderChild = useMemo(() => (isDataReady && children ? children(data) : null), [isDataReady, children, data]);
 
@@ -41,7 +43,9 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 					!isDataReady ? 'min-h-[270px]' : ''
 				}`}
 			>
-				{isDataReady ? <RecordHead id={data.id} name={data.name} moduleId={moduleId} /> : null}
+				{isDataReady ? (
+					<RecordHead id={data.id} name={data.name} moduleId={moduleId} currentId={currentId} />
+				) : null}
 
 				{renderChild}
 			</div>

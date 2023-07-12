@@ -9,14 +9,15 @@ import Location from './Location';
 import Price from './Price';
 import RumorType from './RumorType';
 
-type RumorRecordProps = RecordProps<Rumor>;
+type RumorRecordProps = RecordProps<Rumor> & { currentId: string | undefined };
 
-export default function RumorRecord(props: RumorRecordProps) {
+export default function RumorRecord({ currentId, ...props }: RumorRecordProps) {
 	return (
 		<RecordWrapper
 			{...nullableHandle(props)}
-			moduleId='rumor'
 			color={props.data?.rumorType && rumorColorMap[props.data?.rumorType]}
+			currentId={currentId}
+			moduleId='rumor'
 		>
 			{({ description, location, price, rumorType }) => (
 				<>

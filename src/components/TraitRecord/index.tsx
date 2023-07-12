@@ -7,11 +7,11 @@ import Categories from './Categories';
 import ItemPresent from './ItemPresent';
 import TraitMergeList from './TraitMergeList';
 
-type TraitRecordProps = RecordProps<Trait>;
+type TraitRecordProps = RecordProps<Trait> & { currentId: string | undefined };
 
-export default function TraitRecord(props: TraitRecordProps) {
+export default function TraitRecord({ currentId, ...props }: TraitRecordProps) {
 	return (
-		<RecordWrapper {...nullableHandle(props)} moduleId='trait'>
+		<RecordWrapper {...nullableHandle(props)} currentId={currentId} moduleId='trait'>
 			{({ categories, description, itemPresent, mergeFrom }) => (
 				<>
 					<p className='text-lg'>{description}</p>

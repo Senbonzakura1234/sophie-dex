@@ -41,7 +41,7 @@ export default function ItemDetail({ id }: InferGetStaticPropsType<typeof getSta
 				/>
 			)}
 		>
-			{props => <ItemRecord {...props} />}
+			{props => <ItemRecord {...props} currentId={id} />}
 		</DetailLayout>
 	);
 }

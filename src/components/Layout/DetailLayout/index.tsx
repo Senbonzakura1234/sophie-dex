@@ -1,15 +1,12 @@
+import ScrollWrapper from '@root/components/ScrollWrapper';
 import type { MaybeData, RenderFunction } from '@root/types/common';
 import type { DefaultLayoutProps, ErrorResultProps } from '@root/types/common/props';
 import type { CommonRecord } from '@root/types/model';
+import { capitalize } from '@root/utils/common';
 import Head from 'next/head';
 import { useMemo } from 'react';
+import PageFooter from '../PageFooter';
 import PageTitle from '../PageTitle';
-
-import ScrollWrapper from '@root/components/ScrollWrapper';
-import { capitalize } from '@root/utils/common';
-import dynamic from 'next/dynamic';
-
-const PageFooter = dynamic(() => import('../PageFooter'), { ssr: false });
 
 type DetailLayoutProps<TRecord extends CommonRecord> = DefaultLayoutProps &
 	ErrorResultProps & {

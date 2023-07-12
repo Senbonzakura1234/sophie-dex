@@ -66,8 +66,6 @@ export type SearchQuery = z.infer<typeof searchQueryValidator>;
 
 export const idQueryValidator = z.object({ id: idSchema });
 
-export type IdQuery = z.infer<typeof idQueryValidator>;
-
 export const highlightTextValidator = z.object({ content: z.string() });
 
 export type HighlightText = z.infer<typeof highlightTextValidator>;

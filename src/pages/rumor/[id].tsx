@@ -32,7 +32,7 @@ export default function RumorDetail({ id }: InferGetStaticPropsType<typeof getSt
 			moduleId='rumor'
 			rawData={data}
 		>
-			{props => <RumorRecord {...props} />}
+			{props => <RumorRecord {...props} currentId={id} />}
 		</DetailLayout>
 	);
 }

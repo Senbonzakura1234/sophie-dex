@@ -32,7 +32,7 @@ export default function EffectDetail({ id }: InferGetStaticPropsType<typeof getS
 			moduleId='effect'
 			rawData={data}
 		>
-			{props => <EffectRecord {...props} />}
+			{props => <EffectRecord {...props} currentId={id} />}
 		</DetailLayout>
 	);
 }

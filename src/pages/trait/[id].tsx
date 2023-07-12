@@ -32,7 +32,7 @@ export default function TraitDetail({ id }: InferGetStaticPropsType<typeof getSt
 			moduleId='trait'
 			rawData={data}
 		>
-			{props => <TraitRecord {...props} />}
+			{props => <TraitRecord {...props} currentId={id} />}
 		</DetailLayout>
 	);
 }

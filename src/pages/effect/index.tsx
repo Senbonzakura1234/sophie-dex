@@ -16,7 +16,7 @@ const Effects: NextPage = () => {
 			moduleId='effect'
 			rawData={data}
 		>
-			{props => props.data.map((rumor, key) => <EffectRecord key={key} {...rumor} />)}
+			{props => props.data.map((rumor, key) => <EffectRecord key={key} {...rumor} currentId={undefined} />)}
 		</ListLayout>
 	);
 };

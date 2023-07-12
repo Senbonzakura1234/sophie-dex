@@ -16,7 +16,7 @@ const Rumors: NextPage = () => {
 			moduleId='rumor'
 			rawData={data}
 		>
-			{props => props.data.map((rumor, key) => <RumorRecord key={key} {...rumor} />)}
+			{props => props.data.map((rumor, key) => <RumorRecord key={key} {...rumor} currentId={undefined} />)}
 		</ListLayout>
 	);
 };

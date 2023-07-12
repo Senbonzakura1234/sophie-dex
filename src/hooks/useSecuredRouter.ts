@@ -1,5 +1,5 @@
-import type { IdQuery, ModuleIdEnum, SearchQuery } from '@root/types/common/zod';
-import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
+import type { ModuleIdEnum, SearchQuery } from '@root/types/common/zod';
+import { searchQueryValidator } from '@root/types/common/zod';
 import { parseQuery } from '@root/utils/common';
 import { useRouter } from 'next/router';
 import { useCallback, useMemo } from 'react';
@@ -36,18 +36,4 @@ export const useSearchQuery: UseSearchQuery = () => {
 	}, [isRouterReady, push]);
 
 	return { securedQuery, isRouterReady, updateQuery, resetQuery };
-};
-
-type UseIdQuery = () => { securedIdQuery: Partial<IdQuery> };
-
-export const useIdQuery: UseIdQuery = () => {
-	const { query } = useRouter();
-
-	const securedIdQuery: Partial<IdQuery> = useMemo(() => {
-		const result = idQueryValidator.safeParse(query);
-
-		return result.success ? query : {};
-	}, [query]);
-
-	return { securedIdQuery };
 };

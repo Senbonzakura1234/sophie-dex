@@ -16,7 +16,7 @@ const Items: NextPage = () => {
 			moduleId='item'
 			rawData={data}
 		>
-			{props => props.data.map((rumor, key) => <ItemRecord key={key} {...rumor} />)}
+			{props => props.data.map((rumor, key) => <ItemRecord key={key} {...rumor} currentId={undefined} />)}
 		</ListLayout>
 	);
 };
