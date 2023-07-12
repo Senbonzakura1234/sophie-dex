@@ -1,7 +1,7 @@
 import SelectOption from '@root/components/ui/static/SelectOption';
 import { rumorTypeDefaultSelect, rumorTypeSelectList } from '@root/components/ui/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
-import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import type { ModuleIdProps } from '@root/types/common/props';
 import type { RumorTypeEnum } from '@root/types/common/zod';
 import { useMemo } from 'react';
@@ -9,7 +9,7 @@ import { useMemo } from 'react';
 type RumorTypeFilterProps = ModuleIdProps;
 
 export default function RumorTypeFilter({ moduleId }: RumorTypeFilterProps) {
-	const { securedQuery, updateQuery, isRouterReady } = useSearchQuery();
+	const { securedQuery, updateQuery } = useSecuredRouter();
 
 	const defaultRumorType = useMemo(
 		() => rumorTypeSelectList.find(({ value }) => value === securedQuery.rumorType) ?? rumorTypeDefaultSelect,
@@ -19,7 +19,6 @@ export default function RumorTypeFilter({ moduleId }: RumorTypeFilterProps) {
 	const [rumorTypeSelected, setRumorTypeSelected] = useQueryOnChange<RumorTypeEnum | null>(
 		defaultRumorType,
 		rumorType => updateQuery({ rumorType }, moduleId),
-		isRouterReady,
 	);
 
 	return (

@@ -1,6 +1,6 @@
 import SelectOption from '@root/components/ui/static/SelectOption';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
-import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import type { SelectOptionItem } from '@root/types/common';
 import type { ModuleIdProps } from '@root/types/common/props';
 import { createArray } from '@root/utils/common';
@@ -9,7 +9,7 @@ import { useMemo } from 'react';
 type GoToPageSelectProps = { totalPage: number } & ModuleIdProps;
 
 export default function GoToPageSelect({ totalPage, moduleId }: GoToPageSelectProps) {
-	const { securedQuery, isRouterReady, updateQuery } = useSearchQuery();
+	const { securedQuery, updateQuery } = useSecuredRouter();
 
 	const pageList: SelectOptionItem<number | null>[] = useMemo(
 		() =>
@@ -34,7 +34,6 @@ export default function GoToPageSelect({ totalPage, moduleId }: GoToPageSelectPr
 			),
 		},
 		page => updateQuery({ page }, moduleId),
-		isRouterReady,
 	);
 
 	return (

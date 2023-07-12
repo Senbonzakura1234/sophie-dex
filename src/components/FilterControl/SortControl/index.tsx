@@ -1,12 +1,12 @@
 import { sortByMap } from '@root/constants';
-import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import type { ModuleIdProps } from '@root/types/common/props';
 import SortBtn from './SortBtn';
 
 type SortControlProps = ModuleIdProps;
 
 export default function SortControl({ moduleId }: SortControlProps) {
-	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
+	const { updateQuery, securedQuery } = useSecuredRouter();
 
 	const sortBy = securedQuery.sortBy || (moduleId === 'rumor' ? 'price' : 'index');
 	const direction = securedQuery.direction || 'asc';
@@ -22,7 +22,6 @@ export default function SortControl({ moduleId }: SortControlProps) {
 						<SortBtn
 							key={sortField}
 							isActive={sortBy === sortField}
-							disabled={!isRouterReady}
 							value={sortField}
 							onUpdateQuery={value => updateQuery({ sortBy: value, direction: 'asc' }, moduleId)}
 						/>
@@ -38,7 +37,6 @@ export default function SortControl({ moduleId }: SortControlProps) {
 						<SortBtn
 							key={dir}
 							isActive={dir === direction}
-							disabled={!isRouterReady}
 							value={dir}
 							onUpdateQuery={value => updateQuery({ direction: value }, moduleId)}
 						/>

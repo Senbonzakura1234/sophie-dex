@@ -2,7 +2,7 @@ import ChevronDoubleLeftIcon from '@root/assets/icons/solid/ChevronDoubleLeftIco
 import ChevronDoubleRightIcon from '@root/assets/icons/solid/ChevronDoubleRightIcon';
 import ChevronLeftIcon from '@root/assets/icons/solid/ChevronLeftIcon';
 import ChevronRightIcon from '@root/assets/icons/solid/ChevronRightIcon';
-import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import type { ModuleIdProps } from '@root/types/common/props';
 
 import GoToPageSelect from './GoToPageSelect';
@@ -10,10 +10,10 @@ import GoToPageSelect from './GoToPageSelect';
 type PaginateProps = { page: number; totalPage: number } & ModuleIdProps;
 
 export default function Paginate({ page, totalPage, moduleId }: PaginateProps) {
-	const { isRouterReady, updateQuery } = useSearchQuery();
+	const { updateQuery } = useSecuredRouter();
 
-	const isPreviousDisable = !isRouterReady || page <= 1;
-	const isNextDisable = !isRouterReady || page >= totalPage;
+	const isPreviousDisable = page <= 1;
+	const isNextDisable = page >= totalPage;
 
 	return (
 		<div className='form-control'>

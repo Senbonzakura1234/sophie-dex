@@ -1,6 +1,6 @@
 type SortItemBtnProps<TValue extends string | number> = {
 	value: TValue;
-	disabled: boolean;
+	disabled?: boolean;
 	isActive: boolean;
 	onUpdateQuery: (value: TValue) => void;
 };

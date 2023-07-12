@@ -3,19 +3,15 @@ import { searchQueryValidator } from '@root/types/common/zod';
 import { parseQuery } from '@root/utils/common';
 import { useRouter } from 'next/router';
 import { useCallback, useMemo } from 'react';
-import { useRouterReady } from './useRouterReady';
 
-type UseSearchQuery = () => {
-	isRouterReady: boolean;
+type UseSecuredRouter = () => {
 	securedQuery: Partial<SearchQuery>;
 	updateQuery: (nextQuery: Partial<SearchQuery>, moduleId: ModuleIdEnum) => void;
 	resetQuery: () => void;
 };
 
-export const useSearchQuery: UseSearchQuery = () => {
-	const { query, isReady, push } = useRouter();
-
-	const isRouterReady = useRouterReady(isReady);
+export const useSecuredRouter: UseSecuredRouter = () => {
+	const { query, push } = useRouter();
 
 	const securedQuery: Partial<SearchQuery> = useMemo(() => {
 		const result = searchQueryValidator.safeParse(query);
@@ -24,16 +20,12 @@ export const useSearchQuery: UseSearchQuery = () => {
 	}, [query]);
 
 	const updateQuery = useCallback(
-		(nextQuery: Partial<SearchQuery>, moduleId: ModuleIdEnum) => {
-			if (isRouterReady)
-				push({ pathname: `/${moduleId}`, query: parseQuery({ ...securedQuery, page: null, ...nextQuery }) });
-		},
-		[isRouterReady, push, securedQuery],
+		(nextQuery: Partial<SearchQuery>, moduleId: ModuleIdEnum) =>
+			push({ pathname: `/${moduleId}`, query: parseQuery({ ...securedQuery, page: null, ...nextQuery }) }),
+		[push, securedQuery],
 	);
 
-	const resetQuery = useCallback(() => {
-		if (isRouterReady) push({ query: {} });
-	}, [isRouterReady, push]);
+	const resetQuery = useCallback(() => push({ query: {} }), [push]);
 
-	return { securedQuery, isRouterReady, updateQuery, resetQuery };
+	return { securedQuery, updateQuery, resetQuery };
 };

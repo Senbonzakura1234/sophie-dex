@@ -1,14 +1,14 @@
 import { rumorTypeMap } from '@root/components/ui/SubComponent';
 import { rumorTypeColorMap } from '@root/constants';
-import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import type { RumorTypeEnum } from '@root/types/common/zod';
 
 type RumorTypeProps = { rumorType: RumorTypeEnum };
 
 export default function RumorType({ rumorType }: RumorTypeProps) {
-	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
+	const { updateQuery, securedQuery } = useSecuredRouter();
 
-	const isBtnDisabled = !isRouterReady || securedQuery.rumorType === rumorType;
+	const isBtnDisabled = securedQuery.rumorType === rumorType;
 
 	const className = {
 		MATERIAL: 'app-text-shadow-GREEN',
@@ -25,7 +25,6 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 					}}
 					aria-label={`Filter ${rumorTypeMap.get(rumorType)?.name} Rumor`}
 					role='navigation'
-					disabled={!isRouterReady}
 					className={`btn-xs btn !border-current !bg-current opacity-80 hover:opacity-100 ${
 						isBtnDisabled ? '!no-animation !cursor-default hover:opacity-80' : ''
 					}`}

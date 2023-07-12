@@ -1,13 +1,10 @@
-import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import { useMemo } from 'react';
 
 export default function ResetFilter() {
-	const { resetQuery, isRouterReady, securedQuery } = useSearchQuery();
+	const { resetQuery, securedQuery } = useSecuredRouter();
 
-	const isDisable = useMemo(
-		() => !Object.values(securedQuery ?? {}).some(value => value !== null) && isRouterReady,
-		[isRouterReady, securedQuery],
-	);
+	const isDisable = useMemo(() => !Object.values(securedQuery ?? {}).some(value => value !== null), [securedQuery]);
 
 	return (
 		<button

@@ -1,14 +1,14 @@
 import { categoryMap } from '@root/components/ui/SubComponent';
-import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import type { TextShadowMap } from '@root/types/common/tailwind';
 import type { CategoryEnum, ColorEnum } from '@root/types/common/zod';
 
 type CategoryProps = { category: CategoryEnum; color: ColorEnum };
 
 export default function Category({ category, color }: CategoryProps) {
-	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
+	const { updateQuery, securedQuery } = useSecuredRouter();
 
-	const isBtnDisabled = !isRouterReady || securedQuery.category === category;
+	const isBtnDisabled = securedQuery.category === category;
 
 	const className = {
 		BLUE: 'app-text-shadow-BLUE',
@@ -28,7 +28,6 @@ export default function Category({ category, color }: CategoryProps) {
 					}}
 					aria-label={`Filter ${categoryMap.get(category)?.name} Item`}
 					role='navigation'
-					disabled={!isRouterReady}
 					className={`btn-accent btn-xs btn gap-1 font-extrabold capitalize ${
 						isBtnDisabled ? 'no-animation cursor-default !border-slate-300 !bg-slate-300 !text-slate-900' : ''
 					}`}

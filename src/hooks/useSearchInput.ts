@@ -2,7 +2,7 @@ import type { SearchInput, SetSearchInput } from '@root/types/common';
 import { useEffect, useState } from 'react';
 
 import type { ModuleIdEnum } from '@root/types/common/zod';
-import { useSearchQuery } from './useSecuredRouter';
+import { useSecuredRouter } from './useSecuredRouter';
 
 type UseSearchInput = (moduleId: ModuleIdEnum) => {
 	searchInput: string;
@@ -13,7 +13,7 @@ type UseSearchInput = (moduleId: ModuleIdEnum) => {
 };
 
 export const useSearchInput: UseSearchInput = moduleId => {
-	const { securedQuery, updateQuery } = useSearchQuery();
+	const { securedQuery, updateQuery } = useSecuredRouter();
 
 	const defaultSearchValue = securedQuery.search ?? null;
 	const [searchValue, setSearchValue] = useState<SearchInput>(defaultSearchValue);

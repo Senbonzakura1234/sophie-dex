@@ -1,14 +1,14 @@
-import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import type { RelatedCategoryEnum } from '@root/types/common/zod';
 
 type RelatedCategoriesProps = { relatedCategories: RelatedCategoryEnum[] };
 
 export default function RelatedCategories({ relatedCategories }: RelatedCategoriesProps) {
-	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
+	const { updateQuery, securedQuery } = useSecuredRouter();
 
 	const formatRelateCategory = (r: RelatedCategoryEnum) => r.replaceAll('_', ' ').toLocaleLowerCase();
 
-	const checkBtnDisable = (r: RelatedCategoryEnum) => !isRouterReady || r === securedQuery.relatedCategory;
+	const checkBtnDisable = (r: RelatedCategoryEnum) => r === securedQuery.relatedCategory;
 
 	return (
 		<div className='mt-auto flex flex-wrap gap-2'>

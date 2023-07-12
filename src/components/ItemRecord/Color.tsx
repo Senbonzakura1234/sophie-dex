@@ -1,13 +1,13 @@
 import { colorFilterMap } from '@root/constants';
-import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import type { ColorEnum } from '@root/types/common/zod';
 
 type ColorProps = { color: ColorEnum };
 
 export default function Color({ color }: ColorProps) {
-	const { isRouterReady, updateQuery, securedQuery } = useSearchQuery();
+	const { updateQuery, securedQuery } = useSecuredRouter();
 
-	const isBtnDisabled = !isRouterReady || securedQuery.color === color;
+	const isBtnDisabled = securedQuery.color === color;
 
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
@@ -19,7 +19,6 @@ export default function Color({ color }: ColorProps) {
 				}}
 				role='navigation'
 				aria-label={`Filter ${color} Item`}
-				disabled={!isRouterReady}
 				className='btn-xs btn !border-current !bg-current opacity-80 hover:opacity-100'
 				style={{ color: colorFilterMap[color].secondary }}
 			>

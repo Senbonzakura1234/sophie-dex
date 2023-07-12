@@ -1,7 +1,7 @@
 import SelectOption from '@root/components/ui/static/SelectOption';
 import { recipeTypeDefaultSelect, recipeTypeSelectList } from '@root/components/ui/SubComponent';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
-import { useSearchQuery } from '@root/hooks/useSecuredRouter';
+import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import type { ModuleIdProps } from '@root/types/common/props';
 import type { RecipeTypeEnum } from '@root/types/common/zod';
 import { useMemo } from 'react';
@@ -9,7 +9,7 @@ import { useMemo } from 'react';
 type RecipeTypeFilterProps = ModuleIdProps;
 
 export default function RecipeTypeFilter({ moduleId }: RecipeTypeFilterProps) {
-	const { securedQuery, updateQuery, isRouterReady } = useSearchQuery();
+	const { securedQuery, updateQuery } = useSecuredRouter();
 
 	const defaultRecipeType = useMemo(
 		() => recipeTypeSelectList.find(({ value }) => value === securedQuery.recipeType) ?? recipeTypeDefaultSelect,
@@ -19,7 +19,6 @@ export default function RecipeTypeFilter({ moduleId }: RecipeTypeFilterProps) {
 	const [recipeTypeSelected, setRecipeTypeSelected] = useQueryOnChange<RecipeTypeEnum | null>(
 		defaultRecipeType,
 		recipeType => updateQuery({ recipeType }, moduleId),
-		isRouterReady,
 	);
 
 	return (
