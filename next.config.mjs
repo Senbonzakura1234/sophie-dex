@@ -20,6 +20,7 @@ const config = {
 			])
 			.flat(),
 	],
+	i18n: { locales: ['en'], defaultLocale: 'en' },
 };
 
 export default config;
