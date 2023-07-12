@@ -20,9 +20,8 @@ export default function PageTitle({ moduleId }: PageTitleProps) {
 				className='object-cover'
 				data-url={`${getBaseUrl(true)}/assets/images/top.jpg`}
 				fill
-				sizes='100vw'
+				sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 				src={topBg}
-				quality={50}
 				placeholder='blur'
 				priority={!isHomePage}
 			/>
@@ -35,10 +34,9 @@ export default function PageTitle({ moduleId }: PageTitleProps) {
 						<Image
 							className='mx-auto w-[700px] max-w-full'
 							src={sophieLogo}
-							alt={moduleId ?? 'home'}
+							alt='home'
 							priority={isHomePage}
-							quality={50}
-							width={700}
+							sizes='(max-width: 768px) 70vw, (max-width: 1200px) 400px, 600px'
 							data-url={`${getBaseUrl(true)}/assets/images/sophie-logo.png`}
 						/>
 					) : (
