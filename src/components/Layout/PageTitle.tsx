@@ -23,7 +23,7 @@ export default function PageTitle({ moduleId }: PageTitleProps) {
 							className='mx-auto w-[700px] max-w-full'
 							data-url={`${getBaseUrl(true)}/assets/images/sophie-logo.png`}
 							priority={isHomePage}
-							sizes='(max-width: 768px) 70vw, (max-width: 1200px) 400px, 600px'
+							sizes='(max-width: 640px) 70vw, 500px'
 							src={sophieLogo}
 						/>
 					) : (
@@ -45,7 +45,7 @@ export default function PageTitle({ moduleId }: PageTitleProps) {
 				placeholder='blur'
 				priority={true}
 				quality={70}
-				sizes='(max-width: 768px) 100vw, 50vw'
+				sizes='(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 40vw'
 				src={topBg}
 			/>
 		</section>

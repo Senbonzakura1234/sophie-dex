@@ -25,7 +25,7 @@ export default function PageFooter({ moduleId }: PageFooterProps) {
 				fill
 				placeholder='blur'
 				quality={70}
-				sizes='(max-width: 768px) 100vw, 50vw'
+				sizes='(max-width: 640px) 100vw, 40vw'
 				src={bottomBg}
 			/>
 		</section>
