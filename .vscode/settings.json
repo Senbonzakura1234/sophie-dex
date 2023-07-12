@@ -46,6 +46,7 @@
 		"*.prettierrc": "json",
 		"*.webmanifest": "json"
 	},
+	"npm.packageManager": "pnpm",
 	"typescript.tsdk": "node_modules\\typescript\\lib",
 	"vsicons.associations.files": [
 		{

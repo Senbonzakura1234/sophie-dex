@@ -43,7 +43,7 @@ export default function PageTitle({ moduleId }: PageTitleProps) {
 				data-url={`${getBaseUrl(true)}/assets/images/top.jpg`}
 				fill
 				placeholder='blur'
-				priority={!isHomePage}
+				priority={true}
 				quality={70}
 				sizes='(max-width: 768px) 100vw, 50vw'
 				src={topBg}
