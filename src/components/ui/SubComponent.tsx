@@ -1,11 +1,10 @@
 import { colorFilterMap, recipeTypeColorMap } from '@root/constants';
 import type { SelectOptionItem } from '@root/types/common';
 import type { CategoryEnum, ColorEnum, RecipeTypeEnum, RumorTypeEnum } from '@root/types/common/zod';
-import type { UnicodeClass } from '@root/types/fonts/atelier';
 
 export const hideCategoryOnTrait: Readonly<CategoryEnum[]> = ['KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
 
-export const categoryMap = new Map<CategoryEnum, { name: string; className: UnicodeClass }>([
+export const categoryMap = new Map<CategoryEnum, { name: string; className: string }>([
 	['MATERIAL', { name: 'Material', className: 'atelier__material' }],
 	['SYNTHESIS', { name: 'Synthesis', className: 'atelier__type-synthesis' }],
 	['WEAPON', { name: 'Weapon', className: 'atelier__type-weapon' }],
@@ -21,10 +20,7 @@ export const categoryMap = new Map<CategoryEnum, { name: string; className: Unic
 	['MACHINE', { name: 'Machine', className: 'atelier__category-neutralizers' }],
 ]);
 
-export const rumorTypeMap = new Map<
-	RumorTypeEnum,
-	{ name: Capitalize<Lowercase<RumorTypeEnum>>; className: UnicodeClass }
->([
+export const rumorTypeMap = new Map<RumorTypeEnum, { name: Capitalize<Lowercase<RumorTypeEnum>>; className: string }>([
 	['MATERIAL', { className: 'atelier__material', name: 'Material' }],
 	['MONSTER', { className: 'atelier__race-puni', name: 'Monster' }],
 ]);

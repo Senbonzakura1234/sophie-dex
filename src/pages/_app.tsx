@@ -1,4 +1,4 @@
-import '@root/styles/globals.css';
+import '@root/styles/global.css';
 import '@total-typescript/ts-reset';
 
 import RootLayout from '@root/components/Layout/RootLayout';

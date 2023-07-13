@@ -1,10 +1,3 @@
 node_modules
 dist
 LICENSE
-
-
-# PWA
-service-worker.gen.js
-workbox-*.js
-service-worker.gen.js.map
-workbox-*.js.map

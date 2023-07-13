@@ -9,6 +9,7 @@
 		"heroicons",
 		"ilike",
 		"meruru",
+		"neondatabase",
 		"nextjs",
 		"notranslate",
 		"pnpx",
@@ -40,7 +41,7 @@
 	"eslint.format.enable": true,
 	"eslint.lintTask.enable": true,
 	"files.associations": {
-		"*.css": "tailwindcss",
+		"**/src/styles/*.css": "tailwindcss",
 		"*.eslintrc": "json",
 		"*.json": "json",
 		"*.prettierrc": "json",
