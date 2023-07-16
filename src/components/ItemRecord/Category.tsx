@@ -1,7 +1,8 @@
-import { categoryMap } from '@root/components/ui/SubComponent';
+import { categoryIconMap } from '@root/constants';
 import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import type { TextShadowMap } from '@root/types/common/tailwind';
 import type { CategoryEnum, ColorEnum } from '@root/types/common/zod';
+import { convertCode } from '@root/utils/common';
 
 type CategoryProps = { category: CategoryEnum; color: ColorEnum };
 
@@ -26,21 +27,19 @@ export default function Category({ category, color }: CategoryProps) {
 					onClick={() => {
 						if (!isBtnDisabled) updateQuery({ category }, 'item');
 					}}
-					aria-label={`Filter ${categoryMap.get(category)?.name} Item`}
+					aria-label={`Filter ${convertCode(category)} Item`}
 					role='navigation'
 					className={`btn-accent btn-xs btn gap-1 font-extrabold capitalize ${
 						isBtnDisabled ? 'no-animation cursor-default !border-slate-300 !bg-slate-300 !text-slate-900' : ''
 					}`}
 				>
-					<div className={`font-atelier ${categoryMap.get(category)?.className}`} />
-					{categoryMap.get(category)?.name}
+					<div className={`font-atelier ${categoryIconMap[category]}`} />
+					{convertCode(category)}
 				</button>
 			</div>
 
 			<div
-				className={`absolute bottom-8 right-8 w-10 text-center font-atelier text-lg text-slate-50 md:text-4xl ${
-					categoryMap.get(category)?.className
-				} ${className[color]}`}
+				className={`absolute bottom-8 right-8 w-10 text-center font-atelier text-lg text-slate-50 md:text-4xl ${categoryIconMap[category]} ${className[color]}`}
 			/>
 		</>
 	);

@@ -97,6 +97,9 @@ devDependencies:
   eslint-config-prettier:
     specifier: ^8.8.0
     version: registry.npmjs.org/eslint-config-prettier@8.8.0(eslint@8.44.0)
+  eslint-define-config:
+    specifier: ^1.21.0
+    version: registry.npmjs.org/eslint-define-config@1.21.0
   eslint-plugin-import:
     specifier: ^2.27.5
     version: registry.npmjs.org/eslint-plugin-import@2.27.5(@typescript-eslint/parser@5.61.0)(eslint-import-resolver-typescript@3.5.5)(eslint@8.44.0)
@@ -2688,6 +2691,13 @@ packages:
       eslint: '>=7.0.0'
     dependencies:
       eslint: registry.npmjs.org/eslint@8.44.0
+    dev: true
+
+  registry.npmjs.org/eslint-define-config@1.21.0:
+    resolution: {integrity: sha512-OKfreV19Nw4yK4UX1CDkv5FXWdzeF+VSROsO28DVi1BrzqOD4a3U71LJqEhcupK65MoLXxARQ0pSg8bDvNPONA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/eslint-define-config/-/eslint-define-config-1.21.0.tgz}
+    name: eslint-define-config
+    version: 1.21.0
+    engines: {node: ^16.13.0 || >=18.0.0, npm: '>=7.0.0', pnpm: '>= 8.6.0'}
     dev: true
 
   registry.npmjs.org/eslint-import-resolver-node@0.3.7:

@@ -1,6 +1,6 @@
 import type { HighlightText, HyperLinkRecord, HyperLinkSearch } from '@root/server/db/schema';
 import type { ClassNameProps } from '@root/types/common/props';
-import { parseQuery } from '@root/utils/common';
+import { convertCode, parseQuery } from '@root/utils/common';
 import Link from 'next/link';
 import { useMemo } from 'react';
 import type { UrlObject } from 'url';
@@ -19,7 +19,7 @@ export default function Hyperlink({ input, className }: HyperlinkProps) {
 			return {
 				label: Object.values(query)
 					.filter(Boolean)
-					.map((s, key) => `${key > 0 ? ', ' : ''}${s?.toString().replaceAll('_', ' ').toLowerCase()}`)
+					.map((value, key) => `${key > 0 ? ', ' : ''}${typeof value === 'number' ? value : convertCode(value)}`)
 					.join(),
 				href: { pathname: `/${input.table}`, query },
 			};

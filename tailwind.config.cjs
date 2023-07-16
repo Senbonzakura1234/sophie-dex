@@ -3,14 +3,7 @@ const tailwindPlugin = require('tailwindcss/plugin');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{js,ts,jsx,tsx}'],
-	theme: {
-		fontFamily: { atelier: ['var(--font-atelier)'], roboto: ['var(--font-roboto)'] },
-		extend: {
-			gridTemplateColumns: { traitMergeList: 'repeat(auto-fit, minmax(14rem, 1fr))' },
-			fill: { none: 'none' },
-			stroke: { none: 'none' },
-		},
-	},
+	theme: { fontFamily: { atelier: ['var(--font-atelier)'], roboto: ['var(--font-roboto)'] } },
 	plugins: [
 		require('daisyui'),
 		tailwindPlugin(({ theme, addUtilities }) => {

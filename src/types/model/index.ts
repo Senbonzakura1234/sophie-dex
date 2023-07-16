@@ -15,7 +15,7 @@ export const recipeTypeList = [
 	'MYSTERY_RECIPES',
 ] as const;
 
-export const categoryList = [
+export const traitCategoryList = [
 	'ACCESSORY',
 	'ARMOR',
 	'ATK_ITEM',
@@ -23,13 +23,11 @@ export const categoryList = [
 	'DE_BUFF_ITEM',
 	'HEAL_ITEM',
 	'WEAPON',
-	'MATERIAL',
-	'BOOK',
 	'EXPLORATION',
-	'MACHINE',
-	'KEY_ITEM',
 	'SYNTHESIS',
 ] as const;
+
+export const categoryList = [...traitCategoryList, 'KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
 
 export const relatedCategoryList = [
 	'PLANT',

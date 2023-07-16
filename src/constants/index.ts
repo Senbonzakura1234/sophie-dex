@@ -1,4 +1,12 @@
-import type { ColorEnum, ModuleIdEnum, RecipeTypeEnum, RumorTypeEnum, SortByEnum } from '@root/types/common/zod';
+import type { AtelierIcon } from '@root/types/common/icon';
+import type {
+	CategoryEnum,
+	ColorEnum,
+	ModuleIdEnum,
+	RecipeTypeEnum,
+	RumorTypeEnum,
+	SortByEnum,
+} from '@root/types/common/zod';
 import { createArray } from '@root/utils/common';
 import colors from 'tailwindcss/colors';
 
@@ -43,3 +51,24 @@ export const sortByMap = {
 	rumor: ['price', 'name'],
 	trait: ['index', 'name'],
 } as const satisfies Record<ModuleIdEnum, Readonly<SortByEnum[]>>;
+
+export const rumorTypeIconMap = {
+	MATERIAL: 'atelier__material',
+	MONSTER: 'atelier__race-puni',
+} as const satisfies Record<RumorTypeEnum, AtelierIcon>;
+
+export const categoryIconMap = {
+	MATERIAL: 'atelier__material',
+	SYNTHESIS: 'atelier__type-synthesis',
+	WEAPON: 'atelier__type-weapon',
+	ARMOR: 'atelier__type-armor',
+	ATK_ITEM: 'atelier__type-attack',
+	ACCESSORY: 'atelier__type-accessory',
+	HEAL_ITEM: 'atelier__type-heal',
+	KEY_ITEM: 'atelier__category-key-items',
+	BUFF_ITEM: 'atelier__type-buff',
+	DE_BUFF_ITEM: 'atelier__type-debuff',
+	EXPLORATION: 'atelier__tool-gather',
+	BOOK: 'atelier__book',
+	MACHINE: 'atelier__category-neutralizers',
+} as const satisfies Record<CategoryEnum, AtelierIcon>;

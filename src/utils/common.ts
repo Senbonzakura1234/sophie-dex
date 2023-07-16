@@ -35,6 +35,8 @@ export const formatRecordCount = new Intl.NumberFormat('en-US', { minimumInteger
 export const capitalize = (input: string) =>
 	input.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase());
 
+export const convertCode = (input: string) => input.toLowerCase().replaceAll('_', ' ');
+
 export const parseQuery = (query: Partial<SearchQuery>) => {
 	for (const key in query) {
 		if (!Object.prototype.hasOwnProperty.call(query, key)) continue;

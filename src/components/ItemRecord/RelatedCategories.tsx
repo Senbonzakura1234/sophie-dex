@@ -1,12 +1,11 @@
 import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import type { RelatedCategoryEnum } from '@root/types/common/zod';
+import { convertCode } from '@root/utils/common';
 
 type RelatedCategoriesProps = { relatedCategories: RelatedCategoryEnum[] };
 
 export default function RelatedCategories({ relatedCategories }: RelatedCategoriesProps) {
 	const { updateQuery, securedQuery } = useSecuredRouter();
-
-	const formatRelateCategory = (r: RelatedCategoryEnum) => r.replaceAll('_', ' ').toLocaleLowerCase();
 
 	const checkBtnDisable = (r: RelatedCategoryEnum) => r === securedQuery.relatedCategory;
 
@@ -15,7 +14,7 @@ export default function RelatedCategories({ relatedCategories }: RelatedCategori
 			{relatedCategories.map((relatedCategory, k) => (
 				<button
 					disabled={checkBtnDisable(relatedCategory)}
-					aria-label={formatRelateCategory(relatedCategory)}
+					aria-label={convertCode(relatedCategory)}
 					className={`text-xs capitalize ${
 						!checkBtnDisable(relatedCategory) ? 'link-hover link italic text-neutral/90' : 'font-semibold'
 					}`}
@@ -25,7 +24,7 @@ export default function RelatedCategories({ relatedCategories }: RelatedCategori
 					}}
 					role='navigation'
 				>
-					{formatRelateCategory(relatedCategory)}
+					{convertCode(relatedCategory)}
 				</button>
 			))}
 		</div>

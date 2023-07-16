@@ -1,6 +1,7 @@
 import { recipeTypeColorMap } from '@root/constants';
 import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import type { RecipeTypeEnum } from '@root/types/common/zod';
+import { convertCode } from '@root/utils/common';
 
 type RecipeTypeProps = { recipeType: RecipeTypeEnum };
 
@@ -24,9 +25,7 @@ export default function RecipeType({ recipeType }: RecipeTypeProps) {
 				role='navigation'
 				style={{ color: recipeTypeColorMap[recipeType].secondary }}
 			>
-				<span className='font-extrabold capitalize text-slate-50'>
-					{recipeType.toLowerCase().replaceAll('_', ' ')}
-				</span>
+				<span className='font-extrabold capitalize text-slate-50'>{convertCode(recipeType)}</span>
 			</button>
 		</div>
 	);
