@@ -26,7 +26,7 @@ export default function Paginate({ page, totalPage, moduleId }: PaginateProps) {
 						updateQuery({ page: 1 }, moduleId);
 					}}
 					aria-label='Go To First Page'
-					className='btn-primary btn-sm btn-circle btn my-auto text-slate-50'
+					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
 				>
 					<ChevronDoubleLeftIcon width={16} height={16} />
 				</button>
@@ -39,7 +39,7 @@ export default function Paginate({ page, totalPage, moduleId }: PaginateProps) {
 						updateQuery({ page: page - 1 }, moduleId);
 					}}
 					aria-label='Go To Previous Page'
-					className='btn-primary btn-sm btn-circle btn my-auto text-slate-50'
+					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
 				>
 					<ChevronLeftIcon width={16} height={16} />
 				</button>
@@ -54,7 +54,7 @@ export default function Paginate({ page, totalPage, moduleId }: PaginateProps) {
 						updateQuery({ page: page + 1 }, moduleId);
 					}}
 					aria-label='Go To Next Page'
-					className='btn-primary btn-sm btn-circle btn my-auto text-slate-50'
+					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
 				>
 					<ChevronRightIcon width={16} height={16} />
 				</button>
@@ -67,7 +67,7 @@ export default function Paginate({ page, totalPage, moduleId }: PaginateProps) {
 						updateQuery({ page: totalPage }, moduleId);
 					}}
 					aria-label='Go To Last Page'
-					className='btn-primary btn-sm btn-circle btn my-auto text-slate-50'
+					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
 				>
 					<ChevronDoubleRightIcon width={16} height={16} />
 				</button>

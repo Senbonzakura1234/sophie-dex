@@ -26,7 +26,7 @@ export default function SearchInput({ moduleId }: SearchInputProps) {
 					role='navigation'
 					aria-label='Reset search query'
 					onClick={resetSearch}
-					className='btn-ghost btn-sm btn-circle btn my-auto border-0 hover:bg-transparent'
+					className='btn btn-circle btn-ghost btn-sm my-auto border-0 hover:bg-transparent'
 				>
 					<XMarkIcon width={18} height={18} />
 				</button>
@@ -36,7 +36,7 @@ export default function SearchInput({ moduleId }: SearchInputProps) {
 				role='navigation'
 				aria-label='Apply search query'
 				onClick={() => performSearch()}
-				className='btn-ghost btn-sm btn-circle btn my-auto border-0 hover:bg-transparent'
+				className='btn btn-circle btn-ghost btn-sm my-auto border-0 hover:bg-transparent'
 			>
 				<MagnifyingGlassIcon width={22} height={22} />
 			</button>

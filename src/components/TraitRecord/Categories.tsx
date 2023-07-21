@@ -19,7 +19,7 @@ function Categories({ categories }: CategoriesProps) {
 						disabled={!isClickAble(category)}
 						aria-label={`Filter by ${convertCode(category)}`}
 						role='navigation'
-						className={`btn-sm btn rounded-3xl 2xl:btn-md ${
+						className={`btn btn-sm rounded-3xl 2xl:btn-md ${
 							securedQuery.category !== category && isClickAble(category) ? 'btn-primary text-slate-50' : ''
 						} ${securedQuery.category === category ? 'btn-accent text-slate-50' : ''}`}
 						onClick={() => {

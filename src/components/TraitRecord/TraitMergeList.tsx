@@ -14,7 +14,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 					{traitRecords.map(({ table: moduleId, name, id }, key) => (
 						<Fragment key={key}>
 							{key > 0 ? (
-								<button role='none' className='btn-accent no-animation btn-xs join-item btn'>
+								<button role='none' className='btn btn-accent join-item no-animation btn-xs'>
 									<svg
 										aria-hidden='true'
 										viewBox='0 0 16 16'
@@ -33,7 +33,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 
 							<Link
 								aria-label={name}
-								className='btn-xs join-item btn capitalize'
+								className='btn join-item btn-xs capitalize'
 								href={{ pathname: `/${moduleId}/[id]`, query: { id } }}
 								key={id}
 								role='navigation'

@@ -8,7 +8,7 @@ export default function ResetFilter() {
 
 	return (
 		<button
-			className='btn-xs btn my-auto gap-1 capitalize'
+			className='btn btn-xs my-auto gap-1 capitalize'
 			role='navigation'
 			disabled={isDisable}
 			onClick={() => !isDisable && resetQuery()}

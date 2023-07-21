@@ -25,7 +25,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 					}}
 					aria-label={`Filter ${convertCode(rumorType)} Rumor`}
 					role='navigation'
-					className={`btn-xs btn !border-current !bg-current opacity-80 hover:opacity-100 ${
+					className={`btn btn-xs !border-current !bg-current opacity-80 hover:opacity-100 ${
 						isBtnDisabled ? '!no-animation !cursor-default hover:opacity-80' : ''
 					}`}
 					style={{ color: rumorTypeColorMap[rumorType].secondary }}

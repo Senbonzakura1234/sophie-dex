@@ -16,7 +16,7 @@ export default function RecipeType({ recipeType }: RecipeTypeProps) {
 
 			<button
 				aria-label={`Filter ${recipeType} Item`}
-				className={`btn-xs btn !border-current !bg-current opacity-80 hover:opacity-100 ${
+				className={`btn btn-xs !border-current !bg-current opacity-80 hover:opacity-100 ${
 					isBtnDisabled ? '!no-animation !cursor-default !opacity-80' : ''
 				}`}
 				onClick={() => {

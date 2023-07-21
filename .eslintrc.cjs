@@ -38,7 +38,7 @@ module.exports = {
 			],
 			files: ['**/*.ts', '**/*.tsx'],
 			parserOptions: { project: './tsconfig.json' },
-			plugins: ['@typescript-eslint', 'react', 'import', 'unused-imports', 'tailwindcss'],
+			plugins: ['@typescript-eslint', 'react', 'react-hooks', 'import', 'unused-imports', 'tailwindcss'],
 			rules: {
 				'@typescript-eslint/comma-dangle': 'off',
 				'@typescript-eslint/consistent-type-imports': 'warn',

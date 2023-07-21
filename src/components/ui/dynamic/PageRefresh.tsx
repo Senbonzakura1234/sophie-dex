@@ -1,35 +1,55 @@
-import ArrowPathIcon from '@root/assets/icons/solid/ArrowPathIcon';
-import { useRouter } from 'next/router';
-import { usePullToRefresh } from 'use-pull-to-refresh';
-
-const refreshThreshold = 200;
+import { Router, useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { DEFAULT_REFRESH_THRESHOLD, usePullToRefresh } from 'use-pull-to-refresh';
 
 export type PageRefreshProps = { isDisabled?: boolean };
 
 export default function PageRefresh({ isDisabled = false }: PageRefreshProps) {
 	const { reload } = useRouter();
 
-	const { isRefreshing, pullPosition } = usePullToRefresh({
-		onRefresh: reload,
-		isDisabled,
-		maximumPullLength: 300,
-		refreshThreshold,
-	});
+	const { isRefreshing, pullPosition } = usePullToRefresh({ onRefresh: reload, isDisabled, maximumPullLength: 300 });
+
+	const [isPageLoading, setIsPageLoading] = useState(false);
+
+	useEffect(() => {
+		Router.events.on('routeChangeStart', () => {
+			setIsPageLoading(true);
+		});
+
+		Router.events.on('routeChangeComplete', () => {
+			setIsPageLoading(false);
+		});
+
+		Router.events.on('routeChangeError', () => {
+			setIsPageLoading(false);
+		});
+	}, []);
+
+	useEffect(() => {
+		console.log({ isPageLoading });
+	}, [isPageLoading]);
 
 	return (
-		<div
-			style={{
-				opacity: (isRefreshing || pullPosition > 0) && !isDisabled ? 1 : 0,
-				top: isDisabled ? 0 : (isRefreshing ? refreshThreshold : pullPosition) / 3,
-			}}
-			className='fixed inset-x-1/2 z-30 aspect-square h-8 w-8 -translate-x-1/2 rounded-full bg-slate-50 p-2 transition-opacity'
-		>
+		<>
+			<progress
+				className={`progress progress-primary absolute inset-x-0 top-0 z-40 h-1 rounded-none shadow-xl shadow-primary transition-opacity ${
+					isPageLoading || isRefreshing ? 'opacity-100' : 'opacity-0'
+				}`}
+			/>
+
 			<div
-				style={{ rotate: `${isDisabled ? 0 : pullPosition}deg` }}
-				className={`h-full w-full transition-[rotate] ${!isDisabled && isRefreshing ? 'animate-spin' : ''}`}
+				style={{
+					opacity: (isRefreshing || pullPosition > 0) && !isDisabled ? 1 : 0,
+					top: isDisabled ? 0 : (isRefreshing ? DEFAULT_REFRESH_THRESHOLD : pullPosition) / 3,
+				}}
+				className='fixed inset-x-1/2 z-30 aspect-square h-8 w-8 -translate-x-1/2 rounded-full bg-slate-50 p-2 transition-opacity'
 			>
-				<ArrowPathIcon className='h-full w-full text-primary' />
+				<span
+					className={`loading w-full text-primary transition-all ${
+						isRefreshing ? 'loading-spinner' : 'loading-infinity'
+					}`}
+				/>
 			</div>
-		</div>
+		</>
 	);
 }

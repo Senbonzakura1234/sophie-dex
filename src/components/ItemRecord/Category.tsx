@@ -29,7 +29,7 @@ export default function Category({ category, color }: CategoryProps) {
 					}}
 					aria-label={`Filter ${convertCode(category)} Item`}
 					role='navigation'
-					className={`btn-accent btn-xs btn gap-1 font-extrabold capitalize ${
+					className={`btn btn-accent btn-xs gap-1 font-extrabold capitalize ${
 						isBtnDisabled ? 'no-animation cursor-default !border-slate-300 !bg-slate-300 !text-slate-900' : ''
 					}`}
 				>

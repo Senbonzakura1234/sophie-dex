@@ -19,7 +19,7 @@ export default function Color({ color }: ColorProps) {
 				}}
 				role='navigation'
 				aria-label={`Filter ${color} Item`}
-				className='btn-xs btn !border-current !bg-current opacity-80 hover:opacity-100'
+				className='btn btn-xs !border-current !bg-current opacity-80 hover:opacity-100'
 				style={{ color: colorFilterMap[color].secondary }}
 			>
 				<span className='font-extrabold capitalize text-slate-50'>{color.toLowerCase()}</span>

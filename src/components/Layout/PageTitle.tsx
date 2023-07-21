@@ -2,9 +2,8 @@ import sophieLogo from '@root/assets/images/sophie-logo.webp';
 import topBg from '@root/assets/images/top.webp';
 import type { ModuleIdProps } from '@root/types/common/props';
 import { getBaseUrl } from '@root/utils/common';
-import Image from 'next/image';
-
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 const Breadcrumb = dynamic(() => import('./Breadcrumb'));
 
