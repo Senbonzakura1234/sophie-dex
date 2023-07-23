@@ -8,7 +8,4 @@ export type RenderFunction<TProps> = (props: TProps) => ReactNode;
 export type SelectOptionItem<V> = { value: V; label?: ReactNode; icon?: ReactNode };
 export type SetSelectOptionItem<V> = Dispatch<SetStateAction<SelectOptionItem<V>>>;
 
-export type SearchInput = string | null;
-export type SetSearchInput = Dispatch<SetStateAction<SearchInput>>;
-
 export type LooseAutocomplete<TSuggest extends string, TString extends string> = TSuggest | Omit<TString, TSuggest>;

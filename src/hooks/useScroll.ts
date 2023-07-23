@@ -8,7 +8,7 @@ type UseScrollProps<T extends HTMLElement> = {
 	onScroll: OnScroll<T>;
 };
 
-export const useScroll = <T extends HTMLElement>({ onScroll, scrollableRef }: UseScrollProps<T>) => {
+export const useScroll = <T extends HTMLElement>({ onScroll, scrollableRef }: UseScrollProps<T>) =>
 	useEffect(() => {
 		if (!scrollableRef.current) return;
 
@@ -22,4 +22,3 @@ export const useScroll = <T extends HTMLElement>({ onScroll, scrollableRef }: Us
 
 		return () => current.removeEventListener('scroll', () => current.scrollTo({ top: 0, behavior: 'smooth' }));
 	}, [onScroll, scrollableRef]);
-};

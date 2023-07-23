@@ -1,18 +1,33 @@
+import { observer, useObservable } from '@legendapp/state/react';
 import MagnifyingGlassIcon from '@root/assets/icons/solid/MagnifyingGlassIcon';
 import XMarkIcon from '@root/assets/icons/solid/XMarkIcon';
-import { useSearchInput } from '@root/hooks/useSearchInput';
+import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import type { ModuleIdProps } from '@root/types/common/props';
+import { useEffect } from 'react';
 
 type SearchInputProps = ModuleIdProps;
 
-export default function SearchInput({ moduleId }: SearchInputProps) {
-	const { performSearch, searchInput, setSearchValue, isSearchValueValid, resetSearch } = useSearchInput(moduleId);
+function SearchInput({ moduleId }: SearchInputProps) {
+	const { securedQuery, updateQuery } = useSecuredRouter();
+
+	const searchValue = useObservable<string | null>(null);
+
+	useEffect(() => {
+		searchValue.set(securedQuery.search ?? null);
+	}, [searchValue, securedQuery.search]);
+
+	const resetSearch = () => {
+		searchValue.set(null);
+		return updateQuery({ search: null }, moduleId);
+	};
+
+	const performSearch = () => updateQuery({ search: searchValue.get() || null }, moduleId);
 
 	return (
 		<>
 			<input
-				value={searchInput}
-				onChange={e => setSearchValue(e.target.value)}
+				value={searchValue.get() || ''}
+				onChange={e => searchValue.set(e.target.value)}
 				onKeyUp={e => {
 					if (e.key === 'Enter') performSearch();
 				}}
@@ -21,14 +36,14 @@ export default function SearchInput({ moduleId }: SearchInputProps) {
 				className='input input-sm my-auto grow p-0 !outline-none'
 			/>
 
-			{isSearchValueValid ? (
+			{!!searchValue.get() ? (
 				<button
 					role='navigation'
 					aria-label='Reset search query'
 					onClick={resetSearch}
 					className='btn btn-circle btn-ghost btn-sm my-auto border-0 hover:bg-transparent'
 				>
-					<XMarkIcon width={18} height={18} />
+					<XMarkIcon className='aspect-square h-5' />
 				</button>
 			) : null}
 
@@ -38,8 +53,10 @@ export default function SearchInput({ moduleId }: SearchInputProps) {
 				onClick={() => performSearch()}
 				className='btn btn-circle btn-ghost btn-sm my-auto border-0 hover:bg-transparent'
 			>
-				<MagnifyingGlassIcon width={22} height={22} />
+				<MagnifyingGlassIcon className='aspect-square h-5' />
 			</button>
 		</>
 	);
 }
+
+export default observer(SearchInput);

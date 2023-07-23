@@ -28,7 +28,7 @@ export default function Paginate({ page, totalPage, moduleId }: PaginateProps) {
 					aria-label='Go To First Page'
 					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
 				>
-					<ChevronDoubleLeftIcon width={16} height={16} />
+					<ChevronDoubleLeftIcon className='aspect-square h-4' />
 				</button>
 
 				<button
@@ -41,7 +41,7 @@ export default function Paginate({ page, totalPage, moduleId }: PaginateProps) {
 					aria-label='Go To Previous Page'
 					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
 				>
-					<ChevronLeftIcon width={16} height={16} />
+					<ChevronLeftIcon className='aspect-square h-4' />
 				</button>
 
 				<GoToPageSelect totalPage={totalPage} moduleId={moduleId} />
@@ -56,7 +56,7 @@ export default function Paginate({ page, totalPage, moduleId }: PaginateProps) {
 					aria-label='Go To Next Page'
 					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
 				>
-					<ChevronRightIcon width={16} height={16} />
+					<ChevronRightIcon className='aspect-square h-4' />
 				</button>
 
 				<button
@@ -69,7 +69,7 @@ export default function Paginate({ page, totalPage, moduleId }: PaginateProps) {
 					aria-label='Go To Last Page'
 					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
 				>
-					<ChevronDoubleRightIcon width={16} height={16} />
+					<ChevronDoubleRightIcon className='aspect-square h-4' />
 				</button>
 			</div>
 		</div>

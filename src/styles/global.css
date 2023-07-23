@@ -16,11 +16,11 @@
 		}
 
 		.legacy-scroll-area::-webkit-scrollbar-track {
-			@apply rounded-3xl transition-all bg-transparent;
+			@apply rounded-3xl bg-transparent;
 		}
 
 		.legacy-scroll-area::-webkit-scrollbar-thumb {
-			@apply rounded-2xl transition-all bg-base-content opacity-50;
+			@apply rounded-2xl bg-base-content opacity-50;
 		}
 	}
 

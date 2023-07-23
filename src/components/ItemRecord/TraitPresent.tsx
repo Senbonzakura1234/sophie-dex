@@ -16,7 +16,7 @@ export default function TraitPresent({ traitPresent: { table: moduleId, id, name
 				role='navigation'
 			>
 				<span className='flex gap-1 font-roboto font-bold'>
-					<DocumentChartBarIcon className='my-auto h-4 w-4' />
+					<DocumentChartBarIcon className='my-auto aspect-square h-4' />
 					{name}
 				</span>
 			</Link>

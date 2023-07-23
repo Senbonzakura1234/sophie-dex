@@ -12,8 +12,8 @@ export default function ScrollToTop({ isShow, refObject }: ScrollToTopProps) {
 
 	return (
 		<div
-			className={`fixed right-6 z-30 flex place-content-center transition-[opacity,bottom] duration-500 ${
-				isShow ? 'opacity-1 bottom-6' : 'bottom-0 opacity-0'
+			className={`fixed bottom-0 right-6 z-30 flex place-content-center transition-[opacity,transform] duration-500 ${
+				isShow ? 'opacity-1 -translate-y-6' : '-translate-y-0 opacity-0'
 			}`}
 		>
 			<button

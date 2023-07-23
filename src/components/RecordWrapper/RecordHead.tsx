@@ -20,7 +20,7 @@ export default function RecordHead({ currentId, id, name, moduleId }: RecordHead
 				role='navigation'
 			>
 				<span className='flex gap-2 font-roboto'>
-					<Icon className='my-auto h-4 w-4' />
+					<Icon className='my-auto aspect-square h-4' />
 					<span>{name}</span>
 				</span>
 			</Link>

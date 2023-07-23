@@ -5,7 +5,9 @@ import type { OnScroll } from '@root/hooks/useScroll';
 import { useScroll } from '@root/hooks/useScroll';
 import type { ChildrenProps, ClassNameProps, ErrorResultProps } from '@root/types/common/props';
 import { useRouter } from 'next/router';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
+
+import { observer, useObservable } from '@legendapp/state/react';
 
 import dynamic from 'next/dynamic';
 const ScrollToTop = dynamic(() => import('./ScrollToTop'));
@@ -14,7 +16,7 @@ type ScrollWrapperProps = ChildrenProps &
 	ClassNameProps &
 	ErrorResultProps & { enableScrollTop?: boolean; enablePageRefresh?: boolean };
 
-export default function ScrollWrapper({
+function ScrollWrapper({
 	children,
 	className,
 	enableScrollTop,
@@ -27,22 +29,19 @@ export default function ScrollWrapper({
 
 	const { pathname, query } = useRouter();
 
-	const [isErrorModalOpen, setIsErrorModalOpen] = useState(true);
-	const [isShowScrollTop, setIsShowScrollTop] = useState(false);
-	const [isDisabledPullToRefresh, setIsDisabledPullToRefresh] = useState(false);
+	const isErrorModalOpen = useObservable(false);
+	const isShowScrollTop = useObservable(false);
+	const isDisabledPullToRefresh = useObservable(false);
 
-	const onScroll: OnScroll<HTMLDivElement> = useCallback(
-		(scrollPosition, scrollElement) => {
-			if (enablePageRefresh) setIsDisabledPullToRefresh(scrollPosition > 0);
+	const onScroll: OnScroll<HTMLDivElement> = (scrollPosition, scrollElement) => {
+		if (enablePageRefresh) isDisabledPullToRefresh.set(scrollPosition > 0);
 
-			if (!enableScrollTop) return;
+		if (!enableScrollTop) return;
 
-			if (scrollElement.scrollHeight < 2 * scrollElement.offsetHeight) return setIsShowScrollTop(false);
-			if (scrollPosition > 0.6 && !isShowScrollTop) return setIsShowScrollTop(true);
-			if (scrollPosition <= 0.6 && isShowScrollTop) return setIsShowScrollTop(false);
-		},
-		[enablePageRefresh, enableScrollTop, isShowScrollTop],
-	);
+		if (scrollElement.scrollHeight < 2 * scrollElement.offsetHeight) return isShowScrollTop.set(false);
+		if (scrollPosition > 0.6 && !isShowScrollTop.get()) return isShowScrollTop.set(true);
+		if (scrollPosition <= 0.6 && isShowScrollTop.get()) return isShowScrollTop.set(false);
+	};
 
 	useScroll({ scrollableRef, onScroll });
 
@@ -57,7 +56,7 @@ export default function ScrollWrapper({
 			<Root className={`scroll-area-root ${className}`} type='scroll'>
 				<Viewport
 					className={`scroll-area-viewport scroll-wrapper scroll-wrapper-horizontal relative h-full w-full ${
-						isError && isErrorModalOpen && '!overflow-hidden'
+						isError && isErrorModalOpen.get() && '!overflow-hidden'
 					}`}
 					ref={scrollableRef}
 				>
@@ -65,8 +64,8 @@ export default function ScrollWrapper({
 					<ErrorModal
 						errorData={errorData}
 						errorMessage={errorMessage}
-						isShow={isError && isErrorModalOpen}
-						onClose={() => setIsErrorModalOpen(false)}
+						isShow={isError && isErrorModalOpen.get()}
+						onClose={() => isErrorModalOpen.set(false)}
 					/>
 				</Viewport>
 
@@ -74,8 +73,10 @@ export default function ScrollWrapper({
 					<Thumb className='scroll-area-thumb' />
 				</Scrollbar>
 
-				{enableScrollTop ? <ScrollToTop isShow={isShowScrollTop} refObject={scrollableRef} /> : null}
+				{enableScrollTop ? <ScrollToTop isShow={isShowScrollTop.get()} refObject={scrollableRef} /> : null}
 			</Root>
 		</>
 	);
 }
+
+export default observer(ScrollWrapper);
