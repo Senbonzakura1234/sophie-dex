@@ -1,5 +1,6 @@
 import { defaultLimit } from '@root/constants';
-import type { ModuleIdProps, PageControlProps } from '@root/types/common/props';
+import { useModuleId } from '@root/hooks/useModuleId';
+import type { PageControlProps } from '@root/types/common/props';
 
 import { formatRecordCount, improvedInclude } from '@root/utils/common';
 
@@ -27,18 +28,19 @@ const SortControl = dynamic(() => import('./SortControl'), {
 	loading: () => <div className='w- my-auto h-6 animate-pulse rounded' />,
 });
 
-type FilterControlProps = PageControlProps & ModuleIdProps & { isBottomFilter?: boolean };
+type FilterControlProps = PageControlProps & { isBottomFilter?: boolean };
 
 export default function FilterControl({
 	page = 1,
 	totalPage = 0,
 	totalRecord = 0,
 	isBottomFilter,
-	moduleId,
 }: FilterControlProps) {
 	const fromFormatted = formatRecordCount((page - 1) * defaultLimit + 1);
 	const toFormatted = formatRecordCount(page * defaultLimit > totalRecord ? totalRecord : page * defaultLimit);
 	const totalRecordFormatted = formatRecordCount(totalRecord);
+
+	const moduleId = useModuleId();
 
 	return (
 		<section className={`container relative z-40 mx-auto max-2xl:px-4 ${isBottomFilter ? '!z-30' : ''}`}>
@@ -54,32 +56,30 @@ export default function FilterControl({
 
 					{!isBottomFilter ? (
 						<>
-							<SortControl moduleId={moduleId} />
+							<SortControl />
 
 							{moduleId !== 'effect' ? (
 								<div className='flex flex-wrap gap-2'>
-									{improvedInclude(['trait', 'item'], moduleId) ? (
-										<CategoryFilter moduleId={moduleId} />
-									) : null}
+									{improvedInclude(['trait', 'item'], moduleId) ? <CategoryFilter /> : null}
 
 									{moduleId === 'item' ? (
 										<>
-											<ColorFilter moduleId={moduleId} />
-											<RecipeTypeFilter moduleId={moduleId} />
+											<ColorFilter />
+											<RecipeTypeFilter />
 										</>
 									) : null}
 
-									{moduleId === 'rumor' ? <RumorTypeFilter moduleId={moduleId} /> : null}
+									{moduleId === 'rumor' ? <RumorTypeFilter /> : null}
 								</div>
 							) : null}
 
 							<div className='my-auto min-w-[145px] gap-1 text-xs font-semibold text-neutral'>
-								{fromFormatted} - {toFormatted} of {totalRecordFormatted} {moduleId.toLocaleLowerCase()}s
+								{fromFormatted} - {toFormatted} of {totalRecordFormatted} {moduleId?.toLocaleLowerCase()}s
 							</div>
 						</>
 					) : null}
 
-					<Paginate page={page} totalPage={totalPage} moduleId={moduleId} />
+					<Paginate page={page} totalPage={totalPage} />
 
 					{!isBottomFilter ? <ResetFilter /> : null}
 				</div>

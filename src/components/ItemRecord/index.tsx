@@ -16,7 +16,7 @@ type ItemRecordProps = RecordProps<Item> & { currentId: string | undefined };
 
 export default function ItemRecord({ currentId, ...props }: ItemRecordProps) {
 	return (
-		<RecordWrapper {...nullableHandle(props)} color={props.data?.color} currentId={currentId} moduleId='item'>
+		<RecordWrapper {...nullableHandle(props)} color={props.data?.color} currentId={currentId}>
 			{({ category, color, description, level, recipeIdea, recipeType, relatedCategories, traitPresent }) => (
 				<>
 					<Level level={level} color={color} />

@@ -20,7 +20,7 @@ export default function RelatedCategories({ relatedCategories }: RelatedCategori
 					}`}
 					key={k}
 					onClick={() => {
-						if (!checkBtnDisable(relatedCategory)) updateQuery({ relatedCategory }, 'item');
+						if (!checkBtnDisable(relatedCategory)) updateQuery({ relatedCategory });
 					}}
 					role='navigation'
 				>

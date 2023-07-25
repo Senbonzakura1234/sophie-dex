@@ -1,33 +1,32 @@
-import { observer, useObservable } from '@legendapp/state/react';
 import MagnifyingGlassIcon from '@root/assets/icons/solid/MagnifyingGlassIcon';
 import XMarkIcon from '@root/assets/icons/solid/XMarkIcon';
 import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
-import type { ModuleIdProps } from '@root/types/common/props';
+import { atom, useAtom } from 'jotai';
 import { useEffect } from 'react';
 
-type SearchInputProps = ModuleIdProps;
+const searchValueAtom = atom<string | null>(null);
 
-function SearchInput({ moduleId }: SearchInputProps) {
+function SearchInput() {
 	const { securedQuery, updateQuery } = useSecuredRouter();
 
-	const searchValue = useObservable<string | null>(null);
+	const [searchValue, setSearchValue] = useAtom(searchValueAtom);
 
 	useEffect(() => {
-		searchValue.set(securedQuery.search ?? null);
-	}, [searchValue, securedQuery.search]);
+		setSearchValue(securedQuery.search ?? null);
+	}, [securedQuery.search, setSearchValue]);
 
 	const resetSearch = () => {
-		searchValue.set(null);
-		return updateQuery({ search: null }, moduleId);
+		setSearchValue(null);
+		return updateQuery({ search: null });
 	};
 
-	const performSearch = () => updateQuery({ search: searchValue.get() || null }, moduleId);
+	const performSearch = () => updateQuery({ search: searchValue || null });
 
 	return (
 		<>
 			<input
-				value={searchValue.get() || ''}
-				onChange={e => searchValue.set(e.target.value)}
+				value={searchValue || ''}
+				onChange={e => setSearchValue(e.target.value)}
 				onKeyUp={e => {
 					if (e.key === 'Enter') performSearch();
 				}}
@@ -36,7 +35,7 @@ function SearchInput({ moduleId }: SearchInputProps) {
 				className='input input-sm my-auto grow p-0 !outline-none'
 			/>
 
-			{!!searchValue.get() ? (
+			{!!searchValue ? (
 				<button
 					role='navigation'
 					aria-label='Reset search query'
@@ -59,4 +58,4 @@ function SearchInput({ moduleId }: SearchInputProps) {
 	);
 }
 
-export default observer(SearchInput);
+export default SearchInput;

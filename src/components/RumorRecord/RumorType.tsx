@@ -21,7 +21,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 				<div className='font-bold !shadow-none'>Category: </div>
 				<button
 					onClick={() => {
-						if (!isBtnDisabled) updateQuery({ rumorType }, 'rumor');
+						if (!isBtnDisabled) updateQuery({ rumorType });
 					}}
 					aria-label={`Filter ${convertCode(rumorType)} Rumor`}
 					role='navigation'

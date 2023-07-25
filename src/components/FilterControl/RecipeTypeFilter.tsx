@@ -2,12 +2,9 @@ import SelectOption from '@root/components/ui/static/SelectOption';
 import { recipeTypeColorMap } from '@root/constants';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
-import type { ModuleIdProps } from '@root/types/common/props';
 import type { RecipeTypeEnum } from '@root/types/common/zod';
 import { recipeTypeList } from '@root/types/model';
 import { convertCode } from '@root/utils/common';
-
-type RecipeTypeFilterProps = ModuleIdProps;
 
 const recipeTypeDefaultSelect = {
 	value: null,
@@ -29,10 +26,9 @@ const recipeTypeSelectList: SelectOptionItem<RecipeTypeEnum | null>[] = [
 	})),
 ];
 
-export default function RecipeTypeFilter({ moduleId }: RecipeTypeFilterProps) {
+export default function RecipeTypeFilter() {
 	const [recipeTypeSelected, setRecipeTypeSelected] = useQueryOnChange(
 		'recipeType',
-		moduleId,
 		recipeTypeSelectList,
 		recipeTypeDefaultSelect,
 	);

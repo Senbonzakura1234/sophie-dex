@@ -3,31 +3,31 @@ import ScrollWrapper from '@root/components/ScrollWrapper';
 import SearchControl from '@root/components/SearchControl';
 import { defaultListData } from '@root/constants';
 import type { MaybeListData, RenderFunction } from '@root/types/common';
-import type { DefaultLayoutProps, ErrorResultProps } from '@root/types/common/props';
+import type { ErrorResultProps } from '@root/types/common/props';
 import type { CommonRecord, ListRecord } from '@root/types/model';
 import Head from 'next/head';
 import { useMemo } from 'react';
 import PageTitle from '../PageTitle';
 
+import { useModuleId } from '@root/hooks/useModuleId';
 import { capitalize } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 
 const PageFooter = dynamic(() => import('../PageFooter'), { ssr: false });
 
-type ListLayoutProps<TRecord extends CommonRecord> = DefaultLayoutProps &
-	ErrorResultProps & {
-		children?: RenderFunction<MaybeListData<TRecord>>;
-		rawData: ListRecord<TRecord> | undefined;
-	};
+type ListLayoutProps<TRecord extends CommonRecord> = ErrorResultProps & {
+	children?: RenderFunction<MaybeListData<TRecord>>;
+	rawData: ListRecord<TRecord> | undefined;
+};
 
 export default function ListLayout<TRecord extends CommonRecord>({
-	moduleId,
 	children,
 	errorData,
 	errorMessage,
 	isError,
 	rawData,
 }: ListLayoutProps<TRecord>) {
+	const moduleId = useModuleId();
 	const title = capitalize(moduleId);
 
 	const { data, isDataReady } = !!rawData
@@ -65,11 +65,11 @@ export default function ListLayout<TRecord extends CommonRecord>({
 				<meta name='description' content={`${title} Record`} key='description' />
 			</Head>
 
-			<PageTitle moduleId={moduleId} />
+			<PageTitle />
 
-			<SearchControl moduleId={moduleId} />
+			<SearchControl />
 
-			<FilterControl moduleId={moduleId} page={page || 1} totalPage={totalPage} totalRecord={totalRecord} />
+			<FilterControl page={page || 1} totalPage={totalPage} totalRecord={totalRecord} />
 
 			<section
 				className={`container mx-auto mb-auto grid gap-6 max-2xl:px-4 ${
@@ -79,15 +79,9 @@ export default function ListLayout<TRecord extends CommonRecord>({
 				{renderChild}
 			</section>
 
-			<FilterControl
-				moduleId={moduleId}
-				page={page || 1}
-				totalPage={totalPage}
-				totalRecord={totalRecord}
-				isBottomFilter
-			/>
+			<FilterControl page={page || 1} totalPage={totalPage} totalRecord={totalRecord} isBottomFilter />
 
-			<PageFooter moduleId={moduleId} />
+			<PageFooter />
 		</ScrollWrapper>
 	);
 }

@@ -8,9 +8,6 @@ dependencies:
   '@headlessui/react':
     specifier: ^1.7.15
     version: registry.npmjs.org/@headlessui/react@1.7.15(react-dom@18.2.0)(react@18.2.0)
-  '@legendapp/state':
-    specifier: ^1.6.2
-    version: registry.npmjs.org/@legendapp/state@1.6.2(react@18.2.0)
   '@neondatabase/serverless':
     specifier: ^0.5.2
     version: registry.npmjs.org/@neondatabase/serverless@0.5.2
@@ -44,6 +41,9 @@ dependencies:
   drizzle-orm:
     specifier: ^0.27.2
     version: registry.npmjs.org/drizzle-orm@0.27.2(@neondatabase/serverless@0.5.2)(@vercel/postgres@0.4.0)(pg@8.11.1)
+  jotai:
+    specifier: ^2.2.2
+    version: registry.npmjs.org/jotai@2.2.2(react@18.2.0)
   next:
     specifier: 13.4.10
     version: registry.npmjs.org/next@13.4.10(react-dom@18.2.0)(react@18.2.0)
@@ -810,17 +810,6 @@ packages:
       '@jridgewell/resolve-uri': registry.npmjs.org/@jridgewell/resolve-uri@3.1.0
       '@jridgewell/sourcemap-codec': registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.14
     dev: true
-
-  registry.npmjs.org/@legendapp/state@1.6.2(react@18.2.0):
-    resolution: {integrity: sha512-sUWJM0vLTp+3uQUK+974bZ7riJwYICbKnP97hXaFssKQnh171hRsRx8KHjOQZ2XjVS4j09CxIWaxRJmtmzwFCA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@legendapp/state/-/state-1.6.2.tgz}
-    id: registry.npmjs.org/@legendapp/state/1.6.2
-    name: '@legendapp/state'
-    version: 1.6.2
-    dependencies:
-      use-sync-external-store: registry.npmjs.org/use-sync-external-store@1.2.0(react@18.2.0)
-    transitivePeerDependencies:
-      - react
-    dev: false
 
   registry.npmjs.org/@neondatabase/serverless@0.4.19:
     resolution: {integrity: sha512-atzpP9uBLrWPokXZdVy2iNPmmxVx51HXhrEObDb4KXmsyGEkGhCcb6cs51LA/oyXwjJUeB4AreOoVgMcPAIv5g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@neondatabase/serverless/-/serverless-0.4.19.tgz}
@@ -4195,6 +4184,21 @@ packages:
     version: 1.19.1
     hasBin: true
     dev: true
+
+  registry.npmjs.org/jotai@2.2.2(react@18.2.0):
+    resolution: {integrity: sha512-Cn8hnBg1sc5ppFwEgVGTfMR5WSM0hbAasd/bdAwIwTaum0j3OUPqBSC4tyk3jtB95vicML+RRWgKFOn6gtfN0A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/jotai/-/jotai-2.2.2.tgz}
+    id: registry.npmjs.org/jotai/2.2.2
+    name: jotai
+    version: 2.2.2
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      react: '>=17.0.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      react: registry.npmjs.org/react@18.2.0
+    dev: false
 
   registry.npmjs.org/js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz}

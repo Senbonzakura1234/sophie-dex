@@ -1,48 +1,47 @@
-import type { ObservablePrimitiveBaseFns } from '@legendapp/state';
-import { observer, useObservable } from '@legendapp/state/react';
-import { Router, useRouter } from 'next/router';
+import { atom, useAtom } from 'jotai';
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { DEFAULT_REFRESH_THRESHOLD, usePullToRefresh } from 'use-pull-to-refresh';
 
-type PageRefreshProps = { isDisabled?: ObservablePrimitiveBaseFns<boolean> };
+const isPageLoadingAtom = atom<boolean>(false);
 
-function PageRefresh({ isDisabled }: PageRefreshProps) {
-	const { reload } = useRouter();
+type PageRefreshProps = { isDisabled?: boolean };
+
+function PageRefresh({ isDisabled = false }: PageRefreshProps) {
+	const { reload, events } = useRouter();
 
 	const { isRefreshing, pullPosition } = usePullToRefresh({
 		onRefresh: reload,
-		isDisabled: isDisabled?.get(),
+		isDisabled,
 		maximumPullLength: 300,
 	});
 
-	const isPageLoading = useObservable(false);
+	const [isPageLoading, setIsPageLoading] = useAtom(isPageLoadingAtom);
 
 	useEffect(() => {
-		Router.events.on('routeChangeStart', () => {
-			isPageLoading.set(true);
-		});
+		events.on('routeChangeStart', () => setIsPageLoading(true));
+		events.on('routeChangeComplete', () => setIsPageLoading(false));
+		events.on('routeChangeError', () => setIsPageLoading(false));
 
-		Router.events.on('routeChangeComplete', () => {
-			isPageLoading.set(false);
-		});
-
-		Router.events.on('routeChangeError', () => {
-			isPageLoading.set(false);
-		});
-	}, [isPageLoading]);
+		return () => {
+			events.off('routeChangeStart', () => setIsPageLoading(false));
+			events.off('routeChangeComplete', () => setIsPageLoading(false));
+			events.off('routeChangeError', () => setIsPageLoading(false));
+		};
+	}, [events, setIsPageLoading]);
 
 	return (
 		<>
 			<progress
 				className={`progress progress-primary absolute inset-x-0 top-0 z-40 h-1 rounded-none shadow-xl shadow-primary transition-opacity ${
-					isPageLoading.get() || isRefreshing ? 'opacity-100' : 'opacity-0'
+					isPageLoading || isRefreshing ? 'opacity-100' : 'opacity-0'
 				}`}
 			/>
 
 			<div
 				style={{
-					opacity: (isRefreshing || pullPosition > 0) && !isDisabled?.get() ? 1 : 0,
-					top: isDisabled?.get() ? 0 : (isRefreshing ? DEFAULT_REFRESH_THRESHOLD : pullPosition) / 3,
+					opacity: (isRefreshing || pullPosition > 0) && !isDisabled ? 1 : 0,
+					top: isDisabled ? 0 : (isRefreshing ? DEFAULT_REFRESH_THRESHOLD : pullPosition) / 3,
 				}}
 				className='fixed inset-x-1/2 z-30 aspect-square h-8 w-8 -translate-x-1/2 rounded-full bg-slate-50 p-2 transition-opacity'
 			>
@@ -52,4 +51,4 @@ function PageRefresh({ isDisabled }: PageRefreshProps) {
 	);
 }
 
-export default observer(PageRefresh);
+export default PageRefresh;

@@ -2,11 +2,8 @@ import SelectOption from '@root/components/ui/static/SelectOption';
 import { colorFilterMap } from '@root/constants';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
-import type { ModuleIdProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
 import { colorList } from '@root/types/model';
-
-type ColorFilterProps = ModuleIdProps;
 
 const colorDefaultSelect = {
 	value: null,
@@ -28,8 +25,8 @@ const colorSelectList: SelectOptionItem<ColorEnum | null>[] = [
 	})),
 ];
 
-export default function ColorFilter({ moduleId }: ColorFilterProps) {
-	const [colorSelected, setColorSelected] = useQueryOnChange('color', moduleId, colorSelectList, colorDefaultSelect);
+export default function ColorFilter() {
+	const [colorSelected, setColorSelected] = useQueryOnChange('color', colorSelectList, colorDefaultSelect);
 
 	return (
 		<SelectOption<ColorEnum | null>

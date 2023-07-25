@@ -11,7 +11,7 @@ type TraitRecordProps = RecordProps<Trait> & { currentId: string | undefined };
 
 export default function TraitRecord({ currentId, ...props }: TraitRecordProps) {
 	return (
-		<RecordWrapper {...nullableHandle(props)} currentId={currentId} moduleId='trait'>
+		<RecordWrapper {...nullableHandle(props)} currentId={currentId}>
 			{({ categories, description, itemPresent, mergeFrom }) => (
 				<>
 					<p className='text-lg'>{description}</p>

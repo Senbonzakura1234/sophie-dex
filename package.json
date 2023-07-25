@@ -1,6 +1,6 @@
 {
 	"name": "sophie-dex",
-	"version": "11.0.1",
+	"version": "12.0.1",
 	"private": false,
 	"license": "MIT",
 	"author": {
@@ -21,13 +21,12 @@
 		"lint": "next lint",
 		"start": "next start",
 		"lint:fix": "eslint --ext .js,.jsx,.ts,.tsx,.json . --fix",
-		"build-types": "tsc --noEmit --pretty",
+		"types": "tsc --noEmit --pretty",
 		"drizzle-gen": "drizzle-kit generate:pg",
 		"drizzle-studio": "drizzle-kit studio"
 	},
 	"dependencies": {
 		"@headlessui/react": "^1.7.15",
-		"@legendapp/state": "^1.6.2",
 		"@neondatabase/serverless": "^0.5.2",
 		"@radix-ui/react-scroll-area": "^1.0.4",
 		"@t3-oss/env-nextjs": "^0.6.0",
@@ -39,6 +38,7 @@
 		"@vercel/analytics": "^1.0.1",
 		"@vercel/postgres": "^0.4.0",
 		"drizzle-orm": "^0.27.2",
+		"jotai": "^2.2.2",
 		"next": "13.4.10",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",

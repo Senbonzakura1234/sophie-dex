@@ -3,15 +3,17 @@ import HomeIcon from '@root/assets/icons/solid/HomeIcon';
 import LinkIcon from '@root/assets/icons/solid/LinkIcon';
 import CircleDivider from '@root/components/ui/static/CircleDivider';
 import { APP_AUTHOR, APP_VERSION } from '@root/constants';
-import type { ModuleIdProps } from '@root/types/common/props';
+import { useModuleId } from '@root/hooks/useModuleId';
 import { moduleIdList } from '@root/types/model';
 import Link from 'next/link';
 import { Fragment } from 'react';
 import LinkItem from './LinkItem';
 
-type BreadcrumbProps = { isShowAuthor: boolean } & Partial<ModuleIdProps>;
+type BreadcrumbProps = { isShowAuthor: boolean };
 
-export default function Breadcrumb({ isShowAuthor, moduleId }: BreadcrumbProps) {
+export default function Breadcrumb({ isShowAuthor }: BreadcrumbProps) {
+	const moduleId = useModuleId();
+
 	return (
 		<>
 			<div className='flex w-full'>

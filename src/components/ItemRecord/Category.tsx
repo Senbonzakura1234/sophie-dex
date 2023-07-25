@@ -25,7 +25,7 @@ export default function Category({ category, color }: CategoryProps) {
 				<div className='font-bold !shadow-none'>Category: </div>
 				<button
 					onClick={() => {
-						if (!isBtnDisabled) updateQuery({ category }, 'item');
+						if (!isBtnDisabled) updateQuery({ category });
 					}}
 					aria-label={`Filter ${convertCode(category)} Item`}
 					role='navigation'

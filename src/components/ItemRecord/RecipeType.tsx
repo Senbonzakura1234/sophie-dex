@@ -20,7 +20,7 @@ export default function RecipeType({ recipeType }: RecipeTypeProps) {
 					isBtnDisabled ? '!no-animation !cursor-default !opacity-80' : ''
 				}`}
 				onClick={() => {
-					if (!isBtnDisabled) updateQuery({ recipeType }, 'item');
+					if (!isBtnDisabled) updateQuery({ recipeType });
 				}}
 				role='navigation'
 				style={{ color: recipeTypeColorMap[recipeType].secondary }}

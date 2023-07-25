@@ -1,15 +1,14 @@
 import sophieLogo from '@root/assets/images/sophie-logo.webp';
 import topBg from '@root/assets/images/top.webp';
-import type { ModuleIdProps } from '@root/types/common/props';
+import { useModuleId } from '@root/hooks/useModuleId';
 import { getBaseUrl } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
 const Breadcrumb = dynamic(() => import('./Breadcrumb'));
 
-type PageTitleProps = Partial<ModuleIdProps>;
-
-export default function PageTitle({ moduleId }: PageTitleProps) {
+export default function PageTitle() {
+	const moduleId = useModuleId();
 	const isHomePage = typeof moduleId === 'undefined';
 
 	return (
@@ -31,7 +30,7 @@ export default function PageTitle({ moduleId }: PageTitleProps) {
 						</div>
 					)}
 				</div>
-				<Breadcrumb isShowAuthor={isHomePage} moduleId={moduleId} />
+				<Breadcrumb isShowAuthor={isHomePage} />
 			</div>
 
 			<div className='absolute inset-0 z-10 bg-gradient-to-r from-primary/20 to-slate-700/20' />

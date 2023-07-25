@@ -1,6 +1,7 @@
 import ScrollWrapper from '@root/components/ScrollWrapper';
+import { useModuleId } from '@root/hooks/useModuleId';
 import type { MaybeData, RenderFunction } from '@root/types/common';
-import type { DefaultLayoutProps, ErrorResultProps } from '@root/types/common/props';
+import type { ErrorResultProps } from '@root/types/common/props';
 import type { CommonRecord } from '@root/types/model';
 import { capitalize } from '@root/utils/common';
 import Head from 'next/head';
@@ -8,15 +9,13 @@ import { useMemo } from 'react';
 import PageFooter from '../PageFooter';
 import PageTitle from '../PageTitle';
 
-type DetailLayoutProps<TRecord extends CommonRecord> = DefaultLayoutProps &
-	ErrorResultProps & {
-		extraHead?: RenderFunction<NonNullable<TRecord>>;
-		children?: RenderFunction<MaybeData<TRecord>>;
-		rawData: TRecord | undefined;
-	};
+type DetailLayoutProps<TRecord extends CommonRecord> = ErrorResultProps & {
+	extraHead?: RenderFunction<NonNullable<TRecord>>;
+	children?: RenderFunction<MaybeData<TRecord>>;
+	rawData: TRecord | undefined;
+};
 
 export default function DetailLayout<TRecord extends CommonRecord>({
-	moduleId,
 	children,
 	extraHead,
 	isError,
@@ -24,6 +23,7 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 	errorMessage,
 	rawData,
 }: DetailLayoutProps<TRecord>) {
+	const moduleId = useModuleId();
 	const title = capitalize(moduleId);
 
 	const renderChild = useMemo(() => {
@@ -63,13 +63,13 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 				</Head>
 			) : null}
 
-			<PageTitle moduleId={moduleId} />
+			<PageTitle />
 
 			<section className='grid h-full w-full grid-cols-1 place-content-center gap-4 p-2 2xl:grid-cols-none'>
 				<div className={`mx-auto max-w-full ${moduleId === 'item' ? 'w-[900px]' : 'w-[700px]'}`}>{renderChild}</div>
 			</section>
 
-			<PageFooter moduleId={moduleId} />
+			<PageFooter />
 		</ScrollWrapper>
 	);
 }

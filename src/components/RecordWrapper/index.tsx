@@ -1,6 +1,6 @@
 import { colorFilterMap } from '@root/constants';
 import type { MaybeData, RenderFunction } from '@root/types/common';
-import type { ClassNameProps, ModuleIdProps } from '@root/types/common/props';
+import type { ClassNameProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
 import type { CommonRecord } from '@root/types/model';
 import { useMemo } from 'react';
@@ -11,12 +11,11 @@ const RecordHead = dynamic(() => import('./RecordHead'), {
 	loading: () => <div className='h-7 w-40 max-w-full animate-pulse rounded' />,
 });
 
-type RecordWrapperProps<TRecord extends CommonRecord> = ClassNameProps &
-	ModuleIdProps & {
-		color?: ColorEnum;
-		children?: RenderFunction<TRecord>;
-		currentId?: string;
-	} & MaybeData<TRecord>;
+type RecordWrapperProps<TRecord extends CommonRecord> = ClassNameProps & {
+	color?: ColorEnum;
+	children?: RenderFunction<TRecord>;
+	currentId?: string;
+} & MaybeData<TRecord>;
 
 export default function RecordWrapper<TRecord extends CommonRecord>({
 	children,
@@ -25,7 +24,6 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 	currentId,
 	data,
 	isDataReady,
-	moduleId,
 }: RecordWrapperProps<TRecord>) {
 	const renderChild = useMemo(() => (isDataReady && children ? children(data) : null), [isDataReady, children, data]);
 
@@ -43,9 +41,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 					!isDataReady ? 'min-h-[270px]' : ''
 				}`}
 			>
-				{isDataReady ? (
-					<RecordHead id={data.id} name={data.name} moduleId={moduleId} currentId={currentId} />
-				) : null}
+				{isDataReady ? <RecordHead id={data.id} name={data.name} currentId={currentId} /> : null}
 
 				{renderChild}
 			</div>

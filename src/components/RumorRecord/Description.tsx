@@ -13,14 +13,12 @@ export default function Description({ description: { contentText, contentData } 
 
 			<span className='text-lg'>
 				{contentText.map((text, key) => {
-					let data = undefined;
+					const data = contentData[parseInt(text.replace('keyMap-', ''))];
 
-					if (text.includes('keyMap-')) data = contentData[parseInt(text.replace('keyMap-', ''))];
-
-					return data ? (
-						<Hyperlink key={key} input={data} className='link-primary link visited:link-accent' />
-					) : (
+					return typeof data === 'undefined' ? (
 						<Fragment key={key}>{text}</Fragment>
+					) : (
+						<Hyperlink key={key} input={data} className='link-primary link visited:link-accent' />
 					);
 				})}
 			</span>

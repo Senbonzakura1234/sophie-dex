@@ -32,8 +32,10 @@ export const improvedInclude = <TSearch extends Readonly<string | number>>(
 
 export const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 3 }).format;
 
-export const capitalize = (input: string) =>
-	input.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase());
+export const capitalize = (input?: string | undefined) =>
+	input
+		? input.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase())
+		: '';
 
 export const convertCode = (input: string) => input.toLowerCase().replaceAll('_', ' ');
 

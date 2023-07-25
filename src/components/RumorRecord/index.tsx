@@ -17,7 +17,6 @@ export default function RumorRecord({ currentId, ...props }: RumorRecordProps) {
 			{...nullableHandle(props)}
 			color={props.data?.rumorType && rumorColorMap[props.data?.rumorType]}
 			currentId={currentId}
-			moduleId='rumor'
 		>
 			{({ description, location, price, rumorType }) => (
 				<>

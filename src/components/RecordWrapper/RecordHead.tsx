@@ -1,13 +1,14 @@
 import DocumentChartBarIcon from '@root/assets/icons/outline/DocumentChartBarIcon';
 import LinkIcon from '@root/assets/icons/solid/LinkIcon';
-import type { ModuleIdProps } from '@root/types/common/props';
+import { useModuleId } from '@root/hooks/useModuleId';
 import type { CommonRecord } from '@root/types/model';
 import Link from 'next/link';
 
-type RecordHeadProps = ModuleIdProps & Omit<CommonRecord, 'keyWords'> & { currentId: string | undefined };
+type RecordHeadProps = Omit<CommonRecord, 'keyWords'> & { currentId: string | undefined };
 
-export default function RecordHead({ currentId, id, name, moduleId }: RecordHeadProps) {
+export default function RecordHead({ currentId, id, name }: RecordHeadProps) {
 	const isCurrentRecord = currentId === id;
+	const moduleId = useModuleId();
 
 	const Icon = isCurrentRecord ? DocumentChartBarIcon : LinkIcon;
 

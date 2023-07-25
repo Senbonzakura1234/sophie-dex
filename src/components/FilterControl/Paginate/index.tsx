@@ -3,13 +3,12 @@ import ChevronDoubleRightIcon from '@root/assets/icons/solid/ChevronDoubleRightI
 import ChevronLeftIcon from '@root/assets/icons/solid/ChevronLeftIcon';
 import ChevronRightIcon from '@root/assets/icons/solid/ChevronRightIcon';
 import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
-import type { ModuleIdProps } from '@root/types/common/props';
 
 import GoToPageSelect from './GoToPageSelect';
 
-type PaginateProps = { page: number; totalPage: number } & ModuleIdProps;
+type PaginateProps = { page: number; totalPage: number };
 
-export default function Paginate({ page, totalPage, moduleId }: PaginateProps) {
+export default function Paginate({ page, totalPage }: PaginateProps) {
 	const { updateQuery } = useSecuredRouter();
 
 	const isPreviousDisable = page <= 1;
@@ -23,7 +22,7 @@ export default function Paginate({ page, totalPage, moduleId }: PaginateProps) {
 					disabled={isPreviousDisable}
 					onClick={() => {
 						if (isPreviousDisable) return;
-						updateQuery({ page: 1 }, moduleId);
+						updateQuery({ page: 1 });
 					}}
 					aria-label='Go To First Page'
 					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
@@ -36,7 +35,7 @@ export default function Paginate({ page, totalPage, moduleId }: PaginateProps) {
 					disabled={isPreviousDisable}
 					onClick={() => {
 						if (isPreviousDisable) return;
-						updateQuery({ page: page - 1 }, moduleId);
+						updateQuery({ page: page - 1 });
 					}}
 					aria-label='Go To Previous Page'
 					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
@@ -44,14 +43,14 @@ export default function Paginate({ page, totalPage, moduleId }: PaginateProps) {
 					<ChevronLeftIcon className='aspect-square h-4' />
 				</button>
 
-				<GoToPageSelect totalPage={totalPage} moduleId={moduleId} />
+				<GoToPageSelect totalPage={totalPage} />
 
 				<button
 					role='navigation'
 					disabled={isNextDisable}
 					onClick={() => {
 						if (isNextDisable) return;
-						updateQuery({ page: page + 1 }, moduleId);
+						updateQuery({ page: page + 1 });
 					}}
 					aria-label='Go To Next Page'
 					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
@@ -64,7 +63,7 @@ export default function Paginate({ page, totalPage, moduleId }: PaginateProps) {
 					disabled={isNextDisable}
 					onClick={() => {
 						if (isNextDisable) return;
-						updateQuery({ page: totalPage }, moduleId);
+						updateQuery({ page: totalPage });
 					}}
 					aria-label='Go To Last Page'
 					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'

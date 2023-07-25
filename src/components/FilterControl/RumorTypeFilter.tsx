@@ -2,11 +2,8 @@ import SelectOption from '@root/components/ui/static/SelectOption';
 import { rumorTypeIconMap } from '@root/constants';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
-import type { ModuleIdProps } from '@root/types/common/props';
 import type { RumorTypeEnum } from '@root/types/common/zod';
 import { rumorTypeList } from '@root/types/model';
-
-type RumorTypeFilterProps = ModuleIdProps;
 
 const rumorTypeDefaultSelect = {
 	value: null,
@@ -24,10 +21,9 @@ const rumorTypeSelectList: SelectOptionItem<RumorTypeEnum | null>[] = [
 	})),
 ];
 
-export default function RumorTypeFilter({ moduleId }: RumorTypeFilterProps) {
+export default function RumorTypeFilter() {
 	const [rumorTypeSelected, setRumorTypeSelected] = useQueryOnChange(
 		'rumorType',
-		moduleId,
 		rumorTypeSelectList,
 		rumorTypeDefaultSelect,
 	);

@@ -24,7 +24,7 @@ function Categories({ categories }: CategoriesProps) {
 						} ${securedQuery.category === category ? 'btn-accent text-slate-50' : ''}`}
 						onClick={() => {
 							if (isClickAble(category))
-								updateQuery({ category: securedQuery.category === category ? null : category }, 'trait');
+								updateQuery({ category: securedQuery.category === category ? null : category });
 						}}
 					>
 						<div className={`w-5 font-atelier text-lg 2xl:w-6 2xl:text-xl ${categoryIconMap[category]}`} />
