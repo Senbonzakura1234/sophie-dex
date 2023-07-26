@@ -1,9 +1,11 @@
 import HomeLayout from '@root/components/Layout/HomeLayout';
-import { globalStore, moduleIdAtom } from '@root/utils/store';
+import { useHydrateModuleId } from '@root/hooks/useModuleId';
 import type { NextPage } from 'next';
 
-globalStore.set(moduleIdAtom, undefined);
+const Home: NextPage = () => {
+	useHydrateModuleId();
 
-const Home: NextPage = () => <HomeLayout />;
+	return <HomeLayout />;
+};
 
 export default Home;

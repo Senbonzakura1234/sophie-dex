@@ -3,7 +3,6 @@ import { useModuleId } from '@root/hooks/useModuleId';
 import type { MaybeData, RenderFunction } from '@root/types/common';
 import type { ErrorResultProps } from '@root/types/common/props';
 import type { CommonRecord } from '@root/types/model';
-import { capitalize } from '@root/utils/common';
 import Head from 'next/head';
 import { useMemo } from 'react';
 import PageFooter from '../PageFooter';
@@ -24,7 +23,6 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 	rawData,
 }: DetailLayoutProps<TRecord>) {
 	const moduleId = useModuleId();
-	const title = capitalize(moduleId);
 
 	const renderChild = useMemo(() => {
 		const result = !!rawData
@@ -45,17 +43,9 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 			enableScrollTop
 			enablePageRefresh
 		>
-			<Head>
-				<title>{title}</title>
-				<meta name='og:title' content={title} key='title' />
-				<meta name='description' content={`${title} Record`} key='description' />
-			</Head>
-
 			{rawData ? (
 				<Head>
-					<title>
-						{rawData.name} | {title}
-					</title>
+					<title>{rawData.name}</title>
 					<meta name='og:title' content={rawData.name} key='title' />
 					<meta name='description' content={rawData.keyWords} key='description' />
 					<meta name='keywords' content={rawData.keyWords} key='keywords' />
