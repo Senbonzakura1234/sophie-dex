@@ -4,7 +4,6 @@ import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
 import type { CategoryEnum } from '@root/types/common/zod';
 import { categoryList } from '@root/types/model';
-import { convertCode } from '@root/utils/common';
 
 const categoryDefaultSelect = {
 	value: null,
@@ -14,10 +13,13 @@ const categoryDefaultSelect = {
 const categorySelectList: SelectOptionItem<CategoryEnum | null>[] = [
 	categoryDefaultSelect,
 	...categoryList.map(category => ({
-		label: <span className='capitalize'>{convertCode(category)}</span>,
 		value: category,
 		icon: (
-			<span className={`aspect-square h-4 font-atelier xl:h-5 ${categoryIconMap[category]}`} aria-hidden='true' />
+			<span
+				aria-hidden='true'
+				className={`aspect-square h-4 font-atelier xl:h-5 ${categoryIconMap[category]}`}
+				key={category}
+			/>
 		),
 	})),
 ];

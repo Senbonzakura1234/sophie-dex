@@ -13,10 +13,13 @@ const rumorTypeDefaultSelect = {
 const rumorTypeSelectList: SelectOptionItem<RumorTypeEnum | null>[] = [
 	rumorTypeDefaultSelect,
 	...rumorTypeList.map(rumorType => ({
-		label: <span className='capitalize'>{rumorType.toLowerCase()}</span>,
 		value: rumorType,
 		icon: (
-			<span className={`aspect-square h-4 font-atelier xl:h-5 ${rumorTypeIconMap[rumorType]}`} aria-hidden='true' />
+			<span
+				aria-hidden='true'
+				className={`aspect-square h-4 font-atelier xl:h-5 ${rumorTypeIconMap[rumorType]}`}
+				key={rumorType}
+			/>
 		),
 	})),
 ];

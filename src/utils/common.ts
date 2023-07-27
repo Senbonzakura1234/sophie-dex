@@ -32,12 +32,15 @@ export const improvedInclude = <TSearch extends Readonly<string | number>>(
 
 export const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 3 }).format;
 
-export const capitalize = (input?: string | undefined) =>
+export const capitalize = (input?: string | number | null) =>
 	input
-		? input.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase())
+		? input
+				.toString()
+				.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase())
 		: '';
 
-export const convertCode = (input: string) => input.toLowerCase().replaceAll('_', ' ');
+export const convertCode = (input?: string | number | null) =>
+	input ? input.toString().toLowerCase().replaceAll('_', ' ') : '';
 
 export const parseQuery = (query: Partial<SearchQuery>) => {
 	for (const key in query) {

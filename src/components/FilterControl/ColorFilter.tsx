@@ -13,13 +13,13 @@ const colorDefaultSelect = {
 const colorSelectList: SelectOptionItem<ColorEnum | null>[] = [
 	colorDefaultSelect,
 	...colorList.map(color => ({
-		label: <span className='capitalize'>{color.toLowerCase()}</span>,
 		value: color,
 		icon: (
 			<span
-				style={{ color: colorFilterMap[color].primary }}
-				className='aspect-square h-4 rounded-full border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5'
 				aria-hidden='true'
+				className='aspect-square h-4 rounded-full border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5'
+				key={color}
+				style={{ color: colorFilterMap[color].primary }}
 			/>
 		),
 	})),

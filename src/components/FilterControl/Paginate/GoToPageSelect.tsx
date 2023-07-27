@@ -8,16 +8,12 @@ type GoToPageSelectProps = { totalPage: number };
 
 const pageDefaultSelect = {
 	value: null,
-	label: <span>Page 1</span>,
+	label: 'Page 1',
 };
 
 export default function GoToPageSelect({ totalPage }: GoToPageSelectProps) {
 	const pageList: SelectOptionItem<number | null>[] = useMemo(
-		() =>
-			createArray(totalPage, 0).map((_, i) => ({
-				value: i + 1,
-				label: <span>Page {i + 1}</span>,
-			})),
+		() => createArray(totalPage, 0).map((_, i) => ({ value: i + 1, label: `Page ${i + 1}` })),
 		[totalPage],
 	);
 

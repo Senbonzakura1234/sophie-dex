@@ -4,7 +4,6 @@ import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
 import type { RecipeTypeEnum } from '@root/types/common/zod';
 import { recipeTypeList } from '@root/types/model';
-import { convertCode } from '@root/utils/common';
 
 const recipeTypeDefaultSelect = {
 	value: null,
@@ -14,13 +13,13 @@ const recipeTypeDefaultSelect = {
 const recipeTypeSelectList: SelectOptionItem<RecipeTypeEnum | null>[] = [
 	recipeTypeDefaultSelect,
 	...recipeTypeList.map(recipeType => ({
-		label: <span className='capitalize'>{convertCode(recipeType)}</span>,
 		value: recipeType,
 		icon: (
 			<span
-				style={{ color: recipeTypeColorMap[recipeType].primary }}
-				className='aspect-square h-4 rounded-full border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5'
 				aria-hidden='true'
+				className='aspect-square h-4 rounded-full border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5'
+				key={recipeType}
+				style={{ color: recipeTypeColorMap[recipeType].primary }}
 			/>
 		),
 	})),
@@ -38,7 +37,7 @@ export default function RecipeTypeFilter() {
 			list={recipeTypeSelectList}
 			setValue={setRecipeTypeSelected}
 			value={recipeTypeSelected}
-			className='my-auto min-w-[11.1rem]'
+			className='my-auto min-w-[11.5rem]'
 			useCustomIcon
 		/>
 	);

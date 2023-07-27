@@ -33,7 +33,7 @@ function PageRefresh({ isDisabled = false }: PageRefreshProps) {
 	return (
 		<>
 			<progress
-				className={`progress progress-primary absolute inset-x-0 top-0 z-40 h-1 rounded-none shadow-xl shadow-primary transition-opacity ${
+				className={`progress progress-primary absolute inset-x-0 top-0 z-50 h-1 rounded-none shadow-xl shadow-primary transition-opacity ${
 					isPageLoading || isRefreshing ? 'opacity-100' : 'opacity-0'
 				}`}
 			/>
