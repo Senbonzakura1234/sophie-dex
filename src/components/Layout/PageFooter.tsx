@@ -4,7 +4,14 @@ import Image from 'next/image';
 
 import dynamic from 'next/dynamic';
 
-const Breadcrumb = dynamic(() => import('./Breadcrumb'), { ssr: false });
+const Breadcrumb = dynamic(() => import('./Breadcrumb'), {
+	loading: () => (
+		<div className='flex w-full'>
+			<nav className='card mx-auto w-11/12 max-w-md bg-base-100 px-2 py-1 shadow-lg shadow-primary 2xl:w-2/5 2xl:max-w-none' />
+		</div>
+	),
+	ssr: false,
+});
 
 export default function PageFooter() {
 	return (

@@ -13,7 +13,14 @@ import { useModuleId } from '@root/hooks/useModuleId';
 import { capitalize } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 
-const PageFooter = dynamic(() => import('../PageFooter'), { ssr: false });
+const PageFooter = dynamic(() => import('../PageFooter'), {
+	loading: () => (
+		<section className='relative min-h-[300px] w-full overflow-hidden shadow-inner'>
+			<div className='absolute inset-0 z-10 bg-gradient-to-r from-accent/10 to-primary/10' />
+		</section>
+	),
+	ssr: false,
+});
 
 type ListLayoutProps<TRecord extends CommonRecord> = ErrorResultProps & {
 	children?: RenderFunction<MaybeListData<TRecord>>;

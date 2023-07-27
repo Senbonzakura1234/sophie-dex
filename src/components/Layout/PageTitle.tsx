@@ -5,7 +5,13 @@ import { getBaseUrl } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
-const Breadcrumb = dynamic(() => import('./Breadcrumb'));
+const Breadcrumb = dynamic(() => import('./Breadcrumb'), {
+	loading: () => (
+		<div className='flex w-full'>
+			<nav className='card mx-auto w-11/12 max-w-md bg-base-100 px-2 py-1 shadow-lg shadow-primary 2xl:w-2/5 2xl:max-w-none' />
+		</div>
+	),
+});
 
 export default function PageTitle() {
 	const moduleId = useModuleId();
