@@ -18,27 +18,27 @@ export default function Paginate({ page, totalPage }: PaginateProps) {
 		<div className='form-control'>
 			<div className='flex gap-2'>
 				<button
-					role='navigation'
+					aria-label='Go To First Page'
+					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
 					disabled={isPreviousDisable}
 					onClick={() => {
 						if (isPreviousDisable) return;
 						updateQuery({ page: 1 });
 					}}
-					aria-label='Go To First Page'
-					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
+					role='navigation'
 				>
 					<ChevronDoubleLeftIcon className='aspect-square h-4' />
 				</button>
 
 				<button
-					role='navigation'
+					aria-label='Go To Previous Page'
+					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
 					disabled={isPreviousDisable}
 					onClick={() => {
 						if (isPreviousDisable) return;
 						updateQuery({ page: page - 1 });
 					}}
-					aria-label='Go To Previous Page'
-					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
+					role='navigation'
 				>
 					<ChevronLeftIcon className='aspect-square h-4' />
 				</button>
@@ -46,27 +46,27 @@ export default function Paginate({ page, totalPage }: PaginateProps) {
 				<GoToPageSelect totalPage={totalPage} />
 
 				<button
-					role='navigation'
+					aria-label='Go To Next Page'
+					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
 					disabled={isNextDisable}
 					onClick={() => {
 						if (isNextDisable) return;
 						updateQuery({ page: page + 1 });
 					}}
-					aria-label='Go To Next Page'
-					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
+					role='navigation'
 				>
 					<ChevronRightIcon className='aspect-square h-4' />
 				</button>
 
 				<button
-					role='navigation'
+					aria-label='Go To Last Page'
+					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
 					disabled={isNextDisable}
 					onClick={() => {
 						if (isNextDisable) return;
 						updateQuery({ page: totalPage });
 					}}
-					aria-label='Go To Last Page'
-					className='btn btn-circle btn-primary btn-sm my-auto text-slate-50'
+					role='navigation'
 				>
 					<ChevronDoubleRightIcon className='aspect-square h-4' />
 				</button>

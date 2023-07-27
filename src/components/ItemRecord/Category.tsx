@@ -24,14 +24,14 @@ export default function Category({ category, color }: CategoryProps) {
 			<div className='flex max-w-fit flex-wrap gap-2'>
 				<div className='font-bold !shadow-none'>Category: </div>
 				<button
-					onClick={() => {
-						if (!isBtnDisabled) updateQuery({ category });
-					}}
 					aria-label={`Filter ${convertCode(category)} Item`}
-					role='navigation'
 					className={`btn btn-accent btn-xs gap-1 font-extrabold capitalize ${
 						isBtnDisabled ? 'no-animation cursor-default !border-slate-300 !bg-slate-300 !text-slate-900' : ''
 					}`}
+					onClick={() => {
+						if (!isBtnDisabled) updateQuery({ category });
+					}}
+					role='navigation'
 				>
 					<div className={`font-atelier ${categoryIconMap[category]}`} />
 					{convertCode(category)}

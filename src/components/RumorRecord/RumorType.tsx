@@ -20,14 +20,14 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 			<div className='flex max-w-fit flex-wrap gap-2'>
 				<div className='font-bold !shadow-none'>Category: </div>
 				<button
-					onClick={() => {
-						if (!isBtnDisabled) updateQuery({ rumorType });
-					}}
 					aria-label={`Filter ${convertCode(rumorType)} Rumor`}
-					role='navigation'
 					className={`btn btn-xs !border-current !bg-current opacity-80 hover:opacity-100 ${
 						isBtnDisabled ? '!no-animation !cursor-default hover:opacity-80' : ''
 					}`}
+					onClick={() => {
+						if (!isBtnDisabled) updateQuery({ rumorType });
+					}}
+					role='navigation'
 					style={{ color: rumorTypeColorMap[rumorType].secondary }}
 				>
 					<div className='flex gap-1 font-extrabold capitalize text-slate-50'>

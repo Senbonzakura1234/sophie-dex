@@ -3,6 +3,7 @@ import LinkIcon from '@root/assets/icons/solid/LinkIcon';
 import { useModuleId } from '@root/hooks/useModuleId';
 import type { CommonRecord } from '@root/types/model';
 import Link from 'next/link';
+import CopyUrlButton from '../ui/static/CopyUrlButton';
 
 type RecordHeadProps = Omit<CommonRecord, 'keyWords'> & { currentId: string | undefined };
 
@@ -12,11 +13,13 @@ export default function RecordHead({ currentId, id, name }: RecordHeadProps) {
 
 	const Icon = isCurrentRecord ? DocumentChartBarIcon : LinkIcon;
 
+	const recordUrlObj = { pathname: `/${moduleId}/[id]`, query: { id } };
+
 	return (
 		<div className='card-title'>
 			<Link
 				className={isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'}
-				href={{ pathname: `/${moduleId}/[id]`, query: { id } }}
+				href={recordUrlObj}
 				aria-label={name}
 				role='navigation'
 			>
@@ -25,6 +28,8 @@ export default function RecordHead({ currentId, id, name }: RecordHeadProps) {
 					<span>{name}</span>
 				</span>
 			</Link>
+
+			<CopyUrlButton url={recordUrlObj} />
 		</div>
 	);
 }

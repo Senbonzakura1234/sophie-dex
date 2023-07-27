@@ -22,7 +22,9 @@ export default function Modal({ isShow, children, className, onClose }: ModalPro
 			</form>
 
 			<form method='dialog' className='modal-backdrop bg-slate-900/40' onSubmit={onClose}>
-				<button disabled={!onClose}>close</button>
+				<button aria-label='Close Dialog' disabled={!onClose} role='dialog'>
+					close
+				</button>
 			</form>
 		</dialog>
 	);

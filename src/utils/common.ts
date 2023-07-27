@@ -1,5 +1,8 @@
 import type { MaybeData } from '@root/types/common';
 import type { NodeEnv, SearchQuery } from '@root/types/common/zod';
+import { resolveHref } from 'next/dist/shared/lib/router/utils/resolve-href';
+import Router from 'next/router';
+import type { UrlObject } from 'url';
 import { env } from './env.mjs';
 
 export const evnIs = (nodeEnv: NodeEnv) => env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
@@ -19,8 +22,9 @@ export const tryCatchHandler = async <TReturn = unknown>(promise: Promise<TRetur
 
 export const createArray = <TFill>(len = 0, fill: TFill) => Array(len).fill(fill) as TFill[];
 
-export const getBaseUrl = (isClient?: boolean) => {
-	if (typeof window !== 'undefined' && !isClient) return ''; // browser should use relative url
+export const getBaseUrl = (useMainHost?: boolean) => {
+	if (useMainHost) return env.NEXT_PUBLIC_APP_HOST || `http://localhost:${env.NEXT_PUBLIC_PORT ?? 3000}`;
+	if (typeof window !== 'undefined') return ''; // browser should use relative url
 	if (env.NEXT_PUBLIC_VERCEL_URL) return `https://${env.NEXT_PUBLIC_VERCEL_URL}`; // SSR should use vercel url
 	return `http://localhost:${env.NEXT_PUBLIC_PORT ?? 3000}`; // dev SSR should use localhost
 };
@@ -51,3 +55,5 @@ export const parseQuery = (query: Partial<SearchQuery>) => {
 
 	return query;
 };
+
+export const convertUrlObject = (url: UrlObject) => `${getBaseUrl(true)}${resolveHref(Router, url, true)[1]}`;

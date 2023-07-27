@@ -13,11 +13,11 @@ export default function RelatedCategories({ relatedCategories }: RelatedCategori
 		<div className='mt-auto flex flex-wrap gap-2'>
 			{relatedCategories.map((relatedCategory, k) => (
 				<button
-					disabled={checkBtnDisable(relatedCategory)}
 					aria-label={convertCode(relatedCategory)}
 					className={`text-xs capitalize ${
 						!checkBtnDisable(relatedCategory) ? 'link-hover link italic text-neutral/90' : 'font-semibold'
 					}`}
+					disabled={checkBtnDisable(relatedCategory)}
 					key={k}
 					onClick={() => {
 						if (!checkBtnDisable(relatedCategory)) updateQuery({ relatedCategory });

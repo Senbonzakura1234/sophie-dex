@@ -17,10 +17,11 @@ export default function ScrollToTop({ isShow, refObject }: ScrollToTopProps) {
 			}`}
 		>
 			<button
-				className='btn btn-circle btn-primary text-white'
 				aria-label='Back To Top'
+				className='btn btn-circle btn-primary text-white'
 				disabled={!isShow}
 				onClick={scrollToTop}
+				role='navigation'
 			>
 				<ArrowUpOnSquareIcon className='h4 h-4' />
 			</button>

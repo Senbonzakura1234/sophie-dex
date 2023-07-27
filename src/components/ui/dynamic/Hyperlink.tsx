@@ -4,6 +4,7 @@ import { convertCode, parseQuery } from '@root/utils/common';
 import Link from 'next/link';
 import { useMemo } from 'react';
 import type { UrlObject } from 'url';
+import CopyUrlButton from '../static/CopyUrlButton';
 
 type HyperlinkProps = {
 	input: HighlightText | HyperLinkRecord | HyperLinkSearch;
@@ -31,8 +32,12 @@ export default function Hyperlink({ input, className }: HyperlinkProps) {
 	if (!href) return <span className='font-bold capitalize'>{label}</span>;
 
 	return (
-		<Link aria-label={label} className={`font-bold capitalize ${className}`} href={href} role='navigation'>
-			{label}
-		</Link>
+		<div className='inline-flex gap-2'>
+			<Link aria-label={label} className={`font-bold capitalize ${className}`} href={href} role='navigation'>
+				{label}
+			</Link>
+
+			<CopyUrlButton url={href} />
+		</div>
 	);
 }

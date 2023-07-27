@@ -14,12 +14,12 @@ export default function Color({ color }: ColorProps) {
 			<div className='font-bold'>Color: </div>
 
 			<button
+				aria-label={`Filter ${color} Item`}
+				className='btn btn-xs !border-current !bg-current opacity-80 hover:opacity-100'
 				onClick={() => {
 					if (!isBtnDisabled) updateQuery({ color });
 				}}
 				role='navigation'
-				aria-label={`Filter ${color} Item`}
-				className='btn btn-xs !border-current !bg-current opacity-80 hover:opacity-100'
 				style={{ color: colorFilterMap[color].secondary }}
 			>
 				<span className='font-extrabold capitalize text-slate-50'>{color.toLowerCase()}</span>

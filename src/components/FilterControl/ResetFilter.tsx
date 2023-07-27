@@ -8,11 +8,11 @@ export default function ResetFilter() {
 
 	return (
 		<button
+			aria-label='Reset Filter'
 			className='btn btn-xs my-auto gap-1 capitalize'
-			role='navigation'
 			disabled={isDisable}
 			onClick={() => !isDisable && resetQuery()}
-			aria-label='Reset Filter'
+			role='navigation'
 		>
 			Reset
 		</button>

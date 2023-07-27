@@ -16,9 +16,8 @@ function Categories({ categories }: CategoriesProps) {
 			{traitCategoryList.map((category, key) => (
 				<div className='capitalize 2xl:tooltip 2xl:tooltip-bottom' data-tip={convertCode(category)} key={key}>
 					<button
-						disabled={!isClickAble(category)}
 						aria-label={`Filter by ${convertCode(category)}`}
-						role='navigation'
+						disabled={!isClickAble(category)}
 						className={`btn btn-sm rounded-3xl 2xl:btn-md ${
 							securedQuery.category !== category && isClickAble(category) ? 'btn-primary text-slate-50' : ''
 						} ${securedQuery.category === category ? 'btn-accent text-slate-50' : ''}`}
@@ -26,6 +25,7 @@ function Categories({ categories }: CategoriesProps) {
 							if (isClickAble(category))
 								updateQuery({ category: securedQuery.category === category ? null : category });
 						}}
+						role='navigation'
 					>
 						<div className={`w-5 font-atelier text-lg 2xl:w-6 2xl:text-xl ${categoryIconMap[category]}`} />
 					</button>

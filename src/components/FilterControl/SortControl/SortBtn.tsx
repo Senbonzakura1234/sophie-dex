@@ -13,15 +13,15 @@ export default function SortBtn<TValue extends string | number>({
 }: SortItemBtnProps<TValue>) {
 	return (
 		<button
-			role='navigation'
 			aria-label={`Sort by ${value}`}
 			disabled={disabled}
-			onClick={() => {
-				if (!isActive) onUpdateQuery(value);
-			}}
 			className={`btn join-item btn-xs border-y-2 capitalize ${
 				isActive ? 'btn-primary btn-active no-animation cursor-default text-slate-50' : 'btn-ghost border-accent'
 			}`}
+			onClick={() => {
+				if (!isActive) onUpdateQuery(value);
+			}}
+			role='navigation'
 		>
 			{value}
 		</button>

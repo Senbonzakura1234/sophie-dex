@@ -24,7 +24,7 @@ export default function HeadLayout() {
 			<meta property='og:image' content={`${getBaseUrl()}/api/assets/thumbnail`} />
 			<meta property='og:title' content={APP_NAME} />
 			<meta property='og:description' content={APP_DESCRIPTION} />
-			<meta property='og:url' content={getBaseUrl()} />
+			<meta property='og:url' content={getBaseUrl(true)} />
 
 			{/* Google */}
 			<meta name='robots' content='all' />

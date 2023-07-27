@@ -37,20 +37,20 @@ function SearchInput() {
 
 			{!!searchValue ? (
 				<button
-					role='navigation'
 					aria-label='Reset search query'
-					onClick={resetSearch}
 					className='btn btn-circle btn-ghost btn-sm my-auto border-0 hover:bg-transparent'
+					onClick={resetSearch}
+					role='navigation'
 				>
 					<XMarkIcon className='aspect-square h-5' />
 				</button>
 			) : null}
 
 			<button
-				role='navigation'
 				aria-label='Apply search query'
-				onClick={() => performSearch()}
 				className='btn btn-circle btn-ghost btn-sm my-auto border-0 hover:bg-transparent'
+				onClick={() => performSearch()}
+				role='navigation'
 			>
 				<MagnifyingGlassIcon className='aspect-square h-5' />
 			</button>

@@ -19,6 +19,8 @@ export const env = createEnv({
 		NEXT_PUBLIC_NODE_ENV: nodeEnumEnvSchema.optional(),
 		NEXT_PUBLIC_PORT: z.coerce.number().nonnegative().catch(3000),
 		NEXT_PUBLIC_VERCEL_URL: z.string().optional(),
+
+		NEXT_PUBLIC_APP_HOST: z.string().optional(),
 	},
 	runtimeEnv: {
 		PRIMARY_DB: process.env.PRIMARY_DB,
@@ -29,6 +31,8 @@ export const env = createEnv({
 
 		NEXT_PUBLIC_NODE_ENV: process.env.NODE_ENV,
 		NEXT_PUBLIC_PORT: process.env.PORT || '3000',
-		NEXT_PUBLIC_VERCEL_URL: process.env.VERCEL_URL,
+		NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL,
+
+		NEXT_PUBLIC_APP_HOST: process.env.NEXT_PUBLIC_APP_HOST,
 	},
 });
