@@ -16,7 +16,7 @@ const rumorTypeSelectList: SelectOptionItem<RumorTypeEnum | null>[] = [
 		value: rumorType,
 		icon: (
 			<span
-				aria-hidden='true'
+				aria-hidden
 				className={`aspect-square h-4 font-atelier xl:h-5 ${rumorTypeIconMap[rumorType]}`}
 				key={rumorType}
 			/>

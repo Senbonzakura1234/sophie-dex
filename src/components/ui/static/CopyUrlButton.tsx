@@ -14,7 +14,7 @@ export default function CopyUrlButton({ className, label = 'Copy URL', url, isGr
 		<div className={`flex lg:tooltip lg:tooltip-bottom ${className}`} data-tip={label}>
 			<button
 				aria-label={label}
-				className={`btn btn-primary btn-xs my-auto border-2 ${isGroup ? 'join-item' : ''}`}
+				className={`btn btn-square btn-primary btn-xs my-auto ${isGroup ? 'join-item' : ''}`}
 				onClick={() => navigator.clipboard.writeText(convertUrlObject(url))}
 				role='button'
 			>

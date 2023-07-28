@@ -28,8 +28,9 @@ export default function PageFooter() {
 				data-url={`${getBaseUrl(true)}/assets/images/bottom.jpg`}
 				fill
 				placeholder='blur'
+				priority={false}
 				quality={70}
-				sizes='(max-width: 640px) 100vw, 40vw'
+				sizes='(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 50vw'
 				src={bottomBg}
 			/>
 		</section>

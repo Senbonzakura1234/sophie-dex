@@ -16,7 +16,7 @@ const categorySelectList: SelectOptionItem<CategoryEnum | null>[] = [
 		value: category,
 		icon: (
 			<span
-				aria-hidden='true'
+				aria-hidden
 				className={`aspect-square h-4 font-atelier xl:h-5 ${categoryIconMap[category]}`}
 				key={category}
 			/>

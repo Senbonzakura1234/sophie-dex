@@ -14,6 +14,7 @@ export default function Level({ level, color }: LevelProps) {
 
 	return (
 		<div
+			aria-hidden
 			className={`absolute right-8 top-8 grid w-10 place-content-center gap-1 text-center font-extrabold leading-[0.5] text-slate-50 ${className[color]}`}
 		>
 			<div className='text-center text-xs md:text-lg'>Lv</div>

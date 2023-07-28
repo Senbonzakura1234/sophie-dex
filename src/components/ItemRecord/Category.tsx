@@ -39,6 +39,7 @@ export default function Category({ category, color }: CategoryProps) {
 			</div>
 
 			<div
+				aria-hidden
 				className={`absolute bottom-8 right-8 w-10 text-center font-atelier text-lg text-slate-50 md:text-4xl ${categoryIconMap[category]} ${className[color]}`}
 			/>
 		</>

@@ -2,7 +2,7 @@ import type { IconProps } from '@root/types/common/props';
 
 export default function GithubIcon(props: IconProps) {
 	return (
-		<svg aria-hidden='true' viewBox='0 0 98 96' xmlns='http://www.w3.org/2000/svg' {...props}>
+		<svg aria-hidden viewBox='0 0 98 96' xmlns='http://www.w3.org/2000/svg' {...props}>
 			<path
 				fillRule='evenodd'
 				clipRule='evenodd'

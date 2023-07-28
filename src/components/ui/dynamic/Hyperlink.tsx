@@ -32,12 +32,12 @@ export default function Hyperlink({ input, className }: HyperlinkProps) {
 	if (!href) return <span className='font-bold capitalize'>{label}</span>;
 
 	return (
-		<div className='inline-flex gap-2'>
-			<Link aria-label={label} className={`font-bold capitalize ${className}`} href={href} role='navigation'>
+		<>
+			<Link aria-label={label} className={`mr-2 font-bold capitalize ${className}`} href={href} role='navigation'>
 				{label}
 			</Link>
 
-			<CopyUrlButton url={href} />
-		</div>
+			<CopyUrlButton className='!inline' url={href} />
+		</>
 	);
 }

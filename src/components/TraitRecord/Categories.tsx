@@ -18,7 +18,7 @@ function Categories({ categories }: CategoriesProps) {
 					<button
 						aria-label={`Filter by ${convertCode(category)}`}
 						disabled={!isClickAble(category)}
-						className={`btn btn-sm rounded-3xl 2xl:btn-md ${
+						className={`btn btn-sm rounded-2xl ${
 							securedQuery.category !== category && isClickAble(category) ? 'btn-primary text-slate-50' : ''
 						} ${securedQuery.category === category ? 'btn-accent text-slate-50' : ''}`}
 						onClick={() => {
@@ -27,7 +27,7 @@ function Categories({ categories }: CategoriesProps) {
 						}}
 						role='navigation'
 					>
-						<div className={`w-5 font-atelier text-lg 2xl:w-6 2xl:text-xl ${categoryIconMap[category]}`} />
+						<div className={`w-5 font-atelier text-lg ${categoryIconMap[category]}`} />
 					</button>
 				</div>
 			))}

@@ -26,8 +26,9 @@ export default function PageTitle() {
 							alt='home'
 							className='mx-auto w-[700px] max-w-full'
 							data-url={`${getBaseUrl(true)}/assets/images/sophie-logo.png`}
-							priority={isHomePage}
-							sizes='(max-width: 640px) 70vw, 500px'
+							priority={true}
+							quality={70}
+							sizes='(max-width: 640px) 70vw, 400px'
 							src={sophieLogo}
 						/>
 					) : (
@@ -49,7 +50,7 @@ export default function PageTitle() {
 				placeholder='blur'
 				priority={true}
 				quality={70}
-				sizes='(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 40vw'
+				sizes='(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 50vw'
 				src={topBg}
 			/>
 		</section>

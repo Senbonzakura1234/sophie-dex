@@ -2,25 +2,15 @@ import FilterControl from '@root/components/FilterControl';
 import ScrollWrapper from '@root/components/ScrollWrapper';
 import SearchControl from '@root/components/SearchControl';
 import { defaultListData } from '@root/constants';
+import { useModuleId } from '@root/hooks/useModuleId';
 import type { MaybeListData, RenderFunction } from '@root/types/common';
 import type { ErrorResultProps } from '@root/types/common/props';
 import type { CommonRecord, ListRecord } from '@root/types/model';
+import { capitalize } from '@root/utils/common';
 import Head from 'next/head';
 import { useMemo } from 'react';
+import PageFooter from '../PageFooter';
 import PageTitle from '../PageTitle';
-
-import { useModuleId } from '@root/hooks/useModuleId';
-import { capitalize } from '@root/utils/common';
-import dynamic from 'next/dynamic';
-
-const PageFooter = dynamic(() => import('../PageFooter'), {
-	loading: () => (
-		<section className='relative min-h-[300px] w-full overflow-hidden shadow-inner'>
-			<div className='absolute inset-0 z-10 bg-gradient-to-r from-accent/10 to-primary/10' />
-		</section>
-	),
-	ssr: false,
-});
 
 type ListLayoutProps<TRecord extends CommonRecord> = ErrorResultProps & {
 	children?: RenderFunction<MaybeListData<TRecord>>;

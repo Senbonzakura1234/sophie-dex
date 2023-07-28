@@ -19,7 +19,7 @@ export default function ListboxButton<V extends string | number | null>({
 			}`}
 		>
 			<span className='flex items-center gap-2 truncate font-bold'>
-				{icon || <ChevronUpDownIcon className='my-auto aspect-square h-4 xl:h-5' aria-hidden='true' />}
+				{icon || <ChevronUpDownIcon className='my-auto aspect-square h-4 xl:h-5' aria-hidden />}
 
 				<span className='capitalize'>{convertCode(label ?? value)}</span>
 			</span>

@@ -25,13 +25,13 @@ export default function ListboxOption<V extends string | number | null>({
 				{isSelected || useCustomIcon ? (
 					<>
 						{useCustomIcon ? (
-							optionValue.icon || <span className='aspect-square h-4 xl:h-5' aria-hidden='true' />
+							optionValue.icon || <span className='aspect-square h-4 xl:h-5' aria-hidden />
 						) : (
-							<CheckIcon className='aspect-square h-4 xl:h-5' aria-hidden='true' />
+							<CheckIcon className='aspect-square h-4 xl:h-5' aria-hidden />
 						)}
 					</>
 				) : (
-					<span className='aspect-square h-4 xl:h-5' aria-hidden='true' />
+					<span className='aspect-square h-4 xl:h-5' aria-hidden />
 				)}
 
 				<span className='capitalize'>{convertCode(optionValue.label ?? optionValue.value)}</span>

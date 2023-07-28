@@ -16,7 +16,7 @@ const colorSelectList: SelectOptionItem<ColorEnum | null>[] = [
 		value: color,
 		icon: (
 			<span
-				aria-hidden='true'
+				aria-hidden
 				className='aspect-square h-4 rounded-full border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5'
 				key={color}
 				style={{ color: colorFilterMap[color].primary }}
