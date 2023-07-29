@@ -8,6 +8,7 @@ export default function ClipboardIcon(props: IconProps) {
 			viewBox='0 0 24 24'
 			strokeWidth={2}
 			stroke='currentColor'
+			aria-hidden
 			{...props}
 		>
 			<path

@@ -1,6 +1,7 @@
 import FilterControl from '@root/components/FilterControl';
 import ScrollWrapper from '@root/components/ScrollWrapper';
 import SearchControl from '@root/components/SearchControl';
+import ErrorModal from '@root/components/ui/static/ErrorModal';
 import { defaultListData } from '@root/constants';
 import { useModuleId } from '@root/hooks/useModuleId';
 import type { MaybeListData, RenderFunction } from '@root/types/common';
@@ -9,6 +10,7 @@ import type { CommonRecord, ListRecord } from '@root/types/model';
 import { capitalize } from '@root/utils/common';
 import Head from 'next/head';
 import { useMemo } from 'react';
+import Alert from '../Alert';
 import PageFooter from '../PageFooter';
 import PageTitle from '../PageTitle';
 
@@ -19,10 +21,8 @@ type ListLayoutProps<TRecord extends CommonRecord> = ErrorResultProps & {
 
 export default function ListLayout<TRecord extends CommonRecord>({
 	children,
-	errorData,
-	errorMessage,
-	isError,
 	rawData,
+	...errorResult
 }: ListLayoutProps<TRecord>) {
 	const moduleId = useModuleId();
 	const title = capitalize(moduleId);
@@ -45,17 +45,13 @@ export default function ListLayout<TRecord extends CommonRecord>({
 		[data?.records, isDataReady],
 	);
 
-	const renderChild = useMemo(() => (children && !isError ? children(listData) : null), [children, isError, listData]);
+	const renderChild = useMemo(
+		() => (children && !errorResult.isError ? children(listData) : null),
+		[children, errorResult.isError, listData],
+	);
 
 	return (
-		<ScrollWrapper
-			className='h-screen w-screen bg-base-200 !antialiased'
-			errorData={errorData}
-			errorMessage={errorMessage}
-			isError={isError}
-			enableScrollTop
-			enablePageRefresh
-		>
+		<ScrollWrapper className='h-screen w-screen bg-base-200 !antialiased' enableScrollTop enablePageRefresh>
 			<Head>
 				<title>{title}</title>
 				<meta name='og:title' content={title} key='title' />
@@ -79,6 +75,10 @@ export default function ListLayout<TRecord extends CommonRecord>({
 			<FilterControl page={page || 1} totalPage={totalPage} totalRecord={totalRecord} isBottomFilter />
 
 			<PageFooter />
+
+			<ErrorModal {...errorResult} />
+
+			<Alert />
 		</ScrollWrapper>
 	);
 }

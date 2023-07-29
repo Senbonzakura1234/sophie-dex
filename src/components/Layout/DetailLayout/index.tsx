@@ -1,10 +1,12 @@
 import ScrollWrapper from '@root/components/ScrollWrapper';
+import ErrorModal from '@root/components/ui/static/ErrorModal';
 import { useModuleId } from '@root/hooks/useModuleId';
 import type { MaybeData, RenderFunction } from '@root/types/common';
 import type { ErrorResultProps } from '@root/types/common/props';
 import type { CommonRecord } from '@root/types/model';
 import Head from 'next/head';
 import { useMemo } from 'react';
+import Alert from '../Alert';
 import PageFooter from '../PageFooter';
 import PageTitle from '../PageTitle';
 
@@ -17,10 +19,8 @@ type DetailLayoutProps<TRecord extends CommonRecord> = ErrorResultProps & {
 export default function DetailLayout<TRecord extends CommonRecord>({
 	children,
 	extraHead,
-	isError,
-	errorData,
-	errorMessage,
 	rawData,
+	...errorResult
 }: DetailLayoutProps<TRecord>) {
 	const moduleId = useModuleId();
 
@@ -35,14 +35,7 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 	const renderExtraHead = useMemo(() => (rawData && extraHead ? extraHead(rawData) : null), [rawData, extraHead]);
 
 	return (
-		<ScrollWrapper
-			errorData={errorData}
-			errorMessage={errorMessage}
-			isError={isError}
-			className='h-screen w-screen bg-base-200 !antialiased'
-			enableScrollTop
-			enablePageRefresh
-		>
+		<ScrollWrapper className='h-screen w-screen bg-base-200 !antialiased' enableScrollTop enablePageRefresh>
 			{rawData ? (
 				<Head>
 					<title>{rawData.name}</title>
@@ -60,6 +53,10 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 			</section>
 
 			<PageFooter />
+
+			<ErrorModal {...errorResult} />
+
+			<Alert />
 		</ScrollWrapper>
 	);
 }

@@ -1,7 +1,7 @@
 import ClipboardIcon from '@root/assets/icons/solid/ClipboardIcon';
-import { alertAtom } from '@root/components/ScrollWrapper/Alert';
 import type { ClassNameProps } from '@root/types/common/props';
 import { convertUrlObject } from '@root/utils/common';
+import { alertAtom } from '@root/utils/store';
 import { useAtom } from 'jotai';
 import type { UrlObject } from 'url';
 

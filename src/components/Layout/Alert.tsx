@@ -1,10 +1,7 @@
-import DocumentChartBarIcon from '@root/assets/icons/outline/DocumentChartBarIcon';
-import { atom, useAtom } from 'jotai';
+import InfoIcon from '@root/assets/icons/outline/InfoIcon';
+import { alertAtom } from '@root/utils/store';
+import { useAtom } from 'jotai';
 import { useEffect } from 'react';
-
-type AlertAtom = { isOpen: boolean; message: string };
-
-export const alertAtom = atom<AlertAtom>({ isOpen: false, message: '' });
 
 export default function Alert() {
 	const [{ isOpen, message }, setAlert] = useAtom(alertAtom);
@@ -26,10 +23,10 @@ export default function Alert() {
 			}`}
 		>
 			<div className='rounded-2xl bg-gradient-to-r from-accent to-primary p-1 shadow-lg shadow-primary'>
-				<div className='alert flex items-baseline border-none bg-base-100 font-bold shadow-inner shadow-base-content'>
-					<DocumentChartBarIcon className='aspect-square h-5' />
+				<div className='alert flex items-center border-none bg-base-100 font-bold shadow-inner shadow-base-content'>
+					<InfoIcon className='aspect-square h-5' />
 
-					<span className='my-auto min-w-[7rem]'>{message}</span>
+					<span className='my-auto min-w-[7rem] text-left'>{message}</span>
 				</div>
 			</div>
 		</div>

@@ -3,20 +3,22 @@ import type { ErrorResultProps, SharedModalProps } from '@root/types/common/prop
 import { Monoton } from 'next/font/google';
 import Link from 'next/link';
 
-type ErrorModalProps = Omit<ErrorResultProps, 'isError'> & SharedModalProps;
+type ErrorModalProps = ErrorResultProps & SharedModalProps & { disableBackDrop?: boolean };
 
 const monoton = Monoton({ weight: '400', subsets: ['latin'] });
 
 export default function ErrorModal({
+	disableBackDrop,
 	errorData,
 	errorMessage = 'Unknown Error Occur On Server',
-	...sharedModalProps
+	isError,
 }: ErrorModalProps) {
 	const httpStatus = errorData ? errorData.httpStatus : 500;
 
 	return (
 		<Modal
-			{...sharedModalProps}
+			disableBackDrop={disableBackDrop}
+			isShow={isError}
 			className={`grid cursor-default select-none place-content-center gap-1 text-center shadow-md shadow-current ${
 				httpStatus >= 500 ? 'text-red-600' : 'text-blue-700'
 			}`}

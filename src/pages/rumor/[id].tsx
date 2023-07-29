@@ -3,6 +3,7 @@ import RumorRecord from '@root/components/RumorRecord';
 import { useHydrateModuleId } from '@root/hooks/useModuleId';
 import { appRouter } from '@root/server/api/router/_app';
 import { getAllRumorIds } from '@root/server/db';
+import { evnIs } from '@root/utils/common';
 import { apiContext } from '@root/utils/trpc';
 import { createServerSideHelpers } from '@trpc/react-query/server';
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next';
@@ -14,8 +15,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext<{ id: string }>) => {
-	const helpers = createServerSideHelpers({ router: appRouter, ctx: {} });
 	const id = params?.id;
+
+	if (evnIs('development')) return { props: { id }, revalidate: 100 };
+
+	const helpers = createServerSideHelpers({ router: appRouter, ctx: {} });
 
 	await helpers.rumor.getOne.prefetch({ id });
 

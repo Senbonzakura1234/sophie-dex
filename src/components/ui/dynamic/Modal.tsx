@@ -1,14 +1,20 @@
-import type { ChildrenProps, ClassNameProps, SharedModalProps } from '@root/types/common/props';
+import type { ChildrenProps, ClassNameProps } from '@root/types/common/props';
 import { useEffect, useId, useRef } from 'react';
 
-type ModalProps = ChildrenProps & ClassNameProps & SharedModalProps;
+type ModalProps = ChildrenProps & ClassNameProps & { isShow: boolean; disableBackDrop?: boolean };
 
-export default function Modal({ isShow, children, className, onClose }: ModalProps) {
+export default function Modal({ children, className, isShow, disableBackDrop }: ModalProps) {
 	const dialogId = useId();
 	const dialogRef = useRef<HTMLDialogElement>(null);
 
+	const onClose = () => {
+		if (dialogRef.current == null || disableBackDrop) return;
+		dialogRef.current.close();
+	};
+
 	useEffect(() => {
 		if (!isShow) return;
+
 		setTimeout(() => {
 			if (dialogRef.current == null) return;
 			dialogRef.current.show();
@@ -17,12 +23,12 @@ export default function Modal({ isShow, children, className, onClose }: ModalPro
 
 	return (
 		<dialog id={dialogId} className='modal' open={false} ref={dialogRef}>
-			<form method='dialog' className={`modal-box aspect-video w-full md:w-[600px] ${className}`}>
+			<form method='dialog' className={`modal-box aspect-video w-11/12 md:w-[600px] ${className}`}>
 				{children}
 			</form>
 
 			<form method='dialog' className='modal-backdrop bg-slate-900/40' onSubmit={onClose}>
-				<button aria-label='Close Dialog' disabled={!onClose} role='dialog'>
+				<button aria-label='Close Dialog' role='dialog' disabled={disableBackDrop}>
 					close
 				</button>
 			</form>
