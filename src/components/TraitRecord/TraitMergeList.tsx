@@ -24,7 +24,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 									</button>
 								) : null}
 
-								{key <= 0 ? <CopyUrlButton isGroup key={key} url={recordUrlObj} /> : null}
+								{key <= 0 ? <CopyUrlButton className='join-item' key={key} url={recordUrlObj} /> : null}
 
 								<Link
 									aria-label={name}
@@ -36,7 +36,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 									{name}
 								</Link>
 
-								{key > 0 ? <CopyUrlButton isGroup key={key} url={recordUrlObj} /> : null}
+								{key > 0 ? <CopyUrlButton className='join-item' key={key} url={recordUrlObj} /> : null}
 							</Fragment>
 						);
 					})}

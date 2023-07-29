@@ -19,7 +19,7 @@ export default function ItemPresent({ itemPresent: { table: moduleId, id, name }
 				</span>
 			</Link>
 
-			<CopyUrlButton url={recordUrlObj} />
+			<CopyUrlButton className='btn-ghost text-primary' url={recordUrlObj} />
 		</div>
 	);
 }

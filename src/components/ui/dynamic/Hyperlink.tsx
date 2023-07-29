@@ -37,7 +37,7 @@ export default function Hyperlink({ input, className }: HyperlinkProps) {
 				{label}
 			</Link>
 
-			<CopyUrlButton className='!inline' url={href} />
+			<CopyUrlButton className='btn-ghost text-secondary' url={href} />
 		</>
 	);
 }

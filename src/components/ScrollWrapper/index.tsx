@@ -9,6 +9,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useRef } from 'react';
 
 import dynamic from 'next/dynamic';
+import Alert from './Alert';
 const ScrollToTop = dynamic(() => import('./ScrollToTop'));
 
 const errorModalOpenAtom = atom<boolean>(false);
@@ -59,6 +60,10 @@ function ScrollWrapper({
 		};
 	}, [enableScrollTop, events]);
 
+	useEffect(() => {
+		if (isError) setIsErrorModalOpen(true);
+	}, [isError, setIsErrorModalOpen]);
+
 	return (
 		<>
 			{enableScrollTop ? <PageRefresh isDisabled={isDisabledPullToRefresh} /> : null}
@@ -77,6 +82,8 @@ function ScrollWrapper({
 						isShow={isError && isErrorModalOpen}
 						onClose={() => setIsErrorModalOpen(false)}
 					/>
+
+					<Alert />
 				</Viewport>
 
 				<Scrollbar className='scroll-area-scrollbar' orientation='vertical'>
