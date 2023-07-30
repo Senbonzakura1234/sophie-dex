@@ -56,9 +56,6 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
-  use-pull-to-refresh:
-    specifier: ^2.0.2
-    version: registry.npmjs.org/use-pull-to-refresh@2.0.2
   zod:
     specifier: ^3.21.4
     version: registry.npmjs.org/zod@3.21.4
@@ -5880,14 +5877,6 @@ packages:
     dependencies:
       punycode: registry.npmjs.org/punycode@2.3.0
     dev: true
-
-  registry.npmjs.org/use-pull-to-refresh@2.0.2:
-    resolution: {integrity: sha512-Qiq9mv8PspoBYS3TVii/09K57Nez8liaOQcLcpDq4skTZkFaRA3M3VhX33B232JLRpI5ty0ZkR2RNCQ1OCZhtw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/use-pull-to-refresh/-/use-pull-to-refresh-2.0.2.tgz}
-    name: use-pull-to-refresh
-    version: 2.0.2
-    dependencies:
-      react: registry.npmjs.org/react@18.2.0
-    dev: false
 
   registry.npmjs.org/use-sync-external-store@1.2.0(react@18.2.0):
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz}

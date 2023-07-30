@@ -1,5 +1,6 @@
+import { DEFAULT_REFRESH_THRESHOLD } from '@root/constants';
+import { usePullToRefresh } from '@root/hooks/usePullToRefresh';
 import { useRouter } from 'next/router';
-import { DEFAULT_REFRESH_THRESHOLD, usePullToRefresh } from 'use-pull-to-refresh';
 
 type PageRefreshProps = { isDisabled?: boolean };
 

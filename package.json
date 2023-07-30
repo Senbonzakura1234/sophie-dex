@@ -1,6 +1,6 @@
 {
 	"name": "sophie-dex",
-	"version": "14.0.1",
+	"version": "14.1.0",
 	"private": false,
 	"license": "MIT",
 	"author": {
@@ -43,7 +43,6 @@
 		"preact": "^10.16.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"use-pull-to-refresh": "^2.0.2",
 		"zod": "^3.21.4"
 	},
 	"devDependencies": {
