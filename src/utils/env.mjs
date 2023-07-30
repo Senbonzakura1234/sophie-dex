@@ -3,6 +3,7 @@ import { z } from 'zod';
 
 const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']);
 const dbListEnumSchema = z.enum(['NEON_DB', 'VERCEL_DB']);
+const isrConfigSchema = z.enum(['ENABLED', 'DISABLED']);
 
 /** @type {Record<string, string | undefined>}*/
 const dbURLMap = { NEON_DB: process.env.PGURL_NONPOOLING, VERCEL_DB: process.env.POSTGRES_URL_NON_POOLING };
@@ -14,6 +15,8 @@ export const env = createEnv({
 		DIRECT_DB_URL: z.string().nonempty(),
 
 		SUPABASE_POSTGRES_URL: z.string().nonempty(),
+
+		ENABLE_ISR: isrConfigSchema.optional(),
 	},
 	client: {
 		NEXT_PUBLIC_NODE_ENV: nodeEnumEnvSchema.optional(),
@@ -28,6 +31,8 @@ export const env = createEnv({
 		DIRECT_DB_URL: dbURLMap[process.env.PRIMARY_DB || ''],
 
 		SUPABASE_POSTGRES_URL: process.env.SUPABASE_POSTGRES_URL,
+
+		ENABLE_ISR: process.env.ENABLE_ISR,
 
 		NEXT_PUBLIC_NODE_ENV: process.env.NODE_ENV,
 		NEXT_PUBLIC_PORT: process.env.PORT || '3000',

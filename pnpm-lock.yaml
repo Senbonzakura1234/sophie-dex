@@ -47,11 +47,14 @@ dependencies:
   next:
     specifier: 13.4.10
     version: registry.npmjs.org/next@13.4.10(react-dom@18.2.0)(react@18.2.0)
+  preact:
+    specifier: ^10.16.0
+    version: registry.npmjs.org/preact@10.16.0
   react:
-    specifier: 18.2.0
+    specifier: ^18.2.0
     version: registry.npmjs.org/react@18.2.0
   react-dom:
-    specifier: 18.2.0
+    specifier: ^18.2.0
     version: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
   use-pull-to-refresh:
     specifier: ^2.0.2
@@ -4942,6 +4945,12 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       xtend: registry.npmjs.org/xtend@4.0.2
+
+  registry.npmjs.org/preact@10.16.0:
+    resolution: {integrity: sha512-XTSj3dJ4roKIC93pald6rWuB2qQJO9gO2iLLyTe87MrjQN+HklueLsmskbywEWqCHlclgz3/M4YLL2iBr9UmMA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/preact/-/preact-10.16.0.tgz}
+    name: preact
+    version: 10.16.0
+    dev: false
 
   registry.npmjs.org/prebuild-install@7.1.1:
     resolution: {integrity: sha512-jAXscXWMcCK8GgCoHOfIr0ODh5ai8mj63L2nWrjuAgXE6tDyYGnx4/8o/rCgU+B4JSyZBKbeZqzhtwtC3ovxjw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/prebuild-install/-/prebuild-install-7.1.1.tgz}
