@@ -1,5 +1,5 @@
+import type { ModuleIdEnum } from '@root/types/common/zod';
 import type { PreparedQuery, PreparedQueryConfig } from 'drizzle-orm/pg-core';
-import type { ModuleIdEnum } from '../common/zod';
 
 export const moduleIdList = ['effect', 'item', 'trait', 'rumor'] as const;
 

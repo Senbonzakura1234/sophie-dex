@@ -1,10 +1,10 @@
+import CopyUrlButton from '@root/components/ui/static/CopyUrlButton';
 import type { HighlightText, HyperLinkRecord, HyperLinkSearch } from '@root/server/db/schema';
 import type { ClassNameProps } from '@root/types/common/props';
 import { convertCode, parseQuery } from '@root/utils/common';
 import Link from 'next/link';
 import { useMemo } from 'react';
 import type { UrlObject } from 'url';
-import CopyUrlButton from '../static/CopyUrlButton';
 
 type HyperlinkProps = {
 	input: HighlightText | HyperLinkRecord | HyperLinkSearch;

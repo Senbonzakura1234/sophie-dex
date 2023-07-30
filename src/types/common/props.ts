@@ -1,9 +1,8 @@
+import type { MaybeData } from '@root/types/common';
+import type { CommonRecord } from '@root/types/model';
 import type { Maybe } from '@trpc/server';
 import type { DefaultErrorData } from '@trpc/server/dist/error/formatter';
 import type { ReactNode, RefObject, SVGProps } from 'react';
-
-import type { MaybeData } from '.';
-import type { CommonRecord } from '../model';
 
 export type ClassNameProps = { className?: string };
 export type ChildrenProps = { children?: ReactNode };

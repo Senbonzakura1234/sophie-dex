@@ -1,8 +1,8 @@
 import MergeIcon from '@root/assets/icons/solid/MergeIcon';
+import CopyUrlButton from '@root/components/ui/static/CopyUrlButton';
 import type { HyperLinkRecord } from '@root/server/db/schema';
 import Link from 'next/link';
 import { Fragment } from 'react';
-import CopyUrlButton from '../ui/static/CopyUrlButton';
 
 type TraitMergeListProps = { mergeFrom: HyperLinkRecord[][] };
 

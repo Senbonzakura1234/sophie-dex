@@ -24,11 +24,11 @@ export default function PageTitle() {
 					{isHomePage ? (
 						<Image
 							alt='home'
-							className='mx-auto w-[700px] max-w-full'
+							className='mx-auto w-[600px] max-w-full'
 							data-url={`${getBaseUrl(true)}/assets/images/sophie-logo.png`}
-							priority={true}
-							quality={70}
-							sizes='(max-width: 640px) 70vw, 400px'
+							priority
+							quality={50}
+							sizes='(max-width: 640px) 70vw, 300px'
 							src={sophieLogo}
 						/>
 					) : (
@@ -48,9 +48,9 @@ export default function PageTitle() {
 				data-url={`${getBaseUrl(true)}/assets/images/top.jpg`}
 				fill
 				placeholder='blur'
-				priority={true}
-				quality={70}
-				sizes='(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 50vw'
+				priority
+				quality={50}
+				sizes='(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 50vw'
 				src={topBg}
 			/>
 		</section>

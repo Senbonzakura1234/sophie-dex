@@ -17,12 +17,12 @@ export default function HeadLayout() {
 			{/* Twitter */}
 			<meta property='twitter:image' content={`${getBaseUrl()}/api/assets/thumbnail`} />
 			<meta property='twitter:card' content={`${getBaseUrl()}/api/assets/thumbnail`} />
-			<meta property='twitter:title' content={APP_NAME} />
+			<meta property='twitter:title' content={`${APP_NAME} | ${APP_DESCRIPTION}`} />
 			<meta property='twitter:description' content={APP_DESCRIPTION} />
 
 			{/* Others */}
 			<meta property='og:image' content={`${getBaseUrl()}/api/assets/thumbnail`} />
-			<meta property='og:title' content={APP_NAME} />
+			<meta property='og:title' content={`${APP_NAME} | ${APP_DESCRIPTION}`} />
 			<meta property='og:description' content={APP_DESCRIPTION} />
 			<meta property='og:url' content={getBaseUrl(true)} />
 

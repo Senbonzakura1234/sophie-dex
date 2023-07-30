@@ -3,9 +3,8 @@ import type { MaybeData, RenderFunction } from '@root/types/common';
 import type { ClassNameProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
 import type { CommonRecord } from '@root/types/model';
-import { useMemo } from 'react';
-
 import dynamic from 'next/dynamic';
+import { useMemo } from 'react';
 
 const RecordHead = dynamic(() => import('./RecordHead'), {
 	loading: () => <div className='h-7 w-40 max-w-full animate-pulse rounded' />,

@@ -4,10 +4,10 @@ import type { OnScroll } from '@root/hooks/useScroll';
 import { useScroll } from '@root/hooks/useScroll';
 import type { ChildrenProps, ClassNameProps } from '@root/types/common/props';
 import { atom, useAtom } from 'jotai';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { useEffect, useRef } from 'react';
 
-import dynamic from 'next/dynamic';
 const ScrollToTop = dynamic(() => import('./ScrollToTop'));
 
 const showScrollTopAtom = atom<boolean>(false);

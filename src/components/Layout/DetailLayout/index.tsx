@@ -1,14 +1,18 @@
 import ScrollWrapper from '@root/components/ScrollWrapper';
+import { Alert } from '@root/components/ui/dynamic';
 import ErrorModal from '@root/components/ui/static/ErrorModal';
 import { useModuleId } from '@root/hooks/useModuleId';
 import type { MaybeData, RenderFunction } from '@root/types/common';
 import type { ErrorResultProps } from '@root/types/common/props';
 import type { CommonRecord } from '@root/types/model';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { useMemo } from 'react';
-import Alert from '../Alert';
-import PageFooter from '../PageFooter';
 import PageTitle from '../PageTitle';
+
+const PageFooter = dynamic(() => import('../PageFooter'), {
+	loading: () => <section className='relative min-h-[300px] w-full overflow-hidden shadow-inner' />,
+});
 
 type DetailLayoutProps<TRecord extends CommonRecord> = ErrorResultProps & {
 	extraHead?: RenderFunction<NonNullable<TRecord>>;

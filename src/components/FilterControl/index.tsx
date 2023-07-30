@@ -1,9 +1,7 @@
 import { defaultLimit } from '@root/constants';
 import { useModuleId } from '@root/hooks/useModuleId';
 import type { PageControlProps } from '@root/types/common/props';
-
 import { formatRecordCount, improvedInclude } from '@root/utils/common';
-
 import dynamic from 'next/dynamic';
 
 const CategoryFilter = dynamic(() => import('./CategoryFilter'), {

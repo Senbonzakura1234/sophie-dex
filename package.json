@@ -1,6 +1,6 @@
 {
 	"name": "sophie-dex",
-	"version": "14.1.0",
+	"version": "15.1.0",
 	"private": false,
 	"license": "MIT",
 	"author": {
@@ -35,7 +35,6 @@
 		"@trpc/next": "^10.36.0",
 		"@trpc/react-query": "^10.36.0",
 		"@trpc/server": "^10.36.0",
-		"@vercel/analytics": "^1.0.1",
 		"@vercel/postgres": "^0.4.1",
 		"drizzle-orm": "^0.27.2",
 		"jotai": "^2.2.2",

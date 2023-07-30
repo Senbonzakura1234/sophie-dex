@@ -1,7 +1,7 @@
 import DocumentChartBarIcon from '@root/assets/icons/solid/DocumentChartBarIcon';
+import CopyUrlButton from '@root/components/ui/static/CopyUrlButton';
 import type { HyperLinkRecord } from '@root/server/db/schema';
 import Link from 'next/link';
-import CopyUrlButton from '../ui/static/CopyUrlButton';
 
 type ItemPresentProps = { itemPresent: HyperLinkRecord };
 

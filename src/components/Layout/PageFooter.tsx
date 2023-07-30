@@ -1,8 +1,7 @@
 import bottomBg from '@root/assets/images/bottom.webp';
 import { getBaseUrl } from '@root/utils/common';
-import Image from 'next/image';
-
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 const Breadcrumb = dynamic(() => import('./Breadcrumb'), {
 	loading: () => (
@@ -29,8 +28,8 @@ export default function PageFooter() {
 				fill
 				placeholder='blur'
 				priority={false}
-				quality={70}
-				sizes='(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 50vw'
+				quality={50}
+				sizes='(max-width: 640px) 80vw, (max-width: 1024px) 65vw, 55vw'
 				src={bottomBg}
 			/>
 		</section>

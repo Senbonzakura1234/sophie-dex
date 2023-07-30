@@ -32,9 +32,6 @@ dependencies:
   '@trpc/server':
     specifier: ^10.36.0
     version: registry.npmjs.org/@trpc/server@10.36.0
-  '@vercel/analytics':
-    specifier: ^1.0.1
-    version: registry.npmjs.org/@vercel/analytics@1.0.1
   '@vercel/postgres':
     specifier: ^0.4.1
     version: registry.npmjs.org/@vercel/postgres@0.4.1
@@ -1606,12 +1603,6 @@ packages:
       '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types@6.2.0
       eslint-visitor-keys: registry.npmjs.org/eslint-visitor-keys@3.4.2
     dev: true
-
-  registry.npmjs.org/@vercel/analytics@1.0.1:
-    resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vercel/analytics/-/analytics-1.0.1.tgz}
-    name: '@vercel/analytics'
-    version: 1.0.1
-    dev: false
 
   registry.npmjs.org/@vercel/postgres@0.4.1:
     resolution: {integrity: sha512-rYlNnaXrr2/NWK/OodhAUyed0bomaizKKC8XXjNYv8I1K3m75oocP4IGTcBpZe76VCrHuaKW5d6jLQnuRRoNKg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vercel/postgres/-/postgres-0.4.1.tgz}

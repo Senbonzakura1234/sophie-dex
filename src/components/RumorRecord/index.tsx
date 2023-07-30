@@ -1,9 +1,9 @@
 import RecordWrapper from '@root/components/RecordWrapper';
+import { rumorColorMap } from '@root/constants';
 import type { Rumor } from '@root/server/db/schema';
 import type { RecordProps } from '@root/types/common/props';
 import { nullableHandle } from '@root/utils/common';
 
-import { rumorColorMap } from '@root/constants';
 import Description from './Description';
 import Location from './Location';
 import Price from './Price';
