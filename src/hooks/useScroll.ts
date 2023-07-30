@@ -14,11 +14,15 @@ export const useScroll = <T extends HTMLElement>({ onScroll, scrollableRef }: Us
 
 		const current = scrollableRef.current;
 
-		current.addEventListener('scroll', () => {
-			const scrollHeight = (current?.scrollHeight || 0) - (current?.offsetHeight || 0);
+		current.addEventListener(
+			'scroll',
+			() => {
+				const scrollHeight = (current?.scrollHeight || 0) - (current?.offsetHeight || 0);
 
-			onScroll((current?.scrollTop || 0) / (scrollHeight || 1), current);
-		});
+				onScroll((current?.scrollTop || 0) / (scrollHeight || 1), current);
+			},
+			{ passive: true },
+		);
 
 		return () => current.removeEventListener('scroll', () => current.scrollTo({ top: 0, behavior: 'smooth' }));
 	}, [onScroll, scrollableRef]);
