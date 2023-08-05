@@ -1,7 +1,7 @@
-import CopyUrlButton from '@root/components/ui/static/CopyUrlButton';
+import { CopyUrlButton } from '@root/components/ui/dynamic';
 import type { HighlightText, HyperLinkRecord, HyperLinkSearch } from '@root/server/db/schema';
 import type { ClassNameProps } from '@root/types/common/props';
-import { convertCode, parseQuery } from '@root/utils/common';
+import { convertCode } from '@root/utils/common';
 import Link from 'next/link';
 import { useMemo } from 'react';
 import type { UrlObject } from 'url';
@@ -15,7 +15,7 @@ export default function Hyperlink({ input, className }: HyperlinkProps) {
 		if ('content' in input) return { label: input.content };
 
 		if ('searchQuery' in input) {
-			const query = parseQuery(input.searchQuery);
+			const query = input.searchQuery;
 
 			return {
 				label: Object.values(query)

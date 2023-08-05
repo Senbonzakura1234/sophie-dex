@@ -1,19 +1,19 @@
 import MagnifyingGlassIcon from '@root/assets/icons/solid/MagnifyingGlassIcon';
 import XMarkIcon from '@root/assets/icons/solid/XMarkIcon';
-import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
+import { useUpdateQuery } from '@root/hooks/router';
 import { atom, useAtom } from 'jotai';
 import { useEffect } from 'react';
 
 const searchValueAtom = atom<string | null>(null);
 
 function SearchInput() {
-	const { securedQuery, updateQuery } = useSecuredRouter();
+	const { searchQuery, updateQuery } = useUpdateQuery();
 
 	const [searchValue, setSearchValue] = useAtom(searchValueAtom);
 
 	useEffect(() => {
-		setSearchValue(securedQuery.search ?? null);
-	}, [securedQuery.search, setSearchValue]);
+		setSearchValue(searchQuery.search ?? null);
+	}, [searchQuery.search, setSearchValue]);
 
 	const resetSearch = () => {
 		setSearchValue(null);

@@ -1,15 +1,15 @@
 import { sortByMap } from '@root/constants';
+import { useSearchQuery } from '@root/hooks/router';
 import { useModuleId } from '@root/hooks/useModuleId';
-import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import SortBtn from './SortBtn';
 
 export default function SortControl() {
-	const { updateQuery, securedQuery } = useSecuredRouter();
+	const { searchQuery } = useSearchQuery();
 
 	const moduleId = useModuleId();
 
-	const sortBy = securedQuery.sortBy || (moduleId === 'rumor' ? 'price' : 'index');
-	const direction = securedQuery.direction || 'asc';
+	const sortBy = searchQuery.sortBy || (moduleId === 'rumor' ? 'price' : 'index');
+	const direction = searchQuery.direction || 'asc';
 	const sortFieldList = sortByMap[moduleId || 'effect'];
 
 	return (
@@ -20,10 +20,11 @@ export default function SortControl() {
 				<div className='join w-auto'>
 					{sortFieldList.map(sortField => (
 						<SortBtn
+							aria-label={`Sort By ${sortField}`}
 							key={sortField}
 							isActive={sortBy === sortField}
-							value={sortField}
-							onUpdateQuery={value => updateQuery({ sortBy: value, direction: 'asc' })}
+							label={sortField}
+							query={{ sortBy: sortField, direction: 'asc' }}
 						/>
 					))}
 				</div>
@@ -35,10 +36,11 @@ export default function SortControl() {
 				<div className='join w-auto'>
 					{(['asc', 'desc'] as const).map(dir => (
 						<SortBtn
+							aria-label={`Sort ${dir}`}
 							key={dir}
 							isActive={dir === direction}
-							value={dir}
-							onUpdateQuery={value => updateQuery({ direction: value })}
+							label={dir}
+							query={{ direction: dir }}
 						/>
 					))}
 				</div>

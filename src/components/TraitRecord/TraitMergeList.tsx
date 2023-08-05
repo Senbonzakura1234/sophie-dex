@@ -1,5 +1,5 @@
 import MergeIcon from '@root/assets/icons/solid/MergeIcon';
-import CopyUrlButton from '@root/components/ui/static/CopyUrlButton';
+import { CopyUrlButton } from '@root/components/ui/dynamic';
 import type { HyperLinkRecord } from '@root/server/db/schema';
 import Link from 'next/link';
 import { Fragment } from 'react';
@@ -9,7 +9,7 @@ type TraitMergeListProps = { mergeFrom: HyperLinkRecord[][] };
 export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 	return (
 		<nav className={`relative flex flex-wrap gap-2 ${mergeFrom.length <= 0 ? 'max-xl:hidden' : ''}`}>
-			<h5 className={`font-extrabold ${mergeFrom.length <= 0 ? 'hidden' : ''}`}>Merge from:</h5>
+			<div className={`font-extrabold ${mergeFrom.length <= 0 ? 'hidden' : ''}`}>Merge from:</div>
 
 			{mergeFrom.map((traitRecords, key) => (
 				<div className='join basis-auto' key={key}>
@@ -19,7 +19,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 						return (
 							<Fragment key={key}>
 								{key > 0 ? (
-									<button className='btn btn-accent join-item no-animation btn-xs' role='none'>
+									<button aria-hidden className='btn btn-accent join-item no-animation btn-xs'>
 										<MergeIcon className='aspect-square h-4' />
 									</button>
 								) : null}

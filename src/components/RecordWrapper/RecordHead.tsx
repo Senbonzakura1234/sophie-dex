@@ -1,4 +1,4 @@
-import CopyUrlButton from '@root/components/ui/static/CopyUrlButton';
+import { CopyUrlButton } from '@root/components/ui/dynamic';
 import { useModuleId } from '@root/hooks/useModuleId';
 import type { CommonRecord } from '@root/types/model';
 import Link from 'next/link';

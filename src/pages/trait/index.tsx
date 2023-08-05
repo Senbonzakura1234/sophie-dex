@@ -1,13 +1,13 @@
 import ListLayout from '@root/components/Layout/ListLayout';
 import TraitRecord from '@root/components/TraitRecord';
+import { useSearchQuery } from '@root/hooks/router';
 import { useHydrateModuleId } from '@root/hooks/useModuleId';
-import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import { apiContext } from '@root/utils/trpc';
 import { type NextPage } from 'next';
 
 const Traits: NextPage = () => {
-	const { securedQuery } = useSecuredRouter();
-	const { data, isError, error } = apiContext.trait.getAll.useQuery(securedQuery);
+	const { isReady, searchQuery } = useSearchQuery();
+	const { data, isError, error } = apiContext.trait.getAll.useQuery(searchQuery, { enabled: isReady });
 
 	useHydrateModuleId('trait');
 

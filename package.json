@@ -1,6 +1,6 @@
 {
 	"name": "sophie-dex",
-	"version": "15.1.0",
+	"version": "15.2.0",
 	"private": false,
 	"license": "MIT",
 	"author": {
@@ -39,7 +39,6 @@
 		"drizzle-orm": "^0.27.2",
 		"jotai": "^2.2.2",
 		"next": "13.4.10",
-		"preact": "^10.16.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"zod": "^3.21.4"

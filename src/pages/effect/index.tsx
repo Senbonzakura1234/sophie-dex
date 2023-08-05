@@ -1,13 +1,13 @@
 import EffectRecord from '@root/components/EffectRecord';
 import ListLayout from '@root/components/Layout/ListLayout';
+import { useSearchQuery } from '@root/hooks/router';
 import { useHydrateModuleId } from '@root/hooks/useModuleId';
-import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
 import { apiContext } from '@root/utils/trpc';
 import { type NextPage } from 'next';
 
 const Effects: NextPage = () => {
-	const { securedQuery } = useSecuredRouter();
-	const { data, isError, error } = apiContext.effect.getAll.useQuery(securedQuery);
+	const { isReady, searchQuery } = useSearchQuery();
+	const { data, isError, error } = apiContext.effect.getAll.useQuery(searchQuery, { enabled: isReady });
 
 	useHydrateModuleId('effect');
 

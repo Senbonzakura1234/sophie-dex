@@ -3,6 +3,7 @@ import { useModuleId } from '@root/hooks/useModuleId';
 import type { PageControlProps } from '@root/types/common/props';
 import { formatRecordCount, improvedInclude } from '@root/utils/common';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 
 const CategoryFilter = dynamic(() => import('./CategoryFilter'), {
 	loading: () => <div className='h-8 w-40 animate-pulse rounded 2xl:h-9' />,
@@ -15,9 +16,6 @@ const Paginate = dynamic(() => import('./Paginate'), {
 });
 const RecipeTypeFilter = dynamic(() => import('./RecipeTypeFilter'), {
 	loading: () => <div className='h-8 w-40 animate-pulse rounded 2xl:h-9' />,
-});
-const ResetFilter = dynamic(() => import('./ResetFilter'), {
-	loading: () => <div className='my-auto h-6 w-[52px] animate-pulse rounded' />,
 });
 const RumorTypeFilter = dynamic(() => import('./RumorTypeFilter'), {
 	loading: () => <div className='h-8 w-40 animate-pulse rounded 2xl:h-9' />,
@@ -79,7 +77,16 @@ export default function FilterControl({
 
 					<Paginate page={page} totalPage={totalPage} />
 
-					{!isBottomFilter ? <ResetFilter /> : null}
+					{!isBottomFilter ? (
+						<Link
+							aria-label='Reset Filter'
+							className='btn btn-xs my-auto gap-1 capitalize'
+							href={{ query: {} }}
+							role='navigation'
+						>
+							Reset
+						</Link>
+					) : null}
 				</div>
 			</nav>
 		</section>

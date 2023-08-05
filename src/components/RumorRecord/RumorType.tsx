@@ -1,14 +1,15 @@
 import { rumorTypeColorMap, rumorTypeIconMap } from '@root/constants';
-import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
+import { useSearchQuery } from '@root/hooks/router';
 import type { RumorTypeEnum } from '@root/types/common/zod';
 import { convertCode } from '@root/utils/common';
+import QueryLink from '../ui/static/QueryLink';
 
 type RumorTypeProps = { rumorType: RumorTypeEnum };
 
 export default function RumorType({ rumorType }: RumorTypeProps) {
-	const { updateQuery, securedQuery } = useSecuredRouter();
+	const { searchQuery } = useSearchQuery();
 
-	const isBtnDisabled = securedQuery.rumorType === rumorType;
+	const isActive = searchQuery.rumorType === rumorType;
 
 	const className = {
 		MATERIAL: 'app-text-shadow-GREEN',
@@ -19,22 +20,19 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 		<>
 			<div className='flex max-w-fit flex-wrap gap-2'>
 				<div className='font-bold !shadow-none'>Category: </div>
-				<button
+				<QueryLink
 					aria-label={`Filter ${convertCode(rumorType)} Rumor`}
-					className={`btn btn-xs !border-current !bg-current opacity-80 hover:opacity-100 ${
-						isBtnDisabled ? '!no-animation !cursor-default hover:opacity-80' : ''
-					}`}
-					onClick={() => {
-						if (!isBtnDisabled) updateQuery({ rumorType });
-					}}
-					role='navigation'
+					className={`btn btn-xs !border-current !bg-current ${isActive ? '' : 'opacity-80 hover:opacity-100'}`}
+					href={{ query: { rumorType } }}
+					isActive={isActive}
+					resetPage
 					style={{ color: rumorTypeColorMap[rumorType].secondary }}
 				>
 					<div className='flex gap-1 font-extrabold capitalize text-slate-50'>
 						<div className={`font-atelier ${rumorTypeIconMap[rumorType]}`} />
 						{convertCode(rumorType)}
 					</div>
-				</button>
+				</QueryLink>
 			</div>
 
 			<div

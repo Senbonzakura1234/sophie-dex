@@ -1,15 +1,16 @@
 import { categoryIconMap } from '@root/constants';
-import { useSecuredRouter } from '@root/hooks/useSecuredRouter';
+import { useSearchQuery } from '@root/hooks/router';
 import type { TextShadowMap } from '@root/types/common/tailwind';
 import type { CategoryEnum, ColorEnum } from '@root/types/common/zod';
 import { convertCode } from '@root/utils/common';
+import QueryLink from '../ui/static/QueryLink';
 
 type CategoryProps = { category: CategoryEnum; color: ColorEnum };
 
 export default function Category({ category, color }: CategoryProps) {
-	const { updateQuery, securedQuery } = useSecuredRouter();
+	const { searchQuery } = useSearchQuery();
 
-	const isBtnDisabled = securedQuery.category === category;
+	const isActive = searchQuery.category === category;
 
 	const className = {
 		BLUE: 'app-text-shadow-BLUE',
@@ -23,19 +24,18 @@ export default function Category({ category, color }: CategoryProps) {
 		<>
 			<div className='flex max-w-fit flex-wrap gap-2'>
 				<div className='font-bold !shadow-none'>Category: </div>
-				<button
+				<QueryLink
 					aria-label={`Filter ${convertCode(category)} Item`}
 					className={`btn btn-accent btn-xs gap-1 font-extrabold capitalize ${
-						isBtnDisabled ? 'no-animation cursor-default !border-slate-300 !bg-slate-300 !text-slate-900' : ''
+						isActive ? '!border-slate-300 !bg-slate-300 !text-slate-900' : ''
 					}`}
-					onClick={() => {
-						if (!isBtnDisabled) updateQuery({ category });
-					}}
-					role='navigation'
+					isActive={isActive}
+					href={{ query: { category } }}
+					resetPage
 				>
 					<div className={`font-atelier ${categoryIconMap[category]}`} />
 					{convertCode(category)}
-				</button>
+				</QueryLink>
 			</div>
 
 			<div

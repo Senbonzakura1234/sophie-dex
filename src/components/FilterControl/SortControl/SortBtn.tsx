@@ -1,29 +1,20 @@
-type SortItemBtnProps<TValue extends string | number> = {
-	value: TValue;
-	disabled?: boolean;
-	isActive: boolean;
-	onUpdateQuery: (value: TValue) => void;
-};
+import QueryLink from '@root/components/ui/static/QueryLink';
+import type { SearchQuery } from '@root/types/common/zod';
 
-export default function SortBtn<TValue extends string | number>({
-	value,
-	disabled,
-	isActive,
-	onUpdateQuery,
-}: SortItemBtnProps<TValue>) {
+type SortItemBtnProps = { 'aria-label': string; label: string; isActive: boolean; query: Partial<SearchQuery> };
+
+export default function SortBtn({ label, isActive, query, ...rest }: SortItemBtnProps) {
 	return (
-		<button
-			aria-label={`Sort by ${value}`}
-			disabled={disabled}
+		<QueryLink
 			className={`btn join-item btn-xs border-y-2 capitalize ${
-				isActive ? 'btn-primary btn-active no-animation cursor-default text-slate-50' : 'btn-ghost border-accent'
+				isActive ? 'btn-primary btn-active text-slate-50' : 'btn-ghost border-accent'
 			}`}
-			onClick={() => {
-				if (!isActive) onUpdateQuery(value);
-			}}
-			role='navigation'
+			href={{ query }}
+			isActive={isActive}
+			resetPage
+			{...rest}
 		>
-			{value}
-		</button>
+			{label}
+		</QueryLink>
 	);
 }
