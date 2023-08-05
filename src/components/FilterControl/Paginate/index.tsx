@@ -13,51 +13,49 @@ export default function Paginate({ page, totalPage }: PaginateProps) {
 	const isNextDisable = page >= totalPage;
 
 	return (
-		<div className='form-control'>
-			<div className='flex gap-2'>
-				<QueryLink
-					aria-label='Go To First Page'
-					className='btn btn-circle btn-primary btn-sm my-auto !border-none text-slate-50 !transition-opacity'
-					disabled={isPreviousDisable}
-					href={{ query: {} }}
-					isActive={isPreviousDisable}
-					resetPage
-				>
-					<ChevronDoubleLeftIcon className='aspect-square h-4' />
-				</QueryLink>
+		<div className='flex gap-2'>
+			<QueryLink
+				aria-label='Go To First Page'
+				className='btn btn-circle btn-primary btn-sm my-auto !border-none text-slate-50 !transition-opacity'
+				disabled={isPreviousDisable}
+				href={{ query: {} }}
+				isActive={isPreviousDisable}
+				resetPage
+			>
+				<ChevronDoubleLeftIcon className='aspect-square h-4' />
+			</QueryLink>
 
-				<QueryLink
-					aria-label='Go To Previous Page'
-					className='btn btn-circle btn-primary btn-sm my-auto !border-none text-slate-50 !transition-opacity'
-					disabled={isPreviousDisable}
-					href={{ query: { page: page - 1 } }}
-					isActive={isPreviousDisable}
-				>
-					<ChevronLeftIcon className='aspect-square h-4' />
-				</QueryLink>
+			<QueryLink
+				aria-label='Go To Previous Page'
+				className='btn btn-circle btn-primary btn-sm my-auto !border-none text-slate-50 !transition-opacity'
+				disabled={isPreviousDisable}
+				href={{ query: { page: page - 1 } }}
+				isActive={isPreviousDisable}
+			>
+				<ChevronLeftIcon className='aspect-square h-4' />
+			</QueryLink>
 
-				<GoToPageSelect totalPage={totalPage} />
+			<GoToPageSelect totalPage={totalPage} />
 
-				<QueryLink
-					aria-label='Go To Next Page'
-					className='btn btn-circle btn-primary btn-sm my-auto !border-none text-slate-50 !transition-opacity'
-					disabled={isNextDisable}
-					href={{ query: { page: page + 1 } }}
-					isActive={isNextDisable}
-				>
-					<ChevronRightIcon className='aspect-square h-4' />
-				</QueryLink>
+			<QueryLink
+				aria-label='Go To Next Page'
+				className='btn btn-circle btn-primary btn-sm my-auto !border-none text-slate-50 !transition-opacity'
+				disabled={isNextDisable}
+				href={{ query: { page: page + 1 } }}
+				isActive={isNextDisable}
+			>
+				<ChevronRightIcon className='aspect-square h-4' />
+			</QueryLink>
 
-				<QueryLink
-					aria-label='Go To Next Page'
-					className='btn btn-circle btn-primary btn-sm my-auto border-none text-slate-50 !transition-opacity'
-					disabled={isNextDisable}
-					href={{ query: { page: totalPage } }}
-					isActive={isNextDisable}
-				>
-					<ChevronDoubleRightIcon className='aspect-square h-4' />
-				</QueryLink>
-			</div>
+			<QueryLink
+				aria-label='Go To Next Page'
+				className='btn btn-circle btn-primary btn-sm my-auto border-none text-slate-50 !transition-opacity'
+				disabled={isNextDisable}
+				href={{ query: { page: totalPage } }}
+				isActive={isNextDisable}
+			>
+				<ChevronDoubleRightIcon className='aspect-square h-4' />
+			</QueryLink>
 		</div>
 	);
 }

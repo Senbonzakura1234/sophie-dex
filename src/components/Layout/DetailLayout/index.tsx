@@ -52,11 +52,15 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 
 			<PageTitle />
 
-			<section className='grid h-full w-full grid-cols-1 place-content-center gap-4 p-2 2xl:grid-cols-none'>
-				<div className={`mx-auto max-w-full ${moduleId === 'item' ? 'w-[900px]' : 'w-[700px]'}`}>{renderChild}</div>
+			<section
+				className={`container m-auto grid gap-6 max-2xl:px-4 ${
+					moduleId === 'item' ? 'lg:max-w-[900px]' : 'lg:max-w-[700px]'
+				}`}
+			>
+				{renderChild}
 			</section>
 
-			<PageFooter />
+			<PageFooter hideNavigation />
 
 			<ErrorModal {...errorResult} />
 

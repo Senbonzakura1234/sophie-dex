@@ -18,7 +18,7 @@ export default function PageTitle() {
 	const isHomePage = typeof moduleId === 'undefined';
 
 	return (
-		<section className={`relative w-full overflow-hidden shadow-inner ${isHomePage ? 'h-full' : 'min-h-[300px]'}`}>
+		<section className={`relative w-full overflow-hidden shadow-inner ${isHomePage ? 'h-full' : 'min-h-[18rem]'}`}>
 			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-4 px-4 pt-5 xl:gap-9 2xl:gap-6'>
 				<div className='w-full text-center'>
 					{isHomePage ? (

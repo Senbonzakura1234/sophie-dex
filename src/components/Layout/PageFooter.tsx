@@ -12,11 +12,13 @@ const Breadcrumb = dynamic(() => import('./Breadcrumb'), {
 	ssr: false,
 });
 
-export default function PageFooter() {
+type PageFooterProps = { hideNavigation?: boolean };
+
+export default function PageFooter({ hideNavigation }: PageFooterProps) {
 	return (
-		<section className='relative min-h-[300px] w-full overflow-hidden shadow-inner'>
+		<section className='relative min-h-[18rem] w-full overflow-hidden shadow-inner'>
 			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-3 px-4 pt-5 2xl:gap-6'>
-				<Breadcrumb isShowAuthor={true} />
+				<Breadcrumb isShowAuthor hideNavigation={hideNavigation} />
 			</div>
 
 			<div className='absolute inset-0 z-10 bg-gradient-to-r from-accent/10 to-primary/10' />
