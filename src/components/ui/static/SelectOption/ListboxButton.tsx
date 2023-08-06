@@ -3,12 +3,12 @@ import ChevronUpDownIcon from '@root/assets/icons/solid/ChevronUpDownIcon';
 import type { SelectOptionItem } from '@root/types/common';
 import { convertCode } from '@root/utils/common';
 
-type ListboxButtonProps<V extends string | number | null> = {
+type ListboxButtonProps<V extends string | number> = {
 	isDisabled: boolean;
 	value: SelectOptionItem<V>;
 };
 
-export default function ListboxButton<V extends string | number | null>({
+export default function ListboxButton<V extends string | number>({
 	isDisabled,
 	value: { icon, label, value },
 }: ListboxButtonProps<V>) {

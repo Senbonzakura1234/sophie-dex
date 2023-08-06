@@ -4,6 +4,7 @@ import { useModuleId } from '@root/hooks/useModuleId';
 import { getBaseUrl } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import AppInformation from './AppInformation';
 
 const Breadcrumb = dynamic(() => import('./Breadcrumb'), {
 	loading: () => (
@@ -27,8 +28,7 @@ export default function PageTitle() {
 							className='mx-auto w-[600px] max-w-full'
 							data-url={`${getBaseUrl(true)}/assets/images/sophie-logo.png`}
 							priority
-							quality={50}
-							sizes='(max-width: 640px) 60vw, 300px'
+							sizes='(max-width: 640px) 60vw, 600px'
 							src={sophieLogo}
 						/>
 					) : (
@@ -37,22 +37,30 @@ export default function PageTitle() {
 						</div>
 					)}
 				</div>
-				<Breadcrumb isShowAuthor={isHomePage} />
+
+				<Breadcrumb />
+
+				{isHomePage ? <AppInformation /> : null}
 			</div>
 
-			<div className='absolute inset-0 z-10 bg-gradient-to-r from-primary/20 to-slate-700/20' />
-
-			<Image
-				alt='sophie'
-				className='object-cover'
-				data-url={`${getBaseUrl(true)}/assets/images/top.jpg`}
-				fill
-				placeholder='blur'
-				priority
-				quality={50}
-				sizes='(max-width: 640px) 80vh, (max-width: 1024px) 60vw, 50vw'
-				src={topBg}
+			<div
+				className={`absolute inset-0 z-10 bg-gradient-to-br ${
+					isHomePage ? 'from-yellow-900/30 to-yellow-900/40' : 'from-primary/20 to-slate-700/20'
+				}`}
 			/>
+
+			{isHomePage ? null : (
+				<Image
+					alt='sophie'
+					className='object-cover'
+					data-url={`${getBaseUrl(true)}/assets/images/top.jpg`}
+					fill
+					placeholder='blur'
+					priority
+					sizes='(max-width: 640px) 80vh, (max-width: 1024px) 60vw, 50vw'
+					src={topBg}
+				/>
+			)}
 		</section>
 	);
 }

@@ -8,9 +8,9 @@ type SelectQueryKey = 'category' | 'color' | 'rumorType' | 'recipeType' | 'page'
 
 export function useQueryOnChange<V extends SearchQuery[SelectQueryKey]>(
 	key: SelectQueryKey,
-	list: SelectOptionItem<V | null>[],
-	defaultValue: SelectOptionItem<V | null>,
-): Readonly<[SelectOptionItem<V | null>, SetSelectOptionItem<V | null>]> {
+	list: SelectOptionItem<V>[],
+	defaultValue: SelectOptionItem<V>,
+): Readonly<[SelectOptionItem<V>, SetSelectOptionItem<V>]> {
 	const { searchQuery, updateQuery, moduleId } = useUpdateQuery();
 
 	const selectList = useMemo(() => {
@@ -18,11 +18,15 @@ export function useQueryOnChange<V extends SearchQuery[SelectQueryKey]>(
 		return list.filter(c => !improvedInclude(['MATERIAL', 'KEY_ITEM', 'BOOK', 'MACHINE'], c.value));
 	}, [key, list, moduleId]);
 
-	const selectOptionItem: SelectOptionItem<V | null> = useMemo(() => {
-		return selectList.find(({ value }) => (value?.toString() || null) === searchQuery[key]) ?? defaultValue;
+	const selectOptionItem: SelectOptionItem<V> = useMemo(() => {
+		const defVal = (
+			key === 'page' ? { value: searchQuery[key] || null, label: `Page ${searchQuery[key] || 1}` } : defaultValue
+		) as SelectOptionItem<V>;
+
+		return selectList.find(({ value }) => (value?.toString() || null) === searchQuery[key]) ?? defVal;
 	}, [defaultValue, key, searchQuery, selectList]);
 
-	const setSelectOptionItem: SetSelectOptionItem<V | null> = useCallback(
+	const setSelectOptionItem: SetSelectOptionItem<V> = useCallback(
 		s => {
 			const cur = typeof s === 'function' ? s(defaultValue) : s;
 

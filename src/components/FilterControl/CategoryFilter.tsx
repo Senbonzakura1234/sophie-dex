@@ -10,7 +10,7 @@ const categoryDefaultSelect = {
 	label: 'Category',
 } as const;
 
-const categorySelectList: SelectOptionItem<CategoryEnum | null>[] = [
+const categorySelectList: SelectOptionItem<CategoryEnum>[] = [
 	categoryDefaultSelect,
 	...categoryList.map(category => ({
 		value: category,
@@ -28,7 +28,7 @@ export default function CategoryFilter() {
 	const [cateSelected, setCateSelected] = useQueryOnChange('category', categorySelectList, categoryDefaultSelect);
 
 	return (
-		<SelectOption<CategoryEnum | null>
+		<SelectOption<CategoryEnum>
 			list={categorySelectList}
 			setValue={setCateSelected}
 			value={cateSelected}

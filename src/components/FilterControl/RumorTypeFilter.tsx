@@ -10,7 +10,7 @@ const rumorTypeDefaultSelect = {
 	label: 'Rumor type',
 } as const;
 
-const rumorTypeSelectList: SelectOptionItem<RumorTypeEnum | null>[] = [
+const rumorTypeSelectList: SelectOptionItem<RumorTypeEnum>[] = [
 	rumorTypeDefaultSelect,
 	...rumorTypeList.map(rumorType => ({
 		value: rumorType,
@@ -32,7 +32,7 @@ export default function RumorTypeFilter() {
 	);
 
 	return (
-		<SelectOption<RumorTypeEnum | null>
+		<SelectOption<RumorTypeEnum>
 			list={rumorTypeSelectList}
 			setValue={setRumorTypeSelected}
 			value={rumorTypeSelected}

@@ -11,7 +11,7 @@ type SelectOptionProps<V> = {
 	useCustomIcon?: boolean;
 } & ClassNameProps;
 
-export default function SelectOption<V extends string | number | null>({
+export default function SelectOption<V extends string | number>({
 	list,
 	value,
 	setValue,

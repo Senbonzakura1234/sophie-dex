@@ -3,13 +3,13 @@ import CheckIcon from '@root/assets/icons/solid/CheckIcon';
 import type { SelectOptionItem } from '@root/types/common';
 import { convertCode } from '@root/utils/common';
 
-type ListboxOptionProps<V extends string | number | null> = {
+type ListboxOptionProps<V extends string | number> = {
 	isSelected: boolean;
 	optionValue: SelectOptionItem<V>;
 	useCustomIcon?: boolean;
 };
 
-export default function ListboxOption<V extends string | number | null>({
+export default function ListboxOption<V extends string | number>({
 	isSelected,
 	optionValue,
 	useCustomIcon,

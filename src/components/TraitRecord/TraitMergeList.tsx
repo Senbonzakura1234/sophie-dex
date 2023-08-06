@@ -19,7 +19,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 						return (
 							<Fragment key={key}>
 								{key > 0 ? (
-									<button aria-hidden className='btn btn-accent join-item no-animation btn-xs'>
+									<button aria-label='Merge with' className='btn btn-accent join-item no-animation btn-xs'>
 										<MergeIcon className='aspect-square h-4' />
 									</button>
 								) : null}

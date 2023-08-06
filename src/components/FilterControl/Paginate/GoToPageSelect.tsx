@@ -12,7 +12,7 @@ const pageDefaultSelect = {
 };
 
 export default function GoToPageSelect({ totalPage }: GoToPageSelectProps) {
-	const pageList: SelectOptionItem<number | null>[] = useMemo(
+	const pageList: SelectOptionItem<number>[] = useMemo(
 		() => createArray(totalPage, 0).map((_, i) => ({ value: i + 1, label: `Page ${i + 1}` })),
 		[totalPage],
 	);
@@ -20,7 +20,7 @@ export default function GoToPageSelect({ totalPage }: GoToPageSelectProps) {
 	const [goToPage, setGoToPage] = useQueryOnChange('page', pageList, pageDefaultSelect);
 
 	return (
-		<SelectOption<number | null>
+		<SelectOption<number>
 			list={pageList}
 			setValue={setGoToPage}
 			value={goToPage}

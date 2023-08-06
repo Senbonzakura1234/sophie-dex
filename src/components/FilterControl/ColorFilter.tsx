@@ -10,7 +10,7 @@ const colorDefaultSelect = {
 	label: 'Color',
 } as const;
 
-const colorSelectList: SelectOptionItem<ColorEnum | null>[] = [
+const colorSelectList: SelectOptionItem<ColorEnum>[] = [
 	colorDefaultSelect,
 	...colorList.map(color => ({
 		value: color,
@@ -29,7 +29,7 @@ export default function ColorFilter() {
 	const [colorSelected, setColorSelected] = useQueryOnChange('color', colorSelectList, colorDefaultSelect);
 
 	return (
-		<SelectOption<ColorEnum | null>
+		<SelectOption<ColorEnum>
 			list={colorSelectList}
 			setValue={setColorSelected}
 			value={colorSelected}

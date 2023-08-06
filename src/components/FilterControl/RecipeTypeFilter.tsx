@@ -10,7 +10,7 @@ const recipeTypeDefaultSelect = {
 	label: 'Recipe type',
 } as const;
 
-const recipeTypeSelectList: SelectOptionItem<RecipeTypeEnum | null>[] = [
+const recipeTypeSelectList: SelectOptionItem<RecipeTypeEnum>[] = [
 	recipeTypeDefaultSelect,
 	...recipeTypeList.map(recipeType => ({
 		value: recipeType,
@@ -33,7 +33,7 @@ export default function RecipeTypeFilter() {
 	);
 
 	return (
-		<SelectOption<RecipeTypeEnum | null>
+		<SelectOption<RecipeTypeEnum>
 			list={recipeTypeSelectList}
 			setValue={setRecipeTypeSelected}
 			value={recipeTypeSelected}
