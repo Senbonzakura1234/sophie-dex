@@ -1,13 +1,20 @@
 import ItemRecord from '@root/components/ItemRecord';
 import ListLayout from '@root/components/Layout/ListLayout';
-import { useSearchQuery } from '@root/hooks/router';
 import { useHydrateModuleId } from '@root/hooks/useModuleId';
+import type { SearchQuery } from '@root/types/common/zod';
+import { searchQueryValidator } from '@root/types/common/zod';
 import { apiContext } from '@root/utils/trpc';
-import { type NextPage } from 'next';
+import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 
-const Items: NextPage = () => {
-	const { isReady, searchQuery } = useSearchQuery();
-	const { data, isError, error } = apiContext.item.getAll.useQuery(searchQuery, { enabled: isReady });
+export const getServerSideProps: GetServerSideProps<{
+	searchQuery: Partial<SearchQuery>;
+}> = async ({ query }) => {
+	const result = searchQueryValidator.safeParse(query);
+	return { props: { searchQuery: result.success ? result.data : {} } };
+};
+
+export default function Items({ searchQuery }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+	const { data, isError, error } = apiContext.item.getAll.useQuery(searchQuery);
 
 	useHydrateModuleId('item');
 
@@ -16,6 +23,4 @@ const Items: NextPage = () => {
 			{props => props.data.map((rumor, key) => <ItemRecord key={key} {...rumor} currentId={undefined} />)}
 		</ListLayout>
 	);
-};
-
-export default Items;
+}

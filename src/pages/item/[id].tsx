@@ -18,13 +18,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps = async ({ params }: GetStaticPropsContext<{ id: string }>) => {
 	const id = params?.id;
 
-	if (env.ENABLE_ISR === 'DISABLED') return { props: { id }, revalidate: 100 };
+	if (env.ENABLE_ISR === 'DISABLED') return { props: { id }, revalidate: 9e4 };
 
 	const helpers = createServerSideHelpers({ router: appRouter, ctx: {} });
 
 	await helpers.item.getOne.prefetch({ id });
 
-	return { props: { trpcState: helpers.dehydrate(), id }, revalidate: 100 };
+	return { props: { trpcState: helpers.dehydrate(), id }, revalidate: 9e4 };
 };
 
 export default function ItemDetail({ id }: InferGetStaticPropsType<typeof getStaticProps>) {

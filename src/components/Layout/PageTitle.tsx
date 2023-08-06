@@ -28,7 +28,7 @@ export default function PageTitle() {
 							data-url={`${getBaseUrl(true)}/assets/images/sophie-logo.png`}
 							priority
 							quality={50}
-							sizes='(max-width: 640px) 70vw, 300px'
+							sizes='(max-width: 640px) 60vw, 300px'
 							src={sophieLogo}
 						/>
 					) : (
@@ -50,7 +50,7 @@ export default function PageTitle() {
 				placeholder='blur'
 				priority
 				quality={50}
-				sizes='(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 50vw'
+				sizes='(max-width: 640px) 80vh, (max-width: 1024px) 60vw, 50vw'
 				src={topBg}
 			/>
 		</section>

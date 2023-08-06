@@ -60,7 +60,7 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 				{renderChild}
 			</section>
 
-			<PageFooter hideNavigation />
+			<PageFooter isDetailPage />
 
 			<ErrorModal {...errorResult} />
 

@@ -62,6 +62,7 @@ export default function Breadcrumb({ hideNavigation, isShowAuthor }: BreadcrumbP
 						aria-label={`github@${APP_AUTHOR}`}
 						className='btn btn-ghost h-auto min-h-0 gap-2 rounded-full bg-white fill-black py-2 capitalize text-black shadow-lg shadow-black hover:bg-black hover:fill-white hover:text-white hover:shadow hover:shadow-slate-700 max-lg:text-xs lg:py-3'
 						href={{ protocol: 'https', hostname: 'github', host: 'github.com', pathname: APP_AUTHOR }}
+						prefetch={false}
 						role='navigation'
 						target='_blank'
 					>
