@@ -13,7 +13,9 @@ export default function RecordHead({ currentId, id, name }: RecordHeadProps) {
 
 	return (
 		<div className='card-title inline'>
-			<CopyUrlButton className='btn-outline mr-2' url={recordUrlObj} />
+			<span className='mr-2'>
+				<CopyUrlButton className='btn-outline' url={recordUrlObj} />
+			</span>
 
 			<Link
 				className={`font-roboto ${isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'}`}
