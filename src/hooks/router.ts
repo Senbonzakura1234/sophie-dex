@@ -5,12 +5,21 @@ import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 import { useModuleId } from './useModuleId';
 
-type UseSearchQuery = () => { isReady: boolean; searchQuery: Partial<SearchQuery>; push: NextRouter['push'] };
+type UseSearchQuery = () => {
+	isReady: boolean;
+	moduleId: ModuleIdEnum | undefined;
+	push: NextRouter['push'];
+	searchQuery: Partial<SearchQuery>;
+};
 
 export const useSearchQuery: UseSearchQuery = () => {
 	const { push, query, isReady } = useRouter();
 
-	return { isReady, searchQuery: query as Partial<SearchQuery>, push };
+	const moduleId = useModuleId();
+
+	delete query['id'];
+
+	return { isReady, moduleId, push, searchQuery: query as Partial<SearchQuery> };
 };
 
 type UseUpdateQuery = () => {
@@ -20,8 +29,7 @@ type UseUpdateQuery = () => {
 };
 
 export const useUpdateQuery: UseUpdateQuery = () => {
-	const { searchQuery, push } = useSearchQuery();
-	const moduleId = useModuleId();
+	const { moduleId, push, searchQuery } = useSearchQuery();
 
 	const updateQuery = useCallback(
 		(nextQuery: Partial<SearchQuery>) => {

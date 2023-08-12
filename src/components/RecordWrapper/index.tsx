@@ -31,7 +31,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 			<div
 				className={`absolute inset-y-0 left-0 w-1/3 rounded-2xl shadow-lg ${
 					!!firstColor
-						? `bg-gradient-to-r from-current to-current shadow-base-content ${colorFilterTWClassMap[firstColor]}`
+						? `bg-current shadow-base-content ${colorFilterTWClassMap[firstColor]}`
 						: 'bg-gradient-to-r from-accent to-primary shadow-primary'
 				}`}
 			></div>
@@ -39,7 +39,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 			<div
 				className={`absolute inset-y-0 right-0 w-1/3 rounded-2xl shadow-lg ${
 					!!lastColor
-						? `bg-gradient-to-l from-current to-current shadow-base-content ${colorFilterTWClassMap[lastColor]}`
+						? `bg-current shadow-base-content ${colorFilterTWClassMap[lastColor]}`
 						: 'bg-gradient-to-l from-accent to-primary shadow-primary'
 				}`}
 			></div>

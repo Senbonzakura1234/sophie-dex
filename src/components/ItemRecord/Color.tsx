@@ -19,7 +19,7 @@ export default function Color({ color }: ColorProps) {
 				className={`btn btn-xs !border-current !bg-current ${isActive ? '' : 'opacity-80 hover:opacity-100'} ${
 					colorFilterTWClassMap[color]
 				}`}
-				href={{ query: { color } }}
+				href={{ query: { color, id: null } }}
 				isActive={isActive}
 				resetPage
 			>

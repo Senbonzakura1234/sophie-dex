@@ -13,7 +13,7 @@ export const APP_NAME = 'Sophie Dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book DX - Wiki';
 export const APP_KEYWORD = 'Atelier, Wiki, Sophie, Mysterious, DX';
 export const APP_AUTHOR = 'Senbonzakura1234';
-export const APP_VERSION = 'sophie-dex@15.6.0';
+export const APP_VERSION = 'sophie-dex@15.6.1';
 
 export const defaultLimit = 16;
 export const defaultListData = createArray(defaultLimit, { data: undefined, isDataReady: false as const });
@@ -22,11 +22,11 @@ export const DEFAULT_MAXIMUM_PULL_LENGTH = 240;
 export const DEFAULT_REFRESH_THRESHOLD = 180;
 
 export const colorFilterTWClassMap = {
-	BLUE: 'text-blue-600',
-	GREEN: 'text-green-600',
-	RED: 'text-red-600',
-	WHITE: 'text-slate-600',
-	YELLOW: 'text-yellow-600',
+	BLUE: 'text-blue-500',
+	GREEN: 'text-green-500',
+	RED: 'text-red-500',
+	WHITE: 'text-slate-500',
+	YELLOW: 'text-yellow-500',
 } as const satisfies Record<ColorEnum, string>;
 
 export const recipeTypeColorMap = {

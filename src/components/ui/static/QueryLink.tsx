@@ -21,7 +21,7 @@ export default function QueryLink({
 	isOverridden,
 	...rest
 }: QueryLinkProps) {
-	const { searchQuery } = useSearchQuery();
+	const { searchQuery, moduleId } = useSearchQuery();
 
 	return (
 		<Link
@@ -29,7 +29,7 @@ export default function QueryLink({
 				disabled ? 'btn-disabled' : ''
 			} ${className}`}
 			href={{
-				pathname,
+				pathname: pathname || `/${moduleId}`,
 				query: parseQuery({ ...(isOverridden ? {} : searchQuery), ...query, ...(resetPage ? { page: null } : {}) }),
 			}}
 			role='navigation'
