@@ -18,7 +18,7 @@ export default function CopyUrlButton({ className, label = 'Copy URL', url }: Co
 			aria-label={label}
 			className={`btn btn-square btn-primary btn-xs my-auto ${className}`}
 			onClick={() => {
-				pushAlert({ isOpen: true, message: 'Url Copied' });
+				pushAlert({ isOpen: true, message: 'Url copied to clipboard' });
 				return navigator.clipboard.writeText(convertUrlObject(url));
 			}}
 			role='button'

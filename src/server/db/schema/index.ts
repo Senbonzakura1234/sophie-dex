@@ -67,7 +67,7 @@ export const traits = pgTable('traits', {
 	description: varchar('description', { length: 256 }).notNull(),
 	index: smallint('index').notNull(),
 	itemPresent: jsonb('item_present').$type<HyperLinkRecord>(),
-	mergeFrom: jsonb('merge_from').$type<HyperLinkRecord>().array(2).array().notNull(),
+	mergeFrom: jsonb('merge_from').$type<[HyperLinkRecord, HyperLinkRecord][]>().notNull(),
 });
 
 export type Effect = InferModel<typeof effects>;

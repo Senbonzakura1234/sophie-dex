@@ -23,10 +23,10 @@ export default function Alert() {
 			}`}
 		>
 			<div className='rounded-2xl bg-gradient-to-r from-accent to-primary p-1 shadow-lg shadow-primary'>
-				<div className='alert flex items-center border-none bg-base-100 font-bold shadow-inner shadow-base-content'>
+				<div className='alert flex items-center gap-3 border-none bg-base-100 py-3 font-bold shadow-inner shadow-base-content'>
 					<InfoIcon className='aspect-square h-5' />
 
-					<span className='my-auto min-w-[7rem] text-left'>{message}</span>
+					<p className='my-auto h-6 min-w-[12rem] text-left'>{message}</p>
 				</div>
 			</div>
 		</div>
