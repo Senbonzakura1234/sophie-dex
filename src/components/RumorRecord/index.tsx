@@ -15,7 +15,7 @@ export default function RumorRecord({ currentId, ...props }: RumorRecordProps) {
 	return (
 		<RecordWrapper
 			{...nullableHandle(props)}
-			color={props.data?.rumorType && rumorColorMap[props.data?.rumorType]}
+			colors={[undefined, props.data?.rumorType && rumorColorMap[props.data?.rumorType]]}
 			currentId={currentId}
 		>
 			{({ description, location, price, rumorType }) => (

@@ -15,14 +15,12 @@ const PageFooter = dynamic(() => import('../PageFooter'), {
 });
 
 type DetailLayoutProps<TRecord extends CommonRecord> = ErrorResultProps & {
-	extraHead?: RenderFunction<NonNullable<TRecord>>;
 	children?: RenderFunction<MaybeData<TRecord>>;
 	rawData: TRecord | undefined;
 };
 
 export default function DetailLayout<TRecord extends CommonRecord>({
 	children,
-	extraHead,
 	rawData,
 	...errorResult
 }: DetailLayoutProps<TRecord>) {
@@ -36,8 +34,6 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 		return children ? children(result) : null;
 	}, [children, rawData]);
 
-	const renderExtraHead = useMemo(() => (rawData && extraHead ? extraHead(rawData) : null), [rawData, extraHead]);
-
 	return (
 		<ScrollWrapper className='h-screen w-screen bg-base-200 !antialiased' enableScrollTop enablePageRefresh>
 			{rawData ? (
@@ -46,7 +42,6 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 					<meta name='og:title' content={rawData.name} key='title' />
 					<meta name='description' content={rawData.keyWords} key='description' />
 					<meta name='keywords' content={rawData.keyWords} key='keywords' />
-					{renderExtraHead}
 				</Head>
 			) : null}
 

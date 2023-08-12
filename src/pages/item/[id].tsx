@@ -1,6 +1,5 @@
 import ItemRecord from '@root/components/ItemRecord';
 import DetailLayout from '@root/components/Layout/DetailLayout';
-import { colorFilterMap } from '@root/constants';
 import { useHydrateModuleId } from '@root/hooks/useModuleId';
 import { appRouter } from '@root/server/api/router/_app';
 import { getAllItemIds } from '@root/server/db';
@@ -33,20 +32,7 @@ export default function ItemDetail({ id }: InferGetStaticPropsType<typeof getSta
 	useHydrateModuleId('item');
 
 	return (
-		<DetailLayout
-			isError={isError}
-			errorData={error?.data}
-			errorMessage={error?.message}
-			rawData={data}
-			extraHead={({ color }) => (
-				<meta
-					name='theme-color'
-					property='og:theme-color'
-					key='theme-color'
-					content={colorFilterMap[color].primary}
-				/>
-			)}
-		>
+		<DetailLayout isError={isError} errorData={error?.data} errorMessage={error?.message} rawData={data}>
 			{props => <ItemRecord {...props} currentId={id} />}
 		</DetailLayout>
 	);

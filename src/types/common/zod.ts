@@ -38,28 +38,18 @@ export type RecipeTypeEnum = z.infer<typeof genericRecipeTypeEnumSchema>;
 const genericIdSchema = genericStringSchema.uuid();
 export type Id = z.infer<typeof genericIdSchema>;
 
-const searchSchema = genericStringSchema.nullish().catch(null).default(null);
-const sortBySchema = genericSortByEnumSchema.nullish().catch(null).default(null);
-const directionSchema = genericDirectionEnumSchema.nullish().catch(null).default(null);
-const relatedCategorySchema = genericRelatedCategoryEnumSchema.nullish().catch(null).default(null);
-const categorySchema = genericCategoryEnumSchema.nullish().catch(null).default(null);
-const colorSchema = genericColorEnumSchema.nullish().catch(null).default(null);
-const rumorTypeSchema = genericRumorTypeEnumSchema.nullish().catch(null).default(null);
-const recipeTypeSchema = genericRecipeTypeEnumSchema.nullish().catch(null).default(null);
 const idSchema = genericIdSchema.nullish().catch(null).default(null);
 
-const pageSchema = positiveIntSchema.nullish().catch(null).default(null);
-
 export const searchQueryValidator = z.object({
-	search: searchSchema,
-	sortBy: sortBySchema,
-	direction: directionSchema,
-	relatedCategory: relatedCategorySchema,
-	category: categorySchema,
-	color: colorSchema,
-	rumorType: rumorTypeSchema,
-	recipeType: recipeTypeSchema,
-	page: pageSchema,
+	search: genericStringSchema.nullish().catch(null).default(null),
+	sortBy: genericSortByEnumSchema.nullish().catch(null).default(null),
+	direction: genericDirectionEnumSchema.nullish().catch(null).default(null),
+	relatedCategory: genericRelatedCategoryEnumSchema.nullish().catch(null).default(null),
+	category: genericCategoryEnumSchema.nullish().catch(null).default(null),
+	color: genericColorEnumSchema.nullish().catch(null).default(null),
+	rumorType: genericRumorTypeEnumSchema.nullish().catch(null).default(null),
+	recipeType: genericRecipeTypeEnumSchema.nullish().catch(null).default(null),
+	page: positiveIntSchema.nullish().catch(null).default(null),
 });
 
 export type SearchQuery = z.infer<typeof searchQueryValidator>;

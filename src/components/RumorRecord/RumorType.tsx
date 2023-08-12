@@ -22,11 +22,12 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 				<div className='font-bold !shadow-none'>Category: </div>
 				<QueryLink
 					aria-label={`Filter ${convertCode(rumorType)} Rumor`}
-					className={`btn btn-xs !border-current !bg-current ${isActive ? '' : 'opacity-80 hover:opacity-100'}`}
+					className={`btn btn-xs !border-current !bg-current ${rumorTypeColorMap[rumorType]} ${
+						isActive ? '' : 'opacity-80 hover:opacity-100'
+					}`}
 					href={{ query: { rumorType } }}
 					isActive={isActive}
 					resetPage
-					style={{ color: rumorTypeColorMap[rumorType].secondary }}
 				>
 					<div className='flex gap-1 font-extrabold capitalize text-slate-50'>
 						<div className={`font-atelier ${rumorTypeIconMap[rumorType]}`} />

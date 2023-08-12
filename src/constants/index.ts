@@ -8,13 +8,12 @@ import type {
 	SortByEnum,
 } from '@root/types/common/zod';
 import { createArray } from '@root/utils/common';
-import colors from 'tailwindcss/colors';
 
 export const APP_NAME = 'Sophie Dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book DX - Wiki';
 export const APP_KEYWORD = 'Atelier, Wiki, Sophie, Mysterious, DX';
 export const APP_AUTHOR = 'Senbonzakura1234';
-export const APP_VERSION = 'sophie-dex@15.5.0';
+export const APP_VERSION = 'sophie-dex@15.6.0';
 
 export const defaultLimit = 16;
 export const defaultListData = createArray(defaultLimit, { data: undefined, isDataReady: false as const });
@@ -22,26 +21,26 @@ export const defaultListData = createArray(defaultLimit, { data: undefined, isDa
 export const DEFAULT_MAXIMUM_PULL_LENGTH = 240;
 export const DEFAULT_REFRESH_THRESHOLD = 180;
 
-export const colorFilterMap = {
-	BLUE: { primary: colors.blue[500], secondary: colors.blue[600] },
-	GREEN: { primary: colors.green[500], secondary: colors.green[600] },
-	RED: { primary: colors.red[500], secondary: colors.red[600] },
-	WHITE: { primary: colors.slate[500], secondary: colors.slate[600] },
-	YELLOW: { primary: colors.yellow[500], secondary: colors.yellow[600] },
-} as const satisfies Record<ColorEnum, { primary: string; secondary: string }>;
+export const colorFilterTWClassMap = {
+	BLUE: 'text-blue-600',
+	GREEN: 'text-green-600',
+	RED: 'text-red-600',
+	WHITE: 'text-slate-600',
+	YELLOW: 'text-yellow-600',
+} as const satisfies Record<ColorEnum, string>;
 
 export const recipeTypeColorMap = {
-	BEGINNER_RECIPES: colorFilterMap['RED'],
-	GROWTH_RECIPES: colorFilterMap['BLUE'],
-	HOPE_RECIPES: colorFilterMap['GREEN'],
-	DREAM_RECIPES: colorFilterMap['YELLOW'],
-	MYSTERY_RECIPES: colorFilterMap['WHITE'],
-} as const satisfies Record<RecipeTypeEnum, (typeof colorFilterMap)[keyof typeof colorFilterMap]>;
+	BEGINNER_RECIPES: 'RED',
+	GROWTH_RECIPES: 'BLUE',
+	HOPE_RECIPES: 'GREEN',
+	DREAM_RECIPES: 'YELLOW',
+	MYSTERY_RECIPES: 'WHITE',
+} as const satisfies Record<RecipeTypeEnum, ColorEnum>;
 
 export const rumorTypeColorMap = {
-	MONSTER: colorFilterMap['RED'],
-	MATERIAL: colorFilterMap['GREEN'],
-} as const satisfies Record<RumorTypeEnum, (typeof colorFilterMap)[keyof typeof colorFilterMap]>;
+	MONSTER: colorFilterTWClassMap['RED'],
+	MATERIAL: colorFilterTWClassMap['GREEN'],
+} as const satisfies Record<RumorTypeEnum, string>;
 
 export const rumorColorMap = {
 	MONSTER: 'RED',

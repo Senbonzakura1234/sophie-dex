@@ -48,6 +48,7 @@
 		"*.webmanifest": "json"
 	},
 	"npm.packageManager": "pnpm",
+	"tailwindCSS.classAttributes": ["class", "className", "ngClass", "colorFilterTWClassMap"],
 	"typescript.tsdk": "node_modules\\typescript\\lib",
 	"vsicons.associations.files": [
 		{

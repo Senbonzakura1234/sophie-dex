@@ -1,4 +1,4 @@
-import { colorFilterMap } from '@root/constants';
+import { colorFilterTWClassMap } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/router';
 import type { ColorEnum } from '@root/types/common/zod';
 import QueryLink from '../ui/static/QueryLink';
@@ -16,11 +16,12 @@ export default function Color({ color }: ColorProps) {
 
 			<QueryLink
 				aria-label={`Filter ${color} Item`}
-				className={`btn btn-xs !border-current !bg-current ${isActive ? '' : 'opacity-80 hover:opacity-100'}`}
+				className={`btn btn-xs !border-current !bg-current ${isActive ? '' : 'opacity-80 hover:opacity-100'} ${
+					colorFilterTWClassMap[color]
+				}`}
 				href={{ query: { color } }}
 				isActive={isActive}
 				resetPage
-				style={{ color: colorFilterMap[color].secondary }}
 			>
 				<span className='font-extrabold capitalize text-slate-50'>{color.toLowerCase()}</span>
 			</QueryLink>
