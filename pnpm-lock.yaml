@@ -36,8 +36,8 @@ dependencies:
     specifier: ^0.4.1
     version: registry.npmjs.org/@vercel/postgres@0.4.1
   drizzle-orm:
-    specifier: ^0.28.2
-    version: registry.npmjs.org/drizzle-orm@0.28.2(@neondatabase/serverless@0.5.7)(@vercel/postgres@0.4.1)(pg@8.11.2)
+    specifier: ^0.27.2
+    version: registry.npmjs.org/drizzle-orm@0.27.2(@neondatabase/serverless@0.5.7)(@vercel/postgres@0.4.1)(pg@8.11.2)
   jotai:
     specifier: ^2.3.1
     version: registry.npmjs.org/jotai@2.3.1(@types/react@18.2.20)(react@18.2.0)
@@ -2323,11 +2323,11 @@ packages:
       - supports-color
     dev: true
 
-  registry.npmjs.org/drizzle-orm@0.28.2(@neondatabase/serverless@0.5.7)(@vercel/postgres@0.4.1)(pg@8.11.2):
-    resolution: {integrity: sha512-QRyuzvpJr7GE6LpvZ/sg2nAKNg2if1uGGkgFTiXn4auuYId//vVJe6HBsDTktfKfcaDGzIYos+/f+PS5EkBmrg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/drizzle-orm/-/drizzle-orm-0.28.2.tgz}
-    id: registry.npmjs.org/drizzle-orm/0.28.2
+  registry.npmjs.org/drizzle-orm@0.27.2(@neondatabase/serverless@0.5.7)(@vercel/postgres@0.4.1)(pg@8.11.2):
+    resolution: {integrity: sha512-ZvBvceff+JlgP7FxHKe0zOU9CkZ4RcOtibumIrqfYzDGuOeF0YUY0F9iMqYpRM7pxnLRfC+oO7rWOUH3T5oFQA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/drizzle-orm/-/drizzle-orm-0.27.2.tgz}
+    id: registry.npmjs.org/drizzle-orm/0.27.2
     name: drizzle-orm
-    version: 0.28.2
+    version: 0.27.2
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
