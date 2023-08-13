@@ -44,8 +44,10 @@ export default function PageTitle() {
 			</div>
 
 			<div
-				className={`absolute inset-0 z-10 bg-gradient-to-br ${
-					isHomePage ? 'from-yellow-900/30 to-yellow-900/40' : 'from-primary/20 to-slate-700/20'
+				className={`absolute z-10 bg-gradient-to-br shadow-2xl ${
+					isHomePage
+						? 'inset-3 rounded-3xl from-yellow-900/30 to-yellow-900/40 lg:inset-12'
+						: 'inset-0 from-primary/20 to-slate-700/20'
 				}`}
 			/>
 
