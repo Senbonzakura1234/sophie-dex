@@ -11,16 +11,13 @@ import { capitalize } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { useMemo } from 'react';
-import PageTitle from '../PageTitle';
+import PageBanner from '../PageBanner';
 
-const PageFooter = dynamic(() => import('../PageFooter'), {
-	loading: () => <section className='relative min-h-[300px] w-full overflow-hidden shadow-inner' />,
-});
 const FilterControl = dynamic(() => import('@root/components/FilterControl'), {
 	loading: () => (
 		<section className='container relative z-40 mx-auto grid gap-3 max-2xl:px-4'>
-			<div className='btn btn-primary btn-sm w-[127px] animate-pulse rounded-full lg:hidden'></div>
-			<nav className='card h-[60px] animate-pulse bg-base-100 shadow-lg shadow-primary'></nav>
+			<div className='btn btn-primary btn-sm w-[127px] animate-pulse rounded-full 2xl:hidden' />
+			<nav className='card h-[60px] animate-pulse bg-base-100 shadow-lg shadow-primary max-2xl:hidden' />
 		</section>
 	),
 });
@@ -62,18 +59,18 @@ export default function ListLayout<TRecord extends CommonRecord>({
 	);
 
 	return (
-		<ScrollWrapper className='h-screen w-screen bg-base-200 !antialiased' enableScrollTop enablePageRefresh>
+		<ScrollWrapper className='h-[100dvh] w-[100dvw] bg-base-200 !antialiased' enableScrollTop enablePageRefresh>
 			<Head>
 				<title>{title}</title>
 				<meta name='og:title' content={title} key='title' />
 				<meta name='description' content={`${title} Record`} key='description' />
 			</Head>
 
-			<PageTitle />
+			<PageBanner bannerType='top' key='bannerTop' />
 
 			<SearchControl />
 
-			<FilterControl key='top' page={page || 1} totalPage={totalPage} totalRecord={totalRecord} />
+			<FilterControl key='topFilter' page={page || 1} totalPage={totalPage} totalRecord={totalRecord} />
 
 			<section
 				className={`container mx-auto mb-auto grid gap-6 max-2xl:px-4 ${
@@ -83,9 +80,15 @@ export default function ListLayout<TRecord extends CommonRecord>({
 				{renderChild}
 			</section>
 
-			<FilterControl key='bottom' page={page || 1} totalPage={totalPage} totalRecord={totalRecord} isBottomFilter />
+			<FilterControl
+				key='bottomFilter'
+				page={page || 1}
+				totalPage={totalPage}
+				totalRecord={totalRecord}
+				isBottomFilter
+			/>
 
-			<PageFooter />
+			<PageBanner bannerType='bottom' key='bannerBottom' />
 
 			<ErrorModal {...errorResult} />
 

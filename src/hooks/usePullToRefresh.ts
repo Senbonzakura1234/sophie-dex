@@ -1,6 +1,5 @@
 import { DEFAULT_MAXIMUM_PULL_LENGTH, DEFAULT_REFRESH_THRESHOLD } from '@root/constants';
-import { atom, useAtom } from 'jotai';
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 type UsePullToRefreshParams = {
 	onRefresh: () => void;
@@ -9,19 +8,15 @@ type UsePullToRefreshParams = {
 	isDisabled?: boolean;
 };
 
-const pullStartPositionAtom = atom(0);
-const pullPositionAtom = atom(0);
-const isRefreshingAtom = atom(false);
-
 export const usePullToRefresh = ({
 	onRefresh,
 	maximumPullLength = DEFAULT_MAXIMUM_PULL_LENGTH,
 	refreshThreshold = DEFAULT_REFRESH_THRESHOLD,
 	isDisabled = false,
 }: UsePullToRefreshParams) => {
-	const [pullStartPosition, setPullStartPosition] = useAtom(pullStartPositionAtom);
-	const [pullPosition, setPullPosition] = useAtom(pullPositionAtom);
-	const [isRefreshing, setIsRefreshing] = useAtom(isRefreshingAtom);
+	const [pullStartPosition, setPullStartPosition] = useState(0);
+	const [pullPosition, setPullPosition] = useState(0);
+	const [isRefreshing, setIsRefreshing] = useState(false);
 
 	const onPullStart = useCallback(
 		({ targetTouches }: TouchEvent) => {
@@ -46,7 +41,7 @@ export const usePullToRefresh = ({
 
 			if (currentPullLength <= maximumPullLength) setPullPosition(() => currentPullLength);
 		},
-		[isDisabled, maximumPullLength, pullStartPosition, setPullPosition],
+		[isDisabled, maximumPullLength, pullStartPosition],
 	);
 
 	const onEndPull = useCallback(() => {
@@ -59,7 +54,7 @@ export const usePullToRefresh = ({
 
 		setIsRefreshing(true);
 		setTimeout(onRefresh, 500);
-	}, [isDisabled, onRefresh, pullPosition, refreshThreshold, setIsRefreshing, setPullPosition, setPullStartPosition]);
+	}, [isDisabled, onRefresh, pullPosition, refreshThreshold]);
 
 	useEffect(() => {
 		if (typeof window === 'undefined' || isDisabled) return;
@@ -73,7 +68,7 @@ export const usePullToRefresh = ({
 			window.removeEventListener('touchmove', onPulling);
 			window.removeEventListener('touchend', onEndPull);
 		};
-	}, [onEndPull, onPulling, onPullStart, isDisabled]);
+	}, [isDisabled, onEndPull, onPullStart, onPulling]);
 
 	useEffect(() => {
 		if (maximumPullLength >= refreshThreshold || process.env.NODE_ENV === 'production' || isDisabled) return;
@@ -81,7 +76,7 @@ export const usePullToRefresh = ({
 			'usePullToRefresh',
 			`'maximumPullLength' (currently ${maximumPullLength})  should be bigger or equal than 'refreshThreshold' (currently ${refreshThreshold})`,
 		);
-	}, [maximumPullLength, refreshThreshold, isDisabled]);
+	}, [isDisabled, maximumPullLength, refreshThreshold]);
 
 	return { isRefreshing, pullPosition };
 };

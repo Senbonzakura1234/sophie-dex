@@ -31,15 +31,15 @@ export default function FilterControl({
 
 	const [isOpen, setIsOpen] = useState(false);
 
-	const isLgScreen = useMediaQuery('(min-width: 1024px)');
+	const is2XLScreen = useMediaQuery('(min-width: 1536px)');
 
 	useEffect(() => {
-		if (isLgScreen) return setIsOpen(true);
-	}, [isLgScreen]);
+		if (is2XLScreen) return setIsOpen(true);
+	}, [is2XLScreen]);
 
 	return (
 		<section className={`container relative z-40 mx-auto grid gap-3 max-2xl:px-4 ${isBottomFilter ? '!z-30' : ''}`}>
-			<div className={`z-10 ${isBottomFilter ? 'hidden' : 'lg:hidden'}`}>
+			<div className={`z-10 ${isBottomFilter ? 'hidden' : '2xl:hidden'}`}>
 				<button onClick={() => setIsOpen(prev => !prev)} className='btn btn-primary btn-sm rounded-full capitalize'>
 					<FilterIcon className='aspect-square h-5' /> More filter
 				</button>

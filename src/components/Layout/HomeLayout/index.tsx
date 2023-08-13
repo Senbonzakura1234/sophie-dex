@@ -1,12 +1,13 @@
 import { PageRefresh } from '@root/components/ui/dynamic';
-import PageTitle from '../PageTitle';
+import PageBanner from '../PageBanner';
 
 export default function HomeLayout() {
 	return (
 		<>
 			<PageRefresh />
-			<div className='h-screen w-screen bg-base-200 !antialiased'>
-				<PageTitle />
+
+			<div className='h-[100dvh] w-[100dvw] bg-base-200 !antialiased'>
+				<PageBanner bannerType='full' />
 			</div>
 		</>
 	);
