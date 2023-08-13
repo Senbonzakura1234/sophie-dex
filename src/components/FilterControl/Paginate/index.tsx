@@ -13,7 +13,7 @@ export default function Paginate({ page, totalPage }: PaginateProps) {
 	const isNextDisable = page >= totalPage;
 
 	return (
-		<div className='flex gap-2'>
+		<div className='flex flex-wrap gap-2'>
 			<QueryLink
 				aria-label='Go To First Page'
 				className='btn btn-circle btn-primary btn-sm my-auto !border-none text-slate-50 !transition-opacity'

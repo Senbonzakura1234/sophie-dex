@@ -1,4 +1,3 @@
-import FilterControl from '@root/components/FilterControl';
 import ScrollWrapper from '@root/components/ScrollWrapper';
 import SearchControl from '@root/components/SearchControl';
 import { Alert } from '@root/components/ui/dynamic';
@@ -16,6 +15,14 @@ import PageTitle from '../PageTitle';
 
 const PageFooter = dynamic(() => import('../PageFooter'), {
 	loading: () => <section className='relative min-h-[300px] w-full overflow-hidden shadow-inner' />,
+});
+const FilterControl = dynamic(() => import('@root/components/FilterControl'), {
+	loading: () => (
+		<section className='container relative z-40 mx-auto grid gap-3 max-2xl:px-4'>
+			<div className='btn btn-primary btn-sm w-[127px] animate-pulse rounded-full lg:hidden'></div>
+			<nav className='card h-[60px] animate-pulse bg-base-100 shadow-lg shadow-primary'></nav>
+		</section>
+	),
 });
 
 type ListLayoutProps<TRecord extends CommonRecord> = ErrorResultProps & {
@@ -66,7 +73,7 @@ export default function ListLayout<TRecord extends CommonRecord>({
 
 			<SearchControl />
 
-			<FilterControl page={page || 1} totalPage={totalPage} totalRecord={totalRecord} />
+			<FilterControl key='top' page={page || 1} totalPage={totalPage} totalRecord={totalRecord} />
 
 			<section
 				className={`container mx-auto mb-auto grid gap-6 max-2xl:px-4 ${
@@ -76,7 +83,7 @@ export default function ListLayout<TRecord extends CommonRecord>({
 				{renderChild}
 			</section>
 
-			<FilterControl page={page || 1} totalPage={totalPage} totalRecord={totalRecord} isBottomFilter />
+			<FilterControl key='bottom' page={page || 1} totalPage={totalPage} totalRecord={totalRecord} isBottomFilter />
 
 			<PageFooter />
 

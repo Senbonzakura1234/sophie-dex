@@ -1,28 +1,19 @@
+import { Transition } from '@headlessui/react';
+import FilterIcon from '@root/assets/icons/outline/FilterIcon';
 import { defaultLimit } from '@root/constants';
+import { useMediaQuery } from '@root/hooks/useMediaQuery';
 import { useModuleId } from '@root/hooks/useModuleId';
 import type { PageControlProps } from '@root/types/common/props';
 import { formatRecordCount, improvedInclude } from '@root/utils/common';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
-const CategoryFilter = dynamic(() => import('./CategoryFilter'), {
-	loading: () => <div className='h-8 w-40 animate-pulse rounded 2xl:h-9' />,
-});
-const ColorFilter = dynamic(() => import('./ColorFilter'), {
-	loading: () => <div className='h-8 w-40 animate-pulse rounded 2xl:h-9' />,
-});
-const Paginate = dynamic(() => import('./Paginate'), {
-	loading: () => <div className='h-8 w-[280px] animate-pulse rounded 2xl:h-9' />,
-});
-const RecipeTypeFilter = dynamic(() => import('./RecipeTypeFilter'), {
-	loading: () => <div className='h-8 w-40 animate-pulse rounded 2xl:h-9' />,
-});
-const RumorTypeFilter = dynamic(() => import('./RumorTypeFilter'), {
-	loading: () => <div className='h-8 w-40 animate-pulse rounded 2xl:h-9' />,
-});
-const SortControl = dynamic(() => import('./SortControl'), {
-	loading: () => <div className='w- my-auto h-6 animate-pulse rounded' />,
-});
+import CategoryFilter from './CategoryFilter';
+import ColorFilter from './ColorFilter';
+import Paginate from './Paginate';
+import RecipeTypeFilter from './RecipeTypeFilter';
+import RumorTypeFilter from './RumorTypeFilter';
+import SortControl from './SortControl';
 
 type FilterControlProps = PageControlProps & { isBottomFilter?: boolean };
 
@@ -38,16 +29,40 @@ export default function FilterControl({
 
 	const moduleId = useModuleId();
 
+	const [isOpen, setIsOpen] = useState(false);
+
+	const isLgScreen = useMediaQuery('(min-width: 1024px)');
+
+	useEffect(() => {
+		if (isLgScreen) return setIsOpen(true);
+	}, [isLgScreen]);
+
 	return (
-		<section className={`container relative z-40 mx-auto max-2xl:px-4 ${isBottomFilter ? '!z-30' : ''}`}>
-			<nav className='card bg-base-100 shadow-lg shadow-primary'>
+		<section className={`container relative z-40 mx-auto grid gap-3 max-2xl:px-4 ${isBottomFilter ? '!z-30' : ''}`}>
+			<div className={`z-10 ${isBottomFilter ? 'hidden' : 'lg:hidden'}`}>
+				<button onClick={() => setIsOpen(prev => !prev)} className='btn btn-primary btn-sm rounded-full capitalize'>
+					<FilterIcon className='aspect-square h-5' /> More filter
+				</button>
+			</div>
+
+			<Transition
+				show={isBottomFilter || isOpen}
+				as='nav'
+				className='card bg-base-100 shadow-lg shadow-primary'
+				enter='transition-[opacity,transform] duration-300 transform'
+				enterFrom='opacity-0 -translate-y-3'
+				enterTo='opacity-100 translate-y-0'
+				leave='transition-[opacity,transform] duration-300 transform'
+				leaveFrom='opacity-100 translate-y-0'
+				leaveTo='opacity-0 -translate-y-3'
+			>
 				<div
 					className={`flex w-full flex-row flex-wrap gap-3 px-5 py-3 ${
 						isBottomFilter ? 'place-content-center' : '2xl:place-content-end'
 					}`}
 				>
 					<h2 className={`hidden w-full font-extrabold ${!isBottomFilter ? 'max-2xl:block' : ''}`}>
-						Filter Control:
+						Filter Control
 					</h2>
 
 					{!isBottomFilter ? (
@@ -88,7 +103,7 @@ export default function FilterControl({
 						</Link>
 					) : null}
 				</div>
-			</nav>
+			</Transition>
 		</section>
 	);
 }
