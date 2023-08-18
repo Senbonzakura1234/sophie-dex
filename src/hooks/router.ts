@@ -19,7 +19,11 @@ export const useSearchQuery: UseSearchQuery = () => {
 
 	delete query['id'];
 
-	return { isReady, moduleId, push, searchQuery: query as Partial<SearchQuery> };
+	const searchQuery = query as Partial<SearchQuery>;
+
+	searchQuery.page = Number(query.page) || null;
+
+	return { isReady, moduleId, push, searchQuery };
 };
 
 type UseUpdateQuery = () => {

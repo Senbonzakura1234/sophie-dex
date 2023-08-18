@@ -34,9 +34,8 @@ export const getSortField = <TSearch extends Readonly<SortByEnum>>(
 
 export const processDBListResult = <TRecord extends CommonRecord>(
 	dbResult: DBListResult<TRecord>,
-	page: number | null,
 ): ListRecord<TRecord> => {
 	const [totalRecord, records] = [dbResult[0]?.totalRecord ?? 0, dbResult.map(({ record }) => record)] as const;
 
-	return { records, page, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
+	return { records, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 };

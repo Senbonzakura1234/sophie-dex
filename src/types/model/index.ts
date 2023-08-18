@@ -66,11 +66,6 @@ export type CommonRecord = { id: string; keyWords: string; name: string };
 
 export type DBListResult<TRecord extends CommonRecord> = { record: TRecord; totalRecord: number }[];
 
-export type ListRecord<TRecord extends CommonRecord> = {
-	page: number | null;
-	records: TRecord[];
-	totalPage: number;
-	totalRecord: number;
-};
+export type ListRecord<TRecord extends CommonRecord> = { records: TRecord[]; totalPage: number; totalRecord: number };
 
 export type ExportDBQueriesMap = Record<ModuleIdEnum, PreparedQuery<PreparedQueryConfig & { execute: unknown[] }>>;

@@ -6,10 +6,7 @@ import { useMemo } from 'react';
 
 type GoToPageSelectProps = { totalPage: number };
 
-const pageDefaultSelect = {
-	value: null,
-	label: 'Page 1',
-};
+const pageDefaultSelect = { value: null, label: '' };
 
 export default function GoToPageSelect({ totalPage }: GoToPageSelectProps) {
 	const pageList: SelectOptionItem<number>[] = useMemo(

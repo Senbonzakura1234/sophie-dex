@@ -23,7 +23,7 @@ export const effectRouter = router({
 		if (!search && !sortBy && !direction)
 			return await getListEffectDefault
 				.execute({ offset: ((page ?? 1) - 1) * defaultLimit })
-				.then(res => processDBListResult(res, page))
+				.then(res => processDBListResult(res))
 				.catch(onQueryDBError);
 
 		return await db
@@ -43,7 +43,7 @@ export const effectRouter = router({
 			.orderBy(getDirection(direction)(effects[getSortField(sortByMap.effect, 'index', sortBy)]))
 			.limit(defaultLimit)
 			.offset(((page ?? 1) - 1) * defaultLimit)
-			.then(res => processDBListResult(res, page))
+			.then(res => processDBListResult(res))
 			.catch(onQueryDBError);
 	}),
 

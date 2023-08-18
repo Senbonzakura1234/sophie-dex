@@ -33,7 +33,7 @@ export const itemRouter = router({
 		if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
 			return await getListItemDefault
 				.execute({ offset: ((page ?? 1) - 1) * defaultLimit })
-				.then(res => processDBListResult(res, page))
+				.then(res => processDBListResult(res))
 				.catch(onQueryDBError);
 
 		return await db
@@ -43,7 +43,7 @@ export const itemRouter = router({
 			.orderBy(getDirection(direction)(items[getSortField(sortByMap.item, 'index', sortBy)]))
 			.limit(defaultLimit)
 			.offset(((page ?? 1) - 1) * defaultLimit)
-			.then(res => processDBListResult(res, page))
+			.then(res => processDBListResult(res))
 			.catch(onQueryDBError);
 	}),
 

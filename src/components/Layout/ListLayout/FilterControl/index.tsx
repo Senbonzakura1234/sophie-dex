@@ -1,12 +1,13 @@
 import { Transition } from '@headlessui/react';
 import FilterIcon from '@root/assets/icons/outline/FilterIcon';
 import { defaultLimit } from '@root/constants';
+import { useSearchQuery } from '@root/hooks/router';
+import { useLocalStorage } from '@root/hooks/useLocalStorage';
 import { useMediaQuery } from '@root/hooks/useMediaQuery';
-import { useModuleId } from '@root/hooks/useModuleId';
 import type { PageControlProps } from '@root/types/common/props';
-import { formatRecordCount, improvedInclude } from '@root/utils/common';
+import { formatRecordCount, improvedInclude, parseQuery } from '@root/utils/common';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import CategoryFilter from './CategoryFilter';
 import ColorFilter from './ColorFilter';
@@ -17,34 +18,31 @@ import SortControl from './SortControl';
 
 type FilterControlProps = PageControlProps & { isBottomFilter?: boolean };
 
-export default function FilterControl({
-	page = 1,
-	totalPage = 0,
-	totalRecord = 0,
-	isBottomFilter,
-}: FilterControlProps) {
+export default function FilterControl({ totalPage = 0, totalRecord = 0, isBottomFilter }: FilterControlProps) {
+	const { moduleId, searchQuery } = useSearchQuery();
+
+	const page = searchQuery.page || 1;
+	const isQueryEmpty = Object.keys(parseQuery(searchQuery)).length === 0;
+
 	const fromFormatted = formatRecordCount((page - 1) * defaultLimit + 1);
 	const toFormatted = formatRecordCount(page * defaultLimit > totalRecord ? totalRecord : page * defaultLimit);
 	const totalRecordFormatted = formatRecordCount(totalRecord);
 
-	const moduleId = useModuleId();
-
-	const [isOpen, setIsOpen] = useState(false);
-
 	const is2XLScreen = useMediaQuery('(min-width: 1536px)');
 
+	const [isOpen, setIsOpen] = useLocalStorage('isFilterControlOpen', !isQueryEmpty || is2XLScreen);
+
 	useEffect(() => {
-		if (is2XLScreen) return setIsOpen(true);
-	}, [is2XLScreen]);
+		if (!isQueryEmpty || is2XLScreen) return setIsOpen(true);
+	}, [is2XLScreen, setIsOpen, isQueryEmpty]);
 
 	return (
-		<section className={`container relative z-40 mx-auto grid gap-3 max-2xl:px-4 ${isBottomFilter ? '!z-30' : ''}`}>
+		<>
 			<div className={`z-10 ${isBottomFilter ? 'hidden' : '2xl:hidden'}`}>
 				<button onClick={() => setIsOpen(prev => !prev)} className='btn btn-primary btn-sm rounded-full capitalize'>
 					<FilterIcon className='aspect-square h-5' /> More filter
 				</button>
 			</div>
-
 			<Transition
 				show={isBottomFilter || isOpen}
 				as='nav'
@@ -104,6 +102,6 @@ export default function FilterControl({
 					) : null}
 				</div>
 			</Transition>
-		</section>
+		</>
 	);
 }

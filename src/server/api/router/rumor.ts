@@ -29,7 +29,7 @@ export const rumorRouter = router({
 		if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
 			return await getListRumorDefault
 				.execute({ offset: ((page ?? 1) - 1) * defaultLimit })
-				.then(res => processDBListResult(res, page))
+				.then(res => processDBListResult(res))
 				.catch(onQueryDBError);
 
 		return await db
@@ -39,7 +39,7 @@ export const rumorRouter = router({
 			.orderBy(getDirection(direction)(rumors[getSortField(sortByMap.rumor, 'price', sortBy)]))
 			.limit(defaultLimit)
 			.offset(((page ?? 1) - 1) * defaultLimit)
-			.then(res => processDBListResult(res, page))
+			.then(res => processDBListResult(res))
 			.catch(onQueryDBError);
 	}),
 

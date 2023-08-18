@@ -36,7 +36,7 @@ export const traitRouter = router({
 		if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
 			return await getListTraitDefault
 				.execute({ offset: ((page ?? 1) - 1) * defaultLimit })
-				.then(res => processDBListResult(res, page))
+				.then(res => processDBListResult(res))
 				.catch(onQueryDBError);
 
 		return await db
@@ -46,7 +46,7 @@ export const traitRouter = router({
 			.orderBy(getDirection(direction)(traits[getSortField(sortByMap.trait, 'index', sortBy)]))
 			.limit(defaultLimit)
 			.offset(((page ?? 1) - 1) * defaultLimit)
-			.then(res => processDBListResult(res, page))
+			.then(res => processDBListResult(res))
 			.catch(onQueryDBError);
 	}),
 

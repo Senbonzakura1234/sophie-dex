@@ -13,13 +13,14 @@ import Head from 'next/head';
 import { useMemo } from 'react';
 import PageBanner from '../PageBanner';
 
-const FilterControl = dynamic(() => import('@root/components/FilterControl'), {
+const FilterControl = dynamic(() => import('./FilterControl'), {
 	loading: () => (
-		<section className='container relative z-40 mx-auto grid gap-3 max-2xl:px-4'>
+		<>
 			<div className='btn btn-primary btn-sm w-[127px] animate-pulse rounded-full 2xl:hidden' />
 			<nav className='card h-[60px] animate-pulse bg-base-100 shadow-lg shadow-primary max-2xl:hidden' />
-		</section>
+		</>
 	),
+	ssr: false,
 });
 
 type ListLayoutProps<TRecord extends CommonRecord> = ErrorResultProps & {
@@ -39,11 +40,7 @@ export default function ListLayout<TRecord extends CommonRecord>({
 		? { data: rawData, isDataReady: true as const }
 		: { data: undefined, isDataReady: false as const };
 
-	const { page, totalPage, totalRecord } = {
-		page: isDataReady ? data.page : 1,
-		totalPage: isDataReady ? data.totalPage : 0,
-		totalRecord: isDataReady ? data.totalRecord : 0,
-	};
+	const { totalPage, totalRecord } = isDataReady ? data : { totalPage: 0, totalRecord: 0 };
 
 	const listData: MaybeListData<TRecord> = useMemo(
 		() =>
@@ -70,7 +67,9 @@ export default function ListLayout<TRecord extends CommonRecord>({
 
 			<SearchControl />
 
-			<FilterControl key='topFilter' page={page || 1} totalPage={totalPage} totalRecord={totalRecord} />
+			<section className='container relative z-40 mx-auto grid gap-3 max-2xl:px-4'>
+				<FilterControl key='topFilter' totalPage={totalPage} totalRecord={totalRecord} />
+			</section>
 
 			<section
 				className={`container mx-auto mb-auto grid gap-6 max-2xl:px-4 ${
@@ -80,13 +79,9 @@ export default function ListLayout<TRecord extends CommonRecord>({
 				{renderChild}
 			</section>
 
-			<FilterControl
-				key='bottomFilter'
-				page={page || 1}
-				totalPage={totalPage}
-				totalRecord={totalRecord}
-				isBottomFilter
-			/>
+			<section className='container relative z-30 mx-auto grid gap-3 max-2xl:px-4'>
+				<FilterControl key='bottomFilter' totalPage={totalPage} totalRecord={totalRecord} isBottomFilter />
+			</section>
 
 			<PageBanner bannerType='bottom' key='bannerBottom' />
 
