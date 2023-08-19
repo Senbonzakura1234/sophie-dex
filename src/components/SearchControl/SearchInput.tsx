@@ -1,15 +1,12 @@
 import MagnifyingGlassIcon from '@root/assets/icons/solid/MagnifyingGlassIcon';
 import XMarkIcon from '@root/assets/icons/solid/XMarkIcon';
-import { useUpdateQuery } from '@root/hooks/router';
+import { useUpdateQuery } from '@root/hooks/useUpdateQuery';
 import { useState } from 'react';
 
 function SearchInput() {
-	const {
-		searchQuery: { search = null },
-		updateQuery,
-	} = useUpdateQuery();
+	const { searchQuery, updateQuery } = useUpdateQuery();
 
-	const [searchValue, setSearchValue] = useState(search);
+	const [searchValue, setSearchValue] = useState(searchQuery.search || null);
 
 	const resetSearch = () => {
 		if (searchValue) updateQuery({ search: null });

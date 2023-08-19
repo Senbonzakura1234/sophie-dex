@@ -1,4 +1,4 @@
-import { useSearchQuery } from '@root/hooks/router';
+import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { parseQuery } from '@root/utils/common';
 import Link from 'next/link';
 import type { ParsedUrlQueryInput } from 'querystring';

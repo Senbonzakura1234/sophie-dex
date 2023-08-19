@@ -1,9 +1,9 @@
 import { Transition } from '@headlessui/react';
 import FilterIcon from '@root/assets/icons/outline/FilterIcon';
 import { defaultLimit } from '@root/constants';
-import { useSearchQuery } from '@root/hooks/router';
 import { useLocalStorage } from '@root/hooks/useLocalStorage';
 import { useMediaQuery } from '@root/hooks/useMediaQuery';
+import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { PageControlProps } from '@root/types/common/props';
 import { formatRecordCount, improvedInclude, parseQuery } from '@root/utils/common';
 import Link from 'next/link';

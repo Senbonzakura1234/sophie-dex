@@ -1,5 +1,5 @@
 import { categoryIconMap } from '@root/constants';
-import { useSearchQuery } from '@root/hooks/router';
+import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { TextShadowMap } from '@root/types/common/tailwind';
 import type { CategoryEnum, ColorEnum } from '@root/types/common/zod';
 import { convertCode } from '@root/utils/common';

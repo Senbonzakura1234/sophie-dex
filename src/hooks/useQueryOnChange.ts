@@ -2,7 +2,7 @@ import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
 import type { SearchQuery } from '@root/types/common/zod';
 import { improvedInclude } from '@root/utils/common';
 import { useCallback, useMemo } from 'react';
-import { useUpdateQuery } from './router';
+import { useUpdateQuery } from './useUpdateQuery';
 
 type SelectQueryKey = 'category' | 'color' | 'rumorType' | 'recipeType' | 'page';
 

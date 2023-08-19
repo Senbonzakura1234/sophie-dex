@@ -1,5 +1,5 @@
 import { sortByMap } from '@root/constants';
-import { useSearchQuery } from '@root/hooks/router';
+import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import SortBtn from './SortBtn';
 
 export default function SortControl() {

@@ -1,5 +1,5 @@
 import { colorFilterTWClassMap } from '@root/constants';
-import { useSearchQuery } from '@root/hooks/router';
+import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { ColorEnum } from '@root/types/common/zod';
 import QueryLink from '../ui/static/QueryLink';
 

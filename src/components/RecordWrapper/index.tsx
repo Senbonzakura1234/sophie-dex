@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 import { useMemo } from 'react';
 
 const RecordHead = dynamic(() => import('./RecordHead'), {
-	loading: () => <div className='h-7 w-40 max-w-full animate-pulse rounded' />,
+	loading: () => <div className='h-7 w-40 max-w-full grow-0 animate-pulse rounded' />,
 });
 
 type RecordWrapperProps<TRecord extends CommonRecord> = ClassNameProps & {

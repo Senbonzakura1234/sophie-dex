@@ -1,7 +1,7 @@
-import { evnIs } from '@root/utils/common';
+import { LogProvider } from '@root/utils/common';
 import { useEffect } from 'react';
 
 export const useDebugger = (...debugValue: unknown[]) =>
 	useEffect(() => {
-		if (!evnIs('production')) return console.log(debugValue);
+		return LogProvider.write({ args: [debugValue], type: 'log' });
 	}, [debugValue]);

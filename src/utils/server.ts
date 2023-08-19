@@ -5,10 +5,10 @@ import { asc, desc, sql } from 'drizzle-orm';
 import { defaultLimit } from '@root/constants';
 import type { DirectionEnum, SortByEnum } from '@root/types/common/zod';
 import type { CommonRecord, DBListResult, ListRecord } from '@root/types/model';
-import { evnIs, improvedInclude } from './common';
+import { LogProvider, improvedInclude } from './common';
 
 export const onQueryDBError = (error: unknown) => {
-	if (evnIs('development')) console.error(error);
+	LogProvider.write({ args: [error], type: 'error' });
 
 	throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Some Thing When Wrong On The Server.' });
 };

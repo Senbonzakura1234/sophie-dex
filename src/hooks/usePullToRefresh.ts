@@ -1,4 +1,5 @@
 import { DEFAULT_MAXIMUM_PULL_LENGTH, DEFAULT_REFRESH_THRESHOLD } from '@root/constants';
+import { LogProvider } from '@root/utils/common';
 import { useCallback, useEffect, useState } from 'react';
 
 type UsePullToRefreshParams = {
@@ -71,11 +72,14 @@ export const usePullToRefresh = ({
 	}, [isDisabled, onEndPull, onPullStart, onPulling]);
 
 	useEffect(() => {
-		if (maximumPullLength >= refreshThreshold || process.env.NODE_ENV === 'production' || isDisabled) return;
-		console.error(
-			'usePullToRefresh',
-			`'maximumPullLength' (currently ${maximumPullLength})  should be bigger or equal than 'refreshThreshold' (currently ${refreshThreshold})`,
-		);
+		if (maximumPullLength < refreshThreshold && !isDisabled)
+			return LogProvider.write({
+				args: [
+					'usePullToRefresh',
+					`'maximumPullLength' (currently ${maximumPullLength})  should be bigger or equal than 'refreshThreshold' (currently ${refreshThreshold})`,
+				],
+				type: 'error',
+			});
 	}, [isDisabled, maximumPullLength, refreshThreshold]);
 
 	return { isRefreshing, pullPosition };

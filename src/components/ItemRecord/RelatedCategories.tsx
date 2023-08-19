@@ -1,4 +1,4 @@
-import { useSearchQuery } from '@root/hooks/router';
+import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { RelatedCategoryEnum } from '@root/types/common/zod';
 import { convertCode } from '@root/utils/common';
 import QueryLink from '../ui/static/QueryLink';

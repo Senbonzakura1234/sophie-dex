@@ -1,5 +1,5 @@
 import { colorFilterTWClassMap, recipeTypeColorMap } from '@root/constants';
-import { useSearchQuery } from '@root/hooks/router';
+import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { RecipeTypeEnum } from '@root/types/common/zod';
 import { convertCode } from '@root/utils/common';
 import QueryLink from '../ui/static/QueryLink';

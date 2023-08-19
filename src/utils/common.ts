@@ -7,6 +7,19 @@ import { env } from './env.mjs';
 
 export const evnIs = (nodeEnv: NodeEnv) => env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
 
+type LogProviderWriteParams = {
+	args: unknown[];
+	type: 'log' | 'warn' | 'error';
+};
+
+class LogProviderClass {
+	write({ args, type }: LogProviderWriteParams) {
+		if (!evnIs('production')) return console[type](...args);
+	}
+}
+
+export const LogProvider = new LogProviderClass();
+
 export const nullableHandle = <TData = unknown>({ data, isDataReady }: MaybeData<TData>) =>
 	isDataReady ? { data, isDataReady: true as const } : { data: undefined, isDataReady: false as const };
 
@@ -14,7 +27,17 @@ export const tryCatchHandler = async <TReturn = unknown>(promise: Promise<TRetur
 	try {
 		return { data: await promise, isSuccess: true as const, error: null };
 	} catch (error) {
-		if (evnIs('development')) console.error(error);
+		LogProvider.write({ args: [error], type: 'error' });
+
+		return { data: null, isSuccess: false as const, error };
+	}
+};
+
+export const tryCatchHandlerSync = <TReturn = unknown>(callback: () => TReturn) => {
+	try {
+		return { data: callback(), isSuccess: true as const, error: null };
+	} catch (error) {
+		LogProvider.write({ args: [error], type: 'error' });
 
 		return { data: null, isSuccess: false as const, error };
 	}
@@ -57,3 +80,27 @@ export const parseQuery = (query: Partial<SearchQuery>) => {
 };
 
 export const convertUrlObject = (url: UrlObject) => `${getBaseUrl(true)}${resolveHref(Router, url, true)[1]}`;
+
+type OnCopyToClipboardParams = {
+	input: string;
+	onSuccess: () => void;
+	onFailure: (message: string, error?: unknown) => void;
+};
+
+export const onCopyToClipboard = async ({ input, onFailure, onSuccess }: OnCopyToClipboardParams) => {
+	if (!navigator?.clipboard) return onFailure('Clipboard not supported');
+
+	const { error, isSuccess } = await tryCatchHandler(navigator.clipboard.writeText(input));
+
+	return isSuccess ? onSuccess() : onFailure('Copy to clipboard failed', error);
+};
+
+export const improvedParseJSON = <T>(value: string | null): T | undefined => {
+	const { data, isSuccess, error } = tryCatchHandlerSync(() =>
+		value === 'undefined' ? undefined : (JSON.parse(value ?? '') as T),
+	);
+
+	if (isSuccess) return data;
+
+	LogProvider.write({ args: [`parsing error on ${value}`, error], type: 'error' });
+};
