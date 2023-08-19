@@ -23,7 +23,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 							href={firstRecordUrlObj}
 							role='navigation'
 						>
-							{firstTrait.name}
+							<span className='max-sm:max-w-[4rem] max-sm:truncate'>{firstTrait.name}</span>
 						</Link>
 
 						<button aria-label='Merge with' className='btn btn-accent join-item no-animation btn-xs'>
@@ -36,7 +36,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 							href={lastRecordUrlObj}
 							role='navigation'
 						>
-							{lastTrait.name}
+							<span className='max-sm:max-w-[4rem] max-sm:truncate'>{lastTrait.name}</span>
 						</Link>
 						<CopyUrlButton className='join-item' url={lastRecordUrlObj} />
 					</div>

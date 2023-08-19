@@ -43,7 +43,7 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 			<PageBanner bannerType='top' key='bannerTop' />
 
 			<section
-				className={`container m-auto grid gap-6 max-2xl:px-4 ${
+				className={`container m-auto grid grid-cols-1 gap-6 max-2xl:px-4 ${
 					moduleId === 'item' ? 'lg:max-w-[900px]' : 'lg:max-w-[700px]'
 				}`}
 			>

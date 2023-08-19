@@ -72,7 +72,7 @@ export default function ListLayout<TRecord extends CommonRecord>({
 			</section>
 
 			<section
-				className={`container mx-auto mb-auto grid gap-6 max-2xl:px-4 ${
+				className={`container mx-auto mb-auto grid grid-cols-1 gap-6 max-2xl:px-4 ${
 					moduleId !== 'item' ? 'lg:grid-cols-2' : 'xl:grid-cols-2'
 				}`}
 			>
