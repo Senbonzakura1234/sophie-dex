@@ -9,3 +9,5 @@ export type SelectOptionItem<V> = { value: V | null; label?: string; icon?: Reac
 export type SetSelectOptionItem<V> = Dispatch<SetStateAction<SelectOptionItem<V>>>;
 
 export type LooseAutocomplete<TSuggest extends string, TString extends string> = TSuggest | Omit<TString, TSuggest>;
+
+export type AlertTypeEnum = 'ERROR' | 'INFO' | 'SUCCESS' | 'WARN';

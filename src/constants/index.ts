@@ -1,3 +1,4 @@
+import type { AlertTypeEnum } from '@root/types/common';
 import type { AtelierIcon } from '@root/types/common/icon';
 import type {
 	CategoryEnum,
@@ -21,13 +22,20 @@ export const defaultListData = createArray(defaultLimit, { data: undefined, isDa
 export const DEFAULT_MAXIMUM_PULL_LENGTH = 240;
 export const DEFAULT_REFRESH_THRESHOLD = 180;
 
-export const colorFilterTWClassMap = {
+export const colorTWClassMap = {
 	BLUE: 'text-blue-500',
 	GREEN: 'text-green-500',
 	RED: 'text-red-500',
 	WHITE: 'text-slate-500',
 	YELLOW: 'text-yellow-500',
 } as const satisfies Record<ColorEnum, string>;
+
+export const alertTypeColorMap = {
+	ERROR: 'RED',
+	INFO: 'BLUE',
+	SUCCESS: 'GREEN',
+	WARN: 'YELLOW',
+} as const satisfies Record<AlertTypeEnum, ColorEnum>;
 
 export const recipeTypeColorMap = {
 	BEGINNER_RECIPES: 'RED',
@@ -38,8 +46,8 @@ export const recipeTypeColorMap = {
 } as const satisfies Record<RecipeTypeEnum, ColorEnum>;
 
 export const rumorTypeColorMap = {
-	MONSTER: colorFilterTWClassMap['RED'],
-	MATERIAL: colorFilterTWClassMap['GREEN'],
+	MONSTER: colorTWClassMap['RED'],
+	MATERIAL: colorTWClassMap['GREEN'],
 } as const satisfies Record<RumorTypeEnum, string>;
 
 export const rumorColorMap = {

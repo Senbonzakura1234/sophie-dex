@@ -20,8 +20,8 @@ export default function CopyUrlButton({ className, label = 'Copy URL', url }: Co
 			onClick={() =>
 				onCopyToClipboard({
 					input: convertUrlObject(url),
-					onFailure: message => pushAlert({ isOpen: true, message }),
-					onSuccess: () => pushAlert({ isOpen: true, message: 'Url copied to clipboard' }),
+					onFailure: message => pushAlert({ isOpen: true, message, type: 'ERROR' }),
+					onSuccess: () => pushAlert({ isOpen: true, message: 'Url copied to clipboard', type: 'SUCCESS' }),
 				})
 			}
 			role='button'

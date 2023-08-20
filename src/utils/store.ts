@@ -1,7 +1,8 @@
+import type { AlertTypeEnum } from '@root/types/common';
 import type { ModuleIdEnum } from '@root/types/common/zod';
 import { atom, createStore } from 'jotai';
 
-type AlertAtom = { isOpen: boolean; message: string };
+type AlertAtom = { isOpen: boolean; message: string; type?: AlertTypeEnum };
 
 export const globalStore = createStore();
 

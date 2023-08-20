@@ -1,4 +1,4 @@
-import { colorFilterTWClassMap, recipeTypeColorMap } from '@root/constants';
+import { colorTWClassMap, recipeTypeColorMap } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { RecipeTypeEnum } from '@root/types/common/zod';
 import { convertCode } from '@root/utils/common';
@@ -17,9 +17,9 @@ export default function RecipeType({ recipeType }: RecipeTypeProps) {
 
 			<QueryLink
 				aria-label={`Filter ${recipeType} Item`}
-				className={`btn btn-xs !border-current !bg-current ${
-					colorFilterTWClassMap[recipeTypeColorMap[recipeType]]
-				} ${isActive ? '' : 'opacity-80 hover:opacity-100'}`}
+				className={`btn btn-xs !border-current !bg-current ${colorTWClassMap[recipeTypeColorMap[recipeType]]} ${
+					isActive ? '' : 'opacity-80 hover:opacity-100'
+				}`}
 				href={{ query: { recipeType } }}
 				isActive={isActive}
 				resetPage

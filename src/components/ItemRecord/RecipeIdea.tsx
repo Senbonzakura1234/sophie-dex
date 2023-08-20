@@ -9,8 +9,8 @@ type RecipeIdeaProps = {
 
 export default function RecipeIdea({ recipeIdea: { contentText, contentData }, className }: RecipeIdeaProps) {
 	return (
-		<div className={className}>
-			<span className='font-bold'>RecipeIdea:&nbsp;&nbsp;</span>
+		<div className={`max-w-[90%] ${className}`}>
+			<span className='font-bold'>Recipe Idea:&nbsp;&nbsp;</span>
 
 			<span className='text-lg'>
 				{contentText.map((text, key) => {

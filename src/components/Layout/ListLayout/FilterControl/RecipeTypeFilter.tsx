@@ -1,5 +1,5 @@
 import SelectOption from '@root/components/ui/static/SelectOption';
-import { colorFilterTWClassMap, recipeTypeColorMap } from '@root/constants';
+import { colorTWClassMap, recipeTypeColorMap } from '@root/constants';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
 import type { RecipeTypeEnum } from '@root/types/common/zod';
@@ -18,7 +18,7 @@ const recipeTypeSelectList: SelectOptionItem<RecipeTypeEnum>[] = [
 			<span
 				aria-hidden
 				className={`aspect-square h-4 rounded-full border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5 ${
-					colorFilterTWClassMap[recipeTypeColorMap[recipeType]]
+					colorTWClassMap[recipeTypeColorMap[recipeType]]
 				}`}
 				key={recipeType}
 			/>

@@ -1,4 +1,4 @@
-import { colorFilterTWClassMap } from '@root/constants';
+import { colorTWClassMap } from '@root/constants';
 import type { MaybeData, RenderFunction } from '@root/types/common';
 import type { ClassNameProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
@@ -31,21 +31,21 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 			<div
 				className={`absolute inset-y-0 left-0 w-1/3 rounded-2xl shadow-lg ${
 					!!firstColor
-						? `bg-current shadow-base-content ${colorFilterTWClassMap[firstColor]}`
+						? `bg-current shadow-base-content ${colorTWClassMap[firstColor]}`
 						: 'bg-gradient-to-r from-accent to-primary shadow-primary'
 				}`}
-			></div>
+			/>
 
 			<div
 				className={`absolute inset-y-0 right-0 w-1/3 rounded-2xl shadow-lg ${
 					!!lastColor
-						? `bg-current shadow-base-content ${colorFilterTWClassMap[lastColor]}`
+						? `bg-current shadow-base-content ${colorTWClassMap[lastColor]}`
 						: 'bg-gradient-to-l from-accent to-primary shadow-primary'
 				}`}
-			></div>
+			/>
 
 			<div
-				className={`card-body z-10 flex flex-col gap-3 rounded-xl bg-base-100 p-[1.625rem] text-base-content shadow-inner shadow-base-content ${
+				className={`card-body z-10 gap-3 rounded-xl bg-base-100 p-[1.625rem] text-base-content shadow-inner shadow-base-content ${
 					!isDataReady ? 'min-h-[270px]' : ''
 				}`}
 			>

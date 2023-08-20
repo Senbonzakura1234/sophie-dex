@@ -1,4 +1,4 @@
-import { colorFilterTWClassMap } from '@root/constants';
+import { colorTWClassMap } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { ColorEnum } from '@root/types/common/zod';
 import QueryLink from '../ui/static/QueryLink';
@@ -17,7 +17,7 @@ export default function Color({ color }: ColorProps) {
 			<QueryLink
 				aria-label={`Filter ${color} Item`}
 				className={`btn btn-xs !border-current !bg-current ${isActive ? '' : 'opacity-80 hover:opacity-100'} ${
-					colorFilterTWClassMap[color]
+					colorTWClassMap[color]
 				}`}
 				href={{ query: { color, id: null } }}
 				isActive={isActive}

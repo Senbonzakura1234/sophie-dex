@@ -1,10 +1,26 @@
-import InfoIcon from '@root/assets/icons/outline/InfoIcon';
+import CheckCircleIcon from '@root/assets/icons/solid/CheckCircleIcon';
+import ExclamationCircle from '@root/assets/icons/solid/ExclamationCircle';
+import ExclamationTriangle from '@root/assets/icons/solid/ExclamationTriangle';
+import InfoIcon from '@root/assets/icons/solid/InfoIcon';
+import { alertTypeColorMap, colorTWClassMap } from '@root/constants';
+import type { AlertTypeEnum } from '@root/types/common';
+import type { IconProps } from '@root/types/common/props';
 import { alertAtom } from '@root/utils/store';
 import { useAtom } from 'jotai';
+import type { FC } from 'react';
 import { useEffect } from 'react';
 
+const alertIconMap = {
+	ERROR: ExclamationCircle,
+	INFO: InfoIcon,
+	SUCCESS: CheckCircleIcon,
+	WARN: ExclamationTriangle,
+} satisfies Record<AlertTypeEnum, FC<IconProps>>;
+
 export default function Alert() {
-	const [{ isOpen, message }, setAlert] = useAtom(alertAtom);
+	const [{ isOpen, message, type = 'INFO' satisfies AlertTypeEnum }, setAlert] = useAtom(alertAtom);
+
+	const Icon = alertIconMap[type];
 
 	useEffect(() => {
 		if (!isOpen) return;
@@ -19,14 +35,18 @@ export default function Alert() {
 	return (
 		<div
 			className={`toast toast-start toast-bottom z-50 transition-[transform,opacity] ease-in-out ${
-				isOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
+				isOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
 			}`}
 		>
 			<div className='rounded-2xl bg-gradient-to-r from-accent to-primary p-1 shadow-lg shadow-primary'>
-				<div className='alert flex items-center gap-3 border-none bg-base-100 py-3 font-bold shadow-inner shadow-base-content'>
-					<InfoIcon className='aspect-square h-5' />
+				<div
+					className={`alert flex gap-2 border-none bg-base-100 py-3 font-bold shadow-inner shadow-base-content ${
+						colorTWClassMap[alertTypeColorMap[type]]
+					}`}
+				>
+					<Icon className='aspect-square h-6' />
 
-					<p className='my-auto h-6 min-w-[12rem] text-left'>{message}</p>
+					<span className='min-w-[12rem] self-end text-left leading-[22px] text-base-content'>{message}</span>
 				</div>
 			</div>
 		</div>

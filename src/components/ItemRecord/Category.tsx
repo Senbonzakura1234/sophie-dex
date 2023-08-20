@@ -26,7 +26,7 @@ export default function Category({ category, color }: CategoryProps) {
 				<div className='font-bold !shadow-none'>Category: </div>
 				<QueryLink
 					aria-label={`Filter ${convertCode(category)} Item`}
-					className={`btn btn-accent btn-xs gap-1 font-extrabold capitalize ${
+					className={`btn btn-primary btn-xs gap-1 font-extrabold capitalize ${
 						isActive ? '!border-slate-300 !bg-slate-300 !text-slate-900' : ''
 					}`}
 					isActive={isActive}
