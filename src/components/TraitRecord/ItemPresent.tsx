@@ -13,7 +13,7 @@ export default function ItemPresent({ itemPresent: { table: moduleId, id, name }
 			<div className='font-bold capitalize'>{moduleId}: </div>
 
 			<Link aria-label={name} className='link-hover link' href={recordUrlObj} role='navigation'>
-				<span className='flex gap-1 font-roboto font-bold'>
+				<span className='flex gap-1 font-bold'>
 					<DocumentChartBarIcon className='my-auto aspect-square h-4' />
 					{name}
 				</span>

@@ -1,5 +1,5 @@
 import SelectOption from '@root/components/ui/static/SelectOption';
-import { rumorTypeIconMap } from '@root/constants';
+import { rumorTypeColorMap, rumorTypeIconMap } from '@root/constants';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
 import type { RumorTypeEnum } from '@root/types/common/zod';
@@ -10,14 +10,14 @@ const rumorTypeDefaultSelect = {
 	label: 'Rumor type',
 } as const;
 
-const rumorTypeSelectList: SelectOptionItem<RumorTypeEnum>[] = [
+const rumorTypeSelectList: Array<SelectOptionItem<RumorTypeEnum>> = [
 	rumorTypeDefaultSelect,
 	...rumorTypeList.map(rumorType => ({
 		value: rumorType,
 		icon: (
 			<span
 				aria-hidden
-				className={`aspect-square h-4 font-atelier xl:h-5 ${rumorTypeIconMap[rumorType]}`}
+				className={`aspect-square h-4 font-atelier xl:h-5 ${rumorTypeIconMap[rumorType]} ${rumorTypeColorMap[rumorType]}`}
 				key={rumorType}
 			/>
 		),

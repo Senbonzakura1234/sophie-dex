@@ -10,14 +10,14 @@ const recipeTypeDefaultSelect = {
 	label: 'Recipe type',
 } as const;
 
-const recipeTypeSelectList: SelectOptionItem<RecipeTypeEnum>[] = [
+const recipeTypeSelectList: Array<SelectOptionItem<RecipeTypeEnum>> = [
 	recipeTypeDefaultSelect,
 	...recipeTypeList.map(recipeType => ({
 		value: recipeType,
 		icon: (
 			<span
 				aria-hidden
-				className={`aspect-square h-4 rounded-full border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5 ${
+				className={`card aspect-square h-4 border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5 ${
 					colorTWClassMap[recipeTypeColorMap[recipeType]]
 				}`}
 				key={recipeType}

@@ -50,7 +50,7 @@ export default function DetailLayout<TRecord extends CommonRecord>({
 				{renderChild}
 			</section>
 
-			<PageBanner bannerType='bottom' key='bannerBottom' isDetailPage />
+			<PageBanner bannerType='bottom' key='bannerBottom' />
 
 			<ErrorModal {...errorResult} />
 

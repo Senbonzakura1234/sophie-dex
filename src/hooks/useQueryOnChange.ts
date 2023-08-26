@@ -8,7 +8,7 @@ type SelectQueryKey = 'category' | 'color' | 'rumorType' | 'recipeType' | 'page'
 
 export function useQueryOnChange<V extends SearchQuery[SelectQueryKey]>(
 	key: SelectQueryKey,
-	list: SelectOptionItem<V>[],
+	list: Array<SelectOptionItem<V>>,
 	defaultValue: SelectOptionItem<V>,
 ): Readonly<[SelectOptionItem<V>, SetSelectOptionItem<V>]> {
 	const { searchQuery, updateQuery, moduleId } = useUpdateQuery();

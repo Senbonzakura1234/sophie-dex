@@ -39,7 +39,7 @@ export default function FilterControl({ totalPage = 0, totalRecord = 0, isBottom
 	return (
 		<>
 			<div className={`z-10 ${isBottomFilter ? 'hidden' : '2xl:hidden'}`}>
-				<button onClick={() => setIsOpen(prev => !prev)} className='btn btn-primary btn-sm rounded-full capitalize'>
+				<button onClick={() => setIsOpen(prev => !prev)} className='btn btn-primary btn-sm capitalize'>
 					<FilterIcon className='aspect-square h-5' /> More filter
 				</button>
 			</div>
@@ -82,7 +82,7 @@ export default function FilterControl({ totalPage = 0, totalRecord = 0, isBottom
 								</div>
 							) : null}
 
-							<div className='my-auto min-w-[145px] gap-1 text-xs font-semibold text-neutral'>
+							<div className='my-auto min-w-[145px] gap-1 text-xs font-semibold text-base-content/70'>
 								{fromFormatted} - {toFormatted} of {totalRecordFormatted} {moduleId?.toLocaleLowerCase()}s
 							</div>
 						</>

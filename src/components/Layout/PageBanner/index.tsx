@@ -17,19 +17,19 @@ const PageTitle = dynamic(() => import('./PageTitle'), {
 	loading: () => <div className='h-12 xl:h-[3.75rem] 2xl:h-[4.5rem]' />,
 });
 
-type PageTitleProps = {
-	bannerType: 'full' | 'top' | 'bottom';
-	isDetailPage?: boolean;
-};
+const ThemeSwitcher = dynamic(() => import('./ThemeSwitcher'), { ssr: false });
 
-export default function PageBanner({ bannerType, isDetailPage }: PageTitleProps) {
+type PageTitleProps = { bannerType: 'full' | 'top' | 'bottom' };
+
+export default function PageBanner({ bannerType }: PageTitleProps) {
 	return (
 		<section
-			className={`relative w-full select-none overflow-hidden shadow-inner ${
+			className={`relative w-full select-none overflow-hidden ${bannerType === 'top' ? '' : 'shadow-inner'} ${
 				bannerType === 'full' ? 'h-full' : 'min-h-[18rem]'
 			}`}
 		>
-			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-4 px-4 pt-5 xl:gap-9 2xl:gap-6'>
+			{bannerType !== 'bottom' ? <ThemeSwitcher /> : null}
+			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-4 px-4 pt-5 xl:gap-5 2xl:gap-6'>
 				<div className='w-full text-center'>
 					{bannerType === 'full' ? (
 						<Image
@@ -45,18 +45,18 @@ export default function PageBanner({ bannerType, isDetailPage }: PageTitleProps)
 					{bannerType === 'top' ? <PageTitle /> : null}
 				</div>
 
-				{!isDetailPage || bannerType === 'top' ? <Breadcrumb /> : null}
+				<Breadcrumb />
 
 				{bannerType === 'top' ? null : <AppInformation />}
 			</div>
 
-			<div
-				className={`absolute inset-0 ${
-					bannerType === 'top'
-						? 'z-10 bg-gradient-to-br from-primary/20 to-slate-700/20 shadow-2xl'
-						: 'background-lips text-base-300 [background-color:current-color] [background-size:4rem]'
-				}`}
-			/>
+			{bannerType === 'top' ? (
+				<div className='absolute inset-0 z-10 bg-gradient-to-b from-primary/10 via-primary/30 to-base-200' />
+			) : null}
+
+			{bannerType === 'bottom' ? (
+				<div className='absolute inset-0 z-10 bg-gradient-to-t from-base-200/10 via-base-200/30 to-base-200' />
+			) : null}
 
 			{bannerType === 'top' ? (
 				<Image
@@ -69,7 +69,9 @@ export default function PageBanner({ bannerType, isDetailPage }: PageTitleProps)
 					sizes='(max-width: 640px) 80vh, (max-width: 1024px) 60vw, 50vw'
 					src={topBg}
 				/>
-			) : null}
+			) : (
+				<div className='background-lips absolute inset-0 text-base-200 [background-color:currentColor] [background-size:4rem]' />
+			)}
 		</section>
 	);
 }

@@ -17,16 +17,7 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, SetValue<T
 	const readValue = useCallback((): T => {
 		if (typeof window === 'undefined') return initialValue;
 
-		const { data, error, isSuccess } = tryCatchHandlerSync(() => {
-			const item = window.localStorage.getItem(key);
-			return item ? (improvedParseJSON(item) as T) : initialValue;
-		});
-
-		if (isSuccess) return data;
-
-		LogProvider.write({ args: [`Error reading localStorage key “${key}”:`, error], type: 'error' });
-
-		return initialValue;
+		return improvedParseJSON<T>(window.localStorage.getItem(key)) || initialValue;
 	}, [initialValue, key]);
 
 	const [storedValue, setStoredValue] = useState<T>(readValue);

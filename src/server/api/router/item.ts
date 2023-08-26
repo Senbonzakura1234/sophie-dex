@@ -22,9 +22,9 @@ export const itemRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Item>> => {
 		const { search, sortBy, direction, color, relatedCategory, page, category, recipeType } = input;
 
-		const OR: SQL[] = search ? [ilike(items.name, `%${search}%`), ilike(items.keyWords, `%${search}%`)] : [];
+		const OR: Array<SQL> = search ? [ilike(items.name, `%${search}%`), ilike(items.keyWords, `%${search}%`)] : [];
 
-		const AND: SQL[] = [];
+		const AND: Array<SQL> = [];
 		if (relatedCategory) AND.push(ANYQuery(items.relatedCategories.name, relatedCategory));
 		if (color) AND.push(eq(items.color, color));
 		if (recipeType) AND.push(eq(items.recipeType, recipeType));

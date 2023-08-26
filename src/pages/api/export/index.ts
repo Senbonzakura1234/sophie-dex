@@ -1,5 +1,5 @@
 import { exportDBQueriesMap } from '@root/server/db';
-import { evnIs } from '@root/utils/common';
+import { LogProvider, evnIs, tryCatchHandler } from '@root/utils/common';
 import { writeFile } from 'fs/promises';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -9,9 +9,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 	if (req.method === 'GET') {
 		await Promise.all(
 			Object.entries(exportDBQueriesMap).map(async ([table, query]) => {
-				const result = await query.execute();
+				const exportResult = await tryCatchHandler(query.execute());
 
-				await writeFile(`backup/${table}.json`, JSON.stringify(result, null, 2));
+				if (!exportResult.isSuccess)
+					return LogProvider.write({
+						args: [`Error exporting data from table ${table}`, exportResult.error],
+						type: 'error',
+					});
+
+				const writeFileResult = await tryCatchHandler(
+					writeFile(`backup/${table}.json`, JSON.stringify(exportResult.data, null, 2)),
+				);
+
+				if (!writeFileResult.isSuccess)
+					return LogProvider.write({
+						args: [`Error writing data from table ${table}`, writeFileResult.error],
+						type: 'error',
+					});
 			}),
 		);
 

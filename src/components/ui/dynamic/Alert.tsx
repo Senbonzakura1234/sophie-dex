@@ -38,9 +38,9 @@ export default function Alert() {
 				isOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
 			}`}
 		>
-			<div className='rounded-2xl bg-gradient-to-r from-accent to-primary p-1 shadow-lg shadow-primary'>
+			<div className='card bg-gradient-to-r from-accent to-primary p-1 shadow-lg shadow-primary'>
 				<div
-					className={`alert flex gap-2 border-none bg-base-100 py-3 font-bold shadow-inner shadow-base-content ${
+					className={`flex gap-2 rounded-[inherit] border-none bg-base-100 px-4 py-3 font-bold shadow-inner shadow-base-content ${
 						colorTWClassMap[alertTypeColorMap[type]]
 					}`}
 				>

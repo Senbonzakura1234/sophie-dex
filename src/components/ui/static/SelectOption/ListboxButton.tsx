@@ -2,15 +2,20 @@ import { Listbox } from '@headlessui/react';
 import ChevronUpDownIcon from '@root/assets/icons/solid/ChevronUpDownIcon';
 import type { SelectOptionItem } from '@root/types/common';
 import { convertCode } from '@root/utils/common';
+import type { ReactNode } from 'react';
 
 type ListboxButtonProps<V extends string | number> = {
 	isDisabled: boolean;
+	isHideLabel?: boolean;
+	customLabel?: ReactNode;
 	value: SelectOptionItem<V>;
 };
 
 export default function ListboxButton<V extends string | number>({
 	isDisabled,
 	value: { icon, label, value },
+	isHideLabel,
+	customLabel,
 }: ListboxButtonProps<V>) {
 	return (
 		<Listbox.Button
@@ -21,7 +26,7 @@ export default function ListboxButton<V extends string | number>({
 			<span className='flex items-center gap-2 truncate font-bold'>
 				{icon || <ChevronUpDownIcon className='my-auto aspect-square h-4 xl:h-5' aria-hidden />}
 
-				<span className='capitalize'>{convertCode(label ?? value)}</span>
+				{!isHideLabel ? <span className='capitalize'>{customLabel || convertCode(label ?? value)}</span> : null}
 			</span>
 		</Listbox.Button>
 	);

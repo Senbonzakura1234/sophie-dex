@@ -16,7 +16,7 @@ import PageBanner from '../PageBanner';
 const FilterControl = dynamic(() => import('./FilterControl'), {
 	loading: () => (
 		<>
-			<div className='btn btn-primary btn-sm w-[127px] animate-pulse rounded-full 2xl:hidden' />
+			<div className='btn btn-primary btn-sm w-[127px] animate-pulse 2xl:hidden' />
 			<nav className='card h-[60px] animate-pulse bg-base-100 shadow-lg shadow-primary max-2xl:hidden' />
 		</>
 	),

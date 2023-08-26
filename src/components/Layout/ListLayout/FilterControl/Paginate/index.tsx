@@ -16,7 +16,7 @@ export default function Paginate({ page, totalPage }: PaginateProps) {
 		<div className='flex flex-wrap gap-2'>
 			<QueryLink
 				aria-label='Go To First Page'
-				className='btn btn-circle btn-primary btn-sm my-auto !border-none text-slate-50 !transition-opacity'
+				className='btn btn-circle btn-primary btn-sm my-auto !border-none !transition-opacity'
 				disabled={isPreviousDisable}
 				href={{ query: {} }}
 				isActive={isPreviousDisable}
@@ -27,7 +27,7 @@ export default function Paginate({ page, totalPage }: PaginateProps) {
 
 			<QueryLink
 				aria-label='Go To Previous Page'
-				className='btn btn-circle btn-primary btn-sm my-auto !border-none text-slate-50 !transition-opacity'
+				className='btn btn-circle btn-primary btn-sm my-auto !border-none !transition-opacity'
 				disabled={isPreviousDisable}
 				href={{ query: { page: page - 1 } }}
 				isActive={isPreviousDisable}
@@ -39,7 +39,7 @@ export default function Paginate({ page, totalPage }: PaginateProps) {
 
 			<QueryLink
 				aria-label='Go To Next Page'
-				className='btn btn-circle btn-primary btn-sm my-auto !border-none text-slate-50 !transition-opacity'
+				className='btn btn-circle btn-primary btn-sm my-auto !border-none !transition-opacity'
 				disabled={isNextDisable}
 				href={{ query: { page: page + 1 } }}
 				isActive={isNextDisable}
@@ -49,7 +49,7 @@ export default function Paginate({ page, totalPage }: PaginateProps) {
 
 			<QueryLink
 				aria-label='Go To Next Page'
-				className='btn btn-circle btn-primary btn-sm my-auto border-none text-slate-50 !transition-opacity'
+				className='btn btn-circle btn-primary btn-sm my-auto border-none !transition-opacity'
 				disabled={isNextDisable}
 				href={{ query: { page: totalPage } }}
 				isActive={isNextDisable}

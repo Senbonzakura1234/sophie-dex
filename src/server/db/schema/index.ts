@@ -8,8 +8,8 @@ export type HyperLinkRecord = { id: string; name: string; table: ModuleIdEnum };
 export type HyperLinkSearch = { searchQuery: SearchQuery; table: ModuleIdEnum };
 
 export type ItemDescription = {
-	hunt: string[];
-	location: string[];
+	hunt: Array<string>;
+	location: Array<string>;
 	rumor: HyperLinkRecord | null;
 	special: string | null;
 	shop: string | null;
@@ -18,8 +18,8 @@ export type ItemDescription = {
 export type RelatedCategory = { count: number; name: RelatedCategoryEnum };
 
 export type HyperLinkMap = {
-	contentData: (HighlightText | HyperLinkRecord | HyperLinkSearch)[];
-	contentText: string[];
+	contentData: Array<HighlightText | HyperLinkRecord | HyperLinkSearch>;
+	contentText: Array<string>;
 };
 
 export const effects = pgTable('effects', {
@@ -67,7 +67,7 @@ export const traits = pgTable('traits', {
 	description: varchar('description', { length: 256 }).notNull(),
 	index: smallint('index').notNull(),
 	itemPresent: jsonb('item_present').$type<HyperLinkRecord>(),
-	mergeFrom: jsonb('merge_from').$type<[HyperLinkRecord, HyperLinkRecord][]>().notNull(),
+	mergeFrom: jsonb('merge_from').$type<Array<[HyperLinkRecord, HyperLinkRecord]>>().notNull(),
 });
 
 export type Effect = InferModel<typeof effects>;

@@ -3,7 +3,7 @@ import { CopyUrlButton } from '@root/components/ui/dynamic';
 import type { HyperLinkRecord } from '@root/server/db/schema';
 import Link from 'next/link';
 
-type TraitMergeListProps = { mergeFrom: [HyperLinkRecord, HyperLinkRecord][] };
+type TraitMergeListProps = { mergeFrom: Array<[HyperLinkRecord, HyperLinkRecord]> };
 
 export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 	return (

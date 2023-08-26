@@ -18,7 +18,7 @@ export default function RecordHead({ currentId, id, name }: RecordHeadProps) {
 			</span>
 
 			<Link
-				className={`font-roboto ${isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'}`}
+				className={isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'}
 				href={recordUrlObj}
 				aria-label={name}
 				role='navigation'

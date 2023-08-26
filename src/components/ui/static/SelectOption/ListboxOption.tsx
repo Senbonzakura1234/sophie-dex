@@ -4,6 +4,7 @@ import type { SelectOptionItem } from '@root/types/common';
 import { convertCode } from '@root/utils/common';
 
 type ListboxOptionProps<V extends string | number> = {
+	isHideLabel?: boolean;
 	isSelected: boolean;
 	optionValue: SelectOptionItem<V>;
 	useCustomIcon?: boolean;
@@ -11,6 +12,7 @@ type ListboxOptionProps<V extends string | number> = {
 
 export default function ListboxOption<V extends string | number>({
 	isSelected,
+	isHideLabel,
 	optionValue,
 	useCustomIcon,
 }: ListboxOptionProps<V>) {
@@ -34,7 +36,9 @@ export default function ListboxOption<V extends string | number>({
 					<span className='aspect-square h-4 xl:h-5' aria-hidden />
 				)}
 
-				<span className='capitalize'>{convertCode(optionValue.label ?? optionValue.value)}</span>
+				{!isHideLabel ? (
+					<span className='capitalize'>{convertCode(optionValue.label ?? optionValue.value)}</span>
+				) : null}
 			</span>
 		</Listbox.Option>
 	);

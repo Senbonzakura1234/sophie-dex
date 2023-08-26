@@ -10,14 +10,14 @@ const colorDefaultSelect = {
 	label: 'Color',
 } as const;
 
-const colorSelectList: SelectOptionItem<ColorEnum>[] = [
+const colorSelectList: Array<SelectOptionItem<ColorEnum>> = [
 	colorDefaultSelect,
 	...colorList.map(color => ({
 		value: color,
 		icon: (
 			<span
 				aria-hidden
-				className={`aspect-square h-4 rounded-full border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5 ${colorTWClassMap[color]}`}
+				className={`card aspect-square h-4 border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5 ${colorTWClassMap[color]}`}
 				key={color}
 			/>
 		),

@@ -78,7 +78,7 @@ export const usePullToRefresh = ({
 					'usePullToRefresh',
 					`'maximumPullLength' (currently ${maximumPullLength})  should be bigger or equal than 'refreshThreshold' (currently ${refreshThreshold})`,
 				],
-				type: 'error',
+				type: 'warn',
 			});
 	}, [isDisabled, maximumPullLength, refreshThreshold]);
 

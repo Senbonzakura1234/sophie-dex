@@ -27,7 +27,7 @@ const DirectionMap = { asc, desc } as const;
 export const getDirection = (direction: DirectionEnum | null) => (direction ? DirectionMap[direction] : asc);
 
 export const getSortField = <TSearch extends Readonly<SortByEnum>>(
-	allowedSortField: Readonly<TSearch[]>,
+	allowedSortField: Readonly<Array<TSearch>>,
 	defaultSortField: TSearch,
 	search: SortByEnum | null,
 ) => (improvedInclude(allowedSortField, search) ? search : defaultSortField);

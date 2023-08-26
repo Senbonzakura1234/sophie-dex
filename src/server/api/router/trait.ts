@@ -22,7 +22,7 @@ export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Trait>> => {
 		const { search, sortBy, direction, category, page } = input;
 
-		const OR: SQL[] = search
+		const OR: Array<SQL> = search
 			? [
 					ilike(traits.name, `%${search}%`),
 					ilike(traits.description, `%${search}%`),
@@ -30,7 +30,7 @@ export const traitRouter = router({
 			  ]
 			: [];
 
-		const AND: SQL[] = [];
+		const AND: Array<SQL> = [];
 		if (category) AND.push(ANYQuery(traits.categories.name, category));
 
 		if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)

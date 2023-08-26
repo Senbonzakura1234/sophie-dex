@@ -21,9 +21,9 @@ export const rumorRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(async ({ input }): Promise<ListRecord<Rumor>> => {
 		const { search, sortBy, direction, page, rumorType } = input;
 
-		const OR: SQL[] = search ? [ilike(rumors.name, `%${search}%`), ilike(rumors.keyWords, `%${search}%`)] : [];
+		const OR: Array<SQL> = search ? [ilike(rumors.name, `%${search}%`), ilike(rumors.keyWords, `%${search}%`)] : [];
 
-		const AND: SQL[] = [];
+		const AND: Array<SQL> = [];
 		if (rumorType) AND.push(eq(rumors.rumorType, rumorType));
 
 		if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)

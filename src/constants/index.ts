@@ -1,5 +1,6 @@
 import type { AlertTypeEnum } from '@root/types/common';
 import type { AtelierIcon } from '@root/types/common/icon';
+import type { DaisyUIThemeEnum } from '@root/types/common/tailwind';
 import type {
 	CategoryEnum,
 	ColorEnum,
@@ -14,7 +15,7 @@ export const APP_NAME = 'Sophie Dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book DX - Wiki';
 export const APP_KEYWORD = 'Atelier, Wiki, Sophie, Mysterious, DX';
 export const APP_AUTHOR = 'Senbonzakura1234';
-export const APP_VERSION = 'sophie-dex@16.8.2';
+export const APP_VERSION = 'v16.9.0';
 
 export const defaultLimit = 16;
 export const defaultListData = createArray(defaultLimit, { data: undefined, isDataReady: false as const });
@@ -60,7 +61,7 @@ export const sortByMap = {
 	item: ['index', 'level', 'name'],
 	rumor: ['price', 'name'],
 	trait: ['index', 'name'],
-} as const satisfies Record<ModuleIdEnum, Readonly<SortByEnum[]>>;
+} as const satisfies Record<ModuleIdEnum, Readonly<Array<SortByEnum>>>;
 
 export const rumorTypeIconMap = {
 	MATERIAL: 'atelier__material',
@@ -82,3 +83,5 @@ export const categoryIconMap = {
 	BOOK: 'atelier__book',
 	MACHINE: 'atelier__category-neutralizers',
 } as const satisfies Record<CategoryEnum, AtelierIcon>;
+
+export const daisyUIThemeList: Array<DaisyUIThemeEnum> = ['autumn', 'fantasy', 'forest', 'synthwave', 'wireframe'];

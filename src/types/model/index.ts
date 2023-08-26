@@ -64,8 +64,15 @@ export const relatedCategoryList = [
 
 export type CommonRecord = { id: string; keyWords: string; name: string };
 
-export type DBListResult<TRecord extends CommonRecord> = { record: TRecord; totalRecord: number }[];
+export type DBListResult<TRecord extends CommonRecord> = Array<{ record: TRecord; totalRecord: number }>;
 
-export type ListRecord<TRecord extends CommonRecord> = { records: TRecord[]; totalPage: number; totalRecord: number };
+export type ListRecord<TRecord extends CommonRecord> = {
+	records: Array<TRecord>;
+	totalPage: number;
+	totalRecord: number;
+};
 
-export type ExportDBQueriesMap = Record<ModuleIdEnum, PreparedQuery<PreparedQueryConfig & { execute: unknown[] }>>;
+export type ExportDBQueriesMap = Record<
+	ModuleIdEnum,
+	PreparedQuery<PreparedQueryConfig & { execute: Array<CommonRecord> }>
+>;

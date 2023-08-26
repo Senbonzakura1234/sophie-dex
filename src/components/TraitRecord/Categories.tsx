@@ -4,7 +4,7 @@ import type { CategoryEnum } from '@root/types/common/zod';
 import { convertCode } from '@root/utils/common';
 import QueryLink from '../ui/static/QueryLink';
 
-type CategoriesProps = { categories: CategoryEnum[] };
+type CategoriesProps = { categories: Array<CategoryEnum> };
 
 function Categories({ categories }: CategoriesProps) {
 	const { searchQuery } = useSearchQuery();
@@ -19,7 +19,7 @@ function Categories({ categories }: CategoriesProps) {
 						<QueryLink
 							aria-label={`Filter by ${convertCode(category)}`}
 							href={{ query: { category } }}
-							className={`btn btn-sm rounded-2xl  ${isActive ? 'btn-accent text-slate-50' : 'btn-primary'}`}
+							className={`btn btn-sm ${isActive ? 'btn-accent text-slate-50' : 'btn-primary'}`}
 							isActive={isActive}
 							resetPage
 						>

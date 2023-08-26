@@ -3,7 +3,7 @@ import type { RelatedCategoryEnum } from '@root/types/common/zod';
 import { convertCode } from '@root/utils/common';
 import QueryLink from '../ui/static/QueryLink';
 
-type RelatedCategoriesProps = { relatedCategories: RelatedCategoryEnum[] };
+type RelatedCategoriesProps = { relatedCategories: Array<RelatedCategoryEnum> };
 
 export default function RelatedCategories({ relatedCategories }: RelatedCategoriesProps) {
 	const { searchQuery } = useSearchQuery();
@@ -16,7 +16,7 @@ export default function RelatedCategories({ relatedCategories }: RelatedCategori
 				<QueryLink
 					aria-label={convertCode(relatedCategory)}
 					className={`link-hover link text-xs capitalize ${
-						!checkBtnActive(relatedCategory) ? 'italic text-neutral/90' : 'font-semibold'
+						!checkBtnActive(relatedCategory) ? 'italic text-base-content/70' : 'font-semibold'
 					}`}
 					isActive={checkBtnActive(relatedCategory)}
 					href={{ query: { relatedCategory } }}

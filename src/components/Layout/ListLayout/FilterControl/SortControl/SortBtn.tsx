@@ -7,7 +7,7 @@ export default function SortBtn({ label, isActive, query, ...rest }: SortItemBtn
 	return (
 		<QueryLink
 			className={`btn join-item btn-xs border-y-2 capitalize ${
-				isActive ? 'btn-primary btn-active text-slate-50' : 'btn-ghost border-accent'
+				isActive ? 'btn-primary btn-active' : 'btn-ghost border-accent'
 			}`}
 			href={{ query }}
 			isActive={isActive}

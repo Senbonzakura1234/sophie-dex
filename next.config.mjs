@@ -5,7 +5,7 @@
  */
 !process.env.SKIP_ENV_VALIDATION && (await import('./src/utils/env.mjs'));
 
-/** @type {(import("@root/types/common/zod").ModuleIdEnum)[]} */
+/** @type {Array<(import("@root/types/common/zod").ModuleIdEnum)>} */
 const moduleIdList = ['effect', 'item', 'rumor', 'trait'];
 
 /** @type {import("next").NextConfig} */

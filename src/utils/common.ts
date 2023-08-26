@@ -8,7 +8,7 @@ import { env } from './env.mjs';
 export const evnIs = (nodeEnv: NodeEnv) => env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
 
 type LogProviderWriteParams = {
-	args: unknown[];
+	args: Array<unknown>;
 	type: 'log' | 'warn' | 'error';
 };
 
@@ -43,7 +43,7 @@ export const tryCatchHandlerSync = <TReturn = unknown>(callback: () => TReturn) 
 	}
 };
 
-export const createArray = <TFill>(len = 0, fill: TFill) => Array(len).fill(fill) as TFill[];
+export const createArray = <TFill>(len = 0, fill: TFill) => Array(len).fill(fill) as Array<TFill>;
 
 export const getBaseUrl = (useMainHost?: boolean) => {
 	if (useMainHost) return env.NEXT_PUBLIC_APP_HOST || `http://localhost:${env.NEXT_PUBLIC_PORT ?? 3000}`;
@@ -53,7 +53,7 @@ export const getBaseUrl = (useMainHost?: boolean) => {
 };
 
 export const improvedInclude = <TSearch extends Readonly<string | number>>(
-	arr: Readonly<TSearch[]>,
+	arr: Readonly<Array<TSearch>>,
 	search: unknown,
 ): search is TSearch => arr.includes(search as TSearch);
 

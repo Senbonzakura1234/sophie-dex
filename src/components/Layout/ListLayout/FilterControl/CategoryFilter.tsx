@@ -10,14 +10,14 @@ const categoryDefaultSelect = {
 	label: 'Category',
 } as const;
 
-const categorySelectList: SelectOptionItem<CategoryEnum>[] = [
+const categorySelectList: Array<SelectOptionItem<CategoryEnum>> = [
 	categoryDefaultSelect,
 	...categoryList.map(category => ({
 		value: category,
 		icon: (
 			<span
 				aria-hidden
-				className={`aspect-square h-4 font-atelier xl:h-5 ${categoryIconMap[category]}`}
+				className={`aspect-square h-4 font-atelier text-accent-focus xl:h-5 ${categoryIconMap[category]}`}
 				key={category}
 			/>
 		),

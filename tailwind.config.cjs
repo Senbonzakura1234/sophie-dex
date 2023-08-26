@@ -3,7 +3,7 @@ const tailwindPlugin = require('tailwindcss/plugin');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{js,ts,jsx,tsx}'],
-	theme: { fontFamily: { atelier: ['var(--font-atelier)'], roboto: ['var(--font-roboto)'] } },
+	theme: { fontFamily: { atelier: ['var(--font-atelier)'] } },
 	plugins: [
 		require('daisyui'),
 		tailwindPlugin(({ theme, addUtilities }) => {
@@ -38,8 +38,8 @@ module.exports = {
 		}),
 	],
 	daisyui: {
-		/** @type {import('@root/types/common/tailwind').TailwindTheme} */
-		themes: ['fantasy'],
+		/** @type {Array<import('@root/types/common/tailwind').DaisyUIThemeEnum>} */
+		themes: ['autumn', 'fantasy', 'forest', 'synthwave', 'wireframe'],
 	},
 	darkMode: 'class',
 };

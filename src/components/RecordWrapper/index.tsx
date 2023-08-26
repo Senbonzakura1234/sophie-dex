@@ -29,7 +29,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 	return (
 		<article className={`card relative mb-auto h-full w-full p-1.5 2xl:max-h-96 ${className}`}>
 			<div
-				className={`absolute inset-y-0 left-0 w-1/3 rounded-2xl shadow-lg ${
+				className={`absolute inset-y-0 left-0 w-1/3 rounded-[inherit] shadow-lg ${
 					!!firstColor
 						? `bg-current shadow-base-content ${colorTWClassMap[firstColor]}`
 						: 'bg-gradient-to-r from-accent to-primary shadow-primary'
@@ -37,7 +37,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 			/>
 
 			<div
-				className={`absolute inset-y-0 right-0 w-1/3 rounded-2xl shadow-lg ${
+				className={`absolute inset-y-0 right-0 w-1/3 rounded-[inherit] shadow-lg ${
 					!!lastColor
 						? `bg-current shadow-base-content ${colorTWClassMap[lastColor]}`
 						: 'bg-gradient-to-l from-accent to-primary shadow-primary'
@@ -45,7 +45,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 			/>
 
 			<div
-				className={`card-body z-10 gap-3 rounded-xl bg-base-100 p-[1.625rem] text-base-content shadow-inner shadow-base-content ${
+				className={`card-body z-10 gap-3 rounded-[inherit] bg-base-100 p-[1.625rem] text-base-content shadow-inner shadow-base-content ${
 					!isDataReady ? 'min-h-[270px]' : ''
 				}`}
 			>
