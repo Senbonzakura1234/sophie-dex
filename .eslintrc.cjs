@@ -6,7 +6,6 @@ const prettierConfig = {
 	endOfLine: 'auto',
 	jsxSingleQuote: true,
 	printWidth: 120,
-	semi: true,
 	singleQuote: true,
 	tabWidth: 3,
 	trailingComma: 'all',
@@ -15,7 +14,7 @@ const prettierConfig = {
 
 /** @type {import('eslint-define-config').ESLintConfig} */
 module.exports = {
-	extends: ['plugin:@typescript-eslint/recommended'],
+	extends: ['plugin:@typescript-eslint/recommended', 'next/core-web-vitals'],
 	overrides: [
 		{ extends: ['plugin:markdown/recommended'], files: ['**/*.md'], processor: 'markdown/markdown' },
 		{
@@ -30,7 +29,6 @@ module.exports = {
 		},
 		{
 			extends: [
-				'next/core-web-vitals',
 				'plugin:tailwindcss/recommended',
 				'plugin:prettier/recommended',
 				'plugin:import/recommended',
@@ -38,7 +36,7 @@ module.exports = {
 			],
 			files: ['**/*.ts', '**/*.tsx'],
 			parserOptions: { project: './tsconfig.json' },
-			plugins: ['@typescript-eslint', 'react', 'react-hooks', 'import', 'unused-imports', 'tailwindcss'],
+			plugins: ['@typescript-eslint', 'unused-imports', 'tailwindcss'],
 			rules: {
 				'@typescript-eslint/comma-dangle': 'off',
 				'@typescript-eslint/consistent-type-imports': 'warn',
@@ -67,7 +65,10 @@ module.exports = {
 				'tailwindcss/classnames-order': ['warn', { officialSorting: true }],
 				'tailwindcss/no-custom-classname': 'off',
 				'unused-imports/no-unused-imports': 'warn',
-				'unused-imports/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+				'unused-imports/no-unused-vars': [
+					'warn',
+					{ vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
+				],
 			},
 		},
 	],
