@@ -54,7 +54,10 @@ export const usePullToRefresh = ({
 		if (pullPosition < refreshThreshold) return;
 
 		setIsRefreshing(true);
-		setTimeout(onRefresh, 500);
+		setTimeout(() => {
+			onRefresh();
+			setIsRefreshing(false);
+		}, 500);
 	}, [isDisabled, onRefresh, pullPosition, refreshThreshold]);
 
 	useEffect(() => {

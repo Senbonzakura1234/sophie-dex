@@ -1,9 +1,4 @@
 import type { ModuleIdEnum } from '@root/types/common/zod';
-import { globalStore, moduleIdAtom } from '@root/utils/store';
-import { useStore } from 'jotai';
-import { useHydrateAtoms } from 'jotai/utils';
+import { usePathname } from 'next/navigation';
 
-export const useModuleId = () => useStore().get(moduleIdAtom);
-
-export const useHydrateModuleId = (moduleId?: ModuleIdEnum) =>
-	useHydrateAtoms([[moduleIdAtom, moduleId]], { dangerouslyForceHydrate: true, store: globalStore });
+export const useModuleId = () => usePathname().split('/')[1] as ModuleIdEnum | undefined;

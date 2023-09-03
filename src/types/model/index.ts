@@ -62,6 +62,8 @@ export const relatedCategoryList = [
 	'MAGIC_ITEM',
 ] as const;
 
+export const daisyUIThemeList = ['autumn', 'fantasy', 'forest', 'synthwave', 'wireframe'] as const;
+
 export type CommonRecord = { id: string; keyWords: string; name: string };
 
 export type DBListResult<TRecord extends CommonRecord> = Array<{ record: TRecord; totalRecord: number }>;

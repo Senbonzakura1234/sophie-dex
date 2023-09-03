@@ -18,11 +18,16 @@
 			"@root": ["./src"],
 			"@root/*": ["./src/*"]
 		},
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"strict": true,
 		"target": "ESNext"
 	},
 	"exclude": ["node_modules"],
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs"]
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs", ".next/types/**/*.ts"]
 }

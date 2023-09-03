@@ -1,7 +1,5 @@
 import type { ColorEnum } from './zod';
 
-export type DaisyUIThemeEnum = 'autumn' | 'fantasy' | 'forest' | 'synthwave' | 'wireframe';
-
 export type DefaultColors = {
 	inherit: 'inherit';
 	current: 'currentColor';

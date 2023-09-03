@@ -1,21 +1,18 @@
-import type { ModuleIdEnum, SearchQuery } from '@root/types/common/zod';
-import { parseQuery } from '@root/utils/common';
+import type { SearchQuery } from '@root/types/common/zod';
+import { queryToParamsString } from '@root/utils/common';
+import { useRouter } from 'next/navigation';
 import { useCallback } from 'react';
 import { useSearchQuery } from './useSearchQuery';
 
-type UseUpdateQuery = () => {
-	searchQuery: Partial<SearchQuery>;
-	moduleId: ModuleIdEnum | undefined;
-	updateQuery: (nextQuery: Partial<SearchQuery>) => void;
-};
+export const useUpdateQuery = () => {
+	const { moduleId, searchQuery } = useSearchQuery();
 
-export const useUpdateQuery: UseUpdateQuery = () => {
-	const { moduleId, push, searchQuery } = useSearchQuery();
+	const { push } = useRouter();
 
 	const updateQuery = useCallback(
 		(nextQuery: Partial<SearchQuery>) => {
 			if (typeof moduleId === 'undefined') return;
-			push({ pathname: `/${moduleId}`, query: parseQuery({ ...searchQuery, page: null, ...nextQuery }) });
+			push(`/${moduleId}${queryToParamsString({ ...searchQuery, page: null, ...nextQuery })}`);
 		},
 		[moduleId, push, searchQuery],
 	);

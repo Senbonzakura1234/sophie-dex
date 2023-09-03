@@ -6,10 +6,9 @@ A wiki page created for [Atelier Sophie DX](https://store.steampowered.com/app/1
 
 -  [Next.js](https://nextjs.org)
 -  [Tailwind CSS](https://tailwindcss.com)
--  [tRPC](https://trpc.io)
 -  [drizzle-orm](https://orm.drizzle.team/)
 
-## Git remote config:
+## Git remote config
 
 For git remote config please run these commands below in the order:
 

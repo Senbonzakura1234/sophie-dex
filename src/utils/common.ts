@@ -1,8 +1,6 @@
-import type { MaybeData } from '@root/types/common';
 import type { NodeEnv, SearchQuery } from '@root/types/common/zod';
-import { resolveHref } from 'next/dist/shared/lib/router/utils/resolve-href';
-import Router from 'next/router';
-import type { UrlObject } from 'url';
+import { searchQueryValidator } from '@root/types/common/zod';
+import type { ReadonlyURLSearchParams } from 'next/navigation';
 import { env } from './env.mjs';
 
 export const evnIs = (nodeEnv: NodeEnv) => env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
@@ -19,9 +17,6 @@ class LogProviderClass {
 }
 
 export const LogProvider = new LogProviderClass();
-
-export const nullableHandle = <TData = unknown>({ data, isDataReady }: MaybeData<TData>) =>
-	isDataReady ? { data, isDataReady: true as const } : { data: undefined, isDataReady: false as const };
 
 export const tryCatchHandler = async <TReturn = unknown>(promise: Promise<TReturn>) => {
 	try {
@@ -57,8 +52,6 @@ export const improvedInclude = <TSearch extends Readonly<string | number>>(
 	search: unknown,
 ): search is TSearch => arr.includes(search as TSearch);
 
-export const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 3 }).format;
-
 export const capitalize = (input?: string | number | null) =>
 	input
 		? input
@@ -79,21 +72,18 @@ export const parseQuery = (query: Partial<SearchQuery>) => {
 	return query;
 };
 
-export const convertUrlObject = (url: UrlObject) => `${getBaseUrl(true)}${resolveHref(Router, url, true)[1]}`;
+export const queryToParamsString = (query: Partial<SearchQuery>) => {
+	const queryEntries = Object.entries(query);
 
-type OnCopyToClipboardParams = {
-	input: string;
-	onSuccess: () => void;
-	onFailure: (message: string, error?: unknown) => void;
+	if (!queryEntries.length) return '';
+
+	return `?${queryEntries
+		.filter(([, value]) => Boolean(value))
+		.map(([key, value]) => `${key}=${encodeURIComponent(value!)}`)
+		.join('')}`;
 };
 
-export const onCopyToClipboard = async ({ input, onFailure, onSuccess }: OnCopyToClipboardParams) => {
-	if (!navigator?.clipboard) return onFailure('Clipboard not supported');
-
-	const { error, isSuccess } = await tryCatchHandler(navigator.clipboard.writeText(input));
-
-	return isSuccess ? onSuccess() : onFailure('Copy to clipboard failed', error);
-};
+// export const convertUrlObject = (url: UrlObject) => `${getBaseUrl(true)}${resolveHref(Router, url, true)[1]}`;
 
 export const improvedParseJSON = <T>(value: string | null): T | undefined => {
 	const { data, isSuccess, error } = tryCatchHandlerSync(() =>
@@ -104,3 +94,10 @@ export const improvedParseJSON = <T>(value: string | null): T | undefined => {
 
 	LogProvider.write({ args: [`parsing error on ${value}`, error], type: 'error' });
 };
+
+export const paramsToQuery = (input: ReadonlyURLSearchParams) =>
+	searchQueryValidator.keyof()._def.values.reduce((prev, cur) => {
+		const query = input.get(cur);
+		const value = cur === 'page' ? parseInt(query || '') : query;
+		return { ...prev, [cur]: value || null };
+	}, {}) as SearchQuery;

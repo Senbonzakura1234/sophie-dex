@@ -54,6 +54,5 @@
 	"name": "Sophie Dex",
 	"scope": "./",
 	"short_name": "Sophie Dex",
-	"start_url": "./",
-	"theme_color": "#6e0b75"
+	"start_url": "./"
 }

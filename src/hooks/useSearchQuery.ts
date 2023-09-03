@@ -1,25 +1,11 @@
-import type { ModuleIdEnum, SearchQuery } from '@root/types/common/zod';
-import type { NextRouter } from 'next/router';
-import { useRouter } from 'next/router';
+import { paramsToQuery } from '@root/utils/common';
+import { useSearchParams } from 'next/navigation';
 import { useModuleId } from './useModuleId';
 
-type UseSearchQuery = () => {
-	isReady: boolean;
-	moduleId: ModuleIdEnum | undefined;
-	push: NextRouter['push'];
-	searchQuery: Partial<SearchQuery>;
-};
-
-export const useSearchQuery: UseSearchQuery = () => {
-	const { push, query, isReady } = useRouter();
-
+export const useSearchQuery = () => {
 	const moduleId = useModuleId();
 
-	delete query['id'];
+	const searchParams = useSearchParams();
 
-	const searchQuery = query as Partial<SearchQuery>;
-
-	searchQuery.page = Number(query.page) || null;
-
-	return { isReady, moduleId, push, searchQuery };
+	return { moduleId, searchQuery: paramsToQuery(searchParams) };
 };

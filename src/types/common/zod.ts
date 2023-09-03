@@ -1,6 +1,7 @@
 import {
 	categoryList,
 	colorList,
+	daisyUIThemeList,
 	moduleIdList,
 	recipeTypeList,
 	relatedCategoryList,
@@ -10,6 +11,9 @@ import { z } from 'zod';
 
 export const dbListEnumSchema = z.enum(['NEON_DB', 'VERCEL_DB']);
 export type DBListEnum = z.infer<typeof dbListEnumSchema>;
+
+export const daisyUIThemeEnumSchema = z.enum(daisyUIThemeList).catch('fantasy');
+export type DaisyUIThemeEnum = z.infer<typeof daisyUIThemeEnumSchema>;
 
 export const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']);
 export type NodeEnv = z.infer<typeof nodeEnumEnvSchema>;
@@ -38,7 +42,7 @@ export type RecipeTypeEnum = z.infer<typeof genericRecipeTypeEnumSchema>;
 const genericIdSchema = genericStringSchema.uuid();
 export type Id = z.infer<typeof genericIdSchema>;
 
-const idSchema = genericIdSchema.nullish().catch(null).default(null);
+const idSchema = genericIdSchema;
 
 export const searchQueryValidator = z.object({
 	search: genericStringSchema.nullish().catch(null).default(null),

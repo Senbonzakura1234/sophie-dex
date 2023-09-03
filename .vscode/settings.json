@@ -18,14 +18,15 @@
 		"shallie",
 		"sslmode",
 		"SUPABASE",
+		"synthwave",
 		"tabler-icons-react",
 		"tailwindcss",
 		"tanstack",
-		"trpc",
 		"tsbuildinfo",
 		"tsconfigs",
 		"vsicons",
-		"webp"
+		"webp",
+		"wireframe"
 	],
 	"editor.codeActionsOnSave": {
 		"source.fixAll": true,
@@ -41,7 +42,7 @@
 	"eslint.format.enable": true,
 	"eslint.lintTask.enable": true,
 	"files.associations": {
-		"**/src/styles/*.css": "tailwindcss",
+		"**/src/app/*.css": "tailwindcss",
 		"*.eslintrc": "json",
 		"*.json": "json",
 		"*.prettierrc": "json",
@@ -52,7 +53,7 @@
 		"class",
 		"className",
 		"ngClass",
-		"colorFilterTWClassMap",
+		"colorTWClassMap",
 		"enter",
 		"enterFrom",
 		"enterTo",
@@ -62,13 +63,6 @@
 	],
 	"typescript.tsdk": "node_modules\\typescript\\lib",
 	"vsicons.associations.files": [
-		{
-			"extensions": ["trpc.ts", "[trpc].ts", "trpc", "[trpc]"],
-			"filename": true,
-			"format": "svg",
-			"icon": "trpc",
-			"overrides": "ts"
-		},
 		{
 			"extensions": ["settings.json", "setting.json", "extensions.json", "extension.json"],
 			"filename": true,
