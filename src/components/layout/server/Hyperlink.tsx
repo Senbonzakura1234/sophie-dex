@@ -1,5 +1,5 @@
 import CopyUrlButton from '@root/components/common/client/CopyUrlButton';
-import type { HighlightText, HyperLinkRecord, HyperLinkSearch } from '@root/db/schema';
+import type { HighlightText, HyperLinkRecord, HyperLinkSearch } from '@root/server/database/schema';
 import type { ClassNameProps } from '@root/types/common/props';
 import { convertCode, queryToParamsString } from '@root/utils/common';
 import Link from 'next/link';

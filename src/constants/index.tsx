@@ -1,4 +1,4 @@
-import type { AlertTypeEnum, AppleMediaConfig } from '@root/types/common';
+import type { AlertTypeEnum, AppleMediaConfig, ServerErrorEnum } from '@root/types/common';
 import type { AtelierIcon } from '@root/types/common/icon';
 import type {
 	CategoryEnum,
@@ -14,7 +14,7 @@ export const APP_NAME = 'Sophie Dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book DX - Wiki';
 export const APP_KEYWORD = ['Atelier', 'Wiki', 'Sophie', 'Mysterious', 'DX'];
 export const APP_AUTHOR = 'Senbonzakura1234';
-export const APP_VERSION = 'v17.1.0';
+export const APP_VERSION = 'v17.1.1';
 
 export const defaultLimit = 16;
 
@@ -231,3 +231,9 @@ export const appleMediaConfig: AppleMediaConfig = [
 		media: { width: 744, height: 1133, ratio: 2, orientation: 'portrait' },
 	},
 ];
+
+export const ServerErrorMap = {
+	BAD_REQUEST: { message: 'Invalid Parameters', code: 400 },
+	INTERNAL_SERVER_ERROR: { message: 'Some Thing Wrong Server.', code: 500 },
+	NOT_FOUND: { message: 'Content Not Found', code: 404 },
+} as const satisfies Record<ServerErrorEnum, { code: number; message: string }>;

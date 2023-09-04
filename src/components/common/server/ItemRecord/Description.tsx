@@ -1,5 +1,5 @@
 import Hyperlink from '@root/components/layout/server/Hyperlink';
-import type { ItemDescription } from '@root/db/schema';
+import type { ItemDescription } from '@root/server/database/schema';
 
 type DescriptionProps = { description: ItemDescription };
 

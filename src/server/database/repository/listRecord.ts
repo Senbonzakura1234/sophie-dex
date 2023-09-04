@@ -1,7 +1,13 @@
 import { defaultLimit, sortByMap } from '@root/constants';
-import { db, getListEffectDefault, getListItemDefault, getListRumorDefault, getListTraitDefault } from '@root/db/';
-import type { Effect, Item, Rumor, Trait } from '@root/db/schema';
-import { effects, items, rumors, traits } from '@root/db/schema';
+import {
+	db,
+	getListEffectDefault,
+	getListItemDefault,
+	getListRumorDefault,
+	getListTraitDefault,
+} from '@root/server/database/';
+import type { Effect, Item, Rumor, Trait } from '@root/server/database/schema';
+import { effects, items, rumors, traits } from '@root/server/database/schema';
 import type { PageProps } from '@root/types/common';
 import { searchQueryValidator } from '@root/types/common/zod';
 import type { CommonRecord, DBListResult, ListRecord } from '@root/types/model';
@@ -138,4 +144,4 @@ class ListRecordRepository {
 	}
 }
 
-export const listRecordProvider = new ListRecordRepository();
+export const provider = new ListRecordRepository();

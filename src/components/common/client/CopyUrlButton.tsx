@@ -3,9 +3,22 @@
 import ClipboardIcon from '@root/assets/icons/solid/ClipboardIcon';
 import useDispatch from '@root/hooks/useDispatch';
 import type { ClassNameProps } from '@root/types/common/props';
-import { onCopyToClipboard } from '@root/utils/client';
-import { getBaseUrl } from '@root/utils/common';
+import { getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import type { AlertContextState } from '@root/utils/context';
+
+type OnCopyToClipboardParams = {
+	input: string;
+	onSuccess: () => void;
+	onFailure: (message: string, error?: unknown) => void;
+};
+
+const onCopyToClipboard = async ({ input, onFailure, onSuccess }: OnCopyToClipboardParams) => {
+	if (!navigator?.clipboard) return onFailure('Clipboard not supported');
+
+	const { error, isSuccess } = await tryCatchHandler(navigator.clipboard.writeText(input));
+
+	return isSuccess ? onSuccess() : onFailure('Copy to clipboard failed', error);
+};
 
 type CopyUrlButtonProps = {
 	label?: string;

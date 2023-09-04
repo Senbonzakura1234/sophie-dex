@@ -1,7 +1,7 @@
 import { defaultLimit } from '@root/constants';
-import neonDB from '@root/db/drivers/neon';
-import vercelDB from '@root/db/drivers/vercel';
-import { effects, items, rumors, traits } from '@root/db/schema';
+import neonDB from '@root/server/database/drivers/neon';
+import vercelDB from '@root/server/database/drivers/vercel';
+import { effects, items, rumors, traits } from '@root/server/database/schema';
 import type { ExportDBQueriesMap } from '@root/types/model';
 import { env } from '@root/utils/env.mjs';
 import { CountQuery } from '@root/utils/server';

@@ -1,7 +1,7 @@
 import DispatchListMeta from '@root/components/common/client/DispatchListMeta';
 import RumorRecord from '@root/components/common/server/RumorRecord';
 import { APP_NAME } from '@root/constants';
-import { listRecordProvider } from '@root/db/repository/listRecord';
+import { get } from '@root/server/api/list/getRumors';
 import type { PageProps } from '@root/types/common';
 import { generateListMetadata } from '@root/utils/server';
 import type { Metadata, ResolvingMetadata } from 'next';
@@ -11,7 +11,7 @@ export async function generateMetadata({ searchParams }: PageProps, parent: Reso
 }
 
 export default async function Rumor({ searchParams }: PageProps) {
-	const { records, ...listMeta } = await listRecordProvider.getRumors(searchParams);
+	const { records, ...listMeta } = await get(searchParams);
 
 	return (
 		<>

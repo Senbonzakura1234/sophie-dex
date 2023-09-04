@@ -1,6 +1,6 @@
 import DocumentChartBarIcon from '@root/assets/icons/solid/DocumentChartBarIcon';
 import CopyUrlButton from '@root/components/common/client/CopyUrlButton';
-import type { HyperLinkRecord } from '@root/db/schema';
+import type { HyperLinkRecord } from '@root/server/database/schema';
 import Link from 'next/link';
 
 type TraitPresentProps = { traitPresent: HyperLinkRecord };

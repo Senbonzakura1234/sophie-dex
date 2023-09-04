@@ -1,7 +1,7 @@
 import 'server-only';
 
-import { getEffectRecord, getItemRecord, getRumorRecord, getTraitRecord } from '@root/db/';
-import type { Effect, Item, Rumor, Trait } from '@root/db/schema';
+import { getEffectRecord, getItemRecord, getRumorRecord, getTraitRecord } from '@root/server/database/';
+import type { Effect, Item, Rumor, Trait } from '@root/server/database/schema';
 import type { PageProps } from '@root/types/common';
 import { idQueryValidator } from '@root/types/common/zod';
 import { InvalidRecordIdError, RecordNotFoundError, onQueryDBError } from '@root/utils/server';
@@ -56,4 +56,4 @@ class SingleRecordRepository {
 	}
 }
 
-export const singleRecordProvider = new SingleRecordRepository();
+export const provider = new SingleRecordRepository();

@@ -1,5 +1,5 @@
 import Hyperlink from '@root/components/layout/server/Hyperlink';
-import type { HyperLinkMap } from '@root/db/schema';
+import type { HyperLinkMap } from '@root/server/database/schema';
 import { Fragment } from 'react';
 
 type DescriptionProps = {

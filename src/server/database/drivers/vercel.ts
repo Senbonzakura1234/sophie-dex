@@ -1,4 +1,4 @@
-import schema from '@root/db/schema';
+import schema from '@root/server/database/schema';
 import { evnIs } from '@root/utils/common';
 import { sql } from '@vercel/postgres';
 import { drizzle } from 'drizzle-orm/vercel-postgres';

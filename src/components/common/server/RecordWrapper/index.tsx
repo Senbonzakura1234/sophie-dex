@@ -1,14 +1,14 @@
 import { colorTWClassMap } from '@root/constants';
-import type { RenderFunction } from '@root/types/common';
 import type { ClassNameProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
 import type { CommonRecord } from '@root/types/model';
+import type { ReactNode } from 'react';
 import { Suspense, useMemo } from 'react';
 import RecordHead from './RecordHead';
 
 type RecordWrapperProps<TRecord extends CommonRecord> = ClassNameProps & {
 	colors?: [ColorEnum | undefined, ColorEnum | undefined];
-	children?: RenderFunction<TRecord>;
+	children?: (record: TRecord) => ReactNode;
 	currentId: string | undefined;
 	data: TRecord;
 };

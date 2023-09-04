@@ -1,6 +1,8 @@
 import type { ModuleIdEnum } from '@root/types/common/zod';
 import type { PreparedQuery, PreparedQueryConfig } from 'drizzle-orm/pg-core';
 
+export const serverErrorList = ['INTERNAL_SERVER_ERROR', 'BAD_REQUEST', 'NOT_FOUND'] as const;
+
 export const moduleIdList = ['effect', 'item', 'trait', 'rumor'] as const;
 
 export const colorList = ['BLUE', 'GREEN', 'RED', 'WHITE', 'YELLOW'] as const;

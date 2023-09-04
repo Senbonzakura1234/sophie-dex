@@ -1,6 +1,6 @@
 import RecordWrapper from '@root/components/common/server/RecordWrapper';
 import { rumorColorMap } from '@root/constants';
-import type { Rumor } from '@root/db/schema';
+import type { Rumor } from '@root/server/database/schema';
 
 import Description from './Description';
 import Location from './Location';
