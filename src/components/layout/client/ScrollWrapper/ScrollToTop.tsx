@@ -1,4 +1,4 @@
-import ArrowUpOnSquareIcon from '@root/assets/icons/solid/ArrowUpOnSquareIcon';
+import ArrowUpOnSquareIcon from '@root/components/common/server/icons/solid/ArrowUpOnSquareIcon';
 import type { RefProps } from '@root/types/common/props';
 import { useCallback } from 'react';
 

@@ -1,7 +1,7 @@
-import ChevronDoubleLeftIcon from '@root/assets/icons/solid/ChevronDoubleLeftIcon';
-import ChevronDoubleRightIcon from '@root/assets/icons/solid/ChevronDoubleRightIcon';
-import ChevronLeftIcon from '@root/assets/icons/solid/ChevronLeftIcon';
-import ChevronRightIcon from '@root/assets/icons/solid/ChevronRightIcon';
+import ChevronDoubleLeftIcon from '@root/components/common/server/icons/solid/ChevronDoubleLeftIcon';
+import ChevronDoubleRightIcon from '@root/components/common/server/icons/solid/ChevronDoubleRightIcon';
+import ChevronLeftIcon from '@root/components/common/server/icons/solid/ChevronLeftIcon';
+import ChevronRightIcon from '@root/components/common/server/icons/solid/ChevronRightIcon';
 
 import QueryLink from '@root/components/common/client/QueryLink';
 import GoToPageSelect from './GoToPageSelect';

@@ -1,6 +1,6 @@
 'use client';
 
-import FilterIcon from '@root/assets/icons/outline/FilterIcon';
+import FilterIcon from '@root/components/common/server/icons/outline/FilterIcon';
 import { defaultLimit } from '@root/constants';
 import { useMediaQuery } from '@root/hooks/useMediaQuery';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';

@@ -5,13 +5,15 @@
 @layer base {
 	html,
 	body {
+		overscroll-behavior-inline: none;
+		overscroll-behavior-block: none;
 		@apply overflow-hidden;
 	}
 }
 
 @layer components {
 	.background-lips {
-		background-image: url('../assets/images/lips.svg');
+		background-image: url('../images/lips.svg');
 		background-repeat: repeat;
 	}
 }

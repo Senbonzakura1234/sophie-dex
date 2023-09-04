@@ -1,5 +1,5 @@
 import { Listbox } from '@headlessui/react';
-import ChevronUpDownIcon from '@root/assets/icons/solid/ChevronUpDownIcon';
+import ChevronUpDownIcon from '@root/components/common/server/icons/solid/ChevronUpDownIcon';
 import type { SelectOptionItem } from '@root/types/common';
 import { convertCode } from '@root/utils/common';
 import type { ReactNode } from 'react';

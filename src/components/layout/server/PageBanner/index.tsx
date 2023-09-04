@@ -1,5 +1,5 @@
-import sophieLogo from '@root/assets/images/sophie-logo.webp';
-import topBg from '@root/assets/images/top.webp';
+import sophieLogo from '@root/images/sophie-logo.webp';
+import topBg from '@root/images/top.webp';
 import { getBaseUrl } from '@root/utils/common';
 import Image from 'next/image';
 import { Suspense } from 'react';

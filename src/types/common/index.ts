@@ -9,6 +9,8 @@ export type LooseAutocomplete<TSuggest extends string, TString extends string> =
 
 export type AlertTypeEnum = 'ERROR' | 'INFO' | 'SUCCESS' | 'WARN';
 
+export type PullDirectionEnum = 'backward' | 'forward' | 'reload';
+
 export type AppleMediaConfig = {
 	url: string;
 	media?: { width: number; height: number; ratio: number; orientation: 'landscape' | 'portrait' };

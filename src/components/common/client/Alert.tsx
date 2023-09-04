@@ -1,9 +1,9 @@
 'use client';
 
-import CheckCircleIcon from '@root/assets/icons/solid/CheckCircleIcon';
-import ExclamationCircle from '@root/assets/icons/solid/ExclamationCircle';
-import ExclamationTriangle from '@root/assets/icons/solid/ExclamationTriangle';
-import InfoIcon from '@root/assets/icons/solid/InfoIcon';
+import CheckCircleIcon from '@root/components/common/server/icons/solid/CheckCircleIcon';
+import ExclamationCircle from '@root/components/common/server/icons/solid/ExclamationCircle';
+import ExclamationTriangle from '@root/components/common/server/icons/solid/ExclamationTriangle';
+import InfoIcon from '@root/components/common/server/icons/solid/InfoIcon';
 import { alertTypeColorMap, colorTWClassMap } from '@root/constants';
 import useDispatch from '@root/hooks/useDispatch';
 import useSelector from '@root/hooks/useSelector';

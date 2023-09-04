@@ -1,8 +1,7 @@
 'use client';
 
-import HomeIcon from '@root/assets/icons/solid/HomeIcon';
-import LinkIcon from '@root/assets/icons/solid/LinkIcon';
-import CircleDivider from '@root/components/common/server/CircleDivider';
+import HomeIcon from '@root/components/common/server/icons/solid/HomeIcon';
+import LinkIcon from '@root/components/common/server/icons/solid/LinkIcon';
 import { useModuleId } from '@root/hooks/useModuleId';
 import { moduleIdList } from '@root/types/model';
 import { Fragment } from 'react';
@@ -40,7 +39,7 @@ export default function Breadcrumb() {
 									</LinkItem>
 
 									{i < moduleIdList.length - 1 ? (
-										<CircleDivider className='h-1 w-1 bg-base-300 sm:h-2 sm:w-2' />
+										<div className='h-1 w-1 rounded-full bg-base-300 sm:h-2 sm:w-2' />
 									) : null}
 								</Fragment>
 							))}

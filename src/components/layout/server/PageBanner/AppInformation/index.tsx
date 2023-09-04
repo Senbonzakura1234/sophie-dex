@@ -1,4 +1,4 @@
-import GithubIcon from '@root/assets/icons/solid/GithubIcon';
+import GithubIcon from '@root/components/common/server/icons/solid/GithubIcon';
 import { APP_AUTHOR, APP_VERSION } from '@root/constants';
 import Link from 'next/link';
 
