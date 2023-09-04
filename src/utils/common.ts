@@ -80,10 +80,8 @@ export const queryToParamsString = (query: Partial<SearchQuery>) => {
 	return `?${queryEntries
 		.filter(([, value]) => Boolean(value))
 		.map(([key, value]) => `${key}=${encodeURIComponent(value!)}`)
-		.join('')}`;
+		.join('&')}`;
 };
-
-// export const convertUrlObject = (url: UrlObject) => `${getBaseUrl(true)}${resolveHref(Router, url, true)[1]}`;
 
 export const improvedParseJSON = <T>(value: string | null): T | undefined => {
 	const { data, isSuccess, error } = tryCatchHandlerSync(() =>

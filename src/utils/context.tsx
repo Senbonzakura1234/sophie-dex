@@ -15,15 +15,9 @@ export type AlertContextState = { alert: { isOpen: boolean; message: string; typ
 type StateType = ThemeContextState & ListMetaContextState & AlertContextState;
 
 type ActionType =
-	| ({
-			type: 'SET_THEME';
-	  } & ThemeContextState)
-	| ({
-			type: 'UPDATE_TOTAL_RECORD';
-	  } & ListMetaContextState)
-	| ({
-			type: 'UPDATE_ALERT';
-	  } & AlertContextState);
+	| ({ type: 'SET_THEME' } & ThemeContextState)
+	| ({ type: 'UPDATE_TOTAL_RECORD' } & ListMetaContextState)
+	| ({ type: 'UPDATE_ALERT' } & AlertContextState);
 
 const initialState: StateType = {
 	theme: 'fantasy',

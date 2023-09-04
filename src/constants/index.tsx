@@ -14,7 +14,7 @@ export const APP_NAME = 'Sophie Dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book DX - Wiki';
 export const APP_KEYWORD = ['Atelier', 'Wiki', 'Sophie', 'Mysterious', 'DX'];
 export const APP_AUTHOR = 'Senbonzakura1234';
-export const APP_VERSION = 'v17.0.1';
+export const APP_VERSION = 'v17.1.0';
 
 export const defaultLimit = 16;
 
