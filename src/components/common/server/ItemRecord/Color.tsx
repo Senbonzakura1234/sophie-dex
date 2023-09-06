@@ -18,7 +18,7 @@ export default function Color({ color }: ColorProps) {
 
 			<QueryLink
 				aria-label={`Filter ${color} Item`}
-				className={`btn btn-xs !border-current !bg-current ${isActive ? '' : 'opacity-80 hover:opacity-100'} ${
+				className={`btn btn-xs !border-current !bg-current shadow-current ${isActive ? '' : 'shadow-md'} ${
 					colorTWClassMap[color]
 				}`}
 				href={{ query: { color, id: null } }}

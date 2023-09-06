@@ -15,11 +15,13 @@ export default function RecordHead({ currentId, id, name }: RecordHeadProps) {
 	return (
 		<div className='card-title inline'>
 			<span className='mr-2'>
-				<CopyUrlButton className='btn-outline' url={`/${moduleId}/${id}`} />
+				<CopyUrlButton className='btn-outline dark:shadow-md dark:shadow-current' url={`/${moduleId}/${id}`} />
 			</span>
 
 			<Link
-				className={isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'}
+				className={`dark:text-shadow-light-md ${
+					isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'
+				}`}
 				href={`/${moduleId}/${id}`}
 				aria-label={name}
 				role='navigation'

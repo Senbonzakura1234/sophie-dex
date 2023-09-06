@@ -33,8 +33,17 @@ const config: Config = {
 
 			addUtilities({
 				...appTextShadows,
-				'.text-shadow-dark': { textShadow: `0 0 ${theme('spacing.3')} ${colors.black}` },
-				'.text-shadow-light': { textShadow: `0 0 ${theme('spacing.3')} ${colors.white}` },
+				'.text-shadow-dark-xs': { textShadow: `0 0 ${theme('spacing.1')} ${colors.black}` },
+				'.text-shadow-dark-sm': { textShadow: `0 0 ${theme('spacing.2')} ${colors.black}` },
+				'.text-shadow-dark-md': { textShadow: `0 0 ${theme('spacing.3')} ${colors.black}` },
+				'.text-shadow-dark-lg': { textShadow: `0 0 ${theme('spacing.4')} ${colors.black}` },
+				'.text-shadow-dark-xl': { textShadow: `0 0 ${theme('spacing.5')} ${colors.black}` },
+
+				'.text-shadow-light-xs': { textShadow: `0 0 ${theme('spacing.1')} ${colors.white}` },
+				'.text-shadow-light-sm': { textShadow: `0 0 ${theme('spacing.2')} ${colors.white}` },
+				'.text-shadow-light-md': { textShadow: `0 0 ${theme('spacing.3')} ${colors.white}` },
+				'.text-shadow-light-lg': { textShadow: `0 0 ${theme('spacing.4')} ${colors.white}` },
+				'.text-shadow-light-xl': { textShadow: `0 0 ${theme('spacing.5')} ${colors.white}` },
 			});
 		}),
 	],

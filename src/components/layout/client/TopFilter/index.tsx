@@ -8,9 +8,9 @@ import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import useSelector from '@root/hooks/useSelector';
 import { improvedInclude, parseQuery } from '@root/utils/common';
 import dynamic from 'next/dynamic';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
+import QueryLink from '@root/components/common/client/QueryLink';
 import CategoryFilter from './CategoryFilter';
 import ColorFilter from './ColorFilter';
 import RecipeTypeFilter from './RecipeTypeFilter';
@@ -86,14 +86,16 @@ export default function TopFilter() {
 
 					<Paginate page={page} totalPage={totalPage} />
 
-					<Link
+					<QueryLink
+						disabled={isQueryEmpty}
 						aria-label='Reset Filter'
-						className='btn btn-xs my-auto gap-1 capitalize'
-						href={`/${moduleId}`}
+						className='btn btn-xs my-auto gap-1 capitalize !shadow-current dark:shadow'
+						href={{ pathname: `/${moduleId}`, query: {} }}
+						isOverridden
 						role='navigation'
 					>
 						Reset
-					</Link>
+					</QueryLink>
 				</div>
 			</TransitionWrapper>
 		</>

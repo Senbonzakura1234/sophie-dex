@@ -32,7 +32,7 @@ export default function Hyperlink({ input, className }: HyperlinkProps) {
 
 	return (
 		<>
-			<Link aria-label={label} className={`font-bold capitalize ${className}`} href={href} role='navigation'>
+			<Link aria-label={label} className={`mr-0.5 font-bold capitalize ${className}`} href={href} role='navigation'>
 				{label}
 			</Link>
 

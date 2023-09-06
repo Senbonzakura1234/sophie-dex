@@ -30,7 +30,7 @@ const themeSelectList: Array<SelectOptionItem<DaisyUIThemeEnum>> = [
 			<span
 				aria-hidden
 				key={theme}
-				className='flex aspect-square h-4 flex-row gap-[2px] overflow-hidden rounded border-[2px] border-solid border-base-content bg-base-content xl:h-5'
+				className='flex aspect-square h-4 flex-row gap-[2px] overflow-hidden rounded border-[2px] border-solid border-base-content bg-base-content shadow-lg shadow-base-content/30 xl:h-5'
 			>
 				<span aria-hidden className='grow bg-primary' data-theme={theme} />
 				<span aria-hidden className='grow bg-accent' data-theme={theme} />
@@ -62,7 +62,7 @@ export default function ThemeSwitcher() {
 			value={themeSelect}
 			className='absolute right-3 top-3 z-30 min-w-[8.5rem]'
 			useCustomIcon
-			customLabel='Theme'
+			customLabelText='Theme'
 		/>
 	);
 }

@@ -18,7 +18,9 @@ export default function RelatedCategories({ relatedCategories }: RelatedCategori
 				<QueryLink
 					aria-label={convertCode(relatedCategory)}
 					className={`link-hover link text-xs capitalize ${
-						!checkBtnActive(relatedCategory) ? 'italic text-base-content/70' : 'font-semibold'
+						!checkBtnActive(relatedCategory)
+							? 'italic text-base-content/70'
+							: 'font-semibold text-shadow-dark-md dark:text-shadow-light-md'
 					}`}
 					isActive={checkBtnActive(relatedCategory)}
 					href={{ query: { relatedCategory } }}

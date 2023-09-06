@@ -14,9 +14,7 @@ type PageTitleProps = { bannerType: 'full' | 'top' | 'bottom' };
 export default function PageBanner({ bannerType }: PageTitleProps) {
 	return (
 		<section
-			className={`relative w-full select-none overflow-hidden ${bannerType === 'top' ? '' : 'shadow-inner'} ${
-				bannerType === 'full' ? 'h-full' : 'min-h-[18rem]'
-			}`}
+			className={`relative w-full select-none overflow-hidden ${bannerType === 'full' ? 'h-full' : 'min-h-[18rem]'}`}
 		>
 			{bannerType !== 'bottom' ? <ThemeSwitcher /> : null}
 			<div className='container absolute inset-0 z-20 mx-auto flex flex-wrap place-content-center gap-4 px-4 pt-5 xl:gap-5 2xl:gap-6'>
@@ -57,7 +55,7 @@ export default function PageBanner({ bannerType }: PageTitleProps) {
 			) : null}
 
 			{bannerType === 'bottom' ? (
-				<div className='absolute inset-0 z-10 bg-gradient-to-t from-base-200/10 via-base-200/30 to-base-200' />
+				<div className='absolute inset-0 z-10 bg-gradient-to-b from-base-200 via-primary/10 to-primary/30' />
 			) : null}
 
 			{bannerType === 'top' ? (

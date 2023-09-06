@@ -19,8 +19,8 @@ export default function RecipeType({ recipeType }: RecipeTypeProps) {
 
 			<QueryLink
 				aria-label={`Filter ${recipeType} Item`}
-				className={`btn btn-xs !border-current !bg-current ${colorTWClassMap[recipeTypeColorMap[recipeType]]} ${
-					isActive ? '' : 'opacity-80 hover:opacity-100'
+				className={`btn btn-xs !border-current !bg-current shadow-current ${isActive ? '' : 'shadow-md'} ${
+					colorTWClassMap[recipeTypeColorMap[recipeType]]
 				}`}
 				href={{ query: { recipeType } }}
 				isActive={isActive}

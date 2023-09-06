@@ -14,7 +14,7 @@ export default function SortControl() {
 			<div className='my-auto flex flex-wrap gap-2'>
 				<small className='my-auto text-sm font-bold'>Sort:</small>
 
-				<div className='join w-auto'>
+				<div className='join w-auto shadow-lg shadow-base-content/30'>
 					{sortFieldList.map(sortField => (
 						<SortBtn
 							aria-label={`Sort By ${sortField}`}
@@ -30,7 +30,7 @@ export default function SortControl() {
 			<div className='my-auto flex flex-wrap gap-2'>
 				<small className='my-auto text-sm font-bold'>Direction:</small>
 
-				<div className='join w-auto'>
+				<div className='join w-auto shadow-lg shadow-base-content/30'>
 					{(['asc', 'desc'] as const).map(dir => (
 						<SortBtn
 							aria-label={`Sort ${dir}`}

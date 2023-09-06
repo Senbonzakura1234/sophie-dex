@@ -11,7 +11,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 			<div className={`font-extrabold ${mergeFrom.length <= 0 ? 'hidden' : ''}`}>Merge from:</div>
 
 			{mergeFrom.map(([firstTrait, lastTrait], key) => (
-				<div className='join basis-auto' key={key}>
+				<div className='join basis-auto shadow-lg shadow-base-content/30' key={key}>
 					<CopyUrlButton className='join-item' url={`/${firstTrait.table}/${firstTrait.id}`} />
 					<Link
 						aria-label={firstTrait.name}

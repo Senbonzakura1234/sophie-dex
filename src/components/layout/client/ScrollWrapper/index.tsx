@@ -5,11 +5,9 @@ import PageRefresh from '@root/components/layout/client/PageRefresh';
 import type { OnScroll } from '@root/hooks/useScroll';
 import { useScroll } from '@root/hooks/useScroll';
 import type { ChildrenProps } from '@root/types/common/props';
-import dynamic from 'next/dynamic';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useRef, useState } from 'react';
-
-const ScrollToTop = dynamic(() => import('./ScrollToTop'));
+import ScrollToTop from './ScrollToTop';
 
 type ScrollWrapperProps = ChildrenProps;
 

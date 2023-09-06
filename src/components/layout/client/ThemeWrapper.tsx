@@ -2,8 +2,16 @@
 
 import useSelector from '@root/hooks/useSelector';
 import type { ChildrenProps } from '@root/types/common/props';
+import type { DaisyUIThemeEnum } from '@root/types/common/zod';
 
 export default function ThemeWrapper({ children }: ChildrenProps) {
 	const { theme } = useSelector();
-	return <main data-theme={theme}>{children}</main>;
+	return (
+		<main
+			className={(['forest', 'synthwave'] satisfies DaisyUIThemeEnum[]).includes(theme) ? 'dark' : ''}
+			data-theme={theme}
+		>
+			{children}
+		</main>
+	);
 }

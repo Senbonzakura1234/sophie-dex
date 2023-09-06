@@ -1,3 +1,5 @@
+'use client';
+
 import ArrowUpOnSquareIcon from '@root/components/common/server/icons/solid/ArrowUpOnSquareIcon';
 import type { RefProps } from '@root/types/common/props';
 import { useCallback } from 'react';
@@ -18,7 +20,7 @@ export default function ScrollToTop({ isShow, refObject }: ScrollToTopProps) {
 		>
 			<button
 				aria-label='Back To Top'
-				className='btn btn-circle btn-primary text-white'
+				className='btn btn-circle btn-primary text-slate-50 shadow-lg shadow-base-content/30'
 				disabled={!isShow}
 				onClick={scrollToTop}
 				role='navigation'

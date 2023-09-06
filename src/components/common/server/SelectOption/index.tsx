@@ -11,7 +11,8 @@ type SelectOptionProps<V> = {
 	setValue: SetSelectOptionItem<V>;
 	useCustomIcon?: boolean;
 	isHideLabel?: boolean;
-	customLabel?: ReactNode;
+	customLabelText?: ReactNode;
+	customLabelIcon?: ReactNode;
 } & ClassNameProps;
 
 export default function SelectOption<V extends string | number>({
@@ -21,7 +22,8 @@ export default function SelectOption<V extends string | number>({
 	className,
 	useCustomIcon,
 	isHideLabel,
-	customLabel,
+	customLabelText,
+	customLabelIcon,
 }: SelectOptionProps<V>) {
 	const isDisabled = list.length <= 1;
 
@@ -34,7 +36,8 @@ export default function SelectOption<V extends string | number>({
 							isDisabled={isDisabled}
 							value={value}
 							isHideLabel={isHideLabel}
-							customLabel={customLabel}
+							customLabelText={customLabelText}
+							customLabelIcon={customLabelIcon}
 						/>
 
 						<div
@@ -42,7 +45,7 @@ export default function SelectOption<V extends string | number>({
 								open ? 'opacity-1 translate-y-1' : 'translate-y-5 opacity-0'
 							}`}
 						>
-							<Listbox.Options className='legacy-scroll-area h-full max-h-52 w-full overflow-auto rounded-md bg-base-100 py-1 shadow-lg ring-1 ring-slate-900/5 focus:outline-none'>
+							<Listbox.Options className='legacy-scroll-area h-full max-h-52 w-full overflow-auto rounded-md bg-base-100 py-1 shadow-lg shadow-base-content/30'>
 								{list.map((item, key) => (
 									<ListboxOption
 										key={key}

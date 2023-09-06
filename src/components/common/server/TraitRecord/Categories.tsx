@@ -21,7 +21,9 @@ function Categories({ categories }: CategoriesProps) {
 						<QueryLink
 							aria-label={`Filter by ${convertCode(category)}`}
 							href={{ query: { category } }}
-							className={`btn btn-sm ${isActive ? 'btn-accent text-slate-50' : 'btn-primary'}`}
+							className={`btn btn-sm shadow-md ${
+								isActive ? 'btn-accent shadow-current dark:shadow-accent' : 'btn-primary shadow-primary'
+							}`}
 							isActive={isActive}
 							resetPage
 						>
