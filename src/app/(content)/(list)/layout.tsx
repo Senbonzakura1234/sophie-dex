@@ -1,8 +1,8 @@
+import BottomFilter from '@root/components/layout/client/BottomFilter';
 import ContentWrapper from '@root/components/layout/client/ContentWrapper';
-import FilterControl from '@root/components/layout/client/FilterControl';
+import TopFilter from '@root/components/layout/client/TopFilter';
 import SearchControl from '@root/components/layout/server/SearchControl';
 import type { ChildrenProps } from '@root/types/common/props';
-import { Suspense } from 'react';
 
 export default function ListLayout({ children }: ChildrenProps) {
 	return (
@@ -10,15 +10,13 @@ export default function ListLayout({ children }: ChildrenProps) {
 			<SearchControl />
 
 			<section className='container relative z-40 mx-auto grid gap-3 max-2xl:px-4'>
-				<FilterControl key='topFilter' />
+				<TopFilter />
 			</section>
 
-			<Suspense fallback={<div className='container mx-auto mb-auto grid grid-cols-1 gap-6 max-2xl:px-4' />}>
-				<ContentWrapper type='list'>{children}</ContentWrapper>
-			</Suspense>
+			<ContentWrapper type='list'>{children}</ContentWrapper>
 
 			<section className='container relative z-40 mx-auto grid gap-3 max-2xl:px-4'>
-				<FilterControl key='bottomFilter' isBottomFilter />
+				<BottomFilter />
 			</section>
 		</>
 	);

@@ -3,7 +3,7 @@ import type { ClassNameProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
 import type { CommonRecord } from '@root/types/model';
 import type { ReactNode } from 'react';
-import { Suspense, useMemo } from 'react';
+import { useMemo } from 'react';
 import RecordHead from './RecordHead';
 
 type RecordWrapperProps<TRecord extends CommonRecord> = ClassNameProps & {
@@ -23,7 +23,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 	const renderChild = useMemo(() => (children ? children(data) : null), [children, data]);
 
 	return (
-		<article className={`card relative mb-auto h-full w-full p-1.5 2xl:max-h-96 ${className}`}>
+		<article className={`card relative my-auto h-full p-1.5 2xl:max-h-96 ${className}`}>
 			<div
 				className={`absolute inset-y-0 left-0 w-1/3 rounded-[inherit] shadow-lg ${
 					!!firstColor
@@ -41,9 +41,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 			/>
 
 			<div className='card-body z-10 gap-3 rounded-[inherit] bg-base-100 p-[1.625rem] text-base-content shadow-inner shadow-base-content'>
-				<Suspense fallback={<div className='h-7 w-40 max-w-full grow-0 animate-pulse rounded' />}>
-					<RecordHead id={data.id} name={data.name} currentId={currentId} />
-				</Suspense>
+				<RecordHead id={data.id} name={data.name} currentId={currentId} />
 
 				{renderChild}
 			</div>

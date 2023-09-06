@@ -39,15 +39,15 @@ export default function PageBanner({ bannerType }: PageTitleProps) {
 					) : null}
 				</div>
 
-				<Suspense
-					fallback={
-						<div className='flex w-full'>
-							<nav className='card mx-auto h-10 w-11/12 max-w-md bg-base-100 px-2 py-1 shadow-lg shadow-primary 2xl:w-2/5 2xl:max-w-none' />
+				<div className='flex w-full'>
+					<nav className='card mx-auto w-11/12 max-w-md bg-base-100 px-2 py-1 shadow-lg shadow-primary 2xl:w-2/5 2xl:max-w-none'>
+						<div className='breadcrumbs mx-auto text-xs 2xl:text-base'>
+							<ul className='gap-1 font-bold'>
+								<Breadcrumb />
+							</ul>
 						</div>
-					}
-				>
-					<Breadcrumb />
-				</Suspense>
+					</nav>
+				</div>
 
 				{bannerType === 'top' ? null : <AppInformation />}
 			</div>

@@ -60,7 +60,7 @@ class ListRecordRepository {
 
 	async getItems(input: PageProps['searchParams']): Promise<ListRecord<Item>> {
 		const { search, sortBy, direction, color, relatedCategory, page, category, recipeType } =
-			this.processInput(input);
+			await this.processInput(input);
 
 		const OR: Array<SQL> = search ? [ilike(items.name, `%${search}%`), ilike(items.keyWords, `%${search}%`)] : [];
 

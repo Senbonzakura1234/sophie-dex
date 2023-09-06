@@ -99,3 +99,5 @@ export const paramsToQuery = (input: ReadonlyURLSearchParams) =>
 		const value = cur === 'page' ? parseInt(query || '') : query;
 		return { ...prev, [cur]: value || null };
 	}, {}) as SearchQuery;
+
+export const sleep = (milliseconds = 1000) => new Promise(resolve => setTimeout(resolve, milliseconds));
