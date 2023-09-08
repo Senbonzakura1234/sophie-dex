@@ -4,7 +4,6 @@ import { getBaseUrl } from '@root/utils/common';
 import type { ServerRuntime } from 'next';
 import { ImageResponse } from 'next/server';
 
-// Route segment config
 export const runtime: ServerRuntime = 'edge';
 
 // Image metadata
