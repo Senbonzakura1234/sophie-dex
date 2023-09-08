@@ -5,8 +5,6 @@
 @layer base {
 	html,
 	body {
-		overscroll-behavior-inline: none;
-		overscroll-behavior-block: none;
 		@apply overflow-hidden;
 	}
 }
