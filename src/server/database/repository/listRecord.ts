@@ -1,3 +1,5 @@
+import 'server-only';
+
 import { defaultLimit, sortByMap } from '@root/constants';
 import {
 	db,
@@ -8,28 +10,21 @@ import {
 } from '@root/server/database/';
 import type { Effect, Item, Rumor, Trait } from '@root/server/database/schema';
 import { effects, items, rumors, traits } from '@root/server/database/schema';
-import type { PageProps } from '@root/types/common';
-import { searchQueryValidator } from '@root/types/common/zod';
+import type { SearchQuery } from '@root/types/common/zod';
 import type { CommonRecord, DBListResult, ListRecord } from '@root/types/model';
 import { ANYQuery, CountQuery, getDirection, getSortField, onQueryDBError } from '@root/utils/server';
 import type { SQL } from 'drizzle-orm';
 import { and, eq, ilike, or } from 'drizzle-orm';
 
-import 'server-only';
-
 class ListRecordRepository {
-	private processInput(input: PageProps['searchParams']) {
-		return searchQueryValidator.parse(input);
-	}
-
 	private processOutput<TRecord extends CommonRecord>(dbResult: DBListResult<TRecord>): ListRecord<TRecord> {
 		const [totalRecord, records] = [dbResult[0]?.totalRecord ?? 0, dbResult.map(({ record }) => record)] as const;
 
 		return { records, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
 	}
 
-	async getEffects(input: PageProps['searchParams']): Promise<ListRecord<Effect>> {
-		const { search, sortBy, direction, page } = this.processInput(input);
+	async getEffects(input: SearchQuery): Promise<ListRecord<Effect>> {
+		const { search, sortBy, direction, page } = input;
 
 		if (!search && !sortBy && !direction)
 			return await getListEffectDefault
@@ -58,9 +53,8 @@ class ListRecordRepository {
 			.catch(onQueryDBError);
 	}
 
-	async getItems(input: PageProps['searchParams']): Promise<ListRecord<Item>> {
-		const { search, sortBy, direction, color, relatedCategory, page, category, recipeType } =
-			await this.processInput(input);
+	async getItems(input: SearchQuery): Promise<ListRecord<Item>> {
+		const { search, sortBy, direction, color, relatedCategory, page, category, recipeType } = await input;
 
 		const OR: Array<SQL> = search ? [ilike(items.name, `%${search}%`), ilike(items.keyWords, `%${search}%`)] : [];
 
@@ -87,8 +81,8 @@ class ListRecordRepository {
 			.catch(onQueryDBError);
 	}
 
-	async getRumors(input: PageProps['searchParams']): Promise<ListRecord<Rumor>> {
-		const { search, sortBy, direction, page, rumorType } = this.processInput(input);
+	async getRumors(input: SearchQuery): Promise<ListRecord<Rumor>> {
+		const { search, sortBy, direction, page, rumorType } = input;
 
 		const OR: Array<SQL> = search ? [ilike(rumors.name, `%${search}%`), ilike(rumors.keyWords, `%${search}%`)] : [];
 
@@ -112,8 +106,8 @@ class ListRecordRepository {
 			.catch(onQueryDBError);
 	}
 
-	async getTraits(input: PageProps['searchParams']): Promise<ListRecord<Trait>> {
-		const { search, sortBy, direction, category, page } = this.processInput(input);
+	async getTraits(input: SearchQuery): Promise<ListRecord<Trait>> {
+		const { search, sortBy, direction, category, page } = input;
 
 		const OR: Array<SQL> = search
 			? [
@@ -144,4 +138,4 @@ class ListRecordRepository {
 	}
 }
 
-export const provider = new ListRecordRepository();
+export const listRecordProvider = new ListRecordRepository();

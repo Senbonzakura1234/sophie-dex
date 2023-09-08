@@ -3,22 +3,23 @@ import 'server-only';
 import type { AnyColumn } from 'drizzle-orm';
 import { asc, desc, sql } from 'drizzle-orm';
 
-import type { PageProps, ServerErrorEnum } from '@root/types/common';
+import type { PageProps } from '@root/types/common';
 import type { DirectionEnum, SortByEnum } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
 import type { CommonRecord } from '@root/types/model';
+import { TRPCError } from '@trpc/server';
 import type { Metadata, ResolvingMetadata } from 'next';
-import { LogProvider, improvedInclude, tryCatchHandler } from './common';
+import { LogProvider, improvedInclude } from './common';
 
 export const onQueryDBError = (error: unknown) => {
 	LogProvider.write({ args: [error], type: 'error' });
 
-	throw 'INTERNAL_SERVER_ERROR' as const satisfies ServerErrorEnum;
+	throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Some Thing When Wrong On The Server.' });
 };
 
-export const InvalidRecordIdError = () => 'BAD_REQUEST' as const satisfies ServerErrorEnum;
+export const InvalidRecordIdError = () => new TRPCError({ code: 'BAD_REQUEST', message: 'Invalid Record Id.' });
 
-export const RecordNotFoundError = () => 'NOT_FOUND' as const satisfies ServerErrorEnum;
+export const RecordNotFoundError = () => new TRPCError({ code: 'NOT_FOUND', message: 'Record not found.' });
 
 export const ANYQuery = (column: AnyColumn['name'], value: string | number) =>
 	sql`${value} = ANY(${sql.identifier(column)})`;
@@ -47,14 +48,36 @@ export async function generateListMetadata(
 }
 
 export async function generateDetailMetadata<TRecord extends CommonRecord>(
-	parent: ResolvingMetadata,
-	getRecord: Promise<TRecord>,
+	parentPromise: ResolvingMetadata,
+	getRecordPromise: Promise<TRecord>,
+	dehydrate: () => string,
 ): Promise<Metadata> {
-	const result = await tryCatchHandler(Promise.all([getRecord, parent]));
+	const [parentResult, recordResult] = await Promise.allSettled([parentPromise, getRecordPromise]);
 
-	if (!result.isSuccess) return {};
+	if (parentResult.status === 'rejected') return { title: 'Error', other: { dehydrate: dehydrate() } };
+	if (recordResult.status === 'rejected')
+		return {
+			title: 'Error',
+			other: {
+				...(parentResult.value.other as Record<string, string | number | (string | number)[]>),
+				dehydrate: dehydrate(),
+			},
+		};
 
-	const [{ keyWords, name }, { keywords: prevKeywords }] = result.data;
+	const {
+		value: { keywords: prevKeywords },
+	} = parentResult;
 
-	return { title: name, keywords: [...keyWords.split(','), ...(prevKeywords || [])] };
+	const {
+		value: { keyWords, name },
+	} = recordResult;
+
+	return {
+		title: name,
+		keywords: [...keyWords.split(','), ...(prevKeywords || [])],
+		other: {
+			...(parentResult.value.other as Record<string, string | number | (string | number)[]>),
+			dehydrate: dehydrate(),
+		},
+	};
 }

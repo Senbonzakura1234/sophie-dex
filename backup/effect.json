@@ -1,0 +1,4475 @@
+[
+  {
+    "id": "9c7cf98d-c813-47c8-8d1a-6bcc445307d2",
+    "keyWords": "savage impact",
+    "name": "Savage Impact",
+    "index": 4,
+    "description": "Deals supreme physical damage. Physical damage is affected by the target's defense value."
+  },
+  {
+    "id": "8945ddda-472c-4874-8cce-37818188d433",
+    "keyWords": "flames of hell",
+    "name": "Flames of Hell",
+    "index": 11,
+    "description": "Deals ultimate fire damage. Fire damage is affected by the target's fire resistance value."
+  },
+  {
+    "id": "0a4f4444-542a-4faa-afcf-a17518f5960d",
+    "keyWords": "ice damage m",
+    "name": "Ice Damage M",
+    "index": 13,
+    "description": "Deals moderate ice damage. Ice damage is affected by the target's ice resistance value."
+  },
+  {
+    "id": "746613d4-7f87-46ff-b447-40acfdce3cb1",
+    "keyWords": "ice age",
+    "name": "Ice Age",
+    "index": 16,
+    "description": "Deals supreme ice damage. Ice damage is affected by the target's ice resistance value."
+  },
+  {
+    "id": "c79b3a50-b9aa-449d-8775-5f6f3208aaf7",
+    "keyWords": "lightning damage m",
+    "name": "Lightning Damage M",
+    "index": 19,
+    "description": "Deals moderate lightning damage. Lightning damage is affected by the target's lightning resistance value."
+  },
+  {
+    "id": "3a96a0b0-c064-4221-bf54-f8ac35b77119",
+    "keyWords": "large missile",
+    "name": "Large Missile",
+    "index": 25,
+    "description": "Deals strong magic damage. Magic damage is affected by the target's magic resistance value."
+  },
+  {
+    "id": "7523c9ee-1406-4cc4-9c80-b0db3d9945bf",
+    "keyWords": "a little numbing",
+    "name": "A Little Numbing",
+    "index": 126,
+    "description": "Pushes the target's turn back a little. This effect diminishes with each use until they take another turn."
+  },
+  {
+    "id": "d716f0b0-c708-4872-a17c-af60f820e9db",
+    "keyWords": "call rain cloud",
+    "name": "Call Rain Cloud",
+    "index": 132,
+    "description": "Calls a rain cloud, activating 1 time card that deals lightning damage to the target. The effect lasts 1 turn."
+  },
+  {
+    "id": "5efad032-d752-48d9-919d-472c1adab933",
+    "keyWords": "call thunder cloud",
+    "name": "Call Thunder Cloud",
+    "index": 133,
+    "description": "Calls a thunder cloud, activating 1 time card that deals lightning damage to the target. The effect lasts 2 turns."
+  },
+  {
+    "id": "98b1c192-5114-444b-9ad7-30108b308ebe",
+    "keyWords": "weight of happiness",
+    "name": "Weight of Happiness",
+    "index": 144,
+    "description": "Reduces all of the target's resistances by 1 level. Has no effect if the target has no resistances, and this cannot cause weaknesses."
+  },
+  {
+    "id": "60d86cef-822a-4517-b8d4-a86732b1805f",
+    "keyWords": "lp recovery xs",
+    "name": "LP Recovery XS",
+    "index": 207,
+    "description": "Restores the target's LP by a slight amount."
+  },
+  {
+    "id": "3d1a72ba-8e85-4181-8e62-da2fd0648334",
+    "keyWords": "hpmp recovery s",
+    "name": "HPMP Recovery S",
+    "index": 214,
+    "description": "Restores a small amount of the target's HP and MP."
+  },
+  {
+    "id": "90efbc00-ee96-46c7-a752-f0119c106ac4",
+    "keyWords": "hplp recovery s",
+    "name": "HPLP Recovery S",
+    "index": 219,
+    "description": "Restores a small amount of the target's HP and LP."
+  },
+  {
+    "id": "560e8419-b961-497d-97eb-b52e6962f6e5",
+    "keyWords": "hplp recovery xl",
+    "name": "HPLP Recovery XL",
+    "index": 222,
+    "description": "Restores a huge amount of the target's HP and LP."
+  },
+  {
+    "id": "2d57e3ab-e8a1-4218-88f9-2fed348950e7",
+    "keyWords": "calming aroma",
+    "name": "Calming Aroma",
+    "index": 228,
+    "description": "Restores the whole party's HP by a slight amount."
+  },
+  {
+    "id": "ca1d24bc-0504-4bb0-89f4-0d293d695115",
+    "keyWords": "eat and recover xs",
+    "name": "Eat and Recover XS",
+    "index": 278,
+    "description": "Restores a slight amount of the target's HP and LP. Recovery amount increases with higher maximum HP."
+  },
+  {
+    "id": "b46d7ce4-a6eb-4bd3-b76b-06515a9a74f0",
+    "keyWords": "filling",
+    "name": "Filling",
+    "index": 285,
+    "description": "Sits in the stomach, delaying your turn in battle a small amount. Also restores LP."
+  },
+  {
+    "id": "4bd46ada-ccbd-461a-8df6-93e92beddeb5",
+    "keyWords": "hard to digest",
+    "name": "Hard to Digest",
+    "index": 288,
+    "description": "It's hard to digest, inflicting Slow. The effect is small."
+  },
+  {
+    "id": "fb45486c-55f3-4f97-9b87-75ae21a697c2",
+    "keyWords": "weak to ice",
+    "name": "Weak to Ice",
+    "index": 729,
+    "description": "Reduces the target's ice resistance by 1 level. Has no effect if the target has no resistance, and this cannot cause weaknesses."
+  },
+  {
+    "id": "b0547647-4f32-4346-aab5-4d31a910deca",
+    "keyWords": "level down s",
+    "name": "Level Down S",
+    "index": 731,
+    "description": "Reduces the target's level a little. Reduced level decreases all stats and damage dealt."
+  },
+  {
+    "id": "7c564a7e-67ea-4e7b-b412-30e7267065c6",
+    "keyWords": "damage over time l",
+    "name": "Damage Over Time L",
+    "index": 736,
+    "description": "Deals continuous damage to the target. The effect is big, but the time is short."
+  },
+  {
+    "id": "f8de6826-260b-4bb7-895e-5b7f87489a9d",
+    "keyWords": "add break s",
+    "name": "Add Break S",
+    "index": 740,
+    "description": "Increases Break effect dealt to the target. If multiple targets are hit, the effect is split."
+  },
+  {
+    "id": "62c2125c-6c3b-403c-bca9-5dc471f394c5",
+    "keyWords": "restrain attack s",
+    "name": "Restrain Attack S",
+    "index": 744,
+    "description": "Reduces the rate at which enemies use powerful attacks a little."
+  },
+  {
+    "id": "0f45993f-bc7f-453a-a1a5-957e278785a6",
+    "keyWords": "consume hp xs",
+    "name": "Consume HP XS",
+    "index": 797,
+    "description": "Consumes a slight amount of HP. The amount is influenced by maximum HP."
+  },
+  {
+    "id": "230a00b9-6073-46b2-ac55-7597ed94272c",
+    "keyWords": "consume hp l",
+    "name": "Consume HP L",
+    "index": 800,
+    "description": "Consumes a large amount of HP. The amount is influenced by maximum HP."
+  },
+  {
+    "id": "6c8c9bad-4995-41ef-aeb7-974301ef9547",
+    "keyWords": "consume mp xl",
+    "name": "Consume MP XL",
+    "index": 806,
+    "description": "Consumes a huge amount of MP. The effect is weakened when MP is insufficient."
+  },
+  {
+    "id": "a248cfac-2092-49be-81c1-a052924d2565",
+    "keyWords": "rest 5 hours",
+    "name": "Rest 5 Hours",
+    "index": 859,
+    "description": "Rest for 5 hours, restoring 50% of HP, MP, and LP."
+  },
+  {
+    "id": "80928889-95b7-4acd-bf32-f7d6a84c0712",
+    "keyWords": "average cart",
+    "name": "Average Cart",
+    "index": 865,
+    "description": "Allows you to select items that you gathered, and send them back to the atelier. You can send up to 30 at a time."
+  },
+  {
+    "id": "e440aeb5-5a3e-4ca7-aef9-cc6453d76625",
+    "keyWords": "keeps away danger",
+    "name": "Keeps Away Danger",
+    "index": 869,
+    "description": "Reduces the chance of incidents by a small amount."
+  },
+  {
+    "id": "7adac559-8259-4a76-adc0-7da683f0f049",
+    "keyWords": "wards off monsters",
+    "name": "Wards Off Monsters",
+    "index": 873,
+    "description": ""
+  },
+  {
+    "id": "911a75a2-617c-4cd2-982b-64fd0f453c50",
+    "keyWords": "move speed up s",
+    "name": "Move Speed Up S",
+    "index": 928,
+    "description": "Move speed increases by 10%."
+  },
+  {
+    "id": "e319b2e6-e1a3-4681-b60d-8c6f0493865d",
+    "keyWords": "gather a lot more",
+    "name": "Gather a Lot More",
+    "index": 938,
+    "description": "Increases number of items gathered each time a lot."
+  },
+  {
+    "id": "3b196506-4d88-4c63-b6fb-b5c0bb686026",
+    "keyWords": "training mastery",
+    "name": "Training Mastery",
+    "index": 944,
+    "description": "Increases experience points gained from battle by a lot."
+  },
+  {
+    "id": "f2f00c46-4e10-4e72-82a5-075bad3ef34b",
+    "keyWords": "seal of chaos",
+    "name": "Seal of Chaos",
+    "index": 948,
+    "description": "Makes it easier for gathering level and enemy level to increase."
+  },
+  {
+    "id": "fb07d126-862e-4cc9-9882-2afad50cb163",
+    "keyWords": "seal of trust",
+    "name": "Seal of Trust",
+    "index": 1003,
+    "description": "Increases effect of all Assist actions by a little."
+  },
+  {
+    "id": "5319846f-4fda-4543-a24b-6845196eea33",
+    "keyWords": "hard to notice",
+    "name": "Hard to Notice",
+    "index": 1008,
+    "description": "Hide your presence, making it hard for monsters to notice you for a short time."
+  },
+  {
+    "id": "2e346d60-c09a-4b9e-9aba-5905243b807e",
+    "keyWords": "erase presence",
+    "name": "Erase Presence",
+    "index": 1009,
+    "description": "Erase your presence, making it impossible for monsters to see you for a short time. Just don't get too close."
+  },
+  {
+    "id": "90f43737-c762-4d8e-bcd1-e44538aa59cb",
+    "keyWords": "progress time",
+    "name": "Progress Time",
+    "index": 1012,
+    "description": "Reduces wait time after all actions by a small amount."
+  },
+  {
+    "id": "33f96bdd-9dbe-4cd5-b0de-250b709c90c0",
+    "keyWords": "change the future",
+    "name": "Change the Future",
+    "index": 1024,
+    "description": "Increases the chance of higher expected values a little when attacking."
+  },
+  {
+    "id": "8fefdae3-4bf6-4788-8a6b-799a7002ba12",
+    "keyWords": "soul awakening",
+    "name": "Soul Awakening",
+    "index": 1032,
+    "description": "Automatically revive on turn when KO'd in battle. HP after revival is decent."
+  },
+  {
+    "id": "711ce973-dcf3-461e-9831-2dc43111b24a",
+    "keyWords": "speed up s",
+    "name": "Speed Up S",
+    "index": 1123,
+    "description": "Increases the target's speed a little. The effect lasts 5 turns."
+  },
+  {
+    "id": "ecca4409-621c-490c-9abb-bc12003a0002",
+    "keyWords": "hit rate up xl",
+    "name": "Hit Rate Up XL",
+    "index": 1131,
+    "description": "Increases hit rate by 30%."
+  },
+  {
+    "id": "2001bbd5-cb35-4263-a9ba-59ccace88657",
+    "keyWords": "critical up s",
+    "name": "Critical Up S",
+    "index": 1138,
+    "description": "Increases critical hit rate by 6%."
+  },
+  {
+    "id": "d1c89ab9-f2a3-41b5-ab5c-22dd74735b74",
+    "keyWords": "item enhance s",
+    "name": "Item Enhance S",
+    "index": 1151,
+    "description": "Increases item power by 10%."
+  },
+  {
+    "id": "608c0012-ac17-4f83-a177-c2e0b9b690ff",
+    "keyWords": "nullify sleep",
+    "name": "Nullify Sleep",
+    "index": 1160,
+    "description": "Immunity to Sleep ailment."
+  },
+  {
+    "id": "89b9d7a6-b4bb-48ae-97af-ec1ad4591f59",
+    "keyWords": "nullify no heal",
+    "name": "Nullify No Heal",
+    "index": 1166,
+    "description": "Immunity to No Heal ailment."
+  },
+  {
+    "id": "5223188b-9781-4b68-b0f9-11e326fd61ed",
+    "keyWords": "nullify all ailments",
+    "name": "Nullify All Ailments",
+    "index": 1170,
+    "description": "Immunity to all ailments."
+  },
+  {
+    "id": "44211269-ef4e-4a21-ad78-0266df8d26a6",
+    "keyWords": "avoid ko xs",
+    "name": "Avoid KO XS",
+    "index": 1176,
+    "description": "You have a chance to survive with 1 HP when you receive damage that would reduce your HP to 0. Has a very low chance to work."
+  },
+  {
+    "id": "7332ca0c-2273-40a4-966a-a69e1eb84657",
+    "keyWords": "avoid ko xl",
+    "name": "Avoid KO XL",
+    "index": 1180,
+    "description": "You have a chance to survive with 1 HP when you receive damage that would reduce your HP to 0. Has a high chance to work."
+  },
+  {
+    "id": "d0f1f84b-624b-4624-8abd-330f5927d237",
+    "keyWords": "damage absorb s",
+    "name": "Damage Absorb S",
+    "index": 1184,
+    "description": "Absorbs a portion of damage dealt to the target as HP. The effect is small."
+  },
+  {
+    "id": "d72f4e31-3d8c-4309-b294-f0be3d23973a",
+    "keyWords": "damage cut s",
+    "name": "Damage Cut S",
+    "index": 1188,
+    "description": "Reduces damage taken by 5%."
+  },
+  {
+    "id": "c4744917-fe33-4064-809f-56f0fd6a511d",
+    "keyWords": "break enhance s",
+    "name": "Break Enhance S",
+    "index": 1192,
+    "description": "Increases Break value when attacking enemies by a slight amount."
+  },
+  {
+    "id": "649c7a22-ccf9-4740-a7f8-584dd029c081",
+    "keyWords": "vertical flip",
+    "name": "Vertical Flip",
+    "index": 1274,
+    "description": "When placing materials, you can press <LB><RB> to flip it vertically."
+  },
+  {
+    "id": "a196c9dd-6bbb-4cba-80d1-d8a43017b954",
+    "keyWords": "change color blue",
+    "name": "Change Color Blue",
+    "index": 1284,
+    "description": "Changes the item color to Blue."
+  },
+  {
+    "id": "e59a3f95-3cd2-42cc-b465-1c192cb935c0",
+    "keyWords": "physical damage l",
+    "name": "Physical Damage L",
+    "index": 2,
+    "description": "Deals strong physical damage. Physical damage is affected by the target's defense value."
+  },
+  {
+    "id": "33b611e4-5585-4c07-8171-e8ad3ebf21db",
+    "keyWords": "physical damage xl",
+    "name": "Physical Damage XL",
+    "index": 3,
+    "description": "Deals very powerful physical damage. Physical damage is affected by the target's defense value."
+  },
+  {
+    "id": "c87d993f-17d5-42ce-8165-38c558ae1f07",
+    "keyWords": "physical damage s",
+    "name": "Physical Damage S",
+    "index": 0,
+    "description": "Deals physical damage. Physical damage is affected by the target's defense value."
+  },
+  {
+    "id": "e7fb97b5-3439-42e1-9ddd-c609b9be5413",
+    "keyWords": "fires of purgatory",
+    "name": "Fires of Purgatory",
+    "index": 10,
+    "description": "Deals supreme fire damage. Fire damage is affected by the target's fire resistance value."
+  },
+  {
+    "id": "ac0e93e0-2f02-4596-8a07-23919391c00d",
+    "keyWords": "fire damage m",
+    "name": "Fire Damage M",
+    "index": 7,
+    "description": "Deals moderate fire damage. Fire damage is affected by the target's fire resistance value."
+  },
+  {
+    "id": "c438fe52-6629-481c-b881-2349bd3adb97",
+    "keyWords": "fire damage l",
+    "name": "Fire Damage L",
+    "index": 8,
+    "description": "Deals strong fire damage. Fire damage is affected by the target's fire resistance value."
+  },
+  {
+    "id": "24c076db-ddb0-4ea8-8e05-75bb6975d0fd",
+    "keyWords": "fire damage xl",
+    "name": "Fire Damage XL",
+    "index": 9,
+    "description": "Deals very powerful fire damage. Fire damage is affected by the target's fire resistance value."
+  },
+  {
+    "id": "5b81e174-deea-4ad1-87cf-dcbd33dfd535",
+    "keyWords": "ice damage s",
+    "name": "Ice Damage S",
+    "index": 12,
+    "description": "Deals ice damage. Ice damage is affected by the target's ice resistance value."
+  },
+  {
+    "id": "297d5bdd-5231-450c-b7f8-a056a182ae3c",
+    "keyWords": "absolute zero",
+    "name": "Absolute Zero",
+    "index": 17,
+    "description": "Deals ultimate ice damage. Ice damage is affected by the target's ice resistance value."
+  },
+  {
+    "id": "ac6f51e4-7327-4156-b85d-4917a4d00b4e",
+    "keyWords": "ice damage l",
+    "name": "Ice Damage L",
+    "index": 14,
+    "description": "Deals strong ice damage. Ice damage is affected by the target's ice resistance value."
+  },
+  {
+    "id": "bdc27df0-ce80-4092-a0fe-40dccd94a578",
+    "keyWords": "ice damage xl",
+    "name": "Ice Damage XL",
+    "index": 15,
+    "description": "Deals very powerful ice damage. Ice damage is affected by the target's ice resistance value."
+  },
+  {
+    "id": "a66dea2b-c563-4540-9801-3170c684b0bb",
+    "keyWords": "lightning damage s",
+    "name": "Lightning Damage S",
+    "index": 18,
+    "description": "Deals lightning damage. Lightning damage is affected by the target's lightning resistance value."
+  },
+  {
+    "id": "b6303e1f-b098-42e8-8213-71140c9cfce9",
+    "keyWords": "lightning damage xl",
+    "name": "Lightning Damage XL",
+    "index": 21,
+    "description": "Deals very powerful lightning damage. Lightning damage is affected by the target's lightning resistance value."
+  },
+  {
+    "id": "be8168ab-c887-47be-b330-098e49c2a585",
+    "keyWords": "judgment bolt",
+    "name": "Judgment Bolt",
+    "index": 22,
+    "description": "Deals supreme lightning damage. Lightning damage is affected by the target's lightning resistance value."
+  },
+  {
+    "id": "61d08c01-cab1-462d-aebf-d44d12dde98e",
+    "keyWords": "lightning damage l",
+    "name": "Lightning Damage L",
+    "index": 20,
+    "description": "Deals strong lightning damage. Lightning damage is affected by the target's lightning resistance value."
+  },
+  {
+    "id": "8aafbe26-5417-445f-a3b1-c179ff2e8a4c",
+    "keyWords": "hammer of god",
+    "name": "Hammer of God",
+    "index": 23,
+    "description": "Deals ultimate lightning damage. Lightning damage is affected by the target's lightning resistance value."
+  },
+  {
+    "id": "4f832af5-e4d9-425d-bdde-46072a8d8fe3",
+    "keyWords": "small missile",
+    "name": "Small Missile",
+    "index": 24,
+    "description": "Deals magic damage. Magic damage is affected by the target's magic resistance value."
+  },
+  {
+    "id": "bc03d81c-09a5-4fff-ba32-11222de771e8",
+    "keyWords": "supersonic missile",
+    "name": "Supersonic Missile",
+    "index": 27,
+    "description": "Deals supreme magic damage. Magic damage is affected by the target's magic resistance value."
+  },
+  {
+    "id": "0c423f8e-a1ff-47a7-8e0e-b53528592fe0",
+    "keyWords": "power of creation",
+    "name": "Power of Creation",
+    "index": 29,
+    "description": "Deals very powerful physical damage. Can also randomly cause a number of effects."
+  },
+  {
+    "id": "4a423bed-83e1-4880-bfe8-bdfe258d9a57",
+    "keyWords": "super large missile",
+    "name": "Super Large Missile",
+    "index": 26,
+    "description": "Deals very powerful magic damage. Magic damage is affected by the target's magic resistance value."
+  },
+  {
+    "id": "71dc8dac-6c12-4dc6-9ce4-c777518ac5f3",
+    "keyWords": "fire damage s",
+    "name": "Fire Damage S",
+    "index": 6,
+    "description": "Deals fire damage. Fire damage is affected by the target's fire resistance value."
+  },
+  {
+    "id": "7934347a-a9a2-4f41-ab7c-1370e3cde903",
+    "keyWords": "physical damage m",
+    "name": "Physical Damage M",
+    "index": 1,
+    "description": "Deals moderate physical damage. Physical damage is affected by the target's defense value."
+  },
+  {
+    "id": "565e5d80-ac99-41e9-afa9-0c1f19dcdb5c",
+    "keyWords": "giant's blow",
+    "name": "Giant's Blow",
+    "index": 5,
+    "description": "Deals ultimate physical damage. Physical damage is affected by the target's defense value."
+  },
+  {
+    "id": "f38d22b9-aeff-4ccd-9f04-d561d66b6e51",
+    "keyWords": "power of origin",
+    "name": "Power of Origin",
+    "index": 28,
+    "description": "Deals strong physical damage. Can also randomly cause a number of effects."
+  },
+  {
+    "id": "14b7017b-ac3f-488f-a20c-828afd45e702",
+    "keyWords": "aurora of ruin",
+    "name": "Aurora of Ruin",
+    "index": 39,
+    "description": "Deals ultimate non-attribute damage. This is not affected by any resistance. The damage increases according to how powerful the applied traits are."
+  },
+  {
+    "id": "bd75c7d8-499e-4a3f-b630-8423fef298eb",
+    "keyWords": "light of the end",
+    "name": "Light of the End",
+    "index": 38,
+    "description": "Deals supreme non-attribute damage. This is not affected by any resistance. The damage increases according to how powerful the applied traits are."
+  },
+  {
+    "id": "572ac8c1-51e2-4c67-986b-5c3d653847f6",
+    "keyWords": "falling bombs",
+    "name": "Falling Bombs",
+    "index": 45,
+    "description": "Bombs rain from the sky, dealing fire damage to all enemies. Also activates 1 time card."
+  },
+  {
+    "id": "b3de7363-6709-409d-b0ab-bcd05b6f603d",
+    "keyWords": "falling uni",
+    "name": "Falling Uni",
+    "index": 40,
+    "description": "Uni rain from the sky, dealing physical damage to all enemies. Also activates 1 time card."
+  },
+  {
+    "id": "5ddab8b5-425a-4cf7-beac-613ddedf0657",
+    "keyWords": "falling puni",
+    "name": "Falling Puni",
+    "index": 41,
+    "description": "Puni rain from the sky, dealing magic damage to all enemies. Also activates 1 time card."
+  },
+  {
+    "id": "556595bb-ff43-4f0b-88d4-bc4d29c9734a",
+    "keyWords": "falling meteors",
+    "name": "Falling Meteors",
+    "index": 42,
+    "description": "Meteors rain from the sky, dealing fire damage to all enemies. Also activates 1 time card."
+  },
+  {
+    "id": "1c1914ff-4b0c-41b2-88f3-db7de701bb29",
+    "keyWords": "summon ardra",
+    "name": "Summon Ardra",
+    "index": 48,
+    "description": "Summons an Ardra to deal physical damage, also delaying turn a little."
+  },
+  {
+    "id": "44148cf2-e156-4663-a687-18b63b195862",
+    "keyWords": "falling ???",
+    "name": "Falling ???",
+    "index": 43,
+    "description": "??? rains from the sky, dealing physical damage to all enemies. Also activates 1 time card."
+  },
+  {
+    "id": "b9304966-6b73-419e-9c7c-c977917188bf",
+    "keyWords": "falling island fish",
+    "name": "Falling Island Fish",
+    "index": 46,
+    "description": "Island Fish rain from the sky, dealing physical damage to all enemies. Also activates 1 time card."
+  },
+  {
+    "id": "6add3897-8080-40d9-9386-af62496c465b",
+    "keyWords": "falling stars",
+    "name": "Falling Stars",
+    "index": 44,
+    "description": "Stars rain from the sky, dealing physical damage to all enemies. Also activates 1 time card."
+  },
+  {
+    "id": "1e8489cf-49bd-4cb9-acd3-a93942de5d16",
+    "keyWords": "gift from heaven",
+    "name": "Gift from Heaven",
+    "index": 47,
+    "description": "Treasure chests rain from the sky, dealing magic damage to all enemies. Also activates 1 time card."
+  },
+  {
+    "id": "6b3a286f-46c1-489f-83a7-682400b21a8b",
+    "keyWords": "summon beast",
+    "name": "Summon Beast",
+    "index": 49,
+    "description": "Summons a beast to deal physical damage. Physical damage is affected by the target's defense value."
+  },
+  {
+    "id": "b6182ade-c3ac-424e-abcd-c1eb2a241353",
+    "keyWords": "summon lich",
+    "name": "Summon Lich",
+    "index": 53,
+    "description": "Summons a Lich to deal magic damage. Part of damage dealt is absorbed as HP."
+  },
+  {
+    "id": "d08afaf3-3af3-473f-b97c-5edfbcef0cb5",
+    "keyWords": "summon puni∞",
+    "name": "Summon Puni∞",
+    "index": 50,
+    "description": "Summons a Puni to deal physical damage. Physical damage is affected by the target's defense value."
+  },
+  {
+    "id": "9ee0da60-f569-4012-8338-578375a7e79e",
+    "keyWords": "steal some spirit",
+    "name": "Steal Some Spirit",
+    "index": 57,
+    "description": "Deals moderate physical damage. Physical damage is affected by the target's defense value."
+  },
+  {
+    "id": "97b8a969-9da9-46d6-a3d3-d0fffdc2e412",
+    "keyWords": "summon ghost",
+    "name": "Summon Ghost",
+    "index": 51,
+    "description": "Summons a ghost to deal magic damage. Magic damage is affected by the target's magic resistance value."
+  },
+  {
+    "id": "809480f4-18cb-4709-9989-ced768dcfe8f",
+    "keyWords": "summon mandrake",
+    "name": "Summon Mandrake",
+    "index": 52,
+    "description": "Summons a mandrake to deal magic damage. Has a chance to inflict Poison."
+  },
+  {
+    "id": "696776af-1324-42d7-afae-d62a344ee156",
+    "keyWords": "steal some life",
+    "name": "Steal Some Life",
+    "index": 54,
+    "description": "Deals physical damage, and recover for half the damage dealt. This damage is affected by the target's defense value."
+  },
+  {
+    "id": "3a9a72fe-8b14-4824-bdba-25922f710c84",
+    "keyWords": "steal life",
+    "name": "Steal Life",
+    "index": 55,
+    "description": "Deals strong physical damage, and recover for half the damage dealt. This damage is affected by the target's defense value."
+  },
+  {
+    "id": "539d3805-f8ee-47be-9eb4-393f9f7037a4",
+    "keyWords": "steal lots of life",
+    "name": "Steal Lots of Life",
+    "index": 56,
+    "description": "Deals very powerful physical damage, and recover for half the damage dealt. This damage is affected by the target's defense value."
+  },
+  {
+    "id": "93c413b9-ff8e-4119-9e84-828485de774e",
+    "keyWords": "steal spirit",
+    "name": "Steal Spirit",
+    "index": 58,
+    "description": "Deals moderate physical damage. Physical damage is affected by the target's defense value."
+  },
+  {
+    "id": "d311dfa1-333a-479d-8b2c-3527dfe6b7e4",
+    "keyWords": "steal lots of spirit",
+    "name": "Steal Lots of Spirit",
+    "index": 59,
+    "description": "Deals physical damage. Physical damage is affected by the target's defense value."
+  },
+  {
+    "id": "c3b60bd4-7321-4ca5-ba53-d719cdab7b0d",
+    "keyWords": "bursts",
+    "name": "Bursts",
+    "index": 110,
+    "description": "Bursts to deal minor physical damage to the target. Its power is very small."
+  },
+  {
+    "id": "efa3dadf-b58b-4879-b2b1-36890a76da0f",
+    "keyWords": "soul stabbing thorns",
+    "name": "Soul Stabbing Thorns",
+    "index": 115,
+    "description": "Piercing thorns stab into the target, draining HP over time. The effect is fairly big."
+  },
+  {
+    "id": "f5472ba4-8dfd-44e8-9649-b92099cf0dba",
+    "keyWords": "inflicts burns",
+    "name": "Inflicts Burns",
+    "index": 120,
+    "description": "Burns deal continuous damage. The effect is fairly small."
+  },
+  {
+    "id": "d54f732e-c61d-45ae-adbd-7f19812e6564",
+    "keyWords": "inflicts severe burns",
+    "name": "Inflicts Severe Burns",
+    "index": 121,
+    "description": "Severe burns deal continuous damage. The effect is big."
+  },
+  {
+    "id": "cab31af4-eed2-46db-b887-63f3c5751e6e",
+    "keyWords": "strong in evening",
+    "name": "Strong in Evening",
+    "index": 1038,
+    "description": "Increases attack, defense, and speed by 15% in the evening. No effect during other times."
+  },
+  {
+    "id": "70bf99d5-b916-4125-b36a-d3087e9c5a92",
+    "keyWords": "strong at night",
+    "name": "Strong at Night",
+    "index": 1039,
+    "description": "Increases attack, defense, and speed by 15% at night. No effect during other times."
+  },
+  {
+    "id": "c5cc2d98-bc4e-4882-b744-05bf8a375e96",
+    "keyWords": "embodiment of the sun",
+    "name": "Embodiment of the Sun",
+    "index": 1040,
+    "description": "Increases attack, defense, and speed by 15% in the morning and day. No effect during evening or night."
+  },
+  {
+    "id": "049b8d92-cf07-4659-969c-084744eb0f7f",
+    "keyWords": "envoy of the moon",
+    "name": "Envoy of the Moon",
+    "index": 1041,
+    "description": "Increases attack, defense, and speed by 15% in the evening and night. No effect during morning or day."
+  },
+  {
+    "id": "3030583f-5ebb-43cb-9aa7-1bd9b79960f4",
+    "keyWords": "tool rune",
+    "name": "Tool Rune",
+    "index": 1058,
+    "description": "The hidden magic of the Tool Rune increases item power and reduces wait time."
+  },
+  {
+    "id": "87ae6ac3-3a04-4d5f-9083-544df6cb9e2e",
+    "keyWords": "spirit's power",
+    "name": "Spirit's Power",
+    "index": 1061,
+    "description": "The power of spirits increases base damage."
+  },
+  {
+    "id": "630d9fa9-5b9d-48e3-941e-01279a6bcdf5",
+    "keyWords": "inner fire",
+    "name": "Inner Fire",
+    "index": 1067,
+    "description": "Inner fighting spirit burns bright, revealing true power when fighting stronger enemies."
+  },
+  {
+    "id": "65e46271-f79d-45f4-9d5e-04340e5c1049",
+    "keyWords": "max hp up s",
+    "name": "Max HP Up S",
+    "index": 1103,
+    "description": "Increases maximum HP by 15."
+  },
+  {
+    "id": "9ccf08c3-9b62-42f6-bb0d-b3c6468f48e4",
+    "keyWords": "attack up xs",
+    "name": "Attack Up XS",
+    "index": 1112,
+    "description": "Increases attack power by 5."
+  },
+  {
+    "id": "78acd377-237f-4b2a-85d5-c6eb100c6d4e",
+    "keyWords": "attack up xl",
+    "name": "Attack Up XL",
+    "index": 1116,
+    "description": "Increases attack power by 25."
+  },
+  {
+    "id": "ee26e1ec-8091-4b29-912c-042ee7dd1cf5",
+    "keyWords": "speed up xs",
+    "name": "Speed Up XS",
+    "index": 1122,
+    "description": "Increases speed by 5."
+  },
+  {
+    "id": "6affdd48-bb01-4a56-94d4-2d925b32c743",
+    "keyWords": "evasion up xs",
+    "name": "Evasion Up XS",
+    "index": 1132,
+    "description": "Increases evasion rate by 4%."
+  },
+  {
+    "id": "cdc43f4e-e5be-4b84-89e3-9feb69076004",
+    "keyWords": "evasion up l",
+    "name": "Evasion Up L",
+    "index": 1135,
+    "description": "Increases the target's evasion rate by a lot. The effect lasts 5 turns."
+  },
+  {
+    "id": "0b97d239-8200-4fe6-a79c-6be67a1030da",
+    "keyWords": "critical up xs",
+    "name": "Critical Up XS",
+    "index": 1137,
+    "description": "Increases critical hit rate by 3%."
+  },
+  {
+    "id": "783a9b10-9cee-4ae6-9c5b-3af85de9d6c5",
+    "keyWords": "item enhance m",
+    "name": "Item Enhance M",
+    "index": 1152,
+    "description": "Increases item power by 15%."
+  },
+  {
+    "id": "98dd11c0-1508-4229-82d5-5b05081209bc",
+    "keyWords": "item shorten m",
+    "name": "Item Shorten M",
+    "index": 1155,
+    "description": "Reduces wait time after using item by 15%."
+  },
+  {
+    "id": "f9c61847-9124-4e56-859c-dfdf6e9b6160",
+    "keyWords": "burst up +2%",
+    "name": "Burst Up +2%",
+    "index": 1158,
+    "description": "Increases Burst Gauge fill rate by 2%."
+  },
+  {
+    "id": "de516796-4fcf-40f0-a590-a2ca515eda7a",
+    "keyWords": "ailment resist m",
+    "name": "Ailment Resist M",
+    "index": 1173,
+    "description": "Reduces chance of being affected by ailments by a fair amount."
+  },
+  {
+    "id": "2a71f8fa-35dd-44e5-85e7-0913ba8c7d41",
+    "keyWords": "lightning resistance",
+    "name": "Lightning Resistance",
+    "index": 1183,
+    "description": "Gain lightning resistance."
+  },
+  {
+    "id": "d4f30b20-f6b6-4a6e-910a-848df3ef9165",
+    "keyWords": "damage absorb xl",
+    "name": "Damage Absorb XL",
+    "index": 1187,
+    "description": "Absorbs a portion of damage dealt to the target as HP. The effect is large."
+  },
+  {
+    "id": "4390bdc9-3b8e-4dfa-9512-e6b8c981d08d",
+    "keyWords": "damage cut xl",
+    "name": "Damage Cut XL",
+    "index": 1191,
+    "description": "Reduces damage taken by 10%."
+  },
+  {
+    "id": "fcbb8e29-f3af-4e00-8e60-7d78ec10fc41",
+    "keyWords": "break resist s",
+    "name": "Break Resist S",
+    "index": 1196,
+    "description": "Increases Break resistance by a small amount."
+  },
+  {
+    "id": "665b4b8d-db6f-4be8-a8a9-5a9541f4877a",
+    "keyWords": "use opportunity m",
+    "name": "Use Opportunity M",
+    "index": 1200,
+    "description": "Increases damage dealt to Broken enemies by a small amount."
+  },
+  {
+    "id": "89c8fad0-136a-4af6-9c74-cb70dfe0ec2c",
+    "keyWords": "combined effect",
+    "name": "Combined Effect",
+    "index": 1255,
+    "description": "This cauldron has “Synergy”, “Tuning”, “Time Limit”, and “Color Surroundings” effects."
+  },
+  {
+    "id": "9c235665-87e0-4486-96e5-010032d204fa",
+    "keyWords": "bonus display level 3",
+    "name": "Bonus Display Level 3",
+    "index": 1259,
+    "description": "The Synthesis panel display is level 3. Higher display level increases bonus placement at the start of Synthesis."
+  },
+  {
+    "id": "0492d0d6-7c08-43b8-8662-d42452530aab",
+    "keyWords": "panel 6x6",
+    "name": "Panel 6x6",
+    "index": 1263,
+    "description": "The panel size is 6x6."
+  },
+  {
+    "id": "4f63e76e-6cdc-4b1f-96af-bd1683241980",
+    "keyWords": "color surroundings",
+    "name": "Color Surroundings",
+    "index": 1270,
+    "description": "When a material is placed, the Synthesis bonuses in all 8 directions around it become the same color."
+  },
+  {
+    "id": "409140b2-442d-4ac2-8e8d-22d9e60764c6",
+    "keyWords": "horizontal flip",
+    "name": "Horizontal Flip",
+    "index": 1275,
+    "description": "When placing materials, you can press <LB><RB> to flip it horizontally."
+  },
+  {
+    "id": "942c40e3-711f-4831-bdd1-1e8a136a8e60",
+    "keyWords": "add (ingredient)",
+    "name": "Add (Ingredient)",
+    "index": 1288,
+    "description": "Adds 10 category value to (Ingredient)."
+  },
+  {
+    "id": "701e9cce-2fb2-42eb-8e8e-020cf4409c84",
+    "keyWords": "(ingredient) +5",
+    "name": "(Ingredient) +5",
+    "index": 1298,
+    "description": "Increases (Ingredient) category value by 5."
+  },
+  {
+    "id": "8b26044d-33c9-47bf-ade2-b878ad0b2e8d",
+    "keyWords": "(powder) +5",
+    "name": "(Powder) +5",
+    "index": 1299,
+    "description": "Increases (Gunpowder) category value by 5."
+  },
+  {
+    "id": "650b2909-f484-43ab-85d1-3599037ab0e6",
+    "keyWords": "ultimate mobility",
+    "name": "Ultimate Mobility",
+    "index": 1401,
+    "description": "Gain ultimate mobility. Wait time after using skills is reduced by 20%."
+  },
+  {
+    "id": "e41b8c1b-0ecb-45f2-9f8d-72111ebf85d0",
+    "keyWords": "ultimate enhancement",
+    "name": "Ultimate Enhancement",
+    "index": 1408,
+    "description": "Gain ultimate enhancement. Increases maximum HP and MP by 50."
+  },
+  {
+    "id": "6c1ae389-1efd-4911-a953-4fe66f2d5506",
+    "keyWords": "ultimate thunder resist",
+    "name": "Ultimate Thunder Resist",
+    "index": 1416,
+    "description": "Gain ultimate lightning resistance. Gain super lightning resistance."
+  },
+  {
+    "id": "cfdbab6d-246c-472d-98cf-67775acd196e",
+    "keyWords": "ultimate growth",
+    "name": "Ultimate Growth",
+    "index": 1420,
+    "description": "Gain ultimate growth. Greatly increases expected damage value."
+  },
+  {
+    "id": "171c54fd-1cde-403e-aa8b-0761358d88dc",
+    "keyWords": "ultimate revival",
+    "name": "Ultimate Revival",
+    "index": 1421,
+    "description": "Gain ultimate revival. Automatically revive on your next turn after being KO'd."
+  },
+  {
+    "id": "53a67040-e0fd-4238-9157-6435337a1745",
+    "keyWords": "ultimate reduction",
+    "name": "Ultimate Reduction",
+    "index": 1425,
+    "description": "Gain ultimate reduction. You have a 35% chance after a turn to reduce wait time by 25%."
+  },
+  {
+    "id": "f23dd8e2-7654-40f1-98aa-b83214fbde24",
+    "keyWords": "explodes",
+    "name": "Explodes",
+    "index": 111,
+    "description": "Explodes to deal physical damage to the target. Its power is small."
+  },
+  {
+    "id": "81b2386c-d571-4414-ab02-5bd1fea73c90",
+    "keyWords": "pinpoint flare",
+    "name": "Pinpoint Flare",
+    "index": 125,
+    "description": "The attack area becomes single target, but deals ultimate additional damage that ignores defense."
+  },
+  {
+    "id": "d4b79f70-a8e4-4bb0-9bd3-1d84bfeae70d",
+    "keyWords": "intense shock",
+    "name": "Intense Shock",
+    "index": 129,
+    "description": "Shocks the target with intense electricity, reducing their HP. The amount depends on the target's maximum HP."
+  },
+  {
+    "id": "e1f04f00-fcbe-4fda-b60f-08bb5a1b456e",
+    "keyWords": "call tempest",
+    "name": "Call Tempest",
+    "index": 134,
+    "description": "Calls a tempest, activating 1 time card that deals lightning damage to the target. The effect lasts 3 turns."
+  },
+  {
+    "id": "78b75fce-6109-46a8-9d8a-8303855d9af1",
+    "keyWords": "enthusiastic",
+    "name": "Enthusiastic",
+    "index": 140,
+    "description": "Activates automatically when the user's HP falls below 40%."
+  },
+  {
+    "id": "9829590b-1618-47de-af3f-f93fd2a2def4",
+    "keyWords": "shooting stars",
+    "name": "Shooting Stars",
+    "index": 142,
+    "description": "The rain of fire spawns meteors, dealing big fixed additional damage to the target."
+  },
+  {
+    "id": "1f11bd89-6f2f-4981-a3ed-377ed3b035da",
+    "keyWords": "hp recovery xxl",
+    "name": "HP Recovery XXL",
+    "index": 200,
+    "description": "Restores the target's HP by an extreme amount."
+  },
+  {
+    "id": "2034c332-dca9-4eaf-bef8-008a16d7457b",
+    "keyWords": "mp recovery s",
+    "name": "MP Recovery S",
+    "index": 202,
+    "description": "Restores the target's MP by a small amount."
+  },
+  {
+    "id": "f78682b4-1a47-4578-97d7-a8095e8591db",
+    "keyWords": "hplp recovery xs",
+    "name": "HPLP Recovery XS",
+    "index": 218,
+    "description": "Restores a slight amount of the target's HP and LP."
+  },
+  {
+    "id": "0790670b-1497-4475-886b-96b92598e8f3",
+    "keyWords": "hplp recovery l",
+    "name": "HPLP Recovery L",
+    "index": 221,
+    "description": "Restores a large amount of the target's HP and LP."
+  },
+  {
+    "id": "08df5f5e-cbc4-445b-acac-afcfc62e20d9",
+    "keyWords": "a little filling",
+    "name": "A Little Filling",
+    "index": 284,
+    "description": "Sits in the stomach, delaying your turn in battle a slight amount. Also restores LP."
+  },
+  {
+    "id": "88f5a84b-f0ca-4952-8274-3c4bc630fb0d",
+    "keyWords": "bad taste",
+    "name": "Bad Taste",
+    "index": 290,
+    "description": "It's so bad tasting that it causes pain, inflicting damage."
+  },
+  {
+    "id": "0a706ef7-e96e-4733-ab9b-1f7d6ae816fc",
+    "keyWords": "nutritious",
+    "name": "Nutritious",
+    "index": 305,
+    "description": "The nutritious flavor increases all stats by a small amount."
+  },
+  {
+    "id": "4313fb35-64d2-4513-993a-231619bf00bb",
+    "keyWords": "very nutritious",
+    "name": "Very Nutritious",
+    "index": 306,
+    "description": "The highly nourishing flavor increases all stats."
+  },
+  {
+    "id": "884b4d5c-95d5-43da-8ee7-45fadad06a9a",
+    "keyWords": "recovery bonus xs",
+    "name": "Recovery Bonus XS",
+    "index": 360,
+    "description": "Grants the target a slight HP recovery bonus."
+  },
+  {
+    "id": "f3fd0efa-4e00-48b5-aeef-5c72e96c3cff",
+    "keyWords": "cures slow",
+    "name": "Cures Slow",
+    "index": 377,
+    "description": "The target recovers from Slow."
+  },
+  {
+    "id": "fc908c3b-3383-44d2-9921-ca31cfb27775",
+    "keyWords": "clears the mind",
+    "name": "Clears the Mind",
+    "index": 365,
+    "description": "The target recovers a small amount of Break value."
+  },
+  {
+    "id": "18e24277-6dcf-4627-a38c-1a746e3eb48a",
+    "keyWords": "peppy",
+    "name": "Peppy",
+    "index": 368,
+    "description": "The target recovers a large amount of Break value."
+  },
+  {
+    "id": "b0aafa44-ff2e-496a-ba30-c745a628e34b",
+    "keyWords": "revive from ko xl",
+    "name": "Revive from KO XL",
+    "index": 374,
+    "description": "Revives the target from KO, and restores a huge amount of HP."
+  },
+  {
+    "id": "b7dba735-cd20-4a43-b255-601394b157e3",
+    "keyWords": "cures curse",
+    "name": "Cures Curse",
+    "index": 378,
+    "description": "The target recovers from Curse."
+  },
+  {
+    "id": "448a85a0-e675-4441-98b9-c88d3d5633df",
+    "keyWords": "removes 1 ailment",
+    "name": "Removes 1 Ailment",
+    "index": 384,
+    "description": "The target recovers from 1 ailment."
+  },
+  {
+    "id": "5fdcd9a0-ed34-4e65-9309-c416cd27d883",
+    "keyWords": "fire spirit blessing",
+    "name": "Fire Spirit Blessing",
+    "index": 439,
+    "description": "Grants all allies fire resistance."
+  },
+  {
+    "id": "262201cd-8562-4494-880a-10d1b72a2d52",
+    "keyWords": "angel's protection l",
+    "name": "Angel's Protection L",
+    "index": 445,
+    "description": "Temporarily reduces physical damage taken by the target. The effect is decent."
+  },
+  {
+    "id": "2fd580c5-4cf2-4ebf-9a86-9aafdd862ede",
+    "keyWords": "goddess protection",
+    "name": "Goddess Protection",
+    "index": 449,
+    "description": "Receive the goddess' protection, temporarily increasing the target's level a slight amount. Higher level increases attack and speed."
+  },
+  {
+    "id": "cdad69ba-4e66-4e2e-914c-49ddffdc28eb",
+    "keyWords": "goddess blessing",
+    "name": "Goddess Blessing",
+    "index": 450,
+    "description": "Receive the goddess' blessing, temporarily increasing the target's level a small amount. Higher level increases attack and speed."
+  },
+  {
+    "id": "a1e60d4d-6ce0-4d6c-909e-45a9316b9cf2",
+    "keyWords": "draws out power",
+    "name": "Draws Out Power",
+    "index": 457,
+    "description": "Deals damage to the target, but increases base damage on the next turn."
+  },
+  {
+    "id": "a8b3df4b-9503-4d92-8dff-32b97685d727",
+    "keyWords": "activate split",
+    "name": "Activate Split",
+    "index": 463,
+    "description": "Item becomes a timed effect, allowing it to activate again. Effect lasts 1 turn."
+  },
+  {
+    "id": "9d56ef49-db65-440e-bc24-9467a4d0a091",
+    "keyWords": "activate division",
+    "name": "Activate Division",
+    "index": 465,
+    "description": "Item becomes a timed effect, allowing it to activate again. Effect lasts 3 turns."
+  },
+  {
+    "id": "36390e01-64f1-4b74-af47-e8dfaec11ef2",
+    "keyWords": "attack up s",
+    "name": "Attack Up S",
+    "index": 510,
+    "description": "Increases the target's attack power a little. The effect lasts 5 turns."
+  },
+  {
+    "id": "30659cc7-793d-4b60-b910-4bad4325f4a1",
+    "keyWords": "defense up l",
+    "name": "Defense Up L",
+    "index": 515,
+    "description": "Increases the target's defense by a lot. The effect lasts 5 turns."
+  },
+  {
+    "id": "b75e8078-5300-445e-b32b-2ea12d8d369c",
+    "keyWords": "all stats up s",
+    "name": "All Stats Up S",
+    "index": 519,
+    "description": "Increases all the target's stats a little. The effect lasts 5 turns."
+  },
+  {
+    "id": "df338902-387f-4d21-9cf1-cbff52ede329",
+    "keyWords": "all stats up m",
+    "name": "All Stats Up M",
+    "index": 520,
+    "description": "Increases all the target's stats. The effect lasts 5 turns."
+  },
+  {
+    "id": "67e1c623-e71a-4182-b014-f9433b29dce4",
+    "keyWords": "evasion up m",
+    "name": "Evasion Up M",
+    "index": 526,
+    "description": "Increases the target's evasion rate. The effect lasts 5 turns."
+  },
+  {
+    "id": "6ae6ddec-584e-4f93-8cb1-0061b536cb5d",
+    "keyWords": "crit rate up l",
+    "name": "Crit Rate Up L",
+    "index": 530,
+    "description": "Increases the target's chance to score a critical hit by a large amount."
+  },
+  {
+    "id": "f70097ad-2aa2-43d9-ba09-e70695a76b7d",
+    "keyWords": "hp regen m",
+    "name": "HP Regen M",
+    "index": 536,
+    "description": "The target recovers HP on each turn. The effect lasts for 5 turns."
+  },
+  {
+    "id": "e8711442-feeb-4716-9d8a-66f9bb64a05a",
+    "keyWords": "temp stamina up s",
+    "name": "Temp Stamina Up S",
+    "index": 546,
+    "description": "Temporarily increases the target's maximum HP in battle. The effect is small."
+  },
+  {
+    "id": "ed9bf61f-3f31-4f51-9cf1-7071b7228703",
+    "keyWords": "temp stamina up m",
+    "name": "Temp Stamina Up M",
+    "index": 547,
+    "description": "Temporarily increases the target's maximum HP in battle. The effect is moderate."
+  },
+  {
+    "id": "02d6b40e-ee35-419e-b6f0-4f177693f1ce",
+    "keyWords": "reduce ailments s",
+    "name": "Reduce Ailments S",
+    "index": 555,
+    "description": "Reduces the effectiveness of status ailments by a little."
+  },
+  {
+    "id": "fe56a4a6-3560-422d-bf80-92fcfad0ad16",
+    "keyWords": "chain attack up s",
+    "name": "Chain Attack Up S",
+    "index": 561,
+    "description": "Increases the target's chance to activate a chain attack by 25%. Effect lasts 5 turns."
+  },
+  {
+    "id": "16449b04-7039-4866-9981-8b4c9fd47a75",
+    "keyWords": "more opportunity l",
+    "name": "More Opportunity L",
+    "index": 566,
+    "description": "Increases damage dealt to Broken enemies by 50%. Effect lasts 5 turns."
+  },
+  {
+    "id": "379bf124-1c63-4552-813e-1d47577fb318",
+    "keyWords": "appetizing aroma",
+    "name": "Appetizing Aroma",
+    "index": 619,
+    "description": "Pushes the target's turn back a decent amount. This effect diminishes with each use until they take another turn."
+  },
+  {
+    "id": "5a2e7000-e776-4595-8b24-08124c0a7b68",
+    "keyWords": "tempting aroma",
+    "name": "Tempting Aroma",
+    "index": 620,
+    "description": "Pushes the target's turn back a considerable amount. This effect diminishes with each use until they take another turn."
+  },
+  {
+    "id": "dab9537d-00c0-4987-9f53-2057744f56a5",
+    "keyWords": "steal defense s",
+    "name": "Steal Defense S",
+    "index": 629,
+    "description": "Reduces the target's defense by a small amount, and temporarily increases your own by that amount."
+  },
+  {
+    "id": "c9c5699b-d5a5-47b0-8008-9270fcbb6b97",
+    "keyWords": "steal speed m",
+    "name": "Steal Speed M",
+    "index": 633,
+    "description": "Reduces the target's speed, and temporarily increases your own by that amount."
+  },
+  {
+    "id": "6e832e88-8468-46de-b8d0-1c03b6334c90",
+    "keyWords": "purge enhancements",
+    "name": "Purge Enhancements",
+    "index": 637,
+    "description": ""
+  },
+  {
+    "id": "a657b642-7c6d-46e0-b13d-9b2ae90f3c1e",
+    "keyWords": "attack down l",
+    "name": "Attack Down L",
+    "index": 690,
+    "description": "Greatly reduces the target's attack power."
+  },
+  {
+    "id": "668b1ba2-b8fd-41ae-b32b-a3b7592050e8",
+    "keyWords": "defense down m",
+    "name": "Defense Down M",
+    "index": 692,
+    "description": "Reduces the target's defense."
+  },
+  {
+    "id": "0249ae42-0141-4c8d-98b0-4e84d2168c5b",
+    "keyWords": "inflict slow s",
+    "name": "Inflict Slow S",
+    "index": 706,
+    "description": "Has a low chance of Slowing the target. The effect is small. Slow increases wait time after taking a turn."
+  },
+  {
+    "id": "6941c713-3167-46fd-b02f-1a39420e906a",
+    "keyWords": "inflict curse s",
+    "name": "Inflict Curse S",
+    "index": 709,
+    "description": "Has a low chance of Cursing the target. The effect is small. Curse causes the target to take damage when healing."
+  },
+  {
+    "id": "b4e59efe-a72f-4aab-8c86-e992477fe5f4",
+    "keyWords": "inflict curse m",
+    "name": "Inflict Curse M",
+    "index": 710,
+    "description": "Has a moderate chance of Cursing the target. The effect is moderate. Curse causes the target to take damage when healing."
+  },
+  {
+    "id": "9eeb2ffe-9c1f-4678-ab49-da2754aa7844",
+    "keyWords": "inflict blind l",
+    "name": "Inflict Blind L",
+    "index": 714,
+    "description": "Has a high chance of Blinding the target. The effect is big. Blind reduces attack hit rate and evasion rate."
+  },
+  {
+    "id": "19ac16cf-bfcb-4c3b-b575-d9489f7599d9",
+    "keyWords": "inflict corruption s",
+    "name": "Inflict Corruption S",
+    "index": 724,
+    "description": "Inflicts 3 random status effects on the target. The chance and effect are both low."
+  },
+  {
+    "id": "aeb19723-3140-40fd-9385-b0a79e48fe84",
+    "keyWords": "weak to impacts",
+    "name": "Weak to Impacts",
+    "index": 739,
+    "description": "Increases damage dealt to the target by a fixed ratio. It cannot be stacked, so only the highest effect will apply."
+  },
+  {
+    "id": "95b71cff-07c0-403e-abb1-7b34bec1a33f",
+    "keyWords": "thorn attack",
+    "name": "Thorn Attack",
+    "index": 112,
+    "description": "Sharp thorns inside burst out, dealing physical damage to the target. Its power is fairly high."
+  },
+  {
+    "id": "50740693-88c9-4057-aaf9-568da616e7b4",
+    "keyWords": "piercing damage m",
+    "name": "Piercing Damage M",
+    "index": 117,
+    "description": "Deals fixed damage to the target, unaffected by defense. Its power is small."
+  },
+  {
+    "id": "a5775669-0cf0-48f3-a3ea-f61e22bb200a",
+    "keyWords": "blue flames",
+    "name": "Blue Flames",
+    "index": 124,
+    "description": "Emits a hotter than usual flame, dealing a large amount of additional damage that ignores defense."
+  },
+  {
+    "id": "de485fa3-f310-45ed-bd3b-818cb8a6ccc9",
+    "keyWords": "expand effect area",
+    "name": "Expand Effect Area",
+    "index": 135,
+    "description": "Expands the item's area of effect a little."
+  },
+  {
+    "id": "65c320c4-6864-4281-bec4-7a0b21f8e1c1",
+    "keyWords": "treat hazardous materials",
+    "name": "Treat Hazardous Materials",
+    "index": 143,
+    "description": "Has a high chance to inflict Poison on the target. The effect is very big. Poison deals damage on each turn."
+  },
+  {
+    "id": "d0967d78-468e-4b0f-84ea-64f01c2a43d1",
+    "keyWords": "hp recovery xl",
+    "name": "HP Recovery XL",
+    "index": 199,
+    "description": "Restores the target's HP by a huge amount."
+  },
+  {
+    "id": "98cae84d-63ce-4db4-857b-82a41d13e45e",
+    "keyWords": "mp recovery m",
+    "name": "MP Recovery M",
+    "index": 203,
+    "description": "Restores the target's MP."
+  },
+  {
+    "id": "3fe2d74e-b87d-489e-99e1-a148cd5e632d",
+    "keyWords": "lp recovery l",
+    "name": "LP Recovery L",
+    "index": 210,
+    "description": "Restores the target's LP by a large amount."
+  },
+  {
+    "id": "0babde7e-df23-453f-be91-1cf89a27cff1",
+    "keyWords": "hpmp recovery xs",
+    "name": "HPMP Recovery XS",
+    "index": 213,
+    "description": "Restores a slight amount of the target's HP and MP."
+  },
+  {
+    "id": "64e345cb-6834-4229-90ae-0ab310cb1236",
+    "keyWords": "hplp recovery m",
+    "name": "HPLP Recovery M",
+    "index": 220,
+    "description": "Restores the target's HP and LP."
+  },
+  {
+    "id": "aa7d103c-0a45-4bf9-bff7-a1fae7e11a02",
+    "keyWords": "mplp recovery xs",
+    "name": "MPLP Recovery XS",
+    "index": 223,
+    "description": "Restores a slight amount of the target's HP and LP."
+  },
+  {
+    "id": "db85bfa1-216b-4592-bdc8-88f4d82f5608",
+    "keyWords": "eat and recover xxl",
+    "name": "Eat and Recover XXL",
+    "index": 283,
+    "description": "Restores an extreme amount of the target's HP and LP. Recovery amount increases with higher maximum HP."
+  },
+  {
+    "id": "2bbaaed2-0bdb-4321-911e-d331efca1f2d",
+    "keyWords": "hard",
+    "name": "Hard",
+    "index": 287,
+    "description": "It's so hard that it slows you down, inflicting Slow. The effect is moderate."
+  },
+  {
+    "id": "ffb09bc8-3ad5-45f3-978e-b900f28235e1",
+    "keyWords": "digests quickly",
+    "name": "Digests Quickly",
+    "index": 289,
+    "description": "This is digested so quickly that it doesn't affect the body."
+  },
+  {
+    "id": "0d4f5e9d-e8ae-4d3c-8e21-9b5d8e9839b5",
+    "keyWords": "crumbly",
+    "name": "Crumbly",
+    "index": 302,
+    "description": "The crumbly texture makes you feel weird, reducing defense a small amount."
+  },
+  {
+    "id": "c0427782-9e7a-44d3-b310-f2bc86857dab",
+    "keyWords": "cures weak",
+    "name": "Cures Weak",
+    "index": 380,
+    "description": "The target recovers from Weak."
+  },
+  {
+    "id": "bed8d00e-bbbe-4984-b7e3-9a151d65f427",
+    "keyWords": "strange elasticity",
+    "name": "Strange Elasticity",
+    "index": 304,
+    "description": "The unknown chewiness excites you, increasing defense a little. Also speeds up the target's turn a little."
+  },
+  {
+    "id": "3b9da0a4-056e-4653-961d-2802f48c955b",
+    "keyWords": "snack companion",
+    "name": "Snack Companion",
+    "index": 308,
+    "description": "Restores the target's HP. Recovery amount increases the closer it is to 3pm."
+  },
+  {
+    "id": "90bbbc24-25bc-4f64-b558-ff6d7d4adcab",
+    "keyWords": "recycle",
+    "name": "Recycle",
+    "index": 462,
+    "description": "Item use count might not decrease when used. The chance is high."
+  },
+  {
+    "id": "cfdd418d-3f29-42f8-9f75-dca70ea38786",
+    "keyWords": "auto activate 20%",
+    "name": "Auto Activate 20%",
+    "index": 466,
+    "description": "Activates automatically when the user's HP falls below 20%."
+  },
+  {
+    "id": "5e69beda-0e65-4b3e-903c-3063abae45ff",
+    "keyWords": "all stats up l",
+    "name": "All Stats Up L",
+    "index": 521,
+    "description": "Increases all the target's stats by a lot. The effect lasts 5 turns."
+  },
+  {
+    "id": "401be0ba-113b-4c2a-81b2-99b41d4f1b32",
+    "keyWords": "hit rate up l",
+    "name": "Hit Rate Up L",
+    "index": 524,
+    "description": "Increases the target's hit rate by a lot. The effect lasts 5 turns."
+  },
+  {
+    "id": "476d5c1e-b6e9-401a-b878-a2f75e1cf27c",
+    "keyWords": "evasion up l",
+    "name": "Evasion Up L",
+    "index": 527,
+    "description": "Increases the target's evasion rate by a lot. The effect lasts 5 turns."
+  },
+  {
+    "id": "4df7d9dc-d0f5-468d-a7f8-ae749d5a1e00",
+    "keyWords": "crit power up m",
+    "name": "Crit Power Up M",
+    "index": 532,
+    "description": "Increases the target's critical hit damage bonus by a decent amount."
+  },
+  {
+    "id": "ba2af09a-8e42-409d-a889-8968832db32d",
+    "keyWords": "hp regen s",
+    "name": "HP Regen S",
+    "index": 535,
+    "description": "The target recovers a small amount of HP on each turn. The effect lasts for 5 turns."
+  },
+  {
+    "id": "3b790933-ca94-43f2-b6d9-9f427ff5949e",
+    "keyWords": "hp regen xl",
+    "name": "HP Regen XL",
+    "index": 538,
+    "description": "The target recovers a huge amount of HP on each turn. The effect lasts for 5 turns."
+  },
+  {
+    "id": "6117d884-603d-44c5-9fbd-afc07fa74e5c",
+    "keyWords": "auto revive s",
+    "name": "Auto Revive S",
+    "index": 552,
+    "description": "Automatically revive on the next turn after being KO'd. HP after revival is low."
+  },
+  {
+    "id": "3988ec85-07b7-4624-8ae5-1d2c80c6c2b3",
+    "keyWords": "cut wait time m",
+    "name": "Cut Wait Time M",
+    "index": 559,
+    "description": "Reduces wait time after the target's next turn by a fair bit."
+  },
+  {
+    "id": "113a69d4-537e-4b92-a31d-cdb22796fe10",
+    "keyWords": "chain attack up l",
+    "name": "Chain Attack Up L",
+    "index": 563,
+    "description": "Increases the target's chance to activate a chain attack by 75%. Effect lasts 5 turns."
+  },
+  {
+    "id": "135e0962-300a-4ce8-bb43-2ee429b32d8f",
+    "keyWords": "tasty aroma",
+    "name": "Tasty Aroma",
+    "index": 618,
+    "description": "Pushes the target's turn back a little. This effect diminishes with each use until they take another turn."
+  },
+  {
+    "id": "8e1e9ff4-a3c4-408c-a826-01821e5d6afb",
+    "keyWords": "steal attack m",
+    "name": "Steal Attack M",
+    "index": 627,
+    "description": "Reduces the target's attack, and temporarily increases your own by that amount."
+  },
+  {
+    "id": "0cb4b091-39b3-4890-8d8e-f90e2807f0fe",
+    "keyWords": "steal speed l",
+    "name": "Steal Speed L",
+    "index": 634,
+    "description": "Reduces the target's speed by a large amount, and temporarily increases your own by that amount."
+  },
+  {
+    "id": "09437b5b-0a45-4e11-9837-0a8f27503147",
+    "keyWords": "attack down s",
+    "name": "Attack Down S",
+    "index": 688,
+    "description": "Slightly reduces the target's attack power."
+  },
+  {
+    "id": "123bfbd2-4374-449e-ab05-bf25f87c2320",
+    "keyWords": "defense down l",
+    "name": "Defense Down L",
+    "index": 693,
+    "description": "Greatly reduces the target's defense."
+  },
+  {
+    "id": "771f4fa2-82c1-45e1-b09a-c9cc26c85b46",
+    "keyWords": "all stats down l",
+    "name": "All Stats Down L",
+    "index": 699,
+    "description": "Greatly reduces all of the target's stats."
+  },
+  {
+    "id": "6a67b32c-a8db-40fc-9966-5727cbaaebcf",
+    "keyWords": "inflict poison l",
+    "name": "Inflict Poison L",
+    "index": 705,
+    "description": "Has a high chance of Poisoning the target. The effect is big. Poison deals damage every time the target takes a turn."
+  },
+  {
+    "id": "69bae324-b5e6-40d6-b62f-a711f12dc38f",
+    "keyWords": "inflict weak s",
+    "name": "Inflict Weak S",
+    "index": 715,
+    "description": "Has a low chance of Weakening the target. The effect is small. Weak reduces the power of all skills."
+  },
+  {
+    "id": "a2e18f12-e112-487f-abcc-f512f2c5f52b",
+    "keyWords": "inflict corruption m",
+    "name": "Inflict Corruption M",
+    "index": 725,
+    "description": "Inflicts 3 random status effects on the target. The chance and effect are both moderate."
+  },
+  {
+    "id": "899db1b1-cac5-4760-a725-9ad8108665bf",
+    "keyWords": "strong in morning",
+    "name": "Strong in Morning",
+    "index": 1036,
+    "description": "Increases attack, defense, and speed by 15% in the morning. No effect during other times."
+  },
+  {
+    "id": "e6aa15d3-c29d-4f70-a0b6-5f22a74c524f",
+    "keyWords": "protection to power",
+    "name": "Protection to Power",
+    "index": 1043,
+    "description": "Reduces defense by 15%, increasing attack by that amount."
+  },
+  {
+    "id": "fb67f33d-61e0-4423-ab47-71d656c8d765",
+    "keyWords": "power of ten",
+    "name": "Power of Ten",
+    "index": 1050,
+    "description": "Greatly increases attack, defense, and speed when ailments are removed."
+  },
+  {
+    "id": "c6c38dcd-a5c9-4d5b-9964-4d2bb49acc88",
+    "keyWords": "speed rune",
+    "name": "Speed Rune",
+    "index": 1053,
+    "description": "The hidden magic of the Speed Rune increases speed by 15."
+  },
+  {
+    "id": "9d052351-9369-428f-98a7-e486d4fdb413",
+    "keyWords": "bulwark rune",
+    "name": "Bulwark Rune",
+    "index": 1059,
+    "description": "The hidden magic of the Bulwark Rune reduces all damage taken."
+  },
+  {
+    "id": "82f7de00-269f-422e-9d36-5bab48f95a0c",
+    "keyWords": "spirit king's power",
+    "name": "Spirit King's Power",
+    "index": 1062,
+    "description": "The power of the spirit king greatly increases base damage."
+  },
+  {
+    "id": "e6a36a6c-cf87-4884-a2f9-7123f4df047a",
+    "keyWords": "search for escape",
+    "name": "Search for Escape",
+    "index": 1066,
+    "description": "Find paths to escape, massively increasing the success rate of “Run”."
+  },
+  {
+    "id": "6d2df29d-97e2-454b-af4f-3815c5b2affc",
+    "keyWords": "hp regen l",
+    "name": "HP Regen L",
+    "index": 1096,
+    "description": "The target recovers a large amount of HP on each turn. The effect lasts for 5 turns."
+  },
+  {
+    "id": "eadc6431-2790-46c6-a596-d9142605fc98",
+    "keyWords": "mp regen l",
+    "name": "MP Regen L",
+    "index": 1100,
+    "description": "MP recovers on each turn."
+  },
+  {
+    "id": "ad8d502e-ddc0-40bb-87f7-e3296cee4981",
+    "keyWords": "max mp up xl",
+    "name": "Max MP Up XL",
+    "index": 1111,
+    "description": "Increases maximum MP by 30."
+  },
+  {
+    "id": "5b7ed000-1fdb-417f-b7ab-b8511d4667ad",
+    "keyWords": "defense up xl",
+    "name": "Defense Up XL",
+    "index": 1121,
+    "description": "Increases defense by 25."
+  },
+  {
+    "id": "5e8ecb65-c2f8-4edd-8494-8a309c16cbe9",
+    "keyWords": "speed up l",
+    "name": "Speed Up L",
+    "index": 1125,
+    "description": "Increases the target's speed by a lot. The effect lasts 5 turns."
+  },
+  {
+    "id": "eaa0243e-bab8-4f67-800f-90eb0fd4a112",
+    "keyWords": "evasion up s",
+    "name": "Evasion Up S",
+    "index": 1133,
+    "description": "Increases the target's evasion rate a little. The effect lasts 5 turns."
+  },
+  {
+    "id": "d73163ae-3f5e-4e9f-9455-79be4f954340",
+    "keyWords": "evasion up xl",
+    "name": "Evasion Up XL",
+    "index": 1136,
+    "description": "Increases evasion rate by 12%."
+  },
+  {
+    "id": "3533dc2a-92e0-4803-bb0a-23b48ef13bf4",
+    "keyWords": "critical enhance m",
+    "name": "Critical Enhance M",
+    "index": 1144,
+    "description": "Increases critical damage bonus by 9%."
+  },
+  {
+    "id": "fb754bc7-c190-4aa8-8013-c09fa7ed3d91",
+    "keyWords": "item shorten s",
+    "name": "Item Shorten S",
+    "index": 1154,
+    "description": "Reduces wait time after using item by 10%."
+  },
+  {
+    "id": "8dd8e3f4-f166-40db-9547-cc402d7101b6",
+    "keyWords": "burst up +3%",
+    "name": "Burst Up +3%",
+    "index": 1159,
+    "description": "Increases Burst Gauge fill rate by 3%."
+  },
+  {
+    "id": "14820485-125c-48ac-848f-873cd8714f97",
+    "keyWords": "ailment resist xs",
+    "name": "Ailment Resist XS",
+    "index": 1171,
+    "description": "Reduces chance of being affected by ailments by a slight amount."
+  },
+  {
+    "id": "de113ea2-7685-4d2c-9b9f-e1643c152f7a",
+    "keyWords": "sticking thorns",
+    "name": "Sticking Thorns",
+    "index": 113,
+    "description": "Thorns stick into the target, draining HP over time. The effect is very small."
+  },
+  {
+    "id": "94bad769-3fea-46a5-9fab-b3cd8374615c",
+    "keyWords": "piercing damage l",
+    "name": "Piercing Damage L",
+    "index": 118,
+    "description": "Deals fixed damage to the target, unaffected by defense. Its power is big."
+  },
+  {
+    "id": "82da66cf-cc19-48c1-ac24-6c41cd1f8722",
+    "keyWords": "scorching earth",
+    "name": "Scorching Earth",
+    "index": 123,
+    "description": "A vast level of unending heat deals continuous damage. The effect is supremely big."
+  },
+  {
+    "id": "d3e73e21-a5f9-471a-adb7-c7b933b5f307",
+    "keyWords": "expand effect area +",
+    "name": "Expand Effect Area +",
+    "index": 136,
+    "description": "Expands the item's area of effect."
+  },
+  {
+    "id": "60a2da40-c107-4765-a162-dd8b407a271c",
+    "keyWords": "alive",
+    "name": "Alive",
+    "index": 138,
+    "description": "Activates automatically when the user's HP falls below 20%."
+  },
+  {
+    "id": "1a1f375c-5082-4f58-90d8-f9b15c9c8fa0",
+    "keyWords": "black bullets",
+    "name": "Black Bullets",
+    "index": 141,
+    "description": "Deals additional big fixed damage to the target."
+  },
+  {
+    "id": "a43d68ff-441f-415e-8d38-02f2624659d5",
+    "keyWords": "lp recovery s",
+    "name": "LP Recovery S",
+    "index": 208,
+    "description": "Restores the target's LP by a small amount."
+  },
+  {
+    "id": "a4607d9a-0a6c-4caf-b526-7f7273803add",
+    "keyWords": "hpmp recovery m",
+    "name": "HPMP Recovery M",
+    "index": 215,
+    "description": "Restores the target's HP and MP."
+  },
+  {
+    "id": "17af1d4e-b2e3-4950-9e76-056faa6fa05a",
+    "keyWords": "mplp recovery m",
+    "name": "MPLP Recovery M",
+    "index": 225,
+    "description": "Restores the target's HP and LP."
+  },
+  {
+    "id": "ae6fa920-dbe4-448a-b88a-bca24c5fb7ab",
+    "keyWords": "tranquil aroma",
+    "name": "Tranquil Aroma",
+    "index": 229,
+    "description": "Restores the whole party's HP by a small amount."
+  },
+  {
+    "id": "5acb77c6-b1de-4f70-a684-6402aade3a67",
+    "keyWords": "eat and recover s",
+    "name": "Eat and Recover S",
+    "index": 279,
+    "description": "Restores a small amount of the target's HP and LP. Recovery amount increases with higher maximum HP."
+  },
+  {
+    "id": "ce021511-7860-421a-ad9c-ede08ccaed0c",
+    "keyWords": "very filling",
+    "name": "Very Filling",
+    "index": 286,
+    "description": "Sits in the stomach, delaying your turn in battle. Also restores LP."
+  },
+  {
+    "id": "aa960c37-180c-4586-ba4e-f38993f99df3",
+    "keyWords": "cold",
+    "name": "Cold",
+    "index": 296,
+    "description": "Coldness slows down the body, reducing the target's speed a little."
+  },
+  {
+    "id": "4570a6c4-7ac8-46fc-b3f2-deac353e0410",
+    "keyWords": "hot",
+    "name": "Hot",
+    "index": 298,
+    "description": "Warms the body, increasing the target's speed a lot, but also deals continuous damage."
+  },
+  {
+    "id": "10f49ad1-2607-4425-8d05-d6d6da824eba",
+    "keyWords": "fluffy",
+    "name": "Fluffy",
+    "index": 303,
+    "description": "The fluffy texture is quite pleasant. Increases the target's defense a little."
+  },
+  {
+    "id": "8c1a1b32-51d1-4902-994a-5ec10349f7b9",
+    "keyWords": "recovery bonus s",
+    "name": "Recovery Bonus S",
+    "index": 361,
+    "description": "Grants the target a small HP recovery bonus."
+  },
+  {
+    "id": "b055bd02-5f46-462a-a124-9bfe209b6065",
+    "keyWords": "cure dizziness",
+    "name": "Cure Dizziness",
+    "index": 367,
+    "description": "The target recovers Break value."
+  },
+  {
+    "id": "ae7a7e77-55a3-47f8-a8ae-979601b2cbfd",
+    "keyWords": "great feeling",
+    "name": "Great Feeling",
+    "index": 369,
+    "description": "The target recovers a huge amount of Break value."
+  },
+  {
+    "id": "c8946583-6a68-4ed9-91c8-cb67bab0a62e",
+    "keyWords": "cures after effects",
+    "name": "Cures After Effects",
+    "index": 383,
+    "description": "The target recovers from revival After Effects."
+  },
+  {
+    "id": "9b00c658-0ce9-4ca6-ab89-ef42a46e57b7",
+    "keyWords": "ice spirit blessing",
+    "name": "Ice Spirit Blessing",
+    "index": 440,
+    "description": "Grants all allies ice resistance."
+  },
+  {
+    "id": "305b52aa-2590-4a74-89db-4f35aceb6283",
+    "keyWords": "angel's protection m",
+    "name": "Angel's Protection M",
+    "index": 444,
+    "description": "Temporarily reduces physical damage taken by the target. The effect is fairly small."
+  },
+  {
+    "id": "f3d55003-bd82-4133-b10f-21c39834d478",
+    "keyWords": "heroic protection",
+    "name": "Heroic Protection",
+    "index": 451,
+    "description": "Receive the heroic spirit's protection, temporarily increasing the target's level. Higher level increases attack and speed."
+  },
+  {
+    "id": "f50ef26d-00f1-435e-ad7f-a85f9518159d",
+    "keyWords": "power overflowing",
+    "name": "Power Overflowing",
+    "index": 458,
+    "description": "Deals large damage to the target, but greatly increases base damage on the next turn."
+  },
+  {
+    "id": "5b6b6172-13f0-4478-92b1-773560fb8175",
+    "keyWords": "activate scatter",
+    "name": "Activate Scatter",
+    "index": 464,
+    "description": "Item becomes a timed effect, allowing it to activate again. Effect lasts 2 turns."
+  },
+  {
+    "id": "bdf96bd4-44d2-43e0-8e8a-0a79149c42e2",
+    "keyWords": "auto activate 30%",
+    "name": "Auto Activate 30%",
+    "index": 467,
+    "description": "Activates automatically when the user's HP falls below 30%."
+  },
+  {
+    "id": "126ba097-cb36-4fd9-bcd0-e3547d8e245c",
+    "keyWords": "defense up s",
+    "name": "Defense Up S",
+    "index": 513,
+    "description": "Increases the target's defense a little. The effect lasts 5 turns."
+  },
+  {
+    "id": "3bdbda27-910b-482c-83dd-0e37d07358b9",
+    "keyWords": "speed up l",
+    "name": "Speed Up L",
+    "index": 518,
+    "description": "Increases the target's speed by a lot. The effect lasts 5 turns."
+  },
+  {
+    "id": "596d1b6d-bd98-47d3-bfb4-b318dc41210c",
+    "keyWords": "hit rate up m",
+    "name": "Hit Rate Up M",
+    "index": 523,
+    "description": "Increases the target's hit rate. The effect lasts 5 turns."
+  },
+  {
+    "id": "ffe994e2-5d85-4f9d-8c4e-58e60bb310c9",
+    "keyWords": "crit rate up s",
+    "name": "Crit Rate Up S",
+    "index": 528,
+    "description": "Increases the target's chance to score a critical hit by a small amount."
+  },
+  {
+    "id": "4ace3477-59fa-4bf8-b5ed-4922d804b76b",
+    "keyWords": "crit power up l",
+    "name": "Crit Power Up L",
+    "index": 533,
+    "description": "Increases the target's critical hit damage bonus by a large amount."
+  },
+  {
+    "id": "14dc473a-10c3-42fd-917b-521efaf3ca0e",
+    "keyWords": "hp regen xxl",
+    "name": "HP Regen XXL",
+    "index": 539,
+    "description": "The target recovers an extreme amount of HP on each turn. The effect lasts for 5 turns."
+  },
+  {
+    "id": "bc850d67-79f6-48dc-8a51-203492b851b4",
+    "keyWords": "auto revive m",
+    "name": "Auto Revive M",
+    "index": 553,
+    "description": "Automatically revive on the next turn after being KO'd. HP after revival is moderate."
+  },
+  {
+    "id": "d41362df-6822-4c9d-adb0-31255e73e34a",
+    "keyWords": "reduce ailments l",
+    "name": "Reduce Ailments L",
+    "index": 557,
+    "description": "Reduces the effectiveness of status ailments by a good amount."
+  },
+  {
+    "id": "661785ce-f691-4285-93d5-b4cb066dec59",
+    "keyWords": "more opportunity m",
+    "name": "More Opportunity M",
+    "index": 565,
+    "description": "Increases damage dealt to Broken enemies by 35%. Effect lasts 5 turns."
+  },
+  {
+    "id": "298e6ef8-af46-4961-adaa-a02a0aaaf8ba",
+    "keyWords": "steal attack s",
+    "name": "Steal Attack S",
+    "index": 626,
+    "description": "Reduces the target's attack by a small amount, and temporarily increases your own by that amount."
+  },
+  {
+    "id": "c6d91f20-cd37-4e8e-8a59-ae7f476d9513",
+    "keyWords": "steal defense m",
+    "name": "Steal Defense M",
+    "index": 630,
+    "description": "Reduces the target's defense, and temporarily increases your own by that amount."
+  },
+  {
+    "id": "2bdafd54-4ac9-4a40-9eaa-208f1f3a2930",
+    "keyWords": "speed down m",
+    "name": "Speed Down M",
+    "index": 695,
+    "description": "Reduces the target's speed."
+  },
+  {
+    "id": "03d7f0dd-e13b-4643-b1b8-54c723917b04",
+    "keyWords": "all stats down m",
+    "name": "All Stats Down M",
+    "index": 698,
+    "description": "Reduces all of the target's stats."
+  },
+  {
+    "id": "bf7372a0-f98e-4f27-818e-2455c275a56c",
+    "keyWords": "inflict sleep m",
+    "name": "Inflict Sleep M",
+    "index": 701,
+    "description": "Has a moderate chance of Sleeping the target. Sleep renders the target unable to act on their turn."
+  },
+  {
+    "id": "0d58fbfb-c2c2-4ea1-9fd0-892e33f3e176",
+    "keyWords": "inflict slow m",
+    "name": "Inflict Slow M",
+    "index": 707,
+    "description": "Has a moderate chance of Slowing the target. The effect is moderate. Slow increases wait time after taking a turn."
+  },
+  {
+    "id": "19412a7e-cb29-4276-a849-d06a99fee668",
+    "keyWords": "inflict blind s",
+    "name": "Inflict Blind S",
+    "index": 712,
+    "description": "Has a low chance of Blinding the target. The effect is small. Blind reduces attack hit rate and evasion rate."
+  },
+  {
+    "id": "2945ad0a-6771-4e0d-ab68-7f5414709d78",
+    "keyWords": "inflict no heal m",
+    "name": "Inflict No Heal M",
+    "index": 719,
+    "description": "Has a moderate chance of No Healing the target. No Heal causes all recovery effects to heal for 0."
+  },
+  {
+    "id": "4f0c7d56-fbdc-4bbb-adcf-a6c2767a53bd",
+    "keyWords": "reduce all resistances",
+    "name": "Reduce All Resistances",
+    "index": 727,
+    "description": "Reduces all of the target's resistances by 1 level. Has no effect if the target has no resistances, and this cannot cause weaknesses."
+  },
+  {
+    "id": "e8084675-130c-4079-a138-ea6df52a732d",
+    "keyWords": "damage over time s",
+    "name": "Damage Over Time S",
+    "index": 734,
+    "description": "Deals continuous damage to the target. The effect is small, and the time is short."
+  },
+  {
+    "id": "38063edd-7940-408b-863d-0bea9cf66c08",
+    "keyWords": "restrain attack m",
+    "name": "Restrain Attack M",
+    "index": 745,
+    "description": "Reduces the rate at which enemies use powerful attacks."
+  },
+  {
+    "id": "21c9c1fe-5e5e-4d56-b556-157782b0605e",
+    "keyWords": "consume hp xl",
+    "name": "Consume HP XL",
+    "index": 801,
+    "description": "Consumes a huge amount of HP. The amount is influenced by maximum HP."
+  },
+  {
+    "id": "7ba58020-c979-4428-9eeb-769ce38e4a16",
+    "keyWords": "grow good materials?",
+    "name": "Grow Good Materials?",
+    "index": 857,
+    "description": "Increases the chances of finding better materials in the field."
+  },
+  {
+    "id": "bdf5ad69-6b2e-4e69-be50-0cdac18827b6",
+    "keyWords": "rest 10 hours",
+    "name": "Rest 10 Hours",
+    "index": 860,
+    "description": "Rest for 10 hours, restoring all HP, MP, and LP."
+  },
+  {
+    "id": "2d9d549d-f0e4-468c-a223-0ccc4f427e0e",
+    "keyWords": "big cart",
+    "name": "Big Cart",
+    "index": 866,
+    "description": "Allows you to select many items that you gathered, and send them back to the atelier. You can send up to 50 at a time."
+  },
+  {
+    "id": "390898db-f1ee-4aae-8002-10bab20ded2c",
+    "keyWords": "wards off danger",
+    "name": "Wards Off Danger",
+    "index": 870,
+    "description": "Reduces the chance of incidents."
+  },
+  {
+    "id": "9f9cb676-3976-48b4-875d-8841d51d9976",
+    "keyWords": "good health",
+    "name": "Good Health",
+    "index": 871,
+    "description": "Reduces the chance of incidents by a large amount."
+  },
+  {
+    "id": "539b0612-18af-438a-91c2-4d259c1672c1",
+    "keyWords": "lightens body a lot",
+    "name": "Lightens Body a Lot",
+    "index": 927,
+    "description": "Reduces LP consumed while moving on the World Map to 0."
+  },
+  {
+    "id": "354fa67c-2a2b-4b31-bfbf-e5ccbce9f644",
+    "keyWords": "prepared for emergency",
+    "name": "Prepared for Emergency",
+    "index": 933,
+    "description": "Reduces items lost by party wipe a little."
+  },
+  {
+    "id": "10d40fdf-9f0f-4dec-84c3-e668cdb4da73",
+    "keyWords": "find money",
+    "name": "Find Money",
+    "index": 939,
+    "description": "Increases money gained from battle a little. Has no effect when money obtained is 0."
+  },
+  {
+    "id": "87c9c6b3-c0e2-481a-adcf-3e45c0f45247",
+    "keyWords": "painful thorns",
+    "name": "Painful Thorns",
+    "index": 114,
+    "description": "Sharp thorns stick into the target, draining HP over time. The effect is small."
+  },
+  {
+    "id": "74f33797-b2cd-4b6c-8058-ea9b6e2bb202",
+    "keyWords": "inextinguishable flame",
+    "name": "Inextinguishable Flame",
+    "index": 122,
+    "description": "Inextinguishable flames deal continuous damage. The effect is very big."
+  },
+  {
+    "id": "2e4e2433-ebb7-48c8-a3d4-ddc4e7a6a0d9",
+    "keyWords": "hp recovery l",
+    "name": "HP Recovery L",
+    "index": 198,
+    "description": "Restores the target's HP by a large amount."
+  },
+  {
+    "id": "00d97708-0eb7-4bf9-b2e9-35aae30e9ce7",
+    "keyWords": "mp recovery xs",
+    "name": "MP Recovery XS",
+    "index": 201,
+    "description": "Restores the target's MP by a slight amount."
+  },
+  {
+    "id": "a4755814-aa44-452c-9d81-1eab8c6354d8",
+    "keyWords": "mp recovery xxl",
+    "name": "MP Recovery XXL",
+    "index": 206,
+    "description": "Restores the target's MP by an extreme amount."
+  },
+  {
+    "id": "ed944d0c-b6bf-42fc-ac48-e57e8d5fae5e",
+    "keyWords": "lp recovery xl",
+    "name": "LP Recovery XL",
+    "index": 211,
+    "description": "Restores the target's LP by a huge amount."
+  },
+  {
+    "id": "55617a30-b32c-45b7-b8c4-19b3a4f7ea23",
+    "keyWords": "hpmp recovery l",
+    "name": "HPMP Recovery L",
+    "index": 216,
+    "description": "Restores a large amount of the target's HP and MP."
+  },
+  {
+    "id": "0f7dcc06-2ae5-4eb2-93f5-8a236aa2da48",
+    "keyWords": "mplp recovery s",
+    "name": "MPLP Recovery S",
+    "index": 224,
+    "description": "Restores a small amount of the target's HP and LP."
+  },
+  {
+    "id": "51005e05-8ddd-42ec-bfdb-2e7eacfc3b58",
+    "keyWords": "healing aroma",
+    "name": "Healing Aroma",
+    "index": 230,
+    "description": "Restores the whole party's HP."
+  },
+  {
+    "id": "4b317601-d001-4e0e-99b3-ecf7d9ac1f43",
+    "keyWords": "eat and recover xl",
+    "name": "Eat and Recover XL",
+    "index": 282,
+    "description": "Restores a huge amount of the target's HP and LP. Recovery amount increases with higher maximum HP."
+  },
+  {
+    "id": "32490824-782e-4763-8e9b-a42c112f9954",
+    "keyWords": "very delicious",
+    "name": "Very Delicious",
+    "index": 291,
+    "description": "It's delicious, restoring a small amount of HP."
+  },
+  {
+    "id": "615c8e5d-6b5f-4735-88b2-28529d00efb9",
+    "keyWords": "bitter",
+    "name": "Bitter",
+    "index": 292,
+    "description": "The target recovers from Sleep."
+  },
+  {
+    "id": "e23011c7-f7b8-4fce-91a8-3e9500b9a056",
+    "keyWords": "warm",
+    "name": "Warm",
+    "index": 297,
+    "description": "Warms the body, increasing the target's speed a little."
+  },
+  {
+    "id": "a258d5ff-fed1-4228-b52e-b49a739dea90",
+    "keyWords": "unique texture",
+    "name": "Unique Texture",
+    "index": 301,
+    "description": "The texture experienced for the first time excites you, increasing attack power a little. Also restores a small amount of the target's HP each turn."
+  },
+  {
+    "id": "136ff611-fc89-4b24-8c5e-600dcb1f7e19",
+    "keyWords": "recovery bonus l",
+    "name": "Recovery Bonus L",
+    "index": 363,
+    "description": "Grants the target a large HP recovery bonus."
+  },
+  {
+    "id": "622d0e18-aceb-46ac-928b-ea9edd24443f",
+    "keyWords": "revive from ko s",
+    "name": "Revive from KO S",
+    "index": 371,
+    "description": "Revives the target from KO, and restores a small amount of HP."
+  },
+  {
+    "id": "f0b02a71-2547-4d14-ab4c-13a68d810332",
+    "keyWords": "soul awakening tone",
+    "name": "Soul Awakening Tone",
+    "index": 437,
+    "description": "Automatically revive on the next turn after being KO'd. Affects all allies, but HP after revival is moderate."
+  },
+  {
+    "id": "6992005e-46e9-4580-9d36-848aeac19463",
+    "keyWords": "grand spirit blessing",
+    "name": "Grand Spirit Blessing",
+    "index": 442,
+    "description": "Grants all allies fire, ice, and lightning resistance."
+  },
+  {
+    "id": "5f5c154f-5a9f-493a-a75a-606e332b1f4d",
+    "keyWords": "spirit's protection m",
+    "name": "Spirit's Protection M",
+    "index": 447,
+    "description": "Greatly reduces the effectiveness of the next attack the target receives."
+  },
+  {
+    "id": "0520c634-94d5-44a8-8969-d18efa1aa384",
+    "keyWords": "spirit's protection l",
+    "name": "Spirit's Protection L",
+    "index": 448,
+    "description": "Massively reduces the effectiveness of the next attack the target receives."
+  },
+  {
+    "id": "52e2cac2-b1b5-48f4-a764-b186a8ffc846",
+    "keyWords": "heroic blessing",
+    "name": "Heroic Blessing",
+    "index": 452,
+    "description": "Receive the heroic spirit's blessing, temporarily increasing the target's level a large amount. Higher level increases attack and speed."
+  },
+  {
+    "id": "3edb3a41-3b97-44a7-9291-882ced3e11b7",
+    "keyWords": "reduce consumption",
+    "name": "Reduce Consumption",
+    "index": 460,
+    "description": "Item use count might not decrease when used. The chance is fairly low."
+  },
+  {
+    "id": "f0e5685a-604f-47d5-9085-2ffc94144e49",
+    "keyWords": "speed down l",
+    "name": "Speed Down L",
+    "index": 696,
+    "description": "Greatly reduces the target's speed."
+  },
+  {
+    "id": "ed86a2ec-a9ef-4d76-ae5e-09a9ef8f0fca",
+    "keyWords": "inflict no heal s",
+    "name": "Inflict No Heal S",
+    "index": 718,
+    "description": "Has a low chance of No Healing the target. No Heal causes all recovery effects to heal for 0."
+  },
+  {
+    "id": "c11a5f94-2275-4fc9-8ed5-4e51fb4c6c9a",
+    "keyWords": "inflict seal l",
+    "name": "Inflict Seal L",
+    "index": 723,
+    "description": "Has a high chance of Sealing the target. Seal renders the target unable to use powerful attacks."
+  },
+  {
+    "id": "42a28c05-39ff-4173-8110-441423d8f024",
+    "keyWords": "weak to thunder",
+    "name": "Weak to Thunder",
+    "index": 730,
+    "description": "Reduces the target's lightning resistance by 1 level. Has no effect if the target has no resistance, and this cannot cause weaknesses."
+  },
+  {
+    "id": "27893e9b-fc9a-420a-9304-6c7f1ffdcede",
+    "keyWords": "level down l",
+    "name": "Level Down L",
+    "index": 733,
+    "description": "Reduces the target's level a lot. Reduced level decreases all stats and damage dealt."
+  },
+  {
+    "id": "f1065204-a2fa-4580-a65d-dcbcc1e6150c",
+    "keyWords": "add break l",
+    "name": "Add Break L",
+    "index": 742,
+    "description": "Massively increases Break effect dealt to the target. If multiple targets are hit, the effect is split."
+  },
+  {
+    "id": "3d35572f-cd4a-4463-9d10-a400ef2e5a1f",
+    "keyWords": "add break xl",
+    "name": "Add Break XL",
+    "index": 743,
+    "description": "Ridiculously increases Break effect dealt to the target. If multiple targets are hit, the effect is split."
+  },
+  {
+    "id": "a536d365-fa9c-4edc-8fb4-c55082bec8c4",
+    "keyWords": "consume mp s",
+    "name": "Consume MP S",
+    "index": 803,
+    "description": "Consumes a small amount of MP. The effect is weakened when MP is insufficient."
+  },
+  {
+    "id": "4948c245-0560-4ffa-867d-4ab1b8ab8e79",
+    "keyWords": "grow great materials?",
+    "name": "Grow Great Materials?",
+    "index": 858,
+    "description": "Greatly increases the chances of finding better materials in the field."
+  },
+  {
+    "id": "3dfa06a4-9ab9-4bed-a38f-647b3a8c15a8",
+    "keyWords": "rest to dusk",
+    "name": "Rest to Dusk",
+    "index": 861,
+    "description": "Rest until dusk, restoring HP, MP, and LP. The amount restored depends on how long you rested."
+  },
+  {
+    "id": "4b370e4e-532a-4130-9c4c-011a48e1cea1",
+    "keyWords": "rest to night",
+    "name": "Rest to Night",
+    "index": 862,
+    "description": "Rest until night, restoring HP, MP, and LP. The amount restored depends on how long you rested."
+  },
+  {
+    "id": "72ee21e3-aaae-40ca-815c-40e25639e24e",
+    "keyWords": "hard to notice",
+    "name": "Hard to Notice",
+    "index": 867,
+    "description": "Hide your presence, making it hard for monsters to notice you for a short time."
+  },
+  {
+    "id": "a6b94def-39b0-4b7c-a816-c8497d047fe8",
+    "keyWords": "move speed up l",
+    "name": "Move Speed Up L",
+    "index": 930,
+    "description": "Move speed increases by 30%."
+  },
+  {
+    "id": "cdec840b-3085-474e-a790-9426a5195899",
+    "keyWords": "emergency escape",
+    "name": "Emergency Escape",
+    "index": 934,
+    "description": "Reduces items lost by party wipe."
+  },
+  {
+    "id": "1677f4af-a9ec-42f7-877e-8d230a024735",
+    "keyWords": "insure items",
+    "name": "Insure Items",
+    "index": 935,
+    "description": "Reduces items lost by party wipe a lot."
+  },
+  {
+    "id": "1b91faaa-9abd-4701-8dc3-8a04dbe4c02b",
+    "keyWords": "find lots of money",
+    "name": "Find Lots of Money",
+    "index": 940,
+    "description": "Increases money gained from battle. Has no effect when money obtained is 0."
+  },
+  {
+    "id": "3804569b-1115-465f-806d-343415787c3e",
+    "keyWords": "trains the body a lot",
+    "name": "Trains the Body a Lot",
+    "index": 943,
+    "description": "Increases experience points gained from battle."
+  },
+  {
+    "id": "5d00923d-e43b-412b-9afb-94b9924b8a0e",
+    "keyWords": "get more friendly",
+    "name": "Get More Friendly",
+    "index": 945,
+    "description": "Increases friend points gained when giving presents a little."
+  },
+  {
+    "id": "92baeb37-4930-4750-9015-e9d75e81e52e",
+    "keyWords": "fighting spirit calm",
+    "name": "Fighting Spirit Calm",
+    "index": 999,
+    "description": "Stats are temporarily increased in battle, but the boost decreases with each turn."
+  },
+  {
+    "id": "3123e401-eaa9-495c-8265-3c4b48a96ea9",
+    "keyWords": "accelerate time",
+    "name": "Accelerate Time",
+    "index": 1014,
+    "description": "Reduces wait time after all actions by a large amount."
+  },
+  {
+    "id": "e902f951-817c-4845-9dfd-e60a8c2fccfa",
+    "keyWords": "guardian angel blessing",
+    "name": "Guardian Angel Blessing",
+    "index": 1022,
+    "description": "Reduces damage taken by 10%, but delays turn."
+  },
+  {
+    "id": "6db24854-f768-4cca-8810-bacbe4b8cddb",
+    "keyWords": "life to power",
+    "name": "Life to Power",
+    "index": 1028,
+    "description": "Increases attack, defense, and speed by 20% of base maximum HP."
+  },
+  {
+    "id": "d99d5ca5-1b0c-4cc1-924a-5fd55b532138",
+    "keyWords": "super resist gravity",
+    "name": "Super Resist Gravity",
+    "index": 1035,
+    "description": "Halves turn delaying effects."
+  },
+  {
+    "id": "713803b6-a9f4-4661-8fa0-80dc93ea2b57",
+    "keyWords": "calm blessing",
+    "name": "Calm Blessing",
+    "index": 1044,
+    "description": "Recover a small amount of HP when recovering HP or removing ailments."
+  },
+  {
+    "id": "a2ed6e9a-8a67-4263-8e7a-6a91d66955cd",
+    "keyWords": "pure blessing",
+    "name": "Pure Blessing",
+    "index": 1045,
+    "description": "Removes 2 status ailments when HP is recovered."
+  },
+  {
+    "id": "adcb9691-8220-4fd8-9784-c4407cafe9a9",
+    "keyWords": "healthy blessing",
+    "name": "Healthy Blessing",
+    "index": 1046,
+    "description": "Recover HP when recovering HP or removing ailments."
+  },
+  {
+    "id": "c505808b-d509-47f5-b604-005427506726",
+    "keyWords": "herculean rune",
+    "name": "Herculean Rune",
+    "index": 1054,
+    "description": "The hidden magic of the Herculean Rune increases attack by 25."
+  },
+  {
+    "id": "e7bed102-7aa2-47c0-bb44-7502feee019d",
+    "keyWords": "max hp up m",
+    "name": "Max HP Up M",
+    "index": 1104,
+    "description": "Increases maximum HP by 20."
+  },
+  {
+    "id": "4985f51c-45cb-43c6-9e3f-a4eca357d2db",
+    "keyWords": "max hp up l",
+    "name": "Max HP Up L",
+    "index": 1105,
+    "description": "Increases maximum HP by 25."
+  },
+  {
+    "id": "4e73d497-301d-4802-a781-b637bd65f3f5",
+    "keyWords": "max mp up xs",
+    "name": "Max MP Up XS",
+    "index": 1107,
+    "description": "Increases maximum MP by 10."
+  },
+  {
+    "id": "2d127fa2-5edf-40d0-a91c-f5ae6aac114b",
+    "keyWords": "defense up m",
+    "name": "Defense Up M",
+    "index": 1119,
+    "description": "Increases the target's defense. The effect lasts 5 turns."
+  },
+  {
+    "id": "362fa2da-3e62-4a2d-bba0-1b94bb0d2f31",
+    "keyWords": "hit rate up xs",
+    "name": "Hit Rate Up XS",
+    "index": 1127,
+    "description": "Increases hit rate by 10%."
+  },
+  {
+    "id": "eb7f0d95-15ef-4aa0-8674-a77d43533319",
+    "keyWords": "piercing damage s",
+    "name": "Piercing Damage S",
+    "index": 116,
+    "description": "Deals fixed damage to the target, unaffected by defense. Its power is very small."
+  },
+  {
+    "id": "0831a86b-c371-479f-a0c1-f808351a28f0",
+    "keyWords": "hits vitals",
+    "name": "Hits Vitals",
+    "index": 119,
+    "description": "When the target's HP falls below a certain amount, they can be finished with one hit. This has no effect on certain enemies."
+  },
+  {
+    "id": "e5001f0a-9c4c-42a1-b6a0-63cf2f47c1ea",
+    "keyWords": "numbing",
+    "name": "Numbing",
+    "index": 127,
+    "description": "Pushes the target's turn back a decent amount. This effect diminishes with each use until they take another turn."
+  },
+  {
+    "id": "8acdbdf5-c954-4244-be97-2d5db91c29f7",
+    "keyWords": "very numbing",
+    "name": "Very Numbing",
+    "index": 128,
+    "description": "Pushes the target's turn back a considerable amount. This effect diminishes with each use until they take another turn."
+  },
+  {
+    "id": "b223d668-5de4-4a9e-983a-0f5b8e72b715",
+    "keyWords": "total freeze",
+    "name": "Total Freeze",
+    "index": 130,
+    "description": "Freezes the target with powerful cold, pushing back their turn. This effect diminishes with each use until they take another turn."
+  },
+  {
+    "id": "38071cf7-7c28-4539-b535-b285d334f58c",
+    "keyWords": "expand effect area ++",
+    "name": "Expand Effect Area ++",
+    "index": 137,
+    "description": "Expands the item's area of effect by a lot."
+  },
+  {
+    "id": "18a8e6c7-0942-407e-b561-8688a2e89f01",
+    "keyWords": "lively",
+    "name": "Lively",
+    "index": 139,
+    "description": "Activates automatically when the user's HP falls below 30%."
+  },
+  {
+    "id": "af34f0a4-ea20-4089-a618-8520e1e7074a",
+    "keyWords": "spatial freeze",
+    "name": "Spatial Freeze",
+    "index": 131,
+    "description": "Freezes the target with very powerful cold, pushing back their turn. This effect diminishes with each use until they take another turn."
+  },
+  {
+    "id": "84459958-364e-4432-ad1a-71d2106e7eb2",
+    "keyWords": "hp recovery xs",
+    "name": "HP Recovery XS",
+    "index": 195,
+    "description": "Restores the target's HP by a slight amount."
+  },
+  {
+    "id": "25bbee1e-477b-497e-9eaf-199529247886",
+    "keyWords": "hp recovery s",
+    "name": "HP Recovery S",
+    "index": 196,
+    "description": "Restores the target's HP by a small amount."
+  },
+  {
+    "id": "0f0af10c-e52d-4a3d-8ddc-058de2ef634e",
+    "keyWords": "hp recovery m",
+    "name": "HP Recovery M",
+    "index": 197,
+    "description": "Restores the target's HP."
+  },
+  {
+    "id": "cdd3473b-1e20-46de-83e4-fc9e8d923a43",
+    "keyWords": "mp recovery l",
+    "name": "MP Recovery L",
+    "index": 204,
+    "description": "Restores the target's MP by a large amount."
+  },
+  {
+    "id": "6aca5924-6faa-4d73-b6ed-5b20672021a0",
+    "keyWords": "mp recovery xl",
+    "name": "MP Recovery XL",
+    "index": 205,
+    "description": "Restores the target's MP by a huge amount."
+  },
+  {
+    "id": "e43dd40c-c6ab-4c03-9bd3-bb60cabc12e4",
+    "keyWords": "lp recovery m",
+    "name": "LP Recovery M",
+    "index": 209,
+    "description": "Restores the target's LP."
+  },
+  {
+    "id": "a28c4f6c-0355-4d2c-9db2-0ad1b601d50b",
+    "keyWords": "hpmp recovery xl",
+    "name": "HPMP Recovery XL",
+    "index": 217,
+    "description": "Restores a huge amount of the target's HP and MP."
+  },
+  {
+    "id": "57fbfb23-1d7b-4529-bb16-0841d510b83f",
+    "keyWords": "lp recovery xxl",
+    "name": "LP Recovery XXL",
+    "index": 212,
+    "description": "Restores the target's LP by an extreme amount."
+  },
+  {
+    "id": "0a4a1d74-ade1-41ae-9d1a-57a09e725d52",
+    "keyWords": "mplp recovery l",
+    "name": "MPLP Recovery L",
+    "index": 226,
+    "description": "Restores a large amount of the target's HP and LP."
+  },
+  {
+    "id": "a20b55f0-0d62-413a-8426-7ddddc9c4139",
+    "keyWords": "mplp recovery xl",
+    "name": "MPLP Recovery XL",
+    "index": 227,
+    "description": "Restores a huge amount of the target's HP and LP."
+  },
+  {
+    "id": "b0def9b7-dbdc-430e-af0e-e5f8e874a9b8",
+    "keyWords": "eat and recover m",
+    "name": "Eat and Recover M",
+    "index": 280,
+    "description": "Restores the target's HP and LP. Recovery amount increases with higher maximum HP."
+  },
+  {
+    "id": "423d1318-d54e-4f72-b1ae-8ce2816ec216",
+    "keyWords": "eat and recover l",
+    "name": "Eat and Recover L",
+    "index": 281,
+    "description": "Restores a large amount of the target's HP and LP. Recovery amount increases with higher maximum HP."
+  },
+  {
+    "id": "3c889769-578d-4e92-9336-6644020118d8",
+    "keyWords": "sweet",
+    "name": "Sweet",
+    "index": 294,
+    "description": "Restores a slight amount of the target's HP and LP."
+  },
+  {
+    "id": "5fba2ef9-c7d0-47f0-a352-b68e08e89bbb",
+    "keyWords": "super sweet",
+    "name": "Super Sweet",
+    "index": 295,
+    "description": "Restores a small amount of the target's HP and LP."
+  },
+  {
+    "id": "2f66fe8d-6e57-4ad4-95fd-2b1be1efdeb1",
+    "keyWords": "salty",
+    "name": "Salty",
+    "index": 293,
+    "description": "Reduces the wait time after the target's next turn by a small amount."
+  },
+  {
+    "id": "c39ce73b-7f66-470d-845c-ae3a447f243d",
+    "keyWords": "sloppy",
+    "name": "Sloppy",
+    "index": 299,
+    "description": "The sloppy texture makes you feel weird, reducing attack power a small amount."
+  },
+  {
+    "id": "bb61cd3a-d5df-4397-b099-18a625ecabbc",
+    "keyWords": "jiggly",
+    "name": "Jiggly",
+    "index": 300,
+    "description": "The jiggly texture is quite pleasant. Increases the target's attack power a little."
+  },
+  {
+    "id": "23fbb520-a455-4d44-be38-fc69e2aa4606",
+    "keyWords": "wake up cup",
+    "name": "Wake Up Cup",
+    "index": 307,
+    "description": "Restores the target's HP. Recovery amount increases the closer it is to 7am."
+  },
+  {
+    "id": "e1216fcd-998e-42fb-af71-13d55283ba44",
+    "keyWords": "bedtime cup",
+    "name": "Bedtime Cup",
+    "index": 309,
+    "description": "Restores the target's HP. Recovery amount increases the closer it is to 10pm."
+  },
+  {
+    "id": "afa3456c-ce79-442d-a64a-c2ae9a55f89e",
+    "keyWords": "refreshing",
+    "name": "Refreshing",
+    "index": 364,
+    "description": "The target recovers a slight amount of Break value."
+  },
+  {
+    "id": "992cd155-1c6e-4a80-87a8-049ee674766b",
+    "keyWords": "recovery bonus m",
+    "name": "Recovery Bonus M",
+    "index": 362,
+    "description": "Grants the target an HP recovery bonus."
+  },
+  {
+    "id": "5f5e7f0c-95d9-48dd-add2-93bdaa1b782b",
+    "keyWords": "awakening",
+    "name": "Awakening",
+    "index": 366,
+    "description": "The target recovers a decent amount of Break value."
+  },
+  {
+    "id": "8ad34e99-c73c-456f-a6ab-52ad8174bd34",
+    "keyWords": "revive from ko m",
+    "name": "Revive from KO M",
+    "index": 372,
+    "description": "Revives the target from KO, and restores a moderate amount of HP."
+  },
+  {
+    "id": "a7f6b2b5-441e-4719-b57a-3525fc456826",
+    "keyWords": "revive from ko xs",
+    "name": "Revive from KO XS",
+    "index": 370,
+    "description": "Revives the target from KO, and restores a slight amount of HP."
+  },
+  {
+    "id": "1243c088-3583-4b42-9abe-cd2c609385f9",
+    "keyWords": "cures sleep",
+    "name": "Cures Sleep",
+    "index": 375,
+    "description": "The target recovers from Sleep."
+  },
+  {
+    "id": "59a0b5c8-0b7a-4533-94b4-d1caeaa6d07d",
+    "keyWords": "revive from ko l",
+    "name": "Revive from KO L",
+    "index": 373,
+    "description": "Revives the target from KO, and restores a large amount of HP."
+  },
+  {
+    "id": "e138a444-5469-49e3-a415-d7ebd6e430e9",
+    "keyWords": "cures poison",
+    "name": "Cures Poison",
+    "index": 376,
+    "description": "The target recovers from Poison."
+  },
+  {
+    "id": "1b4a0718-f4d1-42c1-a649-906abe0c6d00",
+    "keyWords": "cures no heal",
+    "name": "Cures No Heal",
+    "index": 381,
+    "description": "The target recovers from No Heal."
+  },
+  {
+    "id": "1e9ddebc-bc62-4f3d-87e7-5c3015640f21",
+    "keyWords": "cures blind",
+    "name": "Cures Blind",
+    "index": 379,
+    "description": "The target recovers from Blind."
+  },
+  {
+    "id": "37738254-a157-44b8-9db7-de931d6e1a2f",
+    "keyWords": "cures seal",
+    "name": "Cures Seal",
+    "index": 382,
+    "description": "The target recovers from Seal."
+  },
+  {
+    "id": "80c1d30b-ca05-4252-b7f7-c0e9b4bf6122",
+    "keyWords": "removes many ailments",
+    "name": "Removes Many Ailments",
+    "index": 385,
+    "description": "The target recovers from 2 ailments."
+  },
+  {
+    "id": "11510b55-a5b3-41b9-9374-e55b3e750d38",
+    "keyWords": "body awakening tone",
+    "name": "Body Awakening Tone",
+    "index": 436,
+    "description": "Automatically revive on the next turn after being KO'd. Affects all allies, but HP after revival is low."
+  },
+  {
+    "id": "eeae874e-fa68-4797-820c-00edcb45e36e",
+    "keyWords": "thunder spirit blessing",
+    "name": "Thunder Spirit Blessing",
+    "index": 441,
+    "description": "Grants all allies lightning resistance."
+  },
+  {
+    "id": "7bece22d-2ab4-4f01-b891-51611e648629",
+    "keyWords": "hidden power",
+    "name": "Hidden Power",
+    "index": 438,
+    "description": "Increases all of the target's stats by 20. The effect lasts for 5 turns."
+  },
+  {
+    "id": "8b65a21f-12dd-49b2-9f0d-2f0d59214204",
+    "keyWords": "angel's protection",
+    "name": "Angel's Protection",
+    "index": 443,
+    "description": "Temporarily reduces physical damage taken by the target. The effect is small."
+  },
+  {
+    "id": "7552de09-3913-40dd-abde-6643ba8810a5",
+    "keyWords": "spirit's protection",
+    "name": "Spirit's Protection",
+    "index": 446,
+    "description": "Reduces the effectiveness of the next attack the target receives."
+  },
+  {
+    "id": "2d2de4f9-8eee-44d9-94e3-61a982c20fca",
+    "keyWords": "heroic descent",
+    "name": "Heroic Descent",
+    "index": 453,
+    "description": "The heroic spirit descends, temporarily increasing the target's level a massive amount. Higher level increases attack and speed."
+  },
+  {
+    "id": "6ffb1928-644a-4e9a-af88-3b54b8b3a1e7",
+    "keyWords": "adrenaline rush",
+    "name": "Adrenaline Rush",
+    "index": 459,
+    "description": "Deals huge damage to the target, but massively increases base damage on the next turn."
+  },
+  {
+    "id": "4aa719f4-c82e-49c5-9810-b86cd5bbebb8",
+    "keyWords": "relieve consumption",
+    "name": "Relieve Consumption",
+    "index": 461,
+    "description": "Item use count might not decrease when used. The chance is low."
+  },
+  {
+    "id": "3ae923e1-74ed-4370-8303-a4c3271b4ad3",
+    "keyWords": "attack up m",
+    "name": "Attack Up M",
+    "index": 511,
+    "description": "Increases the target's attack power. The effect lasts 5 turns."
+  },
+  {
+    "id": "ab551048-efdb-49d9-b29a-89a1083612d2",
+    "keyWords": "auto activate 50%",
+    "name": "Auto Activate 50%",
+    "index": 468,
+    "description": "Activates automatically when the user's HP falls below 50%."
+  },
+  {
+    "id": "024de522-c8aa-42ab-8a30-0171ac7ca9bf",
+    "keyWords": "attack up l",
+    "name": "Attack Up L",
+    "index": 512,
+    "description": "Increases the target's attack power by a lot. The effect lasts 5 turns."
+  },
+  {
+    "id": "608ff0a7-c9fa-436a-8b1b-73bdb5b988c8",
+    "keyWords": "defense up m",
+    "name": "Defense Up M",
+    "index": 514,
+    "description": "Increases the target's defense. The effect lasts 5 turns."
+  },
+  {
+    "id": "89d748d6-5133-499f-863d-6f9aa1d82c76",
+    "keyWords": "speed up s",
+    "name": "Speed Up S",
+    "index": 516,
+    "description": "Increases the target's speed a little. The effect lasts 5 turns."
+  },
+  {
+    "id": "4f8de281-e6b0-4ecd-948b-b4953c1cfb86",
+    "keyWords": "speed up m",
+    "name": "Speed Up M",
+    "index": 517,
+    "description": "Increases the target's speed. The effect lasts 5 turns."
+  },
+  {
+    "id": "0fbbec35-f9d3-4919-a88c-de8055e2f031",
+    "keyWords": "hit rate up s",
+    "name": "Hit Rate Up S",
+    "index": 522,
+    "description": "Increases the target's hit rate a little. The effect lasts 5 turns."
+  },
+  {
+    "id": "16dec0e1-df0c-415e-a23f-7c4ee7da1e6d",
+    "keyWords": "evasion up s",
+    "name": "Evasion Up S",
+    "index": 525,
+    "description": "Increases the target's evasion rate a little. The effect lasts 5 turns."
+  },
+  {
+    "id": "4c2ea922-32eb-4c2c-9f74-049c09a3c66b",
+    "keyWords": "crit rate up m",
+    "name": "Crit Rate Up M",
+    "index": 529,
+    "description": "Increases the target's chance to score a critical hit by a decent amount."
+  },
+  {
+    "id": "c171a084-de54-43bd-b696-f16234d0b9e9",
+    "keyWords": "crit power up s",
+    "name": "Crit Power Up S",
+    "index": 531,
+    "description": "Increases the target's critical hit damage bonus by a small amount."
+  },
+  {
+    "id": "58b134f8-919e-42a4-8e66-b6bd4ff2bf4d",
+    "keyWords": "hp regen xs",
+    "name": "HP Regen XS",
+    "index": 534,
+    "description": "The target recovers a slight amount of HP on each turn. The effect lasts for 5 turns."
+  },
+  {
+    "id": "a79aa5e0-a153-457d-8881-9444a4374d76",
+    "keyWords": "hp regen l",
+    "name": "HP Regen L",
+    "index": 537,
+    "description": "The target recovers a large amount of HP on each turn. The effect lasts for 5 turns."
+  },
+  {
+    "id": "625052c4-ab82-4b93-93cd-685dcbd88d5d",
+    "keyWords": "reduce ailments m",
+    "name": "Reduce Ailments M",
+    "index": 556,
+    "description": "Reduces the effectiveness of status ailments by a fair amount."
+  },
+  {
+    "id": "5c39bebd-c8fa-4a22-8f89-0f23604e10d3",
+    "keyWords": "cut wait time l",
+    "name": "Cut Wait Time L",
+    "index": 560,
+    "description": "Reduces wait time after the target's next turn by a good amount."
+  },
+  {
+    "id": "48adca53-cb1f-415a-b8c3-40b9a4b43987",
+    "keyWords": "more opportunity s",
+    "name": "More Opportunity S",
+    "index": 564,
+    "description": "Increases damage dealt to Broken enemies by 25%. Effect lasts 5 turns."
+  },
+  {
+    "id": "62679ca8-f120-4b42-a8b9-effc0a829b48",
+    "keyWords": "steal speed s",
+    "name": "Steal Speed S",
+    "index": 632,
+    "description": "Reduces the target's speed by a small amount, and temporarily increases your own by that amount."
+  },
+  {
+    "id": "2d61d42c-81fe-4d34-9755-538f427f66c8",
+    "keyWords": "erase enhancements",
+    "name": "Erase Enhancements",
+    "index": 636,
+    "description": ""
+  },
+  {
+    "id": "db9afaed-7c21-4d75-bb52-29b669f9da33",
+    "keyWords": "defense down s",
+    "name": "Defense Down S",
+    "index": 691,
+    "description": "Slightly reduces the target's defense."
+  },
+  {
+    "id": "bf731464-7ce7-4d1a-beed-f2cca1de8a60",
+    "keyWords": "all stats down s",
+    "name": "All Stats Down S",
+    "index": 697,
+    "description": "Slightly reduces all of the target's stats."
+  },
+  {
+    "id": "9f19aa25-ee05-47de-bf02-3a11fbe38307",
+    "keyWords": "inflict sleep s",
+    "name": "Inflict Sleep S",
+    "index": 700,
+    "description": "Has a low chance of Sleeping the target. Sleep renders the target unable to act on their turn."
+  },
+  {
+    "id": "17e07479-a375-49a1-a405-e9ce8a0318e0",
+    "keyWords": "inflict sleep l",
+    "name": "Inflict Sleep L",
+    "index": 702,
+    "description": "Has a high chance of Sleeping the target. Sleep renders the target unable to act on their turn."
+  },
+  {
+    "id": "d6566762-4c55-4124-96c9-f385287daabb",
+    "keyWords": "inflict slow l",
+    "name": "Inflict Slow L",
+    "index": 708,
+    "description": "Has a high chance of Slowing the target. The effect is big. Slow increases wait time after taking a turn."
+  },
+  {
+    "id": "d56e731f-0090-4986-89c3-146096e52b8c",
+    "keyWords": "inflict weak m",
+    "name": "Inflict Weak M",
+    "index": 716,
+    "description": "Has a moderate chance of Weakening the target. The effect is moderate. Weak reduces the power of all skills."
+  },
+  {
+    "id": "40c46e8c-020a-4b2c-84af-b5491b642a6a",
+    "keyWords": "inflict weak l",
+    "name": "Inflict Weak L",
+    "index": 717,
+    "description": "Has a high chance of Weakening the target. The effect is big. Weak reduces the power of all skills."
+  },
+  {
+    "id": "babdfedb-ca55-41d3-b0dc-7180b75aec40",
+    "keyWords": "rotate",
+    "name": "Rotate",
+    "index": 1276,
+    "description": "When placing materials, you can press <LB><RB> to rotate it."
+  },
+  {
+    "id": "e3de7229-6a55-4ef2-a6bb-53e9eabfdfee",
+    "keyWords": "inflict seal s",
+    "name": "Inflict Seal S",
+    "index": 721,
+    "description": "Has a low chance of Sealing the target. Seal renders the target unable to use powerful attacks."
+  },
+  {
+    "id": "05b0648c-6426-4ad3-b58a-867bc4c8aeb2",
+    "keyWords": "inflict corruption l",
+    "name": "Inflict Corruption L",
+    "index": 726,
+    "description": "Inflicts 3 random status effects on the target. The chance and effect are both high."
+  },
+  {
+    "id": "a92a45eb-a2cd-4f6b-af33-c8a0ea8a44e3",
+    "keyWords": "damage over time m",
+    "name": "Damage Over Time M",
+    "index": 735,
+    "description": "Deals continuous damage to the target. The effect is moderate, and the time is short."
+  },
+  {
+    "id": "8c167ff2-0228-43f5-b6f4-34512728ff6e",
+    "keyWords": "critical down",
+    "name": "Critical Down",
+    "index": 737,
+    "description": "Decreases the target's critical hit rate."
+  },
+  {
+    "id": "7d0b62e1-6581-4fdd-bb48-073fb155e9c7",
+    "keyWords": "add break m",
+    "name": "Add Break M",
+    "index": 741,
+    "description": "Greatly increases Break effect dealt to the target. If multiple targets are hit, the effect is split."
+  },
+  {
+    "id": "62834a6f-6e03-4043-848f-2f1bb5d9590e",
+    "keyWords": "pacification m",
+    "name": "Pacification M",
+    "index": 748,
+    "description": "Pacifies the enemy, delaying the activation of powerful attacks by fair bit."
+  },
+  {
+    "id": "6909e7e9-7570-414d-baa7-00df851cc027",
+    "keyWords": "consume hp s",
+    "name": "Consume HP S",
+    "index": 798,
+    "description": "Consumes a small amount of HP. The amount is influenced by maximum HP."
+  },
+  {
+    "id": "fe4485be-30be-48c6-96f0-a049199d082f",
+    "keyWords": "consume hp m",
+    "name": "Consume HP M",
+    "index": 799,
+    "description": "Consumes HP. The amount is influenced by maximum HP."
+  },
+  {
+    "id": "f1ea56f6-54e7-4cb6-9638-3ec7b1896b65",
+    "keyWords": "consume mp m",
+    "name": "Consume MP M",
+    "index": 804,
+    "description": "Consumes MP. The effect is weakened when MP is insufficient."
+  },
+  {
+    "id": "a2ded95e-d762-49a0-996e-8448b4342c13",
+    "keyWords": "return to base",
+    "name": "Return to Base",
+    "index": 863,
+    "description": "Upon use, you will be instantly returned to the atelier."
+  },
+  {
+    "id": "30f552a1-6a50-4a7a-b39d-cf89749d33dc",
+    "keyWords": "wards off misfortune",
+    "name": "Wards Off Misfortune",
+    "index": 872,
+    "description": ""
+  },
+  {
+    "id": "edad896b-503c-449a-a5ae-08f7aab6d77b",
+    "keyWords": "lightens body",
+    "name": "Lightens Body",
+    "index": 926,
+    "description": "Reduces LP consumed while moving on the World Map by half."
+  },
+  {
+    "id": "cff0fae3-ad26-46d1-803c-6f2a3adaadc6",
+    "keyWords": "miser's secrets",
+    "name": "Miser's Secrets",
+    "index": 941,
+    "description": "Increases money gained from battle by a lot. Allows you to gain some money even when amount obtained is 0."
+  },
+  {
+    "id": "302a6780-cf5a-49b1-b9fc-b14eb9c337f2",
+    "keyWords": "trains the body",
+    "name": "Trains the Body",
+    "index": 942,
+    "description": "Increases experience points gained from battle a little."
+  },
+  {
+    "id": "92538de6-e5df-4ca0-b935-62174bbd1a3e",
+    "keyWords": "get much more friendly",
+    "name": "Get Much More Friendly",
+    "index": 946,
+    "description": "Increases friend points gained when giving presents."
+  },
+  {
+    "id": "52fa6bac-2b68-4846-91fb-8c6b4b5b454a",
+    "keyWords": "connects hearts",
+    "name": "Connects Hearts",
+    "index": 947,
+    "description": "Increases friend points gained when giving presents by a lot."
+  },
+  {
+    "id": "dbb8153d-f362-488d-a1ed-08d7902b3113",
+    "keyWords": "seal of stability",
+    "name": "Seal of Stability",
+    "index": 949,
+    "description": "Makes it harder for gathering level and enemy level to increase."
+  },
+  {
+    "id": "843d6c01-f4cc-4aac-90e7-a1d5af8a9c23",
+    "keyWords": "seal of friendship",
+    "name": "Seal of Friendship",
+    "index": 1004,
+    "description": "Increases effect of all Assist actions."
+  },
+  {
+    "id": "c0aef295-bd2f-4ac0-a7ee-95c7ee0d1be6",
+    "keyWords": "oath of friendship",
+    "name": "Oath of Friendship",
+    "index": 1005,
+    "description": "Increases effect of all Assist actions by a lot."
+  },
+  {
+    "id": "6ce0deff-2e1b-4852-bb95-2385359d58a6",
+    "keyWords": "angel's protection",
+    "name": "Angel's Protection",
+    "index": 1006,
+    "description": "Temporarily reduces physical damage taken by the target. The effect is small."
+  },
+  {
+    "id": "e5a4bcc3-1144-403a-b4ad-ddb440c2d3d2",
+    "keyWords": "god's protection",
+    "name": "God's Protection",
+    "index": 1007,
+    "description": "Reduces the number of turns status ailments last by a large amount."
+  },
+  {
+    "id": "915c9644-d2ef-47fe-a311-f630ac00ea82",
+    "keyWords": "speed up time",
+    "name": "Speed Up Time",
+    "index": 1013,
+    "description": "Reduces wait time after all actions."
+  },
+  {
+    "id": "8ae63b04-8d12-4cfe-a538-120d15570040",
+    "keyWords": "chain attack practice",
+    "name": "Chain Attack Practice",
+    "index": 1015,
+    "description": "Increases chain attack chance by a small amount."
+  },
+  {
+    "id": "19733f5b-39ce-4297-93b6-52650e31df5b",
+    "keyWords": "magician blessing",
+    "name": "Magician Blessing",
+    "index": 1021,
+    "description": "Reduces damage taken by 10%, and converts it into MP damage."
+  },
+  {
+    "id": "9f57ca29-d7f7-409e-a7de-3d68f6558763",
+    "keyWords": "time to power",
+    "name": "Time to Power",
+    "index": 1027,
+    "description": "Increases attack skill power by an amount depending on wait time after use."
+  },
+  {
+    "id": "6a42eaf0-b4e8-4b69-9252-f88d745e88d4",
+    "keyWords": "strong in a pinch",
+    "name": "Strong in a Pinch",
+    "index": 1030,
+    "description": "Increases critical hit rate, evasion rate, and other values when below 25% HP."
+  },
+  {
+    "id": "6868de4a-5480-4067-a927-ffed24fb4f80",
+    "keyWords": "strong in day",
+    "name": "Strong in Day",
+    "index": 1037,
+    "description": "Increases attack, defense, and speed by 15% during the day. No effect during other times."
+  },
+  {
+    "id": "03cfdc7a-7044-48e7-a28a-bcbcfc175ace",
+    "keyWords": "power to protection",
+    "name": "Power to Protection",
+    "index": 1042,
+    "description": "Reduces attack by 15%, increasing defense by that amount."
+  },
+  {
+    "id": "6040d8bc-2050-42e3-ad70-8b17ee994a87",
+    "keyWords": "power of one",
+    "name": "Power of One",
+    "index": 1049,
+    "description": "Temporarily increases attack, defense, and speed when ailments are removed."
+  },
+  {
+    "id": "d5a1e264-0623-4dfa-add0-cc93a5b726e8",
+    "keyWords": "power rune",
+    "name": "Power Rune",
+    "index": 1051,
+    "description": "The hidden magic of the Power Rune increases attack power by 15."
+  },
+  {
+    "id": "27b20c04-77b2-40e2-a7db-29d777b5f0be",
+    "keyWords": "swift gale rune",
+    "name": "Swift Gale Rune",
+    "index": 1056,
+    "description": "The hidden magic of the Swift Gale Rune increases speed by 25."
+  },
+  {
+    "id": "6e1f42d1-7ef0-4c96-8d93-85a521223205",
+    "keyWords": "power awakening",
+    "name": "Power Awakening",
+    "index": 1064,
+    "description": "Increases attack, defense, and speed. Increase grows with the wearer's level."
+  },
+  {
+    "id": "a2ea0923-ecad-4685-93ab-768df09c3717",
+    "keyWords": "soul awakening",
+    "name": "Soul Awakening",
+    "index": 1065,
+    "description": "Automatically revive on turn when KO'd in battle. HP after revival is decent."
+  },
+  {
+    "id": "7b880321-c321-4d32-b21f-dc20340ad885",
+    "keyWords": "hp regen m",
+    "name": "HP Regen M",
+    "index": 1095,
+    "description": "The target recovers HP on each turn. The effect lasts for 5 turns."
+  },
+  {
+    "id": "60614702-4cb9-41a7-9928-d5137086842e",
+    "keyWords": "mp regen m",
+    "name": "MP Regen M",
+    "index": 1099,
+    "description": "MP recovers a decent amount on each turn."
+  },
+  {
+    "id": "b195af18-b8ea-49b0-9710-24f3e1941a09",
+    "keyWords": "max hp up xl",
+    "name": "Max HP Up XL",
+    "index": 1106,
+    "description": "Increases maximum HP by 30."
+  },
+  {
+    "id": "78824959-72a7-45b5-879f-a1d9a0fbae11",
+    "keyWords": "max mp up m",
+    "name": "Max MP Up M",
+    "index": 1109,
+    "description": "Increases maximum MP by 20."
+  },
+  {
+    "id": "9d67c5b8-d916-4295-82f8-d98fc9bc06c8",
+    "keyWords": "defense up xs",
+    "name": "Defense Up XS",
+    "index": 1117,
+    "description": "Increases defense by 5."
+  },
+  {
+    "id": "ebc1bf52-6da9-40ca-96ba-f3a7fc17f50a",
+    "keyWords": "hit rate up l",
+    "name": "Hit Rate Up L",
+    "index": 1130,
+    "description": "Increases the target's hit rate by a lot. The effect lasts 5 turns."
+  },
+  {
+    "id": "42dfbe41-c2d5-476f-b697-e4f129683f10",
+    "keyWords": "evasion up m",
+    "name": "Evasion Up M",
+    "index": 1134,
+    "description": "Increases the target's evasion rate. The effect lasts 5 turns."
+  },
+  {
+    "id": "67f222b6-99bc-47f8-809e-bbaf3f6b43e0",
+    "keyWords": "temp stamina up l",
+    "name": "Temp Stamina Up L",
+    "index": 548,
+    "description": "Temporarily increases the target's maximum HP in battle. The effect is large."
+  },
+  {
+    "id": "13e054dd-7cb3-483e-963e-af313c3215fc",
+    "keyWords": "auto revive l",
+    "name": "Auto Revive L",
+    "index": 554,
+    "description": "Automatically revive on the next turn after being KO'd. HP after revival is fairly high."
+  },
+  {
+    "id": "e3ad6d0c-53b4-400b-8ac9-60c04e1c1ae3",
+    "keyWords": "cut wait time s",
+    "name": "Cut Wait Time S",
+    "index": 558,
+    "description": "Reduces wait time after the target's next turn by a little."
+  },
+  {
+    "id": "028e1ffb-ae7a-4efe-9f1a-cb6fedca86ce",
+    "keyWords": "chain attack up m",
+    "name": "Chain Attack Up M",
+    "index": 562,
+    "description": "Increases the target's chance to activate a chain attack by 50%. Effect lasts 5 turns."
+  },
+  {
+    "id": "80a4df06-6571-4398-9de6-bfa92beb0b6d",
+    "keyWords": "cause misfortune",
+    "name": "Cause Misfortune",
+    "index": 617,
+    "description": "Has a set chance of causing Poison, Blind, and Weak on the target."
+  },
+  {
+    "id": "13f515b8-25e8-462d-8660-02aaf6c0a90e",
+    "keyWords": "steal attack l",
+    "name": "Steal Attack L",
+    "index": 628,
+    "description": "Reduces the target's attack by a large amount, and temporarily increases your own by that amount."
+  },
+  {
+    "id": "bfcac7ad-a18a-4d04-a1a6-d7f820416f7a",
+    "keyWords": "steal defense l",
+    "name": "Steal Defense L",
+    "index": 631,
+    "description": "Reduces the target's defense by a large amount, and temporarily increases your own by that amount."
+  },
+  {
+    "id": "6443b924-8efd-427e-b2e2-a611ba63ff54",
+    "keyWords": "remove enhancements",
+    "name": "Remove Enhancements",
+    "index": 635,
+    "description": "Nullifies 1 enhancement effect on the target."
+  },
+  {
+    "id": "1fd48250-3f1c-4115-9ea5-d93250bace2d",
+    "keyWords": "attack down m",
+    "name": "Attack Down M",
+    "index": 689,
+    "description": "Reduces the target's attack power."
+  },
+  {
+    "id": "64513e40-fda1-4aaf-8ac2-33fe257caa19",
+    "keyWords": "speed down s",
+    "name": "Speed Down S",
+    "index": 694,
+    "description": "Slightly reduces the target's speed."
+  },
+  {
+    "id": "d4e41168-b978-4ec8-a1aa-67f24c766bd0",
+    "keyWords": "inflict poison s",
+    "name": "Inflict Poison S",
+    "index": 703,
+    "description": "Has a low chance of Poisoning the target. The effect is small. Poison deals damage every time the target takes a turn."
+  },
+  {
+    "id": "6d463e6d-f884-44f3-89fc-7fe73af29d5d",
+    "keyWords": "inflict poison m",
+    "name": "Inflict Poison M",
+    "index": 704,
+    "description": "Has a moderate chance of Poisoning the target. The effect is moderate. Poison deals damage every time the target takes a turn."
+  },
+  {
+    "id": "c9a3da95-ae12-4819-b502-aa7fde3b2d14",
+    "keyWords": "inflict curse l",
+    "name": "Inflict Curse L",
+    "index": 711,
+    "description": "Has a high chance of Cursing the target. The effect is big. Curse causes the target to take damage when healing."
+  },
+  {
+    "id": "f90e5113-c7c6-4fdb-bdae-d189e89e2ba6",
+    "keyWords": "inflict blind m",
+    "name": "Inflict Blind M",
+    "index": 713,
+    "description": "Has a moderate chance of Blinding the target. The effect is moderate. Blind reduces attack hit rate and evasion rate."
+  },
+  {
+    "id": "7795bea5-e52c-4126-af7d-da7d706591f4",
+    "keyWords": "inflict no heal l",
+    "name": "Inflict No Heal L",
+    "index": 720,
+    "description": "Has a high chance of No Healing the target. No Heal causes all recovery effects to heal for 0."
+  },
+  {
+    "id": "4a62cef4-9352-4212-be04-4a754b07cd19",
+    "keyWords": "inflict seal m",
+    "name": "Inflict Seal M",
+    "index": 722,
+    "description": "Has a moderate chance of Sealing the target. Seal renders the target unable to use powerful attacks."
+  },
+  {
+    "id": "70732cba-613b-4fee-90f9-6a755575b273",
+    "keyWords": "weak to fire",
+    "name": "Weak to Fire",
+    "index": 728,
+    "description": "Reduces the target's fire resistance by 1 level. Has no effect if the target has no resistance, and this cannot cause weaknesses."
+  },
+  {
+    "id": "5826f169-7334-4ba9-abef-084102b96116",
+    "keyWords": "level down m",
+    "name": "Level Down M",
+    "index": 732,
+    "description": "Reduces the target's level. Reduced level decreases all stats and damage dealt."
+  },
+  {
+    "id": "b15b0d3e-426d-40a1-aada-89b7b956b106",
+    "keyWords": "weak to changes",
+    "name": "Weak to Changes",
+    "index": 738,
+    "description": "Increases the effectiveness of status ailments on the target. It does not increase the chances of ailments occurring."
+  },
+  {
+    "id": "397a6a6d-f83c-4c50-91e8-ce85f8f4f715",
+    "keyWords": "pacification l",
+    "name": "Pacification L",
+    "index": 749,
+    "description": "Pacifies the enemy, delaying the activation of powerful attacks."
+  },
+  {
+    "id": "4be65846-fc03-477e-aa91-a6eb0721278b",
+    "keyWords": "consume mp l",
+    "name": "Consume MP L",
+    "index": 805,
+    "description": "Consumes a large amount of MP. The effect is weakened when MP is insufficient."
+  },
+  {
+    "id": "7095fc76-fe78-4167-a55a-589ae240f510",
+    "keyWords": "fits a lot",
+    "name": "Fits a Lot",
+    "index": 931,
+    "description": "Increases item capacity by 20."
+  },
+  {
+    "id": "d772951d-7f05-4173-be14-c3d4e8c2a4ac",
+    "keyWords": "fits a whole lot",
+    "name": "Fits a Whole Lot",
+    "index": 932,
+    "description": "Increases item capacity by 40."
+  },
+  {
+    "id": "69a97ed7-7dc4-43c3-a158-a69eca071b1c",
+    "keyWords": "gather a little more",
+    "name": "Gather a Little More",
+    "index": 936,
+    "description": "Increases number of items gathered each time a little."
+  },
+  {
+    "id": "aeaa46ae-c8e3-47ab-8e3e-bbd2616ed03a",
+    "keyWords": "inject will to fight",
+    "name": "Inject Will to Fight",
+    "index": 1000,
+    "description": "Increases critical hit rate a little."
+  },
+  {
+    "id": "d8ad2810-edb5-4f9f-9403-b4cd39ee0411",
+    "keyWords": "inject fighting spirit",
+    "name": "Inject Fighting Spirit",
+    "index": 1001,
+    "description": "Increases critical hit rate and critical hit damage bonus a little."
+  },
+  {
+    "id": "24c211d0-e048-4c92-b62c-a630908f17d2",
+    "keyWords": "gather attention",
+    "name": "Gather Attention",
+    "index": 1011,
+    "description": "Become more likely to be targeted during battle."
+  },
+  {
+    "id": "9913a401-ce02-4d7e-8ac8-084edcaddc4c",
+    "keyWords": "affect the future",
+    "name": "Affect the Future",
+    "index": 1025,
+    "description": "Increases the chance of higher expected values when attacking."
+  },
+  {
+    "id": "4563c9c2-0e84-42a9-860b-9a1a451e3b3b",
+    "keyWords": "feather awakening",
+    "name": "Feather Awakening",
+    "index": 1031,
+    "description": "Automatically revive on turn when KO'd in battle. HP after revival is low."
+  },
+  {
+    "id": "95ec1d48-44b3-4896-aa49-8a9366c82626",
+    "keyWords": "restrain attack l",
+    "name": "Restrain Attack L",
+    "index": 746,
+    "description": "Reduces the rate at which enemies use powerful attacks a lot."
+  },
+  {
+    "id": "6bf34fd2-9974-4efc-a4bb-dc63a7a3210c",
+    "keyWords": "pacification s",
+    "name": "Pacification S",
+    "index": 747,
+    "description": "Pacifies the enemy, delaying the activation of powerful attacks by a little."
+  },
+  {
+    "id": "3a25fa69-c379-47ff-942f-0705cd6a362b",
+    "keyWords": "consume mp xs",
+    "name": "Consume MP XS",
+    "index": 802,
+    "description": "Consumes a slight amount of MP. The effect is weakened when MP is insufficient."
+  },
+  {
+    "id": "55abe346-b798-42a1-8c4c-1cab56ddd937",
+    "keyWords": "small cart",
+    "name": "Small Cart",
+    "index": 864,
+    "description": "Allows you to select a few items that you gathered, and send them back to the atelier. You can send up to 10 at a time."
+  },
+  {
+    "id": "c9503fa3-1d12-4fca-9764-47b6d1af725b",
+    "keyWords": "erase presence",
+    "name": "Erase Presence",
+    "index": 868,
+    "description": "Erase your presence, making it impossible for monsters to see you for a short time. Just don't get too close."
+  },
+  {
+    "id": "378ba438-5be0-44a6-9894-c5b8f61485c2",
+    "keyWords": "charm's blessing",
+    "name": "Charm's Blessing",
+    "index": 874,
+    "description": ""
+  },
+  {
+    "id": "02ac1bed-6a19-4105-912c-e0a9728ac393",
+    "keyWords": "lightens body a little",
+    "name": "Lightens Body a Little",
+    "index": 925,
+    "description": "Reduces LP consumed while moving on the World Map by 25%."
+  },
+  {
+    "id": "adeeb2ca-1b8b-4efb-9307-4f810b9dbaef",
+    "keyWords": "move speed up m",
+    "name": "Move Speed Up M",
+    "index": 929,
+    "description": "Move speed increases by 20%."
+  },
+  {
+    "id": "7d4c6e9c-f201-40b9-837f-63e5b01d741d",
+    "keyWords": "gather more",
+    "name": "Gather More",
+    "index": 937,
+    "description": "Increases number of items gathered each time."
+  },
+  {
+    "id": "644619cf-2213-43a4-ad25-5bfc29f61ac5",
+    "keyWords": "chain attack skills",
+    "name": "Chain Attack Skills",
+    "index": 1016,
+    "description": "Increases chain attack chance."
+  },
+  {
+    "id": "dc86e638-b792-4fbc-9f30-b83ef6bba6dd",
+    "keyWords": "chain attack mastery",
+    "name": "Chain Attack Mastery",
+    "index": 1018,
+    "description": "Increases chain attack chance by a huge amount."
+  },
+  {
+    "id": "f7b0cdb1-6073-4e03-9e57-ff1cedfbf5ea",
+    "keyWords": "sage's wisdom",
+    "name": "Sage's Wisdom",
+    "index": 1020,
+    "description": "Completely swaps maximum HP and MP values."
+  },
+  {
+    "id": "541a134b-7a6f-4635-a2bc-304c1fb5a107",
+    "keyWords": "control the future",
+    "name": "Control the Future",
+    "index": 1026,
+    "description": "Increases the chance of higher expected values a lot when attacking."
+  },
+  {
+    "id": "91eb6afe-b211-4dcc-b774-83ab32cfcb05",
+    "keyWords": "spirit to power",
+    "name": "Spirit to Power",
+    "index": 1029,
+    "description": "Increases attack, defense, and speed by 25% of base maximum MP."
+  },
+  {
+    "id": "ff32006e-486f-4aeb-8cff-9166aaf34489",
+    "keyWords": "resist gravity",
+    "name": "Resist Gravity",
+    "index": 1034,
+    "description": "Reduces turn delaying effects."
+  },
+  {
+    "id": "37483e13-12e2-4370-b1e8-dda0b783fa1b",
+    "keyWords": "conversion spell",
+    "name": "Conversion Spell",
+    "index": 1047,
+    "description": "During battle, 10% of damage taken and MP consumed is absorbed into the other pool."
+  },
+  {
+    "id": "fcc07ea4-8277-4e7f-a531-7c9cbd93a405",
+    "keyWords": "guardian rune",
+    "name": "Guardian Rune",
+    "index": 1055,
+    "description": "The hidden magic of the Guardian Rune increases defense by 25."
+  },
+  {
+    "id": "b309b601-c6bf-40f8-87cb-c716c8898321",
+    "keyWords": "speed to power",
+    "name": "Speed to Power",
+    "index": 1060,
+    "description": "Reduces speed by 15%, increasing attack by that amount."
+  },
+  {
+    "id": "f982ae56-d0ce-438d-a995-031435325c86",
+    "keyWords": "spirit god's power",
+    "name": "Spirit God's Power",
+    "index": 1063,
+    "description": "The power of the spirit god massively increases base damage."
+  },
+  {
+    "id": "45a72ef7-b52a-4fe3-84fd-e76f24036b6f",
+    "keyWords": "hp regen s",
+    "name": "HP Regen S",
+    "index": 1094,
+    "description": "The target recovers a small amount of HP on each turn. The effect lasts for 5 turns."
+  },
+  {
+    "id": "99a9e4a3-6e14-48e4-b734-df6f1fe690c3",
+    "keyWords": "mp regen s",
+    "name": "MP Regen S",
+    "index": 1098,
+    "description": "MP recovers a small amount on each turn."
+  },
+  {
+    "id": "7dced0aa-9d85-4a18-9cee-f2a1ae1f5284",
+    "keyWords": "mp regen xl",
+    "name": "MP Regen XL",
+    "index": 1101,
+    "description": "MP recovers a large amount on each turn."
+  },
+  {
+    "id": "a81ffe43-c3c0-481c-8f6d-0ef310e63fc7",
+    "keyWords": "max mp up s",
+    "name": "Max MP Up S",
+    "index": 1108,
+    "description": "Increases maximum MP by 15."
+  },
+  {
+    "id": "34dfe9c5-784c-4b24-9c05-24d84157b616",
+    "keyWords": "attack up m",
+    "name": "Attack Up M",
+    "index": 1114,
+    "description": "Increases the target's attack power. The effect lasts 5 turns."
+  },
+  {
+    "id": "2bafdbe2-b264-4e9e-a671-91b265102266",
+    "keyWords": "defense up s",
+    "name": "Defense Up S",
+    "index": 1118,
+    "description": "Increases the target's defense a little. The effect lasts 5 turns."
+  },
+  {
+    "id": "cf2eb3c2-032c-43bd-9e92-c9619a5f02f2",
+    "keyWords": "speed up m",
+    "name": "Speed Up M",
+    "index": 1124,
+    "description": "Increases the target's speed. The effect lasts 5 turns."
+  },
+  {
+    "id": "e4281494-a915-4133-9315-fec29f75368a",
+    "keyWords": "speed up xl",
+    "name": "Speed Up XL",
+    "index": 1126,
+    "description": "Increases speed by 25."
+  },
+  {
+    "id": "e7bc9bf0-f858-46bf-b24c-c80d4c416531",
+    "keyWords": "critical enhance s",
+    "name": "Critical Enhance S",
+    "index": 1143,
+    "description": "Increases critical damage bonus by 6%."
+  },
+  {
+    "id": "e7aa371d-475d-4914-b59d-5c74602e305c",
+    "keyWords": "critical enhance xl",
+    "name": "Critical Enhance XL",
+    "index": 1146,
+    "description": "Increases critical damage bonus by 15%."
+  },
+  {
+    "id": "a77f9ed0-17d3-4c07-a0e9-7e42dd9ede41",
+    "keyWords": "item enhance l",
+    "name": "Item Enhance L",
+    "index": 1153,
+    "description": "Increases item power by 20%."
+  },
+  {
+    "id": "96c2eeab-6da4-477a-9556-1b82c9740f1e",
+    "keyWords": "item shorten l",
+    "name": "Item Shorten L",
+    "index": 1156,
+    "description": "Reduces wait time after using item by 20%."
+  },
+  {
+    "id": "b78859e8-d19c-491d-a237-24fd8d6d3010",
+    "keyWords": "burst up +1%",
+    "name": "Burst Up +1%",
+    "index": 1157,
+    "description": "Increases Burst Gauge fill rate by 1%."
+  },
+  {
+    "id": "134233f5-0164-467e-8175-6a8d03e7518a",
+    "keyWords": "nullify slow",
+    "name": "Nullify Slow",
+    "index": 1162,
+    "description": "Immunity to Slow ailment."
+  },
+  {
+    "id": "27d887a1-beb0-4dbb-8d2b-29afa7d9d8a9",
+    "keyWords": "nullify weak",
+    "name": "Nullify Weak",
+    "index": 1165,
+    "description": "Immunity to Weak ailment."
+  },
+  {
+    "id": "5b4ab948-79da-484a-a15b-69b7f3292765",
+    "keyWords": "nullify seal",
+    "name": "Nullify Seal",
+    "index": 1167,
+    "description": "Immunity to Seal ailment."
+  },
+  {
+    "id": "b5a56a6f-8249-4d52-9cd6-432617b51283",
+    "keyWords": "nullify after effect",
+    "name": "Nullify After Effect",
+    "index": 1168,
+    "description": "Immunity to revival After Effects ailment."
+  },
+  {
+    "id": "9aa58268-7323-41e8-b1f9-0e63b8125911",
+    "keyWords": "ailment resist xl",
+    "name": "Ailment Resist XL",
+    "index": 1175,
+    "description": "Reduces chance of being affected by ailments."
+  },
+  {
+    "id": "cafcd772-0cdf-4144-b5e4-b4680d9df938",
+    "keyWords": "avoid ko m",
+    "name": "Avoid KO M",
+    "index": 1178,
+    "description": "You have a chance to survive with 1 HP when you receive damage that would reduce your HP to 0. Has a fairly low chance to work."
+  },
+  {
+    "id": "e31c00bc-ae87-46b7-8c5e-fec5e1f02f55",
+    "keyWords": "ice resistance",
+    "name": "Ice Resistance",
+    "index": 1182,
+    "description": "Gain ice resistance."
+  },
+  {
+    "id": "2e0e2f74-9b3e-448b-9e48-ff845d593fbb",
+    "keyWords": "break enhance m",
+    "name": "Break Enhance M",
+    "index": 1193,
+    "description": "Increases Break value when attacking enemies by a small amount."
+  },
+  {
+    "id": "eaeb034e-c17c-437b-bace-f5f23e24d26e",
+    "keyWords": "input time limit 20",
+    "name": "Input Time Limit 20",
+    "index": 1256,
+    "description": ""
+  },
+  {
+    "id": "45b0f1c1-1d5c-437a-9d0b-2f0beaa133a2",
+    "keyWords": "panel 5x5",
+    "name": "Panel 5x5",
+    "index": 1262,
+    "description": "The panel size is 5x5."
+  },
+  {
+    "id": "daaa2684-7518-407a-a1fb-800722413ba9",
+    "keyWords": "tuning",
+    "name": "Tuning",
+    "index": 1268,
+    "description": "Obtaining bonuses that are the same color as materials already placed causes those materials to gain the same bonus."
+  },
+  {
+    "id": "5e788852-8a31-4917-8004-a03f715c8f2b",
+    "keyWords": "quality boost",
+    "name": "Quality Boost",
+    "index": 1272,
+    "description": "Increases item quality by the ratio of the most common synthesis panel color."
+  },
+  {
+    "id": "ab4d0892-8a01-4ad9-9c51-c7cd383f7117",
+    "keyWords": "change color green",
+    "name": "Change Color Green",
+    "index": 1285,
+    "description": "Changes the item color to Green."
+  },
+  {
+    "id": "4a296964-fe7e-461c-a1da-9c9670b314a5",
+    "keyWords": "add (poison mat)",
+    "name": "Add (Poison Mat)",
+    "index": 1291,
+    "description": "Adds 10 category value to (Poison Mat)."
+  },
+  {
+    "id": "b89f049b-e84a-4718-be41-4948a89bb4c9",
+    "keyWords": "ultimate destruction",
+    "name": "Ultimate Destruction",
+    "index": 1398,
+    "description": "Gain ultimate destruction. Increases critical hit damage bonus by 30%."
+  },
+  {
+    "id": "7c075101-3429-4774-81a4-d6f603be397f",
+    "keyWords": "ultimate stability",
+    "name": "Ultimate Stability",
+    "index": 1399,
+    "description": "Gain ultimate stability. Nullifies turn delaying effects by 100%."
+  },
+  {
+    "id": "ee790eb8-f986-4aa5-906a-3ccbf4201b56",
+    "keyWords": "ultimate conversion",
+    "name": "Ultimate Conversion",
+    "index": 1404,
+    "description": "Gain ultimate conversion. 20% of damage taken is absorbed into MP."
+  },
+  {
+    "id": "7385e903-8546-44bd-a112-bbdfb5480012",
+    "keyWords": "ultimate energy",
+    "name": "Ultimate Energy",
+    "index": 1411,
+    "description": "Gain ultimate energy. Increases speed by 50."
+  },
+  {
+    "id": "c61bb4b7-4317-4c7e-ba07-6bd3142ed0fa",
+    "keyWords": "ultimate ice resist",
+    "name": "Ultimate Ice Resist",
+    "index": 1415,
+    "description": "Gain ultimate ice resistance. Gain super ice resistance."
+  },
+  {
+    "id": "1899349f-3cba-4f14-bb10-5161e36959b3",
+    "keyWords": "ultimate stunning force",
+    "name": "Ultimate Stunning Force",
+    "index": 1428,
+    "description": "Gain ultimate stunning force. Greatly increases Break value when attacking."
+  },
+  {
+    "id": "57a85037-9940-44df-9b34-ef9eadfb6479",
+    "keyWords": "fighting spirit active",
+    "name": "Fighting Spirit Active",
+    "index": 998,
+    "description": "During battle, stats increase with each turn. There is a limit to this increase."
+  },
+  {
+    "id": "0bc2036a-467b-42ac-a399-6b2a4d473735",
+    "keyWords": "inject warlike spirit",
+    "name": "Inject Warlike Spirit",
+    "index": 1002,
+    "description": "Increases critical hit rate and critical hit damage bonus."
+  },
+  {
+    "id": "991f175d-a263-42d7-b620-5e2d028bee8d",
+    "keyWords": "draw attention",
+    "name": "Draw Attention",
+    "index": 1010,
+    "description": "Become a little more likely to be targeted during battle."
+  },
+  {
+    "id": "6249646e-3c44-4da8-892a-5800b4198aba",
+    "keyWords": "chain attack secrets",
+    "name": "Chain Attack Secrets",
+    "index": 1017,
+    "description": "Increases chain attack chance by a large amount."
+  },
+  {
+    "id": "763c4124-99f0-4097-9225-b13d1babf5de",
+    "keyWords": "scholar's wisdom",
+    "name": "Scholar's Wisdom",
+    "index": 1019,
+    "description": "Swaps 50% of maximum HP and MP values with each other."
+  },
+  {
+    "id": "86fd7eee-33ea-4d2b-b0f8-7f337136a32a",
+    "keyWords": "ancient god blessing",
+    "name": "Ancient God Blessing",
+    "index": 1023,
+    "description": "Reduces damage taken by 10%, but increases Break value."
+  },
+  {
+    "id": "bfda67b8-b1e4-437a-8740-c216769b5ac6",
+    "keyWords": "samsara awakening",
+    "name": "Samsara Awakening",
+    "index": 1033,
+    "description": "Automatically revive on turn when KO'd in battle. HP after revival is about half."
+  },
+  {
+    "id": "f97f4dd9-76a1-4725-9c3e-70be3178847e",
+    "keyWords": "mass conversion spell",
+    "name": "Mass Conversion Spell",
+    "index": 1048,
+    "description": "During battle, 15% of damage taken and MP consumed is absorbed into the other pool."
+  },
+  {
+    "id": "19187874-bf6e-4343-825b-aec7ced79cd8",
+    "keyWords": "defense rune",
+    "name": "Defense Rune",
+    "index": 1052,
+    "description": "The hidden magic of the Defense Rune increases defense by 15."
+  },
+  {
+    "id": "9edf2e76-9594-4114-8356-25299597816e",
+    "keyWords": "weapon rune",
+    "name": "Weapon Rune",
+    "index": 1057,
+    "description": "The hidden magic of the Weapon Rune increases base damage."
+  },
+  {
+    "id": "f76f6ef9-2750-471d-a70d-3734c6ea4192",
+    "keyWords": "hero's ambition",
+    "name": "Hero's Ambition",
+    "index": 1068,
+    "description": "Gain the heroic soul, revealing true power when fighting powerful foes."
+  },
+  {
+    "id": "244dadda-55dc-40eb-b631-8f333cbf8ae6",
+    "keyWords": "hp regen xl",
+    "name": "HP Regen XL",
+    "index": 1097,
+    "description": "The target recovers a huge amount of HP on each turn. The effect lasts for 5 turns."
+  },
+  {
+    "id": "8ac83051-0872-44a0-95db-fd1602e0281e",
+    "keyWords": "max hp up xs",
+    "name": "Max HP Up XS",
+    "index": 1102,
+    "description": "Increases maximum HP by 10."
+  },
+  {
+    "id": "b107a50b-2bde-425b-ab19-b256eb2cc36d",
+    "keyWords": "max mp up l",
+    "name": "Max MP Up L",
+    "index": 1110,
+    "description": "Increases maximum MP by 25."
+  },
+  {
+    "id": "6d0d8915-632b-4379-bc98-0b0d81765abc",
+    "keyWords": "attack up s",
+    "name": "Attack Up S",
+    "index": 1113,
+    "description": "Increases the target's attack power a little. The effect lasts 5 turns."
+  },
+  {
+    "id": "780e44c0-fd14-445c-a415-e6aa46cd5400",
+    "keyWords": "attack up l",
+    "name": "Attack Up L",
+    "index": 1115,
+    "description": "Increases the target's attack power by a lot. The effect lasts 5 turns."
+  },
+  {
+    "id": "36b19ed5-cc56-4bbd-876c-da7b13167f2e",
+    "keyWords": "defense up l",
+    "name": "Defense Up L",
+    "index": 1120,
+    "description": "Increases the target's defense by a lot. The effect lasts 5 turns."
+  },
+  {
+    "id": "83186aba-2c2a-4b19-97b4-2dfe68289bd4",
+    "keyWords": "hit rate up s",
+    "name": "Hit Rate Up S",
+    "index": 1128,
+    "description": "Increases the target's hit rate a little. The effect lasts 5 turns."
+  },
+  {
+    "id": "e4161dde-5156-4641-b69d-3ab68d52ff49",
+    "keyWords": "critical enhance xs",
+    "name": "Critical Enhance XS",
+    "index": 1142,
+    "description": "Increases critical damage bonus by 3%."
+  },
+  {
+    "id": "beabb3c8-80d6-4fa1-9933-1a5251e9ddbb",
+    "keyWords": "critical enhance l",
+    "name": "Critical Enhance L",
+    "index": 1145,
+    "description": "Increases critical damage bonus by 12%."
+  },
+  {
+    "id": "9c727ef6-e046-4436-a4aa-3d05aa63f545",
+    "keyWords": "skill enhance l",
+    "name": "Skill Enhance L",
+    "index": 1149,
+    "description": "Increases skill power by 10%."
+  },
+  {
+    "id": "461fbbdc-d8a3-4706-9fa5-c88c4e53c099",
+    "keyWords": "break enhance l",
+    "name": "Break Enhance L",
+    "index": 1194,
+    "description": "Increases Break value when attacking enemies."
+  },
+  {
+    "id": "694af6f1-7fbf-42a6-baa7-e81286834612",
+    "keyWords": "plachta's cauldron",
+    "name": "Plachta's Cauldron",
+    "index": 1254,
+    "description": ""
+  },
+  {
+    "id": "c48b1d11-df45-4d2a-893c-758332f269ae",
+    "keyWords": "panel display level 3",
+    "name": "Panel Display Level 3",
+    "index": 1260,
+    "description": ""
+  },
+  {
+    "id": "fa343b4a-c1d3-4ac9-94ee-2da136e9a205",
+    "keyWords": "no failures",
+    "name": "No Failures",
+    "index": 1265,
+    "description": "Performing Synthesis at quality value 0 won't result in failure, and produce the desired item."
+  },
+  {
+    "id": "da1749d9-717c-420b-9cb9-65a574fcac02",
+    "keyWords": "true combined effect",
+    "name": "True Combined Effect",
+    "index": 1273,
+    "description": "The ultimate alchemy cauldron, featuring all effects other than “Time Limit”."
+  },
+  {
+    "id": "2d71260e-4c0a-4536-9c4e-7d2a52145bcc",
+    "keyWords": "change color red",
+    "name": "Change Color Red",
+    "index": 1283,
+    "description": "Changes the item color to Red."
+  },
+  {
+    "id": "a88973f6-51c1-41b3-986b-f13a04d65cbe",
+    "keyWords": "change color white",
+    "name": "Change Color White",
+    "index": 1287,
+    "description": "Changes the item color to White."
+  },
+  {
+    "id": "2b074e60-6509-43e6-b280-55f766b3b96e",
+    "keyWords": "(wood) +5",
+    "name": "(Wood) +5",
+    "index": 1300,
+    "description": "Increases (Wood) category value by 5."
+  },
+  {
+    "id": "fb64b51c-521c-46a5-9912-a316007553a3",
+    "keyWords": "(neutralizer) +5",
+    "name": "(Neutralizer) +5",
+    "index": 1301,
+    "description": "Increases (Neutralizer) category value by 5."
+  },
+  {
+    "id": "355422a7-18ae-4e09-88c2-1051369db86d",
+    "keyWords": "ultimate criticality",
+    "name": "Ultimate Criticality",
+    "index": 1403,
+    "description": "Gain ultimate criticality. Increases critical hit rate by 50%."
+  },
+  {
+    "id": "3692423e-5f99-4339-9623-f4c042c17106",
+    "keyWords": "ultimate mentality",
+    "name": "Ultimate Mentality",
+    "index": 1407,
+    "description": "Gain ultimate mentality. Increases maximum MP by 100."
+  },
+  {
+    "id": "757fc632-c799-4157-ae21-9c73d56c4b36",
+    "keyWords": "ultimate accuracy",
+    "name": "Ultimate Accuracy",
+    "index": 1412,
+    "description": "Gain ultimate accuracy. Increases hit rate by 50%."
+  },
+  {
+    "id": "70341a1a-1c23-46a9-b7bd-0ec92a1c6a9f",
+    "keyWords": "ultimate compensation",
+    "name": "Ultimate Compensation",
+    "index": 1419,
+    "description": "Gain ultimate compensation. Increases skill power by 30%."
+  },
+  {
+    "id": "2887e536-5314-4e4d-9a5c-0c72a0eaf6f2",
+    "keyWords": "ultimate explosive force",
+    "name": "Ultimate Explosive Force",
+    "index": 1423,
+    "description": "Gain ultimate explosive force. Increases damage bonus by 15% during Burst."
+  },
+  {
+    "id": "baed48d6-4ce7-4afa-995b-a317e8bc33ea",
+    "keyWords": "ultimate invulnerability",
+    "name": "Ultimate Invulnerability",
+    "index": 1424,
+    "description": "Gain ultimate invulnerability. You have a 35% chance to survive with 1 HP when taking damage that would KO you."
+  },
+  {
+    "id": "b22bb0d2-7b70-43c6-a16a-6b6415cfcd21",
+    "keyWords": "hit rate up m",
+    "name": "Hit Rate Up M",
+    "index": 1129,
+    "description": "Increases the target's hit rate. The effect lasts 5 turns."
+  },
+  {
+    "id": "74b9a4f9-cf79-4e3a-9386-c2bda8a26ddc",
+    "keyWords": "critical up l",
+    "name": "Critical Up L",
+    "index": 1140,
+    "description": "Increases critical hit rate by 12%."
+  },
+  {
+    "id": "03552074-cbfd-445f-b6f9-bdd36f3f2cbf",
+    "keyWords": "critical up xl",
+    "name": "Critical Up XL",
+    "index": 1141,
+    "description": "Increases critical hit rate by 15%."
+  },
+  {
+    "id": "c11b482e-f72f-4529-a2e7-2c45e6fd9e09",
+    "keyWords": "skill enhance s",
+    "name": "Skill Enhance S",
+    "index": 1147,
+    "description": "Increases skill power by 5%."
+  },
+  {
+    "id": "522c8ba7-0fc2-4267-a181-8818915a35a1",
+    "keyWords": "skill enhance m",
+    "name": "Skill Enhance M",
+    "index": 1148,
+    "description": "Increases skill power by 7%."
+  },
+  {
+    "id": "3658d302-4a6c-455e-ae0d-6aaa68f049a9",
+    "keyWords": "critical up m",
+    "name": "Critical Up M",
+    "index": 1139,
+    "description": "Increases critical hit rate by 9%."
+  },
+  {
+    "id": "38f46c73-b26a-4d20-b861-22bb758d848b",
+    "keyWords": "skill enhance xl",
+    "name": "Skill Enhance XL",
+    "index": 1150,
+    "description": "Increases skill power by 15%."
+  },
+  {
+    "id": "a64218df-e250-413a-9b69-401fc099e43f",
+    "keyWords": "nullify poison",
+    "name": "Nullify Poison",
+    "index": 1161,
+    "description": "Immunity to Poison ailment."
+  },
+  {
+    "id": "b229884b-a303-4486-bbc9-49c7d6848e98",
+    "keyWords": "nullify curse",
+    "name": "Nullify Curse",
+    "index": 1163,
+    "description": "Immunity to Curse ailment."
+  },
+  {
+    "id": "8b05fd4e-adf2-4add-8fa0-4aaba67fa7f4",
+    "keyWords": "nullify blind",
+    "name": "Nullify Blind",
+    "index": 1164,
+    "description": "Immunity to Blind ailment."
+  },
+  {
+    "id": "6322b158-6c10-43d8-a4e2-6d6bccfb6871",
+    "keyWords": "nullify one hit ko",
+    "name": "Nullify One Hit KO",
+    "index": 1169,
+    "description": "Immunity to One Hit KO."
+  },
+  {
+    "id": "a43b48d5-6b81-45da-b7ac-eaa534c229cb",
+    "keyWords": "ailment resist l",
+    "name": "Ailment Resist L",
+    "index": 1174,
+    "description": "Reduces chance of being affected by ailments by a decent amount."
+  },
+  {
+    "id": "b0afb191-708a-443d-ba02-a2fb391808ca",
+    "keyWords": "fire resistance",
+    "name": "Fire Resistance",
+    "index": 1181,
+    "description": "Gain fire resistance."
+  },
+  {
+    "id": "a02361ee-c9ee-4820-b552-f1c824d9bea8",
+    "keyWords": "damage absorb m",
+    "name": "Damage Absorb M",
+    "index": 1185,
+    "description": "Absorbs a portion of damage dealt to the target as HP. The effect is fairly small."
+  },
+  {
+    "id": "25145c58-96e4-4359-8323-6800f9da34c7",
+    "keyWords": "damage cut m",
+    "name": "Damage Cut M",
+    "index": 1189,
+    "description": "Reduces damage taken by 6%."
+  },
+  {
+    "id": "743463e4-808d-4a40-a99b-04cd14a25775",
+    "keyWords": "break resist m",
+    "name": "Break Resist M",
+    "index": 1197,
+    "description": "Increases Break resistance by a decent amount."
+  },
+  {
+    "id": "72ee8891-0dd1-4025-82da-2bea1cf0b2cc",
+    "keyWords": "use opportunity s",
+    "name": "Use Opportunity S",
+    "index": 1199,
+    "description": "Increases damage dealt to Broken enemies by a slight amount."
+  },
+  {
+    "id": "f278be59-9078-40b4-9227-925a6054b9f1",
+    "keyWords": "use opportunity l",
+    "name": "Use Opportunity L",
+    "index": 1201,
+    "description": "Increases damage dealt to Broken enemies."
+  },
+  {
+    "id": "95387e44-7e1d-4259-ad8b-02d63720a700",
+    "keyWords": "bonus display level 1",
+    "name": "Bonus Display Level 1",
+    "index": 1257,
+    "description": "The Synthesis panel display is level 1. Higher display level increases bonus placement at the start of Synthesis."
+  },
+  {
+    "id": "1975050a-ca02-4a50-b7a9-0770ad213176",
+    "keyWords": "worn out cauldron",
+    "name": "Worn Out Cauldron",
+    "index": 1264,
+    "description": "The cauldron Sophie inherited from her grandmother. It was used for a long time, so it only has minimal power left."
+  },
+  {
+    "id": "40f5bd4d-95e8-4a74-a019-5b7325398f38",
+    "keyWords": "synergy",
+    "name": "Synergy",
+    "index": 1267,
+    "description": "Obtaining bonuses that are the same color as the liquid in the cauldron increases effect by 50%."
+  },
+  {
+    "id": "57a5b30c-f412-4f8b-873f-d3f5525fc629",
+    "keyWords": "quick to improve",
+    "name": "Quick to Improve",
+    "index": 1271,
+    "description": "Increases alchemy experience points by the ratio of the most common synthesis panel color upon item completion."
+  },
+  {
+    "id": "8e88d316-f29a-4bd2-8b08-59cb4e7a942f",
+    "keyWords": "change color yellow",
+    "name": "Change Color Yellow",
+    "index": 1286,
+    "description": "Changes the item color to Yellow."
+  },
+  {
+    "id": "3fee19d1-b85a-4584-9787-176b469166e7",
+    "keyWords": "ultimate reversal",
+    "name": "Ultimate Reversal",
+    "index": 1400,
+    "description": "Gain ultimate reversal. 15% of damage taken is converted into MP damage and reduced."
+  },
+  {
+    "id": "8770c84a-c192-4c14-b5c5-805c1e1745d8",
+    "keyWords": "ultimate evolution",
+    "name": "Ultimate Evolution",
+    "index": 1405,
+    "description": "Gain ultimate evolution. Greatly enhances stats of the wearer depending on level."
+  },
+  {
+    "id": "6f295221-3cb9-4f61-b53e-8f937ec78f50",
+    "keyWords": "ultimate attack",
+    "name": "Ultimate Attack",
+    "index": 1409,
+    "description": "Gain ultimate attack power. Increases attack power by 50."
+  },
+  {
+    "id": "27e26230-da78-42ae-a824-68c360885b47",
+    "keyWords": "ultimate evasion",
+    "name": "Ultimate Evasion",
+    "index": 1413,
+    "description": "Gain ultimate evasion. Increases evasion rate by 15%."
+  },
+  {
+    "id": "61bbe89d-7cf7-475a-b660-7684a2f1bef9",
+    "keyWords": "ultimate resistance",
+    "name": "Ultimate Resistance",
+    "index": 1417,
+    "description": "Gain ultimate resistance. Gain resistance to all status ailments."
+  },
+  {
+    "id": "b2b56ddb-c506-4924-95cb-5b454c6ce272",
+    "keyWords": "ultimate support",
+    "name": "Ultimate Support",
+    "index": 1418,
+    "description": "Gain ultimate support. Enhances Assist action effects by 15%."
+  },
+  {
+    "id": "f3d5296a-7e8f-4819-97fc-5ef2def62db1",
+    "keyWords": "ultimate turn-around",
+    "name": "Ultimate Turn-Around",
+    "index": 1422,
+    "description": "Gain ultimate turn-around. Greatly increases stats when fighting powerful enemies."
+  },
+  {
+    "id": "61f74a26-f210-4928-861b-fb9a656c5f22",
+    "keyWords": "ultimate zeal",
+    "name": "Ultimate Zeal",
+    "index": 1427,
+    "description": "Gain ultimate zeal. Increases Burst Gauge refill rate by 10% when attacking."
+  },
+  {
+    "id": "0708fe12-ee02-43b8-a9e5-c74be6a06573",
+    "keyWords": "ailment resist s",
+    "name": "Ailment Resist S",
+    "index": 1172,
+    "description": "Reduces chance of being affected by ailments by a small amount."
+  },
+  {
+    "id": "5fb3c6f3-465e-4721-a462-b2b6315e2d71",
+    "keyWords": "avoid ko s",
+    "name": "Avoid KO S",
+    "index": 1177,
+    "description": "You have a chance to survive with 1 HP when you receive damage that would reduce your HP to 0. Has a low chance to work."
+  },
+  {
+    "id": "96d79e62-71af-4dbb-bb70-0c9213b2e780",
+    "keyWords": "avoid ko l",
+    "name": "Avoid KO L",
+    "index": 1179,
+    "description": "You have a chance to survive with 1 HP when you receive damage that would reduce your HP to 0. Has a moderate chance to work."
+  },
+  {
+    "id": "74af194e-2349-4398-bc94-b3aa10f8784b",
+    "keyWords": "damage absorb l",
+    "name": "Damage Absorb L",
+    "index": 1186,
+    "description": "Absorbs a portion of damage dealt to the target as HP. The effect is decent."
+  },
+  {
+    "id": "e1dc38f1-c227-4748-ac10-5303501f8ca5",
+    "keyWords": "damage cut l",
+    "name": "Damage Cut L",
+    "index": 1190,
+    "description": "Reduces damage taken by 8%."
+  },
+  {
+    "id": "327c2abe-7623-45f8-ab8a-9c9c619a4351",
+    "keyWords": "break enhance xl",
+    "name": "Break Enhance XL",
+    "index": 1195,
+    "description": "Increases Break value when attacking enemies by a large amount."
+  },
+  {
+    "id": "187693bc-e0a5-4b00-9910-6cef6a4666ed",
+    "keyWords": "break resist l",
+    "name": "Break Resist L",
+    "index": 1198,
+    "description": "Increases Break resistance."
+  },
+  {
+    "id": "68b0de73-76c3-46d3-843a-2479aff34422",
+    "keyWords": "use opportunity xl",
+    "name": "Use Opportunity XL",
+    "index": 1202,
+    "description": "Increases damage dealt to Broken enemies by a large amount."
+  },
+  {
+    "id": "2921a919-f912-499a-812f-fcbf8d83bb5f",
+    "keyWords": "panels change each day",
+    "name": "Panels Change Each Day",
+    "index": 1253,
+    "description": "The color of panels in the cauldron changes each day. Cycles red → blue → green → yellow → white → red."
+  },
+  {
+    "id": "f464e02a-0f6d-4cf7-a9b6-6486dd2ddfb7",
+    "keyWords": "bonus display level 2",
+    "name": "Bonus Display Level 2",
+    "index": 1258,
+    "description": "The Synthesis panel display is level 2. Higher display level increases bonus placement at the start of Synthesis."
+  },
+  {
+    "id": "0dc7ccbb-b209-4612-a32d-d7b828bcda0a",
+    "keyWords": "panel 4x4",
+    "name": "Panel 4x4",
+    "index": 1261,
+    "description": "The panel size is 4x4."
+  },
+  {
+    "id": "1bd3e9b7-b9b6-41f4-875d-83e4d6a4b716",
+    "keyWords": "for practice",
+    "name": "For Practice",
+    "index": 1266,
+    "description": "A practice cauldron for alchemists in training. Since it's for practice, it only has basic functions."
+  },
+  {
+    "id": "43598e99-ab30-4169-ad9e-019087f844bd",
+    "keyWords": "time limit",
+    "name": "Time Limit",
+    "index": 1269,
+    "description": "60 second time limit. Exceeding this time will result in failure. Countdown begins after selecting materials and you cannot reselect the cauldron"
+  },
+  {
+    "id": "dd0a9ea0-c4c5-4201-8962-40498f4e9c14",
+    "keyWords": "add (fuel)",
+    "name": "Add (Fuel)",
+    "index": 1289,
+    "description": "Adds 10 category value to (Fuel)."
+  },
+  {
+    "id": "db31ed68-3d82-49a8-a101-ddfa984f3aaa",
+    "keyWords": "ultimate regeneration",
+    "name": "Ultimate Regeneration",
+    "index": 1402,
+    "description": "Gain ultimate regeneration. Recover 50 HP on every turn."
+  },
+  {
+    "id": "5521dc4d-e0cd-4a57-80fe-1921ab9f4f19",
+    "keyWords": "ultimate vitality",
+    "name": "Ultimate Vitality",
+    "index": 1406,
+    "description": "Gain ultimate vitality. Increases maximum HP by 100."
+  },
+  {
+    "id": "06ee2d98-6e9b-4fb7-af85-9306405873aa",
+    "keyWords": "ultimate defense",
+    "name": "Ultimate Defense",
+    "index": 1410,
+    "description": "Gain ultimate defense. Increases defense by 50."
+  },
+  {
+    "id": "18089aab-2b1c-4c5e-a81e-e4328b5ca9e0",
+    "keyWords": "ultimate fire resist",
+    "name": "Ultimate Fire Resist",
+    "index": 1414,
+    "description": "Gain ultimate fire resistance. Gain super fire resistance."
+  },
+  {
+    "id": "de23c064-f206-4f74-a367-f605862f83d0",
+    "keyWords": "ultimate mitigation",
+    "name": "Ultimate Mitigation",
+    "index": 1426,
+    "description": "Gain ultimate mitigation. Reduces all damage taken by 10%."
+  },
+  {
+    "id": "d8b99fe6-915b-4d4c-8ac5-0854cfe19b8c",
+    "keyWords": "add (medicine mat)",
+    "name": "Add (Medicine Mat)",
+    "index": 1290,
+    "description": "Adds 10 category value to (Medicine Mat)."
+  },
+  {
+    "id": "351cb515-7da8-4c97-a5ca-20528cd2d72e",
+    "keyWords": "ultimate opposition",
+    "name": "Ultimate Opposition",
+    "index": 1429,
+    "description": "Gain ultimate opposition. Increases damage dealt and reduces damage taken when fighting powerful enemies."
+  }
+]

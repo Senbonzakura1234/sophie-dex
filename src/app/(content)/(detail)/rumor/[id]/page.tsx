@@ -1,15 +1,21 @@
-import RumorRecord from '@root/components/common/server/RumorRecord';
-import { get } from '@root/server/api/detail/getRumor';
+import APISingleWrapper from '@root/components/layout/client/ApiWrapper/rumor';
+import { appRouter } from '@root/server/api/router/_app';
 import type { PageProps } from '@root/types/common';
 import { generateDetailMetadata } from '@root/utils/server';
+import { createServerSideHelpers } from '@trpc/react-query/server';
 import type { Metadata, ResolvingMetadata } from 'next';
 
 export async function generateMetadata({ params }: PageProps, parent: ResolvingMetadata): Promise<Metadata> {
-	return generateDetailMetadata(parent, get(params));
+	const helpers = createServerSideHelpers({ router: appRouter, ctx: {} });
+
+	const dehydrate = () => {
+		helpers.dehydrate();
+		return 'dehydrate';
+	};
+
+	return generateDetailMetadata(parent, helpers.rumor.getOne.fetch(params), dehydrate);
 }
 
-export default async function Rumor({ params }: { params: { id: string } }) {
-	const record = await get(params);
-
-	return <RumorRecord data={record} currentId={params.id} />;
+export default async function Rumor({ params }: PageProps) {
+	return <APISingleWrapper params={params} />;
 }

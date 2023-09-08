@@ -1,11 +1,19 @@
-import { ServerErrorMap } from '@root/constants';
+import { serverErrorMap, serverErrorTrpcErrorMap } from '@root/constants';
 import type { ServerErrorEnum } from '@root/types/common';
+import { improvedInclude } from '@root/utils/common';
+import type { TRPC_ERROR_CODE_KEY } from '@trpc/server/rpc';
 import Link from 'next/link';
 
-type ErrorContentProps = { type: ServerErrorEnum };
+const mapTrpcError = (code: TRPC_ERROR_CODE_KEY): ServerErrorEnum => {
+	if (improvedInclude(serverErrorTrpcErrorMap.BAD_REQUEST, code)) return 'BAD_REQUEST';
+	if (improvedInclude(serverErrorTrpcErrorMap.NOT_FOUND, code)) return 'NOT_FOUND';
+	return 'INTERNAL_SERVER_ERROR';
+};
 
-export default function ErrorContent({ type }: ErrorContentProps) {
-	const { code, message } = ServerErrorMap[type];
+type ErrorContentProps = { type: TRPC_ERROR_CODE_KEY | undefined };
+
+export default function ErrorContent({ type = 'INTERNAL_SERVER_ERROR' }: ErrorContentProps) {
+	const { code, message } = serverErrorMap[mapTrpcError(type)];
 
 	return (
 		<div

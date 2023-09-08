@@ -26,7 +26,8 @@
 		"tsconfigs",
 		"vsicons",
 		"webp",
-		"wireframe"
+		"wireframe",
+		"trpc"
 	],
 	"editor.codeActionsOnSave": {
 		"source.fixAll": true,
@@ -63,6 +64,21 @@
 	],
 	"typescript.tsdk": "node_modules\\typescript\\lib",
 	"vsicons.associations.files": [
+		{
+			"extensions": [
+				"trpc.ts",
+				"[trpc].ts",
+				"trpc",
+				"[trpc]",
+				"TrpcProvider",
+				"TrpcProvider.tsx",
+				"[trpc]/route.ts"
+			],
+			"filename": true,
+			"format": "svg",
+			"icon": "trpc",
+			"overrides": "ts"
+		},
 		{
 			"extensions": ["settings.json", "setting.json", "extensions.json", "extension.json"],
 			"filename": true,

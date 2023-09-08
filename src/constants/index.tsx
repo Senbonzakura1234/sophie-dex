@@ -9,12 +9,13 @@ import type {
 	RumorTypeEnum,
 	SortByEnum,
 } from '@root/types/common/zod';
+import type { TRPC_ERROR_CODE_KEY } from '@trpc/server/rpc';
 
 export const APP_NAME = 'Sophie Dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book DX - Wiki';
 export const APP_KEYWORD = ['Atelier', 'Wiki', 'Sophie', 'Mysterious', 'DX'];
 export const APP_AUTHOR = 'Senbonzakura1234';
-export const APP_VERSION = 'v18.0.1';
+export const APP_VERSION = 'v19.0.1';
 
 export const defaultLimit = 16;
 
@@ -229,8 +230,30 @@ export const appleMediaConfig: AppleMediaConfig = [
 	},
 ];
 
-export const ServerErrorMap = {
+export const serverErrorMap = {
 	BAD_REQUEST: { message: 'Invalid Parameters', code: 400 },
 	INTERNAL_SERVER_ERROR: { message: 'Some Thing Wrong Server.', code: 500 },
 	NOT_FOUND: { message: 'Content Not Found', code: 404 },
 } as const satisfies Record<ServerErrorEnum, { code: number; message: string }>;
+
+export const serverErrorTrpcErrorMap = {
+	BAD_REQUEST: [
+		'PARSE_ERROR',
+		'BAD_REQUEST',
+		'FORBIDDEN',
+		'METHOD_NOT_SUPPORTED',
+		'PAYLOAD_TOO_LARGE',
+		'UNPROCESSABLE_CONTENT',
+		'TOO_MANY_REQUESTS',
+		'CLIENT_CLOSED_REQUEST',
+	],
+	INTERNAL_SERVER_ERROR: [
+		'INTERNAL_SERVER_ERROR',
+		'NOT_IMPLEMENTED',
+		'UNAUTHORIZED',
+		'TIMEOUT',
+		'CONFLICT',
+		'PRECONDITION_FAILED',
+	],
+	NOT_FOUND: ['NOT_FOUND'],
+} as const satisfies Record<ServerErrorEnum, Readonly<TRPC_ERROR_CODE_KEY[]>>;
