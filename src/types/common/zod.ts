@@ -46,8 +46,6 @@ export type RecipeTypeEnum = z.infer<typeof genericRecipeTypeEnumSchema>;
 const genericIdSchema = genericStringSchema.uuid();
 export type Id = z.infer<typeof genericIdSchema>;
 
-const idSchema = genericIdSchema;
-
 export const searchQueryValidator = z.object({
 	search: genericStringSchema.nullish().catch(null).default(null),
 	sortBy: genericSortByEnumSchema.nullish().catch(null).default(null),
@@ -62,7 +60,9 @@ export const searchQueryValidator = z.object({
 
 export type SearchQuery = z.infer<typeof searchQueryValidator>;
 
-export const idQueryValidator = z.object({ id: idSchema });
+export const idQueryValidator = z.object({ id: genericIdSchema.nullable().catch(null) });
+
+export type IdQuery = z.infer<typeof idQueryValidator>;
 
 export const highlightTextValidator = z.object({ content: z.string() });
 

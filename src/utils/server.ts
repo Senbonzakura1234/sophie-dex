@@ -9,17 +9,13 @@ import { searchQueryValidator } from '@root/types/common/zod';
 import type { CommonRecord } from '@root/types/model';
 import { TRPCError } from '@trpc/server';
 import type { Metadata, ResolvingMetadata } from 'next';
-import { LogProvider, improvedInclude } from './common';
+import { LogProvider, improvedInclude, tryCatchHandler } from './common';
 
 export const onQueryDBError = (error: unknown) => {
 	LogProvider.write({ args: [error], type: 'error' });
 
-	throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Some Thing When Wrong On The Server.' });
+	throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
 };
-
-export const InvalidRecordIdError = () => new TRPCError({ code: 'BAD_REQUEST', message: 'Invalid Record Id.' });
-
-export const RecordNotFoundError = () => new TRPCError({ code: 'NOT_FOUND', message: 'Record not found.' });
 
 export const ANYQuery = (column: AnyColumn['name'], value: string | number) =>
 	sql`${value} = ANY(${sql.identifier(column)})`;
@@ -50,34 +46,12 @@ export async function generateListMetadata(
 export async function generateDetailMetadata<TRecord extends CommonRecord>(
 	parentPromise: ResolvingMetadata,
 	getRecordPromise: Promise<TRecord>,
-	dehydrate: () => string,
 ): Promise<Metadata> {
-	const [parentResult, recordResult] = await Promise.allSettled([parentPromise, getRecordPromise]);
+	const result = await tryCatchHandler(Promise.all([parentPromise, getRecordPromise]));
 
-	if (parentResult.status === 'rejected') return { title: 'Error', other: { dehydrate: dehydrate() } };
-	if (recordResult.status === 'rejected')
-		return {
-			title: 'Error',
-			other: {
-				...(parentResult.value.other as Record<string, string | number | (string | number)[]>),
-				dehydrate: dehydrate(),
-			},
-		};
+	if (!result.isSuccess) return { title: 'Error' };
 
-	const {
-		value: { keywords: prevKeywords },
-	} = parentResult;
+	const [parent, record] = result.data;
 
-	const {
-		value: { keyWords, name },
-	} = recordResult;
-
-	return {
-		title: name,
-		keywords: [...keyWords.split(','), ...(prevKeywords || [])],
-		other: {
-			...(parentResult.value.other as Record<string, string | number | (string | number)[]>),
-			dehydrate: dehydrate(),
-		},
-	};
+	return { title: record.name, keywords: [...record.keyWords.split(','), ...(parent.keywords || [])] };
 }

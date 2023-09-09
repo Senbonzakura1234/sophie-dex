@@ -2,48 +2,57 @@ import 'server-only';
 
 import { getEffectRecord, getItemRecord, getRumorRecord, getTraitRecord } from '@root/server/database/';
 import type { Effect, Item, Rumor, Trait } from '@root/server/database/schema';
-import type { PageProps } from '@root/types/common';
-import { RecordNotFoundError, onQueryDBError } from '@root/utils/server';
+import type { IdQuery } from '@root/types/common/zod';
+import { onQueryDBError } from '@root/utils/server';
+import { TRPCError } from '@trpc/server';
 
 class SingleRecordRepository {
-	async getEffect(input: PageProps['params']): Promise<Effect> {
+	async getEffect(input: IdQuery): Promise<Effect> {
 		const { id } = input;
+
+		if (!id) throw new TRPCError({ code: 'BAD_REQUEST' });
 
 		const recordResult = await getEffectRecord.execute({ id }).catch(onQueryDBError);
 
 		if (recordResult[0]) return recordResult[0];
 
-		throw RecordNotFoundError();
+		throw new TRPCError({ code: 'NOT_FOUND' });
 	}
 
-	async getItem(input: PageProps['params']): Promise<Item> {
+	async getItem(input: IdQuery): Promise<Item> {
 		const { id } = input;
+
+		if (!id) throw new TRPCError({ code: 'BAD_REQUEST' });
 
 		const recordResult = await getItemRecord.execute({ id }).catch(onQueryDBError);
 
 		if (recordResult[0]) return recordResult[0];
 
-		throw RecordNotFoundError();
+		throw new TRPCError({ code: 'NOT_FOUND' });
 	}
 
-	async getRumor(input: PageProps['params']): Promise<Rumor> {
+	async getRumor(input: IdQuery): Promise<Rumor> {
 		const { id } = input;
+
+		if (!id) throw new TRPCError({ code: 'BAD_REQUEST' });
 
 		const recordResult = await getRumorRecord.execute({ id }).catch(onQueryDBError);
 
 		if (recordResult[0]) return recordResult[0];
 
-		throw RecordNotFoundError();
+		throw new TRPCError({ code: 'NOT_FOUND' });
 	}
 
-	async getTrait(input: PageProps['params']): Promise<Trait> {
+	async getTrait(input: IdQuery): Promise<Trait> {
 		const { id } = input;
+
+		if (!id) throw new TRPCError({ code: 'BAD_REQUEST' });
 
 		const recordResult = await getTraitRecord.execute({ id }).catch(onQueryDBError);
 
 		if (recordResult[0]) return recordResult[0];
 
-		throw RecordNotFoundError();
+		throw new TRPCError({ code: 'NOT_FOUND' });
 	}
 }
 
