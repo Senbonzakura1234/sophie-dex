@@ -8,7 +8,7 @@ import { Fragment } from 'react';
 import LinkItem from './LinkItem';
 
 export default function Breadcrumb() {
-	const moduleId = useModuleId();
+	const { moduleId } = useModuleId();
 
 	return (
 		<>

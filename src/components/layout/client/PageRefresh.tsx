@@ -2,12 +2,19 @@
 
 import { DEFAULT_REFRESH_THRESHOLD } from '@root/constants';
 import { usePullToRefresh } from '@root/hooks/usePullToRefresh';
+import useSelector from '@root/hooks/useSelector';
+import { useRouter } from 'next/navigation';
 
 type PageRefreshProps = { isDisabled?: boolean };
 
 export default function PageRefresh({ isDisabled = false }: PageRefreshProps) {
+	const { refresh } = useRouter();
+	const {
+		contentData: { refetch },
+	} = useSelector();
+
 	const { isRefreshing, pullPosition } = usePullToRefresh({
-		onRefresh: () => location.reload(),
+		onRefresh: refetch || refresh,
 		isDisabled,
 		maximumPullLength: 300,
 	});

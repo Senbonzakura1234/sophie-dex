@@ -3,7 +3,7 @@
 import { useModuleId } from '@root/hooks/useModuleId';
 
 export default function PageTitle() {
-	const moduleId = useModuleId();
+	const { moduleId } = useModuleId();
 
 	return (
 		<div className='text-5xl font-bold capitalize tracking-widest text-slate-50 text-shadow-dark-md xl:text-6xl 2xl:text-7xl'>

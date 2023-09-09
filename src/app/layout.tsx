@@ -50,7 +50,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		themeColor: metaThemeColorMap[currentTheme],
 		robots: 'all',
 		icons: {
-			icon: '/assets/favicon.ico',
+			icon: '/favicon.ico',
 			shortcut: '/assets/splash_screens/icon.png',
 			apple: '/assets/splash_screens/icon.png',
 		},

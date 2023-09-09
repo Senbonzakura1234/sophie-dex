@@ -6,7 +6,7 @@ import { defaultLimit } from '@root/constants';
 import { useMediaQuery } from '@root/hooks/useMediaQuery';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import useSelector from '@root/hooks/useSelector';
-import { improvedInclude, parseQuery } from '@root/utils/common';
+import { improvedInclude, isQueryEmpty } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 
@@ -24,22 +24,22 @@ const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits:
 export default function TopFilter() {
 	const { moduleId, searchQuery } = useSearchQuery();
 	const page = searchQuery.page || 1;
+
 	const {
-		listMeta: { totalRecord, totalPage },
+		contentData: { totalRecord, totalPage },
 	} = useSelector();
 
 	const fromFormatted = formatRecordCount((page - 1) * defaultLimit + 1);
 	const toFormatted = formatRecordCount(page * defaultLimit > totalRecord ? totalRecord : page * defaultLimit);
 	const totalRecordFormatted = formatRecordCount(totalRecord);
 
-	const isQueryEmpty = Object.keys(parseQuery(searchQuery)).length === 0;
 	const is2XLScreen = useMediaQuery('(min-width: 1536px)');
 
 	const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
-		if (!isQueryEmpty || is2XLScreen) return setIsOpen(true);
-	}, [is2XLScreen, isQueryEmpty]);
+		if (!isQueryEmpty(searchQuery) || is2XLScreen) setIsOpen(true);
+	}, [is2XLScreen, searchQuery]);
 
 	return (
 		<>
@@ -87,7 +87,7 @@ export default function TopFilter() {
 					<Paginate page={page} totalPage={totalPage} />
 
 					<QueryLink
-						disabled={isQueryEmpty}
+						disabled={isQueryEmpty(searchQuery)}
 						aria-label='Reset Filter'
 						className='btn btn-xs my-auto gap-1 capitalize !shadow-current dark:shadow'
 						href={{ pathname: `/${moduleId}`, query: {} }}

@@ -9,19 +9,21 @@ import type { Dispatch } from 'react';
 import { createContext, useReducer } from 'react';
 
 export type ThemeContextState = { theme: DaisyUIThemeEnum };
-export type ListMetaContextState = { listMeta: { totalRecord: number; totalPage: number } };
+export type ContentDataContextState = {
+	contentData: { totalRecord: number; totalPage: number; refetch: undefined | (() => Promise<unknown>) };
+};
 export type AlertContextState = { alert: { isOpen: boolean; message: string; type?: AlertTypeEnum } };
 
-type StateType = ThemeContextState & ListMetaContextState & AlertContextState;
+type StateType = ThemeContextState & ContentDataContextState & AlertContextState;
 
 type ActionType =
 	| ({ type: 'SET_THEME' } & ThemeContextState)
-	| ({ type: 'UPDATE_TOTAL_RECORD' } & ListMetaContextState)
+	| ({ type: 'UPDATE_CONTENT_DATA' } & ContentDataContextState)
 	| ({ type: 'UPDATE_ALERT' } & AlertContextState);
 
 const initialState: StateType = {
 	theme: 'fantasy',
-	listMeta: { totalRecord: 0, totalPage: 0 },
+	contentData: { totalRecord: 0, totalPage: 0, refetch: undefined },
 	alert: { isOpen: false, message: '' },
 };
 
@@ -37,8 +39,8 @@ const reducer = (state: StateType, action: ActionType) => {
 			return { ...state, theme: action.theme };
 		}
 
-		case 'UPDATE_TOTAL_RECORD': {
-			return { ...state, listMeta: action.listMeta };
+		case 'UPDATE_CONTENT_DATA': {
+			return { ...state, contentData: action.contentData };
 		}
 
 		case 'UPDATE_ALERT': {

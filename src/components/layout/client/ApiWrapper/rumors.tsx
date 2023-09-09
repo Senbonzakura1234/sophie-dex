@@ -1,9 +1,9 @@
 'use client';
 
-import DispatchListMeta from '@root/components/common/client/DispatchListMeta';
 import RumorRecord from '@root/components/common/server/RumorRecord';
 import RecordPlaceholder from '@root/components/common/server/loading/RecordPlaceholder';
 import { defaultLimit } from '@root/constants';
+import useDispatchContentData from '@root/hooks/useDispatchContentData';
 import type { PageProps } from '@root/types/common';
 import { createArray } from '@root/utils/common';
 import { ApiContext } from '@root/utils/trpc';
@@ -11,7 +11,9 @@ import { ApiContext } from '@root/utils/trpc';
 type APIListWrapperProps = { searchParams: PageProps['searchParams'] };
 
 export default function APIListWrapper({ searchParams }: APIListWrapperProps) {
-	const { data, isSuccess, isLoading } = ApiContext.rumor.getAll.useQuery(searchParams);
+	const { data, isSuccess, isLoading, refetch } = ApiContext.rumor.getAll.useQuery(searchParams);
+
+	useDispatchContentData({ contentData: { refetch, totalPage: data?.totalPage, totalRecord: data?.totalRecord } });
 
 	if (isLoading)
 		return (
@@ -24,12 +26,10 @@ export default function APIListWrapper({ searchParams }: APIListWrapperProps) {
 
 	if (!isSuccess && !isLoading) return null;
 
-	const { records, ...listMeta } = data;
+	const { records } = data;
 
 	return (
 		<>
-			<DispatchListMeta listMeta={listMeta} />
-
 			{records.map(record => (
 				<RumorRecord key={record.id} data={record} />
 			))}

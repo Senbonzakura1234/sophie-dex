@@ -8,7 +8,7 @@ export default function BottomFilter() {
 	const { searchQuery } = useSearchQuery();
 	const page = searchQuery.page || 1;
 	const {
-		listMeta: { totalPage },
+		contentData: { totalPage },
 	} = useSelector();
 
 	return (

@@ -6,7 +6,7 @@ import type { ChildrenProps } from '@root/types/common/props';
 type ContentWrapperProps = ChildrenProps & { type: 'detail' | 'list' };
 
 export default function ContentWrapper({ children, type }: ContentWrapperProps) {
-	const moduleId = useModuleId();
+	const { moduleId } = useModuleId();
 
 	return (
 		<section

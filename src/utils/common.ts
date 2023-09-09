@@ -101,3 +101,6 @@ export const paramsToQuery = (input: ReadonlyURLSearchParams) =>
 	}, {}) as SearchQuery;
 
 export const sleep = (milliseconds = 1000) => new Promise(resolve => setTimeout(resolve, milliseconds));
+
+export const isQueryEmpty = (searchQuery: Parameters<typeof parseQuery>[0]) =>
+	Object.keys(parseQuery(searchQuery)).length === 0;

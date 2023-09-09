@@ -10,7 +10,7 @@ type RecordHeadProps = Omit<CommonRecord, 'keyWords'> & { currentId: string | un
 export default function RecordHead({ currentId, id, name }: RecordHeadProps) {
 	const isCurrentRecord = currentId === id;
 
-	const moduleId = useModuleId();
+	const { moduleId } = useModuleId();
 
 	return (
 		<div className='card-title inline'>
