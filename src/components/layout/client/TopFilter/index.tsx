@@ -8,9 +8,10 @@ import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import useSelector from '@root/hooks/useSelector';
 import { improvedInclude, isQueryEmpty } from '@root/utils/common';
 import dynamic from 'next/dynamic';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import QueryLink from '@root/components/common/client/QueryLink';
+import { useModuleId } from '@root/hooks/useModuleId';
 import CategoryFilter from './CategoryFilter';
 import ColorFilter from './ColorFilter';
 import RecipeTypeFilter from './RecipeTypeFilter';
@@ -22,16 +23,22 @@ const TransitionWrapper = dynamic(() => import('@root/components/common/client/T
 const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 3 }).format;
 
 export default function TopFilter() {
-	const { moduleId, searchQuery } = useSearchQuery();
-	const page = searchQuery.page || 1;
+	const { moduleId } = useModuleId();
+	const { searchQuery } = useSearchQuery();
 
 	const {
 		contentData: { totalRecord, totalPage },
 	} = useSelector();
 
-	const fromFormatted = formatRecordCount((page - 1) * defaultLimit + 1);
-	const toFormatted = formatRecordCount(page * defaultLimit > totalRecord ? totalRecord : page * defaultLimit);
-	const totalRecordFormatted = formatRecordCount(totalRecord);
+	const paginateInfo = useMemo(() => {
+		const page = searchQuery.page || 1;
+
+		const fromFormatted = formatRecordCount((page - 1) * defaultLimit + 1);
+		const toFormatted = formatRecordCount(page * defaultLimit > totalRecord ? totalRecord : page * defaultLimit);
+		const totalRecordFormatted = formatRecordCount(totalRecord);
+
+		return `${fromFormatted} - ${toFormatted} of ${totalRecordFormatted} ${moduleId}s`;
+	}, [moduleId, searchQuery.page, totalRecord]);
 
 	const is2XLScreen = useMediaQuery('(min-width: 1536px)');
 
@@ -81,10 +88,10 @@ export default function TopFilter() {
 					) : null}
 
 					<div className='my-auto min-w-[145px] gap-1 text-xs font-semibold text-base-content/70'>
-						{fromFormatted} - {toFormatted} of {totalRecordFormatted} {moduleId}s
+						{paginateInfo}
 					</div>
 
-					<Paginate page={page} totalPage={totalPage} />
+					<Paginate page={searchQuery.page || 1} totalPage={totalPage} />
 
 					<QueryLink
 						disabled={isQueryEmpty(searchQuery)}

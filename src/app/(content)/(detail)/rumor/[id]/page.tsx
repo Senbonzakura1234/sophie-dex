@@ -1,4 +1,3 @@
-import DispatchContentData from '@root/components/common/client/DispatchContentData';
 import RumorRecord from '@root/components/common/server/RumorRecord';
 import { appRouter } from '@root/server/api/router/_app';
 import type { PageProps } from '@root/types/common';
@@ -18,17 +17,12 @@ const getRecord = (params: PageProps['params']) => {
 	return helpers.rumor.getOne.fetch(params);
 };
 
-export async function generateMetadata({ params }: PageProps, parent: ResolvingMetadata): Promise<Metadata> {
+export function generateMetadata({ params }: PageProps, parent: ResolvingMetadata): Promise<Metadata> {
 	return generateDetailMetadata(parent, getRecord(params));
 }
 
 export default async function rumor({ params }: PageProps) {
 	const data = await getRecord(params);
 
-	return (
-		<>
-			<DispatchContentData />
-			<RumorRecord data={data} currentId={params.id} />
-		</>
-	);
+	return <RumorRecord data={data} currentId={params.id} />;
 }

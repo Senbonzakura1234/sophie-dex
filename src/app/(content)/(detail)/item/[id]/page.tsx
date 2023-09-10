@@ -1,4 +1,3 @@
-import DispatchContentData from '@root/components/common/client/DispatchContentData';
 import ItemRecord from '@root/components/common/server/ItemRecord';
 import { appRouter } from '@root/server/api/router/_app';
 import type { PageProps } from '@root/types/common';
@@ -18,17 +17,12 @@ const getRecord = (params: PageProps['params']) => {
 	return helpers.item.getOne.fetch(params);
 };
 
-export async function generateMetadata({ params }: PageProps, parent: ResolvingMetadata): Promise<Metadata> {
+export function generateMetadata({ params }: PageProps, parent: ResolvingMetadata): Promise<Metadata> {
 	return generateDetailMetadata(parent, getRecord(params));
 }
 
 export default async function effect({ params }: PageProps) {
 	const data = await getRecord(params);
 
-	return (
-		<>
-			<DispatchContentData />
-			<ItemRecord data={data} currentId={params.id} />
-		</>
-	);
+	return <ItemRecord data={data} currentId={params.id} />;
 }

@@ -1,9 +1,8 @@
-import DispatchContentData from '@root/components/common/client/DispatchContentData';
 import PageRefresh from '@root/components/layout/client/PageRefresh';
 import PageBanner from '@root/components/layout/server/PageBanner';
 import type { ChildrenProps } from '@root/types/common/props';
 
-export default function HomeLayout({}: ChildrenProps) {
+export default function HomeLayout({ children }: ChildrenProps) {
 	return (
 		<>
 			<PageRefresh />
@@ -12,7 +11,7 @@ export default function HomeLayout({}: ChildrenProps) {
 				<PageBanner bannerType='full' />
 			</div>
 
-			<DispatchContentData />
+			{children}
 		</>
 	);
 }

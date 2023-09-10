@@ -24,13 +24,16 @@ export default function APIListWrapper({ searchParams }: APIListWrapperProps) {
 			</>
 		);
 
-	if (!isSuccess && !isLoading) return null;
-
-	const { records } = data;
+	if (!isSuccess && !isLoading)
+		return (
+			<div className='pl-2 italic text-base-content/60'>
+				Some thing when wrong on the sever. Please try refresh the page
+			</div>
+		);
 
 	return (
 		<>
-			{records.map(record => (
+			{data.records.map(record => (
 				<TraitRecord key={record.id} data={record} />
 			))}
 		</>

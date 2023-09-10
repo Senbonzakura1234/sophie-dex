@@ -1,4 +1,3 @@
-import DispatchContentData from '@root/components/common/client/DispatchContentData';
 import TraitRecord from '@root/components/common/server/TraitRecord';
 import { appRouter } from '@root/server/api/router/_app';
 import type { PageProps } from '@root/types/common';
@@ -18,17 +17,12 @@ const getRecord = (params: PageProps['params']) => {
 	return helpers.trait.getOne.fetch(params);
 };
 
-export async function generateMetadata({ params }: PageProps, parent: ResolvingMetadata): Promise<Metadata> {
+export function generateMetadata({ params }: PageProps, parent: ResolvingMetadata): Promise<Metadata> {
 	return generateDetailMetadata(parent, getRecord(params));
 }
 
 export default async function trait({ params }: PageProps) {
 	const data = await getRecord(params);
 
-	return (
-		<>
-			<DispatchContentData />
-			<TraitRecord data={data} currentId={params.id} />
-		</>
-	);
+	return <TraitRecord data={data} currentId={params.id} />;
 }

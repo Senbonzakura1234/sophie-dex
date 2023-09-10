@@ -1,9 +1,11 @@
 import { sortByMap } from '@root/constants';
+import { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import SortBtn from './SortBtn';
 
 export default function SortControl() {
-	const { searchQuery, moduleId } = useSearchQuery();
+	const { moduleId } = useModuleId();
+	const { searchQuery } = useSearchQuery();
 
 	const sortBy = searchQuery.sortBy || (moduleId === 'rumor' ? 'price' : 'index');
 	const direction = searchQuery.direction || 'asc';

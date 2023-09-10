@@ -1,5 +1,6 @@
 import { paramsToQuery } from '@root/utils/common';
 import { useSearchParams } from 'next/navigation';
+import { useMemo } from 'react';
 import { useModuleId } from './useModuleId';
 
 export const useSearchQuery = () => {
@@ -7,7 +8,7 @@ export const useSearchQuery = () => {
 
 	const searchParams = useSearchParams();
 
-	const searchQuery = paramsToQuery(searchParams);
+	const searchQuery = useMemo(() => paramsToQuery(searchParams), [searchParams]);
 
 	return { isDetailPage, moduleId, searchQuery };
 };

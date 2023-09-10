@@ -1,20 +1,21 @@
 'use client';
 
 import { DEFAULT_REFRESH_THRESHOLD } from '@root/constants';
+import type { useModuleId } from '@root/hooks/useModuleId';
 import { usePullToRefresh } from '@root/hooks/usePullToRefresh';
 import useSelector from '@root/hooks/useSelector';
 import { useRouter } from 'next/navigation';
 
-type PageRefreshProps = { isDisabled?: boolean };
+type PageRefreshProps = { isDisabled?: boolean } & Partial<ReturnType<typeof useModuleId>>;
 
-export default function PageRefresh({ isDisabled = false }: PageRefreshProps) {
+export default function PageRefresh({ isDisabled = false, isDetailPage = false, moduleId }: PageRefreshProps) {
 	const { refresh } = useRouter();
 	const {
 		contentData: { refetch },
 	} = useSelector();
 
 	const { isRefreshing, pullPosition } = usePullToRefresh({
-		onRefresh: refetch || refresh,
+		onRefresh: isDetailPage || !moduleId ? refresh : refetch || refresh,
 		isDisabled,
 		maximumPullLength: 300,
 	});

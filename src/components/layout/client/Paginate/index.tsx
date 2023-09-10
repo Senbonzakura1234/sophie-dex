@@ -4,13 +4,16 @@ import ChevronLeftIcon from '@root/components/common/server/icons/solid/ChevronL
 import ChevronRightIcon from '@root/components/common/server/icons/solid/ChevronRightIcon';
 
 import QueryLink from '@root/components/common/client/QueryLink';
+import { useMemo } from 'react';
 import GoToPageSelect from './GoToPageSelect';
 
 type PaginateProps = { page: number; totalPage: number };
 
 export default function Paginate({ page, totalPage }: PaginateProps) {
-	const isPreviousDisable = page <= 1;
-	const isNextDisable = page >= totalPage;
+	const { isNextDisable, isPreviousDisable } = useMemo(
+		() => ({ isPreviousDisable: page <= 1, isNextDisable: page >= totalPage }),
+		[page, totalPage],
+	);
 
 	return (
 		<div className='flex flex-wrap gap-2'>

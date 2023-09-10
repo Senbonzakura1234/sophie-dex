@@ -1,5 +1,6 @@
 'use client';
 
+import { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { parseQuery } from '@root/utils/common';
 import Link from 'next/link';
@@ -23,7 +24,8 @@ export default function QueryLink({
 	isOverridden,
 	...rest
 }: QueryLinkProps) {
-	const { searchQuery, moduleId } = useSearchQuery();
+	const { moduleId } = useModuleId();
+	const { searchQuery } = useSearchQuery();
 
 	return (
 		<Link
