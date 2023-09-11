@@ -61,7 +61,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		},
 		keywords: APP_KEYWORD,
 		manifest: '/manifest.json',
-		metadataBase: new URL(getBaseUrl()),
+		metadataBase: new URL(getBaseUrl(true)),
 		other: {
 			google: 'notranslate',
 			'og:title': `${APP_NAME} | ${APP_DESCRIPTION}`,
