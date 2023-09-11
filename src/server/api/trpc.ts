@@ -1,7 +1,9 @@
+import { evnIs } from '@root/utils/common';
 import { initTRPC } from '@trpc/server';
 import { ZodError } from 'zod';
 
 const t = initTRPC.create({
+	isDev: !evnIs('production'),
 	errorFormatter({ shape, error }) {
 		return {
 			...shape,
