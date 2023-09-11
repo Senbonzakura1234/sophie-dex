@@ -42,41 +42,42 @@ export async function generateMetadata(): Promise<Metadata> {
 	const currentTheme = await getCurrentTheme();
 
 	return {
-		title: `${APP_NAME} | ${APP_DESCRIPTION}`,
-		description: APP_DESCRIPTION,
-		viewport: 'width=device-width, initial-scale=1.0',
-		keywords: APP_KEYWORD,
-		authors: { name: APP_AUTHOR, url: `https://github.com/${APP_AUTHOR}` },
-		themeColor: metaThemeColorMap[currentTheme],
-		robots: 'all',
-		icons: {
-			icon: '/favicon.ico',
-			shortcut: '/assets/splash_screens/icon.png',
-			apple: '/assets/splash_screens/icon.png',
-		},
-		manifest: '/manifest.json',
-		twitter: {
-			images: `${getBaseUrl()}/opengraph-image`,
-			card: 'summary_large_image',
-			title: `${APP_NAME} | ${APP_DESCRIPTION}`,
-			description: APP_DESCRIPTION,
-		},
 		appleWebApp: {
 			title: 'Apple Web App',
 			statusBarStyle: 'black-translucent',
-			startupImage: appleMediaConfig.map(({ url, media }) => ({
-				url: `/assets/splash_screens/${url}.png`,
+			startupImage: appleMediaConfig.map(({ media, url }) => ({
 				media: media
 					? `screen and (device-width: ${media.width}px) and (device-height: ${media.height}px) and (-webkit-device-pixel-ratio: ${media.ratio}) and (orientation: ${media.orientation})`
 					: undefined,
+				url: `/assets/splash_screens/${url}.png`,
 			})),
 		},
+		authors: { name: APP_AUTHOR, url: `https://github.com/${APP_AUTHOR}` },
+		description: APP_DESCRIPTION,
+		icons: {
+			apple: '/assets/splash_screens/icon.png',
+			icon: '/favicon.ico',
+			shortcut: '/assets/splash_screens/icon.png',
+		},
+		keywords: APP_KEYWORD,
+		manifest: '/manifest.json',
+		metadataBase: new URL(getBaseUrl()),
 		other: {
+			google: 'notranslate',
 			'og:title': `${APP_NAME} | ${APP_DESCRIPTION}`,
 			'og:description': APP_DESCRIPTION,
 			'og:url': getBaseUrl(true),
-			google: 'notranslate',
 		},
+		robots: 'all',
+		themeColor: metaThemeColorMap[currentTheme],
+		title: `${APP_NAME} | ${APP_DESCRIPTION}`,
+		twitter: {
+			card: 'summary_large_image',
+			description: APP_DESCRIPTION,
+			images: `${getBaseUrl()}/opengraph-image`,
+			title: `${APP_NAME} | ${APP_DESCRIPTION}`,
+		},
+		viewport: 'width=device-width, initial-scale=1.0',
 	};
 }
 
