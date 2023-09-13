@@ -93,7 +93,7 @@ export const improvedParseJSON = <T>(value: string | null): T | undefined => {
 	LogProvider.write({ args: [`parsing error on ${value}`, error], type: 'error' });
 };
 
-export const paramsToQuery = (input: ReadonlyURLSearchParams) =>
+export const paramsToQuery = (input: ReadonlyURLSearchParams | URLSearchParams) =>
 	searchQueryValidator.keyof()._def.values.reduce((prev, cur) => {
 		const query = input.get(cur);
 		const value = cur === 'page' ? parseInt(query || '') : query;

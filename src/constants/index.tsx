@@ -10,6 +10,7 @@ import type {
 	SortByEnum,
 } from '@root/types/common/zod';
 import type { TRPC_ERROR_CODE_KEY } from '@trpc/server/rpc';
+import type { NextResponse } from 'next/server';
 
 export const APP_NAME = 'Sophie Dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book DX - Wiki';
@@ -260,3 +261,12 @@ export const serverErrorTrpcErrorMap = {
 	],
 	NOT_FOUND: ['NOT_FOUND'],
 } as const satisfies Record<ServerErrorEnum, Readonly<TRPC_ERROR_CODE_KEY[]>>;
+
+export const defaultResponseConfig: Parameters<typeof NextResponse.json>[1] = {
+	status: 200,
+	headers: {
+		'Access-Control-Allow-Origin': '*',
+		'Access-Control-Allow-Methods': 'GET, OPTIONS',
+		'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+	},
+};

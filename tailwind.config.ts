@@ -1,3 +1,4 @@
+import type { TextShadowUtilities } from '@root/types/common/tailwind';
 import daisyui from 'daisyui';
 import type { Config } from 'tailwindcss';
 import tailwindPlugin from 'tailwindcss/plugin';
@@ -8,12 +9,10 @@ const config: Config = {
 	plugins: [
 		daisyui,
 		tailwindPlugin(({ theme, addUtilities }) => {
-			/** @type {import('@root/types/common/tailwind').DefaultColors | undefined}*/
 			const colors = theme('colors');
 			if (!colors) return;
 
-			/** @type {import('@root/types/common/tailwind').TextShadowUtilities}*/
-			const appTextShadows = {
+			const appTextShadows: TextShadowUtilities = {
 				'.app-text-shadow-BLUE': {
 					textShadow: `-2px 2px 0 ${colors.blue[600]}, 2px 2px 0 ${colors.blue[600]}, 2px -2px 0 ${colors.blue[600]}, -2px -2px 0 ${colors.blue[600]}, 0 0 15px ${colors.blue[600]}, 0 0 15px ${colors.blue[900]}`,
 				},
