@@ -11,11 +11,8 @@ export async function generateStaticParams() {
 	return await createServerSideHelpers({ router: appRouter, ctx: {} }).effect.getAllIds.fetch();
 }
 
-const getRecord = (params: PageProps['params']) => {
-	const helpers = createServerSideHelpers({ router: appRouter, ctx: {} });
-
-	return helpers.effect.getOne.fetch(params);
-};
+const getRecord = (params: PageProps['params']) =>
+	createServerSideHelpers({ router: appRouter, ctx: {} }).effect.getOne.fetch(params);
 
 export function generateMetadata({ params }: PageProps, parent: ResolvingMetadata): Promise<Metadata> {
 	return generateDetailMetadata(parent, getRecord(params));

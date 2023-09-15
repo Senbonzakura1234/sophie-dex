@@ -18,7 +18,7 @@ export default function AppInformation() {
 			</Link>
 
 			<div className='card mx-auto block bg-primary px-3 py-1 text-xs font-bold leading-none text-primary-content shadow-lg shadow-base-content/30'>
-				{APP_VERSION}
+				v{APP_VERSION}
 			</div>
 		</div>
 	);

@@ -1,6 +1,6 @@
 import type { ModuleIdEnum, RelatedCategoryEnum, SearchQuery } from '@root/types/common/zod';
 import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
-import type { InferModel } from 'drizzle-orm';
+import type { InferSelectModel } from 'drizzle-orm';
 import { jsonb, pgTable, smallint, uuid, varchar } from 'drizzle-orm/pg-core';
 
 export type HighlightText = { content: string };
@@ -70,10 +70,10 @@ export const traits = pgTable('traits', {
 	mergeFrom: jsonb('merge_from').$type<Array<[HyperLinkRecord, HyperLinkRecord]>>().notNull(),
 });
 
-export type Effect = InferModel<typeof effects>;
-export type Item = InferModel<typeof items>;
-export type Rumor = InferModel<typeof rumors>;
-export type Trait = InferModel<typeof traits>;
+export type Effect = InferSelectModel<typeof effects>;
+export type Item = InferSelectModel<typeof items>;
+export type Rumor = InferSelectModel<typeof rumors>;
+export type Trait = InferSelectModel<typeof traits>;
 
 const schema = { effects, items, rumors, traits };
 

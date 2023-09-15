@@ -18,7 +18,7 @@ import RecipeTypeFilter from './RecipeTypeFilter';
 import RumorTypeFilter from './RumorTypeFilter';
 import SortControl from './SortControl';
 
-const TransitionWrapper = dynamic(() => import('@root/components/common/client/TransitionWrapper'), { ssr: false });
+const TransitionWrapper = dynamic(() => import('@root/components/dynamic/TransitionWrapper'), { ssr: false });
 
 const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 3 }).format;
 

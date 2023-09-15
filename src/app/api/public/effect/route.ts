@@ -2,7 +2,10 @@ import { defaultResponseConfig } from '@root/constants';
 import { appRouter } from '@root/server/api/router/_app';
 import { paramsToQuery, tryCatchHandler } from '@root/utils/common';
 import { createServerSideHelpers } from '@trpc/react-query/server';
+import type { ServerRuntime } from 'next';
 import { NextResponse } from 'next/server';
+
+export const runtime: ServerRuntime = 'edge';
 
 export async function GET(request: Request) {
 	const { searchParams } = new URL(request.url);

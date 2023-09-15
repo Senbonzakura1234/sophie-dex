@@ -80,6 +80,13 @@
 			"overrides": "ts"
 		},
 		{
+			"extensions": ["swagger.ts", "openapi.ts"],
+			"filename": true,
+			"format": "svg",
+			"icon": "swagger",
+			"overrides": "ts"
+		},
+		{
 			"extensions": ["settings.json", "setting.json", "extensions.json", "extension.json"],
 			"filename": true,
 			"format": "svg",

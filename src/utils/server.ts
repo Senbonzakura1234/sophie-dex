@@ -7,6 +7,7 @@ import type { PageProps } from '@root/types/common';
 import type { DirectionEnum, SortByEnum } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
 import type { CommonRecord } from '@root/types/model';
+
 import { TRPCError } from '@trpc/server';
 import type { Metadata, ResolvingMetadata } from 'next';
 import { LogProvider, improvedInclude, tryCatchHandler } from './common';

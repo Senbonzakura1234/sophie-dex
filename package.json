@@ -1,6 +1,6 @@
 {
 	"name": "sophie-dex",
-	"version": "19.1.4",
+	"version": "20.0.1",
 	"private": false,
 	"license": "MIT",
 	"author": {
@@ -37,17 +37,21 @@
 		"@vercel/postgres": "^0.4.1",
 		"cookies-next": "^4.0.0",
 		"drizzle-orm": "^0.28.6",
+		"drizzle-zod": "^0.5.1",
 		"next": "13.4.19",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"server-only": "^0.0.1",
-		"zod": "^3.22.2"
+		"swagger-ui-react": "^5.7.1",
+		"zod": "^3.22.2",
+		"zod-openapi": "^2.9.0"
 	},
 	"devDependencies": {
 		"@total-typescript/ts-reset": "^0.4.2",
 		"@types/node": "^20.6.0",
 		"@types/react": "^18.2.21",
 		"@types/react-dom": "^18.2.7",
+		"@types/swagger-ui-react": "^4.18.0",
 		"@typescript-eslint/eslint-plugin": "^6.7.0",
 		"@typescript-eslint/parser": "^6.7.0",
 		"autoprefixer": "^10.4.15",

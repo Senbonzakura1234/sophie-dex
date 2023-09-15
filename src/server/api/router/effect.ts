@@ -1,5 +1,6 @@
 import { publicProcedure, router } from '@root/server/api/trpc';
 import { getAllEffectIds } from '@root/server/database';
+import { exampleRecordProvider } from '@root/server/database/repository/exampleRecord';
 import { listRecordProvider } from '@root/server/database/repository/listRecord';
 import { singleRecordProvider } from '@root/server/database/repository/singleRecord';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
@@ -13,4 +14,6 @@ export const effectRouter = router({
 	getAllIds: publicProcedure.query(async () =>
 		(await getAllEffectIds.execute().catch(onQueryDBError)).map(({ id }) => ({ id })),
 	),
+
+	getOneExample: publicProcedure.query(exampleRecordProvider.getEffect),
 });
