@@ -29,6 +29,7 @@
 		"wireframe",
 		"trpc"
 	],
+	"css.customData": [".vscode/tailwind.json"],
 	"editor.codeActionsOnSave": {
 		"source.fixAll": true,
 		"source.organizeImports": true
@@ -85,6 +86,13 @@
 			"format": "svg",
 			"icon": "swagger",
 			"overrides": "ts"
+		},
+		{
+			"extensions": ["swagger.css", "openapi.css"],
+			"filename": true,
+			"format": "svg",
+			"icon": "swagger",
+			"overrides": "css"
 		},
 		{
 			"extensions": ["settings.json", "setting.json", "extensions.json", "extension.json"],

@@ -1,3 +1,4 @@
+import ThemeSwitcher from '@root/components/layout/client/ThemeSwitcher';
 import sophieLogo from '@root/images/sophie-logo.webp';
 import topBg from '@root/images/top.webp';
 import { getBaseUrl } from '@root/utils/common';
@@ -7,7 +8,6 @@ import { Suspense } from 'react';
 import AppInformation from './AppInformation';
 import Breadcrumb from './Breadcrumb';
 import PageTitle from './PageTitle';
-import ThemeSwitcher from './ThemeSwitcher';
 
 type PageTitleProps = { bannerType: 'full' | 'top' | 'bottom' };
 
