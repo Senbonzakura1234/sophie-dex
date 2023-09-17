@@ -3,6 +3,7 @@ import './globals.css';
 import '@total-typescript/ts-reset';
 
 import ScrollWrapper from '@root/components/layout/client/ScrollWrapper';
+import ThemeSwitcher from '@root/components/layout/client/ThemeSwitcher';
 import ThemeWrapper from '@root/components/layout/client/ThemeWrapper';
 import {
 	APP_AUTHOR,
@@ -88,7 +89,10 @@ export default async function RootLayout({ children }: ChildrenProps) {
 			<body className={`${rubik.className} ${fontAtelier.variable}`}>
 				<ContextProvider defaultState={{ theme: currentTheme }}>
 					<ThemeWrapper>
-						<ScrollWrapper>{children}</ScrollWrapper>
+						<ScrollWrapper>
+							<ThemeSwitcher />
+							{children}
+						</ScrollWrapper>
 					</ThemeWrapper>
 				</ContextProvider>
 			</body>
