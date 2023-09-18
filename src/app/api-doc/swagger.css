@@ -409,7 +409,7 @@
 	@apply text-error;
 }
 .swagger-ui .model-example {
-	@apply mt-4;
+	@apply flex flex-col gap-2 mt-2;
 }
 .swagger-ui .tab {
 	@apply flex list-none list-image-none p-0;
@@ -506,7 +506,7 @@
 	@apply block;
 }
 .swagger-ui .highlight-code {
-	@apply relative;
+	@apply relative mockup-code;
 }
 .swagger-ui .highlight-code > .microlight {
 	@apply max-h-96 min-h-16 overflow-y-auto;
@@ -520,8 +520,8 @@
 .swagger-ui .curl-command {
 	@apply relative;
 }
-.swagger-ui .download-contents {
-	@apply items-center bg-base-200 border-0 rounded bottom-2.5 text-base-content flex text-sm font-semibold h-8 justify-center p-1.5 absolute right-2.5 text-center;
+.swagger-ui .curl-command > div:nth-child(3) {
+	@apply mockup-code;
 }
 .swagger-ui .scheme-container {
 	@apply bg-base-100 shadow mb-5 py-8;
@@ -655,7 +655,10 @@
 	@apply bg-error-content border-error;
 }
 .swagger-ui .copy-to-clipboard {
-	@apply btn btn-square bottom-2.5 aspect-square flex btn-sm absolute right-24;
+	@apply btn btn-square bottom-7 aspect-square flex btn-sm absolute right-4;
+}
+.swagger-ui .download-contents {
+	@apply bottom-7 h-8 absolute right-20 btn-sm btn capitalize;
 }
 .swagger-ui .copy-to-clipboard button {
 	background: url('/assets/swagger/copy-to-clipboard-black.svg') 50% no-repeat;
@@ -677,7 +680,7 @@
 	@apply fill-base-content;
 }
 .swagger-ui .curl-command .copy-to-clipboard {
-	@apply bottom-2.5 right-2.5 !bg-base-100;
+	@apply bottom-7 right-4 !bg-base-100 z-10;
 }
 .swagger-ui .curl-command .copy-to-clipboard,
 .swagger-ui .highlight-code .copy-to-clipboard {
@@ -979,7 +982,7 @@
 }
 .swagger-ui .parameter__extension,
 .swagger-ui .parameter__in {
-	@apply text-base-300 text-xs italic font-semibold;
+	@apply text-base-content/80 text-xs italic font-semibold;
 	font-family: monospace;
 }
 .swagger-ui .parameter__deprecated {
@@ -1083,7 +1086,7 @@
 	@apply mb-5;
 }
 .swagger-ui .errors-wrapper {
-	@apply bg-error/5 border-2 border-error rounded m-5 px-5 py-2.5 animate-ping;
+	@apply bg-error/5 border-2 border-error rounded m-5 px-5 py-2.5;
 }
 .swagger-ui .errors-wrapper .error-wrapper {
 	@apply mb-2.5;
