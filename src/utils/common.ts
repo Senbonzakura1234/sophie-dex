@@ -1,3 +1,4 @@
+import type { CommonObject, KeyOf } from '@root/types/common';
 import type { NodeEnv, SearchQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
 import type { ReadonlyURLSearchParams } from 'next/navigation';
@@ -65,8 +66,8 @@ export const convertCode = (input?: string | number | null) =>
 export const parseQuery = (query: Partial<SearchQuery>) => {
 	for (const key in query) {
 		if (!Object.prototype.hasOwnProperty.call(query, key)) continue;
-		const element = query[key as keyof typeof query];
-		if (!element) delete query[key as keyof typeof query];
+		const element = query[key as KeyOf<typeof query>];
+		if (!element) delete query[key as KeyOf<typeof query>];
 	}
 
 	return query;
@@ -104,3 +105,8 @@ export const sleep = (milliseconds = 1000) => new Promise(resolve => setTimeout(
 
 export const isQueryEmpty = (searchQuery: Parameters<typeof parseQuery>[0]) =>
 	Object.keys(parseQuery(searchQuery)).length === 0;
+
+export const improvedFromEntries = <Key extends KeyOf<CommonObject>, Value = unknown>(
+	entries: Array<Readonly<[Key, Value]>>,
+): Readonly<Record<Key, Value>> =>
+	entries.reduce((prev, [key, value]) => ({ ...prev, [key]: value }), {}) as Readonly<Record<Key, Value>>;

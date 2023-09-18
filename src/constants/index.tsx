@@ -262,7 +262,7 @@ export const serverErrorTrpcErrorMap = {
 		'PRECONDITION_FAILED',
 	],
 	NOT_FOUND: ['NOT_FOUND'],
-} as const satisfies Record<ServerErrorEnum, Readonly<TRPC_ERROR_CODE_KEY[]>>;
+} as const satisfies Record<ServerErrorEnum, Readonly<Array<TRPC_ERROR_CODE_KEY>>>;
 
 export const defaultResponseConfig: Parameters<typeof NextResponse.json>[1] = {
 	status: 200,

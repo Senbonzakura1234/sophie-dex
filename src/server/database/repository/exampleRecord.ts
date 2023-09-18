@@ -11,7 +11,7 @@ import { onQueryDBError } from '@root/utils/server';
 import { TRPCError } from '@trpc/server';
 
 class ExampleRecordRepository {
-	async getEffect(): Promise<Effect> {
+	async effect(): Promise<Effect> {
 		const recordResult = await getExampleEffectRecord.execute().catch(onQueryDBError);
 
 		if (recordResult[0]) return recordResult[0];
@@ -19,7 +19,7 @@ class ExampleRecordRepository {
 		throw new TRPCError({ code: 'NOT_FOUND' });
 	}
 
-	async getItem(): Promise<Item> {
+	async item(): Promise<Item> {
 		const recordResult = await getExampleItemRecord.execute().catch(onQueryDBError);
 
 		if (recordResult[0]) return recordResult[0];
@@ -27,7 +27,7 @@ class ExampleRecordRepository {
 		throw new TRPCError({ code: 'NOT_FOUND' });
 	}
 
-	async getRumor(): Promise<Rumor> {
+	async rumor(): Promise<Rumor> {
 		const recordResult = await getExampleRumorRecord.execute().catch(onQueryDBError);
 
 		if (recordResult[0]) return recordResult[0];
@@ -35,7 +35,7 @@ class ExampleRecordRepository {
 		throw new TRPCError({ code: 'NOT_FOUND' });
 	}
 
-	async getTrait(): Promise<Trait> {
+	async trait(): Promise<Trait> {
 		const recordResult = await getExampleTraitRecord.execute().catch(onQueryDBError);
 
 		if (recordResult[0]) return recordResult[0];
