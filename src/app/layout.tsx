@@ -57,7 +57,7 @@ export async function generateMetadata(): Promise<Metadata> {
 			icon: '/favicon.ico',
 			shortcut: '/assets/splash_screens/icon.png',
 		},
-		keywords: APP_KEYWORD,
+		keywords: APP_KEYWORD.split(','),
 		manifest: '/manifest.json',
 		metadataBase: new URL(getBaseUrl(true)),
 		other: {

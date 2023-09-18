@@ -6,41 +6,25 @@ import {
 	getExampleRumorRecord,
 	getExampleTraitRecord,
 } from '@root/server/database/';
-import type { Effect, Item, Rumor, Trait } from '@root/server/database/schema';
+import type { Effect, ExampleRecordObject, Item, Rumor, Trait } from '@root/server/database/schema';
 import { onQueryDBError } from '@root/utils/server';
 import { TRPCError } from '@trpc/server';
 
 class ExampleRecordRepository {
-	async effect(): Promise<Effect> {
-		const recordResult = await getExampleEffectRecord.execute().catch(onQueryDBError);
+	async getExample(): Promise<ExampleRecordObject> {
+		const [effect, item, rumor, trait] = (await Promise.all(
+			[getExampleEffectRecord, getExampleItemRecord, getExampleRumorRecord, getExampleTraitRecord].map(
+				async query => {
+					const recordResult = await query.execute().catch(onQueryDBError);
 
-		if (recordResult[0]) return recordResult[0];
+					if (recordResult[0]) return recordResult[0];
 
-		throw new TRPCError({ code: 'NOT_FOUND' });
-	}
+					throw new TRPCError({ code: 'NOT_FOUND' });
+				},
+			),
+		)) as [Effect, Item, Rumor, Trait];
 
-	async item(): Promise<Item> {
-		const recordResult = await getExampleItemRecord.execute().catch(onQueryDBError);
-
-		if (recordResult[0]) return recordResult[0];
-
-		throw new TRPCError({ code: 'NOT_FOUND' });
-	}
-
-	async rumor(): Promise<Rumor> {
-		const recordResult = await getExampleRumorRecord.execute().catch(onQueryDBError);
-
-		if (recordResult[0]) return recordResult[0];
-
-		throw new TRPCError({ code: 'NOT_FOUND' });
-	}
-
-	async trait(): Promise<Trait> {
-		const recordResult = await getExampleTraitRecord.execute().catch(onQueryDBError);
-
-		if (recordResult[0]) return recordResult[0];
-
-		throw new TRPCError({ code: 'NOT_FOUND' });
+		return { effect, item, rumor, trait } as const;
 	}
 }
 

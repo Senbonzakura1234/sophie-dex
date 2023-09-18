@@ -15,9 +15,9 @@ import type { NextResponse } from 'next/server';
 export const APP_NAME = 'Sophie Dex';
 export const APP_CODE = 'sophie-dex';
 export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book DX - Wiki';
-export const APP_KEYWORD = ['Atelier', 'Wiki', 'Sophie', 'Mysterious', 'DX'];
+export const APP_KEYWORD = 'Atelier, Wiki, Sophie, Mysterious, DX';
 export const APP_AUTHOR = 'Senbonzakura1234';
-export const APP_VERSION = '20.2.0';
+export const APP_VERSION = '20.3.0';
 export const APP_AUTHOR_EMAIL = 'anhdungpham090@gmail.com';
 
 export const defaultLimit = 16;

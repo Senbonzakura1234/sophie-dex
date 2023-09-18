@@ -1,7 +1,7 @@
 import type { ClassNameProps } from '@root/types/common/props';
 
-type BasePlaceHolderProps = ClassNameProps;
+type PulsePlaceHolderProps = ClassNameProps;
 
-export default function BasePlaceHolder({ className }: BasePlaceHolderProps) {
+export default function PulsePlaceHolder({ className }: PulsePlaceHolderProps) {
 	return <div className={`animate-pulse bg-base-content/20 ${className}`} />;
 }

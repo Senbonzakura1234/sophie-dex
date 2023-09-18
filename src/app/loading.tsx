@@ -1,5 +1,5 @@
-import BasePlaceHolder from '@root/components/common/server/loading/BasePlaceHolder';
+import PulsePlaceHolder from '@root/components/common/server/loading/PulsePlaceHolder';
 
 export default function Loading() {
-	return <BasePlaceHolder className='h-[100dvh] w-[100dvw]' />;
+	return <PulsePlaceHolder className='h-[100dvh] w-[100dvw]' />;
 }

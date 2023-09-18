@@ -1,8 +1,14 @@
 'use client';
 
-import type { SwaggerClientProps } from '@root/types/common/props';
+import type { ExampleRecordObject } from '@root/server/database/schema';
+import { getApiDocs } from '@root/utils/swagger';
+import { useMemo } from 'react';
 import SwaggerUI from 'swagger-ui-react';
 
-export default function Swagger({ spec }: SwaggerClientProps) {
+type SwaggerProps = { data: ExampleRecordObject };
+
+export default function Swagger({ data }: SwaggerProps) {
+	const spec = useMemo(() => getApiDocs(data), [data]);
+
 	return <SwaggerUI spec={spec} />;
 }

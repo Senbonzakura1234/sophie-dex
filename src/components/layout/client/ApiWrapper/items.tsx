@@ -7,6 +7,7 @@ import useDispatchContentData from '@root/hooks/useDispatchContentData';
 import type { PageProps } from '@root/types/common';
 import { createArray } from '@root/utils/common';
 import { ApiContext } from '@root/utils/trpc';
+import ErrorMessage from './ErrorMessage';
 
 type APIListWrapperProps = { searchParams: PageProps['searchParams'] };
 
@@ -24,12 +25,7 @@ export default function APIListWrapper({ searchParams }: APIListWrapperProps) {
 			</>
 		);
 
-	if (!isSuccess && !isLoading)
-		return (
-			<div className='pl-2 italic text-base-content/60'>
-				Some thing when wrong on the sever. Please try refresh the page
-			</div>
-		);
+	if (!isSuccess && !isLoading) return <ErrorMessage className='pl-2' onRefetch={refetch} />;
 
 	return (
 		<>

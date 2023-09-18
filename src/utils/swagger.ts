@@ -5,6 +5,7 @@ import { createDocument, extendZodWithOpenApi } from 'zod-openapi';
 extendZodWithOpenApi(z);
 
 import { APP_AUTHOR, APP_AUTHOR_EMAIL, APP_CODE, APP_DESCRIPTION, APP_NAME, APP_VERSION } from '@root/constants';
+import type { ExampleRecord, ExampleRecordObject } from '@root/server/database/schema';
 import type { ModuleIdEnum } from '@root/types/common/zod';
 import {
 	genericCategoryEnumSchema,
@@ -18,12 +19,8 @@ import {
 	searchQueryValidator,
 	serverErrorEnumSchema,
 } from '@root/types/common/zod';
-
 import { moduleIdList } from '@root/types/model';
 import { capitalize, improvedFromEntries, improvedInclude } from '@root/utils/common';
-import { createServerSideHelpers } from '@trpc/react-query/server';
-import { appRouter } from './api/router/_app';
-import type { ExampleRecord, ExampleRecordObject } from './database/schema';
 
 const getRecordSwaggerSchema = (moduleId: ModuleIdEnum, example: ExampleRecord) =>
 	z
@@ -150,7 +147,7 @@ const getPaths = (exampleRecordObject: ExampleRecordObject): ZodOpenApiPathsObje
 			.flat(),
 	);
 
-export const getApiDocs = async () =>
+export const getApiDocs = (exampleRecordObject: ExampleRecordObject) =>
 	createDocument({
 		openapi: '3.1.0',
 		info: {
@@ -164,5 +161,5 @@ export const getApiDocs = async () =>
 			description: 'README.md',
 			url: `https://github.com/${APP_AUTHOR}/${APP_CODE}/blob/main/README.md`,
 		},
-		paths: getPaths(await createServerSideHelpers({ router: appRouter, ctx: {} }).example.fetch()),
+		paths: getPaths(exampleRecordObject),
 	});

@@ -496,7 +496,7 @@
 	@apply mb-2;
 }
 .swagger-ui .opblock-body .opblock-loading-animation {
-	@apply mt-12 mx-auto;
+	@apply mt-12 mx-auto animate-none;
 }
 .swagger-ui .opblock-body pre.microlight {
 	@apply bg-base-content text-base-200 rounded text-sm font-semibold hyphens-auto p-2.5 whitespace-pre-wrap break-all break-words;
@@ -537,7 +537,7 @@
 	@apply uppercase;
 }
 .swagger-ui .loading-container {
-	@apply items-center flex flex-col justify-center mt-4 pt-10 pb-16 animate-spin;
+	@apply items-center flex flex-col justify-center mt-4 pt-10 pb-16 !animate-spin;
 	min-height: 1px;
 }
 .swagger-ui .response-controls {
@@ -1029,13 +1029,13 @@
 	@apply bg-success text-success-content border-none border-0 rounded-r text-base font-bold px-8 py-1;
 }
 .swagger-ui .info {
-	@apply pt-20 flex gap-2 flex-wrap;
+	@apply pt-20 flex gap-2 flex-wrap select-none;
 }
 .swagger-ui .info > *:is(.main, .description, .info__contact) {
 	@apply w-full;
 }
 .swagger-ui .info .info__contact {
-	@apply flex gap-2 flex-col;
+	@apply flex gap-2 flex-wrap;
 }
 .swagger-ui .info.failed-config {
 	@apply mx-auto max-w-4xl text-center;
@@ -1053,6 +1053,9 @@
 }
 .swagger-ui .info a {
 	@apply link link-hover link-primary;
+}
+.swagger-ui .info a:visited {
+	@apply link-accent;
 }
 .swagger-ui .info .base-url {
 	@apply text-xs font-semibold;

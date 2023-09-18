@@ -27,48 +27,53 @@ export const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']);
 export type NodeEnv = z.infer<typeof nodeEnumEnvSchema>;
 
 export const genericStringSchema = z.string();
+
 export const genericNonnegativeIntSchema = z.number().int().nonnegative();
 
-const genericModuleIdEnumSchema = z.enum(moduleIdList);
+export const genericModuleIdEnumSchema = z.enum(moduleIdList);
 export type ModuleIdEnum = z.infer<typeof genericModuleIdEnumSchema>;
 
-const genericPageSchema = z.coerce.number().positive();
-const genericSortByEnumSchema = z.enum(['index', 'name', 'level', 'price']);
-export type SortByEnum = z.infer<typeof genericSortByEnumSchema>;
-const genericDirectionEnumSchema = z.enum(directionList);
-export type DirectionEnum = z.infer<typeof genericDirectionEnumSchema>;
-export const genericRelatedCategoryEnumSchema = z.enum(relatedCategoryList);
-export type RelatedCategoryEnum = z.infer<typeof genericRelatedCategoryEnumSchema>;
 export const genericCategoryEnumSchema = z.enum(categoryList);
 export type CategoryEnum = z.infer<typeof genericCategoryEnumSchema>;
+
 export const genericColorEnumSchema = z.enum(colorList);
 export type ColorEnum = z.infer<typeof genericColorEnumSchema>;
-export const genericRumorTypeEnumSchema = z.enum(rumorTypeList);
-export type RumorTypeEnum = z.infer<typeof genericRumorTypeEnumSchema>;
+
+export const genericDirectionEnumSchema = z.enum(directionList);
+export type DirectionEnum = z.infer<typeof genericDirectionEnumSchema>;
+
+export const genericPageSchema = z.coerce.number().positive();
+
 export const genericRecipeTypeEnumSchema = z.enum(recipeTypeList);
 export type RecipeTypeEnum = z.infer<typeof genericRecipeTypeEnumSchema>;
+
+export const genericRelatedCategoryEnumSchema = z.enum(relatedCategoryList);
+export type RelatedCategoryEnum = z.infer<typeof genericRelatedCategoryEnumSchema>;
+
+export const genericRumorTypeEnumSchema = z.enum(rumorTypeList);
+export type RumorTypeEnum = z.infer<typeof genericRumorTypeEnumSchema>;
+
+export const genericSortByEnumSchema = z.enum(['index', 'name', 'level', 'price']);
+export type SortByEnum = z.infer<typeof genericSortByEnumSchema>;
+
 export const genericIdSchema = genericStringSchema.uuid();
 export type Id = z.infer<typeof genericIdSchema>;
 
 export const searchQueryValidator = z.object({
+	category: genericCategoryEnumSchema.nullish().catch(null).default(null),
+	color: genericColorEnumSchema.nullish().catch(null).default(null),
+	direction: genericDirectionEnumSchema.nullish().catch(null).default(null),
 	page: genericPageSchema.nullish().catch(null).default(null),
+	recipeType: genericRecipeTypeEnumSchema.nullish().catch(null).default(null),
+	relatedCategory: genericRelatedCategoryEnumSchema.nullish().catch(null).default(null),
+	rumorType: genericRumorTypeEnumSchema.nullish().catch(null).default(null),
 	search: genericStringSchema.nullish().catch(null).default(null),
 	sortBy: genericSortByEnumSchema.nullish().catch(null).default(null),
-	direction: genericDirectionEnumSchema.nullish().catch(null).default(null),
-	category: genericCategoryEnumSchema.nullish().catch(null).default(null),
-
-	relatedCategory: genericRelatedCategoryEnumSchema.nullish().catch(null).default(null),
-	color: genericColorEnumSchema.nullish().catch(null).default(null),
-	recipeType: genericRecipeTypeEnumSchema.nullish().catch(null).default(null),
-	rumorType: genericRumorTypeEnumSchema.nullish().catch(null).default(null),
 });
-
 export type SearchQuery = z.infer<typeof searchQueryValidator>;
 
 export const idQueryValidator = z.object({ id: genericIdSchema.nullable().catch(null) });
-
 export type IdQuery = z.infer<typeof idQueryValidator>;
 
 export const highlightTextValidator = z.object({ content: z.string() });
-
 export type HighlightText = z.infer<typeof highlightTextValidator>;
