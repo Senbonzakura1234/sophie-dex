@@ -20,10 +20,8 @@ import { LogProvider, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { ContextProvider } from '@root/utils/context';
 import { getCookie } from 'cookies-next';
 import type { Metadata } from 'next';
-import { Rubik } from 'next/font/google';
 import localFont from 'next/font/local';
 
-const rubik = Rubik({ subsets: ['latin'] });
 const fontAtelier = localFont({ src: './Atelier.woff2', preload: true, variable: '--font-atelier' });
 
 const getCurrentTheme = async (): Promise<DaisyUIThemeEnum> => {
@@ -86,7 +84,7 @@ export default async function RootLayout({ children }: ChildrenProps) {
 
 	return (
 		<html lang='en'>
-			<body className={`${rubik.className} ${fontAtelier.variable}`}>
+			<body className={fontAtelier.variable}>
 				<ContextProvider defaultState={{ theme: currentTheme }}>
 					<ThemeWrapper>
 						<ScrollWrapper>

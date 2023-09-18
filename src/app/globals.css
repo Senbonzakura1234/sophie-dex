@@ -6,6 +6,10 @@
 	html,
 	body {
 		@apply overflow-hidden;
+		font-family:
+			Chalkboard,
+			comic sans ms,
+			'sanssecondaryerif';
 	}
 }
 
