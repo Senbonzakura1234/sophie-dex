@@ -3,7 +3,12 @@ import { z } from 'zod';
 
 const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']);
 const dbListEnumSchema = z.enum(['NEON_DB', 'VERCEL_DB']);
-const isrConfigSchema = z.enum(['ENABLED', 'DISABLED']);
+const appCodeSchema = z
+	.string()
+	.regex(/(?=\S*['-])([a-zA-Z'-]+)/)
+	.catch('-');
+const appKeyWordSchema = z.string().regex(/[^,]+/).catch('-');
+const appVersionSchema = z.string().regex(/^(\d+\.)?(\d+\.)?(\*|\d+)$/);
 
 /** @type {Record<string, string | undefined>}*/
 const dbURLMap = { NEON_DB: process.env.PGURL_NONPOOLING, VERCEL_DB: process.env.POSTGRES_URL_NON_POOLING };
@@ -13,10 +18,6 @@ export const env = createEnv({
 		PRIMARY_DB: dbListEnumSchema,
 		SECONDARY_DB: dbListEnumSchema,
 		DIRECT_DB_URL: z.string().nonempty(),
-
-		SUPABASE_POSTGRES_URL: z.string().nonempty(),
-
-		ENABLE_ISR: isrConfigSchema.optional(),
 	},
 	client: {
 		NEXT_PUBLIC_NODE_ENV: nodeEnumEnvSchema.optional(),
@@ -24,20 +25,32 @@ export const env = createEnv({
 		NEXT_PUBLIC_VERCEL_URL: z.string().optional(),
 
 		NEXT_PUBLIC_APP_HOST: z.string().optional(),
+
+		NEXT_PUBLIC_APP_NAME: z.string().catch('-'),
+		NEXT_PUBLIC_APP_CODE: appCodeSchema,
+		NEXT_PUBLIC_APP_DESCRIPTION: z.string().catch('-'),
+		NEXT_PUBLIC_APP_KEYWORD: appKeyWordSchema,
+		NEXT_PUBLIC_APP_AUTHOR: z.string().catch('-'),
+		NEXT_PUBLIC_APP_VERSION: appVersionSchema,
+		NEXT_PUBLIC_APP_AUTHOR_EMAIL: z.string().email(),
 	},
 	runtimeEnv: {
 		PRIMARY_DB: process.env.PRIMARY_DB,
 		SECONDARY_DB: process.env.SECONDARY_DB,
 		DIRECT_DB_URL: dbURLMap[process.env.PRIMARY_DB || ''],
 
-		SUPABASE_POSTGRES_URL: process.env.SUPABASE_POSTGRES_URL,
-
-		ENABLE_ISR: process.env.ENABLE_ISR,
-
 		NEXT_PUBLIC_NODE_ENV: process.env.NODE_ENV,
 		NEXT_PUBLIC_PORT: process.env.PORT || '3000',
 		NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL,
 
 		NEXT_PUBLIC_APP_HOST: process.env.NEXT_PUBLIC_APP_HOST,
+
+		NEXT_PUBLIC_APP_NAME: process.env.NEXT_PUBLIC_APP_NAME,
+		NEXT_PUBLIC_APP_CODE: process.env.NEXT_PUBLIC_APP_CODE,
+		NEXT_PUBLIC_APP_DESCRIPTION: process.env.NEXT_PUBLIC_APP_DESCRIPTION,
+		NEXT_PUBLIC_APP_KEYWORD: process.env.NEXT_PUBLIC_APP_KEYWORD,
+		NEXT_PUBLIC_APP_AUTHOR: process.env.NEXT_PUBLIC_APP_AUTHOR,
+		NEXT_PUBLIC_APP_VERSION: process.env.NEXT_PUBLIC_APP_VERSION,
+		NEXT_PUBLIC_APP_AUTHOR_EMAIL: process.env.NEXT_PUBLIC_APP_AUTHOR_EMAIL,
 	},
 });

@@ -9,16 +9,17 @@ import type {
 	RumorTypeEnum,
 	SortByEnum,
 } from '@root/types/common/zod';
+import { env } from '@root/utils/env.mjs';
 import type { TRPC_ERROR_CODE_KEY } from '@trpc/server/rpc';
 import type { NextResponse } from 'next/server';
 
-export const APP_NAME = 'Sophie Dex';
-export const APP_CODE = 'sophie-dex';
-export const APP_DESCRIPTION = 'Atelier Sophie: The Alchemist of the Mysterious Book DX - Wiki';
-export const APP_KEYWORD = 'Atelier, Wiki, Sophie, Mysterious, DX';
-export const APP_AUTHOR = 'Senbonzakura1234';
-export const APP_VERSION = '20.3.0';
-export const APP_AUTHOR_EMAIL = 'anhdungpham090@gmail.com';
+export const APP_NAME = env.NEXT_PUBLIC_APP_NAME;
+export const APP_CODE = env.NEXT_PUBLIC_APP_CODE;
+export const APP_DESCRIPTION = env.NEXT_PUBLIC_APP_DESCRIPTION;
+export const APP_KEYWORD = env.NEXT_PUBLIC_APP_KEYWORD;
+export const APP_AUTHOR = env.NEXT_PUBLIC_APP_AUTHOR;
+export const APP_VERSION = env.NEXT_PUBLIC_APP_VERSION;
+export const APP_AUTHOR_EMAIL = env.NEXT_PUBLIC_APP_AUTHOR_EMAIL;
 
 export const defaultLimit = 16;
 
