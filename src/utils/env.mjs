@@ -1,14 +1,17 @@
 import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
 
-const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']);
-const dbListEnumSchema = z.enum(['NEON_DB', 'VERCEL_DB']);
+const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']).catch('production');
+const dbListEnumSchema = z.enum(['NEON_DB', 'VERCEL_DB']).catch('NEON_DB');
 const appCodeSchema = z
 	.string()
 	.regex(/(?=\S*['-])([a-zA-Z'-]+)/)
 	.catch('-');
 const appKeyWordSchema = z.string().regex(/[^,]+/).catch('-');
-const appVersionSchema = z.string().regex(/^(\d+\.)?(\d+\.)?(\*|\d+)$/);
+const appVersionSchema = z
+	.string()
+	.regex(/^(\d+\.)?(\d+\.)?(\*|\d+)$/)
+	.catch('-');
 
 /** @type {Record<string, string | undefined>}*/
 const dbURLMap = { NEON_DB: process.env.PGURL_NONPOOLING, VERCEL_DB: process.env.POSTGRES_URL_NON_POOLING };
@@ -17,10 +20,10 @@ export const env = createEnv({
 	server: {
 		PRIMARY_DB: dbListEnumSchema,
 		SECONDARY_DB: dbListEnumSchema,
-		DIRECT_DB_URL: z.string().nonempty(),
+		DIRECT_DB_URL: z.string().catch(''),
 	},
 	client: {
-		NEXT_PUBLIC_NODE_ENV: nodeEnumEnvSchema.optional(),
+		NEXT_PUBLIC_NODE_ENV: nodeEnumEnvSchema,
 		NEXT_PUBLIC_PORT: z.coerce.number().nonnegative().catch(3000),
 		NEXT_PUBLIC_VERCEL_URL: z.string().optional(),
 
@@ -32,7 +35,7 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_KEYWORD: appKeyWordSchema,
 		NEXT_PUBLIC_APP_AUTHOR: z.string().catch('-'),
 		NEXT_PUBLIC_APP_VERSION: appVersionSchema,
-		NEXT_PUBLIC_APP_AUTHOR_EMAIL: z.string().email(),
+		NEXT_PUBLIC_APP_AUTHOR_EMAIL: z.string().email().catch('-'),
 	},
 	runtimeEnv: {
 		PRIMARY_DB: process.env.PRIMARY_DB,
