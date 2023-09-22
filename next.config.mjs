@@ -21,6 +21,7 @@ const config = {
 			.flat(),
 	],
 	i18n: { locales: ['en'], defaultLocale: 'en' },
+	experimental: { typedRoutes: true },
 };
 
 export default config;

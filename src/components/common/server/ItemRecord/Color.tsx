@@ -4,13 +4,14 @@ import QueryLink from '@root/components/common/client/QueryLink';
 import { colorTWClassMap } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { ColorEnum } from '@root/types/common/zod';
+import { useMemo } from 'react';
 
 type ColorProps = { color: ColorEnum };
 
 export default function Color({ color }: ColorProps) {
 	const { searchQuery } = useSearchQuery();
 
-	const isActive = searchQuery.color === color;
+	const isActive = useMemo(() => color === searchQuery.color, [color, searchQuery.color]);
 
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
@@ -23,6 +24,7 @@ export default function Color({ color }: ColorProps) {
 				}`}
 				href={{ query: { color, id: null } }}
 				isActive={isActive}
+				searchQuery={searchQuery}
 				resetPage
 			>
 				<span className='font-extrabold capitalize text-slate-50'>{color.toLowerCase()}</span>

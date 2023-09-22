@@ -1,16 +1,16 @@
-import type { AlertTypeEnum, AppleMediaConfig, ServerErrorEnum } from '@root/types/common';
+import type { AlertTypeEnum, AppleMediaConfig } from '@root/types/common';
 import type { AtelierIcon } from '@root/types/common/icon';
 import type {
 	CategoryEnum,
 	ColorEnum,
 	DaisyUIThemeEnum,
+	ErrorEnum,
 	ModuleIdEnum,
 	RecipeTypeEnum,
 	RumorTypeEnum,
 	SortByEnum,
 } from '@root/types/common/zod';
 import { env } from '@root/utils/env.mjs';
-import type { TRPC_ERROR_CODE_KEY } from '@trpc/server/rpc';
 import type { NextResponse } from 'next/server';
 
 export const APP_NAME = env.NEXT_PUBLIC_APP_NAME;
@@ -237,33 +237,23 @@ export const appleMediaConfig: AppleMediaConfig = [
 	},
 ];
 
-export const serverErrorMap = {
-	BAD_REQUEST: { message: 'Invalid Parameters', code: 400 },
-	INTERNAL_SERVER_ERROR: { message: 'Some Thing Wrong Server.', code: 500 },
-	NOT_FOUND: { message: 'Content Not Found', code: 404 },
-} as const satisfies Record<ServerErrorEnum, { code: number; message: string }>;
-
-export const serverErrorTrpcErrorMap = {
-	BAD_REQUEST: [
-		'PARSE_ERROR',
-		'BAD_REQUEST',
-		'FORBIDDEN',
-		'METHOD_NOT_SUPPORTED',
-		'PAYLOAD_TOO_LARGE',
-		'UNPROCESSABLE_CONTENT',
-		'TOO_MANY_REQUESTS',
-		'CLIENT_CLOSED_REQUEST',
-	],
-	INTERNAL_SERVER_ERROR: [
-		'INTERNAL_SERVER_ERROR',
-		'NOT_IMPLEMENTED',
-		'UNAUTHORIZED',
-		'TIMEOUT',
-		'CONFLICT',
-		'PRECONDITION_FAILED',
-	],
-	NOT_FOUND: ['NOT_FOUND'],
-} as const satisfies Record<ServerErrorEnum, Readonly<Array<TRPC_ERROR_CODE_KEY>>>;
+export const errorMap = {
+	PARSE_ERROR: { message: 'Invalid JSON From Client', status: 400 },
+	BAD_REQUEST: { message: 'Bad Request', status: 400 },
+	UNAUTHORIZED: { message: 'Unauthorized Request', status: 401 },
+	NOT_FOUND: { message: 'Content Not Found', status: 404 },
+	FORBIDDEN: { message: 'Forbidden Content', status: 403 },
+	METHOD_NOT_SUPPORTED: { message: 'Method Not Supported', status: 405 },
+	TIMEOUT: { message: 'Request Timeout', status: 408 },
+	CONFLICT: { message: 'Request Conflict', status: 409 },
+	PRECONDITION_FAILED: { message: 'Request Precondition Failed', status: 412 },
+	PAYLOAD_TOO_LARGE: { message: 'Payload Request Too Large', status: 413 },
+	UNPROCESSABLE_CONTENT: { message: 'Unprocessable Content', status: 422 },
+	TOO_MANY_REQUESTS: { message: 'Too Many Requests', status: 429 },
+	CLIENT_CLOSED_REQUEST: { message: 'Client Closed Request', status: 499 },
+	INTERNAL_SERVER_ERROR: { message: 'Some Thing Wrong Server', status: 500 },
+	NOT_IMPLEMENTED: { message: 'Some Thing Wrong Server', status: 501 },
+} as const satisfies Record<ErrorEnum, { message: string; status: number }>;
 
 export const defaultResponseConfig: Parameters<typeof NextResponse.json>[1] = {
 	status: 200,

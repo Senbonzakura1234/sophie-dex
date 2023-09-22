@@ -22,7 +22,7 @@ export default function RecordHead({ currentId, id, name }: RecordHeadProps) {
 				className={`dark:text-shadow-light-md ${
 					isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'
 				}`}
-				href={`/${moduleId}/${id}`}
+				href={moduleId ? `/${moduleId}/${id}` : '/'}
 				aria-label={name}
 				role='navigation'
 			>

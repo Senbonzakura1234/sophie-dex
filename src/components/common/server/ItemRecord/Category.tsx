@@ -6,14 +6,11 @@ import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { TextShadowMap } from '@root/types/common/tailwind';
 import type { CategoryEnum, ColorEnum } from '@root/types/common/zod';
 import { convertCode } from '@root/utils/common';
+import { useMemo } from 'react';
 
 type CategoryProps = { category: CategoryEnum; color: ColorEnum };
 
 export default function Category({ category, color }: CategoryProps) {
-	const { searchQuery } = useSearchQuery();
-
-	const isActive = searchQuery.category === category;
-
 	const className = {
 		BLUE: 'app-text-shadow-BLUE',
 		GREEN: 'app-text-shadow-GREEN',
@@ -21,6 +18,10 @@ export default function Category({ category, color }: CategoryProps) {
 		WHITE: 'app-text-shadow-WHITE',
 		YELLOW: 'app-text-shadow-YELLOW',
 	} satisfies TextShadowMap;
+
+	const { searchQuery } = useSearchQuery();
+
+	const isActive = useMemo(() => category === searchQuery.category, [category, searchQuery.category]);
 
 	return (
 		<>
@@ -33,6 +34,7 @@ export default function Category({ category, color }: CategoryProps) {
 					}`}
 					isActive={isActive}
 					href={{ query: { category } }}
+					searchQuery={searchQuery}
 					resetPage
 				>
 					<div className={`font-atelier ${categoryIconMap[category]}`} />

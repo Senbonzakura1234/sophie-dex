@@ -8,6 +8,7 @@ import { APP_AUTHOR, APP_AUTHOR_EMAIL, APP_CODE, APP_DESCRIPTION, APP_NAME, APP_
 import type { ExampleRecord, ExampleRecordObject } from '@root/server/database/schema';
 import type { ModuleIdEnum } from '@root/types/common/zod';
 import {
+	errorEnumSchema,
 	genericCategoryEnumSchema,
 	genericColorEnumSchema,
 	genericIdSchema,
@@ -17,7 +18,6 @@ import {
 	genericRumorTypeEnumSchema,
 	genericStringSchema,
 	searchQueryValidator,
-	serverErrorEnumSchema,
 } from '@root/types/common/zod';
 import { moduleIdList } from '@root/types/model';
 import { capitalize, improvedFromEntries, improvedInclude } from '@root/utils/common';
@@ -82,7 +82,7 @@ const getRespondSwaggerSchema = (
 								totalRecord: genericNonnegativeIntSchema.openapi({ example: 1 }),
 						  })
 					).nullable(),
-					error: z.object({ code: serverErrorEnumSchema }).nullable().openapi({ example: null }),
+					error: z.object({ code: errorEnumSchema }).nullable().openapi({ example: null }),
 				}),
 			},
 		},

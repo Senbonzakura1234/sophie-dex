@@ -63,25 +63,12 @@ export const capitalize = (input?: string | number | null) =>
 export const convertCode = (input?: string | number | null) =>
 	input ? input.toString().toLowerCase().replaceAll('_', ' ') : '';
 
-export const parseQuery = (query: Partial<SearchQuery>) => {
-	for (const key in query) {
-		if (!Object.prototype.hasOwnProperty.call(query, key)) continue;
-		const element = query[key as KeyOf<typeof query>];
-		if (!element) delete query[key as KeyOf<typeof query>];
-	}
-
-	return query;
-};
-
 export const queryToParamsString = (query: Partial<SearchQuery>) => {
-	const queryEntries = Object.entries(query);
+	const queryEntries = Object.entries(query).filter(([, value]) => Boolean(value));
 
 	if (!queryEntries.length) return '';
 
-	return `?${queryEntries
-		.filter(([, value]) => Boolean(value))
-		.map(([key, value]) => `${key}=${encodeURIComponent(value!)}`)
-		.join('&')}`;
+	return `?${queryEntries.map(([key, value]) => `${key}=${encodeURIComponent(value!)}`).join('&')}` as const;
 };
 
 export const improvedParseJSON = <T>(value: string | null): T | undefined => {
@@ -102,9 +89,6 @@ export const paramsToQuery = (input: ReadonlyURLSearchParams | URLSearchParams) 
 	}, {}) as SearchQuery;
 
 export const sleep = (milliseconds = 1000) => new Promise(resolve => setTimeout(resolve, milliseconds));
-
-export const isQueryEmpty = (searchQuery: Parameters<typeof parseQuery>[0]) =>
-	Object.keys(parseQuery(searchQuery)).length === 0;
 
 export const improvedFromEntries = <Key extends KeyOf<CommonObject>, Value = unknown>(
 	entries: Array<Readonly<[Key, Value]>>,

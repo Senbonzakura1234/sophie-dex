@@ -10,8 +10,8 @@ type HyperlinkProps = {
 } & ClassNameProps;
 
 export default function Hyperlink({ input, className }: HyperlinkProps) {
-	const { href, label }: { href?: string; label: string } = useMemo(() => {
-		if ('content' in input) return { label: input.content };
+	const { href, label } = useMemo(() => {
+		if ('content' in input) return { label: input.content } as const;
 
 		if ('searchQuery' in input) {
 			const query = input.searchQuery;
@@ -22,10 +22,10 @@ export default function Hyperlink({ input, className }: HyperlinkProps) {
 					.map((value, key) => `${key > 0 ? ', ' : ''}${typeof value === 'number' ? value : convertCode(value)}`)
 					.join(),
 				href: `/${input.table}${queryToParamsString(query)}`,
-			};
+			} as const;
 		}
 
-		return { label: input.name, href: `/${input.table}/${input.id}` };
+		return { label: input.name, href: `/${input.table}/${input.id}` } as const;
 	}, [input]);
 
 	if (!href) return <span className='font-bold capitalize'>{label}</span>;

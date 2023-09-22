@@ -13,7 +13,7 @@ export default function BottomFilter() {
 	return (
 		<nav className='card select-none bg-base-100 shadow-lg shadow-primary'>
 			<div className='flex w-full flex-row flex-wrap place-content-center gap-3 px-5 py-3'>
-				<Paginate page={searchQuery.page || 1} totalPage={totalPage} />
+				<Paginate searchQuery={searchQuery} totalPage={totalPage} />
 			</div>
 		</nav>
 	);

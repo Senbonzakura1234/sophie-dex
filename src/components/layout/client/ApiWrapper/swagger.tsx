@@ -1,9 +1,10 @@
 'use client';
 
 import Loader from '@root/components/common/server/loading/Loader';
+import ErrorContent from '@root/components/layout/server/ErrorContent';
+import useDispatchContentData from '@root/hooks/useDispatchContentData';
 import { ApiContext } from '@root/utils/trpc';
 import dynamic from 'next/dynamic';
-import ErrorMessage from './ErrorMessage';
 
 const Swagger = dynamic(() => import('@root/components/dynamic/Swagger'), {
 	ssr: false,
@@ -11,11 +12,13 @@ const Swagger = dynamic(() => import('@root/components/dynamic/Swagger'), {
 });
 
 export default function APISwaggerWrapper() {
-	const { data, isSuccess, isLoading, refetch } = ApiContext.example.useQuery();
+	const { data, isSuccess, isLoading, refetch, error, isError } = ApiContext.example.useQuery();
+
+	useDispatchContentData({ contentData: { refetch, totalPage: 0, totalRecord: 0, isError } });
 
 	if (isLoading) return <Loader className='loading-rin w-20 text-primary' />;
 
-	if (!isSuccess && !isLoading) return <ErrorMessage onRefetch={refetch} />;
+	if (!isSuccess && !isLoading) return <ErrorContent code={error.data?.code} />;
 
 	return <Swagger data={data} />;
 }

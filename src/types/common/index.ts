@@ -1,6 +1,5 @@
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
-
-export type ServerErrorEnum = 'INTERNAL_SERVER_ERROR' | 'BAD_REQUEST' | 'NOT_FOUND';
+import type { ErrorEnum } from './zod';
 
 export type SelectOptionItem<V> = { value: V | null; label?: string; icon?: ReactNode };
 export type SetSelectOptionItem<V> = Dispatch<SetStateAction<SelectOptionItem<V>>>;
@@ -26,3 +25,5 @@ export type CommonObject = Record<string | number | symbol, unknown>;
 export type KeyOf<TData extends CommonObject> = keyof TData;
 
 export type ValueOf<TData extends CommonObject> = Required<TData>[KeyOf<TData>];
+
+export type CommonServerError = { code: ErrorEnum };

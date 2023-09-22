@@ -10,7 +10,12 @@ import { createContext, useReducer } from 'react';
 
 export type ThemeContextState = { theme: DaisyUIThemeEnum };
 export type ContentDataContextState = {
-	contentData: { totalRecord: number; totalPage: number; refetch: undefined | (() => Promise<unknown>) };
+	contentData: {
+		totalRecord: number;
+		totalPage: number;
+		refetch: undefined | (() => Promise<unknown>);
+		isError: boolean;
+	};
 };
 export type AlertContextState = { alert: { isOpen: boolean; message: string; type?: AlertTypeEnum } };
 
@@ -23,7 +28,7 @@ type ActionType =
 
 const initialState: StateType = {
 	theme: 'fantasy',
-	contentData: { totalRecord: 0, totalPage: 0, refetch: undefined },
+	contentData: { totalRecord: 0, totalPage: 0, refetch: undefined, isError: false },
 	alert: { isOpen: false, message: '' },
 };
 
@@ -58,7 +63,10 @@ export const Context = createContext<{
 	dispatch: Dispatch<ActionType>;
 }>({ state: initialState, dispatch: () => null });
 
-export const ContextProvider = ({ children, defaultState }: ChildrenProps & { defaultState?: Partial<StateType> }) => {
+export const ContextProvider = ({
+	children,
+	defaultState = {},
+}: ChildrenProps & { defaultState?: Partial<StateType> }) => {
 	const [state, dispatch] = useReducer(reducer, { ...initialState, ...defaultState });
 
 	return <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>;

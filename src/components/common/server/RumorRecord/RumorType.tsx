@@ -5,18 +5,18 @@ import { rumorTypeColorMap, rumorTypeIconMap } from '@root/constants';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { RumorTypeEnum } from '@root/types/common/zod';
 import { convertCode } from '@root/utils/common';
+import { useMemo } from 'react';
 
 type RumorTypeProps = { rumorType: RumorTypeEnum };
 
 export default function RumorType({ rumorType }: RumorTypeProps) {
-	const { searchQuery } = useSearchQuery();
-
-	const isActive = searchQuery.rumorType === rumorType;
-
 	const className = {
 		MATERIAL: 'app-text-shadow-GREEN',
 		MONSTER: 'app-text-shadow-RED',
 	} satisfies Record<RumorTypeEnum, string>;
+	const { searchQuery } = useSearchQuery();
+
+	const isActive = useMemo(() => rumorType === searchQuery.rumorType, [rumorType, searchQuery.rumorType]);
 
 	return (
 		<>
@@ -29,6 +29,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 					}`}
 					href={{ query: { rumorType } }}
 					isActive={isActive}
+					searchQuery={searchQuery}
 					resetPage
 				>
 					<div className='flex gap-1 font-extrabold capitalize text-slate-50'>

@@ -3,11 +3,11 @@ import {
 	colorList,
 	daisyUIThemeList,
 	directionList,
+	errorList,
 	moduleIdList,
 	recipeTypeList,
 	relatedCategoryList,
 	rumorTypeList,
-	serverErrorList,
 } from '@root/types/model';
 import { z } from 'zod';
 import { extendZodWithOpenApi } from 'zod-openapi';
@@ -20,8 +20,8 @@ export type DBListEnum = z.infer<typeof dbListEnumSchema>;
 export const daisyUIThemeEnumSchema = z.enum(daisyUIThemeList).catch('fantasy');
 export type DaisyUIThemeEnum = z.infer<typeof daisyUIThemeEnumSchema>;
 
-export const serverErrorEnumSchema = z.enum(serverErrorList).catch('INTERNAL_SERVER_ERROR');
-export type ServerErrorEnum = z.infer<typeof serverErrorEnumSchema>;
+export const errorEnumSchema = z.enum(errorList).catch('INTERNAL_SERVER_ERROR');
+export type ErrorEnum = z.infer<typeof errorEnumSchema>;
 
 export const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']);
 export type NodeEnv = z.infer<typeof nodeEnumEnvSchema>;

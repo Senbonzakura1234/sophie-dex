@@ -6,7 +6,7 @@ import { defaultLimit } from '@root/constants';
 import { useMediaQuery } from '@root/hooks/useMediaQuery';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import useSelector from '@root/hooks/useSelector';
-import { improvedInclude, isQueryEmpty } from '@root/utils/common';
+import { improvedInclude, queryToParamsString } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -40,13 +40,15 @@ export default function TopFilter() {
 		return `${fromFormatted} - ${toFormatted} of ${totalRecordFormatted} ${moduleId}s`;
 	}, [moduleId, searchQuery.page, totalRecord]);
 
+	const isQueryEmpty = useMemo(() => !Boolean(queryToParamsString(searchQuery)), [searchQuery]);
+
 	const is2XLScreen = useMediaQuery('(min-width: 1536px)');
 
 	const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
-		if (!isQueryEmpty(searchQuery) || is2XLScreen) setIsOpen(true);
-	}, [is2XLScreen, searchQuery]);
+		if (!isQueryEmpty || is2XLScreen) setIsOpen(true);
+	}, [is2XLScreen, isQueryEmpty]);
 
 	return (
 		<>
@@ -70,7 +72,7 @@ export default function TopFilter() {
 				<div className='flex w-full flex-row flex-wrap gap-3 px-5 py-3 2xl:place-content-end'>
 					<h2 className='hidden w-full font-extrabold max-2xl:block'>Filter Control</h2>
 
-					<SortControl />
+					<SortControl moduleId={moduleId} searchQuery={searchQuery} />
 
 					{moduleId !== 'effect' ? (
 						<div className='flex flex-wrap gap-2'>
@@ -91,14 +93,15 @@ export default function TopFilter() {
 						{paginateInfo}
 					</div>
 
-					<Paginate page={searchQuery.page || 1} totalPage={totalPage} />
+					<Paginate searchQuery={searchQuery} totalPage={totalPage} />
 
 					<QueryLink
-						disabled={isQueryEmpty(searchQuery)}
+						disabled={isQueryEmpty}
 						aria-label='Reset Filter'
 						className='btn btn-xs my-auto gap-1 capitalize !shadow-current dark:shadow'
-						href={{ pathname: `/${moduleId}`, query: {} }}
+						href={{ query: {} }}
 						isOverridden
+						searchQuery={searchQuery}
 						role='navigation'
 					>
 						Reset
