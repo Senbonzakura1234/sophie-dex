@@ -35,7 +35,7 @@ module.exports = {
 				'plugin:json/recommended',
 			],
 			files: ['**/*.ts', '**/*.tsx'],
-			parserOptions: { project: './tsconfig.json' },
+			parserOptions: { project: './tsconfig.json', ecmaVersion: 'latest', sourceType: 'module' },
 			plugins: ['@typescript-eslint', 'unused-imports', 'tailwindcss'],
 			rules: {
 				'@typescript-eslint/comma-dangle': 'off',

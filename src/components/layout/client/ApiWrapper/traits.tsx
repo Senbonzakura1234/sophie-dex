@@ -15,7 +15,7 @@ export default function APIListWrapper({ searchParams }: APIListWrapperProps) {
 	const { data, isSuccess, isLoading, refetch, error, isError } = ApiContext.trait.getAll.useQuery(searchParams);
 
 	useDispatchContentData({
-		contentData: { refetch, totalPage: data?.totalPage || 0, totalRecord: data?.totalRecord || 0, isError },
+		contentData: { refetch, totalPage: data?.totalPage, totalRecord: data?.totalRecord, isError },
 	});
 
 	if (isLoading)

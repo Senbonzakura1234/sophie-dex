@@ -6,7 +6,7 @@ import useDispatchContentData from '@root/hooks/useDispatchContentData';
 import { ApiContext } from '@root/utils/trpc';
 import dynamic from 'next/dynamic';
 
-const Swagger = dynamic(() => import('@root/components/dynamic/Swagger'), {
+const Swagger = dynamic(() => import('swagger-ui-react'), {
 	ssr: false,
 	loading: () => <Loader className='loading-rin w-20 text-primary' />,
 });
@@ -14,11 +14,11 @@ const Swagger = dynamic(() => import('@root/components/dynamic/Swagger'), {
 export default function APISwaggerWrapper() {
 	const { data, isSuccess, isLoading, refetch, error, isError } = ApiContext.example.useQuery();
 
-	useDispatchContentData({ contentData: { refetch, totalPage: 0, totalRecord: 0, isError } });
+	useDispatchContentData({ contentData: { refetch, isError } });
 
 	if (isLoading) return <Loader className='loading-rin w-20 text-primary' />;
 
 	if (!isSuccess && !isLoading) return <ErrorContent code={error.data?.code} />;
 
-	return <Swagger data={data} />;
+	return <Swagger spec={data} />;
 }

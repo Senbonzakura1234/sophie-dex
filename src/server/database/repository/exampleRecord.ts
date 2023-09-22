@@ -6,12 +6,13 @@ import {
 	getExampleRumorRecord,
 	getExampleTraitRecord,
 } from '@root/server/database/';
-import type { Effect, ExampleRecordObject, Item, Rumor, Trait } from '@root/server/database/schema';
+import type { Effect, Item, Rumor, Trait } from '@root/server/database/schema';
 import { onQueryDBError } from '@root/utils/server';
+import { getApiDocs } from '@root/utils/swagger';
 import { TRPCError } from '@trpc/server';
 
 class ExampleRecordRepository {
-	async getExample(): Promise<ExampleRecordObject> {
+	async getExample() {
 		const [effect, item, rumor, trait] = (await Promise.all(
 			[getExampleEffectRecord, getExampleItemRecord, getExampleRumorRecord, getExampleTraitRecord].map(
 				async query => {
@@ -24,7 +25,7 @@ class ExampleRecordRepository {
 			),
 		)) as [Effect, Item, Rumor, Trait];
 
-		return { effect, item, rumor, trait } as const;
+		return getApiDocs({ effect, item, rumor, trait });
 	}
 }
 
