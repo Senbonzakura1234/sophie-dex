@@ -499,7 +499,7 @@
 	@apply mt-12 mx-auto animate-none;
 }
 .swagger-ui .opblock-body pre.microlight {
-	@apply bg-base-content text-base-200 rounded text-sm font-semibold hyphens-auto p-2.5 whitespace-pre-wrap break-all break-words;
+	@apply !bg-transparent !text-inherit rounded text-sm font-semibold hyphens-auto p-2.5 whitespace-pre-wrap break-all break-words;
 	font-family: monospace;
 }
 .swagger-ui .opblock-body pre.microlight span.headerline {

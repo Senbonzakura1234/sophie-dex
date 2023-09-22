@@ -1,7 +1,7 @@
 import BottomFilter from '@root/components/layout/client/BottomFilter';
+import ContentWrapper from '@root/components/layout/client/ContentWrapper';
 import TopFilter from '@root/components/layout/client/TopFilter';
 import TrpcProvider from '@root/components/layout/client/TrpcProvider';
-import ContentWrapper from '@root/components/layout/server/ContentWrapper';
 import SearchControl from '@root/components/layout/server/SearchControl';
 import type { ChildrenProps } from '@root/types/common/props';
 

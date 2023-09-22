@@ -1,17 +1,19 @@
 'use client';
 
+import QueryLink from '@root/components/common/client/QueryLink';
+import RefetchButton from '@root/components/common/client/RefetchButton';
 import FilterIcon from '@root/components/common/server/icons/outline/FilterIcon';
+import ArrowPathIcon from '@root/components/common/server/icons/solid/ArrowPathIcon';
 import Paginate from '@root/components/layout/client/Paginate';
 import { defaultLimit } from '@root/constants';
 import { useMediaQuery } from '@root/hooks/useMediaQuery';
+import { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import useSelector from '@root/hooks/useSelector';
 import { improvedInclude, queryToParamsString } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import { useEffect, useMemo, useState } from 'react';
 
-import QueryLink from '@root/components/common/client/QueryLink';
-import { useModuleId } from '@root/hooks/useModuleId';
 import CategoryFilter from './CategoryFilter';
 import ColorFilter from './ColorFilter';
 import RecipeTypeFilter from './RecipeTypeFilter';
@@ -106,6 +108,10 @@ export default function TopFilter() {
 					>
 						Reset
 					</QueryLink>
+
+					<RefetchButton className='btn btn-circle btn-primary btn-sm my-auto !border-none shadow-lg shadow-current !transition-opacity'>
+						<ArrowPathIcon className='aspect-square h-4' />
+					</RefetchButton>
 				</div>
 			</TransitionWrapper>
 		</>

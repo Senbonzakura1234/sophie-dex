@@ -1,8 +1,7 @@
+import RefetchButton from '@root/components/common/client/RefetchButton';
 import { errorMap } from '@root/constants';
 import type { CommonServerError } from '@root/types/common';
 import Link from 'next/link';
-
-import RefetchButton from './RefetchButton';
 
 export type ErrorContentProps = Partial<CommonServerError>;
 
@@ -16,7 +15,7 @@ export default function ErrorContent({ code = 'INTERNAL_SERVER_ERROR' }: ErrorCo
 			}`}
 		>
 			<div className='grid gap-1'>
-				<h1 className='text-7xl font-bold tracking-widest md:text-9xl'>{status}</h1>
+				<h1 className='text-7xl font-bold tracking-widest md:text-8xl'>{status}</h1>
 
 				<span className='font-semibold md:text-lg'>Sorry! {message}.</span>
 			</div>
@@ -32,7 +31,7 @@ export default function ErrorContent({ code = 'INTERNAL_SERVER_ERROR' }: ErrorCo
 					Back to home
 				</Link>
 
-				<RefetchButton />
+				<RefetchButton className='link-hover link-primary link text-xs font-bold md:text-sm' isShowDivider />
 			</div>
 		</div>
 	);
