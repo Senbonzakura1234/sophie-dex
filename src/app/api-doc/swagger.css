@@ -199,7 +199,7 @@
 }
 .swagger-ui .parameter__type {
 	font-family: monospace;
-	@apply text-xs font-semibold py-1.5;
+	@apply text-xs font-bold py-1.5;
 }
 .swagger-ui .parameter-controls {
 	@apply mt-3;
@@ -275,7 +275,7 @@
 .swagger-ui .opblock .opblock-summary-operation-id,
 .swagger-ui .opblock .opblock-summary-path,
 .swagger-ui .opblock .opblock-summary-path__deprecated {
-	@apply items-center flex text-xs sm:text-base font-semibold break-words grow;
+	@apply items-center flex text-xs sm:text-base font-bold break-words grow;
 	font-family: monospace;
 }
 .swagger-ui .opblock .opblock-summary-path {
@@ -442,7 +442,7 @@
 .swagger-ui .opblock-description-wrapper p,
 .swagger-ui .opblock-external-docs-wrapper p,
 .swagger-ui .opblock-title_normal p {
-	@apply text-base !m-0 font-semibold;
+	@apply text-base !m-0 font-bold;
 }
 .swagger-ui .opblock-external-docs-wrapper h4 {
 	@apply pl-0;
@@ -479,14 +479,14 @@
 	@apply text-sm;
 }
 .swagger-ui .response-col_status .response-undocumented {
-	@apply text-base-300 text-sm font-semibold;
+	@apply text-base-300 text-sm font-bold;
 	font-family: monospace;
 }
 .swagger-ui .response-col_links {
 	@apply text-sm max-w-2xl;
 }
 .swagger-ui .response-col_links .response-undocumented {
-	@apply text-base-300 text-sm font-semibold;
+	@apply text-base-300 text-sm font-bold;
 	font-family: monospace;
 }
 .swagger-ui .response-col_links .operation-link {
@@ -499,7 +499,7 @@
 	@apply mt-12 mx-auto animate-none;
 }
 .swagger-ui .opblock-body pre.microlight {
-	@apply !bg-transparent !text-inherit rounded text-sm font-semibold hyphens-auto p-2.5 whitespace-pre-wrap break-all break-words;
+	@apply !bg-transparent !text-inherit rounded text-sm font-bold hyphens-auto p-2.5 whitespace-pre-wrap break-all break-words;
 	font-family: monospace;
 }
 .swagger-ui .opblock-body pre.microlight span.headerline {
@@ -730,7 +730,7 @@
 	@apply text-base-content text-xs mb-1.5;
 }
 .swagger-ui .dialog-ux .modal-ux-content h4 {
-	@apply text-lg font-semibold mt-4;
+	@apply text-lg font-bold mt-4;
 }
 .swagger-ui .dialog-ux .modal-ux-header {
 	@apply border border-neutral items-center flex py-3;
@@ -739,11 +739,11 @@
 	@apply appearance-none bg-none border-none border-0 px-2.5;
 }
 .swagger-ui .dialog-ux .modal-ux-header h3 {
-	@apply flex-1 text-xl font-semibold px-5;
+	@apply flex-1 text-xl font-bold px-5;
 }
 .swagger-ui .model {
 	font-family: monospace;
-	@apply text-xs font-semibold;
+	@apply text-xs font-bold;
 }
 .swagger-ui .model .deprecated span,
 .swagger-ui .model .deprecated td {
@@ -885,7 +885,7 @@
 	@apply bottom-0 ml-4 relative;
 }
 .swagger-ui .model-deprecated-warning {
-	@apply text-error text-base font-semibold mr-4;
+	@apply text-error text-base font-bold mr-4;
 }
 .swagger-ui span > span.model .brace-close {
 	@apply pl-2.5;
@@ -948,7 +948,7 @@
 }
 .swagger-ui table.headers td {
 	font-family: monospace;
-	@apply text-xs font-semibold align-middle;
+	@apply text-xs font-bold align-middle;
 }
 .swagger-ui table.headers .header-example {
 	@apply text-base-300 italic;
@@ -982,11 +982,11 @@
 }
 .swagger-ui .parameter__extension,
 .swagger-ui .parameter__in {
-	@apply text-base-content/80 text-xs italic font-semibold;
+	@apply text-base-content/80 text-xs italic font-bold;
 	font-family: monospace;
 }
 .swagger-ui .parameter__deprecated {
-	@apply text-error text-xs italic font-semibold;
+	@apply text-error text-xs italic font-bold;
 	font-family: monospace;
 }
 .swagger-ui .parameter__empty_value_toggle {
@@ -1008,7 +1008,7 @@
 	min-width: 6em;
 }
 .swagger-ui .response__extension {
-	@apply text-base-300 text-xs italic font-semibold;
+	@apply text-base-300 text-xs italic font-bold;
 	font-family: monospace;
 }
 .swagger-ui .topbar {
@@ -1061,7 +1061,7 @@
 	@apply link-accent;
 }
 .swagger-ui .info .base-url {
-	@apply text-xs font-semibold;
+	@apply text-xs font-bold;
 	font-family: monospace;
 }
 .swagger-ui .info .title {
@@ -1092,7 +1092,7 @@
 	@apply mb-2.5;
 }
 .swagger-ui .errors-wrapper .errors h4 {
-	@apply text-sm font-semibold;
+	@apply text-sm font-bold;
 }
 .swagger-ui .errors-wrapper .errors small {
 	@apply text-base-content;
@@ -1127,7 +1127,7 @@
 }
 .swagger-ui .markdown code,
 .swagger-ui .renderedMarkdown code {
-	@apply bg-base-200 text-primary bg-base-content/5 rounded text-sm font-semibold px-2 py-1;
+	@apply bg-base-200 text-primary bg-base-content/5 rounded text-sm font-bold px-2 py-1;
 	font-family: monospace;
 }
 .swagger-ui .markdown pre > code,
@@ -1202,7 +1202,7 @@
 }
 .swagger-ui .json-schema-2020-12-keyword__value--const,
 .swagger-ui .json-schema-2020-12-keyword__value--warning {
-	@apply border border-dashed border-base-content text-base-content rounded inline-block font-semibold leading-5 ml-2.5 px-1 pt-0.5;
+	@apply border border-dashed border-base-content text-base-content rounded inline-block font-bold leading-5 ml-2.5 px-1 pt-0.5;
 	font-family: monospace;
 }
 .swagger-ui .json-schema-2020-12-keyword__value--warning {
@@ -1249,7 +1249,7 @@
 	@apply my-2;
 }
 .swagger-ui .json-schema-2020-12-property .json-schema-2020-12__title {
-	@apply text-xs font-semibold align-middle;
+	@apply text-xs font-bold align-middle;
 	font-family: monospace;
 }
 .swagger-ui .json-schema-2020-12-keyword--properties > ul {
@@ -1279,7 +1279,7 @@
 	@apply inline list-none;
 }
 .swagger-ui .json-schema-2020-12__constraint {
-	@apply bg-primary text-primary-content rounded font-semibold text-sm ml-2.5 px-1 py-0.5;
+	@apply bg-primary text-primary-content rounded font-bold text-sm ml-2.5 px-1 py-0.5;
 	font-family: monospace;
 }
 .swagger-ui .json-schema-2020-12__constraint--string {

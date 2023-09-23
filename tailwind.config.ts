@@ -47,7 +47,7 @@ const config: Config = {
 		}),
 	],
 	daisyui: {
-		themes: ['autumn', 'fantasy', 'forest', 'synthwave', 'wireframe'],
+		themes: ['autumn', 'fantasy', 'forest', 'synthwave'],
 	},
 	darkMode: 'class',
 };

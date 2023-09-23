@@ -72,7 +72,7 @@ export default function TopFilter() {
 				leaveTo='opacity-0 -translate-y-3'
 			>
 				<div className='flex w-full flex-row flex-wrap gap-3 px-5 py-3 2xl:place-content-end'>
-					<h2 className='hidden w-full font-extrabold max-2xl:block'>Filter Control</h2>
+					<h2 className='hidden w-full font-bold max-2xl:block'>Filter Control</h2>
 
 					<SortControl moduleId={moduleId} searchQuery={searchQuery} />
 
@@ -91,9 +91,7 @@ export default function TopFilter() {
 						</div>
 					) : null}
 
-					<div className='my-auto min-w-[145px] gap-1 text-xs font-semibold text-base-content/70'>
-						{paginateInfo}
-					</div>
+					<div className='my-auto min-w-[145px] gap-1 text-xs font-bold text-base-content/70'>{paginateInfo}</div>
 
 					<Paginate searchQuery={searchQuery} totalPage={totalPage} />
 

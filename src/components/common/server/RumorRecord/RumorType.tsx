@@ -21,7 +21,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 	return (
 		<>
 			<div className='flex max-w-fit flex-wrap gap-2'>
-				<div className='font-bold'>Category: </div>
+				<div>Category: </div>
 				<QueryLink
 					aria-label={`Filter ${convertCode(rumorType)} Rumor`}
 					className={`btn btn-xs !border-current !bg-current shadow-current ${isActive ? '' : 'shadow-md'} ${
@@ -32,7 +32,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 					searchQuery={searchQuery}
 					resetPage
 				>
-					<div className='flex gap-1 font-extrabold capitalize text-slate-50'>
+					<div className='flex gap-1 font-bold capitalize text-slate-50'>
 						<div className={`font-atelier ${rumorTypeIconMap[rumorType]}`} />
 						{convertCode(rumorType)}
 					</div>

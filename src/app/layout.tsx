@@ -13,6 +13,7 @@ import {
 	appleMediaConfig,
 	metaThemeColorMap,
 } from '@root/constants';
+import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { ChildrenProps } from '@root/types/common/props';
 import type { DaisyUIThemeEnum } from '@root/types/common/zod';
 import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
@@ -20,9 +21,6 @@ import { LogProvider, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { ContextProvider } from '@root/utils/context';
 import { getCookie } from 'cookies-next';
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
-
-const fontAtelier = localFont({ src: './Atelier.woff2', preload: true, variable: '--font-atelier' });
 
 const getCurrentTheme = async (): Promise<DaisyUIThemeEnum> => {
 	if (typeof window !== 'undefined') return daisyUIThemeEnumSchema.parse(getCookie('theme', { path: '/' }));
@@ -84,7 +82,7 @@ export default async function RootLayout({ children }: ChildrenProps) {
 
 	return (
 		<html lang='en'>
-			<body className={fontAtelier.variable}>
+			<body className={`${fontAtelier.variable} ${fontComicSansMS.className}`}>
 				<ContextProvider defaultState={{ theme: currentTheme }}>
 					<ThemeWrapper>
 						<ScrollWrapper>

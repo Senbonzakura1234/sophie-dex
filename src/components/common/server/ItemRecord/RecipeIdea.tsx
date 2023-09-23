@@ -10,7 +10,7 @@ type RecipeIdeaProps = {
 export default function RecipeIdea({ recipeIdea: { contentText, contentData }, className }: RecipeIdeaProps) {
 	return (
 		<div className={`max-w-[90%] ${className}`}>
-			<span className='font-bold'>Recipe Idea:&nbsp;&nbsp;</span>
+			<span>Recipe Idea:&nbsp;&nbsp;</span>
 
 			<span className='text-lg'>
 				{contentText.map((text, key) => {
@@ -19,7 +19,7 @@ export default function RecipeIdea({ recipeIdea: { contentText, contentData }, c
 					if (text.includes('keyMap-')) data = contentData[parseInt(text.replace('keyMap-', ''))];
 
 					return data ? (
-						<Hyperlink key={key} input={data} className='link-primary link visited:link-accent' />
+						<Hyperlink key={key} input={data} className='link-info link visited:link-accent' />
 					) : (
 						<Fragment key={key}>{text}</Fragment>
 					);

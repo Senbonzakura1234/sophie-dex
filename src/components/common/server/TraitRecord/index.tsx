@@ -12,7 +12,7 @@ export default function TraitRecord({ currentId, ...props }: TraitRecordProps) {
 		<RecordWrapper {...props} currentId={currentId}>
 			{({ categories, description, itemPresent, mergeFrom }) => (
 				<>
-					<p className='text-lg'>{description}</p>
+					<p className='grow-0 text-lg'>{description}</p>
 
 					<TraitMergeList mergeFrom={mergeFrom} />
 

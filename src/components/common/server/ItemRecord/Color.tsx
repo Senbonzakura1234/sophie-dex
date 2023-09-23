@@ -15,7 +15,7 @@ export default function Color({ color }: ColorProps) {
 
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
-			<div className='font-bold'>Color: </div>
+			<div>Color: </div>
 
 			<QueryLink
 				aria-label={`Filter ${color} Item`}
@@ -27,7 +27,7 @@ export default function Color({ color }: ColorProps) {
 				searchQuery={searchQuery}
 				resetPage
 			>
-				<span className='font-extrabold capitalize text-slate-50'>{color.toLowerCase()}</span>
+				<span className='font-bold capitalize text-slate-50'>{color.toLowerCase()}</span>
 			</QueryLink>
 		</div>
 	);

@@ -8,10 +8,15 @@ type ItemPresentProps = { itemPresent: HyperLinkRecord };
 export default function ItemPresent({ itemPresent: { table: moduleId, id, name } }: ItemPresentProps) {
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
-			<div className='font-bold capitalize'>{moduleId}: </div>
+			<div className='capitalize'>{moduleId}: </div>
 
-			<Link aria-label={name} className='link-hover link' href={`/${moduleId}/${id}`} role='navigation'>
-				<span className='flex gap-1 font-bold'>
+			<Link
+				aria-label={name}
+				className='link-info link visited:link-accent'
+				href={`/${moduleId}/${id}`}
+				role='navigation'
+			>
+				<span className='flex gap-1 font-bold decoration-inherit'>
 					<DocumentChartBarIcon className='my-auto aspect-square h-4' />
 					{name}
 				</span>

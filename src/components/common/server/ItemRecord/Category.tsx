@@ -26,10 +26,10 @@ export default function Category({ category, color }: CategoryProps) {
 	return (
 		<>
 			<div className='flex max-w-fit flex-wrap gap-2'>
-				<div className='font-bold'>Category: </div>
+				<div>Category: </div>
 				<QueryLink
 					aria-label={`Filter ${convertCode(category)} Item`}
-					className={`btn btn-primary btn-xs gap-1 font-extrabold capitalize shadow-primary/50 ${
+					className={`btn btn-primary btn-xs gap-1 font-bold capitalize shadow-primary/50 ${
 						isActive ? '' : 'shadow-lg'
 					}`}
 					isActive={isActive}

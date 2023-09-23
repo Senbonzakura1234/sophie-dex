@@ -9,14 +9,15 @@ export default function Description({ description }: DescriptionProps) {
 			{Object.entries(description).map(([key, value]) =>
 				!value || (Array.isArray(value) && !value.length) ? null : (
 					<li key={key}>
-						<span className='inline capitalize'>{key.toLowerCase()}: </span>
+						<span className='inline text-base capitalize'>{key.toLowerCase()}: </span>
 
 						{typeof value === 'string' ? (
 							value
-						) : Array.isArray(value) ? (
-							<span className='font-bold'>{value.join(', ')}</span>
 						) : (
-							<Hyperlink input={value} className='link-primary link visited:link-accent' />
+							<Hyperlink
+								input={Array.isArray(value) ? { content: value.join(', ') } : value}
+								className={Array.isArray(value) ? 'normal-case' : 'link-info link visited:link-accent'}
+							/>
 						)}
 					</li>
 				),

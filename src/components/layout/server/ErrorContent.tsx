@@ -17,7 +17,7 @@ export default function ErrorContent({ code = 'INTERNAL_SERVER_ERROR' }: ErrorCo
 			<div className='grid gap-1'>
 				<h1 className='text-7xl font-bold tracking-widest md:text-8xl'>{status}</h1>
 
-				<span className='font-semibold md:text-lg'>Sorry! {message}.</span>
+				<span className='font-bold md:text-lg'>Sorry! {message}.</span>
 			</div>
 
 			<div>

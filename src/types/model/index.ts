@@ -83,7 +83,7 @@ export const relatedCategoryList = [
 	'MAGIC_ITEM',
 ] as const;
 
-export const daisyUIThemeList = ['autumn', 'fantasy', 'forest', 'synthwave', 'wireframe'] as const;
+export const daisyUIThemeList = ['autumn', 'fantasy', 'forest', 'synthwave'] as const;
 
 export const directionList = ['asc', 'desc'] as const;
 

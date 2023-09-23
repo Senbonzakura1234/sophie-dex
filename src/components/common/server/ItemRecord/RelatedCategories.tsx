@@ -27,7 +27,7 @@ export default function RelatedCategories({ relatedCategories }: RelatedCategori
 						className={`link-hover link text-xs capitalize ${
 							!isActive
 								? 'italic text-base-content/70'
-								: 'font-semibold text-shadow-dark-md dark:text-shadow-light-md'
+								: 'font-bold text-shadow-dark-md dark:text-shadow-light-md'
 						}`}
 						isActive={isActive}
 						href={{ query: { relatedCategory } }}

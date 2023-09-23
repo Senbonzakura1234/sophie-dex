@@ -64,7 +64,6 @@ export const metaThemeColorMap = {
 	fantasy: 'rgb(110, 11, 117)',
 	forest: 'rgb(30, 184, 84)',
 	synthwave: 'rgb(231, 121, 193)',
-	wireframe: 'rgb(184, 184, 184)',
 } as const satisfies Record<DaisyUIThemeEnum, string>;
 
 export const sortByMap = {

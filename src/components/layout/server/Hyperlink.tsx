@@ -28,7 +28,7 @@ export default function Hyperlink({ input, className }: HyperlinkProps) {
 		return { label: input.name, href: `/${input.table}/${input.id}` } as const;
 	}, [input]);
 
-	if (!href) return <span className='font-bold capitalize'>{label}</span>;
+	if (!href) return <span className={`font-bold capitalize text-primary-focus ${className}`}>{label}</span>;
 
 	return (
 		<>

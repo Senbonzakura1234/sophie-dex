@@ -6,16 +6,12 @@
 	html,
 	body {
 		@apply overflow-hidden;
-		font-family:
-			Chalkboard,
-			comic sans ms,
-			'sanssecondaryerif';
 	}
 }
 
 @layer components {
 	.background-lips {
-		background-image: url('../images/lips.svg');
+		background-image: url('./images/lips.svg');
 		background-repeat: repeat;
 	}
 }

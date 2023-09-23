@@ -9,16 +9,16 @@ type DescriptionProps = {
 export default function Description({ description: { contentText, contentData } }: DescriptionProps) {
 	return (
 		<div>
-			<span className='font-bold'>Description:&nbsp;&nbsp;</span>
+			<span>Description:&nbsp;&nbsp;</span>
 
-			<span className='text-lg'>
+			<span className='text-lg font-bold'>
 				{contentText.map((text, key) => {
 					const data = contentData[parseInt(text.replace('keyMap-', ''))];
 
 					return typeof data === 'undefined' ? (
 						<Fragment key={key}>{text}</Fragment>
 					) : (
-						<Hyperlink key={key} input={data} className='link-primary link visited:link-accent' />
+						<Hyperlink key={key} input={data} className='link-info link visited:link-accent' />
 					);
 				})}
 			</span>

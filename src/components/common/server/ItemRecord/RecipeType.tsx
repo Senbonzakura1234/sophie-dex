@@ -16,7 +16,7 @@ export default function RecipeType({ recipeType }: RecipeTypeProps) {
 
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
-			<div className='font-bold'>Recipe type: </div>
+			<div>Recipe type: </div>
 
 			<QueryLink
 				aria-label={`Filter ${recipeType} Item`}
@@ -28,7 +28,7 @@ export default function RecipeType({ recipeType }: RecipeTypeProps) {
 				searchQuery={searchQuery}
 				resetPage
 			>
-				<span className='font-extrabold capitalize text-slate-50'>{convertCode(recipeType)}</span>
+				<span className='font-bold capitalize text-slate-50'>{convertCode(recipeType)}</span>
 			</QueryLink>
 		</div>
 	);
