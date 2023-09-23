@@ -189,10 +189,10 @@
 	@apply flex-1;
 }
 .swagger-ui .opblock-tag small {
-	@apply lg:text-sm px-2.5;
+	@apply text-sm px-2.5;
 }
 .swagger-ui .opblock-tag > div {
-	@apply lg:overflow-hidden lg:text-ellipsis lg:whitespace-nowrap;
+	@apply overflow-hidden text-ellipsis whitespace-nowrap;
 }
 .swagger-ui .opblock-tag .info__externaldocs {
 	@apply text-right;
@@ -275,11 +275,11 @@
 .swagger-ui .opblock .opblock-summary-operation-id,
 .swagger-ui .opblock .opblock-summary-path,
 .swagger-ui .opblock .opblock-summary-path__deprecated {
-	@apply items-center flex text-xs lg:text-base font-semibold break-words grow;
+	@apply items-center flex text-base font-semibold break-words grow;
 	font-family: monospace;
 }
 .swagger-ui .opblock .opblock-summary-path {
-	@apply max-w-full lg:max-w-lg shrink lg:shrink-0;
+	@apply max-w-lg;
 }
 .swagger-ui .opblock .opblock-summary-path__deprecated {
 	@apply line-through;
@@ -505,6 +505,10 @@
 .swagger-ui .opblock-body pre.microlight span.headerline {
 	@apply block;
 }
+.swagger-ui .request-url pre.microlight,
+.swagger-ui .response-col_description > div:nth-child(2) pre.microlight {
+	@apply !bg-base-content !text-base-100;
+}
 .swagger-ui .highlight-code {
 	@apply relative mockup-code;
 }
@@ -655,10 +659,10 @@
 	@apply bg-error-content border-error;
 }
 .swagger-ui .copy-to-clipboard {
-	@apply btn btn-square bottom-7 aspect-square flex btn-sm absolute right-4;
+	@apply btn btn-square bottom-5 aspect-square flex btn-sm absolute right-4;
 }
 .swagger-ui .download-contents {
-	@apply bottom-7 h-8 absolute right-20 btn-sm btn capitalize;
+	@apply bottom-5 h-8 absolute right-20 btn-sm btn capitalize;
 }
 .swagger-ui .copy-to-clipboard button {
 	background: url('/assets/swagger/copy-to-clipboard-black.svg') 50% no-repeat;
@@ -680,7 +684,7 @@
 	@apply fill-base-content;
 }
 .swagger-ui .curl-command .copy-to-clipboard {
-	@apply bottom-7 right-4 !bg-base-100 z-10;
+	@apply bottom-5 right-4 !bg-base-100 z-10;
 }
 .swagger-ui .curl-command .copy-to-clipboard,
 .swagger-ui .highlight-code .copy-to-clipboard {
@@ -1068,7 +1072,7 @@
 	@apply text-4xl;
 }
 .swagger-ui .info .title small {
-	@apply ml-3 bg-base-content rounded-3xl inline-block text-xs py-0.5 relative lg:-top-1.5 align-super font-bold;
+	@apply ml-3 bg-base-content rounded-3xl inline-block text-xs py-0.5 relative -top-1.5 align-super font-bold;
 }
 .swagger-ui .info .title small.version-stamp {
 	background-color: #89bf04;
