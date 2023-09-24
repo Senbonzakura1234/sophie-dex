@@ -1,3 +1,4 @@
+import type { ZodType } from 'zod';
 import { z } from 'zod';
 import type { ZodOpenApiPathItemObject, ZodOpenApiPathsObject, ZodOpenApiResponsesObject } from 'zod-openapi';
 import { createDocument, extendZodWithOpenApi } from 'zod-openapi';
@@ -63,10 +64,23 @@ const getRecordSwaggerSchema = (moduleId: ModuleIdEnum, example: ExampleRecord) 
 		})
 		.openapi({ example });
 
+type ResponseTypeEnum = 'list' | 'detail' | 'export';
+
+const responseMapper = {
+	detail: recordSchema => recordSchema,
+	list: recordSchema =>
+		z.object({
+			records: z.array(recordSchema),
+			totalPage: genericNonnegativeIntSchema.openapi({ example: 1 }),
+			totalRecord: genericNonnegativeIntSchema.openapi({ example: 1 }),
+		}),
+	export: recordSchema => z.array(recordSchema),
+} as const satisfies Record<ResponseTypeEnum, (recordSchema: ReturnType<typeof getRecordSwaggerSchema>) => ZodType>;
+
 const getRespondSwaggerSchema = (
 	moduleId: ModuleIdEnum,
 	exampleRecord: ExampleRecord,
-	isDetail = false,
+	type: ResponseTypeEnum,
 ): ZodOpenApiResponsesObject => ({
 	'200': {
 		description: '',
@@ -74,18 +88,24 @@ const getRespondSwaggerSchema = (
 			'application/json:': {
 				schema: z.object({
 					isSuccess: z.boolean().openapi({ example: true }),
-					data: (isDetail
-						? getRecordSwaggerSchema(moduleId, exampleRecord)
-						: z.object({
-								records: z.array(getRecordSwaggerSchema(moduleId, exampleRecord)),
-								totalPage: genericNonnegativeIntSchema.openapi({ example: 1 }),
-								totalRecord: genericNonnegativeIntSchema.openapi({ example: 1 }),
-						  })
-					).nullable(),
+					data: responseMapper[type](getRecordSwaggerSchema(moduleId, exampleRecord)).nullable(),
 					error: z.object({ code: errorEnumSchema }).nullable().openapi({ example: null }),
 				}),
 			},
 		},
+	},
+});
+
+const getSingleRecordSwaggerSchema = (
+	moduleId: ModuleIdEnum,
+	exampleRecord: ExampleRecord,
+): ZodOpenApiPathItemObject => ({
+	get: {
+		tags: [capitalize(moduleId)],
+		summary: `${capitalize(moduleId)} Record`,
+		description: `Return Single ${capitalize(moduleId)} Record`,
+		requestParams: { path: z.object({ id: genericIdSchema }) },
+		responses: getRespondSwaggerSchema(moduleId, exampleRecord, 'detail'),
 	},
 });
 
@@ -117,20 +137,19 @@ const getListRecordSwaggerSchema = (
 				...(moduleId === 'rumor' ? { rumorType: searchQueryValidator.shape.rumorType } : {}),
 			}),
 		},
-		responses: getRespondSwaggerSchema(moduleId, exampleRecord),
+		responses: getRespondSwaggerSchema(moduleId, exampleRecord, 'list'),
 	},
 });
 
-const getSingleRecordSwaggerSchema = (
+const getExportRecordsSwaggerSchema = (
 	moduleId: ModuleIdEnum,
 	exampleRecord: ExampleRecord,
 ): ZodOpenApiPathItemObject => ({
 	get: {
 		tags: [capitalize(moduleId)],
-		summary: `${capitalize(moduleId)} Record`,
-		description: `Return Single ${capitalize(moduleId)} Record`,
-		requestParams: { path: z.object({ id: genericIdSchema }) },
-		responses: getRespondSwaggerSchema(moduleId, exampleRecord, true),
+		summary: `Export ${capitalize(moduleId)} Table`,
+		description: `Return Full ${capitalize(moduleId)} Table`,
+		responses: getRespondSwaggerSchema(moduleId, exampleRecord, 'export'),
 	},
 });
 
@@ -142,6 +161,7 @@ const getPaths = (exampleRecordObject: ExampleRecordObject): ZodOpenApiPathsObje
 					[
 						[`/api/public/${m}`, getListRecordSwaggerSchema(m, exampleRecordObject[m])],
 						[`/api/public/${m}/{id}`, getSingleRecordSwaggerSchema(m, exampleRecordObject[m])],
+						[`/api/public/${m}/export`, getExportRecordsSwaggerSchema(m, exampleRecordObject[m])],
 					] as const,
 			)
 			.flat(),

@@ -1,5 +1,5 @@
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { getAllTraitIds } from '@root/server/database';
+import { exportTraits, getAllTraitIds } from '@root/server/database';
 import { listRecordProvider } from '@root/server/database/repository/listRecord';
 import { singleRecordProvider } from '@root/server/database/repository/singleRecord';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
@@ -13,4 +13,6 @@ export const traitRouter = router({
 	getAllIds: publicProcedure.query(async () =>
 		(await getAllTraitIds.execute().catch(onQueryDBError)).map(({ id }) => ({ id })),
 	),
+
+	export: publicProcedure.query(() => exportTraits.execute().catch(onQueryDBError)),
 });

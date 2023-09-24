@@ -72,16 +72,16 @@ export const getListTraitDefault = db
 	.offset(sql.placeholder('offset'))
 	.prepare('getListTraitDefault');
 
-const exportEffects = db.select().from(effects).prepare('exportEffects');
-const exportItems = db.select().from(items).prepare('exportItems');
-const exportRumors = db.select().from(rumors).prepare('exportRumors');
-const exportTrait = db.select().from(traits).prepare('exportTraits');
+export const exportEffects = db.select().from(effects).prepare('exportEffects');
+export const exportItems = db.select().from(items).prepare('exportItems');
+export const exportRumors = db.select().from(rumors).prepare('exportRumors');
+export const exportTraits = db.select().from(traits).prepare('exportTraits');
 
 export const exportDBQueriesMap: ExportDBQueriesMap = {
 	effect: exportEffects,
 	item: exportItems,
 	rumor: exportRumors,
-	trait: exportTrait,
+	trait: exportTraits,
 };
 
 export const getAllEffectIds = db.select({ id: effects.id }).from(effects).prepare('getAllEffectIds');

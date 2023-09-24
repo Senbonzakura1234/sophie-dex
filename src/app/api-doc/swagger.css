@@ -253,9 +253,7 @@
 	@apply bg-base-300 -bottom-4 h-1 left-1/2 -translate-x-1/2 absolute content-[];
 	width: 120%;
 }
-.swagger-ui .opblock.is-open .opblock-summary {
-	@apply border border-base-content;
-}
+
 .swagger-ui .opblock .opblock-section-header {
 	@apply bg-base-200 shadow shadow-base-content/20 items-center flex px-5 py-2 min-h-12;
 }
