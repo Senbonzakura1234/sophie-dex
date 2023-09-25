@@ -77,3 +77,9 @@ export type IdQuery = z.infer<typeof idQueryValidator>;
 
 export const highlightTextValidator = z.object({ content: z.string() });
 export type HighlightText = z.infer<typeof highlightTextValidator>;
+
+export const githubFileResponseSchema = z.object({ content: z.string() });
+export type GithubFileResponse = z.infer<typeof githubFileResponseSchema>;
+
+export const packageDotJSONSchema = z.object({ version: z.string() });
+export type PackageDotJSON = z.infer<typeof packageDotJSONSchema>;

@@ -18,7 +18,6 @@ export const APP_CODE = env.NEXT_PUBLIC_APP_CODE;
 export const APP_DESCRIPTION = env.NEXT_PUBLIC_APP_DESCRIPTION;
 export const APP_KEYWORD = env.NEXT_PUBLIC_APP_KEYWORD;
 export const APP_AUTHOR = env.NEXT_PUBLIC_APP_AUTHOR;
-export const APP_VERSION = env.NEXT_PUBLIC_APP_VERSION;
 export const APP_AUTHOR_EMAIL = env.NEXT_PUBLIC_APP_AUTHOR_EMAIL;
 
 export const defaultLimit = 16;

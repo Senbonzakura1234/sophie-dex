@@ -8,10 +8,6 @@ const appCodeSchema = z
 	.regex(/(?=\S*['-])([a-zA-Z'-]+)/)
 	.catch('-');
 const appKeyWordSchema = z.string().regex(/[^,]+/).catch('-');
-const appVersionSchema = z
-	.string()
-	.regex(/^(\d+\.)?(\d+\.)?(\*|\d+)$/)
-	.catch('-');
 
 /** @type {Record<string, string | undefined>}*/
 const dbURLMap = { NEON_DB: process.env.PGURL_NONPOOLING, VERCEL_DB: process.env.POSTGRES_URL_NON_POOLING };
@@ -34,7 +30,6 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_DESCRIPTION: z.string().catch('-'),
 		NEXT_PUBLIC_APP_KEYWORD: appKeyWordSchema,
 		NEXT_PUBLIC_APP_AUTHOR: z.string().catch('-'),
-		NEXT_PUBLIC_APP_VERSION: appVersionSchema,
 		NEXT_PUBLIC_APP_AUTHOR_EMAIL: z.string().email().catch('-'),
 	},
 	runtimeEnv: {
@@ -53,7 +48,6 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_DESCRIPTION: process.env.NEXT_PUBLIC_APP_DESCRIPTION,
 		NEXT_PUBLIC_APP_KEYWORD: process.env.NEXT_PUBLIC_APP_KEYWORD,
 		NEXT_PUBLIC_APP_AUTHOR: process.env.NEXT_PUBLIC_APP_AUTHOR,
-		NEXT_PUBLIC_APP_VERSION: process.env.NEXT_PUBLIC_APP_VERSION,
 		NEXT_PUBLIC_APP_AUTHOR_EMAIL: process.env.NEXT_PUBLIC_APP_AUTHOR_EMAIL,
 	},
 });

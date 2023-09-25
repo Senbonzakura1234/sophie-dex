@@ -1046,6 +1046,7 @@ packages:
     resolution: {integrity: sha512-0Y32CQE6tIt4IPsoCzWAUskZSyGkfw87IIsH5Bcm3D1qIlAhPAokQbe1212MmZoLVUvqrXDqZHXnOxxMaHZvYw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-4/-/apidom-ns-json-schema-draft-4-0.76.2.tgz}
     name: '@swagger-api/apidom-ns-json-schema-draft-4'
     version: 0.76.2
+    requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.22.15
       '@swagger-api/apidom-ast': registry.npmjs.org/@swagger-api/apidom-ast@0.76.2

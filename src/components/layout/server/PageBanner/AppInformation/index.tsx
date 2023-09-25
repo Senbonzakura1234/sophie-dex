@@ -1,8 +1,11 @@
 import GithubIcon from '@root/components/common/server/icons/solid/GithubIcon';
-import { APP_AUTHOR, APP_VERSION } from '@root/constants';
+import { APP_AUTHOR } from '@root/constants';
+import { getVersion } from '@root/utils/server';
 import Link from 'next/link';
 
-export default function AppInformation() {
+export default async function AppInformation() {
+	const version = await getVersion();
+
 	return (
 		<div className='grid gap-3 text-center'>
 			<Link
@@ -18,7 +21,7 @@ export default function AppInformation() {
 			</Link>
 
 			<div className='card mx-auto block bg-primary px-3 py-1 text-xs font-bold leading-none text-primary-content shadow-lg shadow-base-content/30'>
-				v{APP_VERSION}
+				v{version}
 			</div>
 		</div>
 	);
