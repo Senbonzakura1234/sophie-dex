@@ -6,9 +6,7 @@ import type { NextResponse } from 'next/server';
 import { env } from 'process';
 
 export const appleMediaConfig: AppleMediaConfig = [
-	{
-		url: 'iPhone_14_Pro_Max_landscape',
-	},
+	{ url: 'iPhone_14_Pro_Max_landscape' },
 	{
 		url: 'iPhone_14_Pro_Max_landscape',
 		media: { width: 430, height: 932, ratio: 3, orientation: 'landscape' },
@@ -157,10 +155,8 @@ export const defaultResponseConfig: Parameters<typeof NextResponse.json>[1] = {
 };
 
 export const defaultGithubHeader: Parameters<typeof fetch>[1] = {
-	headers: {
-		Authorization: `Bearer ${env.GITHUB_TOKEN}`,
-		'X-GitHub-Api-Version': '2022-11-28',
-	},
+	headers: { Authorization: `Bearer ${env.GITHUB_TOKEN}`, 'X-GitHub-Api-Version': '2022-11-28' },
+	next: { revalidate: 300 },
 };
 
 export const defaultRepoInfo: RepoInfo = {

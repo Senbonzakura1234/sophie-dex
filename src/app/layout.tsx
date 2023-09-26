@@ -13,7 +13,7 @@ import type { DaisyUIThemeEnum } from '@root/types/common/zod';
 import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
 import { LogProvider, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { ContextProvider } from '@root/utils/context';
-import { getGithubUserInfo, getRepoInfo } from '@root/utils/server';
+import { getRepoInfo } from '@root/utils/server';
 import { getCookie } from 'cookies-next';
 import type { Metadata } from 'next';
 
@@ -30,11 +30,13 @@ const getCurrentTheme = async (): Promise<DaisyUIThemeEnum> => {
 };
 
 export async function generateMetadata(): Promise<Metadata> {
-	const [currentTheme, { description }, { html_url, login }] = await Promise.all([
-		getCurrentTheme(),
-		getRepoInfo(),
-		getGithubUserInfo(),
-	]);
+	const [
+		currentTheme,
+		{
+			description,
+			owner: { html_url, login },
+		},
+	] = await Promise.all([getCurrentTheme(), getRepoInfo()]);
 
 	return {
 		appleWebApp: {

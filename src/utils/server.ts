@@ -75,11 +75,21 @@ export async function improvedFetch<TResult = unknown>(
 
 	const fetchResult = await tryCatchHandler(fetch(...args));
 
-	if (!fetchResult.isSuccess)
+	if (!fetchResult.isSuccess) {
 		throw new TRPCError({
 			code: 'INTERNAL_SERVER_ERROR',
 			message: `Fetch fail at: ${JSON.stringify(args[0], null, 2)}`,
+			cause: fetchResult.error,
 		});
+	}
+
+	if (!fetchResult.data.ok) {
+		throw new TRPCError({
+			code: 'INTERNAL_SERVER_ERROR',
+			message: `Fetch fail at: ${JSON.stringify(args[0], null, 2)}`,
+			cause: fetchResult.data,
+		});
+	}
 
 	const jsonResult = await tryCatchHandler(fetchResult.data.json());
 
@@ -87,13 +97,19 @@ export async function improvedFetch<TResult = unknown>(
 		throw new TRPCError({
 			code: 'INTERNAL_SERVER_ERROR',
 			message: `Parse JSON fail: ${JSON.stringify(jsonResult.error, null, 2)}`,
+			cause: jsonResult.error,
 		});
 
 	const parseResult = await validator.safeParseAsync(jsonResult.data);
 
 	if (parseResult.success) return parseResult.data;
 
-	if (!defaultValue) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: parseResult.error.message });
+	if (!defaultValue)
+		throw new TRPCError({
+			code: 'INTERNAL_SERVER_ERROR',
+			message: parseResult.error.message,
+			cause: parseResult.error,
+		});
 
 	return defaultValue;
 }
