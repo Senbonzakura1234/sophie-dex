@@ -1,7 +1,7 @@
 'use client';
 
 import QueryLink from '@root/components/common/client/QueryLink';
-import { colorTWClassMap } from '@root/constants';
+import { colorTWClassMap } from '@root/constants/common';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { ColorEnum } from '@root/types/common/zod';
 import { useMemo } from 'react';

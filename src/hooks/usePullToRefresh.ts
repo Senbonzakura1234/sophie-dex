@@ -1,4 +1,4 @@
-import { DEFAULT_MAXIMUM_PULL_LENGTH, DEFAULT_REFRESH_THRESHOLD } from '@root/constants';
+import { DEFAULT_MAXIMUM_PULL_LENGTH, DEFAULT_REFRESH_THRESHOLD } from '@root/constants/common';
 import { useCallback, useEffect, useState } from 'react';
 
 type UsePullToRefreshParams = {

@@ -1,7 +1,7 @@
 'use client';
 
 import QueryLink from '@root/components/common/client/QueryLink';
-import { rumorTypeColorMap, rumorTypeIconMap } from '@root/constants';
+import { rumorTypeColorMap, rumorTypeIconMap } from '@root/constants/common';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { RumorTypeEnum } from '@root/types/common/zod';
 import { convertCode } from '@root/utils/common';

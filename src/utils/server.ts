@@ -5,10 +5,17 @@ import { asc, desc, sql } from 'drizzle-orm';
 
 import type { PageProps } from '@root/types/common';
 import type { DirectionEnum, SortByEnum } from '@root/types/common/zod';
-import { githubFileResponseSchema, packageDotJSONSchema, searchQueryValidator } from '@root/types/common/zod';
+import {
+	githubFileResponseSchema,
+	githubUserInfoSchema,
+	packageDotJSONSchema,
+	repoInfoSchema,
+	searchQueryValidator,
+} from '@root/types/common/zod';
 import type { CommonRecord } from '@root/types/model';
 
-import { APP_AUTHOR, APP_CODE } from '@root/constants';
+import { APP_AUTHOR, APP_CODE } from '@root/constants/common';
+import { defaultGithubHeader, defaultGithubUserInfo, defaultRepoInfo } from '@root/constants/server';
 import { TRPCError } from '@trpc/server';
 import type { Metadata, ResolvingMetadata } from 'next';
 import type { ZodType } from 'zod';
@@ -97,6 +104,7 @@ export const getVersion = async () => {
 			githubFileResponseSchema,
 			undefined,
 			`https://api.github.com/repos/${APP_AUTHOR}/${APP_CODE}/contents/package.json`,
+			defaultGithubHeader,
 		),
 	);
 
@@ -115,4 +123,25 @@ export const getVersion = async () => {
 	if (!packageDotJSONResult.success) return '0.0.0';
 
 	return packageDotJSONResult.data.version;
+};
+
+export const getRepoInfo = async () => {
+	const repoResult = await tryCatchHandler(
+		improvedFetch(
+			repoInfoSchema,
+			undefined,
+			`https://api.github.com/repos/${APP_AUTHOR}/${APP_CODE}`,
+			defaultGithubHeader,
+		),
+	);
+
+	return repoResult.isSuccess ? repoResult.data : defaultRepoInfo;
+};
+
+export const getGithubUserInfo = async () => {
+	const githubUserInfo = await tryCatchHandler(
+		improvedFetch(githubUserInfoSchema, undefined, `https://api.github.com/users/${APP_AUTHOR}`, defaultGithubHeader),
+	);
+
+	return githubUserInfo.isSuccess ? githubUserInfo.data : defaultGithubUserInfo;
 };

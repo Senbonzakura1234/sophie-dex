@@ -83,3 +83,31 @@ export type GithubFileResponse = z.infer<typeof githubFileResponseSchema>;
 
 export const packageDotJSONSchema = z.object({ version: z.string() });
 export type PackageDotJSON = z.infer<typeof packageDotJSONSchema>;
+
+export const repoInfoSchema = z.object({
+	name: z.string(),
+	full_name: z.string(),
+	owner: z.object({
+		login: z.string(),
+		avatar_url: z.string().url(),
+		html_url: z.string().url(),
+	}),
+	html_url: z.string().url(),
+	description: z.string(),
+});
+export type RepoInfo = z.infer<typeof repoInfoSchema>;
+
+export const githubUserInfoSchema = z.object({
+	login: z.string(),
+	avatar_url: z.string().url(),
+	url: z.string().url(),
+	html_url: z.string().url(),
+	name: z.string(),
+	company: z.string(),
+	blog: z.string().url(),
+	location: z.string(),
+	email: z.string().email(),
+	bio: z.string(),
+	twitter_username: z.string(),
+});
+export type GithubUserInfo = z.infer<typeof githubUserInfoSchema>;

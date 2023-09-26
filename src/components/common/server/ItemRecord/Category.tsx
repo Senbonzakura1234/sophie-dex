@@ -1,7 +1,7 @@
 'use client';
 
 import QueryLink from '@root/components/common/client/QueryLink';
-import { categoryIconMap } from '@root/constants';
+import { categoryIconMap } from '@root/constants/common';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { TextShadowMap } from '@root/types/common/tailwind';
 import type { CategoryEnum, ColorEnum } from '@root/types/common/zod';

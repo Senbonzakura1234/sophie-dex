@@ -1,5 +1,5 @@
 import RefetchButton from '@root/components/common/client/RefetchButton';
-import { errorMap } from '@root/constants';
+import { errorMap } from '@root/constants/common';
 import type { CommonServerError } from '@root/types/common';
 import Link from 'next/link';
 

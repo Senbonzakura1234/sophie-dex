@@ -1,5 +1,5 @@
 import QueryLink from '@root/components/common/client/QueryLink';
-import { sortByMap } from '@root/constants';
+import { sortByMap } from '@root/constants/common';
 import type { useModuleId } from '@root/hooks/useModuleId';
 import type { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { useMemo } from 'react';

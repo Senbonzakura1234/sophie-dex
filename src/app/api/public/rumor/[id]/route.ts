@@ -1,4 +1,4 @@
-import { defaultResponseConfig } from '@root/constants';
+import { defaultResponseConfig } from '@root/constants/server';
 import { appRouter } from '@root/server/api/router/_app';
 import type { PageProps } from '@root/types/common';
 import { tryCatchHandler } from '@root/utils/common';

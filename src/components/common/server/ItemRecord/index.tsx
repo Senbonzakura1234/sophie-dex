@@ -1,5 +1,5 @@
 import RecordWrapper from '@root/components/common/server/RecordWrapper';
-import { recipeTypeColorMap } from '@root/constants';
+import { recipeTypeColorMap } from '@root/constants/common';
 import type { Item } from '@root/server/database/schema';
 
 import Category from './Category';

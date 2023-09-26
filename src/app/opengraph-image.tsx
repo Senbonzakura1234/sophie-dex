@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { APP_NAME } from '@root/constants';
+import { APP_NAME } from '@root/constants/common';
 import { getBaseUrl } from '@root/utils/common';
 import type { ServerRuntime } from 'next';
 import { ImageResponse } from 'next/server';

@@ -5,20 +5,15 @@ import '@total-typescript/ts-reset';
 import ScrollWrapper from '@root/components/layout/client/ScrollWrapper';
 import ThemeSwitcher from '@root/components/layout/client/ThemeSwitcher';
 import ThemeWrapper from '@root/components/layout/client/ThemeWrapper';
-import {
-	APP_AUTHOR,
-	APP_DESCRIPTION,
-	APP_KEYWORD,
-	APP_NAME,
-	appleMediaConfig,
-	metaThemeColorMap,
-} from '@root/constants';
+import { APP_KEYWORD, APP_NAME, metaThemeColorMap } from '@root/constants/common';
+import { appleMediaConfig } from '@root/constants/server';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { ChildrenProps } from '@root/types/common/props';
 import type { DaisyUIThemeEnum } from '@root/types/common/zod';
 import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
 import { LogProvider, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { ContextProvider } from '@root/utils/context';
+import { getGithubUserInfo, getRepoInfo } from '@root/utils/server';
 import { getCookie } from 'cookies-next';
 import type { Metadata } from 'next';
 
@@ -35,7 +30,11 @@ const getCurrentTheme = async (): Promise<DaisyUIThemeEnum> => {
 };
 
 export async function generateMetadata(): Promise<Metadata> {
-	const currentTheme = await getCurrentTheme();
+	const [currentTheme, { description }, { html_url, login }] = await Promise.all([
+		getCurrentTheme(),
+		getRepoInfo(),
+		getGithubUserInfo(),
+	]);
 
 	return {
 		appleWebApp: {
@@ -48,8 +47,8 @@ export async function generateMetadata(): Promise<Metadata> {
 				url: `/assets/splash_screens/${url}.png`,
 			})),
 		},
-		authors: { name: APP_AUTHOR, url: `https://github.com/${APP_AUTHOR}` },
-		description: APP_DESCRIPTION,
+		authors: { name: login, url: html_url },
+		description,
 		icons: {
 			apple: '/assets/splash_screens/icon.png',
 			icon: '/favicon.ico',
@@ -60,18 +59,18 @@ export async function generateMetadata(): Promise<Metadata> {
 		metadataBase: new URL(getBaseUrl(true)),
 		other: {
 			google: 'notranslate',
-			'og:title': `${APP_NAME} | ${APP_DESCRIPTION}`,
-			'og:description': APP_DESCRIPTION,
+			'og:title': `${APP_NAME} | ${description}`,
+			'og:description': description,
 			'og:url': getBaseUrl(true),
 		},
 		robots: 'all',
 		themeColor: metaThemeColorMap[currentTheme],
-		title: `${APP_NAME} | ${APP_DESCRIPTION}`,
+		title: `${APP_NAME} | ${description}`,
 		twitter: {
 			card: 'summary_large_image',
-			description: APP_DESCRIPTION,
+			description: description,
 			images: `${getBaseUrl()}/opengraph-image`,
-			title: `${APP_NAME} | ${APP_DESCRIPTION}`,
+			title: `${APP_NAME} | ${description}`,
 		},
 		viewport: 'width=device-width, initial-scale=1.0',
 	};

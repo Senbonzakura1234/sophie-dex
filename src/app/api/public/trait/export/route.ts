@@ -1,4 +1,4 @@
-import { defaultResponseConfig } from '@root/constants';
+import { defaultResponseConfig } from '@root/constants/server';
 import { appRouter } from '@root/server/api/router/_app';
 import { tryCatchHandler } from '@root/utils/common';
 import { createServerSideHelpers } from '@trpc/react-query/server';

@@ -1,6 +1,6 @@
 # Sophie Dex
 
-A wiki page created for [Atelier Sophie DX](https://store.steampowered.com/app/1502970/Atelier_Sophie_The_Alchemist_of_the_Mysterious_Book_DX/)
+Wiki page for [Atelier Sophie DX](https://store.steampowered.com/app/1502970/Atelier_Sophie_The_Alchemist_of_the_Mysterious_Book_DX/)
 
 ## Tech Stack
 

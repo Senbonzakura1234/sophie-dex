@@ -1,6 +1,6 @@
 import 'server-only';
 
-import { defaultLimit, sortByMap } from '@root/constants';
+import { defaultLimit, sortByMap } from '@root/constants/common';
 import {
 	db,
 	getListEffectDefault,

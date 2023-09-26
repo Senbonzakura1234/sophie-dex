@@ -5,7 +5,7 @@ import RefetchButton from '@root/components/common/client/RefetchButton';
 import FilterIcon from '@root/components/common/server/icons/outline/FilterIcon';
 import ArrowPathIcon from '@root/components/common/server/icons/solid/ArrowPathIcon';
 import Paginate from '@root/components/layout/client/Paginate';
-import { defaultLimit } from '@root/constants';
+import { defaultLimit } from '@root/constants/common';
 import { useMediaQuery } from '@root/hooks/useMediaQuery';
 import { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';

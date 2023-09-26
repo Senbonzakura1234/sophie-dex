@@ -4,7 +4,7 @@ import CheckCircleIcon from '@root/components/common/server/icons/solid/CheckCir
 import ExclamationCircle from '@root/components/common/server/icons/solid/ExclamationCircle';
 import ExclamationTriangle from '@root/components/common/server/icons/solid/ExclamationTriangle';
 import InfoIcon from '@root/components/common/server/icons/solid/InfoIcon';
-import { alertTypeColorMap, colorTWClassMap } from '@root/constants';
+import { alertTypeColorMap, colorTWClassMap } from '@root/constants/common';
 import useDispatch from '@root/hooks/useDispatch';
 import useSelector from '@root/hooks/useSelector';
 import type { AlertTypeEnum } from '@root/types/common';

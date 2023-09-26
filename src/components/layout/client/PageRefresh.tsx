@@ -1,6 +1,6 @@
 'use client';
 
-import { DEFAULT_REFRESH_THRESHOLD } from '@root/constants';
+import { DEFAULT_REFRESH_THRESHOLD } from '@root/constants/common';
 import type { useModuleId } from '@root/hooks/useModuleId';
 import { usePullToRefresh } from '@root/hooks/usePullToRefresh';
 import useSelector from '@root/hooks/useSelector';

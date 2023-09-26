@@ -1,4 +1,4 @@
-import { defaultLimit } from '@root/constants';
+import { defaultLimit } from '@root/constants/common';
 import neonDB from '@root/server/database/drivers/neon';
 import vercelDB from '@root/server/database/drivers/vercel';
 import { effects, items, rumors, traits } from '@root/server/database/schema';

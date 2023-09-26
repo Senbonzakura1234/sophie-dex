@@ -1,5 +1,5 @@
 import SelectOption from '@root/components/common/server/SelectOption';
-import { rumorTypeColorMap, rumorTypeIconMap } from '@root/constants';
+import { rumorTypeColorMap, rumorTypeIconMap } from '@root/constants/common';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
 import type { RumorTypeEnum } from '@root/types/common/zod';

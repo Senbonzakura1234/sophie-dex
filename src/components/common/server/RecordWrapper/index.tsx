@@ -1,4 +1,4 @@
-import { colorTWClassMap } from '@root/constants';
+import { colorTWClassMap } from '@root/constants/common';
 import type { ClassNameProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
 import type { CommonRecord } from '@root/types/model';

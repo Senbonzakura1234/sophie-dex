@@ -1,6 +1,6 @@
 'use client';
 
-import { metaThemeColorMap } from '@root/constants';
+import { metaThemeColorMap } from '@root/constants/common';
 import type { AlertTypeEnum } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
 import type { DaisyUIThemeEnum } from '@root/types/common/zod';

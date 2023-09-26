@@ -3,7 +3,7 @@
 import ItemRecord from '@root/components/common/server/ItemRecord';
 import RecordPlaceholder from '@root/components/common/server/loading/RecordPlaceholder';
 import ErrorContent from '@root/components/layout/server/ErrorContent';
-import { defaultLimit } from '@root/constants';
+import { defaultLimit } from '@root/constants/common';
 import useDispatchContentData from '@root/hooks/useDispatchContentData';
 import type { PageProps } from '@root/types/common';
 import { createArray } from '@root/utils/common';

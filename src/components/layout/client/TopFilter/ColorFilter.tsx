@@ -1,5 +1,5 @@
 import SelectOption from '@root/components/common/server/SelectOption';
-import { colorTWClassMap } from '@root/constants';
+import { colorTWClassMap } from '@root/constants/common';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
 import type { ColorEnum } from '@root/types/common/zod';
