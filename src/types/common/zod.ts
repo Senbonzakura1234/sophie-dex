@@ -87,11 +87,8 @@ export type PackageDotJSON = z.infer<typeof packageDotJSONSchema>;
 export const repoInfoSchema = z.object({
 	name: z.string(),
 	full_name: z.string(),
-	owner: z.object({
-		login: z.string(),
-		avatar_url: z.string().url(),
-		html_url: z.string().url(),
-	}),
+	owner: z.object({ login: z.string(), avatar_url: z.string().url(), html_url: z.string().url() }),
+	license: z.object({ url: z.string().url() }),
 	html_url: z.string().url(),
 	description: z.string(),
 });
@@ -100,9 +97,7 @@ export type RepoInfo = z.infer<typeof repoInfoSchema>;
 export const githubUserInfoSchema = z.object({
 	login: z.string(),
 	avatar_url: z.string().url(),
-	url: z.string().url(),
 	html_url: z.string().url(),
-	name: z.string(),
 	company: z.string(),
 	blog: z.string().url(),
 	location: z.string(),
@@ -111,3 +106,13 @@ export const githubUserInfoSchema = z.object({
 	twitter_username: z.string(),
 });
 export type GithubUserInfo = z.infer<typeof githubUserInfoSchema>;
+
+export const licenseInfoSchema = z.object({
+	name: z.string(),
+	description: z.string(),
+	permissions: z.array(z.string()),
+	conditions: z.array(z.string()),
+	limitations: z.array(z.string()),
+	body: z.string(),
+});
+export type LicenseInfo = z.infer<typeof licenseInfoSchema>;

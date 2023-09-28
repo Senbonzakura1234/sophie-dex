@@ -1,12 +1,13 @@
 import type { ChildrenProps } from '@root/types/common/props';
+import type { RouteType } from 'next/dist/lib/load-custom-routes';
+import type { LinkProps } from 'next/link';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import type { UrlObject } from 'url';
 
 type LinkItemProps = {
 	'aria-label': string;
 	isActive: boolean;
-	href: UrlObject;
+	href: LinkProps<RouteType>['href'];
 	icon: ReactNode;
 } & ChildrenProps;
 

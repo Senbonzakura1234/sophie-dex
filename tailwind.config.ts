@@ -1,11 +1,26 @@
 import type { TextShadowUtilities } from '@root/types/common/tailwind';
+import typography from '@tailwindcss/typography';
 import daisyui from 'daisyui';
 import type { Config } from 'tailwindcss';
 import tailwindPlugin from 'tailwindcss/plugin';
 
 const config: Config = {
 	content: ['./src/**/*.{js,ts,jsx,tsx}'],
-	theme: { fontFamily: { atelier: ['var(--font-atelier)'] } },
+	theme: {
+		extend: {
+			fontFamily: { atelier: ['var(--font-atelier)'] },
+
+			keyframes: {
+				fadeInView: { from: { opacity: '0' }, to: { opacity: '1' }, '0%': { opacity: '0' } },
+			},
+
+			animation: {
+				fadeInView: 'fadeInView linear',
+			},
+
+			gridTemplateColumns: { about: '1fr 350px' },
+		},
+	},
 	plugins: [
 		daisyui,
 		tailwindPlugin(({ theme, addUtilities }) => {
@@ -43,8 +58,10 @@ const config: Config = {
 				'.text-shadow-light-md': { textShadow: `0 0 ${theme('spacing.3')} ${colors.white}` },
 				'.text-shadow-light-lg': { textShadow: `0 0 ${theme('spacing.4')} ${colors.white}` },
 				'.text-shadow-light-xl': { textShadow: `0 0 ${theme('spacing.5')} ${colors.white}` },
+				'.animation-timeline-fadeInView': { 'animation-timeline': 'view(90% 0%)' },
 			});
 		}),
+		typography,
 	],
 	daisyui: {
 		themes: ['autumn', 'fantasy', 'forest', 'synthwave'],

@@ -8,14 +8,20 @@ import type { DirectionEnum, SortByEnum } from '@root/types/common/zod';
 import {
 	githubFileResponseSchema,
 	githubUserInfoSchema,
+	licenseInfoSchema,
 	packageDotJSONSchema,
 	repoInfoSchema,
 	searchQueryValidator,
 } from '@root/types/common/zod';
 import type { CommonRecord } from '@root/types/model';
 
-import { APP_AUTHOR, APP_CODE } from '@root/constants/common';
-import { defaultGithubHeader, defaultGithubUserInfo, defaultRepoInfo } from '@root/constants/server';
+import { APP_AUTHOR, APP_PATH } from '@root/constants/common';
+import {
+	defaultGithubHeader,
+	defaultGithubUserInfo,
+	defaultLicenseInfo,
+	defaultRepoInfo,
+} from '@root/constants/server';
 import { TRPCError } from '@trpc/server';
 import type { Metadata, ResolvingMetadata } from 'next';
 import type { ZodType } from 'zod';
@@ -119,7 +125,7 @@ export const getVersion = async () => {
 		improvedFetch(
 			githubFileResponseSchema,
 			undefined,
-			`https://api.github.com/repos/${APP_AUTHOR}/${APP_CODE}/contents/package.json`,
+			`https://api.github.com/repos/${APP_PATH}/contents/package.json`,
 			defaultGithubHeader,
 		),
 	);
@@ -143,12 +149,7 @@ export const getVersion = async () => {
 
 export const getRepoInfo = async () => {
 	const repoResult = await tryCatchHandler(
-		improvedFetch(
-			repoInfoSchema,
-			undefined,
-			`https://api.github.com/repos/${APP_AUTHOR}/${APP_CODE}`,
-			defaultGithubHeader,
-		),
+		improvedFetch(repoInfoSchema, undefined, `https://api.github.com/repos/${APP_PATH}`, defaultGithubHeader),
 	);
 
 	return repoResult.isSuccess ? repoResult.data : defaultRepoInfo;
@@ -160,4 +161,31 @@ export const getGithubUserInfo = async () => {
 	);
 
 	return githubUserInfo.isSuccess ? githubUserInfo.data : defaultGithubUserInfo;
+};
+
+export const getLicense = async () => {
+	const repoInfo = await getRepoInfo();
+
+	const licenseResult = await tryCatchHandler(
+		improvedFetch(licenseInfoSchema, undefined, repoInfo.license.url, defaultGithubHeader),
+	);
+
+	return licenseResult.isSuccess ? licenseResult.data : defaultLicenseInfo;
+};
+
+export const getReadme = async () => {
+	const githubResult = await tryCatchHandler(
+		improvedFetch(
+			githubFileResponseSchema,
+			undefined,
+			`https://api.github.com/repos/${APP_PATH}/contents/README.md`,
+			defaultGithubHeader,
+		),
+	);
+
+	if (!githubResult.isSuccess) return '';
+
+	const base64ToStringResult = tryCatchHandlerSync(() => atob(githubResult.data.content));
+
+	return base64ToStringResult.isSuccess ? base64ToStringResult.data : '';
 };

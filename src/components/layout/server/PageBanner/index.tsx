@@ -15,7 +15,6 @@ export default function PageBanner({ bannerType }: PageTitleProps) {
 		<section
 			className={`relative w-full select-none overflow-hidden ${bannerType === 'full' ? 'h-full' : 'min-h-[18rem]'}`}
 		>
-			{/* {bannerType !== 'bottom' ? <ThemeSwitcher /> : null} */}
 			<div className='absolute inset-0 z-20 mx-auto flex w-full flex-wrap place-content-center gap-4 px-4 pt-5 xl:gap-5 2xl:gap-6'>
 				<div className='w-full text-center'>
 					{bannerType === 'full' ? (
@@ -37,7 +36,7 @@ export default function PageBanner({ bannerType }: PageTitleProps) {
 				</div>
 
 				<div className='flex w-full'>
-					<nav className='card mx-auto w-full max-w-md bg-base-100 px-2 py-1 shadow-lg shadow-primary 2xl:w-2/5 2xl:max-w-none'>
+					<nav className='card mx-auto w-full max-w-md bg-base-100 px-2 py-1 shadow-lg shadow-primary 2xl:max-w-2xl'>
 						<div className='breadcrumbs mx-auto text-xs 2xl:text-base'>
 							<ul className='gap-1 font-bold'>
 								<Breadcrumb />

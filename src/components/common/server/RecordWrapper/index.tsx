@@ -23,7 +23,9 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 	const renderChild = useMemo(() => (children ? children(data) : null), [children, data]);
 
 	return (
-		<article className={`card relative my-auto h-full p-1.5 2xl:max-h-96 ${className}`}>
+		<article
+			className={`card relative my-auto h-full animate-fadeInView p-1.5 animation-timeline-fadeInView 2xl:max-h-96 ${className}`}
+		>
 			<div
 				className={`absolute inset-y-0 left-0 w-1/3 rounded-[inherit] shadow-lg ${
 					!!firstColor

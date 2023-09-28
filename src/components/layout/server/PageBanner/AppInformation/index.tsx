@@ -1,10 +1,10 @@
-import GithubIcon from '@root/components/common/server/icons/solid/GithubIcon';
+import Avatar from '@root/components/common/server/Avatar';
+import GithubIcon from '@root/components/common/server/icons/brand/GithubIcon';
 import { getGithubUserInfo, getVersion } from '@root/utils/server';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default async function AppInformation() {
-	const [version, { login, avatar_url, email }] = await Promise.all([getVersion(), getGithubUserInfo()]);
+	const [version, { login, avatar_url }] = await Promise.all([getVersion(), getGithubUserInfo()]);
 
 	return (
 		<div className='grid gap-3 text-center'>
@@ -18,24 +18,11 @@ export default async function AppInformation() {
 			>
 				<GithubIcon className='my-auto aspect-square h-4' />
 				{login}
-				<div className='avatar'>
-					<div className='w-5 overflow-hidden rounded-full ring-[0.1px] ring-black ring-offset-2 ring-offset-transparent group-hover/button:ring-white dark:ring-white dark:group-hover/button:ring-black'>
-						<Image
-							alt='sophie'
-							data-url={avatar_url}
-							placeholder='empty'
-							priority={false}
-							sizes='64px'
-							width={18}
-							height={18}
-							src={avatar_url}
-						/>
-					</div>
-				</div>
-			</Link>
-
-			<Link className='btn btn-info btn-xs normal-case' href={{ pathname: `mailto:${email}` }} target='_blank'>
-				{email}
+				<Avatar
+					url={avatar_url}
+					size={64}
+					className='w-5 bg-black to-primary p-0.5 shadow shadow-current group-hover/button:bg-white dark:bg-white dark:group-hover/button:bg-black'
+				/>
 			</Link>
 
 			<div className='card mx-auto block bg-primary px-3 py-1 text-xs font-bold leading-none text-primary-content shadow-lg shadow-base-content/30'>

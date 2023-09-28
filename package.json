@@ -1,6 +1,6 @@
 {
 	"name": "sophie-dex",
-	"version": "22.2.0",
+	"version": "23.0.1",
 	"private": false,
 	"license": "MIT",
 	"author": {
@@ -30,6 +30,7 @@
 		"@neondatabase/serverless": "^0.6.0",
 		"@radix-ui/react-scroll-area": "^1.0.4",
 		"@t3-oss/env-nextjs": "^0.6.1",
+		"@tailwindcss/typography": "^0.5.10",
 		"@tanstack/react-query": "^4.35.3",
 		"@trpc/client": "^10.38.4",
 		"@trpc/react-query": "^10.38.4",
@@ -39,6 +40,7 @@
 		"drizzle-orm": "^0.28.6",
 		"drizzle-zod": "^0.5.1",
 		"next": "13.5.2",
+		"next-mdx-remote": "^4.4.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"server-only": "^0.0.1",

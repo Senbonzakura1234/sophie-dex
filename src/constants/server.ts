@@ -1,7 +1,7 @@
 import 'server-only';
 
 import type { AppleMediaConfig } from '@root/types/common';
-import type { GithubUserInfo, RepoInfo } from '@root/types/common/zod';
+import type { GithubUserInfo, LicenseInfo, RepoInfo } from '@root/types/common/zod';
 import type { NextResponse } from 'next/server';
 import { env } from 'process';
 
@@ -165,6 +165,7 @@ export const defaultRepoInfo: RepoInfo = {
 	html_url: '-',
 	name: '-',
 	owner: { avatar_url: '-', html_url: '-', login: '-' },
+	license: { url: '-' },
 };
 
 export const defaultGithubUserInfo: GithubUserInfo = {
@@ -176,7 +177,14 @@ export const defaultGithubUserInfo: GithubUserInfo = {
 	html_url: '-',
 	location: '-',
 	login: '-',
-	name: '-',
 	twitter_username: '-',
-	url: '-',
+};
+
+export const defaultLicenseInfo: LicenseInfo = {
+	body: '-',
+	conditions: [],
+	description: '-',
+	limitations: [],
+	name: '-',
+	permissions: [],
 };

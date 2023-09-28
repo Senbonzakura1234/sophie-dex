@@ -1,36 +1,38 @@
 'use client';
 
 import HomeIcon from '@root/components/common/server/icons/solid/HomeIcon';
+import InfoIcon from '@root/components/common/server/icons/solid/InfoIcon';
 import LinkIcon from '@root/components/common/server/icons/solid/LinkIcon';
-import { useModuleId } from '@root/hooks/useModuleId';
 import { moduleIdList } from '@root/types/model';
-import { Fragment } from 'react';
+import { usePathname } from 'next/navigation';
+import { Fragment, useMemo } from 'react';
 import LinkItem from './LinkItem';
 
 export default function Breadcrumb() {
-	const { moduleId } = useModuleId();
+	const pathname = usePathname();
+	const segment = useMemo(() => pathname.split('/')[1], [pathname]);
 
 	return (
 		<>
 			<li>
 				<LinkItem
 					aria-label='Go to homepage'
-					href={{ pathname: '/' }}
-					icon={<HomeIcon className='aspect-square h-4' />}
-					isActive={!moduleId}
+					href='/'
+					icon={<HomeIcon className='aspect-square h-4 !text-primary' />}
+					isActive={!segment}
 				>
-					Home
+					<span className='hidden sm:inline'>home</span>
 				</LinkItem>
 			</li>
 
-			<li className='flex gap-2 before:!m-0 2xl:gap-3'>
+			<li className='gap-2 before:!m-0 2xl:gap-3'>
 				{moduleIdList.map((m, i) => (
 					<Fragment key={m}>
 						<LinkItem
 							aria-label={`Go to ${i} Search`}
-							href={{ pathname: `/${m}` }}
+							href={`/${m}`}
 							icon={<LinkIcon className='hidden aspect-square h-4 2xl:inline' />}
-							isActive={m === moduleId}
+							isActive={m === segment}
 						>
 							{m}
 						</LinkItem>
@@ -40,6 +42,17 @@ export default function Breadcrumb() {
 						) : null}
 					</Fragment>
 				))}
+			</li>
+
+			<li className='gap-2 before:!m-0 2xl:gap-3'>
+				<LinkItem
+					aria-label={`Go to about page`}
+					href='/about'
+					icon={<InfoIcon className='aspect-square h-4 !text-primary' />}
+					isActive={segment === 'about'}
+				>
+					<span className='hidden sm:inline'>about</span>
+				</LinkItem>
 			</li>
 		</>
 	);
