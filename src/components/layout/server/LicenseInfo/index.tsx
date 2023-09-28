@@ -13,7 +13,7 @@ export default async function LicenseInfo() {
 
 	return (
 		<CommonWrapper className='order-2 lg:order-1'>
-			<div className='flex flex-wrap gap-2'>
+			<div className='flex flex-wrap gap-6'>
 				<LicenseInfoHead {...rest} />
 
 				<div className='flex grow flex-wrap gap-2'>
@@ -35,8 +35,8 @@ export default async function LicenseInfo() {
 				</div>
 			</div>
 
-			<div className='my-auto bg-gradient-to-r from-accent to-primary py-1.5'>
-				<div className='prose max-w-none bg-base-100 p-5 text-base-content'>
+			<div className='my-6 bg-gradient-to-r from-accent to-primary py-1.5 lg:my-auto'>
+				<div className='prose max-w-none bg-base-100 px-2 py-5 text-base-content'>
 					<MDXRemote
 						source={body.replace('[year]', new Date().getFullYear().toString()).replace('[fullname]', APP_AUTHOR)}
 					/>

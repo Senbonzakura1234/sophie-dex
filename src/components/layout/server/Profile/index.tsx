@@ -24,6 +24,7 @@ export default async function Profile() {
 					<Link
 						className='link-hover link-primary link text-xl font-bold'
 						href={{ protocol: 'https', hostname: 'github', host: 'github.com', pathname: login }}
+						target='_blank'
 					>
 						{login}
 					</Link>
@@ -50,6 +51,7 @@ export default async function Profile() {
 						<Link
 							className='link-hover link-primary link visited:link-accent'
 							href={{ protocol: 'https', hostname: 'twitter', host: 'twitter.com', pathname: twitter_username }}
+							target='_blank'
 						>
 							{twitter_username}
 						</Link>
@@ -58,7 +60,11 @@ export default async function Profile() {
 					<p>
 						<FacebookSquareIcon className='mt-auto aspect-square w-5 text-primary' />
 
-						<Link className='link-hover link-primary link visited:link-accent' href={{ pathname: blog }}>
+						<Link
+							className='link-hover link-primary link visited:link-accent'
+							href={{ pathname: blog }}
+							target='_blank'
+						>
 							My Blog
 						</Link>
 					</p>
@@ -69,6 +75,7 @@ export default async function Profile() {
 						<Link
 							className='link-hover link-primary link visited:link-accent'
 							href={{ pathname: `mailto:${email}` }}
+							target='_blank'
 						>
 							{email}
 						</Link>
