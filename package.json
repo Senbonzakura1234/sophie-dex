@@ -1,6 +1,6 @@
 {
 	"name": "sophie-dex",
-	"version": "23.2.0",
+	"version": "24.0.1",
 	"private": false,
 	"license": "MIT",
 	"author": {
@@ -27,7 +27,10 @@
 	},
 	"dependencies": {
 		"@headlessui/react": "^1.7.17",
+		"@mdx-js/loader": "^2.3.0",
+		"@mdx-js/react": "^2.3.0",
 		"@neondatabase/serverless": "^0.6.0",
+		"@next/mdx": "^13.5.3",
 		"@radix-ui/react-scroll-area": "^1.0.5",
 		"@t3-oss/env-nextjs": "^0.6.1",
 		"@tailwindcss/typography": "^0.5.10",
@@ -35,6 +38,7 @@
 		"@trpc/client": "^10.38.5",
 		"@trpc/react-query": "^10.38.5",
 		"@trpc/server": "^10.38.5",
+		"@types/mdx": "^2.0.8",
 		"@vercel/postgres": "^0.5.0",
 		"cookies-next": "^4.0.0",
 		"drizzle-orm": "^0.28.6",

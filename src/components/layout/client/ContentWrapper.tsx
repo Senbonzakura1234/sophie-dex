@@ -12,10 +12,11 @@ export default function ContentWrapper({ children, type }: ContentWrapperProps) 
 
 	return (
 		<section
-			className={`container m-auto grid grid-cols-1 gap-6 max-2xl:px-4
-				${type === 'detail' ? 'lg:max-w-3xl' : ''}
+			className={`container mx-auto grid grid-cols-1 gap-6 max-2xl:px-4
+				${type === 'detail' ? 'my-auto lg:max-w-3xl' : ''}
 				${type === 'list' && !isError ? 'lg:grid-cols-2' : ''}
-				${type === 'about' ? 'lg:grid-cols-about' : ''}
+				${type === 'list' ? ' my-auto' : ''}
+				${type === 'about' ? 'mb-auto max-w-6xl' : ''}
 			`}
 		>
 			{children}

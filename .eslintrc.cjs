@@ -16,7 +16,7 @@ const prettierConfig = {
 module.exports = {
 	extends: ['plugin:@typescript-eslint/recommended', 'next/core-web-vitals'],
 	overrides: [
-		{ extends: ['plugin:markdown/recommended'], files: ['**/*.md'], processor: 'markdown/markdown' },
+		{ extends: ['plugin:markdown/recommended'], files: ['**/*.md', '**/*.mdx'], processor: 'markdown/markdown' },
 		{
 			extends: ['plugin:prettier/recommended'],
 			files: ['**/*.mjs', '**/*.cjs'],

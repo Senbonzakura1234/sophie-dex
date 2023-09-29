@@ -1,16 +1,10 @@
-import LicenseInfo from '@root/components/layout/server/LicenseInfo';
-import Profile from '@root/components/layout/server/Profile';
-import ReadmeWrapper from '@root/components/layout/server/ReadmeWrapper';
+import CommonWrapper from '@root/components/common/server/CommonWrapper';
+import ReadmeWrapper from '@root/components/layout/client/ReadmeWrapper';
 
-export default async function About() {
+export default function About() {
 	return (
-		<>
-			<div className='order-1 flex flex-col gap-6 lg:order-2'>
-				<Profile />
-				<ReadmeWrapper />
-			</div>
-
-			<LicenseInfo />
-		</>
+		<CommonWrapper className='prose h-auto max-w-none [&>*>*]:mb-1 [&>*>*]:mt-0 [&>*>h1]:text-primary [&>*>h2]:text-accent'>
+			<ReadmeWrapper />
+		</CommonWrapper>
 	);
 }

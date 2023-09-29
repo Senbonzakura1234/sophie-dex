@@ -10,7 +10,7 @@ import Link from 'next/link';
 import type { ComponentProps } from 'react';
 import ProfileField from './ProfileField';
 
-export default async function Profile() {
+export default async function ProfileInfo() {
 	const { avatar_url, login, bio, company, blog, email, location, twitter_username } = await getGithubUserInfo();
 
 	const fields: ComponentProps<typeof ProfileField>[] = [
@@ -29,7 +29,7 @@ export default async function Profile() {
 	];
 
 	return (
-		<CommonWrapper>
+		<CommonWrapper className='mx-auto max-w-lg'>
 			<div className='flex flex-wrap gap-4'>
 				<div className='flex grow flex-wrap gap-4 self-baseline max-sm:text-center'>
 					<div className='max-sm:w-full'>

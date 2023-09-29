@@ -172,20 +172,3 @@ export const getLicense = async () => {
 
 	return licenseResult.isSuccess ? licenseResult.data : defaultLicenseInfo;
 };
-
-export const getReadme = async () => {
-	const githubResult = await tryCatchHandler(
-		improvedFetch(
-			githubFileResponseSchema,
-			undefined,
-			`https://api.github.com/repos/${APP_PATH}/contents/README.md`,
-			defaultGithubHeader,
-		),
-	);
-
-	if (!githubResult.isSuccess) return '';
-
-	const base64ToStringResult = tryCatchHandlerSync(() => atob(githubResult.data.content));
-
-	return base64ToStringResult.isSuccess ? base64ToStringResult.data : '';
-};
