@@ -15,8 +15,6 @@
 		"noErrorTruncation": true,
 		"noUncheckedIndexedAccess": true,
 		"paths": {
-			"@base": ["."],
-			"@base/*": ["./*"],
 			"@root": ["./src"],
 			"@root/*": ["./src/*"]
 		},

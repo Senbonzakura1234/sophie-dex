@@ -5,6 +5,7 @@ import '@total-typescript/ts-reset';
 import ScrollWrapper from '@root/components/layout/client/ScrollWrapper';
 import ThemeSwitcher from '@root/components/layout/client/ThemeSwitcher';
 import ThemeWrapper from '@root/components/layout/client/ThemeWrapper';
+import TrpcProvider from '@root/components/layout/client/TrpcProvider';
 import { APP_KEYWORD, APP_NAME, metaThemeColorMap } from '@root/constants/common';
 import { appleMediaConfig } from '@root/constants/server';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
@@ -85,12 +86,14 @@ export default async function RootLayout({ children }: ChildrenProps) {
 		<html lang='en'>
 			<body className={`${fontAtelier.variable} ${fontComicSansMS.className}`}>
 				<ContextProvider defaultState={{ theme: currentTheme }}>
-					<ThemeWrapper>
-						<ScrollWrapper>
-							<ThemeSwitcher />
-							{children}
-						</ScrollWrapper>
-					</ThemeWrapper>
+					<TrpcProvider>
+						<ThemeWrapper>
+							<ScrollWrapper>
+								<ThemeSwitcher />
+								{children}
+							</ScrollWrapper>
+						</ThemeWrapper>
+					</TrpcProvider>
 				</ContextProvider>
 			</body>
 		</html>

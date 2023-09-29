@@ -1,5 +1,5 @@
-import ProfileInfo from '@root/components/layout/server/ProfileInfo';
+import APIProfileInfoWrapper from '@root/components/layout/client/ApiWrapper/profile';
 
 export default function Profile() {
-	return <ProfileInfo />;
+	return <APIProfileInfoWrapper />;
 }

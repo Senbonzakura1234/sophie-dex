@@ -5,14 +5,18 @@ import TwitterSquareIcon from '@root/components/icons/brand/TwitterSquareIcon';
 import MailIcon from '@root/components/icons/solid/MailIcon';
 import MapPinIcon from '@root/components/icons/solid/MapPinIcon';
 import OfficeIcon from '@root/components/icons/solid/OfficeIcon';
-import { getGithubUserInfo } from '@root/utils/server';
+import type { GithubUserInfo } from '@root/types/common/zod';
 import Link from 'next/link';
 import type { ComponentProps } from 'react';
 import ProfileField from './ProfileField';
 
-export default async function ProfileInfo() {
-	const { avatar_url, login, bio, company, blog, email, location, twitter_username } = await getGithubUserInfo();
+type ProfileInfoProps = {
+	profileInfo: GithubUserInfo;
+};
 
+export default async function ProfileInfo({
+	profileInfo: { avatar_url, login, bio, company, blog, email, location, twitter_username },
+}: ProfileInfoProps) {
 	const fields: ComponentProps<typeof ProfileField>[] = [
 		{ Icon: OfficeIcon, content: { type: 'text', label: company } },
 		{ Icon: MapPinIcon, content: { type: 'text', label: location } },
@@ -29,7 +33,7 @@ export default async function ProfileInfo() {
 	];
 
 	return (
-		<CommonWrapper className='mx-auto max-w-lg'>
+		<CommonWrapper className='m-auto w-full max-w-lg'>
 			<div className='flex flex-wrap gap-4'>
 				<div className='flex grow flex-wrap gap-4 self-baseline max-sm:text-center'>
 					<div className='max-sm:w-full'>

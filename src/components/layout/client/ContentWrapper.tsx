@@ -16,7 +16,7 @@ export default function ContentWrapper({ children, type }: ContentWrapperProps) 
 				${type === 'detail' ? 'my-auto lg:max-w-3xl' : ''}
 				${type === 'list' && !isError ? 'lg:grid-cols-2' : ''}
 				${type === 'list' ? ' my-auto' : ''}
-				${type === 'about' ? 'mb-auto max-w-6xl' : ''}
+				${type === 'about' ? 'm-auto max-w-6xl' : ''}
 			`}
 		>
 			{children}

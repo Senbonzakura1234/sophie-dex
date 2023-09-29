@@ -15,7 +15,7 @@ export default function LicenseInfoHead({ description, name }: LicenseInfoHeadPr
 				</div>
 
 				<div>
-					<h2 className='text-[10px] italic md:text-xs'>{APP_PATH} is licensed under the</h2>
+					<h2 className='text-[10px] italic md:text-xs'>This application is licensed under the</h2>
 
 					<h1 className='flex gap-2 text-2xl font-bold text-primary'>
 						{name}

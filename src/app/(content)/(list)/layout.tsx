@@ -2,7 +2,6 @@ import BottomFilter from '@root/components/layout/client/BottomFilter';
 import ContentWrapper from '@root/components/layout/client/ContentWrapper';
 import SearchInput from '@root/components/layout/client/SearchInput';
 import TopFilter from '@root/components/layout/client/TopFilter';
-import TrpcProvider from '@root/components/layout/client/TrpcProvider';
 import type { ChildrenProps } from '@root/types/common/props';
 
 export default function ListLayout({ children }: ChildrenProps) {
@@ -20,9 +19,7 @@ export default function ListLayout({ children }: ChildrenProps) {
 				<TopFilter />
 			</section>
 
-			<ContentWrapper type='list'>
-				<TrpcProvider>{children}</TrpcProvider>
-			</ContentWrapper>
+			<ContentWrapper type='list'>{children}</ContentWrapper>
 
 			<section className='container relative z-30 mx-auto grid animate-fadeInView gap-3 animation-timeline-fadeInView max-2xl:px-4'>
 				<BottomFilter />

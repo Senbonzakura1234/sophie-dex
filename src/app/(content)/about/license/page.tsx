@@ -1,5 +1,5 @@
-import LicenseInfo from '@root/components/layout/server/LicenseInfo';
+import APILicenseInfoWrapper from '@root/components/layout/client/ApiWrapper/license';
 
 export default function License() {
-	return <LicenseInfo />;
+	return <APILicenseInfoWrapper />;
 }
