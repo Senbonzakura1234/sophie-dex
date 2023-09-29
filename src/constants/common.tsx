@@ -20,7 +20,7 @@ export const APP_NAME = capitalize(APP_CODE.replaceAll('-', ' '));
 export const APP_KEYWORD = env.NEXT_PUBLIC_APP_KEYWORD;
 export const APP_AUTHOR_EMAIL = env.NEXT_PUBLIC_APP_AUTHOR_EMAIL;
 
-export const defaultLimit = 16;
+export const DEFAULT_LIMIT = 16;
 
 export const DEFAULT_MAXIMUM_PULL_LENGTH = 240;
 export const DEFAULT_REFRESH_THRESHOLD = 180;

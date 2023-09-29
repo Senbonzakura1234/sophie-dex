@@ -1,4 +1,4 @@
-import { defaultLimit } from '@root/constants/common';
+import { DEFAULT_LIMIT } from '@root/constants/common';
 import neonDB from '@root/server/database/drivers/neon';
 import vercelDB from '@root/server/database/drivers/vercel';
 import { effects, items, rumors, traits } from '@root/server/database/schema';
@@ -44,7 +44,7 @@ export const getListEffectDefault = db
 	.select({ totalRecord: CountQuery, record: effects })
 	.from(effects)
 	.orderBy(asc(effects.index))
-	.limit(defaultLimit)
+	.limit(DEFAULT_LIMIT)
 	.offset(sql.placeholder('offset'))
 	.prepare('getListEffectDefault');
 
@@ -52,7 +52,7 @@ export const getListItemDefault = db
 	.select({ totalRecord: CountQuery, record: items })
 	.from(items)
 	.orderBy(asc(items.index))
-	.limit(defaultLimit)
+	.limit(DEFAULT_LIMIT)
 	.offset(sql.placeholder('offset'))
 	.prepare('getListItemDefault');
 
@@ -60,7 +60,7 @@ export const getListRumorDefault = db
 	.select({ totalRecord: CountQuery, record: rumors })
 	.from(rumors)
 	.orderBy(asc(rumors.price))
-	.limit(defaultLimit)
+	.limit(DEFAULT_LIMIT)
 	.offset(sql.placeholder('offset'))
 	.prepare('getListRumorDefault');
 
@@ -68,7 +68,7 @@ export const getListTraitDefault = db
 	.select({ totalRecord: CountQuery, record: traits })
 	.from(traits)
 	.orderBy(asc(traits.index))
-	.limit(defaultLimit)
+	.limit(DEFAULT_LIMIT)
 	.offset(sql.placeholder('offset'))
 	.prepare('getListTraitDefault');
 

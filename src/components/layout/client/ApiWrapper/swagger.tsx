@@ -1,7 +1,7 @@
 'use client';
 
-import Loader from '@root/components/common/server/loading/Loader';
 import ErrorContent from '@root/components/layout/server/ErrorContent';
+import Loader from '@root/components/loading/Loader';
 import useDispatchContentData from '@root/hooks/useDispatchContentData';
 import { ApiContext } from '@root/utils/trpc';
 import dynamic from 'next/dynamic';

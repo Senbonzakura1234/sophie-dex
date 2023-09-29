@@ -1,6 +1,6 @@
 import { publicProcedure, router } from '@root/server/api/trpc';
 
-import { exampleRecordProvider } from '@root/server/database/repository/exampleRecord';
+import { getExample } from '@root/server/database/repository/exampleRecord';
 import { effectRouter } from './effect';
 import { itemRouter } from './item';
 import { rumorRouter } from './rumor';
@@ -11,7 +11,7 @@ export const appRouter = router({
 	item: itemRouter,
 	rumor: rumorRouter,
 	trait: traitRouter,
-	example: publicProcedure.query(exampleRecordProvider.getExample),
+	example: publicProcedure.query(getExample),
 });
 
 export type AppRouter = typeof appRouter;

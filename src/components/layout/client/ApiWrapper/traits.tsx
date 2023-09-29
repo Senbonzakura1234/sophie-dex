@@ -1,9 +1,9 @@
 'use client';
 
 import TraitRecord from '@root/components/common/server/TraitRecord';
-import RecordPlaceholder from '@root/components/common/server/loading/RecordPlaceholder';
 import ErrorContent from '@root/components/layout/server/ErrorContent';
-import { defaultLimit } from '@root/constants/common';
+import RecordPlaceholder from '@root/components/loading/RecordPlaceholder';
+import { DEFAULT_LIMIT } from '@root/constants/common';
 import useDispatchContentData from '@root/hooks/useDispatchContentData';
 import type { PageProps } from '@root/types/common';
 import { createArray } from '@root/utils/common';
@@ -21,7 +21,7 @@ export default function APIListWrapper({ searchParams }: APIListWrapperProps) {
 	if (isLoading)
 		return (
 			<>
-				{createArray(defaultLimit, 0).map((_, key) => (
+				{createArray(DEFAULT_LIMIT, 0).map((_, key) => (
 					<RecordPlaceholder key={key} />
 				))}
 			</>

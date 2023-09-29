@@ -5,31 +5,10 @@
  */
 !process.env.SKIP_ENV_VALIDATION && (await import('./src/utils/env.mjs'));
 
-/** @type {Array<(import("@root/types/common/zod").ModuleIdEnum)>} */
-const moduleIdList = ['effect', 'item', 'rumor', 'trait'];
-
 /** @type {import("next").NextConfig} */
 const config = {
-	reactStrictMode: true,
-	swcMinify: true,
-	redirects: async () => [
-		...moduleIdList
-			.map(moduleId => [
-				{ source: `/${moduleId}s`, destination: `/${moduleId}`, permanent: true },
-				{ source: `/${moduleId}s/:id`, destination: `/${moduleId}/:id`, permanent: false },
-			])
-			.flat(),
-	],
 	i18n: { locales: ['en'], defaultLocale: 'en' },
-	images: {
-		remotePatterns: [
-			{
-				protocol: 'https',
-				hostname: 'avatars.githubusercontent.com',
-				port: '',
-			},
-		],
-	},
+	images: { remotePatterns: [{ protocol: 'https', hostname: 'avatars.githubusercontent.com', port: '' }] },
 	experimental: { typedRoutes: true },
 };
 

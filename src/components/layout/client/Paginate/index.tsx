@@ -1,7 +1,7 @@
-import ChevronDoubleLeftIcon from '@root/components/common/server/icons/solid/ChevronDoubleLeftIcon';
-import ChevronDoubleRightIcon from '@root/components/common/server/icons/solid/ChevronDoubleRightIcon';
-import ChevronLeftIcon from '@root/components/common/server/icons/solid/ChevronLeftIcon';
-import ChevronRightIcon from '@root/components/common/server/icons/solid/ChevronRightIcon';
+import ChevronDoubleLeftIcon from '@root/components/icons/solid/ChevronDoubleLeftIcon';
+import ChevronDoubleRightIcon from '@root/components/icons/solid/ChevronDoubleRightIcon';
+import ChevronLeftIcon from '@root/components/icons/solid/ChevronLeftIcon';
+import ChevronRightIcon from '@root/components/icons/solid/ChevronRightIcon';
 
 import QueryLink from '@root/components/common/client/QueryLink';
 import type { useSearchQuery } from '@root/hooks/useSearchQuery';

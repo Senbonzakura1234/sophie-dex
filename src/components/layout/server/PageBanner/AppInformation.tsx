@@ -1,5 +1,5 @@
 import Avatar from '@root/components/common/server/Avatar';
-import GithubIcon from '@root/components/common/server/icons/brand/GithubIcon';
+import GithubIcon from '@root/components/icons/brand/GithubIcon';
 import { getGithubUserInfo, getVersion } from '@root/utils/server';
 import Link from 'next/link';
 

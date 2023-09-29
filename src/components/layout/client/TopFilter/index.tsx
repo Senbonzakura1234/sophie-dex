@@ -2,10 +2,10 @@
 
 import QueryLink from '@root/components/common/client/QueryLink';
 import RefetchButton from '@root/components/common/client/RefetchButton';
-import FilterIcon from '@root/components/common/server/icons/outline/FilterIcon';
-import ArrowPathIcon from '@root/components/common/server/icons/solid/ArrowPathIcon';
+import FilterIcon from '@root/components/icons/outline/FilterIcon';
+import ArrowPathIcon from '@root/components/icons/solid/ArrowPathIcon';
 import Paginate from '@root/components/layout/client/Paginate';
-import { defaultLimit } from '@root/constants/common';
+import { DEFAULT_LIMIT } from '@root/constants/common';
 import { useMediaQuery } from '@root/hooks/useMediaQuery';
 import { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
@@ -35,8 +35,8 @@ export default function TopFilter() {
 	const paginateInfo = useMemo(() => {
 		const page = searchQuery.page || 1;
 
-		const fromFormatted = formatRecordCount((page - 1) * defaultLimit + 1);
-		const toFormatted = formatRecordCount(page * defaultLimit > totalRecord ? totalRecord : page * defaultLimit);
+		const fromFormatted = formatRecordCount((page - 1) * DEFAULT_LIMIT + 1);
+		const toFormatted = formatRecordCount(page * DEFAULT_LIMIT > totalRecord ? totalRecord : page * DEFAULT_LIMIT);
 		const totalRecordFormatted = formatRecordCount(totalRecord);
 
 		return `${fromFormatted} - ${toFormatted} of ${totalRecordFormatted} ${moduleId}s`;

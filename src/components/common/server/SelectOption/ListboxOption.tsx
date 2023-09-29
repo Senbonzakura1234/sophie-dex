@@ -1,5 +1,5 @@
 import { Listbox } from '@headlessui/react';
-import CheckIcon from '@root/components/common/server/icons/solid/CheckIcon';
+import CheckIcon from '@root/components/icons/solid/CheckIcon';
 import type { SelectOptionItem } from '@root/types/common';
 import { convertCode } from '@root/utils/common';
 

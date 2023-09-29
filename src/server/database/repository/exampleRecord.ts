@@ -13,29 +13,24 @@ import { getApiDocs } from '@root/utils/swagger';
 import { TRPCError } from '@trpc/server';
 import type { OpenAPIObject } from 'zod-openapi/lib-types/openapi3-ts/dist/oas31';
 
-class ExampleRecordRepository {
-	async getExample(): Promise<OpenAPIObject> {
-		return (
-			Promise.all([
-				Promise.all(
-					[getExampleEffectRecord, getExampleItemRecord, getExampleRumorRecord, getExampleTraitRecord].map(
-						async query => {
-							const recordResult = await query.execute().catch(onQueryDBError);
+export const getExample = async (): Promise<OpenAPIObject> =>
+	(
+		Promise.all([
+			Promise.all(
+				[getExampleEffectRecord, getExampleItemRecord, getExampleRumorRecord, getExampleTraitRecord].map(
+					async query => {
+						const recordResult = await query.execute().catch(onQueryDBError);
 
-							if (recordResult[0]) return recordResult[0];
+						if (recordResult[0]) return recordResult[0];
 
-							throw new TRPCError({ code: 'NOT_FOUND' });
-						},
-					),
+						throw new TRPCError({ code: 'NOT_FOUND' });
+					},
 				),
-				getVersion(),
-				getRepoInfo(),
-				getGithubUserInfo(),
-			]) as Promise<[[Effect, Item, Rumor, Trait], string, RepoInfo, GithubUserInfo]>
-		)
-			.then(getApiDocs)
-			.catch(onQueryDBError);
-	}
-}
-
-export const exampleRecordProvider = new ExampleRecordRepository();
+			),
+			getVersion(),
+			getRepoInfo(),
+			getGithubUserInfo(),
+		]) as Promise<[[Effect, Item, Rumor, Trait], string, RepoInfo, GithubUserInfo]>
+	)
+		.then(getApiDocs)
+		.catch(onQueryDBError);

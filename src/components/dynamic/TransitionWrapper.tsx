@@ -1,3 +1,5 @@
+'use client';
+
 import { Transition } from '@headlessui/react';
 import type { PropsOf } from '@headlessui/react/dist/types';
 import { useEffect, useState } from 'react';

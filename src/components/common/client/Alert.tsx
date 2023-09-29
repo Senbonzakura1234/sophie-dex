@@ -1,9 +1,9 @@
 'use client';
 
-import CheckCircleIcon from '@root/components/common/server/icons/solid/CheckCircleIcon';
-import ExclamationCircle from '@root/components/common/server/icons/solid/ExclamationCircle';
-import ExclamationTriangle from '@root/components/common/server/icons/solid/ExclamationTriangle';
-import InfoIcon from '@root/components/common/server/icons/solid/InfoIcon';
+import CheckCircleIcon from '@root/components/icons/solid/CheckCircleIcon';
+import ExclamationCircle from '@root/components/icons/solid/ExclamationCircle';
+import ExclamationTriangle from '@root/components/icons/solid/ExclamationTriangle';
+import InfoIcon from '@root/components/icons/solid/InfoIcon';
 import { alertTypeColorMap, colorTWClassMap } from '@root/constants/common';
 import useDispatch from '@root/hooks/useDispatch';
 import useSelector from '@root/hooks/useSelector';
@@ -44,7 +44,7 @@ export default function Alert() {
 				isOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
 			}`}
 		>
-			<div className='card bg-gradient-to-r from-accent to-primary p-1 shadow-lg shadow-primary'>
+			<div className='card bg-gradient-to-br from-accent to-primary p-1 shadow-lg shadow-primary'>
 				<div
 					className={`flex gap-2 rounded-[inherit] border-none bg-base-100 px-4 py-3 font-bold shadow-inner shadow-base-content ${
 						colorTWClassMap[alertTypeColorMap[type]]

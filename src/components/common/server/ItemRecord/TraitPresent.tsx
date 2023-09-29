@@ -1,5 +1,5 @@
 import CopyUrlButton from '@root/components/common/client/CopyUrlButton';
-import DocumentChartBarIcon from '@root/components/common/server/icons/solid/DocumentChartBarIcon';
+import DocumentChartBarIcon from '@root/components/icons/solid/DocumentChartBarIcon';
 import type { HyperLinkRecord } from '@root/server/database/schema';
 import Link from 'next/link';
 

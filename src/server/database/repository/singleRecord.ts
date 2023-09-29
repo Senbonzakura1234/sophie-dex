@@ -10,32 +10,28 @@ import type { PreparedQuery, PreparedQueryConfig } from 'drizzle-orm/pg-core';
 
 type PrepareRecord<TRecord extends CommonRecord> = PreparedQuery<PreparedQueryConfig & { execute: Array<TRecord> }>;
 
-class SingleRecordRepository {
-	private async getRecord<TRecord extends CommonRecord>(query: PrepareRecord<TRecord>, { id }: IdQuery) {
-		if (!id) throw new TRPCError({ code: 'BAD_REQUEST' });
+const getRecord = async <TRecord extends CommonRecord>(query: PrepareRecord<TRecord>, { id }: IdQuery) => {
+	if (!id) throw new TRPCError({ code: 'BAD_REQUEST' });
 
-		const recordResult = await query.execute({ id }).catch(onQueryDBError);
+	const recordResult = await query.execute({ id }).catch(onQueryDBError);
 
-		if (recordResult[0]) return recordResult[0];
+	if (recordResult[0]) return recordResult[0];
 
-		throw new TRPCError({ code: 'NOT_FOUND' });
-	}
+	throw new TRPCError({ code: 'NOT_FOUND' });
+};
 
-	async getEffect(input: IdQuery): Promise<Effect> {
-		return this.getRecord(getEffectRecord, input);
-	}
+export const getEffect = (input: IdQuery): Promise<Effect> => {
+	return getRecord(getEffectRecord, input);
+};
 
-	async getItem(input: IdQuery): Promise<Item> {
-		return this.getRecord(getItemRecord, input);
-	}
+export const getItem = (input: IdQuery): Promise<Item> => {
+	return getRecord(getItemRecord, input);
+};
 
-	async getRumor(input: IdQuery): Promise<Rumor> {
-		return this.getRecord(getRumorRecord, input);
-	}
+export const getRumor = (input: IdQuery): Promise<Rumor> => {
+	return getRecord(getRumorRecord, input);
+};
 
-	async getTrait(input: IdQuery): Promise<Trait> {
-		return this.getRecord(getTraitRecord, input);
-	}
-}
-
-export const singleRecordProvider = new SingleRecordRepository();
+export const getTrait = (input: IdQuery): Promise<Trait> => {
+	return getRecord(getTraitRecord, input);
+};

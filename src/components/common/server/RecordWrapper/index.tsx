@@ -30,7 +30,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 				className={`absolute inset-y-0 left-0 w-1/3 rounded-[inherit] shadow-lg ${
 					!!firstColor
 						? `bg-current shadow-base-content ${colorTWClassMap[firstColor]}`
-						: 'bg-gradient-to-r from-accent to-primary shadow-primary'
+						: 'bg-gradient-to-br from-accent to-primary shadow-primary'
 				}`}
 			/>
 

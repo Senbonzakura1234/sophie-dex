@@ -1,5 +1,5 @@
-import ScaleIcon from '@root/components/common/server/icons/outline/ScaleIcon';
-import ArrowTopRightOnSquareIcon from '@root/components/common/server/icons/solid/ArrowTopRightOnSquareIcon';
+import ScaleIcon from '@root/components/icons/outline/ScaleIcon';
+import ArrowTopRightOnSquareIcon from '@root/components/icons/solid/ArrowTopRightOnSquareIcon';
 import { APP_PATH } from '@root/constants/common';
 import type { LicenseInfo } from '@root/types/common/zod';
 import Link from 'next/link';
@@ -10,7 +10,9 @@ export default function LicenseInfoHead({ description, name }: LicenseInfoHeadPr
 	return (
 		<div className='flex grow flex-col gap-2'>
 			<div className='flex gap-2'>
-				<ScaleIcon className='my-auto aspect-square h-12 text-primary' />
+				<div className='aspect-square h-12 rounded-lg bg-gradient-to-br from-accent to-primary p-1.5'>
+					<ScaleIcon className='my-auto h-full w-full stroke-2 text-base-100' />
+				</div>
 
 				<div>
 					<h2 className='text-[10px] italic md:text-xs'>{APP_PATH} is licensed under the</h2>

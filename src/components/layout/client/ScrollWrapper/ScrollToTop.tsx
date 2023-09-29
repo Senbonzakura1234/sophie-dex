@@ -1,6 +1,4 @@
-'use client';
-
-import ArrowUpOnSquareIcon from '@root/components/common/server/icons/solid/ArrowUpOnSquareIcon';
+import ArrowUpOnSquareIcon from '@root/components/icons/solid/ArrowUpOnSquareIcon';
 import type { RefProps } from '@root/types/common/props';
 import { useCallback } from 'react';
 

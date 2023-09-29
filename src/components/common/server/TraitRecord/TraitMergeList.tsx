@@ -1,5 +1,5 @@
 import CopyUrlButton from '@root/components/common/client/CopyUrlButton';
-import MergeIcon from '@root/components/common/server/icons/solid/MergeIcon';
+import MergeIcon from '@root/components/icons/solid/MergeIcon';
 import type { HyperLinkRecord } from '@root/server/database/schema';
 import Link from 'next/link';
 

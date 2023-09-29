@@ -1,7 +1,7 @@
 'use client';
 
-import MagnifyingGlassIcon from '@root/components/common/server/icons/solid/MagnifyingGlassIcon';
-import XMarkIcon from '@root/components/common/server/icons/solid/XMarkIcon';
+import MagnifyingGlassIcon from '@root/components/icons/solid/MagnifyingGlassIcon';
+import XMarkIcon from '@root/components/icons/solid/XMarkIcon';
 import { useUpdateQuery } from '@root/hooks/useUpdateQuery';
 import { useState } from 'react';
 

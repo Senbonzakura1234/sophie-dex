@@ -1,6 +1,6 @@
 'use client';
 
-import ClipboardIcon from '@root/components/common/server/icons/solid/ClipboardIcon';
+import ClipboardIcon from '@root/components/icons/solid/ClipboardIcon';
 import useDispatch from '@root/hooks/useDispatch';
 import type { ClassNameProps } from '@root/types/common/props';
 import { getBaseUrl, tryCatchHandler } from '@root/utils/common';

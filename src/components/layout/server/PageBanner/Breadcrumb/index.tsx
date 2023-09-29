@@ -1,8 +1,8 @@
 'use client';
 
-import HomeIcon from '@root/components/common/server/icons/solid/HomeIcon';
-import InfoIcon from '@root/components/common/server/icons/solid/InfoIcon';
-import LinkIcon from '@root/components/common/server/icons/solid/LinkIcon';
+import HomeIcon from '@root/components/icons/solid/HomeIcon';
+import InfoIcon from '@root/components/icons/solid/InfoIcon';
+import LinkIcon from '@root/components/icons/solid/LinkIcon';
 import { moduleIdList } from '@root/types/model';
 import { usePathname } from 'next/navigation';
 import { Fragment, useMemo } from 'react';

@@ -6,10 +6,8 @@ export default async function ReadmeWrapper() {
 	const readme = await getReadme();
 
 	return (
-		<CommonWrapper>
-			<div className='prose text-primary'>
-				<MDXRemote source={readme} />
-			</div>
+		<CommonWrapper className='prose max-w-none text-primary'>
+			<MDXRemote source={readme} />
 		</CommonWrapper>
 	);
 }

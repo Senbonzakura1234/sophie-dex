@@ -1,6 +1,6 @@
 import 'server-only';
 
-import { defaultLimit, sortByMap } from '@root/constants/common';
+import { DEFAULT_LIMIT, sortByMap } from '@root/constants/common';
 import {
 	db,
 	getListEffectDefault,
@@ -16,126 +16,122 @@ import { ANYQuery, CountQuery, getDirection, getSortField, onQueryDBError } from
 import type { SQL } from 'drizzle-orm';
 import { and, eq, ilike, or } from 'drizzle-orm';
 
-class ListRecordRepository {
-	private processOutput<TRecord extends CommonRecord>(dbResult: DBListResult<TRecord>): ListRecord<TRecord> {
-		const [totalRecord, records] = [dbResult[0]?.totalRecord ?? 0, dbResult.map(({ record }) => record)] as const;
+const processOutput = <TRecord extends CommonRecord>(dbResult: DBListResult<TRecord>): ListRecord<TRecord> => {
+	const [totalRecord, records] = [dbResult[0]?.totalRecord ?? 0, dbResult.map(({ record }) => record)] as const;
 
-		return { records, totalRecord, totalPage: Math.ceil(totalRecord / defaultLimit) };
-	}
+	return { records, totalRecord, totalPage: Math.ceil(totalRecord / DEFAULT_LIMIT) };
+};
 
-	async getEffects(input: SearchQuery): Promise<ListRecord<Effect>> {
-		const { search, sortBy, direction, page } = input;
+export const getEffects = async (input: SearchQuery): Promise<ListRecord<Effect>> => {
+	const { search, sortBy, direction, page } = input;
 
-		if (!search && !sortBy && !direction)
-			return await getListEffectDefault
-				.execute({ offset: ((page ?? 1) - 1) * defaultLimit })
-				.then(this.processOutput)
-				.catch(onQueryDBError);
-
-		return await db
-			.select({ totalRecord: CountQuery, record: effects })
-			.from(effects)
-			.where(
-				or(
-					...(search
-						? [
-								ilike(effects.name, `%${search}%`),
-								ilike(effects.description, `%${search}%`),
-								ilike(effects.keyWords, `%${search}%`),
-						  ]
-						: []),
-				),
-			)
-			.orderBy(getDirection(direction)(effects[getSortField(sortByMap.effect, 'index', sortBy)]))
-			.limit(defaultLimit)
-			.offset(((page ?? 1) - 1) * defaultLimit)
-			.then(this.processOutput)
+	if (!search && !sortBy && !direction)
+		return await getListEffectDefault
+			.execute({ offset: ((page ?? 1) - 1) * DEFAULT_LIMIT })
+			.then(processOutput)
 			.catch(onQueryDBError);
-	}
 
-	async getItems(input: SearchQuery): Promise<ListRecord<Item>> {
-		const { search, sortBy, direction, color, relatedCategory, page, category, recipeType } = await input;
+	return await db
+		.select({ totalRecord: CountQuery, record: effects })
+		.from(effects)
+		.where(
+			or(
+				...(search
+					? [
+							ilike(effects.name, `%${search}%`),
+							ilike(effects.description, `%${search}%`),
+							ilike(effects.keyWords, `%${search}%`),
+					  ]
+					: []),
+			),
+		)
+		.orderBy(getDirection(direction)(effects[getSortField(sortByMap.effect, 'index', sortBy)]))
+		.limit(DEFAULT_LIMIT)
+		.offset(((page ?? 1) - 1) * DEFAULT_LIMIT)
+		.then(processOutput)
+		.catch(onQueryDBError);
+};
 
-		const OR: Array<SQL> = search ? [ilike(items.name, `%${search}%`), ilike(items.keyWords, `%${search}%`)] : [];
+export const getItems = async (input: SearchQuery): Promise<ListRecord<Item>> => {
+	const { search, sortBy, direction, color, relatedCategory, page, category, recipeType } = await input;
 
-		const AND: Array<SQL> = [];
-		if (relatedCategory) AND.push(ANYQuery(items.relatedCategories.name, relatedCategory));
-		if (color) AND.push(eq(items.color, color));
-		if (recipeType) AND.push(eq(items.recipeType, recipeType));
-		if (category) AND.push(eq(items.category, category));
+	const OR: Array<SQL> = search ? [ilike(items.name, `%${search}%`), ilike(items.keyWords, `%${search}%`)] : [];
 
-		if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
-			return await getListItemDefault
-				.execute({ offset: ((page ?? 1) - 1) * defaultLimit })
-				.then(this.processOutput)
-				.catch(onQueryDBError);
+	const AND: Array<SQL> = [];
+	if (relatedCategory) AND.push(ANYQuery(items.relatedCategories.name, relatedCategory));
+	if (color) AND.push(eq(items.color, color));
+	if (recipeType) AND.push(eq(items.recipeType, recipeType));
+	if (category) AND.push(eq(items.category, category));
 
-		return await db
-			.select({ totalRecord: CountQuery, record: items })
-			.from(items)
-			.where(and(or(...OR), ...AND))
-			.orderBy(getDirection(direction)(items[getSortField(sortByMap.item, 'index', sortBy)]))
-			.limit(defaultLimit)
-			.offset(((page ?? 1) - 1) * defaultLimit)
-			.then(this.processOutput)
+	if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
+		return await getListItemDefault
+			.execute({ offset: ((page ?? 1) - 1) * DEFAULT_LIMIT })
+			.then(processOutput)
 			.catch(onQueryDBError);
-	}
 
-	async getRumors(input: SearchQuery): Promise<ListRecord<Rumor>> {
-		const { search, sortBy, direction, page, rumorType } = input;
+	return await db
+		.select({ totalRecord: CountQuery, record: items })
+		.from(items)
+		.where(and(or(...OR), ...AND))
+		.orderBy(getDirection(direction)(items[getSortField(sortByMap.item, 'index', sortBy)]))
+		.limit(DEFAULT_LIMIT)
+		.offset(((page ?? 1) - 1) * DEFAULT_LIMIT)
+		.then(processOutput)
+		.catch(onQueryDBError);
+};
 
-		const OR: Array<SQL> = search ? [ilike(rumors.name, `%${search}%`), ilike(rumors.keyWords, `%${search}%`)] : [];
+export const getRumors = async (input: SearchQuery): Promise<ListRecord<Rumor>> => {
+	const { search, sortBy, direction, page, rumorType } = input;
 
-		const AND: Array<SQL> = [];
-		if (rumorType) AND.push(eq(rumors.rumorType, rumorType));
+	const OR: Array<SQL> = search ? [ilike(rumors.name, `%${search}%`), ilike(rumors.keyWords, `%${search}%`)] : [];
 
-		if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
-			return await getListRumorDefault
-				.execute({ offset: ((page ?? 1) - 1) * defaultLimit })
-				.then(this.processOutput)
-				.catch(onQueryDBError);
+	const AND: Array<SQL> = [];
+	if (rumorType) AND.push(eq(rumors.rumorType, rumorType));
 
-		return await db
-			.select({ totalRecord: CountQuery, record: rumors })
-			.from(rumors)
-			.where(and(or(...OR), ...AND))
-			.orderBy(getDirection(direction)(rumors[getSortField(sortByMap.rumor, 'price', sortBy)]))
-			.limit(defaultLimit)
-			.offset(((page ?? 1) - 1) * defaultLimit)
-			.then(this.processOutput)
+	if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
+		return await getListRumorDefault
+			.execute({ offset: ((page ?? 1) - 1) * DEFAULT_LIMIT })
+			.then(processOutput)
 			.catch(onQueryDBError);
-	}
 
-	async getTraits(input: SearchQuery): Promise<ListRecord<Trait>> {
-		const { search, sortBy, direction, category, page } = input;
+	return await db
+		.select({ totalRecord: CountQuery, record: rumors })
+		.from(rumors)
+		.where(and(or(...OR), ...AND))
+		.orderBy(getDirection(direction)(rumors[getSortField(sortByMap.rumor, 'price', sortBy)]))
+		.limit(DEFAULT_LIMIT)
+		.offset(((page ?? 1) - 1) * DEFAULT_LIMIT)
+		.then(processOutput)
+		.catch(onQueryDBError);
+};
 
-		const OR: Array<SQL> = search
-			? [
-					ilike(traits.name, `%${search}%`),
-					ilike(traits.description, `%${search}%`),
-					ilike(traits.keyWords, `%${search}%`),
-			  ]
-			: [];
+export const getTraits = async (input: SearchQuery): Promise<ListRecord<Trait>> => {
+	const { search, sortBy, direction, category, page } = input;
 
-		const AND: Array<SQL> = [];
-		if (category) AND.push(ANYQuery(traits.categories.name, category));
+	const OR: Array<SQL> = search
+		? [
+				ilike(traits.name, `%${search}%`),
+				ilike(traits.description, `%${search}%`),
+				ilike(traits.keyWords, `%${search}%`),
+		  ]
+		: [];
 
-		if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
-			return await getListTraitDefault
-				.execute({ offset: ((page ?? 1) - 1) * defaultLimit })
-				.then(this.processOutput)
-				.catch(onQueryDBError);
+	const AND: Array<SQL> = [];
+	if (category) AND.push(ANYQuery(traits.categories.name, category));
 
-		return await db
-			.select({ totalRecord: CountQuery, record: traits })
-			.from(traits)
-			.where(and(or(...OR), ...AND))
-			.orderBy(getDirection(direction)(traits[getSortField(sortByMap.trait, 'index', sortBy)]))
-			.limit(defaultLimit)
-			.offset(((page ?? 1) - 1) * defaultLimit)
-			.then(this.processOutput)
+	if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
+		return await getListTraitDefault
+			.execute({ offset: ((page ?? 1) - 1) * DEFAULT_LIMIT })
+			.then(processOutput)
 			.catch(onQueryDBError);
-	}
-}
 
-export const listRecordProvider = new ListRecordRepository();
+	return await db
+		.select({ totalRecord: CountQuery, record: traits })
+		.from(traits)
+		.where(and(or(...OR), ...AND))
+		.orderBy(getDirection(direction)(traits[getSortField(sortByMap.trait, 'index', sortBy)]))
+		.limit(DEFAULT_LIMIT)
+		.offset(((page ?? 1) - 1) * DEFAULT_LIMIT)
+		.then(processOutput)
+		.catch(onQueryDBError);
+};
