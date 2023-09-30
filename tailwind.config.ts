@@ -5,7 +5,7 @@ import type { Config } from 'tailwindcss';
 import tailwindPlugin from 'tailwindcss/plugin';
 
 const config: Config = {
-	content: ['./src/**/*.{js,ts,jsx,tsx}'],
+	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
 	theme: {
 		extend: {
 			fontFamily: { atelier: ['var(--font-atelier)'] },

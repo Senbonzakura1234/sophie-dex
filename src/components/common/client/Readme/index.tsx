@@ -5,7 +5,7 @@ import README from './README.mdx';
 
 export default function Readme() {
 	return (
-		<CommonWrapper className='prose h-auto max-w-none [&>*>*]:mb-1 [&>*>*]:mt-0 [&>*>h1]:text-primary [&>*>h2]:text-accent'>
+		<CommonWrapper className='readme h-auto'>
 			<README />
 		</CommonWrapper>
 	);

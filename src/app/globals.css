@@ -14,6 +14,22 @@
 		background-image: url('./images/lips.svg');
 		background-repeat: repeat;
 	}
+
+	.readme .card-body {
+		@apply prose max-w-none;
+	}
+	.readme .card-body h2 {
+		@apply mt-0 mb-1;
+	}
+	.readme .card-body ul {
+		@apply m-0;
+	}
+	.readme .card-body > div:not(.table-of-contents) ul {
+		@apply flex gap-2 list-none flex-row p-0 flex-wrap;
+	}
+	.readme .card-body > div:not(.table-of-contents) ul li {
+		@apply m-0 p-0;
+	}
 }
 
 @layer utilities {

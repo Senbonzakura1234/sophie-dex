@@ -1,5 +1,5 @@
 import { exportDBQueriesMap } from '@root/server/database';
-import { LogProvider, evnIs, tryCatchHandler } from '@root/utils/common';
+import { evnIs, tryCatchHandler, writeLog } from '@root/utils/common';
 import { writeFile } from 'fs/promises';
 import { NextResponse } from 'next/server';
 
@@ -9,7 +9,7 @@ const onExport = () =>
 			const exportData = await tryCatchHandler(query.execute());
 
 			if (!exportData.isSuccess) {
-				LogProvider.write({
+				writeLog({
 					args: [`Error exporting data from table ${table}`, exportData.error],
 					type: 'error',
 				});
@@ -22,7 +22,7 @@ const onExport = () =>
 			);
 
 			if (!writeFileResult.isSuccess) {
-				LogProvider.write({
+				writeLog({
 					args: [`Error writing data from table ${table}`, writeFileResult.error],
 					type: 'error',
 				});

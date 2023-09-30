@@ -6,24 +6,15 @@ import { env } from './env.mjs';
 
 export const evnIs = (nodeEnv: NodeEnv) => env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
 
-type LogProviderWriteParams = {
-	args: Array<unknown>;
-	type: 'log' | 'warn' | 'error';
-};
+type WriteLogParams = { args: Array<unknown>; type: 'log' | 'warn' | 'error' };
 
-class LogProviderClass {
-	write({ args, type }: LogProviderWriteParams) {
-		if (!evnIs('production')) return console[type](...args);
-	}
-}
-
-export const LogProvider = new LogProviderClass();
+export const writeLog = ({ args, type }: WriteLogParams) => console[type](...args);
 
 export const tryCatchHandler = async <TReturn = unknown>(promise: Promise<TReturn>) => {
 	try {
 		return { data: await promise, isSuccess: true as const, error: null };
 	} catch (error) {
-		LogProvider.write({ args: [error], type: 'error' });
+		writeLog({ args: [error], type: 'error' });
 
 		return { data: null, isSuccess: false as const, error };
 	}
@@ -33,7 +24,7 @@ export const tryCatchHandlerSync = <TReturn = unknown>(callback: () => TReturn) 
 	try {
 		return { data: callback(), isSuccess: true as const, error: null };
 	} catch (error) {
-		LogProvider.write({ args: [error], type: 'error' });
+		writeLog({ args: [error], type: 'error' });
 
 		return { data: null, isSuccess: false as const, error };
 	}
@@ -78,7 +69,7 @@ export const improvedParseJSON = <T>(value: string | null): T | undefined => {
 
 	if (isSuccess) return data;
 
-	LogProvider.write({ args: [`parsing error on ${value}`, error], type: 'error' });
+	writeLog({ args: [`parsing error on ${value}`, error], type: 'error' });
 };
 
 export const paramsToQuery = (input: ReadonlyURLSearchParams | URLSearchParams) =>

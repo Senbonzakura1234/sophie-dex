@@ -12,7 +12,7 @@ import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { ChildrenProps } from '@root/types/common/props';
 import type { DaisyUIThemeEnum } from '@root/types/common/zod';
 import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
-import { LogProvider, getBaseUrl, tryCatchHandler } from '@root/utils/common';
+import { getBaseUrl, tryCatchHandler, writeLog } from '@root/utils/common';
 import { ContextProvider } from '@root/utils/context';
 import { getRepoInfo } from '@root/utils/server';
 import { getCookie } from 'cookies-next';
@@ -23,7 +23,7 @@ const getCurrentTheme = async (): Promise<DaisyUIThemeEnum> => {
 	const headersResult = await tryCatchHandler(import('next/headers'));
 
 	if (!headersResult.isSuccess) {
-		LogProvider.write({ args: [`Error importing next/headers:`, headersResult.error], type: 'error' });
+		writeLog({ args: [`Error importing next/headers:`, headersResult.error], type: 'error' });
 		return 'fantasy';
 	}
 

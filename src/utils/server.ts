@@ -25,10 +25,10 @@ import {
 import { TRPCError } from '@trpc/server';
 import type { Metadata, ResolvingMetadata } from 'next';
 import type { ZodType } from 'zod';
-import { LogProvider, improvedInclude, tryCatchHandler, tryCatchHandlerSync } from './common';
+import { improvedInclude, tryCatchHandler, tryCatchHandlerSync, writeLog } from './common';
 
 export const onQueryDBError = (error: unknown) => {
-	LogProvider.write({ args: [error], type: 'error' });
+	writeLog({ args: [error], type: 'error' });
 
 	throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
 };
@@ -77,7 +77,7 @@ export async function improvedFetch<TResult = unknown>(
 	defaultValue: TResult | undefined,
 	...args: Parameters<typeof fetch>
 ) {
-	LogProvider.write({ args: [`Fetch: ${JSON.stringify(args[0], null, 2)}`], type: 'log' });
+	writeLog({ args: [`Fetch: ${JSON.stringify(args[0], null, 2)}`], type: 'log' });
 
 	const fetchResult = await tryCatchHandler(fetch(...args));
 
