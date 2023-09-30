@@ -10,6 +10,7 @@
 -  &nbsp;[Usage](#usage)
 -  &nbsp;[Authors](#authors)
 -  &nbsp;[License](#license)
+-  &nbsp;[Keywords](#keywords)
 
 </div>
 
@@ -56,5 +57,16 @@
 ## <a id='license'># License</a>
 
 -  &nbsp;<a href='https://github.com/Senbonzakura1234/sophie-dex/blob/main/LICENSE' target='_blank'>MIT License</a> © Senbonzakura1234
+
+</div>
+
+<div className='keywords list-tag'>
+
+## <a id='keywords'># Keywords</a>
+
+-  &nbsp;[Atelier Series](https://www.google.com/search?q=Atelier+Series)
+-  &nbsp;[Sophie DX](https://www.google.com/search?q=Sophie+DX)
+-  &nbsp;[Mysterious Trio](https://www.google.com/search?q=Atelier+Mysterious+Trio)
+-  &nbsp;[Wiki](https://www.google.com/search?q=Wiki)
 
 </div>
