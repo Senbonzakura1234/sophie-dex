@@ -3,7 +3,7 @@
 import ProfileInfo from '@root/components/common/server/ProfileInfo';
 import ErrorContent from '@root/components/layout/server/ErrorContent';
 import RecordPlaceholder from '@root/components/loading/RecordPlaceholder';
-import { ApiContext } from '@root/utils/trpc';
+import { ApiContext } from '@root/utils/client/trpc';
 
 export default function APIProfileInfoWrapper() {
 	const { data, isSuccess, isLoading, error } = ApiContext.about.profile.useQuery();

@@ -1,3 +1,5 @@
+import 'server-only';
+
 import type { ZodType } from 'zod';
 import { z } from 'zod';
 import type { ZodOpenApiPathItemObject, ZodOpenApiPathsObject, ZodOpenApiResponsesObject } from 'zod-openapi';

@@ -3,7 +3,7 @@ import { exportTraits, getAllTraitIds } from '@root/server/database';
 import { getTraits } from '@root/server/database/repository/listRecord';
 import { getTrait } from '@root/server/database/repository/singleRecord';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
-import { onQueryDBError } from '@root/utils/server';
+import { onQueryDBError } from '@root/utils/server/database';
 
 export const traitRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(({ input }) => getTraits(input)),

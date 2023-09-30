@@ -6,8 +6,8 @@ import RecordPlaceholder from '@root/components/loading/RecordPlaceholder';
 import { DEFAULT_LIMIT } from '@root/constants/common';
 import useDispatchContentData from '@root/hooks/useDispatchContentData';
 import type { PageProps } from '@root/types/common';
+import { ApiContext } from '@root/utils/client/trpc';
 import { createArray } from '@root/utils/common';
-import { ApiContext } from '@root/utils/trpc';
 
 type APIListWrapperProps = { searchParams: PageProps['searchParams'] };
 

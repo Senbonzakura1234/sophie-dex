@@ -1,4 +1,4 @@
-import { Context } from '@root/utils/context';
+import { Context } from '@root/utils/client/context';
 import { useContext } from 'react';
 
 const useDispatch = () => useContext(Context).dispatch;

@@ -3,8 +3,8 @@
 import ClipboardIcon from '@root/components/icons/solid/ClipboardIcon';
 import useDispatch from '@root/hooks/useDispatch';
 import type { ClassNameProps } from '@root/types/common/props';
+import type { AlertContextState } from '@root/utils/client/context';
 import { getBaseUrl, tryCatchHandler } from '@root/utils/common';
-import type { AlertContextState } from '@root/utils/context';
 
 type OnCopyToClipboardParams = {
 	input: string;

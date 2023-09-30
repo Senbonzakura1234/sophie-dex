@@ -3,7 +3,7 @@ import { exportEffects, getAllEffectIds } from '@root/server/database';
 import { getEffects } from '@root/server/database/repository/listRecord';
 import { getEffect } from '@root/server/database/repository/singleRecord';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
-import { onQueryDBError } from '@root/utils/server';
+import { onQueryDBError } from '@root/utils/server/database';
 
 export const effectRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(({ input }) => getEffects(input)),

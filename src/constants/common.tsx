@@ -11,7 +11,7 @@ import type {
 	SortByEnum,
 } from '@root/types/common/zod';
 import { capitalize } from '@root/utils/common';
-import { env } from '@root/utils/env.mjs';
+import { env } from '@root/utils/common/env.mjs';
 
 export const APP_CODE = env.NEXT_PUBLIC_APP_CODE;
 export const APP_AUTHOR = env.NEXT_PUBLIC_APP_AUTHOR;

@@ -3,8 +3,8 @@ import neonDB from '@root/server/database/drivers/neon';
 import vercelDB from '@root/server/database/drivers/vercel';
 import { effects, items, rumors, traits } from '@root/server/database/schema';
 import type { ExportDBQueriesMap } from '@root/types/model';
-import { env } from '@root/utils/env.mjs';
-import { CountQuery } from '@root/utils/server';
+import { env } from '@root/utils/common/env.mjs';
+import { CountQuery } from '@root/utils/server/database';
 import { asc, eq, sql } from 'drizzle-orm';
 
 const dbMap = { NEON_DB: neonDB, VERCEL_DB: vercelDB } as const;

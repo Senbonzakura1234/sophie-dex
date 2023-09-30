@@ -1,5 +1,5 @@
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { getGithubUserInfo, getLicense } from '@root/utils/server';
+import { getGithubUserInfo, getLicense } from '@root/utils/server/fetch';
 
 export const aboutRouter = router({
 	license: publicProcedure.query(getLicense),

@@ -3,7 +3,7 @@
 import ErrorContent from '@root/components/layout/server/ErrorContent';
 import Loader from '@root/components/loading/Loader';
 import useDispatchContentData from '@root/hooks/useDispatchContentData';
-import { ApiContext } from '@root/utils/trpc';
+import { ApiContext } from '@root/utils/client/trpc';
 import dynamic from 'next/dynamic';
 
 const Swagger = dynamic(() => import('swagger-ui-react'), {

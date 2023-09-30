@@ -1,4 +1,4 @@
-import type { ContentDataContextState } from '@root/utils/context';
+import type { ContentDataContextState } from '@root/utils/client/context';
 import { useEffect } from 'react';
 import useDispatch from './useDispatch';
 

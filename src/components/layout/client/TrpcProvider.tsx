@@ -1,8 +1,8 @@
 'use client';
 
 import type { ChildrenProps } from '@root/types/common/props';
+import { ApiContext } from '@root/utils/client/trpc';
 import { evnIs, getBaseUrl } from '@root/utils/common';
-import { ApiContext } from '@root/utils/trpc';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { httpBatchLink, loggerLink } from '@trpc/client';
 import { useState } from 'react';

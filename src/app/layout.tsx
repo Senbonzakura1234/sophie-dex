@@ -12,9 +12,9 @@ import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { ChildrenProps } from '@root/types/common/props';
 import type { DaisyUIThemeEnum } from '@root/types/common/zod';
 import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
+import { ContextProvider } from '@root/utils/client/context';
 import { getBaseUrl, tryCatchHandler, writeLog } from '@root/utils/common';
-import { ContextProvider } from '@root/utils/context';
-import { getRepoInfo } from '@root/utils/server';
+import { getRepoInfo } from '@root/utils/server/fetch';
 import { getCookie } from 'cookies-next';
 import type { Metadata } from 'next';
 

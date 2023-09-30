@@ -3,7 +3,7 @@
 import LicenseInfo from '@root/components/common/server/LicenseInfo';
 import ErrorContent from '@root/components/layout/server/ErrorContent';
 import RecordPlaceholder from '@root/components/loading/RecordPlaceholder';
-import { ApiContext } from '@root/utils/trpc';
+import { ApiContext } from '@root/utils/client/trpc';
 
 export default function APILicenseInfoWrapper() {
 	const { data, isSuccess, isLoading, error } = ApiContext.about.license.useQuery();

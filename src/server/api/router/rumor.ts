@@ -3,7 +3,7 @@ import { exportRumors, getAllRumorIds } from '@root/server/database';
 import { getRumors } from '@root/server/database/repository/listRecord';
 import { getRumor } from '@root/server/database/repository/singleRecord';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
-import { onQueryDBError } from '@root/utils/server';
+import { onQueryDBError } from '@root/utils/server/database';
 
 export const rumorRouter = router({
 	getAll: publicProcedure.input(searchQueryValidator).query(({ input }) => getRumors(input)),

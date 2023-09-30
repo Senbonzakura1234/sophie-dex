@@ -12,7 +12,7 @@ import type { Effect, Item, Rumor, Trait } from '@root/server/database/schema';
 import { effects, items, rumors, traits } from '@root/server/database/schema';
 import type { SearchQuery } from '@root/types/common/zod';
 import type { CommonRecord, DBListResult, ListRecord } from '@root/types/model';
-import { ANYQuery, CountQuery, getDirection, getSortField, onQueryDBError } from '@root/utils/server';
+import { ANYQuery, CountQuery, getDirection, getSortField, onQueryDBError } from '@root/utils/server/database';
 import type { SQL } from 'drizzle-orm';
 import { and, eq, ilike, or } from 'drizzle-orm';
 
