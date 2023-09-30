@@ -51,7 +51,7 @@
 		@apply btn btn-xs btn-primary capitalize visited:btn-accent no-underline font-bold;
 	}
 
-	.readme .card-body > div:is(.tech-stack, .usage) > ul {
+	.readme .card-body > :is(.tech-stack, .usage) > ul {
 		@apply flex gap-2 list-none flex-row p-0 flex-wrap;
 	}
 }
