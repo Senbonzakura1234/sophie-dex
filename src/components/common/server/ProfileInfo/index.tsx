@@ -1,35 +1,25 @@
 import Avatar from '@root/components/common/server/Avatar';
 import CommonWrapper from '@root/components/common/server/CommonWrapper';
-import FacebookSquareIcon from '@root/components/icons/brand/FacebookSquareIcon';
-import TwitterSquareIcon from '@root/components/icons/brand/TwitterSquareIcon';
-import MailIcon from '@root/components/icons/solid/MailIcon';
-import MapPinIcon from '@root/components/icons/solid/MapPinIcon';
-import OfficeIcon from '@root/components/icons/solid/OfficeIcon';
 import type { GithubUserInfo } from '@root/types/common/zod';
 import Link from 'next/link';
-import type { ComponentProps } from 'react';
+import type { ProfileFieldProps } from './ProfileField';
 import ProfileField from './ProfileField';
 
-type ProfileInfoProps = {
-	profileInfo: GithubUserInfo;
-};
+type ProfileInfoProps = { profileInfo: GithubUserInfo };
 
 export default async function ProfileInfo({
 	profileInfo: { avatar_url, login, bio, company, blog, email, location, twitter_username },
 }: ProfileInfoProps) {
-	const fields: ComponentProps<typeof ProfileField>[] = [
-		{ Icon: OfficeIcon, content: { type: 'text', label: company } },
-		{ Icon: MapPinIcon, content: { type: 'text', label: location } },
+	const fields: ProfileFieldProps[] = [
+		{ label: company, type: 'company' },
+		{ label: location, type: 'location' },
 		{
-			Icon: TwitterSquareIcon,
-			content: {
-				type: 'link',
-				href: { protocol: 'https', hostname: 'twitter', host: 'twitter.com', pathname: twitter_username },
-				label: twitter_username,
-			},
+			label: twitter_username,
+			type: 'twitter',
+			href: { protocol: 'https', hostname: 'twitter', host: 'twitter.com', pathname: twitter_username },
 		},
-		{ Icon: FacebookSquareIcon, content: { type: 'link', href: { pathname: blog }, label: 'My Blog' } },
-		{ Icon: MailIcon, content: { type: 'link', href: { pathname: `mailto:${email}` }, label: email } },
+		{ label: 'My Blog', type: 'blog', href: { pathname: blog } },
+		{ label: email, type: 'mail', href: { pathname: `mailto:${email}` } },
 	];
 
 	return (
@@ -60,8 +50,10 @@ export default async function ProfileInfo({
 				<div className='divider divider-vertical m-0 w-full before:bg-gradient-to-br before:from-accent before:to-primary after:bg-gradient-to-tl after:from-accent after:to-primary' />
 
 				<div className='flex flex-col gap-2'>
-					{fields.map((field, key) => (
-						<ProfileField {...field} key={key} />
+					{fields.map((props, key) => (
+						<p className='flex h-5 grow-0 items-end gap-2 text-sm font-bold capitalize' key={key}>
+							<ProfileField {...props} />
+						</p>
 					))}
 				</div>
 			</div>

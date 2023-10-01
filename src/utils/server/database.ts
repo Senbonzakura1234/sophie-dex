@@ -1,12 +1,12 @@
 import 'server-only';
 
+import { DEFAULT_LIMIT } from '@root/constants/common';
 import type { PageProps } from '@root/types/common';
 import type { DirectionEnum, SortByEnum } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
 import type { CommonRecord } from '@root/types/model';
 import { improvedInclude, tryCatchHandler, writeLog } from '@root/utils/common';
 import { TRPCError } from '@trpc/server';
-import type { AnyColumn } from 'drizzle-orm';
 import { asc, desc, sql } from 'drizzle-orm';
 import type { Metadata, ResolvingMetadata } from 'next';
 
@@ -16,8 +16,7 @@ export const onQueryDBError = (error: unknown) => {
 	throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
 };
 
-export const ANYQuery = (column: AnyColumn['name'], value: string | number) =>
-	sql`${value} = ANY(${sql.identifier(column)})`;
+export const getOffset = (page: number | null) => ((page ?? 1) - 1) * DEFAULT_LIMIT;
 
 export const CountQuery = sql<number>`count(*) over()`;
 
@@ -31,10 +30,10 @@ export const getSortField = <TSearch extends Readonly<SortByEnum>>(
 
 export async function generateListMetadata(
 	searchParams: PageProps['searchParams'],
-	parent: ResolvingMetadata,
-	extraMeta: Metadata = {},
+	parentPromise: ResolvingMetadata,
+	extraMeta: Metadata,
 ): Promise<Metadata> {
-	const { keywords } = await parent;
+	const { keywords } = await parentPromise;
 
 	const result = Object.values(searchQueryValidator.parse(searchParams)).filter(Boolean).map(String);
 
@@ -49,7 +48,7 @@ export async function generateDetailMetadata<TRecord extends CommonRecord>(
 
 	if (!result.isSuccess) return { title: 'Error' };
 
-	const [parent, record] = result.data;
+	const [{ keywords: parentKeywords }, { name, keyWords: currentKeywords }] = result.data;
 
-	return { title: record.name, keywords: [...record.keyWords.split(','), ...(parent.keywords || [])] };
+	return { title: name, keywords: [...currentKeywords.split(','), ...(parentKeywords || [])] };
 }

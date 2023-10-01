@@ -10,13 +10,13 @@ import type {
 	RumorTypeEnum,
 	SortByEnum,
 } from '@root/types/common/zod';
-import { capitalize } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
+import { capitalize, replaceAll } from 'string-ts';
 
 export const APP_CODE = env.NEXT_PUBLIC_APP_CODE;
 export const APP_AUTHOR = env.NEXT_PUBLIC_APP_AUTHOR;
 export const APP_PATH = `${APP_AUTHOR}/${APP_CODE}`;
-export const APP_NAME = capitalize(APP_CODE.replaceAll('-', ' '));
+export const APP_NAME = capitalize(replaceAll(APP_CODE, '-', ' '));
 export const APP_KEYWORD = env.NEXT_PUBLIC_APP_KEYWORD;
 export const APP_AUTHOR_EMAIL = env.NEXT_PUBLIC_APP_AUTHOR_EMAIL;
 
@@ -110,3 +110,5 @@ export const errorMap = {
 	INTERNAL_SERVER_ERROR: { message: 'Some Thing Wrong Server', status: 500 },
 	NOT_IMPLEMENTED: { message: 'Some Thing Wrong Server', status: 501 },
 } as const satisfies Record<ErrorEnum, { message: string; status: number }>;
+
+export const listAboutPaths = ['about', 'profile', 'license'] as const;

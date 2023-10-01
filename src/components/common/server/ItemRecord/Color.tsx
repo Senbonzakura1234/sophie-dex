@@ -5,6 +5,7 @@ import { colorTWClassMap } from '@root/constants/common';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { ColorEnum } from '@root/types/common/zod';
 import { useMemo } from 'react';
+import { toLowerCase } from 'string-ts';
 
 type ColorProps = { color: ColorEnum };
 
@@ -27,7 +28,7 @@ export default function Color({ color }: ColorProps) {
 				searchQuery={searchQuery}
 				resetPage
 			>
-				<span className='font-bold capitalize text-slate-50'>{color.toLowerCase()}</span>
+				<span className='font-bold capitalize text-slate-50'>{toLowerCase(color)}</span>
 			</QueryLink>
 		</div>
 	);

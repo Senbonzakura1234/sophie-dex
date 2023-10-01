@@ -2,11 +2,11 @@
 
 import { Root, Scrollbar, Thumb, Viewport } from '@radix-ui/react-scroll-area';
 import PageRefresh from '@root/components/layout/client/PageRefresh';
-import { useModuleId } from '@root/hooks/useModuleId';
+import usePageSegment from '@root/hooks/usePageSegment';
 import type { OnScroll } from '@root/hooks/useScroll';
 import { useScroll } from '@root/hooks/useScroll';
-import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { ChildrenProps } from '@root/types/common/props';
+import { useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import ScrollToTop from './ScrollToTop';
 
@@ -15,9 +15,8 @@ type ScrollWrapperProps = ChildrenProps;
 export default function ScrollWrapper({ children }: ScrollWrapperProps) {
 	const scrollableRef = useRef<HTMLDivElement>(null);
 
-	const { isDetailPage, moduleId } = useModuleId();
-
-	const { searchQuery } = useSearchQuery();
+	const searchParams = useSearchParams();
+	const { isDetailPage, segment } = usePageSegment();
 
 	const [isShowScrollTop, setIsShowScrollTop] = useState(false);
 	const [isDisabledPullToRefresh, setIsDisabledPullToRefresh] = useState(false);
@@ -37,11 +36,11 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
 
 	useEffect(() => {
 		if (scrollableRef?.current) scrollableRef.current.scrollTo({ top: 0, behavior: 'smooth' });
-	}, [isDetailPage, moduleId, searchQuery]);
+	}, [isDetailPage, segment, searchParams]);
 
 	return (
 		<>
-			<PageRefresh isDisabled={isDisabledPullToRefresh} isDetailPage={isDetailPage} moduleId={moduleId} />
+			<PageRefresh isDisabled={isDisabledPullToRefresh} isDetailPage={isDetailPage} segment={segment} />
 
 			<Root className='scroll-area-root h-[100dvh] w-[100dvw] bg-base-200 !antialiased' type='scroll'>
 				<Viewport

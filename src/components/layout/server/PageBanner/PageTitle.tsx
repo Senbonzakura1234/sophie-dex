@@ -1,13 +1,13 @@
 'use client';
 
-import { useModuleId } from '@root/hooks/useModuleId';
+import usePageSegment from '@root/hooks/usePageSegment';
 
 export default function PageTitle() {
-	const { moduleId } = useModuleId();
+	const { segment } = usePageSegment();
 
 	return (
 		<div className='text-5xl font-bold capitalize tracking-widest text-slate-50 text-shadow-dark-md xl:text-6xl 2xl:text-7xl'>
-			{moduleId}
+			{segment}
 		</div>
 	);
 }

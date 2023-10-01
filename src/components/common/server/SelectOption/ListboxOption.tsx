@@ -37,7 +37,7 @@ export default function ListboxOption<V extends string | number>({
 				)}
 
 				{!isHideLabel ? (
-					<span className='capitalize'>{convertCode(optionValue.label ?? optionValue.value)}</span>
+					<span className='capitalize'>{convertCode(`${optionValue.label ?? (optionValue.value || '')}`)}</span>
 				) : null}
 			</span>
 		</Listbox.Option>

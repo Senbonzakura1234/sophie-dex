@@ -1,6 +1,6 @@
+import MDXWrapper from '@root/components/common/client/MDXWrapper';
 import CheckList from '@root/components/common/server/CheckList';
 import CommonWrapper from '@root/components/common/server/CommonWrapper';
-import MDXRenderer from '@root/components/common/server/MDXRenderer';
 import CheckIcon from '@root/components/icons/solid/CheckIcon';
 import InfoIcon from '@root/components/icons/solid/InfoIcon';
 import XMarkIcon from '@root/components/icons/solid/XMarkIcon';
@@ -9,9 +9,7 @@ import type { LicenseInfo } from '@root/types/common/zod';
 
 import LicenseInfoHead from './LicenseInfoHead';
 
-type LicenseInfoProps = {
-	licenseInfo: LicenseInfo;
-};
+type LicenseInfoProps = { licenseInfo: LicenseInfo };
 
 export default async function LicenseInfo({
 	licenseInfo: { body, conditions, limitations, permissions, ...rest },
@@ -44,11 +42,10 @@ export default async function LicenseInfo({
 
 			<div className='divider divider-vertical before:bg-gradient-to-br before:from-accent before:to-primary after:bg-gradient-to-tl after:from-accent after:to-primary' />
 
-			<div className='prose max-w-none px-2 pb-5'>
-				<MDXRenderer
-					body={body.replace('[year]', new Date().getFullYear().toString()).replace('[fullname]', APP_AUTHOR)}
-				/>
-			</div>
+			<MDXWrapper
+				body={body.replace('[year]', new Date().getFullYear().toString()).replace('[fullname]', APP_AUTHOR)}
+				className='px-2 pb-5'
+			/>
 		</CommonWrapper>
 	);
 }

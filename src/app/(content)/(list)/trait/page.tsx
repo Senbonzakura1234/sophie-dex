@@ -1,4 +1,4 @@
-import APIListWrapper from '@root/components/layout/client/ApiWrapper/traits';
+import { APIListWrapper } from '@root/components/layout/client/ApiWrapper/traits';
 import { APP_NAME } from '@root/constants/common';
 import type { PageProps } from '@root/types/common';
 import { generateListMetadata } from '@root/utils/server/database';

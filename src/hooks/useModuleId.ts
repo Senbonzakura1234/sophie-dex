@@ -1,14 +1,9 @@
-import type { ModuleIdEnum } from '@root/types/common/zod';
-import { usePathname } from 'next/navigation';
-import { useMemo } from 'react';
+import { moduleIdList } from '@root/types/model';
+import { improvedInclude } from '@root/utils/common';
+import usePageSegment from './usePageSegment';
 
 export const useModuleId = () => {
-	const pathname = usePathname();
-	const { isDetailPage, moduleId } = useMemo(() => {
-		const pathSegments = pathname.split('/');
+	const { isDetailPage, segment } = usePageSegment();
 
-		return { moduleId: pathSegments[1] as ModuleIdEnum | undefined, isDetailPage: Boolean(pathSegments[2]) };
-	}, [pathname]);
-
-	return { isDetailPage, moduleId };
+	return { isDetailPage, moduleId: improvedInclude(moduleIdList, segment) ? segment : undefined };
 };

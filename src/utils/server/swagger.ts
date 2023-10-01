@@ -23,7 +23,8 @@ import {
 	searchQueryValidator,
 } from '@root/types/common/zod';
 import { moduleIdList } from '@root/types/model';
-import { capitalize, improvedFromEntries, improvedInclude } from '@root/utils/common';
+import { improvedFromEntries, improvedInclude } from '@root/utils/common';
+import { capitalize } from 'string-ts';
 
 const getRecordSwaggerSchema = (moduleId: ModuleIdEnum, example: ExampleRecord) =>
 	z

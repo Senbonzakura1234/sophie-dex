@@ -2,6 +2,7 @@ import type { CommonObject, KeyOf } from '@root/types/common';
 import type { NodeEnv, SearchQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
 import type { ReadonlyURLSearchParams } from 'next/navigation';
+import { replaceAll, toLowerCase } from 'string-ts';
 import { env } from './env.mjs';
 
 export const evnIs = (nodeEnv: NodeEnv) => env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
@@ -44,15 +45,14 @@ export const improvedInclude = <TSearch extends Readonly<string | number>>(
 	search: unknown,
 ): search is TSearch => arr.includes(search as TSearch);
 
-export const capitalize = (input?: string | number | null) =>
-	input
-		? input
-				.toString()
-				.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase())
-		: '';
+export const improvedIndexOf = <TSearch extends Readonly<string | number>>(
+	arr: Readonly<Array<TSearch>>,
+	search: unknown,
+	defaultIndex?: number,
+) => (improvedInclude(arr, search) ? arr.indexOf(search) : defaultIndex || -1);
 
-export const convertCode = (input?: string | number | null) =>
-	input ? input.toString().toLowerCase().replaceAll('_', ' ') : '';
+export const convertCode = <TInput extends string>(input?: TInput | null) =>
+	input ? replaceAll(toLowerCase(input), '_', ' ') : '';
 
 export const queryToParamsString = (query: Partial<SearchQuery>) => {
 	const queryEntries = Object.entries(query).filter(([, value]) => Boolean(value));
@@ -60,16 +60,6 @@ export const queryToParamsString = (query: Partial<SearchQuery>) => {
 	if (!queryEntries.length) return '';
 
 	return `?${queryEntries.map(([key, value]) => `${key}=${encodeURIComponent(value!)}`).join('&')}` as const;
-};
-
-export const improvedParseJSON = <T>(value: string | null): T | undefined => {
-	const { data, isSuccess, error } = tryCatchHandlerSync(() =>
-		value === 'undefined' ? undefined : (JSON.parse(value ?? '') as T),
-	);
-
-	if (isSuccess) return data;
-
-	writeLog({ args: [`parsing error on ${value}`, error], type: 'error' });
 };
 
 export const paramsToQuery = (input: ReadonlyURLSearchParams | URLSearchParams) =>

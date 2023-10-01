@@ -28,7 +28,9 @@ export default function ListboxButton<V extends string | number>({
 			<span className='flex items-center gap-2 truncate font-bold'>
 				{customLabelIcon || icon || <ChevronUpDownIcon className='my-auto aspect-square h-4 xl:h-5' aria-hidden />}
 
-				{!isHideLabel ? <span className='capitalize'>{customLabelText || convertCode(label ?? value)}</span> : null}
+				{!isHideLabel ? (
+					<span className='capitalize'>{customLabelText || convertCode(`${label ?? (value || '')}`)}</span>
+				) : null}
 			</span>
 		</Listbox.Button>
 	);

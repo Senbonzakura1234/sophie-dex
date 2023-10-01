@@ -64,9 +64,9 @@
 
 ## <a id='keywords'># Keywords</a>
 
--  &nbsp;[Atelier Series](https://www.google.com/search?q=Atelier+Series)
--  &nbsp;[Sophie DX](https://www.google.com/search?q=Sophie+DX)
--  &nbsp;[Mysterious Trio](https://www.google.com/search?q=Atelier+Mysterious+Trio)
--  &nbsp;[Wiki](https://www.google.com/search?q=Wiki)
+-  &nbsp;<a href='https://www.google.com/search?q=Atelier+Series' target='_blank'>Atelier Series</a>
+-  &nbsp;<a href='https://www.google.com/search?q=Sophie+DX' target='_blank'>Sophie DX</a>
+-  &nbsp;<a href='https://www.google.com/search?q=Atelier+Mysterious+Trio' target='_blank'>Mysterious Trio</a>
+-  &nbsp;<a href='https://www.google.com/search?q=Wiki' target='_blank'>Wiki</a>
 
 </div>

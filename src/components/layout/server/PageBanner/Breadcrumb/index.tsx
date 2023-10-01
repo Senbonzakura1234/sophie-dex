@@ -3,15 +3,15 @@
 import HomeIcon from '@root/components/icons/solid/HomeIcon';
 import InfoIcon from '@root/components/icons/solid/InfoIcon';
 import LinkIcon from '@root/components/icons/solid/LinkIcon';
+import { listAboutPaths } from '@root/constants/common';
+import usePageSegment from '@root/hooks/usePageSegment';
 import { moduleIdList } from '@root/types/model';
 import { improvedInclude } from '@root/utils/common';
-import { usePathname } from 'next/navigation';
-import { Fragment, useMemo } from 'react';
+import { Fragment } from 'react';
 import LinkItem from './LinkItem';
 
 export default function Breadcrumb() {
-	const pathname = usePathname();
-	const segment = useMemo(() => pathname.split('/')[1], [pathname]);
+	const { segment } = usePageSegment();
 
 	return (
 		<>
@@ -50,7 +50,7 @@ export default function Breadcrumb() {
 					aria-label={`Go to about page`}
 					href='/about'
 					icon={<InfoIcon className='aspect-square h-4 !text-primary' />}
-					isActive={improvedInclude(['about', 'profile', 'license'], segment)}
+					isActive={improvedInclude(listAboutPaths, segment)}
 				>
 					<span className='hidden sm:inline'>about</span>
 				</LinkItem>

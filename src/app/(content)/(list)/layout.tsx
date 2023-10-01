@@ -15,13 +15,13 @@ export default function ListLayout({ children }: ChildrenProps) {
 				</div>
 			</section>
 
-			<section className='container relative z-[31] mx-auto grid animate-fadeInView gap-3 animation-timeline-fadeInView max-2xl:px-4'>
+			<section className='container relative z-[31] mx-auto grid gap-3 max-2xl:px-4'>
 				<TopFilter />
 			</section>
 
 			<ContentWrapper type='list'>{children}</ContentWrapper>
 
-			<section className='container relative z-30 mx-auto grid animate-fadeInView gap-3 animation-timeline-fadeInView max-2xl:px-4'>
+			<section className='container relative z-30 mx-auto grid gap-3 max-2xl:px-4'>
 				<BottomFilter />
 			</section>
 		</>

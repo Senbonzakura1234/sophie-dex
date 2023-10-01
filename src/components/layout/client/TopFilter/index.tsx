@@ -25,7 +25,7 @@ const TransitionWrapper = dynamic(() => import('@root/components/dynamic/Transit
 const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 3 }).format;
 
 export default function TopFilter() {
-	const { moduleId } = useModuleId();
+	const { moduleId = 'effect' } = useModuleId();
 	const { searchQuery } = useSearchQuery();
 
 	const {
