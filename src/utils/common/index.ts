@@ -2,7 +2,6 @@ import type { CommonObject, KeyOf } from '@root/types/common';
 import type { NodeEnv, SearchQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
 import type { ReadonlyURLSearchParams } from 'next/navigation';
-import { replaceAll, toLowerCase } from 'string-ts';
 import { env } from './env.mjs';
 
 export const evnIs = (nodeEnv: NodeEnv) => env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
@@ -40,6 +39,11 @@ export const getBaseUrl = (useMainHost?: boolean) => {
 	return `http://localhost:${env.NEXT_PUBLIC_PORT ?? 3000}`; // dev SSR should use localhost
 };
 
+export const capitalize = <TInput extends string>(input?: TInput | null): Capitalize<TInput> =>
+	(input
+		? input.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase())
+		: '') as Capitalize<TInput>;
+
 export const improvedInclude = <TSearch extends Readonly<string | number>>(
 	arr: Readonly<Array<TSearch>>,
 	search: unknown,
@@ -52,7 +56,7 @@ export const improvedIndexOf = <TSearch extends Readonly<string | number>>(
 ) => (improvedInclude(arr, search) ? arr.indexOf(search) : defaultIndex || -1);
 
 export const convertCode = <TInput extends string>(input?: TInput | null) =>
-	input ? replaceAll(toLowerCase(input), '_', ' ') : '';
+	input ? input.toLowerCase().replaceAll('_', ' ') : '';
 
 export const queryToParamsString = (query: Partial<SearchQuery>) => {
 	const queryEntries = Object.entries(query).filter(([, value]) => Boolean(value));

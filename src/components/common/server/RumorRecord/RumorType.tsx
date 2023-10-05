@@ -5,7 +5,6 @@ import { rumorTypeColorMap, rumorTypeIconMap } from '@root/constants/common';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { RumorTypeEnum } from '@root/types/common/zod';
 import { convertCode } from '@root/utils/common';
-import { useMemo } from 'react';
 
 type RumorTypeProps = { rumorType: RumorTypeEnum };
 
@@ -16,7 +15,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 	} satisfies Record<RumorTypeEnum, string>;
 	const { searchQuery } = useSearchQuery();
 
-	const isActive = useMemo(() => rumorType === searchQuery.rumorType, [rumorType, searchQuery.rumorType]);
+	const isActive = rumorType === searchQuery.rumorType;
 
 	return (
 		<>

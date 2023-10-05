@@ -71,9 +71,6 @@ dependencies:
   server-only:
     specifier: ^0.0.1
     version: registry.npmjs.org/server-only@0.0.1
-  string-ts:
-    specifier: ^1.1.0
-    version: registry.npmjs.org/string-ts@1.1.0
   swagger-ui-react:
     specifier: ^5.9.0
     version: registry.npmjs.org/swagger-ui-react@5.9.0(@types/react-dom@18.2.10)(@types/react@18.2.25)(react-dom@18.2.0)(react@18.2.0)
@@ -7259,12 +7256,6 @@ packages:
       fast-fifo: registry.npmjs.org/fast-fifo@1.3.2
       queue-tick: registry.npmjs.org/queue-tick@1.0.1
     dev: true
-
-  registry.npmjs.org/string-ts@1.1.0:
-    resolution: {integrity: sha512-X0GnZqjD+3pE8BcilERwVmjI+r6w6Gmx3e9oB+WLdzb/ABaOtluuLK9nf73eqPobRD0wWRqwM5zvTd12fQAgJw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/string-ts/-/string-ts-1.1.0.tgz}
-    name: string-ts
-    version: 1.1.0
-    dev: false
 
   registry.npmjs.org/string.prototype.matchall@4.0.10:
     resolution: {integrity: sha512-rGXbGmOEosIQi6Qva94HUjgPs9vKW+dkG7Y8Q5O2OYkWL6wFaTRZO8zM4mhP94uX55wgyrXzfS2aGtGzUL7EJQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/string.prototype.matchall/-/string.prototype.matchall-4.0.10.tgz}

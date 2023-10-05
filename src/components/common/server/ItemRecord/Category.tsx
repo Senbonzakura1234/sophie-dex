@@ -6,7 +6,6 @@ import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { TextShadowMap } from '@root/types/common/tailwind';
 import type { CategoryEnum, ColorEnum } from '@root/types/common/zod';
 import { convertCode } from '@root/utils/common';
-import { useMemo } from 'react';
 
 type CategoryProps = { category: CategoryEnum; color: ColorEnum };
 
@@ -21,7 +20,7 @@ export default function Category({ category, color }: CategoryProps) {
 
 	const { searchQuery } = useSearchQuery();
 
-	const isActive = useMemo(() => category === searchQuery.category, [category, searchQuery.category]);
+	const isActive = category === searchQuery.category;
 
 	return (
 		<>

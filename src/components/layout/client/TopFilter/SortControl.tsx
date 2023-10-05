@@ -3,7 +3,6 @@ import { sortByMap } from '@root/constants/common';
 import type { useModuleId } from '@root/hooks/useModuleId';
 import type { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { improvedIndexOf } from '@root/utils/common';
-import { useMemo } from 'react';
 
 import TabWrapper from '@root/components/common/server/TabWrapper';
 
@@ -13,11 +12,8 @@ type SortControlProps = {
 };
 
 export default function SortControl({ moduleId, searchQuery }: SortControlProps) {
-	const currentSortBy = useMemo(
-		() => searchQuery.sortBy || (moduleId === 'rumor' ? 'price' : 'index'),
-		[moduleId, searchQuery.sortBy],
-	);
-	const currentDirection = useMemo(() => searchQuery.direction || 'asc', [searchQuery.direction]);
+	const currentSortBy = searchQuery.sortBy || (moduleId === 'rumor' ? 'price' : 'index');
+	const currentDirection = searchQuery.direction || 'asc';
 
 	const sortByList = sortByMap[moduleId];
 

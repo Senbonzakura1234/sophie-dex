@@ -1,22 +1,23 @@
 import type { ClassNameProps } from '@root/types/common/props';
 import Image from 'next/image';
-import { useMemo } from 'react';
 
 type AvatarProps = {
 	size: number;
 	url: string;
 } & ClassNameProps;
 
+const getUrlWithSize = ({ size, url }: Omit<AvatarProps, 'className'>) => {
+	const urlObj = new URL(url);
+	urlObj.searchParams.append('size', `${size}`);
+	return urlObj.toString();
+};
+
 /**
  * @type {AvatarProps}
  * @remarks size unit: px;
  */
 export default function Avatar({ size, url, className }: AvatarProps) {
-	const urlWithSize = useMemo(() => {
-		const urlObj = new URL(url);
-		urlObj.searchParams.append('size', `${size}`);
-		return urlObj.toString();
-	}, [size, url]);
+	const urlWithSize = getUrlWithSize({ size, url });
 
 	return (
 		<div className='avatar'>

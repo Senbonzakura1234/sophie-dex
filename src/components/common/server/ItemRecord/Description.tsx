@@ -1,6 +1,5 @@
 import Hyperlink from '@root/components/layout/server/Hyperlink';
 import type { ItemDescription } from '@root/server/database/schema';
-import { toLowerCase } from 'string-ts';
 
 type DescriptionProps = { description: ItemDescription };
 
@@ -10,7 +9,7 @@ export default function Description({ description }: DescriptionProps) {
 			{Object.entries(description).map(([key, value]) =>
 				!value || (Array.isArray(value) && !value.length) ? null : (
 					<li key={key}>
-						<span className='inline text-base capitalize'>{toLowerCase(key)}: </span>
+						<span className='inline text-base capitalize'>{key.toLowerCase()}: </span>
 
 						{typeof value === 'string' ? (
 							value

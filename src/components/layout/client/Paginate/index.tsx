@@ -5,16 +5,18 @@ import ChevronRightIcon from '@root/components/icons/solid/ChevronRightIcon';
 
 import QueryLink from '@root/components/common/client/QueryLink';
 import type { useSearchQuery } from '@root/hooks/useSearchQuery';
-import { useMemo } from 'react';
+import type { SearchQuery } from '@root/types/common/zod';
 import GoToPageSelect from './GoToPageSelect';
 
 type PaginateProps = { searchQuery: ReturnType<typeof useSearchQuery>['searchQuery']; totalPage: number };
 
+const getPaginateProps = (curPage: SearchQuery['page'], totalPage: number) => {
+	const page = curPage || 1;
+	return { isPreviousDisable: page <= 1, isNextDisable: page >= totalPage, page };
+};
+
 export default function Paginate({ totalPage, searchQuery }: PaginateProps) {
-	const { isNextDisable, isPreviousDisable, page } = useMemo(() => {
-		const page = searchQuery.page || 1;
-		return { isPreviousDisable: page <= 1, isNextDisable: page >= totalPage, page };
-	}, [searchQuery.page, totalPage]);
+	const { isNextDisable, isPreviousDisable, page } = getPaginateProps(searchQuery.page, totalPage);
 
 	return (
 		<div className='flex flex-wrap gap-2'>

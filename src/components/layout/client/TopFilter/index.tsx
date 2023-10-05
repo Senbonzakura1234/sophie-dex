@@ -12,8 +12,9 @@ import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import useSelector from '@root/hooks/useSelector';
 import { improvedInclude, queryToParamsString } from '@root/utils/common';
 import dynamic from 'next/dynamic';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
+import type { ModuleIdEnum, SearchQuery } from '@root/types/common/zod';
 import CategoryFilter from './CategoryFilter';
 import ColorFilter from './ColorFilter';
 import RecipeTypeFilter from './RecipeTypeFilter';
@@ -24,6 +25,16 @@ const TransitionWrapper = dynamic(() => import('@root/components/dynamic/Transit
 
 const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 3 }).format;
 
+const getPaginateInfo = (curPage: SearchQuery['page'], totalRecord: number, moduleId: ModuleIdEnum) => {
+	const page = curPage || 1;
+
+	const fromFormatted = formatRecordCount((page - 1) * DEFAULT_LIMIT + 1);
+	const toFormatted = formatRecordCount(page * DEFAULT_LIMIT > totalRecord ? totalRecord : page * DEFAULT_LIMIT);
+	const totalRecordFormatted = formatRecordCount(totalRecord);
+
+	return `${fromFormatted} - ${toFormatted} of ${totalRecordFormatted} ${moduleId}s`;
+};
+
 export default function TopFilter() {
 	const { moduleId = 'effect' } = useModuleId();
 	const { searchQuery } = useSearchQuery();
@@ -32,17 +43,9 @@ export default function TopFilter() {
 		contentData: { totalRecord, totalPage },
 	} = useSelector();
 
-	const paginateInfo = useMemo(() => {
-		const page = searchQuery.page || 1;
+	const paginateInfo = getPaginateInfo(searchQuery.page, totalRecord, moduleId);
 
-		const fromFormatted = formatRecordCount((page - 1) * DEFAULT_LIMIT + 1);
-		const toFormatted = formatRecordCount(page * DEFAULT_LIMIT > totalRecord ? totalRecord : page * DEFAULT_LIMIT);
-		const totalRecordFormatted = formatRecordCount(totalRecord);
-
-		return `${fromFormatted} - ${toFormatted} of ${totalRecordFormatted} ${moduleId}s`;
-	}, [moduleId, searchQuery.page, totalRecord]);
-
-	const isQueryEmpty = useMemo(() => !Boolean(queryToParamsString(searchQuery)), [searchQuery]);
+	const isQueryEmpty = !Boolean(queryToParamsString(searchQuery));
 
 	const is2XLScreen = useMediaQuery('(min-width: 1536px)');
 
