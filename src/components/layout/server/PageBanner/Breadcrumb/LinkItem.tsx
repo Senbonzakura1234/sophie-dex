@@ -14,8 +14,11 @@ export default function LinkItem({ isActive, icon, children, ...rest }: LinkItem
 	return (
 		<Link
 			className={`link gap-1 capitalize ${
-				isActive ? 'no-animation !cursor-default !no-underline' : 'link-hover link-primary visited:link-accent'
+				isActive
+					? 'no-animation pointer-events-none !cursor-default !no-underline'
+					: 'link-hover link-primary visited:link-accent'
 			}`}
+			prefetch={rest.href !== '/'}
 			role='navigation'
 			{...rest}
 		>
