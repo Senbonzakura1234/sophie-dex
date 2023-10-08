@@ -27,3 +27,10 @@ export type KeyOf<TData extends CommonObject> = keyof TData;
 export type ValueOf<TData extends CommonObject> = Required<TData>[KeyOf<TData>];
 
 export type CommonServerError = { code: ErrorEnum };
+
+export type LooseAutoComplete<TSuggest extends TLoose, TLoose = unknown> = TSuggest | NonNullable<unknown>;
+
+export type ImprovedOmit<TObject, TKeys extends LooseAutoComplete<keyof TObject>> = Pick<
+	TObject,
+	Exclude<keyof TObject, TKeys>
+>;

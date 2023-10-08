@@ -1,9 +1,8 @@
 import 'server-only';
 
 import { getEffectRecord, getItemRecord, getRumorRecord, getTraitRecord } from '@root/server/database/';
-import type { Effect, Item, Rumor, Trait } from '@root/server/database/schema';
+import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/database/schema';
 import type { IdQuery } from '@root/types/common/zod';
-import type { CommonRecord } from '@root/types/model';
 import { onQueryDBError } from '@root/utils/server/database';
 import { TRPCError } from '@trpc/server';
 import type { PreparedQuery, PreparedQueryConfig } from 'drizzle-orm/pg-core';

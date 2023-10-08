@@ -1,5 +1,5 @@
 import { Pool } from '@neondatabase/serverless';
-import schema from '@root/server/database/schema';
+import { effects, items, rumors, traits } from '@root/server/database/schema';
 import { evnIs } from '@root/utils/common';
 import { drizzle } from 'drizzle-orm/neon-serverless';
 
@@ -15,4 +15,7 @@ if (evnIs('production')) {
 	neonDBConnection = globalObj.neonDBConnection;
 }
 
-export const driver = drizzle(neonDBConnection, { schema, logger: !evnIs('production') });
+export const driver = drizzle(neonDBConnection, {
+	schema: { effects, items, rumors, traits },
+	logger: !evnIs('production'),
+});

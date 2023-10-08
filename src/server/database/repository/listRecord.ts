@@ -8,10 +8,10 @@ import {
 	getListTraitDefault,
 } from '@root/server/database/';
 import { driver } from '@root/server/database/drivers';
-import type { Effect, Item, Rumor, Trait } from '@root/server/database/schema';
+import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/database/schema';
 import { effects, items, rumors, traits } from '@root/server/database/schema';
 import type { SearchQuery } from '@root/types/common/zod';
-import type { CommonRecord, DBListResult, ListRecord } from '@root/types/model';
+import type { DBListResult, ListRecord } from '@root/types/model';
 import { CountQuery, getDirection, getOffset, getSortField, onQueryDBError } from '@root/utils/server/database';
 import type { SQL } from 'drizzle-orm';
 import { and, arrayOverlaps, eq, ilike, or } from 'drizzle-orm';

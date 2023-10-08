@@ -1,4 +1,4 @@
-import type { ValueOf } from '@root/types/common';
+import type { ImprovedOmit, ValueOf } from '@root/types/common';
 import type { ModuleIdEnum, RelatedCategoryEnum, SearchQuery } from '@root/types/common/zod';
 import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
 import type { InferSelectModel } from 'drizzle-orm';
@@ -76,11 +76,7 @@ export type Item = InferSelectModel<typeof items>;
 export type Rumor = InferSelectModel<typeof rumors>;
 export type Trait = InferSelectModel<typeof traits>;
 
+export type CommonRecord = ImprovedOmit<Effect | Item | Rumor | Trait, 'description'>;
+
 export type ExampleRecordObject = Readonly<{ effect: Effect; item: Item; rumor: Rumor; trait: Trait }>;
 export type ExampleRecord = ValueOf<ExampleRecordObject>;
-
-const schema = { effects, items, rumors, traits };
-
-export type Schema = typeof schema;
-
-export default schema;

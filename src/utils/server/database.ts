@@ -1,10 +1,10 @@
 import 'server-only';
 
 import { DEFAULT_LIMIT } from '@root/constants/common';
+import type { CommonRecord } from '@root/server/database/schema';
 import type { PageProps } from '@root/types/common';
 import type { DirectionEnum, SortByEnum } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
-import type { CommonRecord } from '@root/types/model';
 import { improvedInclude, tryCatchHandler, writeLog } from '@root/utils/common';
 import { TRPCError } from '@trpc/server';
 import { asc, desc, sql } from 'drizzle-orm';

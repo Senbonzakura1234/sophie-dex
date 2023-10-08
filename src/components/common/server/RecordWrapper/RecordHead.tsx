@@ -2,7 +2,7 @@
 
 import CopyUrlButton from '@root/components/common/client/CopyUrlButton';
 import { useModuleId } from '@root/hooks/useModuleId';
-import type { CommonRecord } from '@root/types/model';
+import type { CommonRecord } from '@root/server/database/schema';
 import Link from 'next/link';
 
 type RecordHeadProps = Omit<CommonRecord, 'keyWords'> & { currentId: string | undefined };

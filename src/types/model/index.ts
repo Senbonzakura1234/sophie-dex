@@ -1,3 +1,4 @@
+import type { CommonRecord } from '@root/server/database/schema';
 import type { ModuleIdEnum } from '@root/types/common/zod';
 import type { TRPC_ERROR_CODE_KEY } from '@trpc/server/rpc';
 import type { PreparedQuery, PreparedQueryConfig } from 'drizzle-orm/pg-core';
@@ -86,8 +87,6 @@ export const relatedCategoryList = [
 export const daisyUIThemeList = ['autumn', 'fantasy', 'forest', 'synthwave'] as const;
 
 export const directionList = ['asc', 'desc'] as const;
-
-export type CommonRecord = { id: string; keyWords: string; name: string };
 
 export type DBListResult<TRecord extends CommonRecord> = Array<{ record: TRecord; totalRecord: number }>;
 
