@@ -45,7 +45,11 @@ export default function PageBanner({ bannerType }: PageTitleProps) {
 					</nav>
 				</div>
 
-				{bannerType === 'top' ? null : <AppInformation />}
+				{bannerType === 'top' ? null : (
+					<Suspense>
+						<AppInformation />
+					</Suspense>
+				)}
 			</div>
 
 			{bannerType === 'top' ? (
