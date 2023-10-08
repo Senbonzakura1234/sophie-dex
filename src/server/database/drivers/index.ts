@@ -1,21 +1,11 @@
-import { Pool } from '@neondatabase/serverless';
+import { neon, neonConfig } from '@neondatabase/serverless';
 import { effects, items, rumors, traits } from '@root/server/database/schema';
 import { evnIs } from '@root/utils/common';
-import { drizzle } from 'drizzle-orm/neon-serverless';
+import { env } from '@root/utils/common/env.mjs';
+import { drizzle } from 'drizzle-orm/neon-http';
 
-let neonDBConnection: Pool;
+neonConfig.fetchConnectionCache = true;
 
-if (evnIs('production')) {
-	neonDBConnection = new Pool();
-} else {
-	const globalObj = global as typeof globalThis & { neonDBConnection: Pool };
+const connection = neon(env.DIRECT_DB_URL);
 
-	if (!globalObj.neonDBConnection) globalObj.neonDBConnection = new Pool();
-
-	neonDBConnection = globalObj.neonDBConnection;
-}
-
-export const driver = drizzle(neonDBConnection, {
-	schema: { effects, items, rumors, traits },
-	logger: !evnIs('production'),
-});
+export const driver = drizzle(connection, { schema: { effects, items, rumors, traits }, logger: !evnIs('production') });
