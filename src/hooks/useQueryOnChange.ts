@@ -1,6 +1,6 @@
 import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
 import type { SearchQuery } from '@root/types/common/zod';
-import { improvedInclude } from '@root/utils/common';
+import { arrayInclude } from '@root/utils/common';
 import { useCallback, useMemo } from 'react';
 import { useUpdateQuery } from './useUpdateQuery';
 
@@ -15,7 +15,7 @@ export function useQueryOnChange<V extends SearchQuery[SelectQueryKey]>(
 
 	const selectList = useMemo(() => {
 		if (key !== 'category' || moduleId !== 'trait') return list;
-		return list.filter(c => !improvedInclude(['MATERIAL', 'KEY_ITEM', 'BOOK', 'MACHINE'], c.value));
+		return list.filter(c => !arrayInclude(['MATERIAL', 'KEY_ITEM', 'BOOK', 'MACHINE'], c.value));
 	}, [key, list, moduleId]);
 
 	const selectOptionItem: SelectOptionItem<V> = useMemo(() => {

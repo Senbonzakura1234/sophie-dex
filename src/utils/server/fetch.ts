@@ -23,7 +23,7 @@ async function improvedFetch<TResult = unknown>(
 	defaultValue: TResult | undefined,
 	...args: Parameters<typeof fetch>
 ) {
-	writeLog({ args: [`Fetch: ${JSON.stringify(args[0], null, 2)}`], type: 'log' });
+	writeLog({ args: [`Fetch: ${JSON.stringify(args[0], null, 2)}`] });
 
 	const fetchResult = await tryCatchHandler(fetch(...args));
 

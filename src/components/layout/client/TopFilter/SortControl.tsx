@@ -2,7 +2,7 @@ import QueryLink from '@root/components/common/client/QueryLink';
 import { sortByMap } from '@root/constants/common';
 import type { useModuleId } from '@root/hooks/useModuleId';
 import type { useSearchQuery } from '@root/hooks/useSearchQuery';
-import { improvedIndexOf } from '@root/utils/common';
+import { indexOf } from '@root/utils/common';
 
 import TabWrapper from '@root/components/common/server/TabWrapper';
 
@@ -27,7 +27,7 @@ export default function SortControl({ moduleId, searchQuery }: SortControlProps)
 				<TabWrapper
 					activeStyleType='background'
 					className='border-y-2 border-accent-focus'
-					selectedIndex={improvedIndexOf(sortByList, currentSortBy, 0)}
+					selectedIndex={indexOf(sortByList, currentSortBy, 0)}
 					tabListLength={sortByList.length}
 				>
 					{sortByList.map(sortField => (
@@ -54,7 +54,7 @@ export default function SortControl({ moduleId, searchQuery }: SortControlProps)
 				<TabWrapper
 					activeStyleType='background'
 					className='border-y-2 border-accent-focus'
-					selectedIndex={improvedIndexOf(directionList, currentDirection, 0)}
+					selectedIndex={indexOf(directionList, currentDirection, 0)}
 					tabListLength={directionList.length}
 				>
 					{directionList.map(dir => (

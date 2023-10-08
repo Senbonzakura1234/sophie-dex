@@ -6,7 +6,7 @@ import ScaleIcon from '@root/components/icons/outline/ScaleIcon';
 import InfoIcon from '@root/components/icons/solid/InfoIcon';
 import { listAboutPaths } from '@root/constants/common';
 import usePageSegment from '@root/hooks/usePageSegment';
-import { improvedIndexOf } from '@root/utils/common';
+import { indexOf } from '@root/utils/common';
 import Link from 'next/link';
 
 export default function AboutBreadcrumb() {
@@ -17,7 +17,7 @@ export default function AboutBreadcrumb() {
 			<TabWrapper
 				activeStyleType='border'
 				className='mx-auto'
-				selectedIndex={improvedIndexOf(listAboutPaths, segment, 0)}
+				selectedIndex={indexOf(listAboutPaths, segment, 0)}
 				tabListLength={listAboutPaths.length}
 			>
 				{listAboutPaths.map(path => (

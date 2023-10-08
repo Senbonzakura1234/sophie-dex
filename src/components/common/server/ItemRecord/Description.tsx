@@ -1,12 +1,13 @@
 import Hyperlink from '@root/components/layout/server/Hyperlink';
 import type { ItemDescription } from '@root/server/database/schema';
+import { entries } from '@root/utils/common';
 
 type DescriptionProps = { description: ItemDescription };
 
 export default function Description({ description }: DescriptionProps) {
 	return (
 		<ul className='max-w-[90%] list-disc pl-8 text-lg'>
-			{Object.entries(description).map(([key, value]) =>
+			{entries(description).map(([key, value]) =>
 				!value || (Array.isArray(value) && !value.length) ? null : (
 					<li key={key}>
 						<span className='inline text-base capitalize'>{key.toLowerCase()}: </span>

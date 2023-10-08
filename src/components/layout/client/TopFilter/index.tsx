@@ -10,7 +10,7 @@ import { useMediaQuery } from '@root/hooks/useMediaQuery';
 import { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import useSelector from '@root/hooks/useSelector';
-import { improvedInclude, queryToParamsString } from '@root/utils/common';
+import { arrayInclude, queryToParamsString } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 
@@ -81,7 +81,7 @@ export default function TopFilter() {
 
 					{moduleId !== 'effect' ? (
 						<div className='flex flex-wrap gap-2'>
-							{improvedInclude(['trait', 'item'], moduleId) ? <CategoryFilter /> : null}
+							{arrayInclude(['trait', 'item'], moduleId) ? <CategoryFilter /> : null}
 
 							{moduleId === 'item' ? (
 								<>

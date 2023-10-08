@@ -5,7 +5,7 @@ import type usePageSegment from '@root/hooks/usePageSegment';
 import { usePullToRefresh } from '@root/hooks/usePullToRefresh';
 import useSelector from '@root/hooks/useSelector';
 import { moduleIdList } from '@root/types/model';
-import { improvedInclude } from '@root/utils/common';
+import { arrayInclude } from '@root/utils/common';
 import { useRouter } from 'next/navigation';
 
 type PageRefreshProps = { isDisabled?: boolean } & Partial<ReturnType<typeof usePageSegment>>;
@@ -17,7 +17,7 @@ export default function PageRefresh({ isDisabled = false, isDetailPage = false, 
 	} = useSelector();
 
 	const { isRefreshing, pullPosition } = usePullToRefresh({
-		onRefresh: isDetailPage || improvedInclude(moduleIdList, segment) ? refresh : refetch || refresh,
+		onRefresh: isDetailPage || arrayInclude(moduleIdList, segment) ? refresh : refetch || refresh,
 		isDisabled,
 		maximumPullLength: 300,
 	});

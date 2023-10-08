@@ -6,7 +6,7 @@ import LinkIcon from '@root/components/icons/solid/LinkIcon';
 import { listAboutPaths } from '@root/constants/common';
 import usePageSegment from '@root/hooks/usePageSegment';
 import { moduleIdList } from '@root/types/model';
-import { improvedInclude } from '@root/utils/common';
+import { arrayInclude } from '@root/utils/common';
 import { Fragment } from 'react';
 import LinkItem from './LinkItem';
 
@@ -50,7 +50,7 @@ export default function Breadcrumb() {
 					aria-label={`Go to about page`}
 					href='/about'
 					icon={<InfoIcon className='aspect-square h-4 !text-primary' />}
-					isActive={improvedInclude(listAboutPaths, segment)}
+					isActive={arrayInclude(listAboutPaths, segment)}
 				>
 					<span className='hidden sm:inline'>about</span>
 				</LinkItem>

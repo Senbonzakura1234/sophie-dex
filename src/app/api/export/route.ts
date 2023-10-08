@@ -1,17 +1,18 @@
 import { exportDBQueriesMap } from '@root/server/database';
-import { evnIs, tryCatchHandler, writeLog } from '@root/utils/common';
+import { entries, evnIs, tryCatchHandler, writeLog } from '@root/utils/common';
 import { writeFile } from 'fs/promises';
 import { NextResponse } from 'next/server';
 
 const onExport = () =>
 	Promise.all(
-		Object.entries(exportDBQueriesMap).map(async ([table, query]) => {
+		entries(exportDBQueriesMap).map(async ([table, query]) => {
 			const exportData = await tryCatchHandler(query.execute());
 
 			if (!exportData.isSuccess) {
 				writeLog({
 					args: [`Error exporting data from table ${table}`, exportData.error],
 					type: 'error',
+					hideInProd: true,
 				});
 
 				return { table, error: 'read-error', isSuccess: false } as const;
@@ -25,6 +26,7 @@ const onExport = () =>
 				writeLog({
 					args: [`Error writing data from table ${table}`, writeFileResult.error],
 					type: 'error',
+					hideInProd: true,
 				});
 
 				return { table, error: 'write-error', isSuccess: false } as const;

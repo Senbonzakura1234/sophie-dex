@@ -23,7 +23,7 @@ import {
 	searchQueryValidator,
 } from '@root/types/common/zod';
 import { moduleIdList } from '@root/types/model';
-import { capitalize, improvedFromEntries, improvedInclude } from '@root/utils/common';
+import { arrayInclude, capitalize, fromEntries } from '@root/utils/common';
 
 const getRecordSwaggerSchema = (moduleId: ModuleIdEnum, example: ExampleRecord) =>
 	z
@@ -60,7 +60,7 @@ const getRecordSwaggerSchema = (moduleId: ModuleIdEnum, example: ExampleRecord) 
 				  }
 				: {}),
 
-			...(improvedInclude(['trait', 'effect'], moduleId)
+			...(arrayInclude(['trait', 'effect'], moduleId)
 				? { description: genericStringSchema }
 				: { description: z.object({}) }),
 		})
@@ -126,7 +126,7 @@ const getListRecordSwaggerSchema = (
 				sortBy: searchQueryValidator.shape.sortBy,
 				direction: searchQueryValidator.shape.direction,
 
-				...(improvedInclude(['trait', 'item'], moduleId) ? { category: searchQueryValidator.shape.category } : {}),
+				...(arrayInclude(['trait', 'item'], moduleId) ? { category: searchQueryValidator.shape.category } : {}),
 
 				...(moduleId === 'item'
 					? {
@@ -156,7 +156,7 @@ const getExportRecordsSwaggerSchema = (
 });
 
 const getPaths = (exampleRecordObject: ExampleRecordObject): ZodOpenApiPathsObject =>
-	improvedFromEntries(
+	fromEntries(
 		moduleIdList
 			.map(
 				m =>

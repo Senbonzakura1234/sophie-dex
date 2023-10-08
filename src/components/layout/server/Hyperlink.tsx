@@ -1,7 +1,7 @@
 import CopyUrlButton from '@root/components/common/client/CopyUrlButton';
 import type { HighlightText, HyperLinkRecord, HyperLinkSearch } from '@root/server/database/schema';
 import type { ClassNameProps } from '@root/types/common/props';
-import { convertCode, queryToParamsString } from '@root/utils/common';
+import { convertCode, objectValues, queryToParamsString } from '@root/utils/common';
 import Link from 'next/link';
 
 type HyperlinkProps = {
@@ -15,7 +15,7 @@ const getLinkProps = (input: HyperlinkProps['input']) => {
 		const query = input.searchQuery;
 
 		return {
-			label: Object.values(query)
+			label: objectValues(query)
 				.filter(Boolean)
 				.map((value, key) => `${key > 0 ? ', ' : ''}${typeof value === 'number' ? value : convertCode(value)}`)
 				.join(),
