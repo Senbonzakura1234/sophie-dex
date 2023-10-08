@@ -2,20 +2,15 @@ import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
 
 const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']).catch('production');
-const dbListEnumSchema = z.enum(['NEON_DB', 'VERCEL_DB']).catch('NEON_DB');
 const appCodeSchema = z
 	.string()
 	.regex(/(?=\S*['-])([a-zA-Z'-]+)/)
 	.catch('-');
 const appKeyWordSchema = z.string().regex(/[^,]+/).catch('-');
 
-/** @type {Record<string, string | undefined>}*/
-const dbURLMap = { NEON_DB: process.env.PGURL_NONPOOLING, VERCEL_DB: process.env.POSTGRES_URL_NON_POOLING };
-
 export const env = createEnv({
 	server: {
-		PRIMARY_DB: dbListEnumSchema,
-		SECONDARY_DB: dbListEnumSchema,
+		DB_URL: z.string().catch(''),
 		DIRECT_DB_URL: z.string().catch(''),
 		GITHUB_TOKEN: z.string().catch(''),
 	},
@@ -32,9 +27,8 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_AUTHOR_EMAIL: z.string().email().catch('-'),
 	},
 	runtimeEnv: {
-		PRIMARY_DB: process.env.PRIMARY_DB,
-		SECONDARY_DB: process.env.SECONDARY_DB,
-		DIRECT_DB_URL: dbURLMap[process.env.PRIMARY_DB || ''],
+		DB_URL: process.env.PGURL,
+		DIRECT_DB_URL: process.env.PGURL_NONPOOLING,
 		GITHUB_TOKEN: process.env.GITHUB_TOKEN,
 
 		NEXT_PUBLIC_NODE_ENV: process.env.NODE_ENV,

@@ -10,7 +10,7 @@ type ProfileInfoProps = { profileInfo: GithubUserInfo };
 export default async function ProfileInfo({
 	profileInfo: { avatar_url, login, bio, company, blog, email, location, twitter_username },
 }: ProfileInfoProps) {
-	const fields: ProfileFieldProps[] = [
+	const fields: Array<ProfileFieldProps> = [
 		{ label: company, type: 'company' },
 		{ label: location, type: 'location' },
 		{

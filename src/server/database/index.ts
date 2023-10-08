@@ -1,46 +1,40 @@
 import { DEFAULT_LIMIT } from '@root/constants/common';
-import neonDB from '@root/server/database/drivers/neon';
-import vercelDB from '@root/server/database/drivers/vercel';
+import { driver } from '@root/server/database/drivers';
 import { effects, items, rumors, traits } from '@root/server/database/schema';
 import type { ExportDBQueriesMap } from '@root/types/model';
-import { env } from '@root/utils/common/env.mjs';
 import { CountQuery } from '@root/utils/server/database';
 import { asc, eq, sql } from 'drizzle-orm';
 
-const dbMap = { NEON_DB: neonDB, VERCEL_DB: vercelDB } as const;
+export const getExampleEffectRecord = driver.select().from(effects).limit(1).prepare('getExampleEffectRecord');
+export const getExampleItemRecord = driver.select().from(items).limit(1).prepare('getExampleItemRecord');
+export const getExampleRumorRecord = driver.select().from(rumors).limit(1).prepare('getExampleRumorRecord');
+export const getExampleTraitRecord = driver.select().from(traits).limit(1).prepare('getExampleTraitRecord');
 
-export const db = dbMap[env.PRIMARY_DB];
-
-export const getExampleEffectRecord = db.select().from(effects).limit(1).prepare('getExampleEffectRecord');
-export const getExampleItemRecord = db.select().from(items).limit(1).prepare('getExampleItemRecord');
-export const getExampleRumorRecord = db.select().from(rumors).limit(1).prepare('getExampleRumorRecord');
-export const getExampleTraitRecord = db.select().from(traits).limit(1).prepare('getExampleTraitRecord');
-
-export const getEffectRecord = db
+export const getEffectRecord = driver
 	.select()
 	.from(effects)
 	.where(eq(effects.id, sql.placeholder('id')))
 	.prepare('getEffectRecord');
 
-export const getItemRecord = db
+export const getItemRecord = driver
 	.select()
 	.from(items)
 	.where(eq(items.id, sql.placeholder('id')))
 	.prepare('getItemRecord');
 
-export const getRumorRecord = db
+export const getRumorRecord = driver
 	.select()
 	.from(rumors)
 	.where(eq(rumors.id, sql.placeholder('id')))
 	.prepare('getRumorRecord');
 
-export const getTraitRecord = db
+export const getTraitRecord = driver
 	.select()
 	.from(traits)
 	.where(eq(traits.id, sql.placeholder('id')))
 	.prepare('getTraitRecord');
 
-export const getListEffectDefault = db
+export const getListEffectDefault = driver
 	.select({ totalRecord: CountQuery, record: effects })
 	.from(effects)
 	.orderBy(asc(effects.index))
@@ -48,7 +42,7 @@ export const getListEffectDefault = db
 	.offset(sql.placeholder('offset'))
 	.prepare('getListEffectDefault');
 
-export const getListItemDefault = db
+export const getListItemDefault = driver
 	.select({ totalRecord: CountQuery, record: items })
 	.from(items)
 	.orderBy(asc(items.index))
@@ -56,7 +50,7 @@ export const getListItemDefault = db
 	.offset(sql.placeholder('offset'))
 	.prepare('getListItemDefault');
 
-export const getListRumorDefault = db
+export const getListRumorDefault = driver
 	.select({ totalRecord: CountQuery, record: rumors })
 	.from(rumors)
 	.orderBy(asc(rumors.price))
@@ -64,7 +58,7 @@ export const getListRumorDefault = db
 	.offset(sql.placeholder('offset'))
 	.prepare('getListRumorDefault');
 
-export const getListTraitDefault = db
+export const getListTraitDefault = driver
 	.select({ totalRecord: CountQuery, record: traits })
 	.from(traits)
 	.orderBy(asc(traits.index))
@@ -72,10 +66,10 @@ export const getListTraitDefault = db
 	.offset(sql.placeholder('offset'))
 	.prepare('getListTraitDefault');
 
-export const exportEffects = db.select().from(effects).prepare('exportEffects');
-export const exportItems = db.select().from(items).prepare('exportItems');
-export const exportRumors = db.select().from(rumors).prepare('exportRumors');
-export const exportTraits = db.select().from(traits).prepare('exportTraits');
+export const exportEffects = driver.select().from(effects).prepare('exportEffects');
+export const exportItems = driver.select().from(items).prepare('exportItems');
+export const exportRumors = driver.select().from(rumors).prepare('exportRumors');
+export const exportTraits = driver.select().from(traits).prepare('exportTraits');
 
 export const exportDBQueriesMap: ExportDBQueriesMap = {
 	effect: exportEffects,
@@ -84,7 +78,7 @@ export const exportDBQueriesMap: ExportDBQueriesMap = {
 	trait: exportTraits,
 };
 
-export const getAllEffectIds = db.select({ id: effects.id }).from(effects).prepare('getAllEffectIds');
-export const getAllItemIds = db.select({ id: items.id }).from(items).prepare('getAllItemIds');
-export const getAllRumorIds = db.select({ id: rumors.id }).from(rumors).prepare('getAllRumorIds');
-export const getAllTraitIds = db.select({ id: traits.id }).from(traits).prepare('getAllTraitIds');
+export const getAllEffectIds = driver.select({ id: effects.id }).from(effects).prepare('getAllEffectIds');
+export const getAllItemIds = driver.select({ id: items.id }).from(items).prepare('getAllItemIds');
+export const getAllRumorIds = driver.select({ id: rumors.id }).from(rumors).prepare('getAllRumorIds');
+export const getAllTraitIds = driver.select({ id: traits.id }).from(traits).prepare('getAllTraitIds');

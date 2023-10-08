@@ -2,12 +2,12 @@ import 'server-only';
 
 import { DEFAULT_LIMIT, sortByMap } from '@root/constants/common';
 import {
-	db,
 	getListEffectDefault,
 	getListItemDefault,
 	getListRumorDefault,
 	getListTraitDefault,
 } from '@root/server/database/';
+import { driver } from '@root/server/database/drivers';
 import type { Effect, Item, Rumor, Trait } from '@root/server/database/schema';
 import { effects, items, rumors, traits } from '@root/server/database/schema';
 import type { SearchQuery } from '@root/types/common/zod';
@@ -31,7 +31,7 @@ export const getEffects = async (input: SearchQuery): Promise<ListRecord<Effect>
 			.then(processOutput)
 			.catch(onQueryDBError);
 
-	return await db
+	return await driver
 		.select({ totalRecord: CountQuery, record: effects })
 		.from(effects)
 		.where(
@@ -69,7 +69,7 @@ export const getItems = async (input: SearchQuery): Promise<ListRecord<Item>> =>
 			.then(processOutput)
 			.catch(onQueryDBError);
 
-	return await db
+	return await driver
 		.select({ totalRecord: CountQuery, record: items })
 		.from(items)
 		.where(and(or(...OR), ...AND))
@@ -94,7 +94,7 @@ export const getRumors = async (input: SearchQuery): Promise<ListRecord<Rumor>> 
 			.then(processOutput)
 			.catch(onQueryDBError);
 
-	return await db
+	return await driver
 		.select({ totalRecord: CountQuery, record: rumors })
 		.from(rumors)
 		.where(and(or(...OR), ...AND))
@@ -125,7 +125,7 @@ export const getTraits = async (input: SearchQuery): Promise<ListRecord<Trait>> 
 			.then(processOutput)
 			.catch(onQueryDBError);
 
-	return await db
+	return await driver
 		.select({ totalRecord: CountQuery, record: traits })
 		.from(traits)
 		.where(and(or(...OR), ...AND))

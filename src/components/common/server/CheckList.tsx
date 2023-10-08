@@ -1,6 +1,6 @@
 import type { ChildrenProps } from '@root/types/common/props';
 
-type CheckListProps = { list: string[]; title: string; icon?: ChildrenProps['children'] };
+type CheckListProps = { list: Array<string>; title: string; icon?: ChildrenProps['children'] };
 
 export default function CheckList({ icon, list, title }: CheckListProps) {
 	return (

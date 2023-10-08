@@ -15,6 +15,4 @@ if (evnIs('production')) {
 	neonDBConnection = globalObj.neonDBConnection;
 }
 
-const neonDb = drizzle(neonDBConnection, { schema, logger: !evnIs('production') });
-
-export default neonDb;
+export const driver = drizzle(neonDBConnection, { schema, logger: !evnIs('production') });
