@@ -12,6 +12,6 @@ export function generateMetadata({ params }: PageProps, parent: ResolvingMetadat
 	);
 }
 
-export default async function trait({ params }: PageProps) {
+export default function trait({ params }: PageProps) {
 	return <APIDetailWrapper params={params} />;
 }

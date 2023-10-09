@@ -8,6 +8,6 @@ export async function generateMetadata({ searchParams }: PageProps, parent: Reso
 	return generateListMetadata(searchParams, parent, { title: `${APP_NAME} | Traits` });
 }
 
-export default async function traits({ searchParams }: PageProps) {
+export default function traits({ searchParams }: PageProps) {
 	return <APIListWrapper searchParams={searchParams} />;
 }

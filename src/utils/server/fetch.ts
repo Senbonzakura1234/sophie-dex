@@ -1,18 +1,12 @@
 import 'server-only';
 
-import { APP_AUTHOR, APP_PATH } from '@root/constants/common';
-import {
-	defaultGithubHeader,
-	defaultGithubUserInfo,
-	defaultLicenseInfo,
-	defaultRepoInfo,
-} from '@root/constants/server';
+import { APP_AUTHOR, APP_LICENSE_CODE, APP_PATH } from '@root/constants/common';
+import { defaultGithubHeader, defaultGithubUserInfo, defaultLicenseInfo } from '@root/constants/server';
 import {
 	githubFileResponseSchema,
 	githubUserInfoSchema,
 	licenseInfoSchema,
 	packageDotJSONSchema,
-	repoInfoSchema,
 } from '@root/types/common/zod';
 import { tryCatchHandler, tryCatchHandlerSync, writeLog } from '@root/utils/common';
 import { TRPCError } from '@trpc/server';
@@ -93,14 +87,6 @@ export const getVersion = async () => {
 	return packageDotJSONResult.data.version;
 };
 
-export const getRepoInfo = async () => {
-	const repoResult = await tryCatchHandler(
-		improvedFetch(repoInfoSchema, undefined, `https://api.github.com/repos/${APP_PATH}`, defaultGithubHeader),
-	);
-
-	return repoResult.isSuccess ? repoResult.data : defaultRepoInfo;
-};
-
 export const getGithubUserInfo = async () => {
 	const githubUserInfo = await tryCatchHandler(
 		improvedFetch(githubUserInfoSchema, undefined, `https://api.github.com/users/${APP_AUTHOR}`, defaultGithubHeader),
@@ -110,10 +96,13 @@ export const getGithubUserInfo = async () => {
 };
 
 export const getLicense = async () => {
-	const repoInfo = await getRepoInfo();
-
 	const licenseResult = await tryCatchHandler(
-		improvedFetch(licenseInfoSchema, undefined, repoInfo.license.url, defaultGithubHeader),
+		improvedFetch(
+			licenseInfoSchema,
+			undefined,
+			`https://api.github.com/licenses/${APP_LICENSE_CODE}`,
+			defaultGithubHeader,
+		),
 	);
 
 	return licenseResult.isSuccess ? licenseResult.data : defaultLicenseInfo;

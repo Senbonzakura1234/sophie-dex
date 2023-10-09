@@ -1,7 +1,7 @@
 import 'server-only';
 
 import type { AppleMediaConfig } from '@root/types/common';
-import type { GithubUserInfo, LicenseInfo, RepoInfo } from '@root/types/common/zod';
+import type { GithubUserInfo, LicenseInfo } from '@root/types/common/zod';
 import type { NextResponse } from 'next/server';
 import { env } from 'process';
 
@@ -157,15 +157,6 @@ export const defaultResponseConfig: Parameters<typeof NextResponse.json>[1] = {
 export const defaultGithubHeader: Parameters<typeof fetch>[1] = {
 	headers: { Authorization: `Bearer ${env.GITHUB_TOKEN}`, 'X-GitHub-Api-Version': '2022-11-28' },
 	next: { revalidate: 3e10 },
-};
-
-export const defaultRepoInfo: RepoInfo = {
-	description: '-',
-	full_name: '-',
-	html_url: '-',
-	name: '-',
-	owner: { avatar_url: '-', html_url: '-', login: '-' },
-	license: { url: '-' },
 };
 
 export const defaultGithubUserInfo: GithubUserInfo = {

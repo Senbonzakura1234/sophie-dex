@@ -164,7 +164,7 @@
 	@apply max-w-full w-full;
 }
 .swagger-ui .nested-links a {
-	@apply link link-hover link-info;
+	@apply link link-hover link-primary;
 }
 .swagger-ui .wrapper {
 	@apply mx-auto container px-5 w-full;

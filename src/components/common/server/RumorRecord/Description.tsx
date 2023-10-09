@@ -18,7 +18,7 @@ export default function Description({ description: { contentText, contentData } 
 					return typeof data === 'undefined' ? (
 						<Fragment key={key}>{text}</Fragment>
 					) : (
-						<Hyperlink key={key} input={data} className='link-info link visited:link-accent' />
+						<Hyperlink key={key} input={data} className='link-primary link visited:link-accent' />
 					);
 				})}
 			</span>

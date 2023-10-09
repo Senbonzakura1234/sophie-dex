@@ -7,9 +7,9 @@ import { createDocument, extendZodWithOpenApi } from 'zod-openapi';
 
 extendZodWithOpenApi(z);
 
-import { APP_CODE, APP_NAME } from '@root/constants/common';
+import { APP_CODE, APP_DESCRIPTION, APP_NAME } from '@root/constants/common';
 import type { Effect, ExampleRecord, ExampleRecordObject, Item, Rumor, Trait } from '@root/server/database/schema';
-import type { GithubUserInfo, ModuleIdEnum, RepoInfo } from '@root/types/common/zod';
+import type { GithubUserInfo, ModuleIdEnum } from '@root/types/common/zod';
 import {
 	errorEnumSchema,
 	genericCategoryEnumSchema,
@@ -169,10 +169,9 @@ const getPaths = (exampleRecordObject: ExampleRecordObject): ZodOpenApiPathsObje
 			.flat(),
 	);
 
-export const getApiDocs = ([[effect, item, rumor, trait], version, { description }, { html_url, login, email }]: [
+export const getApiDocs = ([[effect, item, rumor, trait], version, { html_url, login, email }]: [
 	[Effect, Item, Rumor, Trait],
 	string,
-	RepoInfo,
 	GithubUserInfo,
 ]) =>
 	createDocument({
@@ -180,7 +179,7 @@ export const getApiDocs = ([[effect, item, rumor, trait], version, { description
 		info: {
 			title: `${APP_NAME} | OpenApi`,
 			version,
-			description,
+			description: APP_DESCRIPTION,
 			contact: { url: html_url, name: login, email },
 			license: { name: 'MIT License', url: `https://github.com/${login}/${APP_CODE}/blob/main/LICENSE` },
 		},

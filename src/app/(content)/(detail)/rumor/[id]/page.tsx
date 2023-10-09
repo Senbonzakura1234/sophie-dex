@@ -12,6 +12,6 @@ export function generateMetadata({ params }: PageProps, parent: ResolvingMetadat
 	);
 }
 
-export default async function rumor({ params }: PageProps) {
+export default function rumor({ params }: PageProps) {
 	return <APIDetailWrapper params={params} />;
 }

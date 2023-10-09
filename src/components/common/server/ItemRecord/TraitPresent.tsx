@@ -12,7 +12,7 @@ export default function TraitPresent({ traitPresent: { table: moduleId, id, name
 
 			<Link
 				aria-label={name}
-				className='link-info link visited:link-accent'
+				className='link-primary link visited:link-accent'
 				href={`/${moduleId}/${id}`}
 				role='navigation'
 			>

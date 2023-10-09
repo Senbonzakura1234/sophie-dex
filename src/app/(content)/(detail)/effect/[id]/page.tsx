@@ -12,6 +12,6 @@ export function generateMetadata({ params }: PageProps, parent: ResolvingMetadat
 	);
 }
 
-export default async function effect({ params }: PageProps) {
+export default function effect({ params }: PageProps) {
 	return <APIDetailWrapper params={params} />;
 }

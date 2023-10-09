@@ -7,7 +7,7 @@ import ProfileField from './ProfileField';
 
 type ProfileInfoProps = { profileInfo: GithubUserInfo };
 
-export default async function ProfileInfo({
+export default function ProfileInfo({
 	profileInfo: { avatar_url, login, bio, company, blog, email, location, twitter_username },
 }: ProfileInfoProps) {
 	const fields: Array<ProfileFieldProps> = [

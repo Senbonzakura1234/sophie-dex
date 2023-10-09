@@ -36,7 +36,7 @@
 	}
 
 	.readme .card-body > div > h2 > a {
-		@apply link link-info no-underline font-bold;
+		@apply link link-primary no-underline font-bold;
 	}
 
 	.readme .card-body > div > ul > li {

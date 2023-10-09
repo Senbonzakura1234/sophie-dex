@@ -7,9 +7,9 @@ import {
 	getExampleTraitRecord,
 } from '@root/server/database/';
 import type { Effect, Item, Rumor, Trait } from '@root/server/database/schema';
-import type { GithubUserInfo, RepoInfo } from '@root/types/common/zod';
+import type { GithubUserInfo } from '@root/types/common/zod';
 import { onQueryDBError } from '@root/utils/server/database';
-import { getGithubUserInfo, getRepoInfo, getVersion } from '@root/utils/server/fetch';
+import { getGithubUserInfo, getVersion } from '@root/utils/server/fetch';
 import { getApiDocs } from '@root/utils/server/swagger';
 import { TRPCError } from '@trpc/server';
 import type { OpenAPIObject } from 'zod-openapi/lib-types/openapi3-ts/dist/oas31';
@@ -29,9 +29,8 @@ export const getExample = async (): Promise<OpenAPIObject> =>
 				),
 			),
 			getVersion(),
-			getRepoInfo(),
 			getGithubUserInfo(),
-		]) as Promise<[[Effect, Item, Rumor, Trait], string, RepoInfo, GithubUserInfo]>
+		]) as Promise<[[Effect, Item, Rumor, Trait], string, GithubUserInfo]>
 	)
 		.then(getApiDocs)
 		.catch(onQueryDBError);

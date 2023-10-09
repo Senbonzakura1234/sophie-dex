@@ -1,3 +1,4 @@
+import MDXWrapper from '@root/components/common/client/MDXWrapper';
 import ScaleIcon from '@root/components/icons/outline/ScaleIcon';
 import ArrowTopRightOnSquareIcon from '@root/components/icons/solid/ArrowTopRightOnSquareIcon';
 import { APP_PATH } from '@root/constants/common';
@@ -36,7 +37,7 @@ export default function LicenseInfoHead({ description, name }: LicenseInfoHeadPr
 				</div>
 			</div>
 
-			<div className='max-w-xl text-xs font-bold md:text-sm'>{description}</div>
+			<MDXWrapper body={description} className='!max-w-xl text-xs font-bold md:text-sm' />
 		</div>
 	);
 }

@@ -11,7 +11,7 @@ import LicenseInfoHead from './LicenseInfoHead';
 
 type LicenseInfoProps = { licenseInfo: LicenseInfo };
 
-export default async function LicenseInfo({
+export default function LicenseInfo({
 	licenseInfo: { body, conditions, limitations, permissions, ...rest },
 }: LicenseInfoProps) {
 	return (
