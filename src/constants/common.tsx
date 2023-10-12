@@ -24,9 +24,6 @@ export const APP_PATH = `${APP_AUTHOR}/${APP_CODE}`;
 
 export const DEFAULT_LIMIT = 16;
 
-export const DEFAULT_MAXIMUM_PULL_LENGTH = 240;
-export const DEFAULT_REFRESH_THRESHOLD = 180;
-
 export const colorTWClassMap = {
 	BLUE: 'text-blue-500',
 	GREEN: 'text-green-500',

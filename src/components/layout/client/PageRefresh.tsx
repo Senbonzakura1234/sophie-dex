@@ -1,12 +1,11 @@
 'use client';
 
-import { DEFAULT_REFRESH_THRESHOLD } from '@root/constants/common';
 import type usePageSegment from '@root/hooks/usePageSegment';
-import { usePullToRefresh } from '@root/hooks/usePullToRefresh';
 import useSelector from '@root/hooks/useSelector';
 import { moduleIdList } from '@root/types/model';
 import { arrayInclude } from '@root/utils/common';
 import { useRouter } from 'next/navigation';
+import { DEFAULT_REFRESH_THRESHOLD, usePullToRefresh } from 'use-pull-to-refresh';
 
 type PageRefreshProps = { isDisabled?: boolean } & Partial<ReturnType<typeof usePageSegment>>;
 
