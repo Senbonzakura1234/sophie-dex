@@ -16,12 +16,7 @@ export default function TraitPresent({ traitPresent: { table: moduleId, id, name
 		<div className='flex max-w-fit flex-wrap gap-2'>
 			<div className='capitalize'>{moduleId}: </div>
 
-			<Link
-				aria-label={name}
-				className='link-primary link visited:link-accent'
-				href={`/${moduleId}/${id}`}
-				role='navigation'
-			>
+			<Link aria-label={name} className='link-primary link visited:link-accent' href={`/${moduleId}/${id}`}>
 				<span className='flex gap-1 font-bold'>
 					<DocumentChartBarIcon className='my-auto aspect-square h-4' />
 					{name}

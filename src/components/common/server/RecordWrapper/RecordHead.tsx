@@ -30,7 +30,6 @@ export default function RecordHead({ currentId, id, name }: RecordHeadProps) {
 				}`}
 				href={moduleId ? `/${moduleId}/${id}` : '/'}
 				aria-label={name}
-				role='navigation'
 			>
 				{name}
 			</Link>

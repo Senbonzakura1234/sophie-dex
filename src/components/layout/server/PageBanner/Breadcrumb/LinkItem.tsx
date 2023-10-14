@@ -18,7 +18,6 @@ export default function LinkItem({ isActive, icon, children, ...rest }: LinkItem
 					? 'no-animation pointer-events-none !cursor-default !no-underline'
 					: 'link-hover link-primary visited:link-accent'
 			}`}
-			role='navigation'
 			{...rest}
 		>
 			{icon}

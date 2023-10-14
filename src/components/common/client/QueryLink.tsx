@@ -42,7 +42,6 @@ export default function QueryLink({
 					  })}`
 					: '/'
 			}
-			role='navigation'
 			{...rest}
 		>
 			{children}

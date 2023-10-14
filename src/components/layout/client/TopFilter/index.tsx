@@ -103,7 +103,6 @@ export default function TopFilter() {
 						href={{ query: {} }}
 						isOverridden
 						searchQuery={searchQuery}
-						role='navigation'
 					>
 						Reset
 					</QueryLink>

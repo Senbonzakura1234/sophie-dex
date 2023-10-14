@@ -26,7 +26,6 @@ export default function ErrorContent({ code = 'INTERNAL_SERVER_ERROR' }: ErrorCo
 					className='link-hover link text-xs text-base-content md:text-sm'
 					href='/'
 					replace
-					role='navigation'
 				>
 					Back to home
 				</Link>
