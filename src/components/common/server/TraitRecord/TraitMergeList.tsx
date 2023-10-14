@@ -1,7 +1,13 @@
-import CopyUrlButton from '@root/components/common/client/CopyUrlButton';
 import MergeIcon from '@root/components/icons/solid/MergeIcon';
+import PulsePlaceHolder from '@root/components/loading/PulsePlaceHolder';
 import type { HyperLinkRecord } from '@root/server/database/schema';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
+
+const CopyUrlButton = dynamic(() => import('@root/components/common/client/CopyUrlButton'), {
+	ssr: false,
+	loading: () => <PulsePlaceHolder className='aspect-square h-6 rounded-lg' />,
+});
 
 type TraitMergeListProps = { mergeFrom: Array<[HyperLinkRecord, HyperLinkRecord]> };
 

@@ -1,14 +1,16 @@
 'use client';
 
 import { Root, Scrollbar, Thumb, Viewport } from '@radix-ui/react-scroll-area';
-import PageRefresh from '@root/components/layout/client/PageRefresh';
 import usePageSegment from '@root/hooks/usePageSegment';
 import type { OnScroll } from '@root/hooks/useScroll';
 import { useScroll } from '@root/hooks/useScroll';
 import type { ChildrenProps } from '@root/types/common/props';
+import dynamic from 'next/dynamic';
 import { useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import ScrollToTop from './ScrollToTop';
+
+const PageRefresh = dynamic(() => import('@root/components/layout/client/PageRefresh'), { ssr: false });
+const ScrollToTop = dynamic(() => import('./ScrollToTop'), { ssr: false });
 
 type ScrollWrapperProps = ChildrenProps;
 

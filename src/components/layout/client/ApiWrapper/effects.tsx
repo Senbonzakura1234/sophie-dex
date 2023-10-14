@@ -11,7 +11,7 @@ import { createArray } from '@root/utils/common';
 
 type APIListWrapperProps = { searchParams: PageProps['searchParams'] };
 
-export function APIListWrapper({ searchParams }: APIListWrapperProps) {
+export default function APIListWrapper({ searchParams }: APIListWrapperProps) {
 	const { data, isSuccess, isLoading, refetch, error, isError } = ApiContext.effect.getAll.useQuery(searchParams);
 
 	useDispatchContentData({
@@ -36,16 +36,4 @@ export function APIListWrapper({ searchParams }: APIListWrapperProps) {
 			))}
 		</>
 	);
-}
-
-type APIDetailWrapperProps = { params: PageProps['params'] };
-
-export default function APIDetailWrapper({ params }: APIDetailWrapperProps) {
-	const { data, isSuccess, isLoading, error } = ApiContext.effect.getOne.useQuery(params);
-
-	if (isLoading) return <RecordPlaceholder className='min-h-[20rem]' />;
-
-	if (!isSuccess && !isLoading) return <ErrorContent code={error.data?.code} />;
-
-	return <EffectRecord data={data} currentId={params.id} />;
 }

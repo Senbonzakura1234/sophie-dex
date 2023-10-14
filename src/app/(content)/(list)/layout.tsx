@@ -1,8 +1,17 @@
-import BottomFilter from '@root/components/layout/client/BottomFilter';
 import ContentWrapper from '@root/components/layout/client/ContentWrapper';
-import SearchInput from '@root/components/layout/client/SearchInput';
-import TopFilter from '@root/components/layout/client/TopFilter';
+import PulsePlaceHolder from '@root/components/loading/PulsePlaceHolder';
 import type { ChildrenProps } from '@root/types/common/props';
+import dynamic from 'next/dynamic';
+
+const TopFilter = dynamic(() => import('@root/components/layout/client/TopFilter'), {
+	ssr: false,
+	loading: () => <PulsePlaceHolder className='h-8 w-[133px] rounded-lg' />,
+});
+const BottomFilter = dynamic(() => import('@root/components/layout/client/BottomFilter'), { ssr: false });
+const SearchInput = dynamic(() => import('@root/components/layout/client/SearchInput'), {
+	ssr: false,
+	loading: () => <div className='h-8 w-full' />,
+});
 
 export default function ListLayout({ children }: ChildrenProps) {
 	return (

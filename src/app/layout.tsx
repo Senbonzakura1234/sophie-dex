@@ -3,7 +3,6 @@ import './globals.css';
 import '@total-typescript/ts-reset';
 
 import ScrollWrapper from '@root/components/layout/client/ScrollWrapper';
-import ThemeSwitcher from '@root/components/layout/client/ThemeSwitcher';
 import ThemeWrapper from '@root/components/layout/client/ThemeWrapper';
 import { APP_AUTHOR, APP_DESCRIPTION, APP_KEYWORD, APP_NAME, metaThemeColorMap } from '@root/constants/common';
 import { appleMediaConfig } from '@root/constants/server';
@@ -15,6 +14,9 @@ import { ContextProvider } from '@root/utils/client/context';
 import { getBaseUrl, tryCatchHandler, writeLog } from '@root/utils/common';
 import { getCookie } from 'cookies-next';
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
+
+const ThemeSwitcher = dynamic(() => import('@root/components/layout/client/ThemeSwitcher'), { ssr: false });
 
 const getCurrentTheme = async (): Promise<DaisyUIThemeEnum> => {
 	if (typeof window !== 'undefined') return daisyUIThemeEnumSchema.parse(getCookie('theme', { path: '/' }));

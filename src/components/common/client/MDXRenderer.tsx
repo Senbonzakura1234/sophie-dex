@@ -1,14 +1,15 @@
 'use client';
 
 import { compile, run } from '@mdx-js/mdx';
+import type { ClassNameProps } from '@root/types/common/props';
 import { tryCatchHandler } from '@root/utils/common';
 import type { FC } from 'react';
 import { Fragment, useEffect, useState } from 'react';
 import runtime from 'react/jsx-runtime';
 
-export type MDXRendererProps = { body: string };
+export type MDXRendererProps = { body: string } & ClassNameProps;
 
-export default function MDXRenderer({ body }: MDXRendererProps) {
+export default function MDXRenderer({ body, className }: MDXRendererProps) {
 	const [mdxModule, setMdxModule] = useState<{ default: FC }>({ default: Fragment });
 
 	useEffect(() => {
@@ -29,5 +30,9 @@ export default function MDXRenderer({ body }: MDXRendererProps) {
 		renderMDX(body);
 	}, [body]);
 
-	return <mdxModule.default />;
+	return (
+		<div className={`prose max-w-none ${className}`}>
+			<mdxModule.default />
+		</div>
+	);
 }

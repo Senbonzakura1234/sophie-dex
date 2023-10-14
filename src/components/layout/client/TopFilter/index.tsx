@@ -1,5 +1,6 @@
 'use client';
 
+import { Transition } from '@headlessui/react';
 import QueryLink from '@root/components/common/client/QueryLink';
 import RefetchButton from '@root/components/common/client/RefetchButton';
 import FilterIcon from '@root/components/icons/outline/FilterIcon';
@@ -11,7 +12,6 @@ import { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import useSelector from '@root/hooks/useSelector';
 import { arrayInclude, queryToParamsString } from '@root/utils/common';
-import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 
 import type { ModuleIdEnum, SearchQuery } from '@root/types/common/zod';
@@ -20,8 +20,6 @@ import ColorFilter from './ColorFilter';
 import RecipeTypeFilter from './RecipeTypeFilter';
 import RumorTypeFilter from './RumorTypeFilter';
 import SortControl from './SortControl';
-
-const TransitionWrapper = dynamic(() => import('@root/components/dynamic/TransitionWrapper'), { ssr: false });
 
 const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 3 }).format;
 
@@ -63,7 +61,7 @@ export default function TopFilter() {
 				</button>
 			</div>
 
-			<TransitionWrapper
+			<Transition
 				show={isOpen}
 				as='nav'
 				className='card select-none bg-base-100 shadow-lg shadow-primary'
@@ -114,7 +112,7 @@ export default function TopFilter() {
 						<ArrowPathIcon className='aspect-square h-4' />
 					</RefetchButton>
 				</div>
-			</TransitionWrapper>
+			</Transition>
 		</>
 	);
 }

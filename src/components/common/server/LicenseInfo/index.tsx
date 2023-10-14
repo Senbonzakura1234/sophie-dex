@@ -1,4 +1,3 @@
-import MDXWrapper from '@root/components/common/client/MDXWrapper';
 import CheckList from '@root/components/common/server/CheckList';
 import CommonWrapper from '@root/components/common/server/CommonWrapper';
 import CheckIcon from '@root/components/icons/solid/CheckIcon';
@@ -6,8 +5,11 @@ import InfoIcon from '@root/components/icons/solid/InfoIcon';
 import XMarkIcon from '@root/components/icons/solid/XMarkIcon';
 import { APP_AUTHOR } from '@root/constants/common';
 import type { LicenseInfo } from '@root/types/common/zod';
+import dynamic from 'next/dynamic';
 
 import LicenseInfoHead from './LicenseInfoHead';
+
+const MDXRenderer = dynamic(() => import('@root/components/common/client/MDXRenderer'), { ssr: false });
 
 type LicenseInfoProps = { licenseInfo: LicenseInfo };
 
@@ -15,7 +17,7 @@ export default function LicenseInfo({
 	licenseInfo: { body, conditions, limitations, permissions, ...rest },
 }: LicenseInfoProps) {
 	return (
-		<CommonWrapper className='w-full'>
+		<CommonWrapper className='min-h-[42rem] w-full'>
 			<div className='flex flex-wrap gap-6'>
 				<LicenseInfoHead {...rest} />
 
@@ -42,7 +44,7 @@ export default function LicenseInfo({
 
 			<div className='divider divider-vertical before:bg-gradient-to-br before:from-accent before:to-primary after:bg-gradient-to-tl after:from-accent after:to-primary' />
 
-			<MDXWrapper
+			<MDXRenderer
 				body={body.replace('[year]', new Date().getFullYear().toString()).replace('[fullname]', APP_AUTHOR)}
 				className='px-2 pb-5'
 			/>

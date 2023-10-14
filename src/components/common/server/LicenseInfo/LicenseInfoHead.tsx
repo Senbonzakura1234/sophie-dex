@@ -1,9 +1,11 @@
-import MDXWrapper from '@root/components/common/client/MDXWrapper';
 import ScaleIcon from '@root/components/icons/outline/ScaleIcon';
 import ArrowTopRightOnSquareIcon from '@root/components/icons/solid/ArrowTopRightOnSquareIcon';
 import { APP_PATH } from '@root/constants/common';
 import type { LicenseInfo } from '@root/types/common/zod';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
+
+const MDXRenderer = dynamic(() => import('@root/components/common/client/MDXRenderer'), { ssr: false });
 
 type LicenseInfoHeadProps = Pick<LicenseInfo, 'description' | 'name'>;
 
@@ -37,7 +39,7 @@ export default function LicenseInfoHead({ description, name }: LicenseInfoHeadPr
 				</div>
 			</div>
 
-			<MDXWrapper body={description} className='!max-w-xl text-xs font-bold md:text-sm' />
+			<MDXRenderer body={description} className='!max-w-xl text-xs font-bold md:text-sm' />
 		</div>
 	);
 }

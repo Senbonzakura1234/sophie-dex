@@ -1,9 +1,15 @@
 'use client';
 
-import CopyUrlButton from '@root/components/common/client/CopyUrlButton';
+import PulsePlaceHolder from '@root/components/loading/PulsePlaceHolder';
 import { useModuleId } from '@root/hooks/useModuleId';
 import type { CommonRecord } from '@root/server/database/schema';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
+
+const CopyUrlButton = dynamic(() => import('@root/components/common/client/CopyUrlButton'), {
+	ssr: false,
+	loading: () => <PulsePlaceHolder className='aspect-square h-6 rounded-lg' />,
+});
 
 type RecordHeadProps = Omit<CommonRecord, 'keyWords'> & { currentId: string | undefined };
 

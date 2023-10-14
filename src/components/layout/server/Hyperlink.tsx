@@ -1,8 +1,14 @@
-import CopyUrlButton from '@root/components/common/client/CopyUrlButton';
+import PulsePlaceHolder from '@root/components/loading/PulsePlaceHolder';
 import type { HighlightText, HyperLinkRecord, HyperLinkSearch } from '@root/server/database/schema';
 import type { ClassNameProps } from '@root/types/common/props';
 import { convertCode, objectValues, queryToParamsString } from '@root/utils/common';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
+
+const CopyUrlButton = dynamic(() => import('@root/components/common/client/CopyUrlButton'), {
+	ssr: false,
+	loading: () => <PulsePlaceHolder className='aspect-square h-6 rounded-lg' />,
+});
 
 type HyperlinkProps = {
 	input: HighlightText | HyperLinkRecord | HyperLinkSearch;
