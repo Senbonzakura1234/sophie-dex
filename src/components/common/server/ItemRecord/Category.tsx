@@ -9,15 +9,15 @@ import { convertCode } from '@root/utils/common';
 
 type CategoryProps = { category: CategoryEnum; color: ColorEnum };
 
-export default function Category({ category, color }: CategoryProps) {
-	const className = {
-		BLUE: 'app-text-shadow-BLUE',
-		GREEN: 'app-text-shadow-GREEN',
-		RED: 'app-text-shadow-RED',
-		WHITE: 'app-text-shadow-WHITE',
-		YELLOW: 'app-text-shadow-YELLOW',
-	} satisfies TextShadowMap;
+const className = {
+	BLUE: 'app-text-shadow-BLUE text-base-200 dark:text-base-content',
+	GREEN: 'app-text-shadow-GREEN text-base-200 dark:text-base-content',
+	RED: 'app-text-shadow-RED text-base-200 dark:text-base-content',
+	WHITE: 'app-text-shadow-WHITE text-base-200 dark:text-base-content',
+	YELLOW: 'app-text-shadow-YELLOW text-base-200 dark:text-base-content',
+} satisfies TextShadowMap<ColorEnum>;
 
+export default function Category({ category, color }: CategoryProps) {
 	const { searchQuery } = useSearchQuery();
 
 	const isActive = category === searchQuery.category;
@@ -43,7 +43,7 @@ export default function Category({ category, color }: CategoryProps) {
 
 			<div
 				aria-hidden
-				className={`absolute bottom-8 right-8 w-10 text-center font-atelier text-lg text-slate-50 md:text-4xl ${categoryIconMap[category]} ${className[color]}`}
+				className={`absolute bottom-8 right-8 w-10 text-center font-atelier text-lg md:text-4xl ${categoryIconMap[category]} ${className[color]}`}
 			/>
 		</>
 	);

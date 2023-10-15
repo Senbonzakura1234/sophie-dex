@@ -21,7 +21,6 @@ export default function ScrollToTop({ isShow, refObject }: ScrollToTopProps) {
 				className='btn btn-circle btn-primary text-slate-50 shadow-lg shadow-base-content/30'
 				disabled={!isShow}
 				onClick={scrollToTop}
-				role='navigation'
 			>
 				<ArrowUpOnSquareIcon className='h4 h-4' />
 			</button>

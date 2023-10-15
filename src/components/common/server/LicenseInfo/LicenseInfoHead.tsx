@@ -24,6 +24,7 @@ export default function LicenseInfoHead({ description, name }: LicenseInfoHeadPr
 						{name}
 
 						<Link
+							aria-label='Go to license'
 							className='btn btn-circle btn-primary btn-link btn-xs mb-auto'
 							href={{
 								protocol: 'https',

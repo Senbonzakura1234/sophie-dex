@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const CopyUrlButton = dynamic(() => import('@root/components/common/client/CopyUrlButton'), {
 	ssr: false,
-	loading: () => <PulsePlaceHolder className='aspect-square h-6 rounded-lg' />,
+	loading: () => <PulsePlaceHolder className='my-auto mr-2 inline-flex aspect-square h-6 rounded-lg align-middle' />,
 });
 
 type RecordHeadProps = Omit<CommonRecord, 'keyWords'> & { currentId: string | undefined };
@@ -20,12 +20,13 @@ export default function RecordHead({ currentId, id, name }: RecordHeadProps) {
 
 	return (
 		<div className='card-title inline'>
-			<span className='mr-2'>
-				<CopyUrlButton className='btn-outline dark:shadow-md dark:shadow-current' url={`/${moduleId}/${id}`} />
-			</span>
+			<CopyUrlButton
+				className='btn-outline mr-2 align-middle dark:shadow-md dark:shadow-current'
+				url={`/${moduleId}/${id}`}
+			/>
 
 			<Link
-				className={`dark:text-shadow-light-md ${
+				className={`align-middle text-shadow-light dark:text-shadow-dark ${
 					isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'
 				}`}
 				href={moduleId ? `/${moduleId}/${id}` : '/'}

@@ -45,19 +45,6 @@ export type DefaultColors = {
 		'900': '#18181b';
 		'950': '#09090b';
 	};
-	neutral: {
-		'50': '#fafafa';
-		'100': '#f5f5f5';
-		'200': '#e5e5e5';
-		'300': '#d4d4d4';
-		'400': '#a3a3a3';
-		'500': '#737373';
-		'600': '#525252';
-		'700': '#404040';
-		'800': '#262626';
-		'900': '#171717';
-		'950': '#0a0a0a';
-	};
 	stone: {
 		'50': '#fafaf9';
 		'100': '#f5f5f4';
@@ -292,13 +279,18 @@ export type DefaultColors = {
 		'900': '#881337';
 		'950': '#4c0519';
 	};
-	/** @deprecated As of Tailwind CSS v2.2, `lightBlue` has been renamed to `sky`. Update your configuration file to silence this warning. */ lightBlue: DefaultColors['sky'];
-	/** @deprecated As of Tailwind CSS v3.0, `warmGray` has been renamed to `stone`. Update your configuration file to silence this warning. */ warmGray: DefaultColors['stone'];
-	/** @deprecated As of Tailwind CSS v3.0, `trueGray` has been renamed to `neutral`. Update your configuration file to silence this warning. */ trueGray: DefaultColors['neutral'];
-	/** @deprecated As of Tailwind CSS v3.0, `coolGray` has been renamed to `gray`. Update your configuration file to silence this warning. */ coolGray: DefaultColors['gray'];
-	/** @deprecated As of Tailwind CSS v3.0, `blueGray` has been renamed to `slate`. Update your configuration file to silence this warning. */ blueGray: DefaultColors['slate'];
+	'neutral-50': '#fafafa';
+	'neutral-100': '#f5f5f5';
+	'neutral-200': '#e5e5e5';
+	'neutral-300': '#d4d4d4';
+	'neutral-400': '#a3a3a3';
+	'neutral-500': '#737373';
+	'neutral-600': '#525252';
+	'neutral-700': '#404040';
+	'neutral-800': '#262626';
+	'neutral-900': '#171717';
 };
 
 export type TextShadowUtilities = Record<`.app-text-shadow-${ColorEnum}`, { textShadow: string }>;
 
-export type TextShadowMap = Record<ColorEnum, `app-text-shadow-${ColorEnum}`>;
+export type TextShadowMap<T extends string> = Record<T, string>;

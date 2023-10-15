@@ -25,12 +25,12 @@ export const APP_PATH = `${APP_AUTHOR}/${APP_CODE}`;
 export const DEFAULT_LIMIT = 16;
 
 export const colorTWClassMap = {
-	BLUE: 'text-blue-500',
-	GREEN: 'text-green-500',
-	RED: 'text-red-500',
-	WHITE: 'text-slate-500',
-	YELLOW: 'text-yellow-500',
-} as const satisfies Record<ColorEnum, string>;
+	BLUE: { background: 'text-blue-500', foreground: 'text-slate-950' },
+	GREEN: { background: 'text-green-500', foreground: 'text-slate-950' },
+	RED: { background: 'text-red-500', foreground: 'text-slate-950' },
+	WHITE: { background: 'text-slate-500', foreground: 'text-slate-50' },
+	YELLOW: { background: 'text-yellow-500', foreground: 'text-slate-950' },
+} as const satisfies Record<ColorEnum, { background: string; foreground: string }>;
 
 export const alertTypeColorMap = {
 	ERROR: 'RED',
@@ -50,7 +50,7 @@ export const recipeTypeColorMap = {
 export const rumorTypeColorMap = {
 	MONSTER: colorTWClassMap['RED'],
 	MATERIAL: colorTWClassMap['GREEN'],
-} as const satisfies Record<RumorTypeEnum, string>;
+} as const satisfies Record<RumorTypeEnum, { background: string; foreground: string }>;
 
 export const rumorColorMap = {
 	MONSTER: 'RED',

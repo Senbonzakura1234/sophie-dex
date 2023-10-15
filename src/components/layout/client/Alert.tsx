@@ -47,7 +47,7 @@ export default function Alert() {
 			<div className='card bg-gradient-to-br from-accent to-primary p-1 shadow-lg shadow-primary'>
 				<div
 					className={`flex gap-2 rounded-[inherit] border-none bg-base-100 px-4 py-3 font-bold shadow-inner shadow-base-content ${
-						colorTWClassMap[alertTypeColorMap[type]]
+						colorTWClassMap[alertTypeColorMap[type]].background
 					}`}
 				>
 					<Icon className='aspect-square h-6' />

@@ -30,7 +30,7 @@ export default function Breadcrumb() {
 				{moduleIdList.map((m, i) => (
 					<Fragment key={m}>
 						<LinkItem
-							aria-label={`Go to ${i} Search`}
+							aria-label={`Go to ${m} Search`}
 							href={`/${m}`}
 							icon={<LinkIcon className='hidden aspect-square h-4 2xl:inline' />}
 							isActive={m === segment}

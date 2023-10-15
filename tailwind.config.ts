@@ -1,4 +1,4 @@
-import type { TextShadowUtilities } from '@root/types/common/tailwind';
+import type { DefaultColors, TextShadowUtilities } from '@root/types/common/tailwind';
 import typography from '@tailwindcss/typography';
 import daisyui from 'daisyui';
 import type { Config } from 'tailwindcss';
@@ -10,9 +10,9 @@ const config: Config = {
 		extend: { fontFamily: { atelier: ['var(--font-atelier)'] } },
 	},
 	plugins: [
-		daisyui,
 		tailwindPlugin(({ theme, addUtilities }) => {
-			const colors = theme('colors');
+			const colors = theme('colors') as DefaultColors | undefined;
+
 			if (!colors) return;
 
 			const appTextShadows: TextShadowUtilities = {
@@ -35,19 +35,15 @@ const config: Config = {
 
 			addUtilities({
 				...appTextShadows,
-				'.text-shadow-dark-xs': { textShadow: `0 0 ${theme('spacing.1')} ${colors.black}` },
-				'.text-shadow-dark-sm': { textShadow: `0 0 ${theme('spacing.2')} ${colors.black}` },
-				'.text-shadow-dark-md': { textShadow: `0 0 ${theme('spacing.3')} ${colors.black}` },
-				'.text-shadow-dark-lg': { textShadow: `0 0 ${theme('spacing.4')} ${colors.black}` },
-				'.text-shadow-dark-xl': { textShadow: `0 0 ${theme('spacing.5')} ${colors.black}` },
-
-				'.text-shadow-light-xs': { textShadow: `0 0 ${theme('spacing.1')} ${colors.white}` },
-				'.text-shadow-light-sm': { textShadow: `0 0 ${theme('spacing.2')} ${colors.white}` },
-				'.text-shadow-light-md': { textShadow: `0 0 ${theme('spacing.3')} ${colors.white}` },
-				'.text-shadow-light-lg': { textShadow: `0 0 ${theme('spacing.4')} ${colors.white}` },
-				'.text-shadow-light-xl': { textShadow: `0 0 ${theme('spacing.5')} ${colors.white}` },
+				'.text-shadow-dark': {
+					textShadow: `-2px 2px 0 ${colors.slate[950]}, 2px 2px 0 ${colors.slate[950]}, 2px -2px 0 ${colors.slate[950]}, -2px -2px 0 ${colors.slate[950]}, 0 0 15px ${colors.slate[950]}, 0 0 15px ${colors.slate[950]}`,
+				},
+				'.text-shadow-light': {
+					textShadow: `-2px 2px 0 ${colors.slate[50]}, 2px 2px 0 ${colors.slate[50]}, 2px -2px 0 ${colors.slate[50]}, -2px -2px 0 ${colors.slate[50]}, 0 0 15px ${colors.slate[50]}, 0 0 15px ${colors.slate[50]}`,
+				},
 			});
 		}),
+		daisyui,
 		typography,
 	],
 	daisyui: {

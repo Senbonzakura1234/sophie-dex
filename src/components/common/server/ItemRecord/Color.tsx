@@ -12,21 +12,23 @@ export default function Color({ color }: ColorProps) {
 
 	const isActive = color === searchQuery.color;
 
+	const { background, foreground } = colorTWClassMap[color];
+
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
 			<div>Color: </div>
 
 			<QueryLink
 				aria-label={`Filter ${color} Item`}
-				className={`btn btn-xs !border-current !bg-current shadow-current ${isActive ? '' : 'shadow-md'} ${
-					colorTWClassMap[color]
-				}`}
+				className={`btn btn-xs !border-current !bg-current shadow-current ${
+					isActive ? '' : 'shadow-md'
+				} ${background}`}
 				href={{ query: { color, id: null } }}
 				isActive={isActive}
 				searchQuery={searchQuery}
 				resetPage
 			>
-				<span className='font-bold capitalize text-slate-50'>{color.toLowerCase()}</span>
+				<span className={`font-bold capitalize ${foreground}`}>{color.toLowerCase()}</span>
 			</QueryLink>
 		</div>
 	);

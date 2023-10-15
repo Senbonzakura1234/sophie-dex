@@ -35,7 +35,6 @@ function SearchInput() {
 					aria-label='Reset search query'
 					className='btn btn-circle btn-ghost btn-sm my-auto border-0 hover:bg-transparent'
 					onClick={resetSearch}
-					role='navigation'
 				>
 					<XMarkIcon className='aspect-square h-5' />
 				</button>
@@ -45,7 +44,6 @@ function SearchInput() {
 				aria-label='Apply search query'
 				className='btn btn-circle btn-ghost btn-sm my-auto border-0 hover:bg-transparent'
 				onClick={() => performSearch()}
-				role='navigation'
 			>
 				<MagnifyingGlassIcon className='aspect-square h-5' />
 			</button>

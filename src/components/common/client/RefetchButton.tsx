@@ -24,7 +24,6 @@ export default function RefetchButton({ isShowDivider, className, children }: Re
 				aria-label={refetch ? 'refetch data' : 'refresh page'}
 				className={`${className} capitalize`}
 				onClick={refetch || refresh}
-				role='navigation'
 			>
 				{children || 'refresh'}
 			</button>

@@ -17,7 +17,7 @@ const colorSelectList: Array<SelectOptionItem<ColorEnum>> = [
 		icon: (
 			<span
 				aria-hidden
-				className={`card aspect-square h-4 border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5 ${colorTWClassMap[color]}`}
+				className={`card aspect-square h-4 border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5 ${colorTWClassMap[color].background}`}
 				key={color}
 			/>
 		),

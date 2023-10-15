@@ -5,10 +5,7 @@ import type { SelectOptionItem } from '@root/types/common';
 import type { RumorTypeEnum } from '@root/types/common/zod';
 import { rumorTypeList } from '@root/types/model';
 
-const rumorTypeDefaultSelect = {
-	value: null,
-	label: 'Rumor type',
-} as const;
+const rumorTypeDefaultSelect = { value: null, label: 'Rumor type' } as const;
 
 const rumorTypeSelectList: Array<SelectOptionItem<RumorTypeEnum>> = [
 	rumorTypeDefaultSelect,
@@ -17,7 +14,7 @@ const rumorTypeSelectList: Array<SelectOptionItem<RumorTypeEnum>> = [
 		icon: (
 			<span
 				aria-hidden
-				className={`aspect-square h-4 font-atelier xl:h-5 ${rumorTypeIconMap[rumorType]} ${rumorTypeColorMap[rumorType]}`}
+				className={`aspect-square h-4 font-atelier xl:h-5 ${rumorTypeIconMap[rumorType]} ${rumorTypeColorMap[rumorType].background}`}
 				key={rumorType}
 			/>
 		),

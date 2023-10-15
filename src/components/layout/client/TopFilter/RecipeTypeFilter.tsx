@@ -18,7 +18,7 @@ const recipeTypeSelectList: Array<SelectOptionItem<RecipeTypeEnum>> = [
 			<span
 				aria-hidden
 				className={`card aspect-square h-4 border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5 ${
-					colorTWClassMap[recipeTypeColorMap[recipeType]]
+					colorTWClassMap[recipeTypeColorMap[recipeType]].background
 				}`}
 				key={recipeType}
 			/>
