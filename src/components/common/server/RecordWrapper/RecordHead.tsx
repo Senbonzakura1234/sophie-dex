@@ -26,9 +26,7 @@ export default function RecordHead({ currentId, id, name }: RecordHeadProps) {
 			/>
 
 			<Link
-				className={`align-middle text-shadow-light dark:text-shadow-dark ${
-					isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'
-				}`}
+				className={`align-middle ${isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'}`}
 				href={moduleId ? `/${moduleId}/${id}` : '/'}
 				aria-label={name}
 			>
