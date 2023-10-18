@@ -7,6 +7,7 @@
 		"gsap",
 		"headlessui",
 		"heroicons",
+		"homescreen",
 		"ilike",
 		"meruru",
 		"neondatabase",
@@ -22,11 +23,11 @@
 		"tabler-icons-react",
 		"tailwindcss",
 		"tanstack",
+		"trpc",
 		"tsbuildinfo",
 		"tsconfigs",
 		"vsicons",
-		"webp",
-		"trpc"
+		"webp"
 	],
 	"css.customData": [".vscode/tailwind.json"],
 	"editor.codeActionsOnSave": {

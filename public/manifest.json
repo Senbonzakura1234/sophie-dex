@@ -1,5 +1,6 @@
 {
-	"background_color": "#fafafa",
+	"background_color": "#F8FAFC",
+	"description": "A wiki page created for Atelier Sophie DX",
 	"display": "standalone",
 	"icons": [
 		{
@@ -51,8 +52,42 @@
 			"type": "image/png"
 		}
 	],
+	"id": "/?source=pwa",
 	"name": "Sophie Dex",
-	"scope": "./",
+	"scope": "/",
 	"short_name": "Sophie Dex",
-	"start_url": "./"
+	"shortcuts": [
+		{
+			"description": "View the Effect Page",
+			"name": "Open Effect Page",
+			"short_name": "Effect Page",
+			"url": "/effect?utm_source=homescreen"
+		},
+		{
+			"description": "View the Item Page",
+			"name": "Open Item Page",
+			"short_name": "Item Page",
+			"url": "/item?utm_source=homescreen"
+		},
+		{
+			"description": "View the Rumor Page",
+			"name": "Open Rumor Page",
+			"short_name": "Rumor Page",
+			"url": "/rumor?utm_source=homescreen"
+		},
+		{
+			"description": "View the Trait Page",
+			"name": "Open Trait Page",
+			"short_name": "Trait Page",
+			"url": "/trait?utm_source=homescreen"
+		},
+		{
+			"description": "View the About Page",
+			"name": "Open About Page",
+			"short_name": "About Page",
+			"url": "/about?utm_source=homescreen"
+		}
+	],
+	"start_url": "/?source=pwa",
+	"theme_color": "#F8FAFC"
 }
