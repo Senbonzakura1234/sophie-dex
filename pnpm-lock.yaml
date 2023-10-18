@@ -25,7 +25,7 @@ dependencies:
     version: registry.npmjs.org/@next/mdx@13.5.5(@mdx-js/loader@2.3.0)(@mdx-js/react@2.3.0)
   '@radix-ui/react-scroll-area':
     specifier: ^1.0.5
-    version: registry.npmjs.org/@radix-ui/react-scroll-area@1.0.5(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
+    version: registry.npmjs.org/@radix-ui/react-scroll-area@1.0.5(@types/react-dom@18.2.13)(@types/react@18.2.29)(react-dom@18.2.0)(react@18.2.0)
   '@t3-oss/env-nextjs':
     specifier: ^0.7.1
     version: registry.npmjs.org/@t3-oss/env-nextjs@0.7.1(typescript@5.2.2)(zod@3.22.4)
@@ -67,7 +67,7 @@ dependencies:
     version: registry.npmjs.org/server-only@0.0.1
   swagger-ui-react:
     specifier: ^5.9.0
-    version: registry.npmjs.org/swagger-ui-react@5.9.0(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
+    version: registry.npmjs.org/swagger-ui-react@5.9.0(@types/react-dom@18.2.13)(@types/react@18.2.29)(react-dom@18.2.0)(react@18.2.0)
   use-pull-to-refresh:
     specifier: ^2.2.1
     version: registry.npmjs.org/use-pull-to-refresh@2.2.1
@@ -86,11 +86,11 @@ devDependencies:
     specifier: ^2.0.8
     version: registry.npmjs.org/@types/mdx@2.0.8
   '@types/node':
-    specifier: ^20.8.6
-    version: registry.npmjs.org/@types/node@20.8.6
+    specifier: ^20.8.7
+    version: registry.npmjs.org/@types/node@20.8.7
   '@types/react':
-    specifier: ^18.2.28
-    version: registry.npmjs.org/@types/react@18.2.28
+    specifier: ^18.2.29
+    version: registry.npmjs.org/@types/react@18.2.29
   '@types/react-dom':
     specifier: ^18.2.13
     version: registry.npmjs.org/@types/react-dom@18.2.13
@@ -107,8 +107,8 @@ devDependencies:
     specifier: ^10.4.16
     version: registry.npmjs.org/autoprefixer@10.4.16(postcss@8.4.31)
   daisyui:
-    specifier: ^3.9.2
-    version: registry.npmjs.org/daisyui@3.9.2
+    specifier: ^3.9.3
+    version: registry.npmjs.org/daisyui@3.9.3
   dotenv:
     specifier: ^16.3.1
     version: registry.npmjs.org/dotenv@16.3.1
@@ -549,7 +549,7 @@ packages:
     dependencies:
       '@jridgewell/set-array': registry.npmjs.org/@jridgewell/set-array@1.1.2
       '@jridgewell/sourcemap-codec': registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.15
-      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.19
+      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.20
 
   registry.npmjs.org/@jridgewell/resolve-uri@3.1.1:
     resolution: {integrity: sha512-dSYZh7HhCDtCKm4QakX0xFpsRDqjjtZf/kjI/v3T3Nwt5r8/qz/M19F9ySyOqU94SXBmeG9ttTul+YnR4LOxFA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.1.tgz}
@@ -569,7 +569,7 @@ packages:
     version: 0.3.5
     dependencies:
       '@jridgewell/gen-mapping': registry.npmjs.org/@jridgewell/gen-mapping@0.3.3
-      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.19
+      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.20
     dev: false
 
   registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.15:
@@ -577,10 +577,10 @@ packages:
     name: '@jridgewell/sourcemap-codec'
     version: 1.4.15
 
-  registry.npmjs.org/@jridgewell/trace-mapping@0.3.19:
-    resolution: {integrity: sha512-kf37QtfW+Hwx/buWGMPcR60iF9ziHa6r/CZJIHbmcm4+0qrXiVdxegAH0F6yddEVQ7zdkjcGCgCzUu+BcbhQxw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.19.tgz}
+  registry.npmjs.org/@jridgewell/trace-mapping@0.3.20:
+    resolution: {integrity: sha512-R8LcPeWZol2zR8mmH3JeKQ6QRCFb7XgUhV9ZlGhHLGyg4wpPiPZNQOOWhFZhxKw8u//yTbNGI42Bx/3paXEQ+Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.20.tgz}
     name: '@jridgewell/trace-mapping'
-    version: 0.3.19
+    version: 0.3.20
     dependencies:
       '@jridgewell/resolve-uri': registry.npmjs.org/@jridgewell/resolve-uri@3.1.1
       '@jridgewell/sourcemap-codec': registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.15
@@ -605,7 +605,7 @@ packages:
     name: '@mdx-js/mdx'
     version: 2.3.0
     dependencies:
-      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.1
+      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.2
       '@types/mdx': registry.npmjs.org/@types/mdx@2.0.8
       estree-util-build-jsx: registry.npmjs.org/estree-util-build-jsx@2.2.2
       estree-util-is-identifier-name: registry.npmjs.org/estree-util-is-identifier-name@2.1.0
@@ -635,7 +635,7 @@ packages:
       react: '>=16'
     dependencies:
       '@types/mdx': registry.npmjs.org/@types/mdx@2.0.8
-      '@types/react': registry.npmjs.org/@types/react@18.2.28
+      '@types/react': registry.npmjs.org/@types/react@18.2.29
       react: registry.npmjs.org/react@18.2.0
     dev: false
 
@@ -833,7 +833,7 @@ packages:
       '@babel/runtime': registry.npmjs.org/@babel/runtime@7.23.2
     dev: false
 
-  registry.npmjs.org/@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.28)(react@18.2.0):
+  registry.npmjs.org/@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.29)(react@18.2.0):
     resolution: {integrity: sha512-fDSBgd44FKHa1FRMU59qBMPFcl2PZE+2nmqunj+BWFyYYjnhIDWL2ItDs3rrbJDQOtzt5nIebLCQc4QRfz6LJw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@radix-ui/react-compose-refs/-/react-compose-refs-1.0.1.tgz}
     id: registry.npmjs.org/@radix-ui/react-compose-refs/1.0.1
     name: '@radix-ui/react-compose-refs'
@@ -846,11 +846,11 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime@7.23.2
-      '@types/react': registry.npmjs.org/@types/react@18.2.28
+      '@types/react': registry.npmjs.org/@types/react@18.2.29
       react: registry.npmjs.org/react@18.2.0
     dev: false
 
-  registry.npmjs.org/@radix-ui/react-context@1.0.1(@types/react@18.2.28)(react@18.2.0):
+  registry.npmjs.org/@radix-ui/react-context@1.0.1(@types/react@18.2.29)(react@18.2.0):
     resolution: {integrity: sha512-ebbrdFoYTcuZ0v4wG5tedGnp9tzcV8awzsxYph7gXUyvnNLuTIcCk1q17JEbnVhXAKG9oX3KtchwiMIAYp9NLg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@radix-ui/react-context/-/react-context-1.0.1.tgz}
     id: registry.npmjs.org/@radix-ui/react-context/1.0.1
     name: '@radix-ui/react-context'
@@ -863,11 +863,11 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime@7.23.2
-      '@types/react': registry.npmjs.org/@types/react@18.2.28
+      '@types/react': registry.npmjs.org/@types/react@18.2.29
       react: registry.npmjs.org/react@18.2.0
     dev: false
 
-  registry.npmjs.org/@radix-ui/react-direction@1.0.1(@types/react@18.2.28)(react@18.2.0):
+  registry.npmjs.org/@radix-ui/react-direction@1.0.1(@types/react@18.2.29)(react@18.2.0):
     resolution: {integrity: sha512-RXcvnXgyvYvBEOhCBuddKecVkoMiI10Jcm5cTI7abJRAHYfFxeu+FBQs/DvdxSYucxR5mna0dNsL6QFlds5TMA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@radix-ui/react-direction/-/react-direction-1.0.1.tgz}
     id: registry.npmjs.org/@radix-ui/react-direction/1.0.1
     name: '@radix-ui/react-direction'
@@ -880,11 +880,11 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime@7.23.2
-      '@types/react': registry.npmjs.org/@types/react@18.2.28
+      '@types/react': registry.npmjs.org/@types/react@18.2.29
       react: registry.npmjs.org/react@18.2.0
     dev: false
 
-  registry.npmjs.org/@radix-ui/react-presence@1.0.1(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmjs.org/@radix-ui/react-presence@1.0.1(@types/react-dom@18.2.13)(@types/react@18.2.29)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-UXLW4UAbIY5ZjcvzjfRFo5gxva8QirC9hF7wRE4U5gz+TP0DbRk+//qyuAQ1McDxBt1xNMBTaciFGvEmJvAZCg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@radix-ui/react-presence/-/react-presence-1.0.1.tgz}
     id: registry.npmjs.org/@radix-ui/react-presence/1.0.1
     name: '@radix-ui/react-presence'
@@ -901,15 +901,15 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime@7.23.2
-      '@radix-ui/react-compose-refs': registry.npmjs.org/@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.28)(react@18.2.0)
-      '@radix-ui/react-use-layout-effect': registry.npmjs.org/@radix-ui/react-use-layout-effect@1.0.1(@types/react@18.2.28)(react@18.2.0)
-      '@types/react': registry.npmjs.org/@types/react@18.2.28
+      '@radix-ui/react-compose-refs': registry.npmjs.org/@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.29)(react@18.2.0)
+      '@radix-ui/react-use-layout-effect': registry.npmjs.org/@radix-ui/react-use-layout-effect@1.0.1(@types/react@18.2.29)(react@18.2.0)
+      '@types/react': registry.npmjs.org/@types/react@18.2.29
       '@types/react-dom': registry.npmjs.org/@types/react-dom@18.2.13
       react: registry.npmjs.org/react@18.2.0
       react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
     dev: false
 
-  registry.npmjs.org/@radix-ui/react-primitive@1.0.3(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmjs.org/@radix-ui/react-primitive@1.0.3(@types/react-dom@18.2.13)(@types/react@18.2.29)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-yi58uVyoAcK/Nq1inRY56ZSjKypBNKTa/1mcL8qdl6oJeEaDbOldlzrGn7P6Q3Id5d+SYNGc5AJgc4vGhjs5+g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@radix-ui/react-primitive/-/react-primitive-1.0.3.tgz}
     id: registry.npmjs.org/@radix-ui/react-primitive/1.0.3
     name: '@radix-ui/react-primitive'
@@ -926,14 +926,14 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime@7.23.2
-      '@radix-ui/react-slot': registry.npmjs.org/@radix-ui/react-slot@1.0.2(@types/react@18.2.28)(react@18.2.0)
-      '@types/react': registry.npmjs.org/@types/react@18.2.28
+      '@radix-ui/react-slot': registry.npmjs.org/@radix-ui/react-slot@1.0.2(@types/react@18.2.29)(react@18.2.0)
+      '@types/react': registry.npmjs.org/@types/react@18.2.29
       '@types/react-dom': registry.npmjs.org/@types/react-dom@18.2.13
       react: registry.npmjs.org/react@18.2.0
       react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
     dev: false
 
-  registry.npmjs.org/@radix-ui/react-scroll-area@1.0.5(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmjs.org/@radix-ui/react-scroll-area@1.0.5(@types/react-dom@18.2.13)(@types/react@18.2.29)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-b6PAgH4GQf9QEn8zbT2XUHpW5z8BzqEc7Kl11TwDrvuTrxlkcjTD5qa/bxgKr+nmuXKu4L/W5UZ4mlP/VG/5Gw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@radix-ui/react-scroll-area/-/react-scroll-area-1.0.5.tgz}
     id: registry.npmjs.org/@radix-ui/react-scroll-area/1.0.5
     name: '@radix-ui/react-scroll-area'
@@ -952,20 +952,20 @@ packages:
       '@babel/runtime': registry.npmjs.org/@babel/runtime@7.23.2
       '@radix-ui/number': registry.npmjs.org/@radix-ui/number@1.0.1
       '@radix-ui/primitive': registry.npmjs.org/@radix-ui/primitive@1.0.1
-      '@radix-ui/react-compose-refs': registry.npmjs.org/@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.28)(react@18.2.0)
-      '@radix-ui/react-context': registry.npmjs.org/@radix-ui/react-context@1.0.1(@types/react@18.2.28)(react@18.2.0)
-      '@radix-ui/react-direction': registry.npmjs.org/@radix-ui/react-direction@1.0.1(@types/react@18.2.28)(react@18.2.0)
-      '@radix-ui/react-presence': registry.npmjs.org/@radix-ui/react-presence@1.0.1(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-primitive': registry.npmjs.org/@radix-ui/react-primitive@1.0.3(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-use-callback-ref': registry.npmjs.org/@radix-ui/react-use-callback-ref@1.0.1(@types/react@18.2.28)(react@18.2.0)
-      '@radix-ui/react-use-layout-effect': registry.npmjs.org/@radix-ui/react-use-layout-effect@1.0.1(@types/react@18.2.28)(react@18.2.0)
-      '@types/react': registry.npmjs.org/@types/react@18.2.28
+      '@radix-ui/react-compose-refs': registry.npmjs.org/@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.29)(react@18.2.0)
+      '@radix-ui/react-context': registry.npmjs.org/@radix-ui/react-context@1.0.1(@types/react@18.2.29)(react@18.2.0)
+      '@radix-ui/react-direction': registry.npmjs.org/@radix-ui/react-direction@1.0.1(@types/react@18.2.29)(react@18.2.0)
+      '@radix-ui/react-presence': registry.npmjs.org/@radix-ui/react-presence@1.0.1(@types/react-dom@18.2.13)(@types/react@18.2.29)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-primitive': registry.npmjs.org/@radix-ui/react-primitive@1.0.3(@types/react-dom@18.2.13)(@types/react@18.2.29)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-use-callback-ref': registry.npmjs.org/@radix-ui/react-use-callback-ref@1.0.1(@types/react@18.2.29)(react@18.2.0)
+      '@radix-ui/react-use-layout-effect': registry.npmjs.org/@radix-ui/react-use-layout-effect@1.0.1(@types/react@18.2.29)(react@18.2.0)
+      '@types/react': registry.npmjs.org/@types/react@18.2.29
       '@types/react-dom': registry.npmjs.org/@types/react-dom@18.2.13
       react: registry.npmjs.org/react@18.2.0
       react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
     dev: false
 
-  registry.npmjs.org/@radix-ui/react-slot@1.0.2(@types/react@18.2.28)(react@18.2.0):
+  registry.npmjs.org/@radix-ui/react-slot@1.0.2(@types/react@18.2.29)(react@18.2.0):
     resolution: {integrity: sha512-YeTpuq4deV+6DusvVUW4ivBgnkHwECUu0BiN43L5UCDFgdhsRUWAghhTF5MbvNTPzmiFOx90asDSUjWuCNapwg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.0.2.tgz}
     id: registry.npmjs.org/@radix-ui/react-slot/1.0.2
     name: '@radix-ui/react-slot'
@@ -978,12 +978,12 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime@7.23.2
-      '@radix-ui/react-compose-refs': registry.npmjs.org/@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.28)(react@18.2.0)
-      '@types/react': registry.npmjs.org/@types/react@18.2.28
+      '@radix-ui/react-compose-refs': registry.npmjs.org/@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.29)(react@18.2.0)
+      '@types/react': registry.npmjs.org/@types/react@18.2.29
       react: registry.npmjs.org/react@18.2.0
     dev: false
 
-  registry.npmjs.org/@radix-ui/react-use-callback-ref@1.0.1(@types/react@18.2.28)(react@18.2.0):
+  registry.npmjs.org/@radix-ui/react-use-callback-ref@1.0.1(@types/react@18.2.29)(react@18.2.0):
     resolution: {integrity: sha512-D94LjX4Sp0xJFVaoQOd3OO9k7tpBYNOXdVhkltUbGv2Qb9OXdrg/CpsjlZv7ia14Sylv398LswWBVVu5nqKzAQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@radix-ui/react-use-callback-ref/-/react-use-callback-ref-1.0.1.tgz}
     id: registry.npmjs.org/@radix-ui/react-use-callback-ref/1.0.1
     name: '@radix-ui/react-use-callback-ref'
@@ -996,11 +996,11 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime@7.23.2
-      '@types/react': registry.npmjs.org/@types/react@18.2.28
+      '@types/react': registry.npmjs.org/@types/react@18.2.29
       react: registry.npmjs.org/react@18.2.0
     dev: false
 
-  registry.npmjs.org/@radix-ui/react-use-layout-effect@1.0.1(@types/react@18.2.28)(react@18.2.0):
+  registry.npmjs.org/@radix-ui/react-use-layout-effect@1.0.1(@types/react@18.2.29)(react@18.2.0):
     resolution: {integrity: sha512-v/5RegiJWYdoCvMnITBkNNx6bCj20fiaJnWtRkU18yITptraXjffz5Qbn05uOiQnOvi+dbkznkoaMltz1GnszQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@radix-ui/react-use-layout-effect/-/react-use-layout-effect-1.0.1.tgz}
     id: registry.npmjs.org/@radix-ui/react-use-layout-effect/1.0.1
     name: '@radix-ui/react-use-layout-effect'
@@ -1013,7 +1013,7 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime@7.23.2
-      '@types/react': registry.npmjs.org/@types/react@18.2.28
+      '@types/react': registry.npmjs.org/@types/react@18.2.29
       react: registry.npmjs.org/react@18.2.0
     dev: false
 
@@ -1023,13 +1023,13 @@ packages:
     version: 1.5.1
     dev: true
 
-  registry.npmjs.org/@swagger-api/apidom-ast@0.77.0:
-    resolution: {integrity: sha512-BqYc3oZEJ23x9KlamGjNbIymhKId0qxcqykjet7fO3NWm1c68ix/S+VgheTKig8Gl4IJ2lT+Cz3C178ia90ydQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ast/-/apidom-ast-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-ast@0.78.0:
+    resolution: {integrity: sha512-mEXmRmkFlmO6dcBuakFkc2gevN4mC6incPAQE1UciaX4hLuJpiv/5DTH9gVWTR0CWUFw/dXROTD/x6ETV0y03A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ast/-/apidom-ast-0.78.0.tgz}
     name: '@swagger-api/apidom-ast'
-    version: 0.77.0
+    version: 0.78.0
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.77.0
+      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
@@ -1037,14 +1037,14 @@ packages:
       unraw: registry.npmjs.org/unraw@3.0.0
     dev: false
 
-  registry.npmjs.org/@swagger-api/apidom-core@0.77.0:
-    resolution: {integrity: sha512-Yec/Ek6tH8uaHpFsL8/KfOjkunUdQOf42467QfAkG4Df1u9fdrBIuk8y6oFOO5KAE4WXNjoOQW+Z865WCMwmkA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-core/-/apidom-core-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-core@0.78.0:
+    resolution: {integrity: sha512-Qx9m+1u6H4Bsa38s73ANtGn8zFGqK0peguM+SFuUR5HirjpoFB8JB7IG5E8+ymUlpWhlU43q9QnJjcaYJw9MTg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-core/-/apidom-core-0.78.0.tgz}
     name: '@swagger-api/apidom-core'
-    version: 0.77.0
+    version: 0.78.0
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-ast': registry.npmjs.org/@swagger-api/apidom-ast@0.77.0
-      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.77.0
+      '@swagger-api/apidom-ast': registry.npmjs.org/@swagger-api/apidom-ast@0.78.0
+      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       minim: registry.npmjs.org/minim@0.23.8
       ramda: registry.npmjs.org/ramda@0.29.1
@@ -1053,10 +1053,10 @@ packages:
       stampit: registry.npmjs.org/stampit@4.3.2
     dev: false
 
-  registry.npmjs.org/@swagger-api/apidom-error@0.77.0:
-    resolution: {integrity: sha512-7QQPwUdGAxxvAegJntbzuBD0ApPsdMay6nV3UpxQs/F4q4cTaxeTX8HCp2NefXR4B6VHps0oVvIyXf/LDQUtYw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-error/-/apidom-error-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-error@0.78.0:
+    resolution: {integrity: sha512-P0enIK3XymxCPHlhGtqc4TU5H+cHf7L0yDFmfjZEcsjDzGDv5A+m5tf429Pr/R+e51DzpT5/xIcPKTnti0gIOw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-error/-/apidom-error-0.78.0.tgz}
     name: '@swagger-api/apidom-error'
-    version: 0.77.0
+    version: 0.78.0
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
@@ -1064,29 +1064,29 @@ packages:
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
     dev: false
 
-  registry.npmjs.org/@swagger-api/apidom-json-pointer@0.77.0:
-    resolution: {integrity: sha512-VPslp6GbloFDNYTq3QV4z+ByxiqIDQVqqDebVhg70YWriU2+tVJCNV55770AZa8Yqj7QOIafXQoPFg8uAYu0yw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-json-pointer/-/apidom-json-pointer-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-json-pointer@0.78.0:
+    resolution: {integrity: sha512-Ly4ZfUGxxbNoHHc9vR814mU96ZLGsjaJflCW0jdZnMVfVv20fDCoDoOOmXat6ajxUbS2YKimgxPvdBth3K/CRQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-json-pointer/-/apidom-json-pointer-0.78.0.tgz}
     name: '@swagger-api/apidom-json-pointer'
-    version: 0.77.0
+    version: 0.78.0
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
     dev: false
 
-  registry.npmjs.org/@swagger-api/apidom-ns-api-design-systems@0.77.0:
-    resolution: {integrity: sha512-FaadpkDoClkomlOv4yT7Wc+Q+kb0uN7iBoo7j8+vnI2ID13I3FDaeqUcADsGdIgNT3JxaK/esJVIln+65TTdwA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-api-design-systems/-/apidom-ns-api-design-systems-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-ns-api-design-systems@0.78.0:
+    resolution: {integrity: sha512-WoWE6w1P3qsokG3Qyc5F3xpz+e/WablE0EHGSgiYxk+MQJLqYmz5UhS5LxYGT9d6o9XUs24ykSbKrYWYwkpp4w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-api-design-systems/-/apidom-ns-api-design-systems-0.78.0.tgz}
     name: '@swagger-api/apidom-ns-api-design-systems'
-    version: 0.77.0
+    version: 0.78.0
     requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.77.0
-      '@swagger-api/apidom-ns-openapi-3-1': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-1@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.78.0
+      '@swagger-api/apidom-ns-openapi-3-1': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-1@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
@@ -1094,15 +1094,15 @@ packages:
     dev: false
     optional: true
 
-  registry.npmjs.org/@swagger-api/apidom-ns-asyncapi-2@0.77.0:
-    resolution: {integrity: sha512-4IbR49AIihXiegT/NHLCfxp6l+zco/ztUIUoJhnJuRdZ11U1PXaVhYGEdmQX+FoDtEUim17p5FnXSzi0uatbIw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-asyncapi-2/-/apidom-ns-asyncapi-2-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-ns-asyncapi-2@0.78.0:
+    resolution: {integrity: sha512-QWZohCtXf5UX/I9bnc4MQh16X9jGPdGrByWM93xRvh8X8rIF0BtF9S7lIx028aX3AHYIu4SwYr7JZlqEaZ92Kw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-asyncapi-2/-/apidom-ns-asyncapi-2-0.78.0.tgz}
     name: '@swagger-api/apidom-ns-asyncapi-2'
-    version: 0.77.0
+    version: 0.78.0
     requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-ns-json-schema-draft-7': registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-7@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-ns-json-schema-draft-7': registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-7@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
@@ -1110,31 +1110,30 @@ packages:
     dev: false
     optional: true
 
-  registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-4@0.77.0:
-    resolution: {integrity: sha512-LLfNNDuoLNgKgN8ddPJxc5QCYgst3G1BnXEU+0lIFyVlFb5xowZiW4utYtfx/eRBy+UxpgTIk04hvvbaYppFZQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-4/-/apidom-ns-json-schema-draft-4-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-4@0.78.0:
+    resolution: {integrity: sha512-19NR9lTHMOQTIEV4tJq+FlHQAYnjyH+DgI4mmRu6UMFSZjRjutYF7B8lCGogSus9Uwy8YpUk00prLFTld00wgA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-4/-/apidom-ns-json-schema-draft-4-0.78.0.tgz}
     name: '@swagger-api/apidom-ns-json-schema-draft-4'
-    version: 0.77.0
-    requiresBuild: true
+    version: 0.78.0
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-ast': registry.npmjs.org/@swagger-api/apidom-ast@0.77.0
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
+      '@swagger-api/apidom-ast': registry.npmjs.org/@swagger-api/apidom-ast@0.78.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
       stampit: registry.npmjs.org/stampit@4.3.2
     dev: false
 
-  registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-6@0.77.0:
-    resolution: {integrity: sha512-1tXzvGdc96mHelU9IXp28pLRf/OHqCTOKtUNywwhmICEQHs9PVrPpFq4fuMjLA+QvusdUA0Z4PsYR6d51Qnv3Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-6/-/apidom-ns-json-schema-draft-6-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-6@0.78.0:
+    resolution: {integrity: sha512-pHyCPU3OWDiPuLepo03rBpi2n+SCH6PZAgguqAB3lDJ2ymitrT2SNpmZ6CcHvPGR9Y7h4/fR5vAypVZfdNr/WQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-6/-/apidom-ns-json-schema-draft-6-0.78.0.tgz}
     name: '@swagger-api/apidom-ns-json-schema-draft-6'
-    version: 0.77.0
+    version: 0.78.0
     requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.77.0
-      '@swagger-api/apidom-ns-json-schema-draft-4': registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-4@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.78.0
+      '@swagger-api/apidom-ns-json-schema-draft-4': registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-4@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
@@ -1142,16 +1141,16 @@ packages:
     dev: false
     optional: true
 
-  registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-7@0.77.0:
-    resolution: {integrity: sha512-UTwogsJ7gnCcXlwIEriezPwi6Q84rgxYrQxbwqEJN6VrYWb0R1MPJ+CnD6XkkciEI8ETfDs/3NKqto98UjRgkw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-7/-/apidom-ns-json-schema-draft-7-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-7@0.78.0:
+    resolution: {integrity: sha512-ScUiNNAdwnikH3Fo2rUsDmXOjV7zXfQ6CGE+QkY5Wj3t1M6siw2HpDjrBaaCyp6w/bemvogsh280GrzAnxKLIw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-7/-/apidom-ns-json-schema-draft-7-0.78.0.tgz}
     name: '@swagger-api/apidom-ns-json-schema-draft-7'
-    version: 0.77.0
+    version: 0.78.0
     requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.77.0
-      '@swagger-api/apidom-ns-json-schema-draft-6': registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-6@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.78.0
+      '@swagger-api/apidom-ns-json-schema-draft-6': registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-6@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
@@ -1159,193 +1158,194 @@ packages:
     dev: false
     optional: true
 
-  registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-0@0.77.0:
-    resolution: {integrity: sha512-gqd14CVh+ufC8HSVCMmBfpBU7I/2L2fb9TO3b3mI8K38D+k2dbgBsxOch3efo7x+Diwu8QNdwQFuC2n7WAwO5Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-0/-/apidom-ns-openapi-3-0-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-0@0.78.0:
+    resolution: {integrity: sha512-GRmUOknEzMG37y5sStvjEsk30RLVg5E7iZuougK1rEf+wzzX5XhorSgMx2NQmka5rb814BgzyiqGRmvKQErDBw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-0/-/apidom-ns-openapi-3-0-0.78.0.tgz}
     name: '@swagger-api/apidom-ns-openapi-3-0'
-    version: 0.77.0
+    version: 0.78.0
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-ns-json-schema-draft-4': registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-4@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.78.0
+      '@swagger-api/apidom-ns-json-schema-draft-4': registry.npmjs.org/@swagger-api/apidom-ns-json-schema-draft-4@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
       stampit: registry.npmjs.org/stampit@4.3.2
     dev: false
 
-  registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-1@0.77.0:
-    resolution: {integrity: sha512-UcGE5xMKRO+T7oFDIqYjr1kOHKe37MuUsd1CmTwu+QqZALk4L4IwOs6UUxDPyDLNeAP9g8VoXPJAPSFV0IEyYA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-1/-/apidom-ns-openapi-3-1-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-1@0.78.0:
+    resolution: {integrity: sha512-hHpUZLjIiaLK+99cAPiYNV9QzZQxFoMLqBNYo+GQwqizaVOjxQRi5y/hPkfFALqqufZ1L6XWeyjQrtli0ftqBQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-1/-/apidom-ns-openapi-3-1-0.78.0.tgz}
     name: '@swagger-api/apidom-ns-openapi-3-1'
-    version: 0.77.0
+    version: 0.78.0
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-ast': registry.npmjs.org/@swagger-api/apidom-ast@0.77.0
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-ns-openapi-3-0': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-0@0.77.0
+      '@swagger-api/apidom-ast': registry.npmjs.org/@swagger-api/apidom-ast@0.78.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-ns-openapi-3-0': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-0@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
       stampit: registry.npmjs.org/stampit@4.3.2
     dev: false
 
-  registry.npmjs.org/@swagger-api/apidom-parser-adapter-api-design-systems-json@0.77.0:
-    resolution: {integrity: sha512-dwotraK1i80r4zKhV2a8p0qaPBn3dA4e167KUoY/ugwmf1lAtKL+K/Ow74wiOxQME2VD6HkM/CUV0nFJUWCS2A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-api-design-systems-json/-/apidom-parser-adapter-api-design-systems-json-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-parser-adapter-api-design-systems-json@0.78.0:
+    resolution: {integrity: sha512-g7VlfOrpTzbVV30Ugab0qAJITavLo39apvyFFv2cN2jfuIQa8MlzDP0mZmVtCGQy3IoT4Auns/qWeGcZX0li9w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-api-design-systems-json/-/apidom-parser-adapter-api-design-systems-json-0.78.0.tgz}
     name: '@swagger-api/apidom-parser-adapter-api-design-systems-json'
-    version: 0.77.0
+    version: 0.78.0
     requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-ns-api-design-systems': registry.npmjs.org/@swagger-api/apidom-ns-api-design-systems@0.77.0
-      '@swagger-api/apidom-parser-adapter-json': registry.npmjs.org/@swagger-api/apidom-parser-adapter-json@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-ns-api-design-systems': registry.npmjs.org/@swagger-api/apidom-ns-api-design-systems@0.78.0
+      '@swagger-api/apidom-parser-adapter-json': registry.npmjs.org/@swagger-api/apidom-parser-adapter-json@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
     dev: false
     optional: true
 
-  registry.npmjs.org/@swagger-api/apidom-parser-adapter-api-design-systems-yaml@0.77.0:
-    resolution: {integrity: sha512-ftHsFBgNdcpMqVkRXwWyatLjaaOFdgecKPA6/1q0F0NRGEDTdWocyI4KkLuAywbpo6XsbwOHZG2cK26cbLlBEA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-api-design-systems-yaml/-/apidom-parser-adapter-api-design-systems-yaml-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-parser-adapter-api-design-systems-yaml@0.78.0:
+    resolution: {integrity: sha512-ZueYoHOJARRm84ntCggUZLKNwUHz2U0eG9KHIzw75UW43pyvQVbxAE2ELdyP5f8vr51wMuMp6XYRcFOsNi/oeQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-api-design-systems-yaml/-/apidom-parser-adapter-api-design-systems-yaml-0.78.0.tgz}
     name: '@swagger-api/apidom-parser-adapter-api-design-systems-yaml'
-    version: 0.77.0
+    version: 0.78.0
     requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-ns-api-design-systems': registry.npmjs.org/@swagger-api/apidom-ns-api-design-systems@0.77.0
-      '@swagger-api/apidom-parser-adapter-yaml-1-2': registry.npmjs.org/@swagger-api/apidom-parser-adapter-yaml-1-2@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-ns-api-design-systems': registry.npmjs.org/@swagger-api/apidom-ns-api-design-systems@0.78.0
+      '@swagger-api/apidom-parser-adapter-yaml-1-2': registry.npmjs.org/@swagger-api/apidom-parser-adapter-yaml-1-2@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
     dev: false
     optional: true
 
-  registry.npmjs.org/@swagger-api/apidom-parser-adapter-asyncapi-json-2@0.77.0:
-    resolution: {integrity: sha512-nV2aEmZ1YeXSLbnymBNlhBdwWgQAg3DPO1bIEPJifz6zopBjcW+q+MjGAdyj57dmqygL3QoddroKCF7wGgAlLg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-asyncapi-json-2/-/apidom-parser-adapter-asyncapi-json-2-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-parser-adapter-asyncapi-json-2@0.78.0:
+    resolution: {integrity: sha512-Jm0hbNXWOH2QJIiF+5QgY+ioVSOBqV3WlhTeyrF5kSxHinah16nR1jUkz5tMsSc9sxTZHzWYVLneyBMW3VSHrw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-asyncapi-json-2/-/apidom-parser-adapter-asyncapi-json-2-0.78.0.tgz}
     name: '@swagger-api/apidom-parser-adapter-asyncapi-json-2'
-    version: 0.77.0
+    version: 0.78.0
     requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-ns-asyncapi-2': registry.npmjs.org/@swagger-api/apidom-ns-asyncapi-2@0.77.0
-      '@swagger-api/apidom-parser-adapter-json': registry.npmjs.org/@swagger-api/apidom-parser-adapter-json@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-ns-asyncapi-2': registry.npmjs.org/@swagger-api/apidom-ns-asyncapi-2@0.78.0
+      '@swagger-api/apidom-parser-adapter-json': registry.npmjs.org/@swagger-api/apidom-parser-adapter-json@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
     dev: false
     optional: true
 
-  registry.npmjs.org/@swagger-api/apidom-parser-adapter-asyncapi-yaml-2@0.77.0:
-    resolution: {integrity: sha512-fiYfoOttR3zbquaMzZji/+KcbGK092HQjE0HQpGvu/HfJWGfg51A0iFoWE+ebx2tklN3AhV6CD2NJuRa9DlphA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-asyncapi-yaml-2/-/apidom-parser-adapter-asyncapi-yaml-2-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-parser-adapter-asyncapi-yaml-2@0.78.0:
+    resolution: {integrity: sha512-zpP8gQBXhrR/t91Z/Jl0nD/cUSzmYjzhE5qWHkfhbGvzaWatiLrNY+CnFS9RcgF4pb2LSqS5cjDVAExBbjdLdQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-asyncapi-yaml-2/-/apidom-parser-adapter-asyncapi-yaml-2-0.78.0.tgz}
     name: '@swagger-api/apidom-parser-adapter-asyncapi-yaml-2'
-    version: 0.77.0
+    version: 0.78.0
     requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-ns-asyncapi-2': registry.npmjs.org/@swagger-api/apidom-ns-asyncapi-2@0.77.0
-      '@swagger-api/apidom-parser-adapter-yaml-1-2': registry.npmjs.org/@swagger-api/apidom-parser-adapter-yaml-1-2@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-ns-asyncapi-2': registry.npmjs.org/@swagger-api/apidom-ns-asyncapi-2@0.78.0
+      '@swagger-api/apidom-parser-adapter-yaml-1-2': registry.npmjs.org/@swagger-api/apidom-parser-adapter-yaml-1-2@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
     dev: false
     optional: true
 
-  registry.npmjs.org/@swagger-api/apidom-parser-adapter-json@0.77.0:
-    resolution: {integrity: sha512-nx8zqwHIhI0E+vpgQZ2rONdrmmdnSVum3Qct2h6JetYr72UWnFDqVgxOpGbOScMH1kvG7u2n5LpfjJw02uNDKg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-json/-/apidom-parser-adapter-json-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-parser-adapter-json@0.78.0:
+    resolution: {integrity: sha512-d/8gFj5cc+pnCo7ORGN5dJPGWzTleYkIwGfsyFuLZNjb4KlrOrKlPl0LKQ/t7MSEbVpSStxbgezoUtfdVhGscw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-json/-/apidom-parser-adapter-json-0.78.0.tgz}
     name: '@swagger-api/apidom-parser-adapter-json'
-    version: 0.77.0
+    version: 0.78.0
     requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-ast': registry.npmjs.org/@swagger-api/apidom-ast@0.77.0
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.77.0
+      '@swagger-api/apidom-ast': registry.npmjs.org/@swagger-api/apidom-ast@0.78.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
       stampit: registry.npmjs.org/stampit@4.3.2
       tree-sitter: registry.npmjs.org/tree-sitter@0.20.4
-      tree-sitter-json: registry.npmjs.org/tree-sitter-json@0.20.0
+      tree-sitter-json: registry.npmjs.org/tree-sitter-json@0.20.1
       web-tree-sitter: registry.npmjs.org/web-tree-sitter@0.20.3
     dev: false
     optional: true
 
-  registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-json-3-0@0.77.0:
-    resolution: {integrity: sha512-J9hiyVJg19SVgbemK/Ug1l4FjXZ4zCsxTKAlYxVSwjONJI4YdE2SqKG26JagBaTMHeJRZYK4BAC2pXAvAUKISg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-json-3-0/-/apidom-parser-adapter-openapi-json-3-0-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-json-3-0@0.78.0:
+    resolution: {integrity: sha512-MjXkPAiEyTZIljzjEgvAmqaZel0jpKBBqdtC8nWH/9C2ugkKHetKMSgYu+5wvFh//ixJZZE7dM1QHEIBoPl9nA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-json-3-0/-/apidom-parser-adapter-openapi-json-3-0-0.78.0.tgz}
     name: '@swagger-api/apidom-parser-adapter-openapi-json-3-0'
-    version: 0.77.0
+    version: 0.78.0
     requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-ns-openapi-3-0': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-0@0.77.0
-      '@swagger-api/apidom-parser-adapter-json': registry.npmjs.org/@swagger-api/apidom-parser-adapter-json@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-ns-openapi-3-0': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-0@0.78.0
+      '@swagger-api/apidom-parser-adapter-json': registry.npmjs.org/@swagger-api/apidom-parser-adapter-json@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
     dev: false
     optional: true
 
-  registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-json-3-1@0.77.0:
-    resolution: {integrity: sha512-iLputU+USOtJNcUpr5mEMtWFIgdzYGAor4gujfhBbhctGDzdtFAumBU5j/hLRBQoHbfZ00o5379ekxHMDi2/7w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-json-3-1/-/apidom-parser-adapter-openapi-json-3-1-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-json-3-1@0.78.0:
+    resolution: {integrity: sha512-k+rT6kwu1jAN1lYIP1wVshQdaLu9M+jjCfpvMXXkL/2VpZqq1yP6daFm0ExiHllVUcHWeqRXhubFV3wWkFm6eA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-json-3-1/-/apidom-parser-adapter-openapi-json-3-1-0.78.0.tgz}
     name: '@swagger-api/apidom-parser-adapter-openapi-json-3-1'
-    version: 0.77.0
+    version: 0.78.0
     requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-ns-openapi-3-1': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-1@0.77.0
-      '@swagger-api/apidom-parser-adapter-json': registry.npmjs.org/@swagger-api/apidom-parser-adapter-json@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-ns-openapi-3-1': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-1@0.78.0
+      '@swagger-api/apidom-parser-adapter-json': registry.npmjs.org/@swagger-api/apidom-parser-adapter-json@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
     dev: false
     optional: true
 
-  registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-yaml-3-0@0.77.0:
-    resolution: {integrity: sha512-SDZkiCF5863Q6yfCtL4pZkh0s7J6Q8kZodW8CN9zHQ025BbjfbbddTXbSefx7h/Dc3g4QyGi2XT+Qu4lvrlbkg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-yaml-3-0/-/apidom-parser-adapter-openapi-yaml-3-0-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-yaml-3-0@0.78.0:
+    resolution: {integrity: sha512-RzcqL0kvUl5G75H4qOFSi9FTaVfBtRnjzEcjd8SOKVLg3JJsCv3vrk68laRm8HXocyWgGstU51UzBqkMStXy4A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-yaml-3-0/-/apidom-parser-adapter-openapi-yaml-3-0-0.78.0.tgz}
     name: '@swagger-api/apidom-parser-adapter-openapi-yaml-3-0'
-    version: 0.77.0
+    version: 0.78.0
     requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-ns-openapi-3-0': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-0@0.77.0
-      '@swagger-api/apidom-parser-adapter-yaml-1-2': registry.npmjs.org/@swagger-api/apidom-parser-adapter-yaml-1-2@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-ns-openapi-3-0': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-0@0.78.0
+      '@swagger-api/apidom-parser-adapter-yaml-1-2': registry.npmjs.org/@swagger-api/apidom-parser-adapter-yaml-1-2@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
     dev: false
     optional: true
 
-  registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-yaml-3-1@0.77.0:
-    resolution: {integrity: sha512-JxfVLS4xB7UctZPaPUZyr0WbOh7DGchfCGJvMYCgTQ+oxJaKxUvAaJveA5Ch6DkMdwLJDIRBYFJGUXQOfKN1eQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-yaml-3-1/-/apidom-parser-adapter-openapi-yaml-3-1-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-yaml-3-1@0.78.0:
+    resolution: {integrity: sha512-1hB+mcEJd14RJC8lH3yJsoQRDhA8TNNKl3EyQ17eFY0dK29JlluDEbDHIRQpLT1l2jCK/NfqAk2hc37yIwydfw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-yaml-3-1/-/apidom-parser-adapter-openapi-yaml-3-1-0.78.0.tgz}
     name: '@swagger-api/apidom-parser-adapter-openapi-yaml-3-1'
-    version: 0.77.0
+    version: 0.78.0
     requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-ns-openapi-3-1': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-1@0.77.0
-      '@swagger-api/apidom-parser-adapter-yaml-1-2': registry.npmjs.org/@swagger-api/apidom-parser-adapter-yaml-1-2@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-ns-openapi-3-1': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-1@0.78.0
+      '@swagger-api/apidom-parser-adapter-yaml-1-2': registry.npmjs.org/@swagger-api/apidom-parser-adapter-yaml-1-2@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
     dev: false
     optional: true
 
-  registry.npmjs.org/@swagger-api/apidom-parser-adapter-yaml-1-2@0.77.0:
-    resolution: {integrity: sha512-ID3WXpa+4+/ip+4IlDHOvGevS/4M/OzZvtHhNReY4fSz+kTVIdp0C4tqDHcll+2+U360O4Y+bAChvI5BlrYgcw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-yaml-1-2/-/apidom-parser-adapter-yaml-1-2-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-parser-adapter-yaml-1-2@0.78.0:
+    resolution: {integrity: sha512-L37X+nRNp+2PyJkAwMdSQjP8tb3xoc6FVk2QXLHogghe1Phrmfaal3TPu2rWJNn7NSBcvSyiTAR7gEIULitugA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-parser-adapter-yaml-1-2/-/apidom-parser-adapter-yaml-1-2-0.78.0.tgz}
     name: '@swagger-api/apidom-parser-adapter-yaml-1-2'
-    version: 0.77.0
+    version: 0.78.0
     requiresBuild: true
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-ast': registry.npmjs.org/@swagger-api/apidom-ast@0.77.0
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.77.0
+      '@swagger-api/apidom-ast': registry.npmjs.org/@swagger-api/apidom-ast@0.78.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       ramda: registry.npmjs.org/ramda@0.29.1
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
@@ -1356,13 +1356,13 @@ packages:
     dev: false
     optional: true
 
-  registry.npmjs.org/@swagger-api/apidom-reference@0.77.0:
-    resolution: {integrity: sha512-hwViVP7CORnuMYpxav1LH1YPslJyUAx3YsyMwrg5yeo7d8Fn1PCV7VYyFwvjgfOOdFinDkjZxKA9GXDVk2mR0g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-reference/-/apidom-reference-0.77.0.tgz}
+  registry.npmjs.org/@swagger-api/apidom-reference@0.78.0:
+    resolution: {integrity: sha512-IiOaMgy+CzpQe5fFwyge4B/lkHQnBhiuNGPgIJELYXJMZle+pN6K/V4muLCG6JjAXllucbCqMpW/KLmPxGAXaw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@swagger-api/apidom-reference/-/apidom-reference-0.78.0.tgz}
     name: '@swagger-api/apidom-reference'
-    version: 0.77.0
+    version: 0.78.0
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
       '@types/ramda': registry.npmjs.org/@types/ramda@0.29.6
       axios: registry.npmjs.org/axios@1.5.1
       minimatch: registry.npmjs.org/minimatch@7.4.6
@@ -1371,21 +1371,21 @@ packages:
       ramda-adjunct: registry.npmjs.org/ramda-adjunct@4.1.1(ramda@0.29.1)
       stampit: registry.npmjs.org/stampit@4.3.2
     optionalDependencies:
-      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.77.0
-      '@swagger-api/apidom-json-pointer': registry.npmjs.org/@swagger-api/apidom-json-pointer@0.77.0
-      '@swagger-api/apidom-ns-asyncapi-2': registry.npmjs.org/@swagger-api/apidom-ns-asyncapi-2@0.77.0
-      '@swagger-api/apidom-ns-openapi-3-0': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-0@0.77.0
-      '@swagger-api/apidom-ns-openapi-3-1': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-1@0.77.0
-      '@swagger-api/apidom-parser-adapter-api-design-systems-json': registry.npmjs.org/@swagger-api/apidom-parser-adapter-api-design-systems-json@0.77.0
-      '@swagger-api/apidom-parser-adapter-api-design-systems-yaml': registry.npmjs.org/@swagger-api/apidom-parser-adapter-api-design-systems-yaml@0.77.0
-      '@swagger-api/apidom-parser-adapter-asyncapi-json-2': registry.npmjs.org/@swagger-api/apidom-parser-adapter-asyncapi-json-2@0.77.0
-      '@swagger-api/apidom-parser-adapter-asyncapi-yaml-2': registry.npmjs.org/@swagger-api/apidom-parser-adapter-asyncapi-yaml-2@0.77.0
-      '@swagger-api/apidom-parser-adapter-json': registry.npmjs.org/@swagger-api/apidom-parser-adapter-json@0.77.0
-      '@swagger-api/apidom-parser-adapter-openapi-json-3-0': registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-json-3-0@0.77.0
-      '@swagger-api/apidom-parser-adapter-openapi-json-3-1': registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-json-3-1@0.77.0
-      '@swagger-api/apidom-parser-adapter-openapi-yaml-3-0': registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-yaml-3-0@0.77.0
-      '@swagger-api/apidom-parser-adapter-openapi-yaml-3-1': registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-yaml-3-1@0.77.0
-      '@swagger-api/apidom-parser-adapter-yaml-1-2': registry.npmjs.org/@swagger-api/apidom-parser-adapter-yaml-1-2@0.77.0
+      '@swagger-api/apidom-error': registry.npmjs.org/@swagger-api/apidom-error@0.78.0
+      '@swagger-api/apidom-json-pointer': registry.npmjs.org/@swagger-api/apidom-json-pointer@0.78.0
+      '@swagger-api/apidom-ns-asyncapi-2': registry.npmjs.org/@swagger-api/apidom-ns-asyncapi-2@0.78.0
+      '@swagger-api/apidom-ns-openapi-3-0': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-0@0.78.0
+      '@swagger-api/apidom-ns-openapi-3-1': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-1@0.78.0
+      '@swagger-api/apidom-parser-adapter-api-design-systems-json': registry.npmjs.org/@swagger-api/apidom-parser-adapter-api-design-systems-json@0.78.0
+      '@swagger-api/apidom-parser-adapter-api-design-systems-yaml': registry.npmjs.org/@swagger-api/apidom-parser-adapter-api-design-systems-yaml@0.78.0
+      '@swagger-api/apidom-parser-adapter-asyncapi-json-2': registry.npmjs.org/@swagger-api/apidom-parser-adapter-asyncapi-json-2@0.78.0
+      '@swagger-api/apidom-parser-adapter-asyncapi-yaml-2': registry.npmjs.org/@swagger-api/apidom-parser-adapter-asyncapi-yaml-2@0.78.0
+      '@swagger-api/apidom-parser-adapter-json': registry.npmjs.org/@swagger-api/apidom-parser-adapter-json@0.78.0
+      '@swagger-api/apidom-parser-adapter-openapi-json-3-0': registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-json-3-0@0.78.0
+      '@swagger-api/apidom-parser-adapter-openapi-json-3-1': registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-json-3-1@0.78.0
+      '@swagger-api/apidom-parser-adapter-openapi-yaml-3-0': registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-yaml-3-0@0.78.0
+      '@swagger-api/apidom-parser-adapter-openapi-yaml-3-1': registry.npmjs.org/@swagger-api/apidom-parser-adapter-openapi-yaml-3-1@0.78.0
+      '@swagger-api/apidom-parser-adapter-yaml-1-2': registry.npmjs.org/@swagger-api/apidom-parser-adapter-yaml-1-2@0.78.0
     transitivePeerDependencies:
       - debug
     dev: false
@@ -1520,7 +1520,7 @@ packages:
     name: '@types/acorn'
     version: 4.0.6
     dependencies:
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
     dev: false
 
   registry.npmjs.org/@types/cookie@0.4.1:
@@ -1529,67 +1529,67 @@ packages:
     version: 0.4.1
     dev: false
 
-  registry.npmjs.org/@types/debug@4.1.9:
-    resolution: {integrity: sha512-8Hz50m2eoS56ldRlepxSBa6PWEVCtzUo/92HgLc2qTMnotJNIm7xP+UZhyWoYsyOdd5dxZ+NZLb24rsKyFs2ow==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/debug/-/debug-4.1.9.tgz}
+  registry.npmjs.org/@types/debug@4.1.10:
+    resolution: {integrity: sha512-tOSCru6s732pofZ+sMv9o4o3Zc+Sa8l3bxd/tweTQudFn06vAzb13ZX46Zi6m6EJ+RUbRTHvgQJ1gBtSgkaUYA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/debug/-/debug-4.1.10.tgz}
     name: '@types/debug'
-    version: 4.1.9
+    version: 4.1.10
     dependencies:
-      '@types/ms': registry.npmjs.org/@types/ms@0.7.32
+      '@types/ms': registry.npmjs.org/@types/ms@0.7.33
     dev: false
 
-  registry.npmjs.org/@types/eslint-scope@3.7.5:
-    resolution: {integrity: sha512-JNvhIEyxVW6EoMIFIvj93ZOywYFatlpu9deeH6eSx6PE3WHYvHaQtmHmQeNw7aA81bYGBPPQqdtBm6b1SsQMmA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/eslint-scope/-/eslint-scope-3.7.5.tgz}
+  registry.npmjs.org/@types/eslint-scope@3.7.6:
+    resolution: {integrity: sha512-zfM4ipmxVKWdxtDaJ3MP3pBurDXOCoyjvlpE3u6Qzrmw4BPbfm4/ambIeTk/r/J0iq/+2/xp0Fmt+gFvXJY2PQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/eslint-scope/-/eslint-scope-3.7.6.tgz}
     name: '@types/eslint-scope'
-    version: 3.7.5
+    version: 3.7.6
     dependencies:
-      '@types/eslint': registry.npmjs.org/@types/eslint@8.44.4
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
+      '@types/eslint': registry.npmjs.org/@types/eslint@8.44.5
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
     dev: false
 
-  registry.npmjs.org/@types/eslint@8.44.4:
-    resolution: {integrity: sha512-lOzjyfY/D9QR4hY9oblZ76B90MYTB3RrQ4z2vBIJKj9ROCRqdkYl2gSUx1x1a4IWPjKJZLL4Aw1Zfay7eMnmnA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/eslint/-/eslint-8.44.4.tgz}
+  registry.npmjs.org/@types/eslint@8.44.5:
+    resolution: {integrity: sha512-Ol2eio8LtD/tGM4Ga7Jb83NuFwEv3NqvssSlifXL9xuFpSyQZw0ecmm2Kux6iU0KxQmp95hlPmGCzGJ0TCFeRA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/eslint/-/eslint-8.44.5.tgz}
     name: '@types/eslint'
-    version: 8.44.4
+    version: 8.44.5
     dependencies:
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
-      '@types/json-schema': registry.npmjs.org/@types/json-schema@7.0.13
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
+      '@types/json-schema': registry.npmjs.org/@types/json-schema@7.0.14
     dev: false
 
-  registry.npmjs.org/@types/estree-jsx@1.0.1:
-    resolution: {integrity: sha512-sHyakZlAezNFxmYRo0fopDZW+XvK6ipeZkkp5EAOLjdPfZp8VjZBJ67vSRI99RSCAoqXVmXOHS4fnWoxpuGQtQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/estree-jsx/-/estree-jsx-1.0.1.tgz}
+  registry.npmjs.org/@types/estree-jsx@1.0.2:
+    resolution: {integrity: sha512-GNBWlGBMjiiiL5TSkvPtOteuXsiVitw5MYGY1UYlrAq0SKyczsls6sCD7TZ8fsjRsvCVxml7EbyjJezPb3DrSA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/estree-jsx/-/estree-jsx-1.0.2.tgz}
     name: '@types/estree-jsx'
-    version: 1.0.1
-    dependencies:
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
-    dev: false
-
-  registry.npmjs.org/@types/estree@1.0.2:
-    resolution: {integrity: sha512-VeiPZ9MMwXjO32/Xu7+OwflfmeoRwkE/qzndw42gGtgJwZopBnzy2gD//NN1+go1mADzkDcqf/KnFRSjTJ8xJA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/estree/-/estree-1.0.2.tgz}
-    name: '@types/estree'
     version: 1.0.2
+    dependencies:
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
     dev: false
 
-  registry.npmjs.org/@types/hast@2.3.6:
-    resolution: {integrity: sha512-47rJE80oqPmFdVDCD7IheXBrVdwuBgsYwoczFvKmwfo2Mzsnt+V9OONsYauFmICb6lQPpCuXYJWejBNs4pDJRg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/hast/-/hast-2.3.6.tgz}
+  registry.npmjs.org/@types/estree@1.0.3:
+    resolution: {integrity: sha512-CS2rOaoQ/eAgAfcTfq6amKG7bsN+EMcgGY4FAFQdvSj2y1ixvOZTUA9mOtCai7E1SYu283XNw7urKK30nP3wkQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/estree/-/estree-1.0.3.tgz}
+    name: '@types/estree'
+    version: 1.0.3
+    dev: false
+
+  registry.npmjs.org/@types/hast@2.3.7:
+    resolution: {integrity: sha512-EVLigw5zInURhzfXUM65eixfadfsHKomGKUakToXo84t8gGIJuTcD2xooM2See7GyQ7DRtYjhCHnSUQez8JaLw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/hast/-/hast-2.3.7.tgz}
     name: '@types/hast'
-    version: 2.3.6
+    version: 2.3.7
     dependencies:
       '@types/unist': registry.npmjs.org/@types/unist@2.0.8
     dev: false
 
-  registry.npmjs.org/@types/hoist-non-react-statics@3.3.3:
-    resolution: {integrity: sha512-Wny3a2UXn5FEA1l7gc6BbpoV5mD1XijZqgkp4TRgDCDL5r3B5ieOFGUX5h3n78Tr1MEG7BfvoM8qeztdvNU0fw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.3.tgz}
+  registry.npmjs.org/@types/hoist-non-react-statics@3.3.4:
+    resolution: {integrity: sha512-ZchYkbieA+7tnxwX/SCBySx9WwvWR8TaP5tb2jRAzwvLb/rWchGw3v0w3pqUbUvj0GCwW2Xz/AVPSk6kUGctXQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.4.tgz}
     name: '@types/hoist-non-react-statics'
-    version: 3.3.3
+    version: 3.3.4
     dependencies:
-      '@types/react': registry.npmjs.org/@types/react@18.2.28
+      '@types/react': registry.npmjs.org/@types/react@18.2.29
       hoist-non-react-statics: registry.npmjs.org/hoist-non-react-statics@3.3.2
     dev: false
 
-  registry.npmjs.org/@types/json-schema@7.0.13:
-    resolution: {integrity: sha512-RbSSoHliUbnXj3ny0CNFOoxrIDV6SUGyStHsvDqosw6CkdPV8TtWGlfecuK4ToyMEAql6pzNxgCFKanovUzlgQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.13.tgz}
+  registry.npmjs.org/@types/json-schema@7.0.14:
+    resolution: {integrity: sha512-U3PUjAudAdJBeC2pgN8uTIKgxrb4nlDF3SF0++EldXQvQBGkpFZMSnwQiIoDU77tv45VgNkl/L4ouD+rEomujw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.14.tgz}
     name: '@types/json-schema'
-    version: 7.0.13
+    version: 7.0.14
 
   registry.npmjs.org/@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz}
@@ -1597,10 +1597,10 @@ packages:
     version: 0.0.29
     dev: true
 
-  registry.npmjs.org/@types/mdast@3.0.13:
-    resolution: {integrity: sha512-HjiGiWedR0DVFkeNljpa6Lv4/IZU1+30VY5d747K7lBudFc3R0Ibr6yJ9lN3BE28VnZyDfLF/VB1Ql1ZIbKrmg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/mdast/-/mdast-3.0.13.tgz}
+  registry.npmjs.org/@types/mdast@3.0.14:
+    resolution: {integrity: sha512-gVZ04PGgw1qLZKsnWnyFv4ORnaJ+DXLdHTVSFbU8yX6xZ34Bjg4Q32yPkmveUP1yItXReKfB0Aknlh/3zxTKAw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/mdast/-/mdast-3.0.14.tgz}
     name: '@types/mdast'
-    version: 3.0.13
+    version: 3.0.14
     dependencies:
       '@types/unist': registry.npmjs.org/@types/unist@2.0.8
 
@@ -1609,22 +1609,22 @@ packages:
     name: '@types/mdx'
     version: 2.0.8
 
-  registry.npmjs.org/@types/ms@0.7.32:
-    resolution: {integrity: sha512-xPSg0jm4mqgEkNhowKgZFBNtwoEwF6gJ4Dhww+GFpm3IgtNseHQZ5IqdNwnquZEoANxyDAKDRAdVo4Z72VvD/g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/ms/-/ms-0.7.32.tgz}
+  registry.npmjs.org/@types/ms@0.7.33:
+    resolution: {integrity: sha512-AuHIyzR5Hea7ij0P9q7vx7xu4z0C28ucwjAZC0ja7JhINyCnOw8/DnvAPQQ9TfOlCtZAmCERKQX9+o1mgQhuOQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/ms/-/ms-0.7.33.tgz}
     name: '@types/ms'
-    version: 0.7.32
+    version: 0.7.33
     dev: false
 
-  registry.npmjs.org/@types/node@16.18.58:
-    resolution: {integrity: sha512-YGncyA25/MaVtQkjWW9r0EFBukZ+JulsLcVZBlGUfIb96OBMjkoRWwQo5IEWJ8Fj06Go3GHw+bjYDitv6BaGsA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/node/-/node-16.18.58.tgz}
+  registry.npmjs.org/@types/node@16.18.59:
+    resolution: {integrity: sha512-PJ1w2cNeKUEdey4LiPra0ZuxZFOGvetswE8qHRriV/sUkL5Al4tTmPV9D2+Y/TPIxTHHgxTfRjZVKWhPw/ORhQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/node/-/node-16.18.59.tgz}
     name: '@types/node'
-    version: 16.18.58
+    version: 16.18.59
     dev: false
 
-  registry.npmjs.org/@types/node@20.8.6:
-    resolution: {integrity: sha512-eWO4K2Ji70QzKUqRy6oyJWUeB7+g2cRagT3T/nxYibYcT4y2BDL8lqolRXjTHmkZCdJfIPaY73KbJAZmcryxTQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/node/-/node-20.8.6.tgz}
+  registry.npmjs.org/@types/node@20.8.7:
+    resolution: {integrity: sha512-21TKHHh3eUHIi2MloeptJWALuCu5H7HQTdTrWIFReA8ad+aggoX+lRes3ex7/FtpC+sVUpFMQ+QTfYr74mruiQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/node/-/node-20.8.7.tgz}
     name: '@types/node'
-    version: 20.8.6
+    version: 20.8.7
     dependencies:
       undici-types: registry.npmjs.org/undici-types@5.25.3
 
@@ -1633,15 +1633,15 @@ packages:
     name: '@types/pg'
     version: 8.6.6
     dependencies:
-      '@types/node': registry.npmjs.org/@types/node@20.8.6
+      '@types/node': registry.npmjs.org/@types/node@20.8.7
       pg-protocol: registry.npmjs.org/pg-protocol@1.6.0
       pg-types: registry.npmjs.org/pg-types@2.2.0
     dev: false
 
-  registry.npmjs.org/@types/prop-types@15.7.8:
-    resolution: {integrity: sha512-kMpQpfZKSCBqltAJwskgePRaYRFukDkm1oItcAbC3gNELR20XIBcN9VRgg4+m8DKsTfkWeA4m4Imp4DDuWy7FQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.8.tgz}
+  registry.npmjs.org/@types/prop-types@15.7.9:
+    resolution: {integrity: sha512-n1yyPsugYNSmHgxDFjicaI2+gCNjsBck8UX9kuofAKlc0h1bL+20oSF72KeNaW2DUlesbEVCFgyV2dPGTiY42g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.9.tgz}
     name: '@types/prop-types'
-    version: 15.7.8
+    version: 15.7.9
 
   registry.npmjs.org/@types/ramda@0.29.6:
     resolution: {integrity: sha512-4XQ9hYQhCwOxfkoTsIPvDVXc75fY5+MLQHUpExX6ByvU1q+0vOYRLSjWAt1IydkE1hOuhwMH6KvV/9rhzgrvRw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/ramda/-/ramda-0.29.6.tgz}
@@ -1656,14 +1656,14 @@ packages:
     name: '@types/react-dom'
     version: 18.2.13
     dependencies:
-      '@types/react': registry.npmjs.org/@types/react@18.2.28
+      '@types/react': registry.npmjs.org/@types/react@18.2.29
 
-  registry.npmjs.org/@types/react@18.2.28:
-    resolution: {integrity: sha512-ad4aa/RaaJS3hyGz0BGegdnSRXQBkd1CCYDCdNjBPg90UUpLgo+WlJqb9fMYUxtehmzF3PJaTWqRZjko6BRzBg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/react/-/react-18.2.28.tgz}
+  registry.npmjs.org/@types/react@18.2.29:
+    resolution: {integrity: sha512-Z+ZrIRocWtdD70j45izShRwDuiB4JZqDegqMFW/I8aG5DxxLKOzVNoq62UIO82v9bdgi+DO1jvsb9sTEZUSm+Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/react/-/react-18.2.29.tgz}
     name: '@types/react'
-    version: 18.2.28
+    version: 18.2.29
     dependencies:
-      '@types/prop-types': registry.npmjs.org/@types/prop-types@15.7.8
+      '@types/prop-types': registry.npmjs.org/@types/prop-types@15.7.9
       '@types/scheduler': registry.npmjs.org/@types/scheduler@0.16.4
       csstype: registry.npmjs.org/csstype@3.1.2
 
@@ -1683,7 +1683,7 @@ packages:
     name: '@types/swagger-ui-react'
     version: 4.18.1
     dependencies:
-      '@types/react': registry.npmjs.org/@types/react@18.2.28
+      '@types/react': registry.npmjs.org/@types/react@18.2.29
     dev: true
 
   registry.npmjs.org/@types/unist@2.0.8:
@@ -1827,7 +1827,7 @@ packages:
       eslint: ^7.0.0 || ^8.0.0
     dependencies:
       '@eslint-community/eslint-utils': registry.npmjs.org/@eslint-community/eslint-utils@4.4.0(eslint@8.51.0)
-      '@types/json-schema': registry.npmjs.org/@types/json-schema@7.0.13
+      '@types/json-schema': registry.npmjs.org/@types/json-schema@7.0.14
       '@types/semver': registry.npmjs.org/@types/semver@7.5.3
       '@typescript-eslint/scope-manager': registry.npmjs.org/@typescript-eslint/scope-manager@6.8.0
       '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types@6.8.0
@@ -2265,7 +2265,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: registry.npmjs.org/browserslist@4.22.1
-      caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001549
+      caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001550
       fraction.js: registry.npmjs.org/fraction.js@4.3.7
       normalize-range: registry.npmjs.org/normalize-range@0.1.2
       picocolors: registry.npmjs.org/picocolors@1.0.0
@@ -2390,8 +2390,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001549
-      electron-to-chromium: registry.npmjs.org/electron-to-chromium@1.4.556
+      caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001550
+      electron-to-chromium: registry.npmjs.org/electron-to-chromium@1.4.557
       node-releases: registry.npmjs.org/node-releases@2.0.13
       update-browserslist-db: registry.npmjs.org/update-browserslist-db@1.0.13(browserslist@4.22.1)
 
@@ -2470,10 +2470,10 @@ packages:
     engines: {node: '>=14.16'}
     dev: true
 
-  registry.npmjs.org/caniuse-lite@1.0.30001549:
-    resolution: {integrity: sha512-qRp48dPYSCYaP+KurZLhDYdVE+yEyht/3NlmcJgVQ2VMGt6JL36ndQ/7rgspdZsJuxDPFIo/OzBT2+GmIJ53BA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001549.tgz}
+  registry.npmjs.org/caniuse-lite@1.0.30001550:
+    resolution: {integrity: sha512-p82WjBYIypO0ukTsd/FG3Xxs+4tFeaY9pfT4amQL8KWtYH7H9nYwReGAbMTJ0hsmRO8IfDtsS6p3ZWj8+1c2RQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001550.tgz}
     name: caniuse-lite
-    version: 1.0.30001549
+    version: 1.0.30001550
 
   registry.npmjs.org/ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/ccount/-/ccount-2.0.1.tgz}
@@ -2699,7 +2699,7 @@ packages:
     version: 4.0.0
     dependencies:
       '@types/cookie': registry.npmjs.org/@types/cookie@0.4.1
-      '@types/node': registry.npmjs.org/@types/node@16.18.58
+      '@types/node': registry.npmjs.org/@types/node@16.18.59
       cookie: registry.npmjs.org/cookie@0.4.2
     dev: false
 
@@ -2764,10 +2764,10 @@ packages:
       type: registry.npmjs.org/type@1.2.0
     dev: true
 
-  registry.npmjs.org/daisyui@3.9.2:
-    resolution: {integrity: sha512-yJZ1QjHUaL+r9BkquTdzNHb7KIgAJVFh0zbOXql2Wu0r7zx5qZNLxclhjN0WLoIpY+o2h/8lqXg7ijj8oTigOw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/daisyui/-/daisyui-3.9.2.tgz}
+  registry.npmjs.org/daisyui@3.9.3:
+    resolution: {integrity: sha512-8li177QCu6dqlEOzE3h/dAV1y9Movbjx5bzJIO/hNqMNZtJkbHM0trjTzbDejV7N57eNGdjBvAGtxZYKzS4jow==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/daisyui/-/daisyui-3.9.3.tgz}
     name: daisyui
-    version: 3.9.2
+    version: 3.9.3
     engines: {node: '>=16.9.0'}
     dependencies:
       colord: registry.npmjs.org/colord@2.9.3
@@ -3089,10 +3089,10 @@ packages:
       pg: registry.npmjs.org/pg@8.11.3
     dev: false
 
-  registry.npmjs.org/electron-to-chromium@1.4.556:
-    resolution: {integrity: sha512-6RPN0hHfzDU8D56E72YkDvnLw5Cj2NMXZGg3UkgyoHxjVhG99KZpsKgBWMmTy0Ei89xwan+rbRsVB9yzATmYzQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.556.tgz}
+  registry.npmjs.org/electron-to-chromium@1.4.557:
+    resolution: {integrity: sha512-6x0zsxyMXpnMJnHrondrD3SuAeKcwij9S+83j2qHAQPXbGTDDfgImzzwgGlzrIcXbHQ42tkG4qA6U860cImNhw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.557.tgz}
     name: electron-to-chromium
-    version: 1.4.556
+    version: 1.4.557
 
   registry.npmjs.org/emoji-regex@9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz}
@@ -3753,7 +3753,7 @@ packages:
     name: estree-util-attach-comments
     version: 2.1.1
     dependencies:
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
     dev: false
 
   registry.npmjs.org/estree-util-build-jsx@2.2.2:
@@ -3761,7 +3761,7 @@ packages:
     name: estree-util-build-jsx
     version: 2.2.2
     dependencies:
-      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.1
+      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.2
       estree-util-is-identifier-name: registry.npmjs.org/estree-util-is-identifier-name@2.1.0
       estree-walker: registry.npmjs.org/estree-walker@3.0.3
     dev: false
@@ -3777,7 +3777,7 @@ packages:
     name: estree-util-to-js
     version: 1.2.0
     dependencies:
-      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.1
+      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.2
       astring: registry.npmjs.org/astring@1.8.6
       source-map: registry.npmjs.org/source-map@0.7.4
     dev: false
@@ -3787,7 +3787,7 @@ packages:
     name: estree-util-visit
     version: 1.2.1
     dependencies:
-      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.1
+      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.2
       '@types/unist': registry.npmjs.org/@types/unist@2.0.8
     dev: false
 
@@ -3796,7 +3796,7 @@ packages:
     name: estree-walker
     version: 3.0.3
     dependencies:
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
     dev: false
 
   registry.npmjs.org/esutils@2.0.3:
@@ -4323,9 +4323,9 @@ packages:
     name: hast-util-to-estree
     version: 2.3.3
     dependencies:
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
-      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.1
-      '@types/hast': registry.npmjs.org/@types/hast@2.3.6
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
+      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.2
+      '@types/hast': registry.npmjs.org/@types/hast@2.3.7
       '@types/unist': registry.npmjs.org/@types/unist@2.0.8
       comma-separated-tokens: registry.npmjs.org/comma-separated-tokens@2.0.3
       estree-util-attach-comments: registry.npmjs.org/estree-util-attach-comments@2.1.1
@@ -4353,7 +4353,7 @@ packages:
     name: hastscript
     version: 6.0.0
     dependencies:
-      '@types/hast': registry.npmjs.org/@types/hast@2.3.6
+      '@types/hast': registry.npmjs.org/@types/hast@2.3.7
       comma-separated-tokens: registry.npmjs.org/comma-separated-tokens@1.0.8
       hast-util-parse-selector: registry.npmjs.org/hast-util-parse-selector@2.2.5
       property-information: registry.npmjs.org/property-information@5.6.0
@@ -4720,7 +4720,7 @@ packages:
     name: is-reference
     version: 3.0.2
     dependencies:
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
     dev: false
 
   registry.npmjs.org/is-regex@1.1.4:
@@ -4848,7 +4848,7 @@ packages:
     version: 27.5.1
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': registry.npmjs.org/@types/node@20.8.6
+      '@types/node': registry.npmjs.org/@types/node@20.8.7
       merge-stream: registry.npmjs.org/merge-stream@2.0.0
       supports-color: registry.npmjs.org/supports-color@8.1.1
     dev: false
@@ -5122,7 +5122,7 @@ packages:
     name: mdast-util-definitions
     version: 5.1.2
     dependencies:
-      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.13
+      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.14
       '@types/unist': registry.npmjs.org/@types/unist@2.0.8
       unist-util-visit: registry.npmjs.org/unist-util-visit@4.1.2
     dev: false
@@ -5132,7 +5132,7 @@ packages:
     name: mdast-util-from-markdown
     version: 0.8.5
     dependencies:
-      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.13
+      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.14
       mdast-util-to-string: registry.npmjs.org/mdast-util-to-string@2.0.0
       micromark: registry.npmjs.org/micromark@2.11.4
       parse-entities: registry.npmjs.org/parse-entities@2.0.0
@@ -5146,7 +5146,7 @@ packages:
     name: mdast-util-from-markdown
     version: 1.3.1
     dependencies:
-      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.13
+      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.14
       '@types/unist': registry.npmjs.org/@types/unist@2.0.8
       decode-named-character-reference: registry.npmjs.org/decode-named-character-reference@1.0.2
       mdast-util-to-string: registry.npmjs.org/mdast-util-to-string@3.2.0
@@ -5167,9 +5167,9 @@ packages:
     name: mdast-util-mdx-expression
     version: 1.3.2
     dependencies:
-      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.1
-      '@types/hast': registry.npmjs.org/@types/hast@2.3.6
-      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.13
+      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.2
+      '@types/hast': registry.npmjs.org/@types/hast@2.3.7
+      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.14
       mdast-util-from-markdown: registry.npmjs.org/mdast-util-from-markdown@1.3.1
       mdast-util-to-markdown: registry.npmjs.org/mdast-util-to-markdown@1.5.0
     transitivePeerDependencies:
@@ -5181,9 +5181,9 @@ packages:
     name: mdast-util-mdx-jsx
     version: 2.1.4
     dependencies:
-      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.1
-      '@types/hast': registry.npmjs.org/@types/hast@2.3.6
-      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.13
+      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.2
+      '@types/hast': registry.npmjs.org/@types/hast@2.3.7
+      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.14
       '@types/unist': registry.npmjs.org/@types/unist@2.0.8
       ccount: registry.npmjs.org/ccount@2.0.1
       mdast-util-from-markdown: registry.npmjs.org/mdast-util-from-markdown@1.3.1
@@ -5216,9 +5216,9 @@ packages:
     name: mdast-util-mdxjs-esm
     version: 1.3.1
     dependencies:
-      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.1
-      '@types/hast': registry.npmjs.org/@types/hast@2.3.6
-      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.13
+      '@types/estree-jsx': registry.npmjs.org/@types/estree-jsx@1.0.2
+      '@types/hast': registry.npmjs.org/@types/hast@2.3.7
+      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.14
       mdast-util-from-markdown: registry.npmjs.org/mdast-util-from-markdown@1.3.1
       mdast-util-to-markdown: registry.npmjs.org/mdast-util-to-markdown@1.5.0
     transitivePeerDependencies:
@@ -5230,7 +5230,7 @@ packages:
     name: mdast-util-phrasing
     version: 3.0.1
     dependencies:
-      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.13
+      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.14
       unist-util-is: registry.npmjs.org/unist-util-is@5.2.1
     dev: false
 
@@ -5239,8 +5239,8 @@ packages:
     name: mdast-util-to-hast
     version: 12.3.0
     dependencies:
-      '@types/hast': registry.npmjs.org/@types/hast@2.3.6
-      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.13
+      '@types/hast': registry.npmjs.org/@types/hast@2.3.7
+      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.14
       mdast-util-definitions: registry.npmjs.org/mdast-util-definitions@5.1.2
       micromark-util-sanitize-uri: registry.npmjs.org/micromark-util-sanitize-uri@1.2.0
       trim-lines: registry.npmjs.org/trim-lines@3.0.1
@@ -5254,7 +5254,7 @@ packages:
     name: mdast-util-to-markdown
     version: 1.5.0
     dependencies:
-      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.13
+      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.14
       '@types/unist': registry.npmjs.org/@types/unist@2.0.8
       longest-streak: registry.npmjs.org/longest-streak@3.1.0
       mdast-util-phrasing: registry.npmjs.org/mdast-util-phrasing@3.0.1
@@ -5275,7 +5275,7 @@ packages:
     name: mdast-util-to-string
     version: 3.2.0
     dependencies:
-      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.13
+      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.14
     dev: false
 
   registry.npmjs.org/memoizee@0.4.15:
@@ -5332,7 +5332,7 @@ packages:
     name: micromark-extension-mdx-expression
     version: 1.0.8
     dependencies:
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
       micromark-factory-mdx-expression: registry.npmjs.org/micromark-factory-mdx-expression@1.0.9
       micromark-factory-space: registry.npmjs.org/micromark-factory-space@1.1.0
       micromark-util-character: registry.npmjs.org/micromark-util-character@1.2.0
@@ -5348,7 +5348,7 @@ packages:
     version: 1.0.5
     dependencies:
       '@types/acorn': registry.npmjs.org/@types/acorn@4.0.6
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
       estree-util-is-identifier-name: registry.npmjs.org/estree-util-is-identifier-name@2.1.0
       micromark-factory-mdx-expression: registry.npmjs.org/micromark-factory-mdx-expression@1.0.9
       micromark-factory-space: registry.npmjs.org/micromark-factory-space@1.1.0
@@ -5372,7 +5372,7 @@ packages:
     name: micromark-extension-mdxjs-esm
     version: 1.0.5
     dependencies:
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
       micromark-core-commonmark: registry.npmjs.org/micromark-core-commonmark@1.1.0
       micromark-util-character: registry.npmjs.org/micromark-util-character@1.2.0
       micromark-util-events-to-acorn: registry.npmjs.org/micromark-util-events-to-acorn@1.2.3
@@ -5424,7 +5424,7 @@ packages:
     name: micromark-factory-mdx-expression
     version: 1.0.9
     dependencies:
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
       micromark-util-character: registry.npmjs.org/micromark-util-character@1.2.0
       micromark-util-events-to-acorn: registry.npmjs.org/micromark-util-events-to-acorn@1.2.3
       micromark-util-symbol: registry.npmjs.org/micromark-util-symbol@1.1.0
@@ -5532,7 +5532,7 @@ packages:
     version: 1.2.3
     dependencies:
       '@types/acorn': registry.npmjs.org/@types/acorn@4.0.6
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
       '@types/unist': registry.npmjs.org/@types/unist@2.0.8
       estree-util-visit: registry.npmjs.org/estree-util-visit@1.2.1
       micromark-util-symbol: registry.npmjs.org/micromark-util-symbol@1.1.0
@@ -5612,7 +5612,7 @@ packages:
     name: micromark
     version: 3.2.0
     dependencies:
-      '@types/debug': registry.npmjs.org/@types/debug@4.1.9
+      '@types/debug': registry.npmjs.org/@types/debug@4.1.10
       debug: registry.npmjs.org/debug@4.3.4
       decode-named-character-reference: registry.npmjs.org/decode-named-character-reference@1.0.2
       micromark-core-commonmark: registry.npmjs.org/micromark-core-commonmark@1.1.0
@@ -5807,7 +5807,7 @@ packages:
       '@next/env': registry.npmjs.org/@next/env@13.5.5
       '@swc/helpers': registry.npmjs.org/@swc/helpers@0.5.2
       busboy: registry.npmjs.org/busboy@1.6.0
-      caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001549
+      caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001550
       postcss: registry.npmjs.org/postcss@8.4.31
       react: registry.npmjs.org/react@18.2.0
       react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
@@ -6191,7 +6191,7 @@ packages:
     name: periscopic
     version: 3.1.0
     dependencies:
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
       estree-walker: registry.npmjs.org/estree-walker@3.0.3
       is-reference: registry.npmjs.org/is-reference@3.0.2
     dev: false
@@ -6678,7 +6678,7 @@ packages:
     version: 18.2.0
     dev: false
 
-  registry.npmjs.org/react-redux@8.1.3(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1):
+  registry.npmjs.org/react-redux@8.1.3(@types/react-dom@18.2.13)(@types/react@18.2.29)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1):
     resolution: {integrity: sha512-n0ZrutD7DaX/j9VscF+uTALI3oUPa/pO4Z3soOBIjuRn/FzVu6aehhysxZCLi6y7duMf52WNZGMl7CtuK5EnRw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react-redux/-/react-redux-8.1.3.tgz}
     id: registry.npmjs.org/react-redux/8.1.3
     name: react-redux
@@ -6703,8 +6703,8 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime@7.23.2
-      '@types/hoist-non-react-statics': registry.npmjs.org/@types/hoist-non-react-statics@3.3.3
-      '@types/react': registry.npmjs.org/@types/react@18.2.28
+      '@types/hoist-non-react-statics': registry.npmjs.org/@types/hoist-non-react-statics@3.3.4
+      '@types/react': registry.npmjs.org/@types/react@18.2.29
       '@types/react-dom': registry.npmjs.org/@types/react-dom@18.2.13
       '@types/use-sync-external-store': registry.npmjs.org/@types/use-sync-external-store@0.0.3
       hoist-non-react-statics: registry.npmjs.org/hoist-non-react-statics@3.3.2
@@ -6840,7 +6840,7 @@ packages:
     name: remark-parse
     version: 10.0.2
     dependencies:
-      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.13
+      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.14
       mdast-util-from-markdown: registry.npmjs.org/mdast-util-from-markdown@1.3.1
       unified: registry.npmjs.org/unified@10.1.2
     transitivePeerDependencies:
@@ -6852,8 +6852,8 @@ packages:
     name: remark-rehype
     version: 10.1.0
     dependencies:
-      '@types/hast': registry.npmjs.org/@types/hast@2.3.6
-      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.13
+      '@types/hast': registry.npmjs.org/@types/hast@2.3.7
+      '@types/mdast': registry.npmjs.org/@types/mdast@3.0.14
       mdast-util-to-hast: registry.npmjs.org/mdast-util-to-hast@12.3.0
       unified: registry.npmjs.org/unified@10.1.2
     dev: false
@@ -7019,7 +7019,7 @@ packages:
     version: 3.3.0
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/json-schema': registry.npmjs.org/@types/json-schema@7.0.13
+      '@types/json-schema': registry.npmjs.org/@types/json-schema@7.0.14
       ajv: registry.npmjs.org/ajv@6.12.6
       ajv-keywords: registry.npmjs.org/ajv-keywords@3.5.2(ajv@6.12.6)
     dev: false
@@ -7430,10 +7430,10 @@ packages:
     version: 3.23.1
     dependencies:
       '@babel/runtime-corejs3': registry.npmjs.org/@babel/runtime-corejs3@7.23.2
-      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.77.0
-      '@swagger-api/apidom-json-pointer': registry.npmjs.org/@swagger-api/apidom-json-pointer@0.77.0
-      '@swagger-api/apidom-ns-openapi-3-1': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-1@0.77.0
-      '@swagger-api/apidom-reference': registry.npmjs.org/@swagger-api/apidom-reference@0.77.0
+      '@swagger-api/apidom-core': registry.npmjs.org/@swagger-api/apidom-core@0.78.0
+      '@swagger-api/apidom-json-pointer': registry.npmjs.org/@swagger-api/apidom-json-pointer@0.78.0
+      '@swagger-api/apidom-ns-openapi-3-1': registry.npmjs.org/@swagger-api/apidom-ns-openapi-3-1@0.78.0
+      '@swagger-api/apidom-reference': registry.npmjs.org/@swagger-api/apidom-reference@0.78.0
       cookie: registry.npmjs.org/cookie@0.5.0
       deepmerge: registry.npmjs.org/deepmerge@4.3.1
       fast-json-patch: registry.npmjs.org/fast-json-patch@3.1.1
@@ -7448,7 +7448,7 @@ packages:
       - debug
     dev: false
 
-  registry.npmjs.org/swagger-ui-react@5.9.0(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmjs.org/swagger-ui-react@5.9.0(@types/react-dom@18.2.13)(@types/react@18.2.29)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-j45ceuGHMRmI8nhOaG71VeQwrPutFHDq6QhgrxOmf4BRMOdOQgVY1POQY9ksnXZtskbD9J2NHURs4BLEDIs8gA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/swagger-ui-react/-/swagger-ui-react-5.9.0.tgz}
     id: registry.npmjs.org/swagger-ui-react/5.9.0
     name: swagger-ui-react
@@ -7480,7 +7480,7 @@ packages:
       react-immutable-proptypes: registry.npmjs.org/react-immutable-proptypes@2.2.0(immutable@3.8.2)
       react-immutable-pure-component: registry.npmjs.org/react-immutable-pure-component@2.2.2(immutable@3.8.2)(react-dom@18.2.0)(react@18.2.0)
       react-inspector: registry.npmjs.org/react-inspector@6.0.2(react@18.2.0)
-      react-redux: registry.npmjs.org/react-redux@8.1.3(@types/react-dom@18.2.13)(@types/react@18.2.28)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+      react-redux: registry.npmjs.org/react-redux@8.1.3(@types/react-dom@18.2.13)(@types/react@18.2.29)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
       react-syntax-highlighter: registry.npmjs.org/react-syntax-highlighter@15.5.0(react@18.2.0)
       redux: registry.npmjs.org/redux@4.2.1
       redux-immutable: registry.npmjs.org/redux-immutable@4.0.0(immutable@3.8.2)
@@ -7609,7 +7609,7 @@ packages:
       uglify-js:
         optional: true
     dependencies:
-      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.19
+      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.20
       esbuild: registry.npmjs.org/esbuild@0.18.20
       jest-worker: registry.npmjs.org/jest-worker@27.5.1
       schema-utils: registry.npmjs.org/schema-utils@3.3.0
@@ -7697,10 +7697,10 @@ packages:
     version: 0.6.7
     dev: false
 
-  registry.npmjs.org/tree-sitter-json@0.20.0:
-    resolution: {integrity: sha512-PteOLH+Tx6Bz4ZA/d40/DbkiSXXRM/gKahhHI8hQ1lWNfFvdknnz9k3Mz84ol5srRyLboJ8wp8GSkhZ6ht9EGQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/tree-sitter-json/-/tree-sitter-json-0.20.0.tgz}
+  registry.npmjs.org/tree-sitter-json@0.20.1:
+    resolution: {integrity: sha512-482hf7J+aBwhksSw8yWaqI8nyP1DrSwnS4IMBShsnkFWD3SE8oalHnsEik59fEVi3orcTCUtMzSjZx+0Tpa6Vw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/tree-sitter-json/-/tree-sitter-json-0.20.1.tgz}
     name: tree-sitter-json
-    version: 0.20.0
+    version: 0.20.1
     requiresBuild: true
     dependencies:
       nan: registry.npmjs.org/nan@2.18.0
@@ -8184,8 +8184,8 @@ packages:
       webpack-cli:
         optional: true
     dependencies:
-      '@types/eslint-scope': registry.npmjs.org/@types/eslint-scope@3.7.5
-      '@types/estree': registry.npmjs.org/@types/estree@1.0.2
+      '@types/eslint-scope': registry.npmjs.org/@types/eslint-scope@3.7.6
+      '@types/estree': registry.npmjs.org/@types/estree@1.0.3
       '@webassemblyjs/ast': registry.npmjs.org/@webassemblyjs/ast@1.11.6
       '@webassemblyjs/wasm-edit': registry.npmjs.org/@webassemblyjs/wasm-edit@1.11.6
       '@webassemblyjs/wasm-parser': registry.npmjs.org/@webassemblyjs/wasm-parser@1.11.6
