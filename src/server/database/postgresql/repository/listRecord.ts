@@ -6,10 +6,10 @@ import {
 	getListItemDefault,
 	getListRumorDefault,
 	getListTraitDefault,
-} from '@root/server/database/';
-import { driver } from '@root/server/database/drivers';
-import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/database/schema';
-import { effects, items, rumors, traits } from '@root/server/database/schema';
+} from '@root/server/database/postgresql';
+import { driver } from '@root/server/database/postgresql/drivers';
+import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/database/postgresql/schema';
+import { effects, items, rumors, traits } from '@root/server/database/postgresql/schema';
 import type { SearchQuery } from '@root/types/common/zod';
 import type { DBListResult, ListRecord } from '@root/types/model';
 import { CountQuery, getDirection, getOffset, getSortField, onQueryDBError } from '@root/utils/server/database';

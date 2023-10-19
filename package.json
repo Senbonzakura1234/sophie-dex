@@ -39,6 +39,8 @@
 		"@trpc/client": "^10.40.0",
 		"@trpc/react-query": "^10.40.0",
 		"@trpc/server": "^10.40.0",
+		"@upstash/ratelimit": "^0.4.4",
+		"@upstash/redis": "^1.23.4",
 		"@vercel/postgres": "^0.5.0",
 		"cookies-next": "^4.0.0",
 		"drizzle-orm": "^0.28.6",

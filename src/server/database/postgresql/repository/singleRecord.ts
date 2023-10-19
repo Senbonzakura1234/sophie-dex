@@ -1,7 +1,7 @@
 import 'server-only';
 
-import { getEffectRecord, getItemRecord, getRumorRecord, getTraitRecord } from '@root/server/database/';
-import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/database/schema';
+import { getEffectRecord, getItemRecord, getRumorRecord, getTraitRecord } from '@root/server/database/postgresql';
+import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/database/postgresql/schema';
 import type { IdQuery } from '@root/types/common/zod';
 import { onQueryDBError } from '@root/utils/server/database';
 import { TRPCError } from '@trpc/server';

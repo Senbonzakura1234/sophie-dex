@@ -1,6 +1,6 @@
 import DocumentChartBarIcon from '@root/components/icons/solid/DocumentChartBarIcon';
 import PulsePlaceHolder from '@root/components/loading/PulsePlaceHolder';
-import type { HyperLinkRecord } from '@root/server/database/schema';
+import type { HyperLinkRecord } from '@root/server/database/postgresql/schema';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 

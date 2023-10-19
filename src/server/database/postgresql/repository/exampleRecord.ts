@@ -5,8 +5,8 @@ import {
 	getExampleItemRecord,
 	getExampleRumorRecord,
 	getExampleTraitRecord,
-} from '@root/server/database/';
-import type { Effect, Item, Rumor, Trait } from '@root/server/database/schema';
+} from '@root/server/database/postgresql';
+import type { Effect, Item, Rumor, Trait } from '@root/server/database/postgresql/schema';
 import type { GithubUserInfo } from '@root/types/common/zod';
 import { onQueryDBError } from '@root/utils/server/database';
 import { getGithubUserInfo, getVersion } from '@root/utils/server/fetch';

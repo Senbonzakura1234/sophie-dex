@@ -1,7 +1,7 @@
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { exportTraits, getAllTraitIds } from '@root/server/database';
-import { getTraits } from '@root/server/database/repository/listRecord';
-import { getTrait } from '@root/server/database/repository/singleRecord';
+import { exportTraits, getAllTraitIds } from '@root/server/database/postgresql';
+import { getTraits } from '@root/server/database/postgresql/repository/listRecord';
+import { getTrait } from '@root/server/database/postgresql/repository/singleRecord';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import { onQueryDBError } from '@root/utils/server/database';
 

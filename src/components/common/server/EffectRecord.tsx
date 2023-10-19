@@ -1,5 +1,5 @@
 import RecordWrapper from '@root/components/common/server/RecordWrapper';
-import type { Effect } from '@root/server/database/schema';
+import type { Effect } from '@root/server/database/postgresql/schema';
 
 type EffectRecordProps = { data: Effect } & { currentId?: string };
 

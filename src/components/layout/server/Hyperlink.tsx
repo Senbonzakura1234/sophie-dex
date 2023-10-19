@@ -1,5 +1,5 @@
 import PulsePlaceHolder from '@root/components/loading/PulsePlaceHolder';
-import type { HighlightText, HyperLinkRecord, HyperLinkSearch } from '@root/server/database/schema';
+import type { HighlightText, HyperLinkRecord, HyperLinkSearch } from '@root/server/database/postgresql/schema';
 import type { ClassNameProps } from '@root/types/common/props';
 import { convertCode, objectValues, queryToParamsString } from '@root/utils/common';
 import dynamic from 'next/dynamic';

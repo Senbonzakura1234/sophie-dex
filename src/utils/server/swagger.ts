@@ -8,7 +8,14 @@ import { createDocument, extendZodWithOpenApi } from 'zod-openapi';
 extendZodWithOpenApi(z);
 
 import { APP_CODE, APP_DESCRIPTION, APP_NAME } from '@root/constants/common';
-import type { Effect, ExampleRecord, ExampleRecordObject, Item, Rumor, Trait } from '@root/server/database/schema';
+import type {
+	Effect,
+	ExampleRecord,
+	ExampleRecordObject,
+	Item,
+	Rumor,
+	Trait,
+} from '@root/server/database/postgresql/schema';
 import type { GithubUserInfo, ModuleIdEnum } from '@root/types/common/zod';
 import {
 	errorEnumSchema,

@@ -1,5 +1,5 @@
 import { neon, neonConfig } from '@neondatabase/serverless';
-import { effects, items, rumors, traits } from '@root/server/database/schema';
+import { effects, items, rumors, traits } from '@root/server/database/postgresql/schema';
 import { evnIs } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
 import { drizzle } from 'drizzle-orm/neon-http';

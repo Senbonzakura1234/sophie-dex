@@ -2,7 +2,7 @@
 
 import PulsePlaceHolder from '@root/components/loading/PulsePlaceHolder';
 import { useModuleId } from '@root/hooks/useModuleId';
-import type { CommonRecord } from '@root/server/database/schema';
+import type { CommonRecord } from '@root/server/database/postgresql/schema';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 

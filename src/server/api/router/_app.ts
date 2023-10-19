@@ -1,5 +1,5 @@
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { getExample } from '@root/server/database/repository/exampleRecord';
+import { getExample } from '@root/server/database/postgresql/repository/exampleRecord';
 
 import { aboutRouter } from './about';
 import { effectRouter } from './effect';

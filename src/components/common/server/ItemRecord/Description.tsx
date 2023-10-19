@@ -1,5 +1,5 @@
 import Hyperlink from '@root/components/layout/server/Hyperlink';
-import type { ItemDescription } from '@root/server/database/schema';
+import type { ItemDescription } from '@root/server/database/postgresql/schema';
 import { entries } from '@root/utils/common';
 
 type DescriptionProps = { description: ItemDescription };

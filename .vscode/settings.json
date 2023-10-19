@@ -14,6 +14,7 @@
 		"nextjs",
 		"notranslate",
 		"pnpx",
+		"ratelimit",
 		"ryza",
 		"Senbonzakura",
 		"shallie",
@@ -26,6 +27,7 @@
 		"trpc",
 		"tsbuildinfo",
 		"tsconfigs",
+		"UPSTASH",
 		"vsicons",
 		"webp"
 	],
@@ -144,6 +146,12 @@
 			"format": "svg",
 			"icon": "binary",
 			"overrides": "constant"
+		},
+		{
+			"extensions": ["postgresql"],
+			"format": "svg",
+			"icon": "db",
+			"overrides": "postgresql"
 		}
 	],
 	"vsicons.presets.tsOfficial": true

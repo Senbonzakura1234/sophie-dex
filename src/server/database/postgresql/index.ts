@@ -1,6 +1,6 @@
 import { DEFAULT_LIMIT } from '@root/constants/common';
-import { driver } from '@root/server/database/drivers';
-import { effects, items, rumors, traits } from '@root/server/database/schema';
+import { driver } from '@root/server/database/postgresql/drivers';
+import { effects, items, rumors, traits } from '@root/server/database/postgresql/schema';
 import type { ExportDBQueriesMap } from '@root/types/model';
 import { CountQuery } from '@root/utils/server/database';
 import { asc, eq, sql } from 'drizzle-orm';

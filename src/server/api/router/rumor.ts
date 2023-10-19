@@ -1,7 +1,7 @@
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { exportRumors, getAllRumorIds } from '@root/server/database';
-import { getRumors } from '@root/server/database/repository/listRecord';
-import { getRumor } from '@root/server/database/repository/singleRecord';
+import { exportRumors, getAllRumorIds } from '@root/server/database/postgresql';
+import { getRumors } from '@root/server/database/postgresql/repository/listRecord';
+import { getRumor } from '@root/server/database/postgresql/repository/singleRecord';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import { onQueryDBError } from '@root/utils/server/database';
 

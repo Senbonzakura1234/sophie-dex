@@ -1,7 +1,7 @@
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { exportItems, getAllItemIds } from '@root/server/database';
-import { getItems } from '@root/server/database/repository/listRecord';
-import { getItem } from '@root/server/database/repository/singleRecord';
+import { exportItems, getAllItemIds } from '@root/server/database/postgresql';
+import { getItems } from '@root/server/database/postgresql/repository/listRecord';
+import { getItem } from '@root/server/database/postgresql/repository/singleRecord';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import { onQueryDBError } from '@root/utils/server/database';
 

@@ -1,7 +1,7 @@
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { exportEffects, getAllEffectIds } from '@root/server/database';
-import { getEffects } from '@root/server/database/repository/listRecord';
-import { getEffect } from '@root/server/database/repository/singleRecord';
+import { exportEffects, getAllEffectIds } from '@root/server/database/postgresql';
+import { getEffects } from '@root/server/database/postgresql/repository/listRecord';
+import { getEffect } from '@root/server/database/postgresql/repository/singleRecord';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import { onQueryDBError } from '@root/utils/server/database';
 

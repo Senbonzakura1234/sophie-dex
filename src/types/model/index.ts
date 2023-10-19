@@ -1,4 +1,4 @@
-import type { CommonRecord } from '@root/server/database/schema';
+import type { CommonRecord } from '@root/server/database/postgresql/schema';
 import type { ModuleIdEnum } from '@root/types/common/zod';
 import type { TRPC_ERROR_CODE_KEY } from '@trpc/server/rpc';
 import type { PreparedQuery, PreparedQueryConfig } from 'drizzle-orm/pg-core';

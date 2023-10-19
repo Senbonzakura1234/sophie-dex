@@ -1,5 +1,5 @@
 import RecordWrapper from '@root/components/common/server/RecordWrapper';
-import type { Trait } from '@root/server/database/schema';
+import type { Trait } from '@root/server/database/postgresql/schema';
 
 import Categories from './Categories';
 import ItemPresent from './ItemPresent';

@@ -12,6 +12,13 @@ export const env = createEnv({
 	server: {
 		DIRECT_DB_URL: z.string().catch(''),
 		GITHUB_TOKEN: z.string().catch(''),
+
+		REQUEST_COUNT_LIMIT: z.coerce.number().nonnegative().catch(10),
+		REQUEST_LIMIT_TIME_SPAN_S: z.coerce.number().nonnegative().catch(10),
+
+		REDIS_URL: z.string().catch(''),
+		UPSTASH_REDIS_REST_TOKEN: z.string().catch(''),
+		UPSTASH_REDIS_REST_URL: z.string().catch(''),
 	},
 	client: {
 		NEXT_PUBLIC_NODE_ENV: nodeEnumEnvSchema,
@@ -30,6 +37,13 @@ export const env = createEnv({
 	runtimeEnv: {
 		DIRECT_DB_URL: process.env.PGURL_NONPOOLING,
 		GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+
+		REQUEST_COUNT_LIMIT: process.env.REQUEST_COUNT_LIMIT,
+		REQUEST_LIMIT_TIME_SPAN_S: process.env.REQUEST_LIMIT_TIME_SPAN_S,
+
+		REDIS_URL: process.env.REDIS_URL,
+		UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
+		UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL,
 
 		NEXT_PUBLIC_NODE_ENV: process.env.NODE_ENV,
 		NEXT_PUBLIC_PORT: process.env.PORT || '3000',
