@@ -1,7 +1,8 @@
 {
 	"background_color": "#F8FAFC",
 	"description": "A wiki page created for Atelier Sophie DX",
-	"display": "minimal-ui",
+	"display": "standalone",
+	"display_override": ["window-control-overlay", "standalone"],
 	"icons": [
 		{
 			"purpose": "any maskable",
