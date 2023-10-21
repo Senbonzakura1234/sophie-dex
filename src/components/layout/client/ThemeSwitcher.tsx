@@ -6,6 +6,7 @@ import useSelector from '@root/hooks/useSelector';
 import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
 import type { DaisyUIThemeEnum } from '@root/types/common/zod';
 import { daisyUIThemeList } from '@root/types/model';
+import { setCookie } from 'cookies-next';
 import { useCallback, useMemo } from 'react';
 
 const defaultTheme = {
@@ -50,7 +51,11 @@ export default function ThemeSwitcher() {
 		s => {
 			const cur = typeof s === 'function' ? s(themeSelect) : s;
 
-			if (cur.value !== themeSelect.value) dispatch({ type: 'SET_THEME', theme: cur.value || defaultTheme.value });
+			if (cur.value === themeSelect.value) return;
+
+			const nextTheme = cur.value || defaultTheme.value;
+			setCookie('theme', nextTheme, { path: '/' });
+			dispatch({ type: 'SET_THEME', theme: nextTheme });
 		},
 		[dispatch, themeSelect],
 	);
@@ -60,7 +65,7 @@ export default function ThemeSwitcher() {
 			list={themeSelectList}
 			setValue={setThemeSelected}
 			value={themeSelect}
-			className='absolute right-3 top-3 z-30 min-w-[8.5rem]'
+			className='absolute left-3 top-3 z-30 min-w-[8.5rem]'
 			useCustomIcon
 			customLabelText='Theme'
 		/>

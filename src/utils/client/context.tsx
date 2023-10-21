@@ -1,10 +1,8 @@
 'use client';
 
-import { metaThemeColorMap } from '@root/constants/common';
 import type { AlertTypeEnum } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
 import type { DaisyUIThemeEnum } from '@root/types/common/zod';
-import { setCookie } from 'cookies-next';
 import type { Dispatch } from 'react';
 import { createContext, useReducer } from 'react';
 
@@ -33,29 +31,13 @@ const initialState: StateType = {
 };
 
 const reducer = (state: StateType, action: ActionType) => {
-	switch (action.type) {
-		case 'SET_THEME': {
-			if (window?.document?.querySelector)
-				window?.document
-					?.querySelector('meta[name="theme-color"]')
-					?.setAttribute('content', metaThemeColorMap[action.theme]);
+	if (action.type === 'SET_THEME') return { ...state, theme: action.theme };
 
-			setCookie('theme', action.theme, { path: '/' });
-			return { ...state, theme: action.theme };
-		}
+	if (action.type === 'UPDATE_CONTENT_DATA') return { ...state, contentData: action.contentData };
 
-		case 'UPDATE_CONTENT_DATA': {
-			return { ...state, contentData: action.contentData };
-		}
+	if (action.type === 'UPDATE_ALERT') return { ...state, alert: action.alert };
 
-		case 'UPDATE_ALERT': {
-			return { ...state, alert: action.alert };
-		}
-
-		default: {
-			return state;
-		}
-	}
+	return state;
 };
 
 export const Context = createContext<{
