@@ -6,6 +6,6 @@ export default {
 	out: './src/server/database/postgresql/migration',
 	driver: 'pg',
 	breakpoints: true,
-	tablesFilter: [`${env.NEXT_PUBLIC_APP_CODE}-_*`],
+	tablesFilter: [`${env.NEXT_PUBLIC_APP_DB_PREFIX}-_*`],
 	dbCredentials: { connectionString: env.DIRECT_DB_URL },
 } satisfies Config;

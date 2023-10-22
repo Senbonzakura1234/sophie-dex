@@ -24,7 +24,7 @@ export type HyperLinkMap = {
 	contentText: Array<string>;
 };
 
-export const pgTable = pgTableCreator(name => `${env.NEXT_PUBLIC_APP_CODE}_${name}`);
+export const pgTable = pgTableCreator(name => `${env.NEXT_PUBLIC_APP_DB_PREFIX}_${name}`);
 
 export const effects = pgTable('effects', {
 	id: uuid('id').primaryKey(),
