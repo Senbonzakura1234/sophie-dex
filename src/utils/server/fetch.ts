@@ -1,6 +1,5 @@
 import 'server-only';
 
-import { APP_AUTHOR, APP_LICENSE_CODE, APP_PATH } from '@root/constants/common';
 import { defaultGithubHeader, defaultGithubUserInfo, defaultLicenseInfo } from '@root/constants/server';
 import {
 	githubFileResponseSchema,
@@ -9,6 +8,7 @@ import {
 	packageDotJSONSchema,
 } from '@root/types/common/zod';
 import { tryCatchHandler, tryCatchHandlerSync, writeLog } from '@root/utils/common';
+import { env } from '@root/utils/common/env.mjs';
 import { TRPCError } from '@trpc/server';
 import type { ZodType } from 'zod';
 
@@ -65,7 +65,7 @@ export const getVersion = async () => {
 		improvedFetch(
 			githubFileResponseSchema,
 			undefined,
-			`https://api.github.com/repos/${APP_PATH}/contents/package.json`,
+			`https://api.github.com/repos/${env.NEXT_PUBLIC_APP_PATH}/contents/package.json`,
 			defaultGithubHeader,
 		),
 	);
@@ -89,7 +89,12 @@ export const getVersion = async () => {
 
 export const getGithubUserInfo = async () => {
 	const githubUserInfo = await tryCatchHandler(
-		improvedFetch(githubUserInfoSchema, undefined, `https://api.github.com/users/${APP_AUTHOR}`, defaultGithubHeader),
+		improvedFetch(
+			githubUserInfoSchema,
+			undefined,
+			`https://api.github.com/users/${env.NEXT_PUBLIC_APP_AUTHOR}`,
+			defaultGithubHeader,
+		),
 	);
 
 	return githubUserInfo.isSuccess ? githubUserInfo.data : defaultGithubUserInfo;
@@ -100,7 +105,7 @@ export const getLicense = async () => {
 		improvedFetch(
 			licenseInfoSchema,
 			undefined,
-			`https://api.github.com/licenses/${APP_LICENSE_CODE}`,
+			`https://api.github.com/licenses/${env.NEXT_PUBLIC_APP_LICENSE_CODE}`,
 			defaultGithubHeader,
 		),
 	);

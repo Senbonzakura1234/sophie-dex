@@ -10,17 +10,6 @@ import type {
 	RumorTypeEnum,
 	SortByEnum,
 } from '@root/types/common/zod';
-import { capitalize } from '@root/utils/common';
-import { env } from '@root/utils/common/env.mjs';
-
-export const APP_AUTHOR = env.NEXT_PUBLIC_APP_AUTHOR;
-export const APP_AUTHOR_EMAIL = env.NEXT_PUBLIC_APP_AUTHOR_EMAIL;
-export const APP_CODE = env.NEXT_PUBLIC_APP_CODE;
-export const APP_DESCRIPTION = env.NEXT_PUBLIC_APP_DESCRIPTION;
-export const APP_KEYWORD = env.NEXT_PUBLIC_APP_KEYWORD;
-export const APP_LICENSE_CODE = env.NEXT_PUBLIC_APP_LICENSE_CODE;
-export const APP_NAME = capitalize(APP_CODE.replaceAll('-', ' '));
-export const APP_PATH = `${APP_AUTHOR}/${APP_CODE}`;
 
 export const DEFAULT_LIMIT = 16;
 

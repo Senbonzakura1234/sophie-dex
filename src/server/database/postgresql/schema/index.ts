@@ -1,8 +1,9 @@
 import type { ImprovedOmit, ValueOf } from '@root/types/common';
 import type { ModuleIdEnum, RelatedCategoryEnum, SearchQuery } from '@root/types/common/zod';
 import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
+import { env } from '@root/utils/common/env.mjs';
 import type { InferSelectModel } from 'drizzle-orm';
-import { jsonb, pgTable, smallint, uuid, varchar } from 'drizzle-orm/pg-core';
+import { jsonb, pgTableCreator, smallint, uuid, varchar } from 'drizzle-orm/pg-core';
 
 export type HighlightText = { content: string };
 export type HyperLinkRecord = { id: string; name: string; table: ModuleIdEnum };
@@ -22,6 +23,8 @@ export type HyperLinkMap = {
 	contentData: Array<HighlightText | HyperLinkRecord | HyperLinkSearch>;
 	contentText: Array<string>;
 };
+
+export const pgTable = pgTableCreator(name => `${env.NEXT_PUBLIC_APP_CODE}_${name}`);
 
 export const effects = pgTable('effects', {
 	id: uuid('id').primaryKey(),

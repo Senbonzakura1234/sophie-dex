@@ -33,6 +33,8 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_DESCRIPTION: z.string().catch('-'),
 		NEXT_PUBLIC_APP_KEYWORD: appKeyWordSchema,
 		NEXT_PUBLIC_APP_LICENSE_CODE: z.string().catch('-'),
+		NEXT_PUBLIC_APP_NAME: appCodeSchema.transform(val => val.replaceAll('-', ' ')),
+		NEXT_PUBLIC_APP_PATH: z.string().catch('-'),
 	},
 	runtimeEnv: {
 		DIRECT_DB_URL: process.env.PGURL_NONPOOLING,
@@ -57,5 +59,9 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_DESCRIPTION: process.env.NEXT_PUBLIC_APP_DESCRIPTION,
 		NEXT_PUBLIC_APP_KEYWORD: process.env.NEXT_PUBLIC_APP_KEYWORD,
 		NEXT_PUBLIC_APP_LICENSE_CODE: process.env.NEXT_PUBLIC_APP_LICENSE_CODE,
+		NEXT_PUBLIC_APP_NAME: process.env.NEXT_PUBLIC_APP_CODE,
+		NEXT_PUBLIC_APP_PATH: `${process.env.NEXT_PUBLIC_APP_AUTHOR || '-'}/${process.env.NEXT_PUBLIC_APP_CODE || '-'}`,
 	},
+	skipValidation: !!process.env.SKIP_ENV_VALIDATION,
+	emptyStringAsUndefined: true,
 });

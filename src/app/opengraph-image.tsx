@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import { APP_NAME } from '@root/constants/common';
 import { getBaseUrl } from '@root/utils/common';
+import { env } from '@root/utils/common/env.mjs';
 import type { ServerRuntime } from 'next';
 import { ImageResponse } from 'next/server';
 
 export const runtime: ServerRuntime = 'edge';
 
 // Image metadata
-export const alt = APP_NAME;
+export const alt = env.NEXT_PUBLIC_APP_NAME;
 export const size = {
 	width: 1200,
 	height: 630,

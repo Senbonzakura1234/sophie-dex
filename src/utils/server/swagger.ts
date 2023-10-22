@@ -7,7 +7,6 @@ import { createDocument, extendZodWithOpenApi } from 'zod-openapi';
 
 extendZodWithOpenApi(z);
 
-import { APP_CODE, APP_DESCRIPTION, APP_NAME } from '@root/constants/common';
 import type {
 	Effect,
 	ExampleRecord,
@@ -31,6 +30,7 @@ import {
 } from '@root/types/common/zod';
 import { moduleIdList } from '@root/types/model';
 import { arrayInclude, capitalize, fromEntries } from '@root/utils/common';
+import { env } from '@root/utils/common/env.mjs';
 
 const getRecordSwaggerSchema = (moduleId: ModuleIdEnum, example: ExampleRecord) =>
 	z
@@ -184,12 +184,18 @@ export const getApiDocs = ([[effect, item, rumor, trait], version, { html_url, l
 	createDocument({
 		openapi: '3.1.0',
 		info: {
-			title: `${APP_NAME} | OpenApi`,
+			title: `${env.NEXT_PUBLIC_APP_NAME} | OpenApi`,
 			version,
-			description: APP_DESCRIPTION,
+			description: env.NEXT_PUBLIC_APP_DESCRIPTION,
 			contact: { url: html_url, name: login, email },
-			license: { name: 'MIT License', url: `https://github.com/${login}/${APP_CODE}/blob/main/LICENSE` },
+			license: {
+				name: 'MIT License',
+				url: `https://github.com/${login}/${env.NEXT_PUBLIC_APP_CODE}/blob/main/LICENSE`,
+			},
 		},
-		externalDocs: { description: 'README.md', url: `https://github.com/${login}/${APP_CODE}/blob/main/README.md` },
+		externalDocs: {
+			description: 'README.md',
+			url: `https://github.com/${login}/${env.NEXT_PUBLIC_APP_CODE}/blob/main/README.md`,
+		},
 		paths: getPaths({ effect, item, rumor, trait }),
 	});

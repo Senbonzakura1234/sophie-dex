@@ -1,7 +1,7 @@
 import ScaleIcon from '@root/components/icons/outline/ScaleIcon';
 import ArrowTopRightOnSquareIcon from '@root/components/icons/solid/ArrowTopRightOnSquareIcon';
-import { APP_PATH } from '@root/constants/common';
 import type { LicenseInfo } from '@root/types/common/zod';
+import { env } from '@root/utils/common/env.mjs';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
@@ -30,7 +30,7 @@ export default function LicenseInfoHead({ description, name }: LicenseInfoHeadPr
 								protocol: 'https',
 								hostname: 'github',
 								host: 'github.com',
-								pathname: `/${APP_PATH}/blob/main/LICENSE`,
+								pathname: `/${env.NEXT_PUBLIC_APP_PATH}/blob/main/LICENSE`,
 							}}
 							target='_blank'
 						>

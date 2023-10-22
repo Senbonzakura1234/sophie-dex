@@ -22,8 +22,9 @@
 		"start": "next start",
 		"lint:fix": "eslint --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.json . --fix",
 		"types": "tsc --noEmit --pretty",
-		"drizzle-gen": "drizzle-kit generate:pg",
-		"drizzle-studio": "drizzle-kit studio"
+		"drizzle-gen": "dotenv drizzle-kit generate:pg",
+		"drizzle-push": "dotenv drizzle-kit push:pg",
+		"drizzle-studio": "dotenv drizzle-kit studio"
 	},
 	"dependencies": {
 		"@headlessui/react": "^1.7.17",
@@ -64,7 +65,7 @@
 		"@typescript-eslint/parser": "^6.8.0",
 		"autoprefixer": "^10.4.16",
 		"daisyui": "^3.9.3",
-		"dotenv": "^16.3.1",
+		"dotenv-cli": "^7.3.0",
 		"drizzle-kit": "^0.19.13",
 		"eslint": "^8.51.0",
 		"eslint-config-next": "13.5.5",
