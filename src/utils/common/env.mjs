@@ -3,8 +3,8 @@ import { z } from 'zod';
 
 const appCodeSchema = z
 	.string()
-	.regex(/(?=\S*['-])([a-zA-Z'-]+)/)
-	.catch('-');
+	.regex(/(?=\S*['_])([a-zA-Z'_]+)/)
+	.catch('_');
 const appKeyWordSchema = z.string().regex(/[^,]+/).catch('-');
 const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']).catch('production');
 
@@ -33,7 +33,7 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_DESCRIPTION: z.string().catch('-'),
 		NEXT_PUBLIC_APP_KEYWORD: appKeyWordSchema,
 		NEXT_PUBLIC_APP_LICENSE_CODE: z.string().catch('-'),
-		NEXT_PUBLIC_APP_NAME: appCodeSchema.transform(val => val.replaceAll('-', ' ')),
+		NEXT_PUBLIC_APP_NAME: appCodeSchema.transform(val => val.replaceAll('_', ' ')),
 		NEXT_PUBLIC_APP_PATH: z.string().catch('-'),
 	},
 	runtimeEnv: {

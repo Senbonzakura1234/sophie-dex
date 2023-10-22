@@ -1,11 +1,11 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "0a1affc3-2d88-4bde-9e5d-8b13ac896bd3",
+  "id": "b5bdc06d-d351-4136-a932-cff41c0faf6b",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
-    "effects": {
-      "name": "effects",
+    "sophie_dex_effects": {
+      "name": "sophie_dex_effects",
       "schema": "",
       "columns": {
         "id": {
@@ -14,14 +14,14 @@
           "primaryKey": true,
           "notNull": true
         },
-        "name": {
-          "name": "name",
+        "key_words": {
+          "name": "key_words",
           "type": "varchar(256)",
           "primaryKey": false,
           "notNull": true
         },
-        "keyWords": {
-          "name": "keyWords",
+        "name": {
+          "name": "name",
           "type": "varchar(256)",
           "primaryKey": false,
           "notNull": true
@@ -41,10 +41,11 @@
       },
       "indexes": {},
       "foreignKeys": {},
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     },
-    "items": {
-      "name": "items",
+    "sophie_dex_items": {
+      "name": "sophie_dex_items",
       "schema": "",
       "columns": {
         "id": {
@@ -53,39 +54,15 @@
           "primaryKey": true,
           "notNull": true
         },
+        "key_words": {
+          "name": "key_words",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
         "name": {
           "name": "name",
           "type": "varchar(256)",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "keyWords": {
-          "name": "keyWords",
-          "type": "varchar(256)",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "index": {
-          "name": "index",
-          "type": "smallint",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "description": {
-          "name": "description",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "color": {
-          "name": "color",
-          "type": "varchar(100)",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "relatedCategories": {
-          "name": "relatedCategories",
-          "type": "varchar(100)[]",
           "primaryKey": false,
           "notNull": true
         },
@@ -95,26 +72,50 @@
           "primaryKey": false,
           "notNull": true
         },
+        "color": {
+          "name": "color",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "name": "description",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "index": {
+          "name": "index",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
         "level": {
           "name": "level",
           "type": "smallint",
           "primaryKey": false,
           "notNull": true
         },
-        "recipeType": {
-          "name": "recipeType",
-          "type": "varchar(100)",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "recipeIdea": {
-          "name": "recipeIdea",
+        "recipe_idea": {
+          "name": "recipe_idea",
           "type": "jsonb",
           "primaryKey": false,
           "notNull": false
         },
-        "traitPresent": {
-          "name": "traitPresent",
+        "recipe_type": {
+          "name": "recipe_type",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "related_categories": {
+          "name": "related_categories",
+          "type": "varchar(100)[]",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "trait_present": {
+          "name": "trait_present",
           "type": "jsonb",
           "primaryKey": false,
           "notNull": false
@@ -122,10 +123,11 @@
       },
       "indexes": {},
       "foreignKeys": {},
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     },
-    "rumors": {
-      "name": "rumors",
+    "sophie_dex_rumors": {
+      "name": "sophie_dex_rumors",
       "schema": "",
       "columns": {
         "id": {
@@ -134,14 +136,14 @@
           "primaryKey": true,
           "notNull": true
         },
-        "name": {
-          "name": "name",
+        "key_words": {
+          "name": "key_words",
           "type": "varchar(256)",
           "primaryKey": false,
           "notNull": true
         },
-        "keyWords": {
-          "name": "keyWords",
+        "name": {
+          "name": "name",
           "type": "varchar(256)",
           "primaryKey": false,
           "notNull": true
@@ -164,8 +166,8 @@
           "primaryKey": false,
           "notNull": true
         },
-        "rumorType": {
-          "name": "rumorType",
+        "rumor_type": {
+          "name": "rumor_type",
           "type": "varchar(100)",
           "primaryKey": false,
           "notNull": true
@@ -173,10 +175,11 @@
       },
       "indexes": {},
       "foreignKeys": {},
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     },
-    "traits": {
-      "name": "traits",
+    "sophie_dex_traits": {
+      "name": "sophie_dex_traits",
       "schema": "",
       "columns": {
         "id": {
@@ -185,26 +188,14 @@
           "primaryKey": true,
           "notNull": true
         },
+        "key_words": {
+          "name": "key_words",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
         "name": {
           "name": "name",
-          "type": "varchar(256)",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "keyWords": {
-          "name": "keyWords",
-          "type": "varchar(256)",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "index": {
-          "name": "index",
-          "type": "smallint",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "description": {
-          "name": "description",
           "type": "varchar(256)",
           "primaryKey": false,
           "notNull": true
@@ -215,22 +206,35 @@
           "primaryKey": false,
           "notNull": true
         },
-        "mergeFrom": {
-          "name": "mergeFrom",
-          "type": "jsonb[2][]",
+        "description": {
+          "name": "description",
+          "type": "varchar(256)",
           "primaryKey": false,
           "notNull": true
         },
-        "itemPresent": {
-          "name": "itemPresent",
+        "index": {
+          "name": "index",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "item_present": {
+          "name": "item_present",
           "type": "jsonb",
           "primaryKey": false,
           "notNull": false
+        },
+        "merge_from": {
+          "name": "merge_from",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
         }
       },
       "indexes": {},
       "foreignKeys": {},
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     }
   },
   "enums": {},
