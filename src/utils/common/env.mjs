@@ -8,6 +8,12 @@ const appCodeSchema = z
 const appKeyWordSchema = z.string().regex(/[^,]+/).catch('-');
 const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']).catch('production');
 
+/** @type {(input: string) => string} */
+const capitalize = input =>
+	input
+		? input.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase())
+		: '';
+
 export const env = createEnv({
 	server: {
 		DIRECT_DB_URL: z.string().catch(''),
@@ -34,7 +40,7 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_DESCRIPTION: z.string().catch('-'),
 		NEXT_PUBLIC_APP_KEYWORD: appKeyWordSchema,
 		NEXT_PUBLIC_APP_LICENSE_CODE: z.string().catch('-'),
-		NEXT_PUBLIC_APP_NAME: appCodeSchema.transform(val => val.replaceAll('_', ' ')),
+		NEXT_PUBLIC_APP_NAME: appCodeSchema.transform(val => capitalize(val.replaceAll('-', ' '))),
 		NEXT_PUBLIC_APP_PATH: z.string().catch('-'),
 	},
 	runtimeEnv: {

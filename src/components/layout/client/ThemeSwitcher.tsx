@@ -65,7 +65,7 @@ export default function ThemeSwitcher() {
 			list={themeSelectList}
 			setValue={setThemeSelected}
 			value={themeSelect}
-			className='absolute left-3 top-3 z-30 min-w-[8.5rem]'
+			className='absolute right-3 top-3 z-30 min-w-[8.5rem]'
 			useCustomIcon
 			customLabelText='Theme'
 		/>

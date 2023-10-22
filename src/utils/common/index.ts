@@ -16,6 +16,8 @@ export const capitalize = <TInput extends string>(input?: TInput | null): Capita
 		? input.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase())
 		: '') as Capitalize<TInput>;
 
+export type CapitalizeFunction = typeof capitalize;
+
 export const createArray = <TFill>(len = 0, fill: TFill) => Array(len).fill(fill) as Array<TFill>;
 
 export const entries = <const Obj extends CommonObject>(obj: Obj): Array<[KeyOf<Obj>, ValueOf<Obj>]> =>
