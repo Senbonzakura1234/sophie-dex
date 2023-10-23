@@ -6,24 +6,28 @@ import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
 export async function middleware(request: NextRequest) {
-	if (!evnIs('production')) return NextResponse.next();
+	if (request.nextUrl.pathname.startsWith('/api/public/')) {
+		if (!evnIs('production')) return NextResponse.next();
 
-	const ratelimitResult = await tryCatchHandler(ratelimit.limit(`IP_ADDRESS:${getIpAddress(request.headers)}`));
+		const ratelimitResult = await tryCatchHandler(ratelimit.limit(`IP_ADDRESS:${getIpAddress(request.headers)}`));
 
-	if (!ratelimitResult.isSuccess) {
-		writeLog({ args: [`Error get ratelimit data:`, ratelimitResult.error], type: 'error' });
+		if (!ratelimitResult.isSuccess) {
+			writeLog({ args: [`Error get ratelimit data:`, ratelimitResult.error], type: 'error' });
 
-		return NextResponse.json({
-			data: null,
-			error: new TRPCError({ code: 'INTERNAL_SERVER_ERROR' }),
-			isSuccess: false,
-		});
+			return NextResponse.json({
+				data: null,
+				error: new TRPCError({ code: 'INTERNAL_SERVER_ERROR' }),
+				isSuccess: false,
+			});
+		}
+
+		if (!ratelimitResult.data.success)
+			return NextResponse.json({
+				data: null,
+				error: new TRPCError({ code: 'TOO_MANY_REQUESTS' }),
+				isSuccess: false,
+			});
 	}
-
-	if (!ratelimitResult.data.success)
-		return NextResponse.json({ data: null, error: new TRPCError({ code: 'TOO_MANY_REQUESTS' }), isSuccess: false });
 
 	return NextResponse.next();
 }
-
-export const config = { matcher: '/api/public/:path*' };

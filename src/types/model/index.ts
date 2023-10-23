@@ -88,7 +88,7 @@ export const daisyUIThemeList = ['autumn', 'fantasy', 'forest', 'synthwave'] as 
 
 export const directionList = ['asc', 'desc'] as const;
 
-export type DBListResult<TRecord extends CommonRecord> = Array<{ record: TRecord; totalRecord: number }>;
+export type DBListResult<TRecord extends CommonRecord> = Array<TRecord & { totalRecord: number }>;
 
 export type ListRecord<TRecord extends CommonRecord> = {
 	records: Array<TRecord>;

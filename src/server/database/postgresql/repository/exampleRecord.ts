@@ -22,7 +22,7 @@ export const getExample = async (): Promise<OpenAPIObject> =>
 					async query => {
 						const recordResult = await query.execute().catch(onQueryDBError);
 
-						if (recordResult[0]) return recordResult[0];
+						if (recordResult) return recordResult;
 
 						throw new TRPCError({ code: 'NOT_FOUND' });
 					},

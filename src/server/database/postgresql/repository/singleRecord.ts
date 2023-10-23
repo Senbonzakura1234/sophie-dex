@@ -7,14 +7,16 @@ import { onQueryDBError } from '@root/utils/server/database';
 import { TRPCError } from '@trpc/server';
 import type { PreparedQuery, PreparedQueryConfig } from 'drizzle-orm/pg-core';
 
-type PrepareRecord<TRecord extends CommonRecord> = PreparedQuery<PreparedQueryConfig & { execute: Array<TRecord> }>;
+type PrepareRecord<TRecord extends CommonRecord> = PreparedQuery<
+	PreparedQueryConfig & { execute: TRecord | undefined }
+>;
 
 const getRecord = async <TRecord extends CommonRecord>(query: PrepareRecord<TRecord>, { id }: IdQuery) => {
 	if (!id) throw new TRPCError({ code: 'BAD_REQUEST' });
 
 	const recordResult = await query.execute({ id }).catch(onQueryDBError);
 
-	if (recordResult[0]) return recordResult[0];
+	if (recordResult) return recordResult;
 
 	throw new TRPCError({ code: 'NOT_FOUND' });
 };

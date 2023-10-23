@@ -1,106 +1,113 @@
 import 'server-only';
 
 import { DEFAULT_LIMIT, sortByMap } from '@root/constants/common';
-import {
-	getListEffectDefault,
-	getListItemDefault,
-	getListRumorDefault,
-	getListTraitDefault,
-} from '@root/server/database/postgresql';
 import { driver } from '@root/server/database/postgresql/drivers';
 import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/database/postgresql/schema';
-import { effects, items, rumors, traits } from '@root/server/database/postgresql/schema';
-import type { SearchQuery } from '@root/types/common/zod';
+import type { SearchQuery, SortByEnum } from '@root/types/common/zod';
 import type { DBListResult, ListRecord } from '@root/types/model';
-import { CountQuery, getDirection, getOffset, getSortField, onQueryDBError } from '@root/utils/server/database';
-import type { SQL } from 'drizzle-orm';
-import { and, arrayOverlaps, eq, ilike, or } from 'drizzle-orm';
+import { arrayInclude } from '@root/utils/common';
+import { onQueryDBError } from '@root/utils/server/database';
+import type { SQL, sql as sqlFunc } from 'drizzle-orm';
+import { arrayOverlaps } from 'drizzle-orm';
 
-const processOutput = <TRecord extends CommonRecord>(dbResult: DBListResult<TRecord>): ListRecord<TRecord> => {
-	const [totalRecord, records] = [dbResult[0]?.totalRecord ?? 0, dbResult.map(({ record }) => record)] as const;
+const countQueryFunc = (_: unknown, { sql }: { sql: typeof sqlFunc }) => ({
+	totalRecord: sql<number>`count(*) over()`.as('total_record'),
+});
 
-	return { records, totalRecord, totalPage: Math.ceil(totalRecord / DEFAULT_LIMIT) };
+const getOffset = (page: number | null) => ((page ?? 1) - 1) * DEFAULT_LIMIT;
+
+const getSortField = <TSearch extends Readonly<SortByEnum>>(
+	allowedSortField: Readonly<Array<TSearch>>,
+	defaultSortField: TSearch,
+	search: SortByEnum | null,
+) => (arrayInclude(allowedSortField, search) ? search : defaultSortField);
+
+const processOutput = <TRecord extends CommonRecord>(dbResult: DBListResult<TRecord>) => {
+	const [totalRecord, records] = [
+		dbResult[0]?.totalRecord ?? 0,
+		dbResult.map(({ totalRecord: _, ...record }) => record),
+	] as const;
+
+	return { records: records, totalRecord, totalPage: Math.ceil(totalRecord / DEFAULT_LIMIT) };
 };
 
-export const getEffects = async (input: SearchQuery): Promise<ListRecord<Effect>> => {
+export const getEffects = (input: SearchQuery): Promise<ListRecord<Effect>> => {
 	const { search, sortBy, direction, page } = input;
 
-	if (!search && !sortBy && !direction)
-		return await getListEffectDefault
-			.execute({ offset: getOffset(page) })
-			.then(processOutput)
-			.catch(onQueryDBError);
-
-	return await driver
-		.select({ totalRecord: CountQuery, record: effects })
-		.from(effects)
-		.where(
-			or(
-				...(search
-					? [
-							ilike(effects.name, `%${search}%`),
-							ilike(effects.description, `%${search}%`),
-							ilike(effects.keyWords, `%${search}%`),
-					  ]
-					: []),
-			),
-		)
-		.orderBy(getDirection(direction)(effects[getSortField(sortByMap.effect, 'index', sortBy)]))
-		.limit(DEFAULT_LIMIT)
-		.offset(getOffset(page))
+	return driver.query.effects
+		.findMany({
+			extras: countQueryFunc,
+			limit: DEFAULT_LIMIT,
+			orderBy: (schema, { asc, desc }) => [
+				(direction ? { asc, desc }[direction] : asc)(schema[getSortField(sortByMap.effect, 'index', sortBy)]),
+			],
+			offset: getOffset(page),
+			where: (schema, { or, ilike }) =>
+				or(
+					...(search
+						? [
+								ilike(schema.name, `%${search}%`),
+								ilike(schema.description, `%${search}%`),
+								ilike(schema.keyWords, `%${search}%`),
+						  ]
+						: []),
+				),
+		})
 		.then(processOutput)
 		.catch(onQueryDBError);
 };
 
-export const getItems = async (input: SearchQuery): Promise<ListRecord<Item>> => {
-	const { search, sortBy, direction, color, relatedCategory, page, category, recipeType } = await input;
+export const getItems = (input: SearchQuery): Promise<ListRecord<Item>> => {
+	const { search, sortBy, direction, color, relatedCategory, page, category, recipeType } = input;
 
-	const OR: Array<SQL> = search ? [ilike(items.name, `%${search}%`), ilike(items.keyWords, `%${search}%`)] : [];
+	return driver.query.items
+		.findMany({
+			extras: (_, { sql }) => ({ totalRecord: sql<number>`count(*) over()`.as('total_record') }),
+			limit: DEFAULT_LIMIT,
+			orderBy: (schema, { asc, desc }) => [
+				(direction ? { asc, desc }[direction] : asc)(schema[getSortField(sortByMap.item, 'index', sortBy)]),
+			],
+			offset: getOffset(page),
+			where: (schema, { or, and, ilike, eq }) => {
+				const OR: Array<SQL> = search
+					? [ilike(schema.name, `%${search}%`), ilike(schema.keyWords, `%${search}%`)]
+					: [];
 
-	const AND: Array<SQL> = [];
-	if (relatedCategory) AND.push(arrayOverlaps(items.relatedCategories, [relatedCategory]));
-	if (color) AND.push(eq(items.color, color));
-	if (recipeType) AND.push(eq(items.recipeType, recipeType));
-	if (category) AND.push(eq(items.category, category));
+				const AND: Array<SQL> = [];
+				if (relatedCategory) AND.push(arrayOverlaps(schema.relatedCategories, [relatedCategory]));
+				if (color) AND.push(eq(schema.color, color));
+				if (recipeType) AND.push(eq(schema.recipeType, recipeType));
+				if (category) AND.push(eq(schema.category, category));
 
-	if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
-		return await getListItemDefault
-			.execute({ offset: getOffset(page) })
-			.then(processOutput)
-			.catch(onQueryDBError);
-
-	return await driver
-		.select({ totalRecord: CountQuery, record: items })
-		.from(items)
-		.where(and(or(...OR), ...AND))
-		.orderBy(getDirection(direction)(items[getSortField(sortByMap.item, 'index', sortBy)]))
-		.limit(DEFAULT_LIMIT)
-		.offset(getOffset(page))
+				return and(or(...OR), ...AND);
+			},
+		})
 		.then(processOutput)
 		.catch(onQueryDBError);
 };
 
-export const getRumors = async (input: SearchQuery): Promise<ListRecord<Rumor>> => {
+export const getRumors = (input: SearchQuery): Promise<ListRecord<Rumor>> => {
 	const { search, sortBy, direction, page, rumorType } = input;
 
-	const OR: Array<SQL> = search ? [ilike(rumors.name, `%${search}%`), ilike(rumors.keyWords, `%${search}%`)] : [];
+	return driver.query.rumors
+		.findMany({
+			extras: countQueryFunc,
+			limit: DEFAULT_LIMIT,
+			orderBy: (schema, { asc, desc }) => [
+				(direction ? { asc, desc }[direction] : asc)(schema[getSortField(sortByMap.rumor, 'price', sortBy)]),
+			],
+			offset: getOffset(page),
+			where: (schema, { or, and, ilike, eq }) => {
+				const OR: Array<SQL> = search
+					? [ilike(schema.name, `%${search}%`), ilike(schema.keyWords, `%${search}%`)]
+					: [];
 
-	const AND: Array<SQL> = [];
-	if (rumorType) AND.push(eq(rumors.rumorType, rumorType));
+				const AND: Array<SQL> = [];
+				if (rumorType) AND.push(eq(schema.rumorType, rumorType));
 
-	if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
-		return await getListRumorDefault
-			.execute({ offset: getOffset(page) })
-			.then(processOutput)
-			.catch(onQueryDBError);
-
-	return await driver
-		.select({ totalRecord: CountQuery, record: rumors })
-		.from(rumors)
-		.where(and(or(...OR), ...AND))
-		.orderBy(getDirection(direction)(rumors[getSortField(sortByMap.rumor, 'price', sortBy)]))
-		.limit(DEFAULT_LIMIT)
-		.offset(getOffset(page))
+				return and(or(...OR), ...AND);
+			},
+		})
 		.then(processOutput)
 		.catch(onQueryDBError);
 };
@@ -108,30 +115,29 @@ export const getRumors = async (input: SearchQuery): Promise<ListRecord<Rumor>> 
 export const getTraits = async (input: SearchQuery): Promise<ListRecord<Trait>> => {
 	const { search, sortBy, direction, category, page } = input;
 
-	const OR: Array<SQL> = search
-		? [
-				ilike(traits.name, `%${search}%`),
-				ilike(traits.description, `%${search}%`),
-				ilike(traits.keyWords, `%${search}%`),
-		  ]
-		: [];
+	return await driver.query.traits
+		.findMany({
+			extras: countQueryFunc,
+			limit: DEFAULT_LIMIT,
+			orderBy: (schema, { asc, desc }) => [
+				(direction ? { asc, desc }[direction] : asc)(schema[getSortField(sortByMap.trait, 'index', sortBy)]),
+			],
+			offset: getOffset(page),
+			where: (schema, { or, and, ilike }) => {
+				const OR: Array<SQL> = search
+					? [
+							ilike(schema.name, `%${search}%`),
+							ilike(schema.description, `%${search}%`),
+							ilike(schema.keyWords, `%${search}%`),
+					  ]
+					: [];
 
-	const AND: Array<SQL> = [];
-	if (category) AND.push(arrayOverlaps(traits.categories, [category]));
+				const AND: Array<SQL> = [];
+				if (category) AND.push(arrayOverlaps(schema.categories, [category]));
 
-	if (OR.length === 0 && AND.length === 0 && !sortBy && !direction)
-		return await getListTraitDefault
-			.execute({ offset: getOffset(page) })
-			.then(processOutput)
-			.catch(onQueryDBError);
-
-	return await driver
-		.select({ totalRecord: CountQuery, record: traits })
-		.from(traits)
-		.where(and(or(...OR), ...AND))
-		.orderBy(getDirection(direction)(traits[getSortField(sortByMap.trait, 'index', sortBy)]))
-		.limit(DEFAULT_LIMIT)
-		.offset(getOffset(page))
+				return and(or(...OR), ...AND);
+			},
+		})
 		.then(processOutput)
 		.catch(onQueryDBError);
 };
