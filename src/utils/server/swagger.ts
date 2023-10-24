@@ -98,7 +98,7 @@ const getRespondSwaggerSchema = (
 				schema: z.object({
 					isSuccess: z.boolean().openapi({ example: true }),
 					data: responseMapper[type](getRecordSwaggerSchema(moduleId, exampleRecord)).nullable(),
-					error: z.object({ code: errorEnumSchema }).nullable().openapi({ example: null }),
+					error: z.object({ code: errorEnumSchema, codeNumber: z.number() }).nullable().openapi({ example: null }),
 				}),
 			},
 		},

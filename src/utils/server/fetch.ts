@@ -1,6 +1,7 @@
 import 'server-only';
 
 import { defaultGithubHeader, defaultGithubUserInfo, defaultLicenseInfo } from '@root/constants/server';
+import { APIError } from '@root/types/common';
 import {
 	githubFileResponseSchema,
 	githubUserInfoSchema,
@@ -9,7 +10,6 @@ import {
 } from '@root/types/common/zod';
 import { tryCatchHandler, tryCatchHandlerSync, writeLog } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
-import { TRPCError } from '@trpc/server';
 import type { ZodType } from 'zod';
 
 async function improvedFetch<TResult = unknown>(
@@ -22,7 +22,7 @@ async function improvedFetch<TResult = unknown>(
 	const fetchResult = await tryCatchHandler(fetch(...args));
 
 	if (!fetchResult.isSuccess) {
-		throw new TRPCError({
+		throw new APIError({
 			code: 'INTERNAL_SERVER_ERROR',
 			message: `Fetch fail at: ${JSON.stringify(args[0], null, 2)}`,
 			cause: fetchResult.error,
@@ -30,7 +30,7 @@ async function improvedFetch<TResult = unknown>(
 	}
 
 	if (!fetchResult.data.ok) {
-		throw new TRPCError({
+		throw new APIError({
 			code: 'INTERNAL_SERVER_ERROR',
 			message: `Fetch fail at: ${JSON.stringify(args[0], null, 2)}`,
 			cause: fetchResult.data,
@@ -40,7 +40,7 @@ async function improvedFetch<TResult = unknown>(
 	const jsonResult = await tryCatchHandler(fetchResult.data.json());
 
 	if (!jsonResult.isSuccess)
-		throw new TRPCError({
+		throw new APIError({
 			code: 'INTERNAL_SERVER_ERROR',
 			message: `Parse JSON fail: ${JSON.stringify(jsonResult.error, null, 2)}`,
 			cause: jsonResult.error,
@@ -51,7 +51,7 @@ async function improvedFetch<TResult = unknown>(
 	if (parseResult.success) return parseResult.data;
 
 	if (!defaultValue)
-		throw new TRPCError({
+		throw new APIError({
 			code: 'INTERNAL_SERVER_ERROR',
 			message: parseResult.error.message,
 			cause: parseResult.error,

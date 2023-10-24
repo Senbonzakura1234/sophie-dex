@@ -1,16 +1,15 @@
 import 'server-only';
 
 import type { CommonRecord } from '@root/server/database/postgresql/schema';
-import type { PageProps } from '@root/types/common';
+import { APIError, type PageProps } from '@root/types/common';
 import { searchQueryValidator } from '@root/types/common/zod';
 import { objectValues, tryCatchHandler, writeLog } from '@root/utils/common';
-import { TRPCError } from '@trpc/server';
 import type { Metadata, ResolvingMetadata } from 'next';
 
 export const onQueryDBError = (error: unknown) => {
 	writeLog({ args: [error], type: 'error', hideInProd: true });
 
-	throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR' });
+	throw new APIError({ code: 'INTERNAL_SERVER_ERROR' });
 };
 
 export async function generateListMetadata(

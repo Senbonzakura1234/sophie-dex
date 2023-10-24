@@ -1,3 +1,5 @@
+import { errorMap } from '@root/constants/common';
+import { TRPCError } from '@trpc/server';
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
 import type { ErrorEnum } from './zod';
 
@@ -34,3 +36,11 @@ export type ImprovedOmit<TObject, TKeys extends LooseAutoComplete<keyof TObject>
 	TObject,
 	Exclude<keyof TObject, TKeys>
 >;
+
+export class APIError extends TRPCError {
+	codeNumber: ValueOf<typeof errorMap>['status'];
+	constructor(props: ConstructorParameters<typeof TRPCError>[0]) {
+		super(props);
+		this.codeNumber = errorMap[props.code].status;
+	}
+}

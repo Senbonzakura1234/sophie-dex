@@ -7,11 +7,11 @@ import type { SearchQuery, SortByEnum } from '@root/types/common/zod';
 import type { DBListResult, ListRecord } from '@root/types/model';
 import { arrayInclude } from '@root/utils/common';
 import { onQueryDBError } from '@root/utils/server/database';
-import type { SQL, sql as sqlFunc } from 'drizzle-orm';
+import type { SQL, sql } from 'drizzle-orm';
 import { arrayOverlaps } from 'drizzle-orm';
 
-const countQueryFunc = (_: unknown, { sql }: { sql: typeof sqlFunc }) => ({
-	totalRecord: sql<number>`count(*) over()`.as('total_record'),
+const countQueryFunc = (_: unknown, { sql: sqlFunc }: { sql: typeof sql }) => ({
+	totalRecord: sqlFunc<number>`count(*) over()`.as('total_record'),
 });
 
 const getOffset = (page: number | null) => ((page ?? 1) - 1) * DEFAULT_LIMIT;
@@ -39,7 +39,7 @@ export const getEffects = (input: SearchQuery): Promise<ListRecord<Effect>> => {
 			extras: countQueryFunc,
 			limit: DEFAULT_LIMIT,
 			orderBy: (schema, { asc, desc }) => [
-				(direction ? { asc, desc }[direction] : asc)(schema[getSortField(sortByMap.effect, 'index', sortBy)]),
+				{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.effect, 'index', sortBy)]),
 			],
 			offset: getOffset(page),
 			where: (schema, { or, ilike }) =>
@@ -65,7 +65,7 @@ export const getItems = (input: SearchQuery): Promise<ListRecord<Item>> => {
 			extras: (_, { sql }) => ({ totalRecord: sql<number>`count(*) over()`.as('total_record') }),
 			limit: DEFAULT_LIMIT,
 			orderBy: (schema, { asc, desc }) => [
-				(direction ? { asc, desc }[direction] : asc)(schema[getSortField(sortByMap.item, 'index', sortBy)]),
+				{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.item, 'index', sortBy)]),
 			],
 			offset: getOffset(page),
 			where: (schema, { or, and, ilike, eq }) => {
@@ -94,7 +94,7 @@ export const getRumors = (input: SearchQuery): Promise<ListRecord<Rumor>> => {
 			extras: countQueryFunc,
 			limit: DEFAULT_LIMIT,
 			orderBy: (schema, { asc, desc }) => [
-				(direction ? { asc, desc }[direction] : asc)(schema[getSortField(sortByMap.rumor, 'price', sortBy)]),
+				{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.rumor, 'price', sortBy)]),
 			],
 			offset: getOffset(page),
 			where: (schema, { or, and, ilike, eq }) => {
@@ -120,7 +120,7 @@ export const getTraits = async (input: SearchQuery): Promise<ListRecord<Trait>> 
 			extras: countQueryFunc,
 			limit: DEFAULT_LIMIT,
 			orderBy: (schema, { asc, desc }) => [
-				(direction ? { asc, desc }[direction] : asc)(schema[getSortField(sortByMap.trait, 'index', sortBy)]),
+				{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.trait, 'index', sortBy)]),
 			],
 			offset: getOffset(page),
 			where: (schema, { or, and, ilike }) => {

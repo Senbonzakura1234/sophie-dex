@@ -2,9 +2,9 @@ import 'server-only';
 
 import { getEffectRecord, getItemRecord, getRumorRecord, getTraitRecord } from '@root/server/database/postgresql';
 import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/database/postgresql/schema';
+import { APIError } from '@root/types/common';
 import type { IdQuery } from '@root/types/common/zod';
 import { onQueryDBError } from '@root/utils/server/database';
-import { TRPCError } from '@trpc/server';
 import type { PreparedQuery, PreparedQueryConfig } from 'drizzle-orm/pg-core';
 
 type PrepareRecord<TRecord extends CommonRecord> = PreparedQuery<
@@ -12,13 +12,13 @@ type PrepareRecord<TRecord extends CommonRecord> = PreparedQuery<
 >;
 
 const getRecord = async <TRecord extends CommonRecord>(query: PrepareRecord<TRecord>, { id }: IdQuery) => {
-	if (!id) throw new TRPCError({ code: 'BAD_REQUEST' });
+	if (!id) throw new APIError({ code: 'BAD_REQUEST' });
 
 	const recordResult = await query.execute({ id }).catch(onQueryDBError);
 
 	if (recordResult) return recordResult;
 
-	throw new TRPCError({ code: 'NOT_FOUND' });
+	throw new APIError({ code: 'NOT_FOUND' });
 };
 
 export const getEffect = (input: IdQuery): Promise<Effect> => {

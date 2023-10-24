@@ -1,9 +1,9 @@
 import { evnIs, tryCatchHandler, writeLog } from '@root/utils/common';
 import { getIpAddress } from '@root/utils/server';
 import { ratelimit } from '@root/utils/server/ratelimit';
-import { TRPCError } from '@trpc/server';
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
+import { APIError } from './types/common';
 
 export async function middleware(request: NextRequest) {
 	if (request.nextUrl.pathname.startsWith('/api/public/')) {
@@ -16,7 +16,7 @@ export async function middleware(request: NextRequest) {
 
 			return NextResponse.json({
 				data: null,
-				error: new TRPCError({ code: 'INTERNAL_SERVER_ERROR' }),
+				error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }),
 				isSuccess: false,
 			});
 		}
@@ -24,7 +24,7 @@ export async function middleware(request: NextRequest) {
 		if (!ratelimitResult.data.success)
 			return NextResponse.json({
 				data: null,
-				error: new TRPCError({ code: 'TOO_MANY_REQUESTS' }),
+				error: new APIError({ code: 'TOO_MANY_REQUESTS' }),
 				isSuccess: false,
 			});
 	}
