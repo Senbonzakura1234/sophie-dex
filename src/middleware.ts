@@ -1,4 +1,4 @@
-import { evnIs, tryCatchHandler, writeLog } from '@root/utils/common';
+import { tryCatchHandler, writeLog } from '@root/utils/common';
 import { getIpAddress } from '@root/utils/server';
 import { ratelimit } from '@root/utils/server/ratelimit';
 import type { NextRequest } from 'next/server';
@@ -7,8 +7,6 @@ import { APIError } from './types/common';
 
 export async function middleware(request: NextRequest) {
 	if (request.nextUrl.pathname.startsWith('/api/public/')) {
-		if (!evnIs('production')) return NextResponse.next();
-
 		const ratelimitResult = await tryCatchHandler(ratelimit.limit(`IP_ADDRESS:${getIpAddress(request.headers)}`));
 
 		if (!ratelimitResult.isSuccess) {

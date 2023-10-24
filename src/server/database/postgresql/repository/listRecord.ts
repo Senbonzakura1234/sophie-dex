@@ -1,7 +1,7 @@
 import 'server-only';
 
 import { DEFAULT_LIMIT, sortByMap } from '@root/constants/common';
-import { db } from '@root/server/database/postgresql';
+import { postgresql } from '@root/server/database/postgresql';
 import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/database/postgresql/schema';
 import type { SearchQuery, SortByEnum } from '@root/types/common/zod';
 import type { DBListResult, ListRecord } from '@root/types/model';
@@ -34,7 +34,7 @@ const processOutput = <TRecord extends CommonRecord>(dbResult: DBListResult<TRec
 export const getEffects = (input: SearchQuery): Promise<ListRecord<Effect>> => {
 	const { search, sortBy, direction, page } = input;
 
-	return db.query.effects
+	return postgresql.query.effects
 		.findMany({
 			extras: countQueryFunc,
 			limit: DEFAULT_LIMIT,
@@ -60,7 +60,7 @@ export const getEffects = (input: SearchQuery): Promise<ListRecord<Effect>> => {
 export const getItems = (input: SearchQuery): Promise<ListRecord<Item>> => {
 	const { search, sortBy, direction, color, relatedCategory, page, category, recipeType } = input;
 
-	return db.query.items
+	return postgresql.query.items
 		.findMany({
 			extras: (_, { sql }) => ({ totalRecord: sql<number>`count(*) over()`.as('total_record') }),
 			limit: DEFAULT_LIMIT,
@@ -89,7 +89,7 @@ export const getItems = (input: SearchQuery): Promise<ListRecord<Item>> => {
 export const getRumors = (input: SearchQuery): Promise<ListRecord<Rumor>> => {
 	const { search, sortBy, direction, page, rumorType } = input;
 
-	return db.query.rumors
+	return postgresql.query.rumors
 		.findMany({
 			extras: countQueryFunc,
 			limit: DEFAULT_LIMIT,
@@ -115,7 +115,7 @@ export const getRumors = (input: SearchQuery): Promise<ListRecord<Rumor>> => {
 export const getTraits = async (input: SearchQuery): Promise<ListRecord<Trait>> => {
 	const { search, sortBy, direction, category, page } = input;
 
-	return await db.query.traits
+	return await postgresql.query.traits
 		.findMany({
 			extras: countQueryFunc,
 			limit: DEFAULT_LIMIT,
