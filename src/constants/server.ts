@@ -2,8 +2,8 @@ import 'server-only';
 
 import type { AppleMediaConfig } from '@root/types/common';
 import type { GithubUserInfo, LicenseInfo } from '@root/types/common/zod';
+import { env } from '@root/utils/common/env.mjs';
 import type { NextResponse } from 'next/server';
-import { env } from 'process';
 
 export const appleMediaConfig: AppleMediaConfig = [
 	{ url: 'iPhone_14_Pro_Max_landscape' },

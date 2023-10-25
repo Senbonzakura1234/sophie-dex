@@ -14,17 +14,11 @@ import { extendZodWithOpenApi } from 'zod-openapi';
 
 extendZodWithOpenApi(z);
 
-export const dbListEnumSchema = z.enum(['NEON_DB', 'VERCEL_DB']);
-export type DBListEnum = z.infer<typeof dbListEnumSchema>;
-
 export const daisyUIThemeEnumSchema = z.enum(daisyUIThemeList).catch('fantasy');
 export type DaisyUIThemeEnum = z.infer<typeof daisyUIThemeEnumSchema>;
 
 export const errorEnumSchema = z.enum(errorList).catch('INTERNAL_SERVER_ERROR');
 export type ErrorEnum = z.infer<typeof errorEnumSchema>;
-
-export const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']);
-export type NodeEnv = z.infer<typeof nodeEnumEnvSchema>;
 
 export const genericStringSchema = z.string();
 

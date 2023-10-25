@@ -1,9 +1,9 @@
 import RefetchButton from '@root/components/common/client/RefetchButton';
 import { errorMap } from '@root/constants/common';
-import type { CommonServerError } from '@root/types/common';
+import type { APIError } from '@root/types/common';
 import Link from 'next/link';
 
-export type ErrorContentProps = Partial<CommonServerError>;
+export type ErrorContentProps = Partial<Pick<APIError, 'code'>>;
 
 export default function ErrorContent({ code = 'INTERNAL_SERVER_ERROR' }: ErrorContentProps) {
 	const { message, status } = errorMap[code];

@@ -1,3 +1,5 @@
+import 'server-only';
+
 import { env } from '@root/utils/common/env.mjs';
 import { Redis } from '@upstash/redis';
 

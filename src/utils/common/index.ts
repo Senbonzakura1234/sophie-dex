@@ -1,5 +1,5 @@
 import type { CommonObject, KeyOf, ValueOf } from '@root/types/common';
-import type { NodeEnv, SearchQuery } from '@root/types/common/zod';
+import type { SearchQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
 import type { ReadonlyURLSearchParams } from 'next/navigation';
 import { env } from './env.mjs';
@@ -50,7 +50,7 @@ export const writeLog = ({
 	hideInProd?: boolean;
 }) => (!hideInProd || !evnIs('production')) && console[type](...args);
 
-export const evnIs = (nodeEnv: NodeEnv) => env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
+export const evnIs = (nodeEnv: typeof env.NEXT_PUBLIC_NODE_ENV) => env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
 
 // =======================================					Utilities					=======================================
 

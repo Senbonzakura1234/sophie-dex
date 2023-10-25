@@ -1,3 +1,5 @@
+import 'server-only';
+
 import type { NextRequest } from 'next/server';
 
 export const getIpAddress = (headers: NextRequest['headers']) =>

@@ -1,3 +1,5 @@
+import 'server-only';
+
 import { neon, neonConfig } from '@neondatabase/serverless';
 import * as schema from '@root/server/database/postgresql/schema';
 import type { ExportDBQueriesMap } from '@root/types/model';

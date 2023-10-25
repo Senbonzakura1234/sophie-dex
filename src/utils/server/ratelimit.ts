@@ -1,3 +1,5 @@
+import 'server-only';
+
 import { redis } from '@root/server/database/redis';
 import { env } from '@root/utils/common/env.mjs';
 import { Ratelimit } from '@upstash/ratelimit'; // for deno: see above
