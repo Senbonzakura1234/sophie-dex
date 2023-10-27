@@ -1,4 +1,4 @@
-import APIListWrapper from '@root/components/layout/client/ApiWrapper/rumors';
+import APIListWrapper from '@components/layout/client/ApiWrapper/rumors';
 import type { PageProps } from '@root/types/common';
 import { env } from '@root/utils/common/env.mjs';
 import { generateListMetadata } from '@root/utils/server/database';

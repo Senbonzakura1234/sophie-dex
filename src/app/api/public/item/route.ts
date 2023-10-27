@@ -1,7 +1,6 @@
 import { defaultResponseConfig } from '@root/constants/server';
-import { appRouter } from '@root/server/api/router/_app';
 import { paramsToQuery, tryCatchHandler } from '@root/utils/common';
-import { createServerSideHelpers } from '@trpc/react-query/server';
+import { ApiServerCtx } from '@root/utils/server/trpc';
 import type { ServerRuntime } from 'next';
 import { NextResponse } from 'next/server';
 
@@ -12,9 +11,7 @@ export async function GET(request: Request) {
 
 	const searchQuery = paramsToQuery(searchParams);
 
-	const helpers = createServerSideHelpers({ router: appRouter, ctx: {} });
-
-	const { data, error, isSuccess } = await tryCatchHandler(helpers.item.getAll.fetch(searchQuery));
+	const { data, error, isSuccess } = await tryCatchHandler(ApiServerCtx.item.getAll.fetch(searchQuery));
 
 	return NextResponse.json({ data, error, isSuccess }, defaultResponseConfig);
 }

@@ -152,6 +152,12 @@
 			"format": "svg",
 			"icon": "db",
 			"overrides": "postgresql"
+		},
+		{
+			"extensions": ["_components", "_component"],
+			"format": "svg",
+			"icon": "component",
+			"overrides": "component"
 		}
 	],
 	"vsicons.presets.tsOfficial": true

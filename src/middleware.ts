@@ -1,9 +1,9 @@
+import { APIError } from '@root/types/common';
 import { tryCatchHandler, writeLog } from '@root/utils/common';
 import { getIpAddress } from '@root/utils/server';
 import { ratelimit } from '@root/utils/server/ratelimit';
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
-import { APIError } from './types/common';
 
 export async function middleware(request: NextRequest) {
 	if (request.nextUrl.pathname.startsWith('/api/public/')) {

@@ -1,4 +1,4 @@
-import Readme from '@root/components/common/client/Readme';
+import Readme from '@components/common/client/Readme';
 
 export default function About() {
 	return <Readme />;

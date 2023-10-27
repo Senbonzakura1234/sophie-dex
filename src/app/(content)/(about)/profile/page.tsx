@@ -1,5 +1,11 @@
-import APIProfileInfoWrapper from '@root/components/layout/client/ApiWrapper/profile';
+import APIProfileInfoWrapper from '@components/layout/server/ApiWrapper/profile';
+import RecordPlaceholder from '@components/loading/RecordPlaceholder';
+import { Suspense } from 'react';
 
 export default function Profile() {
-	return <APIProfileInfoWrapper />;
+	return (
+		<Suspense fallback={<RecordPlaceholder className='mx-auto min-h-[20rem] w-full max-w-lg' />}>
+			<APIProfileInfoWrapper />
+		</Suspense>
+	);
 }

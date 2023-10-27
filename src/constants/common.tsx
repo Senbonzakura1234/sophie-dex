@@ -9,6 +9,8 @@ import type {
 	RumorTypeEnum,
 	SortByEnum,
 } from '@root/types/common/zod';
+import { evnIs } from '@root/utils/common';
+import type { DefaultOptions } from '@tanstack/react-query';
 
 export const DEFAULT_LIMIT = 16;
 
@@ -99,3 +101,12 @@ export const errorMap = {
 } as const satisfies Record<APIError['code'], { message: string; status: number }>;
 
 export const listAboutPaths = ['about', 'profile', 'license'] as const;
+
+export const defaultTRPCQueryOptions: DefaultOptions = {
+	queries: {
+		refetchOnMount: false,
+		refetchOnReconnect: evnIs('production'),
+		refetchOnWindowFocus: false,
+		retry: evnIs('production') ? 2 : 1,
+	},
+};
