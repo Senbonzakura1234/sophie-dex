@@ -156,7 +156,7 @@ export const defaultResponseConfig: Parameters<typeof NextResponse.json>[1] = {
 
 export const defaultGithubHeader: Parameters<typeof fetch>[1] = {
 	headers: { Authorization: `Bearer ${env.GITHUB_TOKEN}`, 'X-GitHub-Api-Version': '2022-11-28' },
-	next: { revalidate: 3e10 },
+	next: { revalidate: 86400 },
 };
 
 export const defaultGithubUserInfo: GithubUserInfo = {
