@@ -11,7 +11,9 @@ const getMDXModule = async ({ body }: Pick<MDXRendererProps, 'body'>) => {
 
 	if (!compileResult.isSuccess) return { default: Fragment };
 
-	const runtimeResult = await tryCatchHandler(run(String(compileResult.data), runtime));
+	const runtimeResult = await tryCatchHandler(
+		run(String(compileResult.data), { ...runtime, baseUrl: import.meta.url }),
+	);
 
 	if (!runtimeResult.isSuccess) return { default: Fragment };
 
