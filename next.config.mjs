@@ -10,7 +10,7 @@ import withMDX from '@next/mdx';
 /** @type {import("next").NextConfig} */
 const config = {
 	images: { remotePatterns: [{ protocol: 'https', hostname: 'avatars.githubusercontent.com', port: '' }] },
-	experimental: { typedRoutes: true, mdxRs: true },
+	experimental: { typedRoutes: true },
 };
 
 export default withMDX()(config);
