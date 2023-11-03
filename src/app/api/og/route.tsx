@@ -1,4 +1,3 @@
-import type { ImprovedOmit } from '@root/types/common';
 import { getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
 import type { ServerRuntime } from 'next';
@@ -9,34 +8,14 @@ export const runtime: ServerRuntime = 'edge';
 
 type FontList = ImageResponseOptions['fonts'];
 
-const comicSansMsURLs = [
-	{
-		url: new URL('../../../fonts/comic-sans-ms/regular.ttf', import.meta.url),
-		name: 'Comic Sans MS',
-		style: 'normal',
-		weight: 400,
-	},
-	{
-		url: new URL('../../../fonts/comic-sans-ms/regular-bold.ttf', import.meta.url),
-		name: 'Comic Sans MS',
-		style: 'normal',
-		weight: 700,
-	},
-] satisfies Array<ImprovedOmit<NonNullable<FontList>[number], 'data'> & { url: URL }>;
-
 const getFontData = async (): Promise<FontList> => {
-	const fontDataResults = await tryCatchHandler(
-		Promise.all(
-			comicSansMsURLs.map(async ({ url, ...rest }) => ({
-				data: await fetch(url).then(res => res.arrayBuffer()),
-				...rest,
-			})),
-		),
-	);
+	const url = new URL('../../../fonts/comic-sans-ms/regular-bold.ttf', import.meta.url);
 
-	if (!fontDataResults.isSuccess) return undefined;
+	const dataResult = await tryCatchHandler(fetch(url).then(res => res.arrayBuffer()));
 
-	return fontDataResults.data;
+	if (!dataResult.isSuccess) return undefined;
+
+	return [{ data: dataResult.data, name: 'Comic Sans MS', style: 'normal', weight: 700 }];
 };
 
 export async function GET() {

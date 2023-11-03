@@ -40,8 +40,9 @@ export const metadata: Metadata = {
 	metadataBase: new URL(getBaseUrl(true)),
 	other: {
 		google: 'notranslate',
-		'og:title': `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
 		'og:description': env.NEXT_PUBLIC_APP_DESCRIPTION,
+		'og:image': `${getBaseUrl()}/api/og`,
+		'og:title': `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
 		'og:url': getBaseUrl(true),
 	},
 	robots: 'all',
