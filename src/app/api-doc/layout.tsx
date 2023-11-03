@@ -2,9 +2,9 @@ import './swagger.css';
 
 import PageBanner from '@components/layout/server/PageBanner';
 import type { ChildrenProps } from '@root/types/common/props';
-import type { Metadata } from 'next';
+import type { Viewport } from 'next';
 
-export const metadata: Metadata = { viewport: 'width=1024' };
+export const viewport: Viewport = { width: 1024 };
 
 export default function ApiDocLayout({ children }: ChildrenProps) {
 	return (

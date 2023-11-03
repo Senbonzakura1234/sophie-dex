@@ -7,7 +7,7 @@ export const fontComicSansMS = localFont({
 		{ path: './comic-sans-ms/regular-bold.woff2', style: 'normal', weight: '700' },
 		{ path: './comic-sans-ms/italic-bold.woff2', style: 'italic', weight: '700' },
 	],
-	display: 'fallback',
+	display: 'block',
 });
 
-export const fontAtelier = localFont({ src: './Atelier.woff2', variable: '--font-atelier', display: 'fallback' });
+export const fontAtelier = localFont({ src: './Atelier.woff2', variable: '--font-atelier', display: 'block' });

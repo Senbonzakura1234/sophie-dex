@@ -63,7 +63,8 @@
 		"enterTo",
 		"leave",
 		"leaveFrom",
-		"leaveTo"
+		"leaveTo",
+		"tw"
 	],
 	"typescript.tsdk": "node_modules\\typescript\\lib",
 	"vsicons.associations.files": [

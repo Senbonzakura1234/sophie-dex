@@ -11,7 +11,7 @@ import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
 import { ContextProvider } from '@root/utils/client/context';
 import { getBaseUrl } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import dynamic from 'next/dynamic';
 import { cookies } from 'next/headers';
 
@@ -45,16 +45,16 @@ export const metadata: Metadata = {
 		'og:url': getBaseUrl(true),
 	},
 	robots: 'all',
-	themeColor: '#996c254d',
 	title: `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
 	twitter: {
 		card: 'summary_large_image',
 		description: env.NEXT_PUBLIC_APP_DESCRIPTION,
-		images: `${getBaseUrl()}/opengraph-image`,
+		images: `${getBaseUrl()}/og/twitter`,
 		title: `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
 	},
-	viewport: 'width=device-width, initial-scale=1.0',
 };
+
+export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-width', initialScale: 1 };
 
 export default async function RootLayout({ children }: ChildrenProps) {
 	const cookiesList = cookies();

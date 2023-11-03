@@ -3,7 +3,6 @@ import type { AtelierIcon } from '@root/types/common/icon';
 import type {
 	CategoryEnum,
 	ColorEnum,
-	DaisyUIThemeEnum,
 	ModuleIdEnum,
 	RecipeTypeEnum,
 	RumorTypeEnum,
@@ -46,13 +45,6 @@ export const rumorColorMap = {
 	MONSTER: 'RED',
 	MATERIAL: 'GREEN',
 } as const satisfies Record<RumorTypeEnum, ColorEnum>;
-
-export const metaThemeColorMap = {
-	autumn: 'rgb(140, 3, 39)',
-	fantasy: 'rgb(110, 11, 117)',
-	forest: 'rgb(30, 184, 84)',
-	synthwave: 'rgb(231, 121, 193)',
-} as const satisfies Record<DaisyUIThemeEnum, string>;
 
 export const sortByMap = {
 	effect: ['index', 'name'],

@@ -71,6 +71,10 @@ module.exports = {
 				],
 			},
 		},
+		{
+			files: ['**/og/**/*.ts', '**/og/**/*.tsx'],
+			rules: { '@next/next/no-img-element': 'off' },
+		},
 	],
 	parser: '@typescript-eslint/parser',
 };

@@ -6,9 +6,7 @@ import tailwindPlugin from 'tailwindcss/plugin';
 
 const config: Config = {
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
-	theme: {
-		extend: { fontFamily: { atelier: ['var(--font-atelier)'] } },
-	},
+	theme: { extend: { fontFamily: { atelier: ['var(--font-atelier)'] } } },
 	plugins: [
 		tailwindPlugin(({ theme, addUtilities }) => {
 			const colors = theme('colors') as DefaultColors | undefined;
@@ -46,9 +44,7 @@ const config: Config = {
 		daisyui,
 		typography,
 	],
-	daisyui: {
-		themes: ['autumn', 'fantasy', 'forest', 'synthwave'],
-	},
+	daisyui: { themes: ['autumn', 'fantasy', 'forest', 'synthwave'] },
 	darkMode: 'class',
 };
 export default config;
