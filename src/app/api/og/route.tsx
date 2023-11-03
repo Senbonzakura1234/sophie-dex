@@ -11,13 +11,13 @@ type FontList = ImageResponseOptions['fonts'];
 
 const comicSansMsURLs = [
 	{
-		url: new URL('../../fonts/comic-sans-ms/regular.ttf', import.meta.url),
+		url: new URL('../../../fonts/comic-sans-ms/regular.ttf', import.meta.url),
 		name: 'Comic Sans MS',
 		style: 'normal',
 		weight: 400,
 	},
 	{
-		url: new URL('../../fonts/comic-sans-ms/regular-bold.ttf', import.meta.url),
+		url: new URL('../../../fonts/comic-sans-ms/regular-bold.ttf', import.meta.url),
 		name: 'Comic Sans MS',
 		style: 'normal',
 		weight: 700,
@@ -42,12 +42,12 @@ const getFontData = async (): Promise<FontList> => {
 export async function GET() {
 	return new ImageResponse(
 		(
-			<div tw='flex bg-slate-50 w-full h-full p-6'>
+			<div tw='flex bg-slate-50 w-full h-full py-8'>
 				<div
 					style={{ backgroundImage: 'linear-gradient(to bottom right, #ceb760, #9d750d)' }}
-					tw='flex w-full h-full p-2 rounded-3xl'
+					tw='flex w-full h-full py-2'
 				>
-					<div tw='items-center justify-center flex-col flex bg-slate-50 rounded-3xl h-full w-full shadow-inner'>
+					<div tw='items-center justify-center flex-col flex bg-slate-50 h-full w-full shadow-inner'>
 						<img
 							src={`${getBaseUrl()}/assets/images/sophie-logo.compressed.png`}
 							alt={env.NEXT_PUBLIC_APP_NAME}
@@ -55,7 +55,7 @@ export async function GET() {
 							height={303}
 						/>
 						<h1 tw='m-0 text-2xl font-bold text-[#9d750d]'>{env.NEXT_PUBLIC_APP_DESCRIPTION}</h1>
-						<p tw='text-sm text-[#412711]'>{getBaseUrl()}</p>
+						<p tw='text-lg text-[#412711]'>{getBaseUrl(true)}</p>
 					</div>
 				</div>
 			</div>
