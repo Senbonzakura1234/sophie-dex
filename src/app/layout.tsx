@@ -43,13 +43,14 @@ export const metadata: Metadata = {
 		'og:title': `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
 		'og:description': env.NEXT_PUBLIC_APP_DESCRIPTION,
 		'og:url': getBaseUrl(true),
+		'og:image': `${getBaseUrl()}/og`,
 	},
 	robots: 'all',
 	title: `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
 	twitter: {
 		card: 'summary_large_image',
 		description: env.NEXT_PUBLIC_APP_DESCRIPTION,
-		images: `${getBaseUrl()}/og/twitter`,
+		images: `${getBaseUrl()}/og`,
 		title: `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
 	},
 };
