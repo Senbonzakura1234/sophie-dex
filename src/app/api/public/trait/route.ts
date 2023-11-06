@@ -1,4 +1,4 @@
-import { defaultResponseConfig } from '@root/constants/server';
+import { publicResponseConfig } from '@root/constants/server';
 import { paramsToQuery, tryCatchHandler } from '@root/utils/common';
 import { ApiServerCtx } from '@root/utils/server/trpc';
 import type { ServerRuntime } from 'next';
@@ -13,5 +13,5 @@ export async function GET(request: Request) {
 
 	const { data, error, isSuccess } = await tryCatchHandler(ApiServerCtx.trait.getAll.fetch(searchQuery));
 
-	return NextResponse.json({ data, error, isSuccess }, defaultResponseConfig);
+	return NextResponse.json({ data, error, isSuccess }, publicResponseConfig);
 }

@@ -145,7 +145,7 @@ export const appleMediaConfig: AppleMediaConfig = [
 	},
 ];
 
-export const defaultResponseConfig: Parameters<typeof NextResponse.json>[1] = {
+export const publicResponseConfig: Parameters<typeof NextResponse.json>[1] = {
 	status: 200,
 	headers: {
 		'Access-Control-Allow-Origin': '*',
