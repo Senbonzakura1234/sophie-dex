@@ -3,7 +3,6 @@ import type { CommonRecord } from '@root/server/database/postgresql/schema';
 import type { ClassNameProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
 import type { ReactNode } from 'react';
-import { useMemo } from 'react';
 import RecordHead from './RecordHead';
 
 type RecordWrapperProps<TRecord extends CommonRecord> = ClassNameProps & {
@@ -20,7 +19,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 	currentId,
 	data,
 }: RecordWrapperProps<TRecord>) {
-	const renderChild = useMemo(() => (children ? children(data) : null), [children, data]);
+	const renderChild = children ? children(data) : null;
 
 	return (
 		<article className={`card relative my-auto h-full p-1.5 2xl:max-h-96 ${className}`}>

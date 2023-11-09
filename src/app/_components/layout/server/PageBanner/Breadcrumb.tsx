@@ -11,7 +11,7 @@ import Link from 'next/link';
 import { Fragment } from 'react';
 
 export default function Breadcrumb() {
-	const { segment } = usePageSegment();
+	const { segment, isDetailPage } = usePageSegment();
 
 	return (
 		<>
@@ -35,11 +35,10 @@ export default function Breadcrumb() {
 					<Fragment key={m}>
 						<Link
 							aria-label={`Go to ${m} Page`}
-							className={`link gap-1 capitalize ${
-								m === segment
-									? 'no-animation pointer-events-none !cursor-default !no-underline'
-									: 'link-hover link-primary visited:link-accent'
-							}`}
+							className={`link gap-1 capitalize
+								${m !== segment ? 'link-hover link-primary visited:link-accent' : '!no-underline'}
+								${m === segment && !isDetailPage ? 'no-animation pointer-events-none !cursor-default' : ''}
+							`}
 							href={`/${m}`}
 						>
 							<LinkIcon className='hidden aspect-square h-4 2xl:inline' />

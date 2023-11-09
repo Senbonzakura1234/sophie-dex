@@ -5,7 +5,7 @@ import type { ReactNode } from 'react';
 import ListboxButton from './ListboxButton';
 import ListboxOption from './ListboxOption';
 
-type SelectOptionProps<V> = {
+type SelectOptionProps<V extends string | number> = {
 	value: SelectOptionItem<V>;
 	list: Array<SelectOptionItem<V>>;
 	setValue: SetSelectOptionItem<V>;

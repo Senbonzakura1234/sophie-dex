@@ -9,43 +9,26 @@ import { daisyUIThemeList } from '@root/types/model';
 import { setCookie } from 'cookies-next';
 import { useCallback, useMemo } from 'react';
 
-const defaultTheme = {
-	value: 'fantasy',
+const themeSelectList = daisyUIThemeList.map(theme => ({
+	value: theme,
 	icon: (
 		<span
 			aria-hidden
-			key='fantasy'
-			className='flex aspect-square h-4 flex-row gap-[2px] overflow-hidden rounded border-[2px] border-solid border-base-content bg-base-content xl:h-5'
+			key={theme}
+			className='flex aspect-square h-4 flex-row gap-[2px] overflow-hidden rounded border-[2px] border-solid border-base-content bg-base-content shadow-lg shadow-base-content/30 xl:h-5'
 		>
-			<span aria-hidden className='grow bg-primary' data-theme='fantasy' />
-			<span aria-hidden className='grow bg-accent' data-theme='fantasy' />
-			<span aria-hidden className='grow bg-secondary' data-theme='fantasy' />
+			<span aria-hidden className='grow bg-primary' data-theme={theme} />
+			<span aria-hidden className='grow bg-accent' data-theme={theme} />
+			<span aria-hidden className='grow bg-secondary' data-theme={theme} />
 		</span>
 	),
-} as const satisfies SelectOptionItem<DaisyUIThemeEnum>;
-
-const themeSelectList: Array<SelectOptionItem<DaisyUIThemeEnum>> = [
-	...daisyUIThemeList.map(theme => ({
-		value: theme,
-		icon: (
-			<span
-				aria-hidden
-				key={theme}
-				className='flex aspect-square h-4 flex-row gap-[2px] overflow-hidden rounded border-[2px] border-solid border-base-content bg-base-content shadow-lg shadow-base-content/30 xl:h-5'
-			>
-				<span aria-hidden className='grow bg-primary' data-theme={theme} />
-				<span aria-hidden className='grow bg-accent' data-theme={theme} />
-				<span aria-hidden className='grow bg-secondary' data-theme={theme} />
-			</span>
-		),
-	})),
-];
+})) satisfies Array<SelectOptionItem<DaisyUIThemeEnum>>;
 
 export default function ThemeSwitcher() {
 	const { theme } = useSelector();
 	const dispatch = useDispatch();
 
-	const themeSelect = useMemo(() => themeSelectList.find(t => t.value === theme) || defaultTheme, [theme]);
+	const themeSelect = useMemo(() => themeSelectList.find(t => t.value === theme)!, [theme]);
 
 	const setThemeSelected: SetSelectOptionItem<DaisyUIThemeEnum> = useCallback(
 		s => {
@@ -53,9 +36,8 @@ export default function ThemeSwitcher() {
 
 			if (cur.value === themeSelect.value) return;
 
-			const nextTheme = cur.value || defaultTheme.value;
-			setCookie('theme', nextTheme, { path: '/' });
-			dispatch({ type: 'SET_THEME', theme: nextTheme });
+			setCookie('theme', cur.value!, { path: '/' });
+			dispatch({ type: 'SET_THEME', theme: cur.value! });
 		},
 		[dispatch, themeSelect],
 	);
