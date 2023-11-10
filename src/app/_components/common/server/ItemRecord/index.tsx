@@ -11,14 +11,15 @@ import RecipeType from './RecipeType';
 import RelatedCategories from './RelatedCategories';
 import TraitPresent from './TraitPresent';
 
-type ItemRecordProps = { data: Item } & { currentId?: string };
+type ItemRecordProps = { data: Item } & { currentId?: string; search?: string };
 
-export default function ItemRecord({ currentId, ...props }: ItemRecordProps) {
+export default function ItemRecord({ currentId, search, ...props }: ItemRecordProps) {
 	return (
 		<RecordWrapper
 			{...props}
 			colors={[props.data.recipeType ? recipeTypeColorMap[props.data.recipeType] : undefined, props.data?.color]}
 			currentId={currentId}
+			search={search}
 		>
 			{({ category, color, description, level, recipeIdea, recipeType, relatedCategories, traitPresent }) => (
 				<>

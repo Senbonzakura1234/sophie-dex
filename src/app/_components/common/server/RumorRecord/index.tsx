@@ -7,11 +7,16 @@ import Location from './Location';
 import Price from './Price';
 import RumorType from './RumorType';
 
-type RumorRecordProps = { data: Rumor } & { currentId?: string };
+type RumorRecordProps = { data: Rumor } & { currentId?: string; search?: string };
 
-export default function RumorRecord({ currentId, ...props }: RumorRecordProps) {
+export default function RumorRecord({ currentId, search, ...props }: RumorRecordProps) {
 	return (
-		<RecordWrapper {...props} colors={[undefined, rumorColorMap[props.data?.rumorType]]} currentId={currentId}>
+		<RecordWrapper
+			{...props}
+			colors={[undefined, rumorColorMap[props.data?.rumorType]]}
+			currentId={currentId}
+			search={search}
+		>
 			{({ description, location, price, rumorType }) => (
 				<>
 					<Price price={price} />

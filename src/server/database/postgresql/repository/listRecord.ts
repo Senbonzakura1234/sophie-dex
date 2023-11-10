@@ -22,94 +22,100 @@ const getSortField = <TSearch extends Readonly<SortByEnum>>(
 	search: SortByEnum | null,
 ) => (arrayInclude(allowedSortField, search) ? search : defaultSortField);
 
-const processOutput = <TRecord extends CommonRecord>(dbResult: DBListResult<TRecord>) => {
+const processOutput = <TRecord extends CommonRecord>(dbResult: DBListResult<TRecord>, search: string | null) => {
 	const [totalRecord, records] = [
 		dbResult[0]?.totalRecord ?? 0,
 		dbResult.map(({ totalRecord: _, ...record }) => record),
 	] as const;
 
-	return { records: records, totalRecord, totalPage: Math.ceil(totalRecord / DEFAULT_LIMIT) };
+	return { records, totalRecord, totalPage: Math.ceil(totalRecord / DEFAULT_LIMIT), search: search || undefined };
 };
 
-export const getEffects = (input: SearchQuery): Promise<ListRecord<Effect>> => {
+export const getEffects = async (input: SearchQuery): Promise<ListRecord<Effect>> => {
 	const { search, sortBy, direction, page } = input;
 
-	return postgresql.query.effects
-		.findMany({
+	try {
+		const res = await postgresql.query.effects.findMany({
 			extras: countQueryFunc,
 			limit: DEFAULT_LIMIT,
-			orderBy: (schema, { asc, desc }) => [
-				{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.effect, 'index', sortBy)]),
+			orderBy: (schema_1, { asc, desc }) => [
+				{ asc, desc }[direction || 'asc'](schema_1[getSortField(sortByMap.effect, 'index', sortBy)]),
 			],
 			offset: getOffset(page),
-			where: (schema, { or, ilike }) =>
+			where: (schema_3, { or, ilike }) =>
 				or(
 					...(search
 						? [
-								ilike(schema.name, `%${search}%`),
-								ilike(schema.description, `%${search}%`),
-								ilike(schema.keyWords, `%${search}%`),
+								ilike(schema_3.name, `%${search}%`),
+								ilike(schema_3.description, `%${search}%`),
+								ilike(schema_3.keyWords, `%${search}%`),
 						  ]
 						: []),
 				),
-		})
-		.then(processOutput)
-		.catch(onQueryDBError);
+		});
+		return processOutput(res, search);
+	} catch (error) {
+		return onQueryDBError(error);
+	}
 };
 
-export const getItems = (input: SearchQuery): Promise<ListRecord<Item>> => {
+export const getItems = async (input: SearchQuery): Promise<ListRecord<Item>> => {
 	const { search, sortBy, direction, color, relatedCategory, page, category, recipeType } = input;
 
-	return postgresql.query.items
-		.findMany({
-			extras: (_, { sql }) => ({ totalRecord: sql<number>`count(*) over()`.as('total_record') }),
+	try {
+		const res = await postgresql.query.items.findMany({
+			extras: (__1, { sql }) => ({ totalRecord: sql<number>`count(*) over()`.as('total_record') }),
 			limit: DEFAULT_LIMIT,
-			orderBy: (schema, { asc, desc }) => [
-				{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.item, 'index', sortBy)]),
+			orderBy: (schema_1, { asc, desc }) => [
+				{ asc, desc }[direction || 'asc'](schema_1[getSortField(sortByMap.item, 'index', sortBy)]),
 			],
 			offset: getOffset(page),
-			where: (schema, { or, and, ilike, eq }) => {
+			where: (schema_3, { or, and, ilike, eq }) => {
 				const OR: Array<SQL> = search
-					? [ilike(schema.name, `%${search}%`), ilike(schema.keyWords, `%${search}%`)]
+					? [ilike(schema_3.name, `%${search}%`), ilike(schema_3.keyWords, `%${search}%`)]
 					: [];
 
 				const AND: Array<SQL> = [];
-				if (relatedCategory) AND.push(arrayOverlaps(schema.relatedCategories, [relatedCategory]));
-				if (color) AND.push(eq(schema.color, color));
-				if (recipeType) AND.push(eq(schema.recipeType, recipeType));
-				if (category) AND.push(eq(schema.category, category));
+				if (relatedCategory) AND.push(arrayOverlaps(schema_3.relatedCategories, [relatedCategory]));
+				if (color) AND.push(eq(schema_3.color, color));
+				if (recipeType) AND.push(eq(schema_3.recipeType, recipeType));
+				if (category) AND.push(eq(schema_3.category, category));
 
 				return and(or(...OR), ...AND);
 			},
-		})
-		.then(processOutput)
-		.catch(onQueryDBError);
+		});
+		return processOutput(res, search);
+	} catch (error) {
+		return onQueryDBError(error);
+	}
 };
 
-export const getRumors = (input: SearchQuery): Promise<ListRecord<Rumor>> => {
+export const getRumors = async (input: SearchQuery): Promise<ListRecord<Rumor>> => {
 	const { search, sortBy, direction, page, rumorType } = input;
 
-	return postgresql.query.rumors
-		.findMany({
+	try {
+		const res = await postgresql.query.rumors.findMany({
 			extras: countQueryFunc,
 			limit: DEFAULT_LIMIT,
-			orderBy: (schema, { asc, desc }) => [
-				{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.rumor, 'price', sortBy)]),
+			orderBy: (schema_1, { asc, desc }) => [
+				{ asc, desc }[direction || 'asc'](schema_1[getSortField(sortByMap.rumor, 'price', sortBy)]),
 			],
 			offset: getOffset(page),
-			where: (schema, { or, and, ilike, eq }) => {
+			where: (schema_3, { or, and, ilike, eq }) => {
 				const OR: Array<SQL> = search
-					? [ilike(schema.name, `%${search}%`), ilike(schema.keyWords, `%${search}%`)]
+					? [ilike(schema_3.name, `%${search}%`), ilike(schema_3.keyWords, `%${search}%`)]
 					: [];
 
 				const AND: Array<SQL> = [];
-				if (rumorType) AND.push(eq(schema.rumorType, rumorType));
+				if (rumorType) AND.push(eq(schema_3.rumorType, rumorType));
 
 				return and(or(...OR), ...AND);
 			},
-		})
-		.then(processOutput)
-		.catch(onQueryDBError);
+		});
+		return processOutput(res, search);
+	} catch (error) {
+		return onQueryDBError(error);
+	}
 };
 
 export const getTraits = async (input: SearchQuery): Promise<ListRecord<Trait>> => {
@@ -138,6 +144,6 @@ export const getTraits = async (input: SearchQuery): Promise<ListRecord<Trait>> 
 				return and(or(...OR), ...AND);
 			},
 		})
-		.then(processOutput)
+		.then(res => processOutput(res, search))
 		.catch(onQueryDBError);
 };

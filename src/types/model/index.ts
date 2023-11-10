@@ -94,6 +94,7 @@ export type ListRecord<TRecord extends CommonRecord> = {
 	records: Array<TRecord>;
 	totalPage: number;
 	totalRecord: number;
+	search: string | undefined;
 };
 
 export type ExportDBQueriesMap = Record<

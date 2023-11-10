@@ -32,7 +32,7 @@ export default function APIListWrapper({ searchParams }: APIListWrapperProps) {
 	return (
 		<>
 			{data.records.map(record => (
-				<TraitRecord key={record.id} data={record} />
+				<TraitRecord key={record.id} data={record} search={data.search} />
 			))}
 		</>
 	);

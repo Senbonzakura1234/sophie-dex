@@ -61,7 +61,11 @@ export const searchQueryValidator = z.object({
 	recipeType: genericRecipeTypeEnumSchema.nullish().catch(null).default(null),
 	relatedCategory: genericRelatedCategoryEnumSchema.nullish().catch(null).default(null),
 	rumorType: genericRumorTypeEnumSchema.nullish().catch(null).default(null),
-	search: genericStringSchema.nullish().catch(null).default(null),
+	search: genericStringSchema
+		.transform(val => val.trim())
+		.nullish()
+		.catch(null)
+		.default(null),
 	sortBy: genericSortByEnumSchema.nullish().catch(null).default(null),
 });
 export type SearchQuery = z.infer<typeof searchQueryValidator>;

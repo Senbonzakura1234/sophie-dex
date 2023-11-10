@@ -8,8 +8,9 @@ import RecordHead from './RecordHead';
 type RecordWrapperProps<TRecord extends CommonRecord> = ClassNameProps & {
 	colors?: [ColorEnum | undefined, ColorEnum | undefined];
 	children?: (record: TRecord) => ReactNode;
-	currentId: string | undefined;
+	currentId?: string;
 	data: TRecord;
+	search?: string;
 };
 
 export default function RecordWrapper<TRecord extends CommonRecord>({
@@ -18,6 +19,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 	colors: [firstColor, lastColor] = [undefined, undefined],
 	currentId,
 	data,
+	search,
 }: RecordWrapperProps<TRecord>) {
 	const renderChild = children ? children(data) : null;
 
@@ -40,7 +42,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 			/>
 
 			<div className='card-body z-10 gap-3 rounded-[inherit] bg-base-100 p-[1.625rem] text-base-content shadow-inner shadow-base-content'>
-				<RecordHead id={data.id} name={data.name} currentId={currentId} />
+				<RecordHead id={data.id} name={data.name} currentId={currentId} search={search} />
 
 				{renderChild}
 			</div>
