@@ -1,5 +1,3 @@
-import 'server-only';
-
 import type { ImprovedOmit, ValueOf } from '@root/types/common';
 import type { ModuleIdEnum, RelatedCategoryEnum, SearchQuery } from '@root/types/common/zod';
 import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
