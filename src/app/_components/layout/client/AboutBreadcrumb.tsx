@@ -24,8 +24,9 @@ export default function AboutBreadcrumb() {
 					<Link
 						key={path}
 						href={`/${path}`}
-						className={`btn btn-ghost no-animation z-10 h-auto rounded-none border-0 py-3 font-bold capitalize visited:text-accent-focus
-						${segment === path ? '!text-base-content' : ''}`}
+						className={`btn btn-ghost no-animation z-10 h-auto rounded-none border-0 py-3 font-bold capitalize visited:text-accent
+							${segment === path ? '!text-base-content' : ''}
+						`}
 					>
 						{path === 'about' ? <InfoIcon className='aspect-square h-5 text-primary' /> : null}
 						{path === 'profile' ? <ProfileIcon className='aspect-square h-5 text-primary' /> : null}

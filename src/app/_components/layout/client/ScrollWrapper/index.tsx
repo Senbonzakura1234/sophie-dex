@@ -44,16 +44,19 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
 		<>
 			<PageRefresh isDisabled={isDisabledPullToRefresh} isDetailPage={isDetailPage} segment={segment} />
 
-			<Root className='scroll-area-root h-[100dvh] w-[100dvw] bg-base-200 !antialiased' type='scroll'>
+			<Root className='h-[100dvh] w-[100dvw] overflow-hidden bg-base-200 !antialiased' type='scroll'>
 				<Viewport
-					className='scroll-area-viewport scroll-wrapper scroll-wrapper-horizontal relative'
+					className='relative h-full w-full [&>div]:!flex [&>div]:h-full [&>div]:flex-col [&>div]:gap-6'
 					ref={scrollableRef}
 				>
 					{children}
 				</Viewport>
 
-				<Scrollbar className='scroll-area-scrollbar' orientation='vertical'>
-					<Thumb className='scroll-area-thumb' />
+				<Scrollbar
+					className='group/scrollbar z-30 flex touch-none select-none bg-transparent p-0.5 data-[orientation=horizontal]:h-2 data-[orientation=vertical]:w-2 data-[orientation=horizontal]:flex-col'
+					orientation='vertical'
+				>
+					<Thumb className='relative flex-[1] rounded bg-base-content opacity-50 transition-opacity group-hover/scrollbar:opacity-100' />
 				</Scrollbar>
 
 				<ScrollToTop isShow={isShowScrollTop} refObject={scrollableRef} />

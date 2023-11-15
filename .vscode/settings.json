@@ -46,7 +46,6 @@
 	"eslint.format.enable": true,
 	"eslint.lintTask.enable": true,
 	"files.associations": {
-		"**/*.css": "tailwindcss",
 		"*.eslintrc": "json",
 		"*.json": "json",
 		"*.prettierrc": "json",

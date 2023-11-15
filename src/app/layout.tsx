@@ -1,4 +1,4 @@
-import './globals.css';
+import './styles/index.css';
 
 import '@total-typescript/ts-reset';
 

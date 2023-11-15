@@ -1,0 +1,6 @@
+@layer components {
+	.background-lips {
+		background-image: url('../images/lips.svg');
+		background-repeat: repeat;
+	}
+}

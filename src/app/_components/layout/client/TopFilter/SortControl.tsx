@@ -26,7 +26,7 @@ export default function SortControl({ moduleId, searchQuery }: SortControlProps)
 
 				<TabWrapper
 					activeStyleType='background'
-					className='border-y-2 border-accent-focus'
+					className='border-y-2 border-accent'
 					selectedIndex={indexOf(sortByList, currentSortBy, 0)}
 					tabListLength={sortByList.length}
 				>
@@ -53,7 +53,7 @@ export default function SortControl({ moduleId, searchQuery }: SortControlProps)
 
 				<TabWrapper
 					activeStyleType='background'
-					className='border-y-2 border-accent-focus'
+					className='border-y-2 border-accent'
 					selectedIndex={indexOf(directionList, currentDirection, 0)}
 					tabListLength={directionList.length}
 				>

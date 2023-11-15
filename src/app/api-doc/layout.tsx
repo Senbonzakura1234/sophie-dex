@@ -1,5 +1,3 @@
-import './swagger.css';
-
 import PageBanner from '@components/layout/server/PageBanner';
 import type { ChildrenProps } from '@root/types/common/props';
 import type { Viewport } from 'next';

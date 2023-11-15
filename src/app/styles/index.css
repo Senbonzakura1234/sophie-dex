@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './font-atelier.css';
+@import './scroll-area.css';
+@import './mics.css';
+
+@layer base {
+	html,
+	body {
+		@apply overflow-hidden;
+	}
+}

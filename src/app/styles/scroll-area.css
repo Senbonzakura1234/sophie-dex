@@ -1,0 +1,26 @@
+@layer utilities {
+	@media (min-width: theme('screens.lg')) {
+		.legacy-scroll-area::-webkit-scrollbar,
+		.highlight-code pre::-webkit-scrollbar {
+			@apply w-1 h-1;
+		}
+
+		.legacy-scroll-area::-webkit-scrollbar-track,
+		.highlight-code pre::-webkit-scrollbar-track {
+			@apply rounded-3xl bg-transparent;
+		}
+
+		.legacy-scroll-area::-webkit-scrollbar-thumb,
+		.highlight-code pre::-webkit-scrollbar-thumb {
+			@apply rounded-2xl opacity-50;
+		}
+
+		.legacy-scroll-area::-webkit-scrollbar-thumb {
+			@apply bg-base-content;
+		}
+
+		.highlight-code pre::-webkit-scrollbar-thumb {
+			@apply bg-base-100 dark:bg-base-content;
+		}
+	}
+}

@@ -25,7 +25,7 @@ export default function LicenseInfo({
 					<CheckList
 						list={permissions}
 						title='permissions'
-						icon={<CheckIcon className='aspect-square h-[18px] text-primary-focus' />}
+						icon={<CheckIcon className='aspect-square h-[18px] text-primary' />}
 					/>
 					<CheckList
 						list={limitations}

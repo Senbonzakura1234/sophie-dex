@@ -255,7 +255,7 @@
 }
 
 .swagger-ui .opblock .opblock-section-header {
-	@apply bg-base-200 shadow shadow-base-content/20 items-center flex px-5 py-2 min-h-12;
+	@apply bg-base-200 shadow shadow-base-content/20 items-center flex px-5 py-2 min-h-[3rem];
 }
 .swagger-ui .opblock .opblock-section-header > label {
 	@apply items-center flex text-xs font-bold ml-auto;
@@ -269,6 +269,9 @@
 .swagger-ui .opblock .opblock-summary-method {
 	@apply bg-base-content rounded text-base-100 text-sm font-bold py-1.5 text-center shadow shadow-base-content/10;
 	min-width: 80px;
+}
+.swagger-ui .opblock-summary-path-description-wrapper {
+	@apply w-full flex items-baseline justify-between;
 }
 .swagger-ui .opblock .opblock-summary-operation-id,
 .swagger-ui .opblock .opblock-summary-path,
@@ -286,7 +289,7 @@
 	@apply text-sm;
 }
 .swagger-ui .opblock .opblock-summary-description {
-	@apply text-xs break-words overflow-hidden ml-auto pr-2;
+	@apply text-xs break-words overflow-hidden pr-2;
 }
 .swagger-ui .opblock .opblock-summary {
 	@apply p-2 flex cursor-pointer items-center gap-2;
@@ -511,7 +514,7 @@
 	@apply relative mockup-code;
 }
 .swagger-ui .highlight-code > .microlight {
-	@apply max-h-96 min-h-16 overflow-y-auto;
+	@apply max-h-96 min-h-[4rem] overflow-y-auto;
 }
 .swagger-ui .highlight-code > .microlight code {
 	@apply !whitespace-pre-wrap;
@@ -670,7 +673,7 @@
 	background: url('/assets/swagger/copy-to-clipboard-white.svg') 50% no-repeat;
 }
 .swagger-ui .copy-to-clipboard:active {
-	@apply bg-primary-focus;
+	@apply bg-primary;
 }
 .swagger-ui .opblock-control-arrow {
 	@apply px-1.5;

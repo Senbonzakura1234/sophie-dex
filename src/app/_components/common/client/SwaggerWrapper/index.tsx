@@ -1,5 +1,7 @@
 'use client';
 
+import './index.css';
+
 import Loader from '@components/loading/Loader';
 import dynamic from 'next/dynamic';
 import type { SwaggerUIProps } from 'swagger-ui-react';

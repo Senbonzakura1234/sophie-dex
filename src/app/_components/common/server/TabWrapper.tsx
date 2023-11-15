@@ -30,7 +30,6 @@ export default function TabWrapper({
 						width: `calc(100%/${tabListLength})`,
 					}}
 				/>
-
 				{children}
 			</div>
 		</nav>
