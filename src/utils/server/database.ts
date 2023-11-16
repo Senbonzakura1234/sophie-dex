@@ -26,13 +26,18 @@ export async function generateListMetadata(
 
 export async function generateDetailMetadata<TRecord extends CommonRecord>(
 	parentPromise: ResolvingMetadata,
-	getRecordPromise: Promise<TRecord>,
+	getRecordPromise: Promise<{ data: TRecord }>,
 ): Promise<Metadata> {
 	const result = await tryCatchHandler(Promise.all([parentPromise, getRecordPromise]));
 
 	if (!result.isSuccess) return { title: 'Error' };
 
-	const [{ keywords: parentKeywords }, { name, keyWords: currentKeywords }] = result.data;
+	const [
+		{ keywords: parentKeywords },
+		{
+			data: { name, keyWords: currentKeywords },
+		},
+	] = result.data;
 
 	return { title: name, keywords: [...currentKeywords.split(','), ...(parentKeywords || [])] };
 }

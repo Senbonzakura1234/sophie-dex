@@ -7,7 +7,7 @@ import Location from './Location';
 import Price from './Price';
 import RumorType from './RumorType';
 
-type RumorRecordProps = { data: Rumor } & { currentId?: string; search?: string };
+type RumorRecordProps = { data: Rumor } & { currentId?: string; search?: string } & JSX.IntrinsicAttributes;
 
 export default function RumorRecord({ currentId, search, ...props }: RumorRecordProps) {
 	return (

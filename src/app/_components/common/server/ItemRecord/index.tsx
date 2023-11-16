@@ -11,7 +11,7 @@ import RecipeType from './RecipeType';
 import RelatedCategories from './RelatedCategories';
 import TraitPresent from './TraitPresent';
 
-type ItemRecordProps = { data: Item } & { currentId?: string; search?: string };
+type ItemRecordProps = { data: Item } & { currentId?: string; search?: string } & JSX.IntrinsicAttributes;
 
 export default function ItemRecord({ currentId, search, ...props }: ItemRecordProps) {
 	return (

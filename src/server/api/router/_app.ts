@@ -1,5 +1,5 @@
 import { publicProcedure, router } from '@root/server/api/trpc';
-import { getExample } from '@root/server/database/postgresql/repository/exampleRecord';
+import { apiDoc } from '@root/server/database/postgresql/repository/apiDoc';
 
 import { aboutRouter } from './about';
 import { effectRouter } from './effect';
@@ -13,7 +13,7 @@ export const appRouter = router({
 	item: itemRouter,
 	rumor: rumorRouter,
 	trait: traitRouter,
-	example: publicProcedure.query(getExample),
+	apiDoc: publicProcedure.query(apiDoc),
 });
 
 export type AppRouter = typeof appRouter;

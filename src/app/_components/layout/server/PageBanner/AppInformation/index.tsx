@@ -1,11 +1,12 @@
 import GithubIcon from '@components/icons/brand/GithubIcon';
+import SuspenseComponent from '@components/layout/server/SuspenseComponent';
 import { env } from '@root/utils/common/env.mjs';
 import { getVersion } from '@root/utils/server/fetch';
 import Link from 'next/link';
+import { Suspense } from 'react';
+import Version from './Version';
 
-export default async function AppInformation() {
-	const version = await getVersion();
-
+export default function AppInformation() {
 	return (
 		<div className='grid gap-3 text-center'>
 			<Link
@@ -19,9 +20,9 @@ export default async function AppInformation() {
 				{env.NEXT_PUBLIC_APP_AUTHOR}
 			</Link>
 
-			<div className='card mx-auto block bg-primary px-3 py-1 text-xs font-bold leading-none text-primary-content shadow-lg shadow-base-content/30'>
-				v{version}
-			</div>
+			<Suspense fallback={<div className='h-5' />}>
+				<SuspenseComponent promiseData={getVersion()} ChildComponent={Version} />
+			</Suspense>
 		</div>
 	);
 }

@@ -5,10 +5,17 @@ import Link from 'next/link';
 import type { ProfileFieldProps } from './ProfileField';
 import ProfileField from './ProfileField';
 
-type ProfileInfoProps = { profileInfo: GithubUserInfo };
+type ProfileInfoProps = GithubUserInfo & JSX.IntrinsicAttributes;
 
 export default function ProfileInfo({
-	profileInfo: { avatar_url, login, bio, company, blog, email, location, twitter_username },
+	avatar_url,
+	login,
+	bio,
+	company,
+	blog,
+	email,
+	location,
+	twitter_username,
 }: ProfileInfoProps) {
 	const fields: Array<ProfileFieldProps> = [
 		{ label: company, type: 'company' },

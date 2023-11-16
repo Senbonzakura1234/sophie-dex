@@ -6,15 +6,13 @@ import {
 	getExampleRumorRecord,
 	getExampleTraitRecord,
 } from '@root/server/database/postgresql';
-import type { Effect, Item, Rumor, Trait } from '@root/server/database/postgresql/schema';
 import { APIError } from '@root/types/common';
-import type { GithubUserInfo } from '@root/types/common/zod';
 import { onQueryDBError } from '@root/utils/server/database';
 import { getGithubUserInfo, getVersion } from '@root/utils/server/fetch';
 import { getApiDocs } from '@root/utils/server/swagger';
 import type { OpenAPIObject } from 'zod-openapi/lib-types/openapi3-ts/dist/oas31';
 
-export const getExample = async (): Promise<OpenAPIObject> =>
+export const apiDoc = async (): Promise<{ spec: OpenAPIObject }> =>
 	(
 		Promise.all([
 			Promise.all(
@@ -30,7 +28,7 @@ export const getExample = async (): Promise<OpenAPIObject> =>
 			),
 			getVersion(),
 			getGithubUserInfo(),
-		]) as Promise<[[Effect, Item, Rumor, Trait], string, GithubUserInfo]>
+		]) as Promise<Parameters<typeof getApiDocs>[0]>
 	)
 		.then(getApiDocs)
 		.catch(onQueryDBError);

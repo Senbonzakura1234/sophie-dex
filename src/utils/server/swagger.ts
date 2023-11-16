@@ -4,6 +4,7 @@ import type { ZodType } from 'zod';
 import { z } from 'zod';
 import type { ZodOpenApiPathItemObject, ZodOpenApiPathsObject, ZodOpenApiResponsesObject } from 'zod-openapi';
 import { createDocument, extendZodWithOpenApi } from 'zod-openapi';
+import type { OpenAPIObject } from 'zod-openapi/lib-types/openapi3-ts/dist/oas31';
 
 extendZodWithOpenApi(z);
 
@@ -176,12 +177,12 @@ const getPaths = (exampleRecordObject: ExampleRecordObject): ZodOpenApiPathsObje
 			.flat(),
 	);
 
-export const getApiDocs = ([[effect, item, rumor, trait], version, { html_url, login, email }]: [
+export const getApiDocs = ([[effect, item, rumor, trait], { version }, { html_url, login, email }]: [
 	[Effect, Item, Rumor, Trait],
-	string,
+	{ version: string },
 	GithubUserInfo,
-]) =>
-	createDocument({
+]): { spec: OpenAPIObject } => ({
+	spec: createDocument({
 		openapi: '3.1.0',
 		info: {
 			title: `${env.NEXT_PUBLIC_APP_NAME} | OpenApi`,
@@ -198,4 +199,5 @@ export const getApiDocs = ([[effect, item, rumor, trait], version, { html_url, l
 			url: `https://github.com/${login}/${env.NEXT_PUBLIC_APP_CODE}/blob/main/README.md`,
 		},
 		paths: getPaths({ effect, item, rumor, trait }),
-	});
+	}),
+});

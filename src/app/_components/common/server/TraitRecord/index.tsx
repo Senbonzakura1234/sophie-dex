@@ -6,7 +6,7 @@ import Categories from './Categories';
 import ItemPresent from './ItemPresent';
 import TraitMergeList from './TraitMergeList';
 
-type TraitRecordProps = { data: Trait } & { currentId?: string; search?: string };
+type TraitRecordProps = { data: Trait } & { currentId?: string; search?: string } & JSX.IntrinsicAttributes;
 
 export default function TraitRecord({ currentId, search, ...props }: TraitRecordProps) {
 	return (

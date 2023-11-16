@@ -11,6 +11,8 @@ const Swagger = dynamic(() => import('swagger-ui-react'), {
 	loading: () => <Loader className='loading-rin w-20 text-primary' />,
 });
 
-export default function SwaggerWrapper(props: SwaggerUIProps) {
+type Props = SwaggerUIProps & JSX.IntrinsicAttributes;
+
+export default function SwaggerWrapper(props: Props) {
 	return <Swagger {...props} />;
 }

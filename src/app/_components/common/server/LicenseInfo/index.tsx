@@ -9,11 +9,9 @@ import MDXRenderer from '@components/common/client/MDXRenderer';
 import { env } from '@root/utils/common/env.mjs';
 import LicenseInfoHead from './LicenseInfoHead';
 
-type LicenseInfoProps = { licenseInfo: LicenseInfo };
+type LicenseInfoProps = LicenseInfo & JSX.IntrinsicAttributes;
 
-export default function LicenseInfo({
-	licenseInfo: { body, conditions, limitations, permissions, ...rest },
-}: LicenseInfoProps) {
+export default function LicenseInfo({ body, conditions, limitations, permissions, ...rest }: LicenseInfoProps) {
 	return (
 		<CommonWrapper className='min-h-[42rem] w-full'>
 			<div className='flex flex-wrap gap-6'>

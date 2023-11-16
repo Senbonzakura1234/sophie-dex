@@ -70,21 +70,21 @@ export const getVersion = async () => {
 		),
 	);
 
-	if (!githubResult.isSuccess) return '0.0.0';
+	if (!githubResult.isSuccess) return { version: '0.0.0' };
 
 	const base64ToStringResult = tryCatchHandlerSync(() => atob(githubResult.data.content));
 
-	if (!base64ToStringResult.isSuccess) return '0.0.0';
+	if (!base64ToStringResult.isSuccess) return { version: '0.0.0' };
 
 	const jsonToObjResult = tryCatchHandlerSync(() => JSON.parse(base64ToStringResult.data));
 
-	if (!jsonToObjResult.isSuccess) return '0.0.0';
+	if (!jsonToObjResult.isSuccess) return { version: '0.0.0' };
 
 	const packageDotJSONResult = packageDotJSONSchema.safeParse(jsonToObjResult.data);
 
-	if (!packageDotJSONResult.success) return '0.0.0';
+	if (!packageDotJSONResult.success) return { version: '0.0.0' };
 
-	return packageDotJSONResult.data.version;
+	return packageDotJSONResult.data;
 };
 
 export const getGithubUserInfo = async () => {
