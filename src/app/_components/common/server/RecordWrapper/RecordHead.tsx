@@ -7,7 +7,7 @@ import { highlightSearchedText } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
-const CopyUrlButton = dynamic(() => import('@components/common/client/CopyUrlButton'), {
+const ShareButton = dynamic(() => import('@components/common/client/ShareButton'), {
 	ssr: false,
 	loading: () => <PulsePlaceHolder className='my-auto mr-2 inline-flex aspect-square h-6 rounded-lg align-middle' />,
 });
@@ -21,9 +21,9 @@ export default function RecordHead({ currentId, id, name, search }: RecordHeadPr
 
 	return (
 		<div className='card-title inline'>
-			<CopyUrlButton
+			<ShareButton
 				className='btn-outline mr-2 align-middle dark:shadow-md dark:shadow-current'
-				url={`/${moduleId}/${id}`}
+				input={{ text: name, title: name, url: `/${moduleId}/${id}` }}
 			/>
 
 			<Link

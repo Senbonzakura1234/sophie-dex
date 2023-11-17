@@ -4,7 +4,7 @@ import type { HyperLinkRecord } from '@root/server/database/postgresql/schema';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
-const CopyUrlButton = dynamic(() => import('@components/common/client/CopyUrlButton'), {
+const ShareButton = dynamic(() => import('@components/common/client/ShareButton'), {
 	ssr: false,
 	loading: () => <PulsePlaceHolder className='aspect-square h-6 rounded-lg' />,
 });
@@ -23,7 +23,10 @@ export default function TraitPresent({ traitPresent: { table: moduleId, id, name
 				</span>
 			</Link>
 
-			<CopyUrlButton className='btn-ghost text-primary' url={`/${moduleId}/${id}`} />
+			<ShareButton
+				className='btn-ghost text-primary'
+				input={{ text: name, title: name, url: `/${moduleId}/${id}` }}
+			/>
 		</div>
 	);
 }

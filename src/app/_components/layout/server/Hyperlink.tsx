@@ -4,7 +4,7 @@ import { convertCode, objectValues, queryToParamsString } from '@root/utils/comm
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
-const CopyUrlButton = dynamic(() => import('@components/common/client/CopyUrlButton'), { ssr: false });
+const ShareButton = dynamic(() => import('@components/common/client/ShareButton'), { ssr: false });
 
 type HyperlinkProps = {
 	input: HighlightText | HyperLinkRecord | HyperLinkSearch;
@@ -39,7 +39,7 @@ export default function Hyperlink({ input, className }: HyperlinkProps) {
 				{label}
 			</Link>
 
-			<CopyUrlButton className='btn-ghost text-secondary' url={href} />
+			<ShareButton className='btn-ghost text-secondary' input={{ text: label, title: label, url: href }} />
 		</>
 	);
 }

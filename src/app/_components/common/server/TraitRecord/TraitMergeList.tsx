@@ -4,7 +4,7 @@ import type { HyperLinkRecord } from '@root/server/database/postgresql/schema';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
-const CopyUrlButton = dynamic(() => import('@components/common/client/CopyUrlButton'), {
+const ShareButton = dynamic(() => import('@components/common/client/ShareButton'), {
 	ssr: false,
 	loading: () => <PulsePlaceHolder className='aspect-square h-6 rounded-lg' />,
 });
@@ -19,7 +19,14 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 			<div className='flex flex-col gap-2'>
 				{mergeFrom.map(([firstTrait, lastTrait], key) => (
 					<div className='join basis-auto shadow-lg shadow-base-content/30' key={key}>
-						<CopyUrlButton className='join-item' url={`/${firstTrait.table}/${firstTrait.id}`} />
+						<ShareButton
+							className='join-item'
+							input={{
+								text: firstTrait.name,
+								title: firstTrait.name,
+								url: `/${firstTrait.table}/${firstTrait.id}`,
+							}}
+						/>
 						<Link
 							aria-label={firstTrait.name}
 							className='btn join-item btn-xs capitalize'
@@ -39,7 +46,14 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 						>
 							<span className='max-sm:max-w-[4rem] max-sm:truncate'>{lastTrait.name}</span>
 						</Link>
-						<CopyUrlButton className='join-item' url={`/${lastTrait.table}/${lastTrait.id}`} />
+						<ShareButton
+							className='join-item'
+							input={{
+								text: lastTrait.name,
+								title: lastTrait.name,
+								url: `/${lastTrait.table}/${lastTrait.id}`,
+							}}
+						/>
 					</div>
 				))}
 			</div>
