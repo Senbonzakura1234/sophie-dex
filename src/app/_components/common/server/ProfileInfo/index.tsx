@@ -43,7 +43,7 @@ export default function ProfileInfo({
 
 					<div className='my-auto flex flex-col gap-1 max-sm:w-full'>
 						<Link
-							className='link-hover link-primary link text-xl font-bold'
+							className='link-hover link link-primary text-xl font-bold'
 							href={{ protocol: 'https', hostname: 'github', host: 'github.com', pathname: login }}
 							target='_blank'
 						>

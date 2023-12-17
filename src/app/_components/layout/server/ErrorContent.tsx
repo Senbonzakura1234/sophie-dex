@@ -30,7 +30,7 @@ export default function ErrorContent({ code = 'INTERNAL_SERVER_ERROR' }: ErrorCo
 					Back to home
 				</Link>
 
-				<RefetchButton className='link-hover link-primary link text-xs font-bold md:text-sm' isShowDivider />
+				<RefetchButton className='link-hover link link-primary text-xs font-bold md:text-sm' isShowDivider />
 			</div>
 		</div>
 	);

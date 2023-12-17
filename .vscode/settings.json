@@ -33,11 +33,12 @@
 	],
 	"css.customData": [".vscode/tailwind.json"],
 	"editor.codeActionsOnSave": {
-		"source.fixAll": true,
-		"source.organizeImports": true
+		"source.fixAll": "explicit",
+		"source.organizeImports": "explicit"
 	},
 	"editor.formatOnSave": true,
 	"editor.formatOnSaveMode": "file",
+	"editor.inlayHints.enabled": "on",
 	"editor.quickSuggestions": {
 		"strings": true
 	},
@@ -65,6 +66,12 @@
 		"leaveTo",
 		"tw"
 	],
+	"typescript.inlayHints.enumMemberValues.enabled": true,
+	"typescript.inlayHints.parameterNames.enabled": "all",
+	"typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
+	"typescript.inlayHints.parameterTypes.enabled": true,
+	"typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+	"typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": true,
 	"typescript.tsdk": "node_modules\\typescript\\lib",
 	"vsicons.associations.files": [
 		{
