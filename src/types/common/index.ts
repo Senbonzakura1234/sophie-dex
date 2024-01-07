@@ -39,3 +39,11 @@ export class APIError extends TRPCError {
 		this.codeNumber = errorMap[props.code].status;
 	}
 }
+
+export type Inspect<TObject> = {
+	[TKey in keyof TObject]: TObject[TKey];
+} & NonNullable<unknown>;
+
+export type InspectRecursive<TObject> = {
+	[TKey in keyof TObject]: InspectRecursive<TObject[TKey]>;
+} & NonNullable<unknown>;

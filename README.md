@@ -31,7 +31,6 @@
 -  &nbsp;<a href='https://orm.drizzle.team' target='_blank'>Drizzle-orm</a>
 -  &nbsp;<a href='https://trpc.io' target='_blank'>Trpc</a>
 -  &nbsp;<a href='https://zod.dev' target='_blank'>Zod</a>
--  &nbsp;<a href='https://swagger.io' target='_blank'>Swagger</a>
 
 </div>
 
@@ -40,7 +39,6 @@
 ## <a id='usage'># Usage</a>
 
 -  &nbsp;<a href='https://sophie-dex.vercel.app' target='_blank'>Home page</a>
--  &nbsp;<a href='https://sophie-dex.vercel.app/api-doc' target='_blank'>Swagger</a>
 
 </div>
 

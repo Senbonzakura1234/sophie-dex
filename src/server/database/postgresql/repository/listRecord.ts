@@ -38,18 +38,18 @@ export const getEffects = async (input: SearchQuery): Promise<ListRecord<Effect>
 		const res = await postgresql.query.effects.findMany({
 			extras: countQueryFunc,
 			limit: DEFAULT_LIMIT,
-			orderBy: (schema_1, { asc, desc }) => [
-				{ asc, desc }[direction || 'asc'](schema_1[getSortField(sortByMap.effect, 'index', sortBy)]),
+			orderBy: (schema, { asc, desc }) => [
+				{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.effect, 'index', sortBy)]),
 			],
 			offset: getOffset(page),
-			where: (schema_3, { or, ilike }) =>
+			where: (schema, { or, ilike }) =>
 				or(
 					...(search
 						? [
-								ilike(schema_3.name, `%${search}%`),
-								ilike(schema_3.description, `%${search}%`),
-								ilike(schema_3.keyWords, `%${search}%`),
-						  ]
+								ilike(schema.name, `%${search}%`),
+								ilike(schema.description, `%${search}%`),
+								ilike(schema.keyWords, `%${search}%`),
+							]
 						: []),
 				),
 		});
@@ -64,22 +64,22 @@ export const getItems = async (input: SearchQuery): Promise<ListRecord<Item>> =>
 
 	try {
 		const res = await postgresql.query.items.findMany({
-			extras: (__1, { sql }) => ({ totalRecord: sql<number>`count(*) over()`.as('total_record') }),
+			extras: (_, { sql }) => ({ totalRecord: sql<number>`count(*) over()`.as('total_record') }),
 			limit: DEFAULT_LIMIT,
-			orderBy: (schema_1, { asc, desc }) => [
-				{ asc, desc }[direction || 'asc'](schema_1[getSortField(sortByMap.item, 'index', sortBy)]),
+			orderBy: (schema, { asc, desc }) => [
+				{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.item, 'index', sortBy)]),
 			],
 			offset: getOffset(page),
-			where: (schema_3, { or, and, ilike, eq }) => {
+			where: (schema, { or, and, ilike, eq }) => {
 				const OR: Array<SQL> = search
-					? [ilike(schema_3.name, `%${search}%`), ilike(schema_3.keyWords, `%${search}%`)]
+					? [ilike(schema.name, `%${search}%`), ilike(schema.keyWords, `%${search}%`)]
 					: [];
 
 				const AND: Array<SQL> = [];
-				if (relatedCategory) AND.push(arrayOverlaps(schema_3.relatedCategories, [relatedCategory]));
-				if (color) AND.push(eq(schema_3.color, color));
-				if (recipeType) AND.push(eq(schema_3.recipeType, recipeType));
-				if (category) AND.push(eq(schema_3.category, category));
+				if (relatedCategory) AND.push(arrayOverlaps(schema.relatedCategories, [relatedCategory]));
+				if (color) AND.push(eq(schema.color, color));
+				if (recipeType) AND.push(eq(schema.recipeType, recipeType));
+				if (category) AND.push(eq(schema.category, category));
 
 				return and(or(...OR), ...AND);
 			},
@@ -97,17 +97,17 @@ export const getRumors = async (input: SearchQuery): Promise<ListRecord<Rumor>> 
 		const res = await postgresql.query.rumors.findMany({
 			extras: countQueryFunc,
 			limit: DEFAULT_LIMIT,
-			orderBy: (schema_1, { asc, desc }) => [
-				{ asc, desc }[direction || 'asc'](schema_1[getSortField(sortByMap.rumor, 'price', sortBy)]),
+			orderBy: (schema, { asc, desc }) => [
+				{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.rumor, 'price', sortBy)]),
 			],
 			offset: getOffset(page),
-			where: (schema_3, { or, and, ilike, eq }) => {
+			where: (schema, { or, and, ilike, eq }) => {
 				const OR: Array<SQL> = search
-					? [ilike(schema_3.name, `%${search}%`), ilike(schema_3.keyWords, `%${search}%`)]
+					? [ilike(schema.name, `%${search}%`), ilike(schema.keyWords, `%${search}%`)]
 					: [];
 
 				const AND: Array<SQL> = [];
-				if (rumorType) AND.push(eq(schema_3.rumorType, rumorType));
+				if (rumorType) AND.push(eq(schema.rumorType, rumorType));
 
 				return and(or(...OR), ...AND);
 			},
@@ -135,7 +135,7 @@ export const getTraits = async (input: SearchQuery): Promise<ListRecord<Trait>> 
 							ilike(schema.name, `%${search}%`),
 							ilike(schema.description, `%${search}%`),
 							ilike(schema.keyWords, `%${search}%`),
-					  ]
+						]
 					: [];
 
 				const AND: Array<SQL> = [];

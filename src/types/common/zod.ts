@@ -10,9 +10,6 @@ import {
 	rumorTypeList,
 } from '@root/types/model';
 import { z } from 'zod';
-import { extendZodWithOpenApi } from 'zod-openapi';
-
-extendZodWithOpenApi(z);
 
 export const daisyUIThemeEnumSchema = z.enum(daisyUIThemeList).catch('fantasy');
 export type DaisyUIThemeEnum = z.infer<typeof daisyUIThemeEnumSchema>;

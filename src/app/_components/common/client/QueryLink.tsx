@@ -39,7 +39,7 @@ export default function QueryLink({
 							...(isOverridden ? {} : searchQuery),
 							...query,
 							...(resetPage ? { page: null } : {}),
-					  })}`
+						})}`
 					: '/'
 			}
 			{...rest}
