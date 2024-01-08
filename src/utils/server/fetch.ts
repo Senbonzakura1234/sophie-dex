@@ -1,6 +1,6 @@
 import 'server-only';
 
-import { defaultGithubHeader, defaultGithubUserInfo, defaultLicenseInfo } from '@root/constants/server';
+import { defaultGithubHeader } from '@root/constants/server';
 import { APIError } from '@root/types/common';
 import {
 	githubFileResponseSchema,
@@ -12,11 +12,7 @@ import { tryCatchHandler, tryCatchHandlerSync, writeLog } from '@root/utils/comm
 import { env } from '@root/utils/common/env.mjs';
 import type { ZodType } from 'zod';
 
-async function improvedFetch<TResult = unknown>(
-	validator: ZodType<TResult>,
-	defaultValue: TResult | undefined,
-	...args: Parameters<typeof fetch>
-) {
+async function improvedFetch<TResult = unknown>(validator: ZodType<TResult>, ...args: Parameters<typeof fetch>) {
 	writeLog({ args: [`Fetch: ${JSON.stringify(args[0], null, 2)}`] });
 
 	const fetchResult = await tryCatchHandler(fetch(...args));
@@ -50,65 +46,65 @@ async function improvedFetch<TResult = unknown>(
 
 	if (parseResult.success) return parseResult.data;
 
-	if (!defaultValue)
-		throw new APIError({
-			code: 'INTERNAL_SERVER_ERROR',
-			message: parseResult.error.message,
-			cause: parseResult.error,
-		});
-
-	return defaultValue;
+	throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: parseResult.error.message, cause: parseResult.error });
 }
+
+const defaultResult = {
+	isSuccess: false as const,
+	result: null,
+	error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }),
+};
 
 export const getVersion = async () => {
 	const githubResult = await tryCatchHandler(
 		improvedFetch(
 			githubFileResponseSchema,
-			undefined,
 			`https://api.github.com/repos/${env.NEXT_PUBLIC_APP_PATH}/contents/package.json`,
 			defaultGithubHeader,
 		),
 	);
 
-	if (!githubResult.isSuccess) return { version: '0.0.0' };
+	if (!githubResult.isSuccess) return defaultResult;
 
 	const base64ToStringResult = tryCatchHandlerSync(() => atob(githubResult.data.content));
 
-	if (!base64ToStringResult.isSuccess) return { version: '0.0.0' };
+	if (!base64ToStringResult.isSuccess) return defaultResult;
 
 	const jsonToObjResult = tryCatchHandlerSync(() => JSON.parse(base64ToStringResult.data));
 
-	if (!jsonToObjResult.isSuccess) return { version: '0.0.0' };
+	if (!jsonToObjResult.isSuccess) return defaultResult;
 
 	const packageDotJSONResult = packageDotJSONSchema.safeParse(jsonToObjResult.data);
 
-	if (!packageDotJSONResult.success) return { version: '0.0.0' };
+	if (!packageDotJSONResult.success) return defaultResult;
 
-	return packageDotJSONResult.data;
+	return { result: packageDotJSONResult.data, isSuccess: true as const, error: null };
 };
 
 export const getGithubUserInfo = async () => {
 	const githubUserInfo = await tryCatchHandler(
 		improvedFetch(
 			githubUserInfoSchema,
-			undefined,
 			`https://api.github.com/users/${env.NEXT_PUBLIC_APP_AUTHOR}`,
 			defaultGithubHeader,
 		),
 	);
 
-	return githubUserInfo.isSuccess ? githubUserInfo.data : defaultGithubUserInfo;
+	return githubUserInfo.isSuccess
+		? { result: githubUserInfo.data, isSuccess: true as const, error: null }
+		: defaultResult;
 };
 
 export const getLicense = async () => {
 	const licenseResult = await tryCatchHandler(
 		improvedFetch(
 			licenseInfoSchema,
-			undefined,
 			`https://api.github.com/licenses/${env.NEXT_PUBLIC_APP_LICENSE_CODE}`,
 			defaultGithubHeader,
 		),
 	);
 
-	return licenseResult.isSuccess ? licenseResult.data : defaultLicenseInfo;
+	return licenseResult.isSuccess
+		? { result: licenseResult.data, isSuccess: true as const, error: null }
+		: defaultResult;
 };

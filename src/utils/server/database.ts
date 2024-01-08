@@ -1,5 +1,6 @@
 import 'server-only';
 
+import type { getRecord } from '@root/server/database/postgresql/repository/singleRecord';
 import type { CommonRecord } from '@root/server/database/postgresql/schema';
 import { APIError, type PageProps } from '@root/types/common';
 import { searchQueryValidator } from '@root/types/common/zod';
@@ -26,18 +27,19 @@ export async function generateListMetadata(
 
 export async function generateDetailMetadata<TRecord extends CommonRecord>(
 	parentPromise: ResolvingMetadata,
-	getRecordPromise: Promise<{ data: TRecord }>,
+	getRecordPromise: ReturnType<typeof getRecord>,
 ): Promise<Metadata> {
 	const result = await tryCatchHandler(Promise.all([parentPromise, getRecordPromise]));
 
 	if (!result.isSuccess) return { title: 'Error' };
 
-	const [
-		{ keywords: parentKeywords },
-		{
-			data: { name, keyWords: currentKeywords },
-		},
-	] = result.data;
+	const [{ keywords: parentKeywords }, record] = result.data;
+
+	if (!record.isSuccess) return { title: 'Error' };
+
+	const {
+		data: { name, keyWords: currentKeywords },
+	} = record.result;
 
 	return { title: name, keywords: [...currentKeywords.split(','), ...(parentKeywords || [])] };
 }

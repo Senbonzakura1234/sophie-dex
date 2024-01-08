@@ -1,38 +1,48 @@
 import 'server-only';
 
 import { getEffectRecord, getItemRecord, getRumorRecord, getTraitRecord } from '@root/server/database/postgresql';
-import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/database/postgresql/schema';
+import type { CommonRecord } from '@root/server/database/postgresql/schema';
 import { APIError } from '@root/types/common';
 import type { IdQuery } from '@root/types/common/zod';
-import { onQueryDBError } from '@root/utils/server/database';
+import { tryCatchHandler } from '@root/utils/common';
 import type { PreparedQuery, PreparedQueryConfig } from 'drizzle-orm/pg-core';
 
 type PrepareRecord<TRecord extends CommonRecord> = PreparedQuery<
 	PreparedQueryConfig & { execute: TRecord | undefined }
 >;
 
-const getRecord = async <TRecord extends CommonRecord>(query: PrepareRecord<TRecord>, { id }: IdQuery) => {
-	if (!id) throw new APIError({ code: 'BAD_REQUEST' });
+export const getRecord = async <TRecord extends CommonRecord>(query: PrepareRecord<TRecord>, { id }: IdQuery) => {
+	if (!id)
+		return {
+			result: null,
+			isSuccess: false as const,
+			error: new APIError({ code: 'BAD_REQUEST', message: 'Invalid Record Id' }),
+		};
 
-	const recordResult = await query.execute({ id }).catch(onQueryDBError);
+	const { data, isSuccess } = await tryCatchHandler(query.execute({ id }));
 
-	if (recordResult) return recordResult;
+	if (!isSuccess || !data)
+		return {
+			result: null,
+			isSuccess: false as const,
+			error: new APIError({ code: isSuccess ? 'NOT_FOUND' : 'INTERNAL_SERVER_ERROR' }),
+		};
 
-	throw new APIError({ code: 'NOT_FOUND' });
+	return { result: { data, currentId: id }, isSuccess: true as const, error: null };
 };
 
-export const getEffect = (input: IdQuery): Promise<Effect> => {
+export const getEffect = (input: IdQuery) => {
 	return getRecord(getEffectRecord, input);
 };
 
-export const getItem = (input: IdQuery): Promise<Item> => {
+export const getItem = (input: IdQuery) => {
 	return getRecord(getItemRecord, input);
 };
 
-export const getRumor = (input: IdQuery): Promise<Rumor> => {
+export const getRumor = (input: IdQuery) => {
 	return getRecord(getRumorRecord, input);
 };
 
-export const getTrait = (input: IdQuery): Promise<Trait> => {
+export const getTrait = (input: IdQuery) => {
 	return getRecord(getTraitRecord, input);
 };

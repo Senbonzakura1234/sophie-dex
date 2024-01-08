@@ -1,4 +1,4 @@
-import { publicProcedure, router } from '@root/server/api/trpc';
+import { procedure, router } from '@root/server/api/trpc';
 import { exportRumors, getAllRumorIds } from '@root/server/database/postgresql';
 import { getRumors } from '@root/server/database/postgresql/repository/listRecord';
 import { getRumor } from '@root/server/database/postgresql/repository/singleRecord';
@@ -6,13 +6,13 @@ import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import { onQueryDBError } from '@root/utils/server/database';
 
 export const rumorRouter = router({
-	getAll: publicProcedure.input(searchQueryValidator).query(({ input }) => getRumors(input)),
+	getAll: procedure.input(searchQueryValidator).query(({ input }) => getRumors(input)),
 
-	getOne: publicProcedure.input(idQueryValidator).query(({ input }) => getRumor(input)),
+	getOne: procedure.input(idQueryValidator).query(({ input }) => getRumor(input)),
 
-	getAllIds: publicProcedure.query(async () =>
+	getAllIds: procedure.query(async () =>
 		(await getAllRumorIds.execute().catch(onQueryDBError)).map(({ id }) => ({ id })),
 	),
 
-	export: publicProcedure.query(() => exportRumors.execute().catch(onQueryDBError)),
+	export: procedure.query(() => exportRumors.execute().catch(onQueryDBError)),
 });

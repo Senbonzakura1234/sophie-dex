@@ -7,7 +7,11 @@ import { Suspense } from 'react';
 export default function License() {
 	return (
 		<Suspense fallback={<RecordPlaceholder className='min-h-[42rem]' />}>
-			<SuspenseComponent promiseData={ApiServerCtx.about.license.fetch()} ChildComponent={LicenseInfo} />
+			<SuspenseComponent
+				promiseData={ApiServerCtx.info.license.fetch()}
+				ChildComponent={LicenseInfo}
+				showErrorContent
+			/>
 		</Suspense>
 	);
 }
