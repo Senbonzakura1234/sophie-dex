@@ -1,7 +1,7 @@
 import GithubIcon from '@components/icons/brand/GithubIcon';
 import SuspenseComponent from '@components/layout/server/SuspenseComponent';
 import { env } from '@root/utils/common/env.mjs';
-import { ApiServerCtx } from '@root/utils/server/trpc';
+import { getVersion } from '@root/utils/server/fetch';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import Version from './Version';
@@ -21,7 +21,7 @@ export default function AppInformation() {
 			</Link>
 
 			<Suspense fallback={<div className='h-5' />}>
-				<SuspenseComponent promiseData={ApiServerCtx.info.version.fetch()} ChildComponent={Version} />
+				<SuspenseComponent promiseData={getVersion()} ChildComponent={Version} />
 			</Suspense>
 		</div>
 	);
