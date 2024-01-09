@@ -7,6 +7,6 @@ import { Ratelimit } from '@upstash/ratelimit';
 export const ratelimit = new Ratelimit({
 	redis,
 	limiter: Ratelimit.slidingWindow(env.REQUEST_COUNT_LIMIT, `${env.REQUEST_LIMIT_TIME_SPAN_S} s`),
-	analytics: true,
+	analytics: false,
 	prefix: `${env.NEXT_PUBLIC_APP_CODE}/api`,
 });

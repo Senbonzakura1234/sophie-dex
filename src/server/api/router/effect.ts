@@ -1,18 +1,15 @@
-import { procedure, router } from '@root/server/api/trpc';
-import { exportEffects, getAllEffectIds } from '@root/server/database/postgresql';
-import { getEffects } from '@root/server/database/postgresql/repository/listRecord';
-import { getEffect } from '@root/server/database/postgresql/repository/singleRecord';
+import { privateProcedure, router } from '@root/server/api/trpc';
+import { exportEffectsQuery, getAllEffectIdsQuery, getEffectRecordQuery } from '@root/server/database/postgresql';
+import { getEffects } from '@root/server/database/postgresql/repository';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
-import { onQueryDBError } from '@root/utils/server/database';
+import { exportRecords, getAllRecordIds, getRecord } from '@root/utils/server/database';
 
 export const effectRouter = router({
-	getAll: procedure.input(searchQueryValidator).query(({ input }) => getEffects(input)),
+	getAll: privateProcedure.input(searchQueryValidator).query(({ input }) => getEffects(input)),
 
-	getOne: procedure.input(idQueryValidator).query(({ input }) => getEffect(input)),
+	getOne: privateProcedure.input(idQueryValidator).query(({ input }) => getRecord(getEffectRecordQuery, input)),
 
-	getAllIds: procedure.query(async () =>
-		(await getAllEffectIds.execute().catch(onQueryDBError)).map(({ id }) => ({ id })),
-	),
+	getAllIds: privateProcedure.query(() => getAllRecordIds(getAllEffectIdsQuery)),
 
-	export: procedure.query(() => exportEffects.execute().catch(onQueryDBError)),
+	export: privateProcedure.query(() => exportRecords(exportEffectsQuery)),
 });

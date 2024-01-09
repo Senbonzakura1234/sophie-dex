@@ -1,29 +1,33 @@
-// import { APIError } from '@root/types/common';
-// import { tryCatchHandler, writeLog } from '@root/utils/common';
-// import { getIpAddress } from '@root/utils/server';
-// import { ratelimit } from '@root/utils/server/ratelimit';
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
+import { APIError } from './types/common';
+import { tryCatchHandler, writeLog } from './utils/common';
+import { getIpAddress } from './utils/server';
+import { ratelimit } from './utils/server/ratelimit';
 
 export async function middleware(request: NextRequest) {
-	// const ratelimitResult = await tryCatchHandler(ratelimit.limit(`IP_ADDRESS:${getIpAddress(request.headers)}`));
+	const res = NextResponse.next();
 
-	// if (!ratelimitResult.isSuccess) {
-	// 	writeLog({ args: [`Error get ratelimit data:`, ratelimitResult.error], type: 'error' });
+	if (request.nextUrl.pathname.startsWith('/api/trpc/')) {
+		const ratelimitResult = await tryCatchHandler(ratelimit.limit(`IP_ADDRESS:${getIpAddress(request.headers)}`));
 
-	// 	return NextResponse.json({
-	// 		data: null,
-	// 		error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }),
-	// 		isSuccess: false,
-	// 	});
-	// }
+		if (!ratelimitResult.isSuccess) {
+			writeLog({ args: [`Error get ratelimit data:`, ratelimitResult.error], type: 'error' });
 
-	// if (!ratelimitResult.data.success)
-	// 	return NextResponse.json({
-	// 		data: null,
-	// 		error: new APIError({ code: 'TOO_MANY_REQUESTS' }),
-	// 		isSuccess: false,
-	// 	});
+			return NextResponse.json({
+				data: null,
+				error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }),
+				isSuccess: false,
+			});
+		}
 
-	return NextResponse.next();
+		if (!ratelimitResult.data.success)
+			return NextResponse.json({
+				data: null,
+				error: new APIError({ code: 'TOO_MANY_REQUESTS' }),
+				isSuccess: false,
+			});
+	}
+
+	return res;
 }

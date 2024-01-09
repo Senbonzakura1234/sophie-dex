@@ -31,7 +31,7 @@ const getLinkProps = (input: HyperlinkProps['input']) => {
 export default function Hyperlink({ input, className }: HyperlinkProps) {
 	const { href, label } = getLinkProps(input);
 
-	if (!href) return <span className={`font-bold capitalize text-primary ${className}`}>{label}</span>;
+	if (!href) return <span className={`font-bold capitalize text-primary ${className} !cursor-text`}>{label}</span>;
 
 	return (
 		<>

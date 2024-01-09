@@ -1,18 +1,15 @@
-import { procedure, router } from '@root/server/api/trpc';
-import { exportItems, getAllItemIds } from '@root/server/database/postgresql';
-import { getItems } from '@root/server/database/postgresql/repository/listRecord';
-import { getItem } from '@root/server/database/postgresql/repository/singleRecord';
+import { privateProcedure, router } from '@root/server/api/trpc';
+import { exportItemsQuery, getAllItemIdsQuery, getItemRecordQuery } from '@root/server/database/postgresql';
+import { getItems } from '@root/server/database/postgresql/repository';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
-import { onQueryDBError } from '@root/utils/server/database';
+import { exportRecords, getAllRecordIds, getRecord } from '@root/utils/server/database';
 
 export const itemRouter = router({
-	getAll: procedure.input(searchQueryValidator).query(({ input }) => getItems(input)),
+	getAll: privateProcedure.input(searchQueryValidator).query(({ input }) => getItems(input)),
 
-	getOne: procedure.input(idQueryValidator).query(({ input }) => getItem(input)),
+	getOne: privateProcedure.input(idQueryValidator).query(({ input }) => getRecord(getItemRecordQuery, input)),
 
-	getAllIds: procedure.query(async () =>
-		(await getAllItemIds.execute().catch(onQueryDBError)).map(({ id }) => ({ id })),
-	),
+	getAllIds: privateProcedure.query(() => getAllRecordIds(getAllItemIdsQuery)),
 
-	export: procedure.query(() => exportItems.execute().catch(onQueryDBError)),
+	export: privateProcedure.query(() => exportRecords(exportItemsQuery)),
 });

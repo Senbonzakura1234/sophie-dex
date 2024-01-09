@@ -27,7 +27,7 @@ export default function RecordHead({ currentId, id, name, search }: RecordHeadPr
 			/>
 
 			<Link
-				className={`align-middle ${isCurrentRecord ? 'pointer-events-none cursor-default' : 'link-hover link'}`}
+				className={`align-middle ${isCurrentRecord ? 'pointer-events-none' : 'link-hover link'}`}
 				href={moduleId ? `/${moduleId}/${id}` : '/'}
 				aria-label={name}
 				dangerouslySetInnerHTML={{ __html: highlightSearchedText(name, search) }}

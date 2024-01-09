@@ -10,7 +10,9 @@ import { Suspense } from 'react';
 export const revalidate = 9e6;
 
 export async function generateStaticParams() {
-	return await ApiServerCtx.trait.getAllIds.fetch();
+	const { result } = await ApiServerCtx.trait.getAllIds.fetch();
+
+	return result || [];
 }
 
 const getRecord = async (params: PageProps['params']) => ApiServerCtx.trait.getOne.fetch(params);
