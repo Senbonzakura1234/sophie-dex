@@ -46,7 +46,7 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
 
 			<Root className='h-[100dvh] w-[100dvw] overflow-hidden bg-base-200 !antialiased' type='scroll'>
 				<Viewport
-					className='relative h-full w-full [&>div]:!flex [&>div]:h-full [&>div]:flex-col [&>div]:gap-6'
+					className='relative size-full [&>div]:!flex [&>div]:h-full [&>div]:flex-col [&>div]:gap-6'
 					ref={scrollableRef}
 				>
 					{children}

@@ -1,9 +1,6 @@
 import GithubIcon from '@components/icons/brand/GithubIcon';
-import SuspenseComponent from '@components/layout/server/SuspenseComponent';
 import { env } from '@root/utils/common/env.mjs';
-import { getVersion } from '@root/utils/server/fetch';
 import Link from 'next/link';
-import { Suspense } from 'react';
 import Version from './Version';
 
 export default function AppInformation() {
@@ -20,9 +17,7 @@ export default function AppInformation() {
 				{env.NEXT_PUBLIC_APP_AUTHOR}
 			</Link>
 
-			<Suspense fallback={<div className='h-5' />}>
-				<SuspenseComponent promiseData={getVersion()} ChildComponent={Version} />
-			</Suspense>
+			<Version />
 		</div>
 	);
 }

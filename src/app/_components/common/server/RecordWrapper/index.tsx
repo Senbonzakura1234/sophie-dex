@@ -26,7 +26,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 	return (
 		<article className={`card relative my-auto h-full p-1.5 2xl:max-h-96 ${className}`}>
 			<div
-				className={`absolute inset-y-0 left-0 w-1/3 rounded-[inherit] shadow-lg ${
+				className={`absolute inset-y-0 left-0 w-1/3 rounded-[inherit] shadow-lg${
 					!!firstColor
 						? `bg-current shadow-base-content ${colorTWClassMap[firstColor].background}`
 						: 'bg-gradient-to-br from-accent to-primary shadow-primary'
@@ -34,7 +34,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 			/>
 
 			<div
-				className={`absolute inset-y-0 right-0 w-1/3 rounded-[inherit] shadow-lg ${
+				className={`absolute inset-y-0 right-0 w-1/3 rounded-[inherit] shadow-lg${
 					!!lastColor
 						? `bg-current shadow-base-content ${colorTWClassMap[lastColor].background}`
 						: 'bg-gradient-to-l from-accent to-primary shadow-primary'

@@ -14,7 +14,7 @@ export default function LicenseInfoHead({ description, name }: LicenseInfoHeadPr
 		<div className='flex grow flex-col gap-2'>
 			<div className='flex gap-2'>
 				<div className='aspect-square h-12 rounded-lg bg-gradient-to-br from-accent to-primary p-1.5'>
-					<ScaleIcon className='my-auto h-full w-full stroke-2 text-base-100' />
+					<ScaleIcon className='my-auto size-full stroke-2 text-base-100' />
 				</div>
 
 				<div>

@@ -29,7 +29,7 @@ export default function PageRefresh({ isDisabled = false, isDetailPage = false, 
 					(isDisabled ? 0 : (isRefreshing ? DEFAULT_REFRESH_THRESHOLD : pullPosition) / 3) - 48
 				}px)`,
 			}}
-			className='fixed inset-x-1/2 top-0 z-[100] aspect-square h-8 w-8 -translate-x-1/2 rounded-full bg-slate-50 p-2 text-primary transition-[opacity,transform]'
+			className='fixed inset-x-1/2 top-0 z-[100] aspect-square size-8 -translate-x-1/2 rounded-full bg-slate-50 p-2 text-primary transition-[opacity,transform]'
 		>
 			<span className={`loading w-full  ${isRefreshing ? 'loading-spinner' : 'loading-infinity'}`} />
 		</div>

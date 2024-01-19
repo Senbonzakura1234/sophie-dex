@@ -45,7 +45,7 @@ export default function SelectOption<V extends string | number>({
 								open ? 'opacity-1 translate-y-1' : 'translate-y-5 opacity-0'
 							}`}
 						>
-							<Listbox.Options className='legacy-scroll-area h-full max-h-52 w-full overflow-auto rounded-md bg-base-100 py-1 shadow-lg shadow-base-content/30'>
+							<Listbox.Options className='legacy-scroll-area size-full max-h-52 overflow-auto rounded-md bg-base-100 py-1 shadow-lg shadow-base-content/30'>
 								{list.map((item, key) => (
 									<ListboxOption
 										key={key}
