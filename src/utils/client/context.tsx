@@ -5,6 +5,7 @@ import type { ChildrenProps } from '@root/types/common/props';
 import type { DaisyUIThemeEnum } from '@root/types/common/zod';
 import type { Dispatch } from 'react';
 import { createContext, useReducer } from 'react';
+import { deleteNullableProperty } from '../common';
 
 export type ThemeContextState = { theme: DaisyUIThemeEnum };
 export type ContentDataContextState = {
@@ -12,30 +13,34 @@ export type ContentDataContextState = {
 		totalRecord: number;
 		totalPage: number;
 		refetch: undefined | (() => Promise<unknown>);
-		isError: boolean;
+		status: 'error' | 'success' | 'pending';
 	};
 };
 export type AlertContextState = { alert: { isOpen: boolean; message: string; type?: AlertTypeEnum } };
 
 type StateType = ThemeContextState & ContentDataContextState & AlertContextState;
 
+type Action<TKey extends string, TData = unknown> = { type: TKey; data: TData };
+
 type ActionType =
-	| ({ type: 'SET_THEME' } & ThemeContextState)
-	| ({ type: 'UPDATE_CONTENT_DATA' } & ContentDataContextState)
-	| ({ type: 'UPDATE_ALERT' } & AlertContextState);
+	| Action<'SET_THEME', ThemeContextState['theme']>
+	| Action<'UPDATE_CONTENT_DATA', Partial<ContentDataContextState['contentData']>>
+	| Action<'UPDATE_ALERT', AlertContextState['alert']>;
 
 const initialState: StateType = {
 	theme: 'fantasy',
-	contentData: { totalRecord: 0, totalPage: 0, refetch: undefined, isError: false },
+	contentData: { totalRecord: 0, totalPage: 0, refetch: undefined, status: 'pending' },
 	alert: { isOpen: false, message: '' },
 };
 
-const reducer = (state: StateType, action: ActionType) => {
-	if (action.type === 'SET_THEME') return { ...state, theme: action.theme };
+const reducer = (state: StateType, { data, type }: ActionType) => {
+	if (type === 'SET_THEME') return { ...state, theme: data };
 
-	if (action.type === 'UPDATE_CONTENT_DATA') return { ...state, contentData: action.contentData };
+	if (type === 'UPDATE_CONTENT_DATA') {
+		return { ...state, contentData: { ...state.contentData, ...deleteNullableProperty(data) } };
+	}
 
-	if (action.type === 'UPDATE_ALERT') return { ...state, alert: action.alert };
+	if (type === 'UPDATE_ALERT') return { ...state, alert: data };
 
 	return state;
 };

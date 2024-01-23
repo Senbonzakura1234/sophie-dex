@@ -5,6 +5,7 @@ import useSelector from '@root/hooks/useSelector';
 import { moduleIdList } from '@root/types/model';
 import { arrayInclude } from '@root/utils/common';
 import { useRouter } from 'next/navigation';
+import { useMemo } from 'react';
 import { DEFAULT_REFRESH_THRESHOLD, usePullToRefresh } from 'use-pull-to-refresh';
 
 type PageRefreshProps = { isDisabled?: boolean } & Partial<ReturnType<typeof usePageSegment>>;
@@ -15,11 +16,13 @@ export default function PageRefresh({ isDisabled = false, isDetailPage = false, 
 		contentData: { refetch },
 	} = useSelector();
 
-	const { isRefreshing, pullPosition } = usePullToRefresh({
-		onRefresh: isDetailPage || arrayInclude(moduleIdList, segment) ? refresh : refetch || refresh,
-		isDisabled,
-		maximumPullLength: 300,
-	});
+	const onRefresh = useMemo(() => {
+		if (!refetch) return refresh;
+		if (isDetailPage || !arrayInclude(moduleIdList, segment)) return refresh;
+		return refetch;
+	}, [isDetailPage, refetch, refresh, segment]);
+
+	const { isRefreshing, pullPosition } = usePullToRefresh({ onRefresh, isDisabled, maximumPullLength: 300 });
 
 	return (
 		<div

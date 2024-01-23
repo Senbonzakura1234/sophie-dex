@@ -34,7 +34,7 @@ type ShareButtonProps = { input: InputData } & ClassNameProps;
 export default function ShareButton({ className, input }: ShareButtonProps) {
 	const dispatch = useDispatch();
 
-	const pushAlert = (alert: AlertContextState['alert']) => dispatch({ type: 'UPDATE_ALERT', alert });
+	const pushAlert = (data: AlertContextState['alert']) => dispatch({ type: 'UPDATE_ALERT', data });
 
 	const canShare = isCanShare(input);
 

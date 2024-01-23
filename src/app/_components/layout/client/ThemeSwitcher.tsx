@@ -37,7 +37,7 @@ export default function ThemeSwitcher() {
 			if (cur.value === themeSelect.value) return;
 
 			setCookie('theme', cur.value!, { path: '/' });
-			dispatch({ type: 'SET_THEME', theme: cur.value! });
+			dispatch({ type: 'SET_THEME', data: cur.value! });
 		},
 		[dispatch, themeSelect],
 	);

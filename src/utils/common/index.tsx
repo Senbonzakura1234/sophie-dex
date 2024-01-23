@@ -69,6 +69,17 @@ export function writeLog({
 	return (!hideInProd || !evnIs('production')) && console[type](...args);
 }
 
+export function deleteNullableProperty<const Obj extends CommonObject>(
+	obj: Obj,
+	keyList: Array<KeyOf<Obj>> = objectKeys(obj),
+) {
+	keyList.forEach(key => {
+		if (typeof obj[key] === 'undefined') return delete obj[key];
+	});
+
+	return obj;
+}
+
 export function evnIs(nodeEnv: typeof env.NEXT_PUBLIC_NODE_ENV) {
 	return env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
 }

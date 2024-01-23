@@ -18,17 +18,14 @@ export default function APIListWrapper({ searchParams }: APIListWrapperProps) {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		if (status === 'success')
-			dispatch({
-				type: 'UPDATE_CONTENT_DATA',
-				contentData: { isError: false, refetch, totalPage: data.totalPage, totalRecord: data.totalRecord },
-			});
-
-		if (status === 'error')
-			dispatch({
-				type: 'UPDATE_CONTENT_DATA',
-				contentData: { isError: true, refetch, totalPage: 0, totalRecord: 0 },
-			});
+		dispatch({
+			type: 'UPDATE_CONTENT_DATA',
+			data: {
+				status,
+				refetch,
+				...(status !== 'pending' ? { totalPage: data?.totalPage || 0, totalRecord: data?.totalRecord || 0 } : {}),
+			},
+		});
 	}, [data?.totalPage, data?.totalRecord, dispatch, refetch, status]);
 
 	if (status === 'success')

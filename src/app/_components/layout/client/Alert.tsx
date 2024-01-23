@@ -31,7 +31,7 @@ export default function Alert() {
 	useEffect(() => {
 		if (!isOpen) return;
 
-		const timeOut = setTimeout(() => dispatch({ type: 'UPDATE_ALERT', alert: { isOpen: false, message: '' } }), 2000);
+		const timeOut = setTimeout(() => dispatch({ type: 'UPDATE_ALERT', data: { isOpen: false, message: '' } }), 2000);
 
 		return () => {
 			clearTimeout(timeOut);
