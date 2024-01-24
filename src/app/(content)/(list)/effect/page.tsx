@@ -1,4 +1,4 @@
-import APIListWrapper from '@components/layout/client/ApiWrapper/effects';
+import APIListWrapper from '@components/layout/dynamic/ApiWrapper/effects';
 import type { PageProps } from '@root/types/common';
 import { env } from '@root/utils/common/env.mjs';
 import { generateListMetadata } from '@root/utils/server/database';

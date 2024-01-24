@@ -1,15 +1,15 @@
-import ContentWrapper from '@components/layout/client/ContentWrapper';
-import TrpcProvider from '@components/layout/client/TrpcProvider';
+import ContentWrapper from '@components/layout/dynamic/ContentWrapper';
+import TrpcProvider from '@components/layout/dynamic/TrpcProvider';
 import PulsePlaceHolder from '@components/loading/PulsePlaceHolder';
 import type { ChildrenProps } from '@root/types/common/props';
 import dynamic from 'next/dynamic';
 
-const TopFilter = dynamic(() => import('@components/layout/client/TopFilter'), {
+const TopFilter = dynamic(() => import('@components/layout/dynamic/TopFilter'), {
 	ssr: false,
 	loading: () => <PulsePlaceHolder className='h-8 w-[133px] rounded-lg' />,
 });
-const BottomFilter = dynamic(() => import('@components/layout/client/BottomFilter'), { ssr: false });
-const SearchInput = dynamic(() => import('@components/layout/client/SearchInput'), {
+const BottomFilter = dynamic(() => import('@components/layout/dynamic/BottomFilter'), { ssr: false });
+const SearchInput = dynamic(() => import('@components/layout/dynamic/SearchInput'), {
 	ssr: false,
 	loading: () => <div className='h-8 w-full' />,
 });

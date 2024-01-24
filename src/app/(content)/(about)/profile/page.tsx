@@ -1,5 +1,5 @@
-import ProfileInfo from '@components/common/server/ProfileInfo';
-import SuspenseComponent from '@components/layout/server/SuspenseComponent';
+import ProfileInfo from '@components/common/static/ProfileInfo';
+import SuspenseComponent from '@components/layout/static/SuspenseComponent';
 import RecordPlaceholder from '@components/loading/RecordPlaceholder';
 import { getGithubUserInfo } from '@root/utils/server/fetch';
 import { Suspense } from 'react';

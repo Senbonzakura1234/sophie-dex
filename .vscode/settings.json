@@ -151,6 +151,18 @@
 			"format": "svg",
 			"icon": "component",
 			"overrides": "component"
+		},
+		{
+			"extensions": ["dynamic"],
+			"format": "svg",
+			"icon": "client",
+			"overrides": "dynamic"
+		},
+		{
+			"extensions": ["static"],
+			"format": "svg",
+			"icon": "server",
+			"overrides": "static"
 		}
 	],
 	"vsicons.presets.tsOfficial": true

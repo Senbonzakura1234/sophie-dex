@@ -1,5 +1,5 @@
-import ItemRecord from '@components/common/server/ItemRecord';
-import SuspenseComponent from '@components/layout/server/SuspenseComponent';
+import ItemRecord from '@components/common/static/ItemRecord';
+import SuspenseComponent from '@components/layout/static/SuspenseComponent';
 import RecordPlaceholder from '@components/loading/RecordPlaceholder';
 import type { PageProps } from '@root/types/common';
 import { generateDetailMetadata } from '@root/utils/server/database';

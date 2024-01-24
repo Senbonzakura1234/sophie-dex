@@ -1,5 +1,5 @@
-import LicenseInfo from '@components/common/server/LicenseInfo';
-import SuspenseComponent from '@components/layout/server/SuspenseComponent';
+import LicenseInfo from '@components/common/static/LicenseInfo';
+import SuspenseComponent from '@components/layout/static/SuspenseComponent';
 import RecordPlaceholder from '@components/loading/RecordPlaceholder';
 import { getLicense } from '@root/utils/server/fetch';
 import { Suspense } from 'react';

@@ -3,9 +3,9 @@
 import type { AlertTypeEnum } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
 import type { DaisyUIThemeEnum } from '@root/types/common/zod';
+import { deleteNullableProperty } from '@root/utils/common';
 import type { Dispatch } from 'react';
 import { createContext, useReducer } from 'react';
-import { deleteNullableProperty } from '../common';
 
 export type ThemeContextState = { theme: DaisyUIThemeEnum };
 export type ContentDataContextState = {

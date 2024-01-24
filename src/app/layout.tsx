@@ -2,8 +2,8 @@ import './styles/index.css';
 
 import '@total-typescript/ts-reset';
 
-import ScrollWrapper from '@components/layout/client/ScrollWrapper';
-import ThemeWrapper from '@components/layout/client/ThemeWrapper';
+import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
+import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
 import { appleMediaConfig } from '@root/constants/server';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { ChildrenProps } from '@root/types/common/props';
@@ -15,7 +15,7 @@ import type { Metadata, Viewport } from 'next';
 import dynamic from 'next/dynamic';
 import { cookies } from 'next/headers';
 
-const ThemeSwitcher = dynamic(() => import('@components/layout/client/ThemeSwitcher'), { ssr: false });
+const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'), { ssr: false });
 
 export const metadata: Metadata = {
 	appleWebApp: {

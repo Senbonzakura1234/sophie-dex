@@ -1,5 +1,5 @@
-import TraitRecord from '@components/common/server/TraitRecord';
-import SuspenseComponent from '@components/layout/server/SuspenseComponent';
+import TraitRecord from '@components/common/static/TraitRecord';
+import SuspenseComponent from '@components/layout/static/SuspenseComponent';
 import RecordPlaceholder from '@components/loading/RecordPlaceholder';
 import type { PageProps } from '@root/types/common';
 import { generateDetailMetadata } from '@root/utils/server/database';
