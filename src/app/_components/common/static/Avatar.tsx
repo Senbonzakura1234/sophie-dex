@@ -1,4 +1,5 @@
 import type { ClassNameProps } from '@root/types/common/props';
+import { cn } from '@root/utils/common';
 import Image from 'next/image';
 
 type AvatarProps = {
@@ -21,7 +22,7 @@ export default function Avatar({ size, url, className }: AvatarProps) {
 
 	return (
 		<div className='avatar'>
-			<div className={`overflow-hidden rounded-full ${className}`}>
+			<div className={cn('overflow-hidden rounded-full', className)}>
 				<Image
 					className='rounded-full shadow-inner shadow-base-content'
 					alt='sophie'

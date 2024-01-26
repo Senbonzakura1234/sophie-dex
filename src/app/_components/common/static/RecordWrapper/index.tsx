@@ -2,6 +2,7 @@ import { colorTWClassMap } from '@root/constants/common';
 import type { CommonRecord } from '@root/server/database/postgresql/schema';
 import type { ClassNameProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
+import { cn } from '@root/utils/common';
 import type { ReactNode } from 'react';
 import RecordHead from './RecordHead';
 
@@ -24,21 +25,23 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 	const renderChild = children ? children(data) : null;
 
 	return (
-		<article className={`card relative my-auto h-full p-1.5 2xl:max-h-96 ${className}`}>
+		<article className={cn('card relative my-auto h-full p-1.5 2xl:max-h-96', className)}>
 			<div
-				className={`absolute inset-y-0 left-0 w-1/3 rounded-[inherit] shadow-lg ${
-					!!firstColor
+				className={cn(
+					'absolute inset-y-0 left-0 w-1/3 rounded-[inherit] shadow-lg',
+					typeof firstColor !== 'undefined'
 						? `bg-current shadow-base-content ${colorTWClassMap[firstColor].background}`
-						: 'bg-gradient-to-br from-accent to-primary shadow-primary'
-				}`}
+						: 'bg-gradient-to-br from-accent to-primary shadow-primary',
+				)}
 			/>
 
 			<div
-				className={`absolute inset-y-0 right-0 w-1/3 rounded-[inherit] shadow-lg ${
-					!!lastColor
+				className={cn(
+					'absolute inset-y-0 right-0 w-1/3 rounded-[inherit] shadow-lg',
+					typeof lastColor !== 'undefined'
 						? `bg-current shadow-base-content ${colorTWClassMap[lastColor].background}`
-						: 'bg-gradient-to-l from-accent to-primary shadow-primary'
-				}`}
+						: 'bg-gradient-to-tl from-accent to-primary shadow-primary',
+				)}
 			/>
 
 			<div className='card-body z-10 gap-3 rounded-[inherit] bg-base-100 p-[1.625rem] text-base-content shadow-inner shadow-base-content'>

@@ -9,7 +9,7 @@ import { drizzle } from 'drizzle-orm/neon-http';
 
 neonConfig.fetchConnectionCache = true;
 
-const connection = neon(env.DIRECT_DB_URL);
+const connection = neon(env.PGURL_NONPOOLING);
 
 export const postgresql = drizzle(connection, { schema, logger: !evnIs('production') });
 

@@ -2,6 +2,7 @@
 	"cSpell.diagnosticLevel": "Hint",
 	"cSpell.ignorePaths": ["**/node_modules/**", "**/.vscode/extensions.json", ".env", "**/dist/**"],
 	"cSpell.words": [
+		"clsx",
 		"daisyui",
 		"escha",
 		"gsap",
@@ -12,7 +13,9 @@
 		"meruru",
 		"neondatabase",
 		"nextjs",
+		"NONPOOLING",
 		"notranslate",
+		"PGURL",
 		"pnpx",
 		"ratelimit",
 		"ryza",
@@ -65,6 +68,10 @@
 		"leaveFrom",
 		"leaveTo",
 		"tw"
+	],
+	"tailwindCSS.experimental.classRegex": [
+		["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+		["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
 	],
 	"typescript.inlayHints.enumMemberValues.enabled": true,
 	"typescript.inlayHints.parameterNames.enabled": "all",

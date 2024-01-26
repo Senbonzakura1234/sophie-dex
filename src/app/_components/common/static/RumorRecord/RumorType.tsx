@@ -5,7 +5,7 @@ import { rumorTypeColorMap, rumorTypeIconMap } from '@root/constants/common';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { TextShadowMap } from '@root/types/common/tailwind';
 import type { RumorTypeEnum } from '@root/types/common/zod';
-import { convertCode } from '@root/utils/common';
+import { cn, convertCode } from '@root/utils/common';
 
 type RumorTypeProps = { rumorType: RumorTypeEnum };
 
@@ -27,23 +27,29 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 				<div>Category: </div>
 				<QueryLink
 					aria-label={`Filter ${convertCode(rumorType)} Rumor`}
-					className={`btn btn-xs !border-current !bg-current shadow-current ${
-						isActive ? '' : 'shadow-md'
-					} ${background}`}
+					className={cn(
+						'btn btn-xs !border-current !bg-current shadow-current',
+						{ 'shadow-md': !isActive },
+						background,
+					)}
 					href={{ query: { rumorType } }}
 					isActive={isActive}
 					searchQuery={searchQuery}
 					resetPage
 				>
-					<div className={`flex gap-1 font-bold capitalize ${foreground}`}>
-						<div className={`font-atelier ${rumorTypeIconMap[rumorType]}`} />
+					<div className={cn('flex gap-1 font-bold capitalize', foreground)}>
+						<div className={cn('font-atelier', rumorTypeIconMap[rumorType])} />
 						{convertCode(rumorType)}
 					</div>
 				</QueryLink>
 			</div>
 
 			<div
-				className={`absolute bottom-8 right-8 w-10 text-center font-atelier text-lg md:text-4xl ${rumorTypeIconMap[rumorType]} ${className[rumorType]}`}
+				className={cn(
+					'absolute bottom-8 right-8 w-10 text-center font-atelier text-lg md:text-4xl',
+					rumorTypeIconMap[rumorType],
+					className[rumorType],
+				)}
 			/>
 		</>
 	);

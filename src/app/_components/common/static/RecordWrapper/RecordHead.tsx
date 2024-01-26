@@ -3,7 +3,7 @@
 import PulsePlaceHolder from '@components/loading/PulsePlaceHolder';
 import { useModuleId } from '@root/hooks/useModuleId';
 import type { CommonRecord } from '@root/server/database/postgresql/schema';
-import { highlightSearchedText } from '@root/utils/common';
+import { cn, highlightSearchedText } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
@@ -27,7 +27,7 @@ export default function RecordHead({ currentId, id, name, search }: RecordHeadPr
 			/>
 
 			<Link
-				className={`align-middle ${isCurrentRecord ? 'pointer-events-none' : 'link-hover link'}`}
+				className={cn('align-middle', isCurrentRecord ? 'pointer-events-none' : 'link-hover link')}
 				href={moduleId ? `/${moduleId}/${id}` : '/'}
 				aria-label={name}
 				dangerouslySetInnerHTML={{ __html: highlightSearchedText(name, search) }}

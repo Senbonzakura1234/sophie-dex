@@ -6,7 +6,7 @@ import useDispatch from '@root/hooks/useDispatch';
 import type { ImprovedOmit } from '@root/types/common';
 import type { ClassNameProps } from '@root/types/common/props';
 import type { AlertContextState } from '@root/utils/client/context';
-import { tryCatchHandler } from '@root/utils/common';
+import { cn, tryCatchHandler } from '@root/utils/common';
 
 type InputData = ImprovedOmit<Required<ShareData>, 'files'>;
 
@@ -41,7 +41,7 @@ export default function ShareButton({ className, input }: ShareButtonProps) {
 	return (
 		<button
 			aria-label={`Share ${input.title}`}
-			className={`btn btn-square btn-primary btn-xs my-auto ${canShare ? 'border-none' : ''} ${className}`}
+			className={cn('btn btn-square btn-primary btn-xs my-auto', { 'border-none': canShare }, className)}
 			onClick={() =>
 				onShare({
 					input,

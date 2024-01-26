@@ -1,6 +1,7 @@
 import { Listbox } from '@headlessui/react';
 import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
 import type { ClassNameProps } from '@root/types/common/props';
+import { cn } from '@root/utils/common';
 import type { ReactNode } from 'react';
 import ListboxButton from './ListboxButton';
 import ListboxOption from './ListboxOption';
@@ -41,9 +42,10 @@ export default function SelectOption<V extends string | number>({
 						/>
 
 						<div
-							className={`absolute z-10 w-full transition-[opacity,transform] duration-500 ${
-								open ? 'opacity-1 translate-y-1' : 'translate-y-5 opacity-0'
-							}`}
+							className={cn(
+								'absolute z-10 w-full transition-[opacity,transform] duration-500',
+								open ? 'opacity-1 translate-y-1' : 'translate-y-5 opacity-0',
+							)}
 						>
 							<Listbox.Options className='legacy-scroll-area size-full max-h-52 overflow-auto rounded-md bg-base-100 py-1 shadow-lg shadow-base-content/30'>
 								{list.map((item, key) => (

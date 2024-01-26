@@ -1,7 +1,10 @@
 import type { CommonObject, KeyOf, ValueOf } from '@root/types/common';
 import type { SearchQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
+import type { ClassValue } from 'clsx';
+import { clsx } from 'clsx';
 import type { ReadonlyURLSearchParams } from 'next/navigation';
+import { twMerge } from 'tailwind-merge';
 import { env } from './env.mjs';
 
 // =======================================				Native Override				=======================================
@@ -85,6 +88,10 @@ export function evnIs(nodeEnv: typeof env.NEXT_PUBLIC_NODE_ENV) {
 }
 
 // =======================================					Utilities					=======================================
+
+export function cn(...inputs: ClassValue[]) {
+	return twMerge(clsx(inputs));
+}
 
 export function convertCode<TInput extends string>(input?: TInput | null) {
 	return input ? input.toLowerCase().replaceAll('_', ' ') : '';

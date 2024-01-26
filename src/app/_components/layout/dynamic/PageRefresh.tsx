@@ -3,7 +3,7 @@
 import type usePageSegment from '@root/hooks/usePageSegment';
 import useSelector from '@root/hooks/useSelector';
 import { moduleIdList } from '@root/types/model';
-import { arrayInclude } from '@root/utils/common';
+import { arrayInclude, cn } from '@root/utils/common';
 import { useRouter } from 'next/navigation';
 import { useMemo } from 'react';
 import { DEFAULT_REFRESH_THRESHOLD, usePullToRefresh } from 'use-pull-to-refresh';
@@ -34,7 +34,7 @@ export default function PageRefresh({ isDisabled = false, isDetailPage = false, 
 			}}
 			className='fixed inset-x-1/2 top-0 z-[100] aspect-square size-8 -translate-x-1/2 rounded-full bg-slate-50 p-2 text-primary transition-[opacity,transform]'
 		>
-			<span className={`loading w-full  ${isRefreshing ? 'loading-spinner' : 'loading-infinity'}`} />
+			<span className={cn('loading w-full', isRefreshing ? 'loading-spinner' : 'loading-infinity')} />
 		</div>
 	);
 }

@@ -1,7 +1,7 @@
 import type { Fragment, Jsx } from '@mdx-js/mdx';
 import { compile, run } from '@mdx-js/mdx';
 import type { ClassNameProps } from '@root/types/common/props';
-import { tryCatchHandler } from '@root/utils/common';
+import { cn, tryCatchHandler } from '@root/utils/common';
 import { Fragment as ReactFragment } from 'react';
 import * as runtime_ from 'react/jsx-runtime';
 
@@ -27,7 +27,7 @@ export default async function MDXRenderer({ body, className }: MDXRendererProps)
 	const mdxModule = await getMDXModule({ body });
 
 	return (
-		<div className={`prose max-w-none ${className}`}>
+		<div className={cn('prose max-w-none', className)}>
 			<mdxModule.default />
 		</div>
 	);

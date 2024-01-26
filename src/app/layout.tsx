@@ -9,7 +9,7 @@ import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { ChildrenProps } from '@root/types/common/props';
 import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
 import { ContextProvider } from '@root/utils/client/context';
-import { getBaseUrl } from '@root/utils/common';
+import { cn, getBaseUrl } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
 import type { Metadata, Viewport } from 'next';
 import dynamic from 'next/dynamic';
@@ -62,7 +62,7 @@ export default async function RootLayout({ children }: ChildrenProps) {
 
 	return (
 		<html lang='en'>
-			<body className={`${fontAtelier.variable} ${fontComicSansMS.className}`}>
+			<body className={cn(fontAtelier.variable, fontComicSansMS.className)}>
 				<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(cookiesList.get('theme')?.value) }}>
 					<ThemeWrapper>
 						<ScrollWrapper>

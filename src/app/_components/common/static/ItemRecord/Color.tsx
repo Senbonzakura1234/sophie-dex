@@ -4,6 +4,7 @@ import QueryLink from '@components/common/dynamic/QueryLink';
 import { colorTWClassMap } from '@root/constants/common';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { ColorEnum } from '@root/types/common/zod';
+import { cn } from '@root/utils/common';
 
 type ColorProps = { color: ColorEnum };
 
@@ -20,15 +21,17 @@ export default function Color({ color }: ColorProps) {
 
 			<QueryLink
 				aria-label={`Filter ${color} Item`}
-				className={`btn btn-xs !border-current !bg-current shadow-current ${
-					isActive ? '' : 'shadow-md'
-				} ${background}`}
+				className={cn(
+					'btn btn-xs !border-current !bg-current shadow-current',
+					{ 'shadow-md': !isActive },
+					background,
+				)}
 				href={{ query: { color, id: null } }}
 				isActive={isActive}
 				searchQuery={searchQuery}
 				resetPage
 			>
-				<span className={`font-bold capitalize ${foreground}`}>{color.toLowerCase()}</span>
+				<span className={cn('font-bold capitalize', foreground)}>{color.toLowerCase()}</span>
 			</QueryLink>
 		</div>
 	);

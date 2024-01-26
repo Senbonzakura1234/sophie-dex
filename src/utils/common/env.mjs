@@ -16,7 +16,7 @@ const capitalize = input =>
 
 export const env = createEnv({
 	server: {
-		DIRECT_DB_URL: z.string().catch(''),
+		PGURL_NONPOOLING: z.string().catch(''),
 		GITHUB_TOKEN: z.string().catch(''),
 
 		REQUEST_COUNT_LIMIT: z.coerce.number().nonnegative().catch(10),
@@ -44,32 +44,33 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_PATH: z.string().catch('-'),
 	},
 	runtimeEnv: {
-		DIRECT_DB_URL: process.env.PGURL_NONPOOLING,
-		GITHUB_TOKEN: process.env.GITHUB_TOKEN,
-
+		// server
 		REQUEST_COUNT_LIMIT: process.env.REQUEST_COUNT_LIMIT,
 		REQUEST_LIMIT_TIME_SPAN_S: process.env.REQUEST_LIMIT_TIME_SPAN_S,
 
+		GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+		PGURL_NONPOOLING: process.env.PGURL_NONPOOLING,
 		REDIS_URL: process.env.REDIS_URL,
 		UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
 		UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL,
 
-		NEXT_PUBLIC_NODE_ENV: process.env.NODE_ENV,
-		NEXT_PUBLIC_PORT: process.env.PORT || '3000',
-		NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL,
-
+		// client
 		NEXT_PUBLIC_APP_HOST: process.env.NEXT_PUBLIC_APP_HOST,
-
 		NEXT_PUBLIC_APP_AUTHOR: process.env.NEXT_PUBLIC_APP_AUTHOR,
 		NEXT_PUBLIC_APP_AUTHOR_EMAIL: process.env.NEXT_PUBLIC_APP_AUTHOR_EMAIL,
 		NEXT_PUBLIC_APP_CODE: process.env.NEXT_PUBLIC_APP_CODE,
-		NEXT_PUBLIC_APP_DB_PREFIX: process.env.NEXT_PUBLIC_APP_CODE,
 		NEXT_PUBLIC_APP_DESCRIPTION: process.env.NEXT_PUBLIC_APP_DESCRIPTION,
 		NEXT_PUBLIC_APP_KEYWORD: process.env.NEXT_PUBLIC_APP_KEYWORD,
 		NEXT_PUBLIC_APP_LICENSE_CODE: process.env.NEXT_PUBLIC_APP_LICENSE_CODE,
+		NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL,
+
+		NEXT_PUBLIC_APP_DB_PREFIX: process.env.NEXT_PUBLIC_APP_CODE,
 		NEXT_PUBLIC_APP_NAME: process.env.NEXT_PUBLIC_APP_CODE,
 		NEXT_PUBLIC_APP_PATH: `${process.env.NEXT_PUBLIC_APP_AUTHOR || '-'}/${process.env.NEXT_PUBLIC_APP_CODE || '-'}`,
+		NEXT_PUBLIC_NODE_ENV: process.env.NODE_ENV,
+		NEXT_PUBLIC_PORT: process.env.PORT,
 	},
 	skipValidation: !!process.env.SKIP_ENV_VALIDATION,
 	emptyStringAsUndefined: true,
+	isServer: typeof window === 'undefined',
 });

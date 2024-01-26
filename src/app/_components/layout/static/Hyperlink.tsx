@@ -1,6 +1,6 @@
 import type { HighlightText, HyperLinkRecord, HyperLinkSearch } from '@root/server/database/postgresql/schema';
 import type { ClassNameProps } from '@root/types/common/props';
-import { convertCode, objectValues, queryToParamsString } from '@root/utils/common';
+import { cn, convertCode, objectValues, queryToParamsString } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
@@ -31,11 +31,12 @@ const getLinkProps = (input: HyperlinkProps['input']) => {
 export default function Hyperlink({ input, className }: HyperlinkProps) {
 	const { href, label } = getLinkProps(input);
 
-	if (!href) return <span className={`font-bold capitalize text-primary ${className} !cursor-text`}>{label}</span>;
+	if (!href)
+		return <span className={cn('font-bold capitalize text-primary', className, '!cursor-text')}>{label}</span>;
 
 	return (
 		<>
-			<Link aria-label={label} className={`mr-0.5 font-bold capitalize ${className}`} href={href}>
+			<Link aria-label={label} className={cn('mr-0.5 font-bold capitalize', className)} href={href}>
 				{label}
 			</Link>
 

@@ -2,7 +2,7 @@ import QueryLink from '@components/common/dynamic/QueryLink';
 import { sortByMap } from '@root/constants/common';
 import type { useModuleId } from '@root/hooks/useModuleId';
 import type { useSearchQuery } from '@root/hooks/useSearchQuery';
-import { indexOf } from '@root/utils/common';
+import { cn, indexOf } from '@root/utils/common';
 
 import TabWrapper from '@components/common/static/TabWrapper';
 
@@ -34,9 +34,10 @@ export default function SortControl({ moduleId, searchQuery }: SortControlProps)
 						<QueryLink
 							aria-label={`Sort By ${sortField}`}
 							key={sortField}
-							className={`btn btn-ghost no-animation btn-xs z-10 rounded-none border-0 font-bold capitalize
-								${currentSortBy === sortField ? 'text-primary-content' : ''}
-							`}
+							className={cn(
+								'btn btn-ghost no-animation btn-xs z-10 rounded-none border-0 font-bold capitalize',
+								{ 'text-primary-content': currentSortBy === sortField },
+							)}
 							href={{ query: { sortBy: sortField, direction: 'asc' } }}
 							isActive={currentSortBy === sortField}
 							resetPage
@@ -61,9 +62,10 @@ export default function SortControl({ moduleId, searchQuery }: SortControlProps)
 						<QueryLink
 							aria-label={`Sort ${dir}`}
 							key={dir}
-							className={`btn btn-ghost no-animation btn-xs z-10 rounded-none border-0 font-bold capitalize ${
-								dir === currentDirection ? 'text-primary-content' : ''
-							}`}
+							className={cn(
+								'btn btn-ghost no-animation btn-xs z-10 rounded-none border-0 font-bold capitalize',
+								{ 'text-primary-content': dir === currentDirection },
+							)}
 							href={{ query: { direction: dir } }}
 							isActive={dir === currentDirection}
 							resetPage

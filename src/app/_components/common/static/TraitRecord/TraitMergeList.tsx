@@ -1,6 +1,7 @@
 import MergeIcon from '@components/icons/solid/MergeIcon';
 import PulsePlaceHolder from '@components/loading/PulsePlaceHolder';
 import type { HyperLinkRecord } from '@root/server/database/postgresql/schema';
+import { cn } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
@@ -13,8 +14,8 @@ type TraitMergeListProps = { mergeFrom: Array<[HyperLinkRecord, HyperLinkRecord]
 
 export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 	return (
-		<nav className={`relative flex flex-wrap gap-2 ${mergeFrom.length <= 0 ? 'max-xl:hidden' : ''}`}>
-			<div className={`${mergeFrom.length <= 0 ? 'hidden' : ''}`}>Merge from:</div>
+		<nav className={cn('relative flex flex-wrap gap-2', { 'max-xl:hidden': mergeFrom.length <= 0 })}>
+			<div className={cn({ ['hidden']: mergeFrom.length <= 0 })}>Merge from:</div>
 
 			<div className='flex flex-col gap-2'>
 				{mergeFrom.map(([firstTrait, lastTrait], key) => (

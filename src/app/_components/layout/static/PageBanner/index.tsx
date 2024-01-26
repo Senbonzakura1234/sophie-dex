@@ -1,6 +1,6 @@
 import sophieLogo from '@root/app/images/sophie-logo.webp';
 import topBg from '@root/app/images/top.webp';
-import { getBaseUrl } from '@root/utils/common';
+import { cn, getBaseUrl } from '@root/utils/common';
 import Image from 'next/image';
 import { Suspense } from 'react';
 
@@ -13,7 +13,10 @@ type PageTitleProps = { bannerType: 'full' | 'top' | 'bottom' };
 export default function PageBanner({ bannerType }: PageTitleProps) {
 	return (
 		<section
-			className={`relative w-full select-none overflow-hidden ${bannerType === 'full' ? 'h-full' : 'min-h-[18rem]'}`}
+			className={cn(
+				'relative w-full select-none overflow-hidden',
+				bannerType === 'full' ? 'h-full' : 'min-h-[18rem]',
+			)}
 		>
 			<div className='absolute inset-0 z-20 mx-auto flex w-full flex-wrap place-content-center gap-4 px-4 pt-5 xl:gap-5 2xl:gap-6'>
 				<div className='w-full text-center'>

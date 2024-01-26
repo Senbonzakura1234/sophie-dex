@@ -4,6 +4,7 @@ import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
 import type { CategoryEnum } from '@root/types/common/zod';
 import { categoryList } from '@root/types/model';
+import { cn } from '@root/utils/common';
 
 const categoryDefaultSelect = {
 	value: null,
@@ -17,7 +18,7 @@ const categorySelectList: Array<SelectOptionItem<CategoryEnum>> = [
 		icon: (
 			<span
 				aria-hidden
-				className={`aspect-square h-4 font-atelier text-accent xl:h-5 ${categoryIconMap[category]}`}
+				className={cn('aspect-square h-4 font-atelier text-accent xl:h-5', categoryIconMap[category])}
 				key={category}
 			/>
 		),

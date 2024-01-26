@@ -6,6 +6,7 @@ import type {
 	HyperLinkSearch,
 } from '@root/server/database/postgresql/schema';
 import type { ClassNameProps } from '@root/types/common/props';
+import { cn } from '@root/utils/common';
 import { Fragment } from 'react';
 
 type RecipeIdeaProps = {
@@ -14,7 +15,7 @@ type RecipeIdeaProps = {
 
 export default function RecipeIdea({ recipeIdea: { contentText, contentData }, className }: RecipeIdeaProps) {
 	return (
-		<div className={`max-w-[90%] ${className}`}>
+		<div className={cn('max-w-[90%]', className)}>
 			<span>Recipe Idea:&nbsp;&nbsp;</span>
 
 			<span className='text-lg'>

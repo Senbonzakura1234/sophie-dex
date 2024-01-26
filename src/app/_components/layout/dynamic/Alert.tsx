@@ -9,6 +9,7 @@ import useDispatch from '@root/hooks/useDispatch';
 import useSelector from '@root/hooks/useSelector';
 import type { AlertTypeEnum } from '@root/types/common';
 import type { IconProps } from '@root/types/common/props';
+import { cn } from '@root/utils/common';
 import type { FC } from 'react';
 import { useEffect } from 'react';
 
@@ -40,15 +41,17 @@ export default function Alert() {
 
 	return (
 		<div
-			className={`toast toast-start toast-bottom z-50 transition-[transform,opacity] ease-in-out ${
-				isOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
-			}`}
+			className={cn(
+				'toast toast-start toast-bottom z-50 transition-[transform,opacity] ease-in-out',
+				isOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0',
+			)}
 		>
 			<div className='card bg-gradient-to-br from-accent to-primary p-1 shadow-lg shadow-primary'>
 				<div
-					className={`flex gap-2 rounded-[inherit] border-none bg-base-100 px-4 py-3 font-bold shadow-inner shadow-base-content ${
-						colorTWClassMap[alertTypeColorMap[type]].background
-					}`}
+					className={cn(
+						'flex gap-2 rounded-[inherit] border-none bg-base-100 px-4 py-3 font-bold shadow-inner shadow-base-content',
+						colorTWClassMap[alertTypeColorMap[type]].background,
+					)}
 				>
 					<Icon className='aspect-square h-6' />
 

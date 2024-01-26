@@ -6,7 +6,7 @@ import ScaleIcon from '@components/icons/outline/ScaleIcon';
 import InfoIcon from '@components/icons/solid/InfoIcon';
 import { listAboutPaths } from '@root/constants/common';
 import usePageSegment from '@root/hooks/usePageSegment';
-import { indexOf } from '@root/utils/common';
+import { cn, indexOf } from '@root/utils/common';
 import Link from 'next/link';
 
 export default function AboutBreadcrumb() {
@@ -24,9 +24,10 @@ export default function AboutBreadcrumb() {
 					<Link
 						key={path}
 						href={`/${path}`}
-						className={`btn btn-ghost no-animation z-10 h-auto rounded-none border-0 py-3 font-bold capitalize visited:text-accent
-							${segment === path ? '!text-base-content' : ''}
-						`}
+						className={cn(
+							'btn btn-ghost no-animation z-10 h-auto rounded-none border-0 py-3 font-bold capitalize visited:text-accent',
+							{ '!text-base-content': segment === path },
+						)}
 					>
 						{path === 'about' ? <InfoIcon className='aspect-square h-5 text-primary' /> : null}
 						{path === 'profile' ? <ProfileIcon className='aspect-square h-5 text-primary' /> : null}

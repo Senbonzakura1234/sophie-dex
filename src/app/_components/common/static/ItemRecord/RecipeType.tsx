@@ -4,7 +4,7 @@ import QueryLink from '@components/common/dynamic/QueryLink';
 import { colorTWClassMap, recipeTypeColorMap } from '@root/constants/common';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { RecipeTypeEnum } from '@root/types/common/zod';
-import { convertCode } from '@root/utils/common';
+import { cn, convertCode } from '@root/utils/common';
 
 type RecipeTypeProps = { recipeType: RecipeTypeEnum };
 
@@ -21,15 +21,17 @@ export default function RecipeType({ recipeType }: RecipeTypeProps) {
 
 			<QueryLink
 				aria-label={`Filter ${recipeType} Item`}
-				className={`btn btn-xs !border-current !bg-current shadow-current ${
-					isActive ? '' : 'shadow-md'
-				} ${background}`}
+				className={cn(
+					'btn btn-xs !border-current !bg-current shadow-current',
+					{ 'shadow-md': !isActive },
+					background,
+				)}
 				href={{ query: { recipeType } }}
 				isActive={isActive}
 				searchQuery={searchQuery}
 				resetPage
 			>
-				<span className={`font-bold capitalize ${foreground}`}>{convertCode(recipeType)}</span>
+				<span className={cn('font-bold capitalize', foreground)}>{convertCode(recipeType)}</span>
 			</QueryLink>
 		</div>
 	);

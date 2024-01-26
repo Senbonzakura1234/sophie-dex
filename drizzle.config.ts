@@ -7,5 +7,5 @@ export default {
 	driver: 'pg',
 	breakpoints: true,
 	tablesFilter: [`${env.NEXT_PUBLIC_APP_DB_PREFIX}-_*`],
-	dbCredentials: { connectionString: env.DIRECT_DB_URL },
+	dbCredentials: { connectionString: env.PGURL_NONPOOLING },
 } satisfies Config;

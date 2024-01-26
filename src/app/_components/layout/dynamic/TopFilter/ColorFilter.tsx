@@ -4,6 +4,7 @@ import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
 import type { ColorEnum } from '@root/types/common/zod';
 import { colorList } from '@root/types/model';
+import { cn } from '@root/utils/common';
 
 const colorDefaultSelect = {
 	value: null,
@@ -17,7 +18,10 @@ const colorSelectList: Array<SelectOptionItem<ColorEnum>> = [
 		icon: (
 			<span
 				aria-hidden
-				className={`card aspect-square h-4 border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5 ${colorTWClassMap[color].background}`}
+				className={cn(
+					'card aspect-square h-4 border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5',
+					colorTWClassMap[color].background,
+				)}
 				key={color}
 			/>
 		),

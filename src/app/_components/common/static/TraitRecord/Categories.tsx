@@ -4,7 +4,7 @@ import QueryLink from '@components/common/dynamic/QueryLink';
 import { categoryIconMap } from '@root/constants/common';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { CategoryEnum } from '@root/types/common/zod';
-import { convertCode } from '@root/utils/common';
+import { cn, convertCode } from '@root/utils/common';
 import { useCallback } from 'react';
 
 type CategoriesProps = { categories: Array<CategoryEnum> };
@@ -24,14 +24,15 @@ function Categories({ categories }: CategoriesProps) {
 						<QueryLink
 							aria-label={`Filter by ${convertCode(category)}`}
 							href={{ query: { category } }}
-							className={`btn btn-sm shadow-md ${
-								isActive ? 'btn-accent shadow-current dark:shadow-accent' : 'btn-primary shadow-primary'
-							}`}
+							className={cn(
+								'btn btn-sm shadow-md',
+								isActive ? 'btn-accent shadow-current dark:shadow-accent' : 'btn-primary shadow-primary',
+							)}
 							isActive={isActive}
 							searchQuery={searchQuery}
 							resetPage
 						>
-							<div className={`w-5 font-atelier text-lg ${categoryIconMap[category]}`} />
+							<div className={cn('w-5 font-atelier text-lg', categoryIconMap[category])} />
 						</QueryLink>
 					</div>
 				);

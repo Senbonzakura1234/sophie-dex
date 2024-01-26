@@ -2,6 +2,7 @@ import type { DefaultColors, TextShadowUtilities } from '@root/types/common/tail
 import typography from '@tailwindcss/typography';
 import daisyui from 'daisyui';
 import type { Config } from 'tailwindcss';
+import tailwindAnimate from 'tailwindcss-animate';
 import tailwindPlugin from 'tailwindcss/plugin';
 
 const config: Config = {
@@ -43,6 +44,7 @@ const config: Config = {
 		}),
 		daisyui,
 		typography,
+		tailwindAnimate,
 	],
 	daisyui: { themes: ['autumn', 'fantasy', 'forest', 'synthwave'] },
 	darkMode: 'class',

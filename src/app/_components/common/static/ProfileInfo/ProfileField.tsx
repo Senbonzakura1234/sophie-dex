@@ -10,15 +10,8 @@ import Link from 'next/link';
 import type { ComponentProps } from 'react';
 
 export type ProfileFieldProps =
-	| {
-			type: 'company' | 'location';
-			label: string;
-	  }
-	| {
-			type: 'blog' | 'mail' | 'twitter';
-			label: string;
-			href: ComponentProps<typeof Link<RouteType>>['href'];
-	  };
+	| { type: 'company' | 'location'; label: string }
+	| { type: 'blog' | 'mail' | 'twitter'; label: string; href: ComponentProps<typeof Link<RouteType>>['href'] };
 
 const iconMap = {
 	blog: FacebookSquareIcon,

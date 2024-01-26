@@ -4,6 +4,7 @@ import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
 import type { RumorTypeEnum } from '@root/types/common/zod';
 import { rumorTypeList } from '@root/types/model';
+import { cn } from '@root/utils/common';
 
 const rumorTypeDefaultSelect = { value: null, label: 'Rumor type' } as const;
 
@@ -14,7 +15,11 @@ const rumorTypeSelectList: Array<SelectOptionItem<RumorTypeEnum>> = [
 		icon: (
 			<span
 				aria-hidden
-				className={`aspect-square h-4 font-atelier xl:h-5 ${rumorTypeIconMap[rumorType]} ${rumorTypeColorMap[rumorType].background}`}
+				className={cn(
+					'aspect-square h-4 font-atelier xl:h-5',
+					rumorTypeIconMap[rumorType],
+					rumorTypeColorMap[rumorType].background,
+				)}
 				key={rumorType}
 			/>
 		),

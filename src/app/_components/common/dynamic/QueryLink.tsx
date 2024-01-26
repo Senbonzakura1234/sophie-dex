@@ -2,7 +2,7 @@
 
 import { useModuleId } from '@root/hooks/useModuleId';
 import type { useSearchQuery } from '@root/hooks/useSearchQuery';
-import { queryToParamsString } from '@root/utils/common';
+import { cn, queryToParamsString } from '@root/utils/common';
 import Link from 'next/link';
 import type { ParsedUrlQueryInput } from 'querystring';
 
@@ -30,9 +30,11 @@ export default function QueryLink({
 
 	return (
 		<Link
-			className={`${isActive ? '!no-animation !pointer-events-none !cursor-default' : ''} ${
-				disabled ? 'btn-disabled' : ''
-			} ${className}`}
+			className={cn(
+				{ '!no-animation !pointer-events-none !cursor-default': isActive },
+				{ 'btn-disabled': disabled },
+				className,
+			)}
 			href={
 				moduleId
 					? `/${moduleId}${queryToParamsString({

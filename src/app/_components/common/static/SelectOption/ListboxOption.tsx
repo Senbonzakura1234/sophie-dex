@@ -1,7 +1,7 @@
 import CheckIcon from '@components/icons/solid/CheckIcon';
 import { Listbox } from '@headlessui/react';
 import type { SelectOptionItem } from '@root/types/common';
-import { convertCode } from '@root/utils/common';
+import { cn, convertCode } from '@root/utils/common';
 
 type ListboxOptionProps<V extends string | number> = {
 	isHideLabel?: boolean;
@@ -18,9 +18,10 @@ export default function ListboxOption<V extends string | number>({
 }: ListboxOptionProps<V>) {
 	return (
 		<Listbox.Option
-			className={`flex cursor-pointer select-none gap-2 bg-base-100 px-4 py-2 transition-[background] ${
-				isSelected ? 'bg-primary/10 font-bold text-primary' : 'hover:bg-secondary/10'
-			}`}
+			className={cn(
+				'flex cursor-pointer select-none gap-2 bg-base-100 px-4 py-2 transition-[background]',
+				isSelected ? 'bg-primary/10 font-bold text-primary' : 'hover:bg-secondary/10',
+			)}
 			value={optionValue}
 		>
 			<span className='flex items-center gap-2 truncate text-xs xl:text-sm'>
