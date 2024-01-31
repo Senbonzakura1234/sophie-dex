@@ -11,6 +11,7 @@ import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
 import { ContextProvider } from '@root/utils/client/context';
 import { cn, getBaseUrl } from '@root/utils/common';
 import { publicEnv } from '@root/utils/common/env.mjs';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
 import dynamic from 'next/dynamic';
 import { cookies } from 'next/headers';
@@ -211,6 +212,8 @@ export default async function RootLayout({ children }: ChildrenProps) {
 						</ScrollWrapper>
 					</ThemeWrapper>
 				</ContextProvider>
+
+				<SpeedInsights />
 			</body>
 		</html>
 	);
