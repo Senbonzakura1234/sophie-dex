@@ -14,18 +14,7 @@ const capitalize = input =>
 		? input.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase())
 		: '';
 
-export const env = createEnv({
-	server: {
-		PGURL_NONPOOLING: z.string().catch(''),
-		GITHUB_TOKEN: z.string().catch(''),
-
-		REQUEST_COUNT_LIMIT: z.coerce.number().nonnegative().catch(10),
-		REQUEST_LIMIT_TIME_SPAN_S: z.coerce.number().nonnegative().catch(10),
-
-		REDIS_URL: z.string().catch(''),
-		UPSTASH_REDIS_REST_TOKEN: z.string().catch(''),
-		UPSTASH_REDIS_REST_URL: z.string().catch(''),
-	},
+export const publicEnv = createEnv({
 	client: {
 		NEXT_PUBLIC_NODE_ENV: nodeEnumEnvSchema,
 		NEXT_PUBLIC_PORT: z.coerce.number().nonnegative().catch(3000),
@@ -44,17 +33,6 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_PATH: z.string().catch('-'),
 	},
 	runtimeEnv: {
-		// server
-		REQUEST_COUNT_LIMIT: process.env.REQUEST_COUNT_LIMIT,
-		REQUEST_LIMIT_TIME_SPAN_S: process.env.REQUEST_LIMIT_TIME_SPAN_S,
-
-		GITHUB_TOKEN: process.env.GITHUB_TOKEN,
-		PGURL_NONPOOLING: process.env.PGURL_NONPOOLING,
-		REDIS_URL: process.env.REDIS_URL,
-		UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
-		UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL,
-
-		// client
 		NEXT_PUBLIC_APP_HOST: process.env.NEXT_PUBLIC_APP_HOST,
 		NEXT_PUBLIC_APP_AUTHOR: process.env.NEXT_PUBLIC_APP_AUTHOR,
 		NEXT_PUBLIC_APP_AUTHOR_EMAIL: process.env.NEXT_PUBLIC_APP_AUTHOR_EMAIL,

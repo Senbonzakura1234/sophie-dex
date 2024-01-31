@@ -2,9 +2,8 @@ import sophieLogo from '@root/app/images/sophie-logo.webp';
 import topBg from '@root/app/images/top.webp';
 import { cn, getBaseUrl } from '@root/utils/common';
 import Image from 'next/image';
-import { Suspense } from 'react';
 
-import AppInformation from './AppInformation';
+import AuthorLink from './AuthorLink';
 import Breadcrumb from './Breadcrumb';
 import PageTitle from './PageTitle';
 
@@ -31,11 +30,7 @@ export default function PageBanner({ bannerType }: PageTitleProps) {
 						/>
 					) : null}
 
-					{bannerType === 'top' ? (
-						<Suspense fallback={<div className='h-12 xl:h-[3.75rem] 2xl:h-[4.5rem]' />}>
-							<PageTitle />
-						</Suspense>
-					) : null}
+					{bannerType === 'top' ? <PageTitle /> : null}
 				</div>
 
 				<div className='flex w-full'>
@@ -48,7 +43,7 @@ export default function PageBanner({ bannerType }: PageTitleProps) {
 					</nav>
 				</div>
 
-				{bannerType === 'top' ? null : <AppInformation />}
+				{bannerType === 'top' ? null : <AuthorLink />}
 			</div>
 
 			{bannerType === 'top' ? (

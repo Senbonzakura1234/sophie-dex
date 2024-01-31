@@ -21,11 +21,11 @@ export default function ProfileInfo({
 		{ label: company, type: 'company' },
 		{ label: location, type: 'location' },
 		{
-			label: twitter_username,
+			label: `@${twitter_username}`,
 			type: 'twitter',
 			href: { protocol: 'https', hostname: 'twitter', host: 'twitter.com', pathname: twitter_username },
 		},
-		{ label: 'My Blog', type: 'blog', href: { pathname: blog } },
+		{ label: 'Facebook', type: 'blog', href: { pathname: blog } },
 		{ label: email, type: 'mail', href: { pathname: `mailto:${email}` } },
 	];
 

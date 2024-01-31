@@ -6,7 +6,7 @@ import XMarkIcon from '@components/icons/solid/XMarkIcon';
 import type { LicenseInfo } from '@root/types/common/zod';
 
 import MDXRenderer from '@components/common/dynamic/MDXRenderer';
-import { env } from '@root/utils/common/env.mjs';
+import { publicEnv } from '@root/utils/common/env.mjs';
 import LicenseInfoHead from './LicenseInfoHead';
 
 type LicenseInfoProps = LicenseInfo & JSX.IntrinsicAttributes;
@@ -43,7 +43,7 @@ export default function LicenseInfo({ body, conditions, limitations, permissions
 			<MDXRenderer
 				body={body
 					.replace('[year]', new Date().getFullYear().toString())
-					.replace('[fullname]', env.NEXT_PUBLIC_APP_AUTHOR)}
+					.replace('[fullname]', publicEnv.NEXT_PUBLIC_APP_AUTHOR)}
 				className='px-2 pb-5'
 			/>
 		</CommonWrapper>

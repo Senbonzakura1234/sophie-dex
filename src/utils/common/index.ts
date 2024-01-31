@@ -5,7 +5,7 @@ import type { ClassValue } from 'clsx';
 import { clsx } from 'clsx';
 import type { ReadonlyURLSearchParams } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
-import { env } from './env.mjs';
+import { publicEnv } from './env.mjs';
 
 // =======================================				Native Override				=======================================
 
@@ -83,8 +83,8 @@ export function deleteNullableProperty<const Obj extends CommonObject>(
 	return obj;
 }
 
-export function evnIs(nodeEnv: typeof env.NEXT_PUBLIC_NODE_ENV) {
-	return env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
+export function evnIs(nodeEnv: typeof publicEnv.NEXT_PUBLIC_NODE_ENV) {
+	return publicEnv.NEXT_PUBLIC_NODE_ENV === nodeEnv;
 }
 
 // =======================================					Utilities					=======================================
@@ -98,10 +98,10 @@ export function convertCode<TInput extends string>(input?: TInput | null) {
 }
 
 export function getBaseUrl(useMainHost?: boolean) {
-	if (useMainHost) return env.NEXT_PUBLIC_APP_HOST || `http://localhost:${env.NEXT_PUBLIC_PORT ?? 3000}`;
+	if (useMainHost) return publicEnv.NEXT_PUBLIC_APP_HOST || `http://localhost:${publicEnv.NEXT_PUBLIC_PORT ?? 3000}`;
 	if (typeof window !== 'undefined') return ''; // browser should use relative url
-	if (env.NEXT_PUBLIC_VERCEL_URL) return `https://${env.NEXT_PUBLIC_VERCEL_URL}`; // SSR should use vercel url
-	return `http://localhost:${env.NEXT_PUBLIC_PORT ?? 3000}`; // dev SSR should use localhost
+	if (publicEnv.NEXT_PUBLIC_VERCEL_URL) return `https://${publicEnv.NEXT_PUBLIC_VERCEL_URL}`; // SSR should use vercel url
+	return `http://localhost:${publicEnv.NEXT_PUBLIC_PORT ?? 3000}`; // dev SSR should use localhost
 }
 
 export function paramsToQuery(input: ReadonlyURLSearchParams | URLSearchParams) {

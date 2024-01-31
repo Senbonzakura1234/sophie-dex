@@ -7,10 +7,10 @@ import { searchQueryValidator } from '@root/types/common/zod';
 import { objectValues, tryCatchHandler } from '@root/utils/common';
 import type { Metadata, ResolvingMetadata } from 'next';
 
-export async function generateListMetadata(
-	searchParams: PageProps['searchParams'],
+export async function generateGenericMetadata(
 	parentPromise: ResolvingMetadata,
 	extraMeta: Metadata,
+	searchParams?: PageProps['searchParams'],
 ): Promise<Metadata> {
 	const { keywords } = await parentPromise;
 

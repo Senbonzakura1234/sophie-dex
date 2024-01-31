@@ -1,5 +1,5 @@
 import { getBaseUrl, tryCatchHandler } from '@root/utils/common';
-import { env } from '@root/utils/common/env.mjs';
+import { publicEnv } from '@root/utils/common/env.mjs';
 import type { ServerRuntime } from 'next';
 import { ImageResponse } from 'next/og';
 import type { ImageResponseOptions } from 'next/server';
@@ -29,11 +29,11 @@ export async function GET() {
 					<div tw='items-center justify-center flex-col flex bg-slate-50 h-full w-full shadow-inner'>
 						<img
 							src={`${getBaseUrl()}/assets/images/sophie-logo.compressed.png`}
-							alt={env.NEXT_PUBLIC_APP_NAME}
+							alt={publicEnv.NEXT_PUBLIC_APP_NAME}
 							width={736}
 							height={303}
 						/>
-						<h1 tw='m-0 text-2xl font-bold text-[#9d750d]'>{env.NEXT_PUBLIC_APP_DESCRIPTION}</h1>
+						<h1 tw='m-0 text-2xl font-bold text-[#9d750d]'>{publicEnv.NEXT_PUBLIC_APP_DESCRIPTION}</h1>
 						<p tw='text-lg text-[#412711]'>{getBaseUrl(true)}</p>
 					</div>
 				</div>

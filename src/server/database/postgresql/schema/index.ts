@@ -1,7 +1,7 @@
 import type { ImprovedOmit, ValueOf } from '@root/types/common';
 import type { ModuleIdEnum, RelatedCategoryEnum, SearchQuery } from '@root/types/common/zod';
 import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
-import { env } from '@root/utils/common/env.mjs';
+import { publicEnv } from '@root/utils/common/env.mjs';
 import type { InferSelectModel } from 'drizzle-orm';
 import { jsonb, pgTableCreator, smallint, uuid, varchar } from 'drizzle-orm/pg-core';
 
@@ -24,7 +24,7 @@ export type HyperLinkMap = {
 	contentText: Array<string>;
 };
 
-export const pgTable = pgTableCreator(name => `${env.NEXT_PUBLIC_APP_DB_PREFIX}_${name}`);
+export const pgTable = pgTableCreator(name => `${publicEnv.NEXT_PUBLIC_APP_DB_PREFIX}_${name}`);
 
 export const effects = pgTable('effects', {
 	id: uuid('id').primaryKey(),
