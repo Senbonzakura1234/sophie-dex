@@ -27,7 +27,7 @@ function SearchInput() {
 				}}
 				type='text'
 				placeholder='Name or description...'
-				className='input input-sm my-auto grow p-0 !outline-none'
+				className='input input-sm my-auto grow border-none p-0 !outline-none'
 			/>
 
 			{!!searchValue ? (

@@ -1,7 +1,9 @@
 import 'server-only';
 
 import type { CommonRecord } from '@root/server/database/postgresql/schema';
-import { APIError, type PageProps, type PreparedPGQuery } from '@root/types/common';
+import type { APIResult, PageProps, PreparedPGQuery } from '@root/types/common';
+import { APIError } from '@root/types/common';
+
 import type { IdQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
 import { objectValues, tryCatchHandler } from '@root/utils/common';
@@ -47,7 +49,7 @@ export const getRecord = async <TRecord extends CommonRecord>(
 			result: null,
 			isSuccess: false as const,
 			error: new APIError({ code: 'BAD_REQUEST', message: 'Invalid Record Id' }),
-		};
+		} satisfies APIResult;
 
 	const { data, isSuccess } = await tryCatchHandler(query.execute({ id }));
 
@@ -56,23 +58,23 @@ export const getRecord = async <TRecord extends CommonRecord>(
 			result: null,
 			isSuccess: false as const,
 			error: new APIError({ code: isSuccess ? 'NOT_FOUND' : 'INTERNAL_SERVER_ERROR' }),
-		};
+		} satisfies APIResult;
 
-	return { result: { data, currentId: id }, isSuccess: true as const, error: null };
+	return { result: { data, currentId: id }, isSuccess: true as const, error: null } satisfies APIResult;
 };
 
 export const getAllRecordIds = async (query: PreparedPGQuery<Array<{ id: string }>>) => {
 	const { data, isSuccess } = await tryCatchHandler(query.execute());
 
-	if (isSuccess) return { isSuccess, result: data, error: null };
+	if (isSuccess) return { isSuccess, result: data, error: null } satisfies APIResult;
 
-	return { isSuccess, result: null, error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }) };
+	return { isSuccess, result: null, error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }) } satisfies APIResult;
 };
 
 export const exportRecords = async <TRecord extends CommonRecord>(query: PreparedPGQuery<Array<TRecord>>) => {
 	const { data, isSuccess } = await tryCatchHandler(query.execute());
 
-	if (isSuccess) return { isSuccess, result: data, error: null };
+	if (isSuccess) return { isSuccess, result: data, error: null } satisfies APIResult;
 
-	return { isSuccess, result: null, error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }) };
+	return { isSuccess, result: null, error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }) } satisfies APIResult;
 };

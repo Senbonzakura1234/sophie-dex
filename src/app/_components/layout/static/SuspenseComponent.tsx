@@ -1,12 +1,10 @@
-import type { APIError } from '@root/types/common';
+import type { APIResult } from '@root/types/common';
 import type { FC } from 'react';
 import ErrorContent from './ErrorContent';
 
 type Props<TChildProps extends JSX.IntrinsicAttributes> = {
 	ChildComponent: FC<TChildProps>;
-	promiseData: Promise<
-		{ isSuccess: false; result: null; error: APIError } | { isSuccess: true; result: TChildProps; error: null }
-	>;
+	promiseData: Promise<APIResult<TChildProps>>;
 	showErrorContent?: boolean;
 };
 

@@ -1,6 +1,8 @@
 import 'server-only';
 
+import type { APIResult } from '@root/types/common';
 import { APIError } from '@root/types/common';
+import type { GithubUserInfo, LicenseInfo, PackageDotJSON } from '@root/types/common/zod';
 import {
 	githubFileResponseSchema,
 	githubUserInfoSchema,
@@ -53,14 +55,14 @@ const defaultResult = {
 	isSuccess: false as const,
 	result: null,
 	error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }),
-};
+} satisfies APIResult;
 
 const getDefaultFetchHeader = (revalidate = 86400): Parameters<typeof fetch>[1] => ({
 	headers: { Authorization: `Bearer ${serverEnv.GITHUB_TOKEN}`, 'X-GitHub-Api-Version': '2022-11-28' },
 	next: { revalidate },
 });
 
-export const getVersion = async () => {
+export const getVersion = async (): Promise<APIResult<PackageDotJSON>> => {
 	const githubResult = await tryCatchHandler(
 		improvedFetch(
 			githubFileResponseSchema,
@@ -86,7 +88,7 @@ export const getVersion = async () => {
 	return { result: packageDotJSONResult.data, isSuccess: true as const, error: null };
 };
 
-export const getGithubUserInfo = async () => {
+export const getGithubUserInfo = async (): Promise<APIResult<GithubUserInfo>> => {
 	const githubUserInfo = await tryCatchHandler(
 		improvedFetch(
 			githubUserInfoSchema,
@@ -100,7 +102,7 @@ export const getGithubUserInfo = async () => {
 		: defaultResult;
 };
 
-export const getLicense = async () => {
+export const getLicense = async (): Promise<APIResult<LicenseInfo>> => {
 	const licenseResult = await tryCatchHandler(
 		improvedFetch(
 			licenseInfoSchema,
