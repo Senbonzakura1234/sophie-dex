@@ -92,7 +92,7 @@ export const errorMap = {
 	NOT_IMPLEMENTED: { message: 'Some Thing Wrong Server', status: 501 },
 } as const satisfies Record<APIError['code'], { message: string; status: number }>;
 
-export const listAboutPaths = ['about', 'profile', 'license'] as const;
+export const listAboutPaths = ['about', 'license'] as const;
 
 export const defaultTRPCQueryOptions: DefaultOptions = {
 	queries: {

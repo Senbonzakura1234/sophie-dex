@@ -1,9 +1,9 @@
-import type { ImprovedOmit, ValueOf } from '@root/types/common';
-import type { ModuleIdEnum, RelatedCategoryEnum, SearchQuery } from '@root/types/common/zod';
+import type { ImprovedOmit } from '@root/types/common';
+import type { GithubUserInfo, ModuleIdEnum, RelatedCategoryEnum, SearchQuery } from '@root/types/common/zod';
 import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
-import { publicEnv } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env.mjs';
 import type { InferSelectModel } from 'drizzle-orm';
-import { jsonb, pgTableCreator, smallint, uuid, varchar } from 'drizzle-orm/pg-core';
+import { jsonb, pgTableCreator, smallint, timestamp, uuid, varchar } from 'drizzle-orm/pg-core';
 
 export type HighlightText = { content: string };
 export type HyperLinkRecord = { id: string; name: string; table: ModuleIdEnum };
@@ -24,7 +24,7 @@ export type HyperLinkMap = {
 	contentText: Array<string>;
 };
 
-export const pgTable = pgTableCreator(name => `${publicEnv.NEXT_PUBLIC_APP_DB_PREFIX}_${name}`);
+export const pgTable = pgTableCreator(name => `${env.NEXT_PUBLIC_APP_DB_PREFIX}_${name}`);
 
 export const effects = pgTable('effects', {
 	id: uuid('id').primaryKey(),
@@ -74,12 +74,20 @@ export const traits = pgTable('traits', {
 	mergeFrom: jsonb('merge_from').$type<Array<[HyperLinkRecord, HyperLinkRecord]>>().notNull(),
 });
 
+export const users = pgTable('users', {
+	id: uuid('id').primaryKey(),
+	username: varchar('username', { length: 256 }).notNull().unique(),
+	email: varchar('email', { length: 256 }).notNull(),
+	githubProfile: jsonb('github_profile').$type<GithubUserInfo>().notNull(),
+
+	createdAt: timestamp('created_at', { precision: 6, withTimezone: true, mode: 'string' }).defaultNow(),
+	updatedAt: timestamp('updated_at', { precision: 6, withTimezone: true, mode: 'string' }),
+});
+
 export type Effect = InferSelectModel<typeof effects>;
 export type Item = InferSelectModel<typeof items>;
 export type Rumor = InferSelectModel<typeof rumors>;
 export type Trait = InferSelectModel<typeof traits>;
+export type User = InferSelectModel<typeof users>;
 
 export type CommonRecord = ImprovedOmit<Effect | Item | Rumor | Trait, 'description'>;
-
-export type ExampleRecordObject = Readonly<{ effect: Effect; item: Item; rumor: Rumor; trait: Trait }>;
-export type ExampleRecord = ValueOf<ExampleRecordObject>;

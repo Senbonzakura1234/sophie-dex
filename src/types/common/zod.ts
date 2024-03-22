@@ -67,6 +67,14 @@ export const searchQueryValidator = z.object({
 });
 export type SearchQuery = z.infer<typeof searchQueryValidator>;
 
+export const signInQueryValidator = z
+	.object({
+		callbackUrl: genericStringSchema.url().optional().catch('/').default('/'),
+	})
+	.catch({ callbackUrl: '/' })
+	.default({ callbackUrl: '/' });
+export type SignInQuery = z.infer<typeof signInQueryValidator>;
+
 export const idQueryValidator = z.object({ id: genericIdSchema.nullable().catch(null) });
 export type IdQuery = z.infer<typeof idQueryValidator>;
 
@@ -81,14 +89,15 @@ export type PackageDotJSON = z.infer<typeof packageDotJSONSchema>;
 
 export const githubUserInfoSchema = z.object({
 	login: z.string(),
-	avatar_url: z.string().url(),
-	html_url: z.string().url(),
-	company: z.string(),
-	blog: z.string().url(),
-	location: z.string(),
+	id: z.number(),
+	avatar_url: z.string().url().optional().catch(''),
+	html_url: z.string().url().optional().catch(''),
+	company: z.string().optional().catch(''),
+	blog: z.string().url().optional().catch(''),
+	location: z.string().optional().catch(''),
 	email: z.string().email(),
-	bio: z.string(),
-	twitter_username: z.string(),
+	bio: z.string().optional().catch(''),
+	twitter_username: z.string().optional().catch(''),
 });
 export type GithubUserInfo = z.infer<typeof githubUserInfoSchema>;
 

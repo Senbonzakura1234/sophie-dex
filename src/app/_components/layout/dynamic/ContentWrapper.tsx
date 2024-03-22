@@ -4,7 +4,7 @@ import useSelector from '@root/hooks/useSelector';
 import type { ChildrenProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
 
-type ContentWrapperProps = ChildrenProps & { type: 'detail' | 'list' | 'about' };
+type ContentWrapperProps = ChildrenProps & { type: 'detail' | 'list' | 'about' | 'profile' };
 
 export default function ContentWrapper({ children, type }: ContentWrapperProps) {
 	const {
@@ -19,6 +19,7 @@ export default function ContentWrapper({ children, type }: ContentWrapperProps) 
 				{ 'lg:grid-cols-2': type === 'list' && status !== 'error' },
 				{ ' my-auto': type === 'list' },
 				{ 'm-auto max-w-6xl': type === 'about' },
+				{ 'm-auto max-w-6xl': type === 'profile' },
 			)}
 		>
 			{children}

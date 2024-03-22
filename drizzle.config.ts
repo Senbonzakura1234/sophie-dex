@@ -1,5 +1,4 @@
-import { publicEnv } from '@root/utils/common/env.mjs';
-import { serverEnv } from '@root/utils/server/env.mjs';
+import { env } from '@root/utils/common/env.mjs';
 import type { Config } from 'drizzle-kit';
 
 export default {
@@ -7,6 +6,6 @@ export default {
 	out: './src/server/database/postgresql/migration',
 	driver: 'pg',
 	breakpoints: true,
-	tablesFilter: [`${publicEnv.NEXT_PUBLIC_APP_DB_PREFIX}-_*`],
-	dbCredentials: { connectionString: serverEnv.PGURL_NONPOOLING },
+	tablesFilter: [`${env.NEXT_PUBLIC_APP_DB_PREFIX}-_*`],
+	dbCredentials: { connectionString: env.PGURL_NONPOOLING },
 } satisfies Config;

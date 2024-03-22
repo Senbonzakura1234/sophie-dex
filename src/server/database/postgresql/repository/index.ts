@@ -2,13 +2,15 @@ import 'server-only';
 
 import { DEFAULT_LIMIT, sortByMap } from '@root/constants/common';
 import { postgresql } from '@root/server/database/postgresql';
-import type { CommonRecord } from '@root/server/database/postgresql/schema';
+import type { CommonRecord, User } from '@root/server/database/postgresql/schema';
+import { users } from '@root/server/database/postgresql/schema';
 import { APIError } from '@root/types/common';
 import type { SearchQuery, SortByEnum } from '@root/types/common/zod';
 import { arrayInclude, tryCatchHandler } from '@root/utils/common';
 import type { SQL, sql } from 'drizzle-orm';
-import { arrayOverlaps } from 'drizzle-orm';
+import { arrayOverlaps, eq } from 'drizzle-orm';
 import type { PgRelationalQuery } from 'drizzle-orm/pg-core/query-builders/query';
+import { v4 as uuidV4 } from 'uuid';
 
 const countQueryFunc = (_: unknown, { sql: sqlFunc }: { sql: typeof sql }) => ({
 	totalRecord: sqlFunc<number>`count(*) over()`.as('total_record'),
@@ -143,4 +145,32 @@ export const getTraits = async (input: SearchQuery) => {
 	});
 
 	return getListRecord(query, search);
+};
+
+export const checkUserExist = (username: string) =>
+	postgresql.query.users
+		.findFirst({
+			where: eq(users.username, username),
+		})
+		.then(value => Boolean(value))
+		.catch(() => false);
+
+export const insertOrUpdateUser = async (
+	userData: Pick<User, 'email' | 'username' | 'githubProfile'>,
+	isUpdate: boolean,
+) => {
+	if (isUpdate || (await checkUserExist(userData.username))) {
+		return await postgresql
+			.update(users)
+			.set(userData)
+			.where(eq(users.username, userData.username))
+			.returning()
+			.then(res => res[0]);
+	}
+
+	return await postgresql
+		.insert(users)
+		.values({ id: uuidV4(), ...userData })
+		.returning()
+		.then(res => res[0]);
 };

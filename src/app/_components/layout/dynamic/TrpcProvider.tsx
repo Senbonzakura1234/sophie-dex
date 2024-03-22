@@ -9,9 +9,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { httpBatchLink, loggerLink } from '@trpc/client';
 import { useState } from 'react';
 
-type TrpcProviderProps = ChildrenProps;
-
-export default function TrpcProvider({ children }: TrpcProviderProps) {
+export default function TrpcProvider({ children }: ChildrenProps) {
 	const [queryClient] = useState(() => new QueryClient({ defaultOptions: defaultTRPCQueryOptions }));
 
 	const [trpcClient] = useState(() =>

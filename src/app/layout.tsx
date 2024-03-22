@@ -2,6 +2,8 @@ import './styles/index.css';
 
 import '@total-typescript/ts-reset';
 
+import AuthNav from '@components/layout/dynamic/AuthNav';
+import AuthProvider from '@components/layout/dynamic/AuthProvider';
 import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
 import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
@@ -10,9 +12,10 @@ import type { ChildrenProps } from '@root/types/common/props';
 import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
 import { ContextProvider } from '@root/utils/client/context';
 import { cn, getBaseUrl } from '@root/utils/common';
-import { publicEnv } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env.mjs';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
+import { getServerSession } from 'next-auth';
 import dynamic from 'next/dynamic';
 import { cookies } from 'next/headers';
 
@@ -169,30 +172,30 @@ export const metadata: Metadata = {
 			url: `/assets/splash_screens/${url}.png`,
 		})),
 	},
-	authors: { name: publicEnv.NEXT_PUBLIC_APP_AUTHOR, url: `https://github.com/${publicEnv.NEXT_PUBLIC_APP_AUTHOR}` },
-	description: publicEnv.NEXT_PUBLIC_APP_DESCRIPTION,
+	authors: { name: env.NEXT_PUBLIC_APP_AUTHOR, url: `https://github.com/${env.NEXT_PUBLIC_APP_AUTHOR}` },
+	description: env.NEXT_PUBLIC_APP_DESCRIPTION,
 	icons: {
 		apple: '/assets/splash_screens/icon.png',
 		icon: '/favicon.ico',
 		shortcut: '/assets/splash_screens/icon.png',
 	},
-	keywords: publicEnv.NEXT_PUBLIC_APP_KEYWORD.split(','),
+	keywords: env.NEXT_PUBLIC_APP_KEYWORD.split(','),
 	manifest: '/manifest.json',
 	metadataBase: new URL(getBaseUrl(true)),
 	other: {
 		google: 'notranslate',
-		'og:description': publicEnv.NEXT_PUBLIC_APP_DESCRIPTION,
+		'og:description': env.NEXT_PUBLIC_APP_DESCRIPTION,
 		'og:image': `${getBaseUrl()}/api/og`,
-		'og:title': `${publicEnv.NEXT_PUBLIC_APP_NAME} | ${publicEnv.NEXT_PUBLIC_APP_DESCRIPTION}`,
+		'og:title': `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
 		'og:url': getBaseUrl(true),
 	},
 	robots: 'all',
-	title: `${publicEnv.NEXT_PUBLIC_APP_NAME} | ${publicEnv.NEXT_PUBLIC_APP_DESCRIPTION}`,
+	title: `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
 	twitter: {
 		card: 'summary_large_image',
-		description: publicEnv.NEXT_PUBLIC_APP_DESCRIPTION,
+		description: env.NEXT_PUBLIC_APP_DESCRIPTION,
 		images: `${getBaseUrl()}/api/og`,
-		title: `${publicEnv.NEXT_PUBLIC_APP_NAME} | ${publicEnv.NEXT_PUBLIC_APP_DESCRIPTION}`,
+		title: `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
 	},
 };
 
@@ -200,18 +203,24 @@ export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-widt
 
 export default async function RootLayout({ children }: ChildrenProps) {
 	const cookiesList = cookies();
+	const session = await getServerSession();
 
 	return (
 		<html lang='en'>
 			<body className={cn(fontAtelier.variable, fontComicSansMS.className)}>
-				<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(cookiesList.get('theme')?.value) }}>
-					<ThemeWrapper>
-						<ScrollWrapper>
-							<ThemeSwitcher />
-							{children}
-						</ScrollWrapper>
-					</ThemeWrapper>
-				</ContextProvider>
+				<AuthProvider session={session}>
+					<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(cookiesList.get('theme')?.value) }}>
+						<ThemeWrapper>
+							<ScrollWrapper>
+								<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
+									<ThemeSwitcher />
+									<AuthNav />
+								</nav>
+								{children}
+							</ScrollWrapper>
+						</ThemeWrapper>
+					</ContextProvider>
+				</AuthProvider>
 
 				<SpeedInsights />
 			</body>

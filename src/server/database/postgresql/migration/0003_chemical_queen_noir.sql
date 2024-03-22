@@ -1,0 +1,1 @@
+ALTER TABLE "sophie_dex_users" ALTER COLUMN "github_profile" SET NOT NULL;

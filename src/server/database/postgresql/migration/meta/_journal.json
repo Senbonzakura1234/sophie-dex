@@ -8,6 +8,27 @@
       "when": 1697954073104,
       "tag": "0000_bent_kabuki",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1708321217339,
+      "tag": "0001_massive_mystique",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1708323037880,
+      "tag": "0002_slippery_wither",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1708325533276,
+      "tag": "0003_chemical_queen_noir",
+      "breakpoints": true
     }
   ]
 }

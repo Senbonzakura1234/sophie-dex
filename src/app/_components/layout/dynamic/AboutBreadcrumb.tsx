@@ -1,7 +1,6 @@
 'use client';
 
 import TabWrapper from '@components/common/static/TabWrapper';
-import ProfileIcon from '@components/icons/outline/ProfileIcon';
 import ScaleIcon from '@components/icons/outline/ScaleIcon';
 import InfoIcon from '@components/icons/solid/InfoIcon';
 import { listAboutPaths } from '@root/constants/common';
@@ -30,7 +29,6 @@ export default function AboutBreadcrumb() {
 						)}
 					>
 						{path === 'about' ? <InfoIcon className='aspect-square h-5 text-primary' /> : null}
-						{path === 'profile' ? <ProfileIcon className='aspect-square h-5 text-primary' /> : null}
 						{path === 'license' ? <ScaleIcon className='aspect-square h-5 text-primary' /> : null}
 						<span className='w-14 capitalize'>{path}</span>
 					</Link>

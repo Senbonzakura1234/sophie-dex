@@ -11,10 +11,10 @@ export default function ProfileInfo({
 	avatar_url,
 	login,
 	bio,
-	company,
+	company = '',
 	blog,
 	email,
-	location,
+	location = '',
 	twitter_username,
 }: ProfileInfoProps) {
 	const fields: Array<ProfileFieldProps> = [
@@ -35,6 +35,7 @@ export default function ProfileInfo({
 				<div className='flex grow flex-wrap gap-4 self-baseline max-sm:text-center'>
 					<div className='max-sm:w-full'>
 						<Avatar
+							username={login}
 							url={avatar_url}
 							size={200}
 							className='w-16 bg-gradient-to-br from-accent to-primary p-1 shadow-lg shadow-primary max-sm:w-28'

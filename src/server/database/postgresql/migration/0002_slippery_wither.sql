@@ -1,0 +1,1 @@
+ALTER TABLE "sophie_dex_users" DROP CONSTRAINT "sophie_dex_users_email_unique";

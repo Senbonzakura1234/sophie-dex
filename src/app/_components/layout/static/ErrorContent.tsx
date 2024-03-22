@@ -1,4 +1,5 @@
 import RefetchButton from '@components/common/dynamic/RefetchButton';
+import SignInRedirect from '@components/common/dynamic/SignInRedirect';
 import { errorMap } from '@root/constants/common';
 import type { APIError } from '@root/types/common';
 import { cn } from '@root/utils/common';
@@ -8,6 +9,8 @@ export type ErrorContentProps = Partial<Pick<APIError, 'code'>>;
 
 export default function ErrorContent({ code = 'INTERNAL_SERVER_ERROR' }: ErrorContentProps) {
 	const { message, status } = errorMap[code];
+
+	if (code === 'UNAUTHORIZED') return <SignInRedirect />;
 
 	return (
 		<div

@@ -10,9 +10,8 @@ import {
 	packageDotJSONSchema,
 } from '@root/types/common/zod';
 import { tryCatchHandler, tryCatchHandlerSync, writeLog } from '@root/utils/common';
-import { publicEnv } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env.mjs';
 import type { ZodType } from 'zod';
-import { serverEnv } from './env.mjs';
 
 async function improvedFetch<TResult = unknown>(validator: ZodType<TResult>, ...args: Parameters<typeof fetch>) {
 	writeLog({ args: [`Fetch: ${JSON.stringify(args[0], null, 2)}`] });
@@ -58,7 +57,7 @@ const defaultResult = {
 } satisfies APIResult;
 
 const getDefaultFetchHeader = (revalidate = 86400): Parameters<typeof fetch>[1] => ({
-	headers: { Authorization: `Bearer ${serverEnv.GITHUB_TOKEN}`, 'X-GitHub-Api-Version': '2022-11-28' },
+	headers: { Authorization: `Bearer ${env.GITHUB_TOKEN}`, 'X-GitHub-Api-Version': '2022-11-28' },
 	next: { revalidate },
 });
 
@@ -66,7 +65,7 @@ export const getVersion = async (): Promise<APIResult<PackageDotJSON>> => {
 	const githubResult = await tryCatchHandler(
 		improvedFetch(
 			githubFileResponseSchema,
-			`https://api.github.com/repos/${publicEnv.NEXT_PUBLIC_APP_PATH}/contents/package.json`,
+			`https://api.github.com/repos/${env.NEXT_PUBLIC_APP_PATH}/contents/package.json`,
 			getDefaultFetchHeader(),
 		),
 	);
@@ -92,13 +91,13 @@ export const getGithubUserInfo = async (): Promise<APIResult<GithubUserInfo>> =>
 	const githubUserInfo = await tryCatchHandler(
 		improvedFetch(
 			githubUserInfoSchema,
-			`https://api.github.com/users/${publicEnv.NEXT_PUBLIC_APP_AUTHOR}`,
+			`https://api.github.com/users/${env.NEXT_PUBLIC_APP_AUTHOR}`,
 			getDefaultFetchHeader(),
 		),
 	);
 
 	return githubUserInfo.isSuccess
-		? { result: githubUserInfo.data, isSuccess: true as const, error: null }
+		? { result: githubUserInfo.data as GithubUserInfo, isSuccess: true as const, error: null }
 		: defaultResult;
 };
 
@@ -106,7 +105,7 @@ export const getLicense = async (): Promise<APIResult<LicenseInfo>> => {
 	const licenseResult = await tryCatchHandler(
 		improvedFetch(
 			licenseInfoSchema,
-			`https://api.github.com/licenses/${publicEnv.NEXT_PUBLIC_APP_LICENSE_CODE}`,
+			`https://api.github.com/licenses/${env.NEXT_PUBLIC_APP_LICENSE_CODE}`,
 			getDefaultFetchHeader(),
 		),
 	);
