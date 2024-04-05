@@ -87,6 +87,7 @@ export const relatedCategoryList = [
 export const daisyUIThemeList = ['autumn', 'fantasy', 'forest', 'synthwave'] as const;
 
 export const directionList = ['asc', 'desc'] as const;
+export const providerIdList = ['atlassian', 'facebook', 'github', 'google', 'instagram'] as const;
 
 export type DBListResult<TRecord extends CommonRecord> = Array<TRecord & { totalRecord: number }>;
 

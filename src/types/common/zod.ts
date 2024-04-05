@@ -5,6 +5,7 @@ import {
 	directionList,
 	errorList,
 	moduleIdList,
+	providerIdList,
 	recipeTypeList,
 	relatedCategoryList,
 	rumorTypeList,
@@ -70,13 +71,17 @@ export type SearchQuery = z.infer<typeof searchQueryValidator>;
 export const signInQueryValidator = z
 	.object({
 		callbackUrl: genericStringSchema.url().optional().catch('/').default('/'),
+		error: genericStringSchema.optional().catch(undefined).transform(Boolean),
 	})
-	.catch({ callbackUrl: '/' })
-	.default({ callbackUrl: '/' });
+	.catch({ callbackUrl: '/', error: false })
+	.default({ callbackUrl: '/', error: false });
 export type SignInQuery = z.infer<typeof signInQueryValidator>;
 
 export const idQueryValidator = z.object({ id: genericIdSchema.nullable().catch(null) });
 export type IdQuery = z.infer<typeof idQueryValidator>;
+
+export const providerIdEnumValidator = z.enum(providerIdList);
+export type ProviderIdEnum = z.infer<typeof providerIdEnumValidator>;
 
 export const highlightTextValidator = z.object({ content: z.string() });
 export type HighlightText = z.infer<typeof highlightTextValidator>;

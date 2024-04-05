@@ -208,8 +208,8 @@ export default async function RootLayout({ children }: ChildrenProps) {
 	return (
 		<html lang='en'>
 			<body className={cn(fontAtelier.variable, fontComicSansMS.className)}>
-				<AuthProvider session={session}>
-					<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(cookiesList.get('theme')?.value) }}>
+				<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(cookiesList.get('theme')?.value) }}>
+					<AuthProvider session={session}>
 						<ThemeWrapper>
 							<ScrollWrapper>
 								<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
@@ -219,8 +219,8 @@ export default async function RootLayout({ children }: ChildrenProps) {
 								{children}
 							</ScrollWrapper>
 						</ThemeWrapper>
-					</ContextProvider>
-				</AuthProvider>
+					</AuthProvider>
+				</ContextProvider>
 
 				<SpeedInsights />
 			</body>

@@ -59,7 +59,9 @@
 	"npm.packageManager": "pnpm",
 	"tailwindCSS.classAttributes": [
 		"class",
+		"classes",
 		"className",
+		"classNames",
 		"ngClass",
 		"colorTWClassMap",
 		"enter",
@@ -71,8 +73,11 @@
 		"tw"
 	],
 	"tailwindCSS.experimental.classRegex": [
-		["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-		["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+		"cva\\(([^)]*)\\)",
+		"[\"'`]([^\"'`]*).*?[\"'`]",
+		"cx\\(([^)]*)\\)",
+		"(?:'|\"|`)([^']*)(?:'|\"|`)",
+		":\\s*?[\"'`]([^\"'`]*).*?,"
 	],
 	"typescript.inlayHints.enumMemberValues.enabled": true,
 	"typescript.inlayHints.parameterNames.enabled": "all",

@@ -6,7 +6,7 @@ import { getProviders } from 'next-auth/react';
 import { redirect } from 'next/navigation';
 
 export default async function SignIn({ searchParams }: PageProps) {
-	const { callbackUrl } = signInQueryValidator.parse(searchParams);
+	const signInQuery = signInQueryValidator.parse(searchParams);
 	const session = await getServerSession();
 
 	if (session) redirect('/');
@@ -15,5 +15,5 @@ export default async function SignIn({ searchParams }: PageProps) {
 
 	const providerList = Object.values(providers || {});
 
-	return <SignInProviders callbackUrl={callbackUrl} providerList={providerList} />;
+	return <SignInProviders {...signInQuery} providerList={providerList} />;
 }

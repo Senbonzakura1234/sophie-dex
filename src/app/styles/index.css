@@ -11,4 +11,8 @@
 	body {
 		@apply overflow-hidden;
 	}
+
+	img {
+		user-select: none;
+	}
 }

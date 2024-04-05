@@ -30,7 +30,7 @@ export default function ProfileInfo({
 	];
 
 	return (
-		<CommonWrapper className='m-auto w-full max-w-lg'>
+		<CommonWrapper classNames={{ wrapper: 'm-auto w-full max-w-lg' }}>
 			<div className='flex flex-wrap gap-4'>
 				<div className='flex grow flex-wrap gap-4 self-baseline max-sm:text-center'>
 					<div className='max-sm:w-full'>

@@ -14,7 +14,7 @@ export async function generateMetadata({ searchParams }: PageProps, parent: Reso
 
 export default function About() {
 	return (
-		<CommonWrapper className='about h-auto'>
+		<CommonWrapper classNames={{ wrapper: 'about h-auto' }}>
 			<AppVersion className='ml-auto sm:absolute sm:right-8' />
 			<Readme />
 		</CommonWrapper>

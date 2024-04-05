@@ -3,6 +3,7 @@ import topBg from '@root/app/images/top.webp';
 import { cn, getBaseUrl } from '@root/utils/common';
 import Image from 'next/image';
 
+import { env } from '@root/utils/common/env.mjs';
 import AuthorLink from './AuthorLink';
 import Breadcrumb from './Breadcrumb';
 import PageTitle from './PageTitle';
@@ -21,7 +22,7 @@ export default function PageBanner({ bannerType }: PageTitleProps) {
 				<div className='w-full text-center'>
 					{bannerType === 'full' ? (
 						<Image
-							alt='home'
+							alt={env.NEXT_PUBLIC_APP_CODE}
 							className='mx-auto w-[600px] max-sm:max-w-[80vw]'
 							data-url={`${getBaseUrl(true)}/assets/images/sophie-logo.png`}
 							priority

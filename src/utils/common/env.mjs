@@ -7,6 +7,7 @@ const appCodeSchema = z
 	.catch('-');
 const appKeyWordSchema = z.string().regex(/[^,]+/).catch('-');
 const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']).catch('production');
+const providerIdEnumValidator = z.enum(['atlassian', 'facebook', 'github', 'google', 'instagram']);
 
 /** @type {(input: string) => string} */
 const capitalize = input =>
@@ -31,6 +32,10 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_LICENSE_CODE: z.string().catch('-'),
 		NEXT_PUBLIC_APP_NAME: appCodeSchema.transform(val => capitalize(val.replaceAll('-', ' '))),
 		NEXT_PUBLIC_APP_PATH: z.string().catch('-'),
+		NEXT_PUBLIC_ALLOW_AUTH_PROVIDER: z
+			.string()
+			.catch('')
+			.transform(val => z.array(providerIdEnumValidator).catch([]).parse(val.split(','))),
 	},
 	server: {
 		PGURL_NONPOOLING: z.string().catch(''),
@@ -58,6 +63,7 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_KEYWORD: process.env.NEXT_PUBLIC_APP_KEYWORD,
 		NEXT_PUBLIC_APP_LICENSE_CODE: process.env.NEXT_PUBLIC_APP_LICENSE_CODE,
 		NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL,
+		NEXT_PUBLIC_ALLOW_AUTH_PROVIDER: process.env.NEXT_PUBLIC_ALLOW_AUTH_PROVIDER,
 
 		NEXT_PUBLIC_APP_DB_PREFIX: process.env.NEXT_PUBLIC_APP_CODE,
 		NEXT_PUBLIC_APP_NAME: process.env.NEXT_PUBLIC_APP_CODE,

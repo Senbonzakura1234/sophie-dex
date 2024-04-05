@@ -13,7 +13,7 @@ type LicenseInfoProps = LicenseInfo & JSX.IntrinsicAttributes;
 
 export default function LicenseInfo({ body, conditions, limitations, permissions, ...rest }: LicenseInfoProps) {
 	return (
-		<CommonWrapper className='min-h-[42rem] w-full'>
+		<CommonWrapper classNames={{ wrapper: 'min-h-[42rem] w-full' }}>
 			<div className='flex flex-wrap gap-6'>
 				<LicenseInfoHead {...rest} />
 

@@ -2,10 +2,9 @@
 
 import ClipboardIcon from '@components/icons/solid/ClipboardIcon';
 import ShareSquareIcon from '@components/icons/solid/ShareSquareIcon';
-import useDispatch from '@root/hooks/useDispatch';
+import usePushAlert from '@root/hooks/usePushAlert';
 import type { ImprovedOmit } from '@root/types/common';
 import type { ClassNameProps } from '@root/types/common/props';
-import type { AlertContextState } from '@root/utils/client/context';
 import { cn, tryCatchHandler } from '@root/utils/common';
 
 type InputData = ImprovedOmit<Required<ShareData>, 'files'>;
@@ -32,9 +31,7 @@ const onShare = async ({ input, onFailure, onSuccess }: OnShareParams) => {
 type ShareButtonProps = { input: InputData } & ClassNameProps;
 
 export default function ShareButton({ className, input }: ShareButtonProps) {
-	const dispatch = useDispatch();
-
-	const pushAlert = (data: AlertContextState['alert']) => dispatch({ type: 'UPDATE_ALERT', data });
+	const { pushAlert } = usePushAlert();
 
 	const canShare = isCanShare(input);
 
