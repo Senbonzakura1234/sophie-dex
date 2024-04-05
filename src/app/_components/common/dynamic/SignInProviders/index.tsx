@@ -17,7 +17,8 @@ import { env } from '@root/utils/common/env.mjs';
 import type { ClientSafeProvider } from 'next-auth/react';
 import { signIn } from 'next-auth/react';
 import Image from 'next/image';
-import { useEffect, type FC } from 'react';
+import type { FC } from 'react';
+import { useEffect } from 'react';
 
 type Props = {
 	providerList: Array<ClientSafeProvider>;
@@ -47,7 +48,7 @@ export default function SignInProviders({ callbackUrl, providerList, error }: Pr
 	}, [error, pushAlert]);
 
 	return (
-		<CommonWrapper classNames={{ wrapper: 'm-auto w-full max-w-lg', content: 'pt-32 pb-20 gap-7' }}>
+		<CommonWrapper classNames={{ wrapper: 'm-auto w-full max-w-lg', content: 'pt-32 pb-20 gap-7 dark:bg-slate-950' }}>
 			<Image
 				alt={env.NEXT_PUBLIC_APP_CODE}
 				className='mx-auto w-72'
@@ -66,8 +67,6 @@ export default function SignInProviders({ callbackUrl, providerList, error }: Pr
 					if (!idParseResult.success) return null;
 
 					const Icon = iconMapping[idParseResult.data];
-
-					const isDisabled = !env.NEXT_PUBLIC_ALLOW_AUTH_PROVIDER.includes(idParseResult.data);
 
 					return (
 						<button

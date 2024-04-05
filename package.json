@@ -16,7 +16,6 @@
 	},
 	"scripts": {
 		"build": "next build",
-		"prepare": "next prepare",
 		"dev": "concurrently \"pnpm open-home\" \"next dev\"",
 		"dev:safe": "concurrently \"pnpm open-home:safe\" \"next dev --experimental-https\"",
 		"drizzle-gen": "dotenv drizzle-kit generate:pg",

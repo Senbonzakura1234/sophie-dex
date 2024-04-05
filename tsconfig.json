@@ -30,6 +30,6 @@
 		"strict": true,
 		"target": "ES2022"
 	},
-	"exclude": ["node_modules"],
+	"exclude": ["node_modules", ".next/types/app/api/auth/[...nextauth]/route.ts"],
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs", "**/*.mdx", ".next/types/**/*.ts"]
 }
