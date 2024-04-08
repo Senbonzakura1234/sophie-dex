@@ -1,9 +1,13 @@
 import SignInProviders from '@components/common/dynamic/SignInProviders';
+import ContentWrapper from '@components/layout/dynamic/ContentWrapper';
 import type { PageProps } from '@root/types/common';
 import { signInQueryValidator } from '@root/types/common/zod';
 import { getServerSession } from 'next-auth';
 import { getProviders } from 'next-auth/react';
+import dynamic from 'next/dynamic';
 import { redirect } from 'next/navigation';
+
+const Alert = dynamic(() => import('@components/layout/dynamic/Alert'), { ssr: false });
 
 export default async function SignIn({ searchParams }: PageProps) {
 	const signInQuery = signInQueryValidator.parse(searchParams);
@@ -15,5 +19,13 @@ export default async function SignIn({ searchParams }: PageProps) {
 
 	const providerList = Object.values(providers || {});
 
-	return <SignInProviders {...signInQuery} providerList={providerList} />;
+	return (
+		<>
+			<ContentWrapper type='detail'>
+				<SignInProviders {...signInQuery} providerList={providerList} />
+			</ContentWrapper>
+
+			<Alert />
+		</>
+	);
 }
