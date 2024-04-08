@@ -11,6 +11,7 @@ export const authOptions: AuthOptions = {
 	callbacks: {
 		session: ({ session }) => session,
 	},
+	pages: { signIn: '/signin', signOut: '/signout' },
 };
 
 export const handler = NextAuth(authOptions);
