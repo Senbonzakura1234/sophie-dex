@@ -1,6 +1,6 @@
 import { errorMap } from '@root/constants/common';
 import { TRPCError } from '@trpc/server';
-import type { PreparedQuery, PreparedQueryConfig } from 'drizzle-orm/pg-core';
+import type { PgPreparedQuery, PreparedQueryConfig } from 'drizzle-orm/pg-core';
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
 
 export type SelectOptionItem<V> = { value: V | null; label?: string; icon?: ReactNode };
@@ -53,4 +53,4 @@ export type InspectRecursive<TObject> = {
 	[TKey in keyof TObject]: InspectRecursive<TObject[TKey]>;
 } & NonNullable<unknown>;
 
-export type PreparedPGQuery<TData = unknown> = PreparedQuery<PreparedQueryConfig & { execute: TData }>;
+export type PreparedPGQuery<TData = unknown> = PgPreparedQuery<PreparedQueryConfig & { execute: TData }>;

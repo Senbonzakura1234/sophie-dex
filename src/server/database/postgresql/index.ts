@@ -1,15 +1,13 @@
 import 'server-only';
 
-import { neon, neonConfig } from '@neondatabase/serverless';
+import { neon } from '@neondatabase/serverless';
 import * as schema from '@root/server/database/postgresql/schema';
 import type { ExportDBQueriesMap } from '@root/types/model';
 import { evnIs } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
 import { drizzle } from 'drizzle-orm/neon-http';
 
-neonConfig.fetchConnectionCache = true;
-
-const connection = neon(env.PGURL_NONPOOLING);
+const connection = neon<boolean, boolean>(env.PGURL_NONPOOLING);
 
 export const postgresql = drizzle(connection, { schema, logger: !evnIs('production') });
 
