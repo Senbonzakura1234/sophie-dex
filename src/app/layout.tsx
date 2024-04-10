@@ -199,7 +199,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-width', initialScale: 1 };
 
-export default async function RootLayout({ children }: ChildrenProps) {
+export default function RootLayout({ children }: ChildrenProps) {
 	const cookiesList = cookies();
 	// const session = await getServerSession();
 
