@@ -2,7 +2,6 @@ import './styles/index.css';
 
 import '@total-typescript/ts-reset';
 
-import AuthNav from '@components/layout/dynamic/AuthNav';
 import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
 import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
@@ -212,7 +211,7 @@ export default function RootLayout({ children }: ChildrenProps) {
 						<ScrollWrapper>
 							<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
 								<ThemeSwitcher />
-								<AuthNav />
+								{/* <AuthNav /> */}
 							</nav>
 							{children}
 						</ScrollWrapper>
