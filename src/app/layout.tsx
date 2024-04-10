@@ -2,7 +2,6 @@ import './styles/index.css';
 
 import '@total-typescript/ts-reset';
 
-import AuthProvider from '@components/layout/dynamic/AuthProvider';
 import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
 import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
@@ -207,19 +206,19 @@ export default async function RootLayout({ children }: ChildrenProps) {
 	return (
 		<html lang='en'>
 			<body className={cn(fontAtelier.variable, fontComicSansMS.className)}>
-				<AuthProvider session={session}>
-					<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(cookiesList.get('theme')?.value) }}>
-						<ThemeWrapper>
-							<ScrollWrapper>
-								<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
-									<ThemeSwitcher />
-									{/* <AuthNav /> */}
-								</nav>
-								{children}
-							</ScrollWrapper>
-						</ThemeWrapper>
-					</ContextProvider>
-				</AuthProvider>
+				{/* <AuthProvider session={session}> */}
+				<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(cookiesList.get('theme')?.value) }}>
+					<ThemeWrapper>
+						<ScrollWrapper>
+							<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
+								<ThemeSwitcher />
+								{/* <AuthNav /> */}
+							</nav>
+							{children}
+						</ScrollWrapper>
+					</ThemeWrapper>
+				</ContextProvider>
+				{/* </AuthProvider> */}
 
 				<SpeedInsights />
 			</body>
