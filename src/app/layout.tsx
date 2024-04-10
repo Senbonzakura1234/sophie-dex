@@ -4,15 +4,22 @@ import '@total-typescript/ts-reset';
 
 import AuthNav from '@components/layout/dynamic/AuthNav';
 import AuthProvider from '@components/layout/dynamic/AuthProvider';
+import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
+import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { AppleMediaConfig } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
+import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
+import { ContextProvider } from '@root/utils/client/context';
 import { cn, getBaseUrl } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
 import { getServerSession } from 'next-auth';
+import dynamic from 'next/dynamic';
+import { cookies } from 'next/headers';
 
-// const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'), { ssr: false });
+const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'), { ssr: false });
 
 const appleMediaConfig: AppleMediaConfig = [
 	{ url: 'iPhone_14_Pro_Max_landscape' },
@@ -195,40 +202,27 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-width', initialScale: 1 };
 
 export default async function RootLayout({ children }: ChildrenProps) {
-	// const cookiesList = cookies();
+	const cookiesList = cookies();
 	const session = await getServerSession();
-
-	// return (
-	// 	<html lang='en'>
-	// 		<body className={cn(fontAtelier.variable, fontComicSansMS.className)}>
-	// 			<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(cookiesList.get('theme')?.value) }}>
-	// 				<AuthProvider session={session}>
-	// 					<ThemeWrapper>
-	// 						<ScrollWrapper>
-	// 							<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
-	// 								<ThemeSwitcher />
-	// 								<AuthNav />
-	// 							</nav>
-	// 							{children}
-	// 						</ScrollWrapper>
-	// 					</ThemeWrapper>
-	// 				</AuthProvider>
-	// 			</ContextProvider>
-
-	// 			<SpeedInsights />
-	// 		</body>
-	// 	</html>
-	// );
 
 	return (
 		<html lang='en'>
 			<body className={cn(fontAtelier.variable, fontComicSansMS.className)}>
-				<AuthProvider session={session}>
-					<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
-						<AuthNav />
-					</nav>
-					{children}
-				</AuthProvider>
+				<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(cookiesList.get('theme')?.value) }}>
+					<AuthProvider session={session}>
+						<ThemeWrapper>
+							<ScrollWrapper>
+								<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
+									<ThemeSwitcher />
+									<AuthNav />
+								</nav>
+								{children}
+							</ScrollWrapper>
+						</ThemeWrapper>
+					</AuthProvider>
+				</ContextProvider>
+
+				<SpeedInsights />
 			</body>
 		</html>
 	);
