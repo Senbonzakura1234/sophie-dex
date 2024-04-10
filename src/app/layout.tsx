@@ -13,7 +13,6 @@ import { cn, getBaseUrl } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
-import { getServerSession } from 'next-auth';
 import dynamic from 'next/dynamic';
 import { cookies } from 'next/headers';
 
@@ -201,7 +200,7 @@ export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-widt
 
 export default async function RootLayout({ children }: ChildrenProps) {
 	const cookiesList = cookies();
-	const session = await getServerSession();
+	// const session = await getServerSession();
 
 	return (
 		<html lang='en'>
