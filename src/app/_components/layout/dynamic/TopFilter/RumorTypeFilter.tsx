@@ -38,7 +38,7 @@ export default function RumorTypeFilter() {
 			list={rumorTypeSelectList}
 			setValue={setRumorTypeSelected}
 			value={rumorTypeSelected}
-			className='my-auto min-w-[9rem]'
+			className='my-auto min-w-36'
 			useCustomIcon
 		/>
 	);

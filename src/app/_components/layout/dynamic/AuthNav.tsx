@@ -7,7 +7,7 @@ import SignOutIcon from '@components/icons/solid/SignOutIcon';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { usePathname } from 'next/navigation';
 
-const signInUrl = '/api/auth/signin';
+const signInUrl = '/signin';
 
 export default function AuthNav() {
 	const { data: session } = useSession();

@@ -15,7 +15,7 @@ const themeSelectList = daisyUIThemeList.map(theme => ({
 		<span
 			aria-hidden
 			key={theme}
-			className='flex aspect-square h-4 flex-row gap-[2px] overflow-hidden rounded border-[2px] border-solid border-base-content bg-base-content shadow-lg shadow-base-content/30 xl:h-5'
+			className='flex aspect-square h-4 flex-row gap-[2px] overflow-hidden rounded border-2 border-solid border-base-content bg-base-content shadow-lg shadow-base-content/30 xl:h-5'
 		>
 			<span aria-hidden className='grow bg-primary' data-theme={theme} />
 			<span aria-hidden className='grow bg-accent' data-theme={theme} />

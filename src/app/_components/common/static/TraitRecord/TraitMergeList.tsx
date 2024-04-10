@@ -33,7 +33,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 							className='btn join-item btn-xs capitalize'
 							href={`/${firstTrait.table}/${firstTrait.id}`}
 						>
-							<span className='max-sm:max-w-[4rem] max-sm:truncate'>{firstTrait.name}</span>
+							<span className='max-sm:max-w-16 max-sm:truncate'>{firstTrait.name}</span>
 						</Link>
 
 						<button aria-label='Merge with' className='btn btn-accent join-item no-animation btn-xs'>
@@ -45,7 +45,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 							className='btn join-item btn-xs capitalize'
 							href={`/${lastTrait.table}/${lastTrait.id}`}
 						>
-							<span className='max-sm:max-w-[4rem] max-sm:truncate'>{lastTrait.name}</span>
+							<span className='max-sm:max-w-16 max-sm:truncate'>{lastTrait.name}</span>
 						</Link>
 						<ShareButton
 							className='join-item'

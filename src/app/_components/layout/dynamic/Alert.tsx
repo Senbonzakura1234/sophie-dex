@@ -55,7 +55,7 @@ export default function Alert() {
 				>
 					<Icon className='aspect-square h-6' />
 
-					<span className='min-w-[12rem] self-end text-left leading-[22px] text-base-content'>{message}</span>
+					<span className='min-w-48 self-end text-left leading-[22px] text-base-content'>{message}</span>
 				</div>
 			</div>
 		</div>

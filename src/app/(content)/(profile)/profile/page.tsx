@@ -32,7 +32,7 @@ const getProfile = async (): Promise<APIResult<GithubUserInfo>> => {
 
 export default function Profile() {
 	return (
-		<Suspense fallback={<RecordPlaceholder className='mx-auto min-h-[20rem] w-full max-w-lg' />}>
+		<Suspense fallback={<RecordPlaceholder className='mx-auto min-h-80 w-full max-w-lg' />}>
 			<SuspenseComponent promiseData={getProfile()} ChildComponent={ProfileInfo} showErrorContent />
 		</Suspense>
 	);

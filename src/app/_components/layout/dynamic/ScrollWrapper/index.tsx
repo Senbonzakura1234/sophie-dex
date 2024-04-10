@@ -44,7 +44,7 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
 		<>
 			<PageRefresh isDisabled={isDisabledPullToRefresh} isDetailPage={isDetailPage} segment={segment} />
 
-			<Root className='h-[100dvh] w-[100dvw] overflow-hidden bg-base-200 !antialiased' type='scroll'>
+			<Root className='h-dvh w-dvw overflow-hidden bg-base-200 !antialiased' type='scroll'>
 				<Viewport
 					className='relative size-full [&>div]:!flex [&>div]:h-full [&>div]:flex-col [&>div]:gap-6'
 					ref={scrollableRef}
