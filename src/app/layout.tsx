@@ -3,7 +3,6 @@ import './styles/index.css';
 import '@total-typescript/ts-reset';
 
 import AuthNav from '@components/layout/dynamic/AuthNav';
-import AuthProvider from '@components/layout/dynamic/AuthProvider';
 import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
 import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
@@ -15,7 +14,6 @@ import { cn, getBaseUrl } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
-import { getServerSession } from 'next-auth';
 import dynamic from 'next/dynamic';
 import { cookies } from 'next/headers';
 
@@ -201,25 +199,24 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-width', initialScale: 1 };
 
-export default async function RootLayout({ children }: ChildrenProps) {
+export default function RootLayout({ children }: ChildrenProps) {
 	const cookiesList = cookies();
-	const session = await getServerSession();
+	// const session = await getServerSession();
 
 	return (
 		<html lang='en'>
+			{/* <AuthProvider session={session}></AuthProvider> */}
 			<body className={cn(fontAtelier.variable, fontComicSansMS.className)}>
 				<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(cookiesList.get('theme')?.value) }}>
-					<AuthProvider session={session}>
-						<ThemeWrapper>
-							<ScrollWrapper>
-								<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
-									<ThemeSwitcher />
-									<AuthNav />
-								</nav>
-								{children}
-							</ScrollWrapper>
-						</ThemeWrapper>
-					</AuthProvider>
+					<ThemeWrapper>
+						<ScrollWrapper>
+							<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
+								<ThemeSwitcher />
+								<AuthNav />
+							</nav>
+							{children}
+						</ScrollWrapper>
+					</ThemeWrapper>
 				</ContextProvider>
 
 				<SpeedInsights />
