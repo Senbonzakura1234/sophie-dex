@@ -9,7 +9,7 @@ import type { AppleMediaConfig } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
 import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
 import { ContextProvider } from '@root/utils/client/context';
-import { cn, getBaseUrl } from '@root/utils/common';
+import { cn, getBaseUrl, tryCatchHandler, tryCatchHandlerSync } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
@@ -199,16 +199,21 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-width', initialScale: 1 };
 
+const getRootProps = async () => {
+	const cookiesListResult = tryCatchHandlerSync(cookies);
+	const sessionResult = await tryCatchHandler(getServerSession());
+
+	return { cookiesList: cookiesListResult.data, session: sessionResult.data };
+};
+
 export default async function RootLayout({ children }: ChildrenProps) {
-	// const cookiesList = cookies();
-	const session = await getServerSession();
-	// daisyUIThemeEnumSchema.parse(cookiesList.get('theme')?.value)
+	const { session, cookiesList } = await getRootProps();
 
 	return (
 		<html lang='en'>
 			<body className={cn(fontAtelier.variable, fontComicSansMS.className)}>
 				{/* <AuthProvider session={session}> */}
-				<ContextProvider defaultState={{ theme: 'fantasy' }}>
+				<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(cookiesList?.get('theme')?.value) }}>
 					<ThemeWrapper>
 						<ScrollWrapper>
 							<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
