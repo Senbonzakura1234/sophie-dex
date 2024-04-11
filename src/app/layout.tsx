@@ -200,14 +200,15 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-width', initialScale: 1 };
 
 export default async function RootLayout({ children }: ChildrenProps) {
-	const cookiesList = cookies();
+	// const cookiesList = cookies();
 	const session = await getServerSession();
+	// daisyUIThemeEnumSchema.parse(cookiesList.get('theme')?.value)
 
 	return (
 		<html lang='en'>
 			<body className={cn(fontAtelier.variable, fontComicSansMS.className)}>
 				{/* <AuthProvider session={session}> */}
-				<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(cookiesList.get('theme')?.value) }}>
+				<ContextProvider defaultState={{ theme: 'fantasy' }}>
 					<ThemeWrapper>
 						<ScrollWrapper>
 							<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
