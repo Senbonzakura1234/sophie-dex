@@ -7,13 +7,13 @@ import { ApiServerCtx } from '@root/utils/server/trpc';
 import type { Metadata, ResolvingMetadata } from 'next';
 import { Suspense } from 'react';
 
-export const revalidate = 9e6;
+// export const revalidate = 9e6;
 
-export async function generateStaticParams() {
-	const { result } = await ApiServerCtx.rumor.getAllIds.fetch();
+// export async function generateStaticParams() {
+// 	const { result } = await ApiServerCtx.rumor.getAllIds.fetch();
 
-	return result || [];
-}
+// 	return result || [];
+// }
 
 const getRecord = async (params: PageProps['params']) => ApiServerCtx.rumor.getOne.fetch(params);
 
