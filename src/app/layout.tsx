@@ -2,7 +2,6 @@ import './styles/index.css';
 
 import '@total-typescript/ts-reset';
 
-import AuthNav from '@components/layout/dynamic/AuthNav';
 import AuthProvider from '@components/layout/dynamic/AuthProvider';
 import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
 import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
@@ -21,6 +20,8 @@ import { getServerSession } from 'next-auth';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
+const Alert = dynamic(() => import('@components/layout/dynamic/Alert'), { ssr: false });
+const AuthNav = dynamic(() => import('@components/layout/dynamic/AuthNav'), { ssr: false });
 const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'), { ssr: false });
 
 const appleMediaConfig: AppleMediaConfig = [
@@ -226,6 +227,8 @@ export default async function RootLayout({ children }: ChildrenProps) {
 										<AuthNav />
 									</nav>
 									{children}
+
+									<Alert />
 								</ScrollWrapper>
 							</Suspense>
 						</AuthProvider>

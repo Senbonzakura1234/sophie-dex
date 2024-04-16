@@ -1,8 +1,5 @@
 import PageBanner from '@components/layout/static/PageBanner';
 import type { ChildrenProps } from '@root/types/common/props';
-import dynamic from 'next/dynamic';
-
-const Alert = dynamic(() => import('@components/layout/dynamic/Alert'), { ssr: false });
 
 export default async function ContentLayout({ children }: ChildrenProps) {
 	return (
@@ -12,8 +9,6 @@ export default async function ContentLayout({ children }: ChildrenProps) {
 			{children}
 
 			<PageBanner bannerType='bottom' key='bannerBottom' />
-
-			<Alert />
 		</>
 	);
 }
