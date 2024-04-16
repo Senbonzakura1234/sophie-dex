@@ -1,3 +1,6 @@
+import ProfileInfo from '@components/common/static/ProfileInfo';
+import SuspenseComponent from '@components/layout/static/SuspenseComponent';
+import RecordPlaceholder from '@components/loading/RecordPlaceholder';
 import { postgresql } from '@root/server/database/postgresql';
 import { APIError, type APIResult, type PageProps } from '@root/types/common';
 import type { GithubUserInfo } from '@root/types/common/zod';
@@ -5,6 +8,7 @@ import { env } from '@root/utils/common/env.mjs';
 import { generateGenericMetadata } from '@root/utils/server/database';
 import type { Metadata, ResolvingMetadata } from 'next';
 import { getServerSession } from 'next-auth';
+import { Suspense } from 'react';
 
 export async function generateMetadata({ searchParams }: PageProps, parent: ResolvingMetadata): Promise<Metadata> {
 	return generateGenericMetadata(parent, { title: `${env.NEXT_PUBLIC_APP_NAME} | Profile` }, searchParams);
@@ -27,10 +31,9 @@ const getProfile = async (): Promise<APIResult<GithubUserInfo>> => {
 };
 
 export default function Profile() {
-	return null;
-	// return (
-	// 	<Suspense fallback={<RecordPlaceholder className='mx-auto min-h-80 w-full max-w-lg' />}>
-	// 		<SuspenseComponent promiseData={getProfile()} ChildComponent={ProfileInfo} showErrorContent />
-	// 	</Suspense>
-	// );
+	return (
+		<Suspense fallback={<RecordPlaceholder className='mx-auto min-h-80 w-full max-w-lg' />}>
+			<SuspenseComponent promiseData={getProfile()} ChildComponent={ProfileInfo} showErrorContent />
+		</Suspense>
+	);
 }

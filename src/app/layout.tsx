@@ -2,19 +2,24 @@ import './styles/index.css';
 
 import '@total-typescript/ts-reset';
 
+import AuthNav from '@components/layout/dynamic/AuthNav';
+import AuthProvider from '@components/layout/dynamic/AuthProvider';
 import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
 import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
+import Loader from '@components/loading/Loader';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { AppleMediaConfig } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
 import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
 import { ContextProvider } from '@root/utils/client/context';
-import { cn, getBaseUrl } from '@root/utils/common';
+import { cn, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
+import { getCookieData } from '@root/utils/server';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
+import { getServerSession } from 'next-auth';
 import dynamic from 'next/dynamic';
-import { cookies } from 'next/headers';
+import { Suspense } from 'react';
 
 const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'), { ssr: false });
 
@@ -198,25 +203,34 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-width', initialScale: 1 };
 
+const getLayoutProps = async () => {
+	const sessionRes = await tryCatchHandler(getServerSession());
+	const themeCookiesRes = await tryCatchHandler(getCookieData('theme'));
+
+	return { session: sessionRes.data, themeCookies: themeCookiesRes.data };
+};
+
 export default async function RootLayout({ children }: ChildrenProps) {
-	const cookiesList = cookies();
+	const { session, themeCookies } = await getLayoutProps();
 
 	return (
 		<html lang='en'>
 			<body className={cn(fontAtelier.variable, fontComicSansMS.className)}>
-				{/* <AuthProvider session={session}> */}
-				<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(cookiesList.get('theme')?.value) }}>
+				<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(themeCookies?.value) }}>
 					<ThemeWrapper>
-						<ScrollWrapper>
-							<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
-								<ThemeSwitcher />
-								{/* <AuthNav /> */}
-							</nav>
-							{children}
-						</ScrollWrapper>
+						<AuthProvider session={session}>
+							<Suspense fallback={<Loader className='h-dvh w-dvw overflow-hidden bg-base-200 !antialiased' />}>
+								<ScrollWrapper>
+									<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
+										<ThemeSwitcher />
+										<AuthNav />
+									</nav>
+									{children}
+								</ScrollWrapper>
+							</Suspense>
+						</AuthProvider>
 					</ThemeWrapper>
 				</ContextProvider>
-				{/* </AuthProvider> */}
 
 				<SpeedInsights />
 			</body>
