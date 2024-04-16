@@ -4,6 +4,7 @@ import { insertOrUpdateUser } from '@root/server/database/postgresql/repository'
 import { APIError } from '@root/types/common';
 import type { ProviderIdEnum } from '@root/types/common/zod';
 import { githubUserInfoSchema } from '@root/types/common/zod';
+import { evnIs } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
 import type { OAuthConfig } from 'next-auth/providers';
 import Atlassian from 'next-auth/providers/atlassian';
@@ -26,8 +27,8 @@ export const providerMapping = {
 	atlassian: Atlassian({ clientId: '', clientSecret: '' }),
 	facebook: Facebook({ clientId: '', clientSecret: '' }),
 	github: Github({
-		clientId: env.GITHUB_APP_ID,
-		clientSecret: env.GITHUB_APP_SECRET,
+		clientId: evnIs('production') ? env.GITHUB_PROD_APP_ID : env.GITHUB_APP_ID,
+		clientSecret: evnIs('production') ? env.GITHUB_PROD_APP_SECRET : env.GITHUB_APP_SECRET,
 		profile: async (...args) => {
 			const profileResult = githubUserInfoSchema.safeParse(args[0]);
 

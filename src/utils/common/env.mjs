@@ -42,7 +42,9 @@ export const env = createEnv({
 
 		GITHUB_TOKEN: z.string().catch(''),
 		GITHUB_APP_ID: z.string().catch(''),
+		GITHUB_PROD_APP_ID: z.string().catch(''),
 		GITHUB_APP_SECRET: z.string().catch(''),
+		GITHUB_PROD_APP_SECRET: z.string().catch(''),
 
 		NEXTAUTH_URL: z.string().catch(''),
 		NEXTAUTH_SECRET: z.string().catch(''),
@@ -77,6 +79,8 @@ export const env = createEnv({
 		GITHUB_APP_ID: process.env.HTTPS === 'true' ? process.env.GITHUB_HTTPS_APP_ID : process.env.GITHUB_HTTP_APP_ID,
 		GITHUB_APP_SECRET:
 			process.env.HTTPS === 'true' ? process.env.GITHUB_HTTPS_APP_SECRET : process.env.GITHUB_HTTP_APP_SECRET,
+		GITHUB_PROD_APP_ID: process.env.GITHUB_PROD_APP_ID,
+		GITHUB_PROD_APP_SECRET: process.env.GITHUB_PROD_APP_SECRET,
 
 		NEXTAUTH_URL: process.env.NEXTAUTH_URL,
 		NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
