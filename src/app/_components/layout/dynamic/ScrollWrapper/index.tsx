@@ -1,12 +1,11 @@
 'use client';
 
 import { Root, Scrollbar, Thumb, Viewport } from '@radix-ui/react-scroll-area';
-import usePageSegment from '@root/hooks/usePageSegment';
+import useDispatch from '@root/hooks/useDispatch';
 import type { OnScroll } from '@root/hooks/useScroll';
 import { useScroll } from '@root/hooks/useScroll';
 import type { ChildrenProps } from '@root/types/common/props';
 import dynamic from 'next/dynamic';
-import { useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 const PageRefresh = dynamic(() => import('@components/layout/dynamic/PageRefresh'), { ssr: false });
@@ -17,8 +16,7 @@ type ScrollWrapperProps = ChildrenProps;
 export default function ScrollWrapper({ children }: ScrollWrapperProps) {
 	const scrollableRef = useRef<HTMLDivElement>(null);
 
-	const searchParams = useSearchParams();
-	const { isDetailPage, segment } = usePageSegment();
+	const dispatch = useDispatch();
 
 	const [isShowScrollTop, setIsShowScrollTop] = useState(false);
 	const [isDisabledPullToRefresh, setIsDisabledPullToRefresh] = useState(false);
@@ -37,12 +35,16 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
 	useScroll({ scrollableRef, onScroll });
 
 	useEffect(() => {
-		if (scrollableRef?.current) scrollableRef.current.scrollTo({ top: 0, behavior: 'smooth' });
-	}, [isDetailPage, segment, searchParams]);
+		dispatch({ type: 'UPDATE_SCROLL_WRAPPER_STATE', data: { isDisabledPullToRefresh } });
+	}, [dispatch, isDisabledPullToRefresh]);
+
+	useEffect(() => {
+		dispatch({ type: 'UPDATE_SCROLL_WRAPPER_STATE', data: { ref: scrollableRef } });
+	}, [dispatch]);
 
 	return (
 		<>
-			<PageRefresh isDisabled={isDisabledPullToRefresh} isDetailPage={isDetailPage} segment={segment} />
+			<PageRefresh />
 
 			<Root className='h-dvh w-dvw overflow-hidden bg-base-200 !antialiased' type='scroll'>
 				<Viewport

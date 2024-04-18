@@ -1,6 +1,6 @@
 'use client';
 
-import Paginate from '@components/layout/dynamic/Paginate';
+import Paginate from '@components/layout/static/Paginate';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import useSelector from '@root/hooks/useSelector';
 

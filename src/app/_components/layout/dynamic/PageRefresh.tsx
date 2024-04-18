@@ -1,6 +1,6 @@
 'use client';
 
-import type usePageSegment from '@root/hooks/usePageSegment';
+import usePageSegment from '@root/hooks/usePageSegment';
 import useSelector from '@root/hooks/useSelector';
 import { moduleIdList } from '@root/types/model';
 import { arrayInclude, cn } from '@root/utils/common';
@@ -8,13 +8,13 @@ import { useRouter } from 'next/navigation';
 import { useMemo } from 'react';
 import { DEFAULT_REFRESH_THRESHOLD, usePullToRefresh } from 'use-pull-to-refresh';
 
-type PageRefreshProps = { isDisabled?: boolean } & Partial<ReturnType<typeof usePageSegment>>;
-
-export default function PageRefresh({ isDisabled = false, isDetailPage = false, segment }: PageRefreshProps) {
+export default function PageRefresh() {
 	const { refresh } = useRouter();
 	const {
 		contentData: { refetch },
+		scrollWrapper: { isDisabledPullToRefresh: isDisabled },
 	} = useSelector();
+	const { isDetailPage, segment } = usePageSegment();
 
 	const onRefresh = useMemo(() => {
 		if (!refetch) return refresh;

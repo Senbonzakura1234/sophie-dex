@@ -5,7 +5,6 @@ import '@total-typescript/ts-reset';
 import AuthProvider from '@components/layout/dynamic/AuthProvider';
 import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
 import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
-import Loader from '@components/loading/Loader';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { AppleMediaConfig } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
@@ -22,6 +21,7 @@ import { Suspense } from 'react';
 
 const Alert = dynamic(() => import('@components/layout/dynamic/Alert'), { ssr: false });
 const AuthNav = dynamic(() => import('@components/layout/dynamic/AuthNav'), { ssr: false });
+const ScrollTopTrigger = dynamic(() => import('@components/layout/dynamic/ScrollTopTrigger'), { ssr: false });
 const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'), { ssr: false });
 
 const appleMediaConfig: AppleMediaConfig = [
@@ -220,17 +220,19 @@ export default async function RootLayout({ children }: ChildrenProps) {
 				<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(themeCookies?.value) }}>
 					<ThemeWrapper>
 						<AuthProvider session={session}>
-							<Suspense fallback={<Loader className='h-dvh w-dvw overflow-hidden bg-base-200 !antialiased' />}>
-								<ScrollWrapper>
-									<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
-										<ThemeSwitcher />
-										<AuthNav />
-									</nav>
-									{children}
+							<ScrollWrapper>
+								<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
+									<ThemeSwitcher />
+									<AuthNav />
+								</nav>
+								{children}
 
-									<Alert />
-								</ScrollWrapper>
-							</Suspense>
+								<Alert />
+
+								<Suspense>
+									<ScrollTopTrigger />
+								</Suspense>
+							</ScrollWrapper>
 						</AuthProvider>
 					</ThemeWrapper>
 				</ContextProvider>

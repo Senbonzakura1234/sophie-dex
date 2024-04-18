@@ -4,7 +4,7 @@ import QueryLink from '@components/common/dynamic/QueryLink';
 import RefetchButton from '@components/common/dynamic/RefetchButton';
 import FilterIcon from '@components/icons/outline/FilterIcon';
 import ArrowPathIcon from '@components/icons/solid/ArrowPathIcon';
-import Paginate from '@components/layout/dynamic/Paginate';
+import Paginate from '@components/layout/static/Paginate';
 import { Transition } from '@headlessui/react';
 import { DEFAULT_LIMIT } from '@root/constants/common';
 import { useMediaQuery } from '@root/hooks/useMediaQuery';
