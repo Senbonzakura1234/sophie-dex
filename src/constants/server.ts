@@ -56,6 +56,7 @@ export const providerMapping = {
 				email: user.email,
 				image: user.githubProfile.avatar_url,
 				name: user.username,
+				extraInfo: { extra: '' },
 			};
 		},
 	}),

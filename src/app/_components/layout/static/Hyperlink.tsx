@@ -6,9 +6,7 @@ import Link from 'next/link';
 
 const ShareButton = dynamic(() => import('@components/common/dynamic/ShareButton'), { ssr: false });
 
-type HyperlinkProps = {
-	input: HighlightText | HyperLinkRecord | HyperLinkSearch;
-} & ClassNameProps;
+type HyperlinkProps = { input: HighlightText | HyperLinkRecord | HyperLinkSearch } & ClassNameProps;
 
 const getLinkProps = (input: HyperlinkProps['input']) => {
 	if ('content' in input) return { label: input.content } as const;

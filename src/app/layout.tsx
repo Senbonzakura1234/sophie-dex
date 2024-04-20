@@ -19,10 +19,11 @@ import { getServerSession } from 'next-auth';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
-const Alert = dynamic(() => import('@components/layout/dynamic/Alert'), { ssr: false });
-const AuthNav = dynamic(() => import('@components/layout/dynamic/AuthNav'), { ssr: false });
-const ScrollTopTrigger = dynamic(() => import('@components/layout/dynamic/ScrollTopTrigger'), { ssr: false });
-const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'), { ssr: false });
+const Alert = dynamic(() => import('@components/layout/dynamic/Alert'));
+const AuthNav = dynamic(() => import('@components/layout/dynamic/AuthNav'));
+const ScrollTopTrigger = dynamic(() => import('@components/layout/dynamic/ScrollTopTrigger'));
+const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'));
+const WelcomeBackAlertTrigger = dynamic(() => import('@components/layout/dynamic/WelcomeBackAlertTrigger'));
 
 const appleMediaConfig: AppleMediaConfig = [
 	{ url: 'iPhone_14_Pro_Max_landscape' },
@@ -218,13 +219,17 @@ export default async function RootLayout({ children }: ChildrenProps) {
 		<html lang='en'>
 			<body className={cn(fontAtelier.variable, fontComicSansMS.className)}>
 				<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(themeCookies?.value) }}>
-					<ThemeWrapper>
-						<AuthProvider session={session}>
+					<AuthProvider session={session}>
+						<WelcomeBackAlertTrigger />
+
+						<ThemeWrapper>
 							<ScrollWrapper>
 								<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
 									<ThemeSwitcher />
+
 									<AuthNav />
 								</nav>
+
 								{children}
 
 								<Alert />
@@ -233,8 +238,8 @@ export default async function RootLayout({ children }: ChildrenProps) {
 									<ScrollTopTrigger />
 								</Suspense>
 							</ScrollWrapper>
-						</AuthProvider>
-					</ThemeWrapper>
+						</ThemeWrapper>
+					</AuthProvider>
 				</ContextProvider>
 
 				<SpeedInsights />

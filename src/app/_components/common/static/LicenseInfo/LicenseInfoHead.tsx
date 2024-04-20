@@ -5,7 +5,7 @@ import { env } from '@root/utils/common/env.mjs';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
-const MDXRenderer = dynamic(() => import('@components/common/dynamic/MDXRenderer'), { ssr: false });
+const MDXRenderer = dynamic(() => import('@components/common/dynamic/MDXRenderer'));
 
 type LicenseInfoHeadProps = Pick<LicenseInfo, 'description' | 'name'>;
 

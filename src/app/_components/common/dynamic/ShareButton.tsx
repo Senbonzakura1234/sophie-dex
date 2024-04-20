@@ -9,11 +9,7 @@ import { cn, tryCatchHandler } from '@root/utils/common';
 
 type InputData = ImprovedOmit<Required<ShareData>, 'files'>;
 
-type OnShareParams = {
-	input: InputData;
-	onSuccess: () => void;
-	onFailure: (message: string, error?: unknown) => void;
-};
+type OnShareParams = { input: InputData; onSuccess: () => void; onFailure: (message: string, error?: unknown) => void };
 
 const isCanShare = (input: InputData) => Boolean(navigator?.canShare(input));
 

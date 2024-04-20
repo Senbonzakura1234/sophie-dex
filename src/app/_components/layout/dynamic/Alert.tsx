@@ -42,8 +42,10 @@ export default function Alert() {
 	return (
 		<div
 			className={cn(
-				'toast toast-start toast-bottom z-50 transition-[transform,opacity] ease-in-out',
-				isOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0',
+				'toast toast-center lg:toast-start toast-bottom z-50 transition-[transform,opacity] ease-in-out',
+				isOpen
+					? 'translate-y-0 lg:translate-x-0 opacity-100'
+					: 'translate-y-full lg:translate-y-0 lg:-translate-x-full opacity-0',
 			)}
 		>
 			<div className='card bg-gradient-to-br from-accent to-primary p-1 shadow-lg shadow-primary'>

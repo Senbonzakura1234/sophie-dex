@@ -8,8 +8,8 @@ import type { ChildrenProps } from '@root/types/common/props';
 import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-const PageRefresh = dynamic(() => import('@components/layout/dynamic/PageRefresh'), { ssr: false });
-const ScrollToTop = dynamic(() => import('./ScrollToTop'), { ssr: false });
+const PageRefresh = dynamic(() => import('@components/layout/dynamic/PageRefresh'));
+const ScrollToTop = dynamic(() => import('./ScrollToTop'));
 
 type ScrollWrapperProps = ChildrenProps;
 

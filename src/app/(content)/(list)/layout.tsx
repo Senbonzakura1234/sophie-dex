@@ -5,12 +5,10 @@ import type { ChildrenProps } from '@root/types/common/props';
 import dynamic from 'next/dynamic';
 
 const TopFilter = dynamic(() => import('@components/layout/dynamic/TopFilter'), {
-	ssr: false,
 	loading: () => <PulsePlaceHolder className='h-8 w-[133px] rounded-lg' />,
 });
-const BottomFilter = dynamic(() => import('@components/layout/dynamic/BottomFilter'), { ssr: false });
+const BottomFilter = dynamic(() => import('@components/layout/dynamic/BottomFilter'));
 const SearchInput = dynamic(() => import('@components/layout/dynamic/SearchInput'), {
-	ssr: false,
 	loading: () => <div className='h-8 w-full' />,
 });
 

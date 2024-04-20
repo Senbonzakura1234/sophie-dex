@@ -5,6 +5,8 @@ import { env } from '@root/utils/common/env.mjs';
 import type { InferSelectModel } from 'drizzle-orm';
 import { jsonb, pgTableCreator, smallint, timestamp, uuid, varchar } from 'drizzle-orm/pg-core';
 
+//#region <Field Types>
+
 export type HighlightText = { content: string };
 export type HyperLinkRecord = { id: string; name: string; table: ModuleIdEnum };
 export type HyperLinkSearch = { searchQuery: SearchQuery; table: ModuleIdEnum };
@@ -23,8 +25,11 @@ export type HyperLinkMap = {
 	contentData: Array<HighlightText | HyperLinkRecord | HyperLinkSearch>;
 	contentText: Array<string>;
 };
+//#endregion
 
 export const pgTable = pgTableCreator(name => `${env.NEXT_PUBLIC_APP_DB_PREFIX}_${name}`);
+
+//#region <Tables Schema>
 
 export const effects = pgTable('effects', {
 	id: uuid('id').primaryKey(),
@@ -84,6 +89,10 @@ export const users = pgTable('users', {
 	updatedAt: timestamp('updated_at', { precision: 6, withTimezone: true, mode: 'string' }),
 });
 
+//#endregion
+
+//#region <Tables Types>
+
 export type Effect = InferSelectModel<typeof effects>;
 export type Item = InferSelectModel<typeof items>;
 export type Rumor = InferSelectModel<typeof rumors>;
@@ -91,3 +100,5 @@ export type Trait = InferSelectModel<typeof traits>;
 export type User = InferSelectModel<typeof users>;
 
 export type CommonRecord = ImprovedOmit<Effect | Item | Rumor | Trait, 'description'>;
+
+//#endregion

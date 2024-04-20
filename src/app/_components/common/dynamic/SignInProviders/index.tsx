@@ -48,18 +48,23 @@ export default function SignInProviders({ callbackUrl, providerList, error }: Pr
 	}, [error, pushAlert]);
 
 	return (
-		<CommonWrapper classNames={{ wrapper: 'm-auto w-full max-w-lg', content: 'pt-32 pb-20 gap-7 dark:bg-slate-950' }}>
+		<CommonWrapper
+			classNames={{
+				wrapper: 'm-auto w-11/12 max-w-lg',
+				content: 'pt-20 pb-12 lg:pt-32 lg:pb-20 gap-7 dark:bg-slate-950',
+			}}
+		>
 			<Image
 				alt={env.NEXT_PUBLIC_APP_CODE}
-				className='mx-auto w-72'
+				className='mx-auto w-44 lg:w-72'
 				data-url={`${getBaseUrl(true)}/assets/images/sophie-logo.png`}
 				priority
-				sizes='288px'
+				sizes='(max-width: 1024px) 176px, 288px'
 				src={sophieLogo}
 			/>
 
 			<div className='flex flex-col gap-3'>
-				<h1 className='mx-auto text-2xl'>Sign-in to {env.NEXT_PUBLIC_APP_NAME}</h1>
+				<h1 className='mx-auto text-lg lg:text-2xl'>Sign-in to {env.NEXT_PUBLIC_APP_NAME}</h1>
 
 				{providerList.map(({ id, name }) => {
 					const idParseResult = providerIdEnumValidator.safeParse(id);
@@ -71,7 +76,7 @@ export default function SignInProviders({ callbackUrl, providerList, error }: Pr
 					return (
 						<button
 							className={cn(
-								'btn btn-brand btn-outline border-none w-full max-w-80 self-center group',
+								'btn btn-brand btn-outline border-none w-full max-w-64 lg:max-w-80 self-center group',
 								classMapping[idParseResult.data],
 							)}
 							key={name}
