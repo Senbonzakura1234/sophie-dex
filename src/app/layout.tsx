@@ -206,8 +206,10 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-width', initialScale: 1 };
 
 const getLayoutProps = async () => {
-	const sessionRes = await tryCatchHandler(getServerSession());
-	const themeCookiesRes = await tryCatchHandler(getCookieData('theme'));
+	const [sessionRes, themeCookiesRes] = await Promise.all([
+		tryCatchHandler(getServerSession()),
+		tryCatchHandler(getCookieData('theme')),
+	]);
 
 	return { session: sessionRes.data, themeCookies: themeCookiesRes.data };
 };
