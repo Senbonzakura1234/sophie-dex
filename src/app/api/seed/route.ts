@@ -1,13 +1,9 @@
 /* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
+import { effectsList, itemsList, rumorsList, traitsList } from '@root/constants/seedData';
 import { postgresql } from '@root/server/database/postgresql';
-import type { Effect, Item, Rumor, Trait } from '@root/server/database/postgresql/schema';
 import { effects, items, rumors, traits } from '@root/server/database/postgresql/schema';
 import { evnIs, tryCatchHandler } from '@root/utils/common';
 import { NextResponse } from 'next/server';
-import effectsList from '../../../../backup/effect.json';
-import itemsList from '../../../../backup/item.json';
-import rumorsList from '../../../../backup/rumor.json';
-import traitsList from '../../../../backup/trait.json';
 
 export async function GET() {
 	if (evnIs('production')) return new Response('Forbidden resource', { status: 403 });
@@ -31,7 +27,7 @@ export async function GET() {
 	for (let i = 0; i < effectsList.length; i++) {
 		const element = effectsList[i]!;
 
-		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(effects).values(element as Effect));
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(effects).values(element));
 
 		if (!isSuccess) data.errorList.push({ id: element?.id, error });
 		if (isSuccess) {
@@ -43,7 +39,7 @@ export async function GET() {
 	for (let i = 0; i < itemsList.length; i++) {
 		const element = itemsList[i]!;
 
-		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(items).values(element as Item));
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(items).values(element));
 
 		if (!isSuccess) data.errorList.push({ id: element?.id, error });
 		if (isSuccess) {
@@ -55,7 +51,7 @@ export async function GET() {
 	for (let i = 0; i < rumorsList.length; i++) {
 		const element = rumorsList[i]!;
 
-		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(rumors).values(element as Rumor));
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(rumors).values(element));
 
 		if (!isSuccess) data.errorList.push({ id: element?.id, error });
 		if (isSuccess) {
@@ -67,7 +63,7 @@ export async function GET() {
 	for (let i = 0; i < traitsList.length; i++) {
 		const element = traitsList[i]!;
 
-		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(traits).values(element as Trait));
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(traits).values(element));
 
 		if (!isSuccess) data.errorList.push({ id: element?.id, error });
 		if (isSuccess) {
