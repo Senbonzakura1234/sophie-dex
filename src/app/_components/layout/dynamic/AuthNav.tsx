@@ -10,8 +10,10 @@ import { usePathname } from 'next/navigation';
 const signInUrl = '/signin';
 
 export default function AuthNav() {
-	const { data: session } = useSession();
+	const { data: session, status } = useSession();
 	const pathname = usePathname();
+
+	if (status === 'loading') return null;
 
 	if (session)
 		return (

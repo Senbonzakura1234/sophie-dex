@@ -5,6 +5,7 @@ import '@total-typescript/ts-reset';
 import AuthProvider from '@components/layout/dynamic/AuthProvider';
 import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
 import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
+import TrpcProvider from '@components/layout/dynamic/TrpcProvider';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { AppleMediaConfig } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
@@ -23,7 +24,6 @@ const Alert = dynamic(() => import('@components/layout/dynamic/Alert'));
 const AuthNav = dynamic(() => import('@components/layout/dynamic/AuthNav'));
 const ScrollTopTrigger = dynamic(() => import('@components/layout/dynamic/ScrollTopTrigger'));
 const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'));
-const WelcomeBackAlertTrigger = dynamic(() => import('@components/layout/dynamic/WelcomeBackAlertTrigger'));
 
 const appleMediaConfig: AppleMediaConfig = [
 	{ url: 'iPhone_14_Pro_Max_landscape' },
@@ -222,24 +222,24 @@ export default async function RootLayout({ children }: ChildrenProps) {
 			<body className={cn(fontAtelier.variable, fontComicSansMS.className)}>
 				<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(themeCookies?.value) }}>
 					<AuthProvider session={session}>
-						<WelcomeBackAlertTrigger />
-
 						<ThemeWrapper>
-							<ScrollWrapper>
-								<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
-									<ThemeSwitcher />
+							<TrpcProvider>
+								<ScrollWrapper>
+									<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
+										<ThemeSwitcher />
 
-									<AuthNav />
-								</nav>
+										<AuthNav />
+									</nav>
 
-								{children}
+									{children}
 
-								<Alert />
+									<Alert />
 
-								<Suspense>
-									<ScrollTopTrigger />
-								</Suspense>
-							</ScrollWrapper>
+									<Suspense>
+										<ScrollTopTrigger />
+									</Suspense>
+								</ScrollWrapper>
+							</TrpcProvider>
 						</ThemeWrapper>
 					</AuthProvider>
 				</ContextProvider>

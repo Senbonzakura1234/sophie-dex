@@ -3,7 +3,6 @@
 import QueryLink from '@components/common/dynamic/QueryLink';
 import RefetchButton from '@components/common/dynamic/RefetchButton';
 import FilterIcon from '@components/icons/outline/FilterIcon';
-import ArrowPathIcon from '@components/icons/solid/ArrowPathIcon';
 import Paginate from '@components/layout/static/Paginate';
 import { Transition } from '@headlessui/react';
 import { DEFAULT_LIMIT } from '@root/constants/common';
@@ -107,9 +106,7 @@ export default function TopFilter() {
 						Reset
 					</QueryLink>
 
-					<RefetchButton className='btn btn-circle btn-primary btn-sm my-auto !border-none shadow-lg shadow-current !transition-opacity'>
-						<ArrowPathIcon className='aspect-square h-4' />
-					</RefetchButton>
+					<RefetchButton moduleId={moduleId} />
 				</div>
 			</Transition>
 		</>

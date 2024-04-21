@@ -1,33 +1,23 @@
 'use client';
 
-import useSelector from '@root/hooks/useSelector';
-import type { ChildrenProps, ClassNameProps } from '@root/types/common/props';
-import { cn } from '@root/utils/common';
-import { useRouter } from 'next/navigation';
+import ArrowPathIcon from '@components/icons/solid/ArrowPathIcon';
+import type { ModuleIdEnum } from '@root/types/common/zod';
+import { ApiClientCtx } from '@root/utils/client/trpc';
 
 type RefetchButtonProps = {
-	isShowDivider?: boolean;
-} & ClassNameProps &
-	ChildrenProps;
+	moduleId: ModuleIdEnum;
+};
 
-export default function RefetchButton({ isShowDivider, className, children }: RefetchButtonProps) {
-	const {
-		contentData: { refetch },
-	} = useSelector();
-
-	const { refresh } = useRouter();
+export default function RefetchButton({ moduleId }: RefetchButtonProps) {
+	const utils = ApiClientCtx.useUtils();
 
 	return (
-		<>
-			{isShowDivider ? <span className='divider m-0'>or</span> : null}
-
-			<button
-				aria-label={refetch ? 'refetch data' : 'refresh page'}
-				className={cn('capitalize', className)}
-				onClick={refetch || refresh}
-			>
-				{children || 'refresh'}
-			</button>
-		</>
+		<button
+			aria-label='refetch data'
+			className='btn btn-circle btn-primary btn-sm my-auto !border-none capitalize shadow-lg shadow-current !transition-opacity'
+			onClick={() => utils[moduleId].getAll.invalidate}
+		>
+			<ArrowPathIcon className='aspect-square h-4' />
+		</button>
 	);
 }

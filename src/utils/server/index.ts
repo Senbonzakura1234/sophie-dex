@@ -10,5 +10,5 @@ export const getIpAddress = (headers: NextRequest['headers']) =>
 export const getCookieData = async (name: string) => {
 	const cookieData = cookies().get(name);
 
-	return new Promise<RequestCookie | undefined>(resolve => setTimeout(() => resolve(cookieData), 1000));
+	return new Promise<RequestCookie | undefined>(resolve => setTimeout(() => resolve(cookieData), 0));
 };

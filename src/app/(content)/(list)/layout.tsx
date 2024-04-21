@@ -1,5 +1,4 @@
 import ContentWrapper from '@components/layout/dynamic/ContentWrapper';
-import TrpcProvider from '@components/layout/dynamic/TrpcProvider';
 import PulsePlaceHolder from '@components/loading/PulsePlaceHolder';
 import type { ChildrenProps } from '@root/types/common/props';
 import dynamic from 'next/dynamic';
@@ -27,9 +26,7 @@ export default function ListLayout({ children }: ChildrenProps) {
 				<TopFilter />
 			</section>
 
-			<ContentWrapper type='list'>
-				<TrpcProvider>{children}</TrpcProvider>
-			</ContentWrapper>
+			<ContentWrapper type='list'>{children}</ContentWrapper>
 
 			<section className='container relative z-30 mx-auto grid gap-3 max-2xl:px-4'>
 				<BottomFilter />

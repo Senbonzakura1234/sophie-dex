@@ -1,4 +1,4 @@
-import RefetchButton from '@components/common/dynamic/RefetchButton';
+import RefreshButton from '@components/common/dynamic/RefeshButton';
 import SignInRedirect from '@components/common/dynamic/SignInRedirect';
 import { errorMap } from '@root/constants/common';
 import type { APIError } from '@root/types/common';
@@ -35,7 +35,7 @@ export default function ErrorContent({ code = 'INTERNAL_SERVER_ERROR' }: ErrorCo
 					Back to home
 				</Link>
 
-				<RefetchButton className='link-hover link link-primary text-xs font-bold md:text-sm' isShowDivider />
+				<RefreshButton />
 			</div>
 		</div>
 	);
