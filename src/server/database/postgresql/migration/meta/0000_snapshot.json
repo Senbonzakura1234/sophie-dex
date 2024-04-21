@@ -1,5 +1,5 @@
 {
-  "id": "e94b1517-8d44-4e75-b2fb-ed508eb76569",
+  "id": "b149a0bf-4cb6-4202-9194-a30f7ad19d42",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -261,6 +261,30 @@
         "github_profile": {
           "name": "github_profile",
           "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "bookmarked_effect_list": {
+          "name": "bookmarked_effect_list",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "bookmarked_item_list": {
+          "name": "bookmarked_item_list",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "bookmarked_rumor_list": {
+          "name": "bookmarked_rumor_list",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "bookmarked_trait_list": {
+          "name": "bookmarked_trait_list",
+          "type": "text[]",
           "primaryKey": false,
           "notNull": true
         },

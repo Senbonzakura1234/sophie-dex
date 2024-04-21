@@ -86,6 +86,23 @@ export const users = pgTable('users', {
 	email: varchar('email', { length: 256 }).notNull(),
 	githubProfile: jsonb('github_profile').$type<GithubUserInfo>().notNull(),
 
+	bookmarkedEffectList: text('bookmarked_effect_list')
+		.array()
+		.notNull()
+		.$default(() => []),
+	bookmarkedItemList: text('bookmarked_item_list')
+		.array()
+		.notNull()
+		.$default(() => []),
+	bookmarkedRumorList: text('bookmarked_rumor_list')
+		.array()
+		.notNull()
+		.$default(() => []),
+	bookmarkedTraitList: text('bookmarked_trait_list')
+		.array()
+		.notNull()
+		.$default(() => []),
+
 	createdAt: timestamp('created_at', { precision: 6, withTimezone: true, mode: 'string' }).defaultNow(),
 	updatedAt: timestamp('updated_at', { precision: 6, withTimezone: true, mode: 'string' }),
 });

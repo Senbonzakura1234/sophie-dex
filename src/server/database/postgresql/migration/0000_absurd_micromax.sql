@@ -47,6 +47,10 @@ CREATE TABLE IF NOT EXISTS "sophie_dex_users" (
 	"username" varchar(256) NOT NULL,
 	"email" varchar(256) NOT NULL,
 	"github_profile" jsonb NOT NULL,
+	"bookmarked_effect_list" text[] NOT NULL,
+	"bookmarked_item_list" text[] NOT NULL,
+	"bookmarked_rumor_list" text[] NOT NULL,
+	"bookmarked_trait_list" text[] NOT NULL,
 	"created_at" timestamp(6) with time zone DEFAULT now(),
 	"updated_at" timestamp(6) with time zone,
 	CONSTRAINT "sophie_dex_users_username_unique" UNIQUE("username")
