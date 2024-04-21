@@ -23,7 +23,7 @@ export async function generateGenericMetadata(
 
 export async function generateDetailMetadata(
 	parentPromise: ResolvingMetadata,
-	getRecordPromise: ReturnType<typeof getRecord>,
+	getRecordPromise: ReturnType<typeof getContentRecord>,
 ): Promise<Metadata> {
 	const result = await tryCatchHandler(Promise.all([parentPromise, getRecordPromise]));
 
@@ -40,7 +40,7 @@ export async function generateDetailMetadata(
 	return { title: name, keywords: [...currentKeywords.split(','), ...(parentKeywords || [])] };
 }
 
-export const getRecord = async <TRecord extends CommonRecord>(
+export const getContentRecord = async <TRecord extends CommonRecord>(
 	query: PreparedPGQuery<TRecord | undefined>,
 	{ id }: IdQuery,
 ) => {

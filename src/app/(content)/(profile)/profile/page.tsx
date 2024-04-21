@@ -1,9 +1,10 @@
 import ProfileInfo from '@components/common/static/ProfileInfo';
 import SuspenseComponent from '@components/layout/static/SuspenseComponent';
 import RecordPlaceholder from '@components/loading/RecordPlaceholder';
-import { postgresql } from '@root/server/database/postgresql';
+import { getUserRecordQuery } from '@root/server/database/postgresql';
 import { APIError, type APIResult, type PageProps } from '@root/types/common';
 import type { GithubUserInfo } from '@root/types/common/zod';
+import { tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
 import { generateGenericMetadata } from '@root/utils/server/database';
 import type { Metadata, ResolvingMetadata } from 'next';
@@ -23,11 +24,18 @@ const getProfile = async (): Promise<APIResult<GithubUserInfo>> => {
 
 	if (!username) return { isSuccess: false, result: null, error: new APIError({ code: 'UNAUTHORIZED' }) };
 
-	const user = await postgresql.query.users.findFirst({ where: (schema, { eq }) => eq(schema.username, username) });
+	const { data, isSuccess } = await tryCatchHandler(getUserRecordQuery.execute({ username }));
 
-	if (!user) return { isSuccess: false, result: null, error: new APIError({ code: 'UNAUTHORIZED' }) };
+	if (!isSuccess) return { isSuccess: false, result: null, error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }) };
 
-	return { isSuccess: true, result: user.githubProfile, error: null };
+	if (!data)
+		return {
+			isSuccess: false,
+			result: null,
+			error: new APIError({ code: 'NOT_FOUND', message: `User ${username} Not Found` }),
+		};
+
+	return { isSuccess: true, result: data.githubProfile, error: null };
 };
 
 export default function Profile() {

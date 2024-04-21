@@ -24,6 +24,13 @@ export const getTraitRecordQuery = postgresql.query.traits
 	.findFirst({ where: (schema, { eq, sql }) => eq(schema.id, sql.placeholder('id')) })
 	.prepare('getTraitRecord');
 
+export const getUserRecordQuery = postgresql.query.users
+	.findFirst({
+		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
+		columns: { githubProfile: true },
+	})
+	.prepare('getUserRecordQuery');
+
 export const getAllEffectIdsQuery = postgresql.query.effects
 	.findMany({ columns: { id: true } })
 	.prepare('getAllEffectIds');
