@@ -6,14 +6,14 @@
 			"hunt": ["White Root", "Alraunem", "Starfish."],
 			"location": ["Gate of Trees", "Three Bridge Spring", "Small Islet", "Prospector's Strand."],
 			"rumor": {
-				"id": "0abe93a9-9401-4a1e-adf1-1a072ab0a18e",
+				"id": "01HVZGS2KS0Y33FCA0MSFMSN9F",
 				"name": "Moss with Sleep Compounds",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "507a3c01-768c-4487-ad40-22a0bb8d0aa0",
+		"id": "01HVZGS2K56XYHM139V8257RWN",
 		"index": 7,
 		"keyWords": "mossy driftwood,green,wood,plant,material",
 		"level": 13,
@@ -33,7 +33,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "c1e25c50-d7a1-4d94-b3d6-891e8c5fb332",
+		"id": "01HVZGS2K50H141R7VWAFFBF7R",
 		"index": 9,
 		"keyWords": "altare,green,plant,medicine mat,material",
 		"level": 8,
@@ -50,14 +50,14 @@
 			"hunt": ["Kimmoch", "Nightshade", "Sorcerer Titus."],
 			"location": ["Rocky Grove", "Gate of trees", "Forest of Fairies."],
 			"rumor": {
-				"id": "cec87fb3-64a3-4aad-990c-fb2b905dfbd0",
+				"id": "01HVZGS2KS2YXYSKK2EWFDCDD8",
 				"name": "Herb Effective for Medicine",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "f9aec733-af0d-445b-b2bf-2bd45b28b58d",
+		"id": "01HVZGS2K52SB0GPT2NQG9K540",
 		"index": 3,
 		"keyWords": "mystic herb,white,plant,secret power,medicine mat,material",
 		"level": 15,
@@ -77,7 +77,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "24fe96f3-7857-462a-806e-7719daa7453a",
+		"id": "01HVZGS2K56QV0AX1S55JKHWPS",
 		"index": 5,
 		"keyWords": "five day vine,green,plant,secret power,material",
 		"level": 10,
@@ -94,14 +94,14 @@
 			"hunt": ["White Root", "Alraunem", "Starfish."],
 			"location": ["Rocky Mountain", "Verdant Hill", "Scar of the land."],
 			"rumor": {
-				"id": "1f761cbf-ef55-4faa-a7a5-1d96c3fef402",
+				"id": "01HVZGS2KSF43FQF00NDBKQNWZ",
 				"name": "Cotton Disliked by Dragons",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "09923333-e710-4055-87db-cc673a847812",
+		"id": "01HVZGS2K5JB9YW1RNDMZT70S2",
 		"index": 6,
 		"keyWords": "mountain cotton,white,plant,thread,fuel,material",
 		"level": 7,
@@ -118,14 +118,14 @@
 			"hunt": [],
 			"location": ["Gathering of Beast", "Rocky Grove", "Gate of Trees", "Foggy Woodland", "Forest of Faries."],
 			"rumor": {
-				"id": "f5370057-6e0b-471e-92e7-318a23924a32",
+				"id": "01HVZGS2KTNKQWPE6CECRBMRRJ",
 				"name": "Cursed Ancient Trees",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "2cbf08b2-0f2c-4698-be70-5082036b612f",
+		"id": "01HVZGS2K5M0TE6KD692V38Y5D",
 		"index": 8,
 		"keyWords": "kifa,yellow,wood,plant,material",
 		"level": 10,
@@ -145,7 +145,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "94156a20-c4ca-4e6a-8a9f-1f6e9801272a",
+		"id": "01HVZGS2K5Z91N0SQ14GPP8C6T",
 		"index": 4,
 		"keyWords": "sunset grass,yellow,plant,fuel,material",
 		"level": 2,
@@ -165,7 +165,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "f52bc522-5c32-4041-b0b8-b7db1f437146",
+		"id": "01HVZGS2K5SJHHSNS1BDGM0DYJ",
 		"index": 1,
 		"keyWords": "cobalt grass,blue,plant,water,material",
 		"level": 3,
@@ -185,7 +185,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "fdc54868-5d91-4e30-baaa-08fd81a08cad",
+		"id": "01HVZGS2K50RBXW4EZT1A30S6N",
 		"index": 11,
 		"keyWords": "princess grass,white,plant,medicine mat,material",
 		"level": 17,
@@ -205,7 +205,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "bb47dd23-ee6b-41d9-9e4a-b468b1a6059d",
+		"id": "01HVZGS2K5NKTE39PCS2NGWHM3",
 		"index": 14,
 		"keyWords": "dunkelstern,red,plant,poison mat,secret power,material,false flower",
 		"level": 37,
@@ -214,7 +214,7 @@
 		"recipeType": null,
 		"relatedCategories": ["PLANT", "POISON_MAT", "SECRET_POWER"],
 		"traitPresent": {
-			"id": "d3597056-e402-4430-80b2-ec857db3a89f",
+			"id": "01HVZGS2M93TG11RRFWH96HGJ0",
 			"name": "False Flower",
 			"table": "trait"
 		}
@@ -229,7 +229,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "54379b95-aeb5-497e-b41d-8fddf91e495a",
+		"id": "01HVZGS2K5KRE2513934EK5XX0",
 		"index": 12,
 		"keyWords": "eternal blossom,white,plant,elixir,material",
 		"level": 34,
@@ -255,7 +255,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "6eab40c2-a337-4f16-b8a9-298f0a2dc9df",
+		"id": "01HVZGS2K6S98Y00KXRBWNM7Y8",
 		"index": 10,
 		"keyWords": "crimson herb,red,plant,medicine mat,material,slime compound",
 		"level": 14,
@@ -264,7 +264,7 @@
 		"recipeType": null,
 		"relatedCategories": ["PLANT", "MEDICINE_MAT"],
 		"traitPresent": {
-			"id": "ab4d9ff4-d6a9-455a-8db4-cd4eb420ee9f",
+			"id": "01HVZGS2M7DN3TTWEZ9HEDY874",
 			"name": "Slime Compound",
 			"table": "trait"
 		}
@@ -276,14 +276,14 @@
 			"hunt": [],
 			"location": ["Fairy Forest (Rumor only)."],
 			"rumor": {
-				"id": "44329036-4226-4500-ba42-d936a54a9ebc",
+				"id": "01HVZGS2KTKNVRHA3DFYNBQZ85",
 				"name": "Flower Blooming in Silence",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "4aeb3148-1743-4337-b2f9-3f68e132e5c7",
+		"id": "01HVZGS2K647SF4SNQWM2Z6JMM",
 		"index": 13,
 		"keyWords": "dunkelheit,white,plant,medicine mat,elixir,material,full of life",
 		"level": 50,
@@ -292,7 +292,7 @@
 		"recipeType": null,
 		"relatedCategories": ["PLANT", "MEDICINE_MAT", "ELIXIR"],
 		"traitPresent": {
-			"id": "9e710a33-4c90-457c-8242-df01d28520c7",
+			"id": "01HVZGS2KY1FYZX1YBHPF2A6DV",
 			"name": "Full of Life",
 			"table": "trait"
 		}
@@ -307,7 +307,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "b0b8a71a-1f94-4f7a-adbd-ec2a19697816",
+		"id": "01HVZGS2K680HHX367B01H22HQ",
 		"index": 15,
 		"keyWords": "aizen ore,yellow,ore,material",
 		"level": 7,
@@ -327,7 +327,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "ddcdbb54-a02d-4aee-97e5-9c042d3dbd14",
+		"id": "01HVZGS2K6799K2N19XA84MGSG",
 		"index": 17,
 		"keyWords": "kupulf ore,red,ore,material",
 		"level": 9,
@@ -347,7 +347,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "4f035ad5-5af4-4706-93af-faf7769ff753",
+		"id": "01HVZGS2K6QHA3YA17YTVTC9MN",
 		"index": 16,
 		"keyWords": "raiden ore,green,ore,material,electrified",
 		"level": 9,
@@ -356,7 +356,7 @@
 		"recipeType": null,
 		"relatedCategories": ["ORE"],
 		"traitPresent": {
-			"id": "801a43b3-70fb-4835-93d4-fe73738981de",
+			"id": "01HVZGS2M8C4Q4QWSS1EF1B681",
 			"name": "Electrified",
 			"table": "trait"
 		}
@@ -371,7 +371,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "cd1e21d4-c16e-4405-aa3f-bfeaa4a7778f",
+		"id": "01HVZGS2K6ZX08FVQJ8195XVBG",
 		"index": 20,
 		"keyWords": "spirit stone,white,ore,metal,material",
 		"level": 15,
@@ -391,7 +391,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "8bd0ee76-e222-46e1-98ff-b1bcfbb5d7c8",
+		"id": "01HVZGS2K6X92SP0NPG6P4QH6Z",
 		"index": 23,
 		"keyWords": "lakebottom soil,green,clay,material",
 		"level": 9,
@@ -422,7 +422,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "5fefa8a2-62ba-43d7-b41b-5f2351acd80f",
+		"id": "01HVZGS2K6Q5WWRS65SRH91X36",
 		"index": 41,
 		"keyWords": "dragon scale,white,animal,medicine mat,elixir,material",
 		"level": 39,
@@ -442,7 +442,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "36046b9b-9a3e-4a93-b2ef-7ca844dbd666",
+		"id": "01HVZGS2K6K0P7H7FP537SZGZC",
 		"index": 45,
 		"keyWords": "luminous water,green,water,secret power,material,flickering light",
 		"level": 23,
@@ -451,7 +451,7 @@
 		"recipeType": null,
 		"relatedCategories": ["WATER", "SECRET_POWER"],
 		"traitPresent": {
-			"id": "5c57ba20-859b-4dcb-8fdc-930cf4a47691",
+			"id": "01HVZGS2M9JJJM94Q4H8S443YD",
 			"name": "Flickering Light",
 			"table": "trait"
 		}
@@ -463,14 +463,14 @@
 			"hunt": [],
 			"location": ["Merbert Farm", "Flower Garden", "Open Ruins", "Verdant Hilld."],
 			"rumor": {
-				"id": "a6ca4520-3986-4b2e-8d6c-7c8ebf0c3173",
+				"id": "01HVZGS2KRSDRFC92TM4WGBMDD",
 				"name": "Not So Whimsy Strawberries?",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "b1f9b50b-7fe8-41e1-ae7a-b207aba45232",
+		"id": "01HVZGS2K6ZTMTTAKZVVY5T48Q",
 		"index": 62,
 		"keyWords": "whimsy strawberry,green,ingredient,plant,material",
 		"level": 10,
@@ -490,7 +490,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "b33aae16-f696-4144-9660-7c0fdfcae5c3",
+		"id": "01HVZGS2K63QXGCF8G612S5N57",
 		"index": 64,
 		"keyWords": "paper scrap,green,paper,fuel,material",
 		"level": 5,
@@ -507,14 +507,14 @@
 			"hunt": ["Kaiser Pigeon", "Saber Claw", "Gustaf", "Fang."],
 			"location": ["Calm Banks", "Silent Lakeside", "Prospector's Strand."],
 			"rumor": {
-				"id": "60c9babf-235b-4afe-be50-5d2429b4552e",
+				"id": "01HVZGS2KV96QJE9K6EYJ8TVTH",
 				"name": "Shell Like Gemstone",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "e5452301-c65b-45be-a9eb-23999eceaf16",
+		"id": "01HVZGS2K6VB47AF671TFPZ32C",
 		"index": 70,
 		"keyWords": "pretty shell,blue,gem,medicine mat,material",
 		"level": 5,
@@ -531,14 +531,14 @@
 			"hunt": ["Sealed Demon Lord", "Wind Elemental", "Light Elemental."],
 			"location": [],
 			"rumor": {
-				"id": "adda7d26-10f2-4b9a-9238-d0b239964d6d",
+				"id": "01HVZGS2KTB0KJB4K05EKC7BHY",
 				"name": "Faintly Shining Ore",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "7351a54c-d7dd-4063-a042-a318e0f135fd",
+		"id": "01HVZGS2K6862V5Q1H1H8PWEZA",
 		"index": 78,
 		"keyWords": "pendegrune,green,secret power,elixir,material",
 		"level": 28,
@@ -558,7 +558,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "143e2b2a-cfd6-40b9-9e47-124895be121a",
+		"id": "01HVZGS2K6B3T2254Z87H98PGW",
 		"index": 420,
 		"keyWords": "neutralizer r,red,neutralizer,synthesis,beginner recipes,red uni",
 		"level": 2,
@@ -566,7 +566,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "770bd7f5-c0af-4cc2-9ca2-5df2e2c4a9e3",
+					"id": "01HVZGS2KA97AV6Y0FXEWZCSTY",
 					"name": "Red Uni",
 					"table": "item"
 				}
@@ -587,7 +587,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "2f94e463-f7ef-4f46-aca5-bae0cb0ed62c",
+		"id": "01HVZGS2K6H6Z9CFYJCQGSDK4X",
 		"index": 297,
 		"keyWords": "hero's medicine,red,medicine,buff item,mystery recipes,ruins,blue sky altar,fallen palace",
 		"level": 46,
@@ -620,7 +620,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "026af4a8-5475-46cb-883c-5b1aa12f7129",
+		"id": "01HVZGS2K6NBV9B9A90G607DEY",
 		"index": 428,
 		"keyWords": "honey,yellow,ingredient,synthesis,beginner recipes,beehive",
 		"level": 6,
@@ -628,7 +628,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "bd34c9a8-cdea-4887-bf64-997282d2712d",
+					"id": "01HVZGS2K80JM8045PC8QF0BD4",
 					"name": "Beehive",
 					"table": "item"
 				}
@@ -649,7 +649,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "15d4e3d5-0496-4f38-8ad3-abe078611562",
+		"id": "01HVZGS2K6W1RFDHXPBR9WT882",
 		"index": 239,
 		"keyWords": "honey syrup,blue,medicine,heal item,hope recipes,tess",
 		"level": 12,
@@ -676,7 +676,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "e8ad10da-d210-462d-984a-c0a0a84344fb",
+		"id": "01HVZGS2K6SWYG1PP1NSNK5PN2",
 		"index": 362,
 		"keyWords": "traveler's shoes,green,cloth,exploration,hope recipes",
 		"level": 18,
@@ -699,7 +699,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "aecf83a4-bbc0-4ba1-accf-5d9bdb591039",
+		"id": "01HVZGS2K6ST9QB9B3FKWWT3Y5",
 		"index": 368,
 		"keyWords": "warding charm,yellow,magic item,paper,exploration,beginner recipes,pamela,pious talisman",
 		"level": 17,
@@ -707,7 +707,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "84802247-363a-4e60-bc50-c15d91476ecf",
+					"id": "01HVZGS2K7Y628GW4CSTEKVC3K",
 					"name": "Pious Talisman",
 					"table": "item"
 				},
@@ -731,7 +731,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "884f400c-9c02-4f34-93b9-07f72c790f5e",
+		"id": "01HVZGS2K64RBKN35Q24EW0K5J",
 		"index": 434,
 		"keyWords": "blitzlite,green,metal,synthesis,hope recipes,lightning skill",
 		"level": 25,
@@ -761,14 +761,14 @@
 				"Prospector's Strand."
 			],
 			"rumor": {
-				"id": "2797039b-c4e1-461b-9dfb-37b87d1b3a70",
+				"id": "01HVZGS2KS9PW3BNGGFA302YAM",
 				"name": "Enormous Hakurei Stones",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "992fc648-0e38-4acc-8c36-2f9fbb622664",
+		"id": "01HVZGS2K7NDMT3FNKP01G78DZ",
 		"index": 19,
 		"keyWords": "hakurei stone,blue,ore,gem,material,carries cold",
 		"level": 7,
@@ -777,7 +777,7 @@
 		"recipeType": null,
 		"relatedCategories": ["ORE", "GEM"],
 		"traitPresent": {
-			"id": "4bb19231-ddb2-43fc-b108-50ff766cadb9",
+			"id": "01HVZGS2M716RJVJ473RJBZQDW",
 			"name": "Carries Cold",
 			"table": "trait"
 		}
@@ -792,7 +792,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "1fd8a621-4894-4fcb-8766-62a0e82e43c8",
+		"id": "01HVZGS2K77E6KCN4BT84J09DQ",
 		"index": 47,
 		"keyWords": "suspicious liquid,red,water,poison mat,material",
 		"level": 20,
@@ -812,7 +812,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "fe4f074b-bb09-4d08-8fb2-c487f3713a87",
+		"id": "01HVZGS2K7BEM75QDDN0N26EYQ",
 		"index": 25,
 		"keyWords": "ancient tablet,white,ore,clay,secret power,material,ancient seal",
 		"level": 15,
@@ -821,7 +821,7 @@
 		"recipeType": null,
 		"relatedCategories": ["ORE", "CLAY", "SECRET_POWER"],
 		"traitPresent": {
-			"id": "a79a0acb-f99c-46d6-86f9-409d6b2b11a3",
+			"id": "01HVZGS2M7EH2078NRNKHMWPHR",
 			"name": "Ancient Seal",
 			"table": "trait"
 		}
@@ -836,7 +836,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "e825f830-3f3f-4393-adc0-c24fa9eeba93",
+		"id": "01HVZGS2K7JR4YTZWPHH3FCX5D",
 		"index": 26,
 		"keyWords": "broken stone,yellow,ore,clay,material",
 		"level": 11,
@@ -868,7 +868,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "f944f197-f67c-4a26-a452-2a75b616d47a",
+		"id": "01HVZGS2K7BHK95VCBEXABVVCD",
 		"index": 38,
 		"keyWords": "dawn fur,red,animal,thread,material,sunny scent",
 		"level": 21,
@@ -877,7 +877,7 @@
 		"recipeType": null,
 		"relatedCategories": ["ANIMAL", "THREAD"],
 		"traitPresent": {
-			"id": "2a9ae5f6-19e0-4b51-9f4b-8b30e4995b6e",
+			"id": "01HVZGS2MAXGSHPD04V25TWGRD",
 			"name": "Sunny Scent",
 			"table": "trait"
 		}
@@ -892,7 +892,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "d696b785-cfb8-496e-8ed8-8c7d7a952764",
+		"id": "01HVZGS2K7XNF8A3PRGM1THK1D",
 		"index": 48,
 		"keyWords": "puni fluid,blue,water,medicine mat,material",
 		"level": 9,
@@ -909,14 +909,14 @@
 			"hunt": ["Mandragora", "Single Horn."],
 			"location": ["Merbert Farm", "Moon Sun Moor."],
 			"rumor": {
-				"id": "db4dc271-dcbd-47d3-9c84-cb715d245d4a",
+				"id": "01HVZGS2KSBXT5VKWTEDRGD0ZD",
 				"name": "Care to Taste Some Wheat?",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "83ec45ca-bfc0-4dca-be74-1f152213dca1",
+		"id": "01HVZGS2K7Z2CPXS4WAVQG5TEB",
 		"index": 56,
 		"keyWords": "ramel wheat,green,ingredient,plant,material",
 		"level": 6,
@@ -936,7 +936,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "7e88b36d-cf60-4903-89a3-48bd93e3115d",
+		"id": "01HVZGS2K719T7BPFD993Y17P2",
 		"index": 58,
 		"keyWords": "soil potato,yellow,ingredient,plant,material",
 		"level": 9,
@@ -956,7 +956,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "0996c3c9-5052-464d-ac8c-a7524c5fa0b2",
+		"id": "01HVZGS2K7G9AVV1FXZ7FEX962",
 		"index": 59,
 		"keyWords": "silver potato,yellow,ingredient,metal,material,mutated material",
 		"level": 15,
@@ -965,7 +965,7 @@
 		"recipeType": null,
 		"relatedCategories": ["INGREDIENT", "METAL"],
 		"traitPresent": {
-			"id": "e0860688-0608-4c97-af12-c34b07ab2a3e",
+			"id": "01HVZGS2M9C2EYBN98SEA288Z3",
 			"name": "Mutated Material",
 			"table": "trait"
 		}
@@ -980,7 +980,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "84802247-363a-4e60-bc50-c15d91476ecf",
+		"id": "01HVZGS2K7Y628GW4CSTEKVC3K",
 		"index": 69,
 		"keyWords": "pious talisman,white,paper,fuel,magic item,material,power of faith",
 		"level": 26,
@@ -989,7 +989,7 @@
 		"recipeType": null,
 		"relatedCategories": ["PAPER", "FUEL", "MAGIC_ITEM"],
 		"traitPresent": {
-			"id": "34859a2f-0389-426e-ba93-d86e94f68234",
+			"id": "01HVZGS2M9CQ0WB00TE9DFY0VG",
 			"name": "Power of Faith",
 			"table": "trait"
 		}
@@ -1004,7 +1004,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "18a84c5a-e9fe-4760-a988-ca7e923c2b2b",
+		"id": "01HVZGS2K7ZQJ6CCHN8E25ZB13",
 		"index": 83,
 		"keyWords": "forgotten ore,white,ore,material",
 		"level": 41,
@@ -1024,7 +1024,7 @@
 			"shop": null,
 			"special": "Obtain through event."
 		},
-		"id": "394ee255-e44c-464f-9e6e-f669e58bf3b0",
+		"id": "01HVZGS2K7Y0C07YTE8NGZ4DD4",
 		"index": 90,
 		"keyWords": "haze grass petal,green,important,material",
 		"level": 28,
@@ -1044,7 +1044,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "1dcd6a05-e9fb-4d10-84ae-c16aeb9d2796",
+		"id": "01HVZGS2K7NMYS2WW2E50DMXQ6",
 		"index": 92,
 		"keyWords": "magic page,blue,paper,fuel,magic item,material",
 		"level": 18,
@@ -1064,7 +1064,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "e19fbf97-4889-4efd-9cb3-a01d96e3c820",
+		"id": "01HVZGS2K7MVRWC8NXHSARTSH3",
 		"index": 216,
 		"keyWords": "berg medicine,green,medicine,heal item,beginner recipes",
 		"level": 1,
@@ -1072,7 +1072,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "e19fbf97-4889-4efd-9cb3-a01d96e3c820",
+					"id": "01HVZGS2K7MVRWC8NXHSARTSH3",
 					"name": "Berg Medicine",
 					"table": "item"
 				}
@@ -1093,7 +1093,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "d173671a-2d79-4cb2-bc73-9add2acd2f5e",
+		"id": "01HVZGS2K7WDVHN0M494QC8YG0",
 		"index": 164,
 		"keyWords": "flame of the end,white,bomb,magic item,atk item,mystery recipes",
 		"level": 60,
@@ -1116,7 +1116,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "602bbd6c-1d47-472e-8465-2bad4a3e7547",
+		"id": "01HVZGS2K76283VGKE72W0E2MW",
 		"index": 296,
 		"keyWords": "imp's mischief,yellow,magic item,de buff item,growth recipes,monsters",
 		"level": 16,
@@ -1143,7 +1143,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "bc3bac47-2271-4da1-9fcb-6cece8388944",
+		"id": "01HVZGS2K7YWCW2K9A3D6F5VGB",
 		"index": 153,
 		"keyWords": "magician's flute,green,magic item,atk item,dream recipes,book shop",
 		"level": 31,
@@ -1170,7 +1170,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "d84fb3cd-b49a-4971-8a5f-2298c13ede89",
+		"id": "01HVZGS2K7Q4R0KWE9BSP5P70Z",
 		"index": 148,
 		"keyWords": "stahl ice bomb,blue,bomb,atk item,hope recipes,ice bomb",
 		"level": 30,
@@ -1178,7 +1178,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "60182374-d37c-49fb-b5f4-6eb75c8cacab",
+					"id": "01HVZGS2KQW91AMQYRAJY8WYR5",
 					"name": "Ice Bomb",
 					"table": "item"
 				}
@@ -1196,14 +1196,14 @@
 			"hunt": ["Grand Ocean."],
 			"location": [],
 			"rumor": {
-				"id": "68ce4d08-e155-4014-82e9-e48c038ae3b6",
+				"id": "01HVZGS2KRDP37WXW6GTF0E4RG",
 				"name": "Remnant of a Past Sea?",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "e584df9b-bc40-4c29-9098-2417d5f574ae",
+		"id": "01HVZGS2K7GNCB7CDHG9V34N2A",
 		"index": 24,
 		"keyWords": "seabed soil,blue,clay,material",
 		"level": 11,
@@ -1223,7 +1223,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "a1ef30ae-dad7-475d-b164-b97eeeb6e753",
+		"id": "01HVZGS2K8T4KG2BQ9P9TNGYAZ",
 		"index": 27,
 		"keyWords": "ancient pillar,green,ore,plant,material",
 		"level": 21,
@@ -1252,7 +1252,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "ea34b8a1-c94c-44e7-879b-5ad4dbc99d4d",
+		"id": "01HVZGS2K8P8HBB57X6VN5JGSM",
 		"index": 37,
 		"keyWords": "animal fur,yellow,animal,thread,material",
 		"level": 8,
@@ -1272,7 +1272,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "bd34c9a8-cdea-4887-bf64-997282d2712d",
+		"id": "01HVZGS2K80JM8045PC8QF0BD4",
 		"index": 60,
 		"keyWords": "beehive,yellow,ingredient,gunpowder,material",
 		"level": 9,
@@ -1292,7 +1292,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "c8416348-efe3-48ea-94c7-766ab3607b46",
+		"id": "01HVZGS2K8MYJ1SZY8Z5MMXN9S",
 		"index": 65,
 		"keyWords": "natural oil,yellow,fuel,material",
 		"level": 9,
@@ -1309,14 +1309,14 @@
 			"hunt": ["Kaiser Pengeon", "Saber Claw", "Gustaf", "Fang."],
 			"location": [],
 			"rumor": {
-				"id": "d5800460-12bf-446f-a4c9-21f910b9ef17",
+				"id": "01HVZGS2KSHPWRRDHW7S2NQVC7",
 				"name": "Vividly Colored Oil",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "4e72da07-8bb8-4da0-b8ff-194d8e4ff033",
+		"id": "01HVZGS2K85S7HYMEZSG8G6G6W",
 		"index": 66,
 		"keyWords": "zafloa oil,green,fuel,material,secret of health",
 		"level": 13,
@@ -1325,7 +1325,7 @@
 		"recipeType": null,
 		"relatedCategories": ["FUEL"],
 		"traitPresent": {
-			"id": "11d53eb1-2385-4445-ace1-13e0a056414e",
+			"id": "01HVZGS2M7CV2YQ2MDB0846NBP",
 			"name": "Secret of Health",
 			"table": "trait"
 		}
@@ -1340,7 +1340,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "ee467b53-fa85-449a-bdd4-c32e106713b2",
+		"id": "01HVZGS2K8ZAZYJMRY48FDVJEB",
 		"index": 580,
 		"keyWords": "eternal cycle staff,white,weapon",
 		"level": 42,
@@ -1360,7 +1360,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "8327ae2f-5ad8-47e7-87a0-23f2a219bf1f",
+		"id": "01HVZGS2K8K5A2BY2V1WPB31W5",
 		"index": 456,
 		"keyWords": "crimson stone,red,animal,gunpowder,elixir,neutralizer,synthesis,mystery recipes,magmacius",
 		"level": 42,
@@ -1387,7 +1387,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "97d35724-a17f-462f-a8d1-4bc3da946689",
+		"id": "01HVZGS2K8Q5JPE5CYWKRBQ41Z",
 		"index": 436,
 		"keyWords": "alchemic clay,white,clay,elixir,synthesis,growth recipes,fritz",
 		"level": 8,
@@ -1414,7 +1414,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "21d84423-c3dd-466c-b3ca-bc2d72d2091c",
+		"id": "01HVZGS2K8MFS5K7CDRDWWC4W9",
 		"index": 522,
 		"keyWords": "eye of mercury,white,magic item,machine,hope recipes,story progress",
 		"level": 18,
@@ -1441,7 +1441,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "3d041729-5ccc-4148-af4a-4e74acd6c489",
+		"id": "01HVZGS2K8F4M164RC3GS9VAH7",
 		"index": 513,
 		"keyWords": "fairy cauldron,white,important,machine,dream recipes,forest of fairies",
 		"level": 23,
@@ -1449,7 +1449,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "3d041729-5ccc-4148-af4a-4e74acd6c489",
+					"id": "01HVZGS2K8F4M164RC3GS9VAH7",
 					"name": "Fairy Cauldron",
 					"table": "item"
 				},
@@ -1473,7 +1473,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "475a2a7d-ede4-46ef-bde0-1e47adc10cbd",
+		"id": "01HVZGS2K8MCZF1084404XRBYJ",
 		"index": 446,
 		"keyWords": "mofcott,yellow,armor mat,cloth,synthesis,growth recipes,cloth,carries heat",
 		"level": 12,
@@ -1481,12 +1481,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "ab1364fb-bfd6-4885-a75d-f551ceadfe8a",
+					"id": "01HVZGS2KFA88E23FANB0RFRVB",
 					"name": "Cloth",
 					"table": "item"
 				},
 				{
-					"id": "c254dc69-cb1a-4fbb-a2fe-b1ffa922a02a",
+					"id": "01HVZGS2M9FNAP23BDPYNET84V",
 					"name": "Carries Heat",
 					"table": "trait"
 				}
@@ -1507,7 +1507,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "6480d6a0-39ea-4420-8632-77ce81ee370f",
+		"id": "01HVZGS2K8YP42KZMAZHS3PF92",
 		"index": 422,
 		"keyWords": "neutralizer g,green,neutralizer,synthesis,growth recipes",
 		"level": 2,
@@ -1530,7 +1530,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "51f1403f-2f10-4e17-95f0-0430ff53fb54",
+		"id": "01HVZGS2K8K382M9D8AVC7BSST",
 		"index": 451,
 		"keyWords": "snowflake crystal,blue,metal,gem,synthesis,hope recipes,silver crystal",
 		"level": 28,
@@ -1538,7 +1538,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "8ed0dca8-69b2-4d77-8ec8-7d3725fd9df5",
+					"id": "01HVZGS2KBQXK74RZS4GVG8BZC",
 					"name": "Silver Crystal",
 					"table": "item"
 				}
@@ -1559,7 +1559,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "a376bd20-1773-474f-9125-6040b729b038",
+		"id": "01HVZGS2K826MGXF9K1ZFYFXY1",
 		"index": 442,
 		"keyWords": "rubilium,red,weapon mat,metal,synthesis,hope recipes",
 		"level": 23,
@@ -1582,7 +1582,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "69c89c0b-2088-4fec-bf6b-79e06f4dfcce",
+		"id": "01HVZGS2K8N2DX6SRV4XZ85J4T",
 		"index": 425,
 		"keyWords": "spirit tears,blue,water,secret power,synthesis,mystery recipes,small island,small islet",
 		"level": 33,
@@ -1612,7 +1612,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "59b90cdb-7130-4f49-a8c5-e77cbe7ffa31",
+		"id": "01HVZGS2K8BFWYQNCNFCZ5RJYX",
 		"index": 431,
 		"keyWords": "zettel,red,paper,fuel,synthesis,beginner recipes,bookshelf,book shop",
 		"level": 5,
@@ -1648,7 +1648,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "74a9f2eb-3f77-4c49-b7ae-5bf1c32fe005",
+		"id": "01HVZGS2K8BARQ2MTNXF32S1XT",
 		"index": 22,
 		"keyWords": "fairy ball,yellow,clay,medicine mat,material",
 		"level": 3,
@@ -1668,7 +1668,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "814a70b6-4656-446d-9db5-7a237d4c1517",
+		"id": "01HVZGS2K8C4FCC9FB94WE54PV",
 		"index": 30,
 		"keyWords": "night crystal,blue,ore,gem,material,absorbs light",
 		"level": 29,
@@ -1677,7 +1677,7 @@
 		"recipeType": null,
 		"relatedCategories": ["ORE", "GEM"],
 		"traitPresent": {
-			"id": "16d1a4db-b13f-44cc-b796-65da19239063",
+			"id": "01HVZGS2M73QV9MSKM2EMNCJE8",
 			"name": "Absorbs Light",
 			"table": "trait"
 		}
@@ -1692,7 +1692,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "d463eb69-c534-49b9-ab07-0abaeb96a191",
+		"id": "01HVZGS2K9HTC866GYAAVW5M72",
 		"index": 39,
 		"keyWords": "silver web,yellow,thread,material",
 		"level": 10,
@@ -1709,14 +1709,14 @@
 			"hunt": [],
 			"location": ["Calm Banks", "Underwater Lake."],
 			"rumor": {
-				"id": "3e8fc7e8-467d-470c-8ebd-dc2fabea4ecd",
+				"id": "01HVZGS2KSX4XEAGTJDZDQY0BS",
 				"name": "Pure and Clear Spring Water",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "8234ab13-e547-495f-8326-73fe6ec79f39",
+		"id": "01HVZGS2K96WVEJYJD3BPE3ZR4",
 		"index": 43,
 		"keyWords": "good water,blue,water,material",
 		"level": 8,
@@ -1733,14 +1733,14 @@
 			"hunt": ["Black Puni", "Kaiser Pigeon", "Saber Claw", "Gustaf", "Lightning Silent Beast", "Isanasius."],
 			"location": ["Underwater Lake."],
 			"rumor": {
-				"id": "2cfbf159-8904-48f9-be30-411abcaa7672",
+				"id": "01HVZGS2KSDVGDK2EAE6H4FGZD",
 				"name": "Chalk White Shell",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "d9d43713-5748-4efd-9ba7-d40631100ff9",
+		"id": "01HVZGS2K9KKQ0WB5ZMYQ1K60Q",
 		"index": 71,
 		"keyWords": "pelem shell,white,gem,medicine mat,material,medicine compound",
 		"level": 16,
@@ -1749,7 +1749,7 @@
 		"recipeType": null,
 		"relatedCategories": ["GEM", "MEDICINE_MAT"],
 		"traitPresent": {
-			"id": "9b9183bf-1fa4-4224-8b56-8d040f76711b",
+			"id": "01HVZGS2M862VKQ22DH9QDHD9F",
 			"name": "Medicine Compound",
 			"table": "trait"
 		}
@@ -1774,7 +1774,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "86ea731c-15d7-4c87-8896-4055bcc4c990",
+		"id": "01HVZGS2K9HBGVS5EVG67ZKYKE",
 		"index": 76,
 		"keyWords": "rainbow crystal,white,gem,ore,secret power,material",
 		"level": 25,
@@ -1794,7 +1794,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "1467ca47-b90a-469a-993d-92de6e1d4b9b",
+		"id": "01HVZGS2K9RR4GR33D3TWPP3CE",
 		"index": 81,
 		"keyWords": "forgotten wood,white,wood,material",
 		"level": 43,
@@ -1814,7 +1814,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "b2fe12be-8438-46a9-a19f-1429c266bc9b",
+		"id": "01HVZGS2K9BX09SAW523PTCQH8",
 		"index": 87,
 		"keyWords": "stinky fragment,blue,elixir,material",
 		"level": 3,
@@ -1834,7 +1834,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "32c32ea9-96a4-4fb0-9bd1-d48a61addacf",
+		"id": "01HVZGS2K9M5BC1NB783CGQ0XP",
 		"index": 93,
 		"keyWords": "torn grimoire,red,magic item,fuel,paper,material",
 		"level": 25,
@@ -1854,7 +1854,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "23274cc6-6cce-45de-8750-6e01c019597b",
+		"id": "01HVZGS2K95Z9AXE93KV01Q97W",
 		"index": 585,
 		"keyWords": "bright night,white,weapon",
 		"level": 39,
@@ -1874,7 +1874,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "b5f716ab-c745-4645-83c6-61911d113958",
+		"id": "01HVZGS2K98WVZBJG9CDPYEED8",
 		"index": 143,
 		"keyWords": "bomb,red,bomb,atk item,beginner recipes,monsters,complete request",
 		"level": 10,
@@ -1904,7 +1904,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "e68884d9-b88a-4fed-8b35-c2db5318aade",
+		"id": "01HVZGS2K9Y3EHV1RXG54ZFS5J",
 		"index": 430,
 		"keyWords": "elixir base,red,medicine mat,poison mat,synthesis,mystery recipes,life powder skill,forest of fairies",
 		"level": 35,
@@ -1934,7 +1934,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "858f34ec-4a79-4960-b1c8-91b7da9190ae",
+		"id": "01HVZGS2KA4VM7S6557B9Q54JV",
 		"index": 437,
 		"keyWords": "gold thread,yellow,thread,metal,synthesis,beginner recipes,silver web",
 		"level": 10,
@@ -1942,7 +1942,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "d463eb69-c534-49b9-ab07-0abaeb96a191",
+					"id": "01HVZGS2K9HTC866GYAAVW5M72",
 					"name": "Silver Web",
 					"table": "item"
 				}
@@ -1963,7 +1963,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "afa5e7e2-f52e-48ad-9f71-47c3e317eaaa",
+		"id": "01HVZGS2KA1EHP1YVM7V5F2X7G",
 		"index": 369,
 		"keyWords": "heart pendant,white,metal,exploration,dream recipes,bridge,waterside ruins",
 		"level": 21,
@@ -1993,7 +1993,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "91923d29-b70c-489a-864f-130db25425df",
+		"id": "01HVZGS2KAAPZ055P9GYKMCAV1",
 		"index": 149,
 		"keyWords": "lightning crystal,green,bomb,atk item,dream recipes,night thunderstorm,prospectors strand",
 		"level": 35,
@@ -2023,7 +2023,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "26728a08-1c6d-4de5-9466-48ac9a13756b",
+		"id": "01HVZGS2KAR1QDVHEY2KTQ982Y",
 		"index": 361,
 		"keyWords": "mana feather,blue,magic item,animal,exploration,beginner recipes,kaiser pigeon",
 		"level": 11,
@@ -2050,7 +2050,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "80d16f71-d091-4600-a4ff-c221d8885644",
+		"id": "01HVZGS2KAM29D1FXH5EG2HXCV",
 		"index": 28,
 		"keyWords": "smoldering stone,white,ore,clay,metal,material",
 		"level": 19,
@@ -2070,7 +2070,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "739cb73a-de54-4e83-93eb-2ffec61fd1b5",
+		"id": "01HVZGS2KA5HQVQTB2YAC26SMY",
 		"index": 31,
 		"keyWords": "shining ore,blue,ore,gem,material",
 		"level": 34,
@@ -2087,14 +2087,14 @@
 			"hunt": ["Wind Elemental", "Light Elemental."],
 			"location": ["Scar of the land (Big Cystal)."],
 			"rumor": {
-				"id": "f4e342ec-7a02-4415-a7f6-f2026f0bfdea",
+				"id": "01HVZGS2KTZ9MZ81B9NHWRB7P8",
 				"name": "Crystal Blessed by Spirits",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "ac240a43-eea9-41ad-9d98-de02ca7c0c64",
+		"id": "01HVZGS2KAY1PPHGEM02HD1KBK",
 		"index": 33,
 		"keyWords": "spirit crystal,white,ore,gem,elixir,secret power,material",
 		"level": 39,
@@ -2123,7 +2123,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "fa2e6cf7-376a-4f3a-b3ea-16e473deb5dd",
+		"id": "01HVZGS2KA5KP4FPSABM8HG159",
 		"index": 35,
 		"keyWords": "strong bone,yellow,animal,medicine mat,material",
 		"level": 6,
@@ -2143,7 +2143,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "92a245c1-7231-4a2f-abd7-92605430d6f4",
+		"id": "01HVZGS2KA7GFFSM6E9MVBH2K5",
 		"index": 36,
 		"keyWords": "island fish fin,green,animal,ingredient,medicine mat,material,stinks",
 		"level": 14,
@@ -2152,7 +2152,7 @@
 		"recipeType": null,
 		"relatedCategories": ["ANIMAL", "INGREDIENT", "MEDICINE_MAT"],
 		"traitPresent": {
-			"id": "36249be8-e016-4a4d-89fb-8d771be5d577",
+			"id": "01HVZGS2M9Y9N6T2228APAHP79",
 			"name": "Stinks",
 			"table": "trait"
 		}
@@ -2167,7 +2167,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "c0846bea-40af-4322-9c62-3108582344ac",
+		"id": "01HVZGS2KA42T5QBPQ770F523M",
 		"index": 42,
 		"keyWords": "well water,blue,water,material",
 		"level": 1,
@@ -2187,7 +2187,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "770bd7f5-c0af-4cc2-9ca2-5df2e2c4a9e3",
+		"id": "01HVZGS2KA97AV6Y0FXEWZCSTY",
 		"index": 55,
 		"keyWords": "red uni,red,ingredient,plant,gunpowder,material",
 		"level": 9,
@@ -2207,7 +2207,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "d7e2b729-02c6-40df-a1b5-9bbe3f887f0a",
+		"id": "01HVZGS2KAWM5213T1FHXS3Y06",
 		"index": 72,
 		"keyWords": "blue steel stone,blue,gem,ore,material",
 		"level": 26,
@@ -2235,7 +2235,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "5437ff43-8f20-47c4-b55c-95f2c7c3be52",
+		"id": "01HVZGS2KA34EGPKAQRSB2X397",
 		"index": 75,
 		"keyWords": "crystal shard,blue,gem,ore,material",
 		"level": 11,
@@ -2255,7 +2255,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "8e71edfa-636c-45a7-bcbc-903c5db47b69",
+		"id": "01HVZGS2KBNJXB1VGSD9V38TME",
 		"index": 80,
 		"keyWords": "dragon heart,red,gem,secret power,elixir,material",
 		"level": 40,
@@ -2286,7 +2286,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "a5a7b88c-aaeb-48f2-831d-fd609dab2c56",
+		"id": "01HVZGS2KBBP3183E27SPJEQWC",
 		"index": 82,
 		"keyWords": "forgotten gem,white,gem,material",
 		"level": 40,
@@ -2306,7 +2306,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "d6a09254-75d9-42fa-8786-db3cd7bb9b57",
+		"id": "01HVZGS2KB4EJQR5Y4NAJBP2YT",
 		"index": 85,
 		"keyWords": "useless fragment,yellow,elixir,material",
 		"level": 3,
@@ -2326,7 +2326,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "bd34eb3a-e166-4d40-bd75-e06854ac7337",
+		"id": "01HVZGS2KB5VJG1D9YETQSWDN6",
 		"index": 86,
 		"keyWords": "burnt fragment,green,elixir,material",
 		"level": 3,
@@ -2346,7 +2346,7 @@
 			"shop": null,
 			"special": "Obtain through event."
 		},
-		"id": "ea49eb59-cbad-4f42-82e1-b8eeb2921ada",
+		"id": "01HVZGS2KB38H058JN5SKR59WR",
 		"index": 91,
 		"keyWords": "eternity scale,red,important,material",
 		"level": 38,
@@ -2366,7 +2366,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "e67fc741-9b45-4e21-abd0-62e15c8ad792",
+		"id": "01HVZGS2KBQ0QB54X1D6A40SNE",
 		"index": 145,
 		"keyWords": "lightning bomb,green,bomb,atk item,beginner recipes,raiden ore",
 		"level": 14,
@@ -2374,7 +2374,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "4f035ad5-5af4-4706-93af-faf7769ff753",
+					"id": "01HVZGS2K6QHA3YA17YTVTC9MN",
 					"name": "Raiden Ore",
 					"table": "item"
 				}
@@ -2395,7 +2395,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "d1ddfe39-4114-4456-b3bd-0b50dd93aa4b",
+		"id": "01HVZGS2KBXNR8Z6C7BSPW7YHN",
 		"index": 150,
 		"keyWords": "puni missile,blue,bomb,atk item,growth recipes,puni press,puni monsters",
 		"level": 20,
@@ -2425,7 +2425,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "05a67c18-1729-4a11-8524-5d710438117a",
+		"id": "01HVZGS2KBRGH5BRHJT887SP5H",
 		"index": 222,
 		"keyWords": "sotea,blue,food,sweets,heal item,beginner recipes,well water",
 		"level": 3,
@@ -2433,7 +2433,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "c0846bea-40af-4322-9c62-3108582344ac",
+					"id": "01HVZGS2KA42T5QBPQ770F523M",
 					"name": "Well Water",
 					"table": "item"
 				}
@@ -2454,7 +2454,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "bc41de66-66cf-4a54-99cb-408d54f7b2b9",
+		"id": "01HVZGS2KBZFW4NRRKW9W2AGBN",
 		"index": 29,
 		"keyWords": "fardenlite,white,ore,thread,material",
 		"level": 25,
@@ -2474,7 +2474,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "8ed0dca8-69b2-4d77-8ec8-7d3725fd9df5",
+		"id": "01HVZGS2KBQXK74RZS4GVG8BZC",
 		"index": 32,
 		"keyWords": "silver crystal,blue,ore,secret power,material",
 		"level": 28,
@@ -2494,7 +2494,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "942a0970-317e-4fba-a573-53fdcfdbf2a3",
+		"id": "01HVZGS2KBR1MRYVSXJ1S56CF9",
 		"index": 34,
 		"keyWords": "monster feather,red,animal,thread,material",
 		"level": 4,
@@ -2511,14 +2511,14 @@
 			"hunt": ["Wise", "Spirit", "Rok", "Twin Header", "Sorcerer Titus", "Ifritter", "Tempestus", "Wind Elemental."],
 			"location": [],
 			"rumor": {
-				"id": "7eeb13ee-65d0-4a7b-aa4c-03dd9c57d85c",
+				"id": "01HVZGS2KSXWCDVMEYTZT3XHJB",
 				"name": "Golden Strong Thread",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "802a5261-a9e4-46ec-9539-d7f99475edb5",
+		"id": "01HVZGS2KB2NG0AMPBV162B9TN",
 		"index": 40,
 		"keyWords": "gold steel web,yellow,thread,material,cutting thread",
 		"level": 30,
@@ -2527,7 +2527,7 @@
 		"recipeType": null,
 		"relatedCategories": ["THREAD"],
 		"traitPresent": {
-			"id": "5fb7e69a-361f-43ef-90dd-2a2434888815",
+			"id": "01HVZGS2M96WHBQ0TQM5E563JG",
 			"name": "Cutting Thread",
 			"table": "trait"
 		}
@@ -2542,7 +2542,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "8cab6e5c-015e-40e8-9b56-20d530724c6e",
+		"id": "01HVZGS2KBYD348B5Y0EADRZAV",
 		"index": 46,
 		"keyWords": "nitro water,red,gunpowder,water,poison mat,material",
 		"level": 30,
@@ -2559,14 +2559,14 @@
 			"hunt": ["Kaiser Pigeon", "Saber Claw", "Gustaf", "Fang."],
 			"location": ["Chickk Woods", "Green RUins."],
 			"rumor": {
-				"id": "e7cbf131-8461-405a-ae63-2fc306c50ea6",
+				"id": "01HVZGS2KRMSJPJWRWKMC32VG1",
 				"name": "Strange Miniature Eggs",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "38848f6d-453e-4a0b-b27f-3aef10c965f9",
+		"id": "01HVZGS2KBQ01S539V3CR07BXP",
 		"index": 61,
 		"keyWords": "unknown egg,yellow,ingredient,fuel,medicine mat,material",
 		"level": 17,
@@ -2586,7 +2586,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "335f3fb9-6d32-403f-bc56-182793b29600",
+		"id": "01HVZGS2KBFKM9402NBDXJTC57",
 		"index": 67,
 		"keyWords": "church talisman,green,paper,fuel,material",
 		"level": 10,
@@ -2606,7 +2606,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "d855d0e5-9c20-45d9-b918-b4cb9dcd200c",
+		"id": "01HVZGS2KB2H0VCTQWXB79P4AJ",
 		"index": 68,
 		"keyWords": "high class talisman,green,paper,fuel,material",
 		"level": 17,
@@ -2626,7 +2626,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "86e9371b-26bc-4014-a206-01815e4c8b5d",
+		"id": "01HVZGS2KB2YJZCBRPSRM6CCAA",
 		"index": 94,
 		"keyWords": "unknown knowledge scrap,green,paper,fuel,secret power,material",
 		"level": 21,
@@ -2646,7 +2646,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "45677664-07a5-47a7-b458-3bf9895e6120",
+		"id": "01HVZGS2KBWPXNNASAD8ZXAWHG",
 		"index": 599,
 		"keyWords": "banisher,red,weapon",
 		"level": 34,
@@ -2666,7 +2666,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "53f0b70c-419a-43dd-a7f7-66cb5517d442",
+		"id": "01HVZGS2KBV0G6F8PM542NSTT4",
 		"index": 605,
 		"keyWords": "light of dawn,blue,weapon",
 		"level": 45,
@@ -2686,7 +2686,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "88a1a501-fe2b-4566-90c2-5a6b8d0a2694",
+		"id": "01HVZGS2KBACCP6NWZ2PX2AE71",
 		"index": 152,
 		"keyWords": "flame of origin,white,bomb,magic item,atk item,dream recipes",
 		"level": 50,
@@ -2709,7 +2709,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "3eb424e1-a935-4852-8979-05c3c4038c4c",
+		"id": "01HVZGS2KC087VK1F14QPGF8C6",
 		"index": 220,
 		"keyWords": "mystery elixir,white,medicine,elixir,heal item,mystery recipes,dunkelheit",
 		"level": 50,
@@ -2717,7 +2717,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "4aeb3148-1743-4337-b2f9-3f68e132e5c7",
+					"id": "01HVZGS2K647SF4SNQWM2Z6JMM",
 					"name": "Dunkelheit",
 					"table": "item"
 				}
@@ -2738,7 +2738,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "75704147-d8e1-4927-ba59-ed960a9cb896",
+		"id": "01HVZGS2KCH83WGQP1XQ9KQZG9",
 		"index": 147,
 		"keyWords": "ori bomb,red,bomb,atk item,hope recipes,bomb,blue flames",
 		"level": 26,
@@ -2746,12 +2746,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "b5f716ab-c745-4645-83c6-61911d113958",
+					"id": "01HVZGS2K98WVZBJG9CDPYEED8",
 					"name": "Bomb",
 					"table": "item"
 				},
 				{
-					"id": "a5775669-0cf0-48f3-a3ea-f61e22bb200a",
+					"id": "01HVZGS2JAQ5CPCBR7NZTFZJJT",
 					"name": "Blue Flames",
 					"table": "effect"
 				}
@@ -2772,7 +2772,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "f5383424-e813-4c24-91e4-c1af709bf63b",
+		"id": "01HVZGS2KCC6Q0W9RK6Z9RZ728",
 		"index": 291,
 		"keyWords": "warding incense,green,medicine,buff item,hope recipes,julio",
 		"level": 40,
@@ -2799,7 +2799,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "cc173f39-df5d-43bd-b9a7-87ebf7f2a4e1",
+		"id": "01HVZGS2KC2JSV34PCPED4ZX7P",
 		"index": 142,
 		"keyWords": "uni bag,yellow,bomb,atk item,beginner recipes,uni",
 		"level": 4,
@@ -2807,7 +2807,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "7a23023e-9538-4d53-90ef-2864a118f8eb",
+					"id": "01HVZGS2KCK17H621GDG42RGYM",
 					"name": "Uni",
 					"table": "item"
 				}
@@ -2828,7 +2828,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "570bf3b8-78db-4a7a-bf11-34db471ffbf7",
+		"id": "01HVZGS2KCHE7N4G05V466BF0P",
 		"index": 44,
 		"keyWords": "kirchen milk,blue,ingredient,water,material,kirchen bell special",
 		"level": 10,
@@ -2837,7 +2837,7 @@
 		"recipeType": null,
 		"relatedCategories": ["INGREDIENT", "WATER"],
 		"traitPresent": {
-			"id": "7460c5ec-0d3c-482f-bfe2-4327efbcb0be",
+			"id": "01HVZGS2M7QQXE1TBN333GG697",
 			"name": "Kirchen Bell Special",
 			"table": "trait"
 		}
@@ -2852,7 +2852,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "bb3ec231-120e-47e3-9e4c-b00dfbc0f920",
+		"id": "01HVZGS2KCV5043N4WS8RCE1PA",
 		"index": 41,
 		"keyWords": "time control hourglass,green,accessory,mystery recipes,clock,clock shop",
 		"level": 41,
@@ -2882,7 +2882,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "925a1d6b-3c97-4a66-b7dc-327496f1285d",
+		"id": "01HVZGS2KCSK51ETKPCYXAXWNX",
 		"index": 51,
 		"keyWords": "holy water,white,water,secret power,material,purifying water",
 		"level": 10,
@@ -2891,7 +2891,7 @@
 		"recipeType": null,
 		"relatedCategories": ["WATER", "SECRET_POWER"],
 		"traitPresent": {
-			"id": "c7194c8b-98d9-4d59-aafa-d6648ec3067d",
+			"id": "01HVZGS2M7CK343AVS9HV2T5TJ",
 			"name": "Purifying Water",
 			"table": "trait"
 		}
@@ -2906,7 +2906,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "f6861d71-1d58-4dba-95fa-99742f6c90c5",
+		"id": "01HVZGS2KC2CNJB33F7G0NKQC6",
 		"index": 52,
 		"keyWords": "puniball,blue,ingredient,secret power,material",
 		"level": 4,
@@ -2926,7 +2926,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "f2f0a381-e42b-4006-b2bc-430cf01b17b8",
+		"id": "01HVZGS2KC3GKEM3C7SGX06ZDM",
 		"index": 53,
 		"keyWords": "golden puniball,yellow,ingredient,secret power,material,golden radiance",
 		"level": 15,
@@ -2935,7 +2935,7 @@
 		"recipeType": null,
 		"relatedCategories": ["INGREDIENT", "SECRET_POWER"],
 		"traitPresent": {
-			"id": "5e362df3-2ec9-4a0c-84f3-449a0742b36a",
+			"id": "01HVZGS2M9E2W0YRF26CPPWHZW",
 			"name": "Golden Radiance",
 			"table": "trait"
 		}
@@ -2947,14 +2947,14 @@
 			"hunt": ["Madragora", "Single Horn."],
 			"location": ["Chick Woods", "Blessed Forest", "Green Ruins", "Puzzling Path", "Sealed Temple."],
 			"rumor": {
-				"id": "d592fd95-ef8c-4bb7-809c-efc36e602c78",
+				"id": "01HVZGS2KSG618YGYMCPNAVGE9",
 				"name": "Downpour of Uni",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "7a23023e-9538-4d53-90ef-2864a118f8eb",
+		"id": "01HVZGS2KCK17H621GDG42RGYM",
 		"index": 54,
 		"keyWords": "uni,yellow,ingredient,plant,material",
 		"level": 2,
@@ -2971,14 +2971,14 @@
 			"hunt": ["White Root", "Alraune", "Star fish."],
 			"location": ["Open Ruins", "Moon Sun Moor."],
 			"rumor": {
-				"id": "562a912d-a2cf-4124-86e8-ac10e9f16dc1",
+				"id": "01HVZGS2KSNHV6WR8JG711FEX2",
 				"name": "Fruit that Gives Strength",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "5a3836d4-70b8-45c6-97a1-15d70f05a272",
+		"id": "01HVZGS2KC53VKV9P269Y58AQP",
 		"index": 63,
 		"keyWords": "bursting berry,blue,ingredient,plant,material,special ingredient",
 		"level": 11,
@@ -2987,7 +2987,7 @@
 		"recipeType": null,
 		"relatedCategories": ["INGREDIENT", "PLANT"],
 		"traitPresent": {
-			"id": "f1a7908b-a3e9-49ed-8f9f-30a1e7fd6a4d",
+			"id": "01HVZGS2M9GNNJ5NV8WSPEPFJJ",
 			"name": "Special Ingredient",
 			"table": "trait"
 		}
@@ -2999,14 +2999,14 @@
 			"hunt": ["Heavenly Bird", "Draagonaire", "Magmacius."],
 			"location": ["Sun Moon Moor."],
 			"rumor": {
-				"id": "203dced5-107d-47d0-b269-355b3c15ad08",
+				"id": "01HVZGS2KV03V17E8DTXHYSBWZ",
 				"name": "A Shattered Star?",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "afcc7a38-8ef1-4e2f-bc1e-590a2f64053d",
+		"id": "01HVZGS2KCRWBY5SG0GY8F30DP",
 		"index": 73,
 		"keyWords": "star powder,red,elixir,gunpowder,material",
 		"level": 36,
@@ -3026,7 +3026,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "df2cefc3-6e85-4810-9884-2c8a89f6682b",
+		"id": "01HVZGS2KC7HX94MB65PBH3EHK",
 		"index": 74,
 		"keyWords": "sun powder,red,elixir,gunpowder,material",
 		"level": 37,
@@ -3046,7 +3046,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "fa168371-b4fd-4e7b-95b1-6254b6e046c7",
+		"id": "01HVZGS2KC31Z4P5RCR2TWC7KC",
 		"index": 84,
 		"keyWords": "forgotten part,white,metal,material",
 		"level": 43,
@@ -3066,7 +3066,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "ce5f0e25-0dd6-4edd-9e1d-72b3aab484f6",
+		"id": "01HVZGS2KC86ZRHDFPM8FR7ND9",
 		"index": 88,
 		"keyWords": "pretty fragment,red,elixir,material,magical slayer",
 		"level": 3,
@@ -3075,7 +3075,7 @@
 		"recipeType": null,
 		"relatedCategories": ["ELIXIR"],
 		"traitPresent": {
-			"id": "71c90125-06cb-4445-931f-10a005b6d7db",
+			"id": "01HVZGS2M5XMF3RPQKM7PWEKVE",
 			"name": "Magical Slayer",
 			"table": "trait"
 		}
@@ -3090,7 +3090,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "e7e18ed7-d8ac-43c8-94e1-aed33683495d",
+		"id": "01HVZGS2KCPMSM0KHJYRR5RXMH",
 		"index": 89,
 		"keyWords": "failure ash,white,elixir,magic item,material",
 		"level": 1,
@@ -3110,7 +3110,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "19ac1fdb-b5a8-438a-b5f8-633ce1399ec8",
+		"id": "01HVZGS2KCJDXWRCEETJ44FYJR",
 		"index": 95,
 		"keyWords": "sealed knowledge scrap,yellow,paper,fuel,secret power,material",
 		"level": 21,
@@ -3130,7 +3130,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "6ff04e55-5123-48d3-94f2-73c840685db2",
+		"id": "01HVZGS2KD802FVVJ9SHSASPMZ",
 		"index": 294,
 		"keyWords": "fire dragon medicine,red,medicine,buff item,dream recipes,dragon bloodstone",
 		"level": 35,
@@ -3138,7 +3138,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "5b34d699-8572-4fee-bc45-748e74978945",
+					"id": "01HVZGS2KP8W3Y86W41BH4T5Q1",
 					"name": "Dragon Bloodstone",
 					"table": "item"
 				}
@@ -3159,7 +3159,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "9787b2e9-4b80-4044-94e8-94dcd459d849",
+		"id": "01HVZGS2KDG7BAAR628G6TB73Q",
 		"index": 151,
 		"keyWords": "god's gift,yellow,bomb,magic item,atk item,dream recipes,silent bedroom,moon sun moor",
 		"level": 47,
@@ -3189,7 +3189,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "7104142c-7feb-4387-9355-ac31d0878025",
+		"id": "01HVZGS2KDRNYFXQR75JSGFYKA",
 		"index": 223,
 		"keyWords": "puni jelly,blue,food,sweets,secret power,heal item,growth recipes,green puni,red puni,black puni",
 		"level": 7,
@@ -3222,7 +3222,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "fe01f79f-94d7-4d26-954d-6fe0d7817842",
+		"id": "01HVZGS2KDJKYYEX0GHQ2F2NVN",
 		"index": 217,
 		"keyWords": "refuel bottle,blue,medicine,heal item,growth recipes,pond,forgotten nursery",
 		"level": 10,
@@ -3252,7 +3252,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "0594f197-a5dd-4646-abbc-765c5b2dfebd",
+		"id": "01HVZGS2KDRJX0MYTKN2C4TPXY",
 		"index": 238,
 		"keyWords": "supreme hot milk,blue,food,heal item,hope recipes,kirchen milk",
 		"level": 24,
@@ -3260,7 +3260,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "570bf3b8-78db-4a7a-bf11-34db471ffbf7",
+					"id": "01HVZGS2KCHE7N4G05V466BF0P",
 					"name": "Kirchen Milk",
 					"table": "item"
 				}
@@ -3281,7 +3281,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "28e7c5b6-ac20-4afe-a42d-a4ad9b5c8da0",
+		"id": "01HVZGS2KD1VH4JVSN7H86EQSP",
 		"index": 601,
 		"keyWords": "demon slayer,red,weapon",
 		"level": 10,
@@ -3301,7 +3301,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "bf7c963c-3a17-4eb0-8559-b8f1dd084184",
+		"id": "01HVZGS2KD7N299F9YPBT8F5Q2",
 		"index": 604,
 		"keyWords": "true dark light,red,weapon",
 		"level": 35,
@@ -3321,7 +3321,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "72f06ad0-9a76-4d03-a4de-0aa264920301",
+		"id": "01HVZGS2KDY4R80RXE8BABB7T1",
 		"index": 609,
 		"keyWords": "resplendent frost,blue,weapon",
 		"level": 35,
@@ -3341,7 +3341,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "5662daa0-ec7c-48a5-b299-777a35cc7f6a",
+		"id": "01HVZGS2KDJ4CE4MEQJ880B1KW",
 		"index": 610,
 		"keyWords": "devouring flame,red,weapon",
 		"level": 38,
@@ -3361,7 +3361,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "1c12b3e2-276c-4745-a0ff-43e6db15199d",
+		"id": "01HVZGS2KDX16CW2QS4NFFBZF0",
 		"index": 615,
 		"keyWords": "wild cat,blue,weapon",
 		"level": 39,
@@ -3381,7 +3381,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "47ca3b91-7d6f-4f4a-b62e-7e0b40b82ae7",
+		"id": "01HVZGS2KDQ7A3RB5KSTGVHX83",
 		"index": 228,
 		"keyWords": "bagel sandwich,red,food,heal item,beginner recipes,ramel flour",
 		"level": 9,
@@ -3389,7 +3389,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "8592a80f-642f-4951-9b1e-b338cf01951d",
+					"id": "01HVZGS2KFQ1D92SBMFY2SJSHB",
 					"name": "Ramel Flour",
 					"table": "item"
 				}
@@ -3410,7 +3410,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "2c6009d2-f8ed-415e-94e7-4dfe97d44618",
+		"id": "01HVZGS2KDM2953YCG0X7EPJQG",
 		"index": 426,
 		"keyWords": "apcol,yellow,ingredient,medicine mat,synthesis,beginner recipes,whimsy strawberry",
 		"level": 5,
@@ -3418,7 +3418,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "b1f9b50b-7fe8-41e1-ae7a-b207aba45232",
+					"id": "01HVZGS2K6ZTMTTAKZVVY5T48Q",
 					"name": "Whimsy Strawberry",
 					"table": "item"
 				}
@@ -3439,7 +3439,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "39e4f90c-4a88-414b-96cb-ba063c7bab72",
+		"id": "01HVZGS2KDTE2RTTWE5WG9DSF0",
 		"index": 453,
 		"keyWords": "dusk drop,red,poison mat,water,fuel,ore,synthesis,mystery recipes,yasuk,dorak",
 		"level": 31,
@@ -3469,7 +3469,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "2f8c87a4-dfe8-494e-9dac-f2931760534e",
+		"id": "01HVZGS2KDE3SHEAQ2X06R3PRR",
 		"index": 449,
 		"keyWords": "fairheit,yellow,armor mat,cloth,synthesis,dream recipes,adal cloth,high class",
 		"level": 31,
@@ -3477,12 +3477,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "639c46cc-f1ba-4f01-a4dc-5bad5418f342",
+					"id": "01HVZGS2KN6VX1DKMSA195TCWN",
 					"name": "Adal Cloth",
 					"table": "item"
 				},
 				{
-					"id": "14d29e49-03bc-4e24-b6c7-1cb2e1e25b01",
+					"id": "01HVZGS2KVN95YF4A0QNJ35A22",
 					"name": "High Class",
 					"table": "trait"
 				}
@@ -3503,7 +3503,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "db32e6cf-f604-4c3f-a5ed-9a1b735eedc6",
+		"id": "01HVZGS2KDE8VR33NKN9MNP71T",
 		"index": 444,
 		"keyWords": "harmonium,red,weapon mat,metal,synthesis,mystery recipes,spirit crystal",
 		"level": 35,
@@ -3511,7 +3511,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "ac240a43-eea9-41ad-9d98-de02ca7c0c64",
+					"id": "01HVZGS2KAY1PPHGEM02HD1KBK",
 					"name": "Spirit Crystal",
 					"table": "item"
 				}
@@ -3532,7 +3532,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "e23b263e-0626-4682-95df-70fba0b27432",
+		"id": "01HVZGS2KDF3PPDN63TEF50WDF",
 		"index": 423,
 		"keyWords": "neutralizer y,yellow,neutralizer,synthesis,growth recipes,monsters",
 		"level": 2,
@@ -3559,7 +3559,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "84e70153-95d9-4de5-a273-0e2ae498a30d",
+		"id": "01HVZGS2KDJC7KDS5CRD24EAJ2",
 		"index": 227,
 		"keyWords": "plain waffle,red,food,heal item,hope recipes,supreme hot milk,hot",
 		"level": 29,
@@ -3567,12 +3567,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "0594f197-a5dd-4646-abbc-765c5b2dfebd",
+					"id": "01HVZGS2KDRJX0MYTKN2C4TPXY",
 					"name": "Supreme Hot Milk",
 					"table": "item"
 				},
 				{
-					"id": "4570a6c4-7ac8-46fc-b3f2-deac353e0410",
+					"id": "01HVZGS2JETZEWJS8D67EVHM5N",
 					"name": "Hot",
 					"table": "effect"
 				}
@@ -3593,7 +3593,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "9218f4cb-8035-41da-aac1-f3b4c1a207d7",
+		"id": "01HVZGS2KD3TY7M1PW8CAWPS6V",
 		"index": 510,
 		"keyWords": "practice cauldron,white,important,machine,growth recipes,cory",
 		"level": 4,
@@ -3601,7 +3601,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "9218f4cb-8035-41da-aac1-f3b4c1a207d7",
+					"id": "01HVZGS2KD3TY7M1PW8CAWPS6V",
 					"name": "Practice Cauldron",
 					"table": "item"
 				},
@@ -3625,7 +3625,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "e344df2f-2ace-4717-8bd7-96e3f336234b",
+		"id": "01HVZGS2KDEVFCVZTJ5VQ1PYQN",
 		"index": 221,
 		"keyWords": "simple sweets,green,food,sweets,heal item,beginner recipes,ramel wheat",
 		"level": 2,
@@ -3633,7 +3633,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "83ec45ca-bfc0-4dca-be74-1f152213dca1",
+					"id": "01HVZGS2K7Z2CPXS4WAVQG5TEB",
 					"name": "Ramel Wheat",
 					"table": "item"
 				}
@@ -3654,7 +3654,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "9315bcc5-c247-4ccd-b27b-5d105a221521",
+		"id": "01HVZGS2KDHVZE5X31AB9MHH1D",
 		"index": 367,
 		"keyWords": "training charm,green,magic item,exploration,hope recipes,furnace,blacksmith",
 		"level": 17,
@@ -3684,7 +3684,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "fb28e3ea-7360-44d1-9d44-c08d67547cfb",
+		"id": "01HVZGS2KD7N1A473993ARXJG7",
 		"index": 577,
 		"keyWords": "flourish heart,blue,weapon",
 		"level": 14,
@@ -3704,7 +3704,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "5e46cb07-b6e6-46a0-bfc8-c565f777c030",
+		"id": "01HVZGS2KD6WJ4KSY59BJ8GWDZ",
 		"index": 586,
 		"keyWords": "formal rapier,blue,weapon",
 		"level": 8,
@@ -3724,7 +3724,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "7b069114-72f6-411c-87d4-cd21dd962c8a",
+		"id": "01HVZGS2KENJEJMZYSANXQ3HXM",
 		"index": 593,
 		"keyWords": "heaven's shovel,red,weapon",
 		"level": 23,
@@ -3744,7 +3744,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "ec54c009-cc5e-4710-8b36-4250b99c7441",
+		"id": "01HVZGS2KEJDD37V631TR0696E",
 		"index": 595,
 		"keyWords": "bountiful harvester,green,weapon",
 		"level": 43,
@@ -3764,7 +3764,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "5d897615-8591-4522-84ea-4551a5506dc9",
+		"id": "01HVZGS2KEYSEMSP45YJJ3WWSH",
 		"index": 602,
 		"keyWords": "dark light,green,weapon",
 		"level": 18,
@@ -3784,7 +3784,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "14e6918e-e13e-4c2e-a968-365ab9b0deb0",
+		"id": "01HVZGS2KE873WGE8TBTPRMYFE",
 		"index": 606,
 		"keyWords": "steel gauntlet,red,weapon",
 		"level": 9,
@@ -3804,7 +3804,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "abe300c0-a9cd-4912-9527-26c7e0fdb130",
+		"id": "01HVZGS2KEMNTS9XF74VA550ES",
 		"index": 689,
 		"keyWords": "colorful vest,green,armor",
 		"level": 34,
@@ -3824,7 +3824,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "e1e660a1-b737-4f91-b36d-f095f8e71bda",
+		"id": "01HVZGS2KEKRK02ASPSFGH7883",
 		"index": 695,
 		"keyWords": "reactive coat,blue,armor",
 		"level": 25,
@@ -3844,7 +3844,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "792be5d5-d322-42ab-80d3-d208298c0a2b",
+		"id": "01HVZGS2KEHGH8V7Y02TZCPXZ4",
 		"index": 454,
 		"keyWords": "crystal ball,yellow,gem,secret power,synthesis,growth recipes,street,night",
 		"level": 27,
@@ -3874,7 +3874,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "cf599a7a-3bd3-4c27-9418-1176b06db29d",
+		"id": "01HVZGS2KE8V5B6RT0V8T9PYG7",
 		"index": 435,
 		"keyWords": "geist aizen,white,metal,secret power,synthesis,dream recipes,prayerless altar,small islet",
 		"level": 29,
@@ -3904,7 +3904,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "588e24b0-9aa1-4d76-9652-7ea559c6554e",
+		"id": "01HVZGS2KERB6YNGPFXPZ5TPTE",
 		"index": 443,
 		"keyWords": "golt aizen,red,weapon mat,metal,synthesis,dream recipes,ingot,golden radiance",
 		"level": 29,
@@ -3912,12 +3912,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "fefbe65c-0e98-49b3-b37f-21fd056b711d",
+					"id": "01HVZGS2KP1JJXGFJ67YYS0NHV",
 					"name": "Ingot",
 					"table": "item"
 				},
 				{
-					"id": "5e362df3-2ec9-4a0c-84f3-449a0742b36a",
+					"id": "01HVZGS2M9E2W0YRF26CPPWHZW",
 					"name": "Golden Radiance",
 					"table": "trait"
 				}
@@ -3938,7 +3938,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "a6000c5a-0b2b-49ea-98a8-5970f9c34163",
+		"id": "01HVZGS2KE4Z1ZGRKR23T9CHE3",
 		"index": 517,
 		"keyWords": "miraculous cauldron,white,important,machine,mystery recipes,final area of dlc map",
 		"level": 50,
@@ -3946,7 +3946,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "a6000c5a-0b2b-49ea-98a8-5970f9c34163",
+					"id": "01HVZGS2KE4Z1ZGRKR23T9CHE3",
 					"name": "Miraculous Cauldron",
 					"table": "item"
 				},
@@ -3970,7 +3970,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "ad7915f9-dc76-4915-9f88-eb13e8f38f5d",
+		"id": "01HVZGS2KE5X71464PNPB6P7Z7",
 		"index": 432,
 		"keyWords": "refresh oil,yellow,fuel,water,synthesis,growth recipes,ancient kitchen,forgotten nursery",
 		"level": 7,
@@ -4000,7 +4000,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "3972bbb0-98de-413b-b3bf-bfa8e2dc7a3f",
+		"id": "01HVZGS2KEXT8YBPDR1R61C0Y3",
 		"index": 424,
 		"keyWords": "pure water,blue,water,synthesis,hope recipes,luminous water",
 		"level": 20,
@@ -4008,7 +4008,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "36046b9b-9a3e-4a93-b2ef-7ca844dbd666",
+					"id": "01HVZGS2K6K0P7H7FP537SZGZC",
 					"name": "Luminous Water",
 					"table": "item"
 				}
@@ -4029,7 +4029,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "85213be0-ce97-4630-83a4-89efbc451d23",
+		"id": "01HVZGS2KE4GTFV98NGNSQ05XV",
 		"index": 366,
 		"keyWords": "victor's charm,red,magic item,exploration,beginner recipes",
 		"level": 12,
@@ -4052,7 +4052,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "be1fe4d5-3a06-4516-b0f6-579cb08a296e",
+		"id": "01HVZGS2KE411SDKV0NA7PTCHS",
 		"index": 356,
 		"keyWords": "wonder stimulant,green,medicine,exploration,growth recipes,size+",
 		"level": 9,
@@ -4074,7 +4074,7 @@
 					"table": "item"
 				},
 				{
-					"id": "0fa7e1e4-30d2-4b83-baba-646f9a0e6449",
+					"id": "01HVZGS2M8P9FTPMTFJM9RCWFW",
 					"name": "Size+",
 					"table": "trait"
 				}
@@ -4095,7 +4095,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "12b9a0e9-cc96-41bf-a1ca-74331ac829ac",
+		"id": "01HVZGS2KEXQCS21TKYR73RZCR",
 		"index": 365,
 		"keyWords": "gathering gloves,blue,cloth,exploration",
 		"level": 16,
@@ -4115,7 +4115,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "a612506e-3ca5-4d64-889f-64420eacac20",
+		"id": "01HVZGS2KEBD09Z37H43FNR4TS",
 		"index": 360,
 		"keyWords": "clear drops,blue,magic item,exploration,hope recipes,alchemy drops,super sweet",
 		"level": 20,
@@ -4123,12 +4123,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "fa22d929-2d3e-4208-8944-abe4cf48e7b5",
+					"id": "01HVZGS2KNP9012JQBRW527XY5",
 					"name": "Alchemy Drops",
 					"table": "item"
 				},
 				{
-					"id": "5fba2ef9-c7d0-47f0-a352-b68e08e89bbb",
+					"id": "01HVZGS2JK1R6D756HBK6CXFCY",
 					"name": "Super Sweet",
 					"table": "effect"
 				}
@@ -4149,7 +4149,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "476bc101-3c58-4818-9d27-b82813e8592b",
+		"id": "01HVZGS2KE2N3J0A8T5CNWY4ZE",
 		"index": 363,
 		"keyWords": "deluxe backpack,yellow,cloth,exploration,growth recipes",
 		"level": 22,
@@ -4172,7 +4172,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "802e99f5-0c37-43cf-a5c1-957492c5c5b1",
+		"id": "01HVZGS2KECHTQD55ZT7XV8MHP",
 		"index": 364,
 		"keyWords": "emergency bag,yellow,magic item,exploration,dream recipes",
 		"level": 20,
@@ -4195,7 +4195,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "72346cac-0dfc-4ffb-afb0-49a8d6340a13",
+		"id": "01HVZGS2KFS54ZCZKAG44J0S9S",
 		"index": 433,
 		"keyWords": "flame powder,red,gunpowder,synthesis,hope recipes,black orb",
 		"level": 25,
@@ -4203,7 +4203,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "28b940bc-365e-4968-91cf-07bc3f0cda7e",
+					"id": "01HVZGS2KPF12ACDFG3RXVBT6Y",
 					"name": "Black Orb",
 					"table": "item"
 				}
@@ -4224,7 +4224,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "efb86c3c-094f-45b7-b605-22c4af0bc42c",
+		"id": "01HVZGS2KF2S3XBQJ9A5A5HN2D",
 		"index": 578,
 		"keyWords": "wandering staff,red,weapon",
 		"level": 24,
@@ -4244,7 +4244,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "df845ff3-0014-4082-ba0a-3187994b52f8",
+		"id": "01HVZGS2KF9T2DRT9C84XK5YK0",
 		"index": 579,
 		"keyWords": "prosper heart,yellow,weapon",
 		"level": 32,
@@ -4264,7 +4264,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "fb701790-7c61-4ee5-b9b0-a57110d614f7",
+		"id": "01HVZGS2KF5Y9B8KMYX0V144WR",
 		"index": 581,
 		"keyWords": "moon caller,yellow,weapon",
 		"level": 7,
@@ -4284,7 +4284,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "05d6eda7-629b-4958-af04-969eef895a38",
+		"id": "01HVZGS2KF4QW0MEBCM5V6GXMT",
 		"index": 582,
 		"keyWords": "aura bangle,blue,weapon",
 		"level": 15,
@@ -4304,7 +4304,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "a6480602-6a17-46a1-9191-3cb4f7d3ef7b",
+		"id": "01HVZGS2KFF7WH1K437MP4086G",
 		"index": 589,
 		"keyWords": "hero's rapier,blue,weapon",
 		"level": 34,
@@ -4324,7 +4324,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "463f4b9c-fe1f-4bc7-bacf-a404261741d3",
+		"id": "01HVZGS2KFX118CB9ZB0A6J7G0",
 		"index": 590,
 		"keyWords": "monika's estoc,white,weapon",
 		"level": 40,
@@ -4344,7 +4344,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "aaf2bddc-396d-40c3-849a-33fb0536f526",
+		"id": "01HVZGS2KFE1A0KKQ2RM707ZGF",
 		"index": 591,
 		"keyWords": "earth shovel,yellow,weapon",
 		"level": 5,
@@ -4364,7 +4364,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "dba72d70-6209-422b-afb6-f57dcedfcdef",
+		"id": "01HVZGS2KFYF3CWNYBZ1EHTVB9",
 		"index": 594,
 		"keyWords": "shovel of hope,yellow,weapon",
 		"level": 33,
@@ -4384,7 +4384,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "66cfc60e-4522-463b-9039-e9f8c45c7f77",
+		"id": "01HVZGS2KFQNHTA0ZMEWEN8P90",
 		"index": 690,
 		"keyWords": "aegis jacket,red,armor",
 		"level": 38,
@@ -4404,7 +4404,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "ab1364fb-bfd6-4885-a75d-f551ceadfe8a",
+		"id": "01HVZGS2KFA88E23FANB0RFRVB",
 		"index": 445,
 		"keyWords": "cloth,yellow,armor mat,cloth,synthesis,beginner recipes,animal fur",
 		"level": 8,
@@ -4412,7 +4412,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "ea34b8a1-c94c-44e7-879b-5ad4dbc99d4d",
+					"id": "01HVZGS2K8P8HBB57X6VN5JGSM",
 					"name": "Animal Fur",
 					"table": "item"
 				}
@@ -4433,7 +4433,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "881eecf6-9ddf-464c-b0ab-b3f1d5c63331",
+		"id": "01HVZGS2KFYAECRXTHE2ND2PXH",
 		"index": 512,
 		"keyWords": "expert cauldron,white,important,machine,growth recipes,silent bedroom,sun moon mor",
 		"level": 17,
@@ -4441,7 +4441,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "881eecf6-9ddf-464c-b0ab-b3f1d5c63331",
+					"id": "01HVZGS2KFYAECRXTHE2ND2PXH",
 					"name": "Expert Cauldron",
 					"table": "item"
 				},
@@ -4468,7 +4468,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "f8eb135a-4a68-496c-a279-496542963359",
+		"id": "01HVZGS2KFMWWQVCWRJF29PGK9",
 		"index": 421,
 		"keyWords": "neutralizer b,blue,neutralizer,synthesis,beginner recipes,fountain,plaza",
 		"level": 2,
@@ -4498,7 +4498,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "4eda28b7-7549-4141-a17e-7ad038f22d91",
+		"id": "01HVZGS2KFCEBRNSRKXTK89NR5",
 		"index": 441,
 		"keyWords": "silvalia,red,weapon mat,metal,synthesis,growth recipes,monsters,weapons",
 		"level": 14,
@@ -4528,7 +4528,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "8592a80f-642f-4951-9b1e-b338cf01951d",
+		"id": "01HVZGS2KFQ1D92SBMFY2SJSHB",
 		"index": 427,
 		"keyWords": "ramel flour,red,ingredient,gunpowder,synthesis,beginner recipes,south wheat field,merbert farm",
 		"level": 3,
@@ -4558,7 +4558,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "379da3f2-2b33-4863-a067-b1bd6dd2a084",
+		"id": "01HVZGS2KFHE4TVFBJX68BN295",
 		"index": 458,
 		"keyWords": "sun drop,red,secret power,fuel,medicine mat,neutralizer,synthesis,mystery recipes,monika",
 		"level": 40,
@@ -4585,7 +4585,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "3ffd9ac5-ac7b-4bdc-bc2f-427f7ae664a9",
+		"id": "01HVZGS2KFARFBGTT897EYBTCN",
 		"index": 438,
 		"keyWords": "spruce,green,wood,synthesis,beginner recipes,kifa",
 		"level": 9,
@@ -4593,7 +4593,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "2cbf08b2-0f2c-4698-be70-5082036b612f",
+					"id": "01HVZGS2K5M0TE6KD692V38Y5D",
 					"name": "Kifa",
 					"table": "item"
 				}
@@ -4614,7 +4614,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "9330166e-4943-4307-9b30-ab44db765813",
+		"id": "01HVZGS2KGV4QFVEY50MB342YX",
 		"index": 450,
 		"keyWords": "velvetis,yellow,armor mat,cloth,synthesis,mystery recipes,rainbow puni fluid",
 		"level": 37,
@@ -4622,7 +4622,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "c349a19c-2c5d-4347-b0c4-d72d9782e5ca",
+					"id": "01HVZGS2KPH4867XKYRXB43M3B",
 					"name": "Rainbow Puni Fluid",
 					"table": "item"
 				}
@@ -4643,7 +4643,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "29211eb0-798e-4099-ad08-d2132d273545",
+		"id": "01HVZGS2KGDDH8QWW49FRB29CE",
 		"index": 600,
 		"keyWords": "evandeit,yellow,weapon",
 		"level": 44,
@@ -4663,7 +4663,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "cf6e7e6a-3b04-407f-b0eb-b698f7ce8741",
+		"id": "01HVZGS2KGKWCK3P6WME4032Y8",
 		"index": 703,
 		"keyWords": "full metal shirt,red,armor",
 		"level": 35,
@@ -4683,7 +4683,7 @@
 			"shop": null,
 			"special": "Obtain through event."
 		},
-		"id": "11867f7f-7348-4081-a3bc-22b228e6bb56",
+		"id": "01HVZGS2KG4XY3R715MTG9CQBE",
 		"index": 837,
 		"keyWords": "date ticket,white,important,key item",
 		"level": 1,
@@ -4703,7 +4703,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "0aa45d7e-8cf7-4e3d-a050-cfbf2de9156d",
+		"id": "01HVZGS2KG01PGC4PQF2F5NZG6",
 		"index": 842,
 		"keyWords": "old clothing,white,important,key item",
 		"level": 1,
@@ -4723,7 +4723,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "d6326d62-4891-4f5d-8305-953e36bd21c0",
+		"id": "01HVZGS2KGY4RHGC0KH3CQ7R3S",
 		"index": 894,
 		"keyWords": "alchemist's book,red,important,book",
 		"level": 28,
@@ -4743,7 +4743,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "54336411-fa09-4db9-8bb2-639a8c053999",
+		"id": "01HVZGS2KGY1CGDFW34PG0KEBS",
 		"index": 773,
 		"keyWords": "element guard,green,accessory,mystery recipes,sophie,positive release",
 		"level": 38,
@@ -4773,7 +4773,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "934de78e-a23a-4965-98d4-96958cc1e222",
+		"id": "01HVZGS2KGFR8WZGRBEGAPBESR",
 		"index": 765,
 		"keyWords": "ambrosia garland,green,accessory,mystery recipes,dark maiden",
 		"level": 40,
@@ -4800,7 +4800,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "492ce47a-61c0-4a1d-af8f-921c7ddc3991",
+		"id": "01HVZGS2KG4ER59R88Z5YDDC55",
 		"index": 887,
 		"keyWords": "gathering buddy,red,important,book,growth recipes,story progress",
 		"level": 8,
@@ -4827,7 +4827,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "be5cdd70-dfb3-410d-8352-a397bca21191",
+		"id": "01HVZGS2KGRTM61BVXKVSV7G30",
 		"index": 774,
 		"keyWords": "gunade ring,blue,accessory,hope recipes,tess",
 		"level": 30,
@@ -4857,7 +4857,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "9095109b-f30f-42aa-9362-cd57600106ce",
+		"id": "01HVZGS2KGQB4BCRW2MMS42N3R",
 		"index": 516,
 		"keyWords": "hermit's cauldron,white,important,machine,hope recipes,tess",
 		"level": 32,
@@ -4865,7 +4865,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "9095109b-f30f-42aa-9362-cd57600106ce",
+					"id": "01HVZGS2KGQB4BCRW2MMS42N3R",
 					"name": "Hermit's Cauldron",
 					"table": "item"
 				},
@@ -4889,7 +4889,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "cbd95265-a313-4d8b-998e-f8afbdd1c29c",
+		"id": "01HVZGS2KG07N3FMACHR0NGQV1",
 		"index": 509,
 		"keyWords": "grandma's cauldron,white,important,machine,beginner recipes,ice bomb",
 		"level": 4,
@@ -4897,7 +4897,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "60182374-d37c-49fb-b5f4-6eb75c8cacab",
+					"id": "01HVZGS2KQW91AMQYRAJY8WYR5",
 					"name": "Ice Bomb",
 					"table": "item"
 				}
@@ -4918,7 +4918,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "6553b242-d11f-4488-b95e-3e4c58659f82",
+		"id": "01HVZGS2KG0YS08116GKRZ9MPE",
 		"index": 845,
 		"keyWords": "corneria doll,white,cloth,secret power,synthesis,mystery recipes,story progress",
 		"level": 1,
@@ -4945,7 +4945,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "6c804e45-1220-4dac-b927-3f0e85baed64",
+		"id": "01HVZGS2KG5E52GYS7ZDCMA72G",
 		"index": 830,
 		"keyWords": "hexe auris,white,metal,magic item,synthesis,hope recipes,story progress",
 		"level": 46,
@@ -4972,7 +4972,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "70117b0b-6db6-490c-9771-8dafcd032fd6",
+		"id": "01HVZGS2KGBC6EF5XB2FR957WS",
 		"index": 829,
 		"keyWords": "key of truth,white,important,synthesis,mystery recipes,story progress",
 		"level": 41,
@@ -4999,7 +4999,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "2ece4859-257c-45a7-b1bc-cf0d155fbf32",
+		"id": "01HVZGS2KGFTSEHJ98WHWRGMXX",
 		"index": 452,
 		"keyWords": "noble sapphire,blue,gem,synthesis,hope recipes,accessory",
 		"level": 25,
@@ -5037,7 +5037,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "328ee172-5963-41a7-aea9-397ca0c530c5",
+		"id": "01HVZGS2KG0RG8M1JFK8066EEJ",
 		"index": 457,
 		"keyWords": "philosopher stone,white,metal,medicine mat,elixir,secret power,synthesis,mystery recipes,synthesis level",
 		"level": 59,
@@ -5064,7 +5064,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "08575a7c-d6e5-4e8d-bac8-cee0e7fa1c4f",
+		"id": "01HVZGS2KG12B95JKT0NGPXF78",
 		"index": 461,
 		"keyWords": "precise parts,white,metal,synthesis,hope recipes,cory",
 		"level": 24,
@@ -5091,7 +5091,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "fa2ddb93-3b52-4392-a288-b200be86e66c",
+		"id": "01HVZGS2KGR7S31H5AWZV367PQ",
 		"index": 576,
 		"keyWords": "starting staff,green,weapon",
 		"level": 6,
@@ -5111,7 +5111,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "9415b7ef-839c-4248-bee0-d0a474d5b159",
+		"id": "01HVZGS2KG95E99FBFKXYZTZHD",
 		"index": 583,
 		"keyWords": "cosmo caller,red,weapon",
 		"level": 25,
@@ -5131,7 +5131,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "abfca2e4-cf00-496b-b6a5-061ad22db43a",
+		"id": "01HVZGS2KG4ZN39YVFSWJWF3XR",
 		"index": 584,
 		"keyWords": "arch bangle,green,weapon",
 		"level": 34,
@@ -5151,7 +5151,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "820a3da0-8f86-460c-abc7-f432750ead1e",
+		"id": "01HVZGS2KHAARVYP1ZZ6HS7PHQ",
 		"index": 587,
 		"keyWords": "brave rapier,green,weapon",
 		"level": 18,
@@ -5171,7 +5171,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "b52df29b-9a13-4cdd-a311-53f8bbbaf1af",
+		"id": "01HVZGS2KH7X6CDCS8TKBM7HB9",
 		"index": 588,
 		"keyWords": "knight's rapier,red,weapon",
 		"level": 28,
@@ -5191,7 +5191,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "56a7e96a-1b61-4f80-9547-73156e7dd1d0",
+		"id": "01HVZGS2KHK0RX3T2AKXSEXJ5Y",
 		"index": 592,
 		"keyWords": "idle shovel,blue,weapon",
 		"level": 13,
@@ -5211,7 +5211,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "65bc4412-4e5e-48ab-ae09-050baaa28d6b",
+		"id": "01HVZGS2KHE5SMNDYKX65SGXXF",
 		"index": 596,
 		"keyWords": "knight blade,white,weapon",
 		"level": 9,
@@ -5231,7 +5231,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "7dff3d21-f29a-4590-a793-642fbcfed18b",
+		"id": "01HVZGS2KHQ7BN0PPKABY615TZ",
 		"index": 597,
 		"keyWords": "breaker,red,weapon",
 		"level": 18,
@@ -5251,7 +5251,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "eb15e67d-a12a-491c-8d3a-e51c38787440",
+		"id": "01HVZGS2KH0HEAH4NQ085BS419",
 		"index": 598,
 		"keyWords": "paladin blade,blue,weapon",
 		"level": 24,
@@ -5271,7 +5271,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "bc708674-8ad0-471c-9ea6-c553fb919bd9",
+		"id": "01HVZGS2KHKFF82YP4TBE3Z6WD",
 		"index": 603,
 		"keyWords": "demon god slayer,blue,weapon",
 		"level": 25,
@@ -5291,7 +5291,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "42456288-1839-41e8-b568-bde309205e83",
+		"id": "01HVZGS2KHTGHXJZ8BQWBCW9C1",
 		"index": 608,
 		"keyWords": "puni gauntlet,blue,weapon",
 		"level": 26,
@@ -5311,7 +5311,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "621bb44b-db66-4fea-8eb5-46cdfa2d5925",
+		"id": "01HVZGS2KH857WBHEYQDT76FDP",
 		"index": 611,
 		"keyWords": "metal bullets,red,weapon",
 		"level": 8,
@@ -5331,7 +5331,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "e36bb2bb-6f88-458b-8986-eb2676867e8d",
+		"id": "01HVZGS2KHGWE184CNZDR747J9",
 		"index": 616,
 		"keyWords": "maiden's spear,blue,weapon",
 		"level": 10,
@@ -5351,7 +5351,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "c1f82130-064a-4551-beff-a686841100f8",
+		"id": "01HVZGS2KHX1MHAVC3XEN51AXE",
 		"index": 617,
 		"keyWords": "madcat spear,yellow,weapon",
 		"level": 18,
@@ -5371,7 +5371,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "fbd41eb0-eef2-4d77-84a4-1f1b922cb0b8",
+		"id": "01HVZGS2KH1Q77A4T85G2WDKV1",
 		"index": 618,
 		"keyWords": "lady's spear,green,weapon",
 		"level": 24,
@@ -5391,7 +5391,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "495e2d7d-ec4a-4016-9b1a-d667527de10e",
+		"id": "01HVZGS2KHEWMYKWQWTK99YPST",
 		"index": 619,
 		"keyWords": "white panther,green,weapon",
 		"level": 29,
@@ -5411,7 +5411,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "5961c6fe-9aa9-414c-9d48-60f6d3837839",
+		"id": "01HVZGS2KHZ6TDWNHZFETXKVCS",
 		"index": 691,
 		"keyWords": "alchemy vest,blue,armor",
 		"level": 43,
@@ -5431,7 +5431,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "dd5e76a7-ddde-45d1-afd7-c16afebf656b",
+		"id": "01HVZGS2KHYR7XM534D4460PX5",
 		"index": 692,
 		"keyWords": "hard coat,green,armor",
 		"level": 8,
@@ -5451,7 +5451,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "ceb8cf35-e32d-4978-a2c5-32dc270425fd",
+		"id": "01HVZGS2KHXWM16WEVQ7JDNVNP",
 		"index": 698,
 		"keyWords": "first shirt,green,armor",
 		"level": 3,
@@ -5471,7 +5471,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "d99568c6-73de-4865-aacc-e868a48d4457",
+		"id": "01HVZGS2KHHVMXNVTQ6YF9VEYC",
 		"index": 704,
 		"keyWords": "paraselene clothes,white,armor",
 		"level": 32,
@@ -5491,7 +5491,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "57f091e4-6d3f-4791-a8e3-bf1673c22d14",
+		"id": "01HVZGS2KJNV84XW8RB094A8GS",
 		"index": 707,
 		"keyWords": "tight shirt,blue,armor",
 		"level": 32,
@@ -5511,7 +5511,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "325be336-4b95-4c78-b773-530a154c141f",
+		"id": "01HVZGS2KJP1G8D4JWSEBT7RMW",
 		"index": 708,
 		"keyWords": "bridal blouse,white,armor",
 		"level": 37,
@@ -5531,7 +5531,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "fa1e675d-33a2-401f-92d7-ea82aa103fe6",
+		"id": "01HVZGS2KJSY6GMKDS62PD0WSE",
 		"index": 607,
 		"keyWords": "roaring thunder,green,weapon",
 		"level": 19,
@@ -5551,7 +5551,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "f48d3a88-b091-4ef0-aa13-3d334d016b1a",
+		"id": "01HVZGS2KJH9R6CXKEZSN07705",
 		"index": 612,
 		"keyWords": "piercing bullets,yellow,weapon",
 		"level": 18,
@@ -5571,7 +5571,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "f8075542-a243-42ae-9883-f088ba51fa2c",
+		"id": "01HVZGS2KJ57TRYFZTF120A38Z",
 		"index": 613,
 		"keyWords": "crystal bullets,blue,weapon",
 		"level": 24,
@@ -5591,7 +5591,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "5603f457-5107-4206-9efd-686b2e4b2cc4",
+		"id": "01HVZGS2KJNZPWHQFQXDXX343F",
 		"index": 614,
 		"keyWords": "diamant,red,weapon",
 		"level": 34,
@@ -5611,7 +5611,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "8aed671c-4a40-4bb7-a74a-0aac629d90e1",
+		"id": "01HVZGS2KJDA066TJTYH84Q05J",
 		"index": 687,
 		"keyWords": "plate vest,red,armor",
 		"level": 11,
@@ -5631,7 +5631,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "5d9e70c1-9db3-43dd-86cd-04ad466bbbbb",
+		"id": "01HVZGS2KJ6SA8GXZ8GT6MXQCV",
 		"index": 688,
 		"keyWords": "gold jacket,yellow,armor",
 		"level": 28,
@@ -5651,7 +5651,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "c3406cd7-5064-4f97-b722-8f6551981f04",
+		"id": "01HVZGS2KJV2BNZYWSZBX4M1AX",
 		"index": 694,
 		"keyWords": "farden coat,green,armor",
 		"level": 19,
@@ -5671,7 +5671,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "b7136748-5e7a-466a-a957-dd0631b1a437",
+		"id": "01HVZGS2KJ3N7STFX2G9AEWECA",
 		"index": 700,
 		"keyWords": "wanderer's shirt,green,armor",
 		"level": 14,
@@ -5691,7 +5691,7 @@
 			"shop": null,
 			"special": "Obtain through event."
 		},
-		"id": "52266510-46e3-4870-922f-2876803598f9",
+		"id": "01HVZGS2KKZ68TDGVGN4AARJH5",
 		"index": 827,
 		"keyWords": "soul stone,white,important,material",
 		"level": 12,
@@ -5711,7 +5711,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "e20ed97d-ccf2-4ac7-8905-9f05f53b8c38",
+		"id": "01HVZGS2KKZVR0A7KC88VYASHN",
 		"index": 841,
 		"keyWords": "old certificate,white,important,key item",
 		"level": 1,
@@ -5731,7 +5731,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "37cc7547-cba8-4fc1-96d5-0af0b3ca37af",
+		"id": "01HVZGS2KKP64J95PC5MKQSC9Z",
 		"index": 888,
 		"keyWords": "eternal brilliance,green,important,book",
 		"level": 10,
@@ -5751,7 +5751,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "1d129651-56a6-445d-a144-bbf6b629774d",
+		"id": "01HVZGS2KKRT3G6KMSJQ6ZMMH3",
 		"index": 889,
 		"keyWords": "soul techniques,blue,important,book",
 		"level": 11,
@@ -5771,7 +5771,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "9bf2190c-e316-45e8-a78f-d6f98be837d4",
+		"id": "01HVZGS2KKDBAQJMQK9DSKJYYR",
 		"index": 840,
 		"keyWords": "atelier tent,white,important,key item,mystery recipes,story progress",
 		"level": 40,
@@ -5798,7 +5798,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "ee921127-d03f-48a3-8847-79d05428e79d",
+		"id": "01HVZGS2KKS7S0C4QYSMNRJKC1",
 		"index": 771,
 		"keyWords": "friendly persona,yellow,accessory,beginner recipes,silent beast,prospector's strand",
 		"level": 16,
@@ -5828,7 +5828,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "0e4b60ea-ac5c-4b65-8b69-c14304f6e8fb",
+		"id": "01HVZGS2KK204MA81EE6GZFTWE",
 		"index": 767,
 		"keyWords": "mind's eye monocle,green,accessory,dream recipes,weak",
 		"level": 23,
@@ -5855,7 +5855,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "dbb4df58-f930-4a2b-b9db-acf0e9b299f9",
+		"id": "01HVZGS2KKE0AQXK9NJH09FS3Z",
 		"index": 836,
 		"keyWords": "prototype fertilizer,white,important,synthesis,mystery recipes,story progress",
 		"level": 7,
@@ -5882,7 +5882,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "9da0eae1-4a44-444b-9a36-0a3cdf95ebba",
+		"id": "01HVZGS2KKAJC237WJ85W16C1S",
 		"index": 761,
 		"keyWords": "white-hot headband,red,accessory,dream recipes,really strong monsters",
 		"level": 27,
@@ -5909,7 +5909,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "911e03f1-83a3-4104-b92c-46e9a8fff9c7",
+		"id": "01HVZGS2KKVSJN0484TXYZZBM1",
 		"index": 620,
 		"keyWords": "vivid spear,red,weapon",
 		"level": 39,
@@ -5929,7 +5929,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "a3fe403f-cc74-4bd8-b8cd-60494e98016e",
+		"id": "01HVZGS2KKM2JQ7W43A7KNXY96",
 		"index": 686,
 		"keyWords": "traveler's vest,green,armor",
 		"level": 6,
@@ -5949,7 +5949,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "42d5429c-d3f8-4d52-8411-41fccf89222f",
+		"id": "01HVZGS2KKW1C2PP6QE1WQPEHX",
 		"index": 693,
 		"keyWords": "plate coat,red,armor",
 		"level": 14,
@@ -5969,7 +5969,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "4eee99e9-0886-4fb5-afd8-0ea86f941ba1",
+		"id": "01HVZGS2KKNSJZ5RGJ4ER0H3A3",
 		"index": 701,
 		"keyWords": "weightless shirt,blue,armor",
 		"level": 21,
@@ -5989,7 +5989,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "93b5901f-ecb3-4b0d-a3a1-2fb8d34b438a",
+		"id": "01HVZGS2KKXC85JSRXK8SDCVQQ",
 		"index": 702,
 		"keyWords": "natural clothes,green,armor",
 		"level": 25,
@@ -6009,7 +6009,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "6d82a4a1-e05d-4674-9bad-d6bb13dba009",
+		"id": "01HVZGS2KK51M89T4F9XA77HGV",
 		"index": 709,
 		"keyWords": "resurrection wear,white,armor",
 		"level": 42,
@@ -6029,7 +6029,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "28bc8f40-9c6f-47dc-9162-420e5ae6f415",
+		"id": "01HVZGS2KKD0HJ036XCB60VF3B",
 		"index": 825,
 		"keyWords": "plachta's core,green,important,key item",
 		"level": 1,
@@ -6049,7 +6049,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "61bedc84-2c2a-4001-9585-5ef20ffd082e",
+		"id": "01HVZGS2KKGAFHYFDEH4XY090M",
 		"index": 826,
 		"keyWords": "plachta's clothes,green,important,key item",
 		"level": 1,
@@ -6069,7 +6069,7 @@
 			"shop": null,
 			"special": "Obtain through event."
 		},
-		"id": "3d637790-a086-4e5b-88d9-399619e943be",
+		"id": "01HVZGS2KKYNB7BQSKZ4HP1T7G",
 		"index": 838,
 		"keyWords": "moisture grass,white,important,material",
 		"level": 2,
@@ -6089,7 +6089,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "01692c13-1cbf-4000-8657-96f1686ce4cb",
+		"id": "01HVZGS2KMDSQE42VCY65PSW3E",
 		"index": 893,
 		"keyWords": "puppeteer's tools,white,important,book",
 		"level": 22,
@@ -6109,7 +6109,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "52a9c320-4b2c-4ff8-986d-769b32cedf18",
+		"id": "01HVZGS2KMVK7MCZDHSAKXX4J6",
 		"index": 843,
 		"keyWords": "grandma's clothes,white,important,key item,growth recipes,story progress",
 		"level": 1,
@@ -6136,7 +6136,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "29465fb6-5033-4447-ba69-c22e8efb4120",
+		"id": "01HVZGS2KMF7213MPZ9XHTSWCA",
 		"index": 766,
 		"keyWords": "meister mittens,yellow,accessory,beginner recipes,simple sweets,salty",
 		"level": 13,
@@ -6144,12 +6144,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "e344df2f-2ace-4717-8bd7-96e3f336234b",
+					"id": "01HVZGS2KDEVFCVZTJ5VQ1PYQN",
 					"name": "Simple Sweets",
 					"table": "item"
 				},
 				{
-					"id": "2f66fe8d-6e57-4ad4-95fd-2b1be1efdeb1",
+					"id": "01HVZGS2JMXT8AQZF6Z22FJGHP",
 					"name": "Salty",
 					"table": "effect"
 				}
@@ -6170,7 +6170,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "145b9773-8c14-4213-923e-14c613831b03",
+		"id": "01HVZGS2KMAPJ15MKZVEN975Z2",
 		"index": 760,
 		"keyWords": "life bangle,red,accessory,dream recipes,world map",
 		"level": 35,
@@ -6197,7 +6197,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "b62ea51f-dde4-4abf-bc51-c8527baef3b4",
+		"id": "01HVZGS2KMECTXWXDDJ73QPN5Q",
 		"index": 696,
 		"keyWords": "dragonscale coat,red,armor",
 		"level": 40,
@@ -6217,7 +6217,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "9f4aff91-991a-4da4-82ae-9fbc19461e83",
+		"id": "01HVZGS2KMNY5W5FPG0CFCETPJ",
 		"index": 697,
 		"keyWords": "ancient coat,white,armor",
 		"level": 45,
@@ -6237,7 +6237,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "4b6b63e4-865e-47be-ba7a-1c0aa59023c6",
+		"id": "01HVZGS2KM17NQ00FXWHW1X832",
 		"index": 705,
 		"keyWords": "alchemy mantle,white,armor",
 		"level": 41,
@@ -6257,7 +6257,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "62e8ef2e-f522-4584-9923-7858c3a2c354",
+		"id": "01HVZGS2KMAYA981SKEYANVWFH",
 		"index": 832,
 		"keyWords": "plachta doll,white,important,key item",
 		"level": 1,
@@ -6277,7 +6277,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "31532539-eedf-411e-a71b-8415c561c1f5",
+		"id": "01HVZGS2KMJREMEK94GMMG2A7P",
 		"index": 833,
 		"keyWords": "music box of memory,green,important,key item",
 		"level": 1,
@@ -6297,7 +6297,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "18bfab74-7ccb-4b41-954e-0b4ceea64c89",
+		"id": "01HVZGS2KMFH0SG7XCQ5WGF3K3",
 		"index": 890,
 		"keyWords": "alchemic drive guide,yellow,important,book",
 		"level": 13,
@@ -6317,7 +6317,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "7273e86c-a52d-4aaa-9892-a96ce20e2b2e",
+		"id": "01HVZGS2KM8K094WQGM316M6M8",
 		"index": 891,
 		"keyWords": "blessing of the sun,yellow,important,book",
 		"level": 20,
@@ -6337,7 +6337,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "bc474b19-0b50-4aed-a713-d151c01980a0",
+		"id": "01HVZGS2KMF68N9815K2C1B9K4",
 		"index": 892,
 		"keyWords": "recipe of origin,white,important,book",
 		"level": 22,
@@ -6357,7 +6357,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "4cf2e052-03b6-464a-b700-71b0aa4239f7",
+		"id": "01HVZGS2KMHR7CF0MKQW65MC83",
 		"index": 831,
 		"keyWords": "ares brooch,green,accessory,hope recipes,leon",
 		"level": 19,
@@ -6384,7 +6384,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "ce8ec55c-b99f-4980-a7f1-9726be0363ee",
+		"id": "01HVZGS2KM918BMFVEYZZWFJ1N",
 		"index": 763,
 		"keyWords": "feather ornament,green,accessory,growth recipes,saber claw",
 		"level": 24,
@@ -6411,7 +6411,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "8549688b-e18a-4f93-9837-eefb59925dc1",
+		"id": "01HVZGS2KM5DNWQ35DG0PDNZEZ",
 		"index": 772,
 		"keyWords": "hustle belt,red,accessory,hope recipes,drilled scar,scar of the land",
 		"level": 29,
@@ -6441,7 +6441,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "89eb05af-8c63-44e7-a41c-eaa29b2edea3",
+		"id": "01HVZGS2KMA5TS83288R3JPEHQ",
 		"index": 768,
 		"keyWords": "monochrome glasses,white,accessory,growth recipes,monika,light edge,brave heart",
 		"level": 19,
@@ -6474,7 +6474,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "f1d2da82-4e8b-44b8-abca-199136e60a20",
+		"id": "01HVZGS2KMKKJSMWF86XEQCGEA",
 		"index": 834,
 		"keyWords": "puppeteer string,yellow,thread,synthesis,beginner recipes,house,night,pilgrim road",
 		"level": 16,
@@ -6507,7 +6507,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "0ed03316-5e61-4a04-9eb8-0b34237b5c69",
+		"id": "01HVZGS2KMN5SBAYNRXW5JJ4JJ",
 		"index": 828,
 		"keyWords": "spirit needle,white,important,synthesis,growth recipes,julio",
 		"level": 20,
@@ -6534,7 +6534,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "9584f48f-fa17-4109-8c11-5793b78a9457",
+		"id": "01HVZGS2KMA0ZB2XM07QEY248S",
 		"index": 835,
 		"keyWords": "sage's soil,yellow,clay,synthesis,hope recipes,fritz",
 		"level": 17,
@@ -6561,7 +6561,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "49635c04-ee17-4d7b-8e39-2fb035ee06e6",
+		"id": "01HVZGS2KN61NC61FS98VG10D6",
 		"index": 839,
 		"keyWords": "sage's emblem,white,important,key item,mystery recipes,story progress",
 		"level": 48,
@@ -6588,7 +6588,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "80a56dc5-d1b8-4396-9573-58295878deed",
+		"id": "01HVZGS2KNR5NVKW1H2ZTAM6BC",
 		"index": 224,
 		"keyWords": "sofinancier,yellow,food,sweets,heal item,dream recipes,natural yeast,sunny scent",
 		"level": 34,
@@ -6596,12 +6596,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "c3554aaf-1760-42bf-b445-dd97cc4dd69d",
+					"id": "01HVZGS2KPWNKG0ZHW0W8GMZ3H",
 					"name": "Natural Yeast",
 					"table": "item"
 				},
 				{
-					"id": "2a9ae5f6-19e0-4b51-9f4b-8b30e4995b6e",
+					"id": "01HVZGS2MAXGSHPD04V25TWGRD",
 					"name": "Sunny Scent",
 					"table": "trait"
 				}
@@ -6622,7 +6622,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "494b5507-4a99-45b6-a7fd-257ffd41394a",
+		"id": "01HVZGS2KNGAC480989A13PC1Y",
 		"index": 699,
 		"keyWords": "mixed fur shirt,yellow,armor",
 		"level": 8,
@@ -6642,7 +6642,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "4c74e32c-ca81-45e1-a9b4-ef74c4d6c6c0",
+		"id": "01HVZGS2KNKRYKNRM85B57J2HN",
 		"index": 706,
 		"keyWords": "soft armor,blue,armor",
 		"level": 29,
@@ -6662,7 +6662,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "48ced452-e62c-4d48-970b-e0c9964ef574",
+		"id": "01HVZGS2KNM2902WDG9GASJ64N",
 		"index": 514,
 		"keyWords": "ancient cauldron,white,important,machine,mystery recipes,library of all creation,luard",
 		"level": 28,
@@ -6670,7 +6670,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "48ced452-e62c-4d48-970b-e0c9964ef574",
+					"id": "01HVZGS2KNM2902WDG9GASJ64N",
 					"name": "Ancient Cauldron",
 					"table": "item"
 				},
@@ -6697,7 +6697,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "fa22d929-2d3e-4208-8944-abe4cf48e7b5",
+		"id": "01HVZGS2KNP9012JQBRW527XY5",
 		"index": 226,
 		"keyWords": "alchemy drops,red,food,sweets,gem,heal item,growth recipes,honey,kirchen bell special",
 		"level": 11,
@@ -6705,12 +6705,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "026af4a8-5475-46cb-883c-5b1aa12f7129",
+					"id": "01HVZGS2K6NBV9B9A90G607DEY",
 					"name": "Honey",
 					"table": "item"
 				},
 				{
-					"id": "7460c5ec-0d3c-482f-bfe2-4327efbcb0be",
+					"id": "01HVZGS2M7QQXE1TBN333GG697",
 					"name": "Kirchen Bell Special",
 					"table": "trait"
 				}
@@ -6731,7 +6731,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "d3d6417c-2694-401a-9019-339a18f7c855",
+		"id": "01HVZGS2KNAE7SZEFZ7G3FBB8N",
 		"index": 762,
 		"keyWords": "angel ribbon,yellow,accessory,hope recipes,gold thread,purifying water",
 		"level": 21,
@@ -6739,12 +6739,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "858f34ec-4a79-4960-b1c8-91b7da9190ae",
+					"id": "01HVZGS2KA4VM7S6557B9Q54JV",
 					"name": "Gold Thread",
 					"table": "item"
 				},
 				{
-					"id": "c7194c8b-98d9-4d59-aafa-d6648ec3067d",
+					"id": "01HVZGS2M7CK343AVS9HV2T5TJ",
 					"name": "Purifying Water",
 					"table": "trait"
 				}
@@ -6765,7 +6765,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "639c46cc-f1ba-4f01-a4dc-5bad5418f342",
+		"id": "01HVZGS2KN6VX1DKMSA195TCWN",
 		"index": 447,
 		"keyWords": "adal cloth,yellow,armor mat,cloth,synthesis,growth recipes,leon",
 		"level": 21,
@@ -6792,7 +6792,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "dc0c62af-03be-4264-a6fe-3a8f447d3b98",
+		"id": "01HVZGS2KNJMPK6RC5TJG49WVY",
 		"index": 290,
 		"keyWords": "angel's whisper,white,magic item,buff item,hope recipes,unliving king",
 		"level": 35,
@@ -6819,7 +6819,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "60323f65-aedf-4713-a687-8fa6b53d4cd4",
+		"id": "01HVZGS2KNDX467ESQWAH2EK8A",
 		"index": 218,
 		"keyWords": "breezy aroma,green,medicine,heal item,mystery recipes,hill,front of atelier",
 		"level": 39,
@@ -6849,7 +6849,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "3d32fe09-db31-4cd3-bdc7-1f3943dd0f5a",
+		"id": "01HVZGS2KNCSNNZ6WH8R24J95K",
 		"index": 292,
 		"keyWords": "bottled misfortune,red,medicine,de buff item,growth recipes",
 		"level": 12,
@@ -6872,7 +6872,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "26b731f8-89ba-4279-bc74-27ff2b971fea",
+		"id": "01HVZGS2KN7MX5NABM7BJFG1T9",
 		"index": 455,
 		"keyWords": "compass of hades,white,important,synthesis,growth recipes,spirit needle",
 		"level": 27,
@@ -6880,7 +6880,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "0ed03316-5e61-4a04-9eb8-0b34237b5c69",
+					"id": "01HVZGS2KMN5SBAYNRXW5JJ4JJ",
 					"name": "Spirit Needle",
 					"table": "item"
 				}
@@ -6901,7 +6901,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "747c7754-38eb-4067-bab0-ebcf42ccc9e6",
+		"id": "01HVZGS2KNPCTT1G1JQB05G6DE",
 		"index": 146,
 		"keyWords": "craft,yellow,bomb,atk item,growth recipes,uni bag,explodes",
 		"level": 15,
@@ -6909,12 +6909,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "cc173f39-df5d-43bd-b9a7-87ebf7f2a4e1",
+					"id": "01HVZGS2KC2JSV34PCPED4ZX7P",
 					"name": "Uni Bag",
 					"table": "item"
 				},
 				{
-					"id": "f23dd8e2-7654-40f1-98aa-b83214fbde24",
+					"id": "01HVZGS2J6FAB86YF1JF9BCWQK",
 					"name": "Explodes",
 					"table": "effect"
 				}
@@ -6935,7 +6935,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "38571ad8-811f-43bb-914b-5c5d59ed4fc7",
+		"id": "01HVZGS2KN2F0HFTQQ8JQKBS28",
 		"index": 448,
 		"keyWords": "flugel,yellow,armor mat,cloth,synthesis,dream recipes,angel's whisper,soul awakening",
 		"level": 27,
@@ -6943,12 +6943,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "dc0c62af-03be-4264-a6fe-3a8f447d3b98",
+					"id": "01HVZGS2KNJMPK6RC5TJG49WVY",
 					"name": "Angel's Whisper",
 					"table": "item"
 				},
 				{
-					"id": "8fefdae3-4bf6-4788-8a6b-799a7002ba12",
+					"id": "01HVZGS2HYRDV56AJ2Z7DVPZXP",
 					"name": "Soul Awakening",
 					"table": "effect"
 				}
@@ -6969,7 +6969,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "14d9f8ca-a04c-43f9-b924-aca7d5341d79",
+		"id": "01HVZGS2KNH8XRVZ5S5F3GCXT4",
 		"index": 163,
 		"keyWords": "heaven's cleanser,yellow,bomb,magic item,atk item,mystery recipes,light elemental",
 		"level": 54,
@@ -6996,7 +6996,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "a64d4620-9ed2-421c-b1e7-570b460030d1",
+		"id": "01HVZGS2KNAV7MVSEKAGCZG1KK",
 		"index": 844,
 		"keyWords": "living broom,green,magic item,wood,fuel,synthesis,hope recipes,story progress",
 		"level": 1,
@@ -7023,7 +7023,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "eeb1079b-aafa-432d-b36a-8e34d22a7516",
+		"id": "01HVZGS2KNYMK1NMZWNBVB9RQV",
 		"index": 219,
 		"keyWords": "nectar of life,white,medicine,secret power,heal item,hope recipes",
 		"level": 23,
@@ -7043,14 +7043,14 @@
 			"hunt": ["Mandragora", "White Root", "Alraune", "Kimmoch", "Single Horn."],
 			"location": ["Pilgram Road", "Flower Garden", "Rocky Grove", "Scar of the Land."],
 			"rumor": {
-				"id": "13ffceae-6d47-41a3-b158-d3c3bbae72ca",
+				"id": "01HVZGS2KTD1SK7395YJYTSQA5",
 				"name": "Greatly Grown Magic Grass",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "95619510-d2d2-4da9-910f-0e8681a0da21",
+		"id": "01HVZGS2KN36Z8QVJM89J84EGZ",
 		"index": 0,
 		"keyWords": "magic grass,green,plant,medicine mat,material",
 		"level": 2,
@@ -7074,14 +7074,14 @@
 				"Sealed Temple."
 			],
 			"rumor": {
-				"id": "36f21e71-0b29-49cf-a6a7-ed640bc5228a",
+				"id": "01HVZGS2KSM7W57HPTXAYNZ764",
 				"name": "Thin Line Between Poison and Medicine",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "1e73e6c2-76db-4003-b7b6-a70901f2da3f",
+		"id": "01HVZGS2KNZW4CWGPYDCQJEP5Y",
 		"index": 2,
 		"keyWords": "fairy poison grass,blue,plant,poison mat,material,poison mist",
 		"level": 11,
@@ -7090,7 +7090,7 @@
 		"recipeType": null,
 		"relatedCategories": ["PLANT", "POISON_MAT"],
 		"traitPresent": {
-			"id": "53c5aa8a-4038-4741-a7e4-357fa2b388eb",
+			"id": "01HVZGS2M9WMJG6NB2AKF5G4JC",
 			"name": "Poison Mist",
 			"table": "trait"
 		}
@@ -7105,7 +7105,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "a5de6a1b-3b09-4b5f-b25c-53364bb5c2a3",
+		"id": "01HVZGS2KNETTHTXPKG0SMC0V4",
 		"index": 18,
 		"keyWords": "kaen stone,red,ore,gunpowder,material,carries heat",
 		"level": 5,
@@ -7114,7 +7114,7 @@
 		"recipeType": null,
 		"relatedCategories": ["ORE", "GUNPOWDER"],
 		"traitPresent": {
-			"id": "c254dc69-cb1a-4fbb-a2fe-b1ffa922a02a",
+			"id": "01HVZGS2M9FNAP23BDPYNET84V",
 			"name": "Carries Heat",
 			"table": "trait"
 		}
@@ -7129,7 +7129,7 @@
 			"shop": "Elise",
 			"special": null
 		},
-		"id": "92c4ee1d-239e-4659-b5b7-dfc62f1440db",
+		"id": "01HVZGS2KN8VGC49PJTJKZKWAS",
 		"index": 295,
 		"keyWords": "codex of creation,white,magic item,paper,atk item,growth recipes,artisans (harol, leon, cory, logy)",
 		"level": 30,
@@ -7156,7 +7156,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "28b940bc-365e-4968-91cf-07bc3f0cda7e",
+		"id": "01HVZGS2KPF12ACDFG3RXVBT6Y",
 		"index": 21,
 		"keyWords": "black orb,white,ore,poison mat,fuel,material,dark matter",
 		"level": 23,
@@ -7165,7 +7165,7 @@
 		"recipeType": null,
 		"relatedCategories": ["ORE", "POISON_MAT", "FUEL"],
 		"traitPresent": {
-			"id": "7e485650-2861-4ee8-85ef-9af30d006b0d",
+			"id": "01HVZGS2M93JYY3S4V3SKR48NA",
 			"name": "Dark Matter",
 			"table": "trait"
 		}
@@ -7180,7 +7180,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "c349a19c-2c5d-4347-b0c4-d72d9782e5ca",
+		"id": "01HVZGS2KPH4867XKYRXB43M3B",
 		"index": 49,
 		"keyWords": "rainbow puni fluid,white,water,secret power,medicine mat,material,unidentified",
 		"level": 35,
@@ -7189,7 +7189,7 @@
 		"recipeType": null,
 		"relatedCategories": ["WATER", "SECRET_POWER", "MEDICINE_MAT"],
 		"traitPresent": {
-			"id": "7b21d1ca-22dc-4f33-b54a-7091e0d75609",
+			"id": "01HVZGS2M8ASGQ2E54P4ZBHPHQ",
 			"name": "Unidentified",
 			"table": "trait"
 		}
@@ -7201,14 +7201,14 @@
 			"hunt": ["Mandragora", "Single Horn."],
 			"location": ["Gathering Of Beast", "Puzzling Path", "Forest of Fairies."],
 			"rumor": {
-				"id": "31dc689d-b389-45b8-b256-da24e05d0797",
+				"id": "01HVZGS2KS1SXPRGM430MRQZ7A",
 				"name": "Stash of High Grade Flour?",
 				"table": "rumor"
 			},
 			"shop": null,
 			"special": null
 		},
-		"id": "e04f1902-3546-4644-8fa8-49b811213bf2",
+		"id": "01HVZGS2KP89R2JNSKTQ3CTHT9",
 		"index": 57,
 		"keyWords": "weiss powder,green,ingredient,gunpowder,material",
 		"level": 14,
@@ -7239,7 +7239,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "5b34d699-8572-4fee-bc45-748e74978945",
+		"id": "01HVZGS2KP8W3Y86W41BH4T5Q1",
 		"index": 50,
 		"keyWords": "dragon bloodstone,red,water,elixir,poison mat,material",
 		"level": 42,
@@ -7259,7 +7259,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "8936f67b-5bb7-41f5-b833-a351354495fa",
+		"id": "01HVZGS2KP0QP6HXGKH3X4G8QK",
 		"index": 79,
 		"keyWords": "evil core,blue,gem,poison mat,material,demon soul",
 		"level": 22,
@@ -7268,7 +7268,7 @@
 		"recipeType": null,
 		"relatedCategories": ["GEM", "POISON_MAT"],
 		"traitPresent": {
-			"id": "08af5bfb-982a-4cf6-8f87-beeffe885bae",
+			"id": "01HVZGS2M8CMSW1ZBCQFJGKHPF",
 			"name": "Demon Soul",
 			"table": "trait"
 		}
@@ -7283,7 +7283,7 @@
 			"shop": "Elise",
 			"special": null
 		},
-		"id": "8839ae47-a9a7-4993-9e88-be037cb95a0d",
+		"id": "01HVZGS2KP61A5NH3Z5M0QVTW7",
 		"index": 303,
 		"keyWords": "sealing book,white,magic item,paper,de buff item,mystery recipes,codex of creation,steal lots of life",
 		"level": 42,
@@ -7291,12 +7291,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "92c4ee1d-239e-4659-b5b7-dfc62f1440db",
+					"id": "01HVZGS2KN8VGC49PJTJKZKWAS",
 					"name": "Codex of Creation",
 					"table": "item"
 				},
 				{
-					"id": "539d3805-f8ee-47be-9eb4-393f9f7037a4",
+					"id": "01HVZGS2J30TSHHDH6QZQP1WYX",
 					"name": "Steal Lots of Life",
 					"table": "effect"
 				}
@@ -7317,7 +7317,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "1d01433e-7e4e-4fc9-81e0-17dd0f264611",
+		"id": "01HVZGS2KPZK5FC5GX43RA4GM3",
 		"index": 77,
 		"keyWords": "pendeloch,blue,secret power,gem,material",
 		"level": 14,
@@ -7337,7 +7337,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "54cc7eb2-28e8-4bfc-8d2c-2991c232f0fa",
+		"id": "01HVZGS2KPGAQWNMQWM16HR3B8",
 		"index": 359,
 		"keyWords": "living cart,yellow,magic item,wood,exploration,mystery recipes,refuel bottle,auto activate 50%",
 		"level": 33,
@@ -7345,12 +7345,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "fe01f79f-94d7-4d26-954d-6fe0d7817842",
+					"id": "01HVZGS2KDJKYYEX0GHQ2F2NVN",
 					"name": "Refuel Bottle",
 					"table": "item"
 				},
 				{
-					"id": "ab551048-efdb-49d9-b29a-89a1083612d2",
+					"id": "01HVZGS2JNHVS2W33QHEMARG19",
 					"name": "Auto Activate 50%",
 					"table": "effect"
 				}
@@ -7371,7 +7371,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "37de819e-b6b1-4ab3-b93f-218655136474",
+		"id": "01HVZGS2KP9V8VVJR5EMYR73K3",
 		"index": 165,
 		"keyWords": "necromancer flute,green,magic item,atk item,mystery recipes,nearby forest,night",
 		"level": 48,
@@ -7401,7 +7401,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "c3554aaf-1760-42bf-b445-dd97cc4dd69d",
+		"id": "01HVZGS2KPWNKG0ZHW0W8GMZ3H",
 		"index": 429,
 		"keyWords": "natural yeast,green,ingredient,gunpowder,poison mat,synthesis,hope recipes,bagel sandwich,fluffy",
 		"level": 23,
@@ -7409,12 +7409,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "47ca3b91-7d6f-4f4a-b62e-7e0b40b82ae7",
+					"id": "01HVZGS2KDQ7A3RB5KSTGVHX83",
 					"name": "Bagel Sandwich",
 					"table": "item"
 				},
 				{
-					"id": "10f49ad1-2607-4425-8d05-d6d6da824eba",
+					"id": "01HVZGS2JEH2T2SMMZ16H5NSES",
 					"name": "Fluffy",
 					"table": "effect"
 				}
@@ -7435,7 +7435,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "68d90c95-10d9-4e12-8815-01c7735aa3df",
+		"id": "01HVZGS2KP0N9HYB7SWJ32TKH2",
 		"index": 293,
 		"keyWords": "spirit weave cloth,blue,cloth,buff item,hope recipes,puni jelly,activate division",
 		"level": 33,
@@ -7443,12 +7443,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "7104142c-7feb-4387-9355-ac31d0878025",
+					"id": "01HVZGS2KDRNYFXQR75JSGFYKA",
 					"name": "Puni Jelly",
 					"table": "item"
 				},
 				{
-					"id": "9d56ef49-db65-440e-bc24-9467a4d0a091",
+					"id": "01HVZGS2J89PZSN7TW88B18PAM",
 					"name": "Activate Division",
 					"table": "effect"
 				}
@@ -7469,7 +7469,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "fb670467-ca99-42d4-b0e9-7077f899a863",
+		"id": "01HVZGS2KPGH90TMGPMJDWYMT9",
 		"index": 358,
 		"keyWords": "fairy guide,yellow,magic item,exploration,growth recipes,spruce,flickering light",
 		"level": 25,
@@ -7477,12 +7477,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "3ffd9ac5-ac7b-4bdc-bc2f-427f7ae664a9",
+					"id": "01HVZGS2KFARFBGTT897EYBTCN",
 					"name": "Spruce",
 					"table": "item"
 				},
 				{
-					"id": "5c57ba20-859b-4dcb-8fdc-930cf4a47691",
+					"id": "01HVZGS2M9JJJM94Q4H8S443YD",
 					"name": "Flickering Light",
 					"table": "trait"
 				}
@@ -7503,7 +7503,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "b49f5110-f68c-43a0-9cce-87d58161bf9e",
+		"id": "01HVZGS2KPW8Z5ZFYAHZC4N797",
 		"index": 225,
 		"keyWords": "piro sotea,blue,food,secret power,heal item,dream recipes,pure water,secret of health",
 		"level": 31,
@@ -7511,12 +7511,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "3972bbb0-98de-413b-b3bf-bfa8e2dc7a3f",
+					"id": "01HVZGS2KEXT8YBPDR1R61C0Y3",
 					"name": "Pure Water",
 					"table": "item"
 				},
 				{
-					"id": "11d53eb1-2385-4445-ace1-13e0a056414e",
+					"id": "01HVZGS2M7CV2YQ2MDB0846NBP",
 					"name": "Secret of Health",
 					"table": "trait"
 				}
@@ -7537,7 +7537,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "6cee69a5-709b-44dc-abcc-d2347e898b0c",
+		"id": "01HVZGS2KPRRDFP2X3MYPEHDGM",
 		"index": 440,
 		"keyWords": "stahl metal,red,weapon mat,metal,synthesis,growth recipes",
 		"level": 10,
@@ -7560,7 +7560,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "5cd4ee7d-8061-44ba-800c-4e0fb067386b",
+		"id": "01HVZGS2KP0MVTTEATFT0ABR0J",
 		"index": 511,
 		"keyWords": "tuned cauldron,white,important,machine,hope recipes,final area,underground lake",
 		"level": 14,
@@ -7568,7 +7568,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "5cd4ee7d-8061-44ba-800c-4e0fb067386b",
+					"id": "01HVZGS2KP0MVTTEATFT0ABR0J",
 					"name": "Tuned Cauldron",
 					"table": "item"
 				},
@@ -7595,7 +7595,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "88b8ba99-b146-4efd-8c26-94e920b3a56f",
+		"id": "01HVZGS2KP0RCM0KX0J1D1R27T",
 		"index": 460,
 		"keyWords": "fertile soil,yellow,clay,synthesis,mystery recipes,oskar",
 		"level": 25,
@@ -7622,7 +7622,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "d650fd56-cb24-4247-b795-7a4c33ba443e",
+		"id": "01HVZGS2KPZY0ZAPVSYQ2WG0YD",
 		"index": 459,
 		"keyWords": "mineral extract,green,medicine mat,water,metal,synthesis,growth recipes,good water",
 		"level": 23,
@@ -7630,7 +7630,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "8234ab13-e547-495f-8326-73fe6ec79f39",
+					"id": "01HVZGS2K96WVEJYJD3BPE3ZR4",
 					"name": "Good Water",
 					"table": "item"
 				}
@@ -7651,7 +7651,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "fefbe65c-0e98-49b3-b37f-21fd056b711d",
+		"id": "01HVZGS2KP1JJXGFJ67YYS0NHV",
 		"index": 439,
 		"keyWords": "ingot,red,weapon mat,metal,synthesis,beginner recipes,beast,merbert farm,complete request",
 		"level": 7,
@@ -7684,7 +7684,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "7775584e-eca8-4b2f-99b8-d95dba624351",
+		"id": "01HVZGS2KQ6PKXGTYJ0QYXJDEF",
 		"index": 515,
 		"keyWords": "teacher's cauldron,white,important,machine,growth recipes,cory",
 		"level": 10,
@@ -7692,7 +7692,7 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "7775584e-eca8-4b2f-99b8-d95dba624351",
+					"id": "01HVZGS2KQ6PKXGTYJ0QYXJDEF",
 					"name": "Teacher's Cauldron",
 					"table": "item"
 				},
@@ -7716,7 +7716,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "746849a2-52c3-4da7-9965-8c70f8f6523e",
+		"id": "01HVZGS2KQ7303Q00N5TW42R2K",
 		"index": 769,
 		"keyWords": "chronicle mark,blue,accessory,dream recipes,noble sapphire,ancient seal",
 		"level": 36,
@@ -7724,12 +7724,12 @@
 		"recipeIdea": {
 			"contentData": [
 				{
-					"id": "2ece4859-257c-45a7-b1bc-cf0d155fbf32",
+					"id": "01HVZGS2KGFTSEHJ98WHWRGMXX",
 					"name": "Noble Sapphire",
 					"table": "item"
 				},
 				{
-					"id": "a79a0acb-f99c-46d6-86f9-409d6b2b11a3",
+					"id": "01HVZGS2M7EH2078NRNKHMWPHR",
 					"name": "Ancient Seal",
 					"table": "trait"
 				}
@@ -7750,7 +7750,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "13a59232-9caf-45ef-9717-69705e18e0d3",
+		"id": "01HVZGS2KQEXWJPTB065RCBX45",
 		"index": 764,
 		"keyWords": "spirit earrings,blue,accessory,dream recipes,bomb,magic item,medicine",
 		"level": 33,
@@ -7816,7 +7816,7 @@
 			"shop": null,
 			"special": null
 		},
-		"id": "60182374-d37c-49fb-b5f4-6eb75c8cacab",
+		"id": "01HVZGS2KQW91AMQYRAJY8WYR5",
 		"index": 144,
 		"keyWords": "ice bomb,blue,bomb,atk item,beginner recipes,performing synthesis,water",
 		"level": 12,

@@ -5,43 +5,8 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1697954073104,
-      "tag": "0000_bent_kabuki",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "5",
-      "when": 1708321217339,
-      "tag": "0001_massive_mystique",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "5",
-      "when": 1708323037880,
-      "tag": "0002_slippery_wither",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "5",
-      "when": 1708325533276,
-      "tag": "0003_chemical_queen_noir",
-      "breakpoints": true
-    },
-    {
-      "idx": 4,
-      "version": "5",
-      "when": 1713585351004,
-      "tag": "0004_tearful_guardian",
-      "breakpoints": true
-    },
-    {
-      "idx": 5,
-      "version": "5",
-      "when": 1713618518269,
-      "tag": "0005_woozy_ogun",
+      "when": 1713683861975,
+      "tag": "0000_mushy_cyclops",
       "breakpoints": true
     }
   ]

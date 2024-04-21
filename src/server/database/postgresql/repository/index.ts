@@ -10,7 +10,6 @@ import { arrayInclude, tryCatchHandler } from '@root/utils/common';
 import type { SQL, sql } from 'drizzle-orm';
 import { arrayOverlaps, eq } from 'drizzle-orm';
 import type { PgRelationalQuery } from 'drizzle-orm/pg-core/query-builders/query';
-import { v4 as uuidV4 } from 'uuid';
 
 const countQueryFunc = (_: unknown, { sql: sqlFunc }: { sql: typeof sql }) => ({
 	totalRecord: sqlFunc<number>`count(*) over()`.as('total_record'),
@@ -170,7 +169,7 @@ export const insertOrUpdateUser = async (
 
 	return await postgresql
 		.insert(users)
-		.values({ id: uuidV4(), ...userData })
+		.values(userData)
 		.returning()
 		.then(res => res[0]);
 };

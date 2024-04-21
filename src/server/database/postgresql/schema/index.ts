@@ -3,7 +3,8 @@ import type { GithubUserInfo, ModuleIdEnum, RelatedCategoryEnum, SearchQuery } f
 import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
 import { env } from '@root/utils/common/env.mjs';
 import type { InferSelectModel } from 'drizzle-orm';
-import { jsonb, pgTableCreator, smallint, timestamp, uuid, varchar } from 'drizzle-orm/pg-core';
+import { jsonb, pgTableCreator, smallint, text, timestamp, varchar } from 'drizzle-orm/pg-core';
+import { ulid } from 'ulid';
 
 //#region <Field Types>
 
@@ -32,7 +33,7 @@ export const pgTable = pgTableCreator(name => `${env.NEXT_PUBLIC_APP_DB_PREFIX}_
 //#region <Tables Schema>
 
 export const effects = pgTable('effects', {
-	id: uuid('id').primaryKey(),
+	id: text('id').primaryKey(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	name: varchar('name', { length: 256 }).notNull(),
 
@@ -41,7 +42,7 @@ export const effects = pgTable('effects', {
 });
 
 export const items = pgTable('items', {
-	id: uuid('id').primaryKey(),
+	id: text('id').primaryKey(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	name: varchar('name', { length: 256 }).notNull(),
 
@@ -57,7 +58,7 @@ export const items = pgTable('items', {
 });
 
 export const rumors = pgTable('rumors', {
-	id: uuid('id').primaryKey(),
+	id: text('id').primaryKey(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	name: varchar('name', { length: 256 }).notNull(),
 
@@ -68,7 +69,7 @@ export const rumors = pgTable('rumors', {
 });
 
 export const traits = pgTable('traits', {
-	id: uuid('id').primaryKey(),
+	id: text('id').primaryKey(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	name: varchar('name', { length: 256 }).notNull(),
 
@@ -80,7 +81,7 @@ export const traits = pgTable('traits', {
 });
 
 export const users = pgTable('users', {
-	id: uuid('id').primaryKey(),
+	id: text('id').primaryKey().$default(ulid),
 	username: varchar('username', { length: 256 }).notNull().unique(),
 	email: varchar('email', { length: 256 }).notNull(),
 	githubProfile: jsonb('github_profile').$type<GithubUserInfo>().notNull(),

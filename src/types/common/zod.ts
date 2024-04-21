@@ -48,7 +48,7 @@ export type RumorTypeEnum = z.infer<typeof genericRumorTypeEnumSchema>;
 export const genericSortByEnumSchema = z.enum(['index', 'name', 'level', 'price']);
 export type SortByEnum = z.infer<typeof genericSortByEnumSchema>;
 
-export const genericIdSchema = genericStringSchema.uuid();
+export const genericIdSchema = genericStringSchema.ulid();
 export type Id = z.infer<typeof genericIdSchema>;
 
 export const searchQueryValidator = z.object({

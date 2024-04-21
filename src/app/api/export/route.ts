@@ -2,6 +2,7 @@ import { exportDBQueriesMap } from '@root/server/database/postgresql';
 import { entries, evnIs, tryCatchHandler, writeLog } from '@root/utils/common';
 import { writeFile } from 'fs/promises';
 import { NextResponse } from 'next/server';
+import { ulid } from 'ulid';
 
 const onExport = () =>
 	Promise.all(
@@ -19,7 +20,14 @@ const onExport = () =>
 			}
 
 			const writeFileResult = await tryCatchHandler(
-				writeFile(`backup/${table}.json`, JSON.stringify(exportData.data, null, 2)),
+				writeFile(
+					`backup/${table}.json`,
+					JSON.stringify(
+						exportData.data.map(item => ({ ...item, id: ulid() })),
+						null,
+						2,
+					),
+				),
 			);
 
 			if (!writeFileResult.isSuccess) {

@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS "sophie_dex_effects" (
-	"id" uuid PRIMARY KEY NOT NULL,
+	"id" text PRIMARY KEY NOT NULL,
 	"key_words" varchar(256) NOT NULL,
 	"name" varchar(256) NOT NULL,
 	"index" smallint NOT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS "sophie_dex_effects" (
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "sophie_dex_items" (
-	"id" uuid PRIMARY KEY NOT NULL,
+	"id" text PRIMARY KEY NOT NULL,
 	"key_words" varchar(256) NOT NULL,
 	"name" varchar(256) NOT NULL,
 	"category" varchar(100) NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS "sophie_dex_items" (
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "sophie_dex_rumors" (
-	"id" uuid PRIMARY KEY NOT NULL,
+	"id" text PRIMARY KEY NOT NULL,
 	"key_words" varchar(256) NOT NULL,
 	"name" varchar(256) NOT NULL,
 	"description" jsonb NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS "sophie_dex_rumors" (
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "sophie_dex_traits" (
-	"id" uuid PRIMARY KEY NOT NULL,
+	"id" text PRIMARY KEY NOT NULL,
 	"key_words" varchar(256) NOT NULL,
 	"name" varchar(256) NOT NULL,
 	"categories" varchar(100)[] NOT NULL,
@@ -40,4 +40,14 @@ CREATE TABLE IF NOT EXISTS "sophie_dex_traits" (
 	"index" smallint NOT NULL,
 	"item_present" jsonb,
 	"merge_from" jsonb NOT NULL
+);
+--> statement-breakpoint
+CREATE TABLE IF NOT EXISTS "sophie_dex_users" (
+	"id" text PRIMARY KEY NOT NULL,
+	"username" varchar(256) NOT NULL,
+	"email" varchar(256) NOT NULL,
+	"github_profile" jsonb NOT NULL,
+	"created_at" timestamp(6) with time zone DEFAULT now(),
+	"updated_at" timestamp(6) with time zone,
+	CONSTRAINT "sophie_dex_users_username_unique" UNIQUE("username")
 );
