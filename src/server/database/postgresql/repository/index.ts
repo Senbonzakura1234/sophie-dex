@@ -1,12 +1,19 @@
 import 'server-only';
 
 import { DEFAULT_LIMIT, sortByMap } from '@root/constants/common';
-import { postgresql } from '@root/server/database/postgresql';
+import {
+	getAllBookmarksQuery,
+	getBookmarksQueriesMap,
+	getToggleBookmarkQuery,
+	postgresql,
+} from '@root/server/database/postgresql';
 import type { CommonRecord, User } from '@root/server/database/postgresql/schema';
 import { users } from '@root/server/database/postgresql/schema';
+import type { APIResult, ImprovePick } from '@root/types/common';
 import { APIError } from '@root/types/common';
-import type { SearchQuery, SortByEnum } from '@root/types/common/zod';
-import { arrayInclude, tryCatchHandler } from '@root/utils/common';
+import type { BookmarkQuery, ModuleIdQuery, SearchQuery, SortByEnum } from '@root/types/common/zod';
+import { arrayInclude, deleteNullableProperty, tryCatchHandler } from '@root/utils/common';
+import { getSessionUser } from '@root/utils/server';
 import type { SQL, sql } from 'drizzle-orm';
 import { arrayOverlaps, eq } from 'drizzle-orm';
 import type { PgRelationalQuery } from 'drizzle-orm/pg-core/query-builders/query';
@@ -154,14 +161,30 @@ export const checkUserExist = (username: string) =>
 		.then(value => Boolean(value))
 		.catch(() => false);
 
-export const insertOrUpdateUser = async (
-	userData: Pick<User, 'email' | 'username' | 'githubProfile'>,
-	isUpdate: boolean,
-) => {
+type InsertOrUpdateUserProps =
+	| {
+			userData: ImprovePick<User, 'email' | 'username' | 'githubProfile'>;
+			isUpdate: false;
+	  }
+	| {
+			userData: ImprovePick<
+				User,
+				'username',
+				| 'email'
+				| 'githubProfile'
+				| 'bookmarkedEffectList'
+				| 'bookmarkedItemList'
+				| 'bookmarkedRumorList'
+				| 'bookmarkedTraitList'
+			>;
+			isUpdate: true;
+	  };
+
+export const insertOrUpdateUser = async ({ isUpdate, userData }: InsertOrUpdateUserProps) => {
 	if (isUpdate || (await checkUserExist(userData.username))) {
 		return await postgresql
 			.update(users)
-			.set(userData)
+			.set(deleteNullableProperty(userData))
 			.where(eq(users.username, userData.username))
 			.returning()
 			.then(res => res[0]);
@@ -169,7 +192,82 @@ export const insertOrUpdateUser = async (
 
 	return await postgresql
 		.insert(users)
-		.values(userData)
+		.values(deleteNullableProperty(userData))
 		.returning()
 		.then(res => res[0]);
+};
+
+const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: string) =>
+	Object.values((await getBookmarksQueriesMap[moduleId].execute({ username })) || {})[0];
+
+export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery) => {
+	const userSessionRes = await getSessionUser();
+
+	if (!userSessionRes.isSuccess) return userSessionRes;
+
+	const getModuleBookmarkRes = await tryCatchHandler(onGetBookmarks(moduleId, userSessionRes.result.name));
+
+	if (!getModuleBookmarkRes.isSuccess)
+		return {
+			isSuccess: false as const,
+			result: null,
+			error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }),
+		} satisfies APIResult;
+
+	if (!getModuleBookmarkRes.data)
+		return {
+			isSuccess: false as const,
+			result: null,
+			error: new APIError({ code: 'NOT_FOUND', message: 'User not found' }),
+		} satisfies APIResult;
+
+	return {
+		isSuccess: true as const,
+		result: getModuleBookmarkRes.data,
+		error: null,
+	} satisfies APIResult;
+};
+
+export const getAllBookmarks = async () => {
+	const userSessionRes = await getSessionUser();
+
+	if (!userSessionRes.isSuccess) return userSessionRes;
+
+	const getAllBookmarkRes = await tryCatchHandler(
+		getAllBookmarksQuery.execute({ username: userSessionRes.result.name }),
+	);
+
+	if (!getAllBookmarkRes.data)
+		return {
+			isSuccess: false as const,
+			result: null,
+			error: new APIError({ code: 'NOT_FOUND', message: 'User not found' }),
+		} satisfies APIResult;
+
+	return {
+		isSuccess: true as const,
+		result: getAllBookmarkRes.data,
+		error: null,
+	} satisfies APIResult;
+};
+
+export const bookmarkRecord = async ({ bookmarkRecordId, isBookmarked, moduleId }: BookmarkQuery) => {
+	const userSessionRes = await getSessionUser();
+
+	if (!userSessionRes.isSuccess) throw userSessionRes.error;
+
+	const bookmarkRes = await tryCatchHandler(
+		postgresql.execute(
+			getToggleBookmarkQuery({
+				bookmarkRecordId,
+				isBookmarked,
+				moduleId,
+				username: userSessionRes.result.name,
+			}),
+		),
+	);
+
+	if (!bookmarkRes.isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR' });
+
+	return bookmarkRes.data;
 };

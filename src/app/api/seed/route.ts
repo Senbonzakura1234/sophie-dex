@@ -2,7 +2,7 @@
 import { effectsList, itemsList, rumorsList, traitsList } from '@root/constants/seedData';
 import { postgresql } from '@root/server/database/postgresql';
 import { effects, items, rumors, traits } from '@root/server/database/postgresql/schema';
-import { evnIs, tryCatchHandler } from '@root/utils/common';
+import { evnIs, tryCatchHandler, writeLog } from '@root/utils/common';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
@@ -32,7 +32,7 @@ export async function GET() {
 		if (!isSuccess) data.errorList.push({ id: element?.id, error });
 		if (isSuccess) {
 			data.effectsSuccessCount++;
-			console.log({ isSuccess });
+			writeLog({ args: [{ isSuccess }] });
 		}
 	}
 
@@ -44,7 +44,7 @@ export async function GET() {
 		if (!isSuccess) data.errorList.push({ id: element?.id, error });
 		if (isSuccess) {
 			data.itemsSuccessCount++;
-			console.log({ isSuccess });
+			writeLog({ args: [{ isSuccess }] });
 		}
 	}
 
@@ -56,7 +56,7 @@ export async function GET() {
 		if (!isSuccess) data.errorList.push({ id: element?.id, error });
 		if (isSuccess) {
 			data.rumorsSuccessCount++;
-			console.log({ isSuccess });
+			writeLog({ args: [{ isSuccess }] });
 		}
 	}
 
@@ -68,7 +68,7 @@ export async function GET() {
 		if (!isSuccess) data.errorList.push({ id: element?.id, error });
 		if (isSuccess) {
 			data.traitsSuccessCount++;
-			console.log({ isSuccess });
+			writeLog({ args: [{ isSuccess }] });
 		}
 	}
 

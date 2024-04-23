@@ -37,14 +37,14 @@ export const providerMapping = {
 					JSON.stringify(new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get Github Profile Error' })),
 				);
 
-			const user = await insertOrUpdateUser(
-				{
+			const user = await insertOrUpdateUser({
+				isUpdate: false,
+				userData: {
 					email: profileResult.data.email,
 					username: profileResult.data.login,
 					githubProfile: profileResult.data,
 				},
-				false,
-			);
+			});
 
 			if (!user)
 				throw new Error(
@@ -56,7 +56,6 @@ export const providerMapping = {
 				email: user.email,
 				image: user.githubProfile.avatar_url,
 				name: user.username,
-				extraInfo: { extra: '' },
 			};
 		},
 	}),

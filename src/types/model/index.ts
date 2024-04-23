@@ -99,3 +99,9 @@ export type ListRecord<TRecord extends CommonRecord> = {
 };
 
 export type ExportDBQueriesMap = Record<ModuleIdEnum, PreparedPGQuery<Array<CommonRecord>>>;
+export type GetBookmarksQueriesMap = {
+	effect: PreparedPGQuery<{ bookmarkedEffectList: Array<string> } | undefined>;
+	item: PreparedPGQuery<{ bookmarkedItemList: Array<string> } | undefined>;
+	rumor: PreparedPGQuery<{ bookmarkedRumorList: Array<string> } | undefined>;
+	trait: PreparedPGQuery<{ bookmarkedTraitList: Array<string> } | undefined>;
+};

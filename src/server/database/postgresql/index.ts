@@ -2,9 +2,12 @@ import 'server-only';
 
 import { neon } from '@neondatabase/serverless';
 import * as schema from '@root/server/database/postgresql/schema';
+import { users } from '@root/server/database/postgresql/schema';
+import type { BookmarkQuery } from '@root/types/common/zod';
 import type { ExportDBQueriesMap } from '@root/types/model';
-import { evnIs } from '@root/utils/common';
+import { capitalize, evnIs } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
+import { sql } from 'drizzle-orm';
 import { drizzle } from 'drizzle-orm/neon-http';
 
 const connection = neon<boolean, boolean>(env.PGURL_NONPOOLING);
@@ -29,7 +32,7 @@ export const getUserRecordQuery = postgresql.query.users
 		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
 		columns: { githubProfile: true },
 	})
-	.prepare('getUserRecordQuery');
+	.prepare('getUserRecord');
 
 export const getAllEffectIdsQuery = postgresql.query.effects
 	.findMany({ columns: { id: true } })
@@ -52,4 +55,64 @@ export const exportDBQueriesMap: ExportDBQueriesMap = {
 	item: exportItemsQuery,
 	rumor: exportRumorsQuery,
 	trait: exportTraitsQuery,
+};
+
+export const getEffectBookmarksQuery = postgresql.query.users
+	.findFirst({
+		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
+		columns: { bookmarkedEffectList: true },
+	})
+	.prepare('getEffectBookmarks');
+export const getItemBookmarksQuery = postgresql.query.users
+	.findFirst({
+		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
+		columns: { bookmarkedItemList: true },
+	})
+	.prepare('getItemBookmarks');
+export const getRumorBookmarksQuery = postgresql.query.users
+	.findFirst({
+		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
+		columns: { bookmarkedRumorList: true },
+	})
+	.prepare('getRumorBookmarks');
+export const getTraitBookmarksQuery = postgresql.query.users
+	.findFirst({
+		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
+		columns: { bookmarkedTraitList: true },
+	})
+	.prepare('getTraitBookmarks');
+
+export const getBookmarksQueriesMap = {
+	effect: getEffectBookmarksQuery,
+	item: getItemBookmarksQuery,
+	rumor: getRumorBookmarksQuery,
+	trait: getTraitBookmarksQuery,
+};
+
+export const getAllBookmarksQuery = postgresql.query.users
+	.findFirst({
+		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
+		columns: {
+			bookmarkedEffectList: true,
+			bookmarkedItemList: true,
+			bookmarkedRumorList: true,
+			bookmarkedTraitList: true,
+		},
+	})
+	.prepare('getAllBookmarks');
+
+type GetToggleBookmarkQuery = {
+	username: string;
+} & BookmarkQuery;
+
+export const getToggleBookmarkQuery = ({
+	bookmarkRecordId,
+	isBookmarked,
+	moduleId,
+	username,
+}: GetToggleBookmarkQuery) => {
+	const columnName = users[`bookmarked${capitalize(moduleId)}List`].name;
+	const updateCommand = isBookmarked ? 'array_remove' : 'array_append';
+
+	return sql`update ${users} set ${sql.raw(columnName)} = ${sql.raw(updateCommand)}(${sql.raw(columnName)}, ${bookmarkRecordId}) where ${sql.raw(users.username.name)} = ${username}`;
 };

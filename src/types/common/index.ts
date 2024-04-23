@@ -54,3 +54,9 @@ export type InspectRecursive<TObject> = {
 } & NonNullable<unknown>;
 
 export type PreparedPGQuery<TData = unknown> = PgPreparedQuery<PreparedQueryConfig & { execute: TData }>;
+
+export type ImprovePick<
+	TData,
+	KRequired extends keyof TData,
+	KNonRequired extends Exclude<keyof TData, KRequired> = never,
+> = Pick<TData, KRequired> & Partial<Pick<TData, KNonRequired>>;

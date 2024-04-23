@@ -80,6 +80,16 @@ export type SignInQuery = z.infer<typeof signInQueryValidator>;
 export const idQueryValidator = z.object({ id: genericIdSchema.nullable().catch(null) });
 export type IdQuery = z.infer<typeof idQueryValidator>;
 
+export const moduleIdQueryValidator = z.object({ moduleId: genericModuleIdEnumSchema });
+export type ModuleIdQuery = z.infer<typeof moduleIdQueryValidator>;
+
+export const bookmarkQueryValidator = z.object({
+	moduleId: genericModuleIdEnumSchema,
+	bookmarkRecordId: genericIdSchema,
+	isBookmarked: z.boolean().default(false),
+});
+export type BookmarkQuery = z.infer<typeof bookmarkQueryValidator>;
+
 export const providerIdEnumValidator = z.enum(providerIdList);
 export type ProviderIdEnum = z.infer<typeof providerIdEnumValidator>;
 
