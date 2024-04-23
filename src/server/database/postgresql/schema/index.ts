@@ -1,3 +1,4 @@
+import { MAXIMUM_BOOKMARK_LENGTH } from '@root/constants/common';
 import type { ImprovedOmit } from '@root/types/common';
 import type { GithubUserInfo, ModuleIdEnum, RelatedCategoryEnum, SearchQuery } from '@root/types/common/zod';
 import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
@@ -87,19 +88,19 @@ export const users = pgTable('users', {
 	githubProfile: jsonb('github_profile').$type<GithubUserInfo>().notNull(),
 
 	bookmarkedEffectList: text('bookmarked_effect_list')
-		.array()
+		.array(MAXIMUM_BOOKMARK_LENGTH)
 		.notNull()
 		.$default(() => []),
 	bookmarkedItemList: text('bookmarked_item_list')
-		.array()
+		.array(MAXIMUM_BOOKMARK_LENGTH)
 		.notNull()
 		.$default(() => []),
 	bookmarkedRumorList: text('bookmarked_rumor_list')
-		.array()
+		.array(MAXIMUM_BOOKMARK_LENGTH)
 		.notNull()
 		.$default(() => []),
 	bookmarkedTraitList: text('bookmarked_trait_list')
-		.array()
+		.array(MAXIMUM_BOOKMARK_LENGTH)
 		.notNull()
 		.$default(() => []),
 

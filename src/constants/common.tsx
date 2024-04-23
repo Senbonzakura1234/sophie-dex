@@ -13,6 +13,9 @@ import type { DefaultOptions } from '@tanstack/react-query';
 
 export const DEFAULT_LIMIT = 16;
 
+export const MAXIMUM_DB_ARRAY_FIELD_LENGTH = 100 as const;
+export const MAXIMUM_BOOKMARK_LENGTH = MAXIMUM_DB_ARRAY_FIELD_LENGTH / 2;
+
 export const colorTWClassMap = {
 	BLUE: { background: 'text-blue-500', foreground: 'text-slate-950' },
 	GREEN: { background: 'text-green-500', foreground: 'text-slate-950' },

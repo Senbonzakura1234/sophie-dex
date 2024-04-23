@@ -21,6 +21,8 @@ export const errorList = [
 	'CLIENT_CLOSED_REQUEST',
 ] as const satisfies Readonly<Array<TRPC_ERROR_CODE_KEY>>;
 
+export const booleanishList = ['false', 'true'] as const satisfies Array<`${boolean}`>;
+
 export const serverErrorList = ['INTERNAL_SERVER_ERROR', 'BAD_REQUEST', 'NOT_FOUND'] as const;
 
 export const moduleIdList = ['effect', 'item', 'trait', 'rumor'] as const;

@@ -1,5 +1,5 @@
 {
-  "id": "b149a0bf-4cb6-4202-9194-a30f7ad19d42",
+  "id": "729744af-b060-44c6-b84b-9bf4b7d4cb78",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -266,25 +266,25 @@
         },
         "bookmarked_effect_list": {
           "name": "bookmarked_effect_list",
-          "type": "text[]",
+          "type": "text[50]",
           "primaryKey": false,
           "notNull": true
         },
         "bookmarked_item_list": {
           "name": "bookmarked_item_list",
-          "type": "text[]",
+          "type": "text[50]",
           "primaryKey": false,
           "notNull": true
         },
         "bookmarked_rumor_list": {
           "name": "bookmarked_rumor_list",
-          "type": "text[]",
+          "type": "text[50]",
           "primaryKey": false,
           "notNull": true
         },
         "bookmarked_trait_list": {
           "name": "bookmarked_trait_list",
-          "type": "text[]",
+          "type": "text[50]",
           "primaryKey": false,
           "notNull": true
         },
