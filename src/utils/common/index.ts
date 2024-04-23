@@ -89,7 +89,7 @@ export function evnIs(nodeEnv: typeof env.NEXT_PUBLIC_NODE_ENV) {
 
 // =======================================					Utilities					=======================================
 
-export function booleanishToBoolean(input: BooleanishEnum = 'false'): input is 'true' {
+export function booleanishToBoolean(input: BooleanishEnum | null = 'false'): input is 'true' {
 	return input === 'true';
 }
 

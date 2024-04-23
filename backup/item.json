@@ -4061,6 +4061,7 @@
 			"contentData": [
 				{
 					"searchQuery": {
+						"bookmarked": null,
 						"category": null,
 						"color": null,
 						"direction": null,
@@ -5008,6 +5009,7 @@
 			"contentData": [
 				{
 					"searchQuery": {
+						"bookmarked": null,
 						"category": null,
 						"color": null,
 						"direction": null,
@@ -7759,6 +7761,7 @@
 			"contentData": [
 				{
 					"searchQuery": {
+						"bookmarked": null,
 						"category": null,
 						"color": null,
 						"direction": null,
@@ -7773,6 +7776,7 @@
 				},
 				{
 					"searchQuery": {
+						"bookmarked": null,
 						"category": null,
 						"color": null,
 						"direction": null,
@@ -7787,6 +7791,7 @@
 				},
 				{
 					"searchQuery": {
+						"bookmarked": null,
 						"category": null,
 						"color": null,
 						"direction": null,
@@ -7828,6 +7833,7 @@
 				},
 				{
 					"searchQuery": {
+						"bookmarked": null,
 						"category": null,
 						"color": null,
 						"direction": null,

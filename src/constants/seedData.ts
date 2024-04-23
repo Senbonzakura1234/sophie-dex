@@ -8618,6 +8618,7 @@ export const itemsList: Array<Item> = [
 			contentData: [
 				{
 					searchQuery: {
+						bookmarked: null,
 						category: null,
 						color: null,
 						direction: null,
@@ -9565,6 +9566,7 @@ export const itemsList: Array<Item> = [
 			contentData: [
 				{
 					searchQuery: {
+						bookmarked: null,
 						category: null,
 						color: null,
 						direction: null,
@@ -12317,6 +12319,7 @@ export const itemsList: Array<Item> = [
 			contentData: [
 				{
 					searchQuery: {
+						bookmarked: null,
 						category: null,
 						color: null,
 						direction: null,
@@ -12331,6 +12334,7 @@ export const itemsList: Array<Item> = [
 				},
 				{
 					searchQuery: {
+						bookmarked: null,
 						category: null,
 						color: null,
 						direction: null,
@@ -12345,6 +12349,7 @@ export const itemsList: Array<Item> = [
 				},
 				{
 					searchQuery: {
+						bookmarked: null,
 						category: null,
 						color: null,
 						direction: null,
@@ -12386,6 +12391,7 @@ export const itemsList: Array<Item> = [
 				},
 				{
 					searchQuery: {
+						bookmarked: null,
 						category: null,
 						color: null,
 						direction: null,

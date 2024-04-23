@@ -56,6 +56,7 @@ export const genericIdSchema = genericStringSchema.ulid();
 export type Id = z.infer<typeof genericIdSchema>;
 
 export const searchQueryValidator = z.object({
+	bookmarked: genericBooleanishEnumSchema.nullish().catch(null).default(null),
 	category: genericCategoryEnumSchema.nullish().catch(null).default(null),
 	color: genericColorEnumSchema.nullish().catch(null).default(null),
 	direction: genericDirectionEnumSchema.nullish().catch(null).default(null),
