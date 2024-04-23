@@ -23,11 +23,14 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 
 	const { mutateAsync, status: mutateStatus } = ApiClientCtx.user.bookmark.useMutation();
 
+	const isHidden = sessionStatus === 'unauthenticated' || queryStatus === 'error';
+
+	if (isHidden) return null;
+
 	const isLoading = sessionStatus === 'loading' || queryStatus === 'pending' || mutateStatus === 'pending';
-	const isDisabled = isLoading || sessionStatus === 'unauthenticated' || queryStatus === 'error';
 
 	const handleBookmark = async () => {
-		if (isDisabled) return;
+		if (isLoading) return;
 
 		await mutateAsync({
 			bookmarkRecordId: id,
@@ -48,7 +51,7 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 				},
 			)}
 			onClick={handleBookmark}
-			disabled={isDisabled}
+			disabled={isLoading}
 			role='button'
 		>
 			{isLoading ? (

@@ -1,4 +1,5 @@
 import {
+	booleanishList,
 	categoryList,
 	colorList,
 	daisyUIThemeList,
@@ -21,6 +22,9 @@ export type ErrorEnum = z.infer<typeof errorEnumSchema>;
 export const genericStringSchema = z.string();
 
 export const genericNonnegativeIntSchema = z.number().int().nonnegative();
+
+export const genericBooleanishEnumSchema = z.enum(booleanishList);
+export type BooleanishEnum = z.infer<typeof genericBooleanishEnumSchema>;
 
 export const genericModuleIdEnumSchema = z.enum(moduleIdList);
 export type ModuleIdEnum = z.infer<typeof genericModuleIdEnumSchema>;

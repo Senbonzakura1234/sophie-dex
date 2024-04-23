@@ -1,5 +1,5 @@
 import type { CommonObject, KeyOf, ValueOf } from '@root/types/common';
-import type { SearchQuery } from '@root/types/common/zod';
+import type { BooleanishEnum, SearchQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
 import { env } from '@root/utils/common/env.mjs';
 import type { ClassValue } from 'clsx';
@@ -88,6 +88,10 @@ export function evnIs(nodeEnv: typeof env.NEXT_PUBLIC_NODE_ENV) {
 }
 
 // =======================================					Utilities					=======================================
+
+export function booleanishToBoolean(input: BooleanishEnum = 'false'): input is 'true' {
+	return input === 'true';
+}
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
