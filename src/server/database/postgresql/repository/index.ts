@@ -1,14 +1,19 @@
 import 'server-only';
 
 import { DEFAULT_LIMIT, sortByMap } from '@root/constants/common';
-import { getBookmarksQueriesMap, getToggleBookmarkQuery, postgresql } from '@root/server/database/postgresql';
+import {
+	getBookmarksQueriesMap,
+	getToggleBookmarkQuery,
+	getUserRecordQuery,
+	postgresql,
+} from '@root/server/database/postgresql';
 import type { CommonRecord, Effect, Item, Rumor, Trait, User } from '@root/server/database/postgresql/schema';
 import { users } from '@root/server/database/postgresql/schema';
 import type { APIResult, ImprovePick } from '@root/types/common';
 import { APIError } from '@root/types/common';
-import type { BookmarkQuery, ModuleIdQuery, SearchQuery, SortByEnum } from '@root/types/common/zod';
+import type { BookmarkQuery, GithubUserInfo, ModuleIdQuery, SearchQuery, SortByEnum } from '@root/types/common/zod';
 import { arrayInclude, deleteNullableProperty, tryCatchHandler } from '@root/utils/common';
-import { getSessionUser } from '@root/utils/server';
+import { getSessionResult } from '@root/utils/server';
 import type { SQL, sql } from 'drizzle-orm';
 import { arrayOverlaps, eq } from 'drizzle-orm';
 import type { PgRelationalQuery } from 'drizzle-orm/pg-core/query-builders/query';
@@ -256,15 +261,38 @@ export const insertOrUpdateUser = async ({ isUpdate, userData }: InsertOrUpdateU
 		.then(res => res[0]);
 };
 
+export const getProfile = async (): APIResult<GithubUserInfo> => {
+	const userSessionRes = await getSessionResult();
+
+	if (!userSessionRes.isSuccess) return userSessionRes;
+
+	const username = userSessionRes.result.user.name;
+
+	const { data, isSuccess } = await tryCatchHandler(getUserRecordQuery.execute({ username }));
+
+	if (!isSuccess) return { isSuccess: false, result: null, error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }) };
+
+	if (!data)
+		return {
+			isSuccess: false,
+			result: null,
+			error: new APIError({ code: 'NOT_FOUND', message: `User ${username} Not Found` }),
+		};
+
+	return { isSuccess: true, result: data.githubProfile, error: null };
+};
+
 const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: string) =>
 	Object.values((await getBookmarksQueriesMap[moduleId].execute({ username })) || {})[0];
 
 export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery): APIResult<Array<string>> => {
-	const userSessionRes = await getSessionUser();
+	const userSessionRes = await getSessionResult();
 
 	if (!userSessionRes.isSuccess) return userSessionRes;
 
-	const getModuleBookmarkRes = await tryCatchHandler(onGetBookmarks(moduleId, userSessionRes.result.name));
+	const username = userSessionRes.result.user.name;
+
+	const getModuleBookmarkRes = await tryCatchHandler(onGetBookmarks(moduleId, username));
 
 	if (!getModuleBookmarkRes.isSuccess)
 		return {
@@ -288,19 +316,14 @@ export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery): APIResult
 };
 
 export const bookmarkRecord = async ({ bookmarkRecordId, isBookmarked, moduleId }: BookmarkQuery) => {
-	const userSessionRes = await getSessionUser();
+	const userSessionRes = await getSessionResult();
 
 	if (!userSessionRes.isSuccess) throw userSessionRes.error;
 
+	const username = userSessionRes.result.user.name;
+
 	const bookmarkRes = await tryCatchHandler(
-		postgresql.execute(
-			getToggleBookmarkQuery({
-				bookmarkRecordId,
-				isBookmarked,
-				moduleId,
-				username: userSessionRes.result.name,
-			}),
-		),
+		postgresql.execute(getToggleBookmarkQuery({ bookmarkRecordId, isBookmarked, moduleId, username })),
 	);
 
 	if (!bookmarkRes.isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR' });

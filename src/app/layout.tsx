@@ -13,10 +13,9 @@ import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
 import { ContextProvider } from '@root/utils/client/context';
 import { cn, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env.mjs';
-import { getCookieData } from '@root/utils/server';
+import { getCookieData, getSessionResult } from '@root/utils/server';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
-import { getServerSession } from 'next-auth';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
@@ -207,11 +206,11 @@ export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-widt
 
 const getLayoutProps = async () => {
 	const [sessionRes, themeCookiesRes] = await Promise.all([
-		tryCatchHandler(getServerSession()),
+		tryCatchHandler(getSessionResult()),
 		tryCatchHandler(getCookieData('theme')),
 	]);
 
-	return { session: sessionRes.data, themeCookies: themeCookiesRes.data };
+	return { session: sessionRes.data?.result, themeCookies: themeCookiesRes.data };
 };
 
 export default async function RootLayout({ children }: ChildrenProps) {

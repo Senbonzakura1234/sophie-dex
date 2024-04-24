@@ -17,7 +17,7 @@ export const getCookieData = async (name: string) => {
 	return new Promise<RequestCookie | undefined>(resolve => setTimeout(() => resolve(cookieData), 0));
 };
 
-export const getSessionUser = async () => {
+export const getSessionResult = async () => {
 	const sessionRes = await tryCatchHandler(getServerSession());
 
 	if (!sessionRes.isSuccess)
@@ -36,9 +36,12 @@ export const getSessionUser = async () => {
 
 	return {
 		result: {
-			email: sessionRes.data.user.email,
-			image: sessionRes.data.user.image,
-			name: sessionRes.data.user.name,
+			user: {
+				email: sessionRes.data.user.email,
+				image: sessionRes.data.user.image,
+				name: sessionRes.data.user.name,
+			},
+			expires: sessionRes.data.expires,
 		},
 		isSuccess: true as const,
 		error: null,
