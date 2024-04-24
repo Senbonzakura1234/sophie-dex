@@ -264,7 +264,7 @@ export const insertOrUpdateUser = async ({ isUpdate, userData }: InsertOrUpdateU
 const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: string) =>
 	Object.values((await getBookmarksQueriesMap[moduleId].execute({ username })) || {})[0];
 
-export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery) => {
+export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery): APIResult<Array<string>> => {
 	const userSessionRes = await getSessionUser();
 
 	if (!userSessionRes.isSuccess) return userSessionRes;
@@ -276,23 +276,25 @@ export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery) => {
 			isSuccess: false as const,
 			result: null,
 			error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }),
-		} satisfies APIResult;
+		};
 
 	if (!getModuleBookmarkRes.data)
 		return {
 			isSuccess: false as const,
 			result: null,
 			error: new APIError({ code: 'NOT_FOUND', message: 'User not found' }),
-		} satisfies APIResult;
+		};
 
 	return {
 		isSuccess: true as const,
 		result: getModuleBookmarkRes.data,
 		error: null,
-	} satisfies APIResult;
+	};
 };
 
-export const getAllBookmarks = async () => {
+export const getAllBookmarks = async (): APIResult<
+	ImprovePick<User, 'bookmarkedEffectList' | 'bookmarkedItemList' | 'bookmarkedRumorList' | 'bookmarkedTraitList'>
+> => {
 	const userSessionRes = await getSessionUser();
 
 	if (!userSessionRes.isSuccess) return userSessionRes;
@@ -306,13 +308,13 @@ export const getAllBookmarks = async () => {
 			isSuccess: false as const,
 			result: null,
 			error: new APIError({ code: 'NOT_FOUND', message: 'User not found' }),
-		} satisfies APIResult;
+		};
 
 	return {
 		isSuccess: true as const,
 		result: getAllBookmarkRes.data,
 		error: null,
-	} satisfies APIResult;
+	};
 };
 
 export const bookmarkRecord = async ({ bookmarkRecordId, isBookmarked, moduleId }: BookmarkQuery) => {

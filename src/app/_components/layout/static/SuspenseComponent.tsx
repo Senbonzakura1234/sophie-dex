@@ -4,7 +4,7 @@ import ErrorContent from './ErrorContent';
 
 type Props<TChildProps extends JSX.IntrinsicAttributes> = {
 	ChildComponent: FC<TChildProps>;
-	promiseData: Promise<APIResult<TChildProps>>;
+	promiseData: APIResult<TChildProps>;
 	showErrorContent?: boolean;
 };
 

@@ -41,9 +41,9 @@ export class APIError extends TRPCError {
 	}
 }
 
-export type APIResult<TResult = unknown> =
-	| { isSuccess: false; result: null; error: APIError }
-	| { isSuccess: true; result: TResult; error: null };
+export type APIResult<TResult = unknown> = Promise<
+	{ isSuccess: false; result: null; error: APIError } | { isSuccess: true; result: TResult; error: null }
+>;
 
 export type Inspect<TObject> = {
 	[TKey in keyof TObject]: TObject[TKey];

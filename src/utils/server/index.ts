@@ -25,14 +25,14 @@ export const getSessionUser = async () => {
 			isSuccess: false as const,
 			result: null,
 			error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }),
-		} satisfies APIResult;
+		} satisfies Awaited<APIResult>;
 
 	if (!sessionRes.data || !sessionRes.data.user?.name || !sessionRes.data.user?.email)
 		return {
 			isSuccess: false as const,
 			result: null,
 			error: new APIError({ code: 'UNAUTHORIZED' }),
-		} satisfies APIResult;
+		} satisfies Awaited<APIResult>;
 
 	return {
 		result: {

@@ -54,7 +54,7 @@ const defaultResult = {
 	isSuccess: false as const,
 	result: null,
 	error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }),
-} satisfies APIResult;
+} satisfies Awaited<APIResult>;
 
 const getDefaultFetchHeader = (revalidate = 86400): Parameters<typeof fetch>[1] => ({
 	headers: { Authorization: `Bearer ${env.GITHUB_TOKEN}`, 'X-GitHub-Api-Version': '2022-11-28' },
@@ -101,7 +101,7 @@ export const getGithubUserInfo = async (): Promise<APIResult<GithubUserInfo>> =>
 		: defaultResult;
 };
 
-export const getLicense = async (): Promise<APIResult<LicenseInfo>> => {
+export const getLicense = async () => {
 	const licenseResult = await tryCatchHandler(
 		improvedFetch(
 			licenseInfoSchema,
@@ -111,6 +111,6 @@ export const getLicense = async (): Promise<APIResult<LicenseInfo>> => {
 	);
 
 	return licenseResult.isSuccess
-		? { result: licenseResult.data, isSuccess: true as const, error: null }
+		? { result: licenseResult.data as LicenseInfo, isSuccess: true as const, error: null }
 		: defaultResult;
 };

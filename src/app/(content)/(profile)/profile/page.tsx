@@ -15,7 +15,7 @@ export async function generateMetadata({ searchParams }: PageProps, parent: Reso
 	return generateGenericMetadata(parent, { title: `${env.NEXT_PUBLIC_APP_NAME} | Profile` }, searchParams);
 }
 
-const getProfile = async (): Promise<APIResult<GithubUserInfo>> => {
+const getProfile = async (): APIResult<GithubUserInfo> => {
 	const session = await getServerSession();
 
 	if (!session) return { isSuccess: false, result: null, error: new APIError({ code: 'UNAUTHORIZED' }) };
