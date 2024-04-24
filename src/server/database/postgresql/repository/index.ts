@@ -1,12 +1,7 @@
 import 'server-only';
 
 import { DEFAULT_LIMIT, sortByMap } from '@root/constants/common';
-import {
-	getAllBookmarksQuery,
-	getBookmarksQueriesMap,
-	getToggleBookmarkQuery,
-	postgresql,
-} from '@root/server/database/postgresql';
+import { getBookmarksQueriesMap, getToggleBookmarkQuery, postgresql } from '@root/server/database/postgresql';
 import type { CommonRecord, Effect, Item, Rumor, Trait, User } from '@root/server/database/postgresql/schema';
 import { users } from '@root/server/database/postgresql/schema';
 import type { APIResult, ImprovePick } from '@root/types/common';
@@ -288,31 +283,6 @@ export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery): APIResult
 	return {
 		isSuccess: true as const,
 		result: getModuleBookmarkRes.data,
-		error: null,
-	};
-};
-
-export const getAllBookmarks = async (): APIResult<
-	ImprovePick<User, 'bookmarkedEffectList' | 'bookmarkedItemList' | 'bookmarkedRumorList' | 'bookmarkedTraitList'>
-> => {
-	const userSessionRes = await getSessionUser();
-
-	if (!userSessionRes.isSuccess) return userSessionRes;
-
-	const getAllBookmarkRes = await tryCatchHandler(
-		getAllBookmarksQuery.execute({ username: userSessionRes.result.name }),
-	);
-
-	if (!getAllBookmarkRes.data)
-		return {
-			isSuccess: false as const,
-			result: null,
-			error: new APIError({ code: 'NOT_FOUND', message: 'User not found' }),
-		};
-
-	return {
-		isSuccess: true as const,
-		result: getAllBookmarkRes.data,
 		error: null,
 	};
 };

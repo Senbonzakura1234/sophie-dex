@@ -24,8 +24,6 @@ export function capitalize<TInput extends string>(input?: TInput | null): Capita
 	) as Capitalize<TInput>;
 }
 
-export type CapitalizeFunction = typeof capitalize;
-
 export function createArray<TFill>(len = 0, fill: TFill) {
 	return Array(len).fill(fill) as Array<TFill>;
 }

@@ -89,21 +89,7 @@ export const getBookmarksQueriesMap = {
 	trait: getTraitBookmarksQuery,
 };
 
-export const getAllBookmarksQuery = postgresql.query.users
-	.findFirst({
-		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
-		columns: {
-			bookmarkedEffectList: true,
-			bookmarkedItemList: true,
-			bookmarkedRumorList: true,
-			bookmarkedTraitList: true,
-		},
-	})
-	.prepare('getAllBookmarks');
-
-type GetToggleBookmarkQuery = {
-	username: string;
-} & BookmarkQuery;
+type GetToggleBookmarkQuery = { username: string } & BookmarkQuery;
 
 export const getToggleBookmarkQuery = ({
 	bookmarkRecordId,
