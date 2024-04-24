@@ -4,7 +4,10 @@ import { arrayInclude } from '@root/utils/common';
 import { useCallback, useMemo } from 'react';
 import { useUpdateQuery } from './useUpdateQuery';
 
-type SelectQueryKey = 'category' | 'color' | 'rumorType' | 'recipeType' | 'page';
+type SelectQueryKey = keyof Pick<
+	SearchQuery,
+	'category' | 'color' | 'rumorType' | 'recipeType' | 'page' | 'bookmarked'
+>;
 
 export function useQueryOnChange<V extends SearchQuery[SelectQueryKey]>(
 	key: SelectQueryKey,

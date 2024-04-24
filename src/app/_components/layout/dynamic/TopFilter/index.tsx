@@ -13,7 +13,8 @@ import useSelector from '@root/hooks/useSelector';
 import { arrayInclude, queryToParamsString } from '@root/utils/common';
 import { useEffect, useState } from 'react';
 
-import type { ModuleIdEnum, SearchQuery } from '@root/types/common/zod';
+import type { SearchQuery } from '@root/types/common/zod';
+import BookmarkFilter from './BookmarkFilter';
 import CategoryFilter from './CategoryFilter';
 import ColorFilter from './ColorFilter';
 import RecipeTypeFilter from './RecipeTypeFilter';
@@ -22,7 +23,11 @@ import SortControl from './SortControl';
 
 const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 3 }).format;
 
-const getPaginateInfo = (curPage: SearchQuery['page'], totalRecord: number, moduleId: ModuleIdEnum) => {
+const getPaginateInfo = (
+	curPage: SearchQuery['page'],
+	totalRecord: number,
+	moduleId: NonNullable<ReturnType<typeof useModuleId>['moduleId']>,
+) => {
 	const page = curPage || 1;
 
 	const fromFormatted = formatRecordCount((page - 1) * DEFAULT_LIMIT + 1);
@@ -75,6 +80,8 @@ export default function TopFilter() {
 					<h2 className='hidden w-full font-bold max-2xl:block'>Filter Control</h2>
 
 					<SortControl moduleId={moduleId} searchQuery={searchQuery} />
+
+					<BookmarkFilter />
 
 					{moduleId !== 'effect' ? (
 						<div className='flex flex-wrap gap-2'>

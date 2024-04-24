@@ -92,6 +92,9 @@ export function evnIs(nodeEnv: typeof env.NEXT_PUBLIC_NODE_ENV) {
 export function booleanishToBoolean(input: BooleanishEnum | null = 'false'): input is 'true' {
 	return input === 'true';
 }
+export function booleanToBooleanish(input: boolean | null = false): BooleanishEnum {
+	return input ? 'true' : 'false';
+}
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));

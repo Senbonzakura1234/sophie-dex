@@ -7,7 +7,7 @@ import {
 	getToggleBookmarkQuery,
 	postgresql,
 } from '@root/server/database/postgresql';
-import type { CommonRecord, User } from '@root/server/database/postgresql/schema';
+import type { CommonRecord, Effect, Item, Rumor, Trait, User } from '@root/server/database/postgresql/schema';
 import { users } from '@root/server/database/postgresql/schema';
 import type { APIResult, ImprovePick } from '@root/types/common';
 import { APIError } from '@root/types/common';
@@ -30,10 +30,22 @@ const getSortField = <TSearch extends Readonly<SortByEnum>>(
 	search: SortByEnum | null,
 ) => (arrayInclude(allowedSortField, search) ? search : defaultSortField);
 
-const getListRecord = async <TRecord extends CommonRecord>(
-	query: PgRelationalQuery<Array<TRecord & { totalRecord: number }>>,
-	search: string | null,
-) => {
+type GetListRecordProp<TRecord extends CommonRecord> =
+	| {
+			query: PgRelationalQuery<Array<TRecord & { totalRecord: number }>>;
+			search: string | null;
+			isEmptyBookmark: false;
+	  }
+	| {
+			search: string | null;
+			isEmptyBookmark: true;
+	  };
+
+const getListRecord = async <TRecord extends CommonRecord>(args: GetListRecordProp<TRecord>) => {
+	if (args.isEmptyBookmark) return { records: [], totalRecord: 0, totalPage: 0, search: args.search || undefined };
+
+	const { query, search } = args;
+
 	const { data, isSuccess } = await tryCatchHandler(query);
 
 	if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR' });
@@ -47,7 +59,18 @@ const getListRecord = async <TRecord extends CommonRecord>(
 };
 
 export const getEffects = async (input: SearchQuery) => {
-	const { search, sortBy, direction, page } = input;
+	const { search, sortBy, direction, page, bookmarked } = input;
+
+	let bookmarkList: Array<string> = [];
+
+	if (bookmarked === 'true') {
+		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'effect' });
+
+		if (!bookmarkListRes.isSuccess || bookmarkListRes.result.length === 0)
+			return getListRecord<Effect>({ search, isEmptyBookmark: true });
+
+		bookmarkList = bookmarkListRes.result;
+	}
 
 	const query = postgresql.query.effects.findMany({
 		extras: countQueryFunc,
@@ -56,23 +79,39 @@ export const getEffects = async (input: SearchQuery) => {
 			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.effect, 'index', sortBy)]),
 		],
 		offset: getOffset(page),
-		where: (schema, { or, ilike }) =>
-			or(
-				...(search
-					? [
-							ilike(schema.name, `%${search}%`),
-							ilike(schema.description, `%${search}%`),
-							ilike(schema.keyWords, `%${search}%`),
-						]
-					: []),
-			),
+		where: (schema, { or, and, ilike, inArray }) => {
+			const OR: Array<SQL> = search
+				? [
+						ilike(schema.name, `%${search}%`),
+						ilike(schema.description, `%${search}%`),
+						ilike(schema.keyWords, `%${search}%`),
+					]
+				: [];
+
+			const AND: Array<SQL> = [];
+
+			if (bookmarked === 'true') AND.push(inArray(schema.id, bookmarkList));
+
+			return and(or(...OR), ...AND);
+		},
 	});
 
-	return getListRecord(query, search);
+	return getListRecord<Effect>({ query, search, isEmptyBookmark: false });
 };
 
 export const getItems = async (input: SearchQuery) => {
-	const { search, sortBy, direction, color, relatedCategory, page, category, recipeType } = input;
+	const { search, sortBy, direction, color, relatedCategory, page, category, recipeType, bookmarked } = input;
+
+	let bookmarkList: Array<string> = [];
+
+	if (bookmarked === 'true') {
+		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'item' });
+
+		if (!bookmarkListRes.isSuccess || bookmarkListRes.result.length === 0)
+			return getListRecord<Item>({ search, isEmptyBookmark: true });
+
+		bookmarkList = bookmarkListRes.result;
+	}
 
 	const query = postgresql.query.items.findMany({
 		extras: (_, { sql }) => ({ totalRecord: sql<number>`count(*) over()`.as('total_record') }),
@@ -81,7 +120,7 @@ export const getItems = async (input: SearchQuery) => {
 			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.item, 'index', sortBy)]),
 		],
 		offset: getOffset(page),
-		where: (schema, { or, and, ilike, eq }) => {
+		where: (schema, { or, and, ilike, eq, inArray }) => {
 			const OR: Array<SQL> = search
 				? [ilike(schema.name, `%${search}%`), ilike(schema.keyWords, `%${search}%`)]
 				: [];
@@ -91,16 +130,28 @@ export const getItems = async (input: SearchQuery) => {
 			if (color) AND.push(eq(schema.color, color));
 			if (recipeType) AND.push(eq(schema.recipeType, recipeType));
 			if (category) AND.push(eq(schema.category, category));
+			if (bookmarked === 'true') AND.push(inArray(schema.id, bookmarkList));
 
 			return and(or(...OR), ...AND);
 		},
 	});
 
-	return getListRecord(query, search);
+	return getListRecord<Item>({ query, search, isEmptyBookmark: false });
 };
 
 export const getRumors = async (input: SearchQuery) => {
-	const { search, sortBy, direction, page, rumorType } = input;
+	const { search, sortBy, direction, page, rumorType, bookmarked } = input;
+
+	let bookmarkList: Array<string> = [];
+
+	if (bookmarked === 'true') {
+		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'rumor' });
+
+		if (!bookmarkListRes.isSuccess || bookmarkListRes.result.length === 0)
+			return getListRecord<Rumor>({ search, isEmptyBookmark: true });
+
+		bookmarkList = bookmarkListRes.result;
+	}
 
 	const query = postgresql.query.rumors.findMany({
 		extras: countQueryFunc,
@@ -109,23 +160,35 @@ export const getRumors = async (input: SearchQuery) => {
 			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.rumor, 'price', sortBy)]),
 		],
 		offset: getOffset(page),
-		where: (schema, { or, and, ilike, eq }) => {
+		where: (schema, { or, and, ilike, eq, inArray }) => {
 			const OR: Array<SQL> = search
 				? [ilike(schema.name, `%${search}%`), ilike(schema.keyWords, `%${search}%`)]
 				: [];
 
 			const AND: Array<SQL> = [];
 			if (rumorType) AND.push(eq(schema.rumorType, rumorType));
+			if (bookmarked === 'true') AND.push(inArray(schema.id, bookmarkList));
 
 			return and(or(...OR), ...AND);
 		},
 	});
 
-	return getListRecord(query, search);
+	return getListRecord<Rumor>({ query, search, isEmptyBookmark: false });
 };
 
 export const getTraits = async (input: SearchQuery) => {
-	const { search, sortBy, direction, category, page } = input;
+	const { search, sortBy, direction, category, page, bookmarked } = input;
+
+	let bookmarkList: Array<string> = [];
+
+	if (bookmarked === 'true') {
+		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'trait' });
+
+		if (!bookmarkListRes.isSuccess || bookmarkListRes.result.length === 0)
+			return getListRecord<Trait>({ search, isEmptyBookmark: true });
+
+		bookmarkList = bookmarkListRes.result;
+	}
 
 	const query = postgresql.query.traits.findMany({
 		extras: countQueryFunc,
@@ -134,7 +197,7 @@ export const getTraits = async (input: SearchQuery) => {
 			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.trait, 'index', sortBy)]),
 		],
 		offset: getOffset(page),
-		where: (schema, { or, and, ilike }) => {
+		where: (schema, { or, and, ilike, inArray }) => {
 			const OR: Array<SQL> = search
 				? [
 						ilike(schema.name, `%${search}%`),
@@ -145,12 +208,13 @@ export const getTraits = async (input: SearchQuery) => {
 
 			const AND: Array<SQL> = [];
 			if (category) AND.push(arrayOverlaps(schema.categories, [category]));
+			if (bookmarked === 'true') AND.push(inArray(schema.id, bookmarkList));
 
 			return and(or(...OR), ...AND);
 		},
 	});
 
-	return getListRecord(query, search);
+	return getListRecord<Trait>({ query, search, isEmptyBookmark: false });
 };
 
 export const checkUserExist = (username: string) =>
