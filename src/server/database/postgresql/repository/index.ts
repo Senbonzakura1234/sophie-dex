@@ -63,13 +63,18 @@ export const getEffects = async (input: SearchQuery) => {
 
 	let bookmarkList: Array<string> = [];
 
-	if (bookmarked === 'true') {
+	let isEnableBookmarkFilter = bookmarked;
+
+	if (isEnableBookmarkFilter === 'true') {
 		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'effect' });
 
-		if (!bookmarkListRes.isSuccess || bookmarkListRes.result.length === 0)
-			return getListRecord<Effect>({ search, isEmptyBookmark: true });
+		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
-		bookmarkList = bookmarkListRes.result;
+		if (bookmarkListRes.isSuccess) {
+			if (bookmarkListRes.result.length === 0) return getListRecord<Effect>({ search, isEmptyBookmark: true });
+
+			bookmarkList = bookmarkListRes.result;
+		}
 	}
 
 	const query = postgresql.query.effects.findMany({
@@ -90,7 +95,7 @@ export const getEffects = async (input: SearchQuery) => {
 
 			const AND: Array<SQL> = [];
 
-			if (bookmarked === 'true') AND.push(inArray(schema.id, bookmarkList));
+			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
 			return and(or(...OR), ...AND);
 		},
@@ -104,13 +109,18 @@ export const getItems = async (input: SearchQuery) => {
 
 	let bookmarkList: Array<string> = [];
 
-	if (bookmarked === 'true') {
+	let isEnableBookmarkFilter = bookmarked;
+
+	if (isEnableBookmarkFilter === 'true') {
 		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'item' });
 
-		if (!bookmarkListRes.isSuccess || bookmarkListRes.result.length === 0)
-			return getListRecord<Item>({ search, isEmptyBookmark: true });
+		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
-		bookmarkList = bookmarkListRes.result;
+		if (bookmarkListRes.isSuccess) {
+			if (bookmarkListRes.result.length === 0) return getListRecord<Item>({ search, isEmptyBookmark: true });
+
+			bookmarkList = bookmarkListRes.result;
+		}
 	}
 
 	const query = postgresql.query.items.findMany({
@@ -130,7 +140,7 @@ export const getItems = async (input: SearchQuery) => {
 			if (color) AND.push(eq(schema.color, color));
 			if (recipeType) AND.push(eq(schema.recipeType, recipeType));
 			if (category) AND.push(eq(schema.category, category));
-			if (bookmarked === 'true') AND.push(inArray(schema.id, bookmarkList));
+			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
 			return and(or(...OR), ...AND);
 		},
@@ -144,13 +154,18 @@ export const getRumors = async (input: SearchQuery) => {
 
 	let bookmarkList: Array<string> = [];
 
-	if (bookmarked === 'true') {
+	let isEnableBookmarkFilter = bookmarked;
+
+	if (isEnableBookmarkFilter === 'true') {
 		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'rumor' });
 
-		if (!bookmarkListRes.isSuccess || bookmarkListRes.result.length === 0)
-			return getListRecord<Rumor>({ search, isEmptyBookmark: true });
+		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
-		bookmarkList = bookmarkListRes.result;
+		if (bookmarkListRes.isSuccess) {
+			if (bookmarkListRes.result.length === 0) return getListRecord<Rumor>({ search, isEmptyBookmark: true });
+
+			bookmarkList = bookmarkListRes.result;
+		}
 	}
 
 	const query = postgresql.query.rumors.findMany({
@@ -167,7 +182,7 @@ export const getRumors = async (input: SearchQuery) => {
 
 			const AND: Array<SQL> = [];
 			if (rumorType) AND.push(eq(schema.rumorType, rumorType));
-			if (bookmarked === 'true') AND.push(inArray(schema.id, bookmarkList));
+			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
 			return and(or(...OR), ...AND);
 		},
@@ -181,13 +196,18 @@ export const getTraits = async (input: SearchQuery) => {
 
 	let bookmarkList: Array<string> = [];
 
-	if (bookmarked === 'true') {
+	let isEnableBookmarkFilter = bookmarked;
+
+	if (isEnableBookmarkFilter === 'true') {
 		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'trait' });
 
-		if (!bookmarkListRes.isSuccess || bookmarkListRes.result.length === 0)
-			return getListRecord<Trait>({ search, isEmptyBookmark: true });
+		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
-		bookmarkList = bookmarkListRes.result;
+		if (bookmarkListRes.isSuccess) {
+			if (bookmarkListRes.result.length === 0) return getListRecord<Trait>({ search, isEmptyBookmark: true });
+
+			bookmarkList = bookmarkListRes.result;
+		}
 	}
 
 	const query = postgresql.query.traits.findMany({
@@ -208,7 +228,7 @@ export const getTraits = async (input: SearchQuery) => {
 
 			const AND: Array<SQL> = [];
 			if (category) AND.push(arrayOverlaps(schema.categories, [category]));
-			if (bookmarked === 'true') AND.push(inArray(schema.id, bookmarkList));
+			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
 			return and(or(...OR), ...AND);
 		},

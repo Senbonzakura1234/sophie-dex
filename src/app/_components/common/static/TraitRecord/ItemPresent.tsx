@@ -24,7 +24,7 @@ export default function ItemPresent({ itemPresent: { table: moduleId, id, name }
 			</Link>
 
 			<ShareButton
-				className='btn-ghost text-primary'
+				classNames={{ wrapper: 'btn-square btn-ghost text-primary' }}
 				input={{ text: name, title: name, url: `/${moduleId}/${id}` }}
 			/>
 		</div>

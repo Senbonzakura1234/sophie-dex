@@ -13,7 +13,7 @@ import { useEffect } from 'react';
 type APIListWrapperProps = { searchParams: PageProps['searchParams'] };
 
 export default function APIListWrapper({ searchParams }: APIListWrapperProps) {
-	const { data, refetch, error, status } = ApiClientCtx.effect.getAll.useQuery(searchParams);
+	const { data, error, status } = ApiClientCtx.effect.getAll.useQuery(searchParams);
 
 	const dispatch = useDispatch();
 
@@ -22,11 +22,10 @@ export default function APIListWrapper({ searchParams }: APIListWrapperProps) {
 			type: 'UPDATE_CONTENT_DATA',
 			data: {
 				status,
-				refetch,
 				...(status !== 'pending' ? { totalPage: data?.totalPage || 0, totalRecord: data?.totalRecord || 0 } : {}),
 			},
 		});
-	}, [data?.totalPage, data?.totalRecord, dispatch, refetch, status]);
+	}, [data?.totalPage, data?.totalRecord, dispatch, status]);
 
 	if (status === 'success')
 		return (

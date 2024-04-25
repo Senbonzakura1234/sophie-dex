@@ -15,7 +15,6 @@ export type ContentDataContextState = {
 	contentData: {
 		totalRecord: number;
 		totalPage: number;
-		refetch: undefined | (() => Promise<unknown>);
 		status: 'error' | 'success' | 'pending';
 	};
 };
@@ -33,7 +32,7 @@ type ActionType =
 
 const initialState: StateType = {
 	theme: 'fantasy',
-	contentData: { totalRecord: 0, totalPage: 0, refetch: undefined, status: 'pending' },
+	contentData: { totalRecord: 0, totalPage: 0, status: 'pending' },
 	alert: { isOpen: false, message: '' },
 	scrollWrapper: { ref: null, isDisabledPullToRefresh: false },
 };

@@ -1,26 +1,34 @@
 'use client';
 
-import usePageSegment from '@root/hooks/usePageSegment';
+import { useModuleId } from '@root/hooks/useModuleId';
 import useSelector from '@root/hooks/useSelector';
-import { moduleIdList } from '@root/types/model';
-import { arrayInclude, cn } from '@root/utils/common';
+import { ApiClientCtx } from '@root/utils/client/trpc';
+import { cn } from '@root/utils/common';
+import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import { useMemo } from 'react';
+import { useCallback } from 'react';
 import { DEFAULT_REFRESH_THRESHOLD, usePullToRefresh } from 'use-pull-to-refresh';
 
 export default function PageRefresh() {
+	const { status: sessionStatus } = useSession();
+
 	const { refresh } = useRouter();
+
 	const {
-		contentData: { refetch },
 		scrollWrapper: { isDisabledPullToRefresh: isDisabled },
 	} = useSelector();
-	const { isDetailPage, segment } = usePageSegment();
 
-	const onRefresh = useMemo(() => {
-		if (!refetch) return refresh;
-		if (isDetailPage || !arrayInclude(moduleIdList, segment)) return refresh;
-		return refetch;
-	}, [isDetailPage, refetch, refresh, segment]);
+	const trpcUtils = ApiClientCtx.useUtils();
+
+	const { isDetailPage, segment, moduleId } = useModuleId();
+
+	const onRefresh = useCallback(async () => {
+		if (sessionStatus === 'authenticated') await trpcUtils.user.getModuleBookmarks.invalidate();
+
+		if (!segment || !moduleId || isDetailPage) return refresh();
+
+		return await trpcUtils[moduleId].getAll.invalidate();
+	}, [isDetailPage, moduleId, refresh, segment, sessionStatus, trpcUtils]);
 
 	const { isRefreshing, pullPosition } = usePullToRefresh({ onRefresh, isDisabled, maximumPullLength: 300 });
 

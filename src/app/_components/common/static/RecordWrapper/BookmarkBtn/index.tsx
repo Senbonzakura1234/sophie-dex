@@ -1,9 +1,10 @@
 'use client';
 
+import { MAXIMUM_BOOKMARK_LENGTH } from '@root/constants/common';
 import type { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { ApiClientCtx } from '@root/utils/client/trpc';
-import { cn } from '@root/utils/common';
+import { capitalize, cn, tryCatchHandler } from '@root/utils/common';
 import { useSession } from 'next-auth/react';
 import { BookmarkBtnIcon, BookmarkBtnText } from './BookmarkBtnInner';
 
@@ -39,37 +40,45 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 
 	const isRecordBookmarked = Boolean(data?.result?.includes(id));
 
-	const handleBookmark = async () => {
-		if (isLoading) return;
+	const isMaximumBookmarks = (data?.result?.length || 0) >= MAXIMUM_BOOKMARK_LENGTH && !isRecordBookmarked;
 
-		await mutateAsync({
-			bookmarkRecordId: id,
-			moduleId,
-			isBookmarked: isNotBookmarkFilter ? isRecordBookmarked : true,
-		});
+	const isDisabled = isLoading || isMaximumBookmarks;
+
+	const handleBookmark = async () => {
+		if (isDisabled) return;
+
+		await tryCatchHandler(
+			mutateAsync({
+				bookmarkRecordId: id,
+				moduleId,
+				isBookmarked: isNotBookmarkFilter ? isRecordBookmarked : true,
+			}),
+		);
 
 		return await (isNotBookmarkFilter ? refetch() : trpcUtils[moduleId].getAll.invalidate());
 	};
 
 	return (
-		<button
-			aria-label={`${data?.result?.includes(id) ? 'Remove' : ''} Bookmark ${name}`}
-			className={cn(
-				'btn btn-primary btn-xs capitalize align-middle dark:shadow-md dark:shadow-current w-3/4 sm:w-auto sm:mr-auto',
-				{
-					'btn-outline': !data?.result?.includes(id) && isNotBookmarkFilter,
-				},
-			)}
-			onClick={handleBookmark}
-			disabled={isLoading}
-			role='button'
+		<div
+			className={cn('sm:mr-auto tooltip-bottom', { tooltip: isMaximumBookmarks })}
+			data-tip={`Maximum ${MAXIMUM_BOOKMARK_LENGTH} ${capitalize(moduleId)} bookmarks reached`}
 		>
-			<BookmarkBtnIcon
-				isLoading={isLoading}
-				isNotBookmarkFilter={isNotBookmarkFilter}
-				isRecordBookmarked={isRecordBookmarked}
-			/>
-			<BookmarkBtnText isNotBookmarkFilter={isNotBookmarkFilter} isRecordBookmarked={isRecordBookmarked} />
-		</button>
+			<button
+				aria-label={`${data?.result?.includes(id) ? 'Remove' : ''} Bookmark ${name}`}
+				className={cn('btn btn-primary btn-xs capitalize dark:shadow-md dark:shadow-current', {
+					'btn-outline': !data?.result?.includes(id) && isNotBookmarkFilter,
+				})}
+				onClick={handleBookmark}
+				disabled={isDisabled}
+				role='button'
+			>
+				<BookmarkBtnIcon
+					isLoading={isLoading}
+					isNotBookmarkFilter={isNotBookmarkFilter}
+					isRecordBookmarked={isRecordBookmarked}
+				/>
+				<BookmarkBtnText isNotBookmarkFilter={isNotBookmarkFilter} isRecordBookmarked={isRecordBookmarked} />
+			</button>
+		</div>
 	);
 }

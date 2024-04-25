@@ -21,7 +21,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 				{mergeFrom.map(([firstTrait, lastTrait], key) => (
 					<div className='join basis-auto shadow-lg shadow-base-content/30' key={key}>
 						<ShareButton
-							className='join-item'
+							classNames={{ wrapper: 'btn-square join-item' }}
 							input={{
 								text: firstTrait.name,
 								title: firstTrait.name,
@@ -48,7 +48,7 @@ export default function TraitMergeList({ mergeFrom }: TraitMergeListProps) {
 							<span className='max-sm:max-w-16 max-sm:truncate'>{lastTrait.name}</span>
 						</Link>
 						<ShareButton
-							className='join-item'
+							classNames={{ wrapper: 'btn-square join-item' }}
 							input={{
 								text: lastTrait.name,
 								title: lastTrait.name,

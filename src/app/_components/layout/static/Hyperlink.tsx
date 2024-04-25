@@ -38,7 +38,10 @@ export default function Hyperlink({ input, className }: HyperlinkProps) {
 				{label}
 			</Link>
 
-			<ShareButton className='btn-ghost text-secondary' input={{ text: label, title: label, url: href }} />
+			<ShareButton
+				classNames={{ wrapper: 'btn-square btn-ghost text-secondary' }}
+				input={{ text: label, title: label, url: href }}
+			/>
 		</>
 	);
 }

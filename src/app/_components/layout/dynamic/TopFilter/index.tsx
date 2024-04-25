@@ -30,7 +30,7 @@ const getPaginateInfo = (
 ) => {
 	const page = curPage || 1;
 
-	const fromFormatted = formatRecordCount((page - 1) * DEFAULT_LIMIT + 1);
+	const fromFormatted = totalRecord > 0 ? formatRecordCount((page - 1) * DEFAULT_LIMIT + 1) : '000';
 	const toFormatted = formatRecordCount(page * DEFAULT_LIMIT > totalRecord ? totalRecord : page * DEFAULT_LIMIT);
 	const totalRecordFormatted = formatRecordCount(totalRecord);
 
@@ -81,7 +81,7 @@ export default function TopFilter() {
 
 					<SortControl moduleId={moduleId} searchQuery={searchQuery} />
 
-					<BookmarkFilter />
+					<BookmarkFilter moduleId={moduleId} />
 
 					{moduleId !== 'effect' ? (
 						<div className='flex flex-wrap gap-2'>

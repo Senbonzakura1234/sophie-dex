@@ -4,7 +4,7 @@ import ClipboardIcon from '@components/icons/solid/ClipboardIcon';
 import ShareSquareIcon from '@components/icons/solid/ShareSquareIcon';
 import usePushAlert from '@root/hooks/usePushAlert';
 import type { ImprovedOmit } from '@root/types/common';
-import type { ClassNameProps } from '@root/types/common/props';
+import type { ChildrenProps, ClassNamesProps } from '@root/types/common/props';
 import { cn, tryCatchHandler } from '@root/utils/common';
 
 type InputData = ImprovedOmit<Required<ShareData>, 'files'>;
@@ -24,17 +24,19 @@ const onShare = async ({ input, onFailure, onSuccess }: OnShareParams) => {
 	return isSuccess ? onSuccess() : onFailure('Copy to clipboard failed', error);
 };
 
-type ShareButtonProps = { input: InputData } & ClassNameProps;
+type ShareButtonProps = { input: InputData } & ClassNamesProps<'wrapper' | 'icon'> & ChildrenProps;
 
-export default function ShareButton({ className, input }: ShareButtonProps) {
+export default function ShareButton({ classNames, input, children }: ShareButtonProps) {
 	const { pushAlert } = usePushAlert();
 
 	const canShare = isCanShare(input);
 
+	const IconComponent = canShare ? ShareSquareIcon : ClipboardIcon;
+
 	return (
 		<button
 			aria-label={`Share ${input.title}`}
-			className={cn('btn btn-square btn-primary btn-xs my-auto', { 'border-none': canShare }, className)}
+			className={cn('btn btn-primary btn-xs my-auto', classNames?.wrapper)}
 			onClick={() =>
 				onShare({
 					input,
@@ -44,11 +46,9 @@ export default function ShareButton({ className, input }: ShareButtonProps) {
 			}
 			role='button'
 		>
-			{canShare ? (
-				<ShareSquareIcon className='aspect-square h-4' />
-			) : (
-				<ClipboardIcon className='aspect-square h-4' />
-			)}
+			<IconComponent className={cn('size-4', classNames?.icon)} />
+
+			<span>{children}</span>
 		</button>
 	);
 }
