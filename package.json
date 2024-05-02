@@ -44,11 +44,9 @@
 		"@trpc/client": "11.0.0-next-beta.228",
 		"@trpc/react-query": "11.0.0-next-beta.228",
 		"@trpc/server": "11.0.0-next-beta.228",
-		"@types/cors": "^2.8.17",
 		"@vercel/speed-insights": "^1.0.10",
 		"clsx": "^2.1.1",
 		"cookies-next": "^4.1.1",
-		"cors": "^2.8.5",
 		"drizzle-orm": "^0.30.10",
 		"next": "14.2.3",
 		"next-auth": "^4.24.7",
@@ -93,5 +91,6 @@
 		"prettier": "^3.2.5",
 		"tailwindcss": "^3.4.3",
 		"typescript": "5.4.5"
-	}
+	},
+	"packageManager": "pnpm@9.0.6+sha256.0624e30eff866cdeb363b15061bdb7fd9425b17bc1bb42c22f5f4efdea21f6b3"
 }
