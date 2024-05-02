@@ -1,41 +1,46 @@
-import { appCodeSchema, appKeyWordSchema, nodeEnvEnumSchema, providerIdEnumValidator } from '@root/types/common/zod';
+import {
+	appCodeSchema,
+	appKeyWordSchema,
+	genericStringSchema,
+	nodeEnvEnumSchema,
+	providerIdEnumValidator,
+} from '@root/types/common/zod';
+import { capitalize } from '@root/utils/common';
 import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
-import { capitalize } from '.';
 
 export const env = createEnv({
 	client: {
 		NEXT_PUBLIC_NODE_ENV: nodeEnvEnumSchema,
 		NEXT_PUBLIC_PORT: z.coerce.number().nonnegative().catch(3000),
-		NEXT_PUBLIC_VERCEL_URL: z.string().optional(),
+		NEXT_PUBLIC_VERCEL_URL: genericStringSchema.optional(),
 
-		NEXT_PUBLIC_APP_HOST: z.string().optional(),
+		NEXT_PUBLIC_APP_HOST: genericStringSchema.optional(),
 
-		NEXT_PUBLIC_APP_AUTHOR: z.string().catch('-'),
-		NEXT_PUBLIC_APP_AUTHOR_EMAIL: z.string().email().catch('-'),
+		NEXT_PUBLIC_APP_AUTHOR: genericStringSchema.catch('-'),
+		NEXT_PUBLIC_APP_AUTHOR_EMAIL: genericStringSchema.email().catch('-'),
 		NEXT_PUBLIC_APP_CODE: appCodeSchema,
 		NEXT_PUBLIC_APP_DB_PREFIX: appCodeSchema.transform(val => val.replaceAll('-', '_')),
-		NEXT_PUBLIC_APP_DESCRIPTION: z.string().catch('-'),
+		NEXT_PUBLIC_APP_DESCRIPTION: genericStringSchema.catch('-'),
 		NEXT_PUBLIC_APP_KEYWORD: appKeyWordSchema,
-		NEXT_PUBLIC_APP_LICENSE_CODE: z.string().catch('-'),
+		NEXT_PUBLIC_APP_LICENSE_CODE: genericStringSchema.catch('-'),
 		NEXT_PUBLIC_APP_NAME: appCodeSchema.transform(val => capitalize(val.replaceAll('-', ' '))),
-		NEXT_PUBLIC_APP_PATH: z.string().catch('-'),
-		NEXT_PUBLIC_ALLOW_AUTH_PROVIDER: z
-			.string()
+		NEXT_PUBLIC_APP_PATH: genericStringSchema.catch('-'),
+		NEXT_PUBLIC_ALLOW_AUTH_PROVIDER: genericStringSchema
 			.catch('')
 			.transform(val => z.array(providerIdEnumValidator).catch([]).parse(val.split(','))),
 	},
 	server: {
-		PGURL_NONPOOLING: z.string().catch(''),
+		PGURL_NONPOOLING: genericStringSchema.catch(''),
 
-		GITHUB_TOKEN: z.string().catch(''),
-		GITHUB_APP_ID: z.string().catch(''),
-		GITHUB_PROD_APP_ID: z.string().catch(''),
-		GITHUB_APP_SECRET: z.string().catch(''),
-		GITHUB_PROD_APP_SECRET: z.string().catch(''),
+		GITHUB_TOKEN: genericStringSchema.catch(''),
+		GITHUB_APP_ID: genericStringSchema.catch(''),
+		GITHUB_PROD_APP_ID: genericStringSchema.catch(''),
+		GITHUB_APP_SECRET: genericStringSchema.catch(''),
+		GITHUB_PROD_APP_SECRET: genericStringSchema.catch(''),
 
-		NEXTAUTH_URL: z.string().catch(''),
-		NEXTAUTH_SECRET: z.string().catch(''),
+		NEXTAUTH_URL: genericStringSchema.catch(''),
+		NEXTAUTH_SECRET: genericStringSchema.catch(''),
 	},
 	runtimeEnv: {
 		NEXT_PUBLIC_APP_HOST: process.env.NEXT_PUBLIC_APP_HOST,

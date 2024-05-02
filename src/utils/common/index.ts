@@ -9,14 +9,14 @@ import { twMerge } from 'tailwind-merge';
 
 // =======================================				Native Override				=======================================
 
-export function arrayInclude<TSearch extends Readonly<string | number>>(
+export function arrayInclude<const TSearch extends Readonly<string | number>>(
 	arr: Readonly<Array<TSearch>>,
 	search: unknown,
 ): search is TSearch {
 	return arr.includes(search as TSearch);
 }
 
-export function capitalize<TInput extends string>(input?: TInput | null): Capitalize<TInput> {
+export function capitalize<const TInput extends string>(input?: TInput | null): Capitalize<TInput> {
 	return (
 		input
 			? input.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase())
@@ -32,13 +32,13 @@ export function entries<const Obj extends CommonObject>(obj: Obj): Array<[KeyOf<
 	return Object.entries(obj) as Array<[KeyOf<Obj>, ValueOf<Obj>]>;
 }
 
-export function fromEntries<Key extends KeyOf<CommonObject>, Value = unknown>(
+export function fromEntries<const Key extends KeyOf<CommonObject>, Value = unknown>(
 	entries: Array<Readonly<[Key, Value]>>,
 ): Readonly<Record<Key, Value>> {
 	return Object.fromEntries(entries) as Readonly<Record<Key, Value>>;
 }
 
-export function indexOf<TSearch extends Readonly<string | number>>(
+export function indexOf<const TSearch extends Readonly<string | number>>(
 	arr: Readonly<Array<TSearch>>,
 	search: unknown,
 	defaultIndex?: number,

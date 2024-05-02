@@ -12,8 +12,9 @@ import { users } from '@root/server/database/postgresql/schema';
 import type { APIResult, ImprovePick } from '@root/types/common';
 import { APIError } from '@root/types/common';
 import type { BookmarkQuery, GithubUserInfo, ModuleIdQuery, SearchQuery, SortByEnum } from '@root/types/common/zod';
-import { arrayInclude, deleteNullableProperty, tryCatchHandler } from '@root/utils/common';
+import { arrayInclude, deleteNullableProperty, objectValues, tryCatchHandler } from '@root/utils/common';
 import { getSessionResult } from '@root/utils/server';
+import dayjs from 'dayjs';
 import type { SQL, sql } from 'drizzle-orm';
 import { arrayOverlaps, eq } from 'drizzle-orm';
 import type { PgRelationalQuery } from 'drizzle-orm/pg-core/query-builders/query';
@@ -268,7 +269,7 @@ export const insertOrUpdateUser = async ({ isUpdate, userData }: InsertOrUpdateU
 	if (isUpdate || (await checkUserExist(userData.username))) {
 		return await postgresql
 			.update(users)
-			.set(deleteNullableProperty(userData))
+			.set(deleteNullableProperty({ ...userData, updatedAt: dayjs().format('YYYY-MM-DD HH:mm:ss.SSSSSSZZ') }))
 			.where(eq(users.username, userData.username))
 			.returning()
 			.then(res => res[0]);
@@ -303,7 +304,7 @@ export const getProfile = async (): APIResult<GithubUserInfo> => {
 };
 
 const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: string) =>
-	Object.values((await getBookmarksQueriesMap[moduleId].execute({ username })) || {})[0];
+	await getBookmarksQueriesMap[moduleId].execute({ username }).then<Array<string>>(res => objectValues(res || {}));
 
 export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery): APIResult<Array<string>> => {
 	const userSessionRes = await getSessionResult();
