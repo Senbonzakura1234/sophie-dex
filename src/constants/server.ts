@@ -5,12 +5,12 @@ import { APIError } from '@root/types/common';
 import type { ProviderIdEnum } from '@root/types/common/zod';
 import { githubUserInfoSchema } from '@root/types/common/zod';
 import { evnIs } from '@root/utils/common';
-import { env } from '@root/utils/common/env.mjs';
-import type { OAuthConfig } from 'next-auth/providers';
+import { env } from '@root/utils/common/env';
 import Atlassian from 'next-auth/providers/atlassian';
 import Facebook from 'next-auth/providers/facebook';
 import Github from 'next-auth/providers/github';
 import Google from 'next-auth/providers/google';
+import type { OAuthConfig } from 'next-auth/providers/index';
 import Instagram from 'next-auth/providers/instagram';
 import type { NextResponse } from 'next/server';
 

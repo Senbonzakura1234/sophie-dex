@@ -3,7 +3,7 @@ import SuspenseComponent from '@components/layout/static/SuspenseComponent';
 import RecordPlaceholder from '@components/loading/RecordPlaceholder';
 import { getProfile } from '@root/server/database/postgresql/repository';
 import { type PageProps } from '@root/types/common';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import { generateGenericMetadata } from '@root/utils/server/database';
 import type { Metadata, ResolvingMetadata } from 'next';
 import { Suspense } from 'react';

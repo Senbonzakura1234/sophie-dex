@@ -2,7 +2,7 @@ import { MAXIMUM_BOOKMARK_LENGTH } from '@root/constants/common';
 import type { ImprovedOmit } from '@root/types/common';
 import type { GithubUserInfo, ModuleIdEnum, RelatedCategoryEnum, SearchQuery } from '@root/types/common/zod';
 import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import type { InferSelectModel } from 'drizzle-orm';
 import { jsonb, pgTableCreator, smallint, text, timestamp, varchar } from 'drizzle-orm/pg-core';
 import { ulid } from 'ulid';

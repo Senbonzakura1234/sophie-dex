@@ -6,7 +6,7 @@ import XMarkIcon from '@components/icons/solid/XMarkIcon';
 import type { LicenseInfo } from '@root/types/common/zod';
 
 import MDXRenderer from '@components/common/dynamic/MDXRenderer';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import LicenseInfoHead from './LicenseInfoHead';
 
 type LicenseInfoProps = LicenseInfo & JSX.IntrinsicAttributes;

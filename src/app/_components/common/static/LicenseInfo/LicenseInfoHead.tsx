@@ -1,7 +1,7 @@
 import ScaleIcon from '@components/icons/outline/ScaleIcon';
 import ArrowTopRightOnSquareIcon from '@components/icons/solid/ArrowTopRightOnSquareIcon';
 import type { LicenseInfo } from '@root/types/common/zod';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 

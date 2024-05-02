@@ -6,7 +6,7 @@ import { users } from '@root/server/database/postgresql/schema';
 import type { BookmarkQuery } from '@root/types/common/zod';
 import type { ExportDBQueriesMap } from '@root/types/model';
 import { capitalize, evnIs } from '@root/utils/common';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import { sql } from 'drizzle-orm';
 import { drizzle } from 'drizzle-orm/neon-http';
 

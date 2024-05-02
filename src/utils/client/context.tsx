@@ -61,7 +61,7 @@ export const ContextProvider = ({
 	children,
 	defaultState = {},
 }: ChildrenProps & { defaultState?: Partial<StateType> }) => {
-	const [state, dispatch] = useReducer(reducer, { ...initialState, ...defaultState });
+	const [state, dispatch] = useReducer(reducer, { ...initialState, ...deleteNullableProperty(defaultState) });
 
 	return <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>;
 };

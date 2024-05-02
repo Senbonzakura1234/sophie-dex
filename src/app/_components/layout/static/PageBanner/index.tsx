@@ -3,7 +3,7 @@ import topBg from '@root/app/images/top.webp';
 import { cn, getBaseUrl } from '@root/utils/common';
 import Image from 'next/image';
 
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import AuthorLink from './AuthorLink';
 import Breadcrumb from './Breadcrumb';
 import PageTitle from './PageTitle';

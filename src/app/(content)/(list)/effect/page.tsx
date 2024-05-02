@@ -1,6 +1,6 @@
 import APIListWrapper from '@components/layout/dynamic/ApiWrapper/effects';
 import type { PageProps } from '@root/types/common';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import { generateGenericMetadata } from '@root/utils/server/database';
 import type { Metadata, ResolvingMetadata } from 'next';
 

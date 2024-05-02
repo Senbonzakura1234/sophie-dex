@@ -1,7 +1,7 @@
 import type { CommonObject, KeyOf, ValueOf } from '@root/types/common';
-import type { BooleanishEnum, SearchQuery } from '@root/types/common/zod';
+import type { BooleanishEnum, NodeEnvEnum, SearchQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import type { ClassValue } from 'clsx';
 import { clsx } from 'clsx';
 import type { ReadonlyURLSearchParams } from 'next/navigation';
@@ -81,7 +81,7 @@ export function deleteNullableProperty<const Obj extends CommonObject>(
 	return obj;
 }
 
-export function evnIs(nodeEnv: typeof env.NEXT_PUBLIC_NODE_ENV) {
+export function evnIs(nodeEnv: NodeEnvEnum) {
 	return env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
 }
 

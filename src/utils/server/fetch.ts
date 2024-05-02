@@ -10,7 +10,7 @@ import {
 	packageDotJSONSchema,
 } from '@root/types/common/zod';
 import { tryCatchHandler, tryCatchHandlerSync, writeLog } from '@root/utils/common';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import type { ZodType } from 'zod';
 
 async function improvedFetch<TResult = unknown>(validator: ZodType<TResult>, ...args: Parameters<typeof fetch>) {

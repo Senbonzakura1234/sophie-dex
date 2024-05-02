@@ -12,7 +12,7 @@ import type { ChildrenProps } from '@root/types/common/props';
 import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
 import { ContextProvider } from '@root/utils/client/context';
 import { cn, getBaseUrl, tryCatchHandler } from '@root/utils/common';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import { getCookieData, getSessionResult } from '@root/utils/server';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';

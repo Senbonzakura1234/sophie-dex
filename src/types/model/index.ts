@@ -86,10 +86,13 @@ export const relatedCategoryList = [
 	'MAGIC_ITEM',
 ] as const;
 
+export const sortByList = ['index', 'name', 'level', 'price'] as const;
+
 export const daisyUIThemeList = ['autumn', 'fantasy', 'forest', 'synthwave'] as const;
 
 export const directionList = ['asc', 'desc'] as const;
 export const providerIdList = ['atlassian', 'facebook', 'github', 'google', 'instagram'] as const;
+export const nodeEnvList = ['development', 'test', 'production'] as const;
 
 export type DBListResult<TRecord extends CommonRecord> = Array<TRecord & { totalRecord: number }>;
 

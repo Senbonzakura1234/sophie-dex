@@ -6,12 +6,23 @@ import {
 	directionList,
 	errorList,
 	moduleIdList,
+	nodeEnvList,
 	providerIdList,
 	recipeTypeList,
 	relatedCategoryList,
 	rumorTypeList,
+	sortByList,
 } from '@root/types/model';
 import { z } from 'zod';
+
+export const appCodeSchema = z
+	.string()
+	.regex(/(?=\S*['-])([a-zA-Z'-]+)/)
+	.catch('-');
+export const appKeyWordSchema = z.string().regex(/[^,]+/).catch('-');
+
+export const nodeEnvEnumSchema = z.enum(nodeEnvList).catch('production');
+export type NodeEnvEnum = z.infer<typeof nodeEnvEnumSchema>;
 
 export const daisyUIThemeEnumSchema = z.enum(daisyUIThemeList).catch('fantasy');
 export type DaisyUIThemeEnum = z.infer<typeof daisyUIThemeEnumSchema>;
@@ -49,7 +60,7 @@ export type RelatedCategoryEnum = z.infer<typeof genericRelatedCategoryEnumSchem
 export const genericRumorTypeEnumSchema = z.enum(rumorTypeList);
 export type RumorTypeEnum = z.infer<typeof genericRumorTypeEnumSchema>;
 
-export const genericSortByEnumSchema = z.enum(['index', 'name', 'level', 'price']);
+export const genericSortByEnumSchema = z.enum(sortByList);
 export type SortByEnum = z.infer<typeof genericSortByEnumSchema>;
 
 export const genericIdSchema = genericStringSchema.ulid();

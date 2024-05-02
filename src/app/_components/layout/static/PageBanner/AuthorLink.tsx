@@ -1,5 +1,5 @@
 import GithubIcon from '@components/icons/brand/GithubIcon';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import Link from 'next/link';
 
 export default function AuthorLink() {

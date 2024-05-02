@@ -1,23 +1,11 @@
+import { appCodeSchema, appKeyWordSchema, nodeEnvEnumSchema, providerIdEnumValidator } from '@root/types/common/zod';
 import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
-
-const appCodeSchema = z
-	.string()
-	.regex(/(?=\S*['-])([a-zA-Z'-]+)/)
-	.catch('-');
-const appKeyWordSchema = z.string().regex(/[^,]+/).catch('-');
-const nodeEnumEnvSchema = z.enum(['development', 'test', 'production']).catch('production');
-const providerIdEnumValidator = z.enum(['atlassian', 'facebook', 'github', 'google', 'instagram']);
-
-/** @type {(input: string) => string} */
-const capitalize = input =>
-	input
-		? input.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase())
-		: '';
+import { capitalize } from '.';
 
 export const env = createEnv({
 	client: {
-		NEXT_PUBLIC_NODE_ENV: nodeEnumEnvSchema,
+		NEXT_PUBLIC_NODE_ENV: nodeEnvEnumSchema,
 		NEXT_PUBLIC_PORT: z.coerce.number().nonnegative().catch(3000),
 		NEXT_PUBLIC_VERCEL_URL: z.string().optional(),
 

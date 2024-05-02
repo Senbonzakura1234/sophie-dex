@@ -7,6 +7,7 @@ import { arrayInclude } from '@root/utils/common';
 
 export default function ThemeWrapper({ children }: ChildrenProps) {
 	const { theme } = useSelector();
+
 	return (
 		<main
 			className={arrayInclude(['forest', 'synthwave'] satisfies Array<DaisyUIThemeEnum>, theme) ? 'dark' : ''}

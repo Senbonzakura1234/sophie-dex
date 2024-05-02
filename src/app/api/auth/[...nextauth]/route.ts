@@ -1,6 +1,6 @@
 import { providerMapping } from '@root/constants/server';
 import { providerIdList } from '@root/types/model';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import type { AuthOptions } from 'next-auth';
 import NextAuth from 'next-auth';
 

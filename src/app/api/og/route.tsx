@@ -1,5 +1,5 @@
 import { getBaseUrl, tryCatchHandler } from '@root/utils/common';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import type { ServerRuntime } from 'next';
 import { ImageResponse } from 'next/og';
 import type { ImageResponseOptions } from 'next/server';

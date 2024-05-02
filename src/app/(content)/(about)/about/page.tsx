@@ -4,7 +4,7 @@ import Readme from '@components/common/dynamic/Readme';
 import AppVersion from '@components/common/static/AppVersion';
 import CommonWrapper from '@components/common/static/CommonWrapper';
 import type { PageProps } from '@root/types/common';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import { generateGenericMetadata } from '@root/utils/server/database';
 import type { Metadata, ResolvingMetadata } from 'next';
 

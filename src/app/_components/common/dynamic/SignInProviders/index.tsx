@@ -13,7 +13,7 @@ import type { IconProps } from '@root/types/common/props';
 import type { ProviderIdEnum, SignInQuery } from '@root/types/common/zod';
 import { providerIdEnumValidator } from '@root/types/common/zod';
 import { cn, getBaseUrl } from '@root/utils/common';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import type { ClientSafeProvider } from 'next-auth/react';
 import { signIn } from 'next-auth/react';
 import Image from 'next/image';

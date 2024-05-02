@@ -2,7 +2,7 @@ import LicenseInfo from '@components/common/static/LicenseInfo';
 import SuspenseComponent from '@components/layout/static/SuspenseComponent';
 import RecordPlaceholder from '@components/loading/RecordPlaceholder';
 import type { PageProps } from '@root/types/common';
-import { env } from '@root/utils/common/env.mjs';
+import { env } from '@root/utils/common/env';
 import { generateGenericMetadata } from '@root/utils/server/database';
 import { getLicense } from '@root/utils/server/fetch';
 import type { Metadata, ResolvingMetadata } from 'next';
