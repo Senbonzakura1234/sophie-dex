@@ -1,6 +1,6 @@
 import { privateProcedure, router } from '@root/server/api/trpc';
-import { exportTraitsQuery, getAllTraitIdsQuery, getTraitRecordQuery } from '@root/server/database/postgresql';
-import { getTraits } from '@root/server/database/postgresql/repository';
+import { exportTraitsQuery, getAllTraitIdsQuery, getTraitRecordQuery } from '@root/server/postgresql';
+import { getTraits } from '@root/server/postgresql/repository';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import { exportRecords, getAllRecordIds, getContentRecord } from '@root/utils/server/database';
 

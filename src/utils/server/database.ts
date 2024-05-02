@@ -1,6 +1,6 @@
 import 'server-only';
 
-import type { CommonRecord } from '@root/server/database/postgresql/schema';
+import type { CommonRecord } from '@root/server/postgresql/schema';
 import type { APIResult, PageProps, PreparedPGQuery } from '@root/types/common';
 import { APIError } from '@root/types/common';
 

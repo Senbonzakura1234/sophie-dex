@@ -1,8 +1,8 @@
 import 'server-only';
 
 import { neon } from '@neondatabase/serverless';
-import * as schema from '@root/server/database/postgresql/schema';
-import { users } from '@root/server/database/postgresql/schema';
+import * as schema from '@root/server/postgresql/schema';
+import { users } from '@root/server/postgresql/schema';
 import type { BookmarkQuery } from '@root/types/common/zod';
 import type { ExportDBQueriesMap } from '@root/types/model';
 import { capitalize, evnIs } from '@root/utils/common';

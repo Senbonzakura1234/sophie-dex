@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
 import { effectsList, itemsList, rumorsList, traitsList } from '@root/constants/seedData';
-import { postgresql } from '@root/server/database/postgresql';
-import { effects, items, rumors, traits } from '@root/server/database/postgresql/schema';
+import { postgresql } from '@root/server/postgresql';
+import { effects, items, rumors, traits } from '@root/server/postgresql/schema';
 import { evnIs, tryCatchHandler } from '@root/utils/common';
 import { NextResponse } from 'next/server';
 

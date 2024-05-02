@@ -1,5 +1,5 @@
 import RecordWrapper from '@components/common/static/RecordWrapper';
-import type { Trait } from '@root/server/database/postgresql/schema';
+import type { Trait } from '@root/server/postgresql/schema';
 
 import { highlightSearchedText } from '@root/utils/common';
 import Categories from './Categories';

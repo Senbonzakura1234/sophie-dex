@@ -4,7 +4,7 @@ import CaretLeftIcon from '@components/icons/solid/CaretLeftIcon';
 import DocumentChartBarIcon from '@components/icons/solid/DocumentChartBarIcon';
 import PulsePlaceHolder from '@components/loading/PulsePlaceHolder';
 import { useModuleId } from '@root/hooks/useModuleId';
-import type { CommonRecord } from '@root/server/database/postgresql/schema';
+import type { CommonRecord } from '@root/server/postgresql/schema';
 import { cn, highlightSearchedText } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';

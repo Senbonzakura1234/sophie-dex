@@ -1,5 +1,5 @@
 import { colorTWClassMap } from '@root/constants/common';
-import type { CommonRecord } from '@root/server/database/postgresql/schema';
+import type { CommonRecord } from '@root/server/postgresql/schema';
 import type { ClassNameProps } from '@root/types/common/props';
 import type { ColorEnum } from '@root/types/common/zod';
 import { cn } from '@root/utils/common';

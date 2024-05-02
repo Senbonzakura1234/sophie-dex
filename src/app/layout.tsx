@@ -14,7 +14,6 @@ import { ContextProvider } from '@root/utils/client/context';
 import { cn, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import { getCookieData, getSessionResult } from '@root/utils/server';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
@@ -242,8 +241,6 @@ export default async function RootLayout({ children }: ChildrenProps) {
 						</ThemeWrapper>
 					</AuthProvider>
 				</ContextProvider>
-
-				<SpeedInsights />
 			</body>
 		</html>
 	);

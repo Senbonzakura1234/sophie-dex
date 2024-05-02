@@ -1,6 +1,6 @@
 import { privateProcedure, router } from '@root/server/api/trpc';
-import { exportEffectsQuery, getAllEffectIdsQuery, getEffectRecordQuery } from '@root/server/database/postgresql';
-import { getEffects } from '@root/server/database/postgresql/repository';
+import { exportEffectsQuery, getAllEffectIdsQuery, getEffectRecordQuery } from '@root/server/postgresql';
+import { getEffects } from '@root/server/postgresql/repository';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import { exportRecords, getAllRecordIds, getContentRecord } from '@root/utils/server/database';
 

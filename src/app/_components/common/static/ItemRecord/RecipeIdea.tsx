@@ -1,10 +1,5 @@
 import Hyperlink from '@components/layout/static/Hyperlink';
-import type {
-	HighlightText,
-	HyperLinkMap,
-	HyperLinkRecord,
-	HyperLinkSearch,
-} from '@root/server/database/postgresql/schema';
+import type { HighlightText, HyperLinkMap, HyperLinkRecord, HyperLinkSearch } from '@root/server/postgresql/schema';
 import type { ClassNameProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
 import { Fragment } from 'react';

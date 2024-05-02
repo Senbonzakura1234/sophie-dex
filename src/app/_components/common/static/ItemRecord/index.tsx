@@ -1,6 +1,6 @@
 import RecordWrapper from '@components/common/static/RecordWrapper';
 import { recipeTypeColorMap } from '@root/constants/common';
-import type { Item } from '@root/server/database/postgresql/schema';
+import type { Item } from '@root/server/postgresql/schema';
 
 import Category from './Category';
 import Color from './Color';

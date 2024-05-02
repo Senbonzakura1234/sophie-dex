@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
-import { getToggleBookmarkQuery, postgresql } from '@root/server/database/postgresql';
+import { getToggleBookmarkQuery, postgresql } from '@root/server/postgresql';
 import { evnIs } from '@root/utils/common';
 import { NextResponse } from 'next/server';
 

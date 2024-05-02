@@ -1,5 +1,5 @@
 import Hyperlink from '@components/layout/static/Hyperlink';
-import type { HyperLinkMap } from '@root/server/database/postgresql/schema';
+import type { HyperLinkMap } from '@root/server/postgresql/schema';
 import { Fragment } from 'react';
 
 type DescriptionProps = {

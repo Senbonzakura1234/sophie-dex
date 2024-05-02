@@ -39,17 +39,14 @@ importers:
         specifier: ^5.32.1
         version: 5.32.1(@tanstack/react-query@5.32.1(react@18.3.1))(react@18.3.1)
       '@trpc/client':
-        specifier: 11.0.0-next-beta.228
-        version: 11.0.0-next-beta.228(@trpc/server@11.0.0-next-beta.228)
+        specifier: 11.0.0-rc.364
+        version: 11.0.0-rc.364(@trpc/server@11.0.0-rc.364)
       '@trpc/react-query':
-        specifier: 11.0.0-next-beta.228
-        version: 11.0.0-next-beta.228(@tanstack/react-query@5.32.1(react@18.3.1))(@trpc/client@11.0.0-next-beta.228(@trpc/server@11.0.0-next-beta.228))(@trpc/server@11.0.0-next-beta.228)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 11.0.0-rc.364
+        version: 11.0.0-rc.364(@tanstack/react-query@5.32.1(react@18.3.1))(@trpc/client@11.0.0-rc.364(@trpc/server@11.0.0-rc.364))(@trpc/server@11.0.0-rc.364)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@trpc/server':
-        specifier: 11.0.0-next-beta.228
-        version: 11.0.0-next-beta.228
-      '@vercel/speed-insights':
-        specifier: ^1.0.10
-        version: 1.0.10(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+        specifier: 11.0.0-rc.364
+        version: 11.0.0-rc.364
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -934,22 +931,22 @@ packages:
   '@total-typescript/ts-reset@0.5.1':
     resolution: {integrity: sha512-AqlrT8YA1o7Ff5wPfMOL0pvL+1X+sw60NN6CcOCqs658emD6RfiXhF7Gu9QcfKBH7ELY2nInLhKSCWVoNL70MQ==, tarball: https://registry.npmjs.org/@total-typescript/ts-reset/-/ts-reset-0.5.1.tgz}
 
-  '@trpc/client@11.0.0-next-beta.228':
-    resolution: {integrity: sha512-LM7vHbzJBzOs31nONUQV0Mdxsuz7YNt6KDe+5BnLDFS7qXcUcgVj6lpFgtglWEOEDBa02OHQYujyzrajvb3asA==, tarball: https://registry.npmjs.org/@trpc/client/-/client-11.0.0-next-beta.228.tgz}
+  '@trpc/client@11.0.0-rc.364':
+    resolution: {integrity: sha512-k9ZH7I0OOBFME9fZJ1JI0ZjvPEV64bvoT20kWHkFeMH5trJmK1tzcc/q7c7cLBY4pziLPqBDPFw2qax09vyRTg==, tarball: https://registry.npmjs.org/@trpc/client/-/client-11.0.0-rc.364.tgz}
     peerDependencies:
-      '@trpc/server': 11.0.0-next-beta.228+38f3240e9
+      '@trpc/server': 11.0.0-rc.364+d95fb467b
 
-  '@trpc/react-query@11.0.0-next-beta.228':
-    resolution: {integrity: sha512-c50um14znXEU8WIx/oS6/GtO09OZj3F44KsliC55icS+ugU7z3VNXv79iYyVsulz/unkOvQLVeAkSBhSUfM+7g==, tarball: https://registry.npmjs.org/@trpc/react-query/-/react-query-11.0.0-next-beta.228.tgz}
+  '@trpc/react-query@11.0.0-rc.364':
+    resolution: {integrity: sha512-updB1uOVHS/1NK+hclt8OK/Im0GYD8mIRTxs96hZhfaT6tqUhij/wWWG0U6OofxPGC/MZs75ojQeq8Uag9Tr5g==, tarball: https://registry.npmjs.org/@trpc/react-query/-/react-query-11.0.0-rc.364.tgz}
     peerDependencies:
-      '@tanstack/react-query': ^5.0.0
-      '@trpc/client': 11.0.0-next-beta.228+38f3240e9
-      '@trpc/server': 11.0.0-next-beta.228+38f3240e9
+      '@tanstack/react-query': ^5.25.0
+      '@trpc/client': 11.0.0-rc.364+d95fb467b
+      '@trpc/server': 11.0.0-rc.364+d95fb467b
       react: '>=18.2.0'
       react-dom: '>=18.2.0'
 
-  '@trpc/server@11.0.0-next-beta.228':
-    resolution: {integrity: sha512-8pRT1Ixrh8310KlPLLwlfEmfWXL9yrJK+mz9jFgvsiEtazR2N7rUFV8SoG2SWGxLkTaPc03o4k1JSf83XDwWRw==, tarball: https://registry.npmjs.org/@trpc/server/-/server-11.0.0-next-beta.228.tgz}
+  '@trpc/server@11.0.0-rc.364':
+    resolution: {integrity: sha512-sGlrb2jSCiU74TrJ+N+WxIcJIUDyo0WOy0y30vIArw6oHFXjeithgxjvIu+PbN+VWt/Gt4ee8kVhnmxCW4X/Qw==, tarball: https://registry.npmjs.org/@trpc/server/-/server-11.0.0-rc.364.tgz}
 
   '@types/acorn@4.0.6':
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==, tarball: https://registry.npmjs.org/@types/acorn/-/acorn-4.0.6.tgz}
@@ -1111,29 +1108,6 @@ packages:
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==, tarball: https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.2.0.tgz}
-
-  '@vercel/speed-insights@1.0.10':
-    resolution: {integrity: sha512-4uzdKB0RW6Ff2FkzshzjZ+RlJfLPxgm/00i0XXgxfMPhwnnsk92YgtqsxT9OcPLdJUyVU1DqFlSWWjIQMPkh0g==, tarball: https://registry.npmjs.org/@vercel/speed-insights/-/speed-insights-1.0.10.tgz}
-    peerDependencies:
-      '@sveltejs/kit': ^1 || ^2
-      next: '>= 13'
-      react: ^18 || ^19
-      svelte: ^4
-      vue: ^3
-      vue-router: ^4
-    peerDependenciesMeta:
-      '@sveltejs/kit':
-        optional: true
-      next:
-        optional: true
-      react:
-        optional: true
-      svelte:
-        optional: true
-      vue:
-        optional: true
-      vue-router:
-        optional: true
 
   '@webassemblyjs/ast@1.12.1':
     resolution: {integrity: sha512-EKfMUOPRRUTy5UII4qJDGPpqfwjOmZ5jeGFwid9mnoqIFK+e0vqoi1qH56JpmZSzEL53jKnNzScdmftJyG5xWg==, tarball: https://registry.npmjs.org/@webassemblyjs/ast/-/ast-1.12.1.tgz}
@@ -4161,19 +4135,19 @@ snapshots:
 
   '@total-typescript/ts-reset@0.5.1': {}
 
-  '@trpc/client@11.0.0-next-beta.228(@trpc/server@11.0.0-next-beta.228)':
+  '@trpc/client@11.0.0-rc.364(@trpc/server@11.0.0-rc.364)':
     dependencies:
-      '@trpc/server': 11.0.0-next-beta.228
+      '@trpc/server': 11.0.0-rc.364
 
-  '@trpc/react-query@11.0.0-next-beta.228(@tanstack/react-query@5.32.1(react@18.3.1))(@trpc/client@11.0.0-next-beta.228(@trpc/server@11.0.0-next-beta.228))(@trpc/server@11.0.0-next-beta.228)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@trpc/react-query@11.0.0-rc.364(@tanstack/react-query@5.32.1(react@18.3.1))(@trpc/client@11.0.0-rc.364(@trpc/server@11.0.0-rc.364))(@trpc/server@11.0.0-rc.364)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@tanstack/react-query': 5.32.1(react@18.3.1)
-      '@trpc/client': 11.0.0-next-beta.228(@trpc/server@11.0.0-next-beta.228)
-      '@trpc/server': 11.0.0-next-beta.228
+      '@trpc/client': 11.0.0-rc.364(@trpc/server@11.0.0-rc.364)
+      '@trpc/server': 11.0.0-rc.364
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@trpc/server@11.0.0-next-beta.228': {}
+  '@trpc/server@11.0.0-rc.364': {}
 
   '@types/acorn@4.0.6':
     dependencies:
@@ -4377,11 +4351,6 @@ snapshots:
       eslint-visitor-keys: 3.4.3
 
   '@ungap/structured-clone@1.2.0': {}
-
-  '@vercel/speed-insights@1.0.10(next@14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
-    optionalDependencies:
-      next: 14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
 
   '@webassemblyjs/ast@1.12.1':
     dependencies:

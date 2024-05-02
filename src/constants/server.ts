@@ -1,6 +1,6 @@
 import 'server-only';
 
-import { insertOrUpdateUser } from '@root/server/database/postgresql/repository';
+import { insertOrUpdateUser } from '@root/server/postgresql/repository';
 import { APIError } from '@root/types/common';
 import type { ProviderIdEnum } from '@root/types/common/zod';
 import { githubUserInfoSchema } from '@root/types/common/zod';

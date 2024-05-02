@@ -6,9 +6,9 @@ import {
 	getToggleBookmarkQuery,
 	getUserRecordQuery,
 	postgresql,
-} from '@root/server/database/postgresql';
-import type { CommonRecord, Effect, Item, Rumor, Trait, User } from '@root/server/database/postgresql/schema';
-import { users } from '@root/server/database/postgresql/schema';
+} from '@root/server/postgresql';
+import type { CommonRecord, Effect, Item, Rumor, Trait, User } from '@root/server/postgresql/schema';
+import { users } from '@root/server/postgresql/schema';
 import type { APIResult, ImprovePick } from '@root/types/common';
 import { APIError } from '@root/types/common';
 import type { BookmarkQuery, GithubUserInfo, ModuleIdQuery, SearchQuery, SortByEnum } from '@root/types/common/zod';

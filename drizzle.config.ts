@@ -2,8 +2,8 @@ import { env } from '@root/utils/common/env';
 import type { Config } from 'drizzle-kit';
 
 export default {
-	schema: './src/server/database/postgresql/schema',
-	out: './src/server/database/postgresql/migration',
+	schema: './src/server/postgresql/schema',
+	out: './src/server/postgresql/migration',
 	driver: 'pg',
 	breakpoints: true,
 	tablesFilter: [`${env.NEXT_PUBLIC_APP_DB_PREFIX}-_*`],

@@ -1,5 +1,5 @@
 import RecordWrapper from '@components/common/static/RecordWrapper';
-import type { Effect } from '@root/server/database/postgresql/schema';
+import type { Effect } from '@root/server/postgresql/schema';
 import { highlightSearchedText } from '@root/utils/common';
 
 type EffectRecordProps = { data: Effect } & { currentId?: string; search?: string } & JSX.IntrinsicAttributes;

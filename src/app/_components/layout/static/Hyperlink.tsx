@@ -1,4 +1,4 @@
-import type { HighlightText, HyperLinkRecord, HyperLinkSearch } from '@root/server/database/postgresql/schema';
+import type { HighlightText, HyperLinkRecord, HyperLinkSearch } from '@root/server/postgresql/schema';
 import type { ClassNameProps } from '@root/types/common/props';
 import { cn, convertCode, objectValues, queryToParamsString } from '@root/utils/common';
 import dynamic from 'next/dynamic';
