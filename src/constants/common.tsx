@@ -93,6 +93,7 @@ export const errorMap = {
 	CLIENT_CLOSED_REQUEST: { message: 'Client Closed Request', status: 499 },
 	INTERNAL_SERVER_ERROR: { message: 'Some Thing Wrong Server', status: 500 },
 	NOT_IMPLEMENTED: { message: 'Some Thing Wrong Server', status: 501 },
+	UNSUPPORTED_MEDIA_TYPE: { message: 'Unsupported Media Type', status: 415 },
 } as const satisfies Record<APIError['code'], { message: string; status: number }>;
 
 export const listAboutPaths = ['about', 'license'] as const;

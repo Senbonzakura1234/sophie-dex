@@ -1,353 +1,104 @@
 import 'server-only';
 
-import { DEFAULT_LIMIT, sortByMap } from '@root/constants/common';
-import {
-	getBookmarksQueriesMap,
-	getToggleBookmarkQuery,
-	getUserRecordQuery,
-	postgresql,
-} from '@root/server/postgresql';
-import type { CommonRecord, Effect, Item, Rumor, Trait, User } from '@root/server/postgresql/schema';
+import { neon } from '@neondatabase/serverless';
+import * as schema from '@root/server/postgresql/schema';
 import { users } from '@root/server/postgresql/schema';
-import type { APIResult, ImprovePick } from '@root/types/common';
-import { APIError } from '@root/types/common';
-import type { BookmarkQuery, GithubUserInfo, ModuleIdQuery, SearchQuery, SortByEnum } from '@root/types/common/zod';
-import { arrayInclude, deleteNullableProperty, objectValues, tryCatchHandler } from '@root/utils/common';
-import { getSessionResult } from '@root/utils/server';
-import dayjs from 'dayjs';
-import type { SQL, sql } from 'drizzle-orm';
-import { arrayOverlaps, eq } from 'drizzle-orm';
-import type { PgRelationalQuery } from 'drizzle-orm/pg-core/query-builders/query';
+import type { BookmarkQuery } from '@root/types/common/zod';
+import type { ExportDBQueriesMap } from '@root/types/model';
+import { capitalize, evnIs } from '@root/utils/common';
+import { env } from '@root/utils/common/env';
+import { sql } from 'drizzle-orm';
+import { drizzle } from 'drizzle-orm/neon-http';
 
-const countQueryFunc = (_: unknown, { sql: sqlFunc }: { sql: typeof sql }) => ({
-	totalRecord: sqlFunc<number>`count(*) over()`.as('total_record'),
-});
+const connection = neon<boolean, boolean>(env.PGURL_NONPOOLING);
 
-const getOffset = (page: number | null) => ((page ?? 1) - 1) * DEFAULT_LIMIT;
+export const postgresql = drizzle(connection, { schema, logger: !evnIs('production') });
 
-const getSortField = <TSearch extends Readonly<SortByEnum>>(
-	allowedSortField: Readonly<Array<TSearch>>,
-	defaultSortField: TSearch,
-	search: SortByEnum | null,
-) => (arrayInclude(allowedSortField, search) ? search : defaultSortField);
+export const getEffectRecordQuery = postgresql.query.effects
+	.findFirst({ where: (schema, { eq, sql }) => eq(schema.id, sql.placeholder('id')) })
+	.prepare('getEffectRecord');
+export const getItemRecordQuery = postgresql.query.items
+	.findFirst({ where: (schema, { eq, sql }) => eq(schema.id, sql.placeholder('id')) })
+	.prepare('getItemRecord');
+export const getRumorRecordQuery = postgresql.query.rumors
+	.findFirst({ where: (schema, { eq, sql }) => eq(schema.id, sql.placeholder('id')) })
+	.prepare('getRumorRecord');
+export const getTraitRecordQuery = postgresql.query.traits
+	.findFirst({ where: (schema, { eq, sql }) => eq(schema.id, sql.placeholder('id')) })
+	.prepare('getTraitRecord');
 
-type GetListRecordProp<TRecord extends CommonRecord> =
-	| {
-			query: PgRelationalQuery<Array<TRecord & { totalRecord: number }>>;
-			search: string | null;
-			isEmptyBookmark: false;
-	  }
-	| {
-			search: string | null;
-			isEmptyBookmark: true;
-	  };
+export const getUserRecordQuery = postgresql.query.users
+	.findFirst({
+		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
+		columns: { githubProfile: true },
+	})
+	.prepare('getUserRecord');
 
-const getListRecord = async <TRecord extends CommonRecord>(args: GetListRecordProp<TRecord>) => {
-	if (args.isEmptyBookmark) return { records: [], totalRecord: 0, totalPage: 0, search: args.search || undefined };
+export const getAllEffectIdsQuery = postgresql.query.effects
+	.findMany({ columns: { id: true } })
+	.prepare('getAllEffectIds');
+export const getAllItemIdsQuery = postgresql.query.items.findMany({ columns: { id: true } }).prepare('getAllItemIds');
+export const getAllRumorIdsQuery = postgresql.query.rumors
+	.findMany({ columns: { id: true } })
+	.prepare('getAllRumorIds');
+export const getAllTraitIdsQuery = postgresql.query.traits
+	.findMany({ columns: { id: true } })
+	.prepare('getAllTraitIds');
 
-	const { query, search } = args;
+export const exportEffectsQuery = postgresql.query.effects.findMany().prepare('exportEffects');
+export const exportItemsQuery = postgresql.query.items.findMany().prepare('exportItems');
+export const exportRumorsQuery = postgresql.query.rumors.findMany().prepare('exportRumors');
+export const exportTraitsQuery = postgresql.query.traits.findMany().prepare('exportTraits');
 
-	const { data, isSuccess } = await tryCatchHandler(query);
-
-	if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR' });
-
-	const [totalRecord, records] = [
-		data[0]?.totalRecord ?? 0,
-		data.map(({ totalRecord: _, ...record }) => record),
-	] as const;
-
-	return { records, totalRecord, totalPage: Math.ceil(totalRecord / DEFAULT_LIMIT), search: search || undefined };
+export const exportDBQueriesMap: ExportDBQueriesMap = {
+	effect: exportEffectsQuery,
+	item: exportItemsQuery,
+	rumor: exportRumorsQuery,
+	trait: exportTraitsQuery,
 };
 
-export const getEffects = async (input: SearchQuery) => {
-	const { search, sortBy, direction, page, bookmarked } = input;
+export const getEffectBookmarksQuery = postgresql.query.users
+	.findFirst({
+		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
+		columns: { bookmarkedEffectList: true },
+	})
+	.prepare('getEffectBookmarks');
+export const getItemBookmarksQuery = postgresql.query.users
+	.findFirst({
+		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
+		columns: { bookmarkedItemList: true },
+	})
+	.prepare('getItemBookmarks');
+export const getRumorBookmarksQuery = postgresql.query.users
+	.findFirst({
+		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
+		columns: { bookmarkedRumorList: true },
+	})
+	.prepare('getRumorBookmarks');
+export const getTraitBookmarksQuery = postgresql.query.users
+	.findFirst({
+		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
+		columns: { bookmarkedTraitList: true },
+	})
+	.prepare('getTraitBookmarks');
 
-	let bookmarkList: Array<string> = [];
-
-	let isEnableBookmarkFilter = bookmarked;
-
-	if (isEnableBookmarkFilter === 'true') {
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'effect' });
-
-		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
-
-		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Effect>({ search, isEmptyBookmark: true });
-
-			bookmarkList = bookmarkListRes.result;
-		}
-	}
-
-	const query = postgresql.query.effects.findMany({
-		extras: countQueryFunc,
-		limit: DEFAULT_LIMIT,
-		orderBy: (schema, { asc, desc }) => [
-			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.effect, 'index', sortBy)]),
-		],
-		offset: getOffset(page),
-		where: (schema, { or, and, ilike, inArray }) => {
-			const OR: Array<SQL> = search
-				? [
-						ilike(schema.name, `%${search}%`),
-						ilike(schema.description, `%${search}%`),
-						ilike(schema.keyWords, `%${search}%`),
-					]
-				: [];
-
-			const AND: Array<SQL> = [];
-
-			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
-
-			return and(or(...OR), ...AND);
-		},
-	});
-
-	return getListRecord<Effect>({ query, search, isEmptyBookmark: false });
+export const getBookmarksQueriesMap = {
+	effect: getEffectBookmarksQuery,
+	item: getItemBookmarksQuery,
+	rumor: getRumorBookmarksQuery,
+	trait: getTraitBookmarksQuery,
 };
 
-export const getItems = async (input: SearchQuery) => {
-	const { search, sortBy, direction, color, relatedCategory, page, category, recipeType, bookmarked } = input;
+type GetToggleBookmarkQuery = { username: string } & BookmarkQuery;
 
-	let bookmarkList: Array<string> = [];
+export const getToggleBookmarkQuery = ({
+	bookmarkRecordId,
+	isBookmarked,
+	moduleId,
+	username,
+}: GetToggleBookmarkQuery) => {
+	const columnName = users[`bookmarked${capitalize(moduleId)}List`].name;
+	const updateCommand = isBookmarked ? 'array_remove' : 'array_append';
 
-	let isEnableBookmarkFilter = bookmarked;
-
-	if (isEnableBookmarkFilter === 'true') {
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'item' });
-
-		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
-
-		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Item>({ search, isEmptyBookmark: true });
-
-			bookmarkList = bookmarkListRes.result;
-		}
-	}
-
-	const query = postgresql.query.items.findMany({
-		extras: (_, { sql }) => ({ totalRecord: sql<number>`count(*) over()`.as('total_record') }),
-		limit: DEFAULT_LIMIT,
-		orderBy: (schema, { asc, desc }) => [
-			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.item, 'index', sortBy)]),
-		],
-		offset: getOffset(page),
-		where: (schema, { or, and, ilike, eq, inArray }) => {
-			const OR: Array<SQL> = search
-				? [ilike(schema.name, `%${search}%`), ilike(schema.keyWords, `%${search}%`)]
-				: [];
-
-			const AND: Array<SQL> = [];
-			if (relatedCategory) AND.push(arrayOverlaps(schema.relatedCategories, [relatedCategory]));
-			if (color) AND.push(eq(schema.color, color));
-			if (recipeType) AND.push(eq(schema.recipeType, recipeType));
-			if (category) AND.push(eq(schema.category, category));
-			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
-
-			return and(or(...OR), ...AND);
-		},
-	});
-
-	return getListRecord<Item>({ query, search, isEmptyBookmark: false });
-};
-
-export const getRumors = async (input: SearchQuery) => {
-	const { search, sortBy, direction, page, rumorType, bookmarked } = input;
-
-	let bookmarkList: Array<string> = [];
-
-	let isEnableBookmarkFilter = bookmarked;
-
-	if (isEnableBookmarkFilter === 'true') {
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'rumor' });
-
-		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
-
-		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Rumor>({ search, isEmptyBookmark: true });
-
-			bookmarkList = bookmarkListRes.result;
-		}
-	}
-
-	const query = postgresql.query.rumors.findMany({
-		extras: countQueryFunc,
-		limit: DEFAULT_LIMIT,
-		orderBy: (schema, { asc, desc }) => [
-			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.rumor, 'price', sortBy)]),
-		],
-		offset: getOffset(page),
-		where: (schema, { or, and, ilike, eq, inArray }) => {
-			const OR: Array<SQL> = search
-				? [ilike(schema.name, `%${search}%`), ilike(schema.keyWords, `%${search}%`)]
-				: [];
-
-			const AND: Array<SQL> = [];
-			if (rumorType) AND.push(eq(schema.rumorType, rumorType));
-			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
-
-			return and(or(...OR), ...AND);
-		},
-	});
-
-	return getListRecord<Rumor>({ query, search, isEmptyBookmark: false });
-};
-
-export const getTraits = async (input: SearchQuery) => {
-	const { search, sortBy, direction, category, page, bookmarked } = input;
-
-	let bookmarkList: Array<string> = [];
-
-	let isEnableBookmarkFilter = bookmarked;
-
-	if (isEnableBookmarkFilter === 'true') {
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'trait' });
-
-		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
-
-		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Trait>({ search, isEmptyBookmark: true });
-
-			bookmarkList = bookmarkListRes.result;
-		}
-	}
-
-	const query = postgresql.query.traits.findMany({
-		extras: countQueryFunc,
-		limit: DEFAULT_LIMIT,
-		orderBy: (schema, { asc, desc }) => [
-			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.trait, 'index', sortBy)]),
-		],
-		offset: getOffset(page),
-		where: (schema, { or, and, ilike, inArray }) => {
-			const OR: Array<SQL> = search
-				? [
-						ilike(schema.name, `%${search}%`),
-						ilike(schema.description, `%${search}%`),
-						ilike(schema.keyWords, `%${search}%`),
-					]
-				: [];
-
-			const AND: Array<SQL> = [];
-			if (category) AND.push(arrayOverlaps(schema.categories, [category]));
-			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
-
-			return and(or(...OR), ...AND);
-		},
-	});
-
-	return getListRecord<Trait>({ query, search, isEmptyBookmark: false });
-};
-
-export const checkUserExist = (username: string) =>
-	postgresql.query.users
-		.findFirst({
-			where: eq(users.username, username),
-		})
-		.then(value => Boolean(value))
-		.catch(() => false);
-
-type InsertOrUpdateUserProps =
-	| {
-			userData: ImprovePick<User, 'email' | 'username' | 'githubProfile'>;
-			isUpdate: false;
-	  }
-	| {
-			userData: ImprovePick<
-				User,
-				'username',
-				| 'email'
-				| 'githubProfile'
-				| 'bookmarkedEffectList'
-				| 'bookmarkedItemList'
-				| 'bookmarkedRumorList'
-				| 'bookmarkedTraitList'
-			>;
-			isUpdate: true;
-	  };
-
-export const insertOrUpdateUser = async ({ isUpdate, userData }: InsertOrUpdateUserProps) => {
-	if (isUpdate || (await checkUserExist(userData.username))) {
-		return await postgresql
-			.update(users)
-			.set(deleteNullableProperty({ ...userData, updatedAt: dayjs().format('YYYY-MM-DD HH:mm:ss.SSSSSSZZ') }))
-			.where(eq(users.username, userData.username))
-			.returning()
-			.then(res => res[0]);
-	}
-
-	return await postgresql
-		.insert(users)
-		.values(deleteNullableProperty(userData))
-		.returning()
-		.then(res => res[0]);
-};
-
-export const getProfile = async (): APIResult<GithubUserInfo> => {
-	const userSessionRes = await getSessionResult();
-
-	if (!userSessionRes.isSuccess) return userSessionRes;
-
-	const username = userSessionRes.result.user.name;
-
-	const { data, isSuccess } = await tryCatchHandler(getUserRecordQuery.execute({ username }));
-
-	if (!isSuccess) return { isSuccess: false, result: null, error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }) };
-
-	if (!data)
-		return {
-			isSuccess: false,
-			result: null,
-			error: new APIError({ code: 'NOT_FOUND', message: `User ${username} Not Found` }),
-		};
-
-	return { isSuccess: true, result: data.githubProfile, error: null };
-};
-
-const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: string) =>
-	await getBookmarksQueriesMap[moduleId].execute({ username }).then<Array<string>>(res => objectValues(res || {}));
-
-export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery): APIResult<Array<string>> => {
-	const userSessionRes = await getSessionResult();
-
-	if (!userSessionRes.isSuccess) return userSessionRes;
-
-	const username = userSessionRes.result.user.name;
-
-	const getModuleBookmarkRes = await tryCatchHandler(onGetBookmarks(moduleId, username));
-
-	if (!getModuleBookmarkRes.isSuccess)
-		return {
-			isSuccess: false as const,
-			result: null,
-			error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }),
-		};
-
-	if (!getModuleBookmarkRes.data)
-		return {
-			isSuccess: false as const,
-			result: null,
-			error: new APIError({ code: 'NOT_FOUND', message: 'User not found' }),
-		};
-
-	return {
-		isSuccess: true as const,
-		result: getModuleBookmarkRes.data,
-		error: null,
-	};
-};
-
-export const bookmarkRecord = async ({ bookmarkRecordId, isBookmarked, moduleId }: BookmarkQuery) => {
-	const userSessionRes = await getSessionResult();
-
-	if (!userSessionRes.isSuccess) throw userSessionRes.error;
-
-	const username = userSessionRes.result.user.name;
-
-	const bookmarkRes = await tryCatchHandler(
-		postgresql.execute(getToggleBookmarkQuery({ bookmarkRecordId, isBookmarked, moduleId, username })),
-	);
-
-	if (!bookmarkRes.isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR' });
-
-	return bookmarkRes.data;
+	return sql`update ${users} set ${sql.raw(columnName)} = ${sql.raw(updateCommand)}(${sql.raw(columnName)}, ${bookmarkRecordId}) where ${sql.raw(users.username.name)} = ${username}`;
 };

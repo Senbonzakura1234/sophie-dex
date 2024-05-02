@@ -1,4 +1,4 @@
-import { exportDBQueriesMap } from '@root/server/postgresql';
+import { exportDBQueriesMap } from '@root/server/postgresql/repository';
 import { entries, evnIs, tryCatchHandler, writeLog } from '@root/utils/common';
 import { writeFile } from 'fs/promises';
 import { NextResponse } from 'next/server';

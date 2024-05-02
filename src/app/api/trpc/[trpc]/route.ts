@@ -1,4 +1,4 @@
-import { appRouter } from '@root/server/api/router/_app';
+import { appRouter } from '@root/server/router';
 import { writeLog } from '@root/utils/common';
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch';
 

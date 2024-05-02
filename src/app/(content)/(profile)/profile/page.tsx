@@ -1,7 +1,7 @@
 import ProfileInfo from '@components/common/static/ProfileInfo';
 import SuspenseComponent from '@components/layout/static/SuspenseComponent';
 import RecordPlaceholder from '@components/loading/RecordPlaceholder';
-import { getProfile } from '@root/server/postgresql/repository';
+import { getProfile } from '@root/server/postgresql';
 import { type PageProps } from '@root/types/common';
 import { env } from '@root/utils/common/env';
 import { generateGenericMetadata } from '@root/utils/server/database';
