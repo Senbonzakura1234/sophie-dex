@@ -21,6 +21,7 @@
 		"drizzle-gen": "dotenv drizzle-kit generate:pg",
 		"drizzle-push": "dotenv drizzle-kit push:pg",
 		"drizzle-studio": "concurrently \"pnpm open-studio\" \"dotenv drizzle-kit studio\"",
+		"drizzle-seed": "dotenv tsx src/server/postgresql/repository/seed.ts",
 		"lint": "next lint",
 		"lint:fix": "eslint --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.json . --fix",
 		"open-home": "open-cli http://localhost:3000",
@@ -90,6 +91,7 @@
 		"postcss-import": "^16.1.0",
 		"prettier": "^3.2.5",
 		"tailwindcss": "^3.4.3",
+		"tsx": "^4.8.2",
 		"typescript": "5.4.5"
 	},
 	"packageManager": "pnpm@9.0.6+sha256.0624e30eff866cdeb363b15061bdb7fd9425b17bc1bb42c22f5f4efdea21f6b3"

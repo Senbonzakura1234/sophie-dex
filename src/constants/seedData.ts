@@ -1,3 +1,5 @@
+import 'server-only';
+
 import type { Effect, Item, Rumor, Trait } from '@root/server/postgresql/schema';
 
 export const effectsList: Array<Effect> = [
