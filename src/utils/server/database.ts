@@ -3,7 +3,6 @@ import 'server-only';
 import type { CommonRecord } from '@root/server/postgresql/schema';
 import type { APIResult, PageProps, PreparedPGQuery } from '@root/types/common';
 import { APIError } from '@root/types/common';
-
 import type { IdQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
 import { objectValues, tryCatchHandler } from '@root/utils/common';

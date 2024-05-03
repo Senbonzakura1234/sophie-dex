@@ -94,7 +94,8 @@
 				"[trpc]",
 				"TrpcProvider",
 				"TrpcProvider.tsx",
-				"[trpc]/route.ts"
+				"[trpc]/route.ts",
+				"router/index.ts"
 			],
 			"filename": true,
 			"format": "svg",
@@ -131,6 +132,13 @@
 			"format": "svg",
 			"icon": "config",
 			"overrides": "mjs"
+		},
+		{
+			"extensions": ["postgresql/index.ts", "repository/index.ts", "repository/seed.ts", "schema/index.ts"],
+			"filename": true,
+			"format": "svg",
+			"icon": "pgsql",
+			"overrides": "ts"
 		}
 	],
 	"vsicons.associations.folders": [
@@ -153,10 +161,16 @@
 			"overrides": "constant"
 		},
 		{
-			"extensions": ["postgresql"],
+			"extensions": ["postgresql", "migration"],
 			"format": "svg",
 			"icon": "db",
 			"overrides": "postgresql"
+		},
+		{
+			"extensions": ["schema"],
+			"format": "svg",
+			"icon": "typescript",
+			"overrides": "typescript"
 		},
 		{
 			"extensions": ["_components", "_component"],

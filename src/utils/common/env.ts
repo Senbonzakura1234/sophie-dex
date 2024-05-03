@@ -1,6 +1,7 @@
 import {
 	appCodeSchema,
 	appKeyWordSchema,
+	genericBooleanishEnumSchema,
 	genericStringSchema,
 	nodeEnvEnumSchema,
 	providerIdEnumValidator,
@@ -41,6 +42,7 @@ export const env = createEnv({
 
 		NEXTAUTH_URL: genericStringSchema.catch(''),
 		NEXTAUTH_SECRET: genericStringSchema.catch(''),
+		IS_NEXTJS_ENV: genericBooleanishEnumSchema.catch('true'),
 	},
 	runtimeEnv: {
 		NEXT_PUBLIC_APP_HOST: process.env.NEXT_PUBLIC_APP_HOST,
@@ -70,6 +72,7 @@ export const env = createEnv({
 
 		NEXTAUTH_URL: process.env.NEXTAUTH_URL,
 		NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+		IS_NEXTJS_ENV: process.env.IS_NEXTJS_ENV,
 	},
 	skipValidation: !!process.env.SKIP_ENV_VALIDATION,
 });
