@@ -1,5 +1,5 @@
 {
-  "id": "53d01946-acf4-4b66-a7c9-a4ee9a8c7e9d",
+  "id": "54634152-7958-4fde-a484-14c20bc19da3",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -23,6 +23,12 @@
         "name": {
           "name": "name",
           "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "page_index": {
+          "name": "page_index",
+          "type": "integer",
           "primaryKey": false,
           "notNull": true
         },
@@ -63,6 +69,12 @@
         "name": {
           "name": "name",
           "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "page_index": {
+          "name": "page_index",
+          "type": "integer",
           "primaryKey": false,
           "notNull": true
         },
@@ -148,6 +160,12 @@
           "primaryKey": false,
           "notNull": true
         },
+        "page_index": {
+          "name": "page_index",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
         "description": {
           "name": "description",
           "type": "jsonb",
@@ -197,6 +215,12 @@
         "name": {
           "name": "name",
           "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "page_index": {
+          "name": "page_index",
+          "type": "integer",
           "primaryKey": false,
           "notNull": true
         },
@@ -261,6 +285,12 @@
         "github_profile": {
           "name": "github_profile",
           "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "page_index": {
+          "name": "page_index",
+          "type": "integer",
           "primaryKey": false,
           "notNull": true
         },

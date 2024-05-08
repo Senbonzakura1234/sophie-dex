@@ -4,7 +4,7 @@ import type { GithubUserInfo, ModuleIdEnum, RelatedCategoryEnum, SearchQuery } f
 import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
 import { env } from '@root/utils/common/env';
 import type { InferSelectModel } from 'drizzle-orm';
-import { jsonb, pgTableCreator, smallint, text, timestamp, varchar } from 'drizzle-orm/pg-core';
+import { integer, jsonb, pgTableCreator, smallint, text, timestamp, varchar } from 'drizzle-orm/pg-core';
 import { ulid } from 'ulid';
 
 //#region <Field Types>
@@ -37,6 +37,7 @@ export const effects = pgTable('effects', {
 	id: text('id').primaryKey(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	name: varchar('name', { length: 256 }).notNull(),
+	pageIndex: integer('page_index').notNull(),
 
 	index: smallint('index').notNull(),
 	description: varchar('description', { length: 256 }).notNull(),
@@ -46,6 +47,7 @@ export const items = pgTable('items', {
 	id: text('id').primaryKey(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	name: varchar('name', { length: 256 }).notNull(),
+	pageIndex: integer('page_index').notNull(),
 
 	category: varchar('category', { enum: categoryList, length: 100 }).notNull(),
 	color: varchar('color', { enum: colorList, length: 100 }).notNull(),
@@ -62,6 +64,7 @@ export const rumors = pgTable('rumors', {
 	id: text('id').primaryKey(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	name: varchar('name', { length: 256 }).notNull(),
+	pageIndex: integer('page_index').notNull(),
 
 	description: jsonb('description').$type<HyperLinkMap>().notNull(),
 	location: varchar('location', { length: 256 }).notNull(),
@@ -73,6 +76,7 @@ export const traits = pgTable('traits', {
 	id: text('id').primaryKey(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	name: varchar('name', { length: 256 }).notNull(),
+	pageIndex: integer('page_index').notNull(),
 
 	categories: varchar('categories', { enum: categoryList, length: 100 }).array().notNull(),
 	description: varchar('description', { length: 256 }).notNull(),
@@ -86,6 +90,7 @@ export const users = pgTable('users', {
 	username: varchar('username', { length: 256 }).notNull().unique(),
 	email: varchar('email', { length: 256 }).notNull(),
 	githubProfile: jsonb('github_profile').$type<GithubUserInfo>().notNull(),
+	pageIndex: integer('page_index').notNull(),
 
 	bookmarkedEffectList: text('bookmarked_effect_list')
 		.array(MAXIMUM_BOOKMARK_LENGTH)

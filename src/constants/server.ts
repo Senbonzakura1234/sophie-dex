@@ -1,11 +1,11 @@
-import 'server-only';
+import { env } from '@root/utils/common/env';
+if (env.IS_NEXTJS_ENV === 'true') import('server-only');
 
 import { insertOrUpdateUser } from '@root/server/postgresql';
 import { APIError } from '@root/types/common';
 import type { ProviderIdEnum } from '@root/types/common/zod';
 import { githubUserInfoSchema } from '@root/types/common/zod';
 import { evnIs } from '@root/utils/common';
-import { env } from '@root/utils/common/env';
 import Atlassian from 'next-auth/providers/atlassian';
 import Facebook from 'next-auth/providers/facebook';
 import Github from 'next-auth/providers/github';

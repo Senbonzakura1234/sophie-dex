@@ -1,4 +1,5 @@
-import 'server-only';
+import { env } from '@root/utils/common/env';
+if (env.IS_NEXTJS_ENV === 'true') import('server-only');
 
 import type { APIResult } from '@root/types/common';
 import { APIError } from '@root/types/common';

@@ -1,4 +1,5 @@
-import 'server-only';
+import { env } from '@root/utils/common/env';
+if (env.IS_NEXTJS_ENV === 'true') import('server-only');
 
 import type { CommonRecord } from '@root/server/postgresql/schema';
 import type { APIResult, PageProps, PreparedPGQuery } from '@root/types/common';

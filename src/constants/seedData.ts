@@ -1,5 +1,3 @@
-import 'server-only';
-
 import type { Effect, Item, Rumor, Trait } from '@root/server/postgresql/schema';
 
 export const effectsList: Array<Effect> = [
@@ -9,6 +7,7 @@ export const effectsList: Array<Effect> = [
 		index: 4,
 		keyWords: 'savage impact',
 		name: 'Savage Impact',
+		pageIndex: 0,
 	},
 	{
 		description: "Deals ultimate fire damage. Fire damage is affected by the target's fire resistance value.",
@@ -16,6 +15,7 @@ export const effectsList: Array<Effect> = [
 		index: 11,
 		keyWords: 'flames of hell',
 		name: 'Flames of Hell',
+		pageIndex: 1,
 	},
 	{
 		description: "Deals moderate ice damage. Ice damage is affected by the target's ice resistance value.",
@@ -23,6 +23,7 @@ export const effectsList: Array<Effect> = [
 		index: 13,
 		keyWords: 'ice damage m',
 		name: 'Ice Damage M',
+		pageIndex: 2,
 	},
 	{
 		description: "Deals supreme ice damage. Ice damage is affected by the target's ice resistance value.",
@@ -30,6 +31,7 @@ export const effectsList: Array<Effect> = [
 		index: 16,
 		keyWords: 'ice age',
 		name: 'Ice Age',
+		pageIndex: 3,
 	},
 	{
 		description:
@@ -38,6 +40,7 @@ export const effectsList: Array<Effect> = [
 		index: 19,
 		keyWords: 'lightning damage m',
 		name: 'Lightning Damage M',
+		pageIndex: 4,
 	},
 	{
 		description: "Deals strong magic damage. Magic damage is affected by the target's magic resistance value.",
@@ -45,6 +48,7 @@ export const effectsList: Array<Effect> = [
 		index: 25,
 		keyWords: 'large missile',
 		name: 'Large Missile',
+		pageIndex: 5,
 	},
 	{
 		description:
@@ -53,6 +57,7 @@ export const effectsList: Array<Effect> = [
 		index: 126,
 		keyWords: 'a little numbing',
 		name: 'A Little Numbing',
+		pageIndex: 6,
 	},
 	{
 		description:
@@ -61,6 +66,7 @@ export const effectsList: Array<Effect> = [
 		index: 132,
 		keyWords: 'call rain cloud',
 		name: 'Call Rain Cloud',
+		pageIndex: 7,
 	},
 	{
 		description:
@@ -69,6 +75,7 @@ export const effectsList: Array<Effect> = [
 		index: 133,
 		keyWords: 'call thunder cloud',
 		name: 'Call Thunder Cloud',
+		pageIndex: 8,
 	},
 	{
 		description:
@@ -77,6 +84,7 @@ export const effectsList: Array<Effect> = [
 		index: 144,
 		keyWords: 'weight of happiness',
 		name: 'Weight of Happiness',
+		pageIndex: 9,
 	},
 	{
 		description: "Restores the target's LP by a slight amount.",
@@ -84,6 +92,7 @@ export const effectsList: Array<Effect> = [
 		index: 207,
 		keyWords: 'lp recovery xs',
 		name: 'LP Recovery XS',
+		pageIndex: 10,
 	},
 	{
 		description: "Restores a small amount of the target's HP and MP.",
@@ -91,6 +100,7 @@ export const effectsList: Array<Effect> = [
 		index: 214,
 		keyWords: 'hpmp recovery s',
 		name: 'HPMP Recovery S',
+		pageIndex: 11,
 	},
 	{
 		description: "Restores a small amount of the target's HP and LP.",
@@ -98,6 +108,7 @@ export const effectsList: Array<Effect> = [
 		index: 219,
 		keyWords: 'hplp recovery s',
 		name: 'HPLP Recovery S',
+		pageIndex: 12,
 	},
 	{
 		description: "Restores a huge amount of the target's HP and LP.",
@@ -105,6 +116,7 @@ export const effectsList: Array<Effect> = [
 		index: 222,
 		keyWords: 'hplp recovery xl',
 		name: 'HPLP Recovery XL',
+		pageIndex: 13,
 	},
 	{
 		description: "Restores the whole party's HP by a slight amount.",
@@ -112,6 +124,7 @@ export const effectsList: Array<Effect> = [
 		index: 228,
 		keyWords: 'calming aroma',
 		name: 'Calming Aroma',
+		pageIndex: 14,
 	},
 	{
 		description:
@@ -120,6 +133,7 @@ export const effectsList: Array<Effect> = [
 		index: 278,
 		keyWords: 'eat and recover xs',
 		name: 'Eat and Recover XS',
+		pageIndex: 15,
 	},
 	{
 		description: 'Sits in the stomach, delaying your turn in battle a small amount. Also restores LP.',
@@ -127,6 +141,7 @@ export const effectsList: Array<Effect> = [
 		index: 285,
 		keyWords: 'filling',
 		name: 'Filling',
+		pageIndex: 16,
 	},
 	{
 		description: "It's hard to digest, inflicting Slow. The effect is small.",
@@ -134,6 +149,7 @@ export const effectsList: Array<Effect> = [
 		index: 288,
 		keyWords: 'hard to digest',
 		name: 'Hard to Digest',
+		pageIndex: 17,
 	},
 	{
 		description:
@@ -142,6 +158,7 @@ export const effectsList: Array<Effect> = [
 		index: 729,
 		keyWords: 'weak to ice',
 		name: 'Weak to Ice',
+		pageIndex: 18,
 	},
 	{
 		description: "Reduces the target's level a little. Reduced level decreases all stats and damage dealt.",
@@ -149,6 +166,7 @@ export const effectsList: Array<Effect> = [
 		index: 731,
 		keyWords: 'level down s',
 		name: 'Level Down S',
+		pageIndex: 19,
 	},
 	{
 		description: 'Deals continuous damage to the target. The effect is big, but the time is short.',
@@ -156,6 +174,7 @@ export const effectsList: Array<Effect> = [
 		index: 736,
 		keyWords: 'damage over time l',
 		name: 'Damage Over Time L',
+		pageIndex: 20,
 	},
 	{
 		description: 'Increases Break effect dealt to the target. If multiple targets are hit, the effect is split.',
@@ -163,6 +182,7 @@ export const effectsList: Array<Effect> = [
 		index: 740,
 		keyWords: 'add break s',
 		name: 'Add Break S',
+		pageIndex: 21,
 	},
 	{
 		description: 'Reduces the rate at which enemies use powerful attacks a little.',
@@ -170,6 +190,7 @@ export const effectsList: Array<Effect> = [
 		index: 744,
 		keyWords: 'restrain attack s',
 		name: 'Restrain Attack S',
+		pageIndex: 22,
 	},
 	{
 		description: 'Consumes a slight amount of HP. The amount is influenced by maximum HP.',
@@ -177,6 +198,7 @@ export const effectsList: Array<Effect> = [
 		index: 797,
 		keyWords: 'consume hp xs',
 		name: 'Consume HP XS',
+		pageIndex: 23,
 	},
 	{
 		description: 'Consumes a large amount of HP. The amount is influenced by maximum HP.',
@@ -184,6 +206,7 @@ export const effectsList: Array<Effect> = [
 		index: 800,
 		keyWords: 'consume hp l',
 		name: 'Consume HP L',
+		pageIndex: 24,
 	},
 	{
 		description: 'Consumes a huge amount of MP. The effect is weakened when MP is insufficient.',
@@ -191,6 +214,7 @@ export const effectsList: Array<Effect> = [
 		index: 806,
 		keyWords: 'consume mp xl',
 		name: 'Consume MP XL',
+		pageIndex: 25,
 	},
 	{
 		description: 'Rest for 5 hours, restoring 50% of HP, MP, and LP.',
@@ -198,6 +222,7 @@ export const effectsList: Array<Effect> = [
 		index: 859,
 		keyWords: 'rest 5 hours',
 		name: 'Rest 5 Hours',
+		pageIndex: 26,
 	},
 	{
 		description:
@@ -206,6 +231,7 @@ export const effectsList: Array<Effect> = [
 		index: 865,
 		keyWords: 'average cart',
 		name: 'Average Cart',
+		pageIndex: 27,
 	},
 	{
 		description: 'Reduces the chance of incidents by a small amount.',
@@ -213,6 +239,7 @@ export const effectsList: Array<Effect> = [
 		index: 869,
 		keyWords: 'keeps away danger',
 		name: 'Keeps Away Danger',
+		pageIndex: 28,
 	},
 	{
 		description: '',
@@ -220,6 +247,7 @@ export const effectsList: Array<Effect> = [
 		index: 873,
 		keyWords: 'wards off monsters',
 		name: 'Wards Off Monsters',
+		pageIndex: 29,
 	},
 	{
 		description: 'Move speed increases by 10%.',
@@ -227,6 +255,7 @@ export const effectsList: Array<Effect> = [
 		index: 928,
 		keyWords: 'move speed up s',
 		name: 'Move Speed Up S',
+		pageIndex: 30,
 	},
 	{
 		description: 'Increases number of items gathered each time a lot.',
@@ -234,6 +263,7 @@ export const effectsList: Array<Effect> = [
 		index: 938,
 		keyWords: 'gather a lot more',
 		name: 'Gather a Lot More',
+		pageIndex: 31,
 	},
 	{
 		description: 'Increases experience points gained from battle by a lot.',
@@ -241,6 +271,7 @@ export const effectsList: Array<Effect> = [
 		index: 944,
 		keyWords: 'training mastery',
 		name: 'Training Mastery',
+		pageIndex: 32,
 	},
 	{
 		description: 'Makes it easier for gathering level and enemy level to increase.',
@@ -248,6 +279,7 @@ export const effectsList: Array<Effect> = [
 		index: 948,
 		keyWords: 'seal of chaos',
 		name: 'Seal of Chaos',
+		pageIndex: 33,
 	},
 	{
 		description: 'Increases effect of all Assist actions by a little.',
@@ -255,6 +287,7 @@ export const effectsList: Array<Effect> = [
 		index: 1003,
 		keyWords: 'seal of trust',
 		name: 'Seal of Trust',
+		pageIndex: 34,
 	},
 	{
 		description: 'Hide your presence, making it hard for monsters to notice you for a short time.',
@@ -262,6 +295,7 @@ export const effectsList: Array<Effect> = [
 		index: 1008,
 		keyWords: 'hard to notice',
 		name: 'Hard to Notice',
+		pageIndex: 35,
 	},
 	{
 		description:
@@ -270,6 +304,7 @@ export const effectsList: Array<Effect> = [
 		index: 1009,
 		keyWords: 'erase presence',
 		name: 'Erase Presence',
+		pageIndex: 36,
 	},
 	{
 		description: 'Reduces wait time after all actions by a small amount.',
@@ -277,6 +312,7 @@ export const effectsList: Array<Effect> = [
 		index: 1012,
 		keyWords: 'progress time',
 		name: 'Progress Time',
+		pageIndex: 37,
 	},
 	{
 		description: 'Increases the chance of higher expected values a little when attacking.',
@@ -284,6 +320,7 @@ export const effectsList: Array<Effect> = [
 		index: 1024,
 		keyWords: 'change the future',
 		name: 'Change the Future',
+		pageIndex: 38,
 	},
 	{
 		description: "Automatically revive on turn when KO'd in battle. HP after revival is decent.",
@@ -291,6 +328,7 @@ export const effectsList: Array<Effect> = [
 		index: 1032,
 		keyWords: 'soul awakening',
 		name: 'Soul Awakening',
+		pageIndex: 39,
 	},
 	{
 		description: "Increases the target's speed a little. The effect lasts 5 turns.",
@@ -298,6 +336,7 @@ export const effectsList: Array<Effect> = [
 		index: 1123,
 		keyWords: 'speed up s',
 		name: 'Speed Up S',
+		pageIndex: 40,
 	},
 	{
 		description: 'Increases hit rate by 30%.',
@@ -305,6 +344,7 @@ export const effectsList: Array<Effect> = [
 		index: 1131,
 		keyWords: 'hit rate up xl',
 		name: 'Hit Rate Up XL',
+		pageIndex: 41,
 	},
 	{
 		description: 'Increases critical hit rate by 6%.',
@@ -312,6 +352,7 @@ export const effectsList: Array<Effect> = [
 		index: 1138,
 		keyWords: 'critical up s',
 		name: 'Critical Up S',
+		pageIndex: 42,
 	},
 	{
 		description: 'Increases item power by 10%.',
@@ -319,6 +360,7 @@ export const effectsList: Array<Effect> = [
 		index: 1151,
 		keyWords: 'item enhance s',
 		name: 'Item Enhance S',
+		pageIndex: 43,
 	},
 	{
 		description: 'Immunity to Sleep ailment.',
@@ -326,6 +368,7 @@ export const effectsList: Array<Effect> = [
 		index: 1160,
 		keyWords: 'nullify sleep',
 		name: 'Nullify Sleep',
+		pageIndex: 44,
 	},
 	{
 		description: 'Immunity to No Heal ailment.',
@@ -333,6 +376,7 @@ export const effectsList: Array<Effect> = [
 		index: 1166,
 		keyWords: 'nullify no heal',
 		name: 'Nullify No Heal',
+		pageIndex: 45,
 	},
 	{
 		description: 'Immunity to all ailments.',
@@ -340,6 +384,7 @@ export const effectsList: Array<Effect> = [
 		index: 1170,
 		keyWords: 'nullify all ailments',
 		name: 'Nullify All Ailments',
+		pageIndex: 46,
 	},
 	{
 		description:
@@ -348,6 +393,7 @@ export const effectsList: Array<Effect> = [
 		index: 1176,
 		keyWords: 'avoid ko xs',
 		name: 'Avoid KO XS',
+		pageIndex: 47,
 	},
 	{
 		description:
@@ -356,6 +402,7 @@ export const effectsList: Array<Effect> = [
 		index: 1180,
 		keyWords: 'avoid ko xl',
 		name: 'Avoid KO XL',
+		pageIndex: 48,
 	},
 	{
 		description: 'Absorbs a portion of damage dealt to the target as HP. The effect is small.',
@@ -363,6 +410,7 @@ export const effectsList: Array<Effect> = [
 		index: 1184,
 		keyWords: 'damage absorb s',
 		name: 'Damage Absorb S',
+		pageIndex: 49,
 	},
 	{
 		description: 'Reduces damage taken by 5%.',
@@ -370,6 +418,7 @@ export const effectsList: Array<Effect> = [
 		index: 1188,
 		keyWords: 'damage cut s',
 		name: 'Damage Cut S',
+		pageIndex: 50,
 	},
 	{
 		description: 'Increases Break value when attacking enemies by a slight amount.',
@@ -377,6 +426,7 @@ export const effectsList: Array<Effect> = [
 		index: 1192,
 		keyWords: 'break enhance s',
 		name: 'Break Enhance S',
+		pageIndex: 51,
 	},
 	{
 		description: 'When placing materials, you can press <LB><RB> to flip it vertically.',
@@ -384,6 +434,7 @@ export const effectsList: Array<Effect> = [
 		index: 1274,
 		keyWords: 'vertical flip',
 		name: 'Vertical Flip',
+		pageIndex: 52,
 	},
 	{
 		description: 'Changes the item color to Blue.',
@@ -391,6 +442,7 @@ export const effectsList: Array<Effect> = [
 		index: 1284,
 		keyWords: 'change color blue',
 		name: 'Change Color Blue',
+		pageIndex: 53,
 	},
 	{
 		description: "Deals strong physical damage. Physical damage is affected by the target's defense value.",
@@ -398,6 +450,7 @@ export const effectsList: Array<Effect> = [
 		index: 2,
 		keyWords: 'physical damage l',
 		name: 'Physical Damage L',
+		pageIndex: 54,
 	},
 	{
 		description: "Deals very powerful physical damage. Physical damage is affected by the target's defense value.",
@@ -405,6 +458,7 @@ export const effectsList: Array<Effect> = [
 		index: 3,
 		keyWords: 'physical damage xl',
 		name: 'Physical Damage XL',
+		pageIndex: 55,
 	},
 	{
 		description: "Deals physical damage. Physical damage is affected by the target's defense value.",
@@ -412,6 +466,7 @@ export const effectsList: Array<Effect> = [
 		index: 0,
 		keyWords: 'physical damage s',
 		name: 'Physical Damage S',
+		pageIndex: 56,
 	},
 	{
 		description: "Deals supreme fire damage. Fire damage is affected by the target's fire resistance value.",
@@ -419,6 +474,7 @@ export const effectsList: Array<Effect> = [
 		index: 10,
 		keyWords: 'fires of purgatory',
 		name: 'Fires of Purgatory',
+		pageIndex: 57,
 	},
 	{
 		description: "Deals moderate fire damage. Fire damage is affected by the target's fire resistance value.",
@@ -426,6 +482,7 @@ export const effectsList: Array<Effect> = [
 		index: 7,
 		keyWords: 'fire damage m',
 		name: 'Fire Damage M',
+		pageIndex: 58,
 	},
 	{
 		description: "Deals strong fire damage. Fire damage is affected by the target's fire resistance value.",
@@ -433,6 +490,7 @@ export const effectsList: Array<Effect> = [
 		index: 8,
 		keyWords: 'fire damage l',
 		name: 'Fire Damage L',
+		pageIndex: 59,
 	},
 	{
 		description: "Deals very powerful fire damage. Fire damage is affected by the target's fire resistance value.",
@@ -440,6 +498,7 @@ export const effectsList: Array<Effect> = [
 		index: 9,
 		keyWords: 'fire damage xl',
 		name: 'Fire Damage XL',
+		pageIndex: 60,
 	},
 	{
 		description: "Deals ice damage. Ice damage is affected by the target's ice resistance value.",
@@ -447,6 +506,7 @@ export const effectsList: Array<Effect> = [
 		index: 12,
 		keyWords: 'ice damage s',
 		name: 'Ice Damage S',
+		pageIndex: 61,
 	},
 	{
 		description: "Deals ultimate ice damage. Ice damage is affected by the target's ice resistance value.",
@@ -454,6 +514,7 @@ export const effectsList: Array<Effect> = [
 		index: 17,
 		keyWords: 'absolute zero',
 		name: 'Absolute Zero',
+		pageIndex: 62,
 	},
 	{
 		description: "Deals strong ice damage. Ice damage is affected by the target's ice resistance value.",
@@ -461,6 +522,7 @@ export const effectsList: Array<Effect> = [
 		index: 14,
 		keyWords: 'ice damage l',
 		name: 'Ice Damage L',
+		pageIndex: 63,
 	},
 	{
 		description: "Deals very powerful ice damage. Ice damage is affected by the target's ice resistance value.",
@@ -468,6 +530,7 @@ export const effectsList: Array<Effect> = [
 		index: 15,
 		keyWords: 'ice damage xl',
 		name: 'Ice Damage XL',
+		pageIndex: 64,
 	},
 	{
 		description: "Deals lightning damage. Lightning damage is affected by the target's lightning resistance value.",
@@ -475,6 +538,7 @@ export const effectsList: Array<Effect> = [
 		index: 18,
 		keyWords: 'lightning damage s',
 		name: 'Lightning Damage S',
+		pageIndex: 65,
 	},
 	{
 		description:
@@ -483,6 +547,7 @@ export const effectsList: Array<Effect> = [
 		index: 21,
 		keyWords: 'lightning damage xl',
 		name: 'Lightning Damage XL',
+		pageIndex: 66,
 	},
 	{
 		description:
@@ -491,6 +556,7 @@ export const effectsList: Array<Effect> = [
 		index: 22,
 		keyWords: 'judgment bolt',
 		name: 'Judgment Bolt',
+		pageIndex: 67,
 	},
 	{
 		description:
@@ -499,6 +565,7 @@ export const effectsList: Array<Effect> = [
 		index: 20,
 		keyWords: 'lightning damage l',
 		name: 'Lightning Damage L',
+		pageIndex: 68,
 	},
 	{
 		description:
@@ -507,6 +574,7 @@ export const effectsList: Array<Effect> = [
 		index: 23,
 		keyWords: 'hammer of god',
 		name: 'Hammer of God',
+		pageIndex: 69,
 	},
 	{
 		description: "Deals magic damage. Magic damage is affected by the target's magic resistance value.",
@@ -514,6 +582,7 @@ export const effectsList: Array<Effect> = [
 		index: 24,
 		keyWords: 'small missile',
 		name: 'Small Missile',
+		pageIndex: 70,
 	},
 	{
 		description: "Deals supreme magic damage. Magic damage is affected by the target's magic resistance value.",
@@ -521,6 +590,7 @@ export const effectsList: Array<Effect> = [
 		index: 27,
 		keyWords: 'supersonic missile',
 		name: 'Supersonic Missile',
+		pageIndex: 71,
 	},
 	{
 		description: 'Deals very powerful physical damage. Can also randomly cause a number of effects.',
@@ -528,6 +598,7 @@ export const effectsList: Array<Effect> = [
 		index: 29,
 		keyWords: 'power of creation',
 		name: 'Power of Creation',
+		pageIndex: 72,
 	},
 	{
 		description: "Deals very powerful magic damage. Magic damage is affected by the target's magic resistance value.",
@@ -535,6 +606,7 @@ export const effectsList: Array<Effect> = [
 		index: 26,
 		keyWords: 'super large missile',
 		name: 'Super Large Missile',
+		pageIndex: 73,
 	},
 	{
 		description: "Deals fire damage. Fire damage is affected by the target's fire resistance value.",
@@ -542,6 +614,7 @@ export const effectsList: Array<Effect> = [
 		index: 6,
 		keyWords: 'fire damage s',
 		name: 'Fire Damage S',
+		pageIndex: 74,
 	},
 	{
 		description: "Deals moderate physical damage. Physical damage is affected by the target's defense value.",
@@ -549,6 +622,7 @@ export const effectsList: Array<Effect> = [
 		index: 1,
 		keyWords: 'physical damage m',
 		name: 'Physical Damage M',
+		pageIndex: 75,
 	},
 	{
 		description: "Deals ultimate physical damage. Physical damage is affected by the target's defense value.",
@@ -556,6 +630,7 @@ export const effectsList: Array<Effect> = [
 		index: 5,
 		keyWords: "giant's blow",
 		name: "Giant's Blow",
+		pageIndex: 76,
 	},
 	{
 		description: 'Deals strong physical damage. Can also randomly cause a number of effects.',
@@ -563,6 +638,7 @@ export const effectsList: Array<Effect> = [
 		index: 28,
 		keyWords: 'power of origin',
 		name: 'Power of Origin',
+		pageIndex: 77,
 	},
 	{
 		description:
@@ -571,6 +647,7 @@ export const effectsList: Array<Effect> = [
 		index: 39,
 		keyWords: 'aurora of ruin',
 		name: 'Aurora of Ruin',
+		pageIndex: 78,
 	},
 	{
 		description:
@@ -579,6 +656,7 @@ export const effectsList: Array<Effect> = [
 		index: 38,
 		keyWords: 'light of the end',
 		name: 'Light of the End',
+		pageIndex: 79,
 	},
 	{
 		description: 'Bombs rain from the sky, dealing fire damage to all enemies. Also activates 1 time card.',
@@ -586,6 +664,7 @@ export const effectsList: Array<Effect> = [
 		index: 45,
 		keyWords: 'falling bombs',
 		name: 'Falling Bombs',
+		pageIndex: 80,
 	},
 	{
 		description: 'Uni rain from the sky, dealing physical damage to all enemies. Also activates 1 time card.',
@@ -593,6 +672,7 @@ export const effectsList: Array<Effect> = [
 		index: 40,
 		keyWords: 'falling uni',
 		name: 'Falling Uni',
+		pageIndex: 81,
 	},
 	{
 		description: 'Puni rain from the sky, dealing magic damage to all enemies. Also activates 1 time card.',
@@ -600,6 +680,7 @@ export const effectsList: Array<Effect> = [
 		index: 41,
 		keyWords: 'falling puni',
 		name: 'Falling Puni',
+		pageIndex: 82,
 	},
 	{
 		description: 'Meteors rain from the sky, dealing fire damage to all enemies. Also activates 1 time card.',
@@ -607,6 +688,7 @@ export const effectsList: Array<Effect> = [
 		index: 42,
 		keyWords: 'falling meteors',
 		name: 'Falling Meteors',
+		pageIndex: 83,
 	},
 	{
 		description: 'Summons an Ardra to deal physical damage, also delaying turn a little.',
@@ -614,6 +696,7 @@ export const effectsList: Array<Effect> = [
 		index: 48,
 		keyWords: 'summon ardra',
 		name: 'Summon Ardra',
+		pageIndex: 84,
 	},
 	{
 		description: '??? rains from the sky, dealing physical damage to all enemies. Also activates 1 time card.',
@@ -621,6 +704,7 @@ export const effectsList: Array<Effect> = [
 		index: 43,
 		keyWords: 'falling ???',
 		name: 'Falling ???',
+		pageIndex: 85,
 	},
 	{
 		description: 'Island Fish rain from the sky, dealing physical damage to all enemies. Also activates 1 time card.',
@@ -628,6 +712,7 @@ export const effectsList: Array<Effect> = [
 		index: 46,
 		keyWords: 'falling island fish',
 		name: 'Falling Island Fish',
+		pageIndex: 86,
 	},
 	{
 		description: 'Stars rain from the sky, dealing physical damage to all enemies. Also activates 1 time card.',
@@ -635,6 +720,7 @@ export const effectsList: Array<Effect> = [
 		index: 44,
 		keyWords: 'falling stars',
 		name: 'Falling Stars',
+		pageIndex: 87,
 	},
 	{
 		description:
@@ -643,6 +729,7 @@ export const effectsList: Array<Effect> = [
 		index: 47,
 		keyWords: 'gift from heaven',
 		name: 'Gift from Heaven',
+		pageIndex: 88,
 	},
 	{
 		description:
@@ -651,6 +738,7 @@ export const effectsList: Array<Effect> = [
 		index: 49,
 		keyWords: 'summon beast',
 		name: 'Summon Beast',
+		pageIndex: 89,
 	},
 	{
 		description: 'Summons a Lich to deal magic damage. Part of damage dealt is absorbed as HP.',
@@ -658,6 +746,7 @@ export const effectsList: Array<Effect> = [
 		index: 53,
 		keyWords: 'summon lich',
 		name: 'Summon Lich',
+		pageIndex: 90,
 	},
 	{
 		description: "Summons a Puni to deal physical damage. Physical damage is affected by the target's defense value.",
@@ -665,6 +754,7 @@ export const effectsList: Array<Effect> = [
 		index: 50,
 		keyWords: 'summon puni∞',
 		name: 'Summon Puni∞',
+		pageIndex: 91,
 	},
 	{
 		description: "Deals moderate physical damage. Physical damage is affected by the target's defense value.",
@@ -672,6 +762,7 @@ export const effectsList: Array<Effect> = [
 		index: 57,
 		keyWords: 'steal some spirit',
 		name: 'Steal Some Spirit',
+		pageIndex: 92,
 	},
 	{
 		description:
@@ -680,6 +771,7 @@ export const effectsList: Array<Effect> = [
 		index: 51,
 		keyWords: 'summon ghost',
 		name: 'Summon Ghost',
+		pageIndex: 93,
 	},
 	{
 		description: 'Summons a mandrake to deal magic damage. Has a chance to inflict Poison.',
@@ -687,6 +779,7 @@ export const effectsList: Array<Effect> = [
 		index: 52,
 		keyWords: 'summon mandrake',
 		name: 'Summon Mandrake',
+		pageIndex: 94,
 	},
 	{
 		description:
@@ -695,6 +788,7 @@ export const effectsList: Array<Effect> = [
 		index: 54,
 		keyWords: 'steal some life',
 		name: 'Steal Some Life',
+		pageIndex: 95,
 	},
 	{
 		description:
@@ -703,6 +797,7 @@ export const effectsList: Array<Effect> = [
 		index: 55,
 		keyWords: 'steal life',
 		name: 'Steal Life',
+		pageIndex: 96,
 	},
 	{
 		description:
@@ -711,6 +806,7 @@ export const effectsList: Array<Effect> = [
 		index: 56,
 		keyWords: 'steal lots of life',
 		name: 'Steal Lots of Life',
+		pageIndex: 97,
 	},
 	{
 		description: "Deals moderate physical damage. Physical damage is affected by the target's defense value.",
@@ -718,6 +814,7 @@ export const effectsList: Array<Effect> = [
 		index: 58,
 		keyWords: 'steal spirit',
 		name: 'Steal Spirit',
+		pageIndex: 98,
 	},
 	{
 		description: "Deals physical damage. Physical damage is affected by the target's defense value.",
@@ -725,6 +822,7 @@ export const effectsList: Array<Effect> = [
 		index: 59,
 		keyWords: 'steal lots of spirit',
 		name: 'Steal Lots of Spirit',
+		pageIndex: 99,
 	},
 	{
 		description: 'Bursts to deal minor physical damage to the target. Its power is very small.',
@@ -732,6 +830,7 @@ export const effectsList: Array<Effect> = [
 		index: 110,
 		keyWords: 'bursts',
 		name: 'Bursts',
+		pageIndex: 100,
 	},
 	{
 		description: 'Piercing thorns stab into the target, draining HP over time. The effect is fairly big.',
@@ -739,6 +838,7 @@ export const effectsList: Array<Effect> = [
 		index: 115,
 		keyWords: 'soul stabbing thorns',
 		name: 'Soul Stabbing Thorns',
+		pageIndex: 101,
 	},
 	{
 		description: 'Burns deal continuous damage. The effect is fairly small.',
@@ -746,6 +846,7 @@ export const effectsList: Array<Effect> = [
 		index: 120,
 		keyWords: 'inflicts burns',
 		name: 'Inflicts Burns',
+		pageIndex: 102,
 	},
 	{
 		description: 'Severe burns deal continuous damage. The effect is big.',
@@ -753,6 +854,7 @@ export const effectsList: Array<Effect> = [
 		index: 121,
 		keyWords: 'inflicts severe burns',
 		name: 'Inflicts Severe Burns',
+		pageIndex: 103,
 	},
 	{
 		description: 'Increases attack, defense, and speed by 15% in the evening. No effect during other times.',
@@ -760,6 +862,7 @@ export const effectsList: Array<Effect> = [
 		index: 1038,
 		keyWords: 'strong in evening',
 		name: 'Strong in Evening',
+		pageIndex: 104,
 	},
 	{
 		description: 'Increases attack, defense, and speed by 15% at night. No effect during other times.',
@@ -767,6 +870,7 @@ export const effectsList: Array<Effect> = [
 		index: 1039,
 		keyWords: 'strong at night',
 		name: 'Strong at Night',
+		pageIndex: 105,
 	},
 	{
 		description:
@@ -775,6 +879,7 @@ export const effectsList: Array<Effect> = [
 		index: 1040,
 		keyWords: 'embodiment of the sun',
 		name: 'Embodiment of the Sun',
+		pageIndex: 106,
 	},
 	{
 		description:
@@ -783,6 +888,7 @@ export const effectsList: Array<Effect> = [
 		index: 1041,
 		keyWords: 'envoy of the moon',
 		name: 'Envoy of the Moon',
+		pageIndex: 107,
 	},
 	{
 		description: 'The hidden magic of the Tool Rune increases item power and reduces wait time.',
@@ -790,6 +896,7 @@ export const effectsList: Array<Effect> = [
 		index: 1058,
 		keyWords: 'tool rune',
 		name: 'Tool Rune',
+		pageIndex: 108,
 	},
 	{
 		description: 'The power of spirits increases base damage.',
@@ -797,6 +904,7 @@ export const effectsList: Array<Effect> = [
 		index: 1061,
 		keyWords: "spirit's power",
 		name: "Spirit's Power",
+		pageIndex: 109,
 	},
 	{
 		description: 'Inner fighting spirit burns bright, revealing true power when fighting stronger enemies.',
@@ -804,6 +912,7 @@ export const effectsList: Array<Effect> = [
 		index: 1067,
 		keyWords: 'inner fire',
 		name: 'Inner Fire',
+		pageIndex: 110,
 	},
 	{
 		description: 'Increases maximum HP by 15.',
@@ -811,6 +920,7 @@ export const effectsList: Array<Effect> = [
 		index: 1103,
 		keyWords: 'max hp up s',
 		name: 'Max HP Up S',
+		pageIndex: 111,
 	},
 	{
 		description: 'Increases attack power by 5.',
@@ -818,6 +928,7 @@ export const effectsList: Array<Effect> = [
 		index: 1112,
 		keyWords: 'attack up xs',
 		name: 'Attack Up XS',
+		pageIndex: 112,
 	},
 	{
 		description: 'Increases attack power by 25.',
@@ -825,6 +936,7 @@ export const effectsList: Array<Effect> = [
 		index: 1116,
 		keyWords: 'attack up xl',
 		name: 'Attack Up XL',
+		pageIndex: 113,
 	},
 	{
 		description: 'Increases speed by 5.',
@@ -832,6 +944,7 @@ export const effectsList: Array<Effect> = [
 		index: 1122,
 		keyWords: 'speed up xs',
 		name: 'Speed Up XS',
+		pageIndex: 114,
 	},
 	{
 		description: 'Increases evasion rate by 4%.',
@@ -839,6 +952,7 @@ export const effectsList: Array<Effect> = [
 		index: 1132,
 		keyWords: 'evasion up xs',
 		name: 'Evasion Up XS',
+		pageIndex: 115,
 	},
 	{
 		description: "Increases the target's evasion rate by a lot. The effect lasts 5 turns.",
@@ -846,6 +960,7 @@ export const effectsList: Array<Effect> = [
 		index: 1135,
 		keyWords: 'evasion up l',
 		name: 'Evasion Up L',
+		pageIndex: 116,
 	},
 	{
 		description: 'Increases critical hit rate by 3%.',
@@ -853,6 +968,7 @@ export const effectsList: Array<Effect> = [
 		index: 1137,
 		keyWords: 'critical up xs',
 		name: 'Critical Up XS',
+		pageIndex: 117,
 	},
 	{
 		description: 'Increases item power by 15%.',
@@ -860,6 +976,7 @@ export const effectsList: Array<Effect> = [
 		index: 1152,
 		keyWords: 'item enhance m',
 		name: 'Item Enhance M',
+		pageIndex: 118,
 	},
 	{
 		description: 'Reduces wait time after using item by 15%.',
@@ -867,6 +984,7 @@ export const effectsList: Array<Effect> = [
 		index: 1155,
 		keyWords: 'item shorten m',
 		name: 'Item Shorten M',
+		pageIndex: 119,
 	},
 	{
 		description: 'Increases Burst Gauge fill rate by 2%.',
@@ -874,6 +992,7 @@ export const effectsList: Array<Effect> = [
 		index: 1158,
 		keyWords: 'burst up +2%',
 		name: 'Burst Up +2%',
+		pageIndex: 120,
 	},
 	{
 		description: 'Reduces chance of being affected by ailments by a fair amount.',
@@ -881,6 +1000,7 @@ export const effectsList: Array<Effect> = [
 		index: 1173,
 		keyWords: 'ailment resist m',
 		name: 'Ailment Resist M',
+		pageIndex: 121,
 	},
 	{
 		description: 'Gain lightning resistance.',
@@ -888,6 +1008,7 @@ export const effectsList: Array<Effect> = [
 		index: 1183,
 		keyWords: 'lightning resistance',
 		name: 'Lightning Resistance',
+		pageIndex: 122,
 	},
 	{
 		description: 'Absorbs a portion of damage dealt to the target as HP. The effect is large.',
@@ -895,6 +1016,7 @@ export const effectsList: Array<Effect> = [
 		index: 1187,
 		keyWords: 'damage absorb xl',
 		name: 'Damage Absorb XL',
+		pageIndex: 123,
 	},
 	{
 		description: 'Reduces damage taken by 10%.',
@@ -902,6 +1024,7 @@ export const effectsList: Array<Effect> = [
 		index: 1191,
 		keyWords: 'damage cut xl',
 		name: 'Damage Cut XL',
+		pageIndex: 124,
 	},
 	{
 		description: 'Increases Break resistance by a small amount.',
@@ -909,6 +1032,7 @@ export const effectsList: Array<Effect> = [
 		index: 1196,
 		keyWords: 'break resist s',
 		name: 'Break Resist S',
+		pageIndex: 125,
 	},
 	{
 		description: 'Increases damage dealt to Broken enemies by a small amount.',
@@ -916,6 +1040,7 @@ export const effectsList: Array<Effect> = [
 		index: 1200,
 		keyWords: 'use opportunity m',
 		name: 'Use Opportunity M',
+		pageIndex: 126,
 	},
 	{
 		description: 'This cauldron has “Synergy”, “Tuning”, “Time Limit”, and “Color Surroundings” effects.',
@@ -923,6 +1048,7 @@ export const effectsList: Array<Effect> = [
 		index: 1255,
 		keyWords: 'combined effect',
 		name: 'Combined Effect',
+		pageIndex: 127,
 	},
 	{
 		description:
@@ -931,6 +1057,7 @@ export const effectsList: Array<Effect> = [
 		index: 1259,
 		keyWords: 'bonus display level 3',
 		name: 'Bonus Display Level 3',
+		pageIndex: 128,
 	},
 	{
 		description: 'The panel size is 6x6.',
@@ -938,6 +1065,7 @@ export const effectsList: Array<Effect> = [
 		index: 1263,
 		keyWords: 'panel 6x6',
 		name: 'Panel 6x6',
+		pageIndex: 129,
 	},
 	{
 		description:
@@ -946,6 +1074,7 @@ export const effectsList: Array<Effect> = [
 		index: 1270,
 		keyWords: 'color surroundings',
 		name: 'Color Surroundings',
+		pageIndex: 130,
 	},
 	{
 		description: 'When placing materials, you can press <LB><RB> to flip it horizontally.',
@@ -953,6 +1082,7 @@ export const effectsList: Array<Effect> = [
 		index: 1275,
 		keyWords: 'horizontal flip',
 		name: 'Horizontal Flip',
+		pageIndex: 131,
 	},
 	{
 		description: 'Adds 10 category value to (Ingredient).',
@@ -960,6 +1090,7 @@ export const effectsList: Array<Effect> = [
 		index: 1288,
 		keyWords: 'add (ingredient)',
 		name: 'Add (Ingredient)',
+		pageIndex: 132,
 	},
 	{
 		description: 'Increases (Ingredient) category value by 5.',
@@ -967,6 +1098,7 @@ export const effectsList: Array<Effect> = [
 		index: 1298,
 		keyWords: '(ingredient) +5',
 		name: '(Ingredient) +5',
+		pageIndex: 133,
 	},
 	{
 		description: 'Increases (Gunpowder) category value by 5.',
@@ -974,6 +1106,7 @@ export const effectsList: Array<Effect> = [
 		index: 1299,
 		keyWords: '(powder) +5',
 		name: '(Powder) +5',
+		pageIndex: 134,
 	},
 	{
 		description: 'Gain ultimate mobility. Wait time after using skills is reduced by 20%.',
@@ -981,6 +1114,7 @@ export const effectsList: Array<Effect> = [
 		index: 1401,
 		keyWords: 'ultimate mobility',
 		name: 'Ultimate Mobility',
+		pageIndex: 135,
 	},
 	{
 		description: 'Gain ultimate enhancement. Increases maximum HP and MP by 50.',
@@ -988,6 +1122,7 @@ export const effectsList: Array<Effect> = [
 		index: 1408,
 		keyWords: 'ultimate enhancement',
 		name: 'Ultimate Enhancement',
+		pageIndex: 136,
 	},
 	{
 		description: 'Gain ultimate lightning resistance. Gain super lightning resistance.',
@@ -995,6 +1130,7 @@ export const effectsList: Array<Effect> = [
 		index: 1416,
 		keyWords: 'ultimate thunder resist',
 		name: 'Ultimate Thunder Resist',
+		pageIndex: 137,
 	},
 	{
 		description: 'Gain ultimate growth. Greatly increases expected damage value.',
@@ -1002,6 +1138,7 @@ export const effectsList: Array<Effect> = [
 		index: 1420,
 		keyWords: 'ultimate growth',
 		name: 'Ultimate Growth',
+		pageIndex: 138,
 	},
 	{
 		description: "Gain ultimate revival. Automatically revive on your next turn after being KO'd.",
@@ -1009,6 +1146,7 @@ export const effectsList: Array<Effect> = [
 		index: 1421,
 		keyWords: 'ultimate revival',
 		name: 'Ultimate Revival',
+		pageIndex: 139,
 	},
 	{
 		description: 'Gain ultimate reduction. You have a 35% chance after a turn to reduce wait time by 25%.',
@@ -1016,6 +1154,7 @@ export const effectsList: Array<Effect> = [
 		index: 1425,
 		keyWords: 'ultimate reduction',
 		name: 'Ultimate Reduction',
+		pageIndex: 140,
 	},
 	{
 		description: 'Explodes to deal physical damage to the target. Its power is small.',
@@ -1023,6 +1162,7 @@ export const effectsList: Array<Effect> = [
 		index: 111,
 		keyWords: 'explodes',
 		name: 'Explodes',
+		pageIndex: 141,
 	},
 	{
 		description: 'The attack area becomes single target, but deals ultimate additional damage that ignores defense.',
@@ -1030,6 +1170,7 @@ export const effectsList: Array<Effect> = [
 		index: 125,
 		keyWords: 'pinpoint flare',
 		name: 'Pinpoint Flare',
+		pageIndex: 142,
 	},
 	{
 		description:
@@ -1038,6 +1179,7 @@ export const effectsList: Array<Effect> = [
 		index: 129,
 		keyWords: 'intense shock',
 		name: 'Intense Shock',
+		pageIndex: 143,
 	},
 	{
 		description:
@@ -1046,6 +1188,7 @@ export const effectsList: Array<Effect> = [
 		index: 134,
 		keyWords: 'call tempest',
 		name: 'Call Tempest',
+		pageIndex: 144,
 	},
 	{
 		description: "Activates automatically when the user's HP falls below 40%.",
@@ -1053,6 +1196,7 @@ export const effectsList: Array<Effect> = [
 		index: 140,
 		keyWords: 'enthusiastic',
 		name: 'Enthusiastic',
+		pageIndex: 145,
 	},
 	{
 		description: 'The rain of fire spawns meteors, dealing big fixed additional damage to the target.',
@@ -1060,6 +1204,7 @@ export const effectsList: Array<Effect> = [
 		index: 142,
 		keyWords: 'shooting stars',
 		name: 'Shooting Stars',
+		pageIndex: 146,
 	},
 	{
 		description: "Restores the target's HP by an extreme amount.",
@@ -1067,6 +1212,7 @@ export const effectsList: Array<Effect> = [
 		index: 200,
 		keyWords: 'hp recovery xxl',
 		name: 'HP Recovery XXL',
+		pageIndex: 147,
 	},
 	{
 		description: "Restores the target's MP by a small amount.",
@@ -1074,6 +1220,7 @@ export const effectsList: Array<Effect> = [
 		index: 202,
 		keyWords: 'mp recovery s',
 		name: 'MP Recovery S',
+		pageIndex: 148,
 	},
 	{
 		description: "Restores a slight amount of the target's HP and LP.",
@@ -1081,6 +1228,7 @@ export const effectsList: Array<Effect> = [
 		index: 218,
 		keyWords: 'hplp recovery xs',
 		name: 'HPLP Recovery XS',
+		pageIndex: 149,
 	},
 	{
 		description: "Restores a large amount of the target's HP and LP.",
@@ -1088,6 +1236,7 @@ export const effectsList: Array<Effect> = [
 		index: 221,
 		keyWords: 'hplp recovery l',
 		name: 'HPLP Recovery L',
+		pageIndex: 150,
 	},
 	{
 		description: 'Sits in the stomach, delaying your turn in battle a slight amount. Also restores LP.',
@@ -1095,6 +1244,7 @@ export const effectsList: Array<Effect> = [
 		index: 284,
 		keyWords: 'a little filling',
 		name: 'A Little Filling',
+		pageIndex: 151,
 	},
 	{
 		description: "It's so bad tasting that it causes pain, inflicting damage.",
@@ -1102,6 +1252,7 @@ export const effectsList: Array<Effect> = [
 		index: 290,
 		keyWords: 'bad taste',
 		name: 'Bad Taste',
+		pageIndex: 152,
 	},
 	{
 		description: 'The nutritious flavor increases all stats by a small amount.',
@@ -1109,6 +1260,7 @@ export const effectsList: Array<Effect> = [
 		index: 305,
 		keyWords: 'nutritious',
 		name: 'Nutritious',
+		pageIndex: 153,
 	},
 	{
 		description: 'The highly nourishing flavor increases all stats.',
@@ -1116,6 +1268,7 @@ export const effectsList: Array<Effect> = [
 		index: 306,
 		keyWords: 'very nutritious',
 		name: 'Very Nutritious',
+		pageIndex: 154,
 	},
 	{
 		description: 'Grants the target a slight HP recovery bonus.',
@@ -1123,6 +1276,7 @@ export const effectsList: Array<Effect> = [
 		index: 360,
 		keyWords: 'recovery bonus xs',
 		name: 'Recovery Bonus XS',
+		pageIndex: 155,
 	},
 	{
 		description: 'The target recovers from Slow.',
@@ -1130,6 +1284,7 @@ export const effectsList: Array<Effect> = [
 		index: 377,
 		keyWords: 'cures slow',
 		name: 'Cures Slow',
+		pageIndex: 156,
 	},
 	{
 		description: 'The target recovers a small amount of Break value.',
@@ -1137,6 +1292,7 @@ export const effectsList: Array<Effect> = [
 		index: 365,
 		keyWords: 'clears the mind',
 		name: 'Clears the Mind',
+		pageIndex: 157,
 	},
 	{
 		description: 'The target recovers a large amount of Break value.',
@@ -1144,6 +1300,7 @@ export const effectsList: Array<Effect> = [
 		index: 368,
 		keyWords: 'peppy',
 		name: 'Peppy',
+		pageIndex: 158,
 	},
 	{
 		description: 'Revives the target from KO, and restores a huge amount of HP.',
@@ -1151,6 +1308,7 @@ export const effectsList: Array<Effect> = [
 		index: 374,
 		keyWords: 'revive from ko xl',
 		name: 'Revive from KO XL',
+		pageIndex: 159,
 	},
 	{
 		description: 'The target recovers from Curse.',
@@ -1158,6 +1316,7 @@ export const effectsList: Array<Effect> = [
 		index: 378,
 		keyWords: 'cures curse',
 		name: 'Cures Curse',
+		pageIndex: 160,
 	},
 	{
 		description: 'The target recovers from 1 ailment.',
@@ -1165,6 +1324,7 @@ export const effectsList: Array<Effect> = [
 		index: 384,
 		keyWords: 'removes 1 ailment',
 		name: 'Removes 1 Ailment',
+		pageIndex: 161,
 	},
 	{
 		description: 'Grants all allies fire resistance.',
@@ -1172,6 +1332,7 @@ export const effectsList: Array<Effect> = [
 		index: 439,
 		keyWords: 'fire spirit blessing',
 		name: 'Fire Spirit Blessing',
+		pageIndex: 162,
 	},
 	{
 		description: 'Temporarily reduces physical damage taken by the target. The effect is decent.',
@@ -1179,6 +1340,7 @@ export const effectsList: Array<Effect> = [
 		index: 445,
 		keyWords: "angel's protection l",
 		name: "Angel's Protection L",
+		pageIndex: 163,
 	},
 	{
 		description:
@@ -1187,6 +1349,7 @@ export const effectsList: Array<Effect> = [
 		index: 449,
 		keyWords: 'goddess protection',
 		name: 'Goddess Protection',
+		pageIndex: 164,
 	},
 	{
 		description:
@@ -1195,6 +1358,7 @@ export const effectsList: Array<Effect> = [
 		index: 450,
 		keyWords: 'goddess blessing',
 		name: 'Goddess Blessing',
+		pageIndex: 165,
 	},
 	{
 		description: 'Deals damage to the target, but increases base damage on the next turn.',
@@ -1202,6 +1366,7 @@ export const effectsList: Array<Effect> = [
 		index: 457,
 		keyWords: 'draws out power',
 		name: 'Draws Out Power',
+		pageIndex: 166,
 	},
 	{
 		description: 'Item becomes a timed effect, allowing it to activate again. Effect lasts 1 turn.',
@@ -1209,6 +1374,7 @@ export const effectsList: Array<Effect> = [
 		index: 463,
 		keyWords: 'activate split',
 		name: 'Activate Split',
+		pageIndex: 167,
 	},
 	{
 		description: 'Item becomes a timed effect, allowing it to activate again. Effect lasts 3 turns.',
@@ -1216,6 +1382,7 @@ export const effectsList: Array<Effect> = [
 		index: 465,
 		keyWords: 'activate division',
 		name: 'Activate Division',
+		pageIndex: 168,
 	},
 	{
 		description: "Increases the target's attack power a little. The effect lasts 5 turns.",
@@ -1223,6 +1390,7 @@ export const effectsList: Array<Effect> = [
 		index: 510,
 		keyWords: 'attack up s',
 		name: 'Attack Up S',
+		pageIndex: 169,
 	},
 	{
 		description: "Increases the target's defense by a lot. The effect lasts 5 turns.",
@@ -1230,6 +1398,7 @@ export const effectsList: Array<Effect> = [
 		index: 515,
 		keyWords: 'defense up l',
 		name: 'Defense Up L',
+		pageIndex: 170,
 	},
 	{
 		description: "Increases all the target's stats a little. The effect lasts 5 turns.",
@@ -1237,6 +1406,7 @@ export const effectsList: Array<Effect> = [
 		index: 519,
 		keyWords: 'all stats up s',
 		name: 'All Stats Up S',
+		pageIndex: 171,
 	},
 	{
 		description: "Increases all the target's stats. The effect lasts 5 turns.",
@@ -1244,6 +1414,7 @@ export const effectsList: Array<Effect> = [
 		index: 520,
 		keyWords: 'all stats up m',
 		name: 'All Stats Up M',
+		pageIndex: 172,
 	},
 	{
 		description: "Increases the target's evasion rate. The effect lasts 5 turns.",
@@ -1251,6 +1422,7 @@ export const effectsList: Array<Effect> = [
 		index: 526,
 		keyWords: 'evasion up m',
 		name: 'Evasion Up M',
+		pageIndex: 173,
 	},
 	{
 		description: "Increases the target's chance to score a critical hit by a large amount.",
@@ -1258,6 +1430,7 @@ export const effectsList: Array<Effect> = [
 		index: 530,
 		keyWords: 'crit rate up l',
 		name: 'Crit Rate Up L',
+		pageIndex: 174,
 	},
 	{
 		description: 'The target recovers HP on each turn. The effect lasts for 5 turns.',
@@ -1265,6 +1438,7 @@ export const effectsList: Array<Effect> = [
 		index: 536,
 		keyWords: 'hp regen m',
 		name: 'HP Regen M',
+		pageIndex: 175,
 	},
 	{
 		description: "Temporarily increases the target's maximum HP in battle. The effect is small.",
@@ -1272,6 +1446,7 @@ export const effectsList: Array<Effect> = [
 		index: 546,
 		keyWords: 'temp stamina up s',
 		name: 'Temp Stamina Up S',
+		pageIndex: 176,
 	},
 	{
 		description: "Temporarily increases the target's maximum HP in battle. The effect is moderate.",
@@ -1279,6 +1454,7 @@ export const effectsList: Array<Effect> = [
 		index: 547,
 		keyWords: 'temp stamina up m',
 		name: 'Temp Stamina Up M',
+		pageIndex: 177,
 	},
 	{
 		description: 'Reduces the effectiveness of status ailments by a little.',
@@ -1286,6 +1462,7 @@ export const effectsList: Array<Effect> = [
 		index: 555,
 		keyWords: 'reduce ailments s',
 		name: 'Reduce Ailments S',
+		pageIndex: 178,
 	},
 	{
 		description: "Increases the target's chance to activate a chain attack by 25%. Effect lasts 5 turns.",
@@ -1293,6 +1470,7 @@ export const effectsList: Array<Effect> = [
 		index: 561,
 		keyWords: 'chain attack up s',
 		name: 'Chain Attack Up S',
+		pageIndex: 179,
 	},
 	{
 		description: 'Increases damage dealt to Broken enemies by 50%. Effect lasts 5 turns.',
@@ -1300,6 +1478,7 @@ export const effectsList: Array<Effect> = [
 		index: 566,
 		keyWords: 'more opportunity l',
 		name: 'More Opportunity L',
+		pageIndex: 180,
 	},
 	{
 		description:
@@ -1308,6 +1487,7 @@ export const effectsList: Array<Effect> = [
 		index: 619,
 		keyWords: 'appetizing aroma',
 		name: 'Appetizing Aroma',
+		pageIndex: 181,
 	},
 	{
 		description:
@@ -1316,6 +1496,7 @@ export const effectsList: Array<Effect> = [
 		index: 620,
 		keyWords: 'tempting aroma',
 		name: 'Tempting Aroma',
+		pageIndex: 182,
 	},
 	{
 		description: "Reduces the target's defense by a small amount, and temporarily increases your own by that amount.",
@@ -1323,6 +1504,7 @@ export const effectsList: Array<Effect> = [
 		index: 629,
 		keyWords: 'steal defense s',
 		name: 'Steal Defense S',
+		pageIndex: 183,
 	},
 	{
 		description: "Reduces the target's speed, and temporarily increases your own by that amount.",
@@ -1330,6 +1512,7 @@ export const effectsList: Array<Effect> = [
 		index: 633,
 		keyWords: 'steal speed m',
 		name: 'Steal Speed M',
+		pageIndex: 184,
 	},
 	{
 		description: '',
@@ -1337,6 +1520,7 @@ export const effectsList: Array<Effect> = [
 		index: 637,
 		keyWords: 'purge enhancements',
 		name: 'Purge Enhancements',
+		pageIndex: 185,
 	},
 	{
 		description: "Greatly reduces the target's attack power.",
@@ -1344,6 +1528,7 @@ export const effectsList: Array<Effect> = [
 		index: 690,
 		keyWords: 'attack down l',
 		name: 'Attack Down L',
+		pageIndex: 186,
 	},
 	{
 		description: "Reduces the target's defense.",
@@ -1351,6 +1536,7 @@ export const effectsList: Array<Effect> = [
 		index: 692,
 		keyWords: 'defense down m',
 		name: 'Defense Down M',
+		pageIndex: 187,
 	},
 	{
 		description:
@@ -1359,6 +1545,7 @@ export const effectsList: Array<Effect> = [
 		index: 706,
 		keyWords: 'inflict slow s',
 		name: 'Inflict Slow S',
+		pageIndex: 188,
 	},
 	{
 		description:
@@ -1367,6 +1554,7 @@ export const effectsList: Array<Effect> = [
 		index: 709,
 		keyWords: 'inflict curse s',
 		name: 'Inflict Curse S',
+		pageIndex: 189,
 	},
 	{
 		description:
@@ -1375,6 +1563,7 @@ export const effectsList: Array<Effect> = [
 		index: 710,
 		keyWords: 'inflict curse m',
 		name: 'Inflict Curse M',
+		pageIndex: 190,
 	},
 	{
 		description:
@@ -1383,6 +1572,7 @@ export const effectsList: Array<Effect> = [
 		index: 714,
 		keyWords: 'inflict blind l',
 		name: 'Inflict Blind L',
+		pageIndex: 191,
 	},
 	{
 		description: 'Inflicts 3 random status effects on the target. The chance and effect are both low.',
@@ -1390,6 +1580,7 @@ export const effectsList: Array<Effect> = [
 		index: 724,
 		keyWords: 'inflict corruption s',
 		name: 'Inflict Corruption S',
+		pageIndex: 192,
 	},
 	{
 		description:
@@ -1398,6 +1589,7 @@ export const effectsList: Array<Effect> = [
 		index: 739,
 		keyWords: 'weak to impacts',
 		name: 'Weak to Impacts',
+		pageIndex: 193,
 	},
 	{
 		description: 'Sharp thorns inside burst out, dealing physical damage to the target. Its power is fairly high.',
@@ -1405,6 +1597,7 @@ export const effectsList: Array<Effect> = [
 		index: 112,
 		keyWords: 'thorn attack',
 		name: 'Thorn Attack',
+		pageIndex: 194,
 	},
 	{
 		description: 'Deals fixed damage to the target, unaffected by defense. Its power is small.',
@@ -1412,6 +1605,7 @@ export const effectsList: Array<Effect> = [
 		index: 117,
 		keyWords: 'piercing damage m',
 		name: 'Piercing Damage M',
+		pageIndex: 195,
 	},
 	{
 		description: 'Emits a hotter than usual flame, dealing a large amount of additional damage that ignores defense.',
@@ -1419,6 +1613,7 @@ export const effectsList: Array<Effect> = [
 		index: 124,
 		keyWords: 'blue flames',
 		name: 'Blue Flames',
+		pageIndex: 196,
 	},
 	{
 		description: "Expands the item's area of effect a little.",
@@ -1426,6 +1621,7 @@ export const effectsList: Array<Effect> = [
 		index: 135,
 		keyWords: 'expand effect area',
 		name: 'Expand Effect Area',
+		pageIndex: 197,
 	},
 	{
 		description:
@@ -1434,6 +1630,7 @@ export const effectsList: Array<Effect> = [
 		index: 143,
 		keyWords: 'treat hazardous materials',
 		name: 'Treat Hazardous Materials',
+		pageIndex: 198,
 	},
 	{
 		description: "Restores the target's HP by a huge amount.",
@@ -1441,6 +1638,7 @@ export const effectsList: Array<Effect> = [
 		index: 199,
 		keyWords: 'hp recovery xl',
 		name: 'HP Recovery XL',
+		pageIndex: 199,
 	},
 	{
 		description: "Restores the target's MP.",
@@ -1448,6 +1646,7 @@ export const effectsList: Array<Effect> = [
 		index: 203,
 		keyWords: 'mp recovery m',
 		name: 'MP Recovery M',
+		pageIndex: 200,
 	},
 	{
 		description: "Restores the target's LP by a large amount.",
@@ -1455,6 +1654,7 @@ export const effectsList: Array<Effect> = [
 		index: 210,
 		keyWords: 'lp recovery l',
 		name: 'LP Recovery L',
+		pageIndex: 201,
 	},
 	{
 		description: "Restores a slight amount of the target's HP and MP.",
@@ -1462,6 +1662,7 @@ export const effectsList: Array<Effect> = [
 		index: 213,
 		keyWords: 'hpmp recovery xs',
 		name: 'HPMP Recovery XS',
+		pageIndex: 202,
 	},
 	{
 		description: "Restores the target's HP and LP.",
@@ -1469,6 +1670,7 @@ export const effectsList: Array<Effect> = [
 		index: 220,
 		keyWords: 'hplp recovery m',
 		name: 'HPLP Recovery M',
+		pageIndex: 203,
 	},
 	{
 		description: "Restores a slight amount of the target's HP and LP.",
@@ -1476,6 +1678,7 @@ export const effectsList: Array<Effect> = [
 		index: 223,
 		keyWords: 'mplp recovery xs',
 		name: 'MPLP Recovery XS',
+		pageIndex: 204,
 	},
 	{
 		description:
@@ -1484,6 +1687,7 @@ export const effectsList: Array<Effect> = [
 		index: 283,
 		keyWords: 'eat and recover xxl',
 		name: 'Eat and Recover XXL',
+		pageIndex: 205,
 	},
 	{
 		description: "It's so hard that it slows you down, inflicting Slow. The effect is moderate.",
@@ -1491,6 +1695,7 @@ export const effectsList: Array<Effect> = [
 		index: 287,
 		keyWords: 'hard',
 		name: 'Hard',
+		pageIndex: 206,
 	},
 	{
 		description: "This is digested so quickly that it doesn't affect the body.",
@@ -1498,6 +1703,7 @@ export const effectsList: Array<Effect> = [
 		index: 289,
 		keyWords: 'digests quickly',
 		name: 'Digests Quickly',
+		pageIndex: 207,
 	},
 	{
 		description: 'The crumbly texture makes you feel weird, reducing defense a small amount.',
@@ -1505,6 +1711,7 @@ export const effectsList: Array<Effect> = [
 		index: 302,
 		keyWords: 'crumbly',
 		name: 'Crumbly',
+		pageIndex: 208,
 	},
 	{
 		description: 'The target recovers from Weak.',
@@ -1512,6 +1719,7 @@ export const effectsList: Array<Effect> = [
 		index: 380,
 		keyWords: 'cures weak',
 		name: 'Cures Weak',
+		pageIndex: 209,
 	},
 	{
 		description:
@@ -1520,6 +1728,7 @@ export const effectsList: Array<Effect> = [
 		index: 304,
 		keyWords: 'strange elasticity',
 		name: 'Strange Elasticity',
+		pageIndex: 210,
 	},
 	{
 		description: "Restores the target's HP. Recovery amount increases the closer it is to 3pm.",
@@ -1527,6 +1736,7 @@ export const effectsList: Array<Effect> = [
 		index: 308,
 		keyWords: 'snack companion',
 		name: 'Snack Companion',
+		pageIndex: 211,
 	},
 	{
 		description: 'Item use count might not decrease when used. The chance is high.',
@@ -1534,6 +1744,7 @@ export const effectsList: Array<Effect> = [
 		index: 462,
 		keyWords: 'recycle',
 		name: 'Recycle',
+		pageIndex: 212,
 	},
 	{
 		description: "Activates automatically when the user's HP falls below 20%.",
@@ -1541,6 +1752,7 @@ export const effectsList: Array<Effect> = [
 		index: 466,
 		keyWords: 'auto activate 20%',
 		name: 'Auto Activate 20%',
+		pageIndex: 213,
 	},
 	{
 		description: "Increases all the target's stats by a lot. The effect lasts 5 turns.",
@@ -1548,6 +1760,7 @@ export const effectsList: Array<Effect> = [
 		index: 521,
 		keyWords: 'all stats up l',
 		name: 'All Stats Up L',
+		pageIndex: 214,
 	},
 	{
 		description: "Increases the target's hit rate by a lot. The effect lasts 5 turns.",
@@ -1555,6 +1768,7 @@ export const effectsList: Array<Effect> = [
 		index: 524,
 		keyWords: 'hit rate up l',
 		name: 'Hit Rate Up L',
+		pageIndex: 215,
 	},
 	{
 		description: "Increases the target's evasion rate by a lot. The effect lasts 5 turns.",
@@ -1562,6 +1776,7 @@ export const effectsList: Array<Effect> = [
 		index: 527,
 		keyWords: 'evasion up l',
 		name: 'Evasion Up L',
+		pageIndex: 216,
 	},
 	{
 		description: "Increases the target's critical hit damage bonus by a decent amount.",
@@ -1569,6 +1784,7 @@ export const effectsList: Array<Effect> = [
 		index: 532,
 		keyWords: 'crit power up m',
 		name: 'Crit Power Up M',
+		pageIndex: 217,
 	},
 	{
 		description: 'The target recovers a small amount of HP on each turn. The effect lasts for 5 turns.',
@@ -1576,6 +1792,7 @@ export const effectsList: Array<Effect> = [
 		index: 535,
 		keyWords: 'hp regen s',
 		name: 'HP Regen S',
+		pageIndex: 218,
 	},
 	{
 		description: 'The target recovers a huge amount of HP on each turn. The effect lasts for 5 turns.',
@@ -1583,6 +1800,7 @@ export const effectsList: Array<Effect> = [
 		index: 538,
 		keyWords: 'hp regen xl',
 		name: 'HP Regen XL',
+		pageIndex: 219,
 	},
 	{
 		description: "Automatically revive on the next turn after being KO'd. HP after revival is low.",
@@ -1590,6 +1808,7 @@ export const effectsList: Array<Effect> = [
 		index: 552,
 		keyWords: 'auto revive s',
 		name: 'Auto Revive S',
+		pageIndex: 220,
 	},
 	{
 		description: "Reduces wait time after the target's next turn by a fair bit.",
@@ -1597,6 +1816,7 @@ export const effectsList: Array<Effect> = [
 		index: 559,
 		keyWords: 'cut wait time m',
 		name: 'Cut Wait Time M',
+		pageIndex: 221,
 	},
 	{
 		description: "Increases the target's chance to activate a chain attack by 75%. Effect lasts 5 turns.",
@@ -1604,6 +1824,7 @@ export const effectsList: Array<Effect> = [
 		index: 563,
 		keyWords: 'chain attack up l',
 		name: 'Chain Attack Up L',
+		pageIndex: 222,
 	},
 	{
 		description:
@@ -1612,6 +1833,7 @@ export const effectsList: Array<Effect> = [
 		index: 618,
 		keyWords: 'tasty aroma',
 		name: 'Tasty Aroma',
+		pageIndex: 223,
 	},
 	{
 		description: "Reduces the target's attack, and temporarily increases your own by that amount.",
@@ -1619,6 +1841,7 @@ export const effectsList: Array<Effect> = [
 		index: 627,
 		keyWords: 'steal attack m',
 		name: 'Steal Attack M',
+		pageIndex: 224,
 	},
 	{
 		description: "Reduces the target's speed by a large amount, and temporarily increases your own by that amount.",
@@ -1626,6 +1849,7 @@ export const effectsList: Array<Effect> = [
 		index: 634,
 		keyWords: 'steal speed l',
 		name: 'Steal Speed L',
+		pageIndex: 225,
 	},
 	{
 		description: "Slightly reduces the target's attack power.",
@@ -1633,6 +1857,7 @@ export const effectsList: Array<Effect> = [
 		index: 688,
 		keyWords: 'attack down s',
 		name: 'Attack Down S',
+		pageIndex: 226,
 	},
 	{
 		description: "Greatly reduces the target's defense.",
@@ -1640,6 +1865,7 @@ export const effectsList: Array<Effect> = [
 		index: 693,
 		keyWords: 'defense down l',
 		name: 'Defense Down L',
+		pageIndex: 227,
 	},
 	{
 		description: "Greatly reduces all of the target's stats.",
@@ -1647,6 +1873,7 @@ export const effectsList: Array<Effect> = [
 		index: 699,
 		keyWords: 'all stats down l',
 		name: 'All Stats Down L',
+		pageIndex: 228,
 	},
 	{
 		description:
@@ -1655,6 +1882,7 @@ export const effectsList: Array<Effect> = [
 		index: 705,
 		keyWords: 'inflict poison l',
 		name: 'Inflict Poison L',
+		pageIndex: 229,
 	},
 	{
 		description:
@@ -1663,6 +1891,7 @@ export const effectsList: Array<Effect> = [
 		index: 715,
 		keyWords: 'inflict weak s',
 		name: 'Inflict Weak S',
+		pageIndex: 230,
 	},
 	{
 		description: 'Inflicts 3 random status effects on the target. The chance and effect are both moderate.',
@@ -1670,6 +1899,7 @@ export const effectsList: Array<Effect> = [
 		index: 725,
 		keyWords: 'inflict corruption m',
 		name: 'Inflict Corruption M',
+		pageIndex: 231,
 	},
 	{
 		description: 'Increases attack, defense, and speed by 15% in the morning. No effect during other times.',
@@ -1677,6 +1907,7 @@ export const effectsList: Array<Effect> = [
 		index: 1036,
 		keyWords: 'strong in morning',
 		name: 'Strong in Morning',
+		pageIndex: 232,
 	},
 	{
 		description: 'Reduces defense by 15%, increasing attack by that amount.',
@@ -1684,6 +1915,7 @@ export const effectsList: Array<Effect> = [
 		index: 1043,
 		keyWords: 'protection to power',
 		name: 'Protection to Power',
+		pageIndex: 233,
 	},
 	{
 		description: 'Greatly increases attack, defense, and speed when ailments are removed.',
@@ -1691,6 +1923,7 @@ export const effectsList: Array<Effect> = [
 		index: 1050,
 		keyWords: 'power of ten',
 		name: 'Power of Ten',
+		pageIndex: 234,
 	},
 	{
 		description: 'The hidden magic of the Speed Rune increases speed by 15.',
@@ -1698,6 +1931,7 @@ export const effectsList: Array<Effect> = [
 		index: 1053,
 		keyWords: 'speed rune',
 		name: 'Speed Rune',
+		pageIndex: 235,
 	},
 	{
 		description: 'The hidden magic of the Bulwark Rune reduces all damage taken.',
@@ -1705,6 +1939,7 @@ export const effectsList: Array<Effect> = [
 		index: 1059,
 		keyWords: 'bulwark rune',
 		name: 'Bulwark Rune',
+		pageIndex: 236,
 	},
 	{
 		description: 'The power of the spirit king greatly increases base damage.',
@@ -1712,6 +1947,7 @@ export const effectsList: Array<Effect> = [
 		index: 1062,
 		keyWords: "spirit king's power",
 		name: "Spirit King's Power",
+		pageIndex: 237,
 	},
 	{
 		description: 'Find paths to escape, massively increasing the success rate of “Run”.',
@@ -1719,6 +1955,7 @@ export const effectsList: Array<Effect> = [
 		index: 1066,
 		keyWords: 'search for escape',
 		name: 'Search for Escape',
+		pageIndex: 238,
 	},
 	{
 		description: 'The target recovers a large amount of HP on each turn. The effect lasts for 5 turns.',
@@ -1726,6 +1963,7 @@ export const effectsList: Array<Effect> = [
 		index: 1096,
 		keyWords: 'hp regen l',
 		name: 'HP Regen L',
+		pageIndex: 239,
 	},
 	{
 		description: 'MP recovers on each turn.',
@@ -1733,6 +1971,7 @@ export const effectsList: Array<Effect> = [
 		index: 1100,
 		keyWords: 'mp regen l',
 		name: 'MP Regen L',
+		pageIndex: 240,
 	},
 	{
 		description: 'Increases maximum MP by 30.',
@@ -1740,6 +1979,7 @@ export const effectsList: Array<Effect> = [
 		index: 1111,
 		keyWords: 'max mp up xl',
 		name: 'Max MP Up XL',
+		pageIndex: 241,
 	},
 	{
 		description: 'Increases defense by 25.',
@@ -1747,6 +1987,7 @@ export const effectsList: Array<Effect> = [
 		index: 1121,
 		keyWords: 'defense up xl',
 		name: 'Defense Up XL',
+		pageIndex: 242,
 	},
 	{
 		description: "Increases the target's speed by a lot. The effect lasts 5 turns.",
@@ -1754,6 +1995,7 @@ export const effectsList: Array<Effect> = [
 		index: 1125,
 		keyWords: 'speed up l',
 		name: 'Speed Up L',
+		pageIndex: 243,
 	},
 	{
 		description: "Increases the target's evasion rate a little. The effect lasts 5 turns.",
@@ -1761,6 +2003,7 @@ export const effectsList: Array<Effect> = [
 		index: 1133,
 		keyWords: 'evasion up s',
 		name: 'Evasion Up S',
+		pageIndex: 244,
 	},
 	{
 		description: 'Increases evasion rate by 12%.',
@@ -1768,6 +2011,7 @@ export const effectsList: Array<Effect> = [
 		index: 1136,
 		keyWords: 'evasion up xl',
 		name: 'Evasion Up XL',
+		pageIndex: 245,
 	},
 	{
 		description: 'Increases critical damage bonus by 9%.',
@@ -1775,6 +2019,7 @@ export const effectsList: Array<Effect> = [
 		index: 1144,
 		keyWords: 'critical enhance m',
 		name: 'Critical Enhance M',
+		pageIndex: 246,
 	},
 	{
 		description: 'Reduces wait time after using item by 10%.',
@@ -1782,6 +2027,7 @@ export const effectsList: Array<Effect> = [
 		index: 1154,
 		keyWords: 'item shorten s',
 		name: 'Item Shorten S',
+		pageIndex: 247,
 	},
 	{
 		description: 'Increases Burst Gauge fill rate by 3%.',
@@ -1789,6 +2035,7 @@ export const effectsList: Array<Effect> = [
 		index: 1159,
 		keyWords: 'burst up +3%',
 		name: 'Burst Up +3%',
+		pageIndex: 248,
 	},
 	{
 		description: 'Reduces chance of being affected by ailments by a slight amount.',
@@ -1796,6 +2043,7 @@ export const effectsList: Array<Effect> = [
 		index: 1171,
 		keyWords: 'ailment resist xs',
 		name: 'Ailment Resist XS',
+		pageIndex: 249,
 	},
 	{
 		description: 'Thorns stick into the target, draining HP over time. The effect is very small.',
@@ -1803,6 +2051,7 @@ export const effectsList: Array<Effect> = [
 		index: 113,
 		keyWords: 'sticking thorns',
 		name: 'Sticking Thorns',
+		pageIndex: 250,
 	},
 	{
 		description: 'Deals fixed damage to the target, unaffected by defense. Its power is big.',
@@ -1810,6 +2059,7 @@ export const effectsList: Array<Effect> = [
 		index: 118,
 		keyWords: 'piercing damage l',
 		name: 'Piercing Damage L',
+		pageIndex: 251,
 	},
 	{
 		description: 'A vast level of unending heat deals continuous damage. The effect is supremely big.',
@@ -1817,6 +2067,7 @@ export const effectsList: Array<Effect> = [
 		index: 123,
 		keyWords: 'scorching earth',
 		name: 'Scorching Earth',
+		pageIndex: 252,
 	},
 	{
 		description: "Expands the item's area of effect.",
@@ -1824,6 +2075,7 @@ export const effectsList: Array<Effect> = [
 		index: 136,
 		keyWords: 'expand effect area +',
 		name: 'Expand Effect Area +',
+		pageIndex: 253,
 	},
 	{
 		description: "Activates automatically when the user's HP falls below 20%.",
@@ -1831,6 +2083,7 @@ export const effectsList: Array<Effect> = [
 		index: 138,
 		keyWords: 'alive',
 		name: 'Alive',
+		pageIndex: 254,
 	},
 	{
 		description: 'Deals additional big fixed damage to the target.',
@@ -1838,6 +2091,7 @@ export const effectsList: Array<Effect> = [
 		index: 141,
 		keyWords: 'black bullets',
 		name: 'Black Bullets',
+		pageIndex: 255,
 	},
 	{
 		description: "Restores the target's LP by a small amount.",
@@ -1845,6 +2099,7 @@ export const effectsList: Array<Effect> = [
 		index: 208,
 		keyWords: 'lp recovery s',
 		name: 'LP Recovery S',
+		pageIndex: 256,
 	},
 	{
 		description: "Restores the target's HP and MP.",
@@ -1852,6 +2107,7 @@ export const effectsList: Array<Effect> = [
 		index: 215,
 		keyWords: 'hpmp recovery m',
 		name: 'HPMP Recovery M',
+		pageIndex: 257,
 	},
 	{
 		description: "Restores the target's HP and LP.",
@@ -1859,6 +2115,7 @@ export const effectsList: Array<Effect> = [
 		index: 225,
 		keyWords: 'mplp recovery m',
 		name: 'MPLP Recovery M',
+		pageIndex: 258,
 	},
 	{
 		description: "Restores the whole party's HP by a small amount.",
@@ -1866,6 +2123,7 @@ export const effectsList: Array<Effect> = [
 		index: 229,
 		keyWords: 'tranquil aroma',
 		name: 'Tranquil Aroma',
+		pageIndex: 259,
 	},
 	{
 		description:
@@ -1874,6 +2132,7 @@ export const effectsList: Array<Effect> = [
 		index: 279,
 		keyWords: 'eat and recover s',
 		name: 'Eat and Recover S',
+		pageIndex: 260,
 	},
 	{
 		description: 'Sits in the stomach, delaying your turn in battle. Also restores LP.',
@@ -1881,6 +2140,7 @@ export const effectsList: Array<Effect> = [
 		index: 286,
 		keyWords: 'very filling',
 		name: 'Very Filling',
+		pageIndex: 261,
 	},
 	{
 		description: "Coldness slows down the body, reducing the target's speed a little.",
@@ -1888,6 +2148,7 @@ export const effectsList: Array<Effect> = [
 		index: 296,
 		keyWords: 'cold',
 		name: 'Cold',
+		pageIndex: 262,
 	},
 	{
 		description: "Warms the body, increasing the target's speed a lot, but also deals continuous damage.",
@@ -1895,6 +2156,7 @@ export const effectsList: Array<Effect> = [
 		index: 298,
 		keyWords: 'hot',
 		name: 'Hot',
+		pageIndex: 263,
 	},
 	{
 		description: "The fluffy texture is quite pleasant. Increases the target's defense a little.",
@@ -1902,6 +2164,7 @@ export const effectsList: Array<Effect> = [
 		index: 303,
 		keyWords: 'fluffy',
 		name: 'Fluffy',
+		pageIndex: 264,
 	},
 	{
 		description: 'Grants the target a small HP recovery bonus.',
@@ -1909,6 +2172,7 @@ export const effectsList: Array<Effect> = [
 		index: 361,
 		keyWords: 'recovery bonus s',
 		name: 'Recovery Bonus S',
+		pageIndex: 265,
 	},
 	{
 		description: 'The target recovers Break value.',
@@ -1916,6 +2180,7 @@ export const effectsList: Array<Effect> = [
 		index: 367,
 		keyWords: 'cure dizziness',
 		name: 'Cure Dizziness',
+		pageIndex: 266,
 	},
 	{
 		description: 'The target recovers a huge amount of Break value.',
@@ -1923,6 +2188,7 @@ export const effectsList: Array<Effect> = [
 		index: 369,
 		keyWords: 'great feeling',
 		name: 'Great Feeling',
+		pageIndex: 267,
 	},
 	{
 		description: 'The target recovers from revival After Effects.',
@@ -1930,6 +2196,7 @@ export const effectsList: Array<Effect> = [
 		index: 383,
 		keyWords: 'cures after effects',
 		name: 'Cures After Effects',
+		pageIndex: 268,
 	},
 	{
 		description: 'Grants all allies ice resistance.',
@@ -1937,6 +2204,7 @@ export const effectsList: Array<Effect> = [
 		index: 440,
 		keyWords: 'ice spirit blessing',
 		name: 'Ice Spirit Blessing',
+		pageIndex: 269,
 	},
 	{
 		description: 'Temporarily reduces physical damage taken by the target. The effect is fairly small.',
@@ -1944,6 +2212,7 @@ export const effectsList: Array<Effect> = [
 		index: 444,
 		keyWords: "angel's protection m",
 		name: "Angel's Protection M",
+		pageIndex: 270,
 	},
 	{
 		description:
@@ -1952,6 +2221,7 @@ export const effectsList: Array<Effect> = [
 		index: 451,
 		keyWords: 'heroic protection',
 		name: 'Heroic Protection',
+		pageIndex: 271,
 	},
 	{
 		description: 'Deals large damage to the target, but greatly increases base damage on the next turn.',
@@ -1959,6 +2229,7 @@ export const effectsList: Array<Effect> = [
 		index: 458,
 		keyWords: 'power overflowing',
 		name: 'Power Overflowing',
+		pageIndex: 272,
 	},
 	{
 		description: 'Item becomes a timed effect, allowing it to activate again. Effect lasts 2 turns.',
@@ -1966,6 +2237,7 @@ export const effectsList: Array<Effect> = [
 		index: 464,
 		keyWords: 'activate scatter',
 		name: 'Activate Scatter',
+		pageIndex: 273,
 	},
 	{
 		description: "Activates automatically when the user's HP falls below 30%.",
@@ -1973,6 +2245,7 @@ export const effectsList: Array<Effect> = [
 		index: 467,
 		keyWords: 'auto activate 30%',
 		name: 'Auto Activate 30%',
+		pageIndex: 274,
 	},
 	{
 		description: "Increases the target's defense a little. The effect lasts 5 turns.",
@@ -1980,6 +2253,7 @@ export const effectsList: Array<Effect> = [
 		index: 513,
 		keyWords: 'defense up s',
 		name: 'Defense Up S',
+		pageIndex: 275,
 	},
 	{
 		description: "Increases the target's speed by a lot. The effect lasts 5 turns.",
@@ -1987,6 +2261,7 @@ export const effectsList: Array<Effect> = [
 		index: 518,
 		keyWords: 'speed up l',
 		name: 'Speed Up L',
+		pageIndex: 276,
 	},
 	{
 		description: "Increases the target's hit rate. The effect lasts 5 turns.",
@@ -1994,6 +2269,7 @@ export const effectsList: Array<Effect> = [
 		index: 523,
 		keyWords: 'hit rate up m',
 		name: 'Hit Rate Up M',
+		pageIndex: 277,
 	},
 	{
 		description: "Increases the target's chance to score a critical hit by a small amount.",
@@ -2001,6 +2277,7 @@ export const effectsList: Array<Effect> = [
 		index: 528,
 		keyWords: 'crit rate up s',
 		name: 'Crit Rate Up S',
+		pageIndex: 278,
 	},
 	{
 		description: "Increases the target's critical hit damage bonus by a large amount.",
@@ -2008,6 +2285,7 @@ export const effectsList: Array<Effect> = [
 		index: 533,
 		keyWords: 'crit power up l',
 		name: 'Crit Power Up L',
+		pageIndex: 279,
 	},
 	{
 		description: 'The target recovers an extreme amount of HP on each turn. The effect lasts for 5 turns.',
@@ -2015,6 +2293,7 @@ export const effectsList: Array<Effect> = [
 		index: 539,
 		keyWords: 'hp regen xxl',
 		name: 'HP Regen XXL',
+		pageIndex: 280,
 	},
 	{
 		description: "Automatically revive on the next turn after being KO'd. HP after revival is moderate.",
@@ -2022,6 +2301,7 @@ export const effectsList: Array<Effect> = [
 		index: 553,
 		keyWords: 'auto revive m',
 		name: 'Auto Revive M',
+		pageIndex: 281,
 	},
 	{
 		description: 'Reduces the effectiveness of status ailments by a good amount.',
@@ -2029,6 +2309,7 @@ export const effectsList: Array<Effect> = [
 		index: 557,
 		keyWords: 'reduce ailments l',
 		name: 'Reduce Ailments L',
+		pageIndex: 282,
 	},
 	{
 		description: 'Increases damage dealt to Broken enemies by 35%. Effect lasts 5 turns.',
@@ -2036,6 +2317,7 @@ export const effectsList: Array<Effect> = [
 		index: 565,
 		keyWords: 'more opportunity m',
 		name: 'More Opportunity M',
+		pageIndex: 283,
 	},
 	{
 		description: "Reduces the target's attack by a small amount, and temporarily increases your own by that amount.",
@@ -2043,6 +2325,7 @@ export const effectsList: Array<Effect> = [
 		index: 626,
 		keyWords: 'steal attack s',
 		name: 'Steal Attack S',
+		pageIndex: 284,
 	},
 	{
 		description: "Reduces the target's defense, and temporarily increases your own by that amount.",
@@ -2050,6 +2333,7 @@ export const effectsList: Array<Effect> = [
 		index: 630,
 		keyWords: 'steal defense m',
 		name: 'Steal Defense M',
+		pageIndex: 285,
 	},
 	{
 		description: "Reduces the target's speed.",
@@ -2057,6 +2341,7 @@ export const effectsList: Array<Effect> = [
 		index: 695,
 		keyWords: 'speed down m',
 		name: 'Speed Down M',
+		pageIndex: 286,
 	},
 	{
 		description: "Reduces all of the target's stats.",
@@ -2064,6 +2349,7 @@ export const effectsList: Array<Effect> = [
 		index: 698,
 		keyWords: 'all stats down m',
 		name: 'All Stats Down M',
+		pageIndex: 287,
 	},
 	{
 		description:
@@ -2072,6 +2358,7 @@ export const effectsList: Array<Effect> = [
 		index: 701,
 		keyWords: 'inflict sleep m',
 		name: 'Inflict Sleep M',
+		pageIndex: 288,
 	},
 	{
 		description:
@@ -2080,6 +2367,7 @@ export const effectsList: Array<Effect> = [
 		index: 707,
 		keyWords: 'inflict slow m',
 		name: 'Inflict Slow M',
+		pageIndex: 289,
 	},
 	{
 		description:
@@ -2088,6 +2376,7 @@ export const effectsList: Array<Effect> = [
 		index: 712,
 		keyWords: 'inflict blind s',
 		name: 'Inflict Blind S',
+		pageIndex: 290,
 	},
 	{
 		description: 'Has a moderate chance of No Healing the target. No Heal causes all recovery effects to heal for 0.',
@@ -2095,6 +2384,7 @@ export const effectsList: Array<Effect> = [
 		index: 719,
 		keyWords: 'inflict no heal m',
 		name: 'Inflict No Heal M',
+		pageIndex: 291,
 	},
 	{
 		description:
@@ -2103,6 +2393,7 @@ export const effectsList: Array<Effect> = [
 		index: 727,
 		keyWords: 'reduce all resistances',
 		name: 'Reduce All Resistances',
+		pageIndex: 292,
 	},
 	{
 		description: 'Deals continuous damage to the target. The effect is small, and the time is short.',
@@ -2110,6 +2401,7 @@ export const effectsList: Array<Effect> = [
 		index: 734,
 		keyWords: 'damage over time s',
 		name: 'Damage Over Time S',
+		pageIndex: 293,
 	},
 	{
 		description: 'Reduces the rate at which enemies use powerful attacks.',
@@ -2117,6 +2409,7 @@ export const effectsList: Array<Effect> = [
 		index: 745,
 		keyWords: 'restrain attack m',
 		name: 'Restrain Attack M',
+		pageIndex: 294,
 	},
 	{
 		description: 'Consumes a huge amount of HP. The amount is influenced by maximum HP.',
@@ -2124,6 +2417,7 @@ export const effectsList: Array<Effect> = [
 		index: 801,
 		keyWords: 'consume hp xl',
 		name: 'Consume HP XL',
+		pageIndex: 295,
 	},
 	{
 		description: 'Increases the chances of finding better materials in the field.',
@@ -2131,6 +2425,7 @@ export const effectsList: Array<Effect> = [
 		index: 857,
 		keyWords: 'grow good materials?',
 		name: 'Grow Good Materials?',
+		pageIndex: 296,
 	},
 	{
 		description: 'Rest for 10 hours, restoring all HP, MP, and LP.',
@@ -2138,6 +2433,7 @@ export const effectsList: Array<Effect> = [
 		index: 860,
 		keyWords: 'rest 10 hours',
 		name: 'Rest 10 Hours',
+		pageIndex: 297,
 	},
 	{
 		description:
@@ -2146,6 +2442,7 @@ export const effectsList: Array<Effect> = [
 		index: 866,
 		keyWords: 'big cart',
 		name: 'Big Cart',
+		pageIndex: 298,
 	},
 	{
 		description: 'Reduces the chance of incidents.',
@@ -2153,6 +2450,7 @@ export const effectsList: Array<Effect> = [
 		index: 870,
 		keyWords: 'wards off danger',
 		name: 'Wards Off Danger',
+		pageIndex: 299,
 	},
 	{
 		description: 'Reduces the chance of incidents by a large amount.',
@@ -2160,6 +2458,7 @@ export const effectsList: Array<Effect> = [
 		index: 871,
 		keyWords: 'good health',
 		name: 'Good Health',
+		pageIndex: 300,
 	},
 	{
 		description: 'Reduces LP consumed while moving on the World Map to 0.',
@@ -2167,6 +2466,7 @@ export const effectsList: Array<Effect> = [
 		index: 927,
 		keyWords: 'lightens body a lot',
 		name: 'Lightens Body a Lot',
+		pageIndex: 301,
 	},
 	{
 		description: 'Reduces items lost by party wipe a little.',
@@ -2174,6 +2474,7 @@ export const effectsList: Array<Effect> = [
 		index: 933,
 		keyWords: 'prepared for emergency',
 		name: 'Prepared for Emergency',
+		pageIndex: 302,
 	},
 	{
 		description: 'Increases money gained from battle a little. Has no effect when money obtained is 0.',
@@ -2181,6 +2482,7 @@ export const effectsList: Array<Effect> = [
 		index: 939,
 		keyWords: 'find money',
 		name: 'Find Money',
+		pageIndex: 303,
 	},
 	{
 		description: 'Sharp thorns stick into the target, draining HP over time. The effect is small.',
@@ -2188,6 +2490,7 @@ export const effectsList: Array<Effect> = [
 		index: 114,
 		keyWords: 'painful thorns',
 		name: 'Painful Thorns',
+		pageIndex: 304,
 	},
 	{
 		description: 'Inextinguishable flames deal continuous damage. The effect is very big.',
@@ -2195,6 +2498,7 @@ export const effectsList: Array<Effect> = [
 		index: 122,
 		keyWords: 'inextinguishable flame',
 		name: 'Inextinguishable Flame',
+		pageIndex: 305,
 	},
 	{
 		description: "Restores the target's HP by a large amount.",
@@ -2202,6 +2506,7 @@ export const effectsList: Array<Effect> = [
 		index: 198,
 		keyWords: 'hp recovery l',
 		name: 'HP Recovery L',
+		pageIndex: 306,
 	},
 	{
 		description: "Restores the target's MP by a slight amount.",
@@ -2209,6 +2514,7 @@ export const effectsList: Array<Effect> = [
 		index: 201,
 		keyWords: 'mp recovery xs',
 		name: 'MP Recovery XS',
+		pageIndex: 307,
 	},
 	{
 		description: "Restores the target's MP by an extreme amount.",
@@ -2216,6 +2522,7 @@ export const effectsList: Array<Effect> = [
 		index: 206,
 		keyWords: 'mp recovery xxl',
 		name: 'MP Recovery XXL',
+		pageIndex: 308,
 	},
 	{
 		description: "Restores the target's LP by a huge amount.",
@@ -2223,6 +2530,7 @@ export const effectsList: Array<Effect> = [
 		index: 211,
 		keyWords: 'lp recovery xl',
 		name: 'LP Recovery XL',
+		pageIndex: 309,
 	},
 	{
 		description: "Restores a large amount of the target's HP and MP.",
@@ -2230,6 +2538,7 @@ export const effectsList: Array<Effect> = [
 		index: 216,
 		keyWords: 'hpmp recovery l',
 		name: 'HPMP Recovery L',
+		pageIndex: 310,
 	},
 	{
 		description: "Restores a small amount of the target's HP and LP.",
@@ -2237,6 +2546,7 @@ export const effectsList: Array<Effect> = [
 		index: 224,
 		keyWords: 'mplp recovery s',
 		name: 'MPLP Recovery S',
+		pageIndex: 311,
 	},
 	{
 		description: "Restores the whole party's HP.",
@@ -2244,6 +2554,7 @@ export const effectsList: Array<Effect> = [
 		index: 230,
 		keyWords: 'healing aroma',
 		name: 'Healing Aroma',
+		pageIndex: 312,
 	},
 	{
 		description:
@@ -2252,6 +2563,7 @@ export const effectsList: Array<Effect> = [
 		index: 282,
 		keyWords: 'eat and recover xl',
 		name: 'Eat and Recover XL',
+		pageIndex: 313,
 	},
 	{
 		description: "It's delicious, restoring a small amount of HP.",
@@ -2259,6 +2571,7 @@ export const effectsList: Array<Effect> = [
 		index: 291,
 		keyWords: 'very delicious',
 		name: 'Very Delicious',
+		pageIndex: 314,
 	},
 	{
 		description: 'The target recovers from Sleep.',
@@ -2266,6 +2579,7 @@ export const effectsList: Array<Effect> = [
 		index: 292,
 		keyWords: 'bitter',
 		name: 'Bitter',
+		pageIndex: 315,
 	},
 	{
 		description: "Warms the body, increasing the target's speed a little.",
@@ -2273,6 +2587,7 @@ export const effectsList: Array<Effect> = [
 		index: 297,
 		keyWords: 'warm',
 		name: 'Warm',
+		pageIndex: 316,
 	},
 	{
 		description:
@@ -2281,6 +2596,7 @@ export const effectsList: Array<Effect> = [
 		index: 301,
 		keyWords: 'unique texture',
 		name: 'Unique Texture',
+		pageIndex: 317,
 	},
 	{
 		description: 'Grants the target a large HP recovery bonus.',
@@ -2288,6 +2604,7 @@ export const effectsList: Array<Effect> = [
 		index: 363,
 		keyWords: 'recovery bonus l',
 		name: 'Recovery Bonus L',
+		pageIndex: 318,
 	},
 	{
 		description: 'Revives the target from KO, and restores a small amount of HP.',
@@ -2295,6 +2612,7 @@ export const effectsList: Array<Effect> = [
 		index: 371,
 		keyWords: 'revive from ko s',
 		name: 'Revive from KO S',
+		pageIndex: 319,
 	},
 	{
 		description:
@@ -2303,6 +2621,7 @@ export const effectsList: Array<Effect> = [
 		index: 437,
 		keyWords: 'soul awakening tone',
 		name: 'Soul Awakening Tone',
+		pageIndex: 320,
 	},
 	{
 		description: 'Grants all allies fire, ice, and lightning resistance.',
@@ -2310,6 +2629,7 @@ export const effectsList: Array<Effect> = [
 		index: 442,
 		keyWords: 'grand spirit blessing',
 		name: 'Grand Spirit Blessing',
+		pageIndex: 321,
 	},
 	{
 		description: 'Greatly reduces the effectiveness of the next attack the target receives.',
@@ -2317,6 +2637,7 @@ export const effectsList: Array<Effect> = [
 		index: 447,
 		keyWords: "spirit's protection m",
 		name: "Spirit's Protection M",
+		pageIndex: 322,
 	},
 	{
 		description: 'Massively reduces the effectiveness of the next attack the target receives.',
@@ -2324,6 +2645,7 @@ export const effectsList: Array<Effect> = [
 		index: 448,
 		keyWords: "spirit's protection l",
 		name: "Spirit's Protection L",
+		pageIndex: 323,
 	},
 	{
 		description:
@@ -2332,6 +2654,7 @@ export const effectsList: Array<Effect> = [
 		index: 452,
 		keyWords: 'heroic blessing',
 		name: 'Heroic Blessing',
+		pageIndex: 324,
 	},
 	{
 		description: 'Item use count might not decrease when used. The chance is fairly low.',
@@ -2339,6 +2662,7 @@ export const effectsList: Array<Effect> = [
 		index: 460,
 		keyWords: 'reduce consumption',
 		name: 'Reduce Consumption',
+		pageIndex: 325,
 	},
 	{
 		description: "Greatly reduces the target's speed.",
@@ -2346,6 +2670,7 @@ export const effectsList: Array<Effect> = [
 		index: 696,
 		keyWords: 'speed down l',
 		name: 'Speed Down L',
+		pageIndex: 326,
 	},
 	{
 		description: 'Has a low chance of No Healing the target. No Heal causes all recovery effects to heal for 0.',
@@ -2353,6 +2678,7 @@ export const effectsList: Array<Effect> = [
 		index: 718,
 		keyWords: 'inflict no heal s',
 		name: 'Inflict No Heal S',
+		pageIndex: 327,
 	},
 	{
 		description: 'Has a high chance of Sealing the target. Seal renders the target unable to use powerful attacks.',
@@ -2360,6 +2686,7 @@ export const effectsList: Array<Effect> = [
 		index: 723,
 		keyWords: 'inflict seal l',
 		name: 'Inflict Seal L',
+		pageIndex: 328,
 	},
 	{
 		description:
@@ -2368,6 +2695,7 @@ export const effectsList: Array<Effect> = [
 		index: 730,
 		keyWords: 'weak to thunder',
 		name: 'Weak to Thunder',
+		pageIndex: 329,
 	},
 	{
 		description: "Reduces the target's level a lot. Reduced level decreases all stats and damage dealt.",
@@ -2375,6 +2703,7 @@ export const effectsList: Array<Effect> = [
 		index: 733,
 		keyWords: 'level down l',
 		name: 'Level Down L',
+		pageIndex: 330,
 	},
 	{
 		description:
@@ -2383,6 +2712,7 @@ export const effectsList: Array<Effect> = [
 		index: 742,
 		keyWords: 'add break l',
 		name: 'Add Break L',
+		pageIndex: 331,
 	},
 	{
 		description:
@@ -2391,6 +2721,7 @@ export const effectsList: Array<Effect> = [
 		index: 743,
 		keyWords: 'add break xl',
 		name: 'Add Break XL',
+		pageIndex: 332,
 	},
 	{
 		description: 'Consumes a small amount of MP. The effect is weakened when MP is insufficient.',
@@ -2398,6 +2729,7 @@ export const effectsList: Array<Effect> = [
 		index: 803,
 		keyWords: 'consume mp s',
 		name: 'Consume MP S',
+		pageIndex: 333,
 	},
 	{
 		description: 'Greatly increases the chances of finding better materials in the field.',
@@ -2405,6 +2737,7 @@ export const effectsList: Array<Effect> = [
 		index: 858,
 		keyWords: 'grow great materials?',
 		name: 'Grow Great Materials?',
+		pageIndex: 334,
 	},
 	{
 		description: 'Rest until dusk, restoring HP, MP, and LP. The amount restored depends on how long you rested.',
@@ -2412,6 +2745,7 @@ export const effectsList: Array<Effect> = [
 		index: 861,
 		keyWords: 'rest to dusk',
 		name: 'Rest to Dusk',
+		pageIndex: 335,
 	},
 	{
 		description: 'Rest until night, restoring HP, MP, and LP. The amount restored depends on how long you rested.',
@@ -2419,6 +2753,7 @@ export const effectsList: Array<Effect> = [
 		index: 862,
 		keyWords: 'rest to night',
 		name: 'Rest to Night',
+		pageIndex: 336,
 	},
 	{
 		description: 'Hide your presence, making it hard for monsters to notice you for a short time.',
@@ -2426,6 +2761,7 @@ export const effectsList: Array<Effect> = [
 		index: 867,
 		keyWords: 'hard to notice',
 		name: 'Hard to Notice',
+		pageIndex: 337,
 	},
 	{
 		description: 'Move speed increases by 30%.',
@@ -2433,6 +2769,7 @@ export const effectsList: Array<Effect> = [
 		index: 930,
 		keyWords: 'move speed up l',
 		name: 'Move Speed Up L',
+		pageIndex: 338,
 	},
 	{
 		description: 'Reduces items lost by party wipe.',
@@ -2440,6 +2777,7 @@ export const effectsList: Array<Effect> = [
 		index: 934,
 		keyWords: 'emergency escape',
 		name: 'Emergency Escape',
+		pageIndex: 339,
 	},
 	{
 		description: 'Reduces items lost by party wipe a lot.',
@@ -2447,6 +2785,7 @@ export const effectsList: Array<Effect> = [
 		index: 935,
 		keyWords: 'insure items',
 		name: 'Insure Items',
+		pageIndex: 340,
 	},
 	{
 		description: 'Increases money gained from battle. Has no effect when money obtained is 0.',
@@ -2454,6 +2793,7 @@ export const effectsList: Array<Effect> = [
 		index: 940,
 		keyWords: 'find lots of money',
 		name: 'Find Lots of Money',
+		pageIndex: 341,
 	},
 	{
 		description: 'Increases experience points gained from battle.',
@@ -2461,6 +2801,7 @@ export const effectsList: Array<Effect> = [
 		index: 943,
 		keyWords: 'trains the body a lot',
 		name: 'Trains the Body a Lot',
+		pageIndex: 342,
 	},
 	{
 		description: 'Increases friend points gained when giving presents a little.',
@@ -2468,6 +2809,7 @@ export const effectsList: Array<Effect> = [
 		index: 945,
 		keyWords: 'get more friendly',
 		name: 'Get More Friendly',
+		pageIndex: 343,
 	},
 	{
 		description: 'Stats are temporarily increased in battle, but the boost decreases with each turn.',
@@ -2475,6 +2817,7 @@ export const effectsList: Array<Effect> = [
 		index: 999,
 		keyWords: 'fighting spirit calm',
 		name: 'Fighting Spirit Calm',
+		pageIndex: 344,
 	},
 	{
 		description: 'Reduces wait time after all actions by a large amount.',
@@ -2482,6 +2825,7 @@ export const effectsList: Array<Effect> = [
 		index: 1014,
 		keyWords: 'accelerate time',
 		name: 'Accelerate Time',
+		pageIndex: 345,
 	},
 	{
 		description: 'Reduces damage taken by 10%, but delays turn.',
@@ -2489,6 +2833,7 @@ export const effectsList: Array<Effect> = [
 		index: 1022,
 		keyWords: 'guardian angel blessing',
 		name: 'Guardian Angel Blessing',
+		pageIndex: 346,
 	},
 	{
 		description: 'Increases attack, defense, and speed by 20% of base maximum HP.',
@@ -2496,6 +2841,7 @@ export const effectsList: Array<Effect> = [
 		index: 1028,
 		keyWords: 'life to power',
 		name: 'Life to Power',
+		pageIndex: 347,
 	},
 	{
 		description: 'Halves turn delaying effects.',
@@ -2503,6 +2849,7 @@ export const effectsList: Array<Effect> = [
 		index: 1035,
 		keyWords: 'super resist gravity',
 		name: 'Super Resist Gravity',
+		pageIndex: 348,
 	},
 	{
 		description: 'Recover a small amount of HP when recovering HP or removing ailments.',
@@ -2510,6 +2857,7 @@ export const effectsList: Array<Effect> = [
 		index: 1044,
 		keyWords: 'calm blessing',
 		name: 'Calm Blessing',
+		pageIndex: 349,
 	},
 	{
 		description: 'Removes 2 status ailments when HP is recovered.',
@@ -2517,6 +2865,7 @@ export const effectsList: Array<Effect> = [
 		index: 1045,
 		keyWords: 'pure blessing',
 		name: 'Pure Blessing',
+		pageIndex: 350,
 	},
 	{
 		description: 'Recover HP when recovering HP or removing ailments.',
@@ -2524,6 +2873,7 @@ export const effectsList: Array<Effect> = [
 		index: 1046,
 		keyWords: 'healthy blessing',
 		name: 'Healthy Blessing',
+		pageIndex: 351,
 	},
 	{
 		description: 'The hidden magic of the Herculean Rune increases attack by 25.',
@@ -2531,6 +2881,7 @@ export const effectsList: Array<Effect> = [
 		index: 1054,
 		keyWords: 'herculean rune',
 		name: 'Herculean Rune',
+		pageIndex: 352,
 	},
 	{
 		description: 'Increases maximum HP by 20.',
@@ -2538,6 +2889,7 @@ export const effectsList: Array<Effect> = [
 		index: 1104,
 		keyWords: 'max hp up m',
 		name: 'Max HP Up M',
+		pageIndex: 353,
 	},
 	{
 		description: 'Increases maximum HP by 25.',
@@ -2545,6 +2897,7 @@ export const effectsList: Array<Effect> = [
 		index: 1105,
 		keyWords: 'max hp up l',
 		name: 'Max HP Up L',
+		pageIndex: 354,
 	},
 	{
 		description: 'Increases maximum MP by 10.',
@@ -2552,6 +2905,7 @@ export const effectsList: Array<Effect> = [
 		index: 1107,
 		keyWords: 'max mp up xs',
 		name: 'Max MP Up XS',
+		pageIndex: 355,
 	},
 	{
 		description: "Increases the target's defense. The effect lasts 5 turns.",
@@ -2559,6 +2913,7 @@ export const effectsList: Array<Effect> = [
 		index: 1119,
 		keyWords: 'defense up m',
 		name: 'Defense Up M',
+		pageIndex: 356,
 	},
 	{
 		description: 'Increases hit rate by 10%.',
@@ -2566,6 +2921,7 @@ export const effectsList: Array<Effect> = [
 		index: 1127,
 		keyWords: 'hit rate up xs',
 		name: 'Hit Rate Up XS',
+		pageIndex: 357,
 	},
 	{
 		description: 'Deals fixed damage to the target, unaffected by defense. Its power is very small.',
@@ -2573,6 +2929,7 @@ export const effectsList: Array<Effect> = [
 		index: 116,
 		keyWords: 'piercing damage s',
 		name: 'Piercing Damage S',
+		pageIndex: 358,
 	},
 	{
 		description:
@@ -2581,6 +2938,7 @@ export const effectsList: Array<Effect> = [
 		index: 119,
 		keyWords: 'hits vitals',
 		name: 'Hits Vitals',
+		pageIndex: 359,
 	},
 	{
 		description:
@@ -2589,6 +2947,7 @@ export const effectsList: Array<Effect> = [
 		index: 127,
 		keyWords: 'numbing',
 		name: 'Numbing',
+		pageIndex: 360,
 	},
 	{
 		description:
@@ -2597,6 +2956,7 @@ export const effectsList: Array<Effect> = [
 		index: 128,
 		keyWords: 'very numbing',
 		name: 'Very Numbing',
+		pageIndex: 361,
 	},
 	{
 		description:
@@ -2605,6 +2965,7 @@ export const effectsList: Array<Effect> = [
 		index: 130,
 		keyWords: 'total freeze',
 		name: 'Total Freeze',
+		pageIndex: 362,
 	},
 	{
 		description: "Expands the item's area of effect by a lot.",
@@ -2612,6 +2973,7 @@ export const effectsList: Array<Effect> = [
 		index: 137,
 		keyWords: 'expand effect area ++',
 		name: 'Expand Effect Area ++',
+		pageIndex: 363,
 	},
 	{
 		description: "Activates automatically when the user's HP falls below 30%.",
@@ -2619,6 +2981,7 @@ export const effectsList: Array<Effect> = [
 		index: 139,
 		keyWords: 'lively',
 		name: 'Lively',
+		pageIndex: 364,
 	},
 	{
 		description:
@@ -2627,6 +2990,7 @@ export const effectsList: Array<Effect> = [
 		index: 131,
 		keyWords: 'spatial freeze',
 		name: 'Spatial Freeze',
+		pageIndex: 365,
 	},
 	{
 		description: "Restores the target's HP by a slight amount.",
@@ -2634,6 +2998,7 @@ export const effectsList: Array<Effect> = [
 		index: 195,
 		keyWords: 'hp recovery xs',
 		name: 'HP Recovery XS',
+		pageIndex: 366,
 	},
 	{
 		description: "Restores the target's HP by a small amount.",
@@ -2641,6 +3006,7 @@ export const effectsList: Array<Effect> = [
 		index: 196,
 		keyWords: 'hp recovery s',
 		name: 'HP Recovery S',
+		pageIndex: 367,
 	},
 	{
 		description: "Restores the target's HP.",
@@ -2648,6 +3014,7 @@ export const effectsList: Array<Effect> = [
 		index: 197,
 		keyWords: 'hp recovery m',
 		name: 'HP Recovery M',
+		pageIndex: 368,
 	},
 	{
 		description: "Restores the target's MP by a large amount.",
@@ -2655,6 +3022,7 @@ export const effectsList: Array<Effect> = [
 		index: 204,
 		keyWords: 'mp recovery l',
 		name: 'MP Recovery L',
+		pageIndex: 369,
 	},
 	{
 		description: "Restores the target's MP by a huge amount.",
@@ -2662,6 +3030,7 @@ export const effectsList: Array<Effect> = [
 		index: 205,
 		keyWords: 'mp recovery xl',
 		name: 'MP Recovery XL',
+		pageIndex: 370,
 	},
 	{
 		description: "Restores the target's LP.",
@@ -2669,6 +3038,7 @@ export const effectsList: Array<Effect> = [
 		index: 209,
 		keyWords: 'lp recovery m',
 		name: 'LP Recovery M',
+		pageIndex: 371,
 	},
 	{
 		description: "Restores a huge amount of the target's HP and MP.",
@@ -2676,6 +3046,7 @@ export const effectsList: Array<Effect> = [
 		index: 217,
 		keyWords: 'hpmp recovery xl',
 		name: 'HPMP Recovery XL',
+		pageIndex: 372,
 	},
 	{
 		description: "Restores the target's LP by an extreme amount.",
@@ -2683,6 +3054,7 @@ export const effectsList: Array<Effect> = [
 		index: 212,
 		keyWords: 'lp recovery xxl',
 		name: 'LP Recovery XXL',
+		pageIndex: 373,
 	},
 	{
 		description: "Restores a large amount of the target's HP and LP.",
@@ -2690,6 +3062,7 @@ export const effectsList: Array<Effect> = [
 		index: 226,
 		keyWords: 'mplp recovery l',
 		name: 'MPLP Recovery L',
+		pageIndex: 374,
 	},
 	{
 		description: "Restores a huge amount of the target's HP and LP.",
@@ -2697,6 +3070,7 @@ export const effectsList: Array<Effect> = [
 		index: 227,
 		keyWords: 'mplp recovery xl',
 		name: 'MPLP Recovery XL',
+		pageIndex: 375,
 	},
 	{
 		description: "Restores the target's HP and LP. Recovery amount increases with higher maximum HP.",
@@ -2704,6 +3078,7 @@ export const effectsList: Array<Effect> = [
 		index: 280,
 		keyWords: 'eat and recover m',
 		name: 'Eat and Recover M',
+		pageIndex: 376,
 	},
 	{
 		description:
@@ -2712,6 +3087,7 @@ export const effectsList: Array<Effect> = [
 		index: 281,
 		keyWords: 'eat and recover l',
 		name: 'Eat and Recover L',
+		pageIndex: 377,
 	},
 	{
 		description: "Restores a slight amount of the target's HP and LP.",
@@ -2719,6 +3095,7 @@ export const effectsList: Array<Effect> = [
 		index: 294,
 		keyWords: 'sweet',
 		name: 'Sweet',
+		pageIndex: 378,
 	},
 	{
 		description: "Restores a small amount of the target's HP and LP.",
@@ -2726,6 +3103,7 @@ export const effectsList: Array<Effect> = [
 		index: 295,
 		keyWords: 'super sweet',
 		name: 'Super Sweet',
+		pageIndex: 379,
 	},
 	{
 		description: "Reduces the wait time after the target's next turn by a small amount.",
@@ -2733,6 +3111,7 @@ export const effectsList: Array<Effect> = [
 		index: 293,
 		keyWords: 'salty',
 		name: 'Salty',
+		pageIndex: 380,
 	},
 	{
 		description: 'The sloppy texture makes you feel weird, reducing attack power a small amount.',
@@ -2740,6 +3119,7 @@ export const effectsList: Array<Effect> = [
 		index: 299,
 		keyWords: 'sloppy',
 		name: 'Sloppy',
+		pageIndex: 381,
 	},
 	{
 		description: "The jiggly texture is quite pleasant. Increases the target's attack power a little.",
@@ -2747,6 +3127,7 @@ export const effectsList: Array<Effect> = [
 		index: 300,
 		keyWords: 'jiggly',
 		name: 'Jiggly',
+		pageIndex: 382,
 	},
 	{
 		description: "Restores the target's HP. Recovery amount increases the closer it is to 7am.",
@@ -2754,6 +3135,7 @@ export const effectsList: Array<Effect> = [
 		index: 307,
 		keyWords: 'wake up cup',
 		name: 'Wake Up Cup',
+		pageIndex: 383,
 	},
 	{
 		description: "Restores the target's HP. Recovery amount increases the closer it is to 10pm.",
@@ -2761,6 +3143,7 @@ export const effectsList: Array<Effect> = [
 		index: 309,
 		keyWords: 'bedtime cup',
 		name: 'Bedtime Cup',
+		pageIndex: 384,
 	},
 	{
 		description: 'The target recovers a slight amount of Break value.',
@@ -2768,6 +3151,7 @@ export const effectsList: Array<Effect> = [
 		index: 364,
 		keyWords: 'refreshing',
 		name: 'Refreshing',
+		pageIndex: 385,
 	},
 	{
 		description: 'Grants the target an HP recovery bonus.',
@@ -2775,6 +3159,7 @@ export const effectsList: Array<Effect> = [
 		index: 362,
 		keyWords: 'recovery bonus m',
 		name: 'Recovery Bonus M',
+		pageIndex: 386,
 	},
 	{
 		description: 'The target recovers a decent amount of Break value.',
@@ -2782,6 +3167,7 @@ export const effectsList: Array<Effect> = [
 		index: 366,
 		keyWords: 'awakening',
 		name: 'Awakening',
+		pageIndex: 387,
 	},
 	{
 		description: 'Revives the target from KO, and restores a moderate amount of HP.',
@@ -2789,6 +3175,7 @@ export const effectsList: Array<Effect> = [
 		index: 372,
 		keyWords: 'revive from ko m',
 		name: 'Revive from KO M',
+		pageIndex: 388,
 	},
 	{
 		description: 'Revives the target from KO, and restores a slight amount of HP.',
@@ -2796,6 +3183,7 @@ export const effectsList: Array<Effect> = [
 		index: 370,
 		keyWords: 'revive from ko xs',
 		name: 'Revive from KO XS',
+		pageIndex: 389,
 	},
 	{
 		description: 'The target recovers from Sleep.',
@@ -2803,6 +3191,7 @@ export const effectsList: Array<Effect> = [
 		index: 375,
 		keyWords: 'cures sleep',
 		name: 'Cures Sleep',
+		pageIndex: 390,
 	},
 	{
 		description: 'Revives the target from KO, and restores a large amount of HP.',
@@ -2810,6 +3199,7 @@ export const effectsList: Array<Effect> = [
 		index: 373,
 		keyWords: 'revive from ko l',
 		name: 'Revive from KO L',
+		pageIndex: 391,
 	},
 	{
 		description: 'The target recovers from Poison.',
@@ -2817,6 +3207,7 @@ export const effectsList: Array<Effect> = [
 		index: 376,
 		keyWords: 'cures poison',
 		name: 'Cures Poison',
+		pageIndex: 392,
 	},
 	{
 		description: 'The target recovers from No Heal.',
@@ -2824,6 +3215,7 @@ export const effectsList: Array<Effect> = [
 		index: 381,
 		keyWords: 'cures no heal',
 		name: 'Cures No Heal',
+		pageIndex: 393,
 	},
 	{
 		description: 'The target recovers from Blind.',
@@ -2831,6 +3223,7 @@ export const effectsList: Array<Effect> = [
 		index: 379,
 		keyWords: 'cures blind',
 		name: 'Cures Blind',
+		pageIndex: 394,
 	},
 	{
 		description: 'The target recovers from Seal.',
@@ -2838,6 +3231,7 @@ export const effectsList: Array<Effect> = [
 		index: 382,
 		keyWords: 'cures seal',
 		name: 'Cures Seal',
+		pageIndex: 395,
 	},
 	{
 		description: 'The target recovers from 2 ailments.',
@@ -2845,6 +3239,7 @@ export const effectsList: Array<Effect> = [
 		index: 385,
 		keyWords: 'removes many ailments',
 		name: 'Removes Many Ailments',
+		pageIndex: 396,
 	},
 	{
 		description:
@@ -2853,6 +3248,7 @@ export const effectsList: Array<Effect> = [
 		index: 436,
 		keyWords: 'body awakening tone',
 		name: 'Body Awakening Tone',
+		pageIndex: 397,
 	},
 	{
 		description: 'Grants all allies lightning resistance.',
@@ -2860,6 +3256,7 @@ export const effectsList: Array<Effect> = [
 		index: 441,
 		keyWords: 'thunder spirit blessing',
 		name: 'Thunder Spirit Blessing',
+		pageIndex: 398,
 	},
 	{
 		description: "Increases all of the target's stats by 20. The effect lasts for 5 turns.",
@@ -2867,6 +3264,7 @@ export const effectsList: Array<Effect> = [
 		index: 438,
 		keyWords: 'hidden power',
 		name: 'Hidden Power',
+		pageIndex: 399,
 	},
 	{
 		description: 'Temporarily reduces physical damage taken by the target. The effect is small.',
@@ -2874,6 +3272,7 @@ export const effectsList: Array<Effect> = [
 		index: 443,
 		keyWords: "angel's protection",
 		name: "Angel's Protection",
+		pageIndex: 400,
 	},
 	{
 		description: 'Reduces the effectiveness of the next attack the target receives.',
@@ -2881,6 +3280,7 @@ export const effectsList: Array<Effect> = [
 		index: 446,
 		keyWords: "spirit's protection",
 		name: "Spirit's Protection",
+		pageIndex: 401,
 	},
 	{
 		description:
@@ -2889,6 +3289,7 @@ export const effectsList: Array<Effect> = [
 		index: 453,
 		keyWords: 'heroic descent',
 		name: 'Heroic Descent',
+		pageIndex: 402,
 	},
 	{
 		description: 'Deals huge damage to the target, but massively increases base damage on the next turn.',
@@ -2896,6 +3297,7 @@ export const effectsList: Array<Effect> = [
 		index: 459,
 		keyWords: 'adrenaline rush',
 		name: 'Adrenaline Rush',
+		pageIndex: 403,
 	},
 	{
 		description: 'Item use count might not decrease when used. The chance is low.',
@@ -2903,6 +3305,7 @@ export const effectsList: Array<Effect> = [
 		index: 461,
 		keyWords: 'relieve consumption',
 		name: 'Relieve Consumption',
+		pageIndex: 404,
 	},
 	{
 		description: "Increases the target's attack power. The effect lasts 5 turns.",
@@ -2910,6 +3313,7 @@ export const effectsList: Array<Effect> = [
 		index: 511,
 		keyWords: 'attack up m',
 		name: 'Attack Up M',
+		pageIndex: 405,
 	},
 	{
 		description: "Activates automatically when the user's HP falls below 50%.",
@@ -2917,6 +3321,7 @@ export const effectsList: Array<Effect> = [
 		index: 468,
 		keyWords: 'auto activate 50%',
 		name: 'Auto Activate 50%',
+		pageIndex: 406,
 	},
 	{
 		description: "Increases the target's attack power by a lot. The effect lasts 5 turns.",
@@ -2924,6 +3329,7 @@ export const effectsList: Array<Effect> = [
 		index: 512,
 		keyWords: 'attack up l',
 		name: 'Attack Up L',
+		pageIndex: 407,
 	},
 	{
 		description: "Increases the target's defense. The effect lasts 5 turns.",
@@ -2931,6 +3337,7 @@ export const effectsList: Array<Effect> = [
 		index: 514,
 		keyWords: 'defense up m',
 		name: 'Defense Up M',
+		pageIndex: 408,
 	},
 	{
 		description: "Increases the target's speed a little. The effect lasts 5 turns.",
@@ -2938,6 +3345,7 @@ export const effectsList: Array<Effect> = [
 		index: 516,
 		keyWords: 'speed up s',
 		name: 'Speed Up S',
+		pageIndex: 409,
 	},
 	{
 		description: "Increases the target's speed. The effect lasts 5 turns.",
@@ -2945,6 +3353,7 @@ export const effectsList: Array<Effect> = [
 		index: 517,
 		keyWords: 'speed up m',
 		name: 'Speed Up M',
+		pageIndex: 410,
 	},
 	{
 		description: "Increases the target's hit rate a little. The effect lasts 5 turns.",
@@ -2952,6 +3361,7 @@ export const effectsList: Array<Effect> = [
 		index: 522,
 		keyWords: 'hit rate up s',
 		name: 'Hit Rate Up S',
+		pageIndex: 411,
 	},
 	{
 		description: "Increases the target's evasion rate a little. The effect lasts 5 turns.",
@@ -2959,6 +3369,7 @@ export const effectsList: Array<Effect> = [
 		index: 525,
 		keyWords: 'evasion up s',
 		name: 'Evasion Up S',
+		pageIndex: 412,
 	},
 	{
 		description: "Increases the target's chance to score a critical hit by a decent amount.",
@@ -2966,6 +3377,7 @@ export const effectsList: Array<Effect> = [
 		index: 529,
 		keyWords: 'crit rate up m',
 		name: 'Crit Rate Up M',
+		pageIndex: 413,
 	},
 	{
 		description: "Increases the target's critical hit damage bonus by a small amount.",
@@ -2973,6 +3385,7 @@ export const effectsList: Array<Effect> = [
 		index: 531,
 		keyWords: 'crit power up s',
 		name: 'Crit Power Up S',
+		pageIndex: 414,
 	},
 	{
 		description: 'The target recovers a slight amount of HP on each turn. The effect lasts for 5 turns.',
@@ -2980,6 +3393,7 @@ export const effectsList: Array<Effect> = [
 		index: 534,
 		keyWords: 'hp regen xs',
 		name: 'HP Regen XS',
+		pageIndex: 415,
 	},
 	{
 		description: 'The target recovers a large amount of HP on each turn. The effect lasts for 5 turns.',
@@ -2987,6 +3401,7 @@ export const effectsList: Array<Effect> = [
 		index: 537,
 		keyWords: 'hp regen l',
 		name: 'HP Regen L',
+		pageIndex: 416,
 	},
 	{
 		description: 'Reduces the effectiveness of status ailments by a fair amount.',
@@ -2994,6 +3409,7 @@ export const effectsList: Array<Effect> = [
 		index: 556,
 		keyWords: 'reduce ailments m',
 		name: 'Reduce Ailments M',
+		pageIndex: 417,
 	},
 	{
 		description: "Reduces wait time after the target's next turn by a good amount.",
@@ -3001,6 +3417,7 @@ export const effectsList: Array<Effect> = [
 		index: 560,
 		keyWords: 'cut wait time l',
 		name: 'Cut Wait Time L',
+		pageIndex: 418,
 	},
 	{
 		description: 'Increases damage dealt to Broken enemies by 25%. Effect lasts 5 turns.',
@@ -3008,6 +3425,7 @@ export const effectsList: Array<Effect> = [
 		index: 564,
 		keyWords: 'more opportunity s',
 		name: 'More Opportunity S',
+		pageIndex: 419,
 	},
 	{
 		description: "Reduces the target's speed by a small amount, and temporarily increases your own by that amount.",
@@ -3015,6 +3433,7 @@ export const effectsList: Array<Effect> = [
 		index: 632,
 		keyWords: 'steal speed s',
 		name: 'Steal Speed S',
+		pageIndex: 420,
 	},
 	{
 		description: '',
@@ -3022,6 +3441,7 @@ export const effectsList: Array<Effect> = [
 		index: 636,
 		keyWords: 'erase enhancements',
 		name: 'Erase Enhancements',
+		pageIndex: 421,
 	},
 	{
 		description: "Slightly reduces the target's defense.",
@@ -3029,6 +3449,7 @@ export const effectsList: Array<Effect> = [
 		index: 691,
 		keyWords: 'defense down s',
 		name: 'Defense Down S',
+		pageIndex: 422,
 	},
 	{
 		description: "Slightly reduces all of the target's stats.",
@@ -3036,6 +3457,7 @@ export const effectsList: Array<Effect> = [
 		index: 697,
 		keyWords: 'all stats down s',
 		name: 'All Stats Down S',
+		pageIndex: 423,
 	},
 	{
 		description: 'Has a low chance of Sleeping the target. Sleep renders the target unable to act on their turn.',
@@ -3043,6 +3465,7 @@ export const effectsList: Array<Effect> = [
 		index: 700,
 		keyWords: 'inflict sleep s',
 		name: 'Inflict Sleep S',
+		pageIndex: 424,
 	},
 	{
 		description: 'Has a high chance of Sleeping the target. Sleep renders the target unable to act on their turn.',
@@ -3050,6 +3473,7 @@ export const effectsList: Array<Effect> = [
 		index: 702,
 		keyWords: 'inflict sleep l',
 		name: 'Inflict Sleep L',
+		pageIndex: 425,
 	},
 	{
 		description:
@@ -3058,6 +3482,7 @@ export const effectsList: Array<Effect> = [
 		index: 708,
 		keyWords: 'inflict slow l',
 		name: 'Inflict Slow L',
+		pageIndex: 426,
 	},
 	{
 		description:
@@ -3066,6 +3491,7 @@ export const effectsList: Array<Effect> = [
 		index: 716,
 		keyWords: 'inflict weak m',
 		name: 'Inflict Weak M',
+		pageIndex: 427,
 	},
 	{
 		description:
@@ -3074,6 +3500,7 @@ export const effectsList: Array<Effect> = [
 		index: 717,
 		keyWords: 'inflict weak l',
 		name: 'Inflict Weak L',
+		pageIndex: 428,
 	},
 	{
 		description: 'When placing materials, you can press <LB><RB> to rotate it.',
@@ -3081,6 +3508,7 @@ export const effectsList: Array<Effect> = [
 		index: 1276,
 		keyWords: 'rotate',
 		name: 'Rotate',
+		pageIndex: 429,
 	},
 	{
 		description: 'Has a low chance of Sealing the target. Seal renders the target unable to use powerful attacks.',
@@ -3088,6 +3516,7 @@ export const effectsList: Array<Effect> = [
 		index: 721,
 		keyWords: 'inflict seal s',
 		name: 'Inflict Seal S',
+		pageIndex: 430,
 	},
 	{
 		description: 'Inflicts 3 random status effects on the target. The chance and effect are both high.',
@@ -3095,6 +3524,7 @@ export const effectsList: Array<Effect> = [
 		index: 726,
 		keyWords: 'inflict corruption l',
 		name: 'Inflict Corruption L',
+		pageIndex: 431,
 	},
 	{
 		description: 'Deals continuous damage to the target. The effect is moderate, and the time is short.',
@@ -3102,6 +3532,7 @@ export const effectsList: Array<Effect> = [
 		index: 735,
 		keyWords: 'damage over time m',
 		name: 'Damage Over Time M',
+		pageIndex: 432,
 	},
 	{
 		description: "Decreases the target's critical hit rate.",
@@ -3109,6 +3540,7 @@ export const effectsList: Array<Effect> = [
 		index: 737,
 		keyWords: 'critical down',
 		name: 'Critical Down',
+		pageIndex: 433,
 	},
 	{
 		description:
@@ -3117,6 +3549,7 @@ export const effectsList: Array<Effect> = [
 		index: 741,
 		keyWords: 'add break m',
 		name: 'Add Break M',
+		pageIndex: 434,
 	},
 	{
 		description: 'Pacifies the enemy, delaying the activation of powerful attacks by fair bit.',
@@ -3124,6 +3557,7 @@ export const effectsList: Array<Effect> = [
 		index: 748,
 		keyWords: 'pacification m',
 		name: 'Pacification M',
+		pageIndex: 435,
 	},
 	{
 		description: 'Consumes a small amount of HP. The amount is influenced by maximum HP.',
@@ -3131,6 +3565,7 @@ export const effectsList: Array<Effect> = [
 		index: 798,
 		keyWords: 'consume hp s',
 		name: 'Consume HP S',
+		pageIndex: 436,
 	},
 	{
 		description: 'Consumes HP. The amount is influenced by maximum HP.',
@@ -3138,6 +3573,7 @@ export const effectsList: Array<Effect> = [
 		index: 799,
 		keyWords: 'consume hp m',
 		name: 'Consume HP M',
+		pageIndex: 437,
 	},
 	{
 		description: 'Consumes MP. The effect is weakened when MP is insufficient.',
@@ -3145,6 +3581,7 @@ export const effectsList: Array<Effect> = [
 		index: 804,
 		keyWords: 'consume mp m',
 		name: 'Consume MP M',
+		pageIndex: 438,
 	},
 	{
 		description: 'Upon use, you will be instantly returned to the atelier.',
@@ -3152,6 +3589,7 @@ export const effectsList: Array<Effect> = [
 		index: 863,
 		keyWords: 'return to base',
 		name: 'Return to Base',
+		pageIndex: 439,
 	},
 	{
 		description: '',
@@ -3159,6 +3597,7 @@ export const effectsList: Array<Effect> = [
 		index: 872,
 		keyWords: 'wards off misfortune',
 		name: 'Wards Off Misfortune',
+		pageIndex: 440,
 	},
 	{
 		description: 'Reduces LP consumed while moving on the World Map by half.',
@@ -3166,6 +3605,7 @@ export const effectsList: Array<Effect> = [
 		index: 926,
 		keyWords: 'lightens body',
 		name: 'Lightens Body',
+		pageIndex: 441,
 	},
 	{
 		description:
@@ -3174,6 +3614,7 @@ export const effectsList: Array<Effect> = [
 		index: 941,
 		keyWords: "miser's secrets",
 		name: "Miser's Secrets",
+		pageIndex: 442,
 	},
 	{
 		description: 'Increases experience points gained from battle a little.',
@@ -3181,6 +3622,7 @@ export const effectsList: Array<Effect> = [
 		index: 942,
 		keyWords: 'trains the body',
 		name: 'Trains the Body',
+		pageIndex: 443,
 	},
 	{
 		description: 'Increases friend points gained when giving presents.',
@@ -3188,6 +3630,7 @@ export const effectsList: Array<Effect> = [
 		index: 946,
 		keyWords: 'get much more friendly',
 		name: 'Get Much More Friendly',
+		pageIndex: 444,
 	},
 	{
 		description: 'Increases friend points gained when giving presents by a lot.',
@@ -3195,6 +3638,7 @@ export const effectsList: Array<Effect> = [
 		index: 947,
 		keyWords: 'connects hearts',
 		name: 'Connects Hearts',
+		pageIndex: 445,
 	},
 	{
 		description: 'Makes it harder for gathering level and enemy level to increase.',
@@ -3202,6 +3646,7 @@ export const effectsList: Array<Effect> = [
 		index: 949,
 		keyWords: 'seal of stability',
 		name: 'Seal of Stability',
+		pageIndex: 446,
 	},
 	{
 		description: 'Increases effect of all Assist actions.',
@@ -3209,6 +3654,7 @@ export const effectsList: Array<Effect> = [
 		index: 1004,
 		keyWords: 'seal of friendship',
 		name: 'Seal of Friendship',
+		pageIndex: 447,
 	},
 	{
 		description: 'Increases effect of all Assist actions by a lot.',
@@ -3216,6 +3662,7 @@ export const effectsList: Array<Effect> = [
 		index: 1005,
 		keyWords: 'oath of friendship',
 		name: 'Oath of Friendship',
+		pageIndex: 448,
 	},
 	{
 		description: 'Temporarily reduces physical damage taken by the target. The effect is small.',
@@ -3223,6 +3670,7 @@ export const effectsList: Array<Effect> = [
 		index: 1006,
 		keyWords: "angel's protection",
 		name: "Angel's Protection",
+		pageIndex: 449,
 	},
 	{
 		description: 'Reduces the number of turns status ailments last by a large amount.',
@@ -3230,6 +3678,7 @@ export const effectsList: Array<Effect> = [
 		index: 1007,
 		keyWords: "god's protection",
 		name: "God's Protection",
+		pageIndex: 450,
 	},
 	{
 		description: 'Reduces wait time after all actions.',
@@ -3237,6 +3686,7 @@ export const effectsList: Array<Effect> = [
 		index: 1013,
 		keyWords: 'speed up time',
 		name: 'Speed Up Time',
+		pageIndex: 451,
 	},
 	{
 		description: 'Increases chain attack chance by a small amount.',
@@ -3244,6 +3694,7 @@ export const effectsList: Array<Effect> = [
 		index: 1015,
 		keyWords: 'chain attack practice',
 		name: 'Chain Attack Practice',
+		pageIndex: 452,
 	},
 	{
 		description: 'Reduces damage taken by 10%, and converts it into MP damage.',
@@ -3251,6 +3702,7 @@ export const effectsList: Array<Effect> = [
 		index: 1021,
 		keyWords: 'magician blessing',
 		name: 'Magician Blessing',
+		pageIndex: 453,
 	},
 	{
 		description: 'Increases attack skill power by an amount depending on wait time after use.',
@@ -3258,6 +3710,7 @@ export const effectsList: Array<Effect> = [
 		index: 1027,
 		keyWords: 'time to power',
 		name: 'Time to Power',
+		pageIndex: 454,
 	},
 	{
 		description: 'Increases critical hit rate, evasion rate, and other values when below 25% HP.',
@@ -3265,6 +3718,7 @@ export const effectsList: Array<Effect> = [
 		index: 1030,
 		keyWords: 'strong in a pinch',
 		name: 'Strong in a Pinch',
+		pageIndex: 455,
 	},
 	{
 		description: 'Increases attack, defense, and speed by 15% during the day. No effect during other times.',
@@ -3272,6 +3726,7 @@ export const effectsList: Array<Effect> = [
 		index: 1037,
 		keyWords: 'strong in day',
 		name: 'Strong in Day',
+		pageIndex: 456,
 	},
 	{
 		description: 'Reduces attack by 15%, increasing defense by that amount.',
@@ -3279,6 +3734,7 @@ export const effectsList: Array<Effect> = [
 		index: 1042,
 		keyWords: 'power to protection',
 		name: 'Power to Protection',
+		pageIndex: 457,
 	},
 	{
 		description: 'Temporarily increases attack, defense, and speed when ailments are removed.',
@@ -3286,6 +3742,7 @@ export const effectsList: Array<Effect> = [
 		index: 1049,
 		keyWords: 'power of one',
 		name: 'Power of One',
+		pageIndex: 458,
 	},
 	{
 		description: 'The hidden magic of the Power Rune increases attack power by 15.',
@@ -3293,6 +3750,7 @@ export const effectsList: Array<Effect> = [
 		index: 1051,
 		keyWords: 'power rune',
 		name: 'Power Rune',
+		pageIndex: 459,
 	},
 	{
 		description: 'The hidden magic of the Swift Gale Rune increases speed by 25.',
@@ -3300,6 +3758,7 @@ export const effectsList: Array<Effect> = [
 		index: 1056,
 		keyWords: 'swift gale rune',
 		name: 'Swift Gale Rune',
+		pageIndex: 460,
 	},
 	{
 		description: "Increases attack, defense, and speed. Increase grows with the wearer's level.",
@@ -3307,6 +3766,7 @@ export const effectsList: Array<Effect> = [
 		index: 1064,
 		keyWords: 'power awakening',
 		name: 'Power Awakening',
+		pageIndex: 461,
 	},
 	{
 		description: "Automatically revive on turn when KO'd in battle. HP after revival is decent.",
@@ -3314,6 +3774,7 @@ export const effectsList: Array<Effect> = [
 		index: 1065,
 		keyWords: 'soul awakening',
 		name: 'Soul Awakening',
+		pageIndex: 462,
 	},
 	{
 		description: 'The target recovers HP on each turn. The effect lasts for 5 turns.',
@@ -3321,6 +3782,7 @@ export const effectsList: Array<Effect> = [
 		index: 1095,
 		keyWords: 'hp regen m',
 		name: 'HP Regen M',
+		pageIndex: 463,
 	},
 	{
 		description: 'MP recovers a decent amount on each turn.',
@@ -3328,6 +3790,7 @@ export const effectsList: Array<Effect> = [
 		index: 1099,
 		keyWords: 'mp regen m',
 		name: 'MP Regen M',
+		pageIndex: 464,
 	},
 	{
 		description: 'Increases maximum HP by 30.',
@@ -3335,6 +3798,7 @@ export const effectsList: Array<Effect> = [
 		index: 1106,
 		keyWords: 'max hp up xl',
 		name: 'Max HP Up XL',
+		pageIndex: 465,
 	},
 	{
 		description: 'Increases maximum MP by 20.',
@@ -3342,6 +3806,7 @@ export const effectsList: Array<Effect> = [
 		index: 1109,
 		keyWords: 'max mp up m',
 		name: 'Max MP Up M',
+		pageIndex: 466,
 	},
 	{
 		description: 'Increases defense by 5.',
@@ -3349,6 +3814,7 @@ export const effectsList: Array<Effect> = [
 		index: 1117,
 		keyWords: 'defense up xs',
 		name: 'Defense Up XS',
+		pageIndex: 467,
 	},
 	{
 		description: "Increases the target's hit rate by a lot. The effect lasts 5 turns.",
@@ -3356,6 +3822,7 @@ export const effectsList: Array<Effect> = [
 		index: 1130,
 		keyWords: 'hit rate up l',
 		name: 'Hit Rate Up L',
+		pageIndex: 468,
 	},
 	{
 		description: "Increases the target's evasion rate. The effect lasts 5 turns.",
@@ -3363,6 +3830,7 @@ export const effectsList: Array<Effect> = [
 		index: 1134,
 		keyWords: 'evasion up m',
 		name: 'Evasion Up M',
+		pageIndex: 469,
 	},
 	{
 		description: "Temporarily increases the target's maximum HP in battle. The effect is large.",
@@ -3370,6 +3838,7 @@ export const effectsList: Array<Effect> = [
 		index: 548,
 		keyWords: 'temp stamina up l',
 		name: 'Temp Stamina Up L',
+		pageIndex: 470,
 	},
 	{
 		description: "Automatically revive on the next turn after being KO'd. HP after revival is fairly high.",
@@ -3377,6 +3846,7 @@ export const effectsList: Array<Effect> = [
 		index: 554,
 		keyWords: 'auto revive l',
 		name: 'Auto Revive L',
+		pageIndex: 471,
 	},
 	{
 		description: "Reduces wait time after the target's next turn by a little.",
@@ -3384,6 +3854,7 @@ export const effectsList: Array<Effect> = [
 		index: 558,
 		keyWords: 'cut wait time s',
 		name: 'Cut Wait Time S',
+		pageIndex: 472,
 	},
 	{
 		description: "Increases the target's chance to activate a chain attack by 50%. Effect lasts 5 turns.",
@@ -3391,6 +3862,7 @@ export const effectsList: Array<Effect> = [
 		index: 562,
 		keyWords: 'chain attack up m',
 		name: 'Chain Attack Up M',
+		pageIndex: 473,
 	},
 	{
 		description: 'Has a set chance of causing Poison, Blind, and Weak on the target.',
@@ -3398,6 +3870,7 @@ export const effectsList: Array<Effect> = [
 		index: 617,
 		keyWords: 'cause misfortune',
 		name: 'Cause Misfortune',
+		pageIndex: 474,
 	},
 	{
 		description: "Reduces the target's attack by a large amount, and temporarily increases your own by that amount.",
@@ -3405,6 +3878,7 @@ export const effectsList: Array<Effect> = [
 		index: 628,
 		keyWords: 'steal attack l',
 		name: 'Steal Attack L',
+		pageIndex: 475,
 	},
 	{
 		description: "Reduces the target's defense by a large amount, and temporarily increases your own by that amount.",
@@ -3412,6 +3886,7 @@ export const effectsList: Array<Effect> = [
 		index: 631,
 		keyWords: 'steal defense l',
 		name: 'Steal Defense L',
+		pageIndex: 476,
 	},
 	{
 		description: 'Nullifies 1 enhancement effect on the target.',
@@ -3419,6 +3894,7 @@ export const effectsList: Array<Effect> = [
 		index: 635,
 		keyWords: 'remove enhancements',
 		name: 'Remove Enhancements',
+		pageIndex: 477,
 	},
 	{
 		description: "Reduces the target's attack power.",
@@ -3426,6 +3902,7 @@ export const effectsList: Array<Effect> = [
 		index: 689,
 		keyWords: 'attack down m',
 		name: 'Attack Down M',
+		pageIndex: 478,
 	},
 	{
 		description: "Slightly reduces the target's speed.",
@@ -3433,6 +3910,7 @@ export const effectsList: Array<Effect> = [
 		index: 694,
 		keyWords: 'speed down s',
 		name: 'Speed Down S',
+		pageIndex: 479,
 	},
 	{
 		description:
@@ -3441,6 +3919,7 @@ export const effectsList: Array<Effect> = [
 		index: 703,
 		keyWords: 'inflict poison s',
 		name: 'Inflict Poison S',
+		pageIndex: 480,
 	},
 	{
 		description:
@@ -3449,6 +3928,7 @@ export const effectsList: Array<Effect> = [
 		index: 704,
 		keyWords: 'inflict poison m',
 		name: 'Inflict Poison M',
+		pageIndex: 481,
 	},
 	{
 		description:
@@ -3457,6 +3937,7 @@ export const effectsList: Array<Effect> = [
 		index: 711,
 		keyWords: 'inflict curse l',
 		name: 'Inflict Curse L',
+		pageIndex: 482,
 	},
 	{
 		description:
@@ -3465,6 +3946,7 @@ export const effectsList: Array<Effect> = [
 		index: 713,
 		keyWords: 'inflict blind m',
 		name: 'Inflict Blind M',
+		pageIndex: 483,
 	},
 	{
 		description: 'Has a high chance of No Healing the target. No Heal causes all recovery effects to heal for 0.',
@@ -3472,6 +3954,7 @@ export const effectsList: Array<Effect> = [
 		index: 720,
 		keyWords: 'inflict no heal l',
 		name: 'Inflict No Heal L',
+		pageIndex: 484,
 	},
 	{
 		description:
@@ -3480,6 +3963,7 @@ export const effectsList: Array<Effect> = [
 		index: 722,
 		keyWords: 'inflict seal m',
 		name: 'Inflict Seal M',
+		pageIndex: 485,
 	},
 	{
 		description:
@@ -3488,6 +3972,7 @@ export const effectsList: Array<Effect> = [
 		index: 728,
 		keyWords: 'weak to fire',
 		name: 'Weak to Fire',
+		pageIndex: 486,
 	},
 	{
 		description: "Reduces the target's level. Reduced level decreases all stats and damage dealt.",
@@ -3495,6 +3980,7 @@ export const effectsList: Array<Effect> = [
 		index: 732,
 		keyWords: 'level down m',
 		name: 'Level Down M',
+		pageIndex: 487,
 	},
 	{
 		description:
@@ -3503,6 +3989,7 @@ export const effectsList: Array<Effect> = [
 		index: 738,
 		keyWords: 'weak to changes',
 		name: 'Weak to Changes',
+		pageIndex: 488,
 	},
 	{
 		description: 'Pacifies the enemy, delaying the activation of powerful attacks.',
@@ -3510,6 +3997,7 @@ export const effectsList: Array<Effect> = [
 		index: 749,
 		keyWords: 'pacification l',
 		name: 'Pacification L',
+		pageIndex: 489,
 	},
 	{
 		description: 'Consumes a large amount of MP. The effect is weakened when MP is insufficient.',
@@ -3517,6 +4005,7 @@ export const effectsList: Array<Effect> = [
 		index: 805,
 		keyWords: 'consume mp l',
 		name: 'Consume MP L',
+		pageIndex: 490,
 	},
 	{
 		description: 'Increases item capacity by 20.',
@@ -3524,6 +4013,7 @@ export const effectsList: Array<Effect> = [
 		index: 931,
 		keyWords: 'fits a lot',
 		name: 'Fits a Lot',
+		pageIndex: 491,
 	},
 	{
 		description: 'Increases item capacity by 40.',
@@ -3531,6 +4021,7 @@ export const effectsList: Array<Effect> = [
 		index: 932,
 		keyWords: 'fits a whole lot',
 		name: 'Fits a Whole Lot',
+		pageIndex: 492,
 	},
 	{
 		description: 'Increases number of items gathered each time a little.',
@@ -3538,6 +4029,7 @@ export const effectsList: Array<Effect> = [
 		index: 936,
 		keyWords: 'gather a little more',
 		name: 'Gather a Little More',
+		pageIndex: 493,
 	},
 	{
 		description: 'Increases critical hit rate a little.',
@@ -3545,6 +4037,7 @@ export const effectsList: Array<Effect> = [
 		index: 1000,
 		keyWords: 'inject will to fight',
 		name: 'Inject Will to Fight',
+		pageIndex: 494,
 	},
 	{
 		description: 'Increases critical hit rate and critical hit damage bonus a little.',
@@ -3552,6 +4045,7 @@ export const effectsList: Array<Effect> = [
 		index: 1001,
 		keyWords: 'inject fighting spirit',
 		name: 'Inject Fighting Spirit',
+		pageIndex: 495,
 	},
 	{
 		description: 'Become more likely to be targeted during battle.',
@@ -3559,6 +4053,7 @@ export const effectsList: Array<Effect> = [
 		index: 1011,
 		keyWords: 'gather attention',
 		name: 'Gather Attention',
+		pageIndex: 496,
 	},
 	{
 		description: 'Increases the chance of higher expected values when attacking.',
@@ -3566,6 +4061,7 @@ export const effectsList: Array<Effect> = [
 		index: 1025,
 		keyWords: 'affect the future',
 		name: 'Affect the Future',
+		pageIndex: 497,
 	},
 	{
 		description: "Automatically revive on turn when KO'd in battle. HP after revival is low.",
@@ -3573,6 +4069,7 @@ export const effectsList: Array<Effect> = [
 		index: 1031,
 		keyWords: 'feather awakening',
 		name: 'Feather Awakening',
+		pageIndex: 498,
 	},
 	{
 		description: 'Reduces the rate at which enemies use powerful attacks a lot.',
@@ -3580,6 +4077,7 @@ export const effectsList: Array<Effect> = [
 		index: 746,
 		keyWords: 'restrain attack l',
 		name: 'Restrain Attack L',
+		pageIndex: 499,
 	},
 	{
 		description: 'Pacifies the enemy, delaying the activation of powerful attacks by a little.',
@@ -3587,6 +4085,7 @@ export const effectsList: Array<Effect> = [
 		index: 747,
 		keyWords: 'pacification s',
 		name: 'Pacification S',
+		pageIndex: 500,
 	},
 	{
 		description: 'Consumes a slight amount of MP. The effect is weakened when MP is insufficient.',
@@ -3594,6 +4093,7 @@ export const effectsList: Array<Effect> = [
 		index: 802,
 		keyWords: 'consume mp xs',
 		name: 'Consume MP XS',
+		pageIndex: 501,
 	},
 	{
 		description:
@@ -3602,6 +4102,7 @@ export const effectsList: Array<Effect> = [
 		index: 864,
 		keyWords: 'small cart',
 		name: 'Small Cart',
+		pageIndex: 502,
 	},
 	{
 		description:
@@ -3610,6 +4111,7 @@ export const effectsList: Array<Effect> = [
 		index: 868,
 		keyWords: 'erase presence',
 		name: 'Erase Presence',
+		pageIndex: 503,
 	},
 	{
 		description: '',
@@ -3617,6 +4119,7 @@ export const effectsList: Array<Effect> = [
 		index: 874,
 		keyWords: "charm's blessing",
 		name: "Charm's Blessing",
+		pageIndex: 504,
 	},
 	{
 		description: 'Reduces LP consumed while moving on the World Map by 25%.',
@@ -3624,6 +4127,7 @@ export const effectsList: Array<Effect> = [
 		index: 925,
 		keyWords: 'lightens body a little',
 		name: 'Lightens Body a Little',
+		pageIndex: 505,
 	},
 	{
 		description: 'Move speed increases by 20%.',
@@ -3631,6 +4135,7 @@ export const effectsList: Array<Effect> = [
 		index: 929,
 		keyWords: 'move speed up m',
 		name: 'Move Speed Up M',
+		pageIndex: 506,
 	},
 	{
 		description: 'Increases number of items gathered each time.',
@@ -3638,6 +4143,7 @@ export const effectsList: Array<Effect> = [
 		index: 937,
 		keyWords: 'gather more',
 		name: 'Gather More',
+		pageIndex: 507,
 	},
 	{
 		description: 'Increases chain attack chance.',
@@ -3645,6 +4151,7 @@ export const effectsList: Array<Effect> = [
 		index: 1016,
 		keyWords: 'chain attack skills',
 		name: 'Chain Attack Skills',
+		pageIndex: 508,
 	},
 	{
 		description: 'Increases chain attack chance by a huge amount.',
@@ -3652,6 +4159,7 @@ export const effectsList: Array<Effect> = [
 		index: 1018,
 		keyWords: 'chain attack mastery',
 		name: 'Chain Attack Mastery',
+		pageIndex: 509,
 	},
 	{
 		description: 'Completely swaps maximum HP and MP values.',
@@ -3659,6 +4167,7 @@ export const effectsList: Array<Effect> = [
 		index: 1020,
 		keyWords: "sage's wisdom",
 		name: "Sage's Wisdom",
+		pageIndex: 510,
 	},
 	{
 		description: 'Increases the chance of higher expected values a lot when attacking.',
@@ -3666,6 +4175,7 @@ export const effectsList: Array<Effect> = [
 		index: 1026,
 		keyWords: 'control the future',
 		name: 'Control the Future',
+		pageIndex: 511,
 	},
 	{
 		description: 'Increases attack, defense, and speed by 25% of base maximum MP.',
@@ -3673,6 +4183,7 @@ export const effectsList: Array<Effect> = [
 		index: 1029,
 		keyWords: 'spirit to power',
 		name: 'Spirit to Power',
+		pageIndex: 512,
 	},
 	{
 		description: 'Reduces turn delaying effects.',
@@ -3680,6 +4191,7 @@ export const effectsList: Array<Effect> = [
 		index: 1034,
 		keyWords: 'resist gravity',
 		name: 'Resist Gravity',
+		pageIndex: 513,
 	},
 	{
 		description: 'During battle, 10% of damage taken and MP consumed is absorbed into the other pool.',
@@ -3687,6 +4199,7 @@ export const effectsList: Array<Effect> = [
 		index: 1047,
 		keyWords: 'conversion spell',
 		name: 'Conversion Spell',
+		pageIndex: 514,
 	},
 	{
 		description: 'The hidden magic of the Guardian Rune increases defense by 25.',
@@ -3694,6 +4207,7 @@ export const effectsList: Array<Effect> = [
 		index: 1055,
 		keyWords: 'guardian rune',
 		name: 'Guardian Rune',
+		pageIndex: 515,
 	},
 	{
 		description: 'Reduces speed by 15%, increasing attack by that amount.',
@@ -3701,6 +4215,7 @@ export const effectsList: Array<Effect> = [
 		index: 1060,
 		keyWords: 'speed to power',
 		name: 'Speed to Power',
+		pageIndex: 516,
 	},
 	{
 		description: 'The power of the spirit god massively increases base damage.',
@@ -3708,6 +4223,7 @@ export const effectsList: Array<Effect> = [
 		index: 1063,
 		keyWords: "spirit god's power",
 		name: "Spirit God's Power",
+		pageIndex: 517,
 	},
 	{
 		description: 'The target recovers a small amount of HP on each turn. The effect lasts for 5 turns.',
@@ -3715,6 +4231,7 @@ export const effectsList: Array<Effect> = [
 		index: 1094,
 		keyWords: 'hp regen s',
 		name: 'HP Regen S',
+		pageIndex: 518,
 	},
 	{
 		description: 'MP recovers a small amount on each turn.',
@@ -3722,6 +4239,7 @@ export const effectsList: Array<Effect> = [
 		index: 1098,
 		keyWords: 'mp regen s',
 		name: 'MP Regen S',
+		pageIndex: 519,
 	},
 	{
 		description: 'MP recovers a large amount on each turn.',
@@ -3729,6 +4247,7 @@ export const effectsList: Array<Effect> = [
 		index: 1101,
 		keyWords: 'mp regen xl',
 		name: 'MP Regen XL',
+		pageIndex: 520,
 	},
 	{
 		description: 'Increases maximum MP by 15.',
@@ -3736,6 +4255,7 @@ export const effectsList: Array<Effect> = [
 		index: 1108,
 		keyWords: 'max mp up s',
 		name: 'Max MP Up S',
+		pageIndex: 521,
 	},
 	{
 		description: "Increases the target's attack power. The effect lasts 5 turns.",
@@ -3743,6 +4263,7 @@ export const effectsList: Array<Effect> = [
 		index: 1114,
 		keyWords: 'attack up m',
 		name: 'Attack Up M',
+		pageIndex: 522,
 	},
 	{
 		description: "Increases the target's defense a little. The effect lasts 5 turns.",
@@ -3750,6 +4271,7 @@ export const effectsList: Array<Effect> = [
 		index: 1118,
 		keyWords: 'defense up s',
 		name: 'Defense Up S',
+		pageIndex: 523,
 	},
 	{
 		description: "Increases the target's speed. The effect lasts 5 turns.",
@@ -3757,6 +4279,7 @@ export const effectsList: Array<Effect> = [
 		index: 1124,
 		keyWords: 'speed up m',
 		name: 'Speed Up M',
+		pageIndex: 524,
 	},
 	{
 		description: 'Increases speed by 25.',
@@ -3764,6 +4287,7 @@ export const effectsList: Array<Effect> = [
 		index: 1126,
 		keyWords: 'speed up xl',
 		name: 'Speed Up XL',
+		pageIndex: 525,
 	},
 	{
 		description: 'Increases critical damage bonus by 6%.',
@@ -3771,6 +4295,7 @@ export const effectsList: Array<Effect> = [
 		index: 1143,
 		keyWords: 'critical enhance s',
 		name: 'Critical Enhance S',
+		pageIndex: 526,
 	},
 	{
 		description: 'Increases critical damage bonus by 15%.',
@@ -3778,6 +4303,7 @@ export const effectsList: Array<Effect> = [
 		index: 1146,
 		keyWords: 'critical enhance xl',
 		name: 'Critical Enhance XL',
+		pageIndex: 527,
 	},
 	{
 		description: 'Increases item power by 20%.',
@@ -3785,6 +4311,7 @@ export const effectsList: Array<Effect> = [
 		index: 1153,
 		keyWords: 'item enhance l',
 		name: 'Item Enhance L',
+		pageIndex: 528,
 	},
 	{
 		description: 'Reduces wait time after using item by 20%.',
@@ -3792,6 +4319,7 @@ export const effectsList: Array<Effect> = [
 		index: 1156,
 		keyWords: 'item shorten l',
 		name: 'Item Shorten L',
+		pageIndex: 529,
 	},
 	{
 		description: 'Increases Burst Gauge fill rate by 1%.',
@@ -3799,6 +4327,7 @@ export const effectsList: Array<Effect> = [
 		index: 1157,
 		keyWords: 'burst up +1%',
 		name: 'Burst Up +1%',
+		pageIndex: 530,
 	},
 	{
 		description: 'Immunity to Slow ailment.',
@@ -3806,6 +4335,7 @@ export const effectsList: Array<Effect> = [
 		index: 1162,
 		keyWords: 'nullify slow',
 		name: 'Nullify Slow',
+		pageIndex: 531,
 	},
 	{
 		description: 'Immunity to Weak ailment.',
@@ -3813,6 +4343,7 @@ export const effectsList: Array<Effect> = [
 		index: 1165,
 		keyWords: 'nullify weak',
 		name: 'Nullify Weak',
+		pageIndex: 532,
 	},
 	{
 		description: 'Immunity to Seal ailment.',
@@ -3820,6 +4351,7 @@ export const effectsList: Array<Effect> = [
 		index: 1167,
 		keyWords: 'nullify seal',
 		name: 'Nullify Seal',
+		pageIndex: 533,
 	},
 	{
 		description: 'Immunity to revival After Effects ailment.',
@@ -3827,6 +4359,7 @@ export const effectsList: Array<Effect> = [
 		index: 1168,
 		keyWords: 'nullify after effect',
 		name: 'Nullify After Effect',
+		pageIndex: 534,
 	},
 	{
 		description: 'Reduces chance of being affected by ailments.',
@@ -3834,6 +4367,7 @@ export const effectsList: Array<Effect> = [
 		index: 1175,
 		keyWords: 'ailment resist xl',
 		name: 'Ailment Resist XL',
+		pageIndex: 535,
 	},
 	{
 		description:
@@ -3842,6 +4376,7 @@ export const effectsList: Array<Effect> = [
 		index: 1178,
 		keyWords: 'avoid ko m',
 		name: 'Avoid KO M',
+		pageIndex: 536,
 	},
 	{
 		description: 'Gain ice resistance.',
@@ -3849,6 +4384,7 @@ export const effectsList: Array<Effect> = [
 		index: 1182,
 		keyWords: 'ice resistance',
 		name: 'Ice Resistance',
+		pageIndex: 537,
 	},
 	{
 		description: 'Increases Break value when attacking enemies by a small amount.',
@@ -3856,6 +4392,7 @@ export const effectsList: Array<Effect> = [
 		index: 1193,
 		keyWords: 'break enhance m',
 		name: 'Break Enhance M',
+		pageIndex: 538,
 	},
 	{
 		description: '',
@@ -3863,6 +4400,7 @@ export const effectsList: Array<Effect> = [
 		index: 1256,
 		keyWords: 'input time limit 20',
 		name: 'Input Time Limit 20',
+		pageIndex: 539,
 	},
 	{
 		description: 'The panel size is 5x5.',
@@ -3870,6 +4408,7 @@ export const effectsList: Array<Effect> = [
 		index: 1262,
 		keyWords: 'panel 5x5',
 		name: 'Panel 5x5',
+		pageIndex: 540,
 	},
 	{
 		description:
@@ -3878,6 +4417,7 @@ export const effectsList: Array<Effect> = [
 		index: 1268,
 		keyWords: 'tuning',
 		name: 'Tuning',
+		pageIndex: 541,
 	},
 	{
 		description: 'Increases item quality by the ratio of the most common synthesis panel color.',
@@ -3885,6 +4425,7 @@ export const effectsList: Array<Effect> = [
 		index: 1272,
 		keyWords: 'quality boost',
 		name: 'Quality Boost',
+		pageIndex: 542,
 	},
 	{
 		description: 'Changes the item color to Green.',
@@ -3892,6 +4433,7 @@ export const effectsList: Array<Effect> = [
 		index: 1285,
 		keyWords: 'change color green',
 		name: 'Change Color Green',
+		pageIndex: 543,
 	},
 	{
 		description: 'Adds 10 category value to (Poison Mat).',
@@ -3899,6 +4441,7 @@ export const effectsList: Array<Effect> = [
 		index: 1291,
 		keyWords: 'add (poison mat)',
 		name: 'Add (Poison Mat)',
+		pageIndex: 544,
 	},
 	{
 		description: 'Gain ultimate destruction. Increases critical hit damage bonus by 30%.',
@@ -3906,6 +4449,7 @@ export const effectsList: Array<Effect> = [
 		index: 1398,
 		keyWords: 'ultimate destruction',
 		name: 'Ultimate Destruction',
+		pageIndex: 545,
 	},
 	{
 		description: 'Gain ultimate stability. Nullifies turn delaying effects by 100%.',
@@ -3913,6 +4457,7 @@ export const effectsList: Array<Effect> = [
 		index: 1399,
 		keyWords: 'ultimate stability',
 		name: 'Ultimate Stability',
+		pageIndex: 546,
 	},
 	{
 		description: 'Gain ultimate conversion. 20% of damage taken is absorbed into MP.',
@@ -3920,6 +4465,7 @@ export const effectsList: Array<Effect> = [
 		index: 1404,
 		keyWords: 'ultimate conversion',
 		name: 'Ultimate Conversion',
+		pageIndex: 547,
 	},
 	{
 		description: 'Gain ultimate energy. Increases speed by 50.',
@@ -3927,6 +4473,7 @@ export const effectsList: Array<Effect> = [
 		index: 1411,
 		keyWords: 'ultimate energy',
 		name: 'Ultimate Energy',
+		pageIndex: 548,
 	},
 	{
 		description: 'Gain ultimate ice resistance. Gain super ice resistance.',
@@ -3934,6 +4481,7 @@ export const effectsList: Array<Effect> = [
 		index: 1415,
 		keyWords: 'ultimate ice resist',
 		name: 'Ultimate Ice Resist',
+		pageIndex: 549,
 	},
 	{
 		description: 'Gain ultimate stunning force. Greatly increases Break value when attacking.',
@@ -3941,6 +4489,7 @@ export const effectsList: Array<Effect> = [
 		index: 1428,
 		keyWords: 'ultimate stunning force',
 		name: 'Ultimate Stunning Force',
+		pageIndex: 550,
 	},
 	{
 		description: 'During battle, stats increase with each turn. There is a limit to this increase.',
@@ -3948,6 +4497,7 @@ export const effectsList: Array<Effect> = [
 		index: 998,
 		keyWords: 'fighting spirit active',
 		name: 'Fighting Spirit Active',
+		pageIndex: 551,
 	},
 	{
 		description: 'Increases critical hit rate and critical hit damage bonus.',
@@ -3955,6 +4505,7 @@ export const effectsList: Array<Effect> = [
 		index: 1002,
 		keyWords: 'inject warlike spirit',
 		name: 'Inject Warlike Spirit',
+		pageIndex: 552,
 	},
 	{
 		description: 'Become a little more likely to be targeted during battle.',
@@ -3962,6 +4513,7 @@ export const effectsList: Array<Effect> = [
 		index: 1010,
 		keyWords: 'draw attention',
 		name: 'Draw Attention',
+		pageIndex: 553,
 	},
 	{
 		description: 'Increases chain attack chance by a large amount.',
@@ -3969,6 +4521,7 @@ export const effectsList: Array<Effect> = [
 		index: 1017,
 		keyWords: 'chain attack secrets',
 		name: 'Chain Attack Secrets',
+		pageIndex: 554,
 	},
 	{
 		description: 'Swaps 50% of maximum HP and MP values with each other.',
@@ -3976,6 +4529,7 @@ export const effectsList: Array<Effect> = [
 		index: 1019,
 		keyWords: "scholar's wisdom",
 		name: "Scholar's Wisdom",
+		pageIndex: 555,
 	},
 	{
 		description: 'Reduces damage taken by 10%, but increases Break value.',
@@ -3983,6 +4537,7 @@ export const effectsList: Array<Effect> = [
 		index: 1023,
 		keyWords: 'ancient god blessing',
 		name: 'Ancient God Blessing',
+		pageIndex: 556,
 	},
 	{
 		description: "Automatically revive on turn when KO'd in battle. HP after revival is about half.",
@@ -3990,6 +4545,7 @@ export const effectsList: Array<Effect> = [
 		index: 1033,
 		keyWords: 'samsara awakening',
 		name: 'Samsara Awakening',
+		pageIndex: 557,
 	},
 	{
 		description: 'During battle, 15% of damage taken and MP consumed is absorbed into the other pool.',
@@ -3997,6 +4553,7 @@ export const effectsList: Array<Effect> = [
 		index: 1048,
 		keyWords: 'mass conversion spell',
 		name: 'Mass Conversion Spell',
+		pageIndex: 558,
 	},
 	{
 		description: 'The hidden magic of the Defense Rune increases defense by 15.',
@@ -4004,6 +4561,7 @@ export const effectsList: Array<Effect> = [
 		index: 1052,
 		keyWords: 'defense rune',
 		name: 'Defense Rune',
+		pageIndex: 559,
 	},
 	{
 		description: 'The hidden magic of the Weapon Rune increases base damage.',
@@ -4011,6 +4569,7 @@ export const effectsList: Array<Effect> = [
 		index: 1057,
 		keyWords: 'weapon rune',
 		name: 'Weapon Rune',
+		pageIndex: 560,
 	},
 	{
 		description: 'Gain the heroic soul, revealing true power when fighting powerful foes.',
@@ -4018,6 +4577,7 @@ export const effectsList: Array<Effect> = [
 		index: 1068,
 		keyWords: "hero's ambition",
 		name: "Hero's Ambition",
+		pageIndex: 561,
 	},
 	{
 		description: 'The target recovers a huge amount of HP on each turn. The effect lasts for 5 turns.',
@@ -4025,6 +4585,7 @@ export const effectsList: Array<Effect> = [
 		index: 1097,
 		keyWords: 'hp regen xl',
 		name: 'HP Regen XL',
+		pageIndex: 562,
 	},
 	{
 		description: 'Increases maximum HP by 10.',
@@ -4032,6 +4593,7 @@ export const effectsList: Array<Effect> = [
 		index: 1102,
 		keyWords: 'max hp up xs',
 		name: 'Max HP Up XS',
+		pageIndex: 563,
 	},
 	{
 		description: 'Increases maximum MP by 25.',
@@ -4039,6 +4601,7 @@ export const effectsList: Array<Effect> = [
 		index: 1110,
 		keyWords: 'max mp up l',
 		name: 'Max MP Up L',
+		pageIndex: 564,
 	},
 	{
 		description: "Increases the target's attack power a little. The effect lasts 5 turns.",
@@ -4046,6 +4609,7 @@ export const effectsList: Array<Effect> = [
 		index: 1113,
 		keyWords: 'attack up s',
 		name: 'Attack Up S',
+		pageIndex: 565,
 	},
 	{
 		description: "Increases the target's attack power by a lot. The effect lasts 5 turns.",
@@ -4053,6 +4617,7 @@ export const effectsList: Array<Effect> = [
 		index: 1115,
 		keyWords: 'attack up l',
 		name: 'Attack Up L',
+		pageIndex: 566,
 	},
 	{
 		description: "Increases the target's defense by a lot. The effect lasts 5 turns.",
@@ -4060,6 +4625,7 @@ export const effectsList: Array<Effect> = [
 		index: 1120,
 		keyWords: 'defense up l',
 		name: 'Defense Up L',
+		pageIndex: 567,
 	},
 	{
 		description: "Increases the target's hit rate a little. The effect lasts 5 turns.",
@@ -4067,6 +4633,7 @@ export const effectsList: Array<Effect> = [
 		index: 1128,
 		keyWords: 'hit rate up s',
 		name: 'Hit Rate Up S',
+		pageIndex: 568,
 	},
 	{
 		description: 'Increases critical damage bonus by 3%.',
@@ -4074,6 +4641,7 @@ export const effectsList: Array<Effect> = [
 		index: 1142,
 		keyWords: 'critical enhance xs',
 		name: 'Critical Enhance XS',
+		pageIndex: 569,
 	},
 	{
 		description: 'Increases critical damage bonus by 12%.',
@@ -4081,6 +4649,7 @@ export const effectsList: Array<Effect> = [
 		index: 1145,
 		keyWords: 'critical enhance l',
 		name: 'Critical Enhance L',
+		pageIndex: 570,
 	},
 	{
 		description: 'Increases skill power by 10%.',
@@ -4088,6 +4657,7 @@ export const effectsList: Array<Effect> = [
 		index: 1149,
 		keyWords: 'skill enhance l',
 		name: 'Skill Enhance L',
+		pageIndex: 571,
 	},
 	{
 		description: 'Increases Break value when attacking enemies.',
@@ -4095,6 +4665,7 @@ export const effectsList: Array<Effect> = [
 		index: 1194,
 		keyWords: 'break enhance l',
 		name: 'Break Enhance L',
+		pageIndex: 572,
 	},
 	{
 		description: '',
@@ -4102,6 +4673,7 @@ export const effectsList: Array<Effect> = [
 		index: 1254,
 		keyWords: "plachta's cauldron",
 		name: "Plachta's Cauldron",
+		pageIndex: 573,
 	},
 	{
 		description: '',
@@ -4109,6 +4681,7 @@ export const effectsList: Array<Effect> = [
 		index: 1260,
 		keyWords: 'panel display level 3',
 		name: 'Panel Display Level 3',
+		pageIndex: 574,
 	},
 	{
 		description: "Performing Synthesis at quality value 0 won't result in failure, and produce the desired item.",
@@ -4116,6 +4689,7 @@ export const effectsList: Array<Effect> = [
 		index: 1265,
 		keyWords: 'no failures',
 		name: 'No Failures',
+		pageIndex: 575,
 	},
 	{
 		description: 'The ultimate alchemy cauldron, featuring all effects other than “Time Limit”.',
@@ -4123,6 +4697,7 @@ export const effectsList: Array<Effect> = [
 		index: 1273,
 		keyWords: 'true combined effect',
 		name: 'True Combined Effect',
+		pageIndex: 576,
 	},
 	{
 		description: 'Changes the item color to Red.',
@@ -4130,6 +4705,7 @@ export const effectsList: Array<Effect> = [
 		index: 1283,
 		keyWords: 'change color red',
 		name: 'Change Color Red',
+		pageIndex: 577,
 	},
 	{
 		description: 'Changes the item color to White.',
@@ -4137,6 +4713,7 @@ export const effectsList: Array<Effect> = [
 		index: 1287,
 		keyWords: 'change color white',
 		name: 'Change Color White',
+		pageIndex: 578,
 	},
 	{
 		description: 'Increases (Wood) category value by 5.',
@@ -4144,6 +4721,7 @@ export const effectsList: Array<Effect> = [
 		index: 1300,
 		keyWords: '(wood) +5',
 		name: '(Wood) +5',
+		pageIndex: 579,
 	},
 	{
 		description: 'Increases (Neutralizer) category value by 5.',
@@ -4151,6 +4729,7 @@ export const effectsList: Array<Effect> = [
 		index: 1301,
 		keyWords: '(neutralizer) +5',
 		name: '(Neutralizer) +5',
+		pageIndex: 580,
 	},
 	{
 		description: 'Gain ultimate criticality. Increases critical hit rate by 50%.',
@@ -4158,6 +4737,7 @@ export const effectsList: Array<Effect> = [
 		index: 1403,
 		keyWords: 'ultimate criticality',
 		name: 'Ultimate Criticality',
+		pageIndex: 581,
 	},
 	{
 		description: 'Gain ultimate mentality. Increases maximum MP by 100.',
@@ -4165,6 +4745,7 @@ export const effectsList: Array<Effect> = [
 		index: 1407,
 		keyWords: 'ultimate mentality',
 		name: 'Ultimate Mentality',
+		pageIndex: 582,
 	},
 	{
 		description: 'Gain ultimate accuracy. Increases hit rate by 50%.',
@@ -4172,6 +4753,7 @@ export const effectsList: Array<Effect> = [
 		index: 1412,
 		keyWords: 'ultimate accuracy',
 		name: 'Ultimate Accuracy',
+		pageIndex: 583,
 	},
 	{
 		description: 'Gain ultimate compensation. Increases skill power by 30%.',
@@ -4179,6 +4761,7 @@ export const effectsList: Array<Effect> = [
 		index: 1419,
 		keyWords: 'ultimate compensation',
 		name: 'Ultimate Compensation',
+		pageIndex: 584,
 	},
 	{
 		description: 'Gain ultimate explosive force. Increases damage bonus by 15% during Burst.',
@@ -4186,6 +4769,7 @@ export const effectsList: Array<Effect> = [
 		index: 1423,
 		keyWords: 'ultimate explosive force',
 		name: 'Ultimate Explosive Force',
+		pageIndex: 585,
 	},
 	{
 		description:
@@ -4194,6 +4778,7 @@ export const effectsList: Array<Effect> = [
 		index: 1424,
 		keyWords: 'ultimate invulnerability',
 		name: 'Ultimate Invulnerability',
+		pageIndex: 586,
 	},
 	{
 		description: "Increases the target's hit rate. The effect lasts 5 turns.",
@@ -4201,6 +4786,7 @@ export const effectsList: Array<Effect> = [
 		index: 1129,
 		keyWords: 'hit rate up m',
 		name: 'Hit Rate Up M',
+		pageIndex: 587,
 	},
 	{
 		description: 'Increases critical hit rate by 12%.',
@@ -4208,6 +4794,7 @@ export const effectsList: Array<Effect> = [
 		index: 1140,
 		keyWords: 'critical up l',
 		name: 'Critical Up L',
+		pageIndex: 588,
 	},
 	{
 		description: 'Increases critical hit rate by 15%.',
@@ -4215,6 +4802,7 @@ export const effectsList: Array<Effect> = [
 		index: 1141,
 		keyWords: 'critical up xl',
 		name: 'Critical Up XL',
+		pageIndex: 589,
 	},
 	{
 		description: 'Increases skill power by 5%.',
@@ -4222,6 +4810,7 @@ export const effectsList: Array<Effect> = [
 		index: 1147,
 		keyWords: 'skill enhance s',
 		name: 'Skill Enhance S',
+		pageIndex: 590,
 	},
 	{
 		description: 'Increases skill power by 7%.',
@@ -4229,6 +4818,7 @@ export const effectsList: Array<Effect> = [
 		index: 1148,
 		keyWords: 'skill enhance m',
 		name: 'Skill Enhance M',
+		pageIndex: 591,
 	},
 	{
 		description: 'Increases critical hit rate by 9%.',
@@ -4236,6 +4826,7 @@ export const effectsList: Array<Effect> = [
 		index: 1139,
 		keyWords: 'critical up m',
 		name: 'Critical Up M',
+		pageIndex: 592,
 	},
 	{
 		description: 'Increases skill power by 15%.',
@@ -4243,6 +4834,7 @@ export const effectsList: Array<Effect> = [
 		index: 1150,
 		keyWords: 'skill enhance xl',
 		name: 'Skill Enhance XL',
+		pageIndex: 593,
 	},
 	{
 		description: 'Immunity to Poison ailment.',
@@ -4250,6 +4842,7 @@ export const effectsList: Array<Effect> = [
 		index: 1161,
 		keyWords: 'nullify poison',
 		name: 'Nullify Poison',
+		pageIndex: 594,
 	},
 	{
 		description: 'Immunity to Curse ailment.',
@@ -4257,6 +4850,7 @@ export const effectsList: Array<Effect> = [
 		index: 1163,
 		keyWords: 'nullify curse',
 		name: 'Nullify Curse',
+		pageIndex: 595,
 	},
 	{
 		description: 'Immunity to Blind ailment.',
@@ -4264,6 +4858,7 @@ export const effectsList: Array<Effect> = [
 		index: 1164,
 		keyWords: 'nullify blind',
 		name: 'Nullify Blind',
+		pageIndex: 596,
 	},
 	{
 		description: 'Immunity to One Hit KO.',
@@ -4271,6 +4866,7 @@ export const effectsList: Array<Effect> = [
 		index: 1169,
 		keyWords: 'nullify one hit ko',
 		name: 'Nullify One Hit KO',
+		pageIndex: 597,
 	},
 	{
 		description: 'Reduces chance of being affected by ailments by a decent amount.',
@@ -4278,6 +4874,7 @@ export const effectsList: Array<Effect> = [
 		index: 1174,
 		keyWords: 'ailment resist l',
 		name: 'Ailment Resist L',
+		pageIndex: 598,
 	},
 	{
 		description: 'Gain fire resistance.',
@@ -4285,6 +4882,7 @@ export const effectsList: Array<Effect> = [
 		index: 1181,
 		keyWords: 'fire resistance',
 		name: 'Fire Resistance',
+		pageIndex: 599,
 	},
 	{
 		description: 'Absorbs a portion of damage dealt to the target as HP. The effect is fairly small.',
@@ -4292,6 +4890,7 @@ export const effectsList: Array<Effect> = [
 		index: 1185,
 		keyWords: 'damage absorb m',
 		name: 'Damage Absorb M',
+		pageIndex: 600,
 	},
 	{
 		description: 'Reduces damage taken by 6%.',
@@ -4299,6 +4898,7 @@ export const effectsList: Array<Effect> = [
 		index: 1189,
 		keyWords: 'damage cut m',
 		name: 'Damage Cut M',
+		pageIndex: 601,
 	},
 	{
 		description: 'Increases Break resistance by a decent amount.',
@@ -4306,6 +4906,7 @@ export const effectsList: Array<Effect> = [
 		index: 1197,
 		keyWords: 'break resist m',
 		name: 'Break Resist M',
+		pageIndex: 602,
 	},
 	{
 		description: 'Increases damage dealt to Broken enemies by a slight amount.',
@@ -4313,6 +4914,7 @@ export const effectsList: Array<Effect> = [
 		index: 1199,
 		keyWords: 'use opportunity s',
 		name: 'Use Opportunity S',
+		pageIndex: 603,
 	},
 	{
 		description: 'Increases damage dealt to Broken enemies.',
@@ -4320,6 +4922,7 @@ export const effectsList: Array<Effect> = [
 		index: 1201,
 		keyWords: 'use opportunity l',
 		name: 'Use Opportunity L',
+		pageIndex: 604,
 	},
 	{
 		description:
@@ -4328,6 +4931,7 @@ export const effectsList: Array<Effect> = [
 		index: 1257,
 		keyWords: 'bonus display level 1',
 		name: 'Bonus Display Level 1',
+		pageIndex: 605,
 	},
 	{
 		description:
@@ -4336,6 +4940,7 @@ export const effectsList: Array<Effect> = [
 		index: 1264,
 		keyWords: 'worn out cauldron',
 		name: 'Worn Out Cauldron',
+		pageIndex: 606,
 	},
 	{
 		description: 'Obtaining bonuses that are the same color as the liquid in the cauldron increases effect by 50%.',
@@ -4343,6 +4948,7 @@ export const effectsList: Array<Effect> = [
 		index: 1267,
 		keyWords: 'synergy',
 		name: 'Synergy',
+		pageIndex: 607,
 	},
 	{
 		description:
@@ -4351,6 +4957,7 @@ export const effectsList: Array<Effect> = [
 		index: 1271,
 		keyWords: 'quick to improve',
 		name: 'Quick to Improve',
+		pageIndex: 608,
 	},
 	{
 		description: 'Changes the item color to Yellow.',
@@ -4358,6 +4965,7 @@ export const effectsList: Array<Effect> = [
 		index: 1286,
 		keyWords: 'change color yellow',
 		name: 'Change Color Yellow',
+		pageIndex: 609,
 	},
 	{
 		description: 'Gain ultimate reversal. 15% of damage taken is converted into MP damage and reduced.',
@@ -4365,6 +4973,7 @@ export const effectsList: Array<Effect> = [
 		index: 1400,
 		keyWords: 'ultimate reversal',
 		name: 'Ultimate Reversal',
+		pageIndex: 610,
 	},
 	{
 		description: 'Gain ultimate evolution. Greatly enhances stats of the wearer depending on level.',
@@ -4372,6 +4981,7 @@ export const effectsList: Array<Effect> = [
 		index: 1405,
 		keyWords: 'ultimate evolution',
 		name: 'Ultimate Evolution',
+		pageIndex: 611,
 	},
 	{
 		description: 'Gain ultimate attack power. Increases attack power by 50.',
@@ -4379,6 +4989,7 @@ export const effectsList: Array<Effect> = [
 		index: 1409,
 		keyWords: 'ultimate attack',
 		name: 'Ultimate Attack',
+		pageIndex: 612,
 	},
 	{
 		description: 'Gain ultimate evasion. Increases evasion rate by 15%.',
@@ -4386,6 +4997,7 @@ export const effectsList: Array<Effect> = [
 		index: 1413,
 		keyWords: 'ultimate evasion',
 		name: 'Ultimate Evasion',
+		pageIndex: 613,
 	},
 	{
 		description: 'Gain ultimate resistance. Gain resistance to all status ailments.',
@@ -4393,6 +5005,7 @@ export const effectsList: Array<Effect> = [
 		index: 1417,
 		keyWords: 'ultimate resistance',
 		name: 'Ultimate Resistance',
+		pageIndex: 614,
 	},
 	{
 		description: 'Gain ultimate support. Enhances Assist action effects by 15%.',
@@ -4400,6 +5013,7 @@ export const effectsList: Array<Effect> = [
 		index: 1418,
 		keyWords: 'ultimate support',
 		name: 'Ultimate Support',
+		pageIndex: 615,
 	},
 	{
 		description: 'Gain ultimate turn-around. Greatly increases stats when fighting powerful enemies.',
@@ -4407,6 +5021,7 @@ export const effectsList: Array<Effect> = [
 		index: 1422,
 		keyWords: 'ultimate turn-around',
 		name: 'Ultimate Turn-Around',
+		pageIndex: 616,
 	},
 	{
 		description: 'Gain ultimate zeal. Increases Burst Gauge refill rate by 10% when attacking.',
@@ -4414,6 +5029,7 @@ export const effectsList: Array<Effect> = [
 		index: 1427,
 		keyWords: 'ultimate zeal',
 		name: 'Ultimate Zeal',
+		pageIndex: 617,
 	},
 	{
 		description: 'Reduces chance of being affected by ailments by a small amount.',
@@ -4421,6 +5037,7 @@ export const effectsList: Array<Effect> = [
 		index: 1172,
 		keyWords: 'ailment resist s',
 		name: 'Ailment Resist S',
+		pageIndex: 618,
 	},
 	{
 		description:
@@ -4429,6 +5046,7 @@ export const effectsList: Array<Effect> = [
 		index: 1177,
 		keyWords: 'avoid ko s',
 		name: 'Avoid KO S',
+		pageIndex: 619,
 	},
 	{
 		description:
@@ -4437,6 +5055,7 @@ export const effectsList: Array<Effect> = [
 		index: 1179,
 		keyWords: 'avoid ko l',
 		name: 'Avoid KO L',
+		pageIndex: 620,
 	},
 	{
 		description: 'Absorbs a portion of damage dealt to the target as HP. The effect is decent.',
@@ -4444,6 +5063,7 @@ export const effectsList: Array<Effect> = [
 		index: 1186,
 		keyWords: 'damage absorb l',
 		name: 'Damage Absorb L',
+		pageIndex: 621,
 	},
 	{
 		description: 'Reduces damage taken by 8%.',
@@ -4451,6 +5071,7 @@ export const effectsList: Array<Effect> = [
 		index: 1190,
 		keyWords: 'damage cut l',
 		name: 'Damage Cut L',
+		pageIndex: 622,
 	},
 	{
 		description: 'Increases Break value when attacking enemies by a large amount.',
@@ -4458,6 +5079,7 @@ export const effectsList: Array<Effect> = [
 		index: 1195,
 		keyWords: 'break enhance xl',
 		name: 'Break Enhance XL',
+		pageIndex: 623,
 	},
 	{
 		description: 'Increases Break resistance.',
@@ -4465,6 +5087,7 @@ export const effectsList: Array<Effect> = [
 		index: 1198,
 		keyWords: 'break resist l',
 		name: 'Break Resist L',
+		pageIndex: 624,
 	},
 	{
 		description: 'Increases damage dealt to Broken enemies by a large amount.',
@@ -4472,6 +5095,7 @@ export const effectsList: Array<Effect> = [
 		index: 1202,
 		keyWords: 'use opportunity xl',
 		name: 'Use Opportunity XL',
+		pageIndex: 625,
 	},
 	{
 		description:
@@ -4480,6 +5104,7 @@ export const effectsList: Array<Effect> = [
 		index: 1253,
 		keyWords: 'panels change each day',
 		name: 'Panels Change Each Day',
+		pageIndex: 626,
 	},
 	{
 		description:
@@ -4488,6 +5113,7 @@ export const effectsList: Array<Effect> = [
 		index: 1258,
 		keyWords: 'bonus display level 2',
 		name: 'Bonus Display Level 2',
+		pageIndex: 627,
 	},
 	{
 		description: 'The panel size is 4x4.',
@@ -4495,6 +5121,7 @@ export const effectsList: Array<Effect> = [
 		index: 1261,
 		keyWords: 'panel 4x4',
 		name: 'Panel 4x4',
+		pageIndex: 628,
 	},
 	{
 		description:
@@ -4503,6 +5130,7 @@ export const effectsList: Array<Effect> = [
 		index: 1266,
 		keyWords: 'for practice',
 		name: 'For Practice',
+		pageIndex: 629,
 	},
 	{
 		description:
@@ -4511,6 +5139,7 @@ export const effectsList: Array<Effect> = [
 		index: 1269,
 		keyWords: 'time limit',
 		name: 'Time Limit',
+		pageIndex: 630,
 	},
 	{
 		description: 'Adds 10 category value to (Fuel).',
@@ -4518,6 +5147,7 @@ export const effectsList: Array<Effect> = [
 		index: 1289,
 		keyWords: 'add (fuel)',
 		name: 'Add (Fuel)',
+		pageIndex: 631,
 	},
 	{
 		description: 'Gain ultimate regeneration. Recover 50 HP on every turn.',
@@ -4525,6 +5155,7 @@ export const effectsList: Array<Effect> = [
 		index: 1402,
 		keyWords: 'ultimate regeneration',
 		name: 'Ultimate Regeneration',
+		pageIndex: 632,
 	},
 	{
 		description: 'Gain ultimate vitality. Increases maximum HP by 100.',
@@ -4532,6 +5163,7 @@ export const effectsList: Array<Effect> = [
 		index: 1406,
 		keyWords: 'ultimate vitality',
 		name: 'Ultimate Vitality',
+		pageIndex: 633,
 	},
 	{
 		description: 'Gain ultimate defense. Increases defense by 50.',
@@ -4539,6 +5171,7 @@ export const effectsList: Array<Effect> = [
 		index: 1410,
 		keyWords: 'ultimate defense',
 		name: 'Ultimate Defense',
+		pageIndex: 634,
 	},
 	{
 		description: 'Gain ultimate fire resistance. Gain super fire resistance.',
@@ -4546,6 +5179,7 @@ export const effectsList: Array<Effect> = [
 		index: 1414,
 		keyWords: 'ultimate fire resist',
 		name: 'Ultimate Fire Resist',
+		pageIndex: 635,
 	},
 	{
 		description: 'Gain ultimate mitigation. Reduces all damage taken by 10%.',
@@ -4553,6 +5187,7 @@ export const effectsList: Array<Effect> = [
 		index: 1426,
 		keyWords: 'ultimate mitigation',
 		name: 'Ultimate Mitigation',
+		pageIndex: 636,
 	},
 	{
 		description: 'Adds 10 category value to (Medicine Mat).',
@@ -4560,6 +5195,7 @@ export const effectsList: Array<Effect> = [
 		index: 1290,
 		keyWords: 'add (medicine mat)',
 		name: 'Add (Medicine Mat)',
+		pageIndex: 637,
 	},
 	{
 		description:
@@ -4568,6 +5204,7 @@ export const effectsList: Array<Effect> = [
 		index: 1429,
 		keyWords: 'ultimate opposition',
 		name: 'Ultimate Opposition',
+		pageIndex: 638,
 	},
 ];
 
@@ -4595,6 +5232,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WOOD', 'PLANT'],
 		traitPresent: null,
+		pageIndex: 0,
 	},
 	{
 		category: 'MATERIAL',
@@ -4615,6 +5253,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PLANT', 'MEDICINE_MAT'],
 		traitPresent: null,
+		pageIndex: 1,
 	},
 	{
 		category: 'MATERIAL',
@@ -4639,6 +5278,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PLANT', 'SECRET_POWER', 'MEDICINE_MAT'],
 		traitPresent: null,
+		pageIndex: 2,
 	},
 	{
 		category: 'MATERIAL',
@@ -4659,6 +5299,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PLANT', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 3,
 	},
 	{
 		category: 'MATERIAL',
@@ -4683,6 +5324,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PLANT', 'THREAD', 'FUEL'],
 		traitPresent: null,
+		pageIndex: 4,
 	},
 	{
 		category: 'MATERIAL',
@@ -4707,6 +5349,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WOOD', 'PLANT'],
 		traitPresent: null,
+		pageIndex: 5,
 	},
 	{
 		category: 'MATERIAL',
@@ -4727,6 +5370,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PLANT', 'FUEL'],
 		traitPresent: null,
+		pageIndex: 6,
 	},
 	{
 		category: 'MATERIAL',
@@ -4747,6 +5391,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PLANT', 'WATER'],
 		traitPresent: null,
+		pageIndex: 7,
 	},
 	{
 		category: 'MATERIAL',
@@ -4767,6 +5412,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PLANT', 'MEDICINE_MAT'],
 		traitPresent: null,
+		pageIndex: 8,
 	},
 	{
 		category: 'MATERIAL',
@@ -4791,6 +5437,7 @@ export const itemsList: Array<Item> = [
 			name: 'False Flower',
 			table: 'trait',
 		},
+		pageIndex: 9,
 	},
 	{
 		category: 'MATERIAL',
@@ -4811,6 +5458,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PLANT', 'ELIXIR'],
 		traitPresent: null,
+		pageIndex: 10,
 	},
 	{
 		category: 'MATERIAL',
@@ -4841,6 +5489,7 @@ export const itemsList: Array<Item> = [
 			name: 'Slime Compound',
 			table: 'trait',
 		},
+		pageIndex: 11,
 	},
 	{
 		category: 'MATERIAL',
@@ -4869,6 +5518,7 @@ export const itemsList: Array<Item> = [
 			name: 'Full of Life',
 			table: 'trait',
 		},
+		pageIndex: 12,
 	},
 	{
 		category: 'MATERIAL',
@@ -4889,6 +5539,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ORE'],
 		traitPresent: null,
+		pageIndex: 13,
 	},
 	{
 		category: 'MATERIAL',
@@ -4909,6 +5560,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ORE'],
 		traitPresent: null,
+		pageIndex: 14,
 	},
 	{
 		category: 'MATERIAL',
@@ -4933,6 +5585,7 @@ export const itemsList: Array<Item> = [
 			name: 'Electrified',
 			table: 'trait',
 		},
+		pageIndex: 15,
 	},
 	{
 		category: 'MATERIAL',
@@ -4953,6 +5606,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ORE', 'METAL'],
 		traitPresent: null,
+		pageIndex: 16,
 	},
 	{
 		category: 'MATERIAL',
@@ -4973,6 +5627,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['CLAY'],
 		traitPresent: null,
+		pageIndex: 17,
 	},
 	{
 		category: 'MATERIAL',
@@ -5004,6 +5659,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ANIMAL', 'MEDICINE_MAT', 'ELIXIR'],
 		traitPresent: null,
+		pageIndex: 18,
 	},
 	{
 		category: 'MATERIAL',
@@ -5028,6 +5684,7 @@ export const itemsList: Array<Item> = [
 			name: 'Flickering Light',
 			table: 'trait',
 		},
+		pageIndex: 19,
 	},
 	{
 		category: 'MATERIAL',
@@ -5052,6 +5709,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['INGREDIENT', 'PLANT'],
 		traitPresent: null,
+		pageIndex: 20,
 	},
 	{
 		category: 'MATERIAL',
@@ -5072,6 +5730,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PAPER', 'FUEL'],
 		traitPresent: null,
+		pageIndex: 21,
 	},
 	{
 		category: 'MATERIAL',
@@ -5096,6 +5755,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['GEM', 'MEDICINE_MAT'],
 		traitPresent: null,
+		pageIndex: 22,
 	},
 	{
 		category: 'MATERIAL',
@@ -5120,6 +5780,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['SECRET_POWER', 'ELIXIR'],
 		traitPresent: null,
+		pageIndex: 23,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -5149,6 +5810,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['NEUTRALIZER'],
 		traitPresent: null,
+		pageIndex: 24,
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -5182,6 +5844,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['MEDICINE'],
 		traitPresent: null,
+		pageIndex: 25,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -5211,6 +5874,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['INGREDIENT'],
 		traitPresent: null,
+		pageIndex: 26,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -5238,6 +5902,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['MEDICINE'],
 		traitPresent: null,
+		pageIndex: 27,
 	},
 	{
 		category: 'EXPLORATION',
@@ -5261,6 +5926,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['CLOTH'],
 		traitPresent: null,
+		pageIndex: 28,
 	},
 	{
 		category: 'EXPLORATION',
@@ -5293,6 +5959,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['MAGIC_ITEM', 'PAPER'],
 		traitPresent: null,
+		pageIndex: 29,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -5320,6 +5987,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['METAL'],
 		traitPresent: null,
+		pageIndex: 30,
 	},
 	{
 		category: 'MATERIAL',
@@ -5348,6 +6016,7 @@ export const itemsList: Array<Item> = [
 			name: 'Carries Cold',
 			table: 'trait',
 		},
+		pageIndex: 31,
 	},
 	{
 		category: 'MATERIAL',
@@ -5368,6 +6037,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WATER', 'POISON_MAT'],
 		traitPresent: null,
+		pageIndex: 32,
 	},
 	{
 		category: 'MATERIAL',
@@ -5392,6 +6062,7 @@ export const itemsList: Array<Item> = [
 			name: 'Ancient Seal',
 			table: 'trait',
 		},
+		pageIndex: 33,
 	},
 	{
 		category: 'MATERIAL',
@@ -5412,6 +6083,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ORE', 'CLAY'],
 		traitPresent: null,
+		pageIndex: 34,
 	},
 	{
 		category: 'MATERIAL',
@@ -5448,6 +6120,7 @@ export const itemsList: Array<Item> = [
 			name: 'Sunny Scent',
 			table: 'trait',
 		},
+		pageIndex: 35,
 	},
 	{
 		category: 'MATERIAL',
@@ -5468,6 +6141,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WATER', 'MEDICINE_MAT'],
 		traitPresent: null,
+		pageIndex: 36,
 	},
 	{
 		category: 'MATERIAL',
@@ -5492,6 +6166,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['INGREDIENT', 'PLANT'],
 		traitPresent: null,
+		pageIndex: 37,
 	},
 	{
 		category: 'MATERIAL',
@@ -5512,6 +6187,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['INGREDIENT', 'PLANT'],
 		traitPresent: null,
+		pageIndex: 38,
 	},
 	{
 		category: 'MATERIAL',
@@ -5536,6 +6212,7 @@ export const itemsList: Array<Item> = [
 			name: 'Mutated Material',
 			table: 'trait',
 		},
+		pageIndex: 39,
 	},
 	{
 		category: 'MATERIAL',
@@ -5560,6 +6237,7 @@ export const itemsList: Array<Item> = [
 			name: 'Power of Faith',
 			table: 'trait',
 		},
+		pageIndex: 40,
 	},
 	{
 		category: 'MATERIAL',
@@ -5580,6 +6258,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ORE'],
 		traitPresent: null,
+		pageIndex: 41,
 	},
 	{
 		category: 'MATERIAL',
@@ -5600,6 +6279,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 42,
 	},
 	{
 		category: 'MATERIAL',
@@ -5620,6 +6300,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PAPER', 'FUEL', 'MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 43,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -5649,6 +6330,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['MEDICINE'],
 		traitPresent: null,
+		pageIndex: 44,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -5672,6 +6354,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['BOMB', 'MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 45,
 	},
 	{
 		category: 'DE_BUFF_ITEM',
@@ -5699,6 +6382,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 46,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -5726,6 +6410,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 47,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -5755,6 +6440,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['BOMB'],
 		traitPresent: null,
+		pageIndex: 48,
 	},
 	{
 		category: 'MATERIAL',
@@ -5779,6 +6465,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['CLAY'],
 		traitPresent: null,
+		pageIndex: 49,
 	},
 	{
 		category: 'MATERIAL',
@@ -5799,6 +6486,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ORE', 'PLANT'],
 		traitPresent: null,
+		pageIndex: 50,
 	},
 	{
 		category: 'MATERIAL',
@@ -5828,6 +6516,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ANIMAL', 'THREAD'],
 		traitPresent: null,
+		pageIndex: 51,
 	},
 	{
 		category: 'MATERIAL',
@@ -5848,6 +6537,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['INGREDIENT', 'GUNPOWDER'],
 		traitPresent: null,
+		pageIndex: 52,
 	},
 	{
 		category: 'MATERIAL',
@@ -5868,6 +6558,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['FUEL'],
 		traitPresent: null,
+		pageIndex: 53,
 	},
 	{
 		category: 'MATERIAL',
@@ -5896,6 +6587,7 @@ export const itemsList: Array<Item> = [
 			name: 'Secret of Health',
 			table: 'trait',
 		},
+		pageIndex: 54,
 	},
 	{
 		category: 'WEAPON',
@@ -5916,6 +6608,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 55,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -5943,6 +6636,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['ANIMAL', 'GUNPOWDER', 'ELIXIR', 'NEUTRALIZER'],
 		traitPresent: null,
+		pageIndex: 56,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -5970,6 +6664,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['CLAY', 'ELIXIR'],
 		traitPresent: null,
+		pageIndex: 57,
 	},
 	{
 		category: 'MACHINE',
@@ -5997,6 +6692,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 58,
 	},
 	{
 		category: 'MACHINE',
@@ -6029,6 +6725,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 59,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -6063,6 +6760,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['ARMOR_MAT', 'CLOTH'],
 		traitPresent: null,
+		pageIndex: 60,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -6086,6 +6784,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['NEUTRALIZER'],
 		traitPresent: null,
+		pageIndex: 61,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -6115,6 +6814,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['METAL', 'GEM'],
 		traitPresent: null,
+		pageIndex: 62,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -6138,6 +6838,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['WEAPON_MAT', 'METAL'],
 		traitPresent: null,
+		pageIndex: 63,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -6168,6 +6869,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['WATER', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 64,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -6198,6 +6900,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['PAPER', 'FUEL'],
 		traitPresent: null,
+		pageIndex: 65,
 	},
 	{
 		category: 'MATERIAL',
@@ -6224,6 +6927,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['CLAY', 'MEDICINE_MAT'],
 		traitPresent: null,
+		pageIndex: 66,
 	},
 	{
 		category: 'MATERIAL',
@@ -6248,6 +6952,7 @@ export const itemsList: Array<Item> = [
 			name: 'Absorbs Light',
 			table: 'trait',
 		},
+		pageIndex: 67,
 	},
 	{
 		category: 'MATERIAL',
@@ -6268,6 +6973,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['THREAD'],
 		traitPresent: null,
+		pageIndex: 68,
 	},
 	{
 		category: 'MATERIAL',
@@ -6292,6 +6998,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WATER'],
 		traitPresent: null,
+		pageIndex: 69,
 	},
 	{
 		category: 'MATERIAL',
@@ -6320,6 +7027,7 @@ export const itemsList: Array<Item> = [
 			name: 'Medicine Compound',
 			table: 'trait',
 		},
+		pageIndex: 70,
 	},
 	{
 		category: 'MATERIAL',
@@ -6350,6 +7058,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['GEM', 'ORE', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 71,
 	},
 	{
 		category: 'MATERIAL',
@@ -6370,6 +7079,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WOOD'],
 		traitPresent: null,
+		pageIndex: 72,
 	},
 	{
 		category: 'MATERIAL',
@@ -6390,6 +7100,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ELIXIR'],
 		traitPresent: null,
+		pageIndex: 73,
 	},
 	{
 		category: 'MATERIAL',
@@ -6410,6 +7121,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['MAGIC_ITEM', 'FUEL', 'PAPER'],
 		traitPresent: null,
+		pageIndex: 74,
 	},
 	{
 		category: 'WEAPON',
@@ -6430,6 +7142,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 75,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -6460,6 +7173,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['BOMB'],
 		traitPresent: null,
+		pageIndex: 76,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -6490,6 +7204,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['MEDICINE_MAT', 'POISON_MAT'],
 		traitPresent: null,
+		pageIndex: 77,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -6519,6 +7234,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['THREAD', 'METAL'],
 		traitPresent: null,
+		pageIndex: 78,
 	},
 	{
 		category: 'EXPLORATION',
@@ -6549,6 +7265,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['METAL'],
 		traitPresent: null,
+		pageIndex: 79,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -6579,6 +7296,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['BOMB'],
 		traitPresent: null,
+		pageIndex: 80,
 	},
 	{
 		category: 'EXPLORATION',
@@ -6606,6 +7324,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['MAGIC_ITEM', 'ANIMAL'],
 		traitPresent: null,
+		pageIndex: 81,
 	},
 	{
 		category: 'MATERIAL',
@@ -6626,6 +7345,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ORE', 'CLAY', 'METAL'],
 		traitPresent: null,
+		pageIndex: 82,
 	},
 	{
 		category: 'MATERIAL',
@@ -6646,6 +7366,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ORE', 'GEM'],
 		traitPresent: null,
+		pageIndex: 83,
 	},
 	{
 		category: 'MATERIAL',
@@ -6670,6 +7391,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ORE', 'GEM', 'ELIXIR', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 84,
 	},
 	{
 		category: 'MATERIAL',
@@ -6699,6 +7421,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ANIMAL', 'MEDICINE_MAT'],
 		traitPresent: null,
+		pageIndex: 85,
 	},
 	{
 		category: 'MATERIAL',
@@ -6723,6 +7446,7 @@ export const itemsList: Array<Item> = [
 			name: 'Stinks',
 			table: 'trait',
 		},
+		pageIndex: 86,
 	},
 	{
 		category: 'MATERIAL',
@@ -6743,6 +7467,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WATER'],
 		traitPresent: null,
+		pageIndex: 87,
 	},
 	{
 		category: 'MATERIAL',
@@ -6763,6 +7488,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['INGREDIENT', 'PLANT', 'GUNPOWDER'],
 		traitPresent: null,
+		pageIndex: 88,
 	},
 	{
 		category: 'MATERIAL',
@@ -6783,6 +7509,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['GEM', 'ORE'],
 		traitPresent: null,
+		pageIndex: 89,
 	},
 	{
 		category: 'MATERIAL',
@@ -6803,6 +7530,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['GEM', 'ORE'],
 		traitPresent: null,
+		pageIndex: 90,
 	},
 	{
 		category: 'MATERIAL',
@@ -6823,6 +7551,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['GEM', 'SECRET_POWER', 'ELIXIR'],
 		traitPresent: null,
+		pageIndex: 91,
 	},
 	{
 		category: 'MATERIAL',
@@ -6854,6 +7583,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['GEM'],
 		traitPresent: null,
+		pageIndex: 92,
 	},
 	{
 		category: 'MATERIAL',
@@ -6874,6 +7604,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ELIXIR'],
 		traitPresent: null,
+		pageIndex: 93,
 	},
 	{
 		category: 'MATERIAL',
@@ -6894,6 +7625,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ELIXIR'],
 		traitPresent: null,
+		pageIndex: 94,
 	},
 	{
 		category: 'MATERIAL',
@@ -6914,6 +7646,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 95,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -6943,6 +7676,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['BOMB'],
 		traitPresent: null,
+		pageIndex: 96,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -6973,6 +7707,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['BOMB'],
 		traitPresent: null,
+		pageIndex: 97,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -7002,6 +7737,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['FOOD', 'SWEETS'],
 		traitPresent: null,
+		pageIndex: 98,
 	},
 	{
 		category: 'MATERIAL',
@@ -7022,6 +7758,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ORE', 'THREAD'],
 		traitPresent: null,
+		pageIndex: 99,
 	},
 	{
 		category: 'MATERIAL',
@@ -7042,6 +7779,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ORE', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 100,
 	},
 	{
 		category: 'MATERIAL',
@@ -7062,6 +7800,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ANIMAL', 'THREAD'],
 		traitPresent: null,
+		pageIndex: 101,
 	},
 	{
 		category: 'MATERIAL',
@@ -7090,6 +7829,7 @@ export const itemsList: Array<Item> = [
 			name: 'Cutting Thread',
 			table: 'trait',
 		},
+		pageIndex: 102,
 	},
 	{
 		category: 'MATERIAL',
@@ -7110,6 +7850,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['GUNPOWDER', 'WATER', 'POISON_MAT'],
 		traitPresent: null,
+		pageIndex: 103,
 	},
 	{
 		category: 'MATERIAL',
@@ -7134,6 +7875,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['INGREDIENT', 'FUEL', 'MEDICINE_MAT'],
 		traitPresent: null,
+		pageIndex: 104,
 	},
 	{
 		category: 'MATERIAL',
@@ -7154,6 +7896,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PAPER', 'FUEL'],
 		traitPresent: null,
+		pageIndex: 105,
 	},
 	{
 		category: 'MATERIAL',
@@ -7174,6 +7917,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PAPER', 'FUEL'],
 		traitPresent: null,
+		pageIndex: 106,
 	},
 	{
 		category: 'MATERIAL',
@@ -7194,6 +7938,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PAPER', 'FUEL', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 107,
 	},
 	{
 		category: 'WEAPON',
@@ -7214,6 +7959,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 108,
 	},
 	{
 		category: 'WEAPON',
@@ -7234,6 +7980,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 109,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -7257,6 +8004,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['BOMB', 'MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 110,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -7286,6 +8034,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['MEDICINE', 'ELIXIR'],
 		traitPresent: null,
+		pageIndex: 111,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -7320,6 +8069,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['BOMB'],
 		traitPresent: null,
+		pageIndex: 112,
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -7347,6 +8097,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['MEDICINE'],
 		traitPresent: null,
+		pageIndex: 113,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -7376,6 +8127,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['BOMB'],
 		traitPresent: null,
+		pageIndex: 114,
 	},
 	{
 		category: 'MATERIAL',
@@ -7400,6 +8152,7 @@ export const itemsList: Array<Item> = [
 			name: 'Kirchen Bell Special',
 			table: 'trait',
 		},
+		pageIndex: 115,
 	},
 	{
 		category: 'ACCESSORY',
@@ -7430,6 +8183,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 116,
 	},
 	{
 		category: 'MATERIAL',
@@ -7454,6 +8208,7 @@ export const itemsList: Array<Item> = [
 			name: 'Purifying Water',
 			table: 'trait',
 		},
+		pageIndex: 117,
 	},
 	{
 		category: 'MATERIAL',
@@ -7474,6 +8229,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['INGREDIENT', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 118,
 	},
 	{
 		category: 'MATERIAL',
@@ -7498,6 +8254,7 @@ export const itemsList: Array<Item> = [
 			name: 'Golden Radiance',
 			table: 'trait',
 		},
+		pageIndex: 119,
 	},
 	{
 		category: 'MATERIAL',
@@ -7522,6 +8279,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['INGREDIENT', 'PLANT'],
 		traitPresent: null,
+		pageIndex: 120,
 	},
 	{
 		category: 'MATERIAL',
@@ -7550,6 +8308,7 @@ export const itemsList: Array<Item> = [
 			name: 'Special Ingredient',
 			table: 'trait',
 		},
+		pageIndex: 121,
 	},
 	{
 		category: 'MATERIAL',
@@ -7574,6 +8333,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ELIXIR', 'GUNPOWDER'],
 		traitPresent: null,
+		pageIndex: 122,
 	},
 	{
 		category: 'MATERIAL',
@@ -7594,6 +8354,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ELIXIR', 'GUNPOWDER'],
 		traitPresent: null,
+		pageIndex: 123,
 	},
 	{
 		category: 'MATERIAL',
@@ -7614,6 +8375,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['METAL'],
 		traitPresent: null,
+		pageIndex: 124,
 	},
 	{
 		category: 'MATERIAL',
@@ -7638,6 +8400,7 @@ export const itemsList: Array<Item> = [
 			name: 'Magical Slayer',
 			table: 'trait',
 		},
+		pageIndex: 125,
 	},
 	{
 		category: 'MATERIAL',
@@ -7658,6 +8421,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ELIXIR', 'MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 126,
 	},
 	{
 		category: 'MATERIAL',
@@ -7678,6 +8442,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PAPER', 'FUEL', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 127,
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -7707,6 +8472,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['MEDICINE'],
 		traitPresent: null,
+		pageIndex: 128,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -7737,6 +8503,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['BOMB', 'MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 129,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -7770,6 +8537,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['FOOD', 'SWEETS', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 130,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -7800,6 +8568,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['MEDICINE'],
 		traitPresent: null,
+		pageIndex: 131,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -7829,6 +8598,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['FOOD'],
 		traitPresent: null,
+		pageIndex: 132,
 	},
 	{
 		category: 'WEAPON',
@@ -7849,6 +8619,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 133,
 	},
 	{
 		category: 'WEAPON',
@@ -7869,6 +8640,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 134,
 	},
 	{
 		category: 'WEAPON',
@@ -7889,6 +8661,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 135,
 	},
 	{
 		category: 'WEAPON',
@@ -7909,6 +8682,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 136,
 	},
 	{
 		category: 'WEAPON',
@@ -7929,6 +8703,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 137,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -7958,6 +8733,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['FOOD'],
 		traitPresent: null,
+		pageIndex: 138,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -7987,6 +8763,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['INGREDIENT', 'MEDICINE_MAT'],
 		traitPresent: null,
+		pageIndex: 139,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -8017,6 +8794,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['POISON_MAT', 'WATER', 'FUEL', 'ORE'],
 		traitPresent: null,
+		pageIndex: 140,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -8051,6 +8829,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['ARMOR_MAT', 'CLOTH'],
 		traitPresent: null,
+		pageIndex: 141,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -8080,6 +8859,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['WEAPON_MAT', 'METAL'],
 		traitPresent: null,
+		pageIndex: 142,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -8107,6 +8887,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['NEUTRALIZER'],
 		traitPresent: null,
+		pageIndex: 143,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -8141,6 +8922,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['FOOD'],
 		traitPresent: null,
+		pageIndex: 144,
 	},
 	{
 		category: 'MACHINE',
@@ -8173,6 +8955,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 145,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -8202,6 +8985,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['FOOD', 'SWEETS'],
 		traitPresent: null,
+		pageIndex: 146,
 	},
 	{
 		category: 'EXPLORATION',
@@ -8232,6 +9016,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 147,
 	},
 	{
 		category: 'WEAPON',
@@ -8252,6 +9037,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 148,
 	},
 	{
 		category: 'WEAPON',
@@ -8272,6 +9058,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 149,
 	},
 	{
 		category: 'WEAPON',
@@ -8292,6 +9079,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 150,
 	},
 	{
 		category: 'WEAPON',
@@ -8312,6 +9100,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 151,
 	},
 	{
 		category: 'WEAPON',
@@ -8332,6 +9121,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 152,
 	},
 	{
 		category: 'WEAPON',
@@ -8352,6 +9142,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 153,
 	},
 	{
 		category: 'ARMOR',
@@ -8372,6 +9163,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 154,
 	},
 	{
 		category: 'ARMOR',
@@ -8392,6 +9184,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 155,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -8422,6 +9215,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['GEM', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 156,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -8452,6 +9246,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['METAL', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 157,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -8486,6 +9281,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['WEAPON_MAT', 'METAL'],
 		traitPresent: null,
+		pageIndex: 158,
 	},
 	{
 		category: 'MACHINE',
@@ -8518,6 +9314,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 159,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -8548,6 +9345,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['FUEL', 'WATER'],
 		traitPresent: null,
+		pageIndex: 160,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -8577,6 +9375,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['WATER'],
 		traitPresent: null,
+		pageIndex: 161,
 	},
 	{
 		category: 'EXPLORATION',
@@ -8600,6 +9399,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 162,
 	},
 	{
 		category: 'EXPLORATION',
@@ -8644,6 +9444,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['MEDICINE'],
 		traitPresent: null,
+		pageIndex: 163,
 	},
 	{
 		category: 'EXPLORATION',
@@ -8664,6 +9465,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['CLOTH'],
 		traitPresent: null,
+		pageIndex: 164,
 	},
 	{
 		category: 'EXPLORATION',
@@ -8698,6 +9500,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 165,
 	},
 	{
 		category: 'EXPLORATION',
@@ -8721,6 +9524,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['CLOTH'],
 		traitPresent: null,
+		pageIndex: 166,
 	},
 	{
 		category: 'EXPLORATION',
@@ -8744,6 +9548,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 167,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -8773,6 +9578,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['GUNPOWDER'],
 		traitPresent: null,
+		pageIndex: 168,
 	},
 	{
 		category: 'WEAPON',
@@ -8793,6 +9599,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 169,
 	},
 	{
 		category: 'WEAPON',
@@ -8813,6 +9620,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 170,
 	},
 	{
 		category: 'WEAPON',
@@ -8833,6 +9641,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 171,
 	},
 	{
 		category: 'WEAPON',
@@ -8853,6 +9662,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 172,
 	},
 	{
 		category: 'WEAPON',
@@ -8873,6 +9683,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 173,
 	},
 	{
 		category: 'WEAPON',
@@ -8893,6 +9704,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 174,
 	},
 	{
 		category: 'WEAPON',
@@ -8913,6 +9725,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 175,
 	},
 	{
 		category: 'WEAPON',
@@ -8933,6 +9746,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 176,
 	},
 	{
 		category: 'ARMOR',
@@ -8953,6 +9767,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 177,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -8982,6 +9797,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['ARMOR_MAT', 'CLOTH'],
 		traitPresent: null,
+		pageIndex: 178,
 	},
 	{
 		category: 'MACHINE',
@@ -9017,6 +9833,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 179,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -9047,6 +9864,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['NEUTRALIZER'],
 		traitPresent: null,
+		pageIndex: 180,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -9077,6 +9895,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['WEAPON_MAT', 'METAL'],
 		traitPresent: null,
+		pageIndex: 181,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -9107,6 +9926,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['INGREDIENT', 'GUNPOWDER'],
 		traitPresent: null,
+		pageIndex: 182,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -9134,6 +9954,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['SECRET_POWER', 'FUEL', 'MEDICINE_MAT', 'NEUTRALIZER'],
 		traitPresent: null,
+		pageIndex: 183,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -9163,6 +9984,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['WOOD'],
 		traitPresent: null,
+		pageIndex: 184,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -9192,6 +10014,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['ARMOR_MAT', 'CLOTH'],
 		traitPresent: null,
+		pageIndex: 185,
 	},
 	{
 		category: 'WEAPON',
@@ -9212,6 +10035,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 186,
 	},
 	{
 		category: 'ARMOR',
@@ -9232,6 +10056,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 187,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -9252,6 +10077,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 188,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -9272,6 +10098,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 189,
 	},
 	{
 		category: 'BOOK',
@@ -9292,6 +10119,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 190,
 	},
 	{
 		category: 'ACCESSORY',
@@ -9322,6 +10150,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 191,
 	},
 	{
 		category: 'ACCESSORY',
@@ -9349,6 +10178,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 192,
 	},
 	{
 		category: 'BOOK',
@@ -9376,6 +10206,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 193,
 	},
 	{
 		category: 'ACCESSORY',
@@ -9406,6 +10237,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 194,
 	},
 	{
 		category: 'MACHINE',
@@ -9438,6 +10270,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 195,
 	},
 	{
 		category: 'MACHINE',
@@ -9467,6 +10300,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 196,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -9494,6 +10328,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['CLOTH', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 197,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -9521,6 +10356,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['METAL', 'MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 198,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -9548,6 +10384,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 199,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -9587,6 +10424,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['GEM'],
 		traitPresent: null,
+		pageIndex: 200,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -9615,6 +10453,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['METAL', 'MEDICINE_MAT', 'ELIXIR', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 201,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -9642,6 +10481,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['METAL'],
 		traitPresent: null,
+		pageIndex: 202,
 	},
 	{
 		category: 'WEAPON',
@@ -9662,6 +10502,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 203,
 	},
 	{
 		category: 'WEAPON',
@@ -9682,6 +10523,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 204,
 	},
 	{
 		category: 'WEAPON',
@@ -9702,6 +10544,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 205,
 	},
 	{
 		category: 'WEAPON',
@@ -9722,6 +10565,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 206,
 	},
 	{
 		category: 'WEAPON',
@@ -9742,6 +10586,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 207,
 	},
 	{
 		category: 'WEAPON',
@@ -9762,6 +10607,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 208,
 	},
 	{
 		category: 'WEAPON',
@@ -9782,6 +10628,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 209,
 	},
 	{
 		category: 'WEAPON',
@@ -9802,6 +10649,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 210,
 	},
 	{
 		category: 'WEAPON',
@@ -9822,6 +10670,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 211,
 	},
 	{
 		category: 'WEAPON',
@@ -9842,6 +10691,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 212,
 	},
 	{
 		category: 'WEAPON',
@@ -9862,6 +10712,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 213,
 	},
 	{
 		category: 'WEAPON',
@@ -9882,6 +10733,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 214,
 	},
 	{
 		category: 'WEAPON',
@@ -9902,6 +10754,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 215,
 	},
 	{
 		category: 'WEAPON',
@@ -9922,6 +10775,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 216,
 	},
 	{
 		category: 'WEAPON',
@@ -9942,6 +10796,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 217,
 	},
 	{
 		category: 'WEAPON',
@@ -9962,6 +10817,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 218,
 	},
 	{
 		category: 'ARMOR',
@@ -9982,6 +10838,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 219,
 	},
 	{
 		category: 'ARMOR',
@@ -10002,6 +10859,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 220,
 	},
 	{
 		category: 'ARMOR',
@@ -10022,6 +10880,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 221,
 	},
 	{
 		category: 'ARMOR',
@@ -10042,6 +10901,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 222,
 	},
 	{
 		category: 'ARMOR',
@@ -10062,6 +10922,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 223,
 	},
 	{
 		category: 'ARMOR',
@@ -10082,6 +10943,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 224,
 	},
 	{
 		category: 'WEAPON',
@@ -10102,6 +10964,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 225,
 	},
 	{
 		category: 'WEAPON',
@@ -10122,6 +10985,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 226,
 	},
 	{
 		category: 'WEAPON',
@@ -10142,6 +11006,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 227,
 	},
 	{
 		category: 'WEAPON',
@@ -10162,6 +11027,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 228,
 	},
 	{
 		category: 'ARMOR',
@@ -10182,6 +11048,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 229,
 	},
 	{
 		category: 'ARMOR',
@@ -10202,6 +11069,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 230,
 	},
 	{
 		category: 'ARMOR',
@@ -10222,6 +11090,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 231,
 	},
 	{
 		category: 'ARMOR',
@@ -10242,6 +11111,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 232,
 	},
 	{
 		category: 'MATERIAL',
@@ -10262,6 +11132,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 233,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -10282,6 +11153,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 234,
 	},
 	{
 		category: 'BOOK',
@@ -10302,6 +11174,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 235,
 	},
 	{
 		category: 'BOOK',
@@ -10322,6 +11195,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 236,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -10349,6 +11223,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 237,
 	},
 	{
 		category: 'ACCESSORY',
@@ -10379,6 +11254,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 238,
 	},
 	{
 		category: 'ACCESSORY',
@@ -10406,6 +11282,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 239,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -10433,6 +11310,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 240,
 	},
 	{
 		category: 'ACCESSORY',
@@ -10460,6 +11338,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 241,
 	},
 	{
 		category: 'WEAPON',
@@ -10480,6 +11359,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WEAPON'],
 		traitPresent: null,
+		pageIndex: 242,
 	},
 	{
 		category: 'ARMOR',
@@ -10500,6 +11380,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 243,
 	},
 	{
 		category: 'ARMOR',
@@ -10520,6 +11401,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 244,
 	},
 	{
 		category: 'ARMOR',
@@ -10540,6 +11422,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 245,
 	},
 	{
 		category: 'ARMOR',
@@ -10560,6 +11443,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 246,
 	},
 	{
 		category: 'ARMOR',
@@ -10580,6 +11464,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 247,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -10600,6 +11485,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 248,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -10620,6 +11506,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 249,
 	},
 	{
 		category: 'MATERIAL',
@@ -10640,6 +11527,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 250,
 	},
 	{
 		category: 'BOOK',
@@ -10660,6 +11548,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 251,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -10687,6 +11576,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 252,
 	},
 	{
 		category: 'ACCESSORY',
@@ -10721,6 +11611,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 253,
 	},
 	{
 		category: 'ACCESSORY',
@@ -10748,6 +11639,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 254,
 	},
 	{
 		category: 'ARMOR',
@@ -10768,6 +11660,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 255,
 	},
 	{
 		category: 'ARMOR',
@@ -10788,6 +11681,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 256,
 	},
 	{
 		category: 'ARMOR',
@@ -10808,6 +11702,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 257,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -10828,6 +11723,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 258,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -10848,6 +11744,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 259,
 	},
 	{
 		category: 'BOOK',
@@ -10868,6 +11765,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 260,
 	},
 	{
 		category: 'BOOK',
@@ -10888,6 +11786,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 261,
 	},
 	{
 		category: 'BOOK',
@@ -10908,6 +11807,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 262,
 	},
 	{
 		category: 'ACCESSORY',
@@ -10935,6 +11835,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 263,
 	},
 	{
 		category: 'ACCESSORY',
@@ -10962,6 +11863,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 264,
 	},
 	{
 		category: 'ACCESSORY',
@@ -10992,6 +11894,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 265,
 	},
 	{
 		category: 'ACCESSORY',
@@ -11025,6 +11928,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 266,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -11058,6 +11962,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['THREAD'],
 		traitPresent: null,
+		pageIndex: 267,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -11085,6 +11990,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 268,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -11112,6 +12018,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['CLAY'],
 		traitPresent: null,
+		pageIndex: 269,
 	},
 	{
 		category: 'KEY_ITEM',
@@ -11139,6 +12046,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 270,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -11173,6 +12081,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['FOOD', 'SWEETS'],
 		traitPresent: null,
+		pageIndex: 271,
 	},
 	{
 		category: 'ARMOR',
@@ -11193,6 +12102,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 272,
 	},
 	{
 		category: 'ARMOR',
@@ -11213,6 +12123,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['ARMOR'],
 		traitPresent: null,
+		pageIndex: 273,
 	},
 	{
 		category: 'MACHINE',
@@ -11248,6 +12159,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 274,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -11282,6 +12194,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['FOOD', 'SWEETS', 'GEM'],
 		traitPresent: null,
+		pageIndex: 275,
 	},
 	{
 		category: 'ACCESSORY',
@@ -11316,6 +12229,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 276,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -11343,6 +12257,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['ARMOR_MAT', 'CLOTH'],
 		traitPresent: null,
+		pageIndex: 277,
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -11370,6 +12285,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 278,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -11400,6 +12316,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['MEDICINE'],
 		traitPresent: null,
+		pageIndex: 279,
 	},
 	{
 		category: 'DE_BUFF_ITEM',
@@ -11423,6 +12340,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['MEDICINE'],
 		traitPresent: null,
+		pageIndex: 280,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -11452,6 +12370,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 281,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -11486,6 +12405,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['BOMB'],
 		traitPresent: null,
+		pageIndex: 282,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -11520,6 +12440,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['ARMOR_MAT', 'CLOTH'],
 		traitPresent: null,
+		pageIndex: 283,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -11547,6 +12468,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['BOMB', 'MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 284,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -11574,6 +12496,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['MAGIC_ITEM', 'WOOD', 'FUEL'],
 		traitPresent: null,
+		pageIndex: 285,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -11597,6 +12520,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['MEDICINE', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 286,
 	},
 	{
 		category: 'MATERIAL',
@@ -11621,6 +12545,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['PLANT', 'MEDICINE_MAT'],
 		traitPresent: null,
+		pageIndex: 287,
 	},
 	{
 		category: 'MATERIAL',
@@ -11656,6 +12581,7 @@ export const itemsList: Array<Item> = [
 			name: 'Poison Mist',
 			table: 'trait',
 		},
+		pageIndex: 288,
 	},
 	{
 		category: 'MATERIAL',
@@ -11680,6 +12606,7 @@ export const itemsList: Array<Item> = [
 			name: 'Carries Heat',
 			table: 'trait',
 		},
+		pageIndex: 289,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -11707,6 +12634,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['MAGIC_ITEM', 'PAPER'],
 		traitPresent: null,
+		pageIndex: 290,
 	},
 	{
 		category: 'MATERIAL',
@@ -11731,6 +12659,7 @@ export const itemsList: Array<Item> = [
 			name: 'Dark Matter',
 			table: 'trait',
 		},
+		pageIndex: 291,
 	},
 	{
 		category: 'MATERIAL',
@@ -11755,6 +12684,7 @@ export const itemsList: Array<Item> = [
 			name: 'Unidentified',
 			table: 'trait',
 		},
+		pageIndex: 292,
 	},
 	{
 		category: 'MATERIAL',
@@ -11779,6 +12709,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['INGREDIENT', 'GUNPOWDER'],
 		traitPresent: null,
+		pageIndex: 293,
 	},
 	{
 		category: 'MATERIAL',
@@ -11810,6 +12741,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['WATER', 'ELIXIR', 'POISON_MAT'],
 		traitPresent: null,
+		pageIndex: 294,
 	},
 	{
 		category: 'MATERIAL',
@@ -11834,6 +12766,7 @@ export const itemsList: Array<Item> = [
 			name: 'Demon Soul',
 			table: 'trait',
 		},
+		pageIndex: 295,
 	},
 	{
 		category: 'DE_BUFF_ITEM',
@@ -11868,6 +12801,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['MAGIC_ITEM', 'PAPER'],
 		traitPresent: null,
+		pageIndex: 296,
 	},
 	{
 		category: 'MATERIAL',
@@ -11888,6 +12822,7 @@ export const itemsList: Array<Item> = [
 		recipeType: null,
 		relatedCategories: ['SECRET_POWER', 'GEM'],
 		traitPresent: null,
+		pageIndex: 297,
 	},
 	{
 		category: 'EXPLORATION',
@@ -11922,6 +12857,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['MAGIC_ITEM', 'WOOD'],
 		traitPresent: null,
+		pageIndex: 298,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -11952,6 +12888,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 299,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -11986,6 +12923,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['INGREDIENT', 'GUNPOWDER', 'POISON_MAT'],
 		traitPresent: null,
+		pageIndex: 300,
 	},
 	{
 		category: 'BUFF_ITEM',
@@ -12020,6 +12958,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['CLOTH'],
 		traitPresent: null,
+		pageIndex: 301,
 	},
 	{
 		category: 'EXPLORATION',
@@ -12054,6 +12993,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['MAGIC_ITEM'],
 		traitPresent: null,
+		pageIndex: 302,
 	},
 	{
 		category: 'HEAL_ITEM',
@@ -12088,6 +13028,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['FOOD', 'SECRET_POWER'],
 		traitPresent: null,
+		pageIndex: 303,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -12111,6 +13052,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['WEAPON_MAT', 'METAL'],
 		traitPresent: null,
+		pageIndex: 304,
 	},
 	{
 		category: 'MACHINE',
@@ -12146,6 +13088,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'HOPE_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 305,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -12173,6 +13116,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'MYSTERY_RECIPES',
 		relatedCategories: ['CLAY'],
 		traitPresent: null,
+		pageIndex: 306,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -12202,6 +13146,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['MEDICINE_MAT', 'WATER', 'METAL'],
 		traitPresent: null,
+		pageIndex: 307,
 	},
 	{
 		category: 'SYNTHESIS',
@@ -12235,6 +13180,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['WEAPON_MAT', 'METAL'],
 		traitPresent: null,
+		pageIndex: 308,
 	},
 	{
 		category: 'MACHINE',
@@ -12267,6 +13213,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'GROWTH_RECIPES',
 		relatedCategories: ['IMPORTANT'],
 		traitPresent: null,
+		pageIndex: 309,
 	},
 	{
 		category: 'ACCESSORY',
@@ -12301,6 +13248,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 310,
 	},
 	{
 		category: 'ACCESSORY',
@@ -12370,6 +13318,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'DREAM_RECIPES',
 		relatedCategories: ['ACCESSORY'],
 		traitPresent: null,
+		pageIndex: 311,
 	},
 	{
 		category: 'ATK_ITEM',
@@ -12412,6 +13361,7 @@ export const itemsList: Array<Item> = [
 		recipeType: 'BEGINNER_RECIPES',
 		relatedCategories: ['BOMB'],
 		traitPresent: null,
+		pageIndex: 312,
 	},
 ];
 
@@ -12433,6 +13383,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Strange Miniature Eggs',
 		price: 300,
 		rumorType: 'MATERIAL',
+		pageIndex: 0,
 	},
 	{
 		description: {
@@ -12451,6 +13402,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Remnant of a Past Sea?',
 		price: 300,
 		rumorType: 'MATERIAL',
+		pageIndex: 1,
 	},
 	{
 		description: {
@@ -12474,6 +13426,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Not So Whimsy Strawberries?',
 		price: 350,
 		rumorType: 'MATERIAL',
+		pageIndex: 2,
 	},
 	{
 		description: {
@@ -12499,6 +13452,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Huge Puni Outbreak!?',
 		price: 400,
 		rumorType: 'MONSTER',
+		pageIndex: 3,
 	},
 	{
 		description: {
@@ -12517,6 +13471,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Chalk White Shell',
 		price: 450,
 		rumorType: 'MATERIAL',
+		pageIndex: 4,
 	},
 	{
 		description: {
@@ -12540,6 +13495,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Enormous Hakurei Stones',
 		price: 400,
 		rumorType: 'MATERIAL',
+		pageIndex: 5,
 	},
 	{
 		description: {
@@ -12564,6 +13520,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Vividly Colored Oil',
 		price: 300,
 		rumorType: 'MATERIAL',
+		pageIndex: 6,
 	},
 	{
 		description: {
@@ -12582,6 +13539,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Fruit that Gives Strength',
 		price: 300,
 		rumorType: 'MATERIAL',
+		pageIndex: 7,
 	},
 	{
 		description: {
@@ -12598,6 +13556,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Fallen Sorcerer',
 		price: 550,
 		rumorType: 'MONSTER',
+		pageIndex: 8,
 	},
 	{
 		description: {
@@ -12621,6 +13580,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Herb Effective for Medicine',
 		price: 400,
 		rumorType: 'MATERIAL',
+		pageIndex: 9,
 	},
 	{
 		description: {
@@ -12644,6 +13604,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Moss with Sleep Compounds',
 		price: 350,
 		rumorType: 'MATERIAL',
+		pageIndex: 10,
 	},
 	{
 		description: {
@@ -12662,6 +13623,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Thin Line Between Poison and Medicine',
 		price: 350,
 		rumorType: 'MATERIAL',
+		pageIndex: 11,
 	},
 	{
 		description: {
@@ -12685,6 +13647,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Pure and Clear Spring Water',
 		price: 450,
 		rumorType: 'MATERIAL',
+		pageIndex: 12,
 	},
 	{
 		description: {
@@ -12708,6 +13671,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Cotton Disliked by Dragons',
 		price: 450,
 		rumorType: 'MATERIAL',
+		pageIndex: 13,
 	},
 	{
 		description: {
@@ -12731,6 +13695,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Care to Taste Some Wheat?',
 		price: 300,
 		rumorType: 'MATERIAL',
+		pageIndex: 14,
 	},
 	{
 		description: {
@@ -12754,6 +13719,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Stash of High Grade Flour?',
 		price: 450,
 		rumorType: 'MATERIAL',
+		pageIndex: 15,
 	},
 	{
 		description: {
@@ -12770,6 +13736,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Maiden Full of Grudges',
 		price: 700,
 		rumorType: 'MONSTER',
+		pageIndex: 16,
 	},
 	{
 		description: {
@@ -12786,6 +13753,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Puni Among Puni',
 		price: 700,
 		rumorType: 'MONSTER',
+		pageIndex: 17,
 	},
 	{
 		description: {
@@ -12809,6 +13777,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Downpour of Uni',
 		price: 300,
 		rumorType: 'MATERIAL',
+		pageIndex: 18,
 	},
 	{
 		description: {
@@ -12828,6 +13797,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Sacred Bird, Sharp Fang of Earth',
 		price: 1100,
 		rumorType: 'MONSTER',
+		pageIndex: 19,
 	},
 	{
 		description: {
@@ -12844,6 +13814,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Ruler of Wind',
 		price: 1000,
 		rumorType: 'MONSTER',
+		pageIndex: 20,
 	},
 	{
 		description: {
@@ -12860,6 +13831,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Book that Steals Souls',
 		price: 500,
 		rumorType: 'MONSTER',
+		pageIndex: 21,
 	},
 	{
 		description: {
@@ -12878,6 +13850,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Golden Strong Thread',
 		price: 600,
 		rumorType: 'MATERIAL',
+		pageIndex: 22,
 	},
 	{
 		description: {
@@ -12894,6 +13867,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Sealed Disaster',
 		price: 750,
 		rumorType: 'MONSTER',
+		pageIndex: 23,
 	},
 	{
 		description: {
@@ -12912,6 +13886,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Crystal Blessed by Spirits',
 		price: 1000,
 		rumorType: 'MATERIAL',
+		pageIndex: 24,
 	},
 	{
 		description: {
@@ -12928,6 +13903,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Flash of Darkness',
 		price: 3000,
 		rumorType: 'MONSTER',
+		pageIndex: 25,
 	},
 	{
 		description: {
@@ -12946,6 +13922,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Flower Blooming in Silence',
 		price: 2000,
 		rumorType: 'MATERIAL',
+		pageIndex: 26,
 	},
 	{
 		description: {
@@ -12964,6 +13941,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Faintly Shining Ore',
 		price: 600,
 		rumorType: 'MATERIAL',
+		pageIndex: 27,
 	},
 	{
 		description: {
@@ -12980,6 +13958,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Brave Master of Water',
 		price: 650,
 		rumorType: 'MONSTER',
+		pageIndex: 28,
 	},
 	{
 		description: {
@@ -12996,6 +13975,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Ruler of Ice',
 		price: 1000,
 		rumorType: 'MONSTER',
+		pageIndex: 29,
 	},
 	{
 		description: {
@@ -13012,6 +13992,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Ruler of Light',
 		price: 1500,
 		rumorType: 'MONSTER',
+		pageIndex: 30,
 	},
 	{
 		description: {
@@ -13028,6 +14009,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Demon with Horns',
 		price: 650,
 		rumorType: 'MONSTER',
+		pageIndex: 31,
 	},
 	{
 		description: {
@@ -13044,6 +14026,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Brutal Dragon',
 		price: 600,
 		rumorType: 'MONSTER',
+		pageIndex: 32,
 	},
 	{
 		description: {
@@ -13063,6 +14046,7 @@ export const rumorsList: Array<Rumor> = [
 		name: "Heaven's Twin Dragons",
 		price: 1250,
 		rumorType: 'MONSTER',
+		pageIndex: 33,
 	},
 	{
 		description: {
@@ -13079,6 +14063,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Soaring Monster Bird',
 		price: 750,
 		rumorType: 'MONSTER',
+		pageIndex: 34,
 	},
 	{
 		description: {
@@ -13102,6 +14087,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Greatly Grown Magic Grass',
 		price: 250,
 		rumorType: 'MATERIAL',
+		pageIndex: 35,
 	},
 	{
 		description: {
@@ -13118,6 +14104,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Funny Ghosts',
 		price: 300,
 		rumorType: 'MONSTER',
+		pageIndex: 36,
 	},
 	{
 		description: {
@@ -13141,6 +14128,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Cursed Ancient Trees',
 		price: 300,
 		rumorType: 'MATERIAL',
+		pageIndex: 37,
 	},
 	{
 		description: {
@@ -13157,6 +14145,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Ruler of the Ocean',
 		price: 1000,
 		rumorType: 'MONSTER',
+		pageIndex: 38,
 	},
 	{
 		description: {
@@ -13175,6 +14164,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'A Shattered Star?',
 		price: 750,
 		rumorType: 'MATERIAL',
+		pageIndex: 39,
 	},
 	{
 		description: {
@@ -13198,6 +14188,7 @@ export const rumorsList: Array<Rumor> = [
 		name: 'Shell Like Gemstone',
 		price: 500,
 		rumorType: 'MATERIAL',
+		pageIndex: 40,
 	},
 ];
 
@@ -13221,6 +14212,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis,low price+',
 		mergeFrom: [],
 		name: 'Low Price+',
+		pageIndex: 0,
 	},
 	{
 		categories: [
@@ -13241,6 +14233,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis,low price++',
 		mergeFrom: [],
 		name: 'Low Price++',
+		pageIndex: 1,
 	},
 	{
 		categories: [
@@ -13275,6 +14268,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Rare Item',
+		pageIndex: 2,
 	},
 	{
 		categories: [
@@ -13309,6 +14303,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'No Price',
+		pageIndex: 3,
 	},
 	{
 		categories: [
@@ -13343,6 +14338,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'High Class',
+		pageIndex: 4,
 	},
 	{
 		categories: [
@@ -13363,6 +14359,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis,high price',
 		mergeFrom: [],
 		name: 'High Price',
+		pageIndex: 5,
 	},
 	{
 		categories: [
@@ -13383,6 +14380,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis,high price+',
 		mergeFrom: [],
 		name: 'High Price+',
+		pageIndex: 6,
 	},
 	{
 		categories: [
@@ -13403,6 +14401,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis,high price++',
 		mergeFrom: [],
 		name: 'High Price++',
+		pageIndex: 7,
 	},
 	{
 		categories: [
@@ -13437,6 +14436,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Premium Price',
+		pageIndex: 8,
 	},
 	{
 		categories: [
@@ -13457,6 +14457,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis,quality up++',
 		mergeFrom: [],
 		name: 'Quality Up++',
+		pageIndex: 9,
 	},
 	{
 		categories: [
@@ -13491,6 +14492,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Well Made',
+		pageIndex: 10,
 	},
 	{
 		categories: [
@@ -13511,6 +14513,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis,quality up',
 		mergeFrom: [],
 		name: 'Quality Up',
+		pageIndex: 11,
 	},
 	{
 		categories: [
@@ -13531,6 +14534,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis,quality up+',
 		mergeFrom: [],
 		name: 'Quality Up+',
+		pageIndex: 12,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13541,6 +14545,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,destruction up',
 		mergeFrom: [],
 		name: 'Destruction Up',
+		pageIndex: 13,
 	},
 	{
 		categories: [
@@ -13575,6 +14580,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Mass Produced',
+		pageIndex: 14,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -13598,6 +14604,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: "Magician's Wisdom",
+		pageIndex: 15,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13608,6 +14615,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,recovery up+',
 		mergeFrom: [],
 		name: 'Recovery Up+',
+		pageIndex: 16,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13618,6 +14626,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,fixed recovery',
 		mergeFrom: [],
 		name: 'Fixed Recovery',
+		pageIndex: 17,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13628,6 +14637,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,fixed recovery+',
 		mergeFrom: [],
 		name: 'Fixed Recovery+',
+		pageIndex: 18,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13639,6 +14649,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,legendary recovery',
 		mergeFrom: [],
 		name: 'Legendary Recovery',
+		pageIndex: 19,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -13662,6 +14673,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Power of Beasts',
+		pageIndex: 20,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -13672,6 +14684,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,exploration,synthesis,lp boost',
 		mergeFrom: [],
 		name: 'LP Boost',
+		pageIndex: 21,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -13682,6 +14695,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,exploration,synthesis,lp super enhance',
 		mergeFrom: [],
 		name: 'LP Super Enhance',
+		pageIndex: 22,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -13705,6 +14719,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Speed of Light',
+		pageIndex: 23,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13729,6 +14744,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Cost Bonus',
+		pageIndex: 24,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -13739,6 +14755,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'armor,exploration,synthesis,flawless body',
 		mergeFrom: [],
 		name: 'Flawless Body',
+		pageIndex: 25,
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -13749,6 +14766,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,weapon,exploration,synthesis,consume mp -15%',
 		mergeFrom: [],
 		name: 'Consume MP -15%',
+		pageIndex: 26,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -13759,6 +14777,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,skill power +10%',
 		mergeFrom: [],
 		name: 'Skill Power +10%',
+		pageIndex: 27,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -13769,6 +14788,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,expert skill',
 		mergeFrom: [],
 		name: 'Expert Skill',
+		pageIndex: 28,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13779,6 +14799,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,blessing of skanda',
 		mergeFrom: [],
 		name: 'Blessing of Skanda',
+		pageIndex: 29,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -13789,6 +14810,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,weapon,exploration,synthesis,inflict blind',
 		mergeFrom: [],
 		name: 'Inflict Blind',
+		pageIndex: 30,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -13800,6 +14822,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,over power',
 		mergeFrom: [],
 		name: 'Over Power',
+		pageIndex: 31,
 	},
 	{
 		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -13810,6 +14833,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,weapon,exploration,synthesis,dragon slayer',
 		mergeFrom: [],
 		name: 'Dragon Slayer',
+		pageIndex: 32,
 	},
 	{
 		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -13820,6 +14844,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,weapon,exploration,synthesis,undead slayer',
 		mergeFrom: [],
 		name: 'Undead Slayer',
+		pageIndex: 33,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13844,6 +14869,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Effective Vs Many',
+		pageIndex: 34,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13867,6 +14893,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Big Destruction',
+		pageIndex: 35,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13877,6 +14904,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,power to destroy gods',
 		mergeFrom: [],
 		name: 'Power to Destroy Gods',
+		pageIndex: 36,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13900,6 +14928,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Big Recovery',
+		pageIndex: 37,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13910,6 +14939,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,recovery up',
 		mergeFrom: [],
 		name: 'Recovery Up',
+		pageIndex: 38,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13934,6 +14964,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Stability Emphasis',
+		pageIndex: 39,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13957,6 +14988,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Multiply',
+		pageIndex: 40,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -13980,6 +15012,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Reduction',
+		pageIndex: 41,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14003,6 +15036,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Full of Life',
+		pageIndex: 42,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14026,6 +15060,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Wisdom of the Gods',
+		pageIndex: 43,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14049,6 +15084,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Ultimate Recovery',
+		pageIndex: 44,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14072,6 +15108,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Intense Recovery',
+		pageIndex: 45,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14082,6 +15119,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,destruction up+',
 		mergeFrom: [],
 		name: 'Destruction Up+',
+		pageIndex: 46,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14092,6 +15130,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,fixed power+',
 		mergeFrom: [],
 		name: 'Fixed Power+',
+		pageIndex: 47,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14102,6 +15141,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,legendary destruction',
 		mergeFrom: [],
 		name: 'Legendary Destruction',
+		pageIndex: 48,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14112,6 +15152,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,recovery up++',
 		mergeFrom: [],
 		name: 'Recovery Up++',
+		pageIndex: 49,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14135,6 +15176,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Intense Destruction',
+		pageIndex: 50,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14145,6 +15187,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,fixed recovery++',
 		mergeFrom: [],
 		name: 'Fixed Recovery++',
+		pageIndex: 51,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14168,6 +15211,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Pain in Numbers',
+		pageIndex: 52,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14191,6 +15235,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Infinite Stamina',
+		pageIndex: 53,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14201,6 +15246,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,critical',
 		mergeFrom: [],
 		name: 'Critical',
+		pageIndex: 54,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14211,6 +15257,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,use count +2',
 		mergeFrom: [],
 		name: 'Use Count +2',
+		pageIndex: 55,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14221,6 +15268,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,exploration,synthesis,hp enhance',
 		mergeFrom: [],
 		name: 'HP Enhance',
+		pageIndex: 56,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14231,6 +15279,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,exploration,synthesis,mp boost',
 		mergeFrom: [],
 		name: 'MP Boost',
+		pageIndex: 57,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14254,6 +15303,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Dragonscale Defense',
+		pageIndex: 58,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14264,6 +15314,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,attack super enhance',
 		mergeFrom: [],
 		name: 'Attack Super Enhance',
+		pageIndex: 59,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14274,6 +15325,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'armor,exploration,synthesis,defense super enhance',
 		mergeFrom: [],
 		name: 'Defense Super Enhance',
+		pageIndex: 60,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -14297,6 +15349,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Speed of Skanda',
+		pageIndex: 61,
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14320,6 +15373,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'ATK SPD Boost',
+		pageIndex: 62,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14343,6 +15397,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Damage in Numbers',
+		pageIndex: 63,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14353,6 +15408,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,count bonus',
 		mergeFrom: [],
 		name: 'Count Bonus',
+		pageIndex: 64,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14363,6 +15419,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,dreadful king',
 		mergeFrom: [],
 		name: 'Dreadful King',
+		pageIndex: 65,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14373,6 +15430,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,destruction up++',
 		mergeFrom: [],
 		name: 'Destruction Up++',
+		pageIndex: 66,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14383,6 +15441,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,fixed power++',
 		mergeFrom: [],
 		name: 'Fixed Power++',
+		pageIndex: 67,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14406,6 +15465,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Ultimate Destruction',
+		pageIndex: 68,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14416,6 +15476,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,increase sharpness',
 		mergeFrom: [],
 		name: 'Increase Sharpness',
+		pageIndex: 69,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14426,6 +15487,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,increase aggression',
 		mergeFrom: [],
 		name: 'Increase Aggression',
+		pageIndex: 70,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14436,6 +15498,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,exploration,synthesis,mp super enhance',
 		mergeFrom: [],
 		name: 'MP Super Enhance',
+		pageIndex: 71,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14459,6 +15522,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Big Medicine Enhance',
+		pageIndex: 72,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14469,6 +15533,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,stable effect',
 		mergeFrom: [],
 		name: 'Stable Effect',
+		pageIndex: 73,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14479,6 +15544,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,use count +1',
 		mergeFrom: [],
 		name: 'Use Count +1',
+		pageIndex: 74,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14489,6 +15555,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,exploration,synthesis,lp enhance',
 		mergeFrom: [],
 		name: 'LP Enhance',
+		pageIndex: 75,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14512,6 +15579,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Well Rounded Power',
+		pageIndex: 76,
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14535,6 +15603,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Compact MP Consume',
+		pageIndex: 77,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14558,6 +15627,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Skill Enhance',
+		pageIndex: 78,
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14568,6 +15638,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,weapon,exploration,synthesis,consume mp -10%',
 		mergeFrom: [],
 		name: 'Consume MP -10%',
+		pageIndex: 79,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14592,6 +15663,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Super Enhance Recovery',
+		pageIndex: 80,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14615,6 +15687,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Big Damage Numbers',
+		pageIndex: 81,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14625,6 +15698,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,avidya attack',
 		mergeFrom: [],
 		name: 'Avidya Attack',
+		pageIndex: 82,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14635,6 +15709,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,fixed power',
 		mergeFrom: [],
 		name: 'Fixed Power',
+		pageIndex: 83,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14645,6 +15720,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,cuts easily',
 		mergeFrom: [],
 		name: 'Cuts Easily',
+		pageIndex: 84,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14655,6 +15731,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,blessed by god',
 		mergeFrom: [],
 		name: 'Blessed by God',
+		pageIndex: 85,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14665,6 +15742,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,critical++',
 		mergeFrom: [],
 		name: 'Critical++',
+		pageIndex: 86,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14675,6 +15753,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,weapon,exploration,synthesis,inflict seal',
 		mergeFrom: [],
 		name: 'Inflict Seal',
+		pageIndex: 87,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14698,6 +15777,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Steel Defense',
+		pageIndex: 88,
 	},
 	{
 		categories: ['ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14721,6 +15801,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'ATK DEF Enhance',
+		pageIndex: 89,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14731,6 +15812,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,stable effect+',
 		mergeFrom: [],
 		name: 'Stable Effect+',
+		pageIndex: 90,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14754,6 +15836,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Power of Life',
+		pageIndex: 91,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14777,6 +15860,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: "Grand Magician's Wisdom",
+		pageIndex: 92,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14800,6 +15884,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'HPMP Boost',
+		pageIndex: 93,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14823,6 +15908,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'HPMP Super Enhance',
+		pageIndex: 94,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14846,6 +15932,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Draw Out Power',
+		pageIndex: 95,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14869,6 +15956,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Power of Destruction',
+		pageIndex: 96,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14879,6 +15967,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,attack enhance',
 		mergeFrom: [],
 		name: 'Attack Enhance',
+		pageIndex: 97,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -14889,6 +15978,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,attack boost',
 		mergeFrom: [],
 		name: 'Attack Boost',
+		pageIndex: 98,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14912,6 +16002,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'One Hit Kill',
+		pageIndex: 99,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -14922,6 +16013,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,speed boost',
 		mergeFrom: [],
 		name: 'Speed Boost',
+		pageIndex: 100,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -14932,6 +16024,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,speed super enhance',
 		mergeFrom: [],
 		name: 'Speed Super Enhance',
+		pageIndex: 101,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14942,6 +16035,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,stable effect++',
 		mergeFrom: [],
 		name: 'Stable Effect++',
+		pageIndex: 102,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14952,6 +16046,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,use count -1',
 		mergeFrom: [],
 		name: 'Use Count -1',
+		pageIndex: 103,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -14962,6 +16057,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,use count -2',
 		mergeFrom: [],
 		name: 'Use Count -2',
+		pageIndex: 104,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14972,6 +16068,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,exploration,synthesis,hp boost',
 		mergeFrom: [],
 		name: 'HP Boost',
+		pageIndex: 105,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14982,6 +16079,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,exploration,synthesis,hp super enhance',
 		mergeFrom: [],
 		name: 'HP Super Enhance',
+		pageIndex: 106,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -14992,6 +16090,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,exploration,synthesis,mp enhance',
 		mergeFrom: [],
 		name: 'MP Enhance',
+		pageIndex: 107,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15016,6 +16115,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Solid Effect',
+		pageIndex: 108,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -15039,6 +16139,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Enhance the Body',
+		pageIndex: 109,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -15049,6 +16150,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'armor,exploration,synthesis,parameters +5%',
 		mergeFrom: [],
 		name: 'Parameters +5%',
+		pageIndex: 110,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -15059,6 +16161,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'armor,exploration,synthesis,parameters +6%',
 		mergeFrom: [],
 		name: 'Parameters +6%',
+		pageIndex: 111,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -15069,6 +16172,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'armor,exploration,synthesis,parameters +7%',
 		mergeFrom: [],
 		name: 'Parameters +7%',
+		pageIndex: 112,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -15092,6 +16196,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Develops the Body',
+		pageIndex: 113,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -15115,6 +16220,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Diamond Defense',
+		pageIndex: 114,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -15125,6 +16231,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'armor,exploration,synthesis,evolves the body',
 		mergeFrom: [],
 		name: 'Evolves the Body',
+		pageIndex: 115,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -15135,6 +16242,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'armor,exploration,synthesis,defense enhance',
 		mergeFrom: [],
 		name: 'Defense Enhance',
+		pageIndex: 116,
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15158,6 +16266,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'ATK SPD Enhance',
+		pageIndex: 117,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -15168,6 +16277,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'armor,exploration,synthesis,defense boost',
 		mergeFrom: [],
 		name: 'Defense Boost',
+		pageIndex: 118,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -15191,6 +16301,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Speed of Gods',
+		pageIndex: 119,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -15201,6 +16312,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,speed enhance',
 		mergeFrom: [],
 		name: 'Speed Enhance',
+		pageIndex: 120,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15224,6 +16336,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'ATK DEF Boost',
+		pageIndex: 121,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15234,6 +16347,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,fast use',
 		mergeFrom: [],
 		name: 'Fast Use',
+		pageIndex: 122,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15257,6 +16371,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'All Stat Super Enhance',
+		pageIndex: 123,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15280,6 +16395,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Power of Gods',
+		pageIndex: 124,
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15290,6 +16406,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,weapon,exploration,synthesis,consume mp -20%',
 		mergeFrom: [],
 		name: 'Consume MP -20%',
+		pageIndex: 125,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15300,6 +16417,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,skill power +5%',
 		mergeFrom: [],
 		name: 'Skill Power +5%',
+		pageIndex: 126,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15310,6 +16428,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,skill power +7%',
 		mergeFrom: [],
 		name: 'Skill Power +7%',
+		pageIndex: 127,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -15320,6 +16439,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,zeal factor',
 		mergeFrom: [],
 		name: 'Zeal Factor',
+		pageIndex: 128,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -15343,6 +16463,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'HPMP Enhance',
+		pageIndex: 129,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15353,6 +16474,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,soul dwelling',
 		mergeFrom: [],
 		name: 'Soul Dwelling',
+		pageIndex: 130,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15363,6 +16485,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,weapon,exploration,synthesis,inflict slow',
 		mergeFrom: [],
 		name: 'Inflict Slow',
+		pageIndex: 131,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15373,6 +16496,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,weapon,exploration,synthesis,inflict curse',
 		mergeFrom: [],
 		name: 'Inflict Curse',
+		pageIndex: 132,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15383,6 +16507,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,consume soul',
 		mergeFrom: [],
 		name: 'Consume Soul',
+		pageIndex: 133,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15393,6 +16518,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,powerless curse',
 		mergeFrom: [],
 		name: 'Powerless Curse',
+		pageIndex: 134,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15403,6 +16529,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,damage absorb++',
 		mergeFrom: [],
 		name: 'Damage Absorb++',
+		pageIndex: 135,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15426,6 +16553,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Final Blow',
+		pageIndex: 136,
 	},
 	{
 		categories: ['EXPLORATION', 'SYNTHESIS'],
@@ -15436,6 +16564,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'exploration,synthesis,slag slayer',
 		mergeFrom: [],
 		name: 'Slag Slayer',
+		pageIndex: 137,
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15459,6 +16588,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Halve MP Consume',
+		pageIndex: 138,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15469,6 +16599,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,area bonus+',
 		mergeFrom: [],
 		name: 'Area Bonus+',
+		pageIndex: 139,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15479,6 +16610,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,multi bonus',
 		mergeFrom: [],
 		name: 'Multi Bonus',
+		pageIndex: 140,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15489,6 +16621,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,single bonus',
 		mergeFrom: [],
 		name: 'Single Bonus',
+		pageIndex: 141,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15512,6 +16645,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Skill Super Enhance',
+		pageIndex: 142,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -15535,6 +16669,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'DEF SPD Enhance',
+		pageIndex: 143,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -15546,6 +16681,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,unwavering spirit',
 		mergeFrom: [],
 		name: 'Unwavering Spirit',
+		pageIndex: 144,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15570,6 +16706,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Force Final',
+		pageIndex: 145,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15593,6 +16730,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'HP Absorb',
+		pageIndex: 146,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15616,6 +16754,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Ruthless Blow',
+		pageIndex: 147,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15626,6 +16765,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,blessing of protection',
 		mergeFrom: [],
 		name: 'Blessing of Protection',
+		pageIndex: 148,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15636,6 +16776,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,weapon,exploration,synthesis,inflict sleep',
 		mergeFrom: [],
 		name: 'Inflict Sleep',
+		pageIndex: 149,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15646,6 +16787,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,weapon,exploration,synthesis,inflict no heal',
 		mergeFrom: [],
 		name: 'Inflict No Heal',
+		pageIndex: 150,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15656,6 +16798,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,defenseless curse',
 		mergeFrom: [],
 		name: 'Defenseless Curse',
+		pageIndex: 151,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15666,6 +16809,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,damage absorb+',
 		mergeFrom: [],
 		name: 'Damage Absorb+',
+		pageIndex: 152,
 	},
 	{
 		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15676,6 +16820,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,weapon,exploration,synthesis,spirit slayer',
 		mergeFrom: [],
 		name: 'Spirit Slayer',
+		pageIndex: 153,
 	},
 	{
 		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15686,6 +16831,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,weapon,exploration,synthesis,puni slayer',
 		mergeFrom: [],
 		name: 'Puni Slayer',
+		pageIndex: 154,
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15709,6 +16855,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Cut MP Consume',
+		pageIndex: 155,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15719,6 +16866,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,trait enhance+',
 		mergeFrom: [],
 		name: 'Trait Enhance+',
+		pageIndex: 156,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15729,6 +16877,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,area bonus',
 		mergeFrom: [],
 		name: 'Area Bonus',
+		pageIndex: 157,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15739,6 +16888,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,fewer bonus+',
 		mergeFrom: [],
 		name: 'Fewer Bonus+',
+		pageIndex: 158,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15749,6 +16899,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,one time end',
 		mergeFrom: [],
 		name: 'One Time End',
+		pageIndex: 159,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15759,6 +16910,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,wait time enhance',
 		mergeFrom: [],
 		name: 'Wait Time Enhance',
+		pageIndex: 160,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15769,6 +16921,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,size -',
 		mergeFrom: [],
 		name: 'Size -',
+		pageIndex: 161,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15779,6 +16932,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,size enhance',
 		mergeFrom: [],
 		name: 'Size Enhance',
+		pageIndex: 162,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -15790,6 +16944,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,persistent faith',
 		mergeFrom: [],
 		name: 'Persistent Faith',
+		pageIndex: 163,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -15801,6 +16956,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,guide intuition',
 		mergeFrom: [],
 		name: 'Guide Intuition',
+		pageIndex: 164,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -15811,6 +16967,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'armor,exploration,synthesis,tenacious body',
 		mergeFrom: [],
 		name: 'Tenacious Body',
+		pageIndex: 165,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15834,6 +16991,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Skill Boost',
+		pageIndex: 166,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -15857,6 +17015,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'DEF SPD Boost',
+		pageIndex: 167,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15867,6 +17026,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,super skill',
 		mergeFrom: [],
 		name: 'Super Skill',
+		pageIndex: 168,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15877,6 +17037,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,weapon,exploration,synthesis,inflict poison',
 		mergeFrom: [],
 		name: 'Inflict Poison',
+		pageIndex: 169,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15900,6 +17061,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Merciless Blow',
+		pageIndex: 170,
 	},
 	{
 		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15910,6 +17072,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,weapon,exploration,synthesis,beast slayer',
 		mergeFrom: [],
 		name: 'Beast Slayer',
+		pageIndex: 171,
 	},
 	{
 		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -15924,6 +17087,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,weapon,exploration,synthesis,pretty fragment,magical slayer',
 		mergeFrom: [],
 		name: 'Magical Slayer',
+		pageIndex: 172,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15934,6 +17098,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,enhance finisher++',
 		mergeFrom: [],
 		name: 'Enhance Finisher++',
+		pageIndex: 173,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15945,6 +17110,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,trait super enhance',
 		mergeFrom: [],
 		name: 'Trait Super Enhance',
+		pageIndex: 174,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15955,6 +17121,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,fewer bonus',
 		mergeFrom: [],
 		name: 'Fewer Bonus',
+		pageIndex: 175,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15965,6 +17132,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,enhance last',
 		mergeFrom: [],
 		name: 'Enhance Last',
+		pageIndex: 176,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15975,6 +17143,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,count compress+',
 		mergeFrom: [],
 		name: 'Count Compress+',
+		pageIndex: 177,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -15998,6 +17167,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Easy to Handle',
+		pageIndex: 178,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16008,6 +17178,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,wait time enhance+',
 		mergeFrom: [],
 		name: 'Wait Time Enhance+',
+		pageIndex: 179,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16018,6 +17189,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,kind of light',
 		mergeFrom: [],
 		name: 'Kind of Light',
+		pageIndex: 180,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16041,6 +17213,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Absorb Soul',
+		pageIndex: 181,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -16051,6 +17224,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,cunning wit',
 		mergeFrom: [],
 		name: 'Cunning Wit',
+		pageIndex: 182,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16062,6 +17236,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,hammer of justice',
 		mergeFrom: [],
 		name: 'Hammer of Justice',
+		pageIndex: 183,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16072,6 +17247,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,blessing of strength',
 		mergeFrom: [],
 		name: 'Blessing of Strength',
+		pageIndex: 184,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16082,6 +17258,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,weapon,exploration,synthesis,inflict weak',
 		mergeFrom: [],
 		name: 'Inflict Weak',
+		pageIndex: 185,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16092,6 +17269,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,slowness curse',
 		mergeFrom: [],
 		name: 'Slowness Curse',
+		pageIndex: 186,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16102,6 +17280,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,damage absorb',
 		mergeFrom: [],
 		name: 'Damage Absorb',
+		pageIndex: 187,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16125,6 +17304,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Skill Savings',
+		pageIndex: 188,
 	},
 	{
 		categories: ['ATK_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16135,6 +17315,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,weapon,exploration,synthesis,demon slayer',
 		mergeFrom: [],
 		name: 'Demon Slayer',
+		pageIndex: 189,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16145,6 +17326,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,enhance finisher',
 		mergeFrom: [],
 		name: 'Enhance Finisher',
+		pageIndex: 190,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16168,6 +17350,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Sonic Throw',
+		pageIndex: 191,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16178,6 +17361,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,trait enhance',
 		mergeFrom: [],
 		name: 'Trait Enhance',
+		pageIndex: 192,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16188,6 +17372,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,last strike',
 		mergeFrom: [],
 		name: 'Last Strike',
+		pageIndex: 193,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16198,6 +17383,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,count bonus+',
 		mergeFrom: [],
 		name: 'Count Bonus+',
+		pageIndex: 194,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16208,6 +17394,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,fast use+',
 		mergeFrom: [],
 		name: 'Fast Use+',
+		pageIndex: 195,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16218,6 +17405,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,mach throw',
 		mergeFrom: [],
 		name: 'Mach Throw',
+		pageIndex: 196,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16228,6 +17416,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,power throw+',
 		mergeFrom: [],
 		name: 'Power Throw+',
+		pageIndex: 197,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16251,6 +17440,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Strong Throw',
+		pageIndex: 198,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -16262,6 +17452,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'armor,exploration,synthesis,star of expectation',
 		mergeFrom: [],
 		name: 'Star of Expectation',
+		pageIndex: 199,
 	},
 	{
 		categories: ['EXPLORATION', 'SYNTHESIS'],
@@ -16273,6 +17464,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'exploration,synthesis,kind soul',
 		mergeFrom: [],
 		name: 'Kind Soul',
+		pageIndex: 200,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16283,6 +17475,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,deadly attack',
 		mergeFrom: [],
 		name: 'Deadly Attack',
+		pageIndex: 201,
 	},
 	{
 		categories: ['HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16293,6 +17486,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'heal item,exploration,synthesis,auto use',
 		mergeFrom: [],
 		name: 'Auto Use',
+		pageIndex: 202,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16307,6 +17501,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,crimson herb,slime compound',
 		mergeFrom: [],
 		name: 'Slime Compound',
+		pageIndex: 203,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16321,6 +17516,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,ancient tablet,ancient seal',
 		mergeFrom: [],
 		name: 'Ancient Seal',
+		pageIndex: 204,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16335,6 +17531,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,kirchen milk,kirchen bell special',
 		mergeFrom: [],
 		name: 'Kirchen Bell Special',
+		pageIndex: 205,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16346,6 +17543,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,few + many bonus',
 		mergeFrom: [],
 		name: 'Few + Many Bonus',
+		pageIndex: 206,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16356,6 +17554,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,enhance last+',
 		mergeFrom: [],
 		name: 'Enhance Last+',
+		pageIndex: 207,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16366,6 +17565,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,count compress',
 		mergeFrom: [],
 		name: 'Count Compress',
+		pageIndex: 208,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16376,6 +17576,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,enhance with count',
 		mergeFrom: [],
 		name: 'Enhance with Count',
+		pageIndex: 209,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16386,6 +17587,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,jumbo size',
 		mergeFrom: [],
 		name: 'Jumbo Size',
+		pageIndex: 210,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16396,6 +17598,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,size super enhance',
 		mergeFrom: [],
 		name: 'Size Super Enhance',
+		pageIndex: 211,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16420,6 +17623,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Accustoms Quickly',
+		pageIndex: 212,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -16431,6 +17635,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,power of madness',
 		mergeFrom: [],
 		name: 'Power of Madness',
+		pageIndex: 213,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -16442,6 +17647,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,burning passion',
 		mergeFrom: [],
 		name: 'Burning Passion',
+		pageIndex: 214,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16452,6 +17658,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,unceasing desire',
 		mergeFrom: [],
 		name: 'Unceasing Desire',
+		pageIndex: 215,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -16463,6 +17670,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'armor,exploration,synthesis,awakening courage',
 		mergeFrom: [],
 		name: 'Awakening Courage',
+		pageIndex: 216,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16473,6 +17681,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,skillful attack',
 		mergeFrom: [],
 		name: 'Skillful Attack',
+		pageIndex: 217,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16487,6 +17696,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,hakurei stone,carries cold',
 		mergeFrom: [],
 		name: 'Carries Cold',
+		pageIndex: 218,
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16501,6 +17711,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,weapon,exploration,synthesis,night crystal,absorbs light',
 		mergeFrom: [],
 		name: 'Absorbs Light',
+		pageIndex: 219,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16515,6 +17726,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,holy water,purifying water',
 		mergeFrom: [],
 		name: 'Purifying Water',
+		pageIndex: 220,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16530,6 +17742,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,zafloa oil,secret of health',
 		mergeFrom: [],
 		name: 'Secret of Health',
+		pageIndex: 221,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16545,6 +17758,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,evil core,demon soul',
 		mergeFrom: [],
 		name: 'Demon Soul',
+		pageIndex: 222,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16555,6 +17769,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,power throw',
 		mergeFrom: [],
 		name: 'Power Throw',
+		pageIndex: 223,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16565,6 +17780,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,size+',
 		mergeFrom: [],
 		name: 'Size+',
+		pageIndex: 224,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16575,6 +17791,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,mini size',
 		mergeFrom: [],
 		name: 'Mini Size',
+		pageIndex: 225,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16585,6 +17802,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,light',
 		mergeFrom: [],
 		name: 'Light',
+		pageIndex: 226,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -16596,6 +17814,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,splendid glory',
 		mergeFrom: [],
 		name: 'Splendid Glory',
+		pageIndex: 227,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -16607,6 +17826,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,empty world',
 		mergeFrom: [],
 		name: 'Empty World',
+		pageIndex: 228,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -16617,6 +17837,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,fog of illusion',
 		mergeFrom: [],
 		name: 'Fog of Illusion',
+		pageIndex: 229,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16627,6 +17848,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,pursuit of knowledge',
 		mergeFrom: [],
 		name: 'Pursuit of Knowledge',
+		pageIndex: 230,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -16638,6 +17860,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'armor,exploration,synthesis,indomitable soul',
 		mergeFrom: [],
 		name: 'Indomitable Soul',
+		pageIndex: 231,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16648,6 +17871,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,persistent attack',
 		mergeFrom: [],
 		name: 'Persistent Attack',
+		pageIndex: 232,
 	},
 	{
 		categories: ['HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16658,6 +17882,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'heal item,exploration,synthesis,auto activate 50%',
 		mergeFrom: [],
 		name: 'Auto Activate 50%',
+		pageIndex: 233,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16669,6 +17894,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,no attribute',
 		mergeFrom: [],
 		name: 'No Attribute',
+		pageIndex: 234,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16684,6 +17910,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,raiden ore,electrified',
 		mergeFrom: [],
 		name: 'Electrified',
+		pageIndex: 235,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16698,6 +17925,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,rainbow puni fluid,unidentified',
 		mergeFrom: [],
 		name: 'Unidentified',
+		pageIndex: 236,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16708,6 +17936,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,super fine',
 		mergeFrom: [],
 		name: 'Super Fine',
+		pageIndex: 237,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16722,6 +17951,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,pelem shell,medicine compound',
 		mergeFrom: [],
 		name: 'Medicine Compound',
+		pageIndex: 238,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16746,6 +17976,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Crush Dimension',
+		pageIndex: 239,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -16756,6 +17987,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,happy heart',
 		mergeFrom: [],
 		name: 'Happy Heart',
+		pageIndex: 240,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -16767,6 +17999,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,benevolent light',
 		mergeFrom: [],
 		name: 'Benevolent Light',
+		pageIndex: 241,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -16778,6 +18011,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,bonds of belief',
 		mergeFrom: [],
 		name: 'Bonds of Belief',
+		pageIndex: 242,
 	},
 	{
 		categories: ['ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -16789,6 +18023,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'armor,exploration,synthesis,ray of hope',
 		mergeFrom: [],
 		name: 'Ray of Hope',
+		pageIndex: 243,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16799,6 +18034,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,changing attack',
 		mergeFrom: [],
 		name: 'Changing Attack',
+		pageIndex: 244,
 	},
 	{
 		categories: ['HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16809,6 +18045,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'heal item,exploration,synthesis,auto activate 20%',
 		mergeFrom: [],
 		name: 'Auto Activate 20%',
+		pageIndex: 245,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16823,6 +18060,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,weapon,exploration,synthesis,fairy poison grass,poison mist',
 		mergeFrom: [],
 		name: 'Poison Mist',
+		pageIndex: 246,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16837,6 +18075,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,kaen stone,carries heat',
 		mergeFrom: [],
 		name: 'Carries Heat',
+		pageIndex: 247,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16851,6 +18090,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,island fish fin,stinks',
 		mergeFrom: [],
 		name: 'Stinks',
+		pageIndex: 248,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16865,6 +18105,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,luminous water,flickering light',
 		mergeFrom: [],
 		name: 'Flickering Light',
+		pageIndex: 249,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16875,6 +18116,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,wards evil',
 		mergeFrom: [],
 		name: 'Wards Evil',
+		pageIndex: 250,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16885,6 +18127,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,barrage attack',
 		mergeFrom: [],
 		name: 'Barrage Attack',
+		pageIndex: 251,
 	},
 	{
 		categories: ['HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16895,6 +18138,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'heal item,exploration,synthesis,auto activate 30%',
 		mergeFrom: [],
 		name: 'Auto Activate 30%',
+		pageIndex: 252,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16910,6 +18154,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,dunkelstern,false flower',
 		mergeFrom: [],
 		name: 'False Flower',
+		pageIndex: 253,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -16924,6 +18169,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,black orb,dark matter',
 		mergeFrom: [],
 		name: 'Dark Matter',
+		pageIndex: 254,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16938,6 +18184,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,gold steel web,cutting thread',
 		mergeFrom: [],
 		name: 'Cutting Thread',
+		pageIndex: 255,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -16948,6 +18195,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'weapon,exploration,synthesis,dragon soul',
 		mergeFrom: [],
 		name: 'Dragon Soul',
+		pageIndex: 256,
 	},
 	{
 		categories: [
@@ -16968,6 +18216,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis,low price',
 		mergeFrom: [],
 		name: 'Low Price',
+		pageIndex: 257,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -16978,6 +18227,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,buff item,de buff item,heal item,exploration,synthesis,critical+',
 		mergeFrom: [],
 		name: 'Critical+',
+		pageIndex: 258,
 	},
 	{
 		categories: [
@@ -17003,6 +18253,7 @@ export const traitsList: Array<Trait> = [
 			'accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis,golden puniball,golden radiance',
 		mergeFrom: [],
 		name: 'Golden Radiance',
+		pageIndex: 259,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -17017,6 +18268,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,bursting berry,special ingredient',
 		mergeFrom: [],
 		name: 'Special Ingredient',
+		pageIndex: 260,
 	},
 	{
 		categories: [
@@ -17038,6 +18290,7 @@ export const traitsList: Array<Trait> = [
 			'accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis,rainbow radiance',
 		mergeFrom: [],
 		name: 'Rainbow Radiance',
+		pageIndex: 261,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -17052,6 +18305,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,armor,exploration,synthesis,silver potato,mutated material',
 		mergeFrom: [],
 		name: 'Mutated Material',
+		pageIndex: 262,
 	},
 	{
 		categories: ['ACCESSORY', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -17066,6 +18320,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,weapon,exploration,synthesis,pious talisman,power of faith',
 		mergeFrom: [],
 		name: 'Power of Faith',
+		pageIndex: 263,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -17089,6 +18344,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Medicine Enhance',
+		pageIndex: 264,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -17116,6 +18372,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Full of Life',
+		pageIndex: 265,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -17139,6 +18396,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Overflowing Life',
+		pageIndex: 266,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -17162,6 +18420,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Always Critical',
+		pageIndex: 267,
 	},
 	{
 		categories: [
@@ -17196,6 +18455,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Common Item',
+		pageIndex: 268,
 	},
 	{
 		categories: [
@@ -17230,6 +18490,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Pro Perfection',
+		pageIndex: 269,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -17240,6 +18501,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'atk item,de buff item,exploration,synthesis,enhance finisher+',
 		mergeFrom: [],
 		name: 'Enhance Finisher+',
+		pageIndex: 270,
 	},
 	{
 		categories: ['ACCESSORY', 'EXPLORATION', 'SYNTHESIS'],
@@ -17251,6 +18513,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'accessory,exploration,synthesis,wild instinct',
 		mergeFrom: [],
 		name: 'Wild Instinct',
+		pageIndex: 271,
 	},
 	{
 		categories: ['BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -17265,6 +18528,7 @@ export const traitsList: Array<Trait> = [
 		keyWords: 'buff item,heal item,exploration,synthesis,dawn fur,sunny scent',
 		mergeFrom: [],
 		name: 'Sunny Scent',
+		pageIndex: 272,
 	},
 	{
 		categories: ['ATK_ITEM', 'DE_BUFF_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -17288,6 +18552,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Relentless Blow',
+		pageIndex: 273,
 	},
 	{
 		categories: [
@@ -17322,6 +18587,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Super Quality',
+		pageIndex: 274,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -17345,6 +18611,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Critical Finish',
+		pageIndex: 275,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -17369,6 +18636,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Boost Expected Value',
+		pageIndex: 276,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -17392,6 +18660,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Full of Stamina',
+		pageIndex: 277,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'EXPLORATION', 'SYNTHESIS'],
@@ -17415,6 +18684,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Unabating Stamina',
+		pageIndex: 278,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -17438,6 +18708,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Skill Cost Compress',
+		pageIndex: 279,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -17461,6 +18732,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Eco Skill',
+		pageIndex: 280,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -17485,6 +18757,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Effective Vs One',
+		pageIndex: 281,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -17508,6 +18781,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Count Boost',
+		pageIndex: 282,
 	},
 	{
 		categories: ['WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -17531,6 +18805,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Steal Life',
+		pageIndex: 283,
 	},
 	{
 		categories: ['ATK_ITEM', 'BUFF_ITEM', 'DE_BUFF_ITEM', 'HEAL_ITEM', 'EXPLORATION', 'SYNTHESIS'],
@@ -17555,6 +18830,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'Charge Item',
+		pageIndex: 284,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -17603,6 +18879,7 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'All Stat Enhance',
+		pageIndex: 285,
 	},
 	{
 		categories: ['ACCESSORY', 'ARMOR', 'WEAPON', 'EXPLORATION', 'SYNTHESIS'],
@@ -17651,5 +18928,6 @@ export const traitsList: Array<Trait> = [
 			],
 		],
 		name: 'All Stat Boost',
+		pageIndex: 286,
 	},
 ];

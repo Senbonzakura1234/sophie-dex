@@ -21,7 +21,7 @@
 		"drizzle-gen": "dotenv drizzle-kit generate:pg",
 		"drizzle-push": "dotenv drizzle-kit push:pg",
 		"drizzle-studio": "concurrently \"pnpm open-studio\" \"dotenv drizzle-kit studio\"",
-		"drizzle-seed": "dotenv tsx src/server/postgresql/repository/seed.ts",
+		"drizzle-seed": "dotenv -e .env.seed tsx src/server/postgresql/repository/seed.ts",
 		"lint": "next lint",
 		"lint:fix": "eslint --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.json . --fix",
 		"open-home": "open-cli http://localhost:3000",

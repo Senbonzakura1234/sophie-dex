@@ -1,6 +1,7 @@
-import 'server-only';
-
-import { writeLog } from '@root/utils/common';
+import { effectsList, itemsList, rumorsList, traitsList } from '@root/constants/seedData';
+import { postgresql } from '@root/server/postgresql/repository';
+import { effects, items, rumors, traits } from '@root/server/postgresql/schema';
+import { tryCatchHandler, writeLog } from '@root/utils/common';
 
 const seed = async () => {
 	const seedResult: {
@@ -17,49 +18,49 @@ const seed = async () => {
 		traitsSuccessCount: 0,
 	};
 
-	// for (let i = 0; i < effectsList.length; i++) {
-	// 	const element = effectsList[i]!;
+	for (let i = 0; i < effectsList.length; i++) {
+		const element = effectsList[i]!;
 
-	// 	const { isSuccess, error } = await tryCatchHandler(postgresql.insert(effects).values(element));
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(effects).values(element));
 
-	// 	if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
-	// 	if (isSuccess) {
-	// 		seedResult.effectsSuccessCount++;
-	// 	}
-	// }
+		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
+		if (isSuccess) {
+			seedResult.effectsSuccessCount++;
+		}
+	}
 
-	// for (let i = 0; i < itemsList.length; i++) {
-	// 	const element = itemsList[i]!;
+	for (let i = 0; i < itemsList.length; i++) {
+		const element = itemsList[i]!;
 
-	// 	const { isSuccess, error } = await tryCatchHandler(postgresql.insert(items).values(element));
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(items).values(element));
 
-	// 	if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
-	// 	if (isSuccess) {
-	// 		seedResult.itemsSuccessCount++;
-	// 	}
-	// }
+		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
+		if (isSuccess) {
+			seedResult.itemsSuccessCount++;
+		}
+	}
 
-	// for (let i = 0; i < rumorsList.length; i++) {
-	// 	const element = rumorsList[i]!;
+	for (let i = 0; i < rumorsList.length; i++) {
+		const element = rumorsList[i]!;
 
-	// 	const { isSuccess, error } = await tryCatchHandler(postgresql.insert(rumors).values(element));
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(rumors).values(element));
 
-	// 	if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
-	// 	if (isSuccess) {
-	// 		seedResult.rumorsSuccessCount++;
-	// 	}
-	// }
+		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
+		if (isSuccess) {
+			seedResult.rumorsSuccessCount++;
+		}
+	}
 
-	// for (let i = 0; i < traitsList.length; i++) {
-	// 	const element = traitsList[i]!;
+	for (let i = 0; i < traitsList.length; i++) {
+		const element = traitsList[i]!;
 
-	// 	const { isSuccess, error } = await tryCatchHandler(postgresql.insert(traits).values(element));
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(traits).values(element));
 
-	// 	if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
-	// 	if (isSuccess) {
-	// 		seedResult.traitsSuccessCount++;
-	// 	}
-	// }
+		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
+		if (isSuccess) {
+			seedResult.traitsSuccessCount++;
+		}
+	}
 
 	return seedResult;
 };

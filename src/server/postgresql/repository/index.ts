@@ -1,4 +1,5 @@
-import 'server-only';
+import { env } from '@root/utils/common/env';
+if (env.IS_NEXTJS_ENV === 'true') import('server-only');
 
 import { neon } from '@neondatabase/serverless';
 import * as schema from '@root/server/postgresql/schema';
@@ -6,7 +7,6 @@ import { users } from '@root/server/postgresql/schema';
 import type { BookmarkQuery } from '@root/types/common/zod';
 import type { ExportDBQueriesMap } from '@root/types/model';
 import { capitalize, evnIs } from '@root/utils/common';
-import { env } from '@root/utils/common/env';
 import { sql } from 'drizzle-orm';
 import { drizzle } from 'drizzle-orm/neon-http';
 

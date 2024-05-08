@@ -1,4 +1,5 @@
-import 'server-only';
+import { env } from '@root/utils/common/env';
+if (env.IS_NEXTJS_ENV === 'true') import('server-only');
 
 import { DEFAULT_LIMIT, sortByMap } from '@root/constants/common';
 import {

@@ -1,4 +1,5 @@
-import 'server-only';
+import { env } from '@root/utils/common/env';
+if (env.IS_NEXTJS_ENV === 'true') import('server-only');
 
 import type { APIResult } from '@root/types/common';
 import { APIError } from '@root/types/common';
@@ -10,7 +11,6 @@ import {
 	packageDotJSONSchema,
 } from '@root/types/common/zod';
 import { tryCatchHandler, tryCatchHandlerSync, writeLog } from '@root/utils/common';
-import { env } from '@root/utils/common/env';
 import type { ZodType } from 'zod';
 
 async function improvedFetch<TResult = unknown>(validator: ZodType<TResult>, ...args: Parameters<typeof fetch>) {
