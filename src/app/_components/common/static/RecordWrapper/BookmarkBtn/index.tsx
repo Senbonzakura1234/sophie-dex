@@ -38,6 +38,8 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 
 	const isLoading = sessionStatus === 'loading' || queryStatus === 'pending' || mutateStatus === 'pending';
 
+	console.log({ id, data });
+
 	const isRecordBookmarked = Boolean(data?.result?.includes(id));
 
 	const isMaximumBookmarks = (data?.result?.length || 0) >= MAXIMUM_BOOKMARK_LENGTH && !isRecordBookmarked;

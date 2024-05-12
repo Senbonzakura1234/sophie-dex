@@ -1,3 +1,4 @@
 .vscode
 backup
 .editorconfig
+drizzle.config.ts

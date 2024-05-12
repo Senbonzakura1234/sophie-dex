@@ -69,10 +69,10 @@ export default function TopFilter() {
 				show={isOpen}
 				as='nav'
 				className='card select-none bg-base-100 shadow-lg shadow-primary'
-				enter='transition-[opacity,transform] duration-300 transform'
+				enter='transition-[opacity,transform] duration-300'
 				enterFrom='opacity-0 -translate-y-3'
 				enterTo='opacity-100 translate-y-0'
-				leave='transition-[opacity,transform] duration-300 transform'
+				leave='transition-[opacity,transform] duration-300'
 				leaveFrom='opacity-100 translate-y-0'
 				leaveTo='opacity-0 -translate-y-3'
 			>

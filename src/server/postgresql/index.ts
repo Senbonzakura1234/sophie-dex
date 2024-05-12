@@ -305,7 +305,9 @@ export const getProfile = async (): APIResult<GithubUserInfo> => {
 };
 
 const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: string) =>
-	await getBookmarksQueriesMap[moduleId].execute({ username }).then<Array<string>>(res => objectValues(res || {}));
+	await getBookmarksQueriesMap[moduleId]
+		.execute({ username })
+		.then<Array<string>>(res => objectValues(res || {})[0] || []);
 
 export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery): APIResult<Array<string>> => {
 	const userSessionRes = await getSessionResult();

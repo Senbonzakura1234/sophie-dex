@@ -1,5 +1,5 @@
 import CheckIcon from '@components/icons/solid/CheckIcon';
-import { Listbox } from '@headlessui/react';
+import { ListboxOption } from '@headlessui/react';
 import type { SelectOptionItem } from '@root/types/common';
 import { cn, convertCode } from '@root/utils/common';
 
@@ -10,14 +10,15 @@ type ListboxOptionProps<V extends string | number> = {
 	useCustomIcon?: boolean;
 };
 
-export default function ListboxOption<V extends string | number>({
+export default function CustomListboxOption<V extends string | number>({
 	isSelected,
 	isHideLabel,
 	optionValue,
 	useCustomIcon,
 }: ListboxOptionProps<V>) {
 	return (
-		<Listbox.Option
+		<ListboxOption<'li', SelectOptionItem<V>>
+			as='li'
 			className={cn(
 				'flex cursor-pointer select-none gap-2 bg-base-100 px-4 py-2 transition-[background]',
 				isSelected ? 'bg-primary/10 font-bold text-primary' : 'hover:bg-secondary/10',
@@ -41,6 +42,6 @@ export default function ListboxOption<V extends string | number>({
 					<span className='capitalize'>{convertCode(`${optionValue.label ?? (optionValue.value || '')}`)}</span>
 				) : null}
 			</span>
-		</Listbox.Option>
+		</ListboxOption>
 	);
 }

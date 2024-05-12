@@ -217,31 +217,29 @@ export default async function RootLayout({ children }: ChildrenProps) {
 
 	return (
 		<html lang='en'>
-			<body className={cn(fontAtelier.variable, fontComicSansMS.className)}>
-				<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(themeCookies?.value) }}>
+			<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(themeCookies?.value) }}>
+				<ThemeWrapper className={cn(fontAtelier.variable, fontComicSansMS.className)}>
 					<AuthProvider session={session}>
-						<ThemeWrapper>
-							<TrpcProvider>
-								<ScrollWrapper>
-									<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
-										<ThemeSwitcher />
+						<TrpcProvider>
+							<ScrollWrapper>
+								<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
+									<ThemeSwitcher />
 
-										<AuthNav />
-									</nav>
+									<AuthNav />
+								</nav>
 
-									{children}
+								{children}
 
-									<Alert />
+								<Alert />
 
-									<Suspense>
-										<ScrollTopTrigger />
-									</Suspense>
-								</ScrollWrapper>
-							</TrpcProvider>
-						</ThemeWrapper>
+								<Suspense>
+									<ScrollTopTrigger />
+								</Suspense>
+							</ScrollWrapper>
+						</TrpcProvider>
 					</AuthProvider>
-				</ContextProvider>
-			</body>
+				</ThemeWrapper>
+			</ContextProvider>
 		</html>
 	);
 }

@@ -43,7 +43,7 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
 	}, [dispatch]);
 
 	return (
-		<>
+		<main>
 			<PageRefresh />
 
 			<Root className='h-dvh w-dvw overflow-hidden bg-base-200 !antialiased' type='scroll'>
@@ -63,6 +63,6 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
 
 				<ScrollToTop isShow={isShowScrollTop} refObject={scrollableRef} />
 			</Root>
-		</>
+		</main>
 	);
 }

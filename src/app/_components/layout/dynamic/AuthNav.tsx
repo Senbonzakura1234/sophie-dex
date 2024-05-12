@@ -18,7 +18,7 @@ export default function AuthNav() {
 	if (session)
 		return (
 			<Dropdown
-				anchor='right'
+				anchor='bottom end'
 				items={[
 					{
 						type: 'static',
@@ -28,10 +28,10 @@ export default function AuthNav() {
 									url={session.user?.image || ''}
 									username={session.user?.name || ''}
 									size={48}
-									className='aspect-square w-12'
+									className='aspect-square w-[50px] bg-gradient-to-br from-accent to-primary p-1 shadow-lg shadow-primary'
 								/>
 								<div className='flex max-w-full flex-col items-start truncate hover:text-clip'>
-									<div>{session.user?.name}</div>
+									<div className='font-bold text-primary'>{session.user?.name}</div>
 									<div className='text-sm'>{session.user?.email}</div>
 								</div>
 							</>
@@ -56,6 +56,7 @@ export default function AuthNav() {
 							</>
 						),
 						onClick: () => signOut(),
+						className: 'text-primary',
 					},
 				]}
 				buttonLabel={
@@ -64,7 +65,7 @@ export default function AuthNav() {
 							url={session.user?.image || ''}
 							username={session.user?.name || ''}
 							size={20}
-							className='aspect-square w-5'
+							className='aspect-square w-6 bg-gradient-to-br from-slate-500 to-primary-content p-[3px] shadow-inner'
 						/>
 						<span className='hidden sm:inline'>Profile</span>
 					</>
