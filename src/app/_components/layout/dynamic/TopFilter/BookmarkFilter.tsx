@@ -35,7 +35,10 @@ export default function BookmarkFilter({ moduleId }: Props) {
 		data,
 		refetch,
 		status: queryStatus,
-	} = ApiClientCtx.user.getModuleBookmarks.useQuery({ moduleId }, { enabled: !isAPIDisabled });
+	} = ApiClientCtx.user.getModuleBookmarks.useQuery(
+		{ moduleId },
+		{ enabled: !isAPIDisabled, refetchOnMount: true, refetchOnWindowFocus: true },
+	);
 
 	const isFilterDisabled = !isAuthenticated || queryStatus !== 'success' || !Boolean(data.result?.length);
 

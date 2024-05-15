@@ -14,7 +14,6 @@ import type { APIResult, ImprovePick } from '@root/types/common';
 import { APIError } from '@root/types/common';
 import type { BookmarkQuery, GithubUserInfo, ModuleIdQuery, SearchQuery, SortByEnum } from '@root/types/common/zod';
 import { arrayInclude, deleteNullableProperty, objectValues, tryCatchHandler } from '@root/utils/common';
-import { getSessionResult } from '@root/utils/server';
 import dayjs from 'dayjs';
 import type { SQL, sql } from 'drizzle-orm';
 import { arrayOverlaps, eq } from 'drizzle-orm';
@@ -60,15 +59,15 @@ const getListRecord = async <TRecord extends CommonRecord>(args: GetListRecordPr
 	return { records, totalRecord, totalPage: Math.ceil(totalRecord / DEFAULT_LIMIT), search: search || undefined };
 };
 
-export const getEffects = async (input: SearchQuery) => {
+export const getEffects = async (input: SearchQuery, username: string | undefined) => {
 	const { search, sortBy, direction, page, bookmarked } = input;
 
 	let bookmarkList: Array<string> = [];
 
-	let isEnableBookmarkFilter = bookmarked;
+	let isEnableBookmarkFilter = typeof username === 'string' ? bookmarked : null;
 
 	if (isEnableBookmarkFilter === 'true') {
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'effect' });
+		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'effect' }, username!);
 
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
@@ -106,15 +105,15 @@ export const getEffects = async (input: SearchQuery) => {
 	return getListRecord<Effect>({ query, search, isEmptyBookmark: false });
 };
 
-export const getItems = async (input: SearchQuery) => {
+export const getItems = async (input: SearchQuery, username: string | undefined) => {
 	const { search, sortBy, direction, color, relatedCategory, page, category, recipeType, bookmarked } = input;
 
 	let bookmarkList: Array<string> = [];
 
-	let isEnableBookmarkFilter = bookmarked;
+	let isEnableBookmarkFilter = typeof username === 'string' ? bookmarked : null;
 
 	if (isEnableBookmarkFilter === 'true') {
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'item' });
+		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'item' }, username!);
 
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
@@ -151,15 +150,15 @@ export const getItems = async (input: SearchQuery) => {
 	return getListRecord<Item>({ query, search, isEmptyBookmark: false });
 };
 
-export const getRumors = async (input: SearchQuery) => {
+export const getRumors = async (input: SearchQuery, username: string | undefined) => {
 	const { search, sortBy, direction, page, rumorType, bookmarked } = input;
 
 	let bookmarkList: Array<string> = [];
 
-	let isEnableBookmarkFilter = bookmarked;
+	let isEnableBookmarkFilter = typeof username === 'string' ? bookmarked : null;
 
 	if (isEnableBookmarkFilter === 'true') {
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'rumor' });
+		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'rumor' }, username!);
 
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
@@ -193,15 +192,15 @@ export const getRumors = async (input: SearchQuery) => {
 	return getListRecord<Rumor>({ query, search, isEmptyBookmark: false });
 };
 
-export const getTraits = async (input: SearchQuery) => {
+export const getTraits = async (input: SearchQuery, username: string | undefined) => {
 	const { search, sortBy, direction, category, page, bookmarked } = input;
 
 	let bookmarkList: Array<string> = [];
 
-	let isEnableBookmarkFilter = bookmarked;
+	let isEnableBookmarkFilter = typeof username === 'string' ? bookmarked : null;
 
 	if (isEnableBookmarkFilter === 'true') {
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'trait' });
+		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'trait' }, username!);
 
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
@@ -283,13 +282,7 @@ export const insertOrUpdateUser = async ({ isUpdate, userData }: InsertOrUpdateU
 		.then(res => res[0]);
 };
 
-export const getProfile = async (): APIResult<GithubUserInfo> => {
-	const userSessionRes = await getSessionResult();
-
-	if (!userSessionRes.isSuccess) return userSessionRes;
-
-	const username = userSessionRes.result.user.name;
-
+export const getProfile = async (username: string): APIResult<GithubUserInfo> => {
 	const { data, isSuccess } = await tryCatchHandler(getUserRecordQuery.execute({ username }));
 
 	if (!isSuccess) return { isSuccess: false, result: null, error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }) };
@@ -309,13 +302,7 @@ const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: str
 		.execute({ username })
 		.then<Array<string>>(res => objectValues(res || {})[0] || []);
 
-export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery): APIResult<Array<string>> => {
-	const userSessionRes = await getSessionResult();
-
-	if (!userSessionRes.isSuccess) return userSessionRes;
-
-	const username = userSessionRes.result.user.name;
-
+export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery, username: string): APIResult<Array<string>> => {
 	const getModuleBookmarkRes = await tryCatchHandler(onGetBookmarks(moduleId, username));
 
 	if (!getModuleBookmarkRes.isSuccess)
@@ -339,13 +326,7 @@ export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery): APIResult
 	};
 };
 
-export const bookmarkRecord = async ({ bookmarkRecordId, isBookmarked, moduleId }: BookmarkQuery) => {
-	const userSessionRes = await getSessionResult();
-
-	if (!userSessionRes.isSuccess) throw userSessionRes.error;
-
-	const username = userSessionRes.result.user.name;
-
+export const bookmarkRecord = async ({ bookmarkRecordId, isBookmarked, moduleId }: BookmarkQuery, username: string) => {
 	const bookmarkRes = await tryCatchHandler(
 		postgresql.execute(getToggleBookmarkQuery({ bookmarkRecordId, isBookmarked, moduleId, username })),
 	);

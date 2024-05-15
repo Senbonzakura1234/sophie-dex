@@ -3,6 +3,7 @@ import {
 	getEffects,
 	getItems,
 	getModuleBookmarks,
+	getProfile,
 	getRumors,
 	getTraits,
 } from '@root/server/postgresql';
@@ -27,11 +28,14 @@ import {
 	searchQueryValidator,
 } from '@root/types/common/zod';
 import { evnIs } from '@root/utils/common';
+import { getSessionResult } from '@root/utils/server';
 import { exportRecords, getAllRecordIds, getContentRecord } from '@root/utils/server/database';
 import { initTRPC } from '@trpc/server';
 import { ZodError } from 'zod';
 
-const t = initTRPC.create({
+export const createContext = async () => ({ sessionResult: await getSessionResult() });
+
+const t = initTRPC.context<typeof createContext>().create({
 	isDev: !evnIs('production'),
 	errorFormatter({ shape, error }) {
 		return {
@@ -46,9 +50,17 @@ const t = initTRPC.create({
 
 const procedure = t.procedure;
 
+const protectedProcedure = t.procedure.use(opts => {
+	if (opts.ctx.sessionResult.isSuccess) return opts.next();
+
+	throw opts.ctx.sessionResult.error;
+});
+
 export const appRouter = t.router({
 	effect: {
-		getAll: procedure.input(searchQueryValidator).query(({ input }) => getEffects(input)),
+		getAll: procedure
+			.input(searchQueryValidator)
+			.query(({ input, ctx }) => getEffects(input, ctx.sessionResult.result?.user.name)),
 
 		getOne: procedure.input(idQueryValidator).query(({ input }) => getContentRecord(getEffectRecordQuery, input)),
 
@@ -57,7 +69,9 @@ export const appRouter = t.router({
 		export: procedure.query(() => exportRecords(exportEffectsQuery)),
 	},
 	item: {
-		getAll: procedure.input(searchQueryValidator).query(({ input }) => getItems(input)),
+		getAll: procedure
+			.input(searchQueryValidator)
+			.query(({ input, ctx }) => getItems(input, ctx.sessionResult.result?.user.name)),
 
 		getOne: procedure.input(idQueryValidator).query(({ input }) => getContentRecord(getItemRecordQuery, input)),
 
@@ -66,7 +80,9 @@ export const appRouter = t.router({
 		export: procedure.query(() => exportRecords(exportItemsQuery)),
 	},
 	rumor: {
-		getAll: procedure.input(searchQueryValidator).query(({ input }) => getRumors(input)),
+		getAll: procedure
+			.input(searchQueryValidator)
+			.query(({ input, ctx }) => getRumors(input, ctx.sessionResult.result?.user.name)),
 
 		getOne: procedure.input(idQueryValidator).query(({ input }) => getContentRecord(getRumorRecordQuery, input)),
 
@@ -75,7 +91,9 @@ export const appRouter = t.router({
 		export: procedure.query(() => exportRecords(exportRumorsQuery)),
 	},
 	trait: {
-		getAll: procedure.input(searchQueryValidator).query(({ input }) => getTraits(input)),
+		getAll: procedure
+			.input(searchQueryValidator)
+			.query(({ input, ctx }) => getTraits(input, ctx.sessionResult.result?.user.name)),
 
 		getOne: procedure.input(idQueryValidator).query(({ input }) => getContentRecord(getTraitRecordQuery, input)),
 
@@ -84,8 +102,13 @@ export const appRouter = t.router({
 		export: procedure.query(() => exportRecords(exportTraitsQuery)),
 	},
 	user: {
-		getModuleBookmarks: procedure.input(moduleIdQueryValidator).query(({ input }) => getModuleBookmarks(input)),
-		bookmark: procedure.input(bookmarkQueryValidator).mutation(({ input }) => bookmarkRecord(input)),
+		getModuleBookmarks: protectedProcedure
+			.input(moduleIdQueryValidator)
+			.query(({ input, ctx }) => getModuleBookmarks(input, ctx.sessionResult.result?.user.name || '')),
+		bookmark: protectedProcedure
+			.input(bookmarkQueryValidator)
+			.mutation(({ input, ctx }) => bookmarkRecord(input, ctx.sessionResult.result?.user.name || '')),
+		getProfile: protectedProcedure.query(({ ctx }) => getProfile(ctx.sessionResult.result?.user.name || '')),
 	},
 });
 

@@ -1,7 +1,5 @@
-import ProfileInfo from '@components/common/static/ProfileInfo';
-import SuspenseComponent from '@components/layout/static/SuspenseComponent';
+import APIProfileWrapper from '@components/layout/dynamic/ApiWrapper/profile';
 import RecordPlaceholder from '@components/loading/RecordPlaceholder';
-import { getProfile } from '@root/server/postgresql';
 import { type PageProps } from '@root/types/common';
 import { env } from '@root/utils/common/env';
 import { generateGenericMetadata } from '@root/utils/server/database';
@@ -15,7 +13,7 @@ export async function generateMetadata({ searchParams }: PageProps, parent: Reso
 export default function Profile() {
 	return (
 		<Suspense fallback={<RecordPlaceholder className='mx-auto min-h-80 w-full max-w-lg' />}>
-			<SuspenseComponent promiseData={getProfile()} ChildComponent={ProfileInfo} showErrorContent />
+			<APIProfileWrapper />;
 		</Suspense>
 	);
 }

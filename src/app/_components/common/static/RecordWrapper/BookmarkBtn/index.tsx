@@ -5,7 +5,7 @@ import type { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { ApiClientCtx } from '@root/utils/client/trpc';
 import { capitalize, cn, tryCatchHandler } from '@root/utils/common';
-import { useSession } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
 import { BookmarkBtnIcon, BookmarkBtnText } from './BookmarkBtnInner';
 
 type Props = { id: string; name: string; moduleId: NonNullable<ReturnType<typeof useModuleId>['moduleId']> };
@@ -27,7 +27,11 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 		status: queryStatus,
 	} = ApiClientCtx.user.getModuleBookmarks.useQuery(
 		{ moduleId },
-		{ enabled: sessionStatus === 'authenticated' && isNotBookmarkFilter },
+		{
+			enabled: sessionStatus === 'authenticated' && isNotBookmarkFilter,
+			refetchOnMount: true,
+			refetchOnWindowFocus: true,
+		},
 	);
 
 	const { mutateAsync, status: mutateStatus } = ApiClientCtx.user.bookmark.useMutation();
@@ -38,8 +42,6 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 
 	const isLoading = sessionStatus === 'loading' || queryStatus === 'pending' || mutateStatus === 'pending';
 
-	console.log({ id, data });
-
 	const isRecordBookmarked = Boolean(data?.result?.includes(id));
 
 	const isMaximumBookmarks = (data?.result?.length || 0) >= MAXIMUM_BOOKMARK_LENGTH && !isRecordBookmarked;
@@ -49,13 +51,15 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 	const handleBookmark = async () => {
 		if (isDisabled) return;
 
-		await tryCatchHandler(
+		const res = await tryCatchHandler(
 			mutateAsync({
 				bookmarkRecordId: id,
 				moduleId,
 				isBookmarked: isNotBookmarkFilter ? isRecordBookmarked : true,
 			}),
 		);
+
+		if (!res.isSuccess) return await signIn();
 
 		return await (isNotBookmarkFilter ? refetch() : trpcUtils[moduleId].getAll.invalidate());
 	};

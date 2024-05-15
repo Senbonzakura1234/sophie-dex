@@ -1,12 +1,11 @@
 'use client';
 
-import { signIn } from 'next-auth/react';
-import { useEffect } from 'react';
+import { permanentRedirect } from 'next/navigation';
 
 export default function SignInRedirect() {
-	useEffect(() => {
-		signIn();
-	}, []);
+	const url = new URL('/signin', window.location.href);
 
-	return null;
+	url.searchParams.set('callbackUrl', new URL(window.location.href).toString());
+
+	return permanentRedirect(url.toString());
 }
