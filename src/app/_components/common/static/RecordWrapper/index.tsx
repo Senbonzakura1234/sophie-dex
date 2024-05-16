@@ -45,7 +45,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 			/>
 
 			<div className='card-body z-10 gap-3 rounded-[inherit] bg-base-100 p-[1.625rem] text-base-content shadow-inner shadow-base-content'>
-				<RecordHead id={data.id} name={data.name} currentId={currentId} search={search} />
+				<RecordHead id={data.id} name={data.name} currentId={currentId} search={search} moduleId={data.moduleId} />
 
 				{renderChild}
 			</div>

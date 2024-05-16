@@ -13,6 +13,8 @@ export type HighlightText = { content: string };
 export type HyperLinkRecord = { id: string; name: string; table: ModuleIdEnum };
 export type HyperLinkSearch = { searchQuery: SearchQuery; table: ModuleIdEnum };
 
+export type HyperLinkData = HighlightText | HyperLinkRecord | HyperLinkSearch;
+
 export type ItemDescription = {
 	hunt: Array<string>;
 	location: Array<string>;
@@ -24,7 +26,7 @@ export type ItemDescription = {
 export type RelatedCategory = { count: number; name: RelatedCategoryEnum };
 
 export type HyperLinkMap = {
-	contentData: Array<HighlightText | HyperLinkRecord | HyperLinkSearch>;
+	contentData: Array<HyperLinkData>;
 	contentText: Array<string>;
 };
 //#endregion
@@ -37,6 +39,7 @@ export const effects = pgTable('effects', {
 	id: text('id').primaryKey(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	name: varchar('name', { length: 256 }).notNull(),
+	moduleId: varchar('module_id', { enum: ['effect'], length: 100 }).notNull(),
 
 	index: smallint('index').notNull(),
 	description: varchar('description', { length: 256 }).notNull(),
@@ -46,6 +49,7 @@ export const items = pgTable('items', {
 	id: text('id').primaryKey(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	name: varchar('name', { length: 256 }).notNull(),
+	moduleId: varchar('module_id', { enum: ['item'], length: 100 }).notNull(),
 
 	category: varchar('category', { enum: categoryList, length: 100 }).notNull(),
 	color: varchar('color', { enum: colorList, length: 100 }).notNull(),
@@ -62,6 +66,7 @@ export const rumors = pgTable('rumors', {
 	id: text('id').primaryKey(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	name: varchar('name', { length: 256 }).notNull(),
+	moduleId: varchar('module_id', { enum: ['rumor'], length: 100 }).notNull(),
 
 	description: jsonb('description').$type<HyperLinkMap>().notNull(),
 	location: varchar('location', { length: 256 }).notNull(),
@@ -73,6 +78,7 @@ export const traits = pgTable('traits', {
 	id: text('id').primaryKey(),
 	keyWords: varchar('key_words', { length: 256 }).notNull(),
 	name: varchar('name', { length: 256 }).notNull(),
+	moduleId: varchar('module_id', { enum: ['trait'], length: 100 }).notNull(),
 
 	categories: varchar('categories', { enum: categoryList, length: 100 }).array().notNull(),
 	description: varchar('description', { length: 256 }).notNull(),

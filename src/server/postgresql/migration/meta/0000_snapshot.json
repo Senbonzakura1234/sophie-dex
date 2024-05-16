@@ -1,10 +1,10 @@
 {
-  "id": "2f61d8b3-f499-4a48-a566-e1e8ee20711b",
+  "id": "ec9a1ff1-9857-4d7d-9a79-411d0385d368",
   "prevId": "00000000-0000-0000-0000-000000000000",
-  "version": "5",
-  "dialect": "pg",
+  "version": "6",
+  "dialect": "postgresql",
   "tables": {
-    "sophie_dex_effects": {
+    "public.sophie_dex_effects": {
       "name": "sophie_dex_effects",
       "schema": "",
       "columns": {
@@ -26,6 +26,12 @@
           "primaryKey": false,
           "notNull": true
         },
+        "module_id": {
+          "name": "module_id",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
         "index": {
           "name": "index",
           "type": "smallint",
@@ -44,7 +50,7 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
-    "sophie_dex_items": {
+    "public.sophie_dex_items": {
       "name": "sophie_dex_items",
       "schema": "",
       "columns": {
@@ -63,6 +69,12 @@
         "name": {
           "name": "name",
           "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "module_id": {
+          "name": "module_id",
+          "type": "varchar(100)",
           "primaryKey": false,
           "notNull": true
         },
@@ -126,7 +138,7 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
-    "sophie_dex_rumors": {
+    "public.sophie_dex_rumors": {
       "name": "sophie_dex_rumors",
       "schema": "",
       "columns": {
@@ -145,6 +157,12 @@
         "name": {
           "name": "name",
           "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "module_id": {
+          "name": "module_id",
+          "type": "varchar(100)",
           "primaryKey": false,
           "notNull": true
         },
@@ -178,7 +196,7 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
-    "sophie_dex_traits": {
+    "public.sophie_dex_traits": {
       "name": "sophie_dex_traits",
       "schema": "",
       "columns": {
@@ -197,6 +215,12 @@
         "name": {
           "name": "name",
           "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "module_id": {
+          "name": "module_id",
+          "type": "varchar(100)",
           "primaryKey": false,
           "notNull": true
         },
@@ -236,7 +260,7 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
-    "sophie_dex_users": {
+    "public.sophie_dex_users": {
       "name": "sophie_dex_users",
       "schema": "",
       "columns": {

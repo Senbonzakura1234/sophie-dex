@@ -2,6 +2,7 @@ CREATE TABLE IF NOT EXISTS "sophie_dex_effects" (
 	"id" text PRIMARY KEY NOT NULL,
 	"key_words" varchar(256) NOT NULL,
 	"name" varchar(256) NOT NULL,
+	"module_id" varchar(100) NOT NULL,
 	"index" smallint NOT NULL,
 	"description" varchar(256) NOT NULL
 );
@@ -10,6 +11,7 @@ CREATE TABLE IF NOT EXISTS "sophie_dex_items" (
 	"id" text PRIMARY KEY NOT NULL,
 	"key_words" varchar(256) NOT NULL,
 	"name" varchar(256) NOT NULL,
+	"module_id" varchar(100) NOT NULL,
 	"category" varchar(100) NOT NULL,
 	"color" varchar(100) NOT NULL,
 	"description" jsonb NOT NULL,
@@ -25,6 +27,7 @@ CREATE TABLE IF NOT EXISTS "sophie_dex_rumors" (
 	"id" text PRIMARY KEY NOT NULL,
 	"key_words" varchar(256) NOT NULL,
 	"name" varchar(256) NOT NULL,
+	"module_id" varchar(100) NOT NULL,
 	"description" jsonb NOT NULL,
 	"location" varchar(256) NOT NULL,
 	"price" smallint NOT NULL,
@@ -35,6 +38,7 @@ CREATE TABLE IF NOT EXISTS "sophie_dex_traits" (
 	"id" text PRIMARY KEY NOT NULL,
 	"key_words" varchar(256) NOT NULL,
 	"name" varchar(256) NOT NULL,
+	"module_id" varchar(100) NOT NULL,
 	"categories" varchar(100)[] NOT NULL,
 	"description" varchar(256) NOT NULL,
 	"index" smallint NOT NULL,

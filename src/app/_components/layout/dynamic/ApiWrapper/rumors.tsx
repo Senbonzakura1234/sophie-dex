@@ -11,7 +11,9 @@ import { useEffect } from 'react';
 type APIListWrapperProps = { searchParams: PageProps['searchParams'] };
 
 export default function APIListWrapper({ searchParams }: APIListWrapperProps) {
-	const { data, error, status } = ApiClientCtx.rumor.getAll.useQuery(searchParams);
+	const { data, error, status } = ApiClientCtx.rumor.getAll.useQuery(searchParams, {
+		notifyOnChangeProps: ['data', 'error'],
+	});
 
 	const dispatch = useDispatch();
 

@@ -1,12 +1,12 @@
 import { env } from '@root/utils/common/env';
 if (env.IS_NEXTJS_ENV === 'true') import('server-only');
 
-import type { CommonRecord } from '@root/server/postgresql/schema';
+import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/postgresql/schema';
 import type { APIResult, PageProps, PreparedPGQuery } from '@root/types/common';
 import { APIError } from '@root/types/common';
 import type { IdQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
-import { objectValues, tryCatchHandler } from '@root/utils/common';
+import { objectValues, parseHyperLinkData, tryCatchHandler } from '@root/utils/common';
 import type { Metadata, ResolvingMetadata } from 'next';
 
 export async function generateGenericMetadata(
@@ -82,3 +82,62 @@ export const exportRecords = async <TRecord extends CommonRecord>(
 
 	return { isSuccess, result: null, error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }) };
 };
+
+export const updateEffectKeywords = (input: Effect): Effect => ({
+	...input,
+	keyWords: [input.name, input.index].filter(Boolean).join(',').replaceAll('_', ' ').toLowerCase(),
+});
+
+export const updateItemKeywords = (input: Item): Item => ({
+	...input,
+	keyWords: [
+		input.name,
+		input.color,
+		input.category,
+		input.index.toString(),
+		input.level.toString(),
+		input.recipeType,
+		...input.relatedCategories,
+		input.traitPresent?.name,
+		...(input.recipeIdea?.contentData || []).map(c => parseHyperLinkData(c).label),
+		...input.description.hunt,
+		input.description.rumor?.name,
+		input.description.shop,
+		...input.description.location,
+		input.description.special,
+	]
+		.filter(Boolean)
+		.join(',')
+		.replaceAll('_', ' ')
+		.toLowerCase(),
+});
+
+export const updateRumorKeywords = (input: Rumor): Rumor => ({
+	...input,
+	keyWords: [
+		input.name,
+		input.price.toString(),
+		input.location,
+		input.rumorType,
+		...input.description.contentData.map(c => parseHyperLinkData(c).label),
+	]
+		.filter(Boolean)
+		.join(',')
+		.replaceAll('_', ' ')
+		.toLowerCase(),
+});
+
+export const updateTraitKeywords = (input: Trait): Trait => ({
+	...input,
+	keyWords: [
+		input.name,
+		input.index.toString(),
+		input.itemPresent?.name,
+		...input.mergeFrom.map(([f, s]) => [f.name, s.name]).flat(),
+		...input.categories,
+	]
+		.filter(Boolean)
+		.join(',')
+		.replaceAll('_', ' ')
+		.toLowerCase(),
+});

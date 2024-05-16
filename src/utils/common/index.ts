@@ -1,3 +1,4 @@
+import type { HyperLinkData } from '@root/server/postgresql/schema';
 import type { CommonObject, KeyOf, ValueOf } from '@root/types/common';
 import type { BooleanishEnum, NodeEnvEnum, SearchQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
@@ -154,4 +155,22 @@ export function tryCatchHandlerSync<TReturn = unknown>(callback: () => TReturn) 
 
 		return { data: null, isSuccess: false as const, error };
 	}
+}
+
+export function parseHyperLinkData(input: HyperLinkData) {
+	if ('content' in input) return { label: input.content } as const;
+
+	if ('searchQuery' in input) {
+		const query = input.searchQuery;
+
+		return {
+			label: objectValues(query)
+				.filter(Boolean)
+				.map((value, key) => `${key > 0 ? ', ' : ''}${typeof value === 'number' ? value : convertCode(value)}`)
+				.join(),
+			href: `/${input.table}${queryToParamsString(query)}`,
+		} as const;
+	}
+
+	return { label: input.name, href: `/${input.table}/${input.id}` } as const;
 }
