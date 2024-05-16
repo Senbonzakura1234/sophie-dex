@@ -6,9 +6,10 @@ import { Fragment } from 'react';
 
 type RecipeIdeaProps = {
 	recipeIdea: HyperLinkMap;
+	search: string | undefined;
 } & ClassNameProps;
 
-export default function RecipeIdea({ recipeIdea: { contentText, contentData }, className }: RecipeIdeaProps) {
+export default function RecipeIdea({ recipeIdea: { contentText, contentData }, className, search }: RecipeIdeaProps) {
 	return (
 		<div className={cn('max-w-[90%]', className)}>
 			<span>Recipe Idea:&nbsp;&nbsp;</span>
@@ -20,7 +21,7 @@ export default function RecipeIdea({ recipeIdea: { contentText, contentData }, c
 					if (text.includes('keyMap-')) data = contentData[parseInt(text.replace('keyMap-', ''))];
 
 					return data ? (
-						<Hyperlink key={key} input={data} className='link link-primary visited:link-accent' />
+						<Hyperlink search={search} key={key} input={data} className='link link-primary visited:link-accent' />
 					) : (
 						<Fragment key={key}>{text}</Fragment>
 					);

@@ -31,9 +31,9 @@ export default function ItemRecord({ currentId, search, ...props }: ItemRecordPr
 
 					<Color color={color} />
 
-					{recipeIdea ? <RecipeIdea recipeIdea={recipeIdea} /> : null}
+					{recipeIdea ? <RecipeIdea recipeIdea={recipeIdea} search={search} /> : null}
 
-					{description ? <Description description={description} /> : null}
+					{description ? <Description description={description} search={search} /> : null}
 
 					{traitPresent ? <TraitPresent traitPresent={traitPresent} /> : null}
 

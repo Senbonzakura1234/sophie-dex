@@ -25,7 +25,7 @@ export default function Category({ category, color }: CategoryProps) {
 	return (
 		<>
 			<div className='flex max-w-fit flex-wrap gap-2'>
-				<div>ItemCategory: </div>
+				<div>Category: </div>
 				<QueryLink
 					aria-label={`Filter ${convertCode(category)} Item`}
 					className={cn('btn btn-primary btn-xs gap-1 font-bold capitalize shadow-primary/50', {

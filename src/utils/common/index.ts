@@ -110,11 +110,12 @@ export function getBaseUrl(useMainHost?: boolean) {
 }
 
 export function paramsToQuery(input: ReadonlyURLSearchParams | URLSearchParams) {
-	return searchQueryValidator.keyof()._def.values.reduce((prev, cur) => {
-		const query = input.get(cur);
-		const value = cur === 'page' ? parseInt(query || '') : query;
-		return { ...prev, [cur]: value || null };
-	}, {}) as SearchQuery;
+	return searchQueryValidator
+		.keyof()
+		._def.values.reduce(
+			(prev, cur) => ({ ...prev, [cur]: searchQueryValidator.shape[cur].parse(input.get(cur)) }),
+			{} as SearchQuery,
+		);
 }
 
 export function queryToParamsString(query: Partial<SearchQuery>) {
@@ -127,6 +128,7 @@ export function queryToParamsString(query: Partial<SearchQuery>) {
 
 export function highlightSearchedText(input: string, search: string | undefined) {
 	if (!search) return input;
+
 	const arr = input.split(new RegExp(`(${search})`, 'ig'));
 
 	return arr

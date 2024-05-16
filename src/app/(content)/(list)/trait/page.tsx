@@ -13,7 +13,7 @@ export async function generateMetadata({ searchParams }: PageProps, parent: Reso
 export default function traits({ searchParams }: PageProps) {
 	return (
 		<Suspense fallback={<ListRecordPlaceholder />}>
-			<APIListWrapper searchParams={searchParams} />;
+			<APIListWrapper searchParams={searchParams} />
 		</Suspense>
 	);
 }

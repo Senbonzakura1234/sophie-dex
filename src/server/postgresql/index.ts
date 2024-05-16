@@ -28,24 +28,25 @@ const getOffset = (page: number | null) => ((page ?? 1) - 1) * DEFAULT_LIMIT;
 const getSortField = <TSearch extends Readonly<SortByEnum>>(
 	allowedSortField: Readonly<Array<TSearch>>,
 	defaultSortField: TSearch,
-	search: SortByEnum | null,
-) => (arrayInclude(allowedSortField, search) ? search : defaultSortField);
+	sortBy: SortByEnum | null,
+) => (arrayInclude(allowedSortField, sortBy) ? sortBy : defaultSortField);
 
 type GetListRecordProp<TRecord extends CommonRecord> =
 	| {
 			query: PgRelationalQuery<Array<TRecord & { totalRecord: number }>>;
-			search: string | null;
+			searchValue: string | null;
 			isEmptyBookmark: false;
 	  }
 	| {
-			search: string | null;
+			searchValue: string | null;
 			isEmptyBookmark: true;
 	  };
 
 const getListRecord = async <TRecord extends CommonRecord>(args: GetListRecordProp<TRecord>) => {
-	if (args.isEmptyBookmark) return { records: [], totalRecord: 0, totalPage: 0, search: args.search || undefined };
+	if (args.isEmptyBookmark)
+		return { records: [], totalRecord: 0, totalPage: 0, search: args.searchValue || undefined };
 
-	const { query, search } = args;
+	const { query, searchValue } = args;
 
 	const { data, isSuccess } = await tryCatchHandler(query);
 
@@ -56,11 +57,13 @@ const getListRecord = async <TRecord extends CommonRecord>(args: GetListRecordPr
 		data.map(({ totalRecord: _, ...record }) => record),
 	] as const;
 
-	return { records, totalRecord, totalPage: Math.ceil(totalRecord / DEFAULT_LIMIT), search: search || undefined };
+	return { records, totalRecord, totalPage: Math.ceil(totalRecord / DEFAULT_LIMIT), search: searchValue || undefined };
 };
 
 export const getEffects = async (input: SearchQuery, username: string | undefined) => {
 	const { search, sortBy, direction, page, bookmarked } = input;
+
+	const searchValue = search?.split(' ')?.filter(Boolean)?.join(' ') || null;
 
 	let bookmarkList: Array<string> = [];
 
@@ -72,7 +75,7 @@ export const getEffects = async (input: SearchQuery, username: string | undefine
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
 		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Effect>({ search, isEmptyBookmark: true });
+			if (bookmarkListRes.result.length === 0) return getListRecord<Effect>({ searchValue, isEmptyBookmark: true });
 
 			bookmarkList = bookmarkListRes.result;
 		}
@@ -86,11 +89,11 @@ export const getEffects = async (input: SearchQuery, username: string | undefine
 		],
 		offset: getOffset(page),
 		where: (schema, { or, and, ilike, inArray }) => {
-			const OR: Array<SQL> = search
+			const OR: Array<SQL> = searchValue
 				? [
-						ilike(schema.name, `%${search}%`),
-						ilike(schema.description, `%${search}%`),
-						ilike(schema.keyWords, `%${search}%`),
+						ilike(schema.name, `%${searchValue}%`),
+						ilike(schema.description, `%${searchValue}%`),
+						ilike(schema.keyWords, `%${searchValue}%`),
 					]
 				: [];
 
@@ -102,11 +105,13 @@ export const getEffects = async (input: SearchQuery, username: string | undefine
 		},
 	});
 
-	return getListRecord<Effect>({ query, search, isEmptyBookmark: false });
+	return getListRecord<Effect>({ query, searchValue, isEmptyBookmark: false });
 };
 
 export const getItems = async (input: SearchQuery, username: string | undefined) => {
 	const { search, sortBy, direction, color, relatedCategory, page, category, recipeType, bookmarked } = input;
+
+	const searchValue = search?.split(' ')?.filter(Boolean)?.join(' ') || null;
 
 	let bookmarkList: Array<string> = [];
 
@@ -118,7 +123,7 @@ export const getItems = async (input: SearchQuery, username: string | undefined)
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
 		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Item>({ search, isEmptyBookmark: true });
+			if (bookmarkListRes.result.length === 0) return getListRecord<Item>({ searchValue, isEmptyBookmark: true });
 
 			bookmarkList = bookmarkListRes.result;
 		}
@@ -132,8 +137,8 @@ export const getItems = async (input: SearchQuery, username: string | undefined)
 		],
 		offset: getOffset(page),
 		where: (schema, { or, and, ilike, eq, inArray }) => {
-			const OR: Array<SQL> = search
-				? [ilike(schema.name, `%${search}%`), ilike(schema.keyWords, `%${search}%`)]
+			const OR: Array<SQL> = searchValue
+				? [ilike(schema.name, `%${searchValue}%`), ilike(schema.keyWords, `%${searchValue}%`)]
 				: [];
 
 			const AND: Array<SQL> = [];
@@ -147,11 +152,13 @@ export const getItems = async (input: SearchQuery, username: string | undefined)
 		},
 	});
 
-	return getListRecord<Item>({ query, search, isEmptyBookmark: false });
+	return getListRecord<Item>({ query, searchValue, isEmptyBookmark: false });
 };
 
 export const getRumors = async (input: SearchQuery, username: string | undefined) => {
 	const { search, sortBy, direction, page, rumorType, bookmarked } = input;
+
+	const searchValue = search?.split(' ')?.filter(Boolean)?.join(' ') || null;
 
 	let bookmarkList: Array<string> = [];
 
@@ -163,7 +170,7 @@ export const getRumors = async (input: SearchQuery, username: string | undefined
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
 		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Rumor>({ search, isEmptyBookmark: true });
+			if (bookmarkListRes.result.length === 0) return getListRecord<Rumor>({ searchValue, isEmptyBookmark: true });
 
 			bookmarkList = bookmarkListRes.result;
 		}
@@ -177,8 +184,8 @@ export const getRumors = async (input: SearchQuery, username: string | undefined
 		],
 		offset: getOffset(page),
 		where: (schema, { or, and, ilike, eq, inArray }) => {
-			const OR: Array<SQL> = search
-				? [ilike(schema.name, `%${search}%`), ilike(schema.keyWords, `%${search}%`)]
+			const OR: Array<SQL> = searchValue
+				? [ilike(schema.name, `%${searchValue}%`), ilike(schema.keyWords, `%${searchValue}%`)]
 				: [];
 
 			const AND: Array<SQL> = [];
@@ -189,11 +196,13 @@ export const getRumors = async (input: SearchQuery, username: string | undefined
 		},
 	});
 
-	return getListRecord<Rumor>({ query, search, isEmptyBookmark: false });
+	return getListRecord<Rumor>({ query, searchValue, isEmptyBookmark: false });
 };
 
 export const getTraits = async (input: SearchQuery, username: string | undefined) => {
 	const { search, sortBy, direction, category, page, bookmarked } = input;
+
+	const searchValue = search?.split(' ')?.filter(Boolean)?.join(' ') || null;
 
 	let bookmarkList: Array<string> = [];
 
@@ -205,7 +214,7 @@ export const getTraits = async (input: SearchQuery, username: string | undefined
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
 		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Trait>({ search, isEmptyBookmark: true });
+			if (bookmarkListRes.result.length === 0) return getListRecord<Trait>({ searchValue, isEmptyBookmark: true });
 
 			bookmarkList = bookmarkListRes.result;
 		}
@@ -219,11 +228,11 @@ export const getTraits = async (input: SearchQuery, username: string | undefined
 		],
 		offset: getOffset(page),
 		where: (schema, { or, and, ilike, inArray }) => {
-			const OR: Array<SQL> = search
+			const OR: Array<SQL> = searchValue
 				? [
-						ilike(schema.name, `%${search}%`),
-						ilike(schema.description, `%${search}%`),
-						ilike(schema.keyWords, `%${search}%`),
+						ilike(schema.name, `%${searchValue}%`),
+						ilike(schema.description, `%${searchValue}%`),
+						ilike(schema.keyWords, `%${searchValue}%`),
 					]
 				: [];
 
@@ -235,7 +244,7 @@ export const getTraits = async (input: SearchQuery, username: string | undefined
 		},
 	});
 
-	return getListRecord<Trait>({ query, search, isEmptyBookmark: false });
+	return getListRecord<Trait>({ query, searchValue, isEmptyBookmark: false });
 };
 
 export const checkUserExist = (username: string) =>

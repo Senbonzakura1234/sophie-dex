@@ -48,7 +48,7 @@ export default function ShareButton({ classNames, input, children }: ShareButton
 		>
 			<IconComponent className={cn('size-4', classNames?.icon)} />
 
-			<span>{children}</span>
+			{children ? <span>{children}</span> : null}
 		</button>
 	);
 }

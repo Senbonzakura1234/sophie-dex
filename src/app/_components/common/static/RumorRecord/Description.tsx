@@ -4,9 +4,10 @@ import { Fragment } from 'react';
 
 type DescriptionProps = {
 	description: HyperLinkMap;
+	search: string | undefined;
 };
 
-export default function Description({ description: { contentText, contentData } }: DescriptionProps) {
+export default function Description({ description: { contentText, contentData }, search }: DescriptionProps) {
 	return (
 		<div>
 			<span>Description:&nbsp;&nbsp;</span>
@@ -18,7 +19,7 @@ export default function Description({ description: { contentText, contentData } 
 					return typeof data === 'undefined' ? (
 						<Fragment key={key}>{text}</Fragment>
 					) : (
-						<Hyperlink key={key} input={data} className='link link-primary visited:link-accent' />
+						<Hyperlink search={search} key={key} input={data} className='link link-primary visited:link-accent' />
 					);
 				})}
 			</span>

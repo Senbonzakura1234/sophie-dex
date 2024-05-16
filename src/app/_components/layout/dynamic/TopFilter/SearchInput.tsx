@@ -3,7 +3,7 @@
 import MagnifyingGlassIcon from '@components/icons/solid/MagnifyingGlassIcon';
 import XMarkIcon from '@components/icons/solid/XMarkIcon';
 import { useUpdateQuery } from '@root/hooks/useUpdateQuery';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function SearchInput() {
 	const { searchQuery, updateQuery } = useUpdateQuery();
@@ -17,11 +17,18 @@ function SearchInput() {
 
 	const performSearch = () => updateQuery({ search: searchValue || null });
 
+	useEffect(() => {
+		setSearchValue(searchQuery.search || null);
+	}, [searchQuery.search]);
+
 	return (
 		<>
 			<input
 				value={searchValue || ''}
-				onChange={e => setSearchValue(e.target.value)}
+				onChange={e => {
+					setSearchValue(e.target.value);
+					return updateQuery({ search: e.target.value || null });
+				}}
 				onKeyUp={e => {
 					if (e.key === 'Enter') performSearch();
 				}}

@@ -21,7 +21,7 @@ export default function RumorRecord({ currentId, search, ...props }: RumorRecord
 				<>
 					<Price price={price} />
 
-					<Description description={description} />
+					<Description description={description} search={search} />
 
 					<Location location={location} />
 
