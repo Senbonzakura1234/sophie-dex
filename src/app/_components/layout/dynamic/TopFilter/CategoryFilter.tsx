@@ -8,7 +8,7 @@ import { cn } from '@root/utils/common';
 
 const categoryDefaultSelect = {
 	value: null,
-	label: 'Category',
+	label: 'Item Category',
 } as const;
 
 const categorySelectList: Array<SelectOptionItem<CategoryEnum>> = [
@@ -33,7 +33,7 @@ export default function CategoryFilter() {
 			list={categorySelectList}
 			setValue={setCateSelected}
 			value={cateSelected}
-			className='my-auto min-w-[9.2rem]'
+			className='my-auto min-w-44'
 			useCustomIcon
 		/>
 	);

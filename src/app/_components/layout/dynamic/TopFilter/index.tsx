@@ -6,11 +6,11 @@ import FilterIcon from '@components/icons/outline/FilterIcon';
 import Paginate from '@components/layout/static/Paginate';
 import { Transition } from '@headlessui/react';
 import { DEFAULT_LIMIT } from '@root/constants/common';
-import { useMediaQuery } from '@root/hooks/useMediaQuery';
 import { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import useSelector from '@root/hooks/useSelector';
-import { arrayInclude, queryToParamsString } from '@root/utils/common';
+import { arrayInclude, cn, queryToParamsString } from '@root/utils/common';
+import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 
 import type { SearchQuery } from '@root/types/common/zod';
@@ -20,6 +20,10 @@ import ColorFilter from './ColorFilter';
 import RecipeTypeFilter from './RecipeTypeFilter';
 import RumorTypeFilter from './RumorTypeFilter';
 import SortControl from './SortControl';
+
+const SearchInput = dynamic(() => import('@components/layout/dynamic/TopFilter/SearchInput'), {
+	loading: () => <div className='h-8 w-full' />,
+});
 
 const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 3 }).format;
 
@@ -49,26 +53,34 @@ export default function TopFilter() {
 
 	const isQueryEmpty = !Boolean(queryToParamsString(searchQuery));
 
-	const is2XLScreen = useMediaQuery('(min-width: 1536px)');
-
 	const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
-		if (!isQueryEmpty || is2XLScreen) setIsOpen(true);
-	}, [is2XLScreen, isQueryEmpty]);
+		if (!isQueryEmpty) setIsOpen(true);
+	}, [isQueryEmpty]);
 
 	return (
 		<>
-			<div className='z-10 select-none 2xl:hidden'>
-				<button onClick={() => setIsOpen(prev => !prev)} className='btn btn-primary btn-sm capitalize'>
-					<FilterIcon className='aspect-square h-5' /> More filter
-				</button>
+			<button
+				onClick={() => setIsOpen(prev => !prev)}
+				className={cn(
+					'btn btn-primary btn-sm z-10 order-2 w-fit select-none capitalize shadow-lg shadow-base-content sm:order-1',
+					{
+						'btn-outline bg-white shadow-primary': !isOpen,
+					},
+				)}
+			>
+				<FilterIcon className='aspect-square h-5' /> More filter
+			</button>
+
+			<div className='card relative order-1 ml-auto flex w-full flex-row gap-3 overflow-hidden bg-base-100 px-5 py-2 shadow-lg shadow-primary sm:order-2 sm:w-fit md:w-1/4 md:min-w-[300px]'>
+				<SearchInput />
 			</div>
 
 			<Transition
 				show={isOpen}
 				as='nav'
-				className='card select-none bg-base-100 shadow-lg shadow-primary'
+				className='card order-3 flex w-full select-none flex-row flex-wrap gap-3 bg-base-100 px-5 py-3 shadow-lg shadow-primary'
 				enter='transition-[opacity,transform] duration-300'
 				enterFrom='opacity-0 -translate-y-3'
 				enterTo='opacity-100 translate-y-0'
@@ -76,28 +88,29 @@ export default function TopFilter() {
 				leaveFrom='opacity-100 translate-y-0'
 				leaveTo='opacity-0 -translate-y-3'
 			>
-				<div className='flex w-full flex-row flex-wrap gap-3 px-5 py-3 2xl:place-content-end'>
-					<h2 className='hidden w-full font-bold max-2xl:block'>Filter Control</h2>
+				<h2 className='w-full font-bold'>Filter Control</h2>
 
+				<div className='my-auto flex flex-wrap gap-3'>
 					<SortControl moduleId={moduleId} searchQuery={searchQuery} />
-
 					<BookmarkFilter moduleId={moduleId} />
+				</div>
 
-					{moduleId !== 'effect' ? (
-						<div className='flex flex-wrap gap-2'>
-							{arrayInclude(['trait', 'item'], moduleId) ? <CategoryFilter /> : null}
+				{moduleId !== 'effect' ? (
+					<div className='flex flex-wrap gap-3'>
+						{arrayInclude(['trait', 'item'], moduleId) ? <CategoryFilter /> : null}
 
-							{moduleId === 'item' ? (
-								<>
-									<ColorFilter />
-									<RecipeTypeFilter />
-								</>
-							) : null}
+						{moduleId === 'item' ? (
+							<>
+								<ColorFilter />
+								<RecipeTypeFilter />
+							</>
+						) : null}
 
-							{moduleId === 'rumor' ? <RumorTypeFilter /> : null}
-						</div>
-					) : null}
+						{moduleId === 'rumor' ? <RumorTypeFilter /> : null}
+					</div>
+				) : null}
 
+				<div className='my-auto flex flex-wrap gap-3'>
 					<div className='my-auto min-w-[145px] gap-1 text-xs font-bold text-base-content/70'>{paginateInfo}</div>
 
 					<Paginate searchQuery={searchQuery} totalPage={totalPage} />

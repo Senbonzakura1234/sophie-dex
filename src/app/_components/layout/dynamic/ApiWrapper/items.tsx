@@ -2,12 +2,10 @@
 
 import ItemRecord from '@components/common/static/ItemRecord';
 import ErrorContent from '@components/layout/static/ErrorContent';
-import RecordPlaceholder from '@components/loading/RecordPlaceholder';
-import { DEFAULT_LIMIT } from '@root/constants/common';
+import ListRecordPlaceholder from '@components/loading/ListRecordPlaceholder';
 import useDispatch from '@root/hooks/useDispatch';
 import type { PageProps } from '@root/types/common';
 import { ApiClientCtx } from '@root/utils/client/trpc';
-import { createArray } from '@root/utils/common';
 import { useEffect } from 'react';
 
 type APIListWrapperProps = { searchParams: PageProps['searchParams'] };
@@ -36,14 +34,7 @@ export default function APIListWrapper({ searchParams }: APIListWrapperProps) {
 			</>
 		);
 
-	if (status === 'pending')
-		return (
-			<>
-				{createArray(DEFAULT_LIMIT, 0).map((_, key) => (
-					<RecordPlaceholder key={key} />
-				))}
-			</>
-		);
+	if (status === 'pending') return <ListRecordPlaceholder />;
 
 	return <ErrorContent code={error.data?.code} />;
 }
