@@ -14,7 +14,8 @@ export default function APIProfileWrapper() {
 
 	if (queryStatus === 'pending') return <RecordPlaceholder className='mx-auto min-h-80 w-full max-w-lg' />;
 
-	if (queryStatus === 'error') return <ErrorContent code={error.data?.code} />;
+	if (queryStatus === 'error')
+		return <ErrorContent code={error.data?.code === 'NOT_FOUND' ? 'UNAUTHORIZED' : error.data?.code} />;
 
 	if (queryStatus === 'success' && data.isSuccess) return <ProfileInfo profile={data.result} />;
 

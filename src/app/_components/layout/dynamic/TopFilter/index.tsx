@@ -9,7 +9,7 @@ import { DEFAULT_LIMIT } from '@root/constants/common';
 import { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import useSelector from '@root/hooks/useSelector';
-import { arrayInclude, cn, queryToParamsString } from '@root/utils/common';
+import { arrayInclude, queryToParamsString } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 
@@ -63,12 +63,7 @@ export default function TopFilter() {
 		<>
 			<button
 				onClick={() => setIsOpen(prev => !prev)}
-				className={cn(
-					'btn btn-primary btn-sm z-10 order-2 w-fit select-none capitalize shadow-lg shadow-base-content sm:order-1',
-					{
-						'btn-outline bg-white shadow-primary': !isOpen,
-					},
-				)}
+				className='btn btn-outline btn-primary btn-sm z-10 order-2 w-fit select-none bg-base-100 capitalize text-base-content shadow-lg shadow-primary sm:order-1'
 			>
 				<FilterIcon className='aspect-square h-5' /> More filter
 			</button>
