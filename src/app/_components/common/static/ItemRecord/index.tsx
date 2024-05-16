@@ -35,9 +35,9 @@ export default function ItemRecord({ currentId, search, ...props }: ItemRecordPr
 
 					{description ? <Description description={description} search={search} /> : null}
 
-					{traitPresent ? <TraitPresent traitPresent={traitPresent} /> : null}
+					{traitPresent ? <TraitPresent traitPresent={traitPresent} search={search} /> : null}
 
-					<RelatedCategories relatedCategories={relatedCategories} />
+					<RelatedCategories relatedCategories={relatedCategories} search={search} />
 				</>
 			)}
 		</RecordWrapper>

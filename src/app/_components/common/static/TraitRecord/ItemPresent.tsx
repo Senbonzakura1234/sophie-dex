@@ -1,6 +1,7 @@
 import DocumentChartBarIcon from '@components/icons/solid/DocumentChartBarIcon';
 import PulsePlaceHolder from '@components/loading/PulsePlaceHolder';
 import type { HyperLinkRecord } from '@root/server/postgresql/schema';
+import { highlightSearchedText } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
@@ -9,9 +10,9 @@ const ShareButton = dynamic(() => import('@components/common/dynamic/ShareButton
 	loading: () => <PulsePlaceHolder className='aspect-square h-6 rounded-lg' />,
 });
 
-type ItemPresentProps = { itemPresent: HyperLinkRecord };
+type ItemPresentProps = { itemPresent: HyperLinkRecord; search: string | undefined };
 
-export default function ItemPresent({ itemPresent: { table: moduleId, id, name } }: ItemPresentProps) {
+export default function ItemPresent({ itemPresent: { table: moduleId, id, name }, search }: ItemPresentProps) {
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
 			<div className='capitalize'>{moduleId}: </div>
@@ -19,7 +20,7 @@ export default function ItemPresent({ itemPresent: { table: moduleId, id, name }
 			<Link aria-label={name} className='link link-primary visited:link-accent' href={`/${moduleId}/${id}`}>
 				<span className='flex gap-1 font-bold decoration-inherit'>
 					<DocumentChartBarIcon className='my-auto aspect-square h-4' />
-					{name}
+					<span dangerouslySetInnerHTML={{ __html: highlightSearchedText(name, search) }} />
 				</span>
 			</Link>
 

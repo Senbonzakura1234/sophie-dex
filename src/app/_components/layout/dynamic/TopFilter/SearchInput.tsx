@@ -18,17 +18,14 @@ function SearchInput() {
 	const performSearch = () => updateQuery({ search: searchValue || null });
 
 	useEffect(() => {
-		setSearchValue(searchQuery.search || null);
+		if (!searchQuery.search) setSearchValue(null);
 	}, [searchQuery.search]);
 
 	return (
 		<>
 			<input
 				value={searchValue || ''}
-				onChange={e => {
-					setSearchValue(e.target.value);
-					return updateQuery({ search: e.target.value || null });
-				}}
+				onChange={e => setSearchValue(e.target.value)}
 				onKeyUp={e => {
 					if (e.key === 'Enter') performSearch();
 				}}

@@ -19,11 +19,11 @@ export default function RumorRecord({ currentId, search, ...props }: RumorRecord
 		>
 			{({ description, location, price, rumorType }) => (
 				<>
-					<Price price={price} />
+					<Price price={price} search={search} />
 
 					<Description description={description} search={search} />
 
-					<Location location={location} />
+					<Location location={location} search={search} />
 
 					<RumorType rumorType={rumorType} />
 				</>

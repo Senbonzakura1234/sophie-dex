@@ -14,7 +14,7 @@ export default function Hyperlink({ input, className, search }: HyperlinkProps) 
 	if (!href)
 		return (
 			<span
-				className={cn('font-bold capitalize text-primary', className, '!cursor-text')}
+				className={cn('font-bold text-primary', className, '!cursor-text')}
 				dangerouslySetInnerHTML={{ __html: highlightSearchedText(label, search) }}
 			/>
 		);
@@ -23,7 +23,7 @@ export default function Hyperlink({ input, className, search }: HyperlinkProps) 
 		<>
 			<Link
 				aria-label={label}
-				className={cn('mr-0.5 font-bold capitalize', className)}
+				className={cn('mr-0.5 font-bold', className)}
 				href={href}
 				dangerouslySetInnerHTML={{ __html: highlightSearchedText(label, search) }}
 			/>

@@ -60,10 +60,13 @@ const getListRecord = async <TRecord extends CommonRecord>(args: GetListRecordPr
 	return { records, totalRecord, totalPage: Math.ceil(totalRecord / DEFAULT_LIMIT), search: searchValue || undefined };
 };
 
+const sanitizeSearch = (input: string | null) =>
+	input?.split(' ')?.filter(Boolean)?.join(' ').replaceAll('?', '') || null;
+
 export const getEffects = async (input: SearchQuery, username: string | undefined) => {
 	const { search, sortBy, direction, page, bookmarked } = input;
 
-	const searchValue = search?.split(' ')?.filter(Boolean)?.join(' ') || null;
+	const searchValue = sanitizeSearch(search);
 
 	let bookmarkList: Array<string> = [];
 
@@ -111,7 +114,7 @@ export const getEffects = async (input: SearchQuery, username: string | undefine
 export const getItems = async (input: SearchQuery, username: string | undefined) => {
 	const { search, sortBy, direction, color, relatedCategory, page, category, recipeType, bookmarked } = input;
 
-	const searchValue = search?.split(' ')?.filter(Boolean)?.join(' ') || null;
+	const searchValue = sanitizeSearch(search);
 
 	let bookmarkList: Array<string> = [];
 
@@ -158,7 +161,7 @@ export const getItems = async (input: SearchQuery, username: string | undefined)
 export const getRumors = async (input: SearchQuery, username: string | undefined) => {
 	const { search, sortBy, direction, page, rumorType, bookmarked } = input;
 
-	const searchValue = search?.split(' ')?.filter(Boolean)?.join(' ') || null;
+	const searchValue = sanitizeSearch(search);
 
 	let bookmarkList: Array<string> = [];
 
@@ -202,7 +205,7 @@ export const getRumors = async (input: SearchQuery, username: string | undefined
 export const getTraits = async (input: SearchQuery, username: string | undefined) => {
 	const { search, sortBy, direction, category, page, bookmarked } = input;
 
-	const searchValue = search?.split(' ')?.filter(Boolean)?.join(' ') || null;
+	const searchValue = sanitizeSearch(search);
 
 	let bookmarkList: Array<string> = [];
 

@@ -18,9 +18,9 @@ export default function TraitRecord({ currentId, search, ...props }: TraitRecord
 						dangerouslySetInnerHTML={{ __html: highlightSearchedText(description, search) }}
 					/>
 
-					<TraitMergeList mergeFrom={mergeFrom} />
+					<TraitMergeList mergeFrom={mergeFrom} search={search} />
 
-					{itemPresent ? <ItemPresent itemPresent={itemPresent} /> : null}
+					{itemPresent ? <ItemPresent itemPresent={itemPresent} search={search} /> : null}
 
 					<Categories categories={categories} />
 				</>

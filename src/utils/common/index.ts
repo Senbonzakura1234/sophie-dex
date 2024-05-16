@@ -100,7 +100,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function convertCode<TInput extends string>(input?: TInput | null) {
-	return input ? input.toLowerCase().replaceAll('_', ' ') : '';
+	return input ? capitalize(input.toLowerCase().replaceAll('_', ' ')) : '';
 }
 
 export function getBaseUrl(useMainHost?: boolean) {
@@ -127,13 +127,17 @@ export function queryToParamsString(query: Partial<SearchQuery>) {
 	return `?${queryEntries.map(([key, value]) => `${key}=${encodeURIComponent(value!)}`).join('&')}` as const;
 }
 
-export function highlightSearchedText(input: string, search: string | undefined) {
+export function highlightSearchedText(input: string, search: string | undefined, noPadding = false) {
 	if (!search) return input;
 
 	const arr = input.split(new RegExp(`(${search})`, 'ig'));
 
 	return arr
-		.map(s => (s.match(new RegExp(search, 'i')) ? `<span class='bg-base-content text-base-100 px-1'>${s}</span>` : s))
+		.map(s =>
+			s.match(new RegExp(search, 'i'))
+				? `<span class='bg-base-content text-base-100 ${noPadding ? '' : 'px-1'}'>${s}</span>`
+				: s,
+		)
 		.join('');
 }
 

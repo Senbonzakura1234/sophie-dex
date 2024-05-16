@@ -3,12 +3,12 @@
 import QueryLink from '@components/common/dynamic/QueryLink';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { RelatedCategoryEnum } from '@root/types/common/zod';
-import { cn, convertCode } from '@root/utils/common';
+import { cn, convertCode, highlightSearchedText } from '@root/utils/common';
 import { useCallback } from 'react';
 
-type RelatedCategoriesProps = { relatedCategories: Array<RelatedCategoryEnum> };
+type RelatedCategoriesProps = { relatedCategories: Array<RelatedCategoryEnum>; search: string | undefined };
 
-export default function RelatedCategories({ relatedCategories }: RelatedCategoriesProps) {
+export default function RelatedCategories({ relatedCategories, search }: RelatedCategoriesProps) {
 	const { searchQuery } = useSearchQuery();
 
 	const checkIsActive = useCallback(
@@ -24,18 +24,14 @@ export default function RelatedCategories({ relatedCategories }: RelatedCategori
 				return (
 					<QueryLink
 						aria-label={convertCode(relatedCategory)}
-						className={cn(
-							'link-hover link text-xs capitalize',
-							!isActive ? 'italic text-base-content/70' : 'font-bold',
-						)}
+						className={cn('link-hover link text-xs', !isActive ? 'italic text-base-content/70' : 'font-bold')}
 						isActive={isActive}
 						href={{ query: { relatedCategory } }}
 						key={k}
 						searchQuery={searchQuery}
 						resetPage
-					>
-						{convertCode(relatedCategory)}
-					</QueryLink>
+						dangerouslySetInnerHTML={{ __html: highlightSearchedText(convertCode(relatedCategory), search) }}
+					/>
 				);
 			})}
 		</div>
