@@ -7,7 +7,7 @@ import { useUpdateQuery } from '@root/hooks/useUpdateQuery';
 import { useEffect, useState } from 'react';
 
 function SearchInput() {
-	const { searchQuery, updateQuery } = useUpdateQuery();
+	const { searchQuery, updateQuery, moduleId } = useUpdateQuery();
 
 	const [searchValue, setSearchValue] = useState(searchQuery.search || null);
 
@@ -19,12 +19,13 @@ function SearchInput() {
 	};
 
 	useEffect(() => {
-		if (!searchQuery.search) setSearchValue(null);
-	}, [searchQuery.search]);
+		setSearchValue(null);
+	}, [moduleId]);
 
 	useEffect(() => {
 		updateQuery({ search: debouncedSearchValue || null });
-	}, [debouncedSearchValue, updateQuery]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [debouncedSearchValue]);
 
 	return (
 		<>
