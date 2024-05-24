@@ -15,7 +15,7 @@ import type { ClientSafeProvider } from 'next-auth/react';
 import { signIn } from 'next-auth/react';
 import Image from 'next/image';
 import type { FC } from 'react';
-import SignInErrorTrigger from './SignInErrorTrigger';
+import SignInError from './SignInError';
 
 type Props = {
 	providerList: Array<ClientSafeProvider>;
@@ -96,7 +96,7 @@ export default function SignInProviders({ callbackUrl, providerList, error }: Pr
 				</div>
 			</CommonWrapper>
 
-			<SignInErrorTrigger error={error} />
+			<SignInError error={error} />
 		</>
 	);
 }

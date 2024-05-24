@@ -2,10 +2,13 @@
 
 import ClipboardIcon from '@components/icons/solid/ClipboardIcon';
 import ShareSquareIcon from '@components/icons/solid/ShareSquareIcon';
-import usePushAlert from '@root/hooks/usePushAlert';
+import useNotification from '@root/hooks/useNotification';
 import type { ImprovedOmit } from '@root/types/common';
 import type { ChildrenProps, ClassNamesProps } from '@root/types/common/props';
 import { cn, tryCatchHandler } from '@root/utils/common';
+import dynamic from 'next/dynamic';
+
+const Notification = dynamic(() => import('@components/layout/dynamic/Notification'));
 
 type InputData = ImprovedOmit<Required<ShareData>, 'files'>;
 
@@ -27,28 +30,33 @@ const onShare = async ({ input, onFailure, onSuccess }: OnShareParams) => {
 type ShareButtonProps = { input: InputData } & ClassNamesProps<'wrapper' | 'icon'> & ChildrenProps;
 
 export default function ShareButton({ classNames, input, children }: ShareButtonProps) {
-	const { pushAlert } = usePushAlert();
+	const [shareNotification, setShareNotification] = useNotification();
 
 	const canShare = isCanShare(input);
 
 	const IconComponent = canShare ? ShareSquareIcon : ClipboardIcon;
 
 	return (
-		<button
-			aria-label={`Share ${input.title}`}
-			className={cn('btn btn-primary btn-xs my-auto', classNames?.wrapper)}
-			onClick={() =>
-				onShare({
-					input,
-					onFailure: message => pushAlert({ isOpen: true, message, type: 'ERROR' }),
-					onSuccess: () => pushAlert({ isOpen: true, message: 'Url copied to clipboard', type: 'SUCCESS' }),
-				})
-			}
-			role='button'
-		>
-			<IconComponent className={cn('size-4', classNames?.icon)} />
+		<>
+			<button
+				aria-label={`Share ${input.title}`}
+				className={cn('btn btn-primary btn-xs my-auto', classNames?.wrapper)}
+				onClick={() =>
+					onShare({
+						input,
+						onFailure: message => setShareNotification({ isOpen: true, message, type: 'ERROR' }),
+						onSuccess: () =>
+							setShareNotification({ isOpen: true, message: 'Url copied to clipboard', type: 'SUCCESS' }),
+					})
+				}
+				role='button'
+			>
+				<IconComponent className={cn('size-4', classNames?.icon)} />
 
-			{children ? <span>{children}</span> : null}
-		</button>
+				{children ? <span>{children}</span> : null}
+			</button>
+
+			{canShare ? null : <Notification {...shareNotification} />}
+		</>
 	);
 }

@@ -10,10 +10,10 @@ export async function generateMetadata({ searchParams }: PageProps, parent: Reso
 	return generateGenericMetadata(parent, { title: `${env.NEXT_PUBLIC_APP_NAME} | Effects` }, searchParams);
 }
 
-export default function effects({ searchParams }: PageProps) {
+export default function effects() {
 	return (
 		<Suspense fallback={<ListRecordPlaceholder />}>
-			<APIListWrapper searchParams={searchParams} />
+			<APIListWrapper />
 		</Suspense>
 	);
 }

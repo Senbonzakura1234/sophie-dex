@@ -6,11 +6,11 @@ import AuthProvider from '@components/layout/dynamic/AuthProvider';
 import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
 import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
 import TrpcProvider from '@components/layout/dynamic/TrpcProvider';
+import { KEY_BINDING_DICTIONARY } from '@root/constants/common';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { AppleMediaConfig } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
 import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
-import { ContextProvider } from '@root/utils/client/context';
 import { cn, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import { getCookieData, getSessionResult } from '@root/utils/server';
@@ -19,7 +19,6 @@ import type { Metadata, Viewport } from 'next';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
-const Alert = dynamic(() => import('@components/layout/dynamic/Alert'));
 const AuthNav = dynamic(() => import('@components/layout/dynamic/AuthNav'));
 const ScrollTopTrigger = dynamic(() => import('@components/layout/dynamic/ScrollTopTrigger'));
 const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'));
@@ -207,7 +206,7 @@ export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-widt
 const getLayoutProps = async () => {
 	const [sessionRes, themeCookiesRes] = await Promise.all([
 		tryCatchHandler(getSessionResult()),
-		tryCatchHandler(getCookieData('theme')),
+		tryCatchHandler(getCookieData(KEY_BINDING_DICTIONARY.THEME_COOKIE_KEY)),
 	]);
 
 	return { session: sessionRes.data?.result, themeCookies: themeCookiesRes.data };
@@ -218,34 +217,30 @@ export default async function RootLayout({ children }: ChildrenProps) {
 
 	return (
 		<html lang='en'>
-			<ContextProvider>
-				<ThemeWrapper
-					defaultTheme={daisyUIThemeEnumSchema.parse(themeCookies?.value)}
-					className={cn(fontAtelier.variable, fontComicSansMS.className)}
-				>
-					<AuthProvider session={session}>
-						<TrpcProvider>
-							<ScrollWrapper>
-								<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
-									<ThemeSwitcher defaultTheme={daisyUIThemeEnumSchema.parse(themeCookies?.value)} />
+			<ThemeWrapper
+				defaultTheme={daisyUIThemeEnumSchema.parse(themeCookies?.value)}
+				className={cn(fontAtelier.variable, fontComicSansMS.className)}
+			>
+				<AuthProvider session={session}>
+					<TrpcProvider>
+						<ScrollWrapper>
+							<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
+								<ThemeSwitcher defaultTheme={daisyUIThemeEnumSchema.parse(themeCookies?.value)} />
 
-									<AuthNav />
-								</nav>
+								<AuthNav />
+							</nav>
 
-								{children}
+							{children}
 
-								<Alert />
+							<Suspense>
+								<ScrollTopTrigger />
+							</Suspense>
+						</ScrollWrapper>
+					</TrpcProvider>
+				</AuthProvider>
 
-								<Suspense>
-									<ScrollTopTrigger />
-								</Suspense>
-							</ScrollWrapper>
-						</TrpcProvider>
-					</AuthProvider>
-
-					<SpeedInsights />
-				</ThemeWrapper>
-			</ContextProvider>
+				<SpeedInsights />
+			</ThemeWrapper>
 		</html>
 	);
 }

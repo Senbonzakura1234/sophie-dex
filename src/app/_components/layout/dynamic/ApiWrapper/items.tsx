@@ -3,10 +3,8 @@
 import ItemRecord from '@components/common/static/ItemRecord';
 import ErrorContent from '@components/layout/static/ErrorContent';
 import ListRecordPlaceholder from '@components/loading/ListRecordPlaceholder';
-import useDispatch from '@root/hooks/useDispatch';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { ApiClientCtx } from '@root/utils/client/trpc';
-import { useEffect } from 'react';
 
 export default function APIListWrapper() {
 	const { searchQuery } = useSearchQuery();
@@ -14,18 +12,6 @@ export default function APIListWrapper() {
 	const { data, error, status } = ApiClientCtx.item.getAll.useQuery(searchQuery, {
 		notifyOnChangeProps: ['data', 'error'],
 	});
-
-	const dispatch = useDispatch();
-
-	useEffect(() => {
-		dispatch({
-			type: 'UPDATE_CONTENT_DATA',
-			data: {
-				status,
-				...(status !== 'pending' ? { totalPage: data?.totalPage || 0, totalRecord: data?.totalRecord || 0 } : {}),
-			},
-		});
-	}, [data?.totalPage, data?.totalRecord, dispatch, status]);
 
 	if (status === 'success')
 		return (
