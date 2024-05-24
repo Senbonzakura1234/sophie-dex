@@ -8,7 +8,7 @@ import type { ChildrenProps, ClassNamesProps } from '@root/types/common/props';
 import { cn, tryCatchHandler } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 
-const Notification = dynamic(() => import('@components/layout/dynamic/Notification'));
+const Notification = dynamic(() => import('@components/layout/dynamic/Notification'), { ssr: false });
 
 type InputData = ImprovedOmit<Required<ShareData>, 'files'>;
 

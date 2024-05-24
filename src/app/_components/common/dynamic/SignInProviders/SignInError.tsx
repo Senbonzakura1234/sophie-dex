@@ -6,7 +6,7 @@ import type { SignInQuery } from '@root/types/common/zod';
 import dynamic from 'next/dynamic';
 import { useEffect } from 'react';
 
-const Notification = dynamic(() => import('@components/layout/dynamic/Notification'));
+const Notification = dynamic(() => import('@components/layout/dynamic/Notification'), { ssr: false });
 
 type Props = ImprovePick<SignInQuery, 'error'>;
 

@@ -6,7 +6,7 @@ import { SessionProvider } from 'next-auth/react';
 import dynamic from 'next/dynamic';
 import { useEffect } from 'react';
 
-const Notification = dynamic(() => import('@components/layout/dynamic/Notification'));
+const Notification = dynamic(() => import('@components/layout/dynamic/Notification'), { ssr: false });
 
 export default function AuthProvider({ children, ...props }: SessionProviderProps) {
 	const [welcomeNotification, setWelcomeNotification] = useNotification();

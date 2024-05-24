@@ -6,12 +6,13 @@ import AuthProvider from '@components/layout/dynamic/AuthProvider';
 import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
 import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
 import TrpcProvider from '@components/layout/dynamic/TrpcProvider';
+import PulsePlaceHolder from '@components/loading/PulsePlaceHolder';
 import { KEY_BINDING_DICTIONARY } from '@root/constants/common';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { AppleMediaConfig } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
 import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
-import { cn, getBaseUrl, tryCatchHandler } from '@root/utils/common';
+import { cn, evnIs, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import { getCookieData, getSessionResult } from '@root/utils/server';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -20,8 +21,13 @@ import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
 const AuthNav = dynamic(() => import('@components/layout/dynamic/AuthNav'));
-const ScrollTopTrigger = dynamic(() => import('@components/layout/dynamic/ScrollTopTrigger'));
-const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'));
+const ScrollTopTrigger = dynamic(() => import('@components/layout/dynamic/ScrollTopTrigger'), { ssr: false });
+const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'), {
+	ssr: false,
+	loading: () => (
+		<PulsePlaceHolder className='h-8 w-[136px] rounded-lg bg-base-100 shadow-lg shadow-base-content/20 xl:h-9' />
+	),
+});
 
 const appleMediaConfig: AppleMediaConfig = [
 	{ url: 'iPhone_14_Pro_Max_landscape' },
@@ -239,7 +245,7 @@ export default async function RootLayout({ children }: ChildrenProps) {
 					</TrpcProvider>
 				</AuthProvider>
 
-				<SpeedInsights />
+				{evnIs('production') ? <SpeedInsights /> : null}
 			</ThemeWrapper>
 		</html>
 	);
