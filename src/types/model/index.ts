@@ -96,12 +96,15 @@ export const nodeEnvList = ['development', 'test', 'production'] as const;
 
 export type DBListResult<TRecord extends CommonRecord> = Array<TRecord & { totalRecord: number }>;
 
-export type ListRecord<TRecord extends CommonRecord> = {
-	records: Array<TRecord>;
+export type ListMetaData = {
 	totalPage: number;
 	totalRecord: number;
 	search: string | undefined;
 };
+
+export type ListRecord<TRecord extends CommonRecord> = {
+	records: Array<TRecord>;
+} & ListMetaData;
 
 export type ExportDBQueriesMap = Record<ModuleIdEnum, PreparedPGQuery<Array<CommonRecord>>>;
 export type GetBookmarksQueriesMap = {

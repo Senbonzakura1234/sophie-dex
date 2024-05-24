@@ -15,6 +15,8 @@ export default function AuthNav() {
 
 	if (status === 'loading') return null;
 
+	if (pathname === signInUrl) return null;
+
 	if (session)
 		return (
 			<Dropdown
@@ -73,8 +75,6 @@ export default function AuthNav() {
 				className={{ menuBtn: 'bg-primary text-primary-content', dropdown: 'w-72' }}
 			/>
 		);
-
-	if (pathname === signInUrl) return null;
 
 	return (
 		<button

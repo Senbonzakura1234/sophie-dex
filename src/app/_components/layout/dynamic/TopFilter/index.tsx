@@ -8,11 +8,11 @@ import { Transition } from '@headlessui/react';
 import { DEFAULT_LIMIT } from '@root/constants/common';
 import { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import useSelector from '@root/hooks/useSelector';
 import { arrayInclude, queryToParamsString } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 
+import useListQueryMeta from '@root/hooks/useListQueryMeta';
 import type { SearchQuery } from '@root/types/common/zod';
 import BookmarkFilter from './BookmarkFilter';
 import CategoryFilter from './CategoryFilter';
@@ -46,8 +46,8 @@ export default function TopFilter() {
 	const { searchQuery } = useSearchQuery();
 
 	const {
-		contentData: { totalRecord, totalPage },
-	} = useSelector();
+		meta: { totalPage, totalRecord },
+	} = useListQueryMeta({ moduleId, searchQuery });
 
 	const paginateInfo = getPaginateInfo(searchQuery.page, totalRecord, moduleId);
 

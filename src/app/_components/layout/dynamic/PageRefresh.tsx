@@ -1,7 +1,6 @@
 'use client';
 
 import { useModuleId } from '@root/hooks/useModuleId';
-import useSelector from '@root/hooks/useSelector';
 import { ApiClientCtx } from '@root/utils/client/trpc';
 import { cn } from '@root/utils/common';
 import { useSession } from 'next-auth/react';
@@ -9,14 +8,12 @@ import { useRouter } from 'next/navigation';
 import { useCallback } from 'react';
 import { DEFAULT_REFRESH_THRESHOLD, usePullToRefresh } from 'use-pull-to-refresh';
 
-export default function PageRefresh() {
+type Props = { isDisabledPullToRefresh: boolean };
+
+export default function PageRefresh({ isDisabledPullToRefresh: isDisabled }: Props) {
 	const { status: sessionStatus } = useSession();
 
 	const { refresh } = useRouter();
-
-	const {
-		scrollWrapper: { isDisabledPullToRefresh: isDisabled },
-	} = useSelector();
 
 	const trpcUtils = ApiClientCtx.useUtils();
 

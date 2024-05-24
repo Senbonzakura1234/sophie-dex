@@ -1,12 +1,13 @@
 'use client';
 
 import { Root, Scrollbar, Thumb, Viewport } from '@radix-ui/react-scroll-area';
-import useDispatch from '@root/hooks/useDispatch';
+import { KEY_BINDING_DICTIONARY } from '@root/constants/common';
 import type { OnScroll } from '@root/hooks/useScroll';
 import { useScroll } from '@root/hooks/useScroll';
 import type { ChildrenProps } from '@root/types/common/props';
+import { booleanToBooleanish } from '@root/utils/common';
 import dynamic from 'next/dynamic';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 
 const PageRefresh = dynamic(() => import('@components/layout/dynamic/PageRefresh'));
 const ScrollToTop = dynamic(() => import('./ScrollToTop'));
@@ -15,8 +16,6 @@ type ScrollWrapperProps = ChildrenProps;
 
 export default function ScrollWrapper({ children }: ScrollWrapperProps) {
 	const scrollableRef = useRef<HTMLDivElement>(null);
-
-	const dispatch = useDispatch();
 
 	const [isShowScrollTop, setIsShowScrollTop] = useState(false);
 	const [isDisabledPullToRefresh, setIsDisabledPullToRefresh] = useState(false);
@@ -34,21 +33,15 @@ export default function ScrollWrapper({ children }: ScrollWrapperProps) {
 
 	useScroll({ scrollableRef, onScroll });
 
-	useEffect(() => {
-		dispatch({ type: 'UPDATE_SCROLL_WRAPPER_STATE', data: { isDisabledPullToRefresh } });
-	}, [dispatch, isDisabledPullToRefresh]);
-
-	useEffect(() => {
-		dispatch({ type: 'UPDATE_SCROLL_WRAPPER_STATE', data: { ref: scrollableRef } });
-	}, [dispatch]);
-
 	return (
 		<main>
-			<PageRefresh />
+			<PageRefresh isDisabledPullToRefresh={isDisabledPullToRefresh} />
 
 			<Root className='h-dvh w-dvw overflow-hidden bg-base-200 !antialiased' type='scroll'>
 				<Viewport
 					className='relative size-full [&>div]:!flex [&>div]:h-full [&>div]:flex-col [&>div]:gap-6'
+					id={KEY_BINDING_DICTIONARY.SCROLL_WRAPPER_ID}
+					data-disabled={booleanToBooleanish(isDisabledPullToRefresh)}
 					ref={scrollableRef}
 				>
 					{children}

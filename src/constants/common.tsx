@@ -106,3 +106,8 @@ export const defaultTRPCQueryOptions: DefaultOptions = {
 		retry: evnIs('production') ? 2 : 1,
 	},
 };
+
+export const KEY_BINDING_DICTIONARY = {
+	THEME_COOKIE_KEY: 'theme-cookie',
+	SCROLL_WRAPPER_ID: 'scroll-wrapper',
+} as const;

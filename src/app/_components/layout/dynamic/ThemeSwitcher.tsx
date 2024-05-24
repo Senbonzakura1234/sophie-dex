@@ -1,13 +1,13 @@
 'use client';
 
 import SelectOption from '@components/common/static/SelectOption';
-import useDispatch from '@root/hooks/useDispatch';
-import useSelector from '@root/hooks/useSelector';
+import useCookies from '@root/hooks/useCookies';
 import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
 import type { DaisyUIThemeEnum } from '@root/types/common/zod';
 import { daisyUIThemeList } from '@root/types/model';
-import { setCookie } from 'cookies-next';
-import { useCallback, useMemo } from 'react';
+import { useMemo } from 'react';
+
+type Props = { defaultTheme: DaisyUIThemeEnum };
 
 const themeSelectList = daisyUIThemeList.map(theme => ({
 	value: theme,
@@ -24,23 +24,20 @@ const themeSelectList = daisyUIThemeList.map(theme => ({
 	),
 })) satisfies Array<SelectOptionItem<DaisyUIThemeEnum>>;
 
-export default function ThemeSwitcher() {
-	const { theme } = useSelector();
-	const dispatch = useDispatch();
+export default function ThemeSwitcher({ defaultTheme }: Props) {
+	const [theme, setTheme] = useCookies<DaisyUIThemeEnum>('theme', defaultTheme);
 
 	const themeSelect = useMemo(() => themeSelectList.find(t => t.value === theme)!, [theme]);
 
-	const setThemeSelected: SetSelectOptionItem<DaisyUIThemeEnum> = useCallback(
-		s => {
-			const cur = typeof s === 'function' ? s(themeSelect) : s;
+	const setThemeSelected: SetSelectOptionItem<DaisyUIThemeEnum> = s => {
+		const cur = typeof s === 'function' ? s(themeSelect) : s;
 
-			if (cur.value === themeSelect.value) return;
+		if (cur.value === themeSelect.value) return;
 
-			setCookie('theme', cur.value!, { path: '/' });
-			dispatch({ type: 'SET_THEME', data: cur.value! });
-		},
-		[dispatch, themeSelect],
-	);
+		if (typeof window !== 'undefined') window.document.body.setAttribute('data-theme', cur.value!);
+
+		setTheme(cur.value!, { path: '/' });
+	};
 
 	return (
 		<SelectOption<DaisyUIThemeEnum>

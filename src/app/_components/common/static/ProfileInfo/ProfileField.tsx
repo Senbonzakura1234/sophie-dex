@@ -1,5 +1,3 @@
-'use client';
-
 import FacebookSquareIcon from '@components/icons/brand/FacebookSquareIcon';
 import TwitterSquareIcon from '@components/icons/brand/TwitterSquareIcon';
 import MailIcon from '@components/icons/solid/MailIcon';

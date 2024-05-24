@@ -1,15 +1,10 @@
-'use client';
-
-import useSelector from '@root/hooks/useSelector';
 import type { ChildrenProps, ClassNameProps } from '@root/types/common/props';
 import type { DaisyUIThemeEnum } from '@root/types/common/zod';
 import { arrayInclude, cn } from '@root/utils/common';
 
-type Props = ChildrenProps & ClassNameProps;
+type Props = ChildrenProps & ClassNameProps & { defaultTheme: DaisyUIThemeEnum };
 
-export default function ThemeWrapper({ children, className }: Props) {
-	const { theme } = useSelector();
-
+export default function ThemeWrapper({ children, className, defaultTheme: theme }: Props) {
 	return (
 		<body
 			className={cn(

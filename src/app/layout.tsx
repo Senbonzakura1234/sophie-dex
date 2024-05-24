@@ -218,13 +218,16 @@ export default async function RootLayout({ children }: ChildrenProps) {
 
 	return (
 		<html lang='en'>
-			<ContextProvider defaultState={{ theme: daisyUIThemeEnumSchema.parse(themeCookies?.value) }}>
-				<ThemeWrapper className={cn(fontAtelier.variable, fontComicSansMS.className)}>
+			<ContextProvider>
+				<ThemeWrapper
+					defaultTheme={daisyUIThemeEnumSchema.parse(themeCookies?.value)}
+					className={cn(fontAtelier.variable, fontComicSansMS.className)}
+				>
 					<AuthProvider session={session}>
 						<TrpcProvider>
 							<ScrollWrapper>
 								<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
-									<ThemeSwitcher />
+									<ThemeSwitcher defaultTheme={daisyUIThemeEnumSchema.parse(themeCookies?.value)} />
 
 									<AuthNav />
 								</nav>

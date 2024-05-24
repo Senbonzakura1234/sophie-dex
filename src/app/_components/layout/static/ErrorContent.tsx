@@ -13,29 +13,31 @@ export default function ErrorContent({ code = 'INTERNAL_SERVER_ERROR' }: ErrorCo
 	if (code === 'UNAUTHORIZED') return <SignInRedirect />;
 
 	return (
-		<div
-			className={cn(
-				'modal-box m-auto grid aspect-video w-11/12 cursor-default select-none place-content-center gap-1 text-center shadow-md shadow-current md:w-[600px]',
-				status >= 500 ? 'text-error' : 'text-info dark:text-primary',
-			)}
-		>
-			<div className='grid gap-1'>
-				<h1 className='text-7xl font-bold tracking-widest md:text-8xl'>{status}</h1>
+		<div className='col-span-2 grid grid-cols-1'>
+			<div
+				className={cn(
+					'modal-box m-auto grid aspect-video w-11/12 cursor-default select-none place-content-center gap-1 text-center shadow-md shadow-current md:w-[600px]',
+					status >= 500 ? 'text-error' : 'text-info dark:text-primary',
+				)}
+			>
+				<div className='grid gap-1'>
+					<h1 className='text-7xl font-bold tracking-widest md:text-8xl'>{status}</h1>
 
-				<span className='font-bold md:text-lg'>Sorry! {message}.</span>
-			</div>
+					<span className='font-bold md:text-lg'>Sorry! {message}.</span>
+				</div>
 
-			<div>
-				<Link
-					aria-label='Back to home'
-					className='link-hover link text-xs text-base-content md:text-sm'
-					href='/'
-					replace
-				>
-					Back to home
-				</Link>
+				<div>
+					<Link
+						aria-label='Back to home'
+						className='link-hover link text-xs text-base-content md:text-sm'
+						href='/'
+						replace
+					>
+						Back to home
+					</Link>
 
-				<RefreshButton />
+					<RefreshButton />
+				</div>
 			</div>
 		</div>
 	);
