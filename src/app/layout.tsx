@@ -11,7 +11,7 @@ import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { AppleMediaConfig } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
 import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
-import { cn, evnIs, getBaseUrl, tryCatchHandler } from '@root/utils/common';
+import { cn, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import { getCookieData, getSessionResult } from '@root/utils/server';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -238,7 +238,7 @@ export default async function RootLayout({ children }: ChildrenProps) {
 				</main>
 			</ThemeWrapper>
 
-			{evnIs('production') ? <SpeedInsights /> : null}
+			<SpeedInsights />
 		</html>
 	);
 }
