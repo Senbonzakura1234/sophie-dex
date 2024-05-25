@@ -10,7 +10,7 @@ type UseScrollProps = {
 export const useScroll = ({ onScroll, scrollElementId }: UseScrollProps) =>
 	useEffect(() => {
 		if (typeof window === 'undefined') return;
-		const scrollElement = document.getElementById(scrollElementId);
+		const scrollElement = window.document.getElementById(scrollElementId);
 
 		if (!scrollElement) return;
 

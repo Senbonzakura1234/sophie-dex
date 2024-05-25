@@ -11,7 +11,7 @@ export default function ScrollTopTrigger() {
 
 	useEffect(() => {
 		if (typeof window === 'undefined') return;
-		const element = document.getElementById(KEY_BINDING_DICTIONARY.SCROLL_WRAPPER_ID);
+		const element = window.document.getElementById(KEY_BINDING_DICTIONARY.SCROLL_WRAPPER_ID);
 
 		if (element) element.scrollTo({ top: 0, behavior: 'smooth' });
 	}, [isDetailPage, segment, searchParams]);

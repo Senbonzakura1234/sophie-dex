@@ -14,15 +14,23 @@ type InputData = ImprovedOmit<Required<ShareData>, 'files'>;
 
 type OnShareParams = { input: InputData; onSuccess: () => void; onFailure: (message: string, error?: unknown) => void };
 
-const isCanShare = (input: InputData) => Boolean(navigator?.canShare(input));
+const isCanShare = (input: InputData) => {
+	if (typeof window === 'undefined' || !('navigator' in window)) return false;
+	if (!('share' in window.navigator) || !('canShare' in window.navigator)) return false;
+	if (typeof window.navigator.share !== 'function' || typeof window.navigator.canShare !== 'function') return false;
+
+	return Boolean(window.navigator.canShare(input));
+};
 
 const onShare = async ({ input, onFailure, onSuccess }: OnShareParams) => {
-	if (isCanShare(input)) return tryCatchHandler(navigator.share(input));
+	if (isCanShare(input)) return tryCatchHandler(window.navigator.share(input));
 
 	// fallback to copy to clipboard
-	if (!navigator?.clipboard) return onFailure('Clipboard not supported');
+	if (!('clipboard' in window.navigator)) return onFailure('Clipboard not supported');
+	if (!('writeText' in window.navigator.clipboard)) return onFailure('Clipboard not supported');
+	if (typeof window.navigator.clipboard.writeText !== 'function') return onFailure('Clipboard not supported');
 
-	const { error, isSuccess } = await tryCatchHandler(navigator.clipboard.writeText(input.url));
+	const { error, isSuccess } = await tryCatchHandler(window.navigator.clipboard.writeText(input.url));
 
 	return isSuccess ? onSuccess() : onFailure('Copy to clipboard failed', error);
 };
@@ -41,14 +49,23 @@ export default function ShareButton({ classNames, input, children }: ShareButton
 			<button
 				aria-label={`Share ${input.title}`}
 				className={cn('btn btn-primary btn-xs my-auto', classNames?.wrapper)}
-				onClick={() =>
-					onShare({
-						input,
-						onFailure: message => setShareNotification({ isOpen: true, message, type: 'ERROR' }),
-						onSuccess: () =>
-							setShareNotification({ isOpen: true, message: 'Url copied to clipboard', type: 'SUCCESS' }),
-					})
-				}
+				onClick={async () => {
+					const { isSuccess } = await tryCatchHandler(
+						onShare({
+							input,
+							onFailure: message => setShareNotification({ isOpen: true, message, type: 'ERROR' }),
+							onSuccess: () =>
+								setShareNotification({ isOpen: true, message: 'Url copied to clipboard', type: 'SUCCESS' }),
+						}),
+					);
+
+					if (!isSuccess)
+						return setShareNotification({
+							isOpen: true,
+							message: 'Share and Clipboard not supported',
+							type: 'ERROR',
+						});
+				}}
 				role='button'
 			>
 				<IconComponent className={cn('size-4', classNames?.icon)} />

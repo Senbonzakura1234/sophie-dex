@@ -47,7 +47,7 @@ export default function Notification({ message, type = 'INFO', isOpen }: Notific
 						</div>
 					</div>
 				</div>,
-				document.body,
+				window.document.body,
 			)}
 		</>
 	);
