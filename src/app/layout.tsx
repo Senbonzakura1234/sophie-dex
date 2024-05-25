@@ -14,6 +14,7 @@ import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
 import { cn, evnIs, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import { getCookieData, getSessionResult } from '@root/utils/server';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
 import dynamic from 'next/dynamic';
 
@@ -23,7 +24,6 @@ const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwit
 		<PulsePlaceHolder className='h-8 w-[136px] rounded-lg bg-base-100 shadow-lg shadow-base-content/20 xl:h-9' />
 	),
 });
-const SpeedInsights = dynamic(() => import('@vercel/speed-insights/next').then(m => m.SpeedInsights), { ssr: false });
 
 const appleMediaConfig: AppleMediaConfig = [
 	{ url: 'iPhone_14_Pro_Max_landscape' },
