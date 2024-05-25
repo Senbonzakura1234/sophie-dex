@@ -1,6 +1,6 @@
 'use client';
 
-import usePageSegment from '@root/hooks/usePageSegment';
+import { usePageSegment } from '@root/hooks/usePageSegment';
 
 export default function PageTitle() {
 	const { segment } = usePageSegment();

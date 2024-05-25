@@ -109,5 +109,5 @@ export const defaultTRPCQueryOptions: DefaultOptions = {
 
 export const KEY_BINDING_DICTIONARY = {
 	THEME_COOKIE_KEY: 'theme-cookie',
-	SCROLL_WRAPPER_ID: 'scroll-wrapper',
+	ROOT_SCROLL_WRAPPER_ID: 'root-scroll-wrapper',
 } as const;

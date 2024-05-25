@@ -9,7 +9,7 @@ type SelectQueryKey = keyof Pick<
 	'category' | 'color' | 'rumorType' | 'recipeType' | 'page' | 'bookmarked'
 >;
 
-export function useQueryOnChange<V extends SearchQuery[SelectQueryKey]>(
+export function useQueryOnChange<const V extends SearchQuery[SelectQueryKey]>(
 	key: SelectQueryKey,
 	list: Array<SelectOptionItem<V>>,
 	defaultValue: SelectOptionItem<V>,

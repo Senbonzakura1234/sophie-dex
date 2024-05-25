@@ -4,7 +4,7 @@ import HomeIcon from '@components/icons/solid/HomeIcon';
 import InfoIcon from '@components/icons/solid/InfoIcon';
 import LinkIcon from '@components/icons/solid/LinkIcon';
 import { listAboutPaths } from '@root/constants/common';
-import usePageSegment from '@root/hooks/usePageSegment';
+import { usePageSegment } from '@root/hooks/usePageSegment';
 import { moduleIdList } from '@root/types/model';
 import { arrayInclude, cn } from '@root/utils/common';
 import Link from 'next/link';

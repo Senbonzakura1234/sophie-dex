@@ -1,15 +1,23 @@
-import { useEffect } from 'react';
+import type { Dispatch, SetStateAction } from 'react';
+import { useEffect, useState } from 'react';
 
-export type OnScroll = (scrollPosition: number, scrollElement: HTMLElement) => void;
+export type OnScroll = (scrollInput: {
+	scrollPosition: number;
+	scrollElement: HTMLElement;
+	isShowScrollTop: boolean;
+	setIsShowScrollTop: Dispatch<SetStateAction<boolean>>;
+}) => void;
 
 type UseScrollProps = {
-	onScroll: OnScroll;
+	onScroll?: OnScroll;
 	scrollElementId: string;
 };
 
-export const useScroll = ({ onScroll, scrollElementId }: UseScrollProps) =>
+export const useScroll = ({ onScroll, scrollElementId }: UseScrollProps) => {
+	const [isShowScrollTop, setIsShowScrollTop] = useState(false);
+
 	useEffect(() => {
-		if (typeof window === 'undefined') return;
+		if (typeof window === 'undefined' || !onScroll) return;
 		const scrollElement = window.document.getElementById(scrollElementId);
 
 		if (!scrollElement) return;
@@ -18,12 +26,24 @@ export const useScroll = ({ onScroll, scrollElementId }: UseScrollProps) =>
 			'scroll',
 			() => {
 				const scrollHeight = (scrollElement?.scrollHeight || 0) - (scrollElement?.offsetHeight || 0);
+				const scrollPosition = (scrollElement?.scrollTop || 0) / (scrollHeight || 1);
 
-				onScroll((scrollElement?.scrollTop || 0) / (scrollHeight || 1), scrollElement);
+				onScroll({ scrollElement, isShowScrollTop, setIsShowScrollTop, scrollPosition });
 			},
 			{ passive: true },
 		);
 
 		return () =>
 			scrollElement.removeEventListener('scroll', () => scrollElement.scrollTo({ top: 0, behavior: 'smooth' }));
-	}, [onScroll, scrollElementId]);
+	}, [isShowScrollTop, onScroll, scrollElementId]);
+
+	const scrollToTop = () => {
+		if (typeof window === 'undefined' || !isShowScrollTop) return;
+
+		const scrollElement = window.document.getElementById(scrollElementId);
+
+		if (scrollElement) scrollElement.scrollTo({ top: 0, behavior: 'smooth' });
+	};
+
+	return { scrollToTop, isShowScrollTop };
+};

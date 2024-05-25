@@ -13,7 +13,7 @@ type ListUseQueryFn = (
 
 type Props = { moduleId: ModuleIdEnum; searchQuery: SearchQuery };
 
-export default function useListQueryMeta({ moduleId, searchQuery }: Props) {
+export function useListQueryMeta({ moduleId, searchQuery }: Props) {
 	const [meta, setMeta] = useState<ImprovedOmit<ListMetaData, 'search'>>({ totalPage: 0, totalRecord: 0 });
 
 	const { data, status } = (ApiClientCtx[moduleId].getAll.useQuery as ListUseQueryFn)(searchQuery, {

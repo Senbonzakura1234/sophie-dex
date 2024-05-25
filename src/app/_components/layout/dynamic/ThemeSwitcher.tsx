@@ -1,12 +1,10 @@
 'use client';
 
 import SelectOption from '@components/common/static/SelectOption';
-import { KEY_BINDING_DICTIONARY } from '@root/constants/common';
-import useCookies from '@root/hooks/useCookies';
-import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
+import { useTheme } from '@root/hooks/useTheme';
+import type { SelectOptionItem } from '@root/types/common';
 import type { DaisyUIThemeEnum } from '@root/types/common/zod';
 import { daisyUIThemeList } from '@root/types/model';
-import { useMemo } from 'react';
 
 type Props = { defaultTheme: DaisyUIThemeEnum };
 
@@ -26,19 +24,7 @@ const themeSelectList = daisyUIThemeList.map(theme => ({
 })) satisfies Array<SelectOptionItem<DaisyUIThemeEnum>>;
 
 export default function ThemeSwitcher({ defaultTheme }: Props) {
-	const [theme, setTheme] = useCookies<DaisyUIThemeEnum>(KEY_BINDING_DICTIONARY.THEME_COOKIE_KEY, defaultTheme);
-
-	const themeSelect = useMemo(() => themeSelectList.find(t => t.value === theme)!, [theme]);
-
-	const setThemeSelected: SetSelectOptionItem<DaisyUIThemeEnum> = s => {
-		const cur = typeof s === 'function' ? s(themeSelect) : s;
-
-		if (cur.value === themeSelect.value) return;
-
-		if (typeof window !== 'undefined') window.document.body.setAttribute('data-theme', cur.value!);
-
-		setTheme(cur.value!, { path: '/' });
-	};
+	const [themeSelect, setThemeSelected] = useTheme<DaisyUIThemeEnum>(defaultTheme, themeSelectList);
 
 	return (
 		<SelectOption<DaisyUIThemeEnum>

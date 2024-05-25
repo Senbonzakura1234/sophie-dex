@@ -16,9 +16,9 @@ type Props = {
 export default function PageRefresh({ type = 'DEFAULT' }: Props) {
 	const [isDisabled, setIsDisabled] = useState(false);
 
-	const onScroll: OnScroll = useCallback(scrollPosition => setIsDisabled(scrollPosition > 0), []);
+	const onScroll: OnScroll = useCallback(({ scrollPosition }) => setIsDisabled(scrollPosition > 0), []);
 
-	useScroll({ onScroll, scrollElementId: KEY_BINDING_DICTIONARY.SCROLL_WRAPPER_ID });
+	useScroll({ onScroll, scrollElementId: KEY_BINDING_DICTIONARY.ROOT_SCROLL_WRAPPER_ID });
 
 	if (type === 'LIST') return <ListRefresh isDisabled={isDisabled} />;
 

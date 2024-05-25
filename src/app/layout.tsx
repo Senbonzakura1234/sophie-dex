@@ -14,19 +14,16 @@ import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
 import { cn, evnIs, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import { getCookieData, getSessionResult } from '@root/utils/server';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
 import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
 
 const AuthNav = dynamic(() => import('@components/layout/dynamic/AuthNav'));
-const ScrollTopTrigger = dynamic(() => import('@components/layout/dynamic/ScrollTopTrigger'), { ssr: false });
 const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'), {
-	ssr: false,
 	loading: () => (
 		<PulsePlaceHolder className='h-8 w-[136px] rounded-lg bg-base-100 shadow-lg shadow-base-content/20 xl:h-9' />
 	),
 });
+const SpeedInsights = dynamic(() => import('@vercel/speed-insights/next').then(m => m.SpeedInsights));
 
 const appleMediaConfig: AppleMediaConfig = [
 	{ url: 'iPhone_14_Pro_Max_landscape' },
@@ -226,24 +223,22 @@ export default async function RootLayout({ children }: ChildrenProps) {
 				defaultTheme={daisyUIThemeEnumSchema.parse(themeCookies?.value)}
 				className={cn(fontAtelier.variable, fontComicSansMS.className)}
 			>
-				<AuthProvider session={session}>
+				<main>
 					<ScrollWrapper>
-						<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
-							<ThemeSwitcher defaultTheme={daisyUIThemeEnumSchema.parse(themeCookies?.value)} />
+						<AuthProvider session={session}>
+							<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
+								<ThemeSwitcher defaultTheme={daisyUIThemeEnumSchema.parse(themeCookies?.value)} />
 
-							<AuthNav />
-						</nav>
+								<AuthNav />
+							</nav>
 
-						{children}
-
-						<Suspense>
-							<ScrollTopTrigger />
-						</Suspense>
+							{children}
+						</AuthProvider>
 					</ScrollWrapper>
-				</AuthProvider>
-
-				{evnIs('production') ? <SpeedInsights /> : null}
+				</main>
 			</ThemeWrapper>
+
+			{evnIs('production') ? <SpeedInsights /> : null}
 		</html>
 	);
 }

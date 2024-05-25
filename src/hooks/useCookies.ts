@@ -3,7 +3,7 @@
 import { getCookie, setCookie } from 'cookies-next';
 import { useState } from 'react';
 
-export default function useCookies<T extends string>(name: string, defaultValue: T) {
+export function useCookies<T extends string>(name: string, defaultValue: T) {
 	const [value, setValue] = useState(() => {
 		const cookie = getCookie(name) as T | undefined;
 

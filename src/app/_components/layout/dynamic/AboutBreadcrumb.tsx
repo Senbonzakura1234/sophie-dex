@@ -4,7 +4,7 @@ import TabWrapper from '@components/common/static/TabWrapper';
 import ScaleIcon from '@components/icons/outline/ScaleIcon';
 import InfoIcon from '@components/icons/solid/InfoIcon';
 import { listAboutPaths } from '@root/constants/common';
-import usePageSegment from '@root/hooks/usePageSegment';
+import { usePageSegment } from '@root/hooks/usePageSegment';
 import { cn, indexOf } from '@root/utils/common';
 import Link from 'next/link';
 

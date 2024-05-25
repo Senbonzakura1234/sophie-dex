@@ -1,7 +1,7 @@
 import type { NotificationProps } from '@root/types/common/props';
 import { useEffect, useState } from 'react';
 
-export default function useNotification(defaultValue: NotificationProps = { isOpen: false, message: '' }) {
+export function useNotification(defaultValue: NotificationProps = { isOpen: false, message: '' }) {
 	const [alert, setAlert] = useState<NotificationProps>(defaultValue);
 
 	useEffect(() => {

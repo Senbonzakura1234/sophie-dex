@@ -60,3 +60,5 @@ export type ImprovePick<
 	KRequired extends keyof TData,
 	KNonRequired extends Exclude<keyof TData, KRequired> = never,
 > = Pick<TData, KRequired> & Partial<Pick<TData, KNonRequired>>;
+
+export type InputData = ImprovedOmit<Required<ShareData>, 'files'>;

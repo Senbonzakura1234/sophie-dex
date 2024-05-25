@@ -1,27 +1,34 @@
+'use client';
+
 import ArrowUpOnSquareIcon from '@components/icons/solid/ArrowUpOnSquareIcon';
-import type { RefProps } from '@root/types/common/props';
+import { KEY_BINDING_DICTIONARY } from '@root/constants/common';
+import type { OnScroll } from '@root/hooks/useScroll';
+import { useScroll } from '@root/hooks/useScroll';
 import { cn } from '@root/utils/common';
-import { useCallback } from 'react';
 
-type ScrollToTopProps = { isShow: boolean } & RefProps<HTMLDivElement>;
+export default function ScrollToTop() {
+	const onScroll: OnScroll = ({ scrollPosition, scrollElement, isShowScrollTop, setIsShowScrollTop }) => {
+		if (scrollElement.scrollHeight < 2 * scrollElement.offsetHeight) return setIsShowScrollTop(false);
+		if (scrollPosition > 0.6 && !isShowScrollTop) return setIsShowScrollTop(true);
+		if (scrollPosition <= 0.6 && isShowScrollTop) return setIsShowScrollTop(false);
+	};
 
-export default function ScrollToTop({ isShow, refObject }: ScrollToTopProps) {
-	const scrollToTop = useCallback(
-		() => refObject?.current && isShow && refObject.current.scrollTo({ top: 0, behavior: 'smooth' }),
-		[isShow, refObject],
-	);
+	const { isShowScrollTop, scrollToTop } = useScroll({
+		onScroll,
+		scrollElementId: KEY_BINDING_DICTIONARY.ROOT_SCROLL_WRAPPER_ID,
+	});
 
 	return (
 		<div
 			className={cn(
 				'fixed bottom-0 right-6 z-30 flex place-content-center transition-[opacity,transform] duration-500',
-				isShow ? 'opacity-1 -translate-y-6' : '-translate-y-0 opacity-0',
+				isShowScrollTop ? 'opacity-1 -translate-y-6' : '-translate-y-0 opacity-0',
 			)}
 		>
 			<button
 				aria-label='Back To Top'
 				className='btn btn-circle btn-primary text-slate-50 shadow-lg shadow-base-content/30'
-				disabled={!isShow}
+				disabled={!isShowScrollTop}
 				onClick={scrollToTop}
 			>
 				<ArrowUpOnSquareIcon className='h4 h-4' />

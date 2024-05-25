@@ -1,12 +1,12 @@
 'use client';
 
-import useNotification from '@root/hooks/useNotification';
+import { useNotification } from '@root/hooks/useNotification';
 import type { ImprovePick } from '@root/types/common';
 import type { SignInQuery } from '@root/types/common/zod';
 import dynamic from 'next/dynamic';
 import { useEffect } from 'react';
 
-const Notification = dynamic(() => import('@components/layout/dynamic/Notification'), { ssr: false });
+const Notification = dynamic(() => import('@components/layout/dynamic/Notification'));
 
 type Props = ImprovePick<SignInQuery, 'error'>;
 

@@ -1,7 +1,7 @@
 'use client';
 
 import Paginate from '@components/layout/static/Paginate';
-import useListQueryMeta from '@root/hooks/useListQueryMeta';
+import { useListQueryMeta } from '@root/hooks/useListQueryMeta';
 import { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 
