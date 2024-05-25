@@ -5,7 +5,6 @@ import '@total-typescript/ts-reset';
 import AuthProvider from '@components/layout/dynamic/AuthProvider';
 import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
 import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
-import TrpcProvider from '@components/layout/dynamic/TrpcProvider';
 import PulsePlaceHolder from '@components/loading/PulsePlaceHolder';
 import { KEY_BINDING_DICTIONARY } from '@root/constants/common';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
@@ -228,21 +227,19 @@ export default async function RootLayout({ children }: ChildrenProps) {
 				className={cn(fontAtelier.variable, fontComicSansMS.className)}
 			>
 				<AuthProvider session={session}>
-					<TrpcProvider>
-						<ScrollWrapper>
-							<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
-								<ThemeSwitcher defaultTheme={daisyUIThemeEnumSchema.parse(themeCookies?.value)} />
+					<ScrollWrapper>
+						<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
+							<ThemeSwitcher defaultTheme={daisyUIThemeEnumSchema.parse(themeCookies?.value)} />
 
-								<AuthNav />
-							</nav>
+							<AuthNav />
+						</nav>
 
-							{children}
+						{children}
 
-							<Suspense>
-								<ScrollTopTrigger />
-							</Suspense>
-						</ScrollWrapper>
-					</TrpcProvider>
+						<Suspense>
+							<ScrollTopTrigger />
+						</Suspense>
+					</ScrollWrapper>
 				</AuthProvider>
 
 				{evnIs('production') ? <SpeedInsights /> : null}

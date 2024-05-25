@@ -4,17 +4,16 @@ import FacebookSquareIcon from '@components/icons/brand/FacebookSquareIcon';
 import GithubIcon from '@components/icons/brand/GithubIcon';
 import GoogleIcon from '@components/icons/brand/GoogleIcon';
 import InstagramIcon from '@components/icons/brand/InstagramIcon';
-import ChevronDoubleRightIcon from '@components/icons/solid/ChevronDoubleRightIcon';
 import sophieLogo from '@root/app/images/sophie-logo.webp';
 import type { IconProps } from '@root/types/common/props';
 import type { ProviderIdEnum, SignInQuery } from '@root/types/common/zod';
 import { providerIdEnumValidator } from '@root/types/common/zod';
-import { cn, getBaseUrl } from '@root/utils/common';
+import { getBaseUrl } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import type { ClientSafeProvider } from 'next-auth/react';
-import { signIn } from 'next-auth/react';
 import Image from 'next/image';
 import type { FC } from 'react';
+import ProviderBtn from './ProviderBtn';
 import SignInError from './SignInError';
 
 type Props = {
@@ -28,14 +27,6 @@ const iconMapping = {
 	google: GoogleIcon,
 	instagram: InstagramIcon,
 } satisfies Record<ProviderIdEnum, FC<IconProps>>;
-
-const classMapping = {
-	atlassian: 'btn-atlassian',
-	facebook: 'btn-facebook',
-	github: '',
-	google: '',
-	instagram: '',
-} satisfies Record<ProviderIdEnum, string>;
 
 export default function SignInProviders({ callbackUrl, providerList, error }: Props) {
 	return (
@@ -66,31 +57,15 @@ export default function SignInProviders({ callbackUrl, providerList, error }: Pr
 						const Icon = iconMapping[idParseResult.data];
 
 						return (
-							<button
-								className={cn(
-									'btn btn-brand btn-outline border-none w-full max-w-64 lg:max-w-80 self-center group',
-									classMapping[idParseResult.data],
-								)}
-								key={name}
-								onClick={() => signIn(id, { callbackUrl })}
+							<ProviderBtn
+								callbackUrl={callbackUrl}
+								id={id}
+								key={id}
+								name={name}
+								providerId={idParseResult.data}
 							>
-								<div className='flex w-full items-center gap-3 overflow-hidden'>
-									<div className='mr-auto flex translate-x-[-28px] items-center gap-2 transition-transform group-hover:translate-x-0 sm:translate-x-[-115px]'>
-										<ChevronDoubleRightIcon className='size-5 text-inherit opacity-0 transition-opacity group-hover:opacity-100' />
-
-										<span
-											className='hidden text-nowrap opacity-0 transition-opacity group-hover:opacity-100 sm:inline'
-											style={{ wordSpacing: 0 }}
-										>
-											Signin with
-										</span>
-
-										<span>{name}</span>
-									</div>
-
-									<Icon className='icon-provider my-auto size-6' />
-								</div>
-							</button>
+								<Icon className='icon-provider my-auto size-6' />
+							</ProviderBtn>
 						);
 					})}
 				</div>

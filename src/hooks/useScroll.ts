@@ -1,28 +1,29 @@
-import type { RefObject } from 'react';
 import { useEffect } from 'react';
 
-export type OnScroll<T extends HTMLElement> = (scrollPosition: number, scrollElement: T) => void;
+export type OnScroll = (scrollPosition: number, scrollElement: HTMLElement) => void;
 
-type UseScrollProps<T extends HTMLElement> = {
-	scrollableRef: RefObject<T>;
-	onScroll: OnScroll<T>;
+type UseScrollProps = {
+	onScroll: OnScroll;
+	scrollElementId: string;
 };
 
-export const useScroll = <T extends HTMLElement>({ onScroll, scrollableRef }: UseScrollProps<T>) =>
+export const useScroll = ({ onScroll, scrollElementId }: UseScrollProps) =>
 	useEffect(() => {
-		if (!scrollableRef.current) return;
+		if (typeof window === 'undefined') return;
+		const scrollElement = document.getElementById(scrollElementId);
 
-		const current = scrollableRef.current;
+		if (!scrollElement) return;
 
-		current.addEventListener(
+		scrollElement.addEventListener(
 			'scroll',
 			() => {
-				const scrollHeight = (current?.scrollHeight || 0) - (current?.offsetHeight || 0);
+				const scrollHeight = (scrollElement?.scrollHeight || 0) - (scrollElement?.offsetHeight || 0);
 
-				onScroll((current?.scrollTop || 0) / (scrollHeight || 1), current);
+				onScroll((scrollElement?.scrollTop || 0) / (scrollHeight || 1), scrollElement);
 			},
 			{ passive: true },
 		);
 
-		return () => current.removeEventListener('scroll', () => current.scrollTo({ top: 0, behavior: 'smooth' }));
-	}, [onScroll, scrollableRef]);
+		return () =>
+			scrollElement.removeEventListener('scroll', () => scrollElement.scrollTo({ top: 0, behavior: 'smooth' }));
+	}, [onScroll, scrollElementId]);
