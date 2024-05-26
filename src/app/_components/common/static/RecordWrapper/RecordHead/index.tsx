@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 const ShareButton = dynamic(() => import('@components/common/dynamic/ShareButton'), {
-	loading: () => <PulsePlaceHolder className='h-6 w-20 rounded-lg' />,
+	loading: () => <PulsePlaceHolder className='h-6 w-24 rounded-lg' />,
 });
 
 const BookmarkBtn = dynamic(() => import('./BookmarkBtn'), {
@@ -48,13 +48,12 @@ export default function RecordHead({ currentId, id, name, search, moduleId }: Re
 			<nav className='flex gap-2'>
 				<ShareButton
 					classNames={{
-						wrapper: '!btn-outline w-20 capitalize dark:!shadow-md dark:!shadow-current',
+						wrapper: '!btn-outline w-24 capitalize dark:!shadow-md dark:!shadow-current',
 						icon: 'size-3',
 					}}
 					input={{ text: name, title: name, url: `/${moduleId}/${id}` }}
-				>
-					share
-				</ShareButton>
+					showText
+				/>
 
 				<BookmarkBtn id={id} name={name} moduleId={moduleId} />
 			</nav>

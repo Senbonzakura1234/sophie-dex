@@ -32,7 +32,7 @@ export default function AuthNav() {
 									size={48}
 									className='aspect-square w-[50px] bg-gradient-to-br from-accent to-primary p-1 shadow-lg shadow-primary'
 								/>
-								<div className='flex max-w-full flex-col items-start truncate hover:text-clip'>
+								<div className='flex max-w-full flex-col items-start truncate focus:text-clip'>
 									<div className='font-bold text-primary'>{session.user?.name}</div>
 									<div className='text-sm'>{session.user?.email}</div>
 								</div>

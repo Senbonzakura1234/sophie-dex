@@ -40,7 +40,7 @@ function SearchInput() {
 			{!!searchValue ? (
 				<button
 					aria-label='Reset search query'
-					className='btn btn-circle btn-ghost btn-sm my-auto border-0 hover:bg-transparent'
+					className='btn btn-circle btn-ghost btn-sm my-auto border-0 focus:bg-transparent'
 					onClick={resetSearch}
 				>
 					<XMarkIcon className='aspect-square h-5' />

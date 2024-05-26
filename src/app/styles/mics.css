@@ -5,7 +5,7 @@
 	}
 
 	.btn-brand {
-		@apply bg-white capitalize text-black shadow-lg shadow-black/30 hover:bg-black hover:text-white hover:shadow hover:shadow-white/30 dark:bg-black dark:text-white dark:shadow-white/30 dark:hover:bg-white dark:hover:text-black dark:hover:shadow-black/30;
+		@apply bg-white capitalize text-black shadow-lg shadow-black/30 focus:bg-black focus:text-white focus:shadow focus:shadow-white/30 dark:bg-black dark:text-white dark:shadow-white/30 dark:focus:bg-white dark:focus:text-black dark:focus:shadow-black/30;
 	}
 
 	.btn-atlassian .icon-provider {

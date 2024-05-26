@@ -21,7 +21,7 @@ export default function CustomListboxOption<V extends string | number>({
 			as='li'
 			className={cn(
 				'flex cursor-pointer select-none gap-2 bg-base-100 px-4 py-2 transition-[background]',
-				isSelected ? 'bg-primary/10 font-bold text-primary' : 'hover:bg-secondary/10',
+				isSelected ? 'bg-primary/10 font-bold text-primary' : 'focus:bg-secondary/10',
 			)}
 			value={optionValue}
 		>
