@@ -1,5 +1,5 @@
 import type { InputData } from '@root/types/common';
-import { tryCatchHandler, tryCatchHandlerSync } from '@root/utils/common';
+import { getBaseUrl, tryCatchHandler, tryCatchHandlerSync } from '@root/utils/common';
 import { useCallback, useMemo } from 'react';
 import { useNotification } from './useNotification';
 
@@ -45,7 +45,7 @@ export const useShareAPI = (input: InputData) => {
 	);
 
 	const onCopy = useCallback(
-		async () => tryCatchHandler(window.navigator.clipboard.writeText(input.url)),
+		async () => tryCatchHandler(window.navigator.clipboard.writeText(`${getBaseUrl()}${input.url}`)),
 		[input.url],
 	);
 
