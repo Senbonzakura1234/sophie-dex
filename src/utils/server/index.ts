@@ -15,7 +15,7 @@ export const getCookieData = async (name: string) => {
 };
 
 export const getSessionResult = async () => {
-	const sessionRes = await tryCatchHandler(getServerSession());
+	const sessionRes = await tryCatchHandler(getServerSession(), 'getSessionResult.getServerSession');
 
 	if (!sessionRes.isSuccess)
 		return {

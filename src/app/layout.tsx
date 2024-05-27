@@ -207,8 +207,8 @@ export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-widt
 
 const getLayoutProps = async () => {
 	const [sessionRes, themeCookiesRes] = await Promise.all([
-		tryCatchHandler(getSessionResult()),
-		tryCatchHandler(getCookieData(KEY_BINDING_DICTIONARY.THEME_COOKIE_KEY)),
+		tryCatchHandler(getSessionResult(), 'getLayoutProps.getSessionResult'),
+		tryCatchHandler(getCookieData(KEY_BINDING_DICTIONARY.THEME_COOKIE_KEY), 'getLayoutProps.getCookieData'),
 	]);
 
 	return { session: sessionRes.data?.result, themeCookies: themeCookiesRes.data };

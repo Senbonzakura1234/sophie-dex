@@ -1,5 +1,5 @@
 import { exportDBQueriesMap } from '@root/server/postgresql/repository';
-import { entries, evnIs, tryCatchHandler, writeLog } from '@root/utils/common';
+import { entries, evnIs, tryCatchHandler } from '@root/utils/common';
 import { writeFile } from 'fs/promises';
 import { NextResponse } from 'next/server';
 import { ulid } from 'ulid';
@@ -7,17 +7,9 @@ import { ulid } from 'ulid';
 const onExport = () =>
 	Promise.all(
 		entries(exportDBQueriesMap).map(async ([table, query]) => {
-			const exportData = await tryCatchHandler(query.execute());
+			const exportData = await tryCatchHandler(query.execute(), 'exportDataQuery.execute');
 
-			if (!exportData.isSuccess) {
-				writeLog({
-					args: [`Error exporting data from table ${table}`, exportData.error],
-					type: 'error',
-					hideInProd: true,
-				});
-
-				return { table, error: 'read-error', isSuccess: false } as const;
-			}
+			if (!exportData.isSuccess) return { table, error: 'read-error', isSuccess: false } as const;
 
 			const writeFileResult = await tryCatchHandler(
 				writeFile(
@@ -28,17 +20,10 @@ const onExport = () =>
 						2,
 					),
 				),
+				'exportDataQuery.writeFile',
 			);
 
-			if (!writeFileResult.isSuccess) {
-				writeLog({
-					args: [`Error writing data from table ${table}`, writeFileResult.error],
-					type: 'error',
-					hideInProd: true,
-				});
-
-				return { table, error: 'write-error', isSuccess: false } as const;
-			}
+			if (!writeFileResult.isSuccess) return { table, error: 'write-error', isSuccess: false } as const;
 
 			return { table, error: null, isSuccess: true } as const;
 		}),

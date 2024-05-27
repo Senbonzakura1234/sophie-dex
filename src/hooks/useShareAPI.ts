@@ -17,7 +17,7 @@ export const useShareAPI = (input: InputData) => {
 					if (typeof window.navigator.clipboard.writeText !== 'function') return false;
 
 					return true;
-				}).data,
+				}, 'useShareAPI.isCanCopy').data,
 			),
 		[],
 	);
@@ -39,32 +39,26 @@ export const useShareAPI = (input: InputData) => {
 					if (typeof window.navigator.canShare !== 'function') return false;
 
 					return Boolean(window.navigator.canShare(input));
-				}).data,
+				}, 'useShareAPI.isCanShare').data,
 			),
 		[input],
 	);
 
-	const onCopy = useCallback(
-		async () => tryCatchHandler(window.navigator.clipboard.writeText(`${getBaseUrl()}${input.url}`)),
-		[input.url],
-	);
-
-	const onShare = useCallback(async () => {
-		tryCatchHandler(window.navigator.share(input));
-	}, [input]);
-
 	const share = useCallback(async () => {
-		if (isCanShare) return await onShare();
+		if (isCanShare) return await tryCatchHandler(window.navigator.share(input), 'share.navigatorShare');
 
 		// fallback to copy to clipboard
 		if (!isCanCopy) return setShareNotification({ isOpen: true, message: 'Clipboard not supported', type: 'ERROR' });
 
-		const { isSuccess } = await onCopy();
+		const { isSuccess } = await tryCatchHandler(
+			window.navigator.clipboard.writeText(`${getBaseUrl()}${input.url}`),
+			'share.clipboardWriteText',
+		);
 
 		if (isSuccess) return setShareNotification({ isOpen: true, message: 'Url copied to clipboard', type: 'SUCCESS' });
 
 		return setShareNotification({ isOpen: true, message: 'Copy to clipboard failed', type: 'ERROR' });
-	}, [isCanCopy, isCanShare, onCopy, onShare, setShareNotification]);
+	}, [input, isCanCopy, isCanShare, setShareNotification]);
 
 	return { shareNotification, share, isCanShare };
 };

@@ -7,6 +7,7 @@ import type { ClassValue } from 'clsx';
 import { clsx } from 'clsx';
 import type { ReadonlyURLSearchParams } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
+import { getOperationCode } from '../server/fetch';
 
 // =======================================				Native Override				=======================================
 
@@ -141,21 +142,25 @@ export function highlightSearchedText(input: string, search: string | undefined,
 		.join('');
 }
 
-export async function tryCatchHandler<TReturn = unknown>(promise: Promise<TReturn>) {
+export async function tryCatchHandler<TReturn = unknown>(promise: Promise<TReturn>, operationName: string) {
 	try {
 		return { data: await promise, isSuccess: true as const, error: null };
 	} catch (error) {
-		writeLog({ args: [error], type: 'error', hideInProd: true });
+		const operationCode = await getOperationCode(operationName).catch(() => '');
+
+		writeLog({ args: [evnIs('development') ? error : operationCode], type: 'error' });
 
 		return { data: null, isSuccess: false as const, error };
 	}
 }
 
-export function tryCatchHandlerSync<TReturn = unknown>(callback: () => TReturn) {
+export function tryCatchHandlerSync<TReturn = unknown>(callback: () => TReturn, operationName: string) {
 	try {
 		return { data: callback(), isSuccess: true as const, error: null };
 	} catch (error) {
-		writeLog({ args: [error], type: 'error' });
+		getOperationCode(operationName)
+			.catch(() => '')
+			.then(res => writeLog({ args: [evnIs('development') ? error : res], type: 'error' }));
 
 		return { data: null, isSuccess: false as const, error };
 	}

@@ -11,7 +11,10 @@ type FontList = ImageResponseOptions['fonts'];
 const getFontData = async (): Promise<FontList> => {
 	const url = new URL('../../../fonts/comic-sans-ms/regular-bold.ttf', import.meta.url);
 
-	const dataResult = await tryCatchHandler(fetch(url).then(res => res.arrayBuffer()));
+	const dataResult = await tryCatchHandler(
+		fetch(url).then(res => res.arrayBuffer()),
+		'getFontData.fetch',
+	);
 
 	if (!dataResult.isSuccess) return undefined;
 

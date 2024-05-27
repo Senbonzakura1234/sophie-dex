@@ -25,7 +25,10 @@ export async function generateDetailMetadata(
 	parentPromise: ResolvingMetadata,
 	getRecordPromise: ReturnType<typeof getContentRecord>,
 ): Promise<Metadata> {
-	const result = await tryCatchHandler(Promise.all([parentPromise, getRecordPromise]));
+	const result = await tryCatchHandler(
+		Promise.all([parentPromise, getRecordPromise]),
+		'generateDetailMetadata.getParentMetaAndRecord',
+	);
 
 	if (!result.isSuccess) return { title: 'Error' };
 
@@ -51,7 +54,7 @@ export const getContentRecord = async <TRecord extends CommonRecord>(
 			error: new APIError({ code: 'BAD_REQUEST', message: 'Invalid Record Id' }),
 		} satisfies Awaited<APIResult>;
 
-	const { data, isSuccess } = await tryCatchHandler(query.execute({ id }));
+	const { data, isSuccess } = await tryCatchHandler(query.execute({ id }), 'getContentRecord.execute');
 
 	if (!isSuccess || !data)
 		return {
@@ -66,7 +69,7 @@ export const getContentRecord = async <TRecord extends CommonRecord>(
 export const getAllRecordIds = async (
 	query: PreparedPGQuery<Array<{ id: string }>>,
 ): APIResult<Array<{ id: string }>> => {
-	const { data, isSuccess } = await tryCatchHandler(query.execute());
+	const { data, isSuccess } = await tryCatchHandler(query.execute(), 'getAllRecordIds.execute');
 
 	if (isSuccess) return { isSuccess, result: data, error: null };
 
@@ -76,7 +79,7 @@ export const getAllRecordIds = async (
 export const exportRecords = async <TRecord extends CommonRecord>(
 	query: PreparedPGQuery<Array<TRecord>>,
 ): APIResult<Array<TRecord>> => {
-	const { data, isSuccess } = await tryCatchHandler(query.execute());
+	const { data, isSuccess } = await tryCatchHandler(query.execute(), 'exportRecords.execute');
 
 	if (isSuccess) return { isSuccess, result: data, error: null };
 

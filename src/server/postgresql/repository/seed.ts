@@ -21,7 +21,7 @@ const seed = async () => {
 	for (let i = 0; i < effectsList.length; i++) {
 		const element = effectsList[i]!;
 
-		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(effects).values(element));
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(effects).values(element), 'seed.seedEffect');
 
 		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
 		if (isSuccess) {
@@ -32,7 +32,7 @@ const seed = async () => {
 	for (let i = 0; i < itemsList.length; i++) {
 		const element = itemsList[i]!;
 
-		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(items).values(element));
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(items).values(element), 'seed.seedItem');
 
 		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
 		if (isSuccess) {
@@ -43,7 +43,7 @@ const seed = async () => {
 	for (let i = 0; i < rumorsList.length; i++) {
 		const element = rumorsList[i]!;
 
-		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(rumors).values(element));
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(rumors).values(element), 'seed.seedRumor');
 
 		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
 		if (isSuccess) {
@@ -54,7 +54,7 @@ const seed = async () => {
 	for (let i = 0; i < traitsList.length; i++) {
 		const element = traitsList[i]!;
 
-		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(traits).values(element));
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(traits).values(element), 'seed.seedTrait');
 
 		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
 		if (isSuccess) {

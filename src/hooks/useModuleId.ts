@@ -3,7 +3,7 @@ import { arrayInclude } from '@root/utils/common';
 import { usePageSegment } from './usePageSegment';
 
 export const useModuleId = () => {
-	const { isDetailPage, segment } = usePageSegment();
+	const { segment } = usePageSegment();
 
-	return { isDetailPage, moduleId: arrayInclude(moduleIdList, segment) ? segment : undefined, segment };
+	return { moduleId: arrayInclude(moduleIdList, segment) ? segment : undefined, segment };
 };

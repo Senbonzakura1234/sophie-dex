@@ -10,12 +10,16 @@ const runtime = runtime_ as { Fragment: Fragment; jsx: Jsx; jsxs: Jsx };
 type MDXRendererProps = { body: string } & ClassNameProps;
 
 const getMDXModule = async ({ body }: Pick<MDXRendererProps, 'body'>) => {
-	const compileResult = await tryCatchHandler(compile(body, { outputFormat: 'function-body', development: false }));
+	const compileResult = await tryCatchHandler(
+		compile(body, { outputFormat: 'function-body', development: false }),
+		'getMDXModule.compile',
+	);
 
 	if (!compileResult.isSuccess) return { default: ReactFragment };
 
 	const runtimeResult = await tryCatchHandler(
 		run(String(compileResult.data), { ...runtime, baseUrl: import.meta.url }),
+		'getMDXModule.runtime',
 	);
 
 	if (!runtimeResult.isSuccess) return { default: ReactFragment };

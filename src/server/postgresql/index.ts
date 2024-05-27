@@ -48,7 +48,7 @@ const getListRecord = async <TRecord extends CommonRecord>(args: GetListRecordPr
 
 	const { query, searchValue } = args;
 
-	const { data, isSuccess } = await tryCatchHandler(query);
+	const { data, isSuccess } = await tryCatchHandler(query, 'getListRecord.executeQuery');
 
 	if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR' });
 
@@ -295,7 +295,10 @@ export const insertOrUpdateUser = async ({ isUpdate, userData }: InsertOrUpdateU
 };
 
 export const getProfile = async (username: string): APIResult<GithubUserInfo> => {
-	const { data, isSuccess } = await tryCatchHandler(getUserRecordQuery.execute({ username }));
+	const { data, isSuccess } = await tryCatchHandler(
+		getUserRecordQuery.execute({ username }),
+		'getProfile.executeQuery',
+	);
 
 	if (!isSuccess) return { isSuccess: false, result: null, error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }) };
 
@@ -315,7 +318,10 @@ const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: str
 		.then<Array<string>>(res => objectValues(res || {})[0] || []);
 
 export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery, username: string): APIResult<Array<string>> => {
-	const getModuleBookmarkRes = await tryCatchHandler(onGetBookmarks(moduleId, username));
+	const getModuleBookmarkRes = await tryCatchHandler(
+		onGetBookmarks(moduleId, username),
+		'getModuleBookmarks.executeQuery',
+	);
 
 	if (!getModuleBookmarkRes.isSuccess)
 		return {
@@ -341,6 +347,7 @@ export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery, username: 
 export const bookmarkRecord = async ({ bookmarkRecordId, isBookmarked, moduleId }: BookmarkQuery, username: string) => {
 	const bookmarkRes = await tryCatchHandler(
 		postgresql.execute(getToggleBookmarkQuery({ bookmarkRecordId, isBookmarked, moduleId, username })),
+		'bookmarkRecord.executeQuery',
 	);
 
 	if (!bookmarkRes.isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR' });
