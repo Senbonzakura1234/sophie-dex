@@ -32,7 +32,6 @@ export const env = createEnv({
 			.transform(val => z.array(providerIdEnumValidator).catch([]).parse(val.split(','))),
 	},
 	server: {
-		FUNCTION_ACCESS_TOKEN: genericStringSchema,
 		PGURL_NONPOOLING: genericStringSchema.catch(''),
 
 		GITHUB_TOKEN: genericStringSchema.catch(''),
@@ -62,7 +61,6 @@ export const env = createEnv({
 		NEXT_PUBLIC_NODE_ENV: process.env.NODE_ENV,
 		NEXT_PUBLIC_PORT: process.env.PORT,
 
-		FUNCTION_ACCESS_TOKEN: process.env.FUNCTION_ACCESS_TOKEN,
 		PGURL_NONPOOLING: process.env.PGURL_NONPOOLING,
 
 		GITHUB_TOKEN: process.env.GITHUB_TOKEN,
