@@ -22,7 +22,7 @@ export default function Breadcrumb() {
 						'link gap-1 capitalize',
 						typeof segment === 'undefined'
 							? 'no-animation pointer-events-none !cursor-default !no-underline'
-							: 'link-hover link-primary visited:link-accent',
+							: 'link-hover link-primary visited:link-accent'
 					)}
 					href='/'
 				>
@@ -39,7 +39,7 @@ export default function Breadcrumb() {
 							className={cn(
 								'link gap-1 capitalize',
 								m !== segment ? 'link-hover link-primary visited:link-accent' : '!no-underline',
-								{ 'no-animation pointer-events-none !cursor-default': m === segment && !isDetailPage },
+								{ 'no-animation pointer-events-none !cursor-default': m === segment && !isDetailPage }
 							)}
 							href={`/${m}`}
 						>
@@ -61,7 +61,7 @@ export default function Breadcrumb() {
 						'link gap-1 capitalize',
 						arrayInclude(listAboutPaths, segment)
 							? 'no-animation pointer-events-none !cursor-default !no-underline'
-							: 'link-hover link-primary visited:link-accent',
+							: 'link-hover link-primary visited:link-accent'
 					)}
 					href='/about'
 				>

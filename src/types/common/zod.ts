@@ -11,7 +11,7 @@ import {
 	recipeTypeList,
 	relatedCategoryList,
 	rumorTypeList,
-	sortByList,
+	sortByList
 } from '@root/types/model';
 import { z } from 'zod';
 
@@ -80,14 +80,14 @@ export const searchQueryValidator = z.object({
 		.nullish()
 		.catch(null)
 		.default(null),
-	sortBy: genericSortByEnumSchema.nullish().catch(null).default(null),
+	sortBy: genericSortByEnumSchema.nullish().catch(null).default(null)
 });
 export type SearchQuery = z.infer<typeof searchQueryValidator>;
 
 export const signInQueryValidator = z
 	.object({
 		callbackUrl: genericStringSchema.url().optional().catch('/').default('/'),
-		error: genericStringSchema.optional().catch(undefined).transform(Boolean),
+		error: genericStringSchema.optional().catch(undefined).transform(Boolean)
 	})
 	.catch({ callbackUrl: '/', error: false })
 	.default({ callbackUrl: '/', error: false });
@@ -102,7 +102,7 @@ export type ModuleIdQuery = z.infer<typeof moduleIdQueryValidator>;
 export const bookmarkQueryValidator = z.object({
 	moduleId: genericModuleIdEnumSchema,
 	bookmarkRecordId: genericIdSchema,
-	isBookmarked: z.boolean().default(false),
+	isBookmarked: z.boolean().default(false)
 });
 export type BookmarkQuery = z.infer<typeof bookmarkQueryValidator>;
 
@@ -128,7 +128,7 @@ export const githubUserInfoSchema = z.object({
 	location: z.string().optional().catch(''),
 	email: z.string().email(),
 	bio: z.string().optional().catch(''),
-	twitter_username: z.string().optional().catch(''),
+	twitter_username: z.string().optional().catch('')
 });
 export type GithubUserInfo = z.infer<typeof githubUserInfoSchema>;
 
@@ -138,6 +138,6 @@ export const licenseInfoSchema = z.object({
 	permissions: z.array(z.string()),
 	conditions: z.array(z.string()),
 	limitations: z.array(z.string()),
-	body: z.string(),
+	body: z.string()
 });
 export type LicenseInfo = z.infer<typeof licenseInfoSchema>;

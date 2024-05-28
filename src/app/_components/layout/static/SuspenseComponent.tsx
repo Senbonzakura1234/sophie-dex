@@ -11,7 +11,7 @@ type Props<TChildProps extends JSX.IntrinsicAttributes> = {
 export default async function SuspenseComponent<TChildProps extends JSX.IntrinsicAttributes>({
 	ChildComponent,
 	promiseData,
-	showErrorContent,
+	showErrorContent
 }: Props<TChildProps>) {
 	const props = await promiseData;
 

@@ -11,7 +11,7 @@ type RumorTypeProps = { rumorType: RumorTypeEnum };
 
 const className = {
 	MATERIAL: 'app-text-shadow-GREEN text-base-200 dark:text-base-content',
-	MONSTER: 'app-text-shadow-RED text-base-200 dark:text-base-content',
+	MONSTER: 'app-text-shadow-RED text-base-200 dark:text-base-content'
 } satisfies TextShadowMap<RumorTypeEnum>;
 
 export default function RumorType({ rumorType }: RumorTypeProps) {
@@ -30,7 +30,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 					className={cn(
 						'btn btn-xs !border-current !bg-current shadow-current',
 						{ 'shadow-md': !isActive },
-						background,
+						background
 					)}
 					href={{ query: { rumorType } }}
 					isActive={isActive}
@@ -48,7 +48,7 @@ export default function RumorType({ rumorType }: RumorTypeProps) {
 				className={cn(
 					'absolute bottom-8 right-8 w-10 text-center font-atelier text-lg md:text-4xl',
 					rumorTypeIconMap[rumorType],
-					className[rumorType],
+					className[rumorType]
 				)}
 			/>
 		</>

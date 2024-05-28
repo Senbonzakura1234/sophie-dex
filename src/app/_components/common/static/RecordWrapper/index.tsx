@@ -20,7 +20,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 	colors: [firstColor, lastColor] = [undefined, undefined],
 	currentId,
 	data,
-	search,
+	search
 }: RecordWrapperProps<TRecord>) {
 	const renderChild = children ? children(data) : null;
 
@@ -31,7 +31,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 					'absolute inset-y-0 left-0 w-1/3 rounded-[inherit] shadow-lg',
 					typeof firstColor !== 'undefined'
 						? `bg-current shadow-base-content ${colorTWClassMap[firstColor].background}`
-						: 'bg-gradient-to-br from-accent to-primary shadow-primary',
+						: 'bg-gradient-to-br from-accent to-primary shadow-primary'
 				)}
 			/>
 
@@ -40,7 +40,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 					'absolute inset-y-0 right-0 w-1/3 rounded-[inherit] shadow-lg',
 					typeof lastColor !== 'undefined'
 						? `bg-current shadow-base-content ${colorTWClassMap[lastColor].background}`
-						: 'bg-gradient-to-tl from-accent to-primary shadow-primary',
+						: 'bg-gradient-to-tl from-accent to-primary shadow-primary'
 				)}
 			/>
 

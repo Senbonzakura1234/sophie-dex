@@ -25,7 +25,7 @@ const iconMapping = {
 	facebook: FacebookSquareIcon,
 	github: GithubIcon,
 	google: GoogleIcon,
-	instagram: InstagramIcon,
+	instagram: InstagramIcon
 } satisfies Record<ProviderIdEnum, FC<IconProps>>;
 
 export default function SignInProviders({ callbackUrl, providerList, error }: Props) {
@@ -34,7 +34,7 @@ export default function SignInProviders({ callbackUrl, providerList, error }: Pr
 			<CommonWrapper
 				classNames={{
 					wrapper: 'm-auto w-11/12 max-w-lg',
-					content: 'pt-20 pb-12 lg:pt-32 lg:pb-20 gap-7 dark:bg-slate-950',
+					content: 'pt-20 pb-12 lg:pt-32 lg:pb-20 gap-7 dark:bg-slate-950'
 				}}
 			>
 				<Image

@@ -18,19 +18,19 @@ const rumorTypeSelectList: Array<SelectOptionItem<RumorTypeEnum>> = [
 				className={cn(
 					'aspect-square h-4 font-atelier xl:h-5',
 					rumorTypeIconMap[rumorType],
-					rumorTypeColorMap[rumorType].background,
+					rumorTypeColorMap[rumorType].background
 				)}
 				key={rumorType}
 			/>
-		),
-	})),
+		)
+	}))
 ];
 
 export default function RumorTypeFilter() {
 	const [rumorTypeSelected, setRumorTypeSelected] = useQueryOnChange(
 		'rumorType',
 		rumorTypeSelectList,
-		rumorTypeDefaultSelect,
+		rumorTypeDefaultSelect
 	);
 
 	return (

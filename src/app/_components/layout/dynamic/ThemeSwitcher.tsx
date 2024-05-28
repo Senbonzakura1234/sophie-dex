@@ -20,7 +20,7 @@ const themeSelectList = daisyUIThemeList.map(theme => ({
 			<span aria-hidden className='grow bg-accent' data-theme={theme} />
 			<span aria-hidden className='grow bg-secondary' data-theme={theme} />
 		</span>
-	),
+	)
 })) satisfies Array<SelectOptionItem<DaisyUIThemeEnum>>;
 
 export default function ThemeSwitcher({ defaultTheme }: Props) {

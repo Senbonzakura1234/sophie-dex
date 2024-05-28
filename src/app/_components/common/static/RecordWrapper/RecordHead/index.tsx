@@ -6,14 +6,14 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 const ShareButton = dynamic(() => import('@components/common/dynamic/ShareButton'), {
-	loading: () => <PulsePlaceHolder className='h-6 w-24 rounded-lg' />,
+	loading: () => <PulsePlaceHolder className='h-6 w-24 rounded-lg' />
 });
 
 const BookmarkBtn = dynamic(() => import('./BookmarkBtn'), {
-	loading: () => <PulsePlaceHolder className='h-6 w-24 rounded-lg' />,
+	loading: () => <PulsePlaceHolder className='h-6 w-24 rounded-lg' />
 });
 const BackButton = dynamic(() => import('./BackButton'), {
-	loading: () => <PulsePlaceHolder className='mr-2 h-6 w-[61px] rounded-lg' />,
+	loading: () => <PulsePlaceHolder className='mr-2 h-6 w-[61px] rounded-lg' />
 });
 
 type RecordHeadProps = Omit<CommonRecord, 'keyWords'> & { currentId?: string; search?: string };
@@ -28,7 +28,7 @@ export default function RecordHead({ currentId, id, name, search, moduleId }: Re
 					<BackButton
 						classNames={{
 							icon: 'size-5',
-							wrapper: 'btn btn-link capitalize btn-primary btn-xs mr-2 gap-0 pl-1 align-middle',
+							wrapper: 'btn btn-link capitalize btn-primary btn-xs mr-2 gap-0 pl-1 align-middle'
 						}}
 					>
 						back
@@ -49,7 +49,7 @@ export default function RecordHead({ currentId, id, name, search, moduleId }: Re
 				<ShareButton
 					classNames={{
 						wrapper: '!btn-outline w-24 capitalize dark:!shadow-md dark:!shadow-current',
-						icon: 'size-3',
+						icon: 'size-3'
 					}}
 					input={{ text: name, title: name, url: `/${moduleId}/${id}` }}
 					showText

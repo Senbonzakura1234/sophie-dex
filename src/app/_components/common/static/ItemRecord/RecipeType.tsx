@@ -24,7 +24,7 @@ export default function RecipeType({ recipeType }: RecipeTypeProps) {
 				className={cn(
 					'btn btn-xs !border-current !bg-current shadow-current',
 					{ 'shadow-md': !isActive },
-					background,
+					background
 				)}
 				href={{ query: { recipeType } }}
 				isActive={isActive}

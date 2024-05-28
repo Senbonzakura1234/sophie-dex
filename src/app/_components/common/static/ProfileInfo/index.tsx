@@ -8,7 +8,7 @@ import ProfileField from './ProfileField';
 type ProfileInfoProps = { profile: GithubUserInfo };
 
 export default function ProfileInfo({
-	profile: { avatar_url, login, bio, company = '', blog, email, location = '', twitter_username },
+	profile: { avatar_url, login, bio, company = '', blog, email, location = '', twitter_username }
 }: ProfileInfoProps) {
 	const fields: Array<ProfileFieldProps> = [
 		{ label: company, type: 'company' },
@@ -16,10 +16,10 @@ export default function ProfileInfo({
 		{
 			label: `@${twitter_username}`,
 			type: 'twitter',
-			href: { protocol: 'https', hostname: 'twitter', host: 'twitter.com', pathname: twitter_username },
+			href: { protocol: 'https', hostname: 'twitter', host: 'twitter.com', pathname: twitter_username }
 		},
 		{ label: 'Facebook', type: 'blog', href: { pathname: blog } },
-		{ label: email, type: 'mail', href: { pathname: `mailto:${email}` } },
+		{ label: email, type: 'mail', href: { pathname: `mailto:${email}` } }
 	];
 
 	return (

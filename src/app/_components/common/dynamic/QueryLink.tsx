@@ -33,14 +33,14 @@ export default function QueryLink({
 			className={cn(
 				{ '!no-animation !pointer-events-none !cursor-default': isActive },
 				{ 'btn-disabled': disabled },
-				className,
+				className
 			)}
 			href={
 				moduleId
 					? `/${moduleId}${queryToParamsString({
 							...(isOverridden ? {} : searchQuery),
 							...query,
-							...(resetPage ? { page: null } : {}),
+							...(resetPage ? { page: null } : {})
 						})}`
 					: '/'
 			}

@@ -4,7 +4,7 @@ import {
 	genericBooleanishEnumSchema,
 	genericStringSchema,
 	nodeEnvEnumSchema,
-	providerIdEnumValidator,
+	providerIdEnumValidator
 } from '@root/types/common/zod';
 import { capitalize } from '@root/utils/common';
 import { createEnv } from '@t3-oss/env-nextjs';
@@ -29,7 +29,7 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_PATH: genericStringSchema.catch('-'),
 		NEXT_PUBLIC_ALLOW_AUTH_PROVIDER: genericStringSchema
 			.catch('')
-			.transform(val => z.array(providerIdEnumValidator).catch([]).parse(val.split(','))),
+			.transform(val => z.array(providerIdEnumValidator).catch([]).parse(val.split(',')))
 	},
 	server: {
 		PGURL_NONPOOLING: genericStringSchema.catch(''),
@@ -42,7 +42,7 @@ export const env = createEnv({
 
 		NEXTAUTH_URL: genericStringSchema.catch(''),
 		NEXTAUTH_SECRET: genericStringSchema.catch(''),
-		IS_NEXTJS_ENV: genericBooleanishEnumSchema.catch('true'),
+		IS_NEXTJS_ENV: genericBooleanishEnumSchema.catch('true')
 	},
 	runtimeEnv: {
 		NEXT_PUBLIC_APP_HOST: process.env.NEXT_PUBLIC_APP_HOST,
@@ -72,7 +72,7 @@ export const env = createEnv({
 
 		NEXTAUTH_URL: process.env.NEXTAUTH_URL,
 		NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
-		IS_NEXTJS_ENV: process.env.IS_NEXTJS_ENV,
+		IS_NEXTJS_ENV: process.env.IS_NEXTJS_ENV
 	},
-	skipValidation: !!process.env.SKIP_ENV_VALIDATION,
+	skipValidation: !!process.env.SKIP_ENV_VALIDATION
 });

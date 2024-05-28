@@ -5,7 +5,7 @@ import { useCookies } from './useCookies';
 
 export function useTheme<const V extends string>(
 	defaultTheme: V,
-	themeSelectList: Array<SelectOptionItem<V>>,
+	themeSelectList: Array<SelectOptionItem<V>>
 ): Readonly<[SelectOptionItem<V>, SetSelectOptionItem<V>]> {
 	const [theme, setTheme] = useCookies<V>(KEY_BINDING_DICTIONARY.THEME_COOKIE_KEY, defaultTheme);
 
@@ -21,7 +21,7 @@ export function useTheme<const V extends string>(
 
 			setTheme(cur.value!, { path: '/' });
 		},
-		[setTheme, themeSelect],
+		[setTheme, themeSelect]
 	);
 
 	return [themeSelect, setThemeSelected] as const;

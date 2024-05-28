@@ -36,7 +36,7 @@ export default function SortControl({ moduleId, searchQuery }: Props) {
 							key={sortField}
 							className={cn(
 								'btn btn-ghost no-animation btn-xs z-10 rounded-none border-0 font-bold capitalize',
-								{ 'text-primary-content': currentSortBy === sortField },
+								{ 'text-primary-content': currentSortBy === sortField }
 							)}
 							href={{ query: { sortBy: sortField, direction: 'asc' } }}
 							isActive={currentSortBy === sortField}
@@ -64,7 +64,7 @@ export default function SortControl({ moduleId, searchQuery }: Props) {
 							key={dir}
 							className={cn(
 								'btn btn-ghost no-animation btn-xs z-10 rounded-none border-0 font-bold capitalize',
-								{ 'text-primary-content': dir === currentDirection },
+								{ 'text-primary-content': dir === currentDirection }
 							)}
 							href={{ query: { direction: dir } }}
 							isActive={dir === currentDirection}

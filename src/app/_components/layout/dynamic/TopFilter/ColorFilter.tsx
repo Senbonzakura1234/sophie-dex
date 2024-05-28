@@ -8,7 +8,7 @@ import { cn } from '@root/utils/common';
 
 const colorDefaultSelect = {
 	value: null,
-	label: 'Color',
+	label: 'Color'
 } as const;
 
 const colorSelectList: Array<SelectOptionItem<ColorEnum>> = [
@@ -20,12 +20,12 @@ const colorSelectList: Array<SelectOptionItem<ColorEnum>> = [
 				aria-hidden
 				className={cn(
 					'card aspect-square h-4 border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5',
-					colorTWClassMap[color].background,
+					colorTWClassMap[color].background
 				)}
 				key={color}
 			/>
-		),
-	})),
+		)
+	}))
 ];
 
 export default function ColorFilter() {

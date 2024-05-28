@@ -22,7 +22,7 @@ import RumorTypeFilter from './RumorTypeFilter';
 import SortControl from './SortControl';
 
 const SearchInput = dynamic(() => import('@components/layout/dynamic/TopFilter/SearchInput'), {
-	loading: () => <div className='h-8 w-full' />,
+	loading: () => <div className='h-8 w-full' />
 });
 
 const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 3 }).format;
@@ -30,7 +30,7 @@ const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits:
 const getPaginateInfo = (
 	curPage: SearchQuery['page'],
 	totalRecord: number,
-	moduleId: NonNullable<ReturnType<typeof useModuleId>['moduleId']>,
+	moduleId: NonNullable<ReturnType<typeof useModuleId>['moduleId']>
 ) => {
 	const page = curPage || 1;
 
@@ -46,7 +46,7 @@ export default function TopFilter() {
 	const { searchQuery } = useSearchQuery();
 
 	const {
-		meta: { totalPage, totalRecord },
+		meta: { totalPage, totalRecord }
 	} = useListQueryMeta({ moduleId, searchQuery });
 
 	const paginateInfo = getPaginateInfo(searchQuery.page, totalRecord, moduleId);

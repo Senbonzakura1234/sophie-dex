@@ -9,7 +9,7 @@ const className = {
 	GREEN: 'app-text-shadow-GREEN text-base-200 dark:text-base-content',
 	RED: 'app-text-shadow-RED text-base-200 dark:text-base-content',
 	WHITE: 'app-text-shadow-WHITE text-base-200 dark:text-base-content',
-	YELLOW: 'app-text-shadow-YELLOW text-base-200 dark:text-base-content',
+	YELLOW: 'app-text-shadow-YELLOW text-base-200 dark:text-base-content'
 } satisfies TextShadowMap<ColorEnum>;
 
 export default function Level({ level, color }: LevelProps) {
@@ -18,7 +18,7 @@ export default function Level({ level, color }: LevelProps) {
 			aria-hidden
 			className={cn(
 				'absolute right-8 top-8 grid w-10 select-none place-content-center gap-1 text-center font-bold leading-[0.5]',
-				className[color],
+				className[color]
 			)}
 		>
 			<div className='text-center text-xs md:text-lg'>Lv</div>

@@ -13,7 +13,7 @@ const getFontData = async (): Promise<FontList> => {
 
 	const dataResult = await tryCatchHandler(
 		fetch(url).then(res => res.arrayBuffer()),
-		'getFontData.fetch',
+		'getFontData.fetch'
 	);
 
 	if (!dataResult.isSuccess) return undefined;
@@ -42,6 +42,6 @@ export async function GET() {
 				</div>
 			</div>
 		),
-		{ width: 1200, height: 630, fonts: await getFontData() },
+		{ width: 1200, height: 630, fonts: await getFontData() }
 	);
 }

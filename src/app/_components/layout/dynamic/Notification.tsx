@@ -15,7 +15,7 @@ const alertIconMap = {
 	ERROR: ExclamationCircle,
 	INFO: InfoIcon,
 	SUCCESS: CheckCircleIcon,
-	WARN: ExclamationTriangle,
+	WARN: ExclamationTriangle
 } satisfies Record<AlertTypeEnum, FC<IconProps>>;
 
 export default function Notification({ message, type = 'INFO', isOpen }: NotificationProps) {
@@ -31,14 +31,14 @@ export default function Notification({ message, type = 'INFO', isOpen }: Notific
 						'toast toast-center lg:toast-start toast-bottom z-50 transition-[transform,opacity] ease-in-out',
 						isOpen
 							? 'translate-y-0 lg:translate-x-0 opacity-100'
-							: 'translate-y-full lg:translate-y-0 lg:-translate-x-full opacity-0',
+							: 'translate-y-full lg:translate-y-0 lg:-translate-x-full opacity-0'
 					)}
 				>
 					<div className='card bg-gradient-to-br from-accent to-primary p-1 shadow-lg shadow-primary'>
 						<div
 							className={cn(
 								'flex gap-2 rounded-[inherit] border-none bg-base-100 px-4 py-3 font-bold shadow-inner shadow-base-content',
-								colorTWClassMap[alertTypeColorMap[type]].background,
+								colorTWClassMap[alertTypeColorMap[type]].background
 							)}
 						>
 							<Icon className='aspect-square h-6' />
@@ -47,7 +47,7 @@ export default function Notification({ message, type = 'INFO', isOpen }: Notific
 						</div>
 					</div>
 				</div>,
-				window.document.body,
+				window.document.body
 			)}
 		</>
 	);

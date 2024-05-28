@@ -9,7 +9,7 @@ export default function APIProfileWrapper() {
 	const {
 		data,
 		error,
-		status: queryStatus,
+		status: queryStatus
 	} = ApiClientCtx.user.getProfile.useQuery(undefined, { refetchOnMount: true, refetchOnWindowFocus: true });
 
 	if (queryStatus === 'pending') return <RecordPlaceholder className='mx-auto min-h-80 w-full max-w-lg' />;

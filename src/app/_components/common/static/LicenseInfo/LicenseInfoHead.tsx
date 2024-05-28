@@ -30,7 +30,7 @@ export default function LicenseInfoHead({ description, name }: LicenseInfoHeadPr
 								protocol: 'https',
 								hostname: 'github',
 								host: 'github.com',
-								pathname: `/${env.NEXT_PUBLIC_APP_PATH}/blob/main/LICENSE`,
+								pathname: `/${env.NEXT_PUBLIC_APP_PATH}/blob/main/LICENSE`
 							}}
 							target='_blank'
 						>

@@ -13,7 +13,7 @@ export default function RelatedCategories({ relatedCategories, search }: Related
 
 	const checkIsActive = useCallback(
 		(r: RelatedCategoryEnum) => r === searchQuery.relatedCategory,
-		[searchQuery.relatedCategory],
+		[searchQuery.relatedCategory]
 	);
 
 	return (

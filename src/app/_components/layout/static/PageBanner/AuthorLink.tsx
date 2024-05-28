@@ -11,7 +11,7 @@ export default function AuthorLink() {
 				protocol: 'https',
 				hostname: 'github',
 				host: 'github.com',
-				pathname: env.NEXT_PUBLIC_APP_AUTHOR,
+				pathname: env.NEXT_PUBLIC_APP_AUTHOR
 			}}
 			prefetch={false}
 			target='_blank'

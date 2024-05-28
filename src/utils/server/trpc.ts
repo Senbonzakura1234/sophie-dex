@@ -10,5 +10,5 @@ export const getApiServerCtx = async () =>
 	createServerSideHelpers({
 		router: appRouter,
 		ctx: { sessionResult: await getSessionResult() },
-		queryClientConfig: { defaultOptions: defaultTRPCQueryOptions },
+		queryClientConfig: { defaultOptions: defaultTRPCQueryOptions }
 	});

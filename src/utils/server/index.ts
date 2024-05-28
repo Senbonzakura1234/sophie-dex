@@ -21,14 +21,14 @@ export const getSessionResult = async () => {
 		return {
 			isSuccess: false as const,
 			result: null,
-			error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }),
+			error: new APIError({ code: 'INTERNAL_SERVER_ERROR' })
 		} satisfies Awaited<APIResult>;
 
 	if (!sessionRes.data || !sessionRes.data.user?.name || !sessionRes.data.user?.email)
 		return {
 			isSuccess: false as const,
 			result: null,
-			error: new APIError({ code: 'UNAUTHORIZED' }),
+			error: new APIError({ code: 'UNAUTHORIZED' })
 		} satisfies Awaited<APIResult>;
 
 	return {
@@ -36,11 +36,11 @@ export const getSessionResult = async () => {
 			user: {
 				email: sessionRes.data.user.email,
 				image: sessionRes.data.user.image,
-				name: sessionRes.data.user.name,
+				name: sessionRes.data.user.name
 			},
-			expires: sessionRes.data.expires,
+			expires: sessionRes.data.expires
 		},
 		isSuccess: true as const,
-		error: null,
+		error: null
 	};
 };

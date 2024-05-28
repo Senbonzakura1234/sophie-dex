@@ -11,7 +11,7 @@ export default function BottomFilter() {
 	const { moduleId = 'effect' } = useModuleId();
 
 	const {
-		meta: { totalPage },
+		meta: { totalPage }
 	} = useListQueryMeta({ moduleId, searchQuery });
 
 	return (

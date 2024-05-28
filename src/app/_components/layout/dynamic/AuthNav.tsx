@@ -37,7 +37,7 @@ export default function AuthNav() {
 									<div className='text-sm'>{session.user?.email}</div>
 								</div>
 							</>
-						),
+						)
 					},
 					{ type: 'separator' },
 					{
@@ -47,7 +47,7 @@ export default function AuthNav() {
 								<ProfileIcon className='aspect-square w-5' /> Profile
 							</>
 						),
-						href: '/profile',
+						href: '/profile'
 					},
 					{
 						type: 'button',
@@ -58,8 +58,8 @@ export default function AuthNav() {
 							</>
 						),
 						onClick: () => signOut(),
-						className: 'text-primary',
-					},
+						className: 'text-primary'
+					}
 				]}
 				buttonLabel={
 					<>

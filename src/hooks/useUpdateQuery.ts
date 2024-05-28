@@ -16,7 +16,7 @@ export const useUpdateQuery = () => {
 			if (typeof moduleId === 'undefined') return;
 			push(`/${moduleId}${queryToParamsString({ ...searchQuery, page: null, ...nextQuery })}`);
 		},
-		[moduleId, push, searchQuery],
+		[moduleId, push, searchQuery]
 	);
 
 	return { searchQuery, moduleId, updateQuery };

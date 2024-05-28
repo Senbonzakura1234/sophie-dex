@@ -42,7 +42,7 @@ export const effects = pgTable('effects', {
 	moduleId: varchar('module_id', { enum: ['effect'], length: 100 }).notNull(),
 
 	index: smallint('index').notNull(),
-	description: varchar('description', { length: 256 }).notNull(),
+	description: varchar('description', { length: 256 }).notNull()
 });
 
 export const items = pgTable('items', {
@@ -59,7 +59,7 @@ export const items = pgTable('items', {
 	recipeIdea: jsonb('recipe_idea').$type<HyperLinkMap>(),
 	recipeType: varchar('recipe_type', { enum: recipeTypeList, length: 100 }),
 	relatedCategories: varchar('related_categories', { enum: relatedCategoryList, length: 100 }).array().notNull(),
-	traitPresent: jsonb('trait_present').$type<HyperLinkRecord>(),
+	traitPresent: jsonb('trait_present').$type<HyperLinkRecord>()
 });
 
 export const rumors = pgTable('rumors', {
@@ -71,7 +71,7 @@ export const rumors = pgTable('rumors', {
 	description: jsonb('description').$type<HyperLinkMap>().notNull(),
 	location: varchar('location', { length: 256 }).notNull(),
 	price: smallint('price').notNull(),
-	rumorType: varchar('rumor_type', { enum: rumorTypeList, length: 100 }).notNull(),
+	rumorType: varchar('rumor_type', { enum: rumorTypeList, length: 100 }).notNull()
 });
 
 export const traits = pgTable('traits', {
@@ -84,7 +84,7 @@ export const traits = pgTable('traits', {
 	description: varchar('description', { length: 256 }).notNull(),
 	index: smallint('index').notNull(),
 	itemPresent: jsonb('item_present').$type<HyperLinkRecord>(),
-	mergeFrom: jsonb('merge_from').$type<Array<[HyperLinkRecord, HyperLinkRecord]>>().notNull(),
+	mergeFrom: jsonb('merge_from').$type<Array<[HyperLinkRecord, HyperLinkRecord]>>().notNull()
 });
 
 export const users = pgTable('users', {
@@ -111,7 +111,7 @@ export const users = pgTable('users', {
 		.$default(() => []),
 
 	createdAt: timestamp('created_at', { precision: 6, withTimezone: true, mode: 'string' }).defaultNow(),
-	updatedAt: timestamp('updated_at', { precision: 6, withTimezone: true, mode: 'string' }),
+	updatedAt: timestamp('updated_at', { precision: 6, withTimezone: true, mode: 'string' })
 });
 
 //#endregion

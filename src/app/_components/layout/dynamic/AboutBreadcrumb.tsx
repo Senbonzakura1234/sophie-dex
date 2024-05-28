@@ -25,7 +25,7 @@ export default function AboutBreadcrumb() {
 						href={`/${path}`}
 						className={cn(
 							'btn btn-ghost no-animation z-10 h-auto rounded-none border-0 py-3 font-bold capitalize visited:text-accent',
-							{ '!text-base-content': segment === path },
+							{ '!text-base-content': segment === path }
 						)}
 					>
 						{path === 'about' ? <InfoIcon className='aspect-square h-5 text-primary' /> : null}

@@ -2,3 +2,4 @@
 backup
 .editorconfig
 drizzle.config.ts
+src/server/postgresql/repository/seed

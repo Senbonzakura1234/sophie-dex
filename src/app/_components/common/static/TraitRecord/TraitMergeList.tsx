@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 const ShareButton = dynamic(() => import('@components/common/dynamic/ShareButton'), {
-	loading: () => <PulsePlaceHolder className='aspect-square h-6 rounded-lg' />,
+	loading: () => <PulsePlaceHolder className='aspect-square h-6 rounded-lg' />
 });
 
 type TraitMergeListProps = { mergeFrom: Array<[HyperLinkRecord, HyperLinkRecord]>; search: string | undefined };
@@ -24,7 +24,7 @@ export default function TraitMergeList({ mergeFrom, search }: TraitMergeListProp
 							input={{
 								text: firstTrait.name,
 								title: firstTrait.name,
-								url: `/${firstTrait.table}/${firstTrait.id}`,
+								url: `/${firstTrait.table}/${firstTrait.id}`
 							}}
 						/>
 
@@ -59,7 +59,7 @@ export default function TraitMergeList({ mergeFrom, search }: TraitMergeListProp
 							input={{
 								text: lastTrait.name,
 								title: lastTrait.name,
-								url: `/${lastTrait.table}/${lastTrait.id}`,
+								url: `/${lastTrait.table}/${lastTrait.id}`
 							}}
 						/>
 					</div>

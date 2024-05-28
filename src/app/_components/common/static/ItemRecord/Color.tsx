@@ -24,7 +24,7 @@ export default function Color({ color }: ColorProps) {
 				className={cn(
 					'btn btn-xs !border-current !bg-current shadow-current',
 					{ 'shadow-md': !isActive },
-					background,
+					background
 				)}
 				href={{ query: { color, id: null } }}
 				isActive={isActive}

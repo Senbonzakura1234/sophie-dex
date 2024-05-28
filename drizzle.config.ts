@@ -7,7 +7,7 @@ const config: Config = {
 	dialect: 'postgresql',
 	breakpoints: true,
 	tablesFilter: [`${env.NEXT_PUBLIC_APP_DB_PREFIX}-_*`],
-	dbCredentials: { url: env.PGURL_NONPOOLING },
+	dbCredentials: { url: env.PGURL_NONPOOLING }
 };
 
 export default config;

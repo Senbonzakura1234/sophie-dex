@@ -6,7 +6,7 @@ import type {
 	ModuleIdEnum,
 	RecipeTypeEnum,
 	RumorTypeEnum,
-	SortByEnum,
+	SortByEnum
 } from '@root/types/common/zod';
 import { evnIs } from '@root/utils/common';
 import type { DefaultOptions } from '@tanstack/react-query';
@@ -21,14 +21,14 @@ export const colorTWClassMap = {
 	GREEN: { background: 'text-green-500', foreground: 'text-slate-950' },
 	RED: { background: 'text-red-500', foreground: 'text-slate-950' },
 	WHITE: { background: 'text-slate-500', foreground: 'text-slate-50' },
-	YELLOW: { background: 'text-yellow-500', foreground: 'text-slate-950' },
+	YELLOW: { background: 'text-yellow-500', foreground: 'text-slate-950' }
 } as const satisfies Record<ColorEnum, { background: string; foreground: string }>;
 
 export const alertTypeColorMap = {
 	ERROR: 'RED',
 	INFO: 'BLUE',
 	SUCCESS: 'GREEN',
-	WARN: 'YELLOW',
+	WARN: 'YELLOW'
 } as const satisfies Record<AlertTypeEnum, ColorEnum>;
 
 export const recipeTypeColorMap = {
@@ -36,29 +36,29 @@ export const recipeTypeColorMap = {
 	GROWTH_RECIPES: 'BLUE',
 	HOPE_RECIPES: 'GREEN',
 	DREAM_RECIPES: 'YELLOW',
-	MYSTERY_RECIPES: 'WHITE',
+	MYSTERY_RECIPES: 'WHITE'
 } as const satisfies Record<RecipeTypeEnum, ColorEnum>;
 
 export const rumorTypeColorMap = {
 	MONSTER: colorTWClassMap['RED'],
-	MATERIAL: colorTWClassMap['GREEN'],
+	MATERIAL: colorTWClassMap['GREEN']
 } as const satisfies Record<RumorTypeEnum, { background: string; foreground: string }>;
 
 export const rumorColorMap = {
 	MONSTER: 'RED',
-	MATERIAL: 'GREEN',
+	MATERIAL: 'GREEN'
 } as const satisfies Record<RumorTypeEnum, ColorEnum>;
 
 export const sortByMap = {
 	effect: ['index', 'name'],
 	item: ['index', 'level', 'name'],
 	rumor: ['price', 'name'],
-	trait: ['index', 'name'],
+	trait: ['index', 'name']
 } as const satisfies Record<ModuleIdEnum, Readonly<Array<SortByEnum>>>;
 
 export const rumorTypeIconMap = {
 	MATERIAL: 'atelier__material',
-	MONSTER: 'atelier__race-puni',
+	MONSTER: 'atelier__race-puni'
 } as const satisfies Record<RumorTypeEnum, AtelierIcon>;
 
 export const categoryIconMap = {
@@ -74,7 +74,7 @@ export const categoryIconMap = {
 	DE_BUFF_ITEM: 'atelier__type-debuff',
 	EXPLORATION: 'atelier__tool-gather',
 	BOOK: 'atelier__book',
-	MACHINE: 'atelier__category-neutralizers',
+	MACHINE: 'atelier__category-neutralizers'
 } as const satisfies Record<CategoryEnum, AtelierIcon>;
 
 export const errorMap = {
@@ -93,7 +93,7 @@ export const errorMap = {
 	CLIENT_CLOSED_REQUEST: { message: 'Client Closed Request', status: 499 },
 	INTERNAL_SERVER_ERROR: { message: 'Some Thing Wrong Server', status: 500 },
 	NOT_IMPLEMENTED: { message: 'Some Thing Wrong Server', status: 501 },
-	UNSUPPORTED_MEDIA_TYPE: { message: 'Unsupported Media Type', status: 415 },
+	UNSUPPORTED_MEDIA_TYPE: { message: 'Unsupported Media Type', status: 415 }
 } as const satisfies Record<APIError['code'], { message: string; status: number }>;
 
 export const listAboutPaths = ['about', 'license'] as const;
@@ -103,11 +103,11 @@ export const defaultTRPCQueryOptions: DefaultOptions = {
 		refetchOnMount: false,
 		refetchOnReconnect: evnIs('production'),
 		refetchOnWindowFocus: false,
-		retry: evnIs('production') ? 2 : 1,
-	},
+		retry: evnIs('production') ? 2 : 1
+	}
 };
 
 export const KEY_BINDING_DICTIONARY = {
 	THEME_COOKIE_KEY: 'theme-cookie',
-	ROOT_SCROLL_WRAPPER_ID: 'root-scroll-wrapper',
+	ROOT_SCROLL_WRAPPER_ID: 'root-scroll-wrapper'
 } as const;

@@ -1,5 +1,8 @@
-import { effectsList, itemsList, rumorsList, traitsList } from '@root/constants/seedData';
 import { postgresql } from '@root/server/postgresql/repository';
+import effectsList from '@root/server/postgresql/repository/seed/effectsList';
+import itemsList from '@root/server/postgresql/repository/seed/itemsList';
+import rumorsList from '@root/server/postgresql/repository/seed/rumorsList';
+import traitsList from '@root/server/postgresql/repository/seed/traitsList';
 import { effects, items, rumors, traits } from '@root/server/postgresql/schema';
 import { tryCatchHandler, writeLog } from '@root/utils/common';
 
@@ -15,7 +18,7 @@ const seed = async () => {
 		effectsSuccessCount: 0,
 		itemsSuccessCount: 0,
 		rumorsSuccessCount: 0,
-		traitsSuccessCount: 0,
+		traitsSuccessCount: 0
 	};
 
 	for (let i = 0; i < effectsList.length; i++) {
@@ -68,6 +71,6 @@ const seed = async () => {
 seed().then(seedResult =>
 	writeLog({
 		args: [`Seeding Complete with ${seedResult.errorList.length ? 'error' : 'no error'}\n`, { seedResult }],
-		type: seedResult.errorList.length ? 'error' : 'log',
-	}),
+		type: seedResult.errorList.length ? 'error' : 'log'
+	})
 );

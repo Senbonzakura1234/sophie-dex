@@ -58,7 +58,7 @@ export type PreparedPGQuery<TData = unknown> = PgPreparedQuery<PreparedQueryConf
 export type ImprovePick<
 	TData,
 	KRequired extends keyof TData,
-	KNonRequired extends Exclude<keyof TData, KRequired> = never,
+	KNonRequired extends Exclude<keyof TData, KRequired> = never
 > = Pick<TData, KRequired> & Partial<Pick<TData, KNonRequired>>;
 
 export type InputData = ImprovedOmit<Required<ShareData>, 'files'>;

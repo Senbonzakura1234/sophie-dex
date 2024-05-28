@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 
 type ListUseQueryFn = (
 	searchQuery: SearchQuery,
-	options: UseTRPCQueryOptions<unknown, ListMetaData, unknown>,
+	options: UseTRPCQueryOptions<unknown, ListMetaData, unknown>
 ) => QueryObserverResult<ListMetaData>;
 
 type Props = { moduleId: ModuleIdEnum; searchQuery: SearchQuery };
@@ -17,7 +17,7 @@ export function useListQueryMeta({ moduleId, searchQuery }: Props) {
 	const [meta, setMeta] = useState<ImprovedOmit<ListMetaData, 'search'>>({ totalPage: 0, totalRecord: 0 });
 
 	const { data, status } = (ApiClientCtx[moduleId].getAll.useQuery as ListUseQueryFn)(searchQuery, {
-		notifyOnChangeProps: ['data', 'error'],
+		notifyOnChangeProps: ['data', 'error']
 	});
 
 	useEffect(() => {

@@ -13,7 +13,7 @@ export default function TabWrapper({
 	selectedIndex,
 	children,
 	className,
-	activeStyleType,
+	activeStyleType
 }: TabWrapperProps) {
 	return (
 		<nav className={cn('overflow-hidden bg-base-100 shadow-lg shadow-base-content/30', className)}>
@@ -25,11 +25,11 @@ export default function TabWrapper({
 					className={cn(
 						'to absolute bottom-0 bg-primary transition-transform',
 						{ 'top-0': activeStyleType === 'background' },
-						{ 'top-[93%]': activeStyleType === 'border' },
+						{ 'top-[93%]': activeStyleType === 'border' }
 					)}
 					style={{
 						transform: `translate(calc(${100 * selectedIndex}%))`,
-						width: `calc(100%/${tabListLength})`,
+						width: `calc(100%/${tabListLength})`
 					}}
 				/>
 				{children}

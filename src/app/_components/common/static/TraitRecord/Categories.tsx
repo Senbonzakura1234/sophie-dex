@@ -26,7 +26,7 @@ function Categories({ categories }: CategoriesProps) {
 							href={{ query: { category } }}
 							className={cn(
 								'btn btn-sm shadow-md',
-								isActive ? 'btn-accent shadow-current dark:shadow-accent' : 'btn-primary shadow-primary',
+								isActive ? 'btn-accent shadow-current dark:shadow-accent' : 'btn-primary shadow-primary'
 							)}
 							isActive={isActive}
 							searchQuery={searchQuery}

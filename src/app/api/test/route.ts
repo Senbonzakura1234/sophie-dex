@@ -10,7 +10,7 @@ export async function GET() {
 		bookmarkRecordId: '01HVZGS2J0XC4Q5DP2QV0PCJ2E',
 		isBookmarked: true,
 		moduleId: 'effect',
-		username: 'Senbonzakura1234',
+		username: 'Senbonzakura1234'
 	});
 
 	const data = await postgresql.execute(query);

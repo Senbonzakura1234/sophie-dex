@@ -10,7 +10,7 @@ export default function APIListWrapper() {
 	const { searchQuery } = useSearchQuery();
 
 	const { data, error, status } = ApiClientCtx.item.getAll.useQuery(searchQuery, {
-		notifyOnChangeProps: ['data', 'error'],
+		notifyOnChangeProps: ['data', 'error']
 	});
 
 	if (status === 'success')

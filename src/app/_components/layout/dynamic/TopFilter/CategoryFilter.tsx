@@ -8,7 +8,7 @@ import { cn } from '@root/utils/common';
 
 const categoryDefaultSelect = {
 	value: null,
-	label: 'Item Category',
+	label: 'Item Category'
 } as const;
 
 const categorySelectList: Array<SelectOptionItem<CategoryEnum>> = [
@@ -21,8 +21,8 @@ const categorySelectList: Array<SelectOptionItem<CategoryEnum>> = [
 				className={cn('aspect-square h-4 font-atelier text-accent xl:h-5', categoryIconMap[category])}
 				key={category}
 			/>
-		),
-	})),
+		)
+	}))
 ];
 
 export default function CategoryFilter() {

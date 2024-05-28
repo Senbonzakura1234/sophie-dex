@@ -9,7 +9,7 @@ const handler = (req: Request) =>
 		router: appRouter,
 		createContext,
 		onError: ({ path, error }) =>
-			writeLog({ args: [`❌ tRPC failed on ${path}: ${error}`], type: 'error', hideInProd: true }),
+			writeLog({ args: [`❌ tRPC failed on ${path}: ${error}`], type: 'error', hideInProd: true })
 	});
 
 export { handler as GET, handler as POST };

@@ -16,7 +16,7 @@ const iconMap = {
 	company: OfficeIcon,
 	location: MapPinIcon,
 	mail: MailIcon,
-	twitter: TwitterSquareIcon,
+	twitter: TwitterSquareIcon
 };
 
 export default function ProfileField({ type, label, ...restProps }: ProfileFieldProps) {

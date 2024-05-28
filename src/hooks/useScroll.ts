@@ -30,7 +30,7 @@ export const useScroll = ({ onScroll, scrollElementId }: UseScrollProps) => {
 
 				onScroll({ scrollElement, isShowScrollTop, setIsShowScrollTop, scrollPosition });
 			},
-			{ passive: true },
+			{ passive: true }
 		);
 
 		return () =>

@@ -8,7 +8,7 @@ import { cn } from '@root/utils/common';
 
 const recipeTypeDefaultSelect = {
 	value: null,
-	label: 'Recipe type',
+	label: 'Recipe type'
 } as const;
 
 const recipeTypeSelectList: Array<SelectOptionItem<RecipeTypeEnum>> = [
@@ -20,19 +20,19 @@ const recipeTypeSelectList: Array<SelectOptionItem<RecipeTypeEnum>> = [
 				aria-hidden
 				className={cn(
 					'card aspect-square h-4 border-[2px] border-solid border-base-content bg-current shadow-current xl:h-5',
-					colorTWClassMap[recipeTypeColorMap[recipeType]].background,
+					colorTWClassMap[recipeTypeColorMap[recipeType]].background
 				)}
 				key={recipeType}
 			/>
-		),
-	})),
+		)
+	}))
 ];
 
 export default function RecipeTypeFilter() {
 	const [recipeTypeSelected, setRecipeTypeSelected] = useQueryOnChange(
 		'recipeType',
 		recipeTypeSelectList,
-		recipeTypeDefaultSelect,
+		recipeTypeDefaultSelect
 	);
 
 	return (

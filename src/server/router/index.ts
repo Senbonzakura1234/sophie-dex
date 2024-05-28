@@ -5,7 +5,7 @@ import {
 	getModuleBookmarks,
 	getProfile,
 	getRumors,
-	getTraits,
+	getTraits
 } from '@root/server/postgresql';
 import {
 	exportEffectsQuery,
@@ -19,13 +19,13 @@ import {
 	getEffectRecordQuery,
 	getItemRecordQuery,
 	getRumorRecordQuery,
-	getTraitRecordQuery,
+	getTraitRecordQuery
 } from '@root/server/postgresql/repository';
 import {
 	bookmarkQueryValidator,
 	idQueryValidator,
 	moduleIdQueryValidator,
-	searchQueryValidator,
+	searchQueryValidator
 } from '@root/types/common/zod';
 import { evnIs } from '@root/utils/common';
 import { getSessionResult } from '@root/utils/server';
@@ -42,10 +42,10 @@ const t = initTRPC.context<typeof createContext>().create({
 			...shape,
 			data: {
 				...shape.data,
-				zodError: error.cause instanceof ZodError ? error.cause.flatten().fieldErrors : null,
-			},
+				zodError: error.cause instanceof ZodError ? error.cause.flatten().fieldErrors : null
+			}
 		};
-	},
+	}
 });
 
 const procedure = t.procedure;
@@ -66,7 +66,7 @@ export const appRouter = t.router({
 
 		getAllIds: procedure.query(() => getAllRecordIds(getAllEffectIdsQuery)),
 
-		export: procedure.query(() => exportRecords(exportEffectsQuery)),
+		export: procedure.query(() => exportRecords(exportEffectsQuery))
 	},
 	item: {
 		getAll: procedure
@@ -77,7 +77,7 @@ export const appRouter = t.router({
 
 		getAllIds: procedure.query(() => getAllRecordIds(getAllItemIdsQuery)),
 
-		export: procedure.query(() => exportRecords(exportItemsQuery)),
+		export: procedure.query(() => exportRecords(exportItemsQuery))
 	},
 	rumor: {
 		getAll: procedure
@@ -88,7 +88,7 @@ export const appRouter = t.router({
 
 		getAllIds: procedure.query(() => getAllRecordIds(getAllRumorIdsQuery)),
 
-		export: procedure.query(() => exportRecords(exportRumorsQuery)),
+		export: procedure.query(() => exportRecords(exportRumorsQuery))
 	},
 	trait: {
 		getAll: procedure
@@ -99,7 +99,7 @@ export const appRouter = t.router({
 
 		getAllIds: procedure.query(() => getAllRecordIds(getAllTraitIdsQuery)),
 
-		export: procedure.query(() => exportRecords(exportTraitsQuery)),
+		export: procedure.query(() => exportRecords(exportTraitsQuery))
 	},
 	user: {
 		getModuleBookmarks: protectedProcedure
@@ -108,8 +108,8 @@ export const appRouter = t.router({
 		bookmark: protectedProcedure
 			.input(bookmarkQueryValidator)
 			.mutation(({ input, ctx }) => bookmarkRecord(input, ctx.sessionResult.result?.user.name || '')),
-		getProfile: protectedProcedure.query(({ ctx }) => getProfile(ctx.sessionResult.result?.user.name || '')),
-	},
+		getProfile: protectedProcedure.query(({ ctx }) => getProfile(ctx.sessionResult.result?.user.name || ''))
+	}
 });
 
 export type AppRouter = typeof appRouter;

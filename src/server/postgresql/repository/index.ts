@@ -30,7 +30,7 @@ export const getTraitRecordQuery = postgresql.query.traits
 export const getUserRecordQuery = postgresql.query.users
 	.findFirst({
 		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
-		columns: { githubProfile: true },
+		columns: { githubProfile: true }
 	})
 	.prepare('getUserRecord');
 
@@ -54,31 +54,31 @@ export const exportDBQueriesMap: ExportDBQueriesMap = {
 	effect: exportEffectsQuery,
 	item: exportItemsQuery,
 	rumor: exportRumorsQuery,
-	trait: exportTraitsQuery,
+	trait: exportTraitsQuery
 };
 
 export const getEffectBookmarksQuery = postgresql.query.users
 	.findFirst({
 		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
-		columns: { bookmarkedEffectList: true },
+		columns: { bookmarkedEffectList: true }
 	})
 	.prepare('getEffectBookmarks');
 export const getItemBookmarksQuery = postgresql.query.users
 	.findFirst({
 		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
-		columns: { bookmarkedItemList: true },
+		columns: { bookmarkedItemList: true }
 	})
 	.prepare('getItemBookmarks');
 export const getRumorBookmarksQuery = postgresql.query.users
 	.findFirst({
 		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
-		columns: { bookmarkedRumorList: true },
+		columns: { bookmarkedRumorList: true }
 	})
 	.prepare('getRumorBookmarks');
 export const getTraitBookmarksQuery = postgresql.query.users
 	.findFirst({
 		where: (schema, { eq, sql }) => eq(schema.username, sql.placeholder('username')),
-		columns: { bookmarkedTraitList: true },
+		columns: { bookmarkedTraitList: true }
 	})
 	.prepare('getTraitBookmarks');
 
@@ -86,7 +86,7 @@ export const getBookmarksQueriesMap = {
 	effect: getEffectBookmarksQuery,
 	item: getItemBookmarksQuery,
 	rumor: getRumorBookmarksQuery,
-	trait: getTraitBookmarksQuery,
+	trait: getTraitBookmarksQuery
 };
 
 type GetToggleBookmarkQuery = { username: string } & BookmarkQuery;
@@ -95,7 +95,7 @@ export const getToggleBookmarkQuery = ({
 	bookmarkRecordId,
 	isBookmarked,
 	moduleId,
-	username,
+	username
 }: GetToggleBookmarkQuery) => {
 	const columnName = users[`bookmarked${capitalize(moduleId)}List`].name;
 	const updateCommand = isBookmarked ? 'array_remove' : 'array_append';

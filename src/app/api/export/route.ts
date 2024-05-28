@@ -17,16 +17,16 @@ const onExport = () =>
 					JSON.stringify(
 						exportData.data.map(item => ({ ...item, id: ulid() })),
 						null,
-						2,
-					),
+						2
+					)
 				),
-				'exportDataQuery.writeFile',
+				'exportDataQuery.writeFile'
 			);
 
 			if (!writeFileResult.isSuccess) return { table, error: 'write-error', isSuccess: false } as const;
 
 			return { table, error: null, isSuccess: true } as const;
-		}),
+		})
 	);
 
 export type ExportResult = Awaited<ReturnType<typeof onExport>>;

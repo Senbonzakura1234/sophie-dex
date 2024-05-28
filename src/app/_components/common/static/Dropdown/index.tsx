@@ -33,7 +33,7 @@ export default function Dropdown({ buttonLabel: buttonText, className, items, an
 				as='button'
 				className={cn(
 					'relative gap-2 flex h-8 xl:h-9 items-center w-full cursor-pointer rounded-lg bg-base-100 px-4 text-left text-xs font-bold shadow-lg shadow-base-content/20 focus:outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-base-100/75 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary xl:text-sm',
-					className?.menuBtn,
+					className?.menuBtn
 				)}
 			>
 				{buttonText}
@@ -51,7 +51,7 @@ export default function Dropdown({ buttonLabel: buttonText, className, items, an
 					anchor={anchor}
 					className={cn(
 						'legacy-scroll-area w-full z-50 max-h-52 overflow-auto rounded-md bg-base-100 py-1 shadow-lg shadow-base-content/30',
-						className?.dropdown,
+						className?.dropdown
 					)}
 				>
 					{items.map((item, key) => {
@@ -70,7 +70,7 @@ export default function Dropdown({ buttonLabel: buttonText, className, items, an
 									className={cn(
 										'w-full flex select-none gap-2 bg-base-100 px-4 py-2 transition-[background]',
 										className?.item,
-										item.className,
+										item.className
 									)}
 								>
 									{item.label}
@@ -86,7 +86,7 @@ export default function Dropdown({ buttonLabel: buttonText, className, items, an
 									className={cn(
 										'w-full flex cursor-pointer select-none gap-2 bg-base-100 px-4 py-2 transition-[background] data-[focus]:bg-primary/10 data-[focus]:font-bold data-[focus]:text-primary',
 										className?.item,
-										item.className,
+										item.className
 									)}
 								>
 									{item.label}
@@ -101,7 +101,7 @@ export default function Dropdown({ buttonLabel: buttonText, className, items, an
 								className={cn(
 									'w-full flex cursor-pointer select-none gap-2 bg-base-100 px-4 py-2 transition-[background] data-[focus]:bg-primary/10 data-[focus]:font-bold data-[focus]:text-primary',
 									className?.item,
-									item.className,
+									item.className
 								)}
 							>
 								{item.label}

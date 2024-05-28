@@ -11,7 +11,7 @@ export default async function AppVersion({ className }: Props) {
 		<div
 			className={cn(
 				'rounded-full bg-primary px-3 py-1 text-xs font-bold leading-none text-primary-content shadow-lg shadow-base-content/30',
-				className,
+				className
 			)}
 		>
 			v{result?.version}

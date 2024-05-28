@@ -17,9 +17,9 @@ export const useShareAPI = (input: InputData) => {
 					if (typeof window.navigator.clipboard.writeText !== 'function') return false;
 
 					return true;
-				}, 'useShareAPI.isCanCopy').data,
+				}, 'useShareAPI.isCanCopy').data
 			),
-		[],
+		[]
 	);
 
 	const isCanShare = useMemo(
@@ -39,9 +39,9 @@ export const useShareAPI = (input: InputData) => {
 					if (typeof window.navigator.canShare !== 'function') return false;
 
 					return Boolean(window.navigator.canShare(input));
-				}, 'useShareAPI.isCanShare').data,
+				}, 'useShareAPI.isCanShare').data
 			),
-		[input],
+		[input]
 	);
 
 	const share = useCallback(async () => {
@@ -52,7 +52,7 @@ export const useShareAPI = (input: InputData) => {
 
 		const { isSuccess } = await tryCatchHandler(
 			window.navigator.clipboard.writeText(`${getBaseUrl()}${input.url}`),
-			'share.clipboardWriteText',
+			'share.clipboardWriteText'
 		);
 
 		if (isSuccess) return setShareNotification({ isOpen: true, message: 'Url copied to clipboard', type: 'SUCCESS' });

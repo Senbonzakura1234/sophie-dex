@@ -1,3 +1,5 @@
+// @ts-check
+
 /** @type {import('prettier').Config} */
 module.exports = {
 	arrowParens: 'avoid',
@@ -8,6 +10,6 @@ module.exports = {
 	printWidth: 120,
 	singleQuote: true,
 	tabWidth: 3,
-	trailingComma: 'all',
+	trailingComma: 'none',
 	useTabs: true,
 };

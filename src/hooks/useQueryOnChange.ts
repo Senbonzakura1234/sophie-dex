@@ -12,7 +12,7 @@ type SelectQueryKey = keyof Pick<
 export function useQueryOnChange<const V extends SearchQuery[SelectQueryKey]>(
 	key: SelectQueryKey,
 	list: Array<SelectOptionItem<V>>,
-	defaultValue: SelectOptionItem<V>,
+	defaultValue: SelectOptionItem<V>
 ): Readonly<[SelectOptionItem<V>, SetSelectOptionItem<V>]> {
 	const { searchQuery, updateQuery, moduleId } = useUpdateQuery();
 
@@ -35,7 +35,7 @@ export function useQueryOnChange<const V extends SearchQuery[SelectQueryKey]>(
 
 			if (cur.value !== selectOptionItem.value) updateQuery({ [key]: cur.value });
 		},
-		[defaultValue, key, selectOptionItem.value, updateQuery],
+		[defaultValue, key, selectOptionItem.value, updateQuery]
 	);
 
 	return [selectOptionItem, setSelectOptionItem] as const;

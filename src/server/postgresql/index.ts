@@ -6,7 +6,7 @@ import {
 	getBookmarksQueriesMap,
 	getToggleBookmarkQuery,
 	getUserRecordQuery,
-	postgresql,
+	postgresql
 } from '@root/server/postgresql/repository';
 import type { CommonRecord, Effect, Item, Rumor, Trait, User } from '@root/server/postgresql/schema';
 import { users } from '@root/server/postgresql/schema';
@@ -20,7 +20,7 @@ import { arrayOverlaps, eq } from 'drizzle-orm';
 import type { PgRelationalQuery } from 'drizzle-orm/pg-core/query-builders/query';
 
 const countQueryFunc = (_: unknown, { sql: sqlFunc }: { sql: typeof sql }) => ({
-	totalRecord: sqlFunc<number>`count(*) over()`.as('total_record'),
+	totalRecord: sqlFunc<number>`count(*) over()`.as('total_record')
 });
 
 const getOffset = (page: number | null) => ((page ?? 1) - 1) * DEFAULT_LIMIT;
@@ -28,7 +28,7 @@ const getOffset = (page: number | null) => ((page ?? 1) - 1) * DEFAULT_LIMIT;
 const getSortField = <TSearch extends Readonly<SortByEnum>>(
 	allowedSortField: Readonly<Array<TSearch>>,
 	defaultSortField: TSearch,
-	sortBy: SortByEnum | null,
+	sortBy: SortByEnum | null
 ) => (arrayInclude(allowedSortField, sortBy) ? sortBy : defaultSortField);
 
 type GetListRecordProp<TRecord extends CommonRecord> =
@@ -54,7 +54,7 @@ const getListRecord = async <TRecord extends CommonRecord>(args: GetListRecordPr
 
 	const [totalRecord, records] = [
 		data[0]?.totalRecord ?? 0,
-		data.map(({ totalRecord: _, ...record }) => record),
+		data.map(({ totalRecord: _, ...record }) => record)
 	] as const;
 
 	return { records, totalRecord, totalPage: Math.ceil(totalRecord / DEFAULT_LIMIT), search: searchValue || undefined };
@@ -88,7 +88,7 @@ export const getEffects = async (input: SearchQuery, username: string | undefine
 		extras: countQueryFunc,
 		limit: DEFAULT_LIMIT,
 		orderBy: (schema, { asc, desc }) => [
-			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.effect, 'index', sortBy)]),
+			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.effect, 'index', sortBy)])
 		],
 		offset: getOffset(page),
 		where: (schema, { or, and, ilike, inArray }) => {
@@ -96,7 +96,7 @@ export const getEffects = async (input: SearchQuery, username: string | undefine
 				? [
 						ilike(schema.name, `%${searchValue}%`),
 						ilike(schema.description, `%${searchValue}%`),
-						ilike(schema.keyWords, `%${searchValue}%`),
+						ilike(schema.keyWords, `%${searchValue}%`)
 					]
 				: [];
 
@@ -105,7 +105,7 @@ export const getEffects = async (input: SearchQuery, username: string | undefine
 			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
 			return and(or(...OR), ...AND);
-		},
+		}
 	});
 
 	return getListRecord<Effect>({ query, searchValue, isEmptyBookmark: false });
@@ -136,7 +136,7 @@ export const getItems = async (input: SearchQuery, username: string | undefined)
 		extras: (_, { sql }) => ({ totalRecord: sql<number>`count(*) over()`.as('total_record') }),
 		limit: DEFAULT_LIMIT,
 		orderBy: (schema, { asc, desc }) => [
-			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.item, 'index', sortBy)]),
+			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.item, 'index', sortBy)])
 		],
 		offset: getOffset(page),
 		where: (schema, { or, and, ilike, eq, inArray }) => {
@@ -152,7 +152,7 @@ export const getItems = async (input: SearchQuery, username: string | undefined)
 			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
 			return and(or(...OR), ...AND);
-		},
+		}
 	});
 
 	return getListRecord<Item>({ query, searchValue, isEmptyBookmark: false });
@@ -183,7 +183,7 @@ export const getRumors = async (input: SearchQuery, username: string | undefined
 		extras: countQueryFunc,
 		limit: DEFAULT_LIMIT,
 		orderBy: (schema, { asc, desc }) => [
-			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.rumor, 'price', sortBy)]),
+			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.rumor, 'price', sortBy)])
 		],
 		offset: getOffset(page),
 		where: (schema, { or, and, ilike, eq, inArray }) => {
@@ -196,7 +196,7 @@ export const getRumors = async (input: SearchQuery, username: string | undefined
 			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
 			return and(or(...OR), ...AND);
-		},
+		}
 	});
 
 	return getListRecord<Rumor>({ query, searchValue, isEmptyBookmark: false });
@@ -227,7 +227,7 @@ export const getTraits = async (input: SearchQuery, username: string | undefined
 		extras: countQueryFunc,
 		limit: DEFAULT_LIMIT,
 		orderBy: (schema, { asc, desc }) => [
-			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.trait, 'index', sortBy)]),
+			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.trait, 'index', sortBy)])
 		],
 		offset: getOffset(page),
 		where: (schema, { or, and, ilike, inArray }) => {
@@ -235,7 +235,7 @@ export const getTraits = async (input: SearchQuery, username: string | undefined
 				? [
 						ilike(schema.name, `%${searchValue}%`),
 						ilike(schema.description, `%${searchValue}%`),
-						ilike(schema.keyWords, `%${searchValue}%`),
+						ilike(schema.keyWords, `%${searchValue}%`)
 					]
 				: [];
 
@@ -244,7 +244,7 @@ export const getTraits = async (input: SearchQuery, username: string | undefined
 			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
 			return and(or(...OR), ...AND);
-		},
+		}
 	});
 
 	return getListRecord<Trait>({ query, searchValue, isEmptyBookmark: false });
@@ -253,7 +253,7 @@ export const getTraits = async (input: SearchQuery, username: string | undefined
 export const checkUserExist = (username: string) =>
 	postgresql.query.users
 		.findFirst({
-			where: eq(users.username, username),
+			where: eq(users.username, username)
 		})
 		.then(value => Boolean(value))
 		.catch(() => false);
@@ -297,7 +297,7 @@ export const insertOrUpdateUser = async ({ isUpdate, userData }: InsertOrUpdateU
 export const getProfile = async (username: string): APIResult<GithubUserInfo> => {
 	const { data, isSuccess } = await tryCatchHandler(
 		getUserRecordQuery.execute({ username }),
-		'getProfile.executeQuery',
+		'getProfile.executeQuery'
 	);
 
 	if (!isSuccess) return { isSuccess: false, result: null, error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }) };
@@ -306,7 +306,7 @@ export const getProfile = async (username: string): APIResult<GithubUserInfo> =>
 		return {
 			isSuccess: false,
 			result: null,
-			error: new APIError({ code: 'NOT_FOUND', message: `User ${username} Not Found` }),
+			error: new APIError({ code: 'NOT_FOUND', message: `User ${username} Not Found` })
 		};
 
 	return { isSuccess: true, result: data.githubProfile, error: null };
@@ -320,34 +320,34 @@ const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: str
 export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery, username: string): APIResult<Array<string>> => {
 	const getModuleBookmarkRes = await tryCatchHandler(
 		onGetBookmarks(moduleId, username),
-		'getModuleBookmarks.executeQuery',
+		'getModuleBookmarks.executeQuery'
 	);
 
 	if (!getModuleBookmarkRes.isSuccess)
 		return {
 			isSuccess: false as const,
 			result: null,
-			error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }),
+			error: new APIError({ code: 'INTERNAL_SERVER_ERROR' })
 		};
 
 	if (!getModuleBookmarkRes.data)
 		return {
 			isSuccess: false as const,
 			result: null,
-			error: new APIError({ code: 'NOT_FOUND', message: 'User not found' }),
+			error: new APIError({ code: 'NOT_FOUND', message: 'User not found' })
 		};
 
 	return {
 		isSuccess: true as const,
 		result: getModuleBookmarkRes.data,
-		error: null,
+		error: null
 	};
 };
 
 export const bookmarkRecord = async ({ bookmarkRecordId, isBookmarked, moduleId }: BookmarkQuery, username: string) => {
 	const bookmarkRes = await tryCatchHandler(
 		postgresql.execute(getToggleBookmarkQuery({ bookmarkRecordId, isBookmarked, moduleId, username })),
-		'bookmarkRecord.executeQuery',
+		'bookmarkRecord.executeQuery'
 	);
 
 	if (!bookmarkRes.isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR' });

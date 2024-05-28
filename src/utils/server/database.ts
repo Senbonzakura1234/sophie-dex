@@ -12,7 +12,7 @@ import type { Metadata, ResolvingMetadata } from 'next';
 export async function generateGenericMetadata(
 	parentPromise: ResolvingMetadata,
 	extraMeta: Metadata,
-	searchParams?: PageProps['searchParams'],
+	searchParams?: PageProps['searchParams']
 ): Promise<Metadata> {
 	const { keywords } = await parentPromise;
 
@@ -23,11 +23,11 @@ export async function generateGenericMetadata(
 
 export async function generateDetailMetadata(
 	parentPromise: ResolvingMetadata,
-	getRecordPromise: ReturnType<typeof getContentRecord>,
+	getRecordPromise: ReturnType<typeof getContentRecord>
 ): Promise<Metadata> {
 	const result = await tryCatchHandler(
 		Promise.all([parentPromise, getRecordPromise]),
-		'generateDetailMetadata.getParentMetaAndRecord',
+		'generateDetailMetadata.getParentMetaAndRecord'
 	);
 
 	if (!result.isSuccess) return { title: 'Error' };
@@ -37,7 +37,7 @@ export async function generateDetailMetadata(
 	if (!record.isSuccess) return { title: 'Error' };
 
 	const {
-		data: { name, keyWords: currentKeywords },
+		data: { name, keyWords: currentKeywords }
 	} = record.result;
 
 	return { title: name, keywords: [...currentKeywords.split(','), ...(parentKeywords || [])] };
@@ -45,13 +45,13 @@ export async function generateDetailMetadata(
 
 export const getContentRecord = async <TRecord extends CommonRecord>(
 	query: PreparedPGQuery<TRecord | undefined>,
-	{ id }: IdQuery,
+	{ id }: IdQuery
 ) => {
 	if (!id)
 		return {
 			result: null,
 			isSuccess: false as const,
-			error: new APIError({ code: 'BAD_REQUEST', message: 'Invalid Record Id' }),
+			error: new APIError({ code: 'BAD_REQUEST', message: 'Invalid Record Id' })
 		} satisfies Awaited<APIResult>;
 
 	const { data, isSuccess } = await tryCatchHandler(query.execute({ id }), 'getContentRecord.execute');
@@ -60,14 +60,14 @@ export const getContentRecord = async <TRecord extends CommonRecord>(
 		return {
 			result: null,
 			isSuccess: false as const,
-			error: new APIError({ code: isSuccess ? 'NOT_FOUND' : 'INTERNAL_SERVER_ERROR' }),
+			error: new APIError({ code: isSuccess ? 'NOT_FOUND' : 'INTERNAL_SERVER_ERROR' })
 		} satisfies Awaited<APIResult>;
 
 	return { result: { data, currentId: id }, isSuccess: true as const, error: null } satisfies Awaited<APIResult>;
 };
 
 export const getAllRecordIds = async (
-	query: PreparedPGQuery<Array<{ id: string }>>,
+	query: PreparedPGQuery<Array<{ id: string }>>
 ): APIResult<Array<{ id: string }>> => {
 	const { data, isSuccess } = await tryCatchHandler(query.execute(), 'getAllRecordIds.execute');
 
@@ -77,7 +77,7 @@ export const getAllRecordIds = async (
 };
 
 export const exportRecords = async <TRecord extends CommonRecord>(
-	query: PreparedPGQuery<Array<TRecord>>,
+	query: PreparedPGQuery<Array<TRecord>>
 ): APIResult<Array<TRecord>> => {
 	const { data, isSuccess } = await tryCatchHandler(query.execute(), 'exportRecords.execute');
 
@@ -88,7 +88,7 @@ export const exportRecords = async <TRecord extends CommonRecord>(
 
 export const updateEffectKeywords = (input: Effect): Effect => ({
 	...input,
-	keyWords: [input.name, input.index].filter(Boolean).join(',').replaceAll('_', ' ').toLowerCase(),
+	keyWords: [input.name, input.index].filter(Boolean).join(',').replaceAll('_', ' ').toLowerCase()
 });
 
 export const updateItemKeywords = (input: Item): Item => ({
@@ -107,12 +107,12 @@ export const updateItemKeywords = (input: Item): Item => ({
 		input.description.rumor?.name,
 		input.description.shop,
 		...input.description.location,
-		input.description.special,
+		input.description.special
 	]
 		.filter(Boolean)
 		.join(',')
 		.replaceAll('_', ' ')
-		.toLowerCase(),
+		.toLowerCase()
 });
 
 export const updateRumorKeywords = (input: Rumor): Rumor => ({
@@ -122,12 +122,12 @@ export const updateRumorKeywords = (input: Rumor): Rumor => ({
 		input.price.toString(),
 		input.location,
 		input.rumorType,
-		...input.description.contentData.map(c => parseHyperLinkData(c).label),
+		...input.description.contentData.map(c => parseHyperLinkData(c).label)
 	]
 		.filter(Boolean)
 		.join(',')
 		.replaceAll('_', ' ')
-		.toLowerCase(),
+		.toLowerCase()
 });
 
 export const updateTraitKeywords = (input: Trait): Trait => ({
@@ -137,10 +137,10 @@ export const updateTraitKeywords = (input: Trait): Trait => ({
 		input.index.toString(),
 		input.itemPresent?.name,
 		...input.mergeFrom.map(([f, s]) => [f.name, s.name]).flat(),
-		...input.categories,
+		...input.categories
 	]
 		.filter(Boolean)
 		.join(',')
 		.replaceAll('_', ' ')
-		.toLowerCase(),
+		.toLowerCase()
 });

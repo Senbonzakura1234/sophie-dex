@@ -24,7 +24,7 @@ export default function SelectOption<V extends string | number>({
 	useCustomIcon,
 	isHideLabel,
 	customLabelText,
-	customLabelIcon,
+	customLabelIcon
 }: SelectOptionProps<V>) {
 	const isDisabled = list.length <= 1;
 

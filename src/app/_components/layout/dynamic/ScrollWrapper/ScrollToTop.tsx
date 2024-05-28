@@ -15,14 +15,14 @@ export default function ScrollToTop() {
 
 	const { isShowScrollTop, scrollToTop } = useScroll({
 		onScroll,
-		scrollElementId: KEY_BINDING_DICTIONARY.ROOT_SCROLL_WRAPPER_ID,
+		scrollElementId: KEY_BINDING_DICTIONARY.ROOT_SCROLL_WRAPPER_ID
 	});
 
 	return (
 		<div
 			className={cn(
 				'fixed bottom-0 right-6 z-30 flex place-content-center transition-[opacity,transform] duration-500',
-				isShowScrollTop ? 'opacity-1 -translate-y-6' : '-translate-y-0 opacity-0',
+				isShowScrollTop ? 'opacity-1 -translate-y-6' : '-translate-y-0 opacity-0'
 			)}
 		>
 			<button

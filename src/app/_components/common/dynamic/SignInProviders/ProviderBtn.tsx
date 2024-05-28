@@ -13,7 +13,7 @@ const classMapping = {
 	facebook: 'btn-facebook',
 	github: '',
 	google: '',
-	instagram: '',
+	instagram: ''
 } satisfies Record<ProviderIdEnum, string>;
 
 type Props = {
@@ -27,7 +27,7 @@ export default function ProviderBtn({ providerId, children, callbackUrl, id, nam
 		<button
 			className={cn(
 				'btn btn-brand btn-outline border-none w-full max-w-64 lg:max-w-80 self-center group',
-				classMapping[providerId],
+				classMapping[providerId]
 			)}
 			onClick={() => signIn(id, { callbackUrl })}
 		>

@@ -16,7 +16,7 @@ export default function AuthProvider({ children, ...props }: SessionProviderProp
 			setWelcomeNotification({
 				isOpen: true,
 				message: `Welcome back! ${props.session?.user?.name}`,
-				type: 'SUCCESS',
+				type: 'SUCCESS'
 			});
 	}, [props.session?.user?.name, setWelcomeNotification]);
 

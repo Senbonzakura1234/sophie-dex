@@ -17,7 +17,7 @@ export default function ErrorContent({ code = 'INTERNAL_SERVER_ERROR' }: ErrorCo
 			<div
 				className={cn(
 					'modal-box m-auto grid aspect-video w-11/12 cursor-default select-none place-content-center gap-1 text-center shadow-md shadow-current md:w-[600px]',
-					status >= 500 ? 'text-error' : 'text-info dark:text-primary',
+					status >= 500 ? 'text-error' : 'text-info dark:text-primary'
 				)}
 			>
 				<div className='grid gap-1'>

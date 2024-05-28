@@ -12,7 +12,7 @@ type Props = { id: string; name: string; moduleId: NonNullable<ReturnType<typeof
 
 export default function BookmarkBtn({ id, name, moduleId }: Props) {
 	const {
-		searchQuery: { bookmarked },
+		searchQuery: { bookmarked }
 	} = useSearchQuery();
 
 	const isNotBookmarkFilter = bookmarked !== 'true';
@@ -24,14 +24,14 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 	const {
 		data,
 		refetch,
-		status: queryStatus,
+		status: queryStatus
 	} = ApiClientCtx.user.getModuleBookmarks.useQuery(
 		{ moduleId },
 		{
 			enabled: sessionStatus === 'authenticated' && isNotBookmarkFilter,
 			refetchOnMount: true,
-			refetchOnWindowFocus: true,
-		},
+			refetchOnWindowFocus: true
+		}
 	);
 
 	const { mutateAsync, status: mutateStatus } = ApiClientCtx.user.bookmark.useMutation();
@@ -55,9 +55,9 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 			mutateAsync({
 				bookmarkRecordId: id,
 				moduleId,
-				isBookmarked: isNotBookmarkFilter ? isRecordBookmarked : true,
+				isBookmarked: isNotBookmarkFilter ? isRecordBookmarked : true
 			}),
-			'handleBookmark.mutateAsync',
+			'handleBookmark.mutateAsync'
 		);
 
 		if (!res.isSuccess) return await signIn();
@@ -73,7 +73,7 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 			<button
 				aria-label={`${data?.result?.includes(id) ? 'Remove' : ''} Bookmark ${name}`}
 				className={cn('btn btn-primary btn-xs capitalize dark:shadow-md dark:shadow-current', {
-					'btn-outline': !data?.result?.includes(id) && isNotBookmarkFilter,
+					'btn-outline': !data?.result?.includes(id) && isNotBookmarkFilter
 				})}
 				onClick={handleBookmark}
 				disabled={isDisabled}

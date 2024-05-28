@@ -17,10 +17,10 @@ export default function TrpcProvider({ children }: ChildrenProps) {
 			links: [
 				httpBatchLink({ url: `${getBaseUrl()}/api/trpc` }),
 				loggerLink({
-					enabled: opts => evnIs('development') || (opts.direction === 'down' && opts.result instanceof Error),
-				}),
-			],
-		}),
+					enabled: opts => evnIs('development') || (opts.direction === 'down' && opts.result instanceof Error)
+				})
+			]
+		})
 	);
 
 	return (

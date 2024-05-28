@@ -9,7 +9,7 @@ export default function ThemeWrapper({ children, className, defaultTheme: theme 
 		<body
 			className={cn(
 				arrayInclude(['forest', 'synthwave'] satisfies Array<DaisyUIThemeEnum>, theme) ? 'dark' : '',
-				className,
+				className
 			)}
 			data-theme={theme}
 		>

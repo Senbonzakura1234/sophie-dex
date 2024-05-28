@@ -9,6 +9,6 @@ export default chainingPlugin({
 	plugins: [withMDX()],
 	rootConfig: {
 		images: { remotePatterns: [{ protocol: 'https', hostname: 'avatars.githubusercontent.com', port: '' }] },
-		experimental: { typedRoutes: true },
-	},
+		experimental: { typedRoutes: true }
+	}
 });

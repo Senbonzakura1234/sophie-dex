@@ -12,7 +12,7 @@ export default function ContentWrapper({ children, type }: ContentWrapperProps) 
 				{ 'lg:grid-cols-2': type === 'list' },
 				{ ' my-auto': type === 'list' },
 				{ 'm-auto max-w-6xl': type === 'about' },
-				{ 'm-auto max-w-6xl': type === 'profile' },
+				{ 'm-auto max-w-6xl': type === 'profile' }
 			)}
 		>
 			{children}

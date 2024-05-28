@@ -18,7 +18,7 @@ export const errorList = [
 	'PAYLOAD_TOO_LARGE',
 	'UNPROCESSABLE_CONTENT',
 	'TOO_MANY_REQUESTS',
-	'CLIENT_CLOSED_REQUEST',
+	'CLIENT_CLOSED_REQUEST'
 ] as const satisfies Readonly<Array<TRPC_ERROR_CODE_KEY>>;
 
 export const booleanishList = ['false', 'true'] as const satisfies Array<`${boolean}`>;
@@ -36,7 +36,7 @@ export const recipeTypeList = [
 	'GROWTH_RECIPES',
 	'HOPE_RECIPES',
 	'DREAM_RECIPES',
-	'MYSTERY_RECIPES',
+	'MYSTERY_RECIPES'
 ] as const;
 
 export const traitCategoryList = [
@@ -48,7 +48,7 @@ export const traitCategoryList = [
 	'HEAL_ITEM',
 	'WEAPON',
 	'EXPLORATION',
-	'SYNTHESIS',
+	'SYNTHESIS'
 ] as const;
 
 export const categoryList = [...traitCategoryList, 'KEY_ITEM', 'MACHINE', 'MATERIAL', 'BOOK'] as const;
@@ -83,7 +83,7 @@ export const relatedCategoryList = [
 	'ANIMAL',
 	'INGREDIENT',
 	'PAPER',
-	'MAGIC_ITEM',
+	'MAGIC_ITEM'
 ] as const;
 
 export const sortByList = ['index', 'name', 'level', 'price'] as const;

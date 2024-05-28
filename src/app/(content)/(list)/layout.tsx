@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 const PageRefresh = dynamic(() => import('@components/layout/dynamic/PageRefresh'));
 
 const TopFilter = dynamic(() => import('@components/layout/dynamic/TopFilter'), {
-	loading: () => <PulsePlaceHolder className='h-8 w-[133px] rounded-lg' />,
+	loading: () => <PulsePlaceHolder className='h-8 w-[133px] rounded-lg' />
 });
 const BottomFilter = dynamic(() => import('@components/layout/dynamic/BottomFilter'));
 

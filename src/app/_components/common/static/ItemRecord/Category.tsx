@@ -14,7 +14,7 @@ const className = {
 	GREEN: 'app-text-shadow-GREEN text-base-200 dark:text-base-content',
 	RED: 'app-text-shadow-RED text-base-200 dark:text-base-content',
 	WHITE: 'app-text-shadow-WHITE text-base-200 dark:text-base-content',
-	YELLOW: 'app-text-shadow-YELLOW text-base-200 dark:text-base-content',
+	YELLOW: 'app-text-shadow-YELLOW text-base-200 dark:text-base-content'
 } satisfies TextShadowMap<ColorEnum>;
 
 export default function Category({ category, color }: CategoryProps) {
@@ -29,7 +29,7 @@ export default function Category({ category, color }: CategoryProps) {
 				<QueryLink
 					aria-label={`Filter ${convertCode(category)} Item`}
 					className={cn('btn btn-primary btn-xs gap-1 font-bold capitalize shadow-primary/50', {
-						'shadow-lg': !isActive,
+						'shadow-lg': !isActive
 					})}
 					isActive={isActive}
 					href={{ query: { category } }}
@@ -46,7 +46,7 @@ export default function Category({ category, color }: CategoryProps) {
 				className={cn(
 					'absolute bottom-8 right-8 w-10 text-center font-atelier text-lg md:text-4xl',
 					categoryIconMap[category],
-					className[color],
+					className[color]
 				)}
 			/>
 		</>

@@ -13,7 +13,7 @@ export default function CommonWrapper({ classNames, children }: CommonWrapperPro
 			<div
 				className={cn(
 					'card-body z-10 gap-3 rounded-[inherit] bg-base-100 p-[1.625rem] text-base-content shadow-inner shadow-base-content',
-					classNames?.content,
+					classNames?.content
 				)}
 			>
 				{children}

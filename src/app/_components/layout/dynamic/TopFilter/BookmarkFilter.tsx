@@ -13,7 +13,7 @@ const bookmarkedFilterDefault = { value: null } as const;
 
 const bookmarkFilterList: Array<SelectOptionItem<BooleanishEnum>> = [
 	bookmarkedFilterDefault,
-	...booleanishList.map(value => ({ value })),
+	...booleanishList.map(value => ({ value }))
 ];
 
 type Props = { moduleId: NonNullable<ReturnType<typeof useModuleId>['moduleId']> };
@@ -26,7 +26,7 @@ export default function BookmarkFilter({ moduleId }: Props) {
 	const [bookmarkFilter, setBookmarkFilter] = useQueryOnChange(
 		'bookmarked',
 		bookmarkFilterList,
-		bookmarkedFilterDefault,
+		bookmarkedFilterDefault
 	);
 
 	const isAPIDisabled = !isAuthenticated || bookmarkFilter.value === 'true';
@@ -34,10 +34,10 @@ export default function BookmarkFilter({ moduleId }: Props) {
 	const {
 		data,
 		refetch,
-		status: queryStatus,
+		status: queryStatus
 	} = ApiClientCtx.user.getModuleBookmarks.useQuery(
 		{ moduleId },
-		{ enabled: !isAPIDisabled, refetchOnMount: true, refetchOnWindowFocus: true },
+		{ enabled: !isAPIDisabled, refetchOnMount: true, refetchOnWindowFocus: true }
 	);
 
 	const isFilterDisabled = !isAuthenticated || queryStatus !== 'success' || !Boolean(data.result?.length);

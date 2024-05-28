@@ -12,7 +12,7 @@ import { twMerge } from 'tailwind-merge';
 
 export function arrayInclude<const TSearch extends Readonly<string | number>>(
 	arr: Readonly<Array<TSearch>>,
-	search: unknown,
+	search: unknown
 ): search is TSearch {
 	return arr.includes(search as TSearch);
 }
@@ -34,7 +34,7 @@ export function entries<const Obj extends CommonObject>(obj: Obj): Array<[KeyOf<
 }
 
 export function fromEntries<const Key extends KeyOf<CommonObject>, Value = unknown>(
-	entries: Array<Readonly<[Key, Value]>>,
+	entries: Array<Readonly<[Key, Value]>>
 ): Readonly<Record<Key, Value>> {
 	return Object.fromEntries(entries) as Readonly<Record<Key, Value>>;
 }
@@ -42,7 +42,7 @@ export function fromEntries<const Key extends KeyOf<CommonObject>, Value = unkno
 export function indexOf<const TSearch extends Readonly<string | number>>(
 	arr: Readonly<Array<TSearch>>,
 	search: unknown,
-	defaultIndex?: number,
+	defaultIndex?: number
 ) {
 	return arrayInclude(arr, search) ? arr.indexOf(search) : defaultIndex || -1;
 }
@@ -62,7 +62,7 @@ export function sleep(milliseconds = 1000) {
 export function writeLog({
 	args,
 	type = 'log',
-	hideInProd = false,
+	hideInProd = false
 }: {
 	args: Array<unknown>;
 	type?: 'log' | 'warn' | 'error';
@@ -73,7 +73,7 @@ export function writeLog({
 
 export function deleteNullableProperty<const Obj extends CommonObject>(
 	obj: Obj,
-	keyList: Array<KeyOf<Obj>> = objectKeys(obj),
+	keyList: Array<KeyOf<Obj>> = objectKeys(obj)
 ) {
 	keyList.forEach(key => {
 		if (typeof obj[key] === 'undefined') return delete obj[key];
@@ -115,7 +115,7 @@ export function paramsToQuery(input: ReadonlyURLSearchParams | URLSearchParams) 
 		.keyof()
 		._def.values.reduce(
 			(prev, cur) => ({ ...prev, [cur]: searchQueryValidator.shape[cur].parse(input.get(cur)) }),
-			{} as SearchQuery,
+			{} as SearchQuery
 		);
 }
 
@@ -136,7 +136,7 @@ export function highlightSearchedText(input: string, search: string | undefined,
 		.map(s =>
 			s.match(new RegExp(search, 'i'))
 				? `<span class='bg-base-content text-base-100 ${noPadding ? '' : 'px-1'}'>${s}</span>`
-				: s,
+				: s
 		)
 		.join('');
 }
@@ -148,7 +148,7 @@ export async function tryCatchHandler<TReturn = unknown>(promise: Promise<TRetur
 		writeLog({
 			args: [`Error at ${operationCode}`, `Detail: `, JSON.stringify(error, null, 2)],
 			type: 'error',
-			hideInProd: true,
+			hideInProd: true
 		});
 
 		return { data: null, isSuccess: false as const, error };
@@ -162,7 +162,7 @@ export function tryCatchHandlerSync<TReturn = unknown>(callback: () => TReturn, 
 		writeLog({
 			args: [`Error at ${operationCode}`, `Detail: `, JSON.stringify(error, null, 2)],
 			type: 'error',
-			hideInProd: true,
+			hideInProd: true
 		});
 
 		return { data: null, isSuccess: false as const, error };
@@ -180,7 +180,7 @@ export function parseHyperLinkData(input: HyperLinkData) {
 				.filter(Boolean)
 				.map((value, key) => `${key > 0 ? ', ' : ''}${typeof value === 'number' ? value : convertCode(value)}`)
 				.join(),
-			href: `/${input.table}${queryToParamsString(query)}`,
+			href: `/${input.table}${queryToParamsString(query)}`
 		} as const;
 	}
 

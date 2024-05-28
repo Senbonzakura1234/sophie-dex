@@ -22,7 +22,7 @@ export default function Description({ description, search }: DescriptionProps) {
 							/>
 						)}
 					</li>
-				),
+				)
 			)}
 		</ul>
 	);

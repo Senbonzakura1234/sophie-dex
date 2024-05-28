@@ -31,8 +31,8 @@ const providerMapping = {
 				userData: {
 					email: profileResult.data.email,
 					username: profileResult.data.login,
-					githubProfile: profileResult.data,
-				},
+					githubProfile: profileResult.data
+				}
 			});
 
 			if (!user) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Insert Profile Error' });
@@ -41,12 +41,12 @@ const providerMapping = {
 				id: user.githubProfile.id.toString(),
 				email: user.email,
 				image: user.githubProfile.avatar_url,
-				name: user.username,
+				name: user.username
 			};
-		},
+		}
 	}),
 	google: Google({ clientId: '', clientSecret: '' }),
-	instagram: Instagram({ clientId: '', clientSecret: '' }),
+	instagram: Instagram({ clientId: '', clientSecret: '' })
 } satisfies Record<ProviderIdEnum, OAuthConfig<never>>;
 
 export const authOptions: AuthOptions = {
@@ -54,9 +54,9 @@ export const authOptions: AuthOptions = {
 		.sort(id => (env.NEXT_PUBLIC_ALLOW_AUTH_PROVIDER.includes(id) ? -1 : 1))
 		.map(id => providerMapping[id]),
 	callbacks: {
-		session: ({ session }) => session,
+		session: ({ session }) => session
 	},
-	pages: { signIn: '/signin', signOut: '/signout' },
+	pages: { signIn: '/signin', signOut: '/signout' }
 };
 
 export const handler = NextAuth(authOptions);
