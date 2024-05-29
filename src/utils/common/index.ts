@@ -20,7 +20,10 @@ export function arrayInclude<const TSearch extends Readonly<string | number>>(
 export function capitalize<const TInput extends string>(input?: TInput | null): Capitalize<TInput> {
 	return (
 		input
-			? input.replace(/(^\w|\s\w)(\S*)/g, (_, firstLetter, rest) => firstLetter.toUpperCase() + rest.toLowerCase())
+			? input.replace(
+					/(^\w|\s\w)(\S*)/g,
+					(_, firstLetter: string, rest: string) => firstLetter.toUpperCase() + rest.toLowerCase()
+				)
 			: ''
 	) as Capitalize<TInput>;
 }

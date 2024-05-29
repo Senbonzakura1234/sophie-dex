@@ -1,6 +1,12 @@
 {
 	"cSpell.diagnosticLevel": "Hint",
-	"cSpell.ignorePaths": ["**/node_modules/**", "**/.vscode/extensions.json", ".env", "**/dist/**"],
+	"cSpell.ignorePaths": [
+		"**/node_modules/**",
+		"**/.vscode/extensions.json",
+		".env",
+		"**/dist/**",
+		"**/.next/**"
+	],
 	"cSpell.words": [
 		"Authen",
 		"clsx",
@@ -50,12 +56,6 @@
 	"eslint.codeActionsOnSave.mode": "all",
 	"eslint.format.enable": true,
 	"eslint.lintTask.enable": true,
-	"files.associations": {
-		"*.eslintrc": "json",
-		"*.json": "json",
-		"*.prettierrc": "json",
-		"*.webmanifest": "json"
-	},
 	"npm.packageManager": "pnpm",
 	"tailwindCSS.classAttributes": [
 		"class",
@@ -103,7 +103,12 @@
 			"overrides": "ts"
 		},
 		{
-			"extensions": ["settings.json", "setting.json", "extensions.json", "extension.json"],
+			"extensions": [
+				"settings.json",
+				"setting.json",
+				"extensions.json",
+				"extension.json"
+			],
 			"filename": true,
 			"format": "svg",
 			"icon": "vscode"
@@ -134,7 +139,12 @@
 			"overrides": "mjs"
 		},
 		{
-			"extensions": ["postgresql/index.ts", "repository/index.ts", "repository/seed.ts", "schema/index.ts"],
+			"extensions": [
+				"postgresql/index.ts",
+				"repository/index.ts",
+				"repository/seed.ts",
+				"schema/index.ts"
+			],
 			"filename": true,
 			"format": "svg",
 			"icon": "pgsql",

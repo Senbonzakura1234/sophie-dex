@@ -45,7 +45,7 @@ export const useShareAPI = (input: InputData) => {
 	);
 
 	const share = useCallback(async () => {
-		if (isCanShare) return await tryCatchHandler(window.navigator.share(input), 'share.navigatorShare');
+		if (isCanShare) return void tryCatchHandler(window.navigator.share(input), 'share.navigatorShare');
 
 		// fallback to copy to clipboard
 		if (!isCanCopy) return setShareNotification({ isOpen: true, message: 'Clipboard not supported', type: 'ERROR' });

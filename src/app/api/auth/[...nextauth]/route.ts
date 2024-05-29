@@ -11,7 +11,7 @@ import Atlassian from 'next-auth/providers/atlassian';
 import Facebook from 'next-auth/providers/facebook';
 import Github from 'next-auth/providers/github';
 import Google from 'next-auth/providers/google';
-import type { OAuthConfig } from 'next-auth/providers/index';
+import type { Provider } from 'next-auth/providers/index';
 import Instagram from 'next-auth/providers/instagram';
 
 const providerMapping = {
@@ -46,8 +46,8 @@ const providerMapping = {
 		}
 	}),
 	google: Google({ clientId: '', clientSecret: '' }),
-	instagram: Instagram({ clientId: '', clientSecret: '' })
-} satisfies Record<ProviderIdEnum, OAuthConfig<never>>;
+	instagram: Instagram({ clientId: '', clientSecret: '' }) as Provider
+} satisfies Record<ProviderIdEnum, Provider>;
 
 export const authOptions: AuthOptions = {
 	providers: [...providerIdList]
@@ -59,6 +59,6 @@ export const authOptions: AuthOptions = {
 	pages: { signIn: '/signin', signOut: '/signout' }
 };
 
-export const handler = NextAuth(authOptions);
+export const handler = NextAuth(authOptions) as Promise<Response>;
 
 export { handler as GET, handler as POST };

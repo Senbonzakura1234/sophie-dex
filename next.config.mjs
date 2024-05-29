@@ -1,4 +1,3 @@
-// @ts-check
 import withMDX from '@next/mdx';
 
 /** @type {import('@root/types/common/next').ChainingPlugin} */

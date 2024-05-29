@@ -6,7 +6,7 @@ import tailwindAnimate from 'tailwindcss-animate';
 import tailwindPlugin from 'tailwindcss/plugin';
 
 const config: Config = {
-	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+	content: ['./src/**/*.{ts,tsx}'],
 	theme: { extend: { fontFamily: { atelier: ['var(--font-atelier)'] } } },
 	plugins: [
 		tailwindPlugin(({ theme, addUtilities }) => {

@@ -60,9 +60,9 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 			'handleBookmark.mutateAsync'
 		);
 
-		if (!res.isSuccess) return await signIn();
+		if (!res.isSuccess) return void signIn();
 
-		return await (isNotBookmarkFilter ? refetch() : trpcUtils[moduleId].getAll.invalidate());
+		return void (isNotBookmarkFilter ? refetch() : trpcUtils[moduleId].getAll.invalidate());
 	};
 
 	return (

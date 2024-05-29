@@ -68,7 +68,7 @@ const seed = async () => {
 	return seedResult;
 };
 
-seed().then(seedResult =>
+void seed().then(seedResult =>
 	writeLog({
 		args: [`Seeding Complete with ${seedResult.errorList.length ? 'error' : 'no error'}\n`, { seedResult }],
 		type: seedResult.errorList.length ? 'error' : 'log'

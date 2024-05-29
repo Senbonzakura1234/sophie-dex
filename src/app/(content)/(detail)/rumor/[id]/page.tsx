@@ -27,7 +27,7 @@ export function generateMetadata({ params }: PageProps, parent: ResolvingMetadat
 	return generateDetailMetadata(parent, getRecord(params));
 }
 
-export default async function Rumor({ params }: PageProps) {
+export default function Rumor({ params }: PageProps) {
 	return (
 		<Suspense fallback={<RecordPlaceholder />}>
 			<SuspenseComponent promiseData={getRecord(params)} ChildComponent={RumorRecord} showErrorContent />

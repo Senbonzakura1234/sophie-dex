@@ -103,8 +103,3 @@ export const getLicense = async () => {
 		? { result: licenseResult.data as LicenseInfo, isSuccess: true as const, error: null }
 		: defaultResult;
 };
-
-export const getOperationCode = async (_operationName: string) => {
-	// TODO
-	return '';
-};
