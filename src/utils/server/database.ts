@@ -1,12 +1,14 @@
 import { env } from '@root/utils/common/env';
 if (env.IS_NEXTJS_ENV === 'true') import('server-only');
 
+import { errorMap } from '@root/constants/common';
 import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/postgresql/schema';
 import type { APIResult, CommonObject, PageProps, PreparedPGQuery } from '@root/types/common';
 import { APIError } from '@root/types/common';
 import type { IdQuery } from '@root/types/common/zod';
-import { searchQueryValidator } from '@root/types/common/zod';
+import { commonRecordValidator, searchQueryValidator } from '@root/types/common/zod';
 import {
+	capitalize,
 	deleteNullableProperty,
 	getBaseUrl,
 	objectValues,
@@ -36,29 +38,35 @@ export async function generateDetailMetadata(
 		'generateDetailMetadata.getParentMetaAndRecord'
 	);
 
-	if (!result.isSuccess) return { title: 'Error' };
+	if (!result.isSuccess) return { title: `Error 500 - ${errorMap.INTERNAL_SERVER_ERROR.message}` };
 
-	const [{ keywords: parentKeywords, other }, record] = result.data;
+	const [{ keywords: parentKeywords, other, twitter }, record] = result.data;
 
-	if (!record.isSuccess) return { title: 'Error' };
+	if (!record.isSuccess) return { title: `Error ${record.error.codeNumber} - ${errorMap[record.error.code].message}` };
 
-	const {
-		data: { name, keyWords: currentKeywords }
-	} = record.result;
+	const { data: recordData } = record.result;
 
-	console.log({ other });
+	const recordOGParam = new URLSearchParams();
+
+	commonRecordValidator.keyof()._def.values.map(key => {
+		recordOGParam.append(key, recordData[key]);
+	});
 
 	return {
-		title: name,
-		keywords: [...currentKeywords.split(','), ...(parentKeywords || [])],
+		title: recordData.name,
+		keywords: [...recordData.keyWords.split(','), ...(parentKeywords || [])],
 		other: {
 			...deleteNullableProperty((other || {}) as CommonObject),
-			google: 'notranslate',
-			'og:site-name': env.NEXT_PUBLIC_APP_NAME,
-			'og:description': env.NEXT_PUBLIC_APP_DESCRIPTION,
-			'og:image': `${getBaseUrl()}/api/og`,
-			'og:title': `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
-			'og:url': getBaseUrl(true)
+			'og:description': recordData.keyWords,
+			'og:image': `${getBaseUrl()}/api/og?${recordOGParam.toString()}`,
+			'og:title': `${capitalize(recordData.moduleId)} | ${recordData.name}`,
+			'og:url': `${getBaseUrl(true)}/${recordData.moduleId}/${recordData.id}`
+		},
+		twitter: {
+			...deleteNullableProperty((twitter || {}) as CommonObject),
+			description: recordData.keyWords,
+			images: `${getBaseUrl()}/api/og?${recordOGParam.toString()}`,
+			title: `${capitalize(recordData.moduleId)} | ${recordData.name}`
 		}
 	};
 }

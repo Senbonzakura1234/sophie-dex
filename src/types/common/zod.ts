@@ -1,3 +1,4 @@
+import type { CommonRecord } from '@root/server/postgresql/schema';
 import {
 	booleanishList,
 	categoryList,
@@ -141,3 +142,10 @@ export const licenseInfoSchema = z.object({
 	body: z.string()
 });
 export type LicenseInfo = z.infer<typeof licenseInfoSchema>;
+
+export const commonRecordValidator = z.object({
+	name: z.string(),
+	id: genericIdSchema,
+	keyWords: z.string(),
+	moduleId: genericModuleIdEnumSchema
+}) satisfies z.ZodType<CommonRecord>;

@@ -188,7 +188,7 @@ export const metadata: Metadata = {
 	metadataBase: new URL(getBaseUrl(true)),
 	other: {
 		google: 'notranslate',
-		'og:site-name': env.NEXT_PUBLIC_APP_NAME,
+		'og:site_name': env.NEXT_PUBLIC_APP_NAME,
 		'og:description': env.NEXT_PUBLIC_APP_DESCRIPTION,
 		'og:image': `${getBaseUrl()}/api/og`,
 		'og:title': `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
