@@ -2,6 +2,7 @@ import type { CommonRecord } from '@root/server/postgresql/schema';
 import type { PreparedPGQuery } from '@root/types/common';
 import type { ModuleIdEnum } from '@root/types/common/zod';
 import type { TRPC_ERROR_CODE_KEY } from '@trpc/server/rpc';
+import type { Theme } from 'daisyui';
 
 export const errorList = [
 	'PARSE_ERROR',
@@ -88,7 +89,7 @@ export const relatedCategoryList = [
 
 export const sortByList = ['index', 'name', 'level', 'price'] as const;
 
-export const daisyUIThemeList = ['autumn', 'fantasy', 'forest', 'synthwave'] as const;
+export const daisyUIThemeList = ['autumn', 'fantasy', 'forest', 'synthwave'] as const satisfies Array<Theme>;
 
 export const directionList = ['asc', 'desc'] as const;
 export const providerIdList = ['atlassian', 'facebook', 'github', 'google', 'instagram'] as const;

@@ -2,11 +2,17 @@ import { env } from '@root/utils/common/env';
 if (env.IS_NEXTJS_ENV === 'true') import('server-only');
 
 import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/postgresql/schema';
-import type { APIResult, PageProps, PreparedPGQuery } from '@root/types/common';
+import type { APIResult, CommonObject, PageProps, PreparedPGQuery } from '@root/types/common';
 import { APIError } from '@root/types/common';
 import type { IdQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
-import { objectValues, parseHyperLinkData, tryCatchHandler } from '@root/utils/common';
+import {
+	deleteNullableProperty,
+	getBaseUrl,
+	objectValues,
+	parseHyperLinkData,
+	tryCatchHandler
+} from '@root/utils/common';
 import type { Metadata, ResolvingMetadata } from 'next';
 
 export async function generateGenericMetadata(
@@ -32,7 +38,7 @@ export async function generateDetailMetadata(
 
 	if (!result.isSuccess) return { title: 'Error' };
 
-	const [{ keywords: parentKeywords }, record] = result.data;
+	const [{ keywords: parentKeywords, other }, record] = result.data;
 
 	if (!record.isSuccess) return { title: 'Error' };
 
@@ -40,7 +46,21 @@ export async function generateDetailMetadata(
 		data: { name, keyWords: currentKeywords }
 	} = record.result;
 
-	return { title: name, keywords: [...currentKeywords.split(','), ...(parentKeywords || [])] };
+	console.log({ other });
+
+	return {
+		title: name,
+		keywords: [...currentKeywords.split(','), ...(parentKeywords || [])],
+		other: {
+			...deleteNullableProperty((other || {}) as CommonObject),
+			google: 'notranslate',
+			'og:site-name': env.NEXT_PUBLIC_APP_NAME,
+			'og:description': env.NEXT_PUBLIC_APP_DESCRIPTION,
+			'og:image': `${getBaseUrl()}/api/og`,
+			'og:title': `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
+			'og:url': getBaseUrl(true)
+		}
+	};
 }
 
 export const getContentRecord = async <TRecord extends CommonRecord>(

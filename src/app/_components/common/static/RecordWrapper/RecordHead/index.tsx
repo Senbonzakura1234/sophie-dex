@@ -6,7 +6,8 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 const ShareButton = dynamic(() => import('@components/common/dynamic/ShareButton'), {
-	loading: () => <PulsePlaceHolder className='h-6 w-24 rounded-lg' />
+	loading: () => <PulsePlaceHolder className='h-6 w-24 rounded-lg' />,
+	ssr: false
 });
 
 const BookmarkBtn = dynamic(() => import('./BookmarkBtn'), {

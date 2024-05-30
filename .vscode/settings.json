@@ -1,12 +1,6 @@
 {
 	"cSpell.diagnosticLevel": "Hint",
-	"cSpell.ignorePaths": [
-		"**/node_modules/**",
-		"**/.vscode/extensions.json",
-		".env",
-		"**/dist/**",
-		"**/.next/**"
-	],
+	"cSpell.ignorePaths": ["**/node_modules/**", "**/.vscode/extensions.json", ".env", "**/dist/**", "**/.next/**"],
 	"cSpell.words": [
 		"Authen",
 		"clsx",
@@ -72,12 +66,13 @@
 		"leaveTo",
 		"tw"
 	],
-	"tailwindCSS.experimental.classRegex": [
-		"cva\\(([^)]*)\\)",
-		"[\"'`]([^\"'`]*).*?[\"'`]",
-		"cx\\(([^)]*)\\)",
-		"(?:'|\"|`)([^']*)(?:'|\"|`)",
-		":\\s*?[\"'`]([^\"'`]*).*?,"
+	"tailwindCSS.files.exclude": [
+		"**/.git/**",
+		"**/node_modules/**",
+		"**/.next/**",
+		"**/dist/**",
+		"**/src/server/**",
+		"**/src/utils/server/**"
 	],
 	"typescript.inlayHints.enumMemberValues.enabled": true,
 	"typescript.inlayHints.parameterNames.enabled": "all",
@@ -103,12 +98,7 @@
 			"overrides": "ts"
 		},
 		{
-			"extensions": [
-				"settings.json",
-				"setting.json",
-				"extensions.json",
-				"extension.json"
-			],
+			"extensions": ["settings.json", "setting.json", "extensions.json", "extension.json"],
 			"filename": true,
 			"format": "svg",
 			"icon": "vscode"
@@ -139,12 +129,7 @@
 			"overrides": "mjs"
 		},
 		{
-			"extensions": [
-				"postgresql/index.ts",
-				"repository/index.ts",
-				"repository/seed.ts",
-				"schema/index.ts"
-			],
+			"extensions": ["postgresql/index.ts", "repository/index.ts", "repository/seed.ts", "schema/index.ts"],
 			"filename": true,
 			"format": "svg",
 			"icon": "pgsql",

@@ -6,7 +6,8 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 const ShareButton = dynamic(() => import('@components/common/dynamic/ShareButton'), {
-	loading: () => <PulsePlaceHolder className='aspect-square h-6 rounded-lg' />
+	loading: () => <PulsePlaceHolder className='aspect-square h-6 rounded-lg' />,
+	ssr: false
 });
 
 type TraitMergeListProps = { mergeFrom: Array<[HyperLinkRecord, HyperLinkRecord]>; search: string | undefined };

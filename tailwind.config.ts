@@ -1,12 +1,13 @@
 import type { DefaultColors, TextShadowUtilities } from '@root/types/common/tailwind';
 import typography from '@tailwindcss/typography';
+import type { Config as DaisyUiConfig } from 'daisyui';
 import daisyui from 'daisyui';
 import type { Config } from 'tailwindcss';
 import tailwindAnimate from 'tailwindcss-animate';
 import tailwindPlugin from 'tailwindcss/plugin';
 
 const config: Config = {
-	content: ['./src/**/*.{ts,tsx}'],
+	content: ['./src/**/*.{ts,tsx}', '!./src/server/**/*.ts', '!./src/utils/server/**/*.ts'],
 	theme: { extend: { fontFamily: { atelier: ['var(--font-atelier)'] } } },
 	plugins: [
 		tailwindPlugin(({ theme, addUtilities }) => {
@@ -46,7 +47,7 @@ const config: Config = {
 		typography,
 		tailwindAnimate
 	],
-	daisyui: { themes: ['autumn', 'fantasy', 'forest', 'synthwave'] },
+	daisyui: { themes: ['autumn', 'fantasy', 'forest', 'synthwave'], logs: false } satisfies DaisyUiConfig,
 	darkMode: 'class'
 };
 export default config;

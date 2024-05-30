@@ -1,6 +1,6 @@
 {
 	"name": "sophie-dex",
-	"version": "30.0.1",
+	"version": "31.0.1",
 	"private": false,
 	"license": "MIT",
 	"author": {
@@ -16,12 +16,13 @@
 	},
 	"scripts": {
 		"build": "next build",
+		"check-info": "next info",
 		"dev": "concurrently \"pnpm open-home\" \"next dev\"",
 		"dev:safe": "concurrently \"pnpm open-home:safe\" \"next dev --experimental-https\"",
 		"drizzle-gen": "dotenv drizzle-kit generate",
 		"drizzle-push": "dotenv drizzle-kit push",
-		"drizzle-studio": "concurrently \"pnpm open-studio\" \"dotenv drizzle-kit studio\"",
 		"drizzle-seed": "dotenv -e .env.seed tsx src/server/postgresql/repository/seed/index.ts",
+		"drizzle-studio": "concurrently \"pnpm open-studio\" \"dotenv drizzle-kit studio\"",
 		"lint": "next lint",
 		"lint:fix": "eslint --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.json . --fix",
 		"open-home": "open-cli http://localhost:3000",

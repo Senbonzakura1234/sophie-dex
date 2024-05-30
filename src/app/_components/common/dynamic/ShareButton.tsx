@@ -8,7 +8,7 @@ import type { ClassNamesProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 
-const Notification = dynamic(() => import('@components/layout/dynamic/Notification'));
+const Notification = dynamic(() => import('@components/layout/dynamic/Notification'), { ssr: false });
 
 type Props = { input: InputData; showText?: boolean } & ClassNamesProps<'wrapper' | 'icon'>;
 
