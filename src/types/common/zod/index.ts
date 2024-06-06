@@ -103,7 +103,6 @@ export const ogQuerySchema = z.object({
 		.transform(url => (url.includes('/api/og') ? undefined : url))
 		.optional()
 		.catch(undefined),
-	alt: z.string().optional().catch(undefined),
-	type: z.enum(['squared', 'landscape']).catch('landscape').default('landscape')
+	alt: z.string().optional().catch(undefined)
 });
 export type OgQuery = z.infer<typeof ogQuerySchema>;
