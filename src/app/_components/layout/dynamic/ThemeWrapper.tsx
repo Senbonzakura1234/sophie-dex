@@ -1,5 +1,5 @@
 import type { ChildrenProps, ClassNameProps } from '@root/types/common/props';
-import type { DaisyUIThemeEnum } from '@root/types/common/zod';
+import type { DaisyUIThemeEnum } from '@root/types/common/zod/generic';
 import { arrayInclude, cn } from '@root/utils/common';
 
 type Props = ChildrenProps & ClassNameProps & { defaultTheme: DaisyUIThemeEnum };

@@ -1,7 +1,8 @@
 import type { HyperLinkData } from '@root/server/postgresql/schema';
 import type { CommonObject, KeyOf, ValueOf } from '@root/types/common';
-import type { BooleanishEnum, NodeEnvEnum, SearchQuery } from '@root/types/common/zod';
+import type { SearchQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
+import type { BooleanishEnum } from '@root/types/common/zod/generic';
 import { env } from '@root/utils/common/env';
 import type { ClassValue } from 'clsx';
 import { clsx } from 'clsx';
@@ -71,7 +72,7 @@ export function writeLog({
 	type?: 'log' | 'warn' | 'error';
 	hideInProd?: boolean;
 }) {
-	return (!hideInProd || !evnIs('production')) && console[type](...args);
+	return (!hideInProd || env.NEXT_PUBLIC_NODE_ENV !== 'production') && console[type](...args);
 }
 
 export function deleteNullableProperty<const Obj extends CommonObject>(
@@ -83,10 +84,6 @@ export function deleteNullableProperty<const Obj extends CommonObject>(
 	});
 
 	return obj;
-}
-
-export function evnIs(nodeEnv: NodeEnvEnum) {
-	return env.NEXT_PUBLIC_NODE_ENV === nodeEnv;
 }
 
 // =======================================					Utilities					=======================================

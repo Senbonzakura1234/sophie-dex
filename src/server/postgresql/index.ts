@@ -12,7 +12,8 @@ import type { CommonRecord, Effect, Item, Rumor, Trait, User } from '@root/serve
 import { users } from '@root/server/postgresql/schema';
 import type { APIResult, ImprovePick } from '@root/types/common';
 import { APIError } from '@root/types/common';
-import type { BookmarkQuery, GithubUserInfo, ModuleIdQuery, SearchQuery, SortByEnum } from '@root/types/common/zod';
+import type { BookmarkQuery, GithubUserInfo, ModuleIdQuery, SearchQuery } from '@root/types/common/zod';
+import type { SortByEnum } from '@root/types/common/zod/generic';
 import { arrayInclude, deleteNullableProperty, objectValues, tryCatchHandler } from '@root/utils/common';
 import dayjs from 'dayjs';
 import type { SQL, sql } from 'drizzle-orm';

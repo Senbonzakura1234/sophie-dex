@@ -27,7 +27,7 @@ import {
 	moduleIdQueryValidator,
 	searchQueryValidator
 } from '@root/types/common/zod';
-import { evnIs } from '@root/utils/common';
+import { env } from '@root/utils/common/env';
 import { getSessionResult } from '@root/utils/server';
 import { exportRecords, getAllRecordIds, getContentRecord } from '@root/utils/server/database';
 import { initTRPC } from '@trpc/server';
@@ -36,7 +36,7 @@ import { ZodError } from 'zod';
 export const createContext = async () => ({ sessionResult: await getSessionResult() });
 
 const t = initTRPC.context<typeof createContext>().create({
-	isDev: !evnIs('production'),
+	isDev: env.NEXT_PUBLIC_NODE_ENV !== 'production',
 	errorFormatter({ shape, error }) {
 		return {
 			...shape,

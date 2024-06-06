@@ -2,7 +2,7 @@
 
 import QueryLink from '@components/common/dynamic/QueryLink';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import type { RelatedCategoryEnum } from '@root/types/common/zod';
+import type { RelatedCategoryEnum } from '@root/types/common/zod/generic';
 import { cn, convertCode, highlightSearchedText } from '@root/utils/common';
 import { useCallback } from 'react';
 

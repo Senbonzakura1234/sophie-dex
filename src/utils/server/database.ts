@@ -5,17 +5,19 @@ import { errorMap } from '@root/constants/common';
 import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/postgresql/schema';
 import type { APIResult, CommonObject, PageProps, PreparedPGQuery } from '@root/types/common';
 import { APIError } from '@root/types/common';
-import type { IdQuery } from '@root/types/common/zod';
-import { commonRecordValidator, searchQueryValidator } from '@root/types/common/zod';
+import type { IdQuery, OgQuery } from '@root/types/common/zod';
+import { searchQueryValidator } from '@root/types/common/zod';
 import {
 	capitalize,
 	deleteNullableProperty,
+	entries,
 	getBaseUrl,
 	objectValues,
 	parseHyperLinkData,
 	tryCatchHandler
 } from '@root/utils/common';
 import type { Metadata, ResolvingMetadata } from 'next';
+import { getServerSession } from 'next-auth';
 
 export async function generateGenericMetadata(
 	parentPromise: ResolvingMetadata,
@@ -46,27 +48,71 @@ export async function generateDetailMetadata(
 
 	const { data: recordData } = record.result;
 
-	const recordOGParam = new URLSearchParams();
+	const ogQuery = {
+		type: 'landscape',
+		alt: recordData.name,
+		title: `${capitalize(recordData.moduleId)} | ${recordData.name}`,
+		description: `${getBaseUrl(true)}/${recordData.moduleId}/${recordData.id}`
+	} satisfies OgQuery;
 
-	commonRecordValidator.keyof()._def.values.map(key => {
-		recordOGParam.append(key, recordData[key]);
-	});
+	const ogSearchParam = new URLSearchParams(entries(ogQuery));
+	const ogImgUrl = `${getBaseUrl()}/api/og?${ogSearchParam.toString()}`;
 
 	return {
-		title: recordData.name,
+		title: ogQuery.title,
 		keywords: [...recordData.keyWords.split(','), ...(parentKeywords || [])],
 		other: {
 			...deleteNullableProperty((other || {}) as CommonObject),
 			'og:description': recordData.keyWords,
-			'og:image': `${getBaseUrl()}/api/og?${recordOGParam.toString()}`,
-			'og:title': `${capitalize(recordData.moduleId)} | ${recordData.name}`,
-			'og:url': `${getBaseUrl(true)}/${recordData.moduleId}/${recordData.id}`
+			'og:image': ogImgUrl,
+			'og:title': ogQuery.title,
+			'og:url': ogQuery.description
 		},
 		twitter: {
 			...deleteNullableProperty((twitter || {}) as CommonObject),
 			description: recordData.keyWords,
-			images: `${getBaseUrl()}/api/og?${recordOGParam.toString()}`,
-			title: `${capitalize(recordData.moduleId)} | ${recordData.name}`
+			images: ogImgUrl,
+			title: ogQuery.title
+		}
+	};
+}
+export async function generateProfileMetadata(parentPromise: ResolvingMetadata): Promise<Metadata> {
+	const result = await tryCatchHandler(
+		Promise.all([parentPromise, getServerSession()]),
+		'generateDetailMetadata.getParentMetaAndRecord'
+	);
+
+	if (!result.isSuccess) return { title: `Error 500 - ${errorMap.INTERNAL_SERVER_ERROR.message}` };
+
+	const [{ keywords: other, twitter }, session] = result.data;
+
+	if (!session) return { title: `Error ${errorMap.UNAUTHORIZED.status} - ${errorMap.UNAUTHORIZED.message}` };
+
+	const ogQuery = {
+		type: 'squared',
+		alt: session.user?.name || '',
+		src: session.user?.image || '',
+		title: session.user?.name || '',
+		description: session.user?.email || ''
+	} satisfies OgQuery;
+
+	const ogSearchParam = new URLSearchParams(entries(ogQuery));
+	const ogImgUrl = `${getBaseUrl()}/api/og?${ogSearchParam.toString()}`;
+
+	return {
+		title: ogQuery.title,
+		other: {
+			...deleteNullableProperty((other || {}) as CommonObject),
+			'og:description': ogQuery.description,
+			'og:image': ogImgUrl,
+			'og:title': ogQuery.title,
+			'og:url': ogQuery.description
+		},
+		twitter: {
+			...deleteNullableProperty((twitter || {}) as CommonObject),
+			description: ogQuery.description,
+			images: ogImgUrl,
+			title: ogQuery.title
 		}
 	};
 }

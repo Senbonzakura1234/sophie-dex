@@ -2,8 +2,8 @@ import SelectOption from '@components/common/static/SelectOption';
 import { colorTWClassMap } from '@root/constants/common';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
-import type { ColorEnum } from '@root/types/common/zod';
-import { colorList } from '@root/types/model';
+import type { ColorEnum } from '@root/types/common/zod/generic';
+import { genericColorEnumSchema } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
 
 const colorDefaultSelect = {
@@ -13,7 +13,7 @@ const colorDefaultSelect = {
 
 const colorSelectList: Array<SelectOptionItem<ColorEnum>> = [
 	colorDefaultSelect,
-	...colorList.map(color => ({
+	...genericColorEnumSchema._def.values.map(color => ({
 		value: color,
 		icon: (
 			<span

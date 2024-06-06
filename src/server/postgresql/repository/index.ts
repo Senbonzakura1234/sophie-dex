@@ -6,13 +6,13 @@ import * as schema from '@root/server/postgresql/schema';
 import { users } from '@root/server/postgresql/schema';
 import type { BookmarkQuery } from '@root/types/common/zod';
 import type { ExportDBQueriesMap } from '@root/types/model';
-import { capitalize, evnIs } from '@root/utils/common';
+import { capitalize } from '@root/utils/common';
 import { sql } from 'drizzle-orm';
 import { drizzle } from 'drizzle-orm/neon-http';
 
 const connection = neon<boolean, boolean>(env.PGURL_NONPOOLING);
 
-export const postgresql = drizzle(connection, { schema, logger: !evnIs('production') });
+export const postgresql = drizzle(connection, { schema, logger: env.NEXT_PUBLIC_NODE_ENV !== 'production' });
 
 export const getEffectRecordQuery = postgresql.query.effects
 	.findFirst({ where: (schema, { eq, sql }) => eq(schema.id, sql.placeholder('id')) })

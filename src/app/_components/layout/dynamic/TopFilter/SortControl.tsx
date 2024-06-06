@@ -15,7 +15,7 @@ export default function SortControl({ moduleId, searchQuery }: Props) {
 	const currentSortBy = searchQuery.sortBy || (moduleId === 'rumor' ? 'price' : 'index');
 	const currentDirection = searchQuery.direction || 'asc';
 
-	const sortByList = sortByMap[moduleId];
+	const moduleSortByList = sortByMap[moduleId];
 
 	const directionList = ['asc', 'desc'] as const;
 
@@ -27,10 +27,10 @@ export default function SortControl({ moduleId, searchQuery }: Props) {
 				<TabWrapper
 					activeStyleType='background'
 					className='border-y-2 border-accent'
-					selectedIndex={indexOf(sortByList, currentSortBy, 0)}
-					tabListLength={sortByList.length}
+					selectedIndex={indexOf(moduleSortByList, currentSortBy, 0)}
+					tabListLength={moduleSortByList.length}
 				>
-					{sortByList.map(sortField => (
+					{moduleSortByList.map(sortField => (
 						<QueryLink
 							aria-label={`Sort By ${sortField}`}
 							key={sortField}

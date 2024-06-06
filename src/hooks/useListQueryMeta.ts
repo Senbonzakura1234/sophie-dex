@@ -1,5 +1,6 @@
 import type { ImprovedOmit } from '@root/types/common';
-import type { ModuleIdEnum, SearchQuery } from '@root/types/common/zod';
+import type { SearchQuery } from '@root/types/common/zod';
+import type { ModuleIdEnum } from '@root/types/common/zod/generic';
 import type { ListMetaData } from '@root/types/model';
 import { ApiClientCtx } from '@root/utils/client/trpc';
 import type { QueryObserverResult } from '@tanstack/react-query';

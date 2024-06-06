@@ -2,8 +2,8 @@ import SelectOption from '@components/common/static/SelectOption';
 import { colorTWClassMap, recipeTypeColorMap } from '@root/constants/common';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
-import type { RecipeTypeEnum } from '@root/types/common/zod';
-import { recipeTypeList } from '@root/types/model';
+import type { RecipeTypeEnum } from '@root/types/common/zod/generic';
+import { genericRecipeTypeEnumSchema } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
 
 const recipeTypeDefaultSelect = {
@@ -13,7 +13,7 @@ const recipeTypeDefaultSelect = {
 
 const recipeTypeSelectList: Array<SelectOptionItem<RecipeTypeEnum>> = [
 	recipeTypeDefaultSelect,
-	...recipeTypeList.map(recipeType => ({
+	...genericRecipeTypeEnumSchema._def.values.map(recipeType => ({
 		value: recipeType,
 		icon: (
 			<span

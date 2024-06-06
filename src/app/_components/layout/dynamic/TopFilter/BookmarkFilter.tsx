@@ -1,8 +1,8 @@
 import type { useModuleId } from '@root/hooks/useModuleId';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
-import type { BooleanishEnum } from '@root/types/common/zod';
-import { booleanishList } from '@root/types/model';
+import type { BooleanishEnum } from '@root/types/common/zod/generic';
+import { genericBooleanishEnumSchema } from '@root/types/common/zod/generic';
 import { ApiClientCtx } from '@root/utils/client/trpc';
 import { booleanToBooleanish, booleanishToBoolean, cn } from '@root/utils/common';
 import { useSession } from 'next-auth/react';
@@ -13,7 +13,7 @@ const bookmarkedFilterDefault = { value: null } as const;
 
 const bookmarkFilterList: Array<SelectOptionItem<BooleanishEnum>> = [
 	bookmarkedFilterDefault,
-	...booleanishList.map(value => ({ value }))
+	...genericBooleanishEnumSchema._def.values.map(value => ({ value }))
 ];
 
 type Props = { moduleId: NonNullable<ReturnType<typeof useModuleId>['moduleId']> };

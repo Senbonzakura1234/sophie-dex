@@ -7,8 +7,8 @@ import type {
 	RecipeTypeEnum,
 	RumorTypeEnum,
 	SortByEnum
-} from '@root/types/common/zod';
-import { evnIs } from '@root/utils/common';
+} from '@root/types/common/zod/generic';
+import { env } from '@root/utils/common/env';
 import type { DefaultOptions } from '@tanstack/react-query';
 
 export const DEFAULT_LIMIT = 16;
@@ -101,9 +101,9 @@ export const listAboutPaths = ['about', 'license'] as const;
 export const defaultTRPCQueryOptions: DefaultOptions = {
 	queries: {
 		refetchOnMount: false,
-		refetchOnReconnect: evnIs('production'),
+		refetchOnReconnect: env.NEXT_PUBLIC_NODE_ENV === 'production',
 		refetchOnWindowFocus: false,
-		retry: evnIs('production') ? 2 : 1
+		retry: env.NEXT_PUBLIC_NODE_ENV === 'production' ? 2 : 1
 	}
 };
 

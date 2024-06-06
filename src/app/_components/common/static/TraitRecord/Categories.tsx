@@ -3,7 +3,7 @@
 import QueryLink from '@components/common/dynamic/QueryLink';
 import { categoryIconMap } from '@root/constants/common';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import type { CategoryEnum } from '@root/types/common/zod';
+import type { CategoryEnum } from '@root/types/common/zod/generic';
 import { cn, convertCode } from '@root/utils/common';
 import { useCallback } from 'react';
 

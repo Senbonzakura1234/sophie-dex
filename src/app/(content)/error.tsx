@@ -1,8 +1,8 @@
 'use client';
 
 import ErrorContent from '@components/layout/static/ErrorContent';
-import { errorEnumSchema } from '@root/types/common/zod';
+import { genericErrorEnumSchema } from '@root/types/common/zod/generic';
 
 export default function Error({ error }: { error: Error }) {
-	return <ErrorContent code={errorEnumSchema.parse(error.message)} />;
+	return <ErrorContent code={genericErrorEnumSchema.catch('INTERNAL_SERVER_ERROR').parse(error.message)} />;
 }

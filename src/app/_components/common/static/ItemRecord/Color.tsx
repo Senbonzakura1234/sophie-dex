@@ -3,7 +3,7 @@
 import QueryLink from '@components/common/dynamic/QueryLink';
 import { colorTWClassMap } from '@root/constants/common';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import type { ColorEnum } from '@root/types/common/zod';
+import type { ColorEnum } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
 
 type ColorProps = { color: ColorEnum };

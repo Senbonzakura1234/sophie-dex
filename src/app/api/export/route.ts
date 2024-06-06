@@ -1,5 +1,6 @@
 import { exportDBQueriesMap } from '@root/server/postgresql/repository';
-import { entries, evnIs, tryCatchHandler } from '@root/utils/common';
+import { entries, tryCatchHandler } from '@root/utils/common';
+import { env } from '@root/utils/common/env';
 import { writeFile } from 'fs/promises';
 import { NextResponse } from 'next/server';
 import { ulid } from 'ulid';
@@ -32,6 +33,6 @@ const onExport = () =>
 export type ExportResult = Awaited<ReturnType<typeof onExport>>;
 
 export async function GET() {
-	if (evnIs('production')) return new Response('Forbidden resource', { status: 403 });
+	if (env.NEXT_PUBLIC_NODE_ENV === 'production') return new Response('Forbidden resource', { status: 403 });
 	return NextResponse.json({ exportResult: await onExport() });
 }

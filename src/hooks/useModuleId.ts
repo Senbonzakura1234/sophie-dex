@@ -1,9 +1,9 @@
-import { moduleIdList } from '@root/types/model';
+import { genericModuleIdEnumSchema } from '@root/types/common/zod/generic';
 import { arrayInclude } from '@root/utils/common';
 import { usePageSegment } from './usePageSegment';
 
 export const useModuleId = () => {
 	const { segment } = usePageSegment();
 
-	return { moduleId: arrayInclude(moduleIdList, segment) ? segment : undefined, segment };
+	return { moduleId: arrayInclude(genericModuleIdEnumSchema._def.values, segment) ? segment : undefined, segment };
 };

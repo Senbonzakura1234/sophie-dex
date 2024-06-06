@@ -2,15 +2,15 @@ import SelectOption from '@components/common/static/SelectOption';
 import { rumorTypeColorMap, rumorTypeIconMap } from '@root/constants/common';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
-import type { RumorTypeEnum } from '@root/types/common/zod';
-import { rumorTypeList } from '@root/types/model';
+import type { RumorTypeEnum } from '@root/types/common/zod/generic';
+import { genericRumorTypeEnumSchema } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
 
 const rumorTypeDefaultSelect = { value: null, label: 'Rumor type' } as const;
 
 const rumorTypeSelectList: Array<SelectOptionItem<RumorTypeEnum>> = [
 	rumorTypeDefaultSelect,
-	...rumorTypeList.map(rumorType => ({
+	...genericRumorTypeEnumSchema._def.values.map(rumorType => ({
 		value: rumorType,
 		icon: (
 			<span

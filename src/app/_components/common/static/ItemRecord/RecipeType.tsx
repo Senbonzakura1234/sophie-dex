@@ -3,7 +3,7 @@
 import QueryLink from '@components/common/dynamic/QueryLink';
 import { colorTWClassMap, recipeTypeColorMap } from '@root/constants/common';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import type { RecipeTypeEnum } from '@root/types/common/zod';
+import type { RecipeTypeEnum } from '@root/types/common/zod/generic';
 import { cn, convertCode } from '@root/utils/common';
 
 type RecipeTypeProps = { recipeType: RecipeTypeEnum };

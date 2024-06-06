@@ -1,7 +1,14 @@
 import { MAXIMUM_BOOKMARK_LENGTH } from '@root/constants/common';
 import type { ImprovedOmit } from '@root/types/common';
-import type { GithubUserInfo, ModuleIdEnum, RelatedCategoryEnum, SearchQuery } from '@root/types/common/zod';
-import { categoryList, colorList, recipeTypeList, relatedCategoryList, rumorTypeList } from '@root/types/model';
+import type { GithubUserInfo, SearchQuery } from '@root/types/common/zod';
+import type { ModuleIdEnum, RelatedCategoryEnum } from '@root/types/common/zod/generic';
+import {
+	genericCategoryEnumSchema,
+	genericColorEnumSchema,
+	genericRecipeTypeEnumSchema,
+	genericRelatedCategoryEnumSchema,
+	genericRumorTypeEnumSchema
+} from '@root/types/common/zod/generic';
 import { env } from '@root/utils/common/env';
 import type { InferSelectModel } from 'drizzle-orm';
 import { jsonb, pgTableCreator, smallint, text, timestamp, varchar } from 'drizzle-orm/pg-core';
@@ -51,14 +58,16 @@ export const items = pgTable('items', {
 	name: varchar('name', { length: 256 }).notNull(),
 	moduleId: varchar('module_id', { enum: ['item'], length: 100 }).notNull(),
 
-	category: varchar('category', { enum: categoryList, length: 100 }).notNull(),
-	color: varchar('color', { enum: colorList, length: 100 }).notNull(),
+	category: varchar('category', { enum: genericCategoryEnumSchema._def.values, length: 100 }).notNull(),
+	color: varchar('color', { enum: genericColorEnumSchema._def.values, length: 100 }).notNull(),
 	description: jsonb('description').$type<ItemDescription>().notNull(),
 	index: smallint('index').notNull(),
 	level: smallint('level').notNull(),
 	recipeIdea: jsonb('recipe_idea').$type<HyperLinkMap>(),
-	recipeType: varchar('recipe_type', { enum: recipeTypeList, length: 100 }),
-	relatedCategories: varchar('related_categories', { enum: relatedCategoryList, length: 100 }).array().notNull(),
+	recipeType: varchar('recipe_type', { enum: genericRecipeTypeEnumSchema._def.values, length: 100 }),
+	relatedCategories: varchar('related_categories', { enum: genericRelatedCategoryEnumSchema._def.values, length: 100 })
+		.array()
+		.notNull(),
 	traitPresent: jsonb('trait_present').$type<HyperLinkRecord>()
 });
 
@@ -71,7 +80,7 @@ export const rumors = pgTable('rumors', {
 	description: jsonb('description').$type<HyperLinkMap>().notNull(),
 	location: varchar('location', { length: 256 }).notNull(),
 	price: smallint('price').notNull(),
-	rumorType: varchar('rumor_type', { enum: rumorTypeList, length: 100 }).notNull()
+	rumorType: varchar('rumor_type', { enum: genericRumorTypeEnumSchema._def.values, length: 100 }).notNull()
 });
 
 export const traits = pgTable('traits', {
@@ -80,7 +89,7 @@ export const traits = pgTable('traits', {
 	name: varchar('name', { length: 256 }).notNull(),
 	moduleId: varchar('module_id', { enum: ['trait'], length: 100 }).notNull(),
 
-	categories: varchar('categories', { enum: categoryList, length: 100 }).array().notNull(),
+	categories: varchar('categories', { enum: genericCategoryEnumSchema._def.values, length: 100 }).array().notNull(),
 	description: varchar('description', { length: 256 }).notNull(),
 	index: smallint('index').notNull(),
 	itemPresent: jsonb('item_present').$type<HyperLinkRecord>(),

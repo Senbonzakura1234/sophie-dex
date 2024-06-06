@@ -10,8 +10,8 @@ import { KEY_BINDING_DICTIONARY } from '@root/constants/common';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { AppleMediaConfig } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
-import { daisyUIThemeEnumSchema } from '@root/types/common/zod';
-import { cn, evnIs, getBaseUrl, tryCatchHandler } from '@root/utils/common';
+import { genericDaisyUIThemeEnumSchema } from '@root/types/common/zod/generic';
+import { cn, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import { getCookieData, getSessionResult } from '@root/utils/server';
 import type { Metadata, Viewport } from 'next';
@@ -212,23 +212,23 @@ const getLayoutProps = async () => {
 		tryCatchHandler(getCookieData(KEY_BINDING_DICTIONARY.THEME_COOKIE_KEY), 'getLayoutProps.getCookieData')
 	]);
 
-	return { session: sessionRes.data?.result, themeCookies: themeCookiesRes.data };
+	return {
+		session: sessionRes.data?.result,
+		theme: genericDaisyUIThemeEnumSchema.catch('fantasy').parse(themeCookiesRes.data?.value)
+	};
 };
 
 export default async function RootLayout({ children }: ChildrenProps) {
-	const { session, themeCookies } = await getLayoutProps();
+	const { session, theme } = await getLayoutProps();
 
 	return (
 		<html lang='en'>
-			<ThemeWrapper
-				defaultTheme={daisyUIThemeEnumSchema.parse(themeCookies?.value)}
-				className={cn(fontAtelier.variable, fontComicSansMS.className)}
-			>
+			<ThemeWrapper defaultTheme={theme} className={cn(fontAtelier.variable, fontComicSansMS.className)}>
 				<main>
 					<ScrollWrapper>
 						<AuthProvider session={session}>
 							<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
-								<ThemeSwitcher defaultTheme={daisyUIThemeEnumSchema.parse(themeCookies?.value)} />
+								<ThemeSwitcher defaultTheme={theme} />
 
 								<AuthNav />
 							</nav>
@@ -238,7 +238,7 @@ export default async function RootLayout({ children }: ChildrenProps) {
 					</ScrollWrapper>
 				</main>
 
-				{evnIs('production') ? <SpeedInsights /> : null}
+				{env.NEXT_PUBLIC_NODE_ENV === 'production' ? <SpeedInsights /> : null}
 			</ThemeWrapper>
 		</html>
 	);

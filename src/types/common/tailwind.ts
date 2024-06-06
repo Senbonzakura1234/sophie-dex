@@ -1,4 +1,4 @@
-import type { ColorEnum } from './zod';
+import type { ColorEnum } from './zod/generic';
 
 export type DefaultColors = {
 	inherit: 'inherit';

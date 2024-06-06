@@ -1,5 +1,5 @@
 import type { TextShadowMap } from '@root/types/common/tailwind';
-import type { ColorEnum } from '@root/types/common/zod';
+import type { ColorEnum } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
 
 type LevelProps = { level: number; color: ColorEnum };

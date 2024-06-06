@@ -2,8 +2,8 @@ import SelectOption from '@components/common/static/SelectOption';
 import { categoryIconMap } from '@root/constants/common';
 import { useQueryOnChange } from '@root/hooks/useQueryOnChange';
 import type { SelectOptionItem } from '@root/types/common';
-import type { CategoryEnum } from '@root/types/common/zod';
-import { categoryList } from '@root/types/model';
+import type { CategoryEnum } from '@root/types/common/zod/generic';
+import { genericCategoryEnumSchema } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
 
 const categoryDefaultSelect = {
@@ -13,7 +13,7 @@ const categoryDefaultSelect = {
 
 const categorySelectList: Array<SelectOptionItem<CategoryEnum>> = [
 	categoryDefaultSelect,
-	...categoryList.map(category => ({
+	...genericCategoryEnumSchema._def.values.map(category => ({
 		value: category,
 		icon: (
 			<span

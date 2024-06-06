@@ -1,82 +1,29 @@
 import type { CommonRecord } from '@root/server/postgresql/schema';
-import {
-	booleanishList,
-	categoryList,
-	colorList,
-	daisyUIThemeList,
-	directionList,
-	errorList,
-	moduleIdList,
-	nodeEnvList,
-	providerIdList,
-	recipeTypeList,
-	relatedCategoryList,
-	rumorTypeList,
-	sortByList
-} from '@root/types/model';
 import { z } from 'zod';
-
-export const appCodeSchema = z
-	.string()
-	.regex(/(?=\S*['-])([a-zA-Z'-]+)/)
-	.catch('-');
-export const appKeyWordSchema = z.string().regex(/[^,]+/).catch('-');
-
-export const nodeEnvEnumSchema = z.enum(nodeEnvList).catch('production');
-export type NodeEnvEnum = z.infer<typeof nodeEnvEnumSchema>;
-
-export const daisyUIThemeEnumSchema = z.enum(daisyUIThemeList).catch('fantasy');
-export type DaisyUIThemeEnum = z.infer<typeof daisyUIThemeEnumSchema>;
-
-export const errorEnumSchema = z.enum(errorList).catch('INTERNAL_SERVER_ERROR');
-export type ErrorEnum = z.infer<typeof errorEnumSchema>;
-
-export const genericStringSchema = z.string();
-
-export const genericNonnegativeIntSchema = z.number().int().nonnegative();
-
-export const genericBooleanishEnumSchema = z.enum(booleanishList);
-export type BooleanishEnum = z.infer<typeof genericBooleanishEnumSchema>;
-
-export const genericModuleIdEnumSchema = z.enum(moduleIdList);
-export type ModuleIdEnum = z.infer<typeof genericModuleIdEnumSchema>;
-
-export const genericCategoryEnumSchema = z.enum(categoryList);
-export type CategoryEnum = z.infer<typeof genericCategoryEnumSchema>;
-
-export const genericColorEnumSchema = z.enum(colorList);
-export type ColorEnum = z.infer<typeof genericColorEnumSchema>;
-
-export const genericDirectionEnumSchema = z.enum(directionList);
-export type DirectionEnum = z.infer<typeof genericDirectionEnumSchema>;
-
-export const genericPageSchema = z.coerce.number().positive();
-
-export const genericRecipeTypeEnumSchema = z.enum(recipeTypeList);
-export type RecipeTypeEnum = z.infer<typeof genericRecipeTypeEnumSchema>;
-
-export const genericRelatedCategoryEnumSchema = z.enum(relatedCategoryList);
-export type RelatedCategoryEnum = z.infer<typeof genericRelatedCategoryEnumSchema>;
-
-export const genericRumorTypeEnumSchema = z.enum(rumorTypeList);
-export type RumorTypeEnum = z.infer<typeof genericRumorTypeEnumSchema>;
-
-export const genericSortByEnumSchema = z.enum(sortByList);
-export type SortByEnum = z.infer<typeof genericSortByEnumSchema>;
-
-export const genericIdSchema = genericStringSchema.ulid();
-export type Id = z.infer<typeof genericIdSchema>;
+import {
+	genericBooleanishEnumSchema,
+	genericCategoryEnumSchema,
+	genericColorEnumSchema,
+	genericDirectionEnumSchema,
+	genericIdSchema,
+	genericModuleIdEnumSchema,
+	genericRecipeTypeEnumSchema,
+	genericRelatedCategoryEnumSchema,
+	genericRumorTypeEnumSchema,
+	genericSortByEnumSchema
+} from './generic';
 
 export const searchQueryValidator = z.object({
 	bookmarked: genericBooleanishEnumSchema.nullish().catch(null).default(null),
 	category: genericCategoryEnumSchema.nullish().catch(null).default(null),
 	color: genericColorEnumSchema.nullish().catch(null).default(null),
 	direction: genericDirectionEnumSchema.nullish().catch(null).default(null),
-	page: genericPageSchema.nullish().catch(null).default(null),
+	page: z.coerce.number().positive().nullish().catch(null).default(null),
 	recipeType: genericRecipeTypeEnumSchema.nullish().catch(null).default(null),
 	relatedCategory: genericRelatedCategoryEnumSchema.nullish().catch(null).default(null),
 	rumorType: genericRumorTypeEnumSchema.nullish().catch(null).default(null),
-	search: genericStringSchema
+	search: z
+		.string()
 		.transform(val => val.trim())
 		.nullish()
 		.catch(null)
@@ -87,8 +34,8 @@ export type SearchQuery = z.infer<typeof searchQueryValidator>;
 
 export const signInQueryValidator = z
 	.object({
-		callbackUrl: genericStringSchema.url().optional().catch('/').default('/'),
-		error: genericStringSchema.optional().catch(undefined).transform(Boolean)
+		callbackUrl: z.string().url().optional().catch('/').default('/'),
+		error: z.string().optional().catch(undefined).transform(Boolean)
 	})
 	.catch({ callbackUrl: '/', error: false })
 	.default({ callbackUrl: '/', error: false });
@@ -106,9 +53,6 @@ export const bookmarkQueryValidator = z.object({
 	isBookmarked: z.boolean().default(false)
 });
 export type BookmarkQuery = z.infer<typeof bookmarkQueryValidator>;
-
-export const providerIdEnumValidator = z.enum(providerIdList);
-export type ProviderIdEnum = z.infer<typeof providerIdEnumValidator>;
 
 export const highlightTextValidator = z.object({ content: z.string() });
 export type HighlightText = z.infer<typeof highlightTextValidator>;
@@ -149,3 +93,17 @@ export const commonRecordValidator = z.object({
 	keyWords: z.string(),
 	moduleId: genericModuleIdEnumSchema
 }) satisfies z.ZodType<CommonRecord>;
+
+export const ogQuerySchema = z.object({
+	title: z.string().optional().catch(''),
+	description: z.string().optional().catch(''),
+	src: z
+		.string()
+		.url()
+		.transform(url => (url.includes('/api/og') ? undefined : url))
+		.optional()
+		.catch(undefined),
+	alt: z.string().optional().catch(undefined),
+	type: z.enum(['squared', 'landscape']).catch('landscape').default('landscape')
+});
+export type OgQuery = z.infer<typeof ogQuerySchema>;

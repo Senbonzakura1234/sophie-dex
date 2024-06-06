@@ -3,7 +3,8 @@
 import ChevronDoubleRightIcon from '@components/icons/solid/ChevronDoubleRightIcon';
 import type { ImprovePick } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
-import type { ProviderIdEnum, SignInQuery } from '@root/types/common/zod';
+import type { SignInQuery } from '@root/types/common/zod';
+import type { ProviderIdEnum } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
 import type { ClientSafeProvider } from 'next-auth/react';
 import { signIn } from 'next-auth/react';

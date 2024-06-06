@@ -1,47 +1,50 @@
-import {
-	appCodeSchema,
-	appKeyWordSchema,
-	genericBooleanishEnumSchema,
-	genericStringSchema,
-	nodeEnvEnumSchema,
-	providerIdEnumValidator
-} from '@root/types/common/zod';
+import { genericBooleanishEnumSchema, genericProviderIdEnumValidator } from '@root/types/common/zod/generic';
 import { capitalize } from '@root/utils/common';
 import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
+
+const appCodeSchema = z
+	.string()
+	.regex(/(?=\S*['-])([a-zA-Z'-]+)/)
+	.catch('-');
+
+const appKeyWordSchema = z.string().regex(/[^,]+/).catch('-');
+
+const nodeEnvEnumSchema = z.enum(['development', 'test', 'production']).catch('production');
 
 export const env = createEnv({
 	client: {
 		NEXT_PUBLIC_NODE_ENV: nodeEnvEnumSchema,
 		NEXT_PUBLIC_PORT: z.coerce.number().nonnegative().catch(3000),
-		NEXT_PUBLIC_VERCEL_URL: genericStringSchema.optional(),
+		NEXT_PUBLIC_VERCEL_URL: z.string().optional(),
 
-		NEXT_PUBLIC_APP_HOST: genericStringSchema.optional(),
+		NEXT_PUBLIC_APP_HOST: z.string().optional(),
 
-		NEXT_PUBLIC_APP_AUTHOR: genericStringSchema.catch('-'),
-		NEXT_PUBLIC_APP_AUTHOR_EMAIL: genericStringSchema.email().catch('-'),
+		NEXT_PUBLIC_APP_AUTHOR: z.string().catch('-'),
+		NEXT_PUBLIC_APP_AUTHOR_EMAIL: z.string().email().catch('-'),
 		NEXT_PUBLIC_APP_CODE: appCodeSchema,
 		NEXT_PUBLIC_APP_DB_PREFIX: appCodeSchema.transform(val => val.replaceAll('-', '_')),
-		NEXT_PUBLIC_APP_DESCRIPTION: genericStringSchema.catch('-'),
+		NEXT_PUBLIC_APP_DESCRIPTION: z.string().catch('-'),
 		NEXT_PUBLIC_APP_KEYWORD: appKeyWordSchema,
-		NEXT_PUBLIC_APP_LICENSE_CODE: genericStringSchema.catch('-'),
+		NEXT_PUBLIC_APP_LICENSE_CODE: z.string().catch('-'),
 		NEXT_PUBLIC_APP_NAME: appCodeSchema.transform(val => capitalize(val.replaceAll('-', ' '))),
-		NEXT_PUBLIC_APP_PATH: genericStringSchema.catch('-'),
-		NEXT_PUBLIC_ALLOW_AUTH_PROVIDER: genericStringSchema
+		NEXT_PUBLIC_APP_PATH: z.string().catch('-'),
+		NEXT_PUBLIC_ALLOW_AUTH_PROVIDER: z
+			.string()
 			.catch('')
-			.transform(val => z.array(providerIdEnumValidator).catch([]).parse(val.split(',')))
+			.transform(val => z.array(genericProviderIdEnumValidator).catch([]).parse(val.split(',')))
 	},
 	server: {
-		PGURL_NONPOOLING: genericStringSchema.catch(''),
+		PGURL_NONPOOLING: z.string().catch(''),
 
-		GITHUB_TOKEN: genericStringSchema.catch(''),
-		GITHUB_APP_ID: genericStringSchema.catch(''),
-		GITHUB_PROD_APP_ID: genericStringSchema.catch(''),
-		GITHUB_APP_SECRET: genericStringSchema.catch(''),
-		GITHUB_PROD_APP_SECRET: genericStringSchema.catch(''),
+		GITHUB_TOKEN: z.string().catch(''),
+		GITHUB_APP_ID: z.string().catch(''),
+		GITHUB_PROD_APP_ID: z.string().catch(''),
+		GITHUB_APP_SECRET: z.string().catch(''),
+		GITHUB_PROD_APP_SECRET: z.string().catch(''),
 
-		NEXTAUTH_URL: genericStringSchema.catch(''),
-		NEXTAUTH_SECRET: genericStringSchema.catch(''),
+		NEXTAUTH_URL: z.string().catch(''),
+		NEXTAUTH_SECRET: z.string().catch(''),
 		IS_NEXTJS_ENV: genericBooleanishEnumSchema.catch('true')
 	},
 	runtimeEnv: {

@@ -1,7 +1,7 @@
 import { colorTWClassMap } from '@root/constants/common';
 import type { CommonRecord } from '@root/server/postgresql/schema';
 import type { ClassNameProps } from '@root/types/common/props';
-import type { ColorEnum } from '@root/types/common/zod';
+import type { ColorEnum } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
 import type { ReactNode } from 'react';
 import RecordHead from './RecordHead';

@@ -3,12 +3,12 @@
 import SelectOption from '@components/common/static/SelectOption';
 import { useTheme } from '@root/hooks/useTheme';
 import type { SelectOptionItem } from '@root/types/common';
-import type { DaisyUIThemeEnum } from '@root/types/common/zod';
-import { daisyUIThemeList } from '@root/types/model';
+import type { DaisyUIThemeEnum } from '@root/types/common/zod/generic';
+import { genericDaisyUIThemeEnumSchema } from '@root/types/common/zod/generic';
 
 type Props = { defaultTheme: DaisyUIThemeEnum };
 
-const themeSelectList = daisyUIThemeList.map(theme => ({
+const themeSelectList = genericDaisyUIThemeEnumSchema._def.values.map(theme => ({
 	value: theme,
 	icon: (
 		<span

@@ -1,9 +1,8 @@
 import { insertOrUpdateUser } from '@root/server/postgresql';
 import { APIError } from '@root/types/common';
-import type { ProviderIdEnum } from '@root/types/common/zod';
 import { githubUserInfoSchema } from '@root/types/common/zod';
-import { providerIdList } from '@root/types/model';
-import { evnIs } from '@root/utils/common';
+import type { ProviderIdEnum } from '@root/types/common/zod/generic';
+import { genericProviderIdEnumValidator } from '@root/types/common/zod/generic';
 import { env } from '@root/utils/common/env';
 import type { AuthOptions } from 'next-auth';
 import NextAuth from 'next-auth';
@@ -18,8 +17,8 @@ const providerMapping = {
 	atlassian: Atlassian({ clientId: '', clientSecret: '' }),
 	facebook: Facebook({ clientId: '', clientSecret: '' }),
 	github: Github({
-		clientId: evnIs('production') ? env.GITHUB_PROD_APP_ID : env.GITHUB_APP_ID,
-		clientSecret: evnIs('production') ? env.GITHUB_PROD_APP_SECRET : env.GITHUB_APP_SECRET,
+		clientId: env.NEXT_PUBLIC_NODE_ENV === 'production' ? env.GITHUB_PROD_APP_ID : env.GITHUB_APP_ID,
+		clientSecret: env.NEXT_PUBLIC_NODE_ENV === 'production' ? env.GITHUB_PROD_APP_SECRET : env.GITHUB_APP_SECRET,
 		profile: async (...args) => {
 			const profileResult = githubUserInfoSchema.safeParse(args[0]);
 
@@ -50,7 +49,7 @@ const providerMapping = {
 } satisfies Record<ProviderIdEnum, Provider>;
 
 export const authOptions: AuthOptions = {
-	providers: [...providerIdList]
+	providers: genericProviderIdEnumValidator._def.values
 		.sort(id => (env.NEXT_PUBLIC_ALLOW_AUTH_PROVIDER.includes(id) ? -1 : 1))
 		.map(id => providerMapping[id]),
 	callbacks: {
