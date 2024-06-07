@@ -9,9 +9,7 @@ import type { ImageResponseOptions } from 'next/server';
 
 export const runtime: ServerRuntime = 'edge';
 
-type FontList = ImageResponseOptions['fonts'];
-
-const getFontData = async (): Promise<FontList> => {
+const getFontData = async (): Promise<ImageResponseOptions['fonts']> => {
 	const url = new URL('../../../fonts/comic-sans-ms/regular-bold.ttf', import.meta.url);
 
 	const dataResult = await tryCatchHandler(
@@ -25,40 +23,45 @@ const getFontData = async (): Promise<FontList> => {
 };
 
 const defaultOgQuery: OgQuery = {
-	description: getBaseUrl(true),
 	alt: env.NEXT_PUBLIC_APP_NAME,
-	src: `${getBaseUrl(true)}/assets/images/sophie-logo.compressed.png`,
+	description: getBaseUrl(true),
 	title: env.NEXT_PUBLIC_APP_DESCRIPTION
 };
 
 export async function GET(request: Request) {
 	const { searchParams } = new URL(request.url);
 
-	const rawOgQuery = [...searchParams.keys()].reduce(
+	Array.from(searchParams.keys());
+
+	const rawOgQuery = Array.from(searchParams.keys()).reduce(
 		(prev, cur) => ({ ...prev, [cur]: searchParams.get(cur) }),
 		{} as CommonObject
 	);
 
-	const { description, src, alt, title } = ogQuerySchema.catch(defaultOgQuery).parse(rawOgQuery);
+	const {
+		description = defaultOgQuery.description,
+		alt = defaultOgQuery.alt,
+		title = defaultOgQuery.title
+	} = ogQuerySchema.catch(defaultOgQuery).parse(rawOgQuery);
 
 	return new ImageResponse(
 		(
-			<div tw='flex bg-slate-50 w-full h-full py-8' data-theme='fantasy'>
+			<div tw='flex bg-slate-50 w-full h-full py-8'>
 				<div
 					style={{ backgroundImage: 'linear-gradient(to bottom right, #ceb760, #9d750d)' }}
 					tw='flex w-full h-full py-2'
 				>
 					<div tw='items-center justify-center flex-col flex bg-slate-50 h-full w-full shadow-inner'>
 						<img
-							src={src || `${getBaseUrl(true)}/assets/images/sophie-logo.compressed.png`}
-							alt={alt || env.NEXT_PUBLIC_APP_NAME}
+							src={`${getBaseUrl(true)}/assets/images/sophie-logo.compressed.png`}
+							alt={alt}
 							width={736}
 							height={303}
 						/>
 
-						<h1 tw='m-0 text-2xl font-bold text-[#9d750d]'>{title || env.NEXT_PUBLIC_APP_DESCRIPTION}</h1>
+						<h1 tw='m-0 text-2xl font-bold text-[#9d750d]'>{title}</h1>
 
-						<p tw='text-lg text-[#412711]'>{description || getBaseUrl(true)}</p>
+						<p tw='text-lg text-[#412711]'>{description}</p>
 					</div>
 				</div>
 			</div>

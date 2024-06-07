@@ -58,7 +58,7 @@ export async function generateDetailMetadata(
 	} satisfies OgQuery;
 
 	const ogSearchParam = new URLSearchParams(entries(ogQuery));
-	const ogImgUrl = `${getBaseUrl()}/api/og?${ogSearchParam.toString()}`;
+	const ogImgUrl = `${getBaseUrl(true)}/api/og?${ogSearchParam.toString()}`;
 
 	return {
 		title: ogQuery.title,
