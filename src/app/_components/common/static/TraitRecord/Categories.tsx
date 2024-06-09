@@ -5,19 +5,16 @@ import { categoryIconMap } from '@root/constants/common';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { CategoryEnum } from '@root/types/common/zod/generic';
 import { cn, convertCode } from '@root/utils/common';
-import { useCallback } from 'react';
 
 type CategoriesProps = { categories: Array<CategoryEnum> };
 
 function Categories({ categories }: CategoriesProps) {
 	const { searchQuery } = useSearchQuery();
 
-	const checkIsActive = useCallback((r: CategoryEnum) => r === searchQuery.category, [searchQuery.category]);
-
 	return (
 		<nav className='mt-auto flex max-w-fit flex-wrap gap-2 2xl:pt-3'>
 			{categories.map((category, key) => {
-				const isActive = checkIsActive(category);
+				const isActive = category === searchQuery.category;
 
 				return (
 					<div className='capitalize 2xl:tooltip 2xl:tooltip-bottom' data-tip={convertCode(category)} key={key}>

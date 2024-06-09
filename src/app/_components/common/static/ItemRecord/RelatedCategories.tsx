@@ -4,22 +4,16 @@ import QueryLink from '@components/common/dynamic/QueryLink';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { RelatedCategoryEnum } from '@root/types/common/zod/generic';
 import { cn, convertCode, highlightSearchedText } from '@root/utils/common';
-import { useCallback } from 'react';
 
 type RelatedCategoriesProps = { relatedCategories: Array<RelatedCategoryEnum>; search: string | undefined };
 
 export default function RelatedCategories({ relatedCategories, search }: RelatedCategoriesProps) {
 	const { searchQuery } = useSearchQuery();
 
-	const checkIsActive = useCallback(
-		(r: RelatedCategoryEnum) => r === searchQuery.relatedCategory,
-		[searchQuery.relatedCategory]
-	);
-
 	return (
 		<div className='mt-auto flex flex-wrap gap-2'>
 			{relatedCategories.map((relatedCategory, k) => {
-				const isActive = checkIsActive(relatedCategory);
+				const isActive = relatedCategory === searchQuery.relatedCategory;
 
 				return (
 					<QueryLink

@@ -3,7 +3,7 @@
 import { KEY_BINDING_DICTIONARY } from '@root/constants/common';
 import type { OnScroll } from '@root/hooks/useScroll';
 import { useScroll } from '@root/hooks/useScroll';
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 import DefaultRefresh from './DefaultRefresh';
 import DetailRefresh from './DetailRefresh';
 import ListRefresh from './ListRefresh';
@@ -16,7 +16,7 @@ type Props = {
 export default function PageRefresh({ type = 'DEFAULT' }: Props) {
 	const [isDisabled, setIsDisabled] = useState(false);
 
-	const onScroll: OnScroll = useCallback(({ scrollPosition }) => setIsDisabled(scrollPosition > 0), []);
+	const onScroll: OnScroll = ({ scrollPosition }) => setIsDisabled(scrollPosition > 0);
 
 	useScroll({ onScroll, scrollElementId: KEY_BINDING_DICTIONARY.ROOT_SCROLL_WRAPPER_ID });
 

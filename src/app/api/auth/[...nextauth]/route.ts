@@ -19,6 +19,7 @@ const providerMapping = {
 	github: Github({
 		clientId: env.NEXT_PUBLIC_NODE_ENV === 'production' ? env.GITHUB_PROD_APP_ID : env.GITHUB_APP_ID,
 		clientSecret: env.NEXT_PUBLIC_NODE_ENV === 'production' ? env.GITHUB_PROD_APP_SECRET : env.GITHUB_APP_SECRET,
+
 		profile: async (...args) => {
 			const profileResult = githubUserInfoSchema.safeParse(args[0]);
 

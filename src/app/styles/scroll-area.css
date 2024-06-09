@@ -1,5 +1,11 @@
 @layer utilities {
 	@media (min-width: theme('screens.lg')) {
+		.legacy-scroll-area,
+		.highlight-code {
+			@apply text-base-content;
+			scrollbar-color: currentColor transparent;
+			scrollbar-width: thin;
+		}
 		.legacy-scroll-area::-webkit-scrollbar,
 		.highlight-code pre::-webkit-scrollbar {
 			@apply w-1 h-1;
