@@ -4,7 +4,7 @@ import { z } from 'zod';
 export const genericBooleanishEnumSchema = z.enum(['false', 'true']);
 export type BooleanishEnum = z.infer<typeof genericBooleanishEnumSchema>;
 
-export const genericProviderIdEnumValidator = z.enum(['atlassian', 'facebook', 'github', 'google', 'instagram']);
+export const genericProviderIdEnumValidator = z.enum(['apple', 'facebook', 'github', 'google', 'instagram']);
 export type ProviderIdEnum = z.infer<typeof genericProviderIdEnumValidator>;
 
 export const genericDaisyUIThemeEnumSchema = z.enum(['autumn', 'fantasy', 'forest', 'synthwave']);

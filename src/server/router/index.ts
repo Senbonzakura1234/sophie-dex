@@ -21,6 +21,7 @@ import {
 	getRumorRecordQuery,
 	getTraitRecordQuery
 } from '@root/server/postgresql/repository';
+import { APIError } from '@root/types/common';
 import {
 	bookmarkQueryValidator,
 	idQueryValidator,
@@ -33,7 +34,9 @@ import { exportRecords, getAllRecordIds, getContentRecord } from '@root/utils/se
 import { initTRPC } from '@trpc/server';
 import { ZodError } from 'zod';
 
-export const createContext = async () => ({ sessionResult: await getSessionResult() });
+type TrpcCreateContextFn = () => Promise<{ sessionResult?: Awaited<ReturnType<typeof getSessionResult>> }>;
+
+export const createContext: TrpcCreateContextFn = async () => ({ sessionResult: await getSessionResult() });
 
 const t = initTRPC.context<typeof createContext>().create({
 	isDev: env.NEXT_PUBLIC_NODE_ENV !== 'production',
@@ -51,6 +54,8 @@ const t = initTRPC.context<typeof createContext>().create({
 const procedure = t.procedure;
 
 const protectedProcedure = t.procedure.use(opts => {
+	if (!opts.ctx.sessionResult) throw new APIError({ code: 'UNAUTHORIZED' });
+
 	if (opts.ctx.sessionResult.isSuccess) return opts.next();
 
 	throw opts.ctx.sessionResult.error;
@@ -60,7 +65,7 @@ export const appRouter = t.router({
 	effect: {
 		getAll: procedure
 			.input(searchQueryValidator)
-			.query(({ input, ctx }) => getEffects(input, ctx.sessionResult.result?.user.name)),
+			.query(({ input, ctx }) => getEffects(input, ctx.sessionResult?.result?.user.name)),
 
 		getOne: procedure.input(idQueryValidator).query(({ input }) => getContentRecord(getEffectRecordQuery, input)),
 
@@ -71,7 +76,7 @@ export const appRouter = t.router({
 	item: {
 		getAll: procedure
 			.input(searchQueryValidator)
-			.query(({ input, ctx }) => getItems(input, ctx.sessionResult.result?.user.name)),
+			.query(({ input, ctx }) => getItems(input, ctx.sessionResult?.result?.user.name)),
 
 		getOne: procedure.input(idQueryValidator).query(({ input }) => getContentRecord(getItemRecordQuery, input)),
 
@@ -82,7 +87,7 @@ export const appRouter = t.router({
 	rumor: {
 		getAll: procedure
 			.input(searchQueryValidator)
-			.query(({ input, ctx }) => getRumors(input, ctx.sessionResult.result?.user.name)),
+			.query(({ input, ctx }) => getRumors(input, ctx.sessionResult?.result?.user.name)),
 
 		getOne: procedure.input(idQueryValidator).query(({ input }) => getContentRecord(getRumorRecordQuery, input)),
 
@@ -93,7 +98,7 @@ export const appRouter = t.router({
 	trait: {
 		getAll: procedure
 			.input(searchQueryValidator)
-			.query(({ input, ctx }) => getTraits(input, ctx.sessionResult.result?.user.name)),
+			.query(({ input, ctx }) => getTraits(input, ctx.sessionResult?.result?.user.name)),
 
 		getOne: procedure.input(idQueryValidator).query(({ input }) => getContentRecord(getTraitRecordQuery, input)),
 
@@ -104,11 +109,11 @@ export const appRouter = t.router({
 	user: {
 		getModuleBookmarks: protectedProcedure
 			.input(moduleIdQueryValidator)
-			.query(({ input, ctx }) => getModuleBookmarks(input, ctx.sessionResult.result?.user.name || '')),
+			.query(({ input, ctx }) => getModuleBookmarks(input, ctx.sessionResult?.result?.user.name || '')),
 		bookmark: protectedProcedure
 			.input(bookmarkQueryValidator)
-			.mutation(({ input, ctx }) => bookmarkRecord(input, ctx.sessionResult.result?.user.name || '')),
-		getProfile: protectedProcedure.query(({ ctx }) => getProfile(ctx.sessionResult.result?.user.name || ''))
+			.mutation(({ input, ctx }) => bookmarkRecord(input, ctx.sessionResult?.result?.user.name || '')),
+		getProfile: protectedProcedure.query(({ ctx }) => getProfile(ctx.sessionResult?.result?.user.name || ''))
 	}
 });
 

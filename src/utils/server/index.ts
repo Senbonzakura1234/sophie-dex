@@ -1,21 +1,21 @@
 import { env } from '@root/utils/common/env';
 if (env.IS_NEXTJS_ENV === 'true') import('server-only');
 
+import { auth } from '@root/auth';
 import type { APIResult } from '@root/types/common';
 import { APIError } from '@root/types/common';
 import { tryCatchHandler } from '@root/utils/common';
-import { getServerSession } from 'next-auth';
 import type { RequestCookie } from 'next/dist/compiled/@edge-runtime/cookies';
 import { cookies } from 'next/headers';
 
 export const getCookieData = async (name: string) => {
 	const cookieData = cookies().get(name);
 
-	return new Promise<RequestCookie | undefined>(resolve => setTimeout(() => resolve(cookieData), 0));
+	return new Promise<RequestCookie | undefined>(resolve => setTimeout(() => resolve(cookieData)));
 };
 
 export const getSessionResult = async () => {
-	const sessionRes = await tryCatchHandler(getServerSession(), 'getSessionResult.getServerSession');
+	const sessionRes = await tryCatchHandler(auth(), 'getSessionResult.getServerSession');
 
 	if (!sessionRes.isSuccess)
 		return {

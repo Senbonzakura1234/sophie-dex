@@ -13,7 +13,7 @@ export default function ErrorContent({ code = 'INTERNAL_SERVER_ERROR' }: ErrorCo
 	if (code === 'UNAUTHORIZED') return <SignInRedirect />;
 
 	return (
-		<div className='col-span-2 grid grid-cols-1'>
+		<div className='col-span-2 grid size-full grid-cols-1'>
 			<div
 				className={cn(
 					'modal-box m-auto grid aspect-video w-11/12 cursor-default select-none place-content-center gap-1 text-center shadow-md shadow-current md:w-[600px]',

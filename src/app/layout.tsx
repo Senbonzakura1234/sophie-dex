@@ -2,10 +2,8 @@ import './styles/index.css';
 
 import '@total-typescript/ts-reset';
 
-import AuthProvider from '@components/layout/dynamic/AuthProvider';
 import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
 import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
-import PulsePlaceHolder from '@components/loading/PulsePlaceHolder';
 import { KEY_BINDING_DICTIONARY } from '@root/constants/common';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { AppleMediaConfig } from '@root/types/common';
@@ -13,15 +11,17 @@ import type { ChildrenProps } from '@root/types/common/props';
 import { genericDaisyUIThemeEnumSchema } from '@root/types/common/zod/generic';
 import { cn, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
-import { getCookieData, getSessionResult } from '@root/utils/server';
+import { getCookieData } from '@root/utils/server';
 import type { Metadata, Viewport } from 'next';
+import { SessionProvider } from 'next-auth/react';
 import dynamic from 'next/dynamic';
 
-const AuthNav = dynamic(() => import('@components/layout/dynamic/AuthNav'));
+const AuthNav = dynamic(() => import('@components/layout/dynamic/AuthNav'), {
+	loading: () => <div className='h-9 w-[108px] rounded-lg bg-base-100 shadow-lg shadow-base-content/20 xl:h-9' />
+});
+const AuthNotification = dynamic(() => import('@components/layout/dynamic/AuthNotification'));
 const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'), {
-	loading: () => (
-		<PulsePlaceHolder className='h-8 w-[136px] rounded-lg bg-base-100 shadow-lg shadow-base-content/20 xl:h-9' />
-	)
+	loading: () => <div className='h-8 w-[136px] rounded-lg bg-base-100 shadow-lg shadow-base-content/20 xl:h-9' />
 });
 const SpeedInsights = dynamic(() => import('@vercel/speed-insights/next').then(m => m.SpeedInsights), { ssr: false });
 
@@ -207,26 +207,23 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-width', initialScale: 1 };
 
 const getLayoutProps = async () => {
-	const [sessionRes, themeCookiesRes] = await Promise.all([
-		tryCatchHandler(getSessionResult(), 'getLayoutProps.getSessionResult'),
-		tryCatchHandler(getCookieData(KEY_BINDING_DICTIONARY.THEME_COOKIE_KEY), 'getLayoutProps.getCookieData')
-	]);
+	const themeCookiesRes = await tryCatchHandler(
+		getCookieData(KEY_BINDING_DICTIONARY.THEME_COOKIE_KEY),
+		'getLayoutProps.getCookieData'
+	);
 
-	return {
-		session: sessionRes.data?.result,
-		theme: genericDaisyUIThemeEnumSchema.catch('fantasy').parse(themeCookiesRes.data?.value)
-	};
+	return { theme: genericDaisyUIThemeEnumSchema.catch('fantasy').parse(themeCookiesRes.data?.value) };
 };
 
 export default async function RootLayout({ children }: ChildrenProps) {
-	const { session, theme } = await getLayoutProps();
+	const { theme } = await getLayoutProps();
 
 	return (
 		<html lang='en'>
 			<ThemeWrapper defaultTheme={theme} className={cn(fontAtelier.variable, fontComicSansMS.className)}>
 				<main>
 					<ScrollWrapper>
-						<AuthProvider session={session}>
+						<SessionProvider>
 							<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
 								<ThemeSwitcher defaultTheme={theme} />
 
@@ -234,7 +231,9 @@ export default async function RootLayout({ children }: ChildrenProps) {
 							</nav>
 
 							{children}
-						</AuthProvider>
+
+							<AuthNotification />
+						</SessionProvider>
 					</ScrollWrapper>
 				</main>
 

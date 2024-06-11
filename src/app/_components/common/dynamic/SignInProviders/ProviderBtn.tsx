@@ -1,16 +1,14 @@
-'use client';
-
 import ChevronDoubleRightIcon from '@components/icons/solid/ChevronDoubleRightIcon';
+import type { providersData } from '@root/auth';
+import { signIn } from '@root/auth';
 import type { ImprovePick } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
 import type { SignInQuery } from '@root/types/common/zod';
 import type { ProviderIdEnum } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
-import type { ClientSafeProvider } from 'next-auth/react';
-import { signIn } from 'next-auth/react';
 
 const classMapping = {
-	atlassian: 'btn-atlassian',
+	apple: 'btn-atlassian',
 	facebook: 'btn-facebook',
 	github: '',
 	google: '',
@@ -20,34 +18,40 @@ const classMapping = {
 type Props = {
 	providerId: ProviderIdEnum;
 } & ImprovePick<SignInQuery, 'callbackUrl'> &
-	ImprovePick<ClientSafeProvider, 'id' | 'name'> &
+	(typeof providersData)[number] &
 	ChildrenProps;
 
 export default function ProviderBtn({ providerId, children, callbackUrl, id, name }: Props) {
 	return (
-		<button
-			className={cn(
-				'btn btn-brand btn-outline border-none w-full max-w-64 lg:max-w-80 self-center group',
-				classMapping[providerId]
-			)}
-			onClick={() => signIn(id, { callbackUrl })}
+		<form
+			className='w-full max-w-64 self-center lg:max-w-80'
+			action={async () => {
+				'use server';
+
+				return await signIn(id, { callbackUrl });
+			}}
 		>
-			<div className='flex w-full items-center gap-3 overflow-hidden'>
-				<div className='mr-auto flex translate-x-[-28px] items-center gap-2 transition-transform group-hover:translate-x-0 sm:translate-x-[-115px]'>
-					<ChevronDoubleRightIcon className='size-5 text-inherit opacity-0 transition-opacity group-hover:opacity-100' />
+			<button
+				className={cn('group btn btn-brand btn-outline border-none w-full', classMapping[providerId])}
+				type='submit'
+			>
+				<div className='flex w-full items-center gap-3 overflow-hidden'>
+					<div className='mr-auto flex translate-x-[-28px] items-center gap-2 transition-transform group-hover:translate-x-0 sm:translate-x-[-115px]'>
+						<ChevronDoubleRightIcon className='size-5 text-inherit opacity-0 transition-opacity group-hover:opacity-100' />
 
-					<span
-						className='hidden text-nowrap opacity-0 transition-opacity group-hover:opacity-100 sm:inline'
-						style={{ wordSpacing: 0 }}
-					>
-						Signin with
-					</span>
+						<span
+							className='hidden text-nowrap opacity-0 transition-opacity group-hover:opacity-100 sm:inline'
+							style={{ wordSpacing: 0 }}
+						>
+							Signin with
+						</span>
 
-					<span>{name}</span>
+						<span>{name}</span>
+					</div>
+
+					{children}
 				</div>
-
-				{children}
-			</div>
-		</button>
+			</button>
+		</form>
 	);
 }

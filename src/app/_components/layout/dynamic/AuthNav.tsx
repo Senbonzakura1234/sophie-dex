@@ -4,18 +4,20 @@ import Avatar from '@components/common/static/Avatar';
 import Dropdown from '@components/common/static/Dropdown';
 import ProfileIcon from '@components/icons/outline/ProfileIcon';
 import SignOutIcon from '@components/icons/solid/SignOutIcon';
+import { customPages } from '@root/constants/common';
+import { arrayInclude, objectValues } from '@root/utils/common';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { usePathname } from 'next/navigation';
 
-const signInUrl = '/signin';
-
 export default function AuthNav() {
 	const { data: session, status } = useSession();
+
 	const pathname = usePathname();
 
-	if (status === 'loading') return null;
+	if (status === 'loading')
+		return <div className='h-9 w-[108px] rounded-lg bg-base-100 shadow-lg shadow-base-content/20 xl:h-9' />;
 
-	if (pathname === signInUrl) return null;
+	if (arrayInclude(objectValues(customPages), pathname)) return null;
 
 	if (session)
 		return (

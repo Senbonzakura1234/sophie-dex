@@ -43,8 +43,9 @@ export const env = createEnv({
 		GITHUB_APP_SECRET: z.string().catch(''),
 		GITHUB_PROD_APP_SECRET: z.string().catch(''),
 
-		NEXTAUTH_URL: z.string().catch(''),
-		NEXTAUTH_SECRET: z.string().catch(''),
+		AUTH_DRIZZLE_URL: z.string().catch(''),
+		AUTH_SECRET: z.string().catch(''),
+		AUTH_URL: z.string().catch(''),
 		IS_NEXTJS_ENV: genericBooleanishEnumSchema.catch('true')
 	},
 	runtimeEnv: {
@@ -73,8 +74,9 @@ export const env = createEnv({
 		GITHUB_PROD_APP_ID: process.env.GITHUB_PROD_APP_ID,
 		GITHUB_PROD_APP_SECRET: process.env.GITHUB_PROD_APP_SECRET,
 
-		NEXTAUTH_URL: process.env.NEXTAUTH_URL,
-		NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+		AUTH_DRIZZLE_URL: process.env.PGURL_NONPOOLING,
+		AUTH_SECRET: process.env.AUTH_SECRET,
+		AUTH_URL: process.env.AUTH_URL,
 		IS_NEXTJS_ENV: process.env.IS_NEXTJS_ENV
 	},
 	skipValidation: !!process.env.SKIP_ENV_VALIDATION

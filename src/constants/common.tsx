@@ -10,6 +10,7 @@ import type {
 } from '@root/types/common/zod/generic';
 import { env } from '@root/utils/common/env';
 import type { DefaultOptions } from '@tanstack/react-query';
+import type { NextAuthConfig } from 'next-auth';
 
 export const DEFAULT_LIMIT = 16;
 
@@ -111,3 +112,5 @@ export const KEY_BINDING_DICTIONARY = {
 	THEME_COOKIE_KEY: 'theme-cookie',
 	ROOT_SCROLL_WRAPPER_ID: 'root-scroll-wrapper'
 } as const;
+
+export const customPages = { signIn: '/signin' } as const satisfies Partial<NextAuthConfig['pages']>;
