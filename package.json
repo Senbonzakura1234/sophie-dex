@@ -33,7 +33,6 @@
 		"types": "tsc --noEmit --pretty"
 	},
 	"dependencies": {
-		"@auth/drizzle-adapter": "^1.2.0",
 		"@headlessui/react": "^2.0.4",
 		"@mdx-js/loader": "^3.0.1",
 		"@mdx-js/mdx": "^3.0.1",

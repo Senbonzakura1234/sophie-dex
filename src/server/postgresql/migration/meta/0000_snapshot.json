@@ -1,7 +1,7 @@
 {
-  "id": "ec9a1ff1-9857-4d7d-9a79-411d0385d368",
+  "id": "665cd018-d9d5-4135-bf92-a264510a12d0",
   "prevId": "00000000-0000-0000-0000-000000000000",
-  "version": "6",
+  "version": "7",
   "dialect": "postgresql",
   "tables": {
     "public.sophie_dex_effects": {
