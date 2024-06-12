@@ -113,7 +113,7 @@ export default function TopFilter() {
 					<QueryLink
 						disabled={isQueryEmpty}
 						aria-label='Reset Filter'
-						className='btn btn-xs my-auto gap-1 capitalize !shadow-current dark:shadow'
+						className='btn btn-xs my-auto gap-1 capitalize shadow-md !shadow-current'
 						href={{ query: {} }}
 						isOverridden
 						searchQuery={searchQuery}

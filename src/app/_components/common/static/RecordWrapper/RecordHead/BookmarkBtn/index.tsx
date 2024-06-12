@@ -5,7 +5,7 @@ import type { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { ApiClientCtx } from '@root/utils/client/trpc';
 import { capitalize, cn, tryCatchHandler } from '@root/utils/common';
-import { signIn, useSession } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 import { BookmarkBtnIcon, BookmarkBtnText } from './BookmarkBtnInner';
 
 type Props = { id: string; name: string; moduleId: NonNullable<ReturnType<typeof useModuleId>['moduleId']> };
@@ -60,7 +60,7 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 			'handleBookmark.mutateAsync'
 		);
 
-		if (!res.isSuccess) return void signIn();
+		if (!res.isSuccess) return void refetch();
 
 		return void (isNotBookmarkFilter ? refetch() : trpcUtils[moduleId].getAll.invalidate());
 	};
@@ -72,7 +72,7 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 		>
 			<button
 				aria-label={`${data?.result?.includes(id) ? 'Remove' : ''} Bookmark ${name}`}
-				className={cn('btn btn-primary btn-xs capitalize dark:shadow-md dark:shadow-current', {
+				className={cn('btn btn-primary btn-xs capitalize shadow-md shadow-current', {
 					'btn-outline': !data?.result?.includes(id) && isNotBookmarkFilter
 				})}
 				onClick={handleBookmark}

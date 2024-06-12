@@ -4,10 +4,14 @@ import { z } from 'zod';
 export const genericBooleanishEnumSchema = z.enum(['false', 'true']);
 export type BooleanishEnum = z.infer<typeof genericBooleanishEnumSchema>;
 
-export const genericProviderIdEnumValidator = z.enum(['apple', 'facebook', 'github', 'google', 'instagram']);
+export const genericProviderIdEnumValidator = z.enum(['github']);
 export type ProviderIdEnum = z.infer<typeof genericProviderIdEnumValidator>;
 
-export const genericDaisyUIThemeEnumSchema = z.enum(['autumn', 'fantasy', 'forest', 'synthwave']);
+export const lightThemesList = ['autumn', 'fantasy'] as const;
+export const darkThemesList = ['forest', 'synthwave'] as const;
+export const themesList = [...lightThemesList, ...darkThemesList] as const;
+
+export const genericDaisyUIThemeEnumSchema = z.enum(themesList);
 export type DaisyUIThemeEnum = z.infer<typeof genericDaisyUIThemeEnumSchema>;
 
 export const genericErrorEnumSchema = z.enum([

@@ -49,7 +49,7 @@ export default function RecordHead({ currentId, id, name, search, moduleId }: Re
 			<nav className='flex gap-2'>
 				<ShareButton
 					classNames={{
-						wrapper: '!btn-outline w-24 capitalize dark:!shadow-md dark:!shadow-current',
+						wrapper: '!btn-outline w-24 capitalize !shadow-md !shadow-current',
 						icon: 'size-3'
 					}}
 					input={{ text: name, title: name, url: `/${moduleId}/${id}` }}

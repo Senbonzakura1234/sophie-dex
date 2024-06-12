@@ -1,4 +1,4 @@
-import { genericBooleanishEnumSchema, genericProviderIdEnumValidator } from '@root/types/common/zod/generic';
+import { genericBooleanishEnumSchema } from '@root/types/common/zod/generic';
 import { capitalize } from '@root/utils/common';
 import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
@@ -28,11 +28,7 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_KEYWORD: appKeyWordSchema,
 		NEXT_PUBLIC_APP_LICENSE_CODE: z.string().catch('-'),
 		NEXT_PUBLIC_APP_NAME: appCodeSchema.transform(val => capitalize(val.replaceAll('-', ' '))),
-		NEXT_PUBLIC_APP_PATH: z.string().catch('-'),
-		NEXT_PUBLIC_ALLOW_AUTH_PROVIDER: z
-			.string()
-			.catch('')
-			.transform(val => z.array(genericProviderIdEnumValidator).catch([]).parse(val.split(',')))
+		NEXT_PUBLIC_APP_PATH: z.string().catch('-')
 	},
 	server: {
 		PGURL_NONPOOLING: z.string().catch(''),
@@ -56,7 +52,6 @@ export const env = createEnv({
 		NEXT_PUBLIC_APP_KEYWORD: process.env.NEXT_PUBLIC_APP_KEYWORD,
 		NEXT_PUBLIC_APP_LICENSE_CODE: process.env.NEXT_PUBLIC_APP_LICENSE_CODE,
 		NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL,
-		NEXT_PUBLIC_ALLOW_AUTH_PROVIDER: process.env.NEXT_PUBLIC_ALLOW_AUTH_PROVIDER,
 
 		NEXT_PUBLIC_APP_DB_PREFIX: process.env.NEXT_PUBLIC_APP_CODE,
 		NEXT_PUBLIC_APP_NAME: process.env.NEXT_PUBLIC_APP_CODE,

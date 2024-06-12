@@ -2,10 +2,9 @@
 
 import Avatar from '@components/common/static/Avatar';
 import Dropdown from '@components/common/static/Dropdown';
+import GithubIcon from '@components/icons/brand/GithubIcon';
 import ProfileIcon from '@components/icons/outline/ProfileIcon';
 import SignOutIcon from '@components/icons/solid/SignOutIcon';
-import { customPages } from '@root/constants/common';
-import { arrayInclude, objectValues } from '@root/utils/common';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { usePathname } from 'next/navigation';
 
@@ -16,8 +15,6 @@ export default function AuthNav() {
 
 	if (status === 'loading')
 		return <div className='h-9 w-[108px] rounded-lg bg-base-100 shadow-lg shadow-base-content/20 xl:h-9' />;
-
-	if (arrayInclude(objectValues(customPages), pathname)) return null;
 
 	if (session)
 		return (
@@ -59,7 +56,7 @@ export default function AuthNav() {
 								Sign Out
 							</>
 						),
-						onClick: () => signOut(),
+						onClick: () => signOut({ callbackUrl: pathname.startsWith('/profile') ? '/' : pathname }),
 						className: 'text-primary'
 					}
 				]}
@@ -80,9 +77,10 @@ export default function AuthNav() {
 
 	return (
 		<button
-			className='relative cursor-pointer rounded-lg bg-base-100 px-4 py-2 text-left text-xs font-bold shadow-lg shadow-base-content/20 focus:outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-base-100/75 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary xl:text-sm'
+			className='btn-brand flex cursor-pointer gap-2 rounded-lg px-4 py-2 text-left text-xs font-bold shadow-lg shadow-base-content/20 focus:outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-base-100/75 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary xl:text-sm'
 			onClick={() => signIn()}
 		>
+			<GithubIcon className='my-auto aspect-square w-4' />
 			Sign In
 		</button>
 	);
