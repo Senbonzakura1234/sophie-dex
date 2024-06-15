@@ -26,6 +26,7 @@
 		"drizzle-studio": "concurrently \"pnpm open-studio\" \"dotenv drizzle-kit studio\"",
 		"lint": "next lint",
 		"lint:fix": "eslint --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.json . --fix",
+		"lint:fixMD": "eslint --ext .md,.mdx . --fix",
 		"open-home": "open-cli http://localhost:3000",
 		"open-home:safe": "open-cli https://localhost:3000",
 		"open-studio": "open-cli https://local.drizzle.studio",

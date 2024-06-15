@@ -1,8 +1,8 @@
+import effectsList from '@root/scripts/seed/effectsList';
+import itemsList from '@root/scripts/seed/itemsList';
+import rumorsList from '@root/scripts/seed/rumorsList';
+import traitsList from '@root/scripts/seed/traitsList';
 import { postgresql } from '@root/server/postgresql/repository';
-import effectsList from '@root/server/postgresql/repository/seed/effectsList';
-import itemsList from '@root/server/postgresql/repository/seed/itemsList';
-import rumorsList from '@root/server/postgresql/repository/seed/rumorsList';
-import traitsList from '@root/server/postgresql/repository/seed/traitsList';
 import { effects, items, rumors, traits } from '@root/server/postgresql/schema';
 import { tryCatchHandler, writeLog } from '@root/utils/common';
 
