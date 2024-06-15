@@ -8,7 +8,12 @@ import { githubFileResponseSchema, licenseInfoSchema, packageDotJSONSchema } fro
 import { tryCatchHandler, tryCatchHandlerSync, writeLog } from '@root/utils/common';
 import type { ZodType } from 'zod';
 
-async function improvedFetch<TResult = unknown>(validator: ZodType<TResult>, ...args: Parameters<typeof fetch>) {
+async function improvedFetch(args: Parameters<typeof fetch>): Promise<string>;
+async function improvedFetch<TResult = unknown>(
+	args: Parameters<typeof fetch>,
+	validator: ZodType<TResult>
+): Promise<TResult>;
+async function improvedFetch<TResult = unknown>(args: Parameters<typeof fetch>, validator?: ZodType<TResult>) {
 	writeLog({ args: [`Fetch: ${JSON.stringify(args[0], null, 2)}`], hideInProd: true });
 
 	const fetchResult = await tryCatchHandler(fetch(...args), 'improvedFetch.fetch');
@@ -27,6 +32,19 @@ async function improvedFetch<TResult = unknown>(validator: ZodType<TResult>, ...
 			message: `Fetch fail at: ${JSON.stringify(args[0], null, 2)}`,
 			cause: fetchResult.data
 		});
+	}
+
+	if (!validator) {
+		const textResult = await tryCatchHandler(fetchResult.data.text(), 'improvedFetch.parstText');
+
+		if (!textResult.isSuccess)
+			throw new APIError({
+				code: 'INTERNAL_SERVER_ERROR',
+				message: `Parse JSON fail: ${JSON.stringify(textResult.error, null, 2)}`,
+				cause: textResult.error
+			});
+
+		return textResult.data;
 	}
 
 	const jsonResult = await tryCatchHandler(fetchResult.data.json(), 'improvedFetch.parseJson');
@@ -59,9 +77,8 @@ const getDefaultFetchHeader = (revalidate = 86400): Parameters<typeof fetch>[1] 
 export const getVersion = async (): Promise<APIResult<PackageDotJSON>> => {
 	const githubResult = await tryCatchHandler(
 		improvedFetch(
-			githubFileResponseSchema,
-			`https://api.github.com/repos/${env.NEXT_PUBLIC_APP_PATH}/contents/package.json`,
-			getDefaultFetchHeader()
+			[`https://api.github.com/repos/${env.NEXT_PUBLIC_APP_PATH}/contents/package.json`, getDefaultFetchHeader()],
+			githubFileResponseSchema
 		),
 		'getVersion.get'
 	);
@@ -92,14 +109,27 @@ export const getVersion = async (): Promise<APIResult<PackageDotJSON>> => {
 export const getLicense = async () => {
 	const licenseResult = await tryCatchHandler(
 		improvedFetch(
-			licenseInfoSchema,
-			`https://api.github.com/licenses/${env.NEXT_PUBLIC_APP_LICENSE_CODE}`,
-			getDefaultFetchHeader()
+			[`https://api.github.com/licenses/${env.NEXT_PUBLIC_APP_LICENSE_CODE}`, getDefaultFetchHeader()],
+			licenseInfoSchema
 		),
 		'getLicense.get'
 	);
 
 	return licenseResult.isSuccess
 		? { result: licenseResult.data as LicenseInfo, isSuccess: true as const, error: null }
+		: defaultResult;
+};
+
+export const getUserReadme = async () => {
+	const userReadmeResult = await tryCatchHandler(
+		improvedFetch([
+			`https://raw.githubusercontent.com/Senbonzakura1234/Senbonzakura1234/main/README.mdx`,
+			getDefaultFetchHeader()
+		]),
+		'getUserReadme.get'
+	);
+
+	return userReadmeResult.isSuccess
+		? { result: userReadmeResult.data, isSuccess: true as const, error: null }
 		: defaultResult;
 };
