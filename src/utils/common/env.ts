@@ -1,4 +1,3 @@
-import { genericBooleanishEnumSchema } from '@root/types/common/zod/generic';
 import { capitalize } from '@root/utils/common';
 import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
@@ -10,7 +9,7 @@ const appCodeSchema = z
 
 const appKeyWordSchema = z.string().regex(/[^,]+/).catch('-');
 
-const nodeEnvEnumSchema = z.enum(['development', 'test', 'production']).catch('production');
+const nodeEnvEnumSchema = z.enum(['development', 'test', 'production', 'script']).catch('production');
 
 export const env = createEnv({
 	client: {
@@ -40,8 +39,7 @@ export const env = createEnv({
 		GITHUB_PROD_APP_SECRET: z.string().catch(''),
 
 		AUTH_SECRET: z.string().catch(''),
-		AUTH_URL: z.string().catch(''),
-		IS_NEXTJS_ENV: genericBooleanishEnumSchema.catch('true')
+		AUTH_URL: z.string().catch('')
 	},
 	runtimeEnv: {
 		NEXT_PUBLIC_APP_HOST: process.env.NEXT_PUBLIC_APP_HOST,
@@ -69,8 +67,7 @@ export const env = createEnv({
 		GITHUB_PROD_APP_SECRET: process.env.GITHUB_PROD_APP_SECRET,
 
 		AUTH_SECRET: process.env.AUTH_SECRET,
-		AUTH_URL: process.env.AUTH_URL,
-		IS_NEXTJS_ENV: process.env.IS_NEXTJS_ENV
+		AUTH_URL: process.env.HTTPS === 'true' ? process.env.AUTH_URL_HTTPS : process.env.AUTH_URL_HTTP
 	},
 	skipValidation: !!process.env.SKIP_ENV_VALIDATION
 });

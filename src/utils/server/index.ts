@@ -1,5 +1,5 @@
 import { env } from '@root/utils/common/env';
-if (env.IS_NEXTJS_ENV === 'true') import('server-only');
+if (env.NEXT_PUBLIC_NODE_ENV !== 'script') import('server-only');
 
 import { auth } from '@root/auth';
 import type { APIResult } from '@root/types/common';
