@@ -2,9 +2,6 @@ import { env } from '@root/utils/common/env';
 if (env.NEXT_PUBLIC_NODE_ENV !== 'script') import('server-only');
 
 import { auth } from '@root/auth';
-import type { APIResult } from '@root/types/common';
-import { APIError } from '@root/types/common';
-import { tryCatchHandler } from '@root/utils/common';
 import type { RequestCookie } from 'next/dist/compiled/@edge-runtime/cookies';
 import { cookies } from 'next/headers';
 
@@ -14,33 +11,28 @@ export const getCookieData = async (name: string) => {
 	return new Promise<RequestCookie | undefined>(resolve => setTimeout(() => resolve(cookieData)));
 };
 
-export const getSessionResult = async () => {
-	const sessionRes = await tryCatchHandler(auth(), 'getSessionResult.getServerSession');
+export type SessionResult =
+	| { isAuthenticated: false; session: null }
+	| {
+			isAuthenticated: true;
+			session: { user: { id: string; name: string; email: string; image: string }; expires: string };
+	  };
 
-	if (!sessionRes.isSuccess)
-		return {
-			isSuccess: false as const,
-			result: null,
-			error: new APIError({ code: 'INTERNAL_SERVER_ERROR' })
-		} satisfies Awaited<APIResult>;
+export const getSessionResult = async (): Promise<SessionResult> => {
+	const rawSession = await auth();
 
-	if (!sessionRes.data || !sessionRes.data.user?.name || !sessionRes.data.user?.email)
-		return {
-			isSuccess: false as const,
-			result: null,
-			error: new APIError({ code: 'UNAUTHORIZED' })
-		} satisfies Awaited<APIResult>;
+	if (!rawSession) return { isAuthenticated: false as const, session: null };
 
 	return {
-		result: {
+		isAuthenticated: true as const,
+		session: {
 			user: {
-				email: sessionRes.data.user.email,
-				image: sessionRes.data.user.image,
-				name: sessionRes.data.user.name
+				id: rawSession.user?.id || '',
+				name: rawSession.user?.name || '',
+				email: rawSession.user?.email || '',
+				image: rawSession.user?.image || ''
 			},
-			expires: sessionRes.data.expires
-		},
-		isSuccess: true as const,
-		error: null
+			expires: rawSession.expires || ''
+		}
 	};
 };

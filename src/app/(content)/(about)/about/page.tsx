@@ -1,5 +1,3 @@
-import './about.css';
-
 import Readme from '@components/common/dynamic/Readme';
 import AppVersion from '@components/common/static/AppVersion';
 import CommonWrapper from '@components/common/static/CommonWrapper';
@@ -14,7 +12,7 @@ export async function generateMetadata({ searchParams }: PageProps, parent: Reso
 
 export default function About() {
 	return (
-		<CommonWrapper classNames={{ wrapper: 'about h-auto' }}>
+		<CommonWrapper classNames={{ wrapper: 'markdown-wrapper h-auto' }}>
 			<AppVersion className='ml-auto sm:absolute sm:right-8' />
 			<Readme />
 		</CommonWrapper>

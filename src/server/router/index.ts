@@ -29,91 +29,108 @@ import {
 	searchQueryValidator
 } from '@root/types/common/zod';
 import { env } from '@root/utils/common/env';
+import type { SessionResult } from '@root/utils/server';
 import { getSessionResult } from '@root/utils/server';
 import { exportRecords, getAllRecordIds, getContentRecord } from '@root/utils/server/database';
+import { getGithubReadme } from '@root/utils/server/fetch';
 import { initTRPC } from '@trpc/server';
 import { ZodError } from 'zod';
 
-type TrpcCreateContextFn = () => Promise<{ sessionResult?: Awaited<ReturnType<typeof getSessionResult>> }>;
+type TrpcCreateContextFn = () => Promise<{ sessionResult: SessionResult }>;
 
 export const createContext: TrpcCreateContextFn = async () => ({ sessionResult: await getSessionResult() });
 
 const t = initTRPC.context<typeof createContext>().create({
 	isDev: env.NEXT_PUBLIC_NODE_ENV !== 'production',
-	errorFormatter({ shape, error }) {
+	errorFormatter({ shape, error: { cause } }) {
 		return {
 			...shape,
-			data: {
-				...shape.data,
-				zodError: error.cause instanceof ZodError ? error.cause.flatten().fieldErrors : null
-			}
+			data: { ...shape.data, zodError: cause instanceof ZodError ? cause.flatten().fieldErrors : null }
 		};
 	}
 });
 
-const procedure = t.procedure;
+const publicProcedure = t.procedure;
 
 const protectedProcedure = t.procedure.use(opts => {
-	if (!opts.ctx.sessionResult) throw new APIError({ code: 'UNAUTHORIZED' });
+	if (!opts.ctx.sessionResult.isAuthenticated) throw new APIError({ code: 'UNAUTHORIZED' });
 
-	if (opts.ctx.sessionResult.isSuccess) return opts.next();
-
-	throw opts.ctx.sessionResult.error;
+	return opts.next();
 });
 
 export const appRouter = t.router({
 	effect: {
-		getAll: procedure
+		getAll: publicProcedure
 			.input(searchQueryValidator)
-			.query(({ input, ctx }) => getEffects(input, ctx.sessionResult?.result?.user.name)),
+			.query(({ input, ctx }) => getEffects(input, ctx.sessionResult)),
 
-		getOne: procedure.input(idQueryValidator).query(({ input }) => getContentRecord(getEffectRecordQuery, input)),
+		getOne: publicProcedure
+			.input(idQueryValidator)
+			.query(({ input }) => getContentRecord(getEffectRecordQuery, input)),
 
-		getAllIds: procedure.query(() => getAllRecordIds(getAllEffectIdsQuery)),
+		getAllIds: publicProcedure.query(() => getAllRecordIds(getAllEffectIdsQuery)),
 
-		export: procedure.query(() => exportRecords(exportEffectsQuery))
+		export: publicProcedure.query(() => exportRecords(exportEffectsQuery))
 	},
 	item: {
-		getAll: procedure
-			.input(searchQueryValidator)
-			.query(({ input, ctx }) => getItems(input, ctx.sessionResult?.result?.user.name)),
+		getAll: publicProcedure.input(searchQueryValidator).query(({ input, ctx }) => getItems(input, ctx.sessionResult)),
 
-		getOne: procedure.input(idQueryValidator).query(({ input }) => getContentRecord(getItemRecordQuery, input)),
+		getOne: publicProcedure.input(idQueryValidator).query(({ input }) => getContentRecord(getItemRecordQuery, input)),
 
-		getAllIds: procedure.query(() => getAllRecordIds(getAllItemIdsQuery)),
+		getAllIds: publicProcedure.query(() => getAllRecordIds(getAllItemIdsQuery)),
 
-		export: procedure.query(() => exportRecords(exportItemsQuery))
+		export: publicProcedure.query(() => exportRecords(exportItemsQuery))
 	},
 	rumor: {
-		getAll: procedure
+		getAll: publicProcedure
 			.input(searchQueryValidator)
-			.query(({ input, ctx }) => getRumors(input, ctx.sessionResult?.result?.user.name)),
+			.query(({ input, ctx }) => getRumors(input, ctx.sessionResult)),
 
-		getOne: procedure.input(idQueryValidator).query(({ input }) => getContentRecord(getRumorRecordQuery, input)),
+		getOne: publicProcedure
+			.input(idQueryValidator)
+			.query(({ input }) => getContentRecord(getRumorRecordQuery, input)),
 
-		getAllIds: procedure.query(() => getAllRecordIds(getAllRumorIdsQuery)),
+		getAllIds: publicProcedure.query(() => getAllRecordIds(getAllRumorIdsQuery)),
 
-		export: procedure.query(() => exportRecords(exportRumorsQuery))
+		export: publicProcedure.query(() => exportRecords(exportRumorsQuery))
 	},
 	trait: {
-		getAll: procedure
+		getAll: publicProcedure
 			.input(searchQueryValidator)
-			.query(({ input, ctx }) => getTraits(input, ctx.sessionResult?.result?.user.name)),
+			.query(({ input, ctx }) => getTraits(input, ctx.sessionResult)),
 
-		getOne: procedure.input(idQueryValidator).query(({ input }) => getContentRecord(getTraitRecordQuery, input)),
+		getOne: publicProcedure
+			.input(idQueryValidator)
+			.query(({ input }) => getContentRecord(getTraitRecordQuery, input)),
 
-		getAllIds: procedure.query(() => getAllRecordIds(getAllTraitIdsQuery)),
+		getAllIds: publicProcedure.query(() => getAllRecordIds(getAllTraitIdsQuery)),
 
-		export: procedure.query(() => exportRecords(exportTraitsQuery))
+		export: publicProcedure.query(() => exportRecords(exportTraitsQuery))
 	},
 	user: {
-		getModuleBookmarks: protectedProcedure
-			.input(moduleIdQueryValidator)
-			.query(({ input, ctx }) => getModuleBookmarks(input, ctx.sessionResult?.result?.user.name || '')),
-		bookmark: protectedProcedure
-			.input(bookmarkQueryValidator)
-			.mutation(({ input, ctx }) => bookmarkRecord(input, ctx.sessionResult?.result?.user.name || '')),
-		getProfile: protectedProcedure.query(({ ctx }) => getProfile(ctx.sessionResult?.result?.user.name || ''))
+		getModuleBookmarks: protectedProcedure.input(moduleIdQueryValidator).query(({ input, ctx }) => {
+			if (!ctx.sessionResult.isAuthenticated) throw new APIError({ code: 'UNAUTHORIZED' });
+
+			return getModuleBookmarks(input, ctx.sessionResult.session);
+		}),
+
+		bookmark: protectedProcedure.input(bookmarkQueryValidator).mutation(({ input, ctx }) => {
+			if (!ctx.sessionResult.isAuthenticated) throw new APIError({ code: 'UNAUTHORIZED' });
+
+			return bookmarkRecord(input, ctx.sessionResult.session);
+		}),
+
+		getProfile: protectedProcedure.query(({ ctx }) => {
+			if (!ctx.sessionResult.isAuthenticated) throw new APIError({ code: 'UNAUTHORIZED' });
+
+			return getProfile(ctx.sessionResult.session);
+		}),
+
+		getGithubReadme: protectedProcedure.query(({ ctx }) => {
+			if (!ctx.sessionResult.isAuthenticated) throw new APIError({ code: 'UNAUTHORIZED' });
+
+			return getGithubReadme(ctx.sessionResult.session);
+		})
 	}
 });
 

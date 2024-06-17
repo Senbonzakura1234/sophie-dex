@@ -1,6 +1,7 @@
 import Hyperlink from '@components/layout/static/Hyperlink';
 import type { ItemDescription } from '@root/server/postgresql/schema';
 import { entries } from '@root/utils/common';
+import { Fragment } from 'react';
 
 type DescriptionProps = { description: ItemDescription; search: string | undefined };
 
@@ -14,10 +15,17 @@ export default function Description({ description, search }: DescriptionProps) {
 
 						{typeof value === 'string' ? (
 							value
+						) : Array.isArray(value) ? (
+							value.map((v, k) => (
+								<Fragment key={k}>
+									<Hyperlink input={{ content: v.replaceAll('.', '') }} search={search} />
+									{k <= value.length - 2 ? ' - ' : null}
+								</Fragment>
+							))
 						) : (
 							<Hyperlink
-								className={Array.isArray(value) ? 'normal-case' : 'link link-primary visited:link-accent'}
-								input={Array.isArray(value) ? { content: value.join(', ') } : value}
+								classNames={{ link: 'link link-primary visited:link-accent !text-sm' }}
+								input={value}
 								search={search}
 							/>
 						)}

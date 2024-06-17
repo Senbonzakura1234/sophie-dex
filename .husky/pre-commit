@@ -1,3 +1,2 @@
 pnpm generate-README
-pnpm lint:fixMD
 git add .

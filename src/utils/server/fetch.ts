@@ -6,6 +6,7 @@ import { APIError } from '@root/types/common';
 import type { LicenseInfo, PackageDotJSON } from '@root/types/common/zod';
 import { githubFileResponseSchema, licenseInfoSchema, packageDotJSONSchema } from '@root/types/common/zod';
 import { tryCatchHandler, tryCatchHandlerSync, writeLog } from '@root/utils/common';
+import type { SessionResult } from '@root/utils/server';
 import type { ZodType } from 'zod';
 
 async function improvedFetch(args: Parameters<typeof fetch>): Promise<string>;
@@ -120,16 +121,13 @@ export const getLicense = async () => {
 		: defaultResult;
 };
 
-export const getUserReadme = async () => {
+export const getGithubReadme = async ({
+	user: { name }
+}: NonNullable<SessionResult['session']>): Promise<string | undefined> => {
 	const userReadmeResult = await tryCatchHandler(
-		improvedFetch([
-			`https://raw.githubusercontent.com/Senbonzakura1234/Senbonzakura1234/main/README.mdx`,
-			getDefaultFetchHeader()
-		]),
+		improvedFetch([`https://raw.githubusercontent.com/${name}/${name}/main/README.mdx`, getDefaultFetchHeader()]),
 		'getUserReadme.get'
 	);
 
-	return userReadmeResult.isSuccess
-		? { result: userReadmeResult.data, isSuccess: true as const, error: null }
-		: defaultResult;
+	return userReadmeResult.isSuccess ? userReadmeResult.data : undefined;
 };

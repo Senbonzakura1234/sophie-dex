@@ -19,7 +19,12 @@ export default function Description({ description: { contentText, contentData },
 					return typeof data === 'undefined' ? (
 						<Fragment key={key}>{text}</Fragment>
 					) : (
-						<Hyperlink search={search} key={key} input={data} className='link link-primary visited:link-accent' />
+						<Hyperlink
+							search={search}
+							key={key}
+							input={data}
+							classNames={{ label: '', link: 'link link-primary visited:link-accent' }}
+						/>
 					);
 				})}
 			</span>

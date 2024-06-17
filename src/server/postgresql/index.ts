@@ -15,6 +15,7 @@ import { APIError } from '@root/types/common';
 import type { BookmarkQuery, GithubUserInfo, ModuleIdQuery, SearchQuery } from '@root/types/common/zod';
 import type { SortByEnum } from '@root/types/common/zod/generic';
 import { arrayInclude, deleteNullableProperty, objectValues, tryCatchHandler } from '@root/utils/common';
+import type { SessionResult } from '@root/utils/server';
 import dayjs from 'dayjs';
 import type { SQL, sql } from 'drizzle-orm';
 import { arrayOverlaps, eq } from 'drizzle-orm';
@@ -64,17 +65,19 @@ const getListRecord = async <TRecord extends CommonRecord>(args: GetListRecordPr
 const sanitizeSearch = (input: string | null) =>
 	input?.split(' ')?.filter(Boolean)?.join(' ').replaceAll('?', '') || null;
 
-export const getEffects = async (input: SearchQuery, username: string | undefined) => {
+export const getEffects = async (input: SearchQuery, { isAuthenticated, session }: SessionResult) => {
 	const { search, sortBy, direction, page, bookmarked } = input;
 
 	const searchValue = sanitizeSearch(search);
 
 	let bookmarkList: Array<string> = [];
 
-	let isEnableBookmarkFilter = typeof username === 'string' ? bookmarked : null;
+	let isEnableBookmarkFilter: typeof bookmarked = null;
 
-	if (isEnableBookmarkFilter === 'true') {
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'effect' }, username!);
+	if (isAuthenticated && bookmarked === 'true') {
+		isEnableBookmarkFilter = 'true';
+
+		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'effect' }, session);
 
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
@@ -112,17 +115,19 @@ export const getEffects = async (input: SearchQuery, username: string | undefine
 	return getListRecord<Effect>({ query, searchValue, isEmptyBookmark: false });
 };
 
-export const getItems = async (input: SearchQuery, username: string | undefined) => {
+export const getItems = async (input: SearchQuery, { isAuthenticated, session }: SessionResult) => {
 	const { search, sortBy, direction, color, relatedCategory, page, category, recipeType, bookmarked } = input;
 
 	const searchValue = sanitizeSearch(search);
 
 	let bookmarkList: Array<string> = [];
 
-	let isEnableBookmarkFilter = typeof username === 'string' ? bookmarked : null;
+	let isEnableBookmarkFilter: typeof bookmarked = null;
 
-	if (isEnableBookmarkFilter === 'true') {
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'item' }, username!);
+	if (isAuthenticated && bookmarked === 'true') {
+		isEnableBookmarkFilter = 'true';
+
+		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'item' }, session);
 
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
@@ -159,17 +164,19 @@ export const getItems = async (input: SearchQuery, username: string | undefined)
 	return getListRecord<Item>({ query, searchValue, isEmptyBookmark: false });
 };
 
-export const getRumors = async (input: SearchQuery, username: string | undefined) => {
+export const getRumors = async (input: SearchQuery, { isAuthenticated, session }: SessionResult) => {
 	const { search, sortBy, direction, page, rumorType, bookmarked } = input;
 
 	const searchValue = sanitizeSearch(search);
 
 	let bookmarkList: Array<string> = [];
 
-	let isEnableBookmarkFilter = typeof username === 'string' ? bookmarked : null;
+	let isEnableBookmarkFilter: typeof bookmarked = null;
 
-	if (isEnableBookmarkFilter === 'true') {
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'rumor' }, username!);
+	if (isAuthenticated && bookmarked === 'true') {
+		isEnableBookmarkFilter = 'true';
+
+		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'rumor' }, session);
 
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
@@ -203,17 +210,19 @@ export const getRumors = async (input: SearchQuery, username: string | undefined
 	return getListRecord<Rumor>({ query, searchValue, isEmptyBookmark: false });
 };
 
-export const getTraits = async (input: SearchQuery, username: string | undefined) => {
+export const getTraits = async (input: SearchQuery, { isAuthenticated, session }: SessionResult) => {
 	const { search, sortBy, direction, category, page, bookmarked } = input;
 
 	const searchValue = sanitizeSearch(search);
 
 	let bookmarkList: Array<string> = [];
 
-	let isEnableBookmarkFilter = typeof username === 'string' ? bookmarked : null;
+	let isEnableBookmarkFilter: typeof bookmarked = null;
 
-	if (isEnableBookmarkFilter === 'true') {
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'trait' }, username!);
+	if (isAuthenticated && bookmarked === 'true') {
+		isEnableBookmarkFilter = 'true';
+
+		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'trait' }, session);
 
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
@@ -295,9 +304,9 @@ export const insertOrUpdateUser = async ({ isUpdate, userData }: InsertOrUpdateU
 		.then(res => res[0]);
 };
 
-export const getProfile = async (username: string): APIResult<GithubUserInfo> => {
+export const getProfile = async (session: NonNullable<SessionResult['session']>): APIResult<GithubUserInfo> => {
 	const { data, isSuccess } = await tryCatchHandler(
-		getUserRecordQuery.execute({ username }),
+		getUserRecordQuery.execute({ username: session.user.name }),
 		'getProfile.executeQuery'
 	);
 
@@ -307,7 +316,7 @@ export const getProfile = async (username: string): APIResult<GithubUserInfo> =>
 		return {
 			isSuccess: false,
 			result: null,
-			error: new APIError({ code: 'NOT_FOUND', message: `User ${username} Not Found` })
+			error: new APIError({ code: 'NOT_FOUND', message: `User ${session.user.name} Not Found` })
 		};
 
 	return { isSuccess: true, result: data.githubProfile, error: null };
@@ -318,9 +327,12 @@ const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: str
 		.execute({ username })
 		.then<Array<string>>(res => objectValues(res || {})[0] || []);
 
-export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery, username: string): APIResult<Array<string>> => {
+export const getModuleBookmarks = async (
+	{ moduleId }: ModuleIdQuery,
+	session: NonNullable<SessionResult['session']>
+): APIResult<Array<string>> => {
 	const getModuleBookmarkRes = await tryCatchHandler(
-		onGetBookmarks(moduleId, username),
+		onGetBookmarks(moduleId, session.user.name),
 		'getModuleBookmarks.executeQuery'
 	);
 
@@ -345,9 +357,14 @@ export const getModuleBookmarks = async ({ moduleId }: ModuleIdQuery, username: 
 	};
 };
 
-export const bookmarkRecord = async ({ bookmarkRecordId, isBookmarked, moduleId }: BookmarkQuery, username: string) => {
+export const bookmarkRecord = async (
+	{ bookmarkRecordId, isBookmarked, moduleId }: BookmarkQuery,
+	session: NonNullable<SessionResult['session']>
+) => {
 	const bookmarkRes = await tryCatchHandler(
-		postgresql.execute(getToggleBookmarkQuery({ bookmarkRecordId, isBookmarked, moduleId, username })),
+		postgresql.execute(
+			getToggleBookmarkQuery({ bookmarkRecordId, isBookmarked, moduleId, username: session.user.name })
+		),
 		'bookmarkRecord.executeQuery'
 	);
 

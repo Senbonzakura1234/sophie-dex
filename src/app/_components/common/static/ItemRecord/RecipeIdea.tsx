@@ -21,7 +21,12 @@ export default function RecipeIdea({ recipeIdea: { contentText, contentData }, c
 					if (text.includes('keyMap-')) data = contentData[parseInt(text.replace('keyMap-', ''))];
 
 					return data ? (
-						<Hyperlink search={search} key={key} input={data} className='link link-primary visited:link-accent' />
+						<Hyperlink
+							search={search}
+							key={key}
+							input={data}
+							classNames={{ label: '', link: 'link link-primary visited:link-accent' }}
+						/>
 					) : (
 						<Fragment key={key}>{text}</Fragment>
 					);

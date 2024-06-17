@@ -1,0 +1,39 @@
+.markdown-wrapper .card-body {
+	@apply prose max-w-none;
+}
+
+.markdown-wrapper .card-body ul {
+	@apply m-0;
+}
+
+.markdown-wrapper .card-body h1 {
+	@apply font-bold text-primary text-4xl mb-5;
+}
+
+.markdown-wrapper .card-body > div:not(:first-child) {
+	@apply flex flex-col gap-2 mb-3;
+}
+
+.markdown-wrapper .card-body > div > h2 {
+	@apply font-bold text-2xl mb-1 mt-0;
+}
+
+.markdown-wrapper .card-body > div > h2 > a {
+	@apply link link-primary no-underline font-bold;
+}
+
+.markdown-wrapper .card-body > div > ul > li {
+	@apply p-0 m-0;
+}
+
+.markdown-wrapper .card-body > .list > ul > li > a {
+	@apply link link-hover link-primary visited:link-accent;
+}
+
+.markdown-wrapper .card-body > .list-tag > ul > li > a {
+	@apply btn btn-xs btn-primary capitalize no-underline font-bold;
+}
+
+.markdown-wrapper .card-body > :is(.tech-stack, .usage, .keywords) > ul {
+	@apply flex gap-2 list-none flex-row p-0 flex-wrap;
+}

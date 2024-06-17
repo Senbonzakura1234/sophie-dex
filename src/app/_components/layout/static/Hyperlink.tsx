@@ -1,29 +1,31 @@
 import type { HyperLinkData } from '@root/server/postgresql/schema';
-import type { ClassNameProps } from '@root/types/common/props';
+import type { ClassNamesProps } from '@root/types/common/props';
 import { cn, highlightSearchedText, parseHyperLinkData } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 const ShareButton = dynamic(() => import('@components/common/dynamic/ShareButton'), { ssr: false });
 
-type HyperlinkProps = { input: HyperLinkData; search?: string } & ClassNameProps;
+type HyperlinkProps = { input: HyperLinkData; search?: string } & ClassNamesProps<'label' | 'link'>;
 
-export default function Hyperlink({ input, className, search }: HyperlinkProps) {
+export default function Hyperlink({ input, classNames, search }: HyperlinkProps) {
 	const { href, label } = parseHyperLinkData(input);
 
 	if (!href)
 		return (
-			<span
-				className={cn('font-bold text-primary', className, '!cursor-text')}
-				dangerouslySetInnerHTML={{ __html: highlightSearchedText(label, search) }}
-			/>
+			<span className='prose'>
+				<code
+					className={cn('font-bold text-primary', classNames?.label, '!cursor-text')}
+					dangerouslySetInnerHTML={{ __html: highlightSearchedText(label, search) }}
+				/>
+			</span>
 		);
 
 	return (
 		<>
 			<Link
 				aria-label={label}
-				className={cn('mr-0.5 font-bold', className)}
+				className={cn('mr-0.5 font-bold', classNames?.link)}
 				href={href}
 				dangerouslySetInnerHTML={{ __html: highlightSearchedText(label, search) }}
 			/>
