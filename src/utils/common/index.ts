@@ -63,16 +63,10 @@ export function sleep(milliseconds = 1000) {
 	return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
-export function writeLog({
-	args,
-	type = 'log',
-	hideInProd = false
-}: {
-	args: Array<unknown>;
-	type?: 'log' | 'warn' | 'error';
-	hideInProd?: boolean;
-}) {
-	return (!hideInProd || env.NEXT_PUBLIC_NODE_ENV !== 'production') && console[type](...args);
+export function writeLog({ args, type = 'log' }: { args: Array<unknown>; type?: 'log' | 'warn' | 'error' }) {
+	if (env.NEXT_PUBLIC_NODE_ENV === 'production') return;
+
+	console[type](...args);
 }
 
 export function deleteNullableProperty<const Obj extends CommonObject>(
@@ -145,11 +139,7 @@ export async function tryCatchHandler<TReturn = unknown>(promise: Promise<TRetur
 	try {
 		return { data: await promise, isSuccess: true as const, error: null };
 	} catch (error) {
-		writeLog({
-			args: [`Error at ${operationCode}`, `Detail: `, JSON.stringify(error, null, 2)],
-			type: 'error',
-			hideInProd: true
-		});
+		writeLog({ args: [`Error at ${operationCode}`, `Detail: `, JSON.stringify(error, null, 2)], type: 'error' });
 
 		return { data: null, isSuccess: false as const, error };
 	}
@@ -159,11 +149,7 @@ export function tryCatchHandlerSync<TReturn = unknown>(callback: () => TReturn, 
 	try {
 		return { data: callback(), isSuccess: true as const, error: null };
 	} catch (error) {
-		writeLog({
-			args: [`Error at ${operationCode}`, `Detail: `, JSON.stringify(error, null, 2)],
-			type: 'error',
-			hideInProd: true
-		});
+		writeLog({ args: [`Error at ${operationCode}`, `Detail: `, JSON.stringify(error, null, 2)], type: 'error' });
 
 		return { data: null, isSuccess: false as const, error };
 	}

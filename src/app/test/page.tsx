@@ -1,3 +1,3 @@
 export default async function Test() {
-	return null;
+	return <div>Test</div>;
 }

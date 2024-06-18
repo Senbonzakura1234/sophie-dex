@@ -1,21 +1,20 @@
 'use client';
 
 import * as ScrollArea from '@radix-ui/react-scroll-area';
-import { KEY_BINDING_DICTIONARY } from '@root/constants/common';
 import type { ChildrenProps } from '@root/types/common/props';
 import dynamic from 'next/dynamic';
 
 const ScrollToTop = dynamic(() => import('./ScrollToTop'));
 const ScrollTopTrigger = dynamic(() => import('./ScrollTopTrigger'));
 
-type ScrollWrapperProps = ChildrenProps & { disabledScrollTopOnPageChange?: boolean };
+type ScrollWrapperProps = ChildrenProps & { disabledScrollTopOnPageChange?: boolean; id?: string };
 
-export default function ScrollWrapper({ children, disabledScrollTopOnPageChange }: ScrollWrapperProps) {
+export default function ScrollWrapper({ children, disabledScrollTopOnPageChange, id }: ScrollWrapperProps) {
 	return (
 		<ScrollArea.Root className='h-dvh w-dvw overflow-hidden bg-base-200 !antialiased' type='scroll'>
 			<ScrollArea.Viewport
 				className='relative size-full [&>div]:!flex [&>div]:h-full [&>div]:flex-col [&>div]:gap-6'
-				id={KEY_BINDING_DICTIONARY.ROOT_SCROLL_WRAPPER_ID}
+				id={id}
 			>
 				{children}
 			</ScrollArea.Viewport>

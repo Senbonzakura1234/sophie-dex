@@ -1,12 +1,10 @@
 import { exportDBQueriesMap } from '@root/server/postgresql/repository';
 import { entries, tryCatchHandler } from '@root/utils/common';
-import { env } from '@root/utils/common/env';
 import { writeFile } from 'fs/promises';
-import { NextResponse } from 'next/server';
 import { ulid } from 'ulid';
 
-const onExport = () =>
-	Promise.all(
+export async function GET() {
+	const exportResult = await Promise.all(
 		entries(exportDBQueriesMap).map(async ([table, query]) => {
 			const exportData = await tryCatchHandler(query.execute(), 'exportDataQuery.execute');
 
@@ -30,9 +28,5 @@ const onExport = () =>
 		})
 	);
 
-export type ExportResult = Awaited<ReturnType<typeof onExport>>;
-
-export async function GET() {
-	if (env.NEXT_PUBLIC_NODE_ENV === 'production') return new Response('Forbidden resource', { status: 403 });
-	return NextResponse.json({ exportResult: await onExport() });
+	return Response.json({ exportResult });
 }

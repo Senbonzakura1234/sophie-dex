@@ -10,11 +10,7 @@ const handler = (req: NextRequest) =>
 		router: appRouter,
 		createContext,
 		onError: ({ path, error }) =>
-			writeLog({
-				args: [`❌ tRPC failed on ${path}:`, JSON.stringify(error, null, 2)],
-				type: 'error',
-				hideInProd: true
-			})
+			writeLog({ args: [`❌ tRPC failed on ${path}:`, JSON.stringify(error, null, 2)], type: 'error' })
 	});
 
 export { handler as GET, handler as POST };

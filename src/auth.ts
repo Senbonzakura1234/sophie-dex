@@ -39,4 +39,7 @@ export const provider = GitHub({
 
 export const providerConfig = { id: provider.id, name: provider.name };
 
-export const { auth, handlers } = NextAuth({ providers: [provider], pages: customPages });
+export const { auth, handlers } = NextAuth({
+	providers: [provider],
+	pages: customPages
+});

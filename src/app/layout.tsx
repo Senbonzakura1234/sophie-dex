@@ -222,7 +222,7 @@ export default async function RootLayout({ children }: ChildrenProps) {
 		<html lang='en'>
 			<ThemeWrapper defaultTheme={theme} className={cn(fontAtelier.variable, fontComicSansMS.className)}>
 				<main>
-					<ScrollWrapper>
+					<ScrollWrapper id={KEY_BINDING_DICTIONARY.ROOT_SCROLL_WRAPPER_ID}>
 						<SessionProvider>
 							<nav className='absolute right-3 top-3 z-30 flex flex-wrap gap-2'>
 								<ThemeSwitcher defaultTheme={theme} />
