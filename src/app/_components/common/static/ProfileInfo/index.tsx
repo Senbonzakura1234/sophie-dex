@@ -1,6 +1,6 @@
-import MDXRenderer from '@components/common/dynamic/MDXRenderer';
 import Avatar from '@components/common/static/Avatar';
 import CommonWrapper from '@components/common/static/CommonWrapper';
+import MDXRenderer from '@components/common/static/MDXRenderer';
 import type { GithubUserInfo } from '@root/types/common/zod';
 import Link from 'next/link';
 import CreateProfileReadmeGuide from './CreateProfileReadmeGuide';

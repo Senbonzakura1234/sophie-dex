@@ -1,4 +1,4 @@
-# Sophie Dex
+# Sophie Dex ![is maintained](https://badgen.net/badge/maintained/yes/green)
 
 ## \# Table of contents
 

@@ -1,11 +1,10 @@
 import CheckList from '@components/common/static/CheckList';
 import CommonWrapper from '@components/common/static/CommonWrapper';
+import MDXRenderer from '@components/common/static/MDXRenderer';
 import CheckIcon from '@components/icons/solid/CheckIcon';
 import InfoIcon from '@components/icons/solid/InfoIcon';
 import XMarkIcon from '@components/icons/solid/XMarkIcon';
 import type { LicenseInfo } from '@root/types/common/zod';
-
-import MDXRenderer from '@components/common/dynamic/MDXRenderer';
 import { env } from '@root/utils/common/env';
 import LicenseInfoHead from './LicenseInfoHead';
 

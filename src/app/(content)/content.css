@@ -2,6 +2,10 @@
 	@apply prose max-w-none;
 }
 
+.markdown-wrapper .card-body img.badge {
+	@apply m-0;
+}
+
 .markdown-wrapper .card-body ul {
 	@apply m-0;
 }
