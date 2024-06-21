@@ -1,14 +1,17 @@
+import MDXRenderer from '@components/common/dynamic/MDXRenderer';
 import Avatar from '@components/common/static/Avatar';
 import CommonWrapper from '@components/common/static/CommonWrapper';
 import type { GithubUserInfo } from '@root/types/common/zod';
 import Link from 'next/link';
+import CreateProfileReadmeGuide from './CreateProfileReadmeGuide';
 import type { ProfileFieldProps } from './ProfileField';
 import ProfileField from './ProfileField';
 
-type ProfileInfoProps = { profile: GithubUserInfo };
+type ProfileInfoProps = { profile: GithubUserInfo; readmeContent: string | undefined };
 
 export default function ProfileInfo({
-	profile: { avatar_url, login, bio, company = '', blog, email, location = '', twitter_username }
+	profile: { avatar_url, login, bio, company = '', blog, email, location = '', twitter_username },
+	readmeContent
 }: ProfileInfoProps) {
 	const fields: Array<ProfileFieldProps> = [
 		{ label: company, type: 'company' },
@@ -57,6 +60,12 @@ export default function ProfileInfo({
 						</p>
 					))}
 				</div>
+
+				<div className='divider divider-vertical m-0 w-full before:bg-gradient-to-br before:from-accent before:to-primary after:bg-gradient-to-tl after:from-accent after:to-primary' />
+
+				{readmeContent ? <MDXRenderer body={readmeContent} /> : <CreateProfileReadmeGuide />}
+
+				<div className='divider divider-vertical m-0 w-full before:bg-gradient-to-br before:from-accent before:to-primary after:bg-gradient-to-tl after:from-accent after:to-primary' />
 			</div>
 		</CommonWrapper>
 	);

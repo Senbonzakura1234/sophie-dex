@@ -20,11 +20,7 @@
 			"@root": ["./src"],
 			"@root/*": ["./src/*"]
 		},
-		"plugins": [
-			{
-				"name": "next"
-			}
-		],
+		"plugins": [{ "name": "next" }],
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"strict": true,

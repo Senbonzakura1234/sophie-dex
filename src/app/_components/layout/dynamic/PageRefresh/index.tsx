@@ -7,10 +7,9 @@ import { useState } from 'react';
 import DefaultRefresh from './DefaultRefresh';
 import DetailRefresh from './DetailRefresh';
 import ListRefresh from './ListRefresh';
-import ProfileRefresh from './ProfileRefresh';
 
 type Props = {
-	type?: 'DEFAULT' | 'DETAIL' | 'LIST' | 'PROFILE';
+	type?: 'DEFAULT' | 'DETAIL' | 'LIST';
 };
 
 export default function PageRefresh({ type = 'DEFAULT' }: Props) {
@@ -23,8 +22,6 @@ export default function PageRefresh({ type = 'DEFAULT' }: Props) {
 	if (type === 'LIST') return <ListRefresh isDisabled={isDisabled} />;
 
 	if (type === 'DETAIL') return <DetailRefresh isDisabled={isDisabled} />;
-
-	if (type === 'PROFILE') return <ProfileRefresh isDisabled={isDisabled} />;
 
 	return <DefaultRefresh isDisabled={isDisabled} />;
 }

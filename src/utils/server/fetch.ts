@@ -72,7 +72,7 @@ const defaultResult = {
 
 const getDefaultFetchHeader = (revalidate = 86400): Parameters<typeof fetch>[1] => ({
 	headers: { Authorization: `Bearer ${env.GITHUB_TOKEN}`, 'X-GitHub-Api-Version': '2022-11-28' },
-	next: { revalidate }
+	...(env.NEXT_PUBLIC_NODE_ENV === 'production' ? { next: { revalidate } } : { cache: 'no-cache' })
 });
 
 export const getVersion = async (): Promise<APIResult<PackageDotJSON>> => {
@@ -125,7 +125,7 @@ export const getGithubReadme = async ({
 	user: { name }
 }: NonNullable<SessionResult['session']>): Promise<string | undefined> => {
 	const userReadmeResult = await tryCatchHandler(
-		improvedFetch([`https://raw.githubusercontent.com/${name}/${name}/main/README.mdx`, getDefaultFetchHeader()]),
+		improvedFetch([`https://raw.githubusercontent.com/${name}/${name}/main/README.md`, getDefaultFetchHeader()]),
 		'getUserReadme.get'
 	);
 
