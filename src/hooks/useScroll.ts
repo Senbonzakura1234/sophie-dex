@@ -22,6 +22,12 @@ export const useScroll = ({ onScroll, scrollElementId }: UseScrollProps) => {
 
 		if (!scrollElement) return;
 
+		const ac = new AbortController();
+		const options = {
+			passive: true,
+			signal: ac.signal
+		};
+
 		scrollElement.addEventListener(
 			'scroll',
 			() => {
@@ -30,11 +36,10 @@ export const useScroll = ({ onScroll, scrollElementId }: UseScrollProps) => {
 
 				onScroll({ scrollElement, isShowScrollTop, setIsShowScrollTop, scrollPosition });
 			},
-			{ passive: true }
+			options
 		);
 
-		return () =>
-			scrollElement.removeEventListener('scroll', () => scrollElement.scrollTo({ top: 0, behavior: 'smooth' }));
+		return () => void ac.abort();
 	}, [isShowScrollTop, onScroll, scrollElementId]);
 
 	const scrollToTop = () => {

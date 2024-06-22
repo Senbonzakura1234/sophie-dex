@@ -90,8 +90,8 @@ importers:
         specifier: ^2.3.0
         version: 2.3.0
       use-pull-to-refresh:
-        specifier: ^2.2.1
-        version: 2.2.1
+        specifier: ^2.3.2
+        version: 2.3.2(react@18.3.1)
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -3993,8 +3993,10 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==, tarball: https://registry.npmjs.org/uri-js/-/uri-js-4.4.1.tgz}
 
-  use-pull-to-refresh@2.2.1:
-    resolution: {integrity: sha512-uKGi8eAaAON3isPaqBzcataSxNNL+ffZiWSrxWe09usrmR9Fef0IGRsG/SYI/c894mh0d4ymCfUdBafC3MhC0g==, tarball: https://registry.npmjs.org/use-pull-to-refresh/-/use-pull-to-refresh-2.2.1.tgz}
+  use-pull-to-refresh@2.3.2:
+    resolution: {integrity: sha512-gKvxo/YWmLCvcNHFMvuS2Jzwl2nZ+hFN7G9RY0NnaheW7NWh9WquNr6dRgsn837u3jOWWLIm9Bq7IChLEbuc3w==, tarball: https://registry.npmjs.org/use-pull-to-refresh/-/use-pull-to-refresh-2.3.2.tgz}
+    peerDependencies:
+      react: 18.x || 19.x
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==, tarball: https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz}
@@ -8503,7 +8505,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  use-pull-to-refresh@2.2.1:
+  use-pull-to-refresh@2.3.2(react@18.3.1):
     dependencies:
       react: 18.3.1
 
