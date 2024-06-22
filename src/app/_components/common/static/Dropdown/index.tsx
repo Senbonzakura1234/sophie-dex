@@ -1,5 +1,3 @@
-'use client';
-
 import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react';
 import type { ClassNameProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';

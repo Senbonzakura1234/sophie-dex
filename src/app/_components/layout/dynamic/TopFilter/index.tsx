@@ -45,9 +45,7 @@ export default function TopFilter() {
 	const { moduleId = 'effect' } = useModuleId();
 	const { searchQuery } = useSearchQuery();
 
-	const {
-		meta: { totalPage, totalRecord }
-	} = useListQueryMeta({ moduleId, searchQuery });
+	const { totalPage, totalRecord } = useListQueryMeta({ moduleId, searchQuery });
 
 	const paginateInfo = getPaginateInfo(searchQuery.page, totalRecord, moduleId);
 

@@ -1,5 +1,3 @@
-'use client';
-
 import * as ScrollArea from '@radix-ui/react-scroll-area';
 import type { ChildrenProps } from '@root/types/common/props';
 import dynamic from 'next/dynamic';

@@ -34,21 +34,13 @@ const getSortField = <TSearch extends Readonly<SortByEnum>>(
 ) => (arrayInclude(allowedSortField, sortBy) ? sortBy : defaultSortField);
 
 type GetListRecordProp<TRecord extends CommonRecord> =
-	| {
-			query: PgRelationalQuery<Array<TRecord & { totalRecord: number }>>;
-			searchValue: string | null;
-			isEmptyBookmark: false;
-	  }
-	| {
-			searchValue: string | null;
-			isEmptyBookmark: true;
-	  };
+	| { query: PgRelationalQuery<Array<TRecord & { totalRecord: number }>>; isEmptyBookmark: false }
+	| { isEmptyBookmark: true };
 
 const getListRecord = async <TRecord extends CommonRecord>(args: GetListRecordProp<TRecord>) => {
-	if (args.isEmptyBookmark)
-		return { records: [], totalRecord: 0, totalPage: 0, search: args.searchValue || undefined };
+	if (args.isEmptyBookmark) return { records: [], totalRecord: 0, totalPage: 0 };
 
-	const { query, searchValue } = args;
+	const { query } = args;
 
 	const { data, isSuccess } = await tryCatchHandler(query, 'getListRecord.executeQuery');
 
@@ -59,7 +51,7 @@ const getListRecord = async <TRecord extends CommonRecord>(args: GetListRecordPr
 		data.map(({ totalRecord: _, ...record }) => record)
 	] as const;
 
-	return { records, totalRecord, totalPage: Math.ceil(totalRecord / DEFAULT_LIMIT), search: searchValue || undefined };
+	return { records, totalRecord, totalPage: Math.ceil(totalRecord / DEFAULT_LIMIT) };
 };
 
 const sanitizeSearch = (input: string | null) =>
@@ -82,7 +74,7 @@ export const getEffects = async (input: SearchQuery, { isAuthenticated, session 
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
 		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Effect>({ searchValue, isEmptyBookmark: true });
+			if (bookmarkListRes.result.length === 0) return getListRecord<Effect>({ isEmptyBookmark: true });
 
 			bookmarkList = bookmarkListRes.result;
 		}
@@ -112,7 +104,7 @@ export const getEffects = async (input: SearchQuery, { isAuthenticated, session 
 		}
 	});
 
-	return getListRecord<Effect>({ query, searchValue, isEmptyBookmark: false });
+	return getListRecord<Effect>({ query, isEmptyBookmark: false });
 };
 
 export const getItems = async (input: SearchQuery, { isAuthenticated, session }: SessionResult) => {
@@ -132,7 +124,7 @@ export const getItems = async (input: SearchQuery, { isAuthenticated, session }:
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
 		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Item>({ searchValue, isEmptyBookmark: true });
+			if (bookmarkListRes.result.length === 0) return getListRecord<Item>({ isEmptyBookmark: true });
 
 			bookmarkList = bookmarkListRes.result;
 		}
@@ -161,7 +153,7 @@ export const getItems = async (input: SearchQuery, { isAuthenticated, session }:
 		}
 	});
 
-	return getListRecord<Item>({ query, searchValue, isEmptyBookmark: false });
+	return getListRecord<Item>({ query, isEmptyBookmark: false });
 };
 
 export const getRumors = async (input: SearchQuery, { isAuthenticated, session }: SessionResult) => {
@@ -181,7 +173,7 @@ export const getRumors = async (input: SearchQuery, { isAuthenticated, session }
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
 		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Rumor>({ searchValue, isEmptyBookmark: true });
+			if (bookmarkListRes.result.length === 0) return getListRecord<Rumor>({ isEmptyBookmark: true });
 
 			bookmarkList = bookmarkListRes.result;
 		}
@@ -207,7 +199,7 @@ export const getRumors = async (input: SearchQuery, { isAuthenticated, session }
 		}
 	});
 
-	return getListRecord<Rumor>({ query, searchValue, isEmptyBookmark: false });
+	return getListRecord<Rumor>({ query, isEmptyBookmark: false });
 };
 
 export const getTraits = async (input: SearchQuery, { isAuthenticated, session }: SessionResult) => {
@@ -227,7 +219,7 @@ export const getTraits = async (input: SearchQuery, { isAuthenticated, session }
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
 		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Trait>({ searchValue, isEmptyBookmark: true });
+			if (bookmarkListRes.result.length === 0) return getListRecord<Trait>({ isEmptyBookmark: true });
 
 			bookmarkList = bookmarkListRes.result;
 		}
@@ -257,7 +249,7 @@ export const getTraits = async (input: SearchQuery, { isAuthenticated, session }
 		}
 	});
 
-	return getListRecord<Trait>({ query, searchValue, isEmptyBookmark: false });
+	return getListRecord<Trait>({ query, isEmptyBookmark: false });
 };
 
 export const checkUserExist = (username: string) =>

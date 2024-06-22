@@ -19,7 +19,8 @@ function SearchInput() {
 	};
 
 	useEffect(() => {
-		setSearchValue(null);
+		setSearchValue(searchQuery.search);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [moduleId]);
 
 	useEffect(() => {

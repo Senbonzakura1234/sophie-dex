@@ -128,7 +128,7 @@ export function highlightSearchedText(input: string, search: string | undefined,
 
 	return arr
 		.map(s =>
-			s.match(new RegExp(search, 'i'))
+			s.match(new RegExp(`(${search})`, 'ig'))
 				? `<span class='bg-base-content text-base-100 ${noPadding ? '' : 'px-1'}'>${s}</span>`
 				: s
 		)

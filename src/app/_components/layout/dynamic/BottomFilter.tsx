@@ -10,9 +10,7 @@ export default function BottomFilter() {
 
 	const { moduleId = 'effect' } = useModuleId();
 
-	const {
-		meta: { totalPage }
-	} = useListQueryMeta({ moduleId, searchQuery });
+	const { totalPage } = useListQueryMeta({ moduleId, searchQuery });
 
 	return (
 		<nav className='card select-none bg-base-100 shadow-lg shadow-primary'>

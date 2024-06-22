@@ -17,7 +17,7 @@ export default function APIListWrapper() {
 		return (
 			<>
 				{data.records.map(record => (
-					<TraitRecord key={record.id} data={record} search={data.search} />
+					<TraitRecord key={record.id} data={record} search={searchQuery.search || undefined} />
 				))}
 			</>
 		);
