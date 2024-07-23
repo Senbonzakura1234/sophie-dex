@@ -28,7 +28,6 @@ import {
 	moduleIdQueryValidator,
 	searchQueryValidator
 } from '@root/types/common/zod';
-import { env } from '@root/utils/common/env';
 import type { SessionResult } from '@root/utils/server';
 import { getSessionResult } from '@root/utils/server';
 import { exportRecords, getAllRecordIds, getContentRecord } from '@root/utils/server/database';
@@ -41,7 +40,6 @@ type TrpcCreateContextFn = () => Promise<{ sessionResult: SessionResult }>;
 export const createContext: TrpcCreateContextFn = async () => ({ sessionResult: await getSessionResult() });
 
 const t = initTRPC.context<typeof createContext>().create({
-	isDev: env.NEXT_PUBLIC_NODE_ENV !== 'production',
 	errorFormatter({ shape, error: { cause } }) {
 		return {
 			...shape,
