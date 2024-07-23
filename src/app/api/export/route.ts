@@ -1,6 +1,6 @@
 import { exportDBQueriesMap } from '@root/server/postgresql/repository';
 import { entries, tryCatchHandler } from '@root/utils/common';
-import { writeFile } from 'fs/promises';
+import { writeFile } from 'node:fs/promises';
 import { ulid } from 'ulid';
 
 export async function GET() {

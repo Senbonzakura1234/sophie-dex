@@ -1,13 +1,13 @@
 import Readme from '@components/common/dynamic/Readme';
 import AppVersion from '@components/common/static/AppVersion';
 import CommonWrapper from '@components/common/static/CommonWrapper';
+import { APP_NAME } from '@root/constants/common';
 import type { PageProps } from '@root/types/common';
-import { env } from '@root/utils/common/env';
 import { generateGenericMetadata } from '@root/utils/server/database';
 import type { Metadata, ResolvingMetadata } from 'next';
 
 export async function generateMetadata({ searchParams }: PageProps, parent: ResolvingMetadata): Promise<Metadata> {
-	return generateGenericMetadata(parent, { title: `${env.NEXT_PUBLIC_APP_NAME} | About` }, searchParams);
+	return generateGenericMetadata(parent, { title: `${APP_NAME} | About` }, searchParams);
 }
 
 export default function About() {

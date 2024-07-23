@@ -1,7 +1,7 @@
 import { writeLog } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
-import { writeFile } from 'fs/promises';
 import { mdxToMd } from 'mdx-to-md';
+import { writeFile } from 'node:fs/promises';
 import path from 'path';
 
 const generateMD = async () => {

@@ -1,3 +1,4 @@
+import { APP_DB_PREFIX } from '@root/constants/common';
 import { env } from '@root/utils/common/env';
 import type { Config } from 'drizzle-kit';
 
@@ -6,7 +7,7 @@ const config: Config = {
 	out: './src/server/postgresql/migration',
 	dialect: 'postgresql',
 	breakpoints: true,
-	tablesFilter: [`${env.NEXT_PUBLIC_APP_DB_PREFIX}-_*`],
+	tablesFilter: [`${APP_DB_PREFIX}-_*`],
 	dbCredentials: { url: env.PGURL_NONPOOLING }
 };
 

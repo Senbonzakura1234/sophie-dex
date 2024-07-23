@@ -8,9 +8,13 @@ import type {
 	RumorTypeEnum,
 	SortByEnum
 } from '@root/types/common/zod/generic';
+import { capitalize } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import type { DefaultOptions } from '@tanstack/react-query';
 import type { NextAuthConfig } from 'next-auth';
+
+export const APP_NAME = capitalize(env.NEXT_PUBLIC_APP_CODE.replaceAll('-', ' '));
+export const APP_DB_PREFIX = env.NEXT_PUBLIC_APP_CODE.replaceAll('-', '_');
 
 export const DEFAULT_LIMIT = 16;
 

@@ -1,6 +1,6 @@
 [
   {
-    "id": "01J0N1MQ1VTY39V60Q0F3XSSTD",
+    "id": "01J3F5PGKESMYEKEGKBG30T21K",
     "keyWords": "savage impact,4",
     "name": "Savage Impact",
     "moduleId": "effect",
@@ -8,7 +8,7 @@
     "description": "Deals supreme physical damage. Physical damage is affected by the target's defense value."
   },
   {
-    "id": "01J0N1MQ1WCG4NAR47HSVPNS48",
+    "id": "01J3F5PGKF7N4Q3C5KECR178D9",
     "keyWords": "flames of hell,11",
     "name": "Flames of Hell",
     "moduleId": "effect",
@@ -16,7 +16,7 @@
     "description": "Deals ultimate fire damage. Fire damage is affected by the target's fire resistance value."
   },
   {
-    "id": "01J0N1MQ1W7PM7XDA0HSHAJNG8",
+    "id": "01J3F5PGKGEBTKSEBT0T5BQ1WY",
     "keyWords": "ice damage m,13",
     "name": "Ice Damage M",
     "moduleId": "effect",
@@ -24,7 +24,7 @@
     "description": "Deals moderate ice damage. Ice damage is affected by the target's ice resistance value."
   },
   {
-    "id": "01J0N1MQ1WRNQNV8YJG6BVFY10",
+    "id": "01J3F5PGKGESA905MH1NW1EF04",
     "keyWords": "ice age,16",
     "name": "Ice Age",
     "moduleId": "effect",
@@ -32,7 +32,7 @@
     "description": "Deals supreme ice damage. Ice damage is affected by the target's ice resistance value."
   },
   {
-    "id": "01J0N1MQ1XE5RDGN6QK3YSWM9C",
+    "id": "01J3F5PGKG73N5F7QZY9GSGPR7",
     "keyWords": "lightning damage m,19",
     "name": "Lightning Damage M",
     "moduleId": "effect",
@@ -40,7 +40,7 @@
     "description": "Deals moderate lightning damage. Lightning damage is affected by the target's lightning resistance value."
   },
   {
-    "id": "01J0N1MQ1XTGZPZ8V5CF8GHNY7",
+    "id": "01J3F5PGKGJT00KKMDWPJDV9HV",
     "keyWords": "large missile,25",
     "name": "Large Missile",
     "moduleId": "effect",
@@ -48,7 +48,7 @@
     "description": "Deals strong magic damage. Magic damage is affected by the target's magic resistance value."
   },
   {
-    "id": "01J0N1MQ1X7RMK235MSR6N3MPD",
+    "id": "01J3F5PGKG82SNMDX6S9SHNNAJ",
     "keyWords": "a little numbing,126",
     "name": "A Little Numbing",
     "moduleId": "effect",
@@ -56,7 +56,7 @@
     "description": "Pushes the target's turn back a little. This effect diminishes with each use until they take another turn."
   },
   {
-    "id": "01J0N1MQ1Y76R7B5JHEH2FMC51",
+    "id": "01J3F5PGKH3T6XAZXXNNDQXZGV",
     "keyWords": "call rain cloud,132",
     "name": "Call Rain Cloud",
     "moduleId": "effect",
@@ -64,7 +64,7 @@
     "description": "Calls a rain cloud, activating 1 time card that deals lightning damage to the target. The effect lasts 1 turn."
   },
   {
-    "id": "01J0N1MQ1Y297ABM7T57GJT9ND",
+    "id": "01J3F5PGKHJY4J8K0P9GWGMWR8",
     "keyWords": "call thunder cloud,133",
     "name": "Call Thunder Cloud",
     "moduleId": "effect",
@@ -72,7 +72,7 @@
     "description": "Calls a thunder cloud, activating 1 time card that deals lightning damage to the target. The effect lasts 2 turns."
   },
   {
-    "id": "01J0N1MQ1YRTGR7F2A0HXD812G",
+    "id": "01J3F5PGKHPBR7D9F0895WR14T",
     "keyWords": "weight of happiness,144",
     "name": "Weight of Happiness",
     "moduleId": "effect",
@@ -80,7 +80,7 @@
     "description": "Reduces all of the target's resistances by 1 level. Has no effect if the target has no resistances, and this cannot cause weaknesses."
   },
   {
-    "id": "01J0N1MQ1YD85DW1DKTY1G39NM",
+    "id": "01J3F5PGKHT61HZN2JVRMB7AV4",
     "keyWords": "lp recovery xs,207",
     "name": "LP Recovery XS",
     "moduleId": "effect",
@@ -88,7 +88,7 @@
     "description": "Restores the target's LP by a slight amount."
   },
   {
-    "id": "01J0N1MQ1Z8DPXZB5Z9YJ1PSQC",
+    "id": "01J3F5PGKH82W0Q4CAJYQE24JC",
     "keyWords": "hpmp recovery s,214",
     "name": "HPMP Recovery S",
     "moduleId": "effect",
@@ -96,7 +96,7 @@
     "description": "Restores a small amount of the target's HP and MP."
   },
   {
-    "id": "01J0N1MQ1ZKS8R0W5KEPK5BP4F",
+    "id": "01J3F5PGKJ4YAEQJ40PWNV4KXS",
     "keyWords": "hplp recovery s,219",
     "name": "HPLP Recovery S",
     "moduleId": "effect",
@@ -104,7 +104,7 @@
     "description": "Restores a small amount of the target's HP and LP."
   },
   {
-    "id": "01J0N1MQ1ZJEV30J594C6KA5WZ",
+    "id": "01J3F5PGKJ6F2N7SH2APSKA6TV",
     "keyWords": "hplp recovery xl,222",
     "name": "HPLP Recovery XL",
     "moduleId": "effect",
@@ -112,7 +112,7 @@
     "description": "Restores a huge amount of the target's HP and LP."
   },
   {
-    "id": "01J0N1MQ1ZSP5SQA0SJ895Q9GP",
+    "id": "01J3F5PGKJ25RXPKPJ68N393VW",
     "keyWords": "calming aroma,228",
     "name": "Calming Aroma",
     "moduleId": "effect",
@@ -120,7 +120,7 @@
     "description": "Restores the whole party's HP by a slight amount."
   },
   {
-    "id": "01J0N1MQ1Z94QTZ8Y4RWBD3X2R",
+    "id": "01J3F5PGKJDQ33YDAMXN3M4655",
     "keyWords": "eat and recover xs,278",
     "name": "Eat and Recover XS",
     "moduleId": "effect",
@@ -128,7 +128,7 @@
     "description": "Restores a slight amount of the target's HP and LP. Recovery amount increases with higher maximum HP."
   },
   {
-    "id": "01J0N1MQ1ZQK6HAT8QBT9Q4H0G",
+    "id": "01J3F5PGKJVRP2340R1WNVN564",
     "keyWords": "filling,285",
     "name": "Filling",
     "moduleId": "effect",
@@ -136,7 +136,7 @@
     "description": "Sits in the stomach, delaying your turn in battle a small amount. Also restores LP."
   },
   {
-    "id": "01J0N1MQ20S21X6KC8ZAJ59NNR",
+    "id": "01J3F5PGKJ7EPC064FMNCJZSYZ",
     "keyWords": "hard to digest,288",
     "name": "Hard to Digest",
     "moduleId": "effect",
@@ -144,7 +144,7 @@
     "description": "It's hard to digest, inflicting Slow. The effect is small."
   },
   {
-    "id": "01J0N1MQ20EDJCPPTFR95JDJA1",
+    "id": "01J3F5PGKKKVSG87W8WE7G48JE",
     "keyWords": "weak to ice,729",
     "name": "Weak to Ice",
     "moduleId": "effect",
@@ -152,7 +152,7 @@
     "description": "Reduces the target's ice resistance by 1 level. Has no effect if the target has no resistance, and this cannot cause weaknesses."
   },
   {
-    "id": "01J0N1MQ201C8HGVJXE4SK6TD9",
+    "id": "01J3F5PGKKMKJ3BZCMS51HKFFF",
     "keyWords": "level down s,731",
     "name": "Level Down S",
     "moduleId": "effect",
@@ -160,7 +160,7 @@
     "description": "Reduces the target's level a little. Reduced level decreases all stats and damage dealt."
   },
   {
-    "id": "01J0N1MQ20VF45WEGDKBM3E17S",
+    "id": "01J3F5PGKK12DJK6YQM9DHSW86",
     "keyWords": "damage over time l,736",
     "name": "Damage Over Time L",
     "moduleId": "effect",
@@ -168,7 +168,7 @@
     "description": "Deals continuous damage to the target. The effect is big, but the time is short."
   },
   {
-    "id": "01J0N1MQ200MCJQCADCN6PD396",
+    "id": "01J3F5PGKMFQHX30A1T7ZW6TCB",
     "keyWords": "add break s,740",
     "name": "Add Break S",
     "moduleId": "effect",
@@ -176,7 +176,7 @@
     "description": "Increases Break effect dealt to the target. If multiple targets are hit, the effect is split."
   },
   {
-    "id": "01J0N1MQ21YCCG5Y6T3F6JECEB",
+    "id": "01J3F5PGKMHGEPQKXYXEBN57NK",
     "keyWords": "restrain attack s,744",
     "name": "Restrain Attack S",
     "moduleId": "effect",
@@ -184,7 +184,7 @@
     "description": "Reduces the rate at which enemies use powerful attacks a little."
   },
   {
-    "id": "01J0N1MQ212GXZ5VW3CJSXZHYT",
+    "id": "01J3F5PGKMK1N7ZMJ9N9HWNK0K",
     "keyWords": "consume hp xs,797",
     "name": "Consume HP XS",
     "moduleId": "effect",
@@ -192,7 +192,7 @@
     "description": "Consumes a slight amount of HP. The amount is influenced by maximum HP."
   },
   {
-    "id": "01J0N1MQ21HRF15RGG9B6MCSHR",
+    "id": "01J3F5PGKMY7FFQDSK4W98D9XM",
     "keyWords": "consume hp l,800",
     "name": "Consume HP L",
     "moduleId": "effect",
@@ -200,7 +200,7 @@
     "description": "Consumes a large amount of HP. The amount is influenced by maximum HP."
   },
   {
-    "id": "01J0N1MQ21X8XSAV6EJ671JKPG",
+    "id": "01J3F5PGKMNXA9S7C608RRX2Y1",
     "keyWords": "consume mp xl,806",
     "name": "Consume MP XL",
     "moduleId": "effect",
@@ -208,7 +208,7 @@
     "description": "Consumes a huge amount of MP. The effect is weakened when MP is insufficient."
   },
   {
-    "id": "01J0N1MQ21Q5T07GTRDB012XA3",
+    "id": "01J3F5PGKNCZS1SXWDV98S20FD",
     "keyWords": "rest 5 hours,859",
     "name": "Rest 5 Hours",
     "moduleId": "effect",
@@ -216,7 +216,7 @@
     "description": "Rest for 5 hours, restoring 50% of HP, MP, and LP."
   },
   {
-    "id": "01J0N1MQ22K3Q3YZ1JCXNAWQDX",
+    "id": "01J3F5PGKNS9CY0TTHNCP2ZAHV",
     "keyWords": "average cart,865",
     "name": "Average Cart",
     "moduleId": "effect",
@@ -224,7 +224,7 @@
     "description": "Allows you to select items that you gathered, and send them back to the atelier. You can send up to 30 at a time."
   },
   {
-    "id": "01J0N1MQ222H1MCZ0SW956NM9V",
+    "id": "01J3F5PGKNNQ9J3CFD7DFWVZET",
     "keyWords": "keeps away danger,869",
     "name": "Keeps Away Danger",
     "moduleId": "effect",
@@ -232,7 +232,7 @@
     "description": "Reduces the chance of incidents by a small amount."
   },
   {
-    "id": "01J0N1MQ27CJXCZG8VVBEQHDXA",
+    "id": "01J3F5PGKNRYA15WCKCNMS27ZT",
     "keyWords": "wards off monsters,873",
     "name": "Wards Off Monsters",
     "moduleId": "effect",
@@ -240,7 +240,7 @@
     "description": ""
   },
   {
-    "id": "01J0N1MQ278507XR0HJYX0TDWR",
+    "id": "01J3F5PGKNM2A3TGKEHYRFC4YR",
     "keyWords": "move speed up s,928",
     "name": "Move Speed Up S",
     "moduleId": "effect",
@@ -248,7 +248,7 @@
     "description": "Move speed increases by 10%."
   },
   {
-    "id": "01J0N1MQ271SW62M5NVRK5E3J0",
+    "id": "01J3F5PGKN370MNSKT6TS5PNS4",
     "keyWords": "gather a lot more,938",
     "name": "Gather a Lot More",
     "moduleId": "effect",
@@ -256,7 +256,7 @@
     "description": "Increases number of items gathered each time a lot."
   },
   {
-    "id": "01J0N1MQ27WDJBR30FGEB38FRN",
+    "id": "01J3F5PGKP5W44DNRJQEAW83X5",
     "keyWords": "training mastery,944",
     "name": "Training Mastery",
     "moduleId": "effect",
@@ -264,7 +264,7 @@
     "description": "Increases experience points gained from battle by a lot."
   },
   {
-    "id": "01J0N1MQ28VD8M0977MTQPYK57",
+    "id": "01J3F5PGKPPGMDYV774DP55EZK",
     "keyWords": "seal of chaos,948",
     "name": "Seal of Chaos",
     "moduleId": "effect",
@@ -272,7 +272,7 @@
     "description": "Makes it easier for gathering level and enemy level to increase."
   },
   {
-    "id": "01J0N1MQ287KAZJ201MRRPT1DY",
+    "id": "01J3F5PGKPEA85CRH3KEQXXPQ7",
     "keyWords": "seal of trust,1003",
     "name": "Seal of Trust",
     "moduleId": "effect",
@@ -280,7 +280,7 @@
     "description": "Increases effect of all Assist actions by a little."
   },
   {
-    "id": "01J0N1MQ286BHS7JSQ4VG7YTWS",
+    "id": "01J3F5PGKQ5PBKSRFBVG94JZ1B",
     "keyWords": "hard to notice,1008",
     "name": "Hard to Notice",
     "moduleId": "effect",
@@ -288,7 +288,7 @@
     "description": "Hide your presence, making it hard for monsters to notice you for a short time."
   },
   {
-    "id": "01J0N1MQ29K8Z5PPWS39FPPW6Q",
+    "id": "01J3F5PGKQ8AHZD8FX142RYDC2",
     "keyWords": "erase presence,1009",
     "name": "Erase Presence",
     "moduleId": "effect",
@@ -296,7 +296,7 @@
     "description": "Erase your presence, making it impossible for monsters to see you for a short time. Just don't get too close."
   },
   {
-    "id": "01J0N1MQ29BXCY8YCXXGXBAK2P",
+    "id": "01J3F5PGKQEP765MZZHMPTSB4K",
     "keyWords": "progress time,1012",
     "name": "Progress Time",
     "moduleId": "effect",
@@ -304,7 +304,7 @@
     "description": "Reduces wait time after all actions by a small amount."
   },
   {
-    "id": "01J0N1MQ290VEX8TM99RS8Q940",
+    "id": "01J3F5PGKQKKBSD2EH41N4WZVB",
     "keyWords": "change the future,1024",
     "name": "Change the Future",
     "moduleId": "effect",
@@ -312,7 +312,7 @@
     "description": "Increases the chance of higher expected values a little when attacking."
   },
   {
-    "id": "01J0N1MQ29PWCZ6TGMZA5XR09C",
+    "id": "01J3F5PGKQA69W0NT65AAM9GWY",
     "keyWords": "soul awakening,1032",
     "name": "Soul Awakening",
     "moduleId": "effect",
@@ -320,7 +320,7 @@
     "description": "Automatically revive on turn when KO'd in battle. HP after revival is decent."
   },
   {
-    "id": "01J0N1MQ29W0VR10DCM6M92NWY",
+    "id": "01J3F5PGKQCMJNSSRBZMDBBMND",
     "keyWords": "speed up s,1123",
     "name": "Speed Up S",
     "moduleId": "effect",
@@ -328,7 +328,7 @@
     "description": "Increases the target's speed a little. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ295W75MNC2DTWB3V7Q",
+    "id": "01J3F5PGKR97FCBVEV467H4E38",
     "keyWords": "hit rate up xl,1131",
     "name": "Hit Rate Up XL",
     "moduleId": "effect",
@@ -336,7 +336,7 @@
     "description": "Increases hit rate by 30%."
   },
   {
-    "id": "01J0N1MQ2A8D2728H9TJSYH6X5",
+    "id": "01J3F5PGKR5FX4BQ2N0TVZ8CK1",
     "keyWords": "critical up s,1138",
     "name": "Critical Up S",
     "moduleId": "effect",
@@ -344,7 +344,7 @@
     "description": "Increases critical hit rate by 6%."
   },
   {
-    "id": "01J0N1MQ2A0C8V1NCQK34WJVSR",
+    "id": "01J3F5PGKRP9FKEXEBXDTG9NVW",
     "keyWords": "item enhance s,1151",
     "name": "Item Enhance S",
     "moduleId": "effect",
@@ -352,7 +352,7 @@
     "description": "Increases item power by 10%."
   },
   {
-    "id": "01J0N1MQ2AR5296HKR4YTR0JHA",
+    "id": "01J3F5PGKRTDH18WEBRVTDKAC8",
     "keyWords": "nullify sleep,1160",
     "name": "Nullify Sleep",
     "moduleId": "effect",
@@ -360,7 +360,7 @@
     "description": "Immunity to Sleep ailment."
   },
   {
-    "id": "01J0N1MQ2ARK8XFX3V67T7N3AF",
+    "id": "01J3F5PGKSBZPBZPWR3ED35T3H",
     "keyWords": "nullify no heal,1166",
     "name": "Nullify No Heal",
     "moduleId": "effect",
@@ -368,7 +368,7 @@
     "description": "Immunity to No Heal ailment."
   },
   {
-    "id": "01J0N1MQ2A9NJM6TY3FD7BC6DM",
+    "id": "01J3F5PGKS8V1MD3F6AMYGHYFK",
     "keyWords": "nullify all ailments,1170",
     "name": "Nullify All Ailments",
     "moduleId": "effect",
@@ -376,7 +376,7 @@
     "description": "Immunity to all ailments."
   },
   {
-    "id": "01J0N1MQ2AYM7F3Q0ANK0EBB3D",
+    "id": "01J3F5PGKS971CAFAHD7WRQDBK",
     "keyWords": "avoid ko xs,1176",
     "name": "Avoid KO XS",
     "moduleId": "effect",
@@ -384,7 +384,7 @@
     "description": "You have a chance to survive with 1 HP when you receive damage that would reduce your HP to 0. Has a very low chance to work."
   },
   {
-    "id": "01J0N1MQ2A8AFMSERZKVJG4N5Q",
+    "id": "01J3F5PGKS2VET03WS5JYQZR45",
     "keyWords": "damage absorb s,1184",
     "name": "Damage Absorb S",
     "moduleId": "effect",
@@ -392,7 +392,7 @@
     "description": "Absorbs a portion of damage dealt to the target as HP. The effect is small."
   },
   {
-    "id": "01J0N1MQ2BQXT1F92XS3AS2K9E",
+    "id": "01J3F5PGKSE7Y57GYF6AV75G98",
     "keyWords": "change color blue,1284",
     "name": "Change Color Blue",
     "moduleId": "effect",
@@ -400,7 +400,7 @@
     "description": "Changes the item color to Blue."
   },
   {
-    "id": "01J0N1MQ2BD89Z8H6DYDZP9S12",
+    "id": "01J3F5PGKS5N9N5MAV6EK3V6SR",
     "keyWords": "fires of purgatory,10",
     "name": "Fires of Purgatory",
     "moduleId": "effect",
@@ -408,7 +408,7 @@
     "description": "Deals supreme fire damage. Fire damage is affected by the target's fire resistance value."
   },
   {
-    "id": "01J0N1MQ2BRJREC0W0DPFZ7JJC",
+    "id": "01J3F5PGKSVETTBCQ4DJ7BMRVY",
     "keyWords": "ice damage s,12",
     "name": "Ice Damage S",
     "moduleId": "effect",
@@ -416,7 +416,7 @@
     "description": "Deals ice damage. Ice damage is affected by the target's ice resistance value."
   },
   {
-    "id": "01J0N1MQ2BY8ABFZ44Y6D5XY58",
+    "id": "01J3F5PGKTM5P74CJS4Y51XZ8V",
     "keyWords": "lightning damage s,18",
     "name": "Lightning Damage S",
     "moduleId": "effect",
@@ -424,7 +424,7 @@
     "description": "Deals lightning damage. Lightning damage is affected by the target's lightning resistance value."
   },
   {
-    "id": "01J0N1MQ2BCF5WX92WDP30RG08",
+    "id": "01J3F5PGKT3Y2975HYS7RKN0ZN",
     "keyWords": "hammer of god,23",
     "name": "Hammer of God",
     "moduleId": "effect",
@@ -432,7 +432,7 @@
     "description": "Deals ultimate lightning damage. Lightning damage is affected by the target's lightning resistance value."
   },
   {
-    "id": "01J0N1MQ2BREXTP94C047CZB8P",
+    "id": "01J3F5PGKT03H4KB429XFE0VY5",
     "keyWords": "super large missile,26",
     "name": "Super Large Missile",
     "moduleId": "effect",
@@ -440,7 +440,7 @@
     "description": "Deals very powerful magic damage. Magic damage is affected by the target's magic resistance value."
   },
   {
-    "id": "01J0N1MQ2C7VK3C0V6CSQS1D6T",
+    "id": "01J3F5PGKT0A2AHDQW98TB0988",
     "keyWords": "power of origin,28",
     "name": "Power of Origin",
     "moduleId": "effect",
@@ -448,7 +448,7 @@
     "description": "Deals strong physical damage. Can also randomly cause a number of effects."
   },
   {
-    "id": "01J0N1MQ2C2S0AJ248K1M1P36C",
+    "id": "01J3F5PGKTX92WYRWZ69XCHX05",
     "keyWords": "falling uni,40",
     "name": "Falling Uni",
     "moduleId": "effect",
@@ -456,7 +456,7 @@
     "description": "Uni rain from the sky, dealing physical damage to all enemies. Also activates 1 time card."
   },
   {
-    "id": "01J0N1MQ2CEPNRPGWDDQCX5T65",
+    "id": "01J3F5PGKT48BHMHWJK1HJYMRA",
     "keyWords": "falling ???,43",
     "name": "Falling ???",
     "moduleId": "effect",
@@ -464,7 +464,7 @@
     "description": "??? rains from the sky, dealing physical damage to all enemies. Also activates 1 time card."
   },
   {
-    "id": "01J0N1MQ2C5FT2R1S9WR9WK49W",
+    "id": "01J3F5PGKVGHGZKZMDXET6AZW7",
     "keyWords": "summon beast,49",
     "name": "Summon Beast",
     "moduleId": "effect",
@@ -472,7 +472,7 @@
     "description": "Summons a beast to deal physical damage. Physical damage is affected by the target's defense value."
   },
   {
-    "id": "01J0N1MQ2CYF6W2S5MMRB11H59",
+    "id": "01J3F5PGKVF476ARMAMK4FZZEZ",
     "keyWords": "summon ghost,51",
     "name": "Summon Ghost",
     "moduleId": "effect",
@@ -480,7 +480,7 @@
     "description": "Summons a ghost to deal magic damage. Magic damage is affected by the target's magic resistance value."
   },
   {
-    "id": "01J0N1MQ2C3DA3AE6RJJ3HC6JP",
+    "id": "01J3F5PGKVTJK2CS29BZNRY8FN",
     "keyWords": "steal lots of life,56",
     "name": "Steal Lots of Life",
     "moduleId": "effect",
@@ -488,7 +488,7 @@
     "description": "Deals very powerful physical damage, and recover for half the damage dealt. This damage is affected by the target's defense value."
   },
   {
-    "id": "01J0N1MQ2DDR0QS8YSE02TS1JQ",
+    "id": "01J3F5PGKV61FW11VPNTZ8D8JM",
     "keyWords": "soul stabbing thorns,115",
     "name": "Soul Stabbing Thorns",
     "moduleId": "effect",
@@ -496,7 +496,7 @@
     "description": "Piercing thorns stab into the target, draining HP over time. The effect is fairly big."
   },
   {
-    "id": "01J0N1MQ2DGKMEGPPDNP03ENKX",
+    "id": "01J3F5PGKVJD8X2MADMWQK18KW",
     "keyWords": "strong at night,1039",
     "name": "Strong at Night",
     "moduleId": "effect",
@@ -504,7 +504,7 @@
     "description": "Increases attack, defense, and speed by 15% at night. No effect during other times."
   },
   {
-    "id": "01J0N1MQ2D9MF7XXRZ171J21E1",
+    "id": "01J3F5PGKWA2N93YBSDSZTRPZ7",
     "keyWords": "spirit's power,1061",
     "name": "Spirit's Power",
     "moduleId": "effect",
@@ -512,7 +512,7 @@
     "description": "The power of spirits increases base damage."
   },
   {
-    "id": "01J0N1MQ2D3AFP6HDMWQACV4RY",
+    "id": "01J3F5PGKWZR2W12J4VX0978V4",
     "keyWords": "attack up xl,1116",
     "name": "Attack Up XL",
     "moduleId": "effect",
@@ -520,7 +520,7 @@
     "description": "Increases attack power by 25."
   },
   {
-    "id": "01J0N1MQ2DS39F6C94K0YE47WG",
+    "id": "01J3F5PGKW9YM53YR3QD0T4683",
     "keyWords": "critical up xs,1137",
     "name": "Critical Up XS",
     "moduleId": "effect",
@@ -528,7 +528,7 @@
     "description": "Increases critical hit rate by 3%."
   },
   {
-    "id": "01J0N1MQ2D40WZYA1KTZCNB2CF",
+    "id": "01J3F5PGKWYV9X90X5RS5TZRWK",
     "keyWords": "ailment resist m,1173",
     "name": "Ailment Resist M",
     "moduleId": "effect",
@@ -536,7 +536,7 @@
     "description": "Reduces chance of being affected by ailments by a fair amount."
   },
   {
-    "id": "01J0N1MQ2EB3QE0PTD7SKP4XG4",
+    "id": "01J3F5PGKWFAEP5Z0RPSPEAWAE",
     "keyWords": "break resist s,1196",
     "name": "Break Resist S",
     "moduleId": "effect",
@@ -544,7 +544,7 @@
     "description": "Increases Break resistance by a small amount."
   },
   {
-    "id": "01J0N1MQ2EZ11M7HTRKZXKDXHB",
+    "id": "01J3F5PGKW3HQVSQDPDBVHYBCT",
     "keyWords": "panel 6x6,1263",
     "name": "Panel 6x6",
     "moduleId": "effect",
@@ -552,7 +552,7 @@
     "description": "The panel size is 6x6."
   },
   {
-    "id": "01J0N1MQ2EVABH8Y7M1YY0QSHW",
+    "id": "01J3F5PGKXE736CDGQ9Y8C18QT",
     "keyWords": "(ingredient) +5,1298",
     "name": "(Ingredient) +5",
     "moduleId": "effect",
@@ -560,7 +560,7 @@
     "description": "Increases (Ingredient) category value by 5."
   },
   {
-    "id": "01J0N1MQ2EEMDM8PHEK33C7PJW",
+    "id": "01J3F5PGKXRW39S2K8XPNGNZHM",
     "keyWords": "ultimate thunder resist,1416",
     "name": "Ultimate Thunder Resist",
     "moduleId": "effect",
@@ -568,7 +568,7 @@
     "description": "Gain ultimate lightning resistance. Gain super lightning resistance."
   },
   {
-    "id": "01J0N1MQ2EXW2JF64YM0Q53AGE",
+    "id": "01J3F5PGKXM31QN6C5D4F37ZRC",
     "keyWords": "explodes,111",
     "name": "Explodes",
     "moduleId": "effect",
@@ -576,7 +576,7 @@
     "description": "Explodes to deal physical damage to the target. Its power is small."
   },
   {
-    "id": "01J0N1MQ2EGCQVBQHSAQ7ZNEY0",
+    "id": "01J3F5PGKX5Z90WSYCT73WSF4F",
     "keyWords": "vertical flip,1274",
     "name": "Vertical Flip",
     "moduleId": "effect",
@@ -584,7 +584,7 @@
     "description": "When placing materials, you can press <LB><RB> to flip it vertically."
   },
   {
-    "id": "01J0N1MQ2E40W6TRMRWPPPS32A",
+    "id": "01J3F5PGKX2819R6TX5HSWB780",
     "keyWords": "physical damage s",
     "name": "Physical Damage S",
     "moduleId": "effect",
@@ -592,7 +592,7 @@
     "description": "Deals physical damage. Physical damage is affected by the target's defense value."
   },
   {
-    "id": "01J0N1MQ2FMC45RP2FPQY0TVYV",
+    "id": "01J3F5PGKXFDAG3MSGM5JRZK35",
     "keyWords": "fire damage xl,9",
     "name": "Fire Damage XL",
     "moduleId": "effect",
@@ -600,7 +600,7 @@
     "description": "Deals very powerful fire damage. Fire damage is affected by the target's fire resistance value."
   },
   {
-    "id": "01J0N1MQ2F6YAP4VZB7KTQC1EP",
+    "id": "01J3F5PGKXP3AVW653KCYEVSE1",
     "keyWords": "ice damage xl,15",
     "name": "Ice Damage XL",
     "moduleId": "effect",
@@ -608,7 +608,7 @@
     "description": "Deals very powerful ice damage. Ice damage is affected by the target's ice resistance value."
   },
   {
-    "id": "01J0N1MQ2FNW5SG254B75H02JA",
+    "id": "01J3F5PGKYD0EHAKZKAF7BCKKX",
     "keyWords": "lightning damage l,20",
     "name": "Lightning Damage L",
     "moduleId": "effect",
@@ -616,7 +616,7 @@
     "description": "Deals strong lightning damage. Lightning damage is affected by the target's lightning resistance value."
   },
   {
-    "id": "01J0N1MQ2FWGBGC442WZ02V26J",
+    "id": "01J3F5PGKY8P0DR8HBAA2PN79Q",
     "keyWords": "power of creation,29",
     "name": "Power of Creation",
     "moduleId": "effect",
@@ -624,7 +624,7 @@
     "description": "Deals very powerful physical damage. Can also randomly cause a number of effects."
   },
   {
-    "id": "01J0N1MQ2FJ2VBYXQQNQN8S24H",
+    "id": "01J3F5PGKY385SST0K41BD2YBX",
     "keyWords": "giant's blow,5",
     "name": "Giant's Blow",
     "moduleId": "effect",
@@ -632,7 +632,7 @@
     "description": "Deals ultimate physical damage. Physical damage is affected by the target's defense value."
   },
   {
-    "id": "01J0N1MQ2FTA9PTWWRDJR5E17J",
+    "id": "01J3F5PGKYG1CRQ0R0B700C3EP",
     "keyWords": "falling bombs,45",
     "name": "Falling Bombs",
     "moduleId": "effect",
@@ -640,7 +640,7 @@
     "description": "Bombs rain from the sky, dealing fire damage to all enemies. Also activates 1 time card."
   },
   {
-    "id": "01J0N1MQ2GKSRTAP85NG5BN017",
+    "id": "01J3F5PGKYN6YAMBESSVGM3HBF",
     "keyWords": "summon ardra,48",
     "name": "Summon Ardra",
     "moduleId": "effect",
@@ -648,7 +648,7 @@
     "description": "Summons an Ardra to deal physical damage, also delaying turn a little."
   },
   {
-    "id": "01J0N1MQ2GYJ3ZRQWY6J4MS992",
+    "id": "01J3F5PGKYKKY3DB0D8WG4WCVM",
     "keyWords": "gift from heaven,47",
     "name": "Gift from Heaven",
     "moduleId": "effect",
@@ -656,7 +656,7 @@
     "description": "Treasure chests rain from the sky, dealing magic damage to all enemies. Also activates 1 time card."
   },
   {
-    "id": "01J0N1MQ2GFZEJ6BF9CSR0PCXE",
+    "id": "01J3F5PGKZWXQ63J0RJQ4QR0K5",
     "keyWords": "steal some spirit,57",
     "name": "Steal Some Spirit",
     "moduleId": "effect",
@@ -664,7 +664,7 @@
     "description": "Deals moderate physical damage. Physical damage is affected by the target's defense value."
   },
   {
-    "id": "01J0N1MQ2GVWC76FQNZM8J0551",
+    "id": "01J3F5PGKZRANFSEHHH9RYMQ9K",
     "keyWords": "steal life,55",
     "name": "Steal Life",
     "moduleId": "effect",
@@ -672,7 +672,7 @@
     "description": "Deals strong physical damage, and recover for half the damage dealt. This damage is affected by the target's defense value."
   },
   {
-    "id": "01J0N1MQ2G3EMXPKZQ50BBYAT0",
+    "id": "01J3F5PGKZWYDMH7JH5RD2YKAT",
     "keyWords": "bursts,110",
     "name": "Bursts",
     "moduleId": "effect",
@@ -680,7 +680,7 @@
     "description": "Bursts to deal minor physical damage to the target. Its power is very small."
   },
   {
-    "id": "01J0N1MQ2HQETTY3WM0V9BZ2H9",
+    "id": "01J3F5PGKZRRQDS5K4YWRYQ8FV",
     "keyWords": "strong in evening,1038",
     "name": "Strong in Evening",
     "moduleId": "effect",
@@ -688,7 +688,7 @@
     "description": "Increases attack, defense, and speed by 15% in the evening. No effect during other times."
   },
   {
-    "id": "01J0N1MQ2H3J3NY4HYQV1HQQ2S",
+    "id": "01J3F5PGKZJ57838KEN1S2K3PF",
     "keyWords": "tool rune,1058",
     "name": "Tool Rune",
     "moduleId": "effect",
@@ -696,7 +696,7 @@
     "description": "The hidden magic of the Tool Rune increases item power and reduces wait time."
   },
   {
-    "id": "01J0N1MQ2H496C7BVCF2M84BWP",
+    "id": "01J3F5PGM0W8PFECDDNB43TF7P",
     "keyWords": "attack up xs,1112",
     "name": "Attack Up XS",
     "moduleId": "effect",
@@ -704,7 +704,7 @@
     "description": "Increases attack power by 5."
   },
   {
-    "id": "01J0N1MQ2H6XMPTWW1E0VJFF3Y",
+    "id": "01J3F5PGM0G119J6PYKMYW0SBC",
     "keyWords": "evasion up l,1135",
     "name": "Evasion Up L",
     "moduleId": "effect",
@@ -712,7 +712,7 @@
     "description": "Increases the target's evasion rate by a lot. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ2HDP7KX752R0KCM66V",
+    "id": "01J3F5PGM0XWTZ35PBVVR89N4E",
     "keyWords": "burst up +2%,1158",
     "name": "Burst Up +2%",
     "moduleId": "effect",
@@ -720,7 +720,7 @@
     "description": "Increases Burst Gauge fill rate by 2%."
   },
   {
-    "id": "01J0N1MQ2JSKGK1DFJ8P9KPTG2",
+    "id": "01J3F5PGM0BNJWVERH8RAQKZ9Q",
     "keyWords": "damage cut xl,1191",
     "name": "Damage Cut XL",
     "moduleId": "effect",
@@ -728,7 +728,7 @@
     "description": "Reduces damage taken by 10%."
   },
   {
-    "id": "01J0N1MQ2J6GY86YBPXCHKYH28",
+    "id": "01J3F5PGM0QN89Q29ZCR1HN265",
     "keyWords": "bonus display level 3,1259",
     "name": "Bonus Display Level 3",
     "moduleId": "effect",
@@ -736,7 +736,7 @@
     "description": "The Synthesis panel display is level 3. Higher display level increases bonus placement at the start of Synthesis."
   },
   {
-    "id": "01J0N1MQ2J4AN9DBJ1ZK70W0F3",
+    "id": "01J3F5PGM0CBDP3K2ACBW10WV3",
     "keyWords": "avoid ko xl,1180",
     "name": "Avoid KO XL",
     "moduleId": "effect",
@@ -744,7 +744,7 @@
     "description": "You have a chance to survive with 1 HP when you receive damage that would reduce your HP to 0. Has a high chance to work."
   },
   {
-    "id": "01J0N1MQ2J6EJSCJPKNCKZ44RH",
+    "id": "01J3F5PGM1PV3D8MMFJ04NEFKD",
     "keyWords": "break enhance s,1192",
     "name": "Break Enhance S",
     "moduleId": "effect",
@@ -752,7 +752,7 @@
     "description": "Increases Break value when attacking enemies by a slight amount."
   },
   {
-    "id": "01J0N1MQ2TDVNC98F423FM0G1K",
+    "id": "01J3F5PGM234NMM8TTQ1J747TQ",
     "keyWords": "physical damage xl,3",
     "name": "Physical Damage XL",
     "moduleId": "effect",
@@ -760,7 +760,7 @@
     "description": "Deals very powerful physical damage. Physical damage is affected by the target's defense value."
   },
   {
-    "id": "01J0N1MQ2T2908ASKXW0HCW6K6",
+    "id": "01J3F5PGM2RTWN1FEAHFMN3NYX",
     "keyWords": "fire damage l,8",
     "name": "Fire Damage L",
     "moduleId": "effect",
@@ -768,7 +768,7 @@
     "description": "Deals strong fire damage. Fire damage is affected by the target's fire resistance value."
   },
   {
-    "id": "01J0N1MQ2T51MS6HB5VJK24HXF",
+    "id": "01J3F5PGM26BWKJZM0SFN2DZ0H",
     "keyWords": "ice damage l,14",
     "name": "Ice Damage L",
     "moduleId": "effect",
@@ -776,7 +776,7 @@
     "description": "Deals strong ice damage. Ice damage is affected by the target's ice resistance value."
   },
   {
-    "id": "01J0N1MQ2TY3KSMXD96D7MWQRF",
+    "id": "01J3F5PGM26C1GYFWGTH58RCXS",
     "keyWords": "judgment bolt,22",
     "name": "Judgment Bolt",
     "moduleId": "effect",
@@ -784,7 +784,7 @@
     "description": "Deals supreme lightning damage. Lightning damage is affected by the target's lightning resistance value."
   },
   {
-    "id": "01J0N1MQ2VGXVWXVWJ8XMFAT7V",
+    "id": "01J3F5PGM2W3W2FHV4RPKH1HJ9",
     "keyWords": "supersonic missile,27",
     "name": "Supersonic Missile",
     "moduleId": "effect",
@@ -792,7 +792,7 @@
     "description": "Deals supreme magic damage. Magic damage is affected by the target's magic resistance value."
   },
   {
-    "id": "01J0N1MQ2VX866BT8NXR0RA3MT",
+    "id": "01J3F5PGM2PS8EADRT27Q1ASGB",
     "keyWords": "physical damage m,1",
     "name": "Physical Damage M",
     "moduleId": "effect",
@@ -800,7 +800,7 @@
     "description": "Deals moderate physical damage. Physical damage is affected by the target's defense value."
   },
   {
-    "id": "01J0N1MQ2V3JS8Q16YB94XZZGB",
+    "id": "01J3F5PGM3NPNS3QY0358PQQ9Z",
     "keyWords": "light of the end,38",
     "name": "Light of the End",
     "moduleId": "effect",
@@ -808,7 +808,7 @@
     "description": "Deals supreme non-attribute damage. This is not affected by any resistance. The damage increases according to how powerful the applied traits are."
   },
   {
-    "id": "01J0N1MQ2V556C3Z60VE7DBCCX",
+    "id": "01J3F5PGM30TW1DAV96TWHCYJ4",
     "keyWords": "falling meteors,42",
     "name": "Falling Meteors",
     "moduleId": "effect",
@@ -816,7 +816,7 @@
     "description": "Meteors rain from the sky, dealing fire damage to all enemies. Also activates 1 time card."
   },
   {
-    "id": "01J0N1MQ2VJQBZV07YA6H1838C",
+    "id": "01J3F5PGM3CS2WHEAVY6PS6Y4X",
     "keyWords": "falling stars,44",
     "name": "Falling Stars",
     "moduleId": "effect",
@@ -824,7 +824,7 @@
     "description": "Stars rain from the sky, dealing physical damage to all enemies. Also activates 1 time card."
   },
   {
-    "id": "01J0N1MQ2VVZB4VFFEQVQ20DVG",
+    "id": "01J3F5PGM35482Z71Q2HZ6Z7TP",
     "keyWords": "summon puni∞,50",
     "name": "Summon Puni∞",
     "moduleId": "effect",
@@ -832,7 +832,7 @@
     "description": "Summons a Puni to deal physical damage. Physical damage is affected by the target's defense value."
   },
   {
-    "id": "01J0N1MQ2VC58EW1B5WENZQFNZ",
+    "id": "01J3F5PGM37P6XQ2G8SAKR0EP5",
     "keyWords": "steal some life,54",
     "name": "Steal Some Life",
     "moduleId": "effect",
@@ -840,7 +840,7 @@
     "description": "Deals physical damage, and recover for half the damage dealt. This damage is affected by the target's defense value."
   },
   {
-    "id": "01J0N1MQ2VGX9P6SM2MCHA1N3D",
+    "id": "01J3F5PGM335D3C3APNESXZ54X",
     "keyWords": "steal lots of spirit,59",
     "name": "Steal Lots of Spirit",
     "moduleId": "effect",
@@ -848,7 +848,7 @@
     "description": "Deals physical damage. Physical damage is affected by the target's defense value."
   },
   {
-    "id": "01J0N1MQ2WS303HQX992NG75AA",
+    "id": "01J3F5PGM4AXCR0FEDAW14G7D5",
     "keyWords": "inflicts severe burns,121",
     "name": "Inflicts Severe Burns",
     "moduleId": "effect",
@@ -856,7 +856,7 @@
     "description": "Severe burns deal continuous damage. The effect is big."
   },
   {
-    "id": "01J0N1MQ2WW0ADKAGBEA50W4ZJ",
+    "id": "01J3F5PGM4JAQQZ8MBXVHDSJMZ",
     "keyWords": "envoy of the moon,1041",
     "name": "Envoy of the Moon",
     "moduleId": "effect",
@@ -864,7 +864,7 @@
     "description": "Increases attack, defense, and speed by 15% in the evening and night. No effect during morning or day."
   },
   {
-    "id": "01J0N1MQ2WB4JXAR1JV3P26EZF",
+    "id": "01J3F5PGM4HES2VTWT00NQBE34",
     "keyWords": "max hp up s,1103",
     "name": "Max HP Up S",
     "moduleId": "effect",
@@ -872,7 +872,7 @@
     "description": "Increases maximum HP by 15."
   },
   {
-    "id": "01J0N1MQ2W6YEKX69S4E5WEPT8",
+    "id": "01J3F5PGM41CK293QXBBZXNE5Q",
     "keyWords": "evasion up xs,1132",
     "name": "Evasion Up XS",
     "moduleId": "effect",
@@ -880,7 +880,7 @@
     "description": "Increases evasion rate by 4%."
   },
   {
-    "id": "01J0N1MQ2W49D7PJXNZWCASEX4",
+    "id": "01J3F5PGM58QND3WSYPEGBD7EB",
     "keyWords": "item shorten m,1155",
     "name": "Item Shorten M",
     "moduleId": "effect",
@@ -888,7 +888,7 @@
     "description": "Reduces wait time after using item by 15%."
   },
   {
-    "id": "01J0N1MQ2WAW17P0X72DK20F0V",
+    "id": "01J3F5PGM5KHXF6ZN710R5YF9H",
     "keyWords": "damage absorb xl,1187",
     "name": "Damage Absorb XL",
     "moduleId": "effect",
@@ -896,7 +896,7 @@
     "description": "Absorbs a portion of damage dealt to the target as HP. The effect is large."
   },
   {
-    "id": "01J0N1MQ2WJN9DQGW9HB311BJB",
+    "id": "01J3F5PGM52Q27N87NHVDCJK0J",
     "keyWords": "combined effect,1255",
     "name": "Combined Effect",
     "moduleId": "effect",
@@ -904,7 +904,7 @@
     "description": "This cauldron has “Synergy”, “Tuning”, “Time Limit”, and “Color Surroundings” effects."
   },
   {
-    "id": "01J0N1MQ2WQTB47D7G4Z4HK1C9",
+    "id": "01J3F5PGM57PV8AVEB7Z2RDN9V",
     "keyWords": "horizontal flip,1275",
     "name": "Horizontal Flip",
     "moduleId": "effect",
@@ -912,7 +912,7 @@
     "description": "When placing materials, you can press <LB><RB> to flip it horizontally."
   },
   {
-    "id": "01J0N1MQ2W59SFE62FVZ0H2GH4",
+    "id": "01J3F5PGM5YCGW5D3DMB275DVD",
     "keyWords": "ultimate mobility,1401",
     "name": "Ultimate Mobility",
     "moduleId": "effect",
@@ -920,7 +920,7 @@
     "description": "Gain ultimate mobility. Wait time after using skills is reduced by 20%."
   },
   {
-    "id": "01J0N1MQ2X5QVC4P85W69DASKK",
+    "id": "01J3F5PGM5NAJ3G0E88BS9NVBN",
     "keyWords": "ultimate revival,1421",
     "name": "Ultimate Revival",
     "moduleId": "effect",
@@ -928,7 +928,7 @@
     "description": "Gain ultimate revival. Automatically revive on your next turn after being KO'd."
   },
   {
-    "id": "01J0N1MQ2XXPQDFMTHB7DAYFJQ",
+    "id": "01J3F5PGM5SSGEEG16Z1QV1KCA",
     "keyWords": "damage cut s,1188",
     "name": "Damage Cut S",
     "moduleId": "effect",
@@ -936,7 +936,7 @@
     "description": "Reduces damage taken by 5%."
   },
   {
-    "id": "01J0N1MQ2X1BP2Q3MKGS5WRSKY",
+    "id": "01J3F5PGM6SJPESPBN1SF7ZWPG",
     "keyWords": "physical damage l,2",
     "name": "Physical Damage L",
     "moduleId": "effect",
@@ -944,7 +944,7 @@
     "description": "Deals strong physical damage. Physical damage is affected by the target's defense value."
   },
   {
-    "id": "01J0N1MQ2XDHW52R8MD63PWY5E",
+    "id": "01J3F5PGM6GNDYRJR6J6H3XMM3",
     "keyWords": "fire damage m,7",
     "name": "Fire Damage M",
     "moduleId": "effect",
@@ -952,7 +952,7 @@
     "description": "Deals moderate fire damage. Fire damage is affected by the target's fire resistance value."
   },
   {
-    "id": "01J0N1MQ2XXCH0T2TMDMZJ7Z4Z",
+    "id": "01J3F5PGM604GMFD8WYNFP537V",
     "keyWords": "absolute zero,17",
     "name": "Absolute Zero",
     "moduleId": "effect",
@@ -960,7 +960,7 @@
     "description": "Deals ultimate ice damage. Ice damage is affected by the target's ice resistance value."
   },
   {
-    "id": "01J0N1MQ2XJC1YXWA0D4MS1SE9",
+    "id": "01J3F5PGM6F40919WK7BB9SD4R",
     "keyWords": "lightning damage xl,21",
     "name": "Lightning Damage XL",
     "moduleId": "effect",
@@ -968,7 +968,7 @@
     "description": "Deals very powerful lightning damage. Lightning damage is affected by the target's lightning resistance value."
   },
   {
-    "id": "01J0N1MQ2XX64N4HHXB05TGXG8",
+    "id": "01J3F5PGM6JYNBGJ3B8N4TP6MX",
     "keyWords": "small missile,24",
     "name": "Small Missile",
     "moduleId": "effect",
@@ -976,7 +976,7 @@
     "description": "Deals magic damage. Magic damage is affected by the target's magic resistance value."
   },
   {
-    "id": "01J0N1MQ2XRCWBJMYTCF66FRS0",
+    "id": "01J3F5PGM62GRDZC3AFQ6WF1HK",
     "keyWords": "fire damage s,6",
     "name": "Fire Damage S",
     "moduleId": "effect",
@@ -984,7 +984,7 @@
     "description": "Deals fire damage. Fire damage is affected by the target's fire resistance value."
   },
   {
-    "id": "01J0N1MQ2XEBXENFKW9CMVW670",
+    "id": "01J3F5PGM6Z7KVEXQHTFQSNFF1",
     "keyWords": "aurora of ruin,39",
     "name": "Aurora of Ruin",
     "moduleId": "effect",
@@ -992,7 +992,7 @@
     "description": "Deals ultimate non-attribute damage. This is not affected by any resistance. The damage increases according to how powerful the applied traits are."
   },
   {
-    "id": "01J0N1MQ2YTBQPS34NFSSHAGR1",
+    "id": "01J3F5PGM75XBACB6C63YK6S4Q",
     "keyWords": "falling puni,41",
     "name": "Falling Puni",
     "moduleId": "effect",
@@ -1000,7 +1000,7 @@
     "description": "Puni rain from the sky, dealing magic damage to all enemies. Also activates 1 time card."
   },
   {
-    "id": "01J0N1MQ2YHMJ7YMRB1SBAV628",
+    "id": "01J3F5PGM7GVVRYKM83S705DGP",
     "keyWords": "falling island fish,46",
     "name": "Falling Island Fish",
     "moduleId": "effect",
@@ -1008,7 +1008,7 @@
     "description": "Island Fish rain from the sky, dealing physical damage to all enemies. Also activates 1 time card."
   },
   {
-    "id": "01J0N1MQ2Y94JFNY25ECPPG10Q",
+    "id": "01J3F5PGM7MK5YWY8RF9XXJXAB",
     "keyWords": "summon lich,53",
     "name": "Summon Lich",
     "moduleId": "effect",
@@ -1016,7 +1016,7 @@
     "description": "Summons a Lich to deal magic damage. Part of damage dealt is absorbed as HP."
   },
   {
-    "id": "01J0N1MQ2YD84NAFY0NM31849F",
+    "id": "01J3F5PGM76HAK9HCG4RFY716Y",
     "keyWords": "summon mandrake,52",
     "name": "Summon Mandrake",
     "moduleId": "effect",
@@ -1024,7 +1024,7 @@
     "description": "Summons a mandrake to deal magic damage. Has a chance to inflict Poison."
   },
   {
-    "id": "01J0N1MQ2Y96977JDCXEAKM4BF",
+    "id": "01J3F5PGM7N7CBMSJGTTT1DA5G",
     "keyWords": "steal spirit,58",
     "name": "Steal Spirit",
     "moduleId": "effect",
@@ -1032,7 +1032,7 @@
     "description": "Deals moderate physical damage. Physical damage is affected by the target's defense value."
   },
   {
-    "id": "01J0N1MQ2Y139VEWBW9EMFNNK8",
+    "id": "01J3F5PGM79VGG8X336GZ4039B",
     "keyWords": "inflicts burns,120",
     "name": "Inflicts Burns",
     "moduleId": "effect",
@@ -1040,7 +1040,7 @@
     "description": "Burns deal continuous damage. The effect is fairly small."
   },
   {
-    "id": "01J0N1MQ2YZY1E4372P54MKRRQ",
+    "id": "01J3F5PGM84T2MB0XNTQFY5GVR",
     "keyWords": "embodiment of the sun,1040",
     "name": "Embodiment of the Sun",
     "moduleId": "effect",
@@ -1048,7 +1048,7 @@
     "description": "Increases attack, defense, and speed by 15% in the morning and day. No effect during evening or night."
   },
   {
-    "id": "01J0N1MQ2ZM1C3W5E8SC05CH9H",
+    "id": "01J3F5PGM8WWTSDDM53AGDXDMB",
     "keyWords": "inner fire,1067",
     "name": "Inner Fire",
     "moduleId": "effect",
@@ -1056,7 +1056,7 @@
     "description": "Inner fighting spirit burns bright, revealing true power when fighting stronger enemies."
   },
   {
-    "id": "01J0N1MQ2Z48WZTAATMFXQ1061",
+    "id": "01J3F5PGM8YMN47DFV6ZSXJH8R",
     "keyWords": "speed up xs,1122",
     "name": "Speed Up XS",
     "moduleId": "effect",
@@ -1064,7 +1064,7 @@
     "description": "Increases speed by 5."
   },
   {
-    "id": "01J0N1MQ2ZAD0QKQM4F6Z12P98",
+    "id": "01J3F5PGM8RXZJX6EN6C3T6K6B",
     "keyWords": "item enhance m,1152",
     "name": "Item Enhance M",
     "moduleId": "effect",
@@ -1072,7 +1072,7 @@
     "description": "Increases item power by 15%."
   },
   {
-    "id": "01J0N1MQ2Z92M1BN25XSG84SNP",
+    "id": "01J3F5PGM8E5XNXYAE79JD7CEG",
     "keyWords": "lightning resistance,1183",
     "name": "Lightning Resistance",
     "moduleId": "effect",
@@ -1080,7 +1080,7 @@
     "description": "Gain lightning resistance."
   },
   {
-    "id": "01J0N1MQ2ZB64HPFJDYYYC47BT",
+    "id": "01J3F5PGM8NY6N79E06KDENY1M",
     "keyWords": "use opportunity m,1200",
     "name": "Use Opportunity M",
     "moduleId": "effect",
@@ -1088,7 +1088,7 @@
     "description": "Increases damage dealt to Broken enemies by a small amount."
   },
   {
-    "id": "01J0N1MQ2ZT9QFZ60MCRYMD1X7",
+    "id": "01J3F5PGM96KFKYV8RPNTB4JPZ",
     "keyWords": "color surroundings,1270",
     "name": "Color Surroundings",
     "moduleId": "effect",
@@ -1096,7 +1096,7 @@
     "description": "When a material is placed, the Synthesis bonuses in all 8 directions around it become the same color."
   },
   {
-    "id": "01J0N1MQ2Z9ATNEPXWAKKRSQXG",
+    "id": "01J3F5PGM9EGNAPJEPN40K35MG",
     "keyWords": "(powder) +5,1299",
     "name": "(Powder) +5",
     "moduleId": "effect",
@@ -1104,7 +1104,7 @@
     "description": "Increases (Gunpowder) category value by 5."
   },
   {
-    "id": "01J0N1MQ2ZCS27QCAWFS4AVWA4",
+    "id": "01J3F5PGM9A7EGXK2HBJBPT6XF",
     "keyWords": "ultimate growth,1420",
     "name": "Ultimate Growth",
     "moduleId": "effect",
@@ -1112,7 +1112,7 @@
     "description": "Gain ultimate growth. Greatly increases expected damage value."
   },
   {
-    "id": "01J0N1MQ308XBPKXTTZ2YSB1B8",
+    "id": "01J3F5PGM9TTG6D37SQD3K2H0H",
     "keyWords": "pinpoint flare,125",
     "name": "Pinpoint Flare",
     "moduleId": "effect",
@@ -1120,7 +1120,7 @@
     "description": "The attack area becomes single target, but deals ultimate additional damage that ignores defense."
   },
   {
-    "id": "01J0N1MQ30XWDTC56CXCN4DRC0",
+    "id": "01J3F5PGM9WDC6VH3Z3ZWAAEFS",
     "keyWords": "intense shock,129",
     "name": "Intense Shock",
     "moduleId": "effect",
@@ -1128,7 +1128,7 @@
     "description": "Shocks the target with intense electricity, reducing their HP. The amount depends on the target's maximum HP."
   },
   {
-    "id": "01J0N1MQ30G2MWNVVXBQ56VE80",
+    "id": "01J3F5PGM9SSBRRMXPV1TAZ29Y",
     "keyWords": "hp recovery xxl,200",
     "name": "HP Recovery XXL",
     "moduleId": "effect",
@@ -1136,7 +1136,7 @@
     "description": "Restores the target's HP by an extreme amount."
   },
   {
-    "id": "01J0N1MQ307TBWP4QA8H9T9TYW",
+    "id": "01J3F5PGMAPKH5WDG09C37YQG1",
     "keyWords": "a little filling,284",
     "name": "A Little Filling",
     "moduleId": "effect",
@@ -1144,7 +1144,7 @@
     "description": "Sits in the stomach, delaying your turn in battle a slight amount. Also restores LP."
   },
   {
-    "id": "01J0N1MQ30T0PAHREV9S8BJ2NP",
+    "id": "01J3F5PGMAJS98R2YYS4V4MMZ1",
     "keyWords": "recovery bonus xs,360",
     "name": "Recovery Bonus XS",
     "moduleId": "effect",
@@ -1152,7 +1152,7 @@
     "description": "Grants the target a slight HP recovery bonus."
   },
   {
-    "id": "01J0N1MQ308XEDV3CRCK0GSM6F",
+    "id": "01J3F5PGMA7RD8AJD2HZ4YXA0Y",
     "keyWords": "revive from ko xl,374",
     "name": "Revive from KO XL",
     "moduleId": "effect",
@@ -1160,7 +1160,7 @@
     "description": "Revives the target from KO, and restores a huge amount of HP."
   },
   {
-    "id": "01J0N1MQ307PZZYW9T3B1AMYCA",
+    "id": "01J3F5PGMAFJ2RHT05Z6QN53YX",
     "keyWords": "angel's protection l,445",
     "name": "Angel's Protection L",
     "moduleId": "effect",
@@ -1168,7 +1168,7 @@
     "description": "Temporarily reduces physical damage taken by the target. The effect is decent."
   },
   {
-    "id": "01J0N1MQ304XHF50MX878BHGYF",
+    "id": "01J3F5PGMAK7Z8R0Y221QRXWMS",
     "keyWords": "activate split,463",
     "name": "Activate Split",
     "moduleId": "effect",
@@ -1176,7 +1176,7 @@
     "description": "Item becomes a timed effect, allowing it to activate again. Effect lasts 1 turn."
   },
   {
-    "id": "01J0N1MQ30AR3YNDRCWDY4PZE7",
+    "id": "01J3F5PGMAX0ASHN3C56BN2PFH",
     "keyWords": "all stats up s,519",
     "name": "All Stats Up S",
     "moduleId": "effect",
@@ -1184,7 +1184,7 @@
     "description": "Increases all the target's stats a little. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ31E0T9EWVYN21NNJ71",
+    "id": "01J3F5PGMA6K53P1GJ862R8SM7",
     "keyWords": "hp regen m,536",
     "name": "HP Regen M",
     "moduleId": "effect",
@@ -1192,7 +1192,7 @@
     "description": "The target recovers HP on each turn. The effect lasts for 5 turns."
   },
   {
-    "id": "01J0N1MQ3116HT03G9TDJFTJYQ",
+    "id": "01J3F5PGMAZE0VR10P6TSZ1HC2",
     "keyWords": "chain attack up s,561",
     "name": "Chain Attack Up S",
     "moduleId": "effect",
@@ -1200,7 +1200,7 @@
     "description": "Increases the target's chance to activate a chain attack by 25%. Effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ31YH9Y0ARES6Q9RDBB",
+    "id": "01J3F5PGMBVP3FM2AJD751SD0N",
     "keyWords": "steal defense s,629",
     "name": "Steal Defense S",
     "moduleId": "effect",
@@ -1208,7 +1208,7 @@
     "description": "Reduces the target's defense by a small amount, and temporarily increases your own by that amount."
   },
   {
-    "id": "01J0N1MQ31K85DH9BM83V3ARP6",
+    "id": "01J3F5PGMBGP7NXT55P3NWAQFG",
     "keyWords": "defense down m,692",
     "name": "Defense Down M",
     "moduleId": "effect",
@@ -1216,7 +1216,7 @@
     "description": "Reduces the target's defense."
   },
   {
-    "id": "01J0N1MQ315MC1G1Z5EPWRSW0K",
+    "id": "01J3F5PGMBM6KS8PEVM0CG5N3F",
     "keyWords": "inflict blind l,714",
     "name": "Inflict Blind L",
     "moduleId": "effect",
@@ -1224,7 +1224,7 @@
     "description": "Has a high chance of Blinding the target. The effect is big. Blind reduces attack hit rate and evasion rate."
   },
   {
-    "id": "01J0N1MQ315RSMSMPQ8HEVDA3S",
+    "id": "01J3F5PGMBDHTQSJ4Q5QCCJ75Y",
     "keyWords": "piercing damage m,117",
     "name": "Piercing Damage M",
     "moduleId": "effect",
@@ -1232,7 +1232,7 @@
     "description": "Deals fixed damage to the target, unaffected by defense. Its power is small."
   },
   {
-    "id": "01J0N1MQ310JD42H45A3TCH8YK",
+    "id": "01J3F5PGMBQ7M9DQFKWK44HJET",
     "keyWords": "hp recovery xl,199",
     "name": "HP Recovery XL",
     "moduleId": "effect",
@@ -1240,7 +1240,7 @@
     "description": "Restores the target's HP by a huge amount."
   },
   {
-    "id": "01J0N1MQ31TMDAS8VXK4EB3SGM",
+    "id": "01J3F5PGMB7CAYCFNC19G7BZCD",
     "keyWords": "hplp recovery m,220",
     "name": "HPLP Recovery M",
     "moduleId": "effect",
@@ -1248,7 +1248,7 @@
     "description": "Restores the target's HP and LP."
   },
   {
-    "id": "01J0N1MQ31SHZS3NV65NKJA8MA",
+    "id": "01J3F5PGMBFC73NBCW85SC6NYP",
     "keyWords": "digests quickly,289",
     "name": "Digests Quickly",
     "moduleId": "effect",
@@ -1256,7 +1256,7 @@
     "description": "This is digested so quickly that it doesn't affect the body."
   },
   {
-    "id": "01J0N1MQ321TGKJMTCXPXY2VE5",
+    "id": "01J3F5PGMBTCKZ8VKDY44WJHEH",
     "keyWords": "snack companion,308",
     "name": "Snack Companion",
     "moduleId": "effect",
@@ -1264,7 +1264,7 @@
     "description": "Restores the target's HP. Recovery amount increases the closer it is to 3pm."
   },
   {
-    "id": "01J0N1MQ327X11YAVTWQ8WCYCW",
+    "id": "01J3F5PGMBPAPXXGV8CAWPSB6P",
     "keyWords": "hit rate up l,524",
     "name": "Hit Rate Up L",
     "moduleId": "effect",
@@ -1272,7 +1272,7 @@
     "description": "Increases the target's hit rate by a lot. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ32ERNKBMBP36V3NTM5",
+    "id": "01J3F5PGMB83JW50K2HVEVPG8W",
     "keyWords": "hp regen xl,538",
     "name": "HP Regen XL",
     "moduleId": "effect",
@@ -1280,7 +1280,7 @@
     "description": "The target recovers a huge amount of HP on each turn. The effect lasts for 5 turns."
   },
   {
-    "id": "01J0N1MQ32SAET792JZYG0K1FT",
+    "id": "01J3F5PGMCACE5RWYB0QD9K962",
     "keyWords": "tasty aroma,618",
     "name": "Tasty Aroma",
     "moduleId": "effect",
@@ -1288,7 +1288,7 @@
     "description": "Pushes the target's turn back a little. This effect diminishes with each use until they take another turn."
   },
   {
-    "id": "01J0N1MQ32G6HNFJCQ73367QGV",
+    "id": "01J3F5PGMCMC8YZRWJYJ0NCNAT",
     "keyWords": "defense down l,693",
     "name": "Defense Down L",
     "moduleId": "effect",
@@ -1296,7 +1296,7 @@
     "description": "Greatly reduces the target's defense."
   },
   {
-    "id": "01J0N1MQ32CBASNHCKGB6XQ5XX",
+    "id": "01J3F5PGMCSJ4N88N6RWV8MGJT",
     "keyWords": "inflict corruption m,725",
     "name": "Inflict Corruption M",
     "moduleId": "effect",
@@ -1304,7 +1304,7 @@
     "description": "Inflicts 3 random status effects on the target. The chance and effect are both moderate."
   },
   {
-    "id": "01J0N1MQ32VZA0HFADKZW9G5QW",
+    "id": "01J3F5PGMC675KWXQSZYW71MY5",
     "keyWords": "speed rune,1053",
     "name": "Speed Rune",
     "moduleId": "effect",
@@ -1312,7 +1312,7 @@
     "description": "The hidden magic of the Speed Rune increases speed by 15."
   },
   {
-    "id": "01J0N1MQ33GS0KYCR9WTPNBJ0S",
+    "id": "01J3F5PGMC4NGCFJKRQ0RZNHYW",
     "keyWords": "hp regen l,1096",
     "name": "HP Regen L",
     "moduleId": "effect",
@@ -1320,7 +1320,7 @@
     "description": "The target recovers a large amount of HP on each turn. The effect lasts for 5 turns."
   },
   {
-    "id": "01J0N1MQ33K99D8H416TYH58B9",
+    "id": "01J3F5PGMC38CRVC6B1B8MJ567",
     "keyWords": "shooting stars,142",
     "name": "Shooting Stars",
     "moduleId": "effect",
@@ -1328,7 +1328,7 @@
     "description": "The rain of fire spawns meteors, dealing big fixed additional damage to the target."
   },
   {
-    "id": "01J0N1MQ339ZJ5JE0D96EBW2WG",
+    "id": "01J3F5PGMCZV7EQ0PT7W4WHH53",
     "keyWords": "hplp recovery l,221",
     "name": "HPLP Recovery L",
     "moduleId": "effect",
@@ -1336,7 +1336,7 @@
     "description": "Restores a large amount of the target's HP and LP."
   },
   {
-    "id": "01J0N1MQ33TYBPMNM5V96QJ4WV",
+    "id": "01J3F5PGMCR71YPT236X5PGGHY",
     "keyWords": "very nutritious,306",
     "name": "Very Nutritious",
     "moduleId": "effect",
@@ -1344,7 +1344,7 @@
     "description": "The highly nourishing flavor increases all stats."
   },
   {
-    "id": "01J0N1MQ33SQJEQ786EYN5DQXZ",
+    "id": "01J3F5PGMDMJCEPW5D3JJN95XM",
     "keyWords": "peppy,368",
     "name": "Peppy",
     "moduleId": "effect",
@@ -1352,7 +1352,7 @@
     "description": "The target recovers a large amount of Break value."
   },
   {
-    "id": "01J0N1MQ33DRRDNR7P4E9QCHJ4",
+    "id": "01J3F5PGMDEGCG4361KXCZPNG5",
     "keyWords": "fire spirit blessing,439",
     "name": "Fire Spirit Blessing",
     "moduleId": "effect",
@@ -1360,7 +1360,7 @@
     "description": "Grants all allies fire resistance."
   },
   {
-    "id": "01J0N1MQ33300YTSJA1KHSHAH1",
+    "id": "01J3F5PGMDYC901W1QFQW0R2W8",
     "keyWords": "draws out power,457",
     "name": "Draws Out Power",
     "moduleId": "effect",
@@ -1368,7 +1368,7 @@
     "description": "Deals damage to the target, but increases base damage on the next turn."
   },
   {
-    "id": "01J0N1MQ33R2Y853KVTZZP72J9",
+    "id": "01J3F5PGMD56YWCQ9YABBWK5P1",
     "keyWords": "defense up l,515",
     "name": "Defense Up L",
     "moduleId": "effect",
@@ -1376,7 +1376,7 @@
     "description": "Increases the target's defense by a lot. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ342ABJD5CSJNCYHY0J",
+    "id": "01J3F5PGMD74DMGXYGNVKTX0MM",
     "keyWords": "crit rate up l,530",
     "name": "Crit Rate Up L",
     "moduleId": "effect",
@@ -1384,7 +1384,7 @@
     "description": "Increases the target's chance to score a critical hit by a large amount."
   },
   {
-    "id": "01J0N1MQ34090J2G3Y2YJE1A8Q",
+    "id": "01J3F5PGMDXQ8DKY3M6AKW6FSD",
     "keyWords": "reduce ailments s,555",
     "name": "Reduce Ailments S",
     "moduleId": "effect",
@@ -1392,7 +1392,7 @@
     "description": "Reduces the effectiveness of status ailments by a little."
   },
   {
-    "id": "01J0N1MQ34226JDZT1EENM4F95",
+    "id": "01J3F5PGMD0EP50N1FN9NF88WY",
     "keyWords": "tempting aroma,620",
     "name": "Tempting Aroma",
     "moduleId": "effect",
@@ -1400,7 +1400,7 @@
     "description": "Pushes the target's turn back a considerable amount. This effect diminishes with each use until they take another turn."
   },
   {
-    "id": "01J0N1MQ34K2RB6AS845JGDV17",
+    "id": "01J3F5PGMD1A2D0GRDJY9XH6W4",
     "keyWords": "attack down l,690",
     "name": "Attack Down L",
     "moduleId": "effect",
@@ -1408,7 +1408,7 @@
     "description": "Greatly reduces the target's attack power."
   },
   {
-    "id": "01J0N1MQ34ERXMGA3T58K3JXF0",
+    "id": "01J3F5PGMD4X1HGC8RHJQSTP0Y",
     "keyWords": "inflict curse m,710",
     "name": "Inflict Curse M",
     "moduleId": "effect",
@@ -1416,7 +1416,7 @@
     "description": "Has a moderate chance of Cursing the target. The effect is moderate. Curse causes the target to take damage when healing."
   },
   {
-    "id": "01J0N1MQ34D2DQPQ8YXEN181QG",
+    "id": "01J3F5PGMDEHJGAAJTNSQJV9GN",
     "keyWords": "thorn attack,112",
     "name": "Thorn Attack",
     "moduleId": "effect",
@@ -1424,7 +1424,7 @@
     "description": "Sharp thorns inside burst out, dealing physical damage to the target. Its power is fairly high."
   },
   {
-    "id": "01J0N1MQ34TYWFBXZFM852ZHDE",
+    "id": "01J3F5PGMEHSG0KXFA79PXFJ7V",
     "keyWords": "treat hazardous materials,143",
     "name": "Treat Hazardous Materials",
     "moduleId": "effect",
@@ -1432,7 +1432,7 @@
     "description": "Has a high chance to inflict Poison on the target. The effect is very big. Poison deals damage on each turn."
   },
   {
-    "id": "01J0N1MQ34BHPCCXJE8TDZEPM1",
+    "id": "01J3F5PGMER7S8HE3R6TZZD2E8",
     "keyWords": "hpmp recovery xs,213",
     "name": "HPMP Recovery XS",
     "moduleId": "effect",
@@ -1440,7 +1440,7 @@
     "description": "Restores a slight amount of the target's HP and MP."
   },
   {
-    "id": "01J0N1MQ34WXY9GJ3X12CZKDNJ",
+    "id": "01J3F5PGMEEBYNZC0MVEHEHZFS",
     "keyWords": "hard,287",
     "name": "Hard",
     "moduleId": "effect",
@@ -1448,7 +1448,7 @@
     "description": "It's so hard that it slows you down, inflicting Slow. The effect is moderate."
   },
   {
-    "id": "01J0N1MQ352D2ZTD8BWYBDVCTY",
+    "id": "01J3F5PGME5MQBG4KE4HBA14JP",
     "keyWords": "strange elasticity,304",
     "name": "Strange Elasticity",
     "moduleId": "effect",
@@ -1456,7 +1456,7 @@
     "description": "The unknown chewiness excites you, increasing defense a little. Also speeds up the target's turn a little."
   },
   {
-    "id": "01J0N1MQ351SFR2ACC28PJ0N37",
+    "id": "01J3F5PGMEMSDFF6EQ6FC07CSZ",
     "keyWords": "add (ingredient),1288",
     "name": "Add (Ingredient)",
     "moduleId": "effect",
@@ -1464,7 +1464,7 @@
     "description": "Adds 10 category value to (Ingredient)."
   },
   {
-    "id": "01J0N1MQ35SSBZ0HJSRMJ36H4H",
+    "id": "01J3F5PGMEGCPK4J4YFHSQ3YYY",
     "keyWords": "ultimate enhancement,1408",
     "name": "Ultimate Enhancement",
     "moduleId": "effect",
@@ -1472,7 +1472,7 @@
     "description": "Gain ultimate enhancement. Increases maximum HP and MP by 50."
   },
   {
-    "id": "01J0N1MQ35XSFHZD8TX1TQR10J",
+    "id": "01J3F5PGMEH0WJ9TR03WWS2YQM",
     "keyWords": "ultimate reduction,1425",
     "name": "Ultimate Reduction",
     "moduleId": "effect",
@@ -1480,7 +1480,7 @@
     "description": "Gain ultimate reduction. You have a 35% chance after a turn to reduce wait time by 25%."
   },
   {
-    "id": "01J0N1MQ35WGRSBP83D1GFY77R",
+    "id": "01J3F5PGME1QWNM69ZAKATDFCS",
     "keyWords": "max mp up xl,1111",
     "name": "Max MP Up XL",
     "moduleId": "effect",
@@ -1488,7 +1488,7 @@
     "description": "Increases maximum MP by 30."
   },
   {
-    "id": "01J0N1MQ36MCKSYH43ZH11GA8H",
+    "id": "01J3F5PGMENKV6EJB1QC7CHMAC",
     "keyWords": "enthusiastic,140",
     "name": "Enthusiastic",
     "moduleId": "effect",
@@ -1496,7 +1496,7 @@
     "description": "Activates automatically when the user's HP falls below 40%."
   },
   {
-    "id": "01J0N1MQ36ZX47KVDF57YCA95T",
+    "id": "01J3F5PGMFCQ7HMX4AMQ1GDCED",
     "keyWords": "hplp recovery xs,218",
     "name": "HPLP Recovery XS",
     "moduleId": "effect",
@@ -1504,7 +1504,7 @@
     "description": "Restores a slight amount of the target's HP and LP."
   },
   {
-    "id": "01J0N1MQ36QZH43DTB8XTPE889",
+    "id": "01J3F5PGMFKG59777APTT4R4VJ",
     "keyWords": "nutritious,305",
     "name": "Nutritious",
     "moduleId": "effect",
@@ -1512,7 +1512,7 @@
     "description": "The nutritious flavor increases all stats by a small amount."
   },
   {
-    "id": "01J0N1MQ36SDHB4VBNJ9DDHBSS",
+    "id": "01J3F5PGMFPTN2Z0TT7D3XTB1N",
     "keyWords": "clears the mind,365",
     "name": "Clears the Mind",
     "moduleId": "effect",
@@ -1520,7 +1520,7 @@
     "description": "The target recovers a small amount of Break value."
   },
   {
-    "id": "01J0N1MQ368WV5S5CKXZ7K33S1",
+    "id": "01J3F5PGMFRH4CYBDNWJYTPJXE",
     "keyWords": "removes 1 ailment,384",
     "name": "Removes 1 Ailment",
     "moduleId": "effect",
@@ -1528,7 +1528,7 @@
     "description": "The target recovers from 1 ailment."
   },
   {
-    "id": "01J0N1MQ36BW2BKBP43BYAD9JQ",
+    "id": "01J3F5PGMFBA9JQ2P2WWDKSKGV",
     "keyWords": "goddess blessing,450",
     "name": "Goddess Blessing",
     "moduleId": "effect",
@@ -1536,7 +1536,7 @@
     "description": "Receive the goddess' blessing, temporarily increasing the target's level a small amount. Higher level increases attack and speed."
   },
   {
-    "id": "01J0N1MQ37Y31Y14NDTBAHEP0B",
+    "id": "01J3F5PGMF1AEDD2HMSVJ4C8CB",
     "keyWords": "attack up s,510",
     "name": "Attack Up S",
     "moduleId": "effect",
@@ -1544,7 +1544,7 @@
     "description": "Increases the target's attack power a little. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ37FYCJ8B01VFH9XY72",
+    "id": "01J3F5PGMFE2SSQ0DB19A6JY09",
     "keyWords": "evasion up m,526",
     "name": "Evasion Up M",
     "moduleId": "effect",
@@ -1552,7 +1552,7 @@
     "description": "Increases the target's evasion rate. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ37DVF4ADRQ8WJNMNVK",
+    "id": "01J3F5PGMFJ9Z12APJWPNQ96V6",
     "keyWords": "temp stamina up m,547",
     "name": "Temp Stamina Up M",
     "moduleId": "effect",
@@ -1560,7 +1560,7 @@
     "description": "Temporarily increases the target's maximum HP in battle. The effect is moderate."
   },
   {
-    "id": "01J0N1MQ37QCT858VWFCB06GQ3",
+    "id": "01J3F5PGMFDA0RSMCGGES7AMAQ",
     "keyWords": "appetizing aroma,619",
     "name": "Appetizing Aroma",
     "moduleId": "effect",
@@ -1568,7 +1568,7 @@
     "description": "Pushes the target's turn back a decent amount. This effect diminishes with each use until they take another turn."
   },
   {
-    "id": "01J0N1MQ370SHMP2299EXZRS0P",
+    "id": "01J3F5PGMFT47JK48405T6M55F",
     "keyWords": "purge enhancements,637",
     "name": "Purge Enhancements",
     "moduleId": "effect",
@@ -1576,7 +1576,7 @@
     "description": ""
   },
   {
-    "id": "01J0N1MQ37VHW4V2EP16M4VB5N",
+    "id": "01J3F5PGMGPPQZVYHWAZ641YZS",
     "keyWords": "inflict curse s,709",
     "name": "Inflict Curse S",
     "moduleId": "effect",
@@ -1584,7 +1584,7 @@
     "description": "Has a low chance of Cursing the target. The effect is small. Curse causes the target to take damage when healing."
   },
   {
-    "id": "01J0N1MQ375CKXXY0PDDZY6146",
+    "id": "01J3F5PGMGSPTM0SHZCZC190N7",
     "keyWords": "weak to impacts,739",
     "name": "Weak to Impacts",
     "moduleId": "effect",
@@ -1592,7 +1592,7 @@
     "description": "Increases damage dealt to the target by a fixed ratio. It cannot be stacked, so only the highest effect will apply."
   },
   {
-    "id": "01J0N1MQ38SW2RRZZA9M2WTJAR",
+    "id": "01J3F5PGMG31E6XSW7DCJ0DJM9",
     "keyWords": "expand effect area,135",
     "name": "Expand Effect Area",
     "moduleId": "effect",
@@ -1600,7 +1600,7 @@
     "description": "Expands the item's area of effect a little."
   },
   {
-    "id": "01J0N1MQ388QVPCM82G9K45WS3",
+    "id": "01J3F5PGMG1ENAAXDSBQ0ZA12G",
     "keyWords": "lp recovery l,210",
     "name": "LP Recovery L",
     "moduleId": "effect",
@@ -1608,7 +1608,7 @@
     "description": "Restores the target's LP by a large amount."
   },
   {
-    "id": "01J0N1MQ38XR4XPN2KWFDXG8ZT",
+    "id": "01J3F5PGMGKCSHPQ2HEA15MW9P",
     "keyWords": "eat and recover xxl,283",
     "name": "Eat and Recover XXL",
     "moduleId": "effect",
@@ -1616,7 +1616,7 @@
     "description": "Restores an extreme amount of the target's HP and LP. Recovery amount increases with higher maximum HP."
   },
   {
-    "id": "01J0N1MQ38TK312QXC58BH6G87",
+    "id": "01J3F5PGMGN0E92PVVTF4AAZQE",
     "keyWords": "cures weak,380",
     "name": "Cures Weak",
     "moduleId": "effect",
@@ -1624,7 +1624,7 @@
     "description": "The target recovers from Weak."
   },
   {
-    "id": "01J0N1MQ38ZAY1F9BM0VCF4VJ7",
+    "id": "01J3F5PGMGWKCS7SN8B9XTVH2H",
     "keyWords": "auto activate 20%,466",
     "name": "Auto Activate 20%",
     "moduleId": "effect",
@@ -1632,7 +1632,7 @@
     "description": "Activates automatically when the user's HP falls below 20%."
   },
   {
-    "id": "01J0N1MQ39W65ASHNMH328N1D9",
+    "id": "01J3F5PGMGQP0FP6SN82J5XZV2",
     "keyWords": "crit power up m,532",
     "name": "Crit Power Up M",
     "moduleId": "effect",
@@ -1640,7 +1640,7 @@
     "description": "Increases the target's critical hit damage bonus by a decent amount."
   },
   {
-    "id": "01J0N1MQ39V2NAX60ZWWCWSYZE",
+    "id": "01J3F5PGMG4GX8MJ58N5WVBDTS",
     "keyWords": "cut wait time m,559",
     "name": "Cut Wait Time M",
     "moduleId": "effect",
@@ -1648,7 +1648,7 @@
     "description": "Reduces wait time after the target's next turn by a fair bit."
   },
   {
-    "id": "01J0N1MQ39M1F6BJ50RY0BC1C5",
+    "id": "01J3F5PGMGATBS8S3X3Z99RHV9",
     "keyWords": "steal speed l,634",
     "name": "Steal Speed L",
     "moduleId": "effect",
@@ -1656,7 +1656,7 @@
     "description": "Reduces the target's speed by a large amount, and temporarily increases your own by that amount."
   },
   {
-    "id": "01J0N1MQ39PWJ1YZWR4EJK57XR",
+    "id": "01J3F5PGMHF3F7AYY425PS9ZQP",
     "keyWords": "inflict poison l,705",
     "name": "Inflict Poison L",
     "moduleId": "effect",
@@ -1664,7 +1664,7 @@
     "description": "Has a high chance of Poisoning the target. The effect is big. Poison deals damage every time the target takes a turn."
   },
   {
-    "id": "01J0N1MQ39S9BPAM56YCM79S2Y",
+    "id": "01J3F5PGMH3HYQWX02671ZCA81",
     "keyWords": "protection to power,1043",
     "name": "Protection to Power",
     "moduleId": "effect",
@@ -1672,7 +1672,7 @@
     "description": "Reduces defense by 15%, increasing attack by that amount."
   },
   {
-    "id": "01J0N1MQ39R9CY9PQZ6QC9VMBJ",
+    "id": "01J3F5PGMHWM3M6BBJC6MBAJG0",
     "keyWords": "spirit king's power,1062",
     "name": "Spirit King's Power",
     "moduleId": "effect",
@@ -1680,7 +1680,7 @@
     "description": "The power of the spirit king greatly increases base damage."
   },
   {
-    "id": "01J0N1MQ399CNVS4X4EA7N496E",
+    "id": "01J3F5PGMH3T6GRKZ10CEANPZB",
     "keyWords": "call tempest,134",
     "name": "Call Tempest",
     "moduleId": "effect",
@@ -1688,7 +1688,7 @@
     "description": "Calls a tempest, activating 1 time card that deals lightning damage to the target. The effect lasts 3 turns."
   },
   {
-    "id": "01J0N1MQ39ZP7SXA67328JS2DH",
+    "id": "01J3F5PGMHCF3XMG48CS0R8KM9",
     "keyWords": "mp recovery s,202",
     "name": "MP Recovery S",
     "moduleId": "effect",
@@ -1696,7 +1696,7 @@
     "description": "Restores the target's MP by a small amount."
   },
   {
-    "id": "01J0N1MQ39B30VRPKN30SAQC4G",
+    "id": "01J3F5PGMHC8YZYY4NT7RHDSKP",
     "keyWords": "bad taste,290",
     "name": "Bad Taste",
     "moduleId": "effect",
@@ -1704,7 +1704,7 @@
     "description": "It's so bad tasting that it causes pain, inflicting damage."
   },
   {
-    "id": "01J0N1MQ398ZTKBP6398AT3JF3",
+    "id": "01J3F5PGMHX70TPZBX3KM115X6",
     "keyWords": "cures slow,377",
     "name": "Cures Slow",
     "moduleId": "effect",
@@ -1712,7 +1712,7 @@
     "description": "The target recovers from Slow."
   },
   {
-    "id": "01J0N1MQ3AEC0A7XTEDFXZXQEF",
+    "id": "01J3F5PGMHQ1MWA3MWQX4NGQEV",
     "keyWords": "cures curse,378",
     "name": "Cures Curse",
     "moduleId": "effect",
@@ -1720,7 +1720,7 @@
     "description": "The target recovers from Curse."
   },
   {
-    "id": "01J0N1MQ3AQT4QV2MRTHY4SB5S",
+    "id": "01J3F5PGMHMNMHR987FVQA0N05",
     "keyWords": "goddess protection,449",
     "name": "Goddess Protection",
     "moduleId": "effect",
@@ -1728,7 +1728,7 @@
     "description": "Receive the goddess' protection, temporarily increasing the target's level a slight amount. Higher level increases attack and speed."
   },
   {
-    "id": "01J0N1MQ3ACPCC8JH6YDA6MBEZ",
+    "id": "01J3F5PGMH0B91KEDBG2B25DMH",
     "keyWords": "activate division,465",
     "name": "Activate Division",
     "moduleId": "effect",
@@ -1736,7 +1736,7 @@
     "description": "Item becomes a timed effect, allowing it to activate again. Effect lasts 3 turns."
   },
   {
-    "id": "01J0N1MQ3APZPSM87115PGNT01",
+    "id": "01J3F5PGMJP63EYF35M6K6XW45",
     "keyWords": "all stats up m,520",
     "name": "All Stats Up M",
     "moduleId": "effect",
@@ -1744,7 +1744,7 @@
     "description": "Increases all the target's stats. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3AWZC5ZA0RD4W85YRQ",
+    "id": "01J3F5PGMJG82VC570CZVXHCKK",
     "keyWords": "temp stamina up s,546",
     "name": "Temp Stamina Up S",
     "moduleId": "effect",
@@ -1752,7 +1752,7 @@
     "description": "Temporarily increases the target's maximum HP in battle. The effect is small."
   },
   {
-    "id": "01J0N1MQ3AY4VFEAJBHAWAKRYV",
+    "id": "01J3F5PGMJXVXSWS8EEQKVEZX9",
     "keyWords": "more opportunity l,566",
     "name": "More Opportunity L",
     "moduleId": "effect",
@@ -1760,7 +1760,7 @@
     "description": "Increases damage dealt to Broken enemies by 50%. Effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3ANBCKSQ354Z6MCN2R",
+    "id": "01J3F5PGMJ2G2B1XH9HG9XQP3V",
     "keyWords": "steal speed m,633",
     "name": "Steal Speed M",
     "moduleId": "effect",
@@ -1768,7 +1768,7 @@
     "description": "Reduces the target's speed, and temporarily increases your own by that amount."
   },
   {
-    "id": "01J0N1MQ3APQQANCCXSCT5JNVT",
+    "id": "01J3F5PGMJQ7GAB836A7XV8FF2",
     "keyWords": "inflict slow s,706",
     "name": "Inflict Slow S",
     "moduleId": "effect",
@@ -1776,7 +1776,7 @@
     "description": "Has a low chance of Slowing the target. The effect is small. Slow increases wait time after taking a turn."
   },
   {
-    "id": "01J0N1MQ3BRTJ1PS2DQK42CPSD",
+    "id": "01J3F5PGMJCBACJF00T6DEKBXT",
     "keyWords": "inflict corruption s,724",
     "name": "Inflict Corruption S",
     "moduleId": "effect",
@@ -1784,7 +1784,7 @@
     "description": "Inflicts 3 random status effects on the target. The chance and effect are both low."
   },
   {
-    "id": "01J0N1MQ3BKCVQS2DHH9VZ5SYA",
+    "id": "01J3F5PGMJ5JFNJKQ0T9T7S1CT",
     "keyWords": "blue flames,124",
     "name": "Blue Flames",
     "moduleId": "effect",
@@ -1792,7 +1792,7 @@
     "description": "Emits a hotter than usual flame, dealing a large amount of additional damage that ignores defense."
   },
   {
-    "id": "01J0N1MQ3B25D5EEJYZ2G3SCXE",
+    "id": "01J3F5PGMJ9PC7XWB1KSHF3BWB",
     "keyWords": "mp recovery m,203",
     "name": "MP Recovery M",
     "moduleId": "effect",
@@ -1800,7 +1800,7 @@
     "description": "Restores the target's MP."
   },
   {
-    "id": "01J0N1MQ3BE9GF2HWVY2AJNRBE",
+    "id": "01J3F5PGMKEHV936VQ4247HK0F",
     "keyWords": "mplp recovery xs,223",
     "name": "MPLP Recovery XS",
     "moduleId": "effect",
@@ -1808,7 +1808,7 @@
     "description": "Restores a slight amount of the target's HP and LP."
   },
   {
-    "id": "01J0N1MQ3BC9MVB03Q8V6CYTW3",
+    "id": "01J3F5PGMKW3SFJY2BABD4P2QE",
     "keyWords": "crumbly,302",
     "name": "Crumbly",
     "moduleId": "effect",
@@ -1816,7 +1816,7 @@
     "description": "The crumbly texture makes you feel weird, reducing defense a small amount."
   },
   {
-    "id": "01J0N1MQ3B6PB06Y4YPZNGVHJK",
+    "id": "01J3F5PGMKYYQEWQSTWX0P35GW",
     "keyWords": "recycle,462",
     "name": "Recycle",
     "moduleId": "effect",
@@ -1824,7 +1824,7 @@
     "description": "Item use count might not decrease when used. The chance is high."
   },
   {
-    "id": "01J0N1MQ3B1BXKDHDDNJ3P4TVY",
+    "id": "01J3F5PGMKBVAXPRWHSZM51QYH",
     "keyWords": "evasion up l,527",
     "name": "Evasion Up L",
     "moduleId": "effect",
@@ -1832,7 +1832,7 @@
     "description": "Increases the target's evasion rate by a lot. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3BSE9AZGFXTHKQD6RF",
+    "id": "01J3F5PGMK61X9KTMV5XRANE1T",
     "keyWords": "all stats up l,521",
     "name": "All Stats Up L",
     "moduleId": "effect",
@@ -1840,7 +1840,7 @@
     "description": "Increases all the target's stats by a lot. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3CR9SS56H811K1M5KX",
+    "id": "01J3F5PGMK1VFC03D2PBKG10CB",
     "keyWords": "hp regen s,535",
     "name": "HP Regen S",
     "moduleId": "effect",
@@ -1848,7 +1848,7 @@
     "description": "The target recovers a small amount of HP on each turn. The effect lasts for 5 turns."
   },
   {
-    "id": "01J0N1MQ3C2TNNBV1S5ZDDFXXE",
+    "id": "01J3F5PGMKEHXXF83C781S9889",
     "keyWords": "chain attack up l,563",
     "name": "Chain Attack Up L",
     "moduleId": "effect",
@@ -1856,7 +1856,7 @@
     "description": "Increases the target's chance to activate a chain attack by 75%. Effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3C8F0JS4FGWH8F3YM3",
+    "id": "01J3F5PGMKXB5GWX5T08GRA7R1",
     "keyWords": "attack down s,688",
     "name": "Attack Down S",
     "moduleId": "effect",
@@ -1864,7 +1864,7 @@
     "description": "Slightly reduces the target's attack power."
   },
   {
-    "id": "01J0N1MQ3CJR9YKBVFQPYE901R",
+    "id": "01J3F5PGMK1DW9YYDH3TQ0TCSY",
     "keyWords": "inflict weak s,715",
     "name": "Inflict Weak S",
     "moduleId": "effect",
@@ -1872,7 +1872,7 @@
     "description": "Has a low chance of Weakening the target. The effect is small. Weak reduces the power of all skills."
   },
   {
-    "id": "01J0N1MQ3C4VNFFJT6MQM635TB",
+    "id": "01J3F5PGMMGFJ0C96CQ8ZCGXVC",
     "keyWords": "power of ten,1050",
     "name": "Power of Ten",
     "moduleId": "effect",
@@ -1880,7 +1880,7 @@
     "description": "Greatly increases attack, defense, and speed when ailments are removed."
   },
   {
-    "id": "01J0N1MQ3C0EDP29WH1YEPHDK6",
+    "id": "01J3F5PGMMDBXXT9M81SG24BSG",
     "keyWords": "search for escape,1066",
     "name": "Search for Escape",
     "moduleId": "effect",
@@ -1888,7 +1888,7 @@
     "description": "Find paths to escape, massively increasing the success rate of “Run”."
   },
   {
-    "id": "01J0N1MQ3C3KXX7TG0BCPEHDH1",
+    "id": "01J3F5PGMME88JP635DNGXYQQY",
     "keyWords": "defense up xl,1121",
     "name": "Defense Up XL",
     "moduleId": "effect",
@@ -1896,7 +1896,7 @@
     "description": "Increases defense by 25."
   },
   {
-    "id": "01J0N1MQ3C16MKBF5A1WYEQAAC",
+    "id": "01J3F5PGMM7SKNJZNW39BQG0Y9",
     "keyWords": "evasion up xl,1136",
     "name": "Evasion Up XL",
     "moduleId": "effect",
@@ -1904,7 +1904,7 @@
     "description": "Increases evasion rate by 12%."
   },
   {
-    "id": "01J0N1MQ3DRMTY2X02G9QCXVY0",
+    "id": "01J3F5PGMM6GZDX3Y3MM3Y791N",
     "keyWords": "ailment resist xs,1171",
     "name": "Ailment Resist XS",
     "moduleId": "effect",
@@ -1912,7 +1912,7 @@
     "description": "Reduces chance of being affected by ailments by a slight amount."
   },
   {
-    "id": "01J0N1MQ3DAPAX8FQ8R8TK4XF4",
+    "id": "01J3F5PGMM1F37V1VMGY8XJ6KH",
     "keyWords": "expand effect area +,136",
     "name": "Expand Effect Area +",
     "moduleId": "effect",
@@ -1920,7 +1920,7 @@
     "description": "Expands the item's area of effect."
   },
   {
-    "id": "01J0N1MQ3D1BYFTP28SN843CZQ",
+    "id": "01J3F5PGMM89DKSPP031VTD3TJ",
     "keyWords": "hpmp recovery m,215",
     "name": "HPMP Recovery M",
     "moduleId": "effect",
@@ -1928,7 +1928,7 @@
     "description": "Restores the target's HP and MP."
   },
   {
-    "id": "01J0N1MQ3DVAPS55CF3CZP3DV3",
+    "id": "01J3F5PGMMYY88NT4Q5KR9EPMB",
     "keyWords": "very filling,286",
     "name": "Very Filling",
     "moduleId": "effect",
@@ -1936,7 +1936,7 @@
     "description": "Sits in the stomach, delaying your turn in battle. Also restores LP."
   },
   {
-    "id": "01J0N1MQ3DKEFM5AP4Q6V8WNSS",
+    "id": "01J3F5PGMM1S53G2NBPG33802T",
     "keyWords": "recovery bonus s,361",
     "name": "Recovery Bonus S",
     "moduleId": "effect",
@@ -1944,7 +1944,7 @@
     "description": "Grants the target a small HP recovery bonus."
   },
   {
-    "id": "01J0N1MQ3DHTNTBM4HTACGHX6G",
+    "id": "01J3F5PGMN384JT7PGFH6N5B7X",
     "keyWords": "ice spirit blessing,440",
     "name": "Ice Spirit Blessing",
     "moduleId": "effect",
@@ -1952,7 +1952,7 @@
     "description": "Grants all allies ice resistance."
   },
   {
-    "id": "01J0N1MQ3D93D2HYTPV5MHNJ6E",
+    "id": "01J3F5PGMNSHJQPZQKBCWZR396",
     "keyWords": "activate scatter,464",
     "name": "Activate Scatter",
     "moduleId": "effect",
@@ -1960,7 +1960,7 @@
     "description": "Item becomes a timed effect, allowing it to activate again. Effect lasts 2 turns."
   },
   {
-    "id": "01J0N1MQ3DD2NC3J644188QWMT",
+    "id": "01J3F5PGMNFS8N509ZAKCCA5R6",
     "keyWords": "hit rate up m,523",
     "name": "Hit Rate Up M",
     "moduleId": "effect",
@@ -1968,7 +1968,7 @@
     "description": "Increases the target's hit rate. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3D11SGHMMSTP5YF8PP",
+    "id": "01J3F5PGMNMTYGK63RPE1J79F7",
     "keyWords": "auto revive m,553",
     "name": "Auto Revive M",
     "moduleId": "effect",
@@ -1976,7 +1976,7 @@
     "description": "Automatically revive on the next turn after being KO'd. HP after revival is moderate."
   },
   {
-    "id": "01J0N1MQ3EJ67NHNM2R9NM4HX5",
+    "id": "01J3F5PGMN1CZNF5SRB29ZRYMW",
     "keyWords": "steal defense m,630",
     "name": "Steal Defense M",
     "moduleId": "effect",
@@ -1984,7 +1984,7 @@
     "description": "Reduces the target's defense, and temporarily increases your own by that amount."
   },
   {
-    "id": "01J0N1MQ3EBGBXAX3RC7APPX69",
+    "id": "01J3F5PGMNZDTF7X7KQRQX2P8P",
     "keyWords": "inflict slow m,707",
     "name": "Inflict Slow M",
     "moduleId": "effect",
@@ -1992,7 +1992,7 @@
     "description": "Has a moderate chance of Slowing the target. The effect is moderate. Slow increases wait time after taking a turn."
   },
   {
-    "id": "01J0N1MQ3EA24R7HKFKFB52N4Z",
+    "id": "01J3F5PGMN6Y7QTDMJAY2FC39P",
     "keyWords": "damage over time s,734",
     "name": "Damage Over Time S",
     "moduleId": "effect",
@@ -2000,7 +2000,7 @@
     "description": "Deals continuous damage to the target. The effect is small, and the time is short."
   },
   {
-    "id": "01J0N1MQ3EH46XHN8NR7XHVY9E",
+    "id": "01J3F5PGMNTWE1DHG4AF1NRVB6",
     "keyWords": "rest 10 hours,860",
     "name": "Rest 10 Hours",
     "moduleId": "effect",
@@ -2008,7 +2008,7 @@
     "description": "Rest for 10 hours, restoring all HP, MP, and LP."
   },
   {
-    "id": "01J0N1MQ3EQ8C07C1VQYBWQ444",
+    "id": "01J3F5PGMPZK296TDVAD5PQNTS",
     "keyWords": "lightens body a lot,927",
     "name": "Lightens Body a Lot",
     "moduleId": "effect",
@@ -2016,7 +2016,7 @@
     "description": "Reduces LP consumed while moving on the World Map to 0."
   },
   {
-    "id": "01J0N1MQ3EX04ZNTDE35N9DRPQ",
+    "id": "01J3F5PGMP390FTKGG22GTT0W5",
     "keyWords": "auto revive s,552",
     "name": "Auto Revive S",
     "moduleId": "effect",
@@ -2024,7 +2024,7 @@
     "description": "Automatically revive on the next turn after being KO'd. HP after revival is low."
   },
   {
-    "id": "01J0N1MQ3F8AF47EEYFRJ8CY7R",
+    "id": "01J3F5PGMPP9QJ0M8WDBFQPZQE",
     "keyWords": "steal attack m,627",
     "name": "Steal Attack M",
     "moduleId": "effect",
@@ -2032,7 +2032,7 @@
     "description": "Reduces the target's attack, and temporarily increases your own by that amount."
   },
   {
-    "id": "01J0N1MQ3FHDGXDGKEE9VJP0FJ",
+    "id": "01J3F5PGMP7XMEZ404X78YEQW3",
     "keyWords": "all stats down l,699",
     "name": "All Stats Down L",
     "moduleId": "effect",
@@ -2040,7 +2040,7 @@
     "description": "Greatly reduces all of the target's stats."
   },
   {
-    "id": "01J0N1MQ3FS3ZCDAH5EPYQDEEX",
+    "id": "01J3F5PGMSNM21YRWB6708YJ9R",
     "keyWords": "strong in morning,1036",
     "name": "Strong in Morning",
     "moduleId": "effect",
@@ -2048,7 +2048,7 @@
     "description": "Increases attack, defense, and speed by 15% in the morning. No effect during other times."
   },
   {
-    "id": "01J0N1MQ3FF64WBJVKV6P488AD",
+    "id": "01J3F5PGMS1HNS12JJ6P6ZWE8M",
     "keyWords": "bulwark rune,1059",
     "name": "Bulwark Rune",
     "moduleId": "effect",
@@ -2056,7 +2056,7 @@
     "description": "The hidden magic of the Bulwark Rune reduces all damage taken."
   },
   {
-    "id": "01J0N1MQ3F7CJFVEJ2ZVTZR64V",
+    "id": "01J3F5PGMSKP5SX634667Z7QP0",
     "keyWords": "mp regen l,1100",
     "name": "MP Regen L",
     "moduleId": "effect",
@@ -2064,7 +2064,7 @@
     "description": "MP recovers on each turn."
   },
   {
-    "id": "01J0N1MQ3F28W5DQZQRTEN8FJJ",
+    "id": "01J3F5PGMSEQC2RWK6VFV31DDF",
     "keyWords": "speed up l,1125",
     "name": "Speed Up L",
     "moduleId": "effect",
@@ -2072,7 +2072,7 @@
     "description": "Increases the target's speed by a lot. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3F4ERQ3J04G57Y1EE5",
+    "id": "01J3F5PGMSQBFFXZ9PZCFPAKWP",
     "keyWords": "item shorten s,1154",
     "name": "Item Shorten S",
     "moduleId": "effect",
@@ -2080,7 +2080,7 @@
     "description": "Reduces wait time after using item by 10%."
   },
   {
-    "id": "01J0N1MQ3F6FY54QJB5FRZF0RV",
+    "id": "01J3F5PGMSQJH5C4F9YDM6F3E5",
     "keyWords": "piercing damage l,118",
     "name": "Piercing Damage L",
     "moduleId": "effect",
@@ -2088,7 +2088,7 @@
     "description": "Deals fixed damage to the target, unaffected by defense. Its power is big."
   },
   {
-    "id": "01J0N1MQ3GXMKJ282RK0APD51F",
+    "id": "01J3F5PGMSPCWBMCWPCFNVZZHQ",
     "keyWords": "black bullets,141",
     "name": "Black Bullets",
     "moduleId": "effect",
@@ -2096,7 +2096,7 @@
     "description": "Deals additional big fixed damage to the target."
   },
   {
-    "id": "01J0N1MQ3G1ZENJA6XVAHNYS9Y",
+    "id": "01J3F5PGMSHXYPWESE32XJ19NA",
     "keyWords": "tranquil aroma,229",
     "name": "Tranquil Aroma",
     "moduleId": "effect",
@@ -2104,7 +2104,7 @@
     "description": "Restores the whole party's HP by a small amount."
   },
   {
-    "id": "01J0N1MQ3GPSJ03N8GXXT8EZB0",
+    "id": "01J3F5PGMT5J91BYPYFDQZSKB7",
     "keyWords": "hot,298",
     "name": "Hot",
     "moduleId": "effect",
@@ -2112,7 +2112,7 @@
     "description": "Warms the body, increasing the target's speed a lot, but also deals continuous damage."
   },
   {
-    "id": "01J0N1MQ3G306FNHJ5S5NTYTD5",
+    "id": "01J3F5PGMT6HPBD83VBESRVACE",
     "keyWords": "great feeling,369",
     "name": "Great Feeling",
     "moduleId": "effect",
@@ -2120,7 +2120,7 @@
     "description": "The target recovers a huge amount of Break value."
   },
   {
-    "id": "01J0N1MQ3GC4BR8B75X5D01V7B",
+    "id": "01J3F5PGMTY6WJDCKT4RZWQ4CC",
     "keyWords": "heroic protection,451",
     "name": "Heroic Protection",
     "moduleId": "effect",
@@ -2128,7 +2128,7 @@
     "description": "Receive the heroic spirit's protection, temporarily increasing the target's level. Higher level increases attack and speed."
   },
   {
-    "id": "01J0N1MQ3GV4KHSCB1928JTDJJ",
+    "id": "01J3F5PGMT2477TB316QZKWHC0",
     "keyWords": "defense up s,513",
     "name": "Defense Up S",
     "moduleId": "effect",
@@ -2136,7 +2136,7 @@
     "description": "Increases the target's defense a little. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3G54ZGQ5NMFFG7HK0M",
+    "id": "01J3F5PGMTJ0TN4J1EX3SWT62W",
     "keyWords": "crit power up l,533",
     "name": "Crit Power Up L",
     "moduleId": "effect",
@@ -2144,7 +2144,7 @@
     "description": "Increases the target's critical hit damage bonus by a large amount."
   },
   {
-    "id": "01J0N1MQ3G02QN6K66DESTFYJJ",
+    "id": "01J3F5PGMT3SKV63NAVQ85B63T",
     "keyWords": "more opportunity m,565",
     "name": "More Opportunity M",
     "moduleId": "effect",
@@ -2152,7 +2152,7 @@
     "description": "Increases damage dealt to Broken enemies by 35%. Effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3GK5JQ1NDS0ET979B8",
+    "id": "01J3F5PGMT5KPZD3HYA4V9HXWM",
     "keyWords": "all stats down m,698",
     "name": "All Stats Down M",
     "moduleId": "effect",
@@ -2160,7 +2160,7 @@
     "description": "Reduces all of the target's stats."
   },
   {
-    "id": "01J0N1MQ3HFX5YPC1TR6ZKJMAW",
+    "id": "01J3F5PGMVBCQP8TW723R71TBQ",
     "keyWords": "inflict no heal m,719",
     "name": "Inflict No Heal M",
     "moduleId": "effect",
@@ -2168,7 +2168,7 @@
     "description": "Has a moderate chance of No Healing the target. No Heal causes all recovery effects to heal for 0."
   },
   {
-    "id": "01J0N1MQ3HEWYAF42YZVM3TRKY",
+    "id": "01J3F5PGMV3KPK2AQSG87WWJ24",
     "keyWords": "consume hp xl,801",
     "name": "Consume HP XL",
     "moduleId": "effect",
@@ -2176,7 +2176,7 @@
     "description": "Consumes a huge amount of HP. The amount is influenced by maximum HP."
   },
   {
-    "id": "01J0N1MQ3H1NTZ6CTD78MAMV8N",
+    "id": "01J3F5PGMV3TKX8WH4GEQQ0HGY",
     "keyWords": "wards off danger,870",
     "name": "Wards Off Danger",
     "moduleId": "effect",
@@ -2184,7 +2184,7 @@
     "description": "Reduces the chance of incidents."
   },
   {
-    "id": "01J0N1MQ3HYPY8MYBA0JYKV5H1",
+    "id": "01J3F5PGMVD6QWQT4FWC9D3Q45",
     "keyWords": "find money,939",
     "name": "Find Money",
     "moduleId": "effect",
@@ -2192,7 +2192,7 @@
     "description": "Increases money gained from battle a little. Has no effect when money obtained is 0."
   },
   {
-    "id": "01J0N1MQ3HAAG7E1189YVK92K0",
+    "id": "01J3F5PGMV9VSNQP5CX8FWGBXJ",
     "keyWords": "inextinguishable flame,122",
     "name": "Inextinguishable Flame",
     "moduleId": "effect",
@@ -2200,7 +2200,7 @@
     "description": "Inextinguishable flames deal continuous damage. The effect is very big."
   },
   {
-    "id": "01J0N1MQ3H2JAT7E83PD86D99R",
+    "id": "01J3F5PGMV06XCSSFCTN15JHFC",
     "keyWords": "mp recovery xs,201",
     "name": "MP Recovery XS",
     "moduleId": "effect",
@@ -2208,7 +2208,7 @@
     "description": "Restores the target's MP by a slight amount."
   },
   {
-    "id": "01J0N1MQ3HRFR3KPA40ZKX7YEY",
+    "id": "01J3F5PGMVYJXBQF3EEPG9N302",
     "keyWords": "lp recovery xl,211",
     "name": "LP Recovery XL",
     "moduleId": "effect",
@@ -2216,7 +2216,7 @@
     "description": "Restores the target's LP by a huge amount."
   },
   {
-    "id": "01J0N1MQ3HWJ2HM6V81SBZGPDT",
+    "id": "01J3F5PGMV36TKJE7XWWR1QHCK",
     "keyWords": "mplp recovery s,224",
     "name": "MPLP Recovery S",
     "moduleId": "effect",
@@ -2224,7 +2224,7 @@
     "description": "Restores a small amount of the target's HP and LP."
   },
   {
-    "id": "01J0N1MQ3JDCQPDDP5PJ71GFAT",
+    "id": "01J3F5PGMVW2H5J8E1H5ZT9RPE",
     "keyWords": "eat and recover xl,282",
     "name": "Eat and Recover XL",
     "moduleId": "effect",
@@ -2232,7 +2232,7 @@
     "description": "Restores a huge amount of the target's HP and LP. Recovery amount increases with higher maximum HP."
   },
   {
-    "id": "01J0N1MQ3JS5T52W79JN7RHK1S",
+    "id": "01J3F5PGMV7GVZ382EW2ANEKT5",
     "keyWords": "bitter,292",
     "name": "Bitter",
     "moduleId": "effect",
@@ -2240,7 +2240,7 @@
     "description": "The target recovers from Sleep."
   },
   {
-    "id": "01J0N1MQ3JNE6KVWC4R0GWNP12",
+    "id": "01J3F5PGMVTA0N68Q5EA5N1PM3",
     "keyWords": "unique texture,301",
     "name": "Unique Texture",
     "moduleId": "effect",
@@ -2248,7 +2248,7 @@
     "description": "The texture experienced for the first time excites you, increasing attack power a little. Also restores a small amount of the target's HP each turn."
   },
   {
-    "id": "01J0N1MQ3JB12EW1NQ25CT3572",
+    "id": "01J3F5PGMW619VGKY2BBVFVMEB",
     "keyWords": "revive from ko s,371",
     "name": "Revive from KO S",
     "moduleId": "effect",
@@ -2256,7 +2256,7 @@
     "description": "Revives the target from KO, and restores a small amount of HP."
   },
   {
-    "id": "01J0N1MQ3J6DA903QRJG5YF2PN",
+    "id": "01J3F5PGMWADX3YMBCNYV9WJ62",
     "keyWords": "grand spirit blessing,442",
     "name": "Grand Spirit Blessing",
     "moduleId": "effect",
@@ -2264,7 +2264,7 @@
     "description": "Grants all allies fire, ice, and lightning resistance."
   },
   {
-    "id": "01J0N1MQ3JM27RBQ7TMDRJPZNQ",
+    "id": "01J3F5PGMW8YCJDF361FG9SS4B",
     "keyWords": "spirit's protection l,448",
     "name": "Spirit's Protection L",
     "moduleId": "effect",
@@ -2272,7 +2272,7 @@
     "description": "Massively reduces the effectiveness of the next attack the target receives."
   },
   {
-    "id": "01J0N1MQ3JDQZ8SEJF5VYY04BH",
+    "id": "01J3F5PGMWHJ7CVBGNJ62YB440",
     "keyWords": "reduce consumption,460",
     "name": "Reduce Consumption",
     "moduleId": "effect",
@@ -2280,7 +2280,7 @@
     "description": "Item use count might not decrease when used. The chance is fairly low."
   },
   {
-    "id": "01J0N1MQ3JB69BF4VY8D2XXYHJ",
+    "id": "01J3F5PGMWX9QNGGTNRBQ4FMZZ",
     "keyWords": "inflict no heal s,718",
     "name": "Inflict No Heal S",
     "moduleId": "effect",
@@ -2288,7 +2288,7 @@
     "description": "Has a low chance of No Healing the target. No Heal causes all recovery effects to heal for 0."
   },
   {
-    "id": "01J0N1MQ3KBD2K8WPKDBBBPPT1",
+    "id": "01J3F5PGMWZCJVKQY394RJMERG",
     "keyWords": "weak to thunder,730",
     "name": "Weak to Thunder",
     "moduleId": "effect",
@@ -2296,7 +2296,7 @@
     "description": "Reduces the target's lightning resistance by 1 level. Has no effect if the target has no resistance, and this cannot cause weaknesses."
   },
   {
-    "id": "01J0N1MQ3K3KJDJNNPT77CAE0K",
+    "id": "01J3F5PGMWSFBWECQ3XWT1R64D",
     "keyWords": "add break l,742",
     "name": "Add Break L",
     "moduleId": "effect",
@@ -2304,7 +2304,7 @@
     "description": "Massively increases Break effect dealt to the target. If multiple targets are hit, the effect is split."
   },
   {
-    "id": "01J0N1MQ3KZA5PDNQ9JJJE532J",
+    "id": "01J3F5PGMW36M5N0HCCM9E6H4S",
     "keyWords": "consume mp s,803",
     "name": "Consume MP S",
     "moduleId": "effect",
@@ -2312,7 +2312,7 @@
     "description": "Consumes a small amount of MP. The effect is weakened when MP is insufficient."
   },
   {
-    "id": "01J0N1MQ3KKSMZABMC9WBRCPPB",
+    "id": "01J3F5PGMWBYCJKWSC7Q282ZGK",
     "keyWords": "rest to dusk,861",
     "name": "Rest to Dusk",
     "moduleId": "effect",
@@ -2320,7 +2320,7 @@
     "description": "Rest until dusk, restoring HP, MP, and LP. The amount restored depends on how long you rested."
   },
   {
-    "id": "01J0N1MQ3K413M736SQR95JS7T",
+    "id": "01J3F5PGMW359HYG381DW9M5HK",
     "keyWords": "hard to notice,867",
     "name": "Hard to Notice",
     "moduleId": "effect",
@@ -2328,7 +2328,7 @@
     "description": "Hide your presence, making it hard for monsters to notice you for a short time."
   },
   {
-    "id": "01J0N1MQ3K1MBWBWX65MKZ95MJ",
+    "id": "01J3F5PGMXDN5BZD1KSWDCTPB8",
     "keyWords": "evasion up s,1133",
     "name": "Evasion Up S",
     "moduleId": "effect",
@@ -2336,7 +2336,7 @@
     "description": "Increases the target's evasion rate a little. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3K14G5KC91TQJ013DS",
+    "id": "01J3F5PGMX0WC5J2GGT5B22JK2",
     "keyWords": "critical enhance m,1144",
     "name": "Critical Enhance M",
     "moduleId": "effect",
@@ -2344,7 +2344,7 @@
     "description": "Increases critical damage bonus by 9%."
   },
   {
-    "id": "01J0N1MQ3KS6RP4B9ZC1PX29X2",
+    "id": "01J3F5PGMX8SFTJXV2XQHMERHN",
     "keyWords": "burst up +3%,1159",
     "name": "Burst Up +3%",
     "moduleId": "effect",
@@ -2352,7 +2352,7 @@
     "description": "Increases Burst Gauge fill rate by 3%."
   },
   {
-    "id": "01J0N1MQ3KWJXCP686RBGNZY68",
+    "id": "01J3F5PGMXV3P4V294GTMAJGB6",
     "keyWords": "sticking thorns,113",
     "name": "Sticking Thorns",
     "moduleId": "effect",
@@ -2360,7 +2360,7 @@
     "description": "Thorns stick into the target, draining HP over time. The effect is very small."
   },
   {
-    "id": "01J0N1MQ3MSPQX4PGYYG19AYHX",
+    "id": "01J3F5PGMX5081TTFTBQNXGBGA",
     "keyWords": "scorching earth,123",
     "name": "Scorching Earth",
     "moduleId": "effect",
@@ -2368,7 +2368,7 @@
     "description": "A vast level of unending heat deals continuous damage. The effect is supremely big."
   },
   {
-    "id": "01J0N1MQ3MQRKCH61EQMFSWTQQ",
+    "id": "01J3F5PGMXGXK5EWWTZVR1003F",
     "keyWords": "alive,138",
     "name": "Alive",
     "moduleId": "effect",
@@ -2376,7 +2376,7 @@
     "description": "Activates automatically when the user's HP falls below 20%."
   },
   {
-    "id": "01J0N1MQ3MHFW831D1MNM6NYXC",
+    "id": "01J3F5PGMXTPXGVE7MHGE5N75H",
     "keyWords": "lp recovery s,208",
     "name": "LP Recovery S",
     "moduleId": "effect",
@@ -2384,7 +2384,7 @@
     "description": "Restores the target's LP by a small amount."
   },
   {
-    "id": "01J0N1MQ3MX38YXJSGTBFADR39",
+    "id": "01J3F5PGMXG14FMNCKXR4TC1X9",
     "keyWords": "mplp recovery m,225",
     "name": "MPLP Recovery M",
     "moduleId": "effect",
@@ -2392,7 +2392,7 @@
     "description": "Restores the target's HP and LP."
   },
   {
-    "id": "01J0N1MQ3MGG050593JDQX4XNF",
+    "id": "01J3F5PGMXDNA7C9P9W0VNVG09",
     "keyWords": "eat and recover s,279",
     "name": "Eat and Recover S",
     "moduleId": "effect",
@@ -2400,7 +2400,7 @@
     "description": "Restores a small amount of the target's HP and LP. Recovery amount increases with higher maximum HP."
   },
   {
-    "id": "01J0N1MQ3MNKHSFPNM4WB6366G",
+    "id": "01J3F5PGMYAQVN6CKQ8XT2YTJY",
     "keyWords": "fluffy,303",
     "name": "Fluffy",
     "moduleId": "effect",
@@ -2408,7 +2408,7 @@
     "description": "The fluffy texture is quite pleasant. Increases the target's defense a little."
   },
   {
-    "id": "01J0N1MQ3M8BW1NZJQQJTY9CMJ",
+    "id": "01J3F5PGMYN37KA6D5Q0BVAHTW",
     "keyWords": "cures after effects,383",
     "name": "Cures After Effects",
     "moduleId": "effect",
@@ -2416,7 +2416,7 @@
     "description": "The target recovers from revival After Effects."
   },
   {
-    "id": "01J0N1MQ3MEV2PKWXX5KX10DY7",
+    "id": "01J3F5PGMY7N307BRF1B1BGPS2",
     "keyWords": "power overflowing,458",
     "name": "Power Overflowing",
     "moduleId": "effect",
@@ -2424,7 +2424,7 @@
     "description": "Deals large damage to the target, but greatly increases base damage on the next turn."
   },
   {
-    "id": "01J0N1MQ3M2X1QY39YVPS89CY9",
+    "id": "01J3F5PGMYHBWXC2PK0P4GRECM",
     "keyWords": "speed up l,518",
     "name": "Speed Up L",
     "moduleId": "effect",
@@ -2432,7 +2432,7 @@
     "description": "Increases the target's speed by a lot. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3MMWEDD63FT898E2YW",
+    "id": "01J3F5PGMYZR2P86229V0B9PZ7",
     "keyWords": "hp regen xxl,539",
     "name": "HP Regen XXL",
     "moduleId": "effect",
@@ -2440,7 +2440,7 @@
     "description": "The target recovers an extreme amount of HP on each turn. The effect lasts for 5 turns."
   },
   {
-    "id": "01J0N1MQ3N1SW2NKF29MN4AP2S",
+    "id": "01J3F5PGMYPW0QK2V06646KS9T",
     "keyWords": "steal attack s,626",
     "name": "Steal Attack S",
     "moduleId": "effect",
@@ -2448,7 +2448,7 @@
     "description": "Reduces the target's attack by a small amount, and temporarily increases your own by that amount."
   },
   {
-    "id": "01J0N1MQ3N0K4WGYYE59P07VGC",
+    "id": "01J3F5PGMYC1J1BX5GA0A8DWT3",
     "keyWords": "inflict sleep m,701",
     "name": "Inflict Sleep M",
     "moduleId": "effect",
@@ -2456,7 +2456,7 @@
     "description": "Has a moderate chance of Sleeping the target. Sleep renders the target unable to act on their turn."
   },
   {
-    "id": "01J0N1MQ3NKD7NSMVAV70KVQJ1",
+    "id": "01J3F5PGMYAJ7J1F1APDX9RGW5",
     "keyWords": "reduce all resistances,727",
     "name": "Reduce All Resistances",
     "moduleId": "effect",
@@ -2464,7 +2464,7 @@
     "description": "Reduces all of the target's resistances by 1 level. Has no effect if the target has no resistances, and this cannot cause weaknesses."
   },
   {
-    "id": "01J0N1MQ3NEKYJ0CMA0WV81BE4",
+    "id": "01J3F5PGMYV85ZDVN8EP2X8BZJ",
     "keyWords": "grow good materials?,857",
     "name": "Grow Good Materials?",
     "moduleId": "effect",
@@ -2472,7 +2472,7 @@
     "description": "Increases the chances of finding better materials in the field."
   },
   {
-    "id": "01J0N1MQ3NY3S8E4M7DVAK91EA",
+    "id": "01J3F5PGMYAB7TQ31DG7ETM2A1",
     "keyWords": "good health,871",
     "name": "Good Health",
     "moduleId": "effect",
@@ -2480,7 +2480,7 @@
     "description": "Reduces the chance of incidents by a large amount."
   },
   {
-    "id": "01J0N1MQ3N0828RY3TD7PKMM0X",
+    "id": "01J3F5PGMZWTQAKA3KZ9FMD8V4",
     "keyWords": "painful thorns,114",
     "name": "Painful Thorns",
     "moduleId": "effect",
@@ -2488,7 +2488,7 @@
     "description": "Sharp thorns stick into the target, draining HP over time. The effect is small."
   },
   {
-    "id": "01J0N1MQ3NDKS7R524VA7Z4E30",
+    "id": "01J3F5PGMZ0KX0PJ50RQX5KN9Y",
     "keyWords": "mp recovery xxl,206",
     "name": "MP Recovery XXL",
     "moduleId": "effect",
@@ -2496,7 +2496,7 @@
     "description": "Restores the target's MP by an extreme amount."
   },
   {
-    "id": "01J0N1MQ3NCFA3K20BV4TEDMMZ",
+    "id": "01J3F5PGMZZCDFBX0MPMPE6MDH",
     "keyWords": "healing aroma,230",
     "name": "Healing Aroma",
     "moduleId": "effect",
@@ -2504,7 +2504,7 @@
     "description": "Restores the whole party's HP."
   },
   {
-    "id": "01J0N1MQ3N9DC4P7BNP5WPCW11",
+    "id": "01J3F5PGMZ20C390VTF4PQ67NM",
     "keyWords": "warm,297",
     "name": "Warm",
     "moduleId": "effect",
@@ -2512,7 +2512,7 @@
     "description": "Warms the body, increasing the target's speed a little."
   },
   {
-    "id": "01J0N1MQ3NRG2PDJZ75KRF5R75",
+    "id": "01J3F5PGMZ4GWBHPXWD4PP65HT",
     "keyWords": "soul awakening tone,437",
     "name": "Soul Awakening Tone",
     "moduleId": "effect",
@@ -2520,7 +2520,7 @@
     "description": "Automatically revive on the next turn after being KO'd. Affects all allies, but HP after revival is moderate."
   },
   {
-    "id": "01J0N1MQ3P3KSPRCKX8992NQZE",
+    "id": "01J3F5PGMZ42P091Y1MB9PHT0H",
     "keyWords": "heroic blessing,452",
     "name": "Heroic Blessing",
     "moduleId": "effect",
@@ -2528,7 +2528,7 @@
     "description": "Receive the heroic spirit's blessing, temporarily increasing the target's level a large amount. Higher level increases attack and speed."
   },
   {
-    "id": "01J0N1MQ3PBA25W8M04CKWMNHT",
+    "id": "01J3F5PGMZ598XVQYWDJXE3AVQ",
     "keyWords": "inflict seal l,723",
     "name": "Inflict Seal L",
     "moduleId": "effect",
@@ -2536,7 +2536,7 @@
     "description": "Has a high chance of Sealing the target. Seal renders the target unable to use powerful attacks."
   },
   {
-    "id": "01J0N1MQ3PQ7F8NY8JHN69KH9C",
+    "id": "01J3F5PGMZTD6TN4ZMA1M89YXG",
     "keyWords": "add break xl,743",
     "name": "Add Break XL",
     "moduleId": "effect",
@@ -2544,7 +2544,7 @@
     "description": "Ridiculously increases Break effect dealt to the target. If multiple targets are hit, the effect is split."
   },
   {
-    "id": "01J0N1MQ3PKCHA19KASQ1AC46Z",
+    "id": "01J3F5PGMZ4JFY1CGT6ZFX7YGD",
     "keyWords": "rest to night,862",
     "name": "Rest to Night",
     "moduleId": "effect",
@@ -2552,7 +2552,7 @@
     "description": "Rest until night, restoring HP, MP, and LP. The amount restored depends on how long you rested."
   },
   {
-    "id": "01J0N1MQ3PV1RRTWNZ39M5J3YD",
+    "id": "01J3F5PGMZZVTK605TCD9A1AEY",
     "keyWords": "emergency escape,934",
     "name": "Emergency Escape",
     "moduleId": "effect",
@@ -2560,7 +2560,7 @@
     "description": "Reduces items lost by party wipe."
   },
   {
-    "id": "01J0N1MQ3PY6B7JTW0DKBTJTXE",
+    "id": "01J3F5PGN0PZQ1FWY2P06CHDJY",
     "keyWords": "find lots of money,940",
     "name": "Find Lots of Money",
     "moduleId": "effect",
@@ -2568,7 +2568,7 @@
     "description": "Increases money gained from battle. Has no effect when money obtained is 0."
   },
   {
-    "id": "01J0N1MQ3PC9KF7P9JRQBG4377",
+    "id": "01J3F5PGN0MNQVRG9GD863CGPV",
     "keyWords": "accelerate time,1014",
     "name": "Accelerate Time",
     "moduleId": "effect",
@@ -2576,7 +2576,7 @@
     "description": "Reduces wait time after all actions by a large amount."
   },
   {
-    "id": "01J0N1MQ3P427VWF49GJSBKZRZ",
+    "id": "01J3F5PGN0M6TR6N1GBYGXBWA1",
     "keyWords": "calm blessing,1044",
     "name": "Calm Blessing",
     "moduleId": "effect",
@@ -2584,7 +2584,7 @@
     "description": "Recover a small amount of HP when recovering HP or removing ailments."
   },
   {
-    "id": "01J0N1MQ3QDSNCZRZTHWVBQXJN",
+    "id": "01J3F5PGN0ZQAXEJN84MH19K68",
     "keyWords": "max hp up m,1104",
     "name": "Max HP Up M",
     "moduleId": "effect",
@@ -2592,7 +2592,7 @@
     "description": "Increases maximum HP by 20."
   },
   {
-    "id": "01J0N1MQ3QJ3T9M2YRR6TZZT62",
+    "id": "01J3F5PGN0V81404R23SAERSKW",
     "keyWords": "hit rate up xs,1127",
     "name": "Hit Rate Up XS",
     "moduleId": "effect",
@@ -2600,7 +2600,7 @@
     "description": "Increases hit rate by 10%."
   },
   {
-    "id": "01J0N1MQ3QB87C96RW3N246Z7H",
+    "id": "01J3F5PGN1W0Z7C95FN62JE7H6",
     "keyWords": "very numbing,128",
     "name": "Very Numbing",
     "moduleId": "effect",
@@ -2608,7 +2608,7 @@
     "description": "Pushes the target's turn back a considerable amount. This effect diminishes with each use until they take another turn."
   },
   {
-    "id": "01J0N1MQ3Q2DMRQTAF8ZK7B1G8",
+    "id": "01J3F5PGN1G9KP12247M8B4R5K",
     "keyWords": "spatial freeze,131",
     "name": "Spatial Freeze",
     "moduleId": "effect",
@@ -2616,7 +2616,7 @@
     "description": "Freezes the target with very powerful cold, pushing back their turn. This effect diminishes with each use until they take another turn."
   },
   {
-    "id": "01J0N1MQ3QC9ZDA24RDFZN9RRB",
+    "id": "01J3F5PGN23J7X4FS8RMQP11VB",
     "keyWords": "mp recovery l,204",
     "name": "MP Recovery L",
     "moduleId": "effect",
@@ -2624,7 +2624,7 @@
     "description": "Restores the target's MP by a large amount."
   },
   {
-    "id": "01J0N1MQ3Q2S4K4P6EC290J5X0",
+    "id": "01J3F5PGN2A2P70ZTMKF7YYJXQ",
     "keyWords": "lp recovery xxl,212",
     "name": "LP Recovery XXL",
     "moduleId": "effect",
@@ -2632,7 +2632,7 @@
     "description": "Restores the target's LP by an extreme amount."
   },
   {
-    "id": "01J0N1MQ3Q88EVQC2M7KP3TWVG",
+    "id": "01J3F5PGN2R6S4FR5HGM01RFJ3",
     "keyWords": "eat and recover l,281",
     "name": "Eat and Recover L",
     "moduleId": "effect",
@@ -2640,7 +2640,7 @@
     "description": "Restores a large amount of the target's HP and LP. Recovery amount increases with higher maximum HP."
   },
   {
-    "id": "01J0N1MQ3Q5YEC2T9KGWTJFDQQ",
+    "id": "01J3F5PGN2WP1YV3FTJ32FZNF0",
     "keyWords": "sloppy,299",
     "name": "Sloppy",
     "moduleId": "effect",
@@ -2648,7 +2648,7 @@
     "description": "The sloppy texture makes you feel weird, reducing attack power a small amount."
   },
   {
-    "id": "01J0N1MQ3QN42ZAY55CZE1H4PW",
+    "id": "01J3F5PGN3KWHZR8TXQSCKF6ST",
     "keyWords": "refreshing,364",
     "name": "Refreshing",
     "moduleId": "effect",
@@ -2656,7 +2656,7 @@
     "description": "The target recovers a slight amount of Break value."
   },
   {
-    "id": "01J0N1MQ3QSV5HZSMS1HG3998G",
+    "id": "01J3F5PGN35MY911V6R5PQYTC2",
     "keyWords": "revive from ko xs,370",
     "name": "Revive from KO XS",
     "moduleId": "effect",
@@ -2664,7 +2664,7 @@
     "description": "Revives the target from KO, and restores a slight amount of HP."
   },
   {
-    "id": "01J0N1MQ3RF0DS9XY0DSTT40ZZ",
+    "id": "01J3F5PGN3875DEPFVZHABPWPY",
     "keyWords": "cures no heal,381",
     "name": "Cures No Heal",
     "moduleId": "effect",
@@ -2672,7 +2672,7 @@
     "description": "The target recovers from No Heal."
   },
   {
-    "id": "01J0N1MQ3R6W2NHP8AXT1NGNZB",
+    "id": "01J3F5PGN3BMYEFEX5KFZ0DE0Y",
     "keyWords": "body awakening tone,436",
     "name": "Body Awakening Tone",
     "moduleId": "effect",
@@ -2680,7 +2680,7 @@
     "description": "Automatically revive on the next turn after being KO'd. Affects all allies, but HP after revival is low."
   },
   {
-    "id": "01J0N1MQ3RCJEKN00886ZDET0H",
+    "id": "01J3F5PGN3D3Z0ADEV2P3WN3V2",
     "keyWords": "spirit's protection,446",
     "name": "Spirit's Protection",
     "moduleId": "effect",
@@ -2688,7 +2688,7 @@
     "description": "Reduces the effectiveness of the next attack the target receives."
   },
   {
-    "id": "01J0N1MQ3RJCMTXKJZDQ6SKDCT",
+    "id": "01J3F5PGN3MTDTQSGRE5ZPRTS1",
     "keyWords": "attack up m,511",
     "name": "Attack Up M",
     "moduleId": "effect",
@@ -2696,7 +2696,7 @@
     "description": "Increases the target's attack power. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3R6MRYX4RK2Y6DBMQC",
+    "id": "01J3F5PGN36TK52QHFYV6D48Z7",
     "keyWords": "speed up s,516",
     "name": "Speed Up S",
     "moduleId": "effect",
@@ -2704,7 +2704,7 @@
     "description": "Increases the target's speed a little. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3R5EBK2DXYMJ9XC0YE",
+    "id": "01J3F5PGN3VDZA1GNERSZTF99W",
     "keyWords": "crit rate up m,529",
     "name": "Crit Rate Up M",
     "moduleId": "effect",
@@ -2712,7 +2712,7 @@
     "description": "Increases the target's chance to score a critical hit by a decent amount."
   },
   {
-    "id": "01J0N1MQ3RTN06KVVZ594T4K7X",
+    "id": "01J3F5PGN3PPH0Y8EK0HQB52VP",
     "keyWords": "reduce ailments m,556",
     "name": "Reduce Ailments M",
     "moduleId": "effect",
@@ -2720,7 +2720,7 @@
     "description": "Reduces the effectiveness of status ailments by a fair amount."
   },
   {
-    "id": "01J0N1MQ3RX3NFRXADVYP5693F",
+    "id": "01J3F5PGN43CP3055DATMNXE9C",
     "keyWords": "erase enhancements,636",
     "name": "Erase Enhancements",
     "moduleId": "effect",
@@ -2728,7 +2728,7 @@
     "description": ""
   },
   {
-    "id": "01J0N1MQ3S2WDM8KW7V7SQGF0P",
+    "id": "01J3F5PGN4EABZDAX3HRPQ348D",
     "keyWords": "inflict sleep l,702",
     "name": "Inflict Sleep L",
     "moduleId": "effect",
@@ -2736,7 +2736,7 @@
     "description": "Has a high chance of Sleeping the target. Sleep renders the target unable to act on their turn."
   },
   {
-    "id": "01J0N1MQ3SACVTF6NXZRD1W8BV",
+    "id": "01J3F5PGN433MEEQ547QB7T8F4",
     "keyWords": "rotate,1276",
     "name": "Rotate",
     "moduleId": "effect",
@@ -2744,7 +2744,7 @@
     "description": "When placing materials, you can press <LB><RB> to rotate it."
   },
   {
-    "id": "01J0N1MQ3S26212ZCJPD24YETW",
+    "id": "01J3F5PGN461S7M8EE3VZYG2M7",
     "keyWords": "critical down,737",
     "name": "Critical Down",
     "moduleId": "effect",
@@ -2752,7 +2752,7 @@
     "description": "Decreases the target's critical hit rate."
   },
   {
-    "id": "01J0N1MQ3S0CN8VVBRT6HJ5065",
+    "id": "01J3F5PGN5HAR3Y1521A58VPC1",
     "keyWords": "consume hp m,799",
     "name": "Consume HP M",
     "moduleId": "effect",
@@ -2760,7 +2760,7 @@
     "description": "Consumes HP. The amount is influenced by maximum HP."
   },
   {
-    "id": "01J0N1MQ3ST7WBMFC3W5SVK4M1",
+    "id": "01J3F5PGN5QCNV2H6S4BASNDYG",
     "keyWords": "cold,296",
     "name": "Cold",
     "moduleId": "effect",
@@ -2768,7 +2768,7 @@
     "description": "Coldness slows down the body, reducing the target's speed a little."
   },
   {
-    "id": "01J0N1MQ3SHFEMKHBD8PK96J9S",
+    "id": "01J3F5PGN53BEHKYGKEVQGKSHC",
     "keyWords": "cure dizziness,367",
     "name": "Cure Dizziness",
     "moduleId": "effect",
@@ -2776,7 +2776,7 @@
     "description": "The target recovers Break value."
   },
   {
-    "id": "01J0N1MQ3SNQ5NTSMC8180PYF2",
+    "id": "01J3F5PGN5016XF4NPVK5S9GRT",
     "keyWords": "angel's protection m,444",
     "name": "Angel's Protection M",
     "moduleId": "effect",
@@ -2784,7 +2784,7 @@
     "description": "Temporarily reduces physical damage taken by the target. The effect is fairly small."
   },
   {
-    "id": "01J0N1MQ3S6PXKPAMMQ6GAHVD8",
+    "id": "01J3F5PGN5VSPG4A5HXB6GA9N2",
     "keyWords": "auto activate 30%,467",
     "name": "Auto Activate 30%",
     "moduleId": "effect",
@@ -2792,7 +2792,7 @@
     "description": "Activates automatically when the user's HP falls below 30%."
   },
   {
-    "id": "01J0N1MQ3S0DT0X3HQ0HEQWQ5N",
+    "id": "01J3F5PGN52G8EBXH61JHQ6AW8",
     "keyWords": "crit rate up s,528",
     "name": "Crit Rate Up S",
     "moduleId": "effect",
@@ -2800,7 +2800,7 @@
     "description": "Increases the target's chance to score a critical hit by a small amount."
   },
   {
-    "id": "01J0N1MQ3SA1GV1K25B40GB79S",
+    "id": "01J3F5PGN56YG8WED1N1ZBMZ0N",
     "keyWords": "reduce ailments l,557",
     "name": "Reduce Ailments L",
     "moduleId": "effect",
@@ -2808,7 +2808,7 @@
     "description": "Reduces the effectiveness of status ailments by a good amount."
   },
   {
-    "id": "01J0N1MQ3TYA1PT8W9VT6P6EZQ",
+    "id": "01J3F5PGN5HJHN1QWZT3ZQ4M19",
     "keyWords": "speed down m,695",
     "name": "Speed Down M",
     "moduleId": "effect",
@@ -2816,7 +2816,7 @@
     "description": "Reduces the target's speed."
   },
   {
-    "id": "01J0N1MQ3TJRJ01P5388RTE6TW",
+    "id": "01J3F5PGN5PQZ9T8MA04W5X03M",
     "keyWords": "inflict blind s,712",
     "name": "Inflict Blind S",
     "moduleId": "effect",
@@ -2824,7 +2824,7 @@
     "description": "Has a low chance of Blinding the target. The effect is small. Blind reduces attack hit rate and evasion rate."
   },
   {
-    "id": "01J0N1MQ3TMEFDCXNBCMZYN0FR",
+    "id": "01J3F5PGN67HQZN3CPK6MBWNRP",
     "keyWords": "restrain attack m,745",
     "name": "Restrain Attack M",
     "moduleId": "effect",
@@ -2832,7 +2832,7 @@
     "description": "Reduces the rate at which enemies use powerful attacks."
   },
   {
-    "id": "01J0N1MQ3TDR58GD94RJE48ARN",
+    "id": "01J3F5PGN6CHR0XRS5862QHRPZ",
     "keyWords": "big cart,866",
     "name": "Big Cart",
     "moduleId": "effect",
@@ -2840,7 +2840,7 @@
     "description": "Allows you to select many items that you gathered, and send them back to the atelier. You can send up to 50 at a time."
   },
   {
-    "id": "01J0N1MQ3THZY8538RG8TJ4RJM",
+    "id": "01J3F5PGN6DTMZN1SZZEPZN1F3",
     "keyWords": "prepared for emergency,933",
     "name": "Prepared for Emergency",
     "moduleId": "effect",
@@ -2848,7 +2848,7 @@
     "description": "Reduces items lost by party wipe a little."
   },
   {
-    "id": "01J0N1MQ3T28MG0BNBM5YTNB4C",
+    "id": "01J3F5PGN67H32KJYC4SNV2A3B",
     "keyWords": "hp recovery l,198",
     "name": "HP Recovery L",
     "moduleId": "effect",
@@ -2856,7 +2856,7 @@
     "description": "Restores the target's HP by a large amount."
   },
   {
-    "id": "01J0N1MQ3T6PY2CCJ13X94QJ1Y",
+    "id": "01J3F5PGN6P2N6XVP34PV5N8CZ",
     "keyWords": "hpmp recovery l,216",
     "name": "HPMP Recovery L",
     "moduleId": "effect",
@@ -2864,7 +2864,7 @@
     "description": "Restores a large amount of the target's HP and MP."
   },
   {
-    "id": "01J0N1MQ3TY0MM8TR5BRCEAKXQ",
+    "id": "01J3F5PGN6VC4J3VM2AZ9YVV1R",
     "keyWords": "very delicious,291",
     "name": "Very Delicious",
     "moduleId": "effect",
@@ -2872,7 +2872,7 @@
     "description": "It's delicious, restoring a small amount of HP."
   },
   {
-    "id": "01J0N1MQ3T72HEE4G2HD42Q96T",
+    "id": "01J3F5PGN6DG9R5B18PHS4W8AH",
     "keyWords": "recovery bonus l,363",
     "name": "Recovery Bonus L",
     "moduleId": "effect",
@@ -2880,7 +2880,7 @@
     "description": "Grants the target a large HP recovery bonus."
   },
   {
-    "id": "01J0N1MQ3T1PD27BD4DMQEAQ51",
+    "id": "01J3F5PGN6HZS9SPA3W5WG2VX7",
     "keyWords": "spirit's protection m,447",
     "name": "Spirit's Protection M",
     "moduleId": "effect",
@@ -2888,7 +2888,7 @@
     "description": "Greatly reduces the effectiveness of the next attack the target receives."
   },
   {
-    "id": "01J0N1MQ3TRHMKZ8BZVGJ0GB5C",
+    "id": "01J3F5PGN6ETKVWDZYF45S2627",
     "keyWords": "speed down l,696",
     "name": "Speed Down L",
     "moduleId": "effect",
@@ -2896,7 +2896,7 @@
     "description": "Greatly reduces the target's speed."
   },
   {
-    "id": "01J0N1MQ3VV4JZH4HNM8TJZDFJ",
+    "id": "01J3F5PGN72B6P5HT6R9JH4QBR",
     "keyWords": "level down l,733",
     "name": "Level Down L",
     "moduleId": "effect",
@@ -2904,7 +2904,7 @@
     "description": "Reduces the target's level a lot. Reduced level decreases all stats and damage dealt."
   },
   {
-    "id": "01J0N1MQ3VWP2MC04EBZXFMD7G",
+    "id": "01J3F5PGN7JF7KR7EYZ8X38D60",
     "keyWords": "grow great materials?,858",
     "name": "Grow Great Materials?",
     "moduleId": "effect",
@@ -2912,7 +2912,7 @@
     "description": "Greatly increases the chances of finding better materials in the field."
   },
   {
-    "id": "01J0N1MQ3V33R2PBX44VSG912T",
+    "id": "01J3F5PGN7DNX34FMEH5FYQ3ZQ",
     "keyWords": "move speed up l,930",
     "name": "Move Speed Up L",
     "moduleId": "effect",
@@ -2920,7 +2920,7 @@
     "description": "Move speed increases by 30%."
   },
   {
-    "id": "01J0N1MQ3VFCYMS3Y56MFY9HZZ",
+    "id": "01J3F5PGN7D14HV5F192YQQ3R1",
     "keyWords": "insure items,935",
     "name": "Insure Items",
     "moduleId": "effect",
@@ -2928,7 +2928,7 @@
     "description": "Reduces items lost by party wipe a lot."
   },
   {
-    "id": "01J0N1MQ3VCVT3133VN3B2JMC2",
+    "id": "01J3F5PGN7KQC79SK77H1KA73S",
     "keyWords": "get more friendly,945",
     "name": "Get More Friendly",
     "moduleId": "effect",
@@ -2936,7 +2936,7 @@
     "description": "Increases friend points gained when giving presents a little."
   },
   {
-    "id": "01J0N1MQ3V9FAKMCNB5QYWZVXY",
+    "id": "01J3F5PGN7M55G299Z5NFBB959",
     "keyWords": "life to power,1028",
     "name": "Life to Power",
     "moduleId": "effect",
@@ -2944,7 +2944,7 @@
     "description": "Increases attack, defense, and speed by 20% of base maximum HP."
   },
   {
-    "id": "01J0N1MQ3VCN9QW67RACSF3GH1",
+    "id": "01J3F5PGN7JYQWYPDKHV9DZY27",
     "keyWords": "healthy blessing,1046",
     "name": "Healthy Blessing",
     "moduleId": "effect",
@@ -2952,7 +2952,7 @@
     "description": "Recover HP when recovering HP or removing ailments."
   },
   {
-    "id": "01J0N1MQ3VY4BAJDKJNS8CXA8Z",
+    "id": "01J3F5PGN7T5QN7XAN5325HEAY",
     "keyWords": "max mp up xs,1107",
     "name": "Max MP Up XS",
     "moduleId": "effect",
@@ -2960,7 +2960,7 @@
     "description": "Increases maximum MP by 10."
   },
   {
-    "id": "01J0N1MQ3W1PEDWV6V1B7HHJ5K",
+    "id": "01J3F5PGN7M70M7C7360E1985G",
     "keyWords": "hits vitals,119",
     "name": "Hits Vitals",
     "moduleId": "effect",
@@ -2968,7 +2968,7 @@
     "description": "When the target's HP falls below a certain amount, they can be finished with one hit. This has no effect on certain enemies."
   },
   {
-    "id": "01J0N1MQ3WGC84MF7CKQPNYZEN",
+    "id": "01J3F5PGN76K7TZ1X1AT0ZBKW6",
     "keyWords": "expand effect area ++,137",
     "name": "Expand Effect Area ++",
     "moduleId": "effect",
@@ -2976,7 +2976,7 @@
     "description": "Expands the item's area of effect by a lot."
   },
   {
-    "id": "01J0N1MQ3WVRV5ED9FFNEW3VGG",
+    "id": "01J3F5PGN8DH24CPF6RQVB1V5R",
     "keyWords": "hp recovery s,196",
     "name": "HP Recovery S",
     "moduleId": "effect",
@@ -2984,7 +2984,7 @@
     "description": "Restores the target's HP by a small amount."
   },
   {
-    "id": "01J0N1MQ3WXC39FY6HXR89R4GR",
+    "id": "01J3F5PGN8NY0Q2PGKTZRSHG1S",
     "keyWords": "lp recovery m,209",
     "name": "LP Recovery M",
     "moduleId": "effect",
@@ -2992,7 +2992,7 @@
     "description": "Restores the target's LP."
   },
   {
-    "id": "01J0N1MQ3WYTZN062G6EA8NKA9",
+    "id": "01J3F5PGN81XP5FR14XSFNT1VE",
     "keyWords": "mplp recovery xl,227",
     "name": "MPLP Recovery XL",
     "moduleId": "effect",
@@ -3000,7 +3000,7 @@
     "description": "Restores a huge amount of the target's HP and LP."
   },
   {
-    "id": "01J0N1MQ3WKKEYA8M2X5ENPMX9",
+    "id": "01J3F5PGN8PDQA159K6YVB5Z12",
     "keyWords": "super sweet,295",
     "name": "Super Sweet",
     "moduleId": "effect",
@@ -3008,7 +3008,7 @@
     "description": "Restores a small amount of the target's HP and LP."
   },
   {
-    "id": "01J0N1MQ3W2TVRW6KSJG2JE69N",
+    "id": "01J3F5PGN84XXT9AD9PHDQA0R7",
     "keyWords": "wake up cup,307",
     "name": "Wake Up Cup",
     "moduleId": "effect",
@@ -3016,7 +3016,7 @@
     "description": "Restores the target's HP. Recovery amount increases the closer it is to 7am."
   },
   {
-    "id": "01J0N1MQ3W3GJGRDC22Q1K8BRF",
+    "id": "01J3F5PGN894061AGHMDJ7086W",
     "keyWords": "awakening,366",
     "name": "Awakening",
     "moduleId": "effect",
@@ -3024,7 +3024,7 @@
     "description": "The target recovers a decent amount of Break value."
   },
   {
-    "id": "01J0N1MQ3W5C47T8G84EV9QXGV",
+    "id": "01J3F5PGN8ZGB96E3R80ZFN40R",
     "keyWords": "revive from ko l,373",
     "name": "Revive from KO L",
     "moduleId": "effect",
@@ -3032,7 +3032,7 @@
     "description": "Revives the target from KO, and restores a large amount of HP."
   },
   {
-    "id": "01J0N1MQ3XP1JE9RHZT0MNHMC2",
+    "id": "01J3F5PGN830AT0X366QPK9XC8",
     "keyWords": "cures seal,382",
     "name": "Cures Seal",
     "moduleId": "effect",
@@ -3040,7 +3040,7 @@
     "description": "The target recovers from Seal."
   },
   {
-    "id": "01J0N1MQ3XYAT6A8X0F303YC5Q",
+    "id": "01J3F5PGN9KS60F2ZT6NPZ6Z30",
     "keyWords": "hidden power,438",
     "name": "Hidden Power",
     "moduleId": "effect",
@@ -3048,7 +3048,7 @@
     "description": "Increases all of the target's stats by 20. The effect lasts for 5 turns."
   },
   {
-    "id": "01J0N1MQ3XAMVFA9RZ2FY8CPTK",
+    "id": "01J3F5PGN9E98ANPJZV6C6ZR92",
     "keyWords": "adrenaline rush,459",
     "name": "Adrenaline Rush",
     "moduleId": "effect",
@@ -3056,7 +3056,7 @@
     "description": "Deals huge damage to the target, but massively increases base damage on the next turn."
   },
   {
-    "id": "01J0N1MQ3XDBSH3A8KRVTGFC18",
+    "id": "01J3F5PGN92QDR42DVVMHZZ1RT",
     "keyWords": "attack up l,512",
     "name": "Attack Up L",
     "moduleId": "effect",
@@ -3064,7 +3064,7 @@
     "description": "Increases the target's attack power by a lot. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3XX3A69MX1SFGJNJNP",
+    "id": "01J3F5PGN99MT7STSWZ7VXZC4N",
     "keyWords": "hit rate up s,522",
     "name": "Hit Rate Up S",
     "moduleId": "effect",
@@ -3072,7 +3072,7 @@
     "description": "Increases the target's hit rate a little. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3XM82D39X1232MYV30",
+    "id": "01J3F5PGN904VXPG5ANEE7MRR6",
     "keyWords": "hp regen xs,534",
     "name": "HP Regen XS",
     "moduleId": "effect",
@@ -3080,7 +3080,7 @@
     "description": "The target recovers a slight amount of HP on each turn. The effect lasts for 5 turns."
   },
   {
-    "id": "01J0N1MQ3XZF7S11W1B5JXDWWS",
+    "id": "01J3F5PGNA1E3ZKHRRFHZFV00B",
     "keyWords": "more opportunity s,564",
     "name": "More Opportunity S",
     "moduleId": "effect",
@@ -3088,7 +3088,7 @@
     "description": "Increases damage dealt to Broken enemies by 25%. Effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ3XKPRC7CZW4DKT32EW",
+    "id": "01J3F5PGNAYQAB3AED7GRHRP95",
     "keyWords": "all stats down s,697",
     "name": "All Stats Down S",
     "moduleId": "effect",
@@ -3096,7 +3096,7 @@
     "description": "Slightly reduces all of the target's stats."
   },
   {
-    "id": "01J0N1MQ3XQV3YQKC6CD94359F",
+    "id": "01J3F5PGNASA93RV3S1TBGC2V1",
     "keyWords": "inflict weak m,716",
     "name": "Inflict Weak M",
     "moduleId": "effect",
@@ -3104,7 +3104,7 @@
     "description": "Has a moderate chance of Weakening the target. The effect is moderate. Weak reduces the power of all skills."
   },
   {
-    "id": "01J0N1MQ3YZD6B0KX4DJ5NBKRG",
+    "id": "01J3F5PGNACJHY35PTH9SMX6BB",
     "keyWords": "inflict corruption l,726",
     "name": "Inflict Corruption L",
     "moduleId": "effect",
@@ -3112,7 +3112,7 @@
     "description": "Inflicts 3 random status effects on the target. The chance and effect are both high."
   },
   {
-    "id": "01J0N1MQ3YEDBQT330EQ9V647A",
+    "id": "01J3F5PGNAWV742WB7W4H78F60",
     "keyWords": "pacification m,748",
     "name": "Pacification M",
     "moduleId": "effect",
@@ -3120,7 +3120,7 @@
     "description": "Pacifies the enemy, delaying the activation of powerful attacks by fair bit."
   },
   {
-    "id": "01J0N1MQ3YXE3H9SXNM6VW6HCY",
+    "id": "01J3F5PGNAT6F3R1H368NB51PH",
     "keyWords": "return to base,863",
     "name": "Return to Base",
     "moduleId": "effect",
@@ -3128,7 +3128,7 @@
     "description": "Upon use, you will be instantly returned to the atelier."
   },
   {
-    "id": "01J0N1MQ3YKZ7P88VM9HNSE9CC",
+    "id": "01J3F5PGNB2TGYSQ1Q60JAT2TA",
     "keyWords": "trains the body,942",
     "name": "Trains the Body",
     "moduleId": "effect",
@@ -3136,7 +3136,7 @@
     "description": "Increases experience points gained from battle a little."
   },
   {
-    "id": "01J0N1MQ3YG29GHAS18DC6NDRY",
+    "id": "01J3F5PGNBN9GXKQCZTE7E7Y60",
     "keyWords": "fighting spirit calm,999",
     "name": "Fighting Spirit Calm",
     "moduleId": "effect",
@@ -3144,7 +3144,7 @@
     "description": "Stats are temporarily increased in battle, but the boost decreases with each turn."
   },
   {
-    "id": "01J0N1MQ3YR3FCPS2V9YXAEE45",
+    "id": "01J3F5PGNBQ5JGXCKAGBQGWGTR",
     "keyWords": "super resist gravity,1035",
     "name": "Super Resist Gravity",
     "moduleId": "effect",
@@ -3152,7 +3152,7 @@
     "description": "Halves turn delaying effects."
   },
   {
-    "id": "01J0N1MQ3Y04BFNGB05YRDE2RW",
+    "id": "01J3F5PGNBF9WSYXQT318SN733",
     "keyWords": "lightens body,926",
     "name": "Lightens Body",
     "moduleId": "effect",
@@ -3160,7 +3160,7 @@
     "description": "Reduces LP consumed while moving on the World Map by half."
   },
   {
-    "id": "01J0N1MQ3Y8453HJ750JPZ9TZC",
+    "id": "01J3F5PGNB9ZR2WSGG07MMYBKE",
     "keyWords": "trains the body a lot,943",
     "name": "Trains the Body a Lot",
     "moduleId": "effect",
@@ -3168,7 +3168,7 @@
     "description": "Increases experience points gained from battle."
   },
   {
-    "id": "01J0N1MQ3YWZD2TXEPV8HQAZH6",
+    "id": "01J3F5PGNCHSMG8Y04D2AKXAJK",
     "keyWords": "guardian angel blessing,1022",
     "name": "Guardian Angel Blessing",
     "moduleId": "effect",
@@ -3176,7 +3176,7 @@
     "description": "Reduces damage taken by 10%, but delays turn."
   },
   {
-    "id": "01J0N1MQ3YHTAYP4EMBES17XQM",
+    "id": "01J3F5PGNCAFSRV5AE28C90RJE",
     "keyWords": "pure blessing,1045",
     "name": "Pure Blessing",
     "moduleId": "effect",
@@ -3184,7 +3184,7 @@
     "description": "Removes 2 status ailments when HP is recovered."
   },
   {
-    "id": "01J0N1MQ3Z62MW535B0MCR6FSB",
+    "id": "01J3F5PGNCR16FM11XV1V31CDE",
     "keyWords": "max hp up l,1105",
     "name": "Max HP Up L",
     "moduleId": "effect",
@@ -3192,7 +3192,7 @@
     "description": "Increases maximum HP by 25."
   },
   {
-    "id": "01J0N1MQ3ZYV8180H5JXWH369N",
+    "id": "01J3F5PGNCF3XPHN6WRBSW4TKS",
     "keyWords": "piercing damage s,116",
     "name": "Piercing Damage S",
     "moduleId": "effect",
@@ -3200,7 +3200,7 @@
     "description": "Deals fixed damage to the target, unaffected by defense. Its power is very small."
   },
   {
-    "id": "01J0N1MQ3Z6BTYWD7QJBQZ5T0Z",
+    "id": "01J3F5PGNCRPMPWCDR8H7DBQ98",
     "keyWords": "total freeze,130",
     "name": "Total Freeze",
     "moduleId": "effect",
@@ -3208,7 +3208,7 @@
     "description": "Freezes the target with powerful cold, pushing back their turn. This effect diminishes with each use until they take another turn."
   },
   {
-    "id": "01J0N1MQ3ZMK21S82XQZP3CHX9",
+    "id": "01J3F5PGNCM7G447AY17H1S7W8",
     "keyWords": "hp recovery xs,195",
     "name": "HP Recovery XS",
     "moduleId": "effect",
@@ -3216,7 +3216,7 @@
     "description": "Restores the target's HP by a slight amount."
   },
   {
-    "id": "01J0N1MQ3ZWR2TB5SMS5J3V1VA",
+    "id": "01J3F5PGNDS28AAKPXQAYRKXMX",
     "keyWords": "mp recovery xl,205",
     "name": "MP Recovery XL",
     "moduleId": "effect",
@@ -3224,7 +3224,7 @@
     "description": "Restores the target's MP by a huge amount."
   },
   {
-    "id": "01J0N1MQ3ZSM10DRX0PJPMZ318",
+    "id": "01J3F5PGND9APEQNGYEWV111ES",
     "keyWords": "mplp recovery l,226",
     "name": "MPLP Recovery L",
     "moduleId": "effect",
@@ -3232,7 +3232,7 @@
     "description": "Restores a large amount of the target's HP and LP."
   },
   {
-    "id": "01J0N1MQ3Z3Y8XFXY77WF7AMTQ",
+    "id": "01J3F5PGNDB23W2TT0RXXTBQ09",
     "keyWords": "sweet,294",
     "name": "Sweet",
     "moduleId": "effect",
@@ -3240,7 +3240,7 @@
     "description": "Restores a slight amount of the target's HP and LP."
   },
   {
-    "id": "01J0N1MQ3Z4DS1B3KBB20E3Q3F",
+    "id": "01J3F5PGNDN51SGQM1MPTP062H",
     "keyWords": "jiggly,300",
     "name": "Jiggly",
     "moduleId": "effect",
@@ -3248,7 +3248,7 @@
     "description": "The jiggly texture is quite pleasant. Increases the target's attack power a little."
   },
   {
-    "id": "01J0N1MQ3Z9BBMM0RTC0NWV5HF",
+    "id": "01J3F5PGND7K6K0215B4H0CJQC",
     "keyWords": "recovery bonus m,362",
     "name": "Recovery Bonus M",
     "moduleId": "effect",
@@ -3256,7 +3256,7 @@
     "description": "Grants the target an HP recovery bonus."
   },
   {
-    "id": "01J0N1MQ3ZJ441DVGBYWG3T89D",
+    "id": "01J3F5PGNDD26X3K9197B54R1J",
     "keyWords": "cures sleep,375",
     "name": "Cures Sleep",
     "moduleId": "effect",
@@ -3264,7 +3264,7 @@
     "description": "The target recovers from Sleep."
   },
   {
-    "id": "01J0N1MQ403EFFA78B8XWVFE33",
+    "id": "01J3F5PGNDP8E6JC5JPKSGTHD3",
     "keyWords": "cures blind,379",
     "name": "Cures Blind",
     "moduleId": "effect",
@@ -3272,7 +3272,7 @@
     "description": "The target recovers from Blind."
   },
   {
-    "id": "01J0N1MQ40PJFZ8EFP3RX4VYF7",
+    "id": "01J3F5PGND5NGV9T4MTFAYAPJ9",
     "keyWords": "thunder spirit blessing,441",
     "name": "Thunder Spirit Blessing",
     "moduleId": "effect",
@@ -3280,7 +3280,7 @@
     "description": "Grants all allies lightning resistance."
   },
   {
-    "id": "01J0N1MQ408Q07EJSZ7248T9H4",
+    "id": "01J3F5PGNEEYBN57DZR7TSKYNR",
     "keyWords": "heroic descent,453",
     "name": "Heroic Descent",
     "moduleId": "effect",
@@ -3288,7 +3288,7 @@
     "description": "The heroic spirit descends, temporarily increasing the target's level a massive amount. Higher level increases attack and speed."
   },
   {
-    "id": "01J0N1MQ40N8ANWKHPNZ7BKH6B",
+    "id": "01J3F5PGNEWD9ZSMN01FQVWEG4",
     "keyWords": "auto activate 50%,468",
     "name": "Auto Activate 50%",
     "moduleId": "effect",
@@ -3296,7 +3296,7 @@
     "description": "Activates automatically when the user's HP falls below 50%."
   },
   {
-    "id": "01J0N1MQ404VT8RZN3F3VKJV4W",
+    "id": "01J3F5PGNEDKTWBCDGFYPVN2DM",
     "keyWords": "speed up m,517",
     "name": "Speed Up M",
     "moduleId": "effect",
@@ -3304,7 +3304,7 @@
     "description": "Increases the target's speed. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ408P1PANVSW1XAM87R",
+    "id": "01J3F5PGNE0ZXJGVRF5D2M59S8",
     "keyWords": "crit power up s,531",
     "name": "Crit Power Up S",
     "moduleId": "effect",
@@ -3312,7 +3312,7 @@
     "description": "Increases the target's critical hit damage bonus by a small amount."
   },
   {
-    "id": "01J0N1MQ4021WSVHS76VDTHCES",
+    "id": "01J3F5PGNEEKJ3G0C0GFJK75GX",
     "keyWords": "cut wait time l,560",
     "name": "Cut Wait Time L",
     "moduleId": "effect",
@@ -3320,7 +3320,7 @@
     "description": "Reduces wait time after the target's next turn by a good amount."
   },
   {
-    "id": "01J0N1MQ41Y6ER9WQPTJ1BATZE",
+    "id": "01J3F5PGNE96X5KX4N4ECEYDF2",
     "keyWords": "defense down s,691",
     "name": "Defense Down S",
     "moduleId": "effect",
@@ -3328,7 +3328,7 @@
     "description": "Slightly reduces the target's defense."
   },
   {
-    "id": "01J0N1MQ41N0MRC40R4GMSJS10",
+    "id": "01J3F5PGNEMW00C4PK711CZ7B1",
     "keyWords": "inflict slow l,708",
     "name": "Inflict Slow L",
     "moduleId": "effect",
@@ -3336,7 +3336,7 @@
     "description": "Has a high chance of Slowing the target. The effect is big. Slow increases wait time after taking a turn."
   },
   {
-    "id": "01J0N1MQ41SV64E37AE25SV7T0",
+    "id": "01J3F5PGNED144QVN2RK72DNNV",
     "keyWords": "inflict seal s,721",
     "name": "Inflict Seal S",
     "moduleId": "effect",
@@ -3344,7 +3344,7 @@
     "description": "Has a low chance of Sealing the target. Seal renders the target unable to use powerful attacks."
   },
   {
-    "id": "01J0N1MQ41B39HX28WRXBQS1E8",
+    "id": "01J3F5PGNEHYDRGKB1A0S65E0M",
     "keyWords": "add break m,741",
     "name": "Add Break M",
     "moduleId": "effect",
@@ -3352,7 +3352,7 @@
     "description": "Greatly increases Break effect dealt to the target. If multiple targets are hit, the effect is split."
   },
   {
-    "id": "01J0N1MQ412Z87CM1NQBT1J43B",
+    "id": "01J3F5PGNEX4EB4N5HWXYCVMZ2",
     "keyWords": "consume mp m,804",
     "name": "Consume MP M",
     "moduleId": "effect",
@@ -3360,7 +3360,7 @@
     "description": "Consumes MP. The effect is weakened when MP is insufficient."
   },
   {
-    "id": "01J0N1MQ41YXW2G4VV89A1YC6H",
+    "id": "01J3F5PGNENTE2RT73VQ2X5QM1",
     "keyWords": "miser's secrets,941",
     "name": "Miser's Secrets",
     "moduleId": "effect",
@@ -3368,7 +3368,7 @@
     "description": "Increases money gained from battle by a lot. Allows you to gain some money even when amount obtained is 0."
   },
   {
-    "id": "01J0N1MQ41QJNK1MDHZXKX8QPB",
+    "id": "01J3F5PGNFB149ETGN6YWK5259",
     "keyWords": "seal of stability,949",
     "name": "Seal of Stability",
     "moduleId": "effect",
@@ -3376,7 +3376,7 @@
     "description": "Makes it harder for gathering level and enemy level to increase."
   },
   {
-    "id": "01J0N1MQ4181WE5J59K4Z6WMTP",
+    "id": "01J3F5PGNFY0J82WW14SVA0NNH",
     "keyWords": "god's protection,1007",
     "name": "God's Protection",
     "moduleId": "effect",
@@ -3384,7 +3384,7 @@
     "description": "Reduces the number of turns status ailments last by a large amount."
   },
   {
-    "id": "01J0N1MQ41K0EME1BE5NQ2HAKF",
+    "id": "01J3F5PGNFD830B5C6XJZMAGVK",
     "keyWords": "time to power,1027",
     "name": "Time to Power",
     "moduleId": "effect",
@@ -3392,7 +3392,7 @@
     "description": "Increases attack skill power by an amount depending on wait time after use."
   },
   {
-    "id": "01J0N1MQ4232F8F124GKZEYNZW",
+    "id": "01J3F5PGNFW80NE1GCJX01ZH4X",
     "keyWords": "power of one,1049",
     "name": "Power of One",
     "moduleId": "effect",
@@ -3400,7 +3400,7 @@
     "description": "Temporarily increases attack, defense, and speed when ailments are removed."
   },
   {
-    "id": "01J0N1MQ428Q99FWZYC5ZJY8KG",
+    "id": "01J3F5PGNF236JZKWGDYAVSZDD",
     "keyWords": "soul awakening,1065",
     "name": "Soul Awakening",
     "moduleId": "effect",
@@ -3408,7 +3408,7 @@
     "description": "Automatically revive on turn when KO'd in battle. HP after revival is decent."
   },
   {
-    "id": "01J0N1MQ42S6XGJXS4S9F06VKC",
+    "id": "01J3F5PGNFCPS73K009TPKN7HE",
     "keyWords": "max mp up m,1109",
     "name": "Max MP Up M",
     "moduleId": "effect",
@@ -3416,7 +3416,7 @@
     "description": "Increases maximum MP by 20."
   },
   {
-    "id": "01J0N1MQ42CSEYFS3QVDBZCYAB",
+    "id": "01J3F5PGNF87A7TGD4Z829Q5TH",
     "keyWords": "temp stamina up l,548",
     "name": "Temp Stamina Up L",
     "moduleId": "effect",
@@ -3424,7 +3424,7 @@
     "description": "Temporarily increases the target's maximum HP in battle. The effect is large."
   },
   {
-    "id": "01J0N1MQ42S7TGPP9FQ4NBX0H6",
+    "id": "01J3F5PGNFYTD33B25SAAV9DW0",
     "keyWords": "cause misfortune,617",
     "name": "Cause Misfortune",
     "moduleId": "effect",
@@ -3432,7 +3432,7 @@
     "description": "Has a set chance of causing Poison, Blind, and Weak on the target."
   },
   {
-    "id": "01J0N1MQ42813VJQD1FXWHQ7DE",
+    "id": "01J3F5PGNFJJ5SA2YPK2D6F7T7",
     "keyWords": "attack down m,689",
     "name": "Attack Down M",
     "moduleId": "effect",
@@ -3440,7 +3440,7 @@
     "description": "Reduces the target's attack power."
   },
   {
-    "id": "01J0N1MQ42JMKQ8ZSM5SJSPZZY",
+    "id": "01J3F5PGNF609TWPYB68EPJHWR",
     "keyWords": "inflict curse l,711",
     "name": "Inflict Curse L",
     "moduleId": "effect",
@@ -3448,7 +3448,7 @@
     "description": "Has a high chance of Cursing the target. The effect is big. Curse causes the target to take damage when healing."
   },
   {
-    "id": "01J0N1MQ42H3X6C8Z02J8V4XNG",
+    "id": "01J3F5PGNGJTNKJN44MK6TN438",
     "keyWords": "weak to fire,728",
     "name": "Weak to Fire",
     "moduleId": "effect",
@@ -3456,7 +3456,7 @@
     "description": "Reduces the target's fire resistance by 1 level. Has no effect if the target has no resistance, and this cannot cause weaknesses."
   },
   {
-    "id": "01J0N1MQ420QVRW7P6943A588S",
+    "id": "01J3F5PGNGBDQ3DS0PT1F9FTC8",
     "keyWords": "consume mp l,805",
     "name": "Consume MP L",
     "moduleId": "effect",
@@ -3464,7 +3464,7 @@
     "description": "Consumes a large amount of MP. The effect is weakened when MP is insufficient."
   },
   {
-    "id": "01J0N1MQ43R88NYT16SD4AP6Q0",
+    "id": "01J3F5PGNGG1R1R7T4RXTMS4SK",
     "keyWords": "inject will to fight,1000",
     "name": "Inject Will to Fight",
     "moduleId": "effect",
@@ -3472,7 +3472,7 @@
     "description": "Increases critical hit rate a little."
   },
   {
-    "id": "01J0N1MQ43VQ8K051JPGMJWG9W",
+    "id": "01J3F5PGNGRC2CKGA8RCNS8C2X",
     "keyWords": "feather awakening,1031",
     "name": "Feather Awakening",
     "moduleId": "effect",
@@ -3480,7 +3480,7 @@
     "description": "Automatically revive on turn when KO'd in battle. HP after revival is low."
   },
   {
-    "id": "01J0N1MQ43BQKZKV4RK5MXNG36",
+    "id": "01J3F5PGNGFXFSYFCCSCM5PHCG",
     "keyWords": "small cart,864",
     "name": "Small Cart",
     "moduleId": "effect",
@@ -3488,7 +3488,7 @@
     "description": "Allows you to select a few items that you gathered, and send them back to the atelier. You can send up to 10 at a time."
   },
   {
-    "id": "01J0N1MQ43T7EMW8SZE9604PC2",
+    "id": "01J3F5PGNG2ZBM142HRJ4G5AXJ",
     "keyWords": "move speed up m,929",
     "name": "Move Speed Up M",
     "moduleId": "effect",
@@ -3496,7 +3496,7 @@
     "description": "Move speed increases by 20%."
   },
   {
-    "id": "01J0N1MQ432D6NZ6XAF23VD82V",
+    "id": "01J3F5PGNGJYTBAV0TZACYGVKW",
     "keyWords": "sage's wisdom,1020",
     "name": "Sage's Wisdom",
     "moduleId": "effect",
@@ -3504,7 +3504,7 @@
     "description": "Completely swaps maximum HP and MP values."
   },
   {
-    "id": "01J0N1MQ430BM0VHVZMP1RAV64",
+    "id": "01J3F5PGNGZJX659PV2AMPH49A",
     "keyWords": "conversion spell,1047",
     "name": "Conversion Spell",
     "moduleId": "effect",
@@ -3512,7 +3512,7 @@
     "description": "During battle, 10% of damage taken and MP consumed is absorbed into the other pool."
   },
   {
-    "id": "01J0N1MQ43F0S7KV1VDDPC25YR",
+    "id": "01J3F5PGNHDA352FK2NX1WVM0M",
     "keyWords": "hp regen s,1094",
     "name": "HP Regen S",
     "moduleId": "effect",
@@ -3520,7 +3520,7 @@
     "description": "The target recovers a small amount of HP on each turn. The effect lasts for 5 turns."
   },
   {
-    "id": "01J0N1MQ43JHCN8MNFQC7QE0AM",
+    "id": "01J3F5PGNHQAD73NH46XMFN3MN",
     "keyWords": "attack up m,1114",
     "name": "Attack Up M",
     "moduleId": "effect",
@@ -3528,7 +3528,7 @@
     "description": "Increases the target's attack power. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ43NR2FRAJMNYY1KBWJ",
+    "id": "01J3F5PGNHST69FN3A5VQ11WR7",
     "keyWords": "critical enhance s,1143",
     "name": "Critical Enhance S",
     "moduleId": "effect",
@@ -3536,7 +3536,7 @@
     "description": "Increases critical damage bonus by 6%."
   },
   {
-    "id": "01J0N1MQ43CV53WR7HNA5HC9NR",
+    "id": "01J3F5PGNHMCT40EZVTK19Y3F7",
     "keyWords": "herculean rune,1054",
     "name": "Herculean Rune",
     "moduleId": "effect",
@@ -3544,7 +3544,7 @@
     "description": "The hidden magic of the Herculean Rune increases attack by 25."
   },
   {
-    "id": "01J0N1MQ445SHVR69PFQPXM4WB",
+    "id": "01J3F5PGNHRQVQA52B5F3AH7B3",
     "keyWords": "defense up m,1119",
     "name": "Defense Up M",
     "moduleId": "effect",
@@ -3552,7 +3552,7 @@
     "description": "Increases the target's defense. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ44W36GAPKZNRX0N936",
+    "id": "01J3F5PGNHG7JYFBSSHMJCQMY4",
     "keyWords": "numbing,127",
     "name": "Numbing",
     "moduleId": "effect",
@@ -3560,7 +3560,7 @@
     "description": "Pushes the target's turn back a decent amount. This effect diminishes with each use until they take another turn."
   },
   {
-    "id": "01J0N1MQ4482YYGAQWRGJPJ3RK",
+    "id": "01J3F5PGNH2XS30PJ42TV1VV31",
     "keyWords": "lively,139",
     "name": "Lively",
     "moduleId": "effect",
@@ -3568,7 +3568,7 @@
     "description": "Activates automatically when the user's HP falls below 30%."
   },
   {
-    "id": "01J0N1MQ44J4EN5YEKRNDHHNGQ",
+    "id": "01J3F5PGNHRTJN3KCT8K3FMK6D",
     "keyWords": "hp recovery m,197",
     "name": "HP Recovery M",
     "moduleId": "effect",
@@ -3576,7 +3576,7 @@
     "description": "Restores the target's HP."
   },
   {
-    "id": "01J0N1MQ44YK0G9BEFD1BSKWY5",
+    "id": "01J3F5PGNJCRBC40PV0B8FHZ7X",
     "keyWords": "hpmp recovery xl,217",
     "name": "HPMP Recovery XL",
     "moduleId": "effect",
@@ -3584,7 +3584,7 @@
     "description": "Restores a huge amount of the target's HP and MP."
   },
   {
-    "id": "01J0N1MQ44FGAAKK2S05WXQ70A",
+    "id": "01J3F5PGNJT5GDDNXDDAK7ZPJ7",
     "keyWords": "eat and recover m,280",
     "name": "Eat and Recover M",
     "moduleId": "effect",
@@ -3592,7 +3592,7 @@
     "description": "Restores the target's HP and LP. Recovery amount increases with higher maximum HP."
   },
   {
-    "id": "01J0N1MQ45GR0VMG9VW2G7X5NB",
+    "id": "01J3F5PGNJF2HZSDCAC3MXRJMY",
     "keyWords": "salty,293",
     "name": "Salty",
     "moduleId": "effect",
@@ -3600,7 +3600,7 @@
     "description": "Reduces the wait time after the target's next turn by a small amount."
   },
   {
-    "id": "01J0N1MQ45MV1MPMHAJVRM7Y0W",
+    "id": "01J3F5PGNJG704XAWSSJJMYJB4",
     "keyWords": "bedtime cup,309",
     "name": "Bedtime Cup",
     "moduleId": "effect",
@@ -3608,7 +3608,7 @@
     "description": "Restores the target's HP. Recovery amount increases the closer it is to 10pm."
   },
   {
-    "id": "01J0N1MQ45TX0Y7V2QAEQHT9V0",
+    "id": "01J3F5PGNJWT0JM6RHZ5EN11RZ",
     "keyWords": "revive from ko m,372",
     "name": "Revive from KO M",
     "moduleId": "effect",
@@ -3616,7 +3616,7 @@
     "description": "Revives the target from KO, and restores a moderate amount of HP."
   },
   {
-    "id": "01J0N1MQ45258AZ362WZFXNTXT",
+    "id": "01J3F5PGNJ54598Y2W0RFW0QND",
     "keyWords": "cures poison,376",
     "name": "Cures Poison",
     "moduleId": "effect",
@@ -3624,7 +3624,7 @@
     "description": "The target recovers from Poison."
   },
   {
-    "id": "01J0N1MQ45CQYJ93RX8TX8PED9",
+    "id": "01J3F5PGNJV5X0CWWMDMJZGYAH",
     "keyWords": "removes many ailments,385",
     "name": "Removes Many Ailments",
     "moduleId": "effect",
@@ -3632,7 +3632,7 @@
     "description": "The target recovers from 2 ailments."
   },
   {
-    "id": "01J0N1MQ4596HHMT1GAV4AHB5M",
+    "id": "01J3F5PGNJ5HYESJ0X3TRXH0FR",
     "keyWords": "angel's protection,443",
     "name": "Angel's Protection",
     "moduleId": "effect",
@@ -3640,7 +3640,7 @@
     "description": "Temporarily reduces physical damage taken by the target. The effect is small."
   },
   {
-    "id": "01J0N1MQ45KYDK1D0YGZRXTVK8",
+    "id": "01J3F5PGNJ76ZD5ZSX2S307HVC",
     "keyWords": "relieve consumption,461",
     "name": "Relieve Consumption",
     "moduleId": "effect",
@@ -3648,7 +3648,7 @@
     "description": "Item use count might not decrease when used. The chance is low."
   },
   {
-    "id": "01J0N1MQ45775JW94EWZE1ZSJY",
+    "id": "01J3F5PGNJB0JXPGNG9HHNF30G",
     "keyWords": "defense up m,514",
     "name": "Defense Up M",
     "moduleId": "effect",
@@ -3656,7 +3656,7 @@
     "description": "Increases the target's defense. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ467TDA28N0HRQFYZRQ",
+    "id": "01J3F5PGNJJBEYEWPFCD8TT45P",
     "keyWords": "evasion up s,525",
     "name": "Evasion Up S",
     "moduleId": "effect",
@@ -3664,7 +3664,7 @@
     "description": "Increases the target's evasion rate a little. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ46RHGNADPZCK8C0M67",
+    "id": "01J3F5PGNK81BRV8DGY820EM2F",
     "keyWords": "hp regen l,537",
     "name": "HP Regen L",
     "moduleId": "effect",
@@ -3672,7 +3672,7 @@
     "description": "The target recovers a large amount of HP on each turn. The effect lasts for 5 turns."
   },
   {
-    "id": "01J0N1MQ46Q9RRFXDKSEKV7707",
+    "id": "01J3F5PGNKGDF0WKGD21R1VE8S",
     "keyWords": "steal speed s,632",
     "name": "Steal Speed S",
     "moduleId": "effect",
@@ -3680,7 +3680,7 @@
     "description": "Reduces the target's speed by a small amount, and temporarily increases your own by that amount."
   },
   {
-    "id": "01J0N1MQ46BJV0MZ0QWXMD4TJZ",
+    "id": "01J3F5PGNKK79MTCVXDEZAHJA9",
     "keyWords": "inflict sleep s,700",
     "name": "Inflict Sleep S",
     "moduleId": "effect",
@@ -3688,7 +3688,7 @@
     "description": "Has a low chance of Sleeping the target. Sleep renders the target unable to act on their turn."
   },
   {
-    "id": "01J0N1MQ46MP9K17EX6GXMYK7P",
+    "id": "01J3F5PGNKDPZ7HCK2X3WN74JW",
     "keyWords": "inflict weak l,717",
     "name": "Inflict Weak L",
     "moduleId": "effect",
@@ -3696,7 +3696,7 @@
     "description": "Has a high chance of Weakening the target. The effect is big. Weak reduces the power of all skills."
   },
   {
-    "id": "01J0N1MQ46AGBSAPTRT3ZA6T4G",
+    "id": "01J3F5PGNKEABKSZRYSZRQGNMF",
     "keyWords": "damage over time m,735",
     "name": "Damage Over Time M",
     "moduleId": "effect",
@@ -3704,7 +3704,7 @@
     "description": "Deals continuous damage to the target. The effect is moderate, and the time is short."
   },
   {
-    "id": "01J0N1MQ46YK5VN29JN9G3RGSD",
+    "id": "01J3F5PGNK18TKRSJSJ35Q26AR",
     "keyWords": "consume hp s,798",
     "name": "Consume HP S",
     "moduleId": "effect",
@@ -3712,7 +3712,7 @@
     "description": "Consumes a small amount of HP. The amount is influenced by maximum HP."
   },
   {
-    "id": "01J0N1MQ46S9KQGDPQZDPV47WF",
+    "id": "01J3F5PGNK21PZJMGK8V4N5HAA",
     "keyWords": "wards off misfortune,872",
     "name": "Wards Off Misfortune",
     "moduleId": "effect",
@@ -3720,7 +3720,7 @@
     "description": ""
   },
   {
-    "id": "01J0N1MQ46SR46RCJ0NNYNXF0Z",
+    "id": "01J3F5PGNMEKR02SVF21ANF1GP",
     "keyWords": "get much more friendly,946",
     "name": "Get Much More Friendly",
     "moduleId": "effect",
@@ -3728,7 +3728,7 @@
     "description": "Increases friend points gained when giving presents."
   },
   {
-    "id": "01J0N1MQ46QGY3G72NP1ZM2SWE",
+    "id": "01J3F5PGNMHZ7M3FT8E5GMB1YN",
     "keyWords": "oath of friendship,1005",
     "name": "Oath of Friendship",
     "moduleId": "effect",
@@ -3736,7 +3736,7 @@
     "description": "Increases effect of all Assist actions by a lot."
   },
   {
-    "id": "01J0N1MQ46PZSR8PXK8MBTRVJQ",
+    "id": "01J3F5PGNMZJ465HQJZWS18HYK",
     "keyWords": "chain attack practice,1015",
     "name": "Chain Attack Practice",
     "moduleId": "effect",
@@ -3744,7 +3744,7 @@
     "description": "Increases chain attack chance by a small amount."
   },
   {
-    "id": "01J0N1MQ47X6321NZJRFVVAZNR",
+    "id": "01J3F5PGNM5M6NRX052VZV2V1R",
     "keyWords": "strong in day,1037",
     "name": "Strong in Day",
     "moduleId": "effect",
@@ -3752,7 +3752,7 @@
     "description": "Increases attack, defense, and speed by 15% during the day. No effect during other times."
   },
   {
-    "id": "01J0N1MQ475RD5ZC5R58XDC4ZS",
+    "id": "01J3F5PGNMNJFM31QVR3BQK703",
     "keyWords": "swift gale rune,1056",
     "name": "Swift Gale Rune",
     "moduleId": "effect",
@@ -3760,7 +3760,7 @@
     "description": "The hidden magic of the Swift Gale Rune increases speed by 25."
   },
   {
-    "id": "01J0N1MQ471RC5EH2XTDDCEMEX",
+    "id": "01J3F5PGNMVZXE0QAV42T6G60G",
     "keyWords": "mp regen m,1099",
     "name": "MP Regen M",
     "moduleId": "effect",
@@ -3768,7 +3768,7 @@
     "description": "MP recovers a decent amount on each turn."
   },
   {
-    "id": "01J0N1MQ47V3WF9D19JSF0KKDB",
+    "id": "01J3F5PGNM50SSMP9X4X8BN4J4",
     "keyWords": "hit rate up l,1130",
     "name": "Hit Rate Up L",
     "moduleId": "effect",
@@ -3776,7 +3776,7 @@
     "description": "Increases the target's hit rate by a lot. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ47K3KDM82TEHQ6XASQ",
+    "id": "01J3F5PGNMXPG65MCYYPP5FBWZ",
     "keyWords": "cut wait time s,558",
     "name": "Cut Wait Time S",
     "moduleId": "effect",
@@ -3784,7 +3784,7 @@
     "description": "Reduces wait time after the target's next turn by a little."
   },
   {
-    "id": "01J0N1MQ47C9VXB3H843B94796",
+    "id": "01J3F5PGNMZXP33F4K8QRNYG83",
     "keyWords": "steal defense l,631",
     "name": "Steal Defense L",
     "moduleId": "effect",
@@ -3792,7 +3792,7 @@
     "description": "Reduces the target's defense by a large amount, and temporarily increases your own by that amount."
   },
   {
-    "id": "01J0N1MQ47B81W7G7MWSK5X5BX",
+    "id": "01J3F5PGNNG0YTWHE0B3P69VZS",
     "keyWords": "inflict poison s,703",
     "name": "Inflict Poison S",
     "moduleId": "effect",
@@ -3800,7 +3800,7 @@
     "description": "Has a low chance of Poisoning the target. The effect is small. Poison deals damage every time the target takes a turn."
   },
   {
-    "id": "01J0N1MQ47N4BWG2DHCNWGDXW2",
+    "id": "01J3F5PGNNQDBAPSHQ909AREVK",
     "keyWords": "inflict no heal l,720",
     "name": "Inflict No Heal L",
     "moduleId": "effect",
@@ -3808,7 +3808,7 @@
     "description": "Has a high chance of No Healing the target. No Heal causes all recovery effects to heal for 0."
   },
   {
-    "id": "01J0N1MQ4756YQ7ZHCSDFAX0QB",
+    "id": "01J3F5PGNN63HW5CGZHF0K38QV",
     "keyWords": "weak to changes,738",
     "name": "Weak to Changes",
     "moduleId": "effect",
@@ -3816,7 +3816,7 @@
     "description": "Increases the effectiveness of status ailments on the target. It does not increase the chances of ailments occurring."
   },
   {
-    "id": "01J0N1MQ47DAEPA0W6SBMGH3G1",
+    "id": "01J3F5PGNNRW99DXDES57RETH9",
     "keyWords": "fits a whole lot,932",
     "name": "Fits a Whole Lot",
     "moduleId": "effect",
@@ -3824,7 +3824,7 @@
     "description": "Increases item capacity by 40."
   },
   {
-    "id": "01J0N1MQ485BNVM8VQBEACSTZ2",
+    "id": "01J3F5PGNNCCZZCC1144EA4YX5",
     "keyWords": "gather attention,1011",
     "name": "Gather Attention",
     "moduleId": "effect",
@@ -3832,7 +3832,7 @@
     "description": "Become more likely to be targeted during battle."
   },
   {
-    "id": "01J0N1MQ48451PY0A5Q3Q6VTEX",
+    "id": "01J3F5PGNN0HKJ17V8SXTCC46C",
     "keyWords": "pacification s,747",
     "name": "Pacification S",
     "moduleId": "effect",
@@ -3840,7 +3840,7 @@
     "description": "Pacifies the enemy, delaying the activation of powerful attacks by a little."
   },
   {
-    "id": "01J0N1MQ480BP4J4HB7X05VFT3",
+    "id": "01J3F5PGNNCCKC28G7C80ZXAX1",
     "keyWords": "charm's blessing,874",
     "name": "Charm's Blessing",
     "moduleId": "effect",
@@ -3848,7 +3848,7 @@
     "description": ""
   },
   {
-    "id": "01J0N1MQ4A3WP3WQEHWSMGXQ9D",
+    "id": "01J3F5PGNN3GJG3EP5P7W5HHEM",
     "keyWords": "chain attack skills,1016",
     "name": "Chain Attack Skills",
     "moduleId": "effect",
@@ -3856,7 +3856,7 @@
     "description": "Increases chain attack chance."
   },
   {
-    "id": "01J0N1MQ4AY6G6XQZMV8RZ0BB0",
+    "id": "01J3F5PGNPWPY0MSNZQ515A779",
     "keyWords": "spirit to power,1029",
     "name": "Spirit to Power",
     "moduleId": "effect",
@@ -3864,7 +3864,7 @@
     "description": "Increases attack, defense, and speed by 25% of base maximum MP."
   },
   {
-    "id": "01J0N1MQ4AAW5V7P61FKZPDDZ4",
+    "id": "01J3F5PGNP145JF9138M6E43N8",
     "keyWords": "speed to power,1060",
     "name": "Speed to Power",
     "moduleId": "effect",
@@ -3872,7 +3872,7 @@
     "description": "Reduces speed by 15%, increasing attack by that amount."
   },
   {
-    "id": "01J0N1MQ4A6PGCBV74MGNHT4KH",
+    "id": "01J3F5PGNPJ582TTTDD610AB7F",
     "keyWords": "mp regen xl,1101",
     "name": "MP Regen XL",
     "moduleId": "effect",
@@ -3880,7 +3880,7 @@
     "description": "MP recovers a large amount on each turn."
   },
   {
-    "id": "01J0N1MQ4A9PB08EZ532JGSQK3",
+    "id": "01J3F5PGNPFQ65VBEW96P3MBCF",
     "keyWords": "speed up m,1124",
     "name": "Speed Up M",
     "moduleId": "effect",
@@ -3888,7 +3888,7 @@
     "description": "Increases the target's speed. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ4BXFRX2NZW816XM41W",
+    "id": "01J3F5PGNP9QE5SGQ5GG6AR003",
     "keyWords": "item enhance l,1153",
     "name": "Item Enhance L",
     "moduleId": "effect",
@@ -3896,7 +3896,7 @@
     "description": "Increases item power by 20%."
   },
   {
-    "id": "01J0N1MQ4BT4KQS6M2KHGB91XG",
+    "id": "01J3F5PGNPG1MFZ3F89QCDE4PK",
     "keyWords": "nullify weak,1165",
     "name": "Nullify Weak",
     "moduleId": "effect",
@@ -3904,7 +3904,7 @@
     "description": "Immunity to Weak ailment."
   },
   {
-    "id": "01J0N1MQ4B91GH8GA1MEV3VMR3",
+    "id": "01J3F5PGNPBE51Y1BZATEHJWJS",
     "keyWords": "avoid ko m,1178",
     "name": "Avoid KO M",
     "moduleId": "effect",
@@ -3912,7 +3912,7 @@
     "description": "You have a chance to survive with 1 HP when you receive damage that would reduce your HP to 0. Has a fairly low chance to work."
   },
   {
-    "id": "01J0N1MQ4BPG78GJ07Z8VBHEST",
+    "id": "01J3F5PGNP76BN0D27CZCYTJYZ",
     "keyWords": "panel 5x5,1262",
     "name": "Panel 5x5",
     "moduleId": "effect",
@@ -3920,7 +3920,7 @@
     "description": "The panel size is 5x5."
   },
   {
-    "id": "01J0N1MQ4BAV9FH356DRZFXHC1",
+    "id": "01J3F5PGNP6R12VR4CFKBKD763",
     "keyWords": "add (poison mat),1291",
     "name": "Add (Poison Mat)",
     "moduleId": "effect",
@@ -3928,7 +3928,7 @@
     "description": "Adds 10 category value to (Poison Mat)."
   },
   {
-    "id": "01J0N1MQ4C52FX1SB19A43YD3E",
+    "id": "01J3F5PGNP90YYEHRVNT98Z9A2",
     "keyWords": "burst up +1%,1157",
     "name": "Burst Up +1%",
     "moduleId": "effect",
@@ -3936,7 +3936,7 @@
     "description": "Increases Burst Gauge fill rate by 1%."
   },
   {
-    "id": "01J0N1MQ4C3E660S59QXZ29736",
+    "id": "01J3F5PGNQACVFZPDNZNMPPTAA",
     "keyWords": "nullify after effect,1168",
     "name": "Nullify After Effect",
     "moduleId": "effect",
@@ -3944,7 +3944,7 @@
     "description": "Immunity to revival After Effects ailment."
   },
   {
-    "id": "01J0N1MQ4C9MVAZCGM2EJTGKB0",
+    "id": "01J3F5PGNQB5JSJXB29E8DAPFT",
     "keyWords": "break enhance m,1193",
     "name": "Break Enhance M",
     "moduleId": "effect",
@@ -3952,7 +3952,7 @@
     "description": "Increases Break value when attacking enemies by a small amount."
   },
   {
-    "id": "01J0N1MQ4CMJ2REPEGZVE0JYBK",
+    "id": "01J3F5PGNQPTGXJKEDYBJPKWJC",
     "keyWords": "quality boost,1272",
     "name": "Quality Boost",
     "moduleId": "effect",
@@ -3960,7 +3960,7 @@
     "description": "Increases item quality by the ratio of the most common synthesis panel color."
   },
   {
-    "id": "01J0N1MQ4CCMX0MJ5BKWFX4MQR",
+    "id": "01J3F5PGNQ23QVBC2RHXN8EW7V",
     "keyWords": "ultimate stability,1399",
     "name": "Ultimate Stability",
     "moduleId": "effect",
@@ -3968,7 +3968,7 @@
     "description": "Gain ultimate stability. Nullifies turn delaying effects by 100%."
   },
   {
-    "id": "01J0N1MQ4DB3KQQNNVJR2T4AVH",
+    "id": "01J3F5PGNQZ1FFD5AMB4WWRMKZ",
     "keyWords": "seal of friendship,1004",
     "name": "Seal of Friendship",
     "moduleId": "effect",
@@ -3976,7 +3976,7 @@
     "description": "Increases effect of all Assist actions."
   },
   {
-    "id": "01J0N1MQ4D4H336BWMMJ9066FW",
+    "id": "01J3F5PGNQC5GNB0J2X8ADYR5P",
     "keyWords": "speed up time,1013",
     "name": "Speed Up Time",
     "moduleId": "effect",
@@ -3984,7 +3984,7 @@
     "description": "Reduces wait time after all actions."
   },
   {
-    "id": "01J0N1MQ4DTT0T8D8A4RS5Q0GM",
+    "id": "01J3F5PGNQ5HWKS3XQ8TQ6KQ9A",
     "keyWords": "strong in a pinch,1030",
     "name": "Strong in a Pinch",
     "moduleId": "effect",
@@ -3992,7 +3992,7 @@
     "description": "Increases critical hit rate, evasion rate, and other values when below 25% HP."
   },
   {
-    "id": "01J0N1MQ4D1RT3GBVEBQSJ9JXT",
+    "id": "01J3F5PGNQXHS6N3BM063PF6TA",
     "keyWords": "power rune,1051",
     "name": "Power Rune",
     "moduleId": "effect",
@@ -4000,7 +4000,7 @@
     "description": "The hidden magic of the Power Rune increases attack power by 15."
   },
   {
-    "id": "01J0N1MQ4DQER1DAZRTR1G84H6",
+    "id": "01J3F5PGNQYCEKRHYRX4BMQKTD",
     "keyWords": "hp regen m,1095",
     "name": "HP Regen M",
     "moduleId": "effect",
@@ -4008,7 +4008,7 @@
     "description": "The target recovers HP on each turn. The effect lasts for 5 turns."
   },
   {
-    "id": "01J0N1MQ4D58F89M9BS6THAYSZ",
+    "id": "01J3F5PGNQMV5SXSWE9ENXGG7B",
     "keyWords": "defense up xs,1117",
     "name": "Defense Up XS",
     "moduleId": "effect",
@@ -4016,7 +4016,7 @@
     "description": "Increases defense by 5."
   },
   {
-    "id": "01J0N1MQ4ESZ51KANBN05YDC25",
+    "id": "01J3F5PGNQS6PRYCXAG4EG9K7V",
     "keyWords": "auto revive l,554",
     "name": "Auto Revive L",
     "moduleId": "effect",
@@ -4024,7 +4024,7 @@
     "description": "Automatically revive on the next turn after being KO'd. HP after revival is fairly high."
   },
   {
-    "id": "01J0N1MQ4E2QYFYE5VFZZKPN58",
+    "id": "01J3F5PGNRTVKRQM0287DF05YX",
     "keyWords": "steal attack l,628",
     "name": "Steal Attack L",
     "moduleId": "effect",
@@ -4032,7 +4032,7 @@
     "description": "Reduces the target's attack by a large amount, and temporarily increases your own by that amount."
   },
   {
-    "id": "01J0N1MQ4EZD833BRZC4D7M0NB",
+    "id": "01J3F5PGNRJDY4DWQRJP36G0PA",
     "keyWords": "speed down s,694",
     "name": "Speed Down S",
     "moduleId": "effect",
@@ -4040,7 +4040,7 @@
     "description": "Slightly reduces the target's speed."
   },
   {
-    "id": "01J0N1MQ4EFYP2PJQTWJV57BAK",
+    "id": "01J3F5PGNR94Z17XD5RD592BPG",
     "keyWords": "inflict blind m,713",
     "name": "Inflict Blind M",
     "moduleId": "effect",
@@ -4048,7 +4048,7 @@
     "description": "Has a moderate chance of Blinding the target. The effect is moderate. Blind reduces attack hit rate and evasion rate."
   },
   {
-    "id": "01J0N1MQ4E9E48YRBSFTCDN0ZY",
+    "id": "01J3F5PGNR8ZC5ZD7189HE7G9X",
     "keyWords": "level down m,732",
     "name": "Level Down M",
     "moduleId": "effect",
@@ -4056,7 +4056,7 @@
     "description": "Reduces the target's level. Reduced level decreases all stats and damage dealt."
   },
   {
-    "id": "01J0N1MQ4E12HNE5DYSCAMV53R",
+    "id": "01J3F5PGNRH00HWCTM38QJ46RA",
     "keyWords": "fits a lot,931",
     "name": "Fits a Lot",
     "moduleId": "effect",
@@ -4064,7 +4064,7 @@
     "description": "Increases item capacity by 20."
   },
   {
-    "id": "01J0N1MQ4FJCM0BW0KATPZC7J0",
+    "id": "01J3F5PGNRQPHXJW8ZGC63HWQW",
     "keyWords": "inject fighting spirit,1001",
     "name": "Inject Fighting Spirit",
     "moduleId": "effect",
@@ -4072,7 +4072,7 @@
     "description": "Increases critical hit rate and critical hit damage bonus a little."
   },
   {
-    "id": "01J0N1MQ5B7RMRE6D8P463581K",
+    "id": "01J3F5PGNS7W7GM79EJC6C48G3",
     "keyWords": "restrain attack l,746",
     "name": "Restrain Attack L",
     "moduleId": "effect",
@@ -4080,7 +4080,7 @@
     "description": "Reduces the rate at which enemies use powerful attacks a lot."
   },
   {
-    "id": "01J0N1MQ5B4FYKQ5341TCR7DAZ",
+    "id": "01J3F5PGNS41E42ZR883CEDD7H",
     "keyWords": "erase presence,868",
     "name": "Erase Presence",
     "moduleId": "effect",
@@ -4088,7 +4088,7 @@
     "description": "Erase your presence, making it impossible for monsters to see you for a short time. Just don't get too close."
   },
   {
-    "id": "01J0N1MQ5B0GWSBZ7BHDEND7N6",
+    "id": "01J3F5PGNS30XC8TNH0J84SSH7",
     "keyWords": "gather more,937",
     "name": "Gather More",
     "moduleId": "effect",
@@ -4096,7 +4096,7 @@
     "description": "Increases number of items gathered each time."
   },
   {
-    "id": "01J0N1MQ5BHMZ1575A5YRCJJ7F",
+    "id": "01J3F5PGNSHNJWM6NXFKN0AZR7",
     "keyWords": "control the future,1026",
     "name": "Control the Future",
     "moduleId": "effect",
@@ -4104,7 +4104,7 @@
     "description": "Increases the chance of higher expected values a lot when attacking."
   },
   {
-    "id": "01J0N1MQ5CJS0XX4107A9HGACP",
+    "id": "01J3F5PGNS2QHJAY99W1R1YF7F",
     "keyWords": "guardian rune,1055",
     "name": "Guardian Rune",
     "moduleId": "effect",
@@ -4112,7 +4112,7 @@
     "description": "The hidden magic of the Guardian Rune increases defense by 25."
   },
   {
-    "id": "01J0N1MQ5CJR60T6S2E9Y82WKX",
+    "id": "01J3F5PGNS9DE8DKXXKM0SWC9V",
     "keyWords": "mp regen s,1098",
     "name": "MP Regen S",
     "moduleId": "effect",
@@ -4120,7 +4120,7 @@
     "description": "MP recovers a small amount on each turn."
   },
   {
-    "id": "01J0N1MQ5CJBX52CGVR5X1KN1Y",
+    "id": "01J3F5PGNSECV3AYHM0J5HAZN3",
     "keyWords": "defense up s,1118",
     "name": "Defense Up S",
     "moduleId": "effect",
@@ -4128,7 +4128,7 @@
     "description": "Increases the target's defense a little. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ5CP3NMP4RM1GC8G3KC",
+    "id": "01J3F5PGNT0M2ME9PCP56KZNM7",
     "keyWords": "critical enhance xl,1146",
     "name": "Critical Enhance XL",
     "moduleId": "effect",
@@ -4136,7 +4136,7 @@
     "description": "Increases critical damage bonus by 15%."
   },
   {
-    "id": "01J0N1MQ5C4M98ZZCW54ZKEY3E",
+    "id": "01J3F5PGNTF3F0CHNBQ8H1YV63",
     "keyWords": "nullify slow,1162",
     "name": "Nullify Slow",
     "moduleId": "effect",
@@ -4144,7 +4144,7 @@
     "description": "Immunity to Slow ailment."
   },
   {
-    "id": "01J0N1MQ5C03NPEFYZ3A589H7G",
+    "id": "01J3F5PGNTYGR90BR50S786NTC",
     "keyWords": "ailment resist xl,1175",
     "name": "Ailment Resist XL",
     "moduleId": "effect",
@@ -4152,7 +4152,7 @@
     "description": "Reduces chance of being affected by ailments."
   },
   {
-    "id": "01J0N1MQ5C8CRNXF0GQHPT5CK2",
+    "id": "01J3F5PGNTFQ5C9AMQZTQWCY03",
     "keyWords": "input time limit 20,1256",
     "name": "Input Time Limit 20",
     "moduleId": "effect",
@@ -4160,7 +4160,7 @@
     "description": ""
   },
   {
-    "id": "01J0N1MQ5C6ANKS5MGZAF2FFVV",
+    "id": "01J3F5PGNTG7GMBD1882X0DBB0",
     "keyWords": "change color green,1285",
     "name": "Change Color Green",
     "moduleId": "effect",
@@ -4168,7 +4168,7 @@
     "description": "Changes the item color to Green."
   },
   {
-    "id": "01J0N1MQ5CRFX2RPGPZH8TJC7C",
+    "id": "01J3F5PGNTH1RY671JCMSFHVCR",
     "keyWords": "ultimate conversion,1404",
     "name": "Ultimate Conversion",
     "moduleId": "effect",
@@ -4176,7 +4176,7 @@
     "description": "Gain ultimate conversion. 20% of damage taken is absorbed into MP."
   },
   {
-    "id": "01J0N1MQ5DTX6JWTHEFPDB28YW",
+    "id": "01J3F5PGNTHER97FB3NDRGR266",
     "keyWords": "ultimate energy,1411",
     "name": "Ultimate Energy",
     "moduleId": "effect",
@@ -4184,7 +4184,7 @@
     "description": "Gain ultimate energy. Increases speed by 50."
   },
   {
-    "id": "01J0N1MQ5DBTVFFTQ00S68Z6PM",
+    "id": "01J3F5PGNTTGCCH3THV8BVJK0W",
     "keyWords": "inject warlike spirit,1002",
     "name": "Inject Warlike Spirit",
     "moduleId": "effect",
@@ -4192,7 +4192,7 @@
     "description": "Increases critical hit rate and critical hit damage bonus."
   },
   {
-    "id": "01J0N1MQ5DF7FJDCV83Y796DZV",
+    "id": "01J3F5PGNT2WGKQEM61D0WQG47",
     "keyWords": "ancient god blessing,1023",
     "name": "Ancient God Blessing",
     "moduleId": "effect",
@@ -4200,7 +4200,7 @@
     "description": "Reduces damage taken by 10%, but increases Break value."
   },
   {
-    "id": "01J0N1MQ5D4E3XHTTK4QCN6EQ1",
+    "id": "01J3F5PGNVVGZQEMAFRWDRW1HP",
     "keyWords": "weapon rune,1057",
     "name": "Weapon Rune",
     "moduleId": "effect",
@@ -4208,7 +4208,7 @@
     "description": "The hidden magic of the Weapon Rune increases base damage."
   },
   {
-    "id": "01J0N1MQ5DE817M5K6JH7JYNY5",
+    "id": "01J3F5PGNV51TE9VH208F9JYF9",
     "keyWords": "max mp up l,1110",
     "name": "Max MP Up L",
     "moduleId": "effect",
@@ -4216,7 +4216,7 @@
     "description": "Increases maximum MP by 25."
   },
   {
-    "id": "01J0N1MQ5DM8FGG3ZYWWDQFT49",
+    "id": "01J3F5PGNVKAKF6RKTKXZ285CH",
     "keyWords": "hit rate up s,1128",
     "name": "Hit Rate Up S",
     "moduleId": "effect",
@@ -4224,7 +4224,7 @@
     "description": "Increases the target's hit rate a little. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ5DAJKB4HSGBJJ1R6SY",
+    "id": "01J3F5PGNVTQK8MZEMF93RVBPP",
     "keyWords": "break enhance l,1194",
     "name": "Break Enhance L",
     "moduleId": "effect",
@@ -4232,7 +4232,7 @@
     "description": "Increases Break value when attacking enemies."
   },
   {
-    "id": "01J0N1MQ5DPN4KF4CA1FRTFDAF",
+    "id": "01J3F5PGNVV139DC46V73EHQJ5",
     "keyWords": "true combined effect,1273",
     "name": "True Combined Effect",
     "moduleId": "effect",
@@ -4240,7 +4240,7 @@
     "description": "The ultimate alchemy cauldron, featuring all effects other than “Time Limit”."
   },
   {
-    "id": "01J0N1MQ5D1678KXX3M736E170",
+    "id": "01J3F5PGNVZFCMMXGF6M5CSABH",
     "keyWords": "(neutralizer) +5,1301",
     "name": "(Neutralizer) +5",
     "moduleId": "effect",
@@ -4248,7 +4248,7 @@
     "description": "Increases (Neutralizer) category value by 5."
   },
   {
-    "id": "01J0N1MQ5E2XWV6ASGTA72G7P7",
+    "id": "01J3F5PGNVDZJ39S8VZERF9T1W",
     "keyWords": "ultimate compensation,1419",
     "name": "Ultimate Compensation",
     "moduleId": "effect",
@@ -4256,7 +4256,7 @@
     "description": "Gain ultimate compensation. Increases skill power by 30%."
   },
   {
-    "id": "01J0N1MQ5E0EBNCTWEKNTEJJNF",
+    "id": "01J3F5PGNV53T3AQ8N9S6TE5TG",
     "keyWords": "critical up l,1140",
     "name": "Critical Up L",
     "moduleId": "effect",
@@ -4264,7 +4264,7 @@
     "description": "Increases critical hit rate by 12%."
   },
   {
-    "id": "01J0N1MQ5EJEDSA02A5HG373H2",
+    "id": "01J3F5PGNWXH5GQ98VHNB95J6X",
     "keyWords": "critical up m,1139",
     "name": "Critical Up M",
     "moduleId": "effect",
@@ -4272,7 +4272,7 @@
     "description": "Increases critical hit rate by 9%."
   },
   {
-    "id": "01J0N1MQ5E2VZA3HV8PVG38NYS",
+    "id": "01J3F5PGNW6JRKRT7TYMAE2MN8",
     "keyWords": "nullify blind,1164",
     "name": "Nullify Blind",
     "moduleId": "effect",
@@ -4280,7 +4280,7 @@
     "description": "Immunity to Blind ailment."
   },
   {
-    "id": "01J0N1MQ5E3KAH6NH69GF9MDFD",
+    "id": "01J3F5PGP7RERRGCVQW8KY8DHK",
     "keyWords": "damage absorb m,1185",
     "name": "Damage Absorb M",
     "moduleId": "effect",
@@ -4288,7 +4288,7 @@
     "description": "Absorbs a portion of damage dealt to the target as HP. The effect is fairly small."
   },
   {
-    "id": "01J0N1MQ5EHSXDEMJXB2YKENRT",
+    "id": "01J3F5PGP7R3FZ2QCS5NJR2ACD",
     "keyWords": "use opportunity l,1201",
     "name": "Use Opportunity L",
     "moduleId": "effect",
@@ -4296,7 +4296,7 @@
     "description": "Increases damage dealt to Broken enemies."
   },
   {
-    "id": "01J0N1MQ5EX7XMK9JA7Y5P70ZQ",
+    "id": "01J3F5PGP7A7DWPYB6AM0BZMZQ",
     "keyWords": "quick to improve,1271",
     "name": "Quick to Improve",
     "moduleId": "effect",
@@ -4304,7 +4304,7 @@
     "description": "Increases alchemy experience points by the ratio of the most common synthesis panel color upon item completion."
   },
   {
-    "id": "01J0N1MQ5ET3PKZ0B23G4CNA0N",
+    "id": "01J3F5PGP7702J7833TXSYQZ8R",
     "keyWords": "ultimate attack,1409",
     "name": "Ultimate Attack",
     "moduleId": "effect",
@@ -4312,7 +4312,7 @@
     "description": "Gain ultimate attack power. Increases attack power by 50."
   },
   {
-    "id": "01J0N1MQ5EFZVAHS0S9VGCJEXE",
+    "id": "01J3F5PGP712P40GTBTNH7NFJ7",
     "keyWords": "ultimate turn-around,1422",
     "name": "Ultimate Turn-Around",
     "moduleId": "effect",
@@ -4320,7 +4320,7 @@
     "description": "Gain ultimate turn-around. Greatly increases stats when fighting powerful enemies."
   },
   {
-    "id": "01J0N1MQ5F0NNKKSWES3N5VR6N",
+    "id": "01J3F5PGP7K003Z1JGPXCJCRJH",
     "keyWords": "connects hearts,947",
     "name": "Connects Hearts",
     "moduleId": "effect",
@@ -4328,7 +4328,7 @@
     "description": "Increases friend points gained when giving presents by a lot."
   },
   {
-    "id": "01J0N1MQ5FAWJ5JXXHEVDSFEC1",
+    "id": "01J3F5PGP7965K2827BT5GXMB8",
     "keyWords": "angel's protection,1006",
     "name": "Angel's Protection",
     "moduleId": "effect",
@@ -4336,7 +4336,7 @@
     "description": "Temporarily reduces physical damage taken by the target. The effect is small."
   },
   {
-    "id": "01J0N1MQ5F0QWNA2PBX0Z3GP5C",
+    "id": "01J3F5PGP8KMRE1DACGV41AHV4",
     "keyWords": "magician blessing,1021",
     "name": "Magician Blessing",
     "moduleId": "effect",
@@ -4344,7 +4344,7 @@
     "description": "Reduces damage taken by 10%, and converts it into MP damage."
   },
   {
-    "id": "01J0N1MQ5FG5YFQG9Q1H0SW2WX",
+    "id": "01J3F5PGP8HG2Z9M2FWS726NPY",
     "keyWords": "power to protection,1042",
     "name": "Power to Protection",
     "moduleId": "effect",
@@ -4352,7 +4352,7 @@
     "description": "Reduces attack by 15%, increasing defense by that amount."
   },
   {
-    "id": "01J0N1MQ5FDEW4NQKQDNQS1N11",
+    "id": "01J3F5PGP8T4WRDEZ7K6G3RC8W",
     "keyWords": "power awakening,1064",
     "name": "Power Awakening",
     "moduleId": "effect",
@@ -4360,7 +4360,7 @@
     "description": "Increases attack, defense, and speed. Increase grows with the wearer's level."
   },
   {
-    "id": "01J0N1MQ5FNXXMND2SGHQZTD08",
+    "id": "01J3F5PGP87G9Y9RDMY7NNYGCE",
     "keyWords": "max hp up xl,1106",
     "name": "Max HP Up XL",
     "moduleId": "effect",
@@ -4368,7 +4368,7 @@
     "description": "Increases maximum HP by 30."
   },
   {
-    "id": "01J0N1MQ5H4BBW530FVWX6QS7F",
+    "id": "01J3F5PGP8H26AH9JE4NV33HZ7",
     "keyWords": "evasion up m,1134",
     "name": "Evasion Up M",
     "moduleId": "effect",
@@ -4376,7 +4376,7 @@
     "description": "Increases the target's evasion rate. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ5JE69N6J1C727YDZHR",
+    "id": "01J3F5PGP8VX8PSGVNY74DSDK5",
     "keyWords": "chain attack up m,562",
     "name": "Chain Attack Up M",
     "moduleId": "effect",
@@ -4384,7 +4384,7 @@
     "description": "Increases the target's chance to activate a chain attack by 50%. Effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ5J6RR3JQYJA5ASM4A7",
+    "id": "01J3F5PGP89Z00EQ73WD6D79RY",
     "keyWords": "remove enhancements,635",
     "name": "Remove Enhancements",
     "moduleId": "effect",
@@ -4392,7 +4392,7 @@
     "description": "Nullifies 1 enhancement effect on the target."
   },
   {
-    "id": "01J0N1MQ5J8P8994C0TDS2HXGF",
+    "id": "01J3F5PGP8MV648355NKK2TPKC",
     "keyWords": "inflict poison m,704",
     "name": "Inflict Poison M",
     "moduleId": "effect",
@@ -4400,7 +4400,7 @@
     "description": "Has a moderate chance of Poisoning the target. The effect is moderate. Poison deals damage every time the target takes a turn."
   },
   {
-    "id": "01J0N1MQ5KRQ3E2QZCQHHSMTZ7",
+    "id": "01J3F5PGP87XVMR5YJ6PSZ8CKW",
     "keyWords": "inflict seal m,722",
     "name": "Inflict Seal M",
     "moduleId": "effect",
@@ -4408,7 +4408,7 @@
     "description": "Has a moderate chance of Sealing the target. Seal renders the target unable to use powerful attacks."
   },
   {
-    "id": "01J0N1MQ5KZ9GYJH7TJS4Y5MA5",
+    "id": "01J3F5PGP8JQQ4SQDHESJGK7TX",
     "keyWords": "pacification l,749",
     "name": "Pacification L",
     "moduleId": "effect",
@@ -4416,7 +4416,7 @@
     "description": "Pacifies the enemy, delaying the activation of powerful attacks."
   },
   {
-    "id": "01J0N1MQ5KFEZRJYB1HD914MMN",
+    "id": "01J3F5PGP8K2KYGHYRY79ZGK0E",
     "keyWords": "gather a little more,936",
     "name": "Gather a Little More",
     "moduleId": "effect",
@@ -4424,7 +4424,7 @@
     "description": "Increases number of items gathered each time a little."
   },
   {
-    "id": "01J0N1MQ5KQPQJGKW3AAWV5CWT",
+    "id": "01J3F5PGP9F5NSB0XN8Q8GW9KV",
     "keyWords": "affect the future,1025",
     "name": "Affect the Future",
     "moduleId": "effect",
@@ -4432,7 +4432,7 @@
     "description": "Increases the chance of higher expected values when attacking."
   },
   {
-    "id": "01J0N1MQ5K0TXXCA8Q39PNZVHD",
+    "id": "01J3F5PGP9KS04K2EQRG9G6CBJ",
     "keyWords": "consume mp xs,802",
     "name": "Consume MP XS",
     "moduleId": "effect",
@@ -4440,7 +4440,7 @@
     "description": "Consumes a slight amount of MP. The effect is weakened when MP is insufficient."
   },
   {
-    "id": "01J0N1MQ5KHW67JD7JBGKX5G2G",
+    "id": "01J3F5PGP9JK1NEX3CF6NFWE2A",
     "keyWords": "lightens body a little,925",
     "name": "Lightens Body a Little",
     "moduleId": "effect",
@@ -4448,7 +4448,7 @@
     "description": "Reduces LP consumed while moving on the World Map by 25%."
   },
   {
-    "id": "01J0N1MQ5MH8J3PMFDK4JQ0BF6",
+    "id": "01J3F5PGP9VPR56G4WCQRAT79D",
     "keyWords": "chain attack mastery,1018",
     "name": "Chain Attack Mastery",
     "moduleId": "effect",
@@ -4456,7 +4456,7 @@
     "description": "Increases chain attack chance by a huge amount."
   },
   {
-    "id": "01J0N1MQ5MZZQXZQ76VW7S6QWK",
+    "id": "01J3F5PGP9PERQY43SXAFEEPWM",
     "keyWords": "resist gravity,1034",
     "name": "Resist Gravity",
     "moduleId": "effect",
@@ -4464,7 +4464,7 @@
     "description": "Reduces turn delaying effects."
   },
   {
-    "id": "01J0N1MQ5MFSQ4S023MTRNM1X6",
+    "id": "01J3F5PGP9E5G1NEADRW6BWRF1",
     "keyWords": "spirit god's power,1063",
     "name": "Spirit God's Power",
     "moduleId": "effect",
@@ -4472,7 +4472,7 @@
     "description": "The power of the spirit god massively increases base damage."
   },
   {
-    "id": "01J0N1MQ5MJET9QABHYWBGSTVT",
+    "id": "01J3F5PGP95HXJ554D5FB0XX9P",
     "keyWords": "max mp up s,1108",
     "name": "Max MP Up S",
     "moduleId": "effect",
@@ -4480,7 +4480,7 @@
     "description": "Increases maximum MP by 15."
   },
   {
-    "id": "01J0N1MQ5M0RA6SNAZKZRW3P7D",
+    "id": "01J3F5PGP960JCWKMKX13XBZ44",
     "keyWords": "speed up xl,1126",
     "name": "Speed Up XL",
     "moduleId": "effect",
@@ -4488,7 +4488,7 @@
     "description": "Increases speed by 25."
   },
   {
-    "id": "01J0N1MQ5MR7CVGJNT5A8A279V",
+    "id": "01J3F5PGP9HKV3KW34SPR5G0BY",
     "keyWords": "item shorten l,1156",
     "name": "Item Shorten L",
     "moduleId": "effect",
@@ -4496,7 +4496,7 @@
     "description": "Reduces wait time after using item by 20%."
   },
   {
-    "id": "01J0N1MQ5MHSJEVHVMH1C5Z681",
+    "id": "01J3F5PGP9XBWBBWTYHW6E23QC",
     "keyWords": "nullify seal,1167",
     "name": "Nullify Seal",
     "moduleId": "effect",
@@ -4504,7 +4504,7 @@
     "description": "Immunity to Seal ailment."
   },
   {
-    "id": "01J0N1MQ5X0AA92QF50RJGD4AV",
+    "id": "01J3F5PGPAQ2DZ9Y51G2RA1W18",
     "keyWords": "ice resistance,1182",
     "name": "Ice Resistance",
     "moduleId": "effect",
@@ -4512,7 +4512,7 @@
     "description": "Gain ice resistance."
   },
   {
-    "id": "01J0N1MQ5XMG3AD35N7YCWDK90",
+    "id": "01J3F5PGPA34RZRBDNTYP0AD14",
     "keyWords": "tuning,1268",
     "name": "Tuning",
     "moduleId": "effect",
@@ -4520,7 +4520,7 @@
     "description": "Obtaining bonuses that are the same color as materials already placed causes those materials to gain the same bonus."
   },
   {
-    "id": "01J0N1MQ5XY38M323AXSENPXM5",
+    "id": "01J3F5PGPA25RZXZC13B9XMZ8V",
     "keyWords": "ultimate destruction,1398",
     "name": "Ultimate Destruction",
     "moduleId": "effect",
@@ -4528,7 +4528,7 @@
     "description": "Gain ultimate destruction. Increases critical hit damage bonus by 30%."
   },
   {
-    "id": "01J0N1MQ5X5BZFCQZZGWN987P5",
+    "id": "01J3F5PGPAV355H6M56KB36GQH",
     "keyWords": "ultimate ice resist,1415",
     "name": "Ultimate Ice Resist",
     "moduleId": "effect",
@@ -4536,7 +4536,7 @@
     "description": "Gain ultimate ice resistance. Gain super ice resistance."
   },
   {
-    "id": "01J0N1MQ5X6BYMAK8T597P4HBQ",
+    "id": "01J3F5PGPARP1TAJNBAKFM3HBP",
     "keyWords": "ultimate stunning force,1428",
     "name": "Ultimate Stunning Force",
     "moduleId": "effect",
@@ -4544,7 +4544,7 @@
     "description": "Gain ultimate stunning force. Greatly increases Break value when attacking."
   },
   {
-    "id": "01J0N1MQ5YE74DZ28G7QBJ9AXZ",
+    "id": "01J3F5PGPAYAEV0ESEATA8W6XK",
     "keyWords": "chain attack secrets,1017",
     "name": "Chain Attack Secrets",
     "moduleId": "effect",
@@ -4552,7 +4552,7 @@
     "description": "Increases chain attack chance by a large amount."
   },
   {
-    "id": "01J0N1MQ5Y3955KH4TDCAZQQ05",
+    "id": "01J3F5PGPAR87S1M0G61HKF5KP",
     "keyWords": "mass conversion spell,1048",
     "name": "Mass Conversion Spell",
     "moduleId": "effect",
@@ -4560,7 +4560,7 @@
     "description": "During battle, 15% of damage taken and MP consumed is absorbed into the other pool."
   },
   {
-    "id": "01J0N1MQ5Y4KTYDP3QG5GCEC6R",
+    "id": "01J3F5PGPAV9E7T0SZDA254F00",
     "keyWords": "hp regen xl,1097",
     "name": "HP Regen XL",
     "moduleId": "effect",
@@ -4568,7 +4568,7 @@
     "description": "The target recovers a huge amount of HP on each turn. The effect lasts for 5 turns."
   },
   {
-    "id": "01J0N1MQ5Y67QSMR5954ZKZFNB",
+    "id": "01J3F5PGPABY1J93W6XRY432HR",
     "keyWords": "attack up l,1115",
     "name": "Attack Up L",
     "moduleId": "effect",
@@ -4576,7 +4576,7 @@
     "description": "Increases the target's attack power by a lot. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ5YQ104R4XRR67Z5WYJ",
+    "id": "01J3F5PGPACFP5RGAP4ANBCYBR",
     "keyWords": "critical enhance l,1145",
     "name": "Critical Enhance L",
     "moduleId": "effect",
@@ -4584,7 +4584,7 @@
     "description": "Increases critical damage bonus by 12%."
   },
   {
-    "id": "01J0N1MQ5YV87BV62KRR1BYT3V",
+    "id": "01J3F5PGPAF8XBXNW1R689HMBV",
     "keyWords": "panel display level 3,1260",
     "name": "Panel Display Level 3",
     "moduleId": "effect",
@@ -4592,7 +4592,7 @@
     "description": ""
   },
   {
-    "id": "01J0N1MQ5YE46YPRFCKDV8QR0E",
+    "id": "01J3F5PGPBQ7QSRVJN6YYWH419",
     "keyWords": "change color white,1287",
     "name": "Change Color White",
     "moduleId": "effect",
@@ -4600,7 +4600,7 @@
     "description": "Changes the item color to White."
   },
   {
-    "id": "01J0N1MQ5YRA15NNXK861HZ2VY",
+    "id": "01J3F5PGPBTMM0PJRPB6ABJ0Q9",
     "keyWords": "ultimate mentality,1407",
     "name": "Ultimate Mentality",
     "moduleId": "effect",
@@ -4608,7 +4608,7 @@
     "description": "Gain ultimate mentality. Increases maximum MP by 100."
   },
   {
-    "id": "01J0N1MQ5Y0RW7N6WFVQDX7625",
+    "id": "01J3F5PGPBB3SN4EMJFZ5RKD2A",
     "keyWords": "ultimate invulnerability,1424",
     "name": "Ultimate Invulnerability",
     "moduleId": "effect",
@@ -4616,7 +4616,7 @@
     "description": "Gain ultimate invulnerability. You have a 35% chance to survive with 1 HP when taking damage that would KO you."
   },
   {
-    "id": "01J0N1MQ5ZWN7DFMYB1GF3QQFH",
+    "id": "01J3F5PGPBV44MVGM8RYYVXGRW",
     "keyWords": "skill enhance s,1147",
     "name": "Skill Enhance S",
     "moduleId": "effect",
@@ -4624,7 +4624,7 @@
     "description": "Increases skill power by 5%."
   },
   {
-    "id": "01J0N1MQ5ZKTCDZPXVY2CQ421Q",
+    "id": "01J3F5PGPB2T4DS4ZEJ5XD13YF",
     "keyWords": "nullify poison,1161",
     "name": "Nullify Poison",
     "moduleId": "effect",
@@ -4632,7 +4632,7 @@
     "description": "Immunity to Poison ailment."
   },
   {
-    "id": "01J0N1MQ5ZT4KPY8GXNPE54MNZ",
+    "id": "01J3F5PGPBPW68DK78EAZTP2C0",
     "keyWords": "ailment resist l,1174",
     "name": "Ailment Resist L",
     "moduleId": "effect",
@@ -4640,7 +4640,7 @@
     "description": "Reduces chance of being affected by ailments by a decent amount."
   },
   {
-    "id": "01J0N1MQ5Z29WZPPHK3RQMJSJ3",
+    "id": "01J3F5PGPBQ9P21E34V7HQV7QK",
     "keyWords": "break resist m,1197",
     "name": "Break Resist M",
     "moduleId": "effect",
@@ -4648,7 +4648,7 @@
     "description": "Increases Break resistance by a decent amount."
   },
   {
-    "id": "01J0N1MQ5ZRAD23D6WVHY9YCF8",
+    "id": "01J3F5PGPB8YKKX9S4PB6FDH28",
     "keyWords": "worn out cauldron,1264",
     "name": "Worn Out Cauldron",
     "moduleId": "effect",
@@ -4656,7 +4656,7 @@
     "description": "The cauldron Sophie inherited from her grandmother. It was used for a long time, so it only has minimal power left."
   },
   {
-    "id": "01J0N1MQ5ZEEJC2ZQ5KCSBJA2D",
+    "id": "01J3F5PGPBGM9XG7E05ZY055ZY",
     "keyWords": "ultimate reversal,1400",
     "name": "Ultimate Reversal",
     "moduleId": "effect",
@@ -4664,7 +4664,7 @@
     "description": "Gain ultimate reversal. 15% of damage taken is converted into MP damage and reduced."
   },
   {
-    "id": "01J0N1MQ5Z9GMWJSDX44RQY7WF",
+    "id": "01J3F5PGPBVZNPR0PY77R7NT0M",
     "keyWords": "ultimate resistance,1417",
     "name": "Ultimate Resistance",
     "moduleId": "effect",
@@ -4672,7 +4672,7 @@
     "description": "Gain ultimate resistance. Gain resistance to all status ailments."
   },
   {
-    "id": "01J0N1MQ60D1KTXZC599W8N6YV",
+    "id": "01J3F5PGPB8AKKKQMC5S49YTVK",
     "keyWords": "ailment resist s,1172",
     "name": "Ailment Resist S",
     "moduleId": "effect",
@@ -4680,7 +4680,7 @@
     "description": "Reduces chance of being affected by ailments by a small amount."
   },
   {
-    "id": "01J0N1MQ60R7EAV7E66SH7G7PS",
+    "id": "01J3F5PGPC5674R1C95JTPP8PY",
     "keyWords": "damage cut l,1190",
     "name": "Damage Cut L",
     "moduleId": "effect",
@@ -4688,7 +4688,7 @@
     "description": "Reduces damage taken by 8%."
   },
   {
-    "id": "01J0N1MQ60C7WDKBXPSPTSQKSY",
+    "id": "01J3F5PGPCQDNNYXZZ3VE9NFGC",
     "keyWords": "panels change each day,1253",
     "name": "Panels Change Each Day",
     "moduleId": "effect",
@@ -4696,7 +4696,7 @@
     "description": "The color of panels in the cauldron changes each day. Cycles red → blue → green → yellow → white → red."
   },
   {
-    "id": "01J0N1MQ60HSQ9WHG1XTZ3M0BX",
+    "id": "01J3F5PGPCF003WRN88XV8A92N",
     "keyWords": "avoid ko l,1179",
     "name": "Avoid KO L",
     "moduleId": "effect",
@@ -4704,7 +4704,7 @@
     "description": "You have a chance to survive with 1 HP when you receive damage that would reduce your HP to 0. Has a moderate chance to work."
   },
   {
-    "id": "01J0N1MQ608YBZFYYRGTM7VST5",
+    "id": "01J3F5PGPCDMJPWX3BERR03M17",
     "keyWords": "break resist l,1198",
     "name": "Break Resist L",
     "moduleId": "effect",
@@ -4712,7 +4712,7 @@
     "description": "Increases Break resistance."
   },
   {
-    "id": "01J0N1MQ60R8F9P54XHBXH7GJS",
+    "id": "01J3F5PGPC2H37N9P0T9N9HJRJ",
     "keyWords": "panel 4x4,1261",
     "name": "Panel 4x4",
     "moduleId": "effect",
@@ -4720,7 +4720,7 @@
     "description": "The panel size is 4x4."
   },
   {
-    "id": "01J0N1MQ60CMWQ635YG1TMJYMX",
+    "id": "01J3F5PGPCFK76QA2CQXXP2T6R",
     "keyWords": "ultimate regeneration,1402",
     "name": "Ultimate Regeneration",
     "moduleId": "effect",
@@ -4728,7 +4728,7 @@
     "description": "Gain ultimate regeneration. Recover 50 HP on every turn."
   },
   {
-    "id": "01J0N1MQ61DF58SVJRZF82HJ6P",
+    "id": "01J3F5PGPCYEDY2PR53WXV1NV7",
     "keyWords": "ultimate mitigation,1426",
     "name": "Ultimate Mitigation",
     "moduleId": "effect",
@@ -4736,7 +4736,7 @@
     "description": "Gain ultimate mitigation. Reduces all damage taken by 10%."
   },
   {
-    "id": "01J0N1MQ614519KPNF0XQ6DESV",
+    "id": "01J3F5PGPC9SSFWS6QVK5STPYM",
     "keyWords": "fighting spirit active,998",
     "name": "Fighting Spirit Active",
     "moduleId": "effect",
@@ -4744,7 +4744,7 @@
     "description": "During battle, stats increase with each turn. There is a limit to this increase."
   },
   {
-    "id": "01J0N1MQ61Y1CM67XSHJ5R3R4R",
+    "id": "01J3F5PGPC6X0Z256JV0QA8CQ3",
     "keyWords": "scholar's wisdom,1019",
     "name": "Scholar's Wisdom",
     "moduleId": "effect",
@@ -4752,7 +4752,7 @@
     "description": "Swaps 50% of maximum HP and MP values with each other."
   },
   {
-    "id": "01J0N1MQ61G86SWTQ9MK39PMX9",
+    "id": "01J3F5PGPC6E2QYCKQSE0VCZ25",
     "keyWords": "defense rune,1052",
     "name": "Defense Rune",
     "moduleId": "effect",
@@ -4760,7 +4760,7 @@
     "description": "The hidden magic of the Defense Rune increases defense by 15."
   },
   {
-    "id": "01J0N1MQ61MDYY2ACXKBC9W0X7",
+    "id": "01J3F5PGPC0Q43AN83C6XMCVKF",
     "keyWords": "max hp up xs,1102",
     "name": "Max HP Up XS",
     "moduleId": "effect",
@@ -4768,7 +4768,7 @@
     "description": "Increases maximum HP by 10."
   },
   {
-    "id": "01J0N1MQ61MZQA6WN3H7KS1YBS",
+    "id": "01J3F5PGPDF1EHA6E0YF9BHTGW",
     "keyWords": "defense up l,1120",
     "name": "Defense Up L",
     "moduleId": "effect",
@@ -4776,7 +4776,7 @@
     "description": "Increases the target's defense by a lot. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ61ABT5DJS1QG3RYH7T",
+    "id": "01J3F5PGPDNPJ09WZ6VAW1Y46V",
     "keyWords": "skill enhance l,1149",
     "name": "Skill Enhance L",
     "moduleId": "effect",
@@ -4784,7 +4784,7 @@
     "description": "Increases skill power by 10%."
   },
   {
-    "id": "01J0N1MQ622XJ3Q1MACYJ4TSX2",
+    "id": "01J3F5PGPDF0WH11PAHGQ50C6R",
     "keyWords": "no failures,1265",
     "name": "No Failures",
     "moduleId": "effect",
@@ -4792,7 +4792,7 @@
     "description": "Performing Synthesis at quality value 0 won't result in failure, and produce the desired item."
   },
   {
-    "id": "01J0N1MQ6244JXVFXCP6KF33GW",
+    "id": "01J3F5PGPD4WB9ZD6TZS7KMHFG",
     "keyWords": "(wood) +5,1300",
     "name": "(Wood) +5",
     "moduleId": "effect",
@@ -4800,7 +4800,7 @@
     "description": "Increases (Wood) category value by 5."
   },
   {
-    "id": "01J0N1MQ62TH1ZE7DDNGVDEH2Q",
+    "id": "01J3F5PGPD7NJBT530PSBRV1AQ",
     "keyWords": "ultimate accuracy,1412",
     "name": "Ultimate Accuracy",
     "moduleId": "effect",
@@ -4808,7 +4808,7 @@
     "description": "Gain ultimate accuracy. Increases hit rate by 50%."
   },
   {
-    "id": "01J0N1MQ620W5NVXQ1D910PRAS",
+    "id": "01J3F5PGPDBC3H2JPPQSM08CHZ",
     "keyWords": "hit rate up m,1129",
     "name": "Hit Rate Up M",
     "moduleId": "effect",
@@ -4816,7 +4816,7 @@
     "description": "Increases the target's hit rate. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ622765JDGAZZW0F39X",
+    "id": "01J3F5PGPDXW5NX73NM4WGWS6G",
     "keyWords": "skill enhance m,1148",
     "name": "Skill Enhance M",
     "moduleId": "effect",
@@ -4824,7 +4824,7 @@
     "description": "Increases skill power by 7%."
   },
   {
-    "id": "01J0N1MQ62WJDVHM233E8KZ2V8",
+    "id": "01J3F5PGPD6F1SNBKDBS2R84R7",
     "keyWords": "nullify curse,1163",
     "name": "Nullify Curse",
     "moduleId": "effect",
@@ -4832,7 +4832,7 @@
     "description": "Immunity to Curse ailment."
   },
   {
-    "id": "01J0N1MQ620SQSTWKJ3J9DDTVT",
+    "id": "01J3F5PGPD2J37EZF14ZWRXRKX",
     "keyWords": "fire resistance,1181",
     "name": "Fire Resistance",
     "moduleId": "effect",
@@ -4840,7 +4840,7 @@
     "description": "Gain fire resistance."
   },
   {
-    "id": "01J0N1MQ62AHREX45YNKFJAB3S",
+    "id": "01J3F5PGPD2QQW17DK5GACHFZ9",
     "keyWords": "use opportunity s,1199",
     "name": "Use Opportunity S",
     "moduleId": "effect",
@@ -4848,7 +4848,7 @@
     "description": "Increases damage dealt to Broken enemies by a slight amount."
   },
   {
-    "id": "01J0N1MQ6295V08V49GFTTEESH",
+    "id": "01J3F5PGPDFQ7W1N5WN4DSJYMX",
     "keyWords": "synergy,1267",
     "name": "Synergy",
     "moduleId": "effect",
@@ -4856,7 +4856,7 @@
     "description": "Obtaining bonuses that are the same color as the liquid in the cauldron increases effect by 50%."
   },
   {
-    "id": "01J0N1MQ62C03J6DV7ZA05BSX4",
+    "id": "01J3F5PGPEGQPFX5QR1T30B5DH",
     "keyWords": "ultimate evolution,1405",
     "name": "Ultimate Evolution",
     "moduleId": "effect",
@@ -4864,7 +4864,7 @@
     "description": "Gain ultimate evolution. Greatly enhances stats of the wearer depending on level."
   },
   {
-    "id": "01J0N1MQ63445V9F7PXWQNVMT8",
+    "id": "01J3F5PGPERNZ4AST9BNZPJSZZ",
     "keyWords": "ultimate support,1418",
     "name": "Ultimate Support",
     "moduleId": "effect",
@@ -4872,7 +4872,7 @@
     "description": "Gain ultimate support. Enhances Assist action effects by 15%."
   },
   {
-    "id": "01J0N1MQ63F4XTDH2F6KHYWY5S",
+    "id": "01J3F5PGPEB97TBCAQA892T1N6",
     "keyWords": "avoid ko s,1177",
     "name": "Avoid KO S",
     "moduleId": "effect",
@@ -4880,7 +4880,7 @@
     "description": "You have a chance to survive with 1 HP when you receive damage that would reduce your HP to 0. Has a low chance to work."
   },
   {
-    "id": "01J0N1MQ638VRQQNS40DYB66WA",
+    "id": "01J3F5PGPE7BV6Q0KSST6TZ93E",
     "keyWords": "break enhance xl,1195",
     "name": "Break Enhance XL",
     "moduleId": "effect",
@@ -4888,7 +4888,7 @@
     "description": "Increases Break value when attacking enemies by a large amount."
   },
   {
-    "id": "01J0N1MQ63NH0A833Q0ZST5NBB",
+    "id": "01J3F5PGPE4FH2TQK6X191TK1M",
     "keyWords": "bonus display level 2,1258",
     "name": "Bonus Display Level 2",
     "moduleId": "effect",
@@ -4896,7 +4896,7 @@
     "description": "The Synthesis panel display is level 2. Higher display level increases bonus placement at the start of Synthesis."
   },
   {
-    "id": "01J0N1MQ63HVVB254Z0AKNH7HJ",
+    "id": "01J3F5PGPEVM84T525TC90A5X3",
     "keyWords": "add (fuel),1289",
     "name": "Add (Fuel)",
     "moduleId": "effect",
@@ -4904,7 +4904,7 @@
     "description": "Adds 10 category value to (Fuel)."
   },
   {
-    "id": "01J0N1MQ631EXNWM7VXNCECFFX",
+    "id": "01J3F5PGPE4R7TXCHD58PECMSR",
     "keyWords": "ultimate fire resist,1414",
     "name": "Ultimate Fire Resist",
     "moduleId": "effect",
@@ -4912,7 +4912,7 @@
     "description": "Gain ultimate fire resistance. Gain super fire resistance."
   },
   {
-    "id": "01J0N1MQ63CPC36XGWN6RZ1N78",
+    "id": "01J3F5PGPE1GX7411N3DX2KD1D",
     "keyWords": "time limit,1269",
     "name": "Time Limit",
     "moduleId": "effect",
@@ -4920,7 +4920,7 @@
     "description": "60 second time limit. Exceeding this time will result in failure. Countdown begins after selecting materials and you cannot reselect the cauldron"
   },
   {
-    "id": "01J0N1MQ63ZY0ZH5H8FMV79MV4",
+    "id": "01J3F5PGPEYR5KNYS0370TKG0J",
     "keyWords": "ultimate defense,1410",
     "name": "Ultimate Defense",
     "moduleId": "effect",
@@ -4928,7 +4928,7 @@
     "description": "Gain ultimate defense. Increases defense by 50."
   },
   {
-    "id": "01J0N1MQ63BJM4RKCP10XHYQM4",
+    "id": "01J3F5PGPE5647AT79ZMQP5F0C",
     "keyWords": "ultimate opposition,1429",
     "name": "Ultimate Opposition",
     "moduleId": "effect",
@@ -4936,7 +4936,7 @@
     "description": "Gain ultimate opposition. Increases damage dealt and reduces damage taken when fighting powerful enemies."
   },
   {
-    "id": "01J0N1MQ64R0F4ARRTW3NW22AP",
+    "id": "01J3F5PGPF9X7YB7YZ29YJWGBC",
     "keyWords": "draw attention,1010",
     "name": "Draw Attention",
     "moduleId": "effect",
@@ -4944,7 +4944,7 @@
     "description": "Become a little more likely to be targeted during battle."
   },
   {
-    "id": "01J0N1MQ64VCNQGTRQVNTAMAN8",
+    "id": "01J3F5PGPF3GCKPW55BHYVBYFK",
     "keyWords": "samsara awakening,1033",
     "name": "Samsara Awakening",
     "moduleId": "effect",
@@ -4952,7 +4952,7 @@
     "description": "Automatically revive on turn when KO'd in battle. HP after revival is about half."
   },
   {
-    "id": "01J0N1MQ644RK0G0DD8BBVYRGZ",
+    "id": "01J3F5PGPFCPE0HC6CEZK1P7JE",
     "keyWords": "hero's ambition,1068",
     "name": "Hero's Ambition",
     "moduleId": "effect",
@@ -4960,7 +4960,7 @@
     "description": "Gain the heroic soul, revealing true power when fighting powerful foes."
   },
   {
-    "id": "01J0N1MQ64RJFCHRT5QDH6DMF0",
+    "id": "01J3F5PGPFPBMR3Z21WR5QEV12",
     "keyWords": "attack up s,1113",
     "name": "Attack Up S",
     "moduleId": "effect",
@@ -4968,7 +4968,7 @@
     "description": "Increases the target's attack power a little. The effect lasts 5 turns."
   },
   {
-    "id": "01J0N1MQ6495BGZ0MYGS8F5C9E",
+    "id": "01J3F5PGPF2HGGEFZQ961YN5DF",
     "keyWords": "critical enhance xs,1142",
     "name": "Critical Enhance XS",
     "moduleId": "effect",
@@ -4976,7 +4976,7 @@
     "description": "Increases critical damage bonus by 3%."
   },
   {
-    "id": "01J0N1MQ646V1RZBTCWC9V3N0X",
+    "id": "01J3F5PGPFRV9TAMM7JHXDDYSE",
     "keyWords": "plachta's cauldron,1254",
     "name": "Plachta's Cauldron",
     "moduleId": "effect",
@@ -4984,7 +4984,7 @@
     "description": ""
   },
   {
-    "id": "01J0N1MQ647D9AJ4R4CRP92A8D",
+    "id": "01J3F5PGPF72BPQS8WJP7B5WYC",
     "keyWords": "change color red,1283",
     "name": "Change Color Red",
     "moduleId": "effect",
@@ -4992,7 +4992,7 @@
     "description": "Changes the item color to Red."
   },
   {
-    "id": "01J0N1MQ64D8E1NGJQ41PV2839",
+    "id": "01J3F5PGPF079N69B1W3PVDG0S",
     "keyWords": "ultimate criticality,1403",
     "name": "Ultimate Criticality",
     "moduleId": "effect",
@@ -5000,7 +5000,7 @@
     "description": "Gain ultimate criticality. Increases critical hit rate by 50%."
   },
   {
-    "id": "01J0N1MQ64CYBPQ8DAQRZB54SH",
+    "id": "01J3F5PGPFWQR4HX5MDWP0Q0QF",
     "keyWords": "ultimate explosive force,1423",
     "name": "Ultimate Explosive Force",
     "moduleId": "effect",
@@ -5008,7 +5008,7 @@
     "description": "Gain ultimate explosive force. Increases damage bonus by 15% during Burst."
   },
   {
-    "id": "01J0N1MQ65ZJXGDEZZ3JJ34TYD",
+    "id": "01J3F5PGPFKRPYXD7WWFDZNGQX",
     "keyWords": "critical up xl,1141",
     "name": "Critical Up XL",
     "moduleId": "effect",
@@ -5016,7 +5016,7 @@
     "description": "Increases critical hit rate by 15%."
   },
   {
-    "id": "01J0N1MQ65APQVZ2W06T8EMW9D",
+    "id": "01J3F5PGPF05YRBYECA5P62C67",
     "keyWords": "skill enhance xl,1150",
     "name": "Skill Enhance XL",
     "moduleId": "effect",
@@ -5024,7 +5024,7 @@
     "description": "Increases skill power by 15%."
   },
   {
-    "id": "01J0N1MQ65ABFT3BWJDJ14YP53",
+    "id": "01J3F5PGPG2X82VJQ4DMM6911Q",
     "keyWords": "nullify one hit ko,1169",
     "name": "Nullify One Hit KO",
     "moduleId": "effect",
@@ -5032,7 +5032,7 @@
     "description": "Immunity to One Hit KO."
   },
   {
-    "id": "01J0N1MQ65B3H5JHGE9AJPD377",
+    "id": "01J3F5PGPGHJZQJ1B03KA9MSD4",
     "keyWords": "damage cut m,1189",
     "name": "Damage Cut M",
     "moduleId": "effect",
@@ -5040,7 +5040,7 @@
     "description": "Reduces damage taken by 6%."
   },
   {
-    "id": "01J0N1MQ65JXDKSZ428GC6MMWT",
+    "id": "01J3F5PGPGJGQ6NMQK2GEGDZ9A",
     "keyWords": "bonus display level 1,1257",
     "name": "Bonus Display Level 1",
     "moduleId": "effect",
@@ -5048,7 +5048,7 @@
     "description": "The Synthesis panel display is level 1. Higher display level increases bonus placement at the start of Synthesis."
   },
   {
-    "id": "01J0N1MQ65SSY2M45KKHRETTGR",
+    "id": "01J3F5PGPGERZWY3P6DBSRMQ3G",
     "keyWords": "change color yellow,1286",
     "name": "Change Color Yellow",
     "moduleId": "effect",
@@ -5056,7 +5056,7 @@
     "description": "Changes the item color to Yellow."
   },
   {
-    "id": "01J0N1MQ65QFFHP8M39VZPJDAT",
+    "id": "01J3F5PGPGDTDQ9ZPAC02YNS13",
     "keyWords": "ultimate evasion,1413",
     "name": "Ultimate Evasion",
     "moduleId": "effect",
@@ -5064,7 +5064,7 @@
     "description": "Gain ultimate evasion. Increases evasion rate by 15%."
   },
   {
-    "id": "01J0N1MQ66J11SQED33AAERPAH",
+    "id": "01J3F5PGPGZXK75HA96SH5R6T2",
     "keyWords": "ultimate zeal,1427",
     "name": "Ultimate Zeal",
     "moduleId": "effect",
@@ -5072,7 +5072,7 @@
     "description": "Gain ultimate zeal. Increases Burst Gauge refill rate by 10% when attacking."
   },
   {
-    "id": "01J0N1MQ66X4JF9HKASHKW21HT",
+    "id": "01J3F5PGPG13RV5A29WWYZKMCK",
     "keyWords": "damage absorb l,1186",
     "name": "Damage Absorb L",
     "moduleId": "effect",
@@ -5080,7 +5080,7 @@
     "description": "Absorbs a portion of damage dealt to the target as HP. The effect is decent."
   },
   {
-    "id": "01J0N1MQ66EDHTZHVZGHAA8KR6",
+    "id": "01J3F5PGPGHCJZVDMAGSMWWBBS",
     "keyWords": "use opportunity xl,1202",
     "name": "Use Opportunity XL",
     "moduleId": "effect",
@@ -5088,7 +5088,7 @@
     "description": "Increases damage dealt to Broken enemies by a large amount."
   },
   {
-    "id": "01J0N1MQ66W60Q5TEYDMWKZWYM",
+    "id": "01J3F5PGPGCXM3VC5E1SQMC5A5",
     "keyWords": "for practice,1266",
     "name": "For Practice",
     "moduleId": "effect",
@@ -5096,7 +5096,7 @@
     "description": "A practice cauldron for alchemists in training. Since it's for practice, it only has basic functions."
   },
   {
-    "id": "01J0N1MQ66AMCWR66V543G2RF5",
+    "id": "01J3F5PGPG31XGJFF6NPAYW10K",
     "keyWords": "ultimate vitality,1406",
     "name": "Ultimate Vitality",
     "moduleId": "effect",
@@ -5104,7 +5104,7 @@
     "description": "Gain ultimate vitality. Increases maximum HP by 100."
   },
   {
-    "id": "01J0N1MQ66QGQSKAYNBSG25X0W",
+    "id": "01J3F5PGPG1DX5894JG228VK9P",
     "keyWords": "add (medicine mat),1290",
     "name": "Add (Medicine Mat)",
     "moduleId": "effect",

@@ -1,5 +1,5 @@
 import { env } from '@root/utils/common/env';
-if (env.NEXT_PUBLIC_NODE_ENV !== 'script') import('server-only');
+if (env.NEXT_PUBLIC_NODE_ENV !== 'script') void import('server-only');
 
 import { neon } from '@neondatabase/serverless';
 import * as schema from '@root/server/postgresql/schema';

@@ -4,7 +4,7 @@ import '@total-typescript/ts-reset';
 
 import ScrollWrapper from '@components/layout/dynamic/ScrollWrapper';
 import ThemeWrapper from '@components/layout/dynamic/ThemeWrapper';
-import { KEY_BINDING_DICTIONARY } from '@root/constants/common';
+import { APP_NAME, KEY_BINDING_DICTIONARY } from '@root/constants/common';
 import { fontAtelier, fontComicSansMS } from '@root/fonts';
 import type { AppleMediaConfig } from '@root/types/common';
 import type { ChildrenProps } from '@root/types/common/props';
@@ -188,19 +188,19 @@ export const metadata: Metadata = {
 	metadataBase: new URL(getBaseUrl(true)),
 	other: {
 		google: 'notranslate',
-		'og:site_name': env.NEXT_PUBLIC_APP_NAME,
+		'og:site_name': APP_NAME,
 		'og:description': env.NEXT_PUBLIC_APP_DESCRIPTION,
 		'og:image': `${getBaseUrl()}/api/og`,
-		'og:title': `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
+		'og:title': `${APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
 		'og:url': getBaseUrl(true)
 	},
 	robots: 'all',
-	title: `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
+	title: `${APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
 	twitter: {
 		card: 'summary_large_image',
 		description: env.NEXT_PUBLIC_APP_DESCRIPTION,
 		images: `${getBaseUrl()}/api/og`,
-		title: `${env.NEXT_PUBLIC_APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`
+		title: `${APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`
 	}
 };
 

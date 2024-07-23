@@ -1,4 +1,4 @@
-import { MAXIMUM_BOOKMARK_LENGTH } from '@root/constants/common';
+import { APP_DB_PREFIX, MAXIMUM_BOOKMARK_LENGTH } from '@root/constants/common';
 import type { ImprovedOmit } from '@root/types/common';
 import type { GithubUserInfo, SearchQuery } from '@root/types/common/zod';
 import type { ModuleIdEnum, RelatedCategoryEnum } from '@root/types/common/zod/generic';
@@ -9,7 +9,6 @@ import {
 	genericRelatedCategoryEnumSchema,
 	genericRumorTypeEnumSchema
 } from '@root/types/common/zod/generic';
-import { env } from '@root/utils/common/env';
 import type { InferSelectModel } from 'drizzle-orm';
 import { jsonb, pgTableCreator, smallint, text, timestamp, varchar } from 'drizzle-orm/pg-core';
 import { ulid } from 'ulid';
@@ -38,7 +37,7 @@ export type HyperLinkMap = {
 };
 //#endregion
 
-export const pgTable = pgTableCreator(name => `${env.NEXT_PUBLIC_APP_DB_PREFIX}_${name}`);
+export const pgTable = pgTableCreator(name => `${APP_DB_PREFIX}_${name}`);
 
 //#region <Tables Schema>
 

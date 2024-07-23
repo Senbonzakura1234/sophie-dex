@@ -1,3 +1,4 @@
+import { APP_NAME } from '@root/constants/common';
 import type { CommonObject } from '@root/types/common';
 import type { OgQuery } from '@root/types/common/zod';
 import { ogQuerySchema } from '@root/types/common/zod';
@@ -23,7 +24,7 @@ const getFontData = async (): Promise<ImageResponseOptions['fonts']> => {
 };
 
 const defaultOgQuery: OgQuery = {
-	alt: env.NEXT_PUBLIC_APP_NAME,
+	alt: APP_NAME,
 	description: getBaseUrl(true),
 	title: env.NEXT_PUBLIC_APP_DESCRIPTION
 };
