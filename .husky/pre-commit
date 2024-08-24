@@ -1,2 +1,4 @@
 pnpm generate-README
+pnpm lint
+pnpm types
 git add .

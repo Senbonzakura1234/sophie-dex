@@ -314,10 +314,11 @@ export const getProfile = async (session: NonNullable<SessionResult['session']>)
 	return { isSuccess: true, result: data.githubProfile, error: null };
 };
 
-const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: string) =>
-	await getBookmarksQueriesMap[moduleId]
-		.execute({ username })
-		.then<Array<string>>(res => objectValues(res || {})[0] || []);
+const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: string) => {
+	const res = (await getBookmarksQueriesMap[moduleId].execute({ username })) as Record<string, Array<string>>;
+
+	return objectValues(res || {})[0] || [];
+};
 
 export const getModuleBookmarks = async (
 	{ moduleId }: ModuleIdQuery,
