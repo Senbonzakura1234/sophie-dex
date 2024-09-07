@@ -63,5 +63,5 @@ export const env = createEnv({
 		AUTH_SECRET: process.env.AUTH_SECRET,
 		AUTH_URL: process.env.AUTH_URL
 	},
-	skipValidation: !!process.env.SKIP_ENV_VALIDATION
+	skipValidation: !!process.env.SKIP_ENV_VALIDATION || nodeEnvEnumSchema.parse(process.env.NODE_ENV) === 'script'
 });
