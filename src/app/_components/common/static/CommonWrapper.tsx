@@ -1,9 +1,9 @@
 import type { ChildrenProps, ClassNamesProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
 
-type CommonWrapperProps = ChildrenProps & ClassNamesProps;
+type Props = Readonly<ChildrenProps & ClassNamesProps>;
 
-export default function CommonWrapper({ classNames, children }: CommonWrapperProps) {
+export default function CommonWrapper({ classNames, children }: Props) {
 	return (
 		<article className={cn('card relative p-1.5', classNames?.wrapper)}>
 			<div className='absolute inset-y-0 left-0 w-1/3 rounded-[inherit] bg-gradient-to-br from-accent to-primary shadow-lg shadow-primary' />

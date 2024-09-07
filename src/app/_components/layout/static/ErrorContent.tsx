@@ -1,11 +1,11 @@
 import RefreshButton from '@components/common/dynamic/RefeshButton';
 import SignInRedirect from '@components/common/dynamic/SignInRedirect';
 import { errorMap } from '@root/constants/common';
-import type { APIError } from '@root/types/common';
+import type { APIError, ImprovePick } from '@root/types/common';
 import { cn } from '@root/utils/common';
 import Link from 'next/link';
 
-export type ErrorContentProps = Partial<Pick<APIError, 'code'>>;
+export type ErrorContentProps = Readonly<Partial<ImprovePick<APIError, 'code'>>>;
 
 export default function ErrorContent({ code = 'INTERNAL_SERVER_ERROR' }: ErrorContentProps) {
 	const { message, status } = errorMap[code];

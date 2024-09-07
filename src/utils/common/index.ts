@@ -29,7 +29,7 @@ export function capitalize<const TInput extends string>(input?: TInput | null): 
 	) as Capitalize<TInput>;
 }
 
-export function createArray<TFill>(len = 0, fill: TFill) {
+export function createArray<TFill>(fill: TFill, len = 0) {
 	return Array(len).fill(fill) as Array<TFill>;
 }
 
@@ -60,7 +60,7 @@ export function objectValues<const Obj extends CommonObject>(obj: Obj): Array<Va
 }
 
 export function sleep(milliseconds = 1000) {
-	return new Promise(resolve => setTimeout(resolve, milliseconds));
+	return new Promise<void>(resolve => setTimeout(resolve, milliseconds));
 }
 
 export function writeLog({ args, type = 'log' }: { args: Array<unknown>; type?: 'log' | 'warn' | 'error' }) {
@@ -128,7 +128,7 @@ export function highlightSearchedText(input: string, search: string | undefined,
 
 	return arr
 		.map(s =>
-			s.match(new RegExp(`(${search})`, 'ig'))
+			RegExp(`(${search})`, 'ig').exec(s)
 				? `<span class='bg-base-content text-base-100 ${noPadding ? '' : 'px-1'}'>${s}</span>`
 				: s
 		)

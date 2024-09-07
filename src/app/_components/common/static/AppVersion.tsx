@@ -2,9 +2,7 @@ import type { ClassNameProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
 import { getVersion } from '@root/utils/server/fetch';
 
-type Props = ClassNameProps;
-
-export default async function AppVersion({ className }: Props) {
+export default async function AppVersion({ className }: Readonly<ClassNameProps>) {
 	const { result } = await getVersion();
 
 	return (

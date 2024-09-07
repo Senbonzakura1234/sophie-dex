@@ -1,6 +1,8 @@
 declare module 'server-only';
 
 declare module 'mdx-to-md' {
+	// import type { ImprovePick } from './common';
+
 	async function mdxToMd<
 		Frontmatter extends {
 			[key: string]: unknown;

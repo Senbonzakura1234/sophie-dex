@@ -1,8 +1,8 @@
 import { highlightSearchedText } from '@root/utils/common';
 
-type LocationProps = { location: string; search: string | undefined };
+type Props = Readonly<{ location: string; search: string | undefined }>;
 
-export default function Location({ location, search }: LocationProps) {
+export default function Location({ location, search }: Props) {
 	return (
 		<div className='flex max-w-[90%] gap-2'>
 			<div>Location: </div>

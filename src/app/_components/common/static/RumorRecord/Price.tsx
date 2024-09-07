@@ -1,8 +1,8 @@
 import { highlightSearchedText } from '@root/utils/common';
 
-type PriceProps = { price: number; search: string | undefined };
+type Props = Readonly<{ price: number; search: string | undefined }>;
 
-export default function Price({ price, search }: PriceProps) {
+export default function Price({ price, search }: Props) {
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
 			<div>Price: </div>

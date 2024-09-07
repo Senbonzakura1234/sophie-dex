@@ -6,9 +6,9 @@ import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { CategoryEnum } from '@root/types/common/zod/generic';
 import { cn, convertCode } from '@root/utils/common';
 
-type CategoriesProps = { categories: Array<CategoryEnum> };
+type Props = Readonly<{ categories: Array<CategoryEnum> }>;
 
-function Categories({ categories }: CategoriesProps) {
+function Categories({ categories }: Props) {
 	const { searchQuery } = useSearchQuery();
 
 	return (

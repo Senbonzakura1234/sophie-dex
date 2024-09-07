@@ -8,7 +8,7 @@ import { capitalize, cn, tryCatchHandler } from '@root/utils/common';
 import { useSession } from 'next-auth/react';
 import { BookmarkBtnIcon, BookmarkBtnText } from './BookmarkBtnInner';
 
-type Props = { id: string; name: string; moduleId: NonNullable<ReturnType<typeof useModuleId>['moduleId']> };
+type Props = Readonly<{ id: string; name: string; moduleId: NonNullable<ReturnType<typeof useModuleId>['moduleId']> }>;
 
 export default function BookmarkBtn({ id, name, moduleId }: Props) {
 	const {
@@ -77,7 +77,6 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 				})}
 				onClick={handleBookmark}
 				disabled={isDisabled}
-				role='button'
 			>
 				<BookmarkBtnIcon
 					isLoading={isLoading}

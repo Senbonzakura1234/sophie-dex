@@ -3,19 +3,19 @@ import { ListboxOption } from '@headlessui/react';
 import type { SelectOptionItem } from '@root/types/common';
 import { cn, convertCode } from '@root/utils/common';
 
-type ListboxOptionProps<V extends string | number> = {
+type Props<V extends string | number> = Readonly<{
 	isHideLabel?: boolean;
 	isSelected: boolean;
 	optionValue: SelectOptionItem<V>;
 	useCustomIcon?: boolean;
-};
+}>;
 
 export default function CustomListboxOption<V extends string | number>({
 	isSelected,
 	isHideLabel,
 	optionValue,
 	useCustomIcon
-}: ListboxOptionProps<V>) {
+}: Props<V>) {
 	return (
 		<ListboxOption<'li', SelectOptionItem<V>>
 			as='li'

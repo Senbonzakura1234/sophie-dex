@@ -3,8 +3,9 @@ if (env.NEXT_PUBLIC_NODE_ENV !== 'script') void import('server-only');
 
 import { errorMap } from '@root/constants/common';
 import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/postgresql/schema';
-import type { APIResult, CommonObject, PageProps, PreparedPGQuery } from '@root/types/common';
+import type { APIResult, CommonObject, PreparedPGQuery } from '@root/types/common';
 import { APIError } from '@root/types/common';
+import type { PageProps } from '@root/types/common/props';
 import type { IdQuery, OgQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
 import {
@@ -21,7 +22,7 @@ import type { Metadata, ResolvingMetadata } from 'next';
 export async function generateGenericMetadata(
 	parentPromise: ResolvingMetadata,
 	extraMeta: Metadata,
-	searchParams?: PageProps['searchParams']
+	searchParams?: Readonly<PageProps>['searchParams']
 ): Promise<Metadata> {
 	const parentRes = await tryCatchHandler(parentPromise, 'generateGenericMetadata.getParentMeta');
 

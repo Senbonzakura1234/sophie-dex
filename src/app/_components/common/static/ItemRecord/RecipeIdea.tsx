@@ -4,12 +4,9 @@ import type { ClassNameProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
 import { Fragment } from 'react';
 
-type RecipeIdeaProps = {
-	recipeIdea: HyperLinkMap;
-	search: string | undefined;
-} & ClassNameProps;
+type Props = Readonly<{ recipeIdea: HyperLinkMap; search: string | undefined } & ClassNameProps>;
 
-export default function RecipeIdea({ recipeIdea: { contentText, contentData }, className, search }: RecipeIdeaProps) {
+export default function RecipeIdea({ recipeIdea: { contentText, contentData }, className, search }: Props) {
 	return (
 		<div className={cn('max-w-[90%]', className)}>
 			<span>Recipe Idea:&nbsp;&nbsp;</span>

@@ -8,9 +8,7 @@ import DefaultRefresh from './DefaultRefresh';
 import DetailRefresh from './DetailRefresh';
 import ListRefresh from './ListRefresh';
 
-type Props = {
-	type?: 'DEFAULT' | 'DETAIL' | 'LIST';
-};
+type Props = Readonly<{ type?: 'DEFAULT' | 'DETAIL' | 'LIST' }>;
 
 export default function PageRefresh({ type = 'DEFAULT' }: Props) {
 	const [isDisabled, setIsDisabled] = useState(false);

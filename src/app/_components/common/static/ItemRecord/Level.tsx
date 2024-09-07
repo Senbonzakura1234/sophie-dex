@@ -2,7 +2,7 @@ import type { TextShadowMap } from '@root/types/common/tailwind';
 import type { ColorEnum } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
 
-type LevelProps = { level: number; color: ColorEnum };
+type Props = Readonly<{ level: number; color: ColorEnum }>;
 
 const className = {
 	BLUE: 'app-text-shadow-BLUE text-base-200 dark:text-base-content',
@@ -12,7 +12,7 @@ const className = {
 	YELLOW: 'app-text-shadow-YELLOW text-base-200 dark:text-base-content'
 } satisfies TextShadowMap<ColorEnum>;
 
-export default function Level({ level, color }: LevelProps) {
+export default function Level({ level, color }: Props) {
 	return (
 		<div
 			aria-hidden

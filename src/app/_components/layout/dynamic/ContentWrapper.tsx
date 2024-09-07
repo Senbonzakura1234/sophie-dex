@@ -1,9 +1,9 @@
 import type { ChildrenProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
 
-type ContentWrapperProps = ChildrenProps & { type: 'detail' | 'list' | 'about' | 'profile' };
+type Props = Readonly<ChildrenProps & { type: 'detail' | 'list' | 'about' | 'profile' }>;
 
-export default function ContentWrapper({ children, type }: ContentWrapperProps) {
+export default function ContentWrapper({ children, type }: Props) {
 	return (
 		<section
 			className={cn(

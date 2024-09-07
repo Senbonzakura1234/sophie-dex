@@ -6,13 +6,10 @@ import type { RecipeTypeEnum } from '@root/types/common/zod/generic';
 import { genericRecipeTypeEnumSchema } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
 
-const recipeTypeDefaultSelect = {
-	value: null,
-	label: 'Recipe type'
-} as const;
+const filterDefValue = { value: null, label: 'Recipe type' } as const;
 
-const recipeTypeSelectList: Array<SelectOptionItem<RecipeTypeEnum>> = [
-	recipeTypeDefaultSelect,
+const filterList: Array<SelectOptionItem<RecipeTypeEnum>> = [
+	filterDefValue,
 	...genericRecipeTypeEnumSchema._def.values.map(recipeType => ({
 		value: recipeType,
 		icon: (
@@ -29,15 +26,15 @@ const recipeTypeSelectList: Array<SelectOptionItem<RecipeTypeEnum>> = [
 ];
 
 export default function RecipeTypeFilter() {
-	const [recipeTypeSelected, setRecipeTypeSelected] = useQueryOnChange(
-		'recipeType',
-		recipeTypeSelectList,
-		recipeTypeDefaultSelect
-	);
+	const [recipeTypeSelected, setRecipeTypeSelected] = useQueryOnChange({
+		filterDefValue,
+		filterKey: 'recipeType',
+		filterList
+	});
 
 	return (
 		<SelectOption<RecipeTypeEnum>
-			list={recipeTypeSelectList}
+			filterList={filterList}
 			setValue={setRecipeTypeSelected}
 			value={recipeTypeSelected}
 			className='my-auto min-w-[11.5rem]'

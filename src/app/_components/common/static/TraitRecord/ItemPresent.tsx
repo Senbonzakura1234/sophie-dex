@@ -10,9 +10,9 @@ const ShareButton = dynamic(() => import('@components/common/dynamic/ShareButton
 	ssr: false
 });
 
-type ItemPresentProps = { itemPresent: HyperLinkRecord; search: string | undefined };
+type Props = Readonly<{ itemPresent: HyperLinkRecord; search: string | undefined }>;
 
-export default function ItemPresent({ itemPresent: { table: moduleId, id, name }, search }: ItemPresentProps) {
+export default function ItemPresent({ itemPresent: { table: moduleId, id, name }, search }: Props) {
 	return (
 		<div className='flex max-w-fit flex-wrap gap-2'>
 			<div className='capitalize'>{moduleId}: </div>

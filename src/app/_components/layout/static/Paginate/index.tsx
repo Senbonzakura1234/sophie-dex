@@ -8,14 +8,14 @@ import type { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { SearchQuery } from '@root/types/common/zod';
 import GoToPageSelect from './GoToPageSelect';
 
-type PaginateProps = { searchQuery: ReturnType<typeof useSearchQuery>['searchQuery']; totalPage: number };
+type Props = Readonly<{ searchQuery: ReturnType<typeof useSearchQuery>['searchQuery']; totalPage: number }>;
 
 const getPaginateProps = (curPage: SearchQuery['page'], totalPage: number) => {
 	const page = curPage || 1;
 	return { isPreviousDisable: page <= 1, isNextDisable: page >= totalPage, page };
 };
 
-export default function Paginate({ totalPage, searchQuery }: PaginateProps) {
+export default function Paginate({ totalPage, searchQuery }: Props) {
 	const { isNextDisable, isPreviousDisable, page } = getPaginateProps(searchQuery.page, totalPage);
 
 	return (

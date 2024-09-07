@@ -4,13 +4,13 @@ import type { SelectOptionItem } from '@root/types/common';
 import { cn, convertCode } from '@root/utils/common';
 import type { ReactNode } from 'react';
 
-type ListboxButtonProps<V extends string | number> = {
+type Props<V extends string | number> = Readonly<{
 	isDisabled: boolean;
 	isHideLabel?: boolean;
 	customLabelText?: ReactNode;
 	customLabelIcon?: ReactNode;
 	value: SelectOptionItem<V>;
-};
+}>;
 
 export default function CustomListboxButton<V extends string | number>({
 	isDisabled,
@@ -18,7 +18,7 @@ export default function CustomListboxButton<V extends string | number>({
 	isHideLabel,
 	customLabelText,
 	customLabelIcon
-}: ListboxButtonProps<V>) {
+}: Props<V>) {
 	return (
 		<ListboxButton
 			className={cn(

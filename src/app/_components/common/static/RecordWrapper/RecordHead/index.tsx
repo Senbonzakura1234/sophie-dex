@@ -17,9 +17,9 @@ const BackButton = dynamic(() => import('./BackButton'), {
 	loading: () => <PulsePlaceHolder className='mr-2 h-6 w-[61px] rounded-lg' />
 });
 
-type RecordHeadProps = Omit<CommonRecord, 'keyWords'> & { currentId?: string; search?: string };
+type Props = Readonly<Omit<CommonRecord, 'keyWords'> & { currentId?: string; search?: string }>;
 
-export default function RecordHead({ currentId, id, name, search, moduleId }: RecordHeadProps) {
+export default function RecordHead({ currentId, id, name, search, moduleId }: Props) {
 	const isCurrentRecord = currentId === id;
 
 	return (

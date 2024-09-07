@@ -10,9 +10,9 @@ const ShareButton = dynamic(() => import('@components/common/dynamic/ShareButton
 	ssr: false
 });
 
-type TraitMergeListProps = { mergeFrom: Array<[HyperLinkRecord, HyperLinkRecord]>; search: string | undefined };
+type Props = Readonly<{ mergeFrom: Array<[HyperLinkRecord, HyperLinkRecord]>; search: string | undefined }>;
 
-export default function TraitMergeList({ mergeFrom, search }: TraitMergeListProps) {
+export default function TraitMergeList({ mergeFrom, search }: Props) {
 	return (
 		<nav className={cn('relative flex flex-wrap gap-2', { 'max-xl:hidden': mergeFrom.length <= 0 })}>
 			<div className={cn({ ['hidden']: mergeFrom.length <= 0 })}>Merge from:</div>

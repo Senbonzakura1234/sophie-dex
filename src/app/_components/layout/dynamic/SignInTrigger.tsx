@@ -6,7 +6,7 @@ import type { SignInQuery } from '@root/types/common/zod';
 import { signIn } from 'next-auth/react';
 import { useEffect } from 'react';
 
-type Props = typeof providerConfig & ImprovePick<SignInQuery, 'callbackUrl'>;
+type Props = Readonly<typeof providerConfig & ImprovePick<SignInQuery, 'callbackUrl'>>;
 
 export default function SignInTrigger({ id, callbackUrl }: Props) {
 	useEffect(() => {

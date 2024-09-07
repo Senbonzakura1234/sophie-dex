@@ -260,7 +260,7 @@ export const checkUserExist = (username: string) =>
 		.then(value => Boolean(value))
 		.catch(() => false);
 
-type InsertOrUpdateUserProps =
+type InsertOrUpdateUserParams =
 	| {
 			userData: ImprovePick<User, 'email' | 'username' | 'githubProfile'>;
 			isUpdate: false;
@@ -279,7 +279,7 @@ type InsertOrUpdateUserProps =
 			isUpdate: true;
 	  };
 
-export const insertOrUpdateUser = async ({ isUpdate, userData }: InsertOrUpdateUserProps) => {
+export const insertOrUpdateUser = async ({ isUpdate, userData }: InsertOrUpdateUserParams) => {
 	if (isUpdate || (await checkUserExist(userData.username))) {
 		return await postgresql
 			.update(users)

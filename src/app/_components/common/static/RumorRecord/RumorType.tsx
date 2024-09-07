@@ -7,14 +7,14 @@ import type { TextShadowMap } from '@root/types/common/tailwind';
 import type { RumorTypeEnum } from '@root/types/common/zod/generic';
 import { cn, convertCode } from '@root/utils/common';
 
-type RumorTypeProps = { rumorType: RumorTypeEnum };
+type Props = Readonly<{ rumorType: RumorTypeEnum }>;
 
 const className = {
 	MATERIAL: 'app-text-shadow-GREEN text-base-200 dark:text-base-content',
 	MONSTER: 'app-text-shadow-RED text-base-200 dark:text-base-content'
 } satisfies TextShadowMap<RumorTypeEnum>;
 
-export default function RumorType({ rumorType }: RumorTypeProps) {
+export default function RumorType({ rumorType }: Props) {
 	const { searchQuery } = useSearchQuery();
 
 	const isActive = rumorType === searchQuery.rumorType;

@@ -6,13 +6,15 @@ import { cn } from '@root/utils/common';
 import type { ReactNode } from 'react';
 import RecordHead from './RecordHead';
 
-type RecordWrapperProps<TRecord extends CommonRecord> = ClassNameProps & {
-	colors?: [ColorEnum | undefined, ColorEnum | undefined];
-	children?: (record: TRecord) => ReactNode;
-	currentId?: string;
-	data: TRecord;
-	search?: string;
-};
+type Props<TRecord extends CommonRecord> = Readonly<
+	ClassNameProps & {
+		colors?: [ColorEnum | undefined, ColorEnum | undefined];
+		children?: (record: TRecord) => ReactNode;
+		currentId?: string;
+		data: TRecord;
+		search?: string;
+	}
+>;
 
 export default function RecordWrapper<TRecord extends CommonRecord>({
 	children,
@@ -21,7 +23,7 @@ export default function RecordWrapper<TRecord extends CommonRecord>({
 	currentId,
 	data,
 	search
-}: RecordWrapperProps<TRecord>) {
+}: Props<TRecord>) {
 	const renderChild = children ? children(data) : null;
 
 	return (

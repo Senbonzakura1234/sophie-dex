@@ -6,9 +6,9 @@ import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { RecipeTypeEnum } from '@root/types/common/zod/generic';
 import { cn, convertCode } from '@root/utils/common';
 
-type RecipeTypeProps = { recipeType: RecipeTypeEnum };
+type Props = Readonly<{ recipeType: RecipeTypeEnum }>;
 
-export default function RecipeType({ recipeType }: RecipeTypeProps) {
+export default function RecipeType({ recipeType }: Props) {
 	const { searchQuery } = useSearchQuery();
 
 	const isActive = recipeType === searchQuery.recipeType;

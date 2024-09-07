@@ -10,7 +10,7 @@ type ListUseQueryFn = (
 	options: UseTRPCQueryOptions<unknown, ListMetaData, unknown>
 ) => QueryObserverResult<ListMetaData>;
 
-type Props = { moduleId: ModuleIdEnum; searchQuery: SearchQuery };
+type Props = Readonly<{ moduleId: ModuleIdEnum; searchQuery: SearchQuery }>;
 
 export function useListQueryMeta({ moduleId, searchQuery }: Props): ListMetaData {
 	const { data, status } = (ApiClientCtx[moduleId].getAll.useQuery as ListUseQueryFn)(searchQuery, {

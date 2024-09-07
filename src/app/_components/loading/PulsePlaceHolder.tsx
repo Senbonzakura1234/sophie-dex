@@ -1,8 +1,8 @@
 import type { ClassNameProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
 
-type PulsePlaceHolderProps = ClassNameProps;
+type Props = Readonly<ClassNameProps>;
 
-export default function PulsePlaceHolder({ className }: PulsePlaceHolderProps) {
+export default function PulsePlaceHolder({ className }: Props) {
 	return <div className={cn('animate-pulse bg-base-content/20 ', className)} />;
 }

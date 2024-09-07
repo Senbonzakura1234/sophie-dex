@@ -1,6 +1,6 @@
 [
   {
-    "id": "01J3F5PGRHJ0XC8YMD14E4ZGM6",
+    "id": "01J76MWE00D2G33HJV0RRVX4VM",
     "keyWords": "mossy driftwood,green,material,7,13,wood,plant,white root,alraunem,starfish.,moss with sleep compounds,gate of trees,three bridge spring,small islet,prospector's strand.",
     "name": "Mossy Driftwood",
     "moduleId": "item",
@@ -37,7 +37,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRJNXQ9HTBM7SY4P3QH",
+    "id": "01J76MWE01QCNRDK378FGA3HSM",
     "keyWords": "altare,green,material,9,8,plant,medicine mat,small islet,moon sun mor (unlock after oskar event).",
     "name": "Altare",
     "moduleId": "item",
@@ -64,7 +64,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRJF2CJG2E264XSPQBD",
+    "id": "01J76MWE01V8JJ7NAPWQJJFHQQ",
     "keyWords": "mystic herb,white,material,3,15,plant,secret power,medicine mat,kimmoch,nightshade,sorcerer titus.,herb effective for medicine,rocky grove,gate of trees,forest of fairies.",
     "name": "Mystic Herb",
     "moduleId": "item",
@@ -101,7 +101,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRJX50E0ADRV2FN89V3",
+    "id": "01J76MWE01QX49V70R95S02M28",
     "keyWords": "five day vine,green,material,5,10,plant,secret power,white root,alraunem,starfish.,funal garden,foggy woodland,forest of faries.",
     "name": "Five Day Vine",
     "moduleId": "item",
@@ -133,7 +133,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRJT8R8450VW0JQN6WK",
+    "id": "01J76MWE01GBPXMB0W3BWT0X5R",
     "keyWords": "mountain cotton,white,material,6,7,plant,thread,fuel,white root,alraunem,starfish.,cotton disliked by dragons,rocky mountain,verdant hill,scar of the land.",
     "name": "Mountain Cotton",
     "moduleId": "item",
@@ -170,7 +170,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRJ1CSVA742M82E6PQM",
+    "id": "01J76MWE01WM77QVWDJJA7X48Y",
     "keyWords": "kifa,yellow,material,8,10,wood,plant,cursed ancient trees,gathering of beast,rocky grove,gate of trees,foggy woodland,forest of faries.",
     "name": "Kifa",
     "moduleId": "item",
@@ -204,7 +204,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRJQS7J61GGBG7BFRPZ",
+    "id": "01J76MWE010ANSG0901FN5ZXK6",
     "keyWords": "sunset grass,yellow,material,4,2,plant,fuel,white root,araune,kimmoch.,chick woods,lisure plaza,fungal garden,rocky mountain,dead tree wasteland.",
     "name": "Sunset Grass",
     "moduleId": "item",
@@ -238,7 +238,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRJE43D8BRQN1YPTBD5",
+    "id": "01J76MWE01J4VD26PNY6R9M0BC",
     "keyWords": "cobalt grass,blue,material,1,3,plant,water,white root,alraune,kimmoch.,pilgram road,flower garden,verdant hill,underground lake.",
     "name": "Cobalt Grass",
     "moduleId": "item",
@@ -271,7 +271,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRJ74BAMQ70D3W9EDGR",
+    "id": "01J76MWE01JNBNZFWZSGQHVBSW",
     "keyWords": "princess grass,white,material,11,17,plant,medicine mat,underground lake  (unlock after oskar event).",
     "name": "Princess Grass",
     "moduleId": "item",
@@ -297,7 +297,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRJ31W4YBD4FTHB9TVW",
+    "id": "01J76MWE01G828PZJ5WER6X655",
     "keyWords": "dunkelstern,red,material,14,37,plant,poison mat,secret power,false flower,kimmoch,nightshade,sealed demon lord,sorcerer titus,light elemental.",
     "name": "Dunkelstern",
     "moduleId": "item",
@@ -332,7 +332,7 @@
     }
   },
   {
-    "id": "01J3F5PGRJ0M8VRAE1KHCX29JD",
+    "id": "01J76MWE01EZW8EE4QZ36D48RB",
     "keyWords": "eternal blossom,white,material,12,34,plant,elixir,forest of faries  (unlock after oskar final event).",
     "name": "Eternal Blossom",
     "moduleId": "item",
@@ -358,7 +358,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRKJA645RXT7B8G6VWC",
+    "id": "01J76MWE02A1TR8QB0NKQYZ5VM",
     "keyWords": "crimson herb,red,material,10,14,plant,medicine mat,slime compound,gate of tress,three bridge spring,silent lakeside,prospector's strand,underground lake  (unlock after oskar event).",
     "name": "Crimson Herb",
     "moduleId": "item",
@@ -392,7 +392,7 @@
     }
   },
   {
-    "id": "01J3F5PGRKMGX7MZYXY757WXJD",
+    "id": "01J76MWE02QQ5CB587ESM4J6AM",
     "keyWords": "dunkelheit,white,material,13,50,plant,medicine mat,elixir,full of life,flower blooming in silence,fairy forest (rumor only).",
     "name": "Dunkelheit",
     "moduleId": "item",
@@ -427,7 +427,7 @@
     }
   },
   {
-    "id": "01J3F5PGRKFMFDJZRV7K0DXG6P",
+    "id": "01J76MWE029QJF58M9AJYQHSJZ",
     "keyWords": "aizen ore,yellow,material,15,7,ore,magic book,gargolye,apostle,mini demon.,merbert farm,enlightened mountain,underground lake.",
     "name": "Aizen Ore",
     "moduleId": "item",
@@ -459,7 +459,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRKP6HTWTJMZ3Q3ANPQ",
+    "id": "01J76MWE02BJJ6JAR2N0BT0VZG",
     "keyWords": "kupulf ore,red,material,17,9,ore,punipuni?,magic book,book familiar,mini demon,tricker,devil horn,sealed demon.,flower garden,sealed temple.",
     "name": "Kupulf Ore",
     "moduleId": "item",
@@ -493,7 +493,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRKC5KWY5XDJ4J2CDYT",
+    "id": "01J76MWE028DKHD0QYY3KKG45A",
     "keyWords": "breaker,red,weapon,597,18,weapon",
     "name": "Breaker",
     "moduleId": "item",
@@ -516,7 +516,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRK6DDGMT4GETPC7F2J",
+    "id": "01J76MWE02HB2G31AVKQY3TM9Q",
     "keyWords": "raiden ore,green,material,16,9,ore,electrified,punipuni?,magic book,book familiar,mini demon,tricker.,flower garden,sealed temple.",
     "name": "Raiden Ore",
     "moduleId": "item",
@@ -552,7 +552,7 @@
     }
   },
   {
-    "id": "01J3F5PGRK4YCHMPGAREKAXRBQ",
+    "id": "01J76MWE03TAYAETHY7EKAM2QV",
     "keyWords": "lakebottom soil,green,material,23,9,clay,island fish,isanasius.,calm banks,fertile shore,underground lake,.",
     "name": "Lakebottom Soil",
     "moduleId": "item",
@@ -582,7 +582,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRKNWHT7E4QTDWTDXXK",
+    "id": "01J76MWE03X4G9N7MAFM1AW9PB",
     "keyWords": "wandering staff,red,weapon,578,24,weapon",
     "name": "Wandering Staff",
     "moduleId": "item",
@@ -605,7 +605,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRKS0QK0S1ZXV3CTY6N",
+    "id": "01J76MWE03ERQP51RRRGFYA1RA",
     "keyWords": "paper scrap,green,material,64,5,paper,fuel,magic book,book familiar,living grimoire,forbidden codex.,flower garden,forgotten nursery,fallen palace,sealed temple.",
     "name": "Paper Scrap",
     "moduleId": "item",
@@ -639,7 +639,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRK77TPQAE1A6YMVW2Z",
+    "id": "01J76MWE03VX0M995TKB1XNJAE",
     "keyWords": "hero's medicine,red,buff item,297,46,mystery recipes,medicine,ruins,blue sky altar,fallen palace",
     "name": "Hero's Medicine",
     "moduleId": "item",
@@ -682,7 +682,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRMN9G18E3P0ZXGN11E",
+    "id": "01J76MWE03Y6XF89BKE50E1SHP",
     "keyWords": "warding charm,yellow,exploration,368,17,beginner recipes,magic item,paper,pious talisman,pamela",
     "name": "Warding Charm",
     "moduleId": "item",
@@ -723,7 +723,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRMMJ68TB1AR6B6K6QF",
+    "id": "01J76MWE03X8Z2MCXGTPHBBCSW",
     "keyWords": "ancient tablet,white,material,25,15,ore,clay,secret power,ancient seal,gargoyle,apostle.,moon sun moor,city of the lost,sealed temple.",
     "name": "Ancient Tablet",
     "moduleId": "item",
@@ -759,7 +759,7 @@
     }
   },
   {
-    "id": "01J3F5PGRM7F2A5ZVCKC4ZTPS3",
+    "id": "01J76MWE03CPD7RBXQ41N8CFEZ",
     "keyWords": "ramel wheat,green,material,56,6,ingredient,plant,mandragora,single horn.,care to taste some wheat?,merbert farm,moon sun moor.",
     "name": "Ramel Wheat",
     "moduleId": "item",
@@ -793,7 +793,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRM7CGGXYR5TMTYPN9S",
+    "id": "01J76MWE04SS1TF5NGX8VCEXNK",
     "keyWords": "forgotten ore,white,material,83,41,ore,devil horn,sealed demon lord,dragonaire,magmacius.",
     "name": "Forgotten Ore",
     "moduleId": "item",
@@ -821,7 +821,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRMAPXHZ4HX0GWT3SX8",
+    "id": "01J76MWE0493NNMYY2J2TER2PJ",
     "keyWords": "flame of the end,white,atk item,164,60,mystery recipes,bomb,magic item",
     "name": "Flame of the End",
     "moduleId": "item",
@@ -850,7 +850,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRMAPVP0WG77H45E5TC",
+    "id": "01J76MWE04HQ829F9EZQV70P23",
     "keyWords": "seabed soil,blue,material,24,11,clay,grand ocean.,remnant of a past sea?",
     "name": "Seabed Soil",
     "moduleId": "item",
@@ -879,7 +879,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRM8M5Q7Y14TXRCYXV2",
+    "id": "01J76MWE040GEQJKV5KAADCZ7C",
     "keyWords": "natural oil,yellow,material,65,9,fuel,mini demon,ardra,chimera beast.",
     "name": "Natural Oil",
     "moduleId": "item",
@@ -906,7 +906,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRM73TJ25QKZZDN8DK1",
+    "id": "01J76MWE04D8GVCT5H0YA09BN5",
     "keyWords": "whimsy strawberry,green,material,62,10,ingredient,plant,not so whimsy strawberries?,merbert farm,flower garden,open ruins,verdant hilld.",
     "name": "Whimsy Strawberry",
     "moduleId": "item",
@@ -939,7 +939,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRMEVMNYWDCZ06BWNYJ",
+    "id": "01J76MWE04ST5WCGQ63P52CEF3",
     "keyWords": "neutralizer r,red,synthesis,420,2,beginner recipes,neutralizer,red uni",
     "name": "Neutralizer R",
     "moduleId": "item",
@@ -974,7 +974,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRM108EDNG80KWWJSXJ",
+    "id": "01J76MWE04R5KB98A1YEKRFFJ5",
     "keyWords": "traveler's shoes,green,exploration,362,18,hope recipes,cloth",
     "name": "Traveler's Shoes",
     "moduleId": "item",
@@ -1002,7 +1002,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRMEYSKZ2GDN7K39ZNA",
+    "id": "01J76MWE04S1ZNJSG4H80QH3BX",
     "keyWords": "suspicious liquid,red,material,47,20,water,poison mat,black puni,punipuni? kaiser pigeonm saber claw,gustaf,lightning,silent beast.,forgotten nursery,waterside,ruins,small islet,.",
     "name": "Suspicious Liquid",
     "moduleId": "item",
@@ -1037,7 +1037,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRNEZYADVVYVDAVXAPK",
+    "id": "01J76MWE048K1AC6Q6N14SR01H",
     "keyWords": "puni fluid,blue,material,48,9,water,medicine mat,blue puni,green puni,red puni,gold puni,black puni.",
     "name": "Puni Fluid",
     "moduleId": "item",
@@ -1067,7 +1067,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRNXHCNBJTQ8EDVBAYX",
+    "id": "01J76MWE04T68BFNVX4J34VEST",
     "keyWords": "metal bullets,red,weapon,611,8,weapon",
     "name": "Metal Bullets",
     "moduleId": "item",
@@ -1090,7 +1090,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRNJTNV5Q4RQRGKPNYN",
+    "id": "01J76MWE04KJ2QHXF16XAKFK0A",
     "keyWords": "spirit stone,white,material,20,15,ore,metal,devil horn,sealed demon lord.,scar of the land, enlightend mountain.",
     "name": "Spirit Stone",
     "moduleId": "item",
@@ -1120,7 +1120,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRNGHSQP405XD18E65Z",
+    "id": "01J76MWE05G1MARFB4TZCWHMKD",
     "keyWords": "dragon scale,white,material,41,39,animal,medicine mat,elixir,wise spirit,rok,twin header,sorcer titus,ifritter,tempestus,dragonaire,mamacius,sun destroyer yasuk,moon eater durak..",
     "name": "Dragon Scale",
     "moduleId": "item",
@@ -1156,7 +1156,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRNWVHXADS381XDDZC6",
+    "id": "01J76MWE059NEKG3MKET4YXXPE",
     "keyWords": "luminous water,green,material,45,23,water,secret power,flickering light,dragonaire,magmacius.,fertile shore,moon sun moor.",
     "name": "Luminous Water",
     "moduleId": "item",
@@ -1190,7 +1190,7 @@
     }
   },
   {
-    "id": "01J3F5PGRNPZ7N8X7EPZNWZWN5",
+    "id": "01J76MWE05T92JWBVRSHETW99F",
     "keyWords": "pendegrune,green,material,78,28,secret power,elixir,sealed demon lord,wind elemental,light elemental.,faintly shining ore",
     "name": "Pendegrune",
     "moduleId": "item",
@@ -1222,7 +1222,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRNHS8G1VNKWZNGM98M",
+    "id": "01J76MWE05B1N72XAC5Q8XZARZ",
     "keyWords": "honey syrup,blue,heal item,239,12,hope recipes,medicine,tess",
     "name": "Honey Syrup",
     "moduleId": "item",
@@ -1256,7 +1256,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRN4KEPJWSNE0S3V3TQ",
+    "id": "01J76MWE05RDF83EX590342X48",
     "keyWords": "hakurei stone,blue,material,19,7,ore,gem,carries cold,punipuni?,book familiar,tricker.,enormous hakurei stones,gate of trees,three bridge spring,silent lakeside,merbert farm,prospector's strand.",
     "name": "Hakurei Stone",
     "moduleId": "item",
@@ -1298,7 +1298,7 @@
     }
   },
   {
-    "id": "01J3F5PGRN6B8XDB22PQMDGHQV",
+    "id": "01J76MWE0510TEMSA9HZVXRQE3",
     "keyWords": "dawn fur,red,material,38,21,animal,thread,sunny scent,black puni,kaiser pigeon,saber claw,gustaf,lightning,fang ,twin header,silent beast,crimson fang dragonaire,magmacius,wind elemental.",
     "name": "Dawn Fur",
     "moduleId": "item",
@@ -1338,7 +1338,7 @@
     }
   },
   {
-    "id": "01J3F5PGRN6PPCAV6TM21QHB38",
+    "id": "01J76MWE05A30JC4TYGDXSTM6F",
     "keyWords": "silver potato,yellow,material,59,15,ingredient,metal,mutated material,kimmoch,nightshade,sorcerer titus.,gathering of beast,puzzling path,forest of fairies.",
     "name": "Silver Potato",
     "moduleId": "item",
@@ -1374,7 +1374,7 @@
     }
   },
   {
-    "id": "01J3F5PGRNBQ9WACX6H7SCR3K0",
+    "id": "01J76MWE05JE0MQJ6M4BSWVN98",
     "keyWords": "magic page,blue,material,92,18,paper,fuel,magic item,library of all creation.",
     "name": "Magic Page",
     "moduleId": "item",
@@ -1401,7 +1401,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRP6V8CYD2FRC2K4HYC",
+    "id": "01J76MWE05D1BFCMFH5D34YSGP",
     "keyWords": "magician's flute,green,atk item,153,31,dream recipes,magic item,book shop",
     "name": "Magician's Flute",
     "moduleId": "item",
@@ -1434,7 +1434,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRPTWBSTEE5HJFGPSQ2",
+    "id": "01J76MWE05CGBZFSAMGQP6EN65",
     "keyWords": "animal fur,yellow,material,37,8,animal,thread,mini demon,ardra,chimera beast,lightning,fang,twin header,island fish,single horn.",
     "name": "Animal Fur",
     "moduleId": "item",
@@ -1467,7 +1467,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRPKBABQYM7A3746XJ1",
+    "id": "01J76MWE06Q6WNW7JVY5FZG70V",
     "keyWords": "eternal cycle staff,white,weapon,580,42,weapon",
     "name": "Eternal Cycle Staff",
     "moduleId": "item",
@@ -1490,7 +1490,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRPWKAMZFMJ8HNF72ZD",
+    "id": "01J76MWE061FGMQ2FED3D0VGCC",
     "keyWords": "pretty shell,blue,material,70,5,gem,medicine mat,kaiser pigeon,saber claw,gustaf,fang.,shell like gemstone,calm banks,silent lakeside,prospector's strand.",
     "name": "Pretty Shell",
     "moduleId": "item",
@@ -1527,7 +1527,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRP40W56Y7Y9GA3Y7EW",
+    "id": "01J76MWE06XC9J1E8BKYYJSHMJ",
     "keyWords": "honey,yellow,synthesis,428,6,beginner recipes,ingredient,beehive",
     "name": "Honey",
     "moduleId": "item",
@@ -1562,7 +1562,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRPDJKY798NG4FT8B7Z",
+    "id": "01J76MWE067F8QTB9F6PH9J8E4",
     "keyWords": "blitzlite,green,synthesis,434,25,hope recipes,metal,lightning skill",
     "name": "Blitzlite",
     "moduleId": "item",
@@ -1596,7 +1596,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRPK11A0N04R0PX2PRR",
+    "id": "01J76MWE061R5EF32S337KZXYH",
     "keyWords": "broken stone,yellow,material,26,11,ore,clay,gargoyle,apostle.,forgotten nursery,small islet,city of the lost,fallen palace.",
     "name": "Broken Stone",
     "moduleId": "item",
@@ -1628,7 +1628,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRPXTBSXYRHJYC2CART",
+    "id": "01J76MWE06R87RCNVNRVREX660",
     "keyWords": "soil potato,yellow,material,58,9,ingredient,plant,kimmoch,nightshade,sorcerer titus.,gathering of beast,puzzling path,forest of fairies.",
     "name": "Soil Potato",
     "moduleId": "item",
@@ -1660,7 +1660,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRPY2WF9RQ76437W4T0",
+    "id": "01J76MWE06RGX9ZT13BP0EYYNV",
     "keyWords": "haze grass petal,green,material,90,28,important,obtain through event.",
     "name": "Haze Grass Petal",
     "moduleId": "item",
@@ -1683,7 +1683,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRPR2VHWQC38NM08BXN",
+    "id": "01J76MWE066MNC43QM42RGH4QN",
     "keyWords": "imp's mischief,yellow,de buff item,296,16,growth recipes,magic item,monsters",
     "name": "Imp's Mischief",
     "moduleId": "item",
@@ -1716,7 +1716,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRPTPJXDQV5MTSQW9QH",
+    "id": "01J76MWE06H554S820BXR7D026",
     "keyWords": "ancient pillar,green,material,27,21,ore,plant,magic book,mini demon dragonaire,magmacius.,waterside ruins,fallen palace,forgotten nursery.",
     "name": "Ancient Pillar",
     "moduleId": "item",
@@ -1748,7 +1748,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRPBR3ND97NMNTGRGF8",
+    "id": "01J76MWE06M0B21J223A6STFTR",
     "keyWords": "zafloa oil,green,material,66,13,fuel,secret of health,kaiser pengeon,saber claw,gustaf,fang.,vividly colored oil",
     "name": "Zafloa Oil",
     "moduleId": "item",
@@ -1784,7 +1784,7 @@
     }
   },
   {
-    "id": "01J3F5PGRQW25A0MJAFRMD5N58",
+    "id": "01J76MWE06FWVGF97D786863Y5",
     "keyWords": "alchemic clay,white,synthesis,436,8,growth recipes,clay,elixir,fritz",
     "name": "Alchemic Clay",
     "moduleId": "item",
@@ -1818,7 +1818,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRQT9PRH9FJM4F1J1TH",
+    "id": "01J76MWE07N4V49Y6F8WVDAEME",
     "keyWords": "neutralizer g,green,synthesis,422,2,growth recipes,neutralizer",
     "name": "Neutralizer G",
     "moduleId": "item",
@@ -1846,7 +1846,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRQQJ3C2WS72TRJC8ZA",
+    "id": "01J76MWE07EQZWQGFA67JVDFK4",
     "keyWords": "zettel,red,synthesis,431,5,beginner recipes,paper,fuel,bookshelf,book shop",
     "name": "Zettel",
     "moduleId": "item",
@@ -1885,7 +1885,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRQ0CWN8SQBNXSEJAJF",
+    "id": "01J76MWE07FVRQ5PS49F76N6FC",
     "keyWords": "good water,blue,material,43,8,water,pure and clear spring water,calm banks,underwater lake.",
     "name": "Good Water",
     "moduleId": "item",
@@ -1915,7 +1915,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRQX15J62ZHYNFGBSX1",
+    "id": "01J76MWE075XD5REKCWFCACVAZ",
     "keyWords": "stinky fragment,blue,material,87,3,elixir,forgotten nursery,sealed temple,soul space.",
     "name": "Stinky Fragment",
     "moduleId": "item",
@@ -1942,7 +1942,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRQ9N8A3RZH7Q1VCT6E",
+    "id": "01J76MWE073CN97XNWHFDMQ6VB",
     "keyWords": "elixir base,red,synthesis,430,35,mystery recipes,medicine mat,poison mat,life powder skill,forest of fairies",
     "name": "Elixir Base",
     "moduleId": "item",
@@ -1982,7 +1982,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRQKDFDNRC29BFB7WAQ",
+    "id": "01J76MWE07PWFR0CYG8FKTTFVV",
     "keyWords": "mana feather,blue,exploration,361,11,beginner recipes,magic item,animal,kaiser pigeon",
     "name": "Mana Feather",
     "moduleId": "item",
@@ -2016,7 +2016,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRQTXNC2HGRHX85CF5R",
+    "id": "01J76MWE07ZMG1V2ZJFG9MR4P1",
     "keyWords": "strong bone,yellow,material,35,6,animal,medicine mat,mini demon,ardra,chimera beast,lightning,fang,twin header,island fish,single horn.,open ruins,fungal gardens,husk forest,moon sun mor.",
     "name": "Strong Bone",
     "moduleId": "item",
@@ -2054,7 +2054,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRQNDTVCA8Q45B39H5J",
+    "id": "01J76MWE07B3X34MGF4T5XMFMD",
     "keyWords": "blue steel stone,blue,material,72,26,gem,ore,black puni,kaiser pigeon,saber claw,gustaf,lightning silent beast.,merbert farm,sealed temple,underground lake,scar of the land.",
     "name": "Blue Steel Stone",
     "moduleId": "item",
@@ -2089,7 +2089,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRRZW7WSWAYP67M7EJ8",
+    "id": "01J76MWE08HYDHK7FH8PFAB9K0",
     "keyWords": "useless fragment,yellow,material,85,3,elixir,moon sun mor,fallen palace,soul space.",
     "name": "Useless Fragment",
     "moduleId": "item",
@@ -2116,7 +2116,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRR6AKFK6KVYTM7V54T",
+    "id": "01J76MWE08D09WRJRYA8SYYJGQ",
     "keyWords": "eye of mercury,white,machine,522,18,hope recipes,magic item,story progress",
     "name": "Eye of Mercury",
     "moduleId": "item",
@@ -2149,7 +2149,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRRH47ZDT0C0JAY3PTP",
+    "id": "01J76MWE08BJZP85G1DT5Y3R4T",
     "keyWords": "snowflake crystal,blue,synthesis,451,28,hope recipes,metal,gem,silver crystal",
     "name": "Snowflake Crystal",
     "moduleId": "item",
@@ -2185,7 +2185,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRR63XR7TJZ4582BXWJ",
+    "id": "01J76MWE087WHTR3GWXQCFKGE4",
     "keyWords": "moon caller,yellow,weapon,581,7,weapon",
     "name": "Moon Caller",
     "moduleId": "item",
@@ -2208,7 +2208,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRRVS30ESJ99NKNZ571",
+    "id": "01J76MWE087HGPF824GC9Z7FHM",
     "keyWords": "pious talisman,white,material,69,26,paper,fuel,magic item,power of faith,lich ordser,haunt,sealed demon lord,unliving king.",
     "name": "Pious Talisman",
     "moduleId": "item",
@@ -2242,7 +2242,7 @@
     }
   },
   {
-    "id": "01J3F5PGRRQPZCHA5MV9SR2SXD",
+    "id": "01J76MWE08A7NY4D4TBCKA2FWK",
     "keyWords": "berg medicine,green,heal item,216,1,beginner recipes,medicine,berg medicine",
     "name": "Berg Medicine",
     "moduleId": "item",
@@ -2277,7 +2277,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRRZW3C5ZEQGDRS9RGG",
+    "id": "01J76MWE08TVYYZV13HZ5T41V7",
     "keyWords": "stahl ice bomb,blue,atk item,148,30,hope recipes,bomb,ice bomb",
     "name": "Stahl Ice Bomb",
     "moduleId": "item",
@@ -2312,7 +2312,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRRMAYJ6E5MY4E71CHS",
+    "id": "01J76MWE080PF96P5WRZ77SA1W",
     "keyWords": "beehive,yellow,material,60,9,ingredient,gunpowder,mini demon,ardra,chimera beast.,blessed forest,leaisure plaza,green ruins,gate of trees.",
     "name": "Beehive",
     "moduleId": "item",
@@ -2345,7 +2345,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRRWP8XHGHSW1CWDDP9",
+    "id": "01J76MWE08B6DMMF24XJMGSC77",
     "keyWords": "crimson stone,red,synthesis,456,42,mystery recipes,animal,gunpowder,elixir,neutralizer,magmacius",
     "name": "Crimson Stone",
     "moduleId": "item",
@@ -2381,7 +2381,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRRRY2ZA1WKAT71NM4Y",
+    "id": "01J76MWE082V80N6KPMF56TWJA",
     "keyWords": "fairy cauldron,white,machine,513,23,dream recipes,important,fairy cauldron,forest of fairies",
     "name": "Fairy Cauldron",
     "moduleId": "item",
@@ -2421,7 +2421,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRSXDZQK1PW668ME4DJ",
+    "id": "01J76MWE081G0Z7JDH83165HKG",
     "keyWords": "rubilium,red,synthesis,442,23,hope recipes,weapon mat,metal",
     "name": "Rubilium",
     "moduleId": "item",
@@ -2450,7 +2450,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRSVV2E5ZDX2QXFQK1J",
+    "id": "01J76MWE08T49CB9AW5E5A0PEN",
     "keyWords": "night crystal,blue,material,30,29,ore,gem,absorbs light,living grimoire.,mountain boundary,underground lake,fallen palace.",
     "name": "Night Crystal",
     "moduleId": "item",
@@ -2484,7 +2484,7 @@
     }
   },
   {
-    "id": "01J3F5PGRSCAG89YNJT58EH8FF",
+    "id": "01J76MWE092CTWCCT9F0WFG5YJ",
     "keyWords": "rainbow crystal,white,material,76,25,gem,ore,secret power,forbidden codex,lich order,wise spirit,rok,twin header,sorcer titus,ifritter,tempestus,wind elemental.,moon sun moor,fallen palace,forgotten nursery.",
     "name": "Rainbow Crystal",
     "moduleId": "item",
@@ -2523,7 +2523,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRSARY67VE68E9C28A1",
+    "id": "01J76MWE09X78FNBS7MYQYRJKD",
     "keyWords": "bright night,white,weapon,585,39,weapon",
     "name": "Bright Night",
     "moduleId": "item",
@@ -2546,7 +2546,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRS67T0X7PQQKC8GD7T",
+    "id": "01J76MWE090AHKPBE8G94160Y2",
     "keyWords": "heart pendant,white,exploration,369,21,dream recipes,metal,bridge,waterside ruins",
     "name": "Heart Pendant",
     "moduleId": "item",
@@ -2584,7 +2584,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRSHMMWZYWZH713DCB7",
+    "id": "01J76MWE095VSDS3T01KFKKGN4",
     "keyWords": "shining ore,blue,material,31,34,ore,gem,dragonaire,magmacius.,dead tree,small islet.",
     "name": "Shining Ore",
     "moduleId": "item",
@@ -2614,7 +2614,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRSC6G4TG1S93DK19S0",
+    "id": "01J76MWE0922HE3R1X2P9TA2BH",
     "keyWords": "well water,blue,material,42,1,water,calm banks,small islet,prospector's strand,underground lake.",
     "name": "Well Water",
     "moduleId": "item",
@@ -2642,7 +2642,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRSD28EYF0CKNQVQZJ4",
+    "id": "01J76MWE0910G96VHYBPP3RPH9",
     "keyWords": "dragon heart,red,material,80,40,gem,secret power,elixir,dragonaire,magmacius,sun destroyer yasuk,moon eater durakk.",
     "name": "Dragon Heart",
     "moduleId": "item",
@@ -2672,7 +2672,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRSRFQ1Y0D1X4Q8SSF8",
+    "id": "01J76MWE092YT5KP0CZSHT2T6J",
     "keyWords": "eternity scale,red,material,91,38,important,obtain through event.",
     "name": "Eternity Scale",
     "moduleId": "item",
@@ -2695,7 +2695,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRS6JM1T965S0AJN8FT",
+    "id": "01J76MWE09GKNBBE4NF59Z8PDF",
     "keyWords": "mofcott,yellow,synthesis,446,12,growth recipes,armor mat,cloth,cloth,carries heat",
     "name": "Mofcott",
     "moduleId": "item",
@@ -2738,7 +2738,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRT1279PRWSBHZP2712",
+    "id": "01J76MWE0ARFGVVNZ74YSYXBTD",
     "keyWords": "spirit tears,blue,synthesis,425,33,mystery recipes,water,secret power,small island,small islet",
     "name": "Spirit Tears",
     "moduleId": "item",
@@ -2777,7 +2777,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRT9CKWAED58W5Z8GTW",
+    "id": "01J76MWE0A12FMQBHZ1ZWE2RY9",
     "keyWords": "fairy ball,yellow,material,22,3,clay,medicine mat,merbert farm,three bridge spring,dead tree wasteland,waterside ruins,prospectors strand.",
     "name": "Fairy Ball",
     "moduleId": "item",
@@ -2807,7 +2807,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGRTA712D6QEXM0PEC9V",
+    "id": "01J76MWE0A4JBQX5A81T66SYH6",
     "keyWords": "pelem shell,white,material,71,16,gem,medicine mat,medicine compound,black puni,kaiser pigeon,saber claw,gustaf,lightning silent beast,isanasius.,chalk white shell,underwater lake.",
     "name": "Pelem Shell",
     "moduleId": "item",
@@ -2848,7 +2848,7 @@
     }
   },
   {
-    "id": "01J3F5PGS5PKK8H12CZ2WMH31E",
+    "id": "01J76MWE0A0JNR5N5VEFYVB5FC",
     "keyWords": "torn grimoire,red,material,93,25,magic item,fuel,paper,library of all creation.",
     "name": "Torn Grimoire",
     "moduleId": "item",
@@ -2875,7 +2875,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS5MNR5Q0C7T1YJGAA9",
+    "id": "01J76MWE0A397KHFVJSMEE2TEJ",
     "keyWords": "gold thread,yellow,synthesis,437,10,beginner recipes,thread,metal,silver web",
     "name": "Gold Thread",
     "moduleId": "item",
@@ -2911,7 +2911,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS5G1200AHGJSNDT2YM",
+    "id": "01J76MWE0A4W34NJVQ6594KCS5",
     "keyWords": "smoldering stone,white,material,28,19,ore,clay,metal,punipuni? book familiar tricker.,silent lakeside,sealed temple,fallen palace,soul space.",
     "name": "Smoldering Stone",
     "moduleId": "item",
@@ -2943,7 +2943,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS5ZBQ9W654BDPWM90C",
+    "id": "01J76MWE0A59JNVRJ1NF7P1D0H",
     "keyWords": "island fish fin,green,material,36,14,animal,ingredient,medicine mat,stinks,island fish,signle horn,star fish,isanasius,grand ocean.",
     "name": "Island Fish Fin",
     "moduleId": "item",
@@ -2978,7 +2978,7 @@
     }
   },
   {
-    "id": "01J3F5PGS5NRJE6XMQ7RKZMN7N",
+    "id": "01J76MWE0A8FGVD8XP808F4H2B",
     "keyWords": "crystal shard,blue,material,75,11,gem,ore,magic book,book of familiar,ghost,scarlady,gentle phantom,funny face,dark maiden.,rocky mountain,mountain boundary,dead tree wasteland,scard of the land.",
     "name": "Crystal Shard",
     "moduleId": "item",
@@ -3015,7 +3015,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS5V5HRYX8K18N587KB",
+    "id": "01J76MWE0AZFBBPJHJ0E9FWTKX",
     "keyWords": "burnt fragment,green,material,86,3,elixir,flower garden sealed temple,soul space.",
     "name": "Burnt Fragment",
     "moduleId": "item",
@@ -3041,7 +3041,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS5Z4CJ1ZWEPVEJ3YCP",
+    "id": "01J76MWE0APDY91MC4MYC4A2CF",
     "keyWords": "sotea,blue,heal item,222,3,beginner recipes,food,sweets,well water",
     "name": "Sotea",
     "moduleId": "item",
@@ -3078,7 +3078,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS5XNF9H0MKM1E9G9TC",
+    "id": "01J76MWE0BA0PY1E4NX253X35E",
     "keyWords": "gold steel web,yellow,material,40,30,thread,cutting thread,wise,spirit,rok,twin header,sorcerer titus,ifritter,tempestus,wind elemental.,golden strong thread",
     "name": "Gold Steel Web",
     "moduleId": "item",
@@ -3118,7 +3118,7 @@
     }
   },
   {
-    "id": "01J3F5PGS5HZSQTVMGZ1WGS61H",
+    "id": "01J76MWE0B80XBB8FHG38R39BG",
     "keyWords": "high class talisman,green,material,68,17,paper,fuel,haunt,unliving king.",
     "name": "High Class Talisman",
     "moduleId": "item",
@@ -3145,7 +3145,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS57ZNWJTK8ANBRXD4G",
+    "id": "01J76MWE0BKHK4638E6H32B2ZK",
     "keyWords": "flame of origin,white,atk item,152,50,dream recipes,bomb,magic item",
     "name": "Flame of Origin",
     "moduleId": "item",
@@ -3174,7 +3174,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS5ER49VWNETH8PC362",
+    "id": "01J76MWE0B877KWMKVE4NJFFAN",
     "keyWords": "uni bag,yellow,atk item,142,4,beginner recipes,bomb,uni",
     "name": "Uni Bag",
     "moduleId": "item",
@@ -3209,7 +3209,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS64GBHWH2XSAQ6QTKF",
+    "id": "01J76MWE0BFDSRQJJRYX2117YD",
     "keyWords": "puniball,blue,material,52,4,ingredient,secret power,blue puni,green puni,red puni,gold puni,black puni.",
     "name": "Puniball",
     "moduleId": "item",
@@ -3239,7 +3239,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS6QAPQPC13S64DNVW8",
+    "id": "01J76MWE0BS3R8NBT9WSZFKWPV",
     "keyWords": "star powder,red,material,73,36,elixir,gunpowder,heavenly bird,draagonaire,magmacius.,a shattered star?,sun moon moor.",
     "name": "Star Powder",
     "moduleId": "item",
@@ -3273,7 +3273,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS6ZWB4MNNZ9GW4EWBW",
+    "id": "01J76MWE0B7VB3HVDW8G3EKQZW",
     "keyWords": "failure ash,white,material,89,1,elixir,magic item",
     "name": "Failure Ash",
     "moduleId": "item",
@@ -3297,7 +3297,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS64EXX47XN3KAZW9YB",
+    "id": "01J76MWE0BW5DFJ8KCJY7KEHJ7",
     "keyWords": "puni jelly,blue,heal item,223,7,growth recipes,food,sweets,secret power,green puni,red puni,black puni",
     "name": "Puni Jelly",
     "moduleId": "item",
@@ -3342,7 +3342,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS6NMAMP7HPPPYQRZ9D",
+    "id": "01J76MWE0BNEBVK33B2P3GDRH9",
     "keyWords": "silver web,yellow,material,39,10,thread,kaiser pigeon,saber claw,gusaf,fang.,flower garden,underground lake,forgotten nursery,sealed temple.",
     "name": "Silver Web",
     "moduleId": "item",
@@ -3375,7 +3375,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS6EJ3WZGAFZCHT91AY",
+    "id": "01J76MWE0BKFPV76BC3ZT1MSN7",
     "keyWords": "forgotten wood,white,material,81,43,wood,kimmoch,nightshade,sorcerer titus,light elemental.",
     "name": "Forgotten Wood",
     "moduleId": "item",
@@ -3403,7 +3403,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS6DKFZ37JSBM9A6XCD",
+    "id": "01J76MWE0BPGKWY2712XTK37JA",
     "keyWords": "bomb,red,atk item,143,10,beginner recipes,bomb,monsters,complete request",
     "name": "Bomb",
     "moduleId": "item",
@@ -3441,7 +3441,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS6V1KGZA51MDMQNXE9",
+    "id": "01J76MWE0CKNR2QTMM39QW9RDJ",
     "keyWords": "lightning crystal,green,atk item,149,35,dream recipes,bomb,night thunderstorm,prospectors strand",
     "name": "Lightning Crystal",
     "moduleId": "item",
@@ -3479,7 +3479,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS6DSK5SFYYCRBKG6E5",
+    "id": "01J76MWE0C9VG5MTAE7TM8CRDF",
     "keyWords": "spirit crystal,white,material,33,39,ore,gem,elixir,secret power,wind elemental,light elemental.,crystal blessed by spirits,scar of the land (big cystal).",
     "name": "Spirit Crystal",
     "moduleId": "item",
@@ -3514,7 +3514,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS6XTDRVFSP48XMVC8W",
+    "id": "01J76MWE0C986CSCQBQWKWJ3MP",
     "keyWords": "red uni,red,material,55,9,ingredient,plant,gunpowder,white root,alraune,kimmoch.,blessed forest,green ruins,puzzling path,sealed temple.",
     "name": "Red Uni",
     "moduleId": "item",
@@ -3548,7 +3548,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS6S6JJHY7JESP3ERZW",
+    "id": "01J76MWE0CMYRJKWSQSXEWYTNE",
     "keyWords": "forgotten gem,white,material,82,40,gem,wise spirit,rok,twin header,grand ocean,sorcerer titus,ifritter,tempestus,dragonaire,magmacius,light elemental.",
     "name": "Forgotten Gem",
     "moduleId": "item",
@@ -3582,7 +3582,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS79KGAFTZ6E2DQV4CH",
+    "id": "01J76MWE0C8RYFQGC38J4WFA79",
     "keyWords": "lightning bomb,green,atk item,145,14,beginner recipes,bomb,raiden ore",
     "name": "Lightning Bomb",
     "moduleId": "item",
@@ -3617,7 +3617,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS7CX3HVKN01MPKQ2X1",
+    "id": "01J76MWE0CMC0MB2GF3TDQS9CW",
     "keyWords": "silver crystal,blue,material,32,28,ore,secret power,sealed demon lord,wind elemental,light elemental.,fertile shore,underground lake.",
     "name": "Silver Crystal",
     "moduleId": "item",
@@ -3648,7 +3648,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS78MBY00HBS5D5TQC9",
+    "id": "01J76MWE0C8W9N1CJY67D4AEW0",
     "keyWords": "unknown egg,yellow,material,61,17,ingredient,fuel,medicine mat,kaiser pigeon,saber claw,gustaf,fang.,strange miniature eggs,chickk woods,green ruins.",
     "name": "Unknown Egg",
     "moduleId": "item",
@@ -3685,7 +3685,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS7NHTHC6Q0PBQPJQJF",
+    "id": "01J76MWE0CFA10EDBGSZKF6XJY",
     "keyWords": "banisher,red,weapon,599,34,weapon",
     "name": "Banisher",
     "moduleId": "item",
@@ -3708,7 +3708,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS77MPC7DM98NFHFTDH",
+    "id": "01J76MWE0CG5CZNF0FNYWSWH2C",
     "keyWords": "ori bomb,red,atk item,147,26,hope recipes,bomb,bomb,blue flames",
     "name": "Ori Bomb",
     "moduleId": "item",
@@ -3750,7 +3750,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS7QJVY83H7SZB9CYP7",
+    "id": "01J76MWE0C2GBB429HN2MRYXCS",
     "keyWords": "time control hourglass,green,accessory,41,41,mystery recipes,accessory,clock,clock shop",
     "name": "Time Control Hourglass",
     "moduleId": "item",
@@ -3788,7 +3788,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS76AYCT7WWJJCDTXAP",
+    "id": "01J76MWE0DPSYC5R9TGVKZMRSZ",
     "keyWords": "uni,yellow,material,54,2,ingredient,plant,madragora,single horn.,downpour of uni,chick woods,blessed forest,green ruins,puzzling path,sealed temple.",
     "name": "Uni",
     "moduleId": "item",
@@ -3825,7 +3825,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS7BKK62D4WGP01PPMQ",
+    "id": "01J76MWE0D046CQB1RKPJTE331",
     "keyWords": "forgotten part,white,material,84,43,metal,wise spirit,rok,twin header,sorcerer titus,ifritter,tempestus.",
     "name": "Forgotten Part",
     "moduleId": "item",
@@ -3855,7 +3855,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS7H4FG910QY18PSBBK",
+    "id": "01J76MWE0EVFG27923T4G92E97",
     "keyWords": "fire dragon medicine,red,buff item,294,35,dream recipes,medicine,dragon bloodstone",
     "name": "Fire Dragon Medicine",
     "moduleId": "item",
@@ -3890,7 +3890,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS7TWD11FXQET17TA74",
+    "id": "01J76MWE0ET7HWZSR2X1AF7QZ3",
     "keyWords": "earth shovel,yellow,weapon,591,5,weapon",
     "name": "Earth Shovel",
     "moduleId": "item",
@@ -3913,7 +3913,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS819GW18DCA0HE4Z6V",
+    "id": "01J76MWE0ENJJNPQ35GE4EPCY9",
     "keyWords": "puni missile,blue,atk item,150,20,growth recipes,bomb,puni press,puni monsters",
     "name": "Puni Missile",
     "moduleId": "item",
@@ -3952,7 +3952,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS8515RB88HGGM7G7BM",
+    "id": "01J76MWE0EMAHHFAVJ9DHF3RW0",
     "keyWords": "monster feather,red,material,34,4,animal,thread,ardra,kaiser pigeon,saber claw,gustaf,rok,heavenly bird.,blessed forest,liesure plaza,funal garden,enlightened mountain.",
     "name": "Monster Feather",
     "moduleId": "item",
@@ -3988,7 +3988,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS8WNAGPSMC50ZG4D9N",
+    "id": "01J76MWE0ECG65G6XK3Y18ETV0",
     "keyWords": "church talisman,green,material,67,10,paper,fuel,haunt,unliving king.",
     "name": "Church Talisman",
     "moduleId": "item",
@@ -4015,7 +4015,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS84WG1W92XVF51KGPY",
+    "id": "01J76MWE0EC8N4NPPJBR26N2NZ",
     "keyWords": "light of dawn,blue,weapon,605,45,weapon",
     "name": "Light of Dawn",
     "moduleId": "item",
@@ -4038,7 +4038,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS8SQ3513PEXZPVWNP1",
+    "id": "01J76MWE0E2SH8S2FBQZMVR8PX",
     "keyWords": "warding incense,green,buff item,291,40,hope recipes,medicine,julio",
     "name": "Warding Incense",
     "moduleId": "item",
@@ -4072,7 +4072,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS872C986ZNQZ80TFM2",
+    "id": "01J76MWE0EFEREK8QZMAN25CRF",
     "keyWords": "holy water,white,material,51,10,water,secret power,purifying water,haunt unliving king.",
     "name": "Holy Water",
     "moduleId": "item",
@@ -4102,7 +4102,7 @@
     }
   },
   {
-    "id": "01J3F5PGS8EYRTXHH22QVQQ26E",
+    "id": "01J76MWE0ER413ZXAB2WZ3DAV4",
     "keyWords": "bursting berry,blue,material,63,11,ingredient,plant,special ingredient,white root,alraune,star fish.,fruit that gives strength,open ruins,moon sun moor.",
     "name": "Bursting Berry",
     "moduleId": "item",
@@ -4141,7 +4141,7 @@
     }
   },
   {
-    "id": "01J3F5PGS8DVD2XXW0TM5KBHNS",
+    "id": "01J76MWE0EKF4BMBRP0FD5D1TB",
     "keyWords": "pretty fragment,red,material,88,3,elixir,magical slayer,dragonaire,magmacius.,small islet,fallen palace,soul space.",
     "name": "Pretty Fragment",
     "moduleId": "item",
@@ -4175,7 +4175,7 @@
     }
   },
   {
-    "id": "01J3F5PGS819P4K7WKE075Z1J2",
+    "id": "01J76MWE0FY5NV3V5JX9NZAWS1",
     "keyWords": "god's gift,yellow,atk item,151,47,dream recipes,bomb,magic item,silent bedroom,moon sun moor",
     "name": "God's Gift",
     "moduleId": "item",
@@ -4214,7 +4214,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS8X5QVQ8KVR485G30M",
+    "id": "01J76MWE0FGB6HTK33ZBPDEEJF",
     "keyWords": "demon slayer,red,weapon,601,10,weapon",
     "name": "Demon Slayer",
     "moduleId": "item",
@@ -4237,7 +4237,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS9QVBATMGZRDGBEDJA",
+    "id": "01J76MWE0FP5MRJ5TVRYJWABP4",
     "keyWords": "wild cat,blue,weapon,615,39,weapon",
     "name": "Wild Cat",
     "moduleId": "item",
@@ -4260,7 +4260,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS91FM23S78APANX1J8",
+    "id": "01J76MWE0FVW93XTVD7C1S13EK",
     "keyWords": "true dark light,red,weapon,604,35,weapon",
     "name": "True Dark Light",
     "moduleId": "item",
@@ -4283,7 +4283,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS95D8JZV1ZKWQDJT4H",
+    "id": "01J76MWE0FWWAP2P1Y0ZEV22JN",
     "keyWords": "bagel sandwich,red,heal item,228,9,beginner recipes,food,ramel flour",
     "name": "Bagel Sandwich",
     "moduleId": "item",
@@ -4318,7 +4318,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS96P9J3TMQ8ZY1C5Z5",
+    "id": "01J76MWE0F9KDQ16WMMFRQ85H7",
     "keyWords": "harmonium,red,synthesis,444,35,mystery recipes,weapon mat,metal,spirit crystal",
     "name": "Harmonium",
     "moduleId": "item",
@@ -4354,7 +4354,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS9EN4SDG1H6K1QECFZ",
+    "id": "01J76MWE0F7HGJ3K7E9YZ7DZZX",
     "keyWords": "simple sweets,green,heal item,221,2,beginner recipes,food,sweets,ramel wheat",
     "name": "Simple Sweets",
     "moduleId": "item",
@@ -4390,7 +4390,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS9QXGHRC5MCJNY9G5R",
+    "id": "01J76MWE0F9X90ZJ9D94ZHQK6A",
     "keyWords": "heaven's shovel,red,weapon,593,23,weapon",
     "name": "Heaven's Shovel",
     "moduleId": "item",
@@ -4413,7 +4413,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS997MDSGT0VVHFFG9P",
+    "id": "01J76MWE0G0STR99RJK2BPSE7S",
     "keyWords": "colorful vest,green,armor,689,34,armor",
     "name": "Colorful Vest",
     "moduleId": "item",
@@ -4436,7 +4436,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS917RVPVQGN18PB03S",
+    "id": "01J76MWE0GVGVADQW5P9PVF5CF",
     "keyWords": "golt aizen,red,synthesis,443,29,dream recipes,weapon mat,metal,ingot,golden radiance",
     "name": "Golt Aizen",
     "moduleId": "item",
@@ -4479,7 +4479,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS9BHZEXX1JTNRR2WXF",
+    "id": "01J76MWE0G097AC0Q36XZ65ZVX",
     "keyWords": "apcol,yellow,synthesis,426,5,beginner recipes,ingredient,medicine mat,whimsy strawberry",
     "name": "Apcol",
     "moduleId": "item",
@@ -4515,7 +4515,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGS9PYAFNSPHZ9RX56RT",
+    "id": "01J76MWE0GZKVW630522H0ANGG",
     "keyWords": "fardenlite,white,material,29,25,ore,thread,heavenly bird,dragonaire,magmacius.,mountain boundary,husk forest,scar of the land,moon sun moor.",
     "name": "Fardenlite",
     "moduleId": "item",
@@ -4548,7 +4548,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSAXWJKMBPKGV8TJQ9P",
+    "id": "01J76MWE0GVDJZS7DSHEA8F1PY",
     "keyWords": "nitro water,red,material,46,30,gunpowder,water,poison mat,dragonaire,magmacius.,waterside ruins,sealed temple,soul space.",
     "name": "Nitro Water",
     "moduleId": "item",
@@ -4580,7 +4580,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSAEA84XFY75FR9T37Y",
+    "id": "01J76MWE0GSXJDW21DS23K9D8E",
     "keyWords": "unknown knowledge scrap,green,material,94,21,paper,fuel,secret power,library of all creation.",
     "name": "Unknown Knowledge Scrap",
     "moduleId": "item",
@@ -4607,7 +4607,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSAEB4Z0ZG2HV6D9ZYY",
+    "id": "01J76MWE0GA91RKCA950R0KCPP",
     "keyWords": "mystery elixir,white,heal item,220,50,mystery recipes,medicine,elixir,dunkelheit",
     "name": "Mystery Elixir",
     "moduleId": "item",
@@ -4643,7 +4643,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSAM0YQ4HNZ1NBM8YW1",
+    "id": "01J76MWE0GS138QM9S4KKWV56R",
     "keyWords": "kirchen milk,blue,material,44,10,ingredient,water,kirchen bell special,bought.",
     "name": "Kirchen Milk",
     "moduleId": "item",
@@ -4673,7 +4673,7 @@
     }
   },
   {
-    "id": "01J3F5PGSAZB7VS08GJAE8J98V",
+    "id": "01J76MWE0HFJ42R50T897GANJ5",
     "keyWords": "golden puniball,yellow,material,53,15,ingredient,secret power,golden radiance,blue puni,green puni,red puni,gold puni,punipuni? super puni,admiral puni.",
     "name": "Golden Puniball",
     "moduleId": "item",
@@ -4708,7 +4708,7 @@
     }
   },
   {
-    "id": "01J3F5PGSAJAVGKACNAKQZRPXJ",
+    "id": "01J76MWE0HZ37PQ1VR9FFWJB9D",
     "keyWords": "sun powder,red,material,74,37,elixir,gunpowder,crimson fang,dragonaire,magmacius.,sealed temple,moon sun moor.",
     "name": "Sun Powder",
     "moduleId": "item",
@@ -4739,7 +4739,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSA5E97JTANQ157XXA5",
+    "id": "01J76MWE0HG8G2FJ2FE7XWX6MT",
     "keyWords": "sealed knowledge scrap,yellow,material,95,21,paper,fuel,secret power,library of all creation.",
     "name": "Sealed Knowledge Scrap",
     "moduleId": "item",
@@ -4766,7 +4766,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSA7TQ56H35JHWS8C2A",
+    "id": "01J76MWE0HV68R0ZK785YFYQCM",
     "keyWords": "refuel bottle,blue,heal item,217,10,growth recipes,medicine,pond,forgotten nursery",
     "name": "Refuel Bottle",
     "moduleId": "item",
@@ -4804,7 +4804,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSA74D3BZ90TW251PTS",
+    "id": "01J76MWE0HFCA2Y1CRVX741V59",
     "keyWords": "resplendent frost,blue,weapon,609,35,weapon",
     "name": "Resplendent Frost",
     "moduleId": "item",
@@ -4827,7 +4827,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSAGN3XN2Z8H50AS0G7",
+    "id": "01J76MWE0HWXC5XMMD34QAZFBS",
     "keyWords": "supreme hot milk,blue,heal item,238,24,hope recipes,food,kirchen milk",
     "name": "Supreme Hot Milk",
     "moduleId": "item",
@@ -4862,7 +4862,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSAX87ATRA2SHWX6214",
+    "id": "01J76MWE0HCSWW8PCP6Z7BKJK7",
     "keyWords": "devouring flame,red,weapon,610,38,weapon",
     "name": "Devouring Flame",
     "moduleId": "item",
@@ -4885,7 +4885,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSBG8GSY8NM1YQY1ZTD",
+    "id": "01J76MWE0H4P07CK10NZK3CWM7",
     "keyWords": "dusk drop,red,synthesis,453,31,mystery recipes,poison mat,water,fuel,ore,yasuk,dorak",
     "name": "Dusk Drop",
     "moduleId": "item",
@@ -4926,7 +4926,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSB3K89HF903MZ1GKCR",
+    "id": "01J76MWE0HEB2DHCN0K19WQ7RV",
     "keyWords": "plain waffle,red,heal item,227,29,hope recipes,food,supreme hot milk,hot",
     "name": "Plain Waffle",
     "moduleId": "item",
@@ -4968,7 +4968,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSBRP8M59EX0GNQVD6Y",
+    "id": "01J76MWE0JV3TCV1HS59SC809W",
     "keyWords": "flourish heart,blue,weapon,577,14,weapon",
     "name": "Flourish Heart",
     "moduleId": "item",
@@ -4991,7 +4991,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSBJTHN5JZ48KZ24VYN",
+    "id": "01J76MWE0JE79H4KXNWE5BX8Z6",
     "keyWords": "dark light,green,weapon,602,18,weapon",
     "name": "Dark Light",
     "moduleId": "item",
@@ -5014,7 +5014,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSBQ65MVFFRWCMWSTG6",
+    "id": "01J76MWE0J2ESHHVVSQQ18VBYW",
     "keyWords": "crystal ball,yellow,synthesis,454,27,growth recipes,gem,secret power,street,night",
     "name": "Crystal Ball",
     "moduleId": "item",
@@ -5053,7 +5053,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSBZAZAY5M8EJMA50ZS",
+    "id": "01J76MWE0JACMPAQBNFG3BY5WV",
     "keyWords": "refresh oil,yellow,synthesis,432,7,growth recipes,fuel,water,ancient kitchen,forgotten nursery",
     "name": "Refresh Oil",
     "moduleId": "item",
@@ -5092,7 +5092,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSB6Y52DTDDACX7SFNT",
+    "id": "01J76MWE0JDKXJPYXSG5112T9W",
     "keyWords": "neutralizer y,yellow,synthesis,423,2,growth recipes,neutralizer,monsters",
     "name": "Neutralizer Y",
     "moduleId": "item",
@@ -5125,7 +5125,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSBK9YRH02KNK15T77D",
+    "id": "01J76MWE0J1TBZFPKT4YQJGR5Q",
     "keyWords": "fairheit,yellow,synthesis,449,31,dream recipes,armor mat,cloth,adal cloth,high class",
     "name": "Fairheit",
     "moduleId": "item",
@@ -5168,7 +5168,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSBNXBQTSBST7RV6KTV",
+    "id": "01J76MWE0J8HV8Z73FHEHYW751",
     "keyWords": "practice cauldron,white,machine,510,4,growth recipes,important,practice cauldron,cory",
     "name": "Practice Cauldron",
     "moduleId": "item",
@@ -5208,7 +5208,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSBMZ3BAJJVSJSDF0ZR",
+    "id": "01J76MWE0JV0TYGC9QDZ836WXK",
     "keyWords": "formal rapier,blue,weapon,586,8,weapon",
     "name": "Formal Rapier",
     "moduleId": "item",
@@ -5231,7 +5231,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSCQEY51EEK8VSZ4BDE",
+    "id": "01J76MWE0JYH1FV0RK18TG37WS",
     "keyWords": "steel gauntlet,red,weapon,606,9,weapon",
     "name": "Steel Gauntlet",
     "moduleId": "item",
@@ -5254,7 +5254,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSCZDDJYKRVFD6BGW4Q",
+    "id": "01J76MWE0J7E1YZR52PA80ET0T",
     "keyWords": "geist aizen,white,synthesis,435,29,dream recipes,metal,secret power,prayerless altar,small islet",
     "name": "Geist Aizen",
     "moduleId": "item",
@@ -5293,7 +5293,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSCVJQY76MBSCX71PD8",
+    "id": "01J76MWE0JGVY3N5NT6S4AEW5Y",
     "keyWords": "pure water,blue,synthesis,424,20,hope recipes,water,luminous water",
     "name": "Pure Water",
     "moduleId": "item",
@@ -5328,7 +5328,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSC5GAZWPZP875TC0DK",
+    "id": "01J76MWE0JPMV5D86R32JPTK3X",
     "keyWords": "wonder stimulant,green,exploration,356,9,growth recipes,medicine,medicine,size+",
     "name": "Wonder Stimulant",
     "moduleId": "item",
@@ -5380,7 +5380,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSCSYMRAQQRV2ATEZH4",
+    "id": "01J76MWE0KZ813CTMMT4A40H0N",
     "keyWords": "clear drops,blue,exploration,360,20,hope recipes,magic item,alchemy drops,super sweet",
     "name": "Clear Drops",
     "moduleId": "item",
@@ -5422,7 +5422,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSC19D65E9HSFAQ7YMS",
+    "id": "01J76MWE0K68VXHADBWDJ93SC9",
     "keyWords": "emergency bag,yellow,exploration,364,20,dream recipes,magic item",
     "name": "Emergency Bag",
     "moduleId": "item",
@@ -5450,7 +5450,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSCG9R18KAWQWK5TN7T",
+    "id": "01J76MWE0KHCGDTYHM7J92P4FW",
     "keyWords": "prosper heart,yellow,weapon,579,32,weapon",
     "name": "Prosper Heart",
     "moduleId": "item",
@@ -5473,7 +5473,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSC5XHZ46EEX434YQKQ",
+    "id": "01J76MWE0K2E8HA30P5C7PJFM2",
     "keyWords": "monika's estoc,white,weapon,590,40,weapon",
     "name": "Monika's Estoc",
     "moduleId": "item",
@@ -5496,7 +5496,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSCSNZN3ESF5AM9B596",
+    "id": "01J76MWE0K0R6RA4BJ052FXCNC",
     "keyWords": "cloth,yellow,synthesis,445,8,beginner recipes,armor mat,cloth,animal fur",
     "name": "Cloth",
     "moduleId": "item",
@@ -5532,7 +5532,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSC1CFXF1CGTEAPDK3S",
+    "id": "01J76MWE0KBVRG6XP49WHVDQJW",
     "keyWords": "ramel flour,red,synthesis,427,3,beginner recipes,ingredient,gunpowder,south wheat field,merbert farm",
     "name": "Ramel Flour",
     "moduleId": "item",
@@ -5571,7 +5571,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSCDKBRPXE69XV0YCR3",
+    "id": "01J76MWE0K2QK38R0C321ZRJTN",
     "keyWords": "evandeit,yellow,weapon,600,44,weapon",
     "name": "Evandeit",
     "moduleId": "item",
@@ -5594,7 +5594,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSCWM849Y9MN6ESFPXM",
+    "id": "01J76MWE0KFMYAYXTK9T5SY7BH",
     "keyWords": "alchemist's book,red,book,894,28,important",
     "name": "Alchemist's Book",
     "moduleId": "item",
@@ -5617,7 +5617,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSDXTWZ1BMSFD9CMJBP",
+    "id": "01J76MWE0KCER710KAAGEW4S0V",
     "keyWords": "gunade ring,blue,accessory,774,30,hope recipes,accessory,gunade ring,tess",
     "name": "Gunade Ring",
     "moduleId": "item",
@@ -5655,7 +5655,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSDY4E7X4AXS7DA011V",
+    "id": "01J76MWE0KKV11Y1PM37KEHADG",
     "keyWords": "hexe auris,white,synthesis,830,46,hope recipes,metal,magic item,story progress",
     "name": "Hexe Auris",
     "moduleId": "item",
@@ -5689,7 +5689,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSD7P0HP4500Y64CQ8E",
+    "id": "01J76MWE0KMAZ0FDMCBCMEE9RD",
     "keyWords": "precise parts,white,synthesis,461,24,hope recipes,metal,cory",
     "name": "Precise Parts",
     "moduleId": "item",
@@ -5723,7 +5723,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSD9S14XZSKMA8XNNPP",
+    "id": "01J76MWE0MFJYRJF77XSH2ARST",
     "keyWords": "brave rapier,green,weapon,587,18,weapon",
     "name": "Brave Rapier",
     "moduleId": "item",
@@ -5746,7 +5746,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSDEW5NT0DXZX3M58QS",
+    "id": "01J76MWE0MRGPDRMKSMTXKFS04",
     "keyWords": "training charm,green,exploration,367,17,hope recipes,magic item,furnace,blacksmith",
     "name": "Training Charm",
     "moduleId": "item",
@@ -5784,7 +5784,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSDXXFK4MDSRN8M16MN",
+    "id": "01J76MWE0MPAX9RXWCCMY8XA27",
     "keyWords": "bountiful harvester,green,weapon,595,43,weapon",
     "name": "Bountiful Harvester",
     "moduleId": "item",
@@ -5807,7 +5807,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSDK83XZV4NM0611EZX",
+    "id": "01J76MWE0M16409XQCNBVXYPPS",
     "keyWords": "reactive coat,blue,armor,695,25,armor",
     "name": "Reactive Coat",
     "moduleId": "item",
@@ -5830,7 +5830,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSD86QWFR2KCV4NP099",
+    "id": "01J76MWE0MSGSKVAH62E13FGJA",
     "keyWords": "miraculous cauldron,white,machine,517,50,mystery recipes,important,miraculous cauldron,final area of dlc map",
     "name": "Miraculous Cauldron",
     "moduleId": "item",
@@ -5870,7 +5870,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSD2346PP2P58QSKR20",
+    "id": "01J76MWE0M2337ZMXCZX54BHCM",
     "keyWords": "victor's charm,red,exploration,366,12,beginner recipes,magic item",
     "name": "Victor's Charm",
     "moduleId": "item",
@@ -5898,7 +5898,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSD45M9FZN8R1X9JDMJ",
+    "id": "01J76MWE0MB483YBEPHAE956NK",
     "keyWords": "gathering gloves,blue,exploration,365,16,cloth",
     "name": "Gathering Gloves",
     "moduleId": "item",
@@ -5921,7 +5921,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSDQXKNQBX42C4V2KSH",
+    "id": "01J76MWE0M53W6VJHBSE4ZYP93",
     "keyWords": "deluxe backpack,yellow,exploration,363,22,growth recipes,cloth",
     "name": "Deluxe Backpack",
     "moduleId": "item",
@@ -5949,7 +5949,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSEEB3MH6MAF7Y4DTWG",
+    "id": "01J76MWE0MWA9CSZWAX9J99SM2",
     "keyWords": "flame powder,red,synthesis,433,25,hope recipes,gunpowder,black orb",
     "name": "Flame Powder",
     "moduleId": "item",
@@ -5984,7 +5984,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSE0K4PJG0CCBT2JJ8N",
+    "id": "01J76MWE0NAERFE4G8DNJBRJY4",
     "keyWords": "aura bangle,blue,weapon,582,15,weapon",
     "name": "Aura Bangle",
     "moduleId": "item",
@@ -6007,7 +6007,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSEGTXNEVK0FBBX6TX1",
+    "id": "01J76MWE0N364SYA7TP17NTATA",
     "keyWords": "shovel of hope,yellow,weapon,594,33,weapon",
     "name": "Shovel of Hope",
     "moduleId": "item",
@@ -6030,7 +6030,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSEAFZRS9S8MTFW2G8G",
+    "id": "01J76MWE0NEA6HYXECC6VT2HNJ",
     "keyWords": "neutralizer b,blue,synthesis,421,2,beginner recipes,neutralizer,fountain,plaza",
     "name": "Neutralizer B",
     "moduleId": "item",
@@ -6068,7 +6068,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSEPC6Z0CHRW203N6HA",
+    "id": "01J76MWE0NJNE382DMEXMZ5H3K",
     "keyWords": "spruce,green,synthesis,438,9,beginner recipes,wood,kifa",
     "name": "Spruce",
     "moduleId": "item",
@@ -6103,7 +6103,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSEX9WS29Q8RKZ3X9T6",
+    "id": "01J76MWE0NFNJ1GS47EDGES59V",
     "keyWords": "date ticket,white,key item,837,1,important,obtain through event.",
     "name": "Date Ticket",
     "moduleId": "item",
@@ -6126,7 +6126,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSEPXTNKGV92MC1X2NE",
+    "id": "01J76MWE0NVRTVKTKJD0SE87A1",
     "keyWords": "ambrosia garland,green,accessory,765,40,mystery recipes,accessory,dark maiden",
     "name": "Ambrosia Garland",
     "moduleId": "item",
@@ -6159,7 +6159,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSEVPERBVDMWKSJK2MW",
+    "id": "01J76MWE0NPY32B4YDJG3NZWCE",
     "keyWords": "grandma's cauldron,white,machine,509,4,beginner recipes,important,ice bomb",
     "name": "Grandma's Cauldron",
     "moduleId": "item",
@@ -6194,7 +6194,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSECTFFE4M1TDB4JS18",
+    "id": "01J76MWE0NN643KXF0PTV2YV4Y",
     "keyWords": "noble sapphire,blue,synthesis,452,25,hope recipes,gem,accessory",
     "name": "Noble Sapphire",
     "moduleId": "item",
@@ -6239,7 +6239,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSE2FMQ8NNG6J42REKJ",
+    "id": "01J76MWE0NY7GZHCC3X5H843KW",
     "keyWords": "cosmo caller,red,weapon,583,25,weapon",
     "name": "Cosmo Caller",
     "moduleId": "item",
@@ -6262,7 +6262,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSETTRRHYPDZ1JSE5M2",
+    "id": "01J76MWE0NBZKZJ91KNM1KEM3K",
     "keyWords": "idle shovel,blue,weapon,592,13,weapon",
     "name": "Idle Shovel",
     "moduleId": "item",
@@ -6285,7 +6285,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSFXYHGWM2ERAJVGVE1",
+    "id": "01J76MWE0P294J6Q9ENVZ66E2R",
     "keyWords": "demon god slayer,blue,weapon,603,25,weapon",
     "name": "Demon God Slayer",
     "moduleId": "item",
@@ -6308,7 +6308,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSF3W9FYY7QA7KAW8M1",
+    "id": "01J76MWE0PYS2NSS2YW675PJEB",
     "keyWords": "madcat spear,yellow,weapon,617,18,weapon",
     "name": "Madcat Spear",
     "moduleId": "item",
@@ -6331,7 +6331,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSF549SPKJ2WVWMEKWC",
+    "id": "01J76MWE0PZP9RQ3CR0HWC7XHF",
     "keyWords": "hero's rapier,blue,weapon,589,34,weapon",
     "name": "Hero's Rapier",
     "moduleId": "item",
@@ -6354,7 +6354,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSF3PN8M19678PMCB3N",
+    "id": "01J76MWE0P9HTY43ZTG4ZZWXNS",
     "keyWords": "aegis jacket,red,armor,690,38,armor",
     "name": "Aegis Jacket",
     "moduleId": "item",
@@ -6377,7 +6377,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSF7YWARXZFDNM6SQEC",
+    "id": "01J76MWE0PYTJ0PET7YXJYA4YC",
     "keyWords": "expert cauldron,white,machine,512,17,growth recipes,important,expert cauldron,silent bedroom,sun moon mor",
     "name": "Expert Cauldron",
     "moduleId": "item",
@@ -6422,7 +6422,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSF4ER3BBS1J8A11AZ3",
+    "id": "01J76MWE0PEY6GZJXC2GVMEGDK",
     "keyWords": "sun drop,red,synthesis,458,40,mystery recipes,secret power,fuel,medicine mat,neutralizer,monika",
     "name": "Sun Drop",
     "moduleId": "item",
@@ -6459,7 +6459,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSFDWYHACYG478SX6QD",
+    "id": "01J76MWE0PTAVJV7J2936PDDW6",
     "keyWords": "full metal shirt,red,armor,703,35,armor",
     "name": "Full Metal Shirt",
     "moduleId": "item",
@@ -6482,7 +6482,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSFNYDQY44QCVDXV44T",
+    "id": "01J76MWE0PTB1GNS16EX72BJ5T",
     "keyWords": "element guard,green,accessory,773,38,mystery recipes,accessory,sophie,positive release",
     "name": "Element Guard",
     "moduleId": "item",
@@ -6520,7 +6520,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSFHRHG56Q2BP43EXXR",
+    "id": "01J76MWE0P9HJ95CZAPT5G5WNG",
     "keyWords": "hermit's cauldron,white,machine,516,32,hope recipes,important,hermit's cauldron,tess",
     "name": "Hermit's Cauldron",
     "moduleId": "item",
@@ -6560,7 +6560,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSFWS0PERKKFTSF8AXM",
+    "id": "01J76MWE0Q7291X7P8775Y9DAV",
     "keyWords": "key of truth,white,synthesis,829,41,mystery recipes,important,story progress",
     "name": "Key of Truth",
     "moduleId": "item",
@@ -6593,7 +6593,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSF78KHM5VHNP6PWHYN",
+    "id": "01J76MWE0QDTZ2R93AFWYTWY9S",
     "keyWords": "starting staff,green,weapon,576,6,weapon",
     "name": "Starting Staff",
     "moduleId": "item",
@@ -6616,7 +6616,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSFSNH96QSFE3WF74ZJ",
+    "id": "01J76MWE0Q9W569VSKW8N1KGBG",
     "keyWords": "knight's rapier,red,weapon,588,28,weapon",
     "name": "Knight's Rapier",
     "moduleId": "item",
@@ -6639,7 +6639,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSGBVAVA6744S5K06J3",
+    "id": "01J76MWE0QW6TZCZQQDB9EDG2A",
     "keyWords": "paladin blade,blue,weapon,598,24,weapon",
     "name": "Paladin Blade",
     "moduleId": "item",
@@ -6662,7 +6662,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSGMB4VKXJJQWW0R612",
+    "id": "01J76MWE0QCDK7S3W1ER4R6FQA",
     "keyWords": "maiden's spear,blue,weapon,616,10,weapon",
     "name": "Maiden's Spear",
     "moduleId": "item",
@@ -6685,7 +6685,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSGZN4HA65HWE0RA6J0",
+    "id": "01J76MWE0Q3NC8FZMCYAYAV7MD",
     "keyWords": "alchemy vest,blue,armor,691,43,armor",
     "name": "Alchemy Vest",
     "moduleId": "item",
@@ -6708,7 +6708,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSGT2Z3ED3Y38CG5T9N",
+    "id": "01J76MWE0Q625FDY614VNHYDSB",
     "keyWords": "tight shirt,blue,armor,707,32,armor",
     "name": "Tight Shirt",
     "moduleId": "item",
@@ -6731,7 +6731,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSG438NF5QTGNEBC26W",
+    "id": "01J76MWE0Q99FGZBZN4QRRMD1N",
     "keyWords": "crystal bullets,blue,weapon,613,24,weapon",
     "name": "Crystal Bullets",
     "moduleId": "item",
@@ -6754,7 +6754,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSGS8GVENGJF3RJ5GEA",
+    "id": "01J76MWE0QQQ5CEH06AHBFX47F",
     "keyWords": "farden coat,green,armor,694,19,armor",
     "name": "Farden Coat",
     "moduleId": "item",
@@ -6777,7 +6777,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSG02VSFM0KNZ4MD3J3",
+    "id": "01J76MWE0Q27REGGBB01TE10SQ",
     "keyWords": "eternal brilliance,green,book,888,10,important",
     "name": "Eternal Brilliance",
     "moduleId": "item",
@@ -6800,7 +6800,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSGTD44N59B1YH1BD3D",
+    "id": "01J76MWE0R5TJJ7N4W3BV0NE35",
     "keyWords": "mind's eye monocle,green,accessory,767,23,dream recipes,accessory,weak",
     "name": "Mind's Eye Monocle",
     "moduleId": "item",
@@ -6834,7 +6834,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSG5Z03ZN43F5CRR3RP",
+    "id": "01J76MWE0RMAE6DJSD2JJVS8JA",
     "keyWords": "traveler's vest,green,armor,686,6,armor",
     "name": "Traveler's Vest",
     "moduleId": "item",
@@ -6857,7 +6857,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSGF51XCH5WSP5A1DPX",
+    "id": "01J76MWE0RR3WY3XQSAB1HADKX",
     "keyWords": "resurrection wear,white,armor,709,42,armor",
     "name": "Resurrection Wear",
     "moduleId": "item",
@@ -6880,7 +6880,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSG47PNY9DKH8J814YQ",
+    "id": "01J76MWE0RRHPQQNBGN6S0CG07",
     "keyWords": "puppeteer's tools,white,book,893,22,important",
     "name": "Puppeteer's Tools",
     "moduleId": "item",
@@ -6903,7 +6903,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSHP1GKHMWJTF468VQ0",
+    "id": "01J76MWE0RDCDP9E1GA8VVY5QS",
     "keyWords": "dragonscale coat,red,armor,696,40,armor",
     "name": "Dragonscale Coat",
     "moduleId": "item",
@@ -6926,7 +6926,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSHMHHJ3HR6GF4H7PQ2",
+    "id": "01J76MWE0RMV79HMYSQKAJHMMA",
     "keyWords": "music box of memory,green,key item,833,1,important",
     "name": "Music Box of Memory",
     "moduleId": "item",
@@ -6949,7 +6949,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSHNN6TX6TZH5A33T1V",
+    "id": "01J76MWE0RVSTHGH41N1HQTF3W",
     "keyWords": "ares brooch,green,accessory,831,19,hope recipes,accessory,leon",
     "name": "Ares Brooch",
     "moduleId": "item",
@@ -6983,7 +6983,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSHARW4C45R79GATXGC",
+    "id": "01J76MWE0RTRAP8C2HHWT0X6FJ",
     "keyWords": "puppeteer string,yellow,synthesis,834,16,beginner recipes,thread,house,night,pilgrim road",
     "name": "Puppeteer String",
     "moduleId": "item",
@@ -7026,7 +7026,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSHFF0G432EHHT54TT6",
+    "id": "01J76MWE0RK0G3B80WVBH6P0Z1",
     "keyWords": "silvalia,red,synthesis,441,14,growth recipes,weapon mat,metal,monsters,weapons",
     "name": "Silvalia",
     "moduleId": "item",
@@ -7065,7 +7065,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSH0H2AM8F3RQES5XRF",
+    "id": "01J76MWE0RYPDR5XPPD6N4AXNK",
     "keyWords": "velvetis,yellow,synthesis,450,37,mystery recipes,armor mat,cloth,rainbow puni fluid",
     "name": "Velvetis",
     "moduleId": "item",
@@ -7101,7 +7101,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSHB9Z30CTE88Z9MPVP",
+    "id": "01J76MWE14MPFNFY7ZVWC363EA",
     "keyWords": "old clothing,white,key item,842,1,important",
     "name": "Old Clothing",
     "moduleId": "item",
@@ -7124,7 +7124,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSH84T369MS9GWAKAPM",
+    "id": "01J76MWE14T40BVNDEX79GY3CN",
     "keyWords": "gathering buddy,red,book,887,8,growth recipes,important,story progress",
     "name": "Gathering Buddy",
     "moduleId": "item",
@@ -7157,7 +7157,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSHKR7H7NV2QYQRCYJM",
+    "id": "01J76MWE14JJ6ZKVZS90JQ2NZB",
     "keyWords": "corneria doll,white,synthesis,845,1,mystery recipes,cloth,secret power,story progress",
     "name": "Corneria Doll",
     "moduleId": "item",
@@ -7191,7 +7191,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSJJQT3M5NFPA12K6YN",
+    "id": "01J76MWE14TQKA3NSANRZEG8ZR",
     "keyWords": "philosopher stone,white,synthesis,457,59,mystery recipes,metal,medicine mat,elixir,secret power,synthesis level",
     "name": "Philosopher Stone",
     "moduleId": "item",
@@ -7228,7 +7228,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSJ9TF7ETCAPZH70YJB",
+    "id": "01J76MWE140CYCYP7SXPRB9WZ7",
     "keyWords": "arch bangle,green,weapon,584,34,weapon",
     "name": "Arch Bangle",
     "moduleId": "item",
@@ -7251,7 +7251,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSJD4QT5RJNH1B866RV",
+    "id": "01J76MWE159C73AJK6FZHVPAP4",
     "keyWords": "knight blade,white,weapon,596,9,weapon",
     "name": "Knight Blade",
     "moduleId": "item",
@@ -7274,7 +7274,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSJD7QE7GEJWNHD5BG4",
+    "id": "01J76MWE15E5TP9VFWJ9K4CV8T",
     "keyWords": "puni gauntlet,blue,weapon,608,26,weapon",
     "name": "Puni Gauntlet",
     "moduleId": "item",
@@ -7297,7 +7297,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSJ9EYNZMPY5STMYDYZ",
+    "id": "01J76MWE15MX8DHHMP7FF0MQMM",
     "keyWords": "lady's spear,green,weapon,618,24,weapon",
     "name": "Lady's Spear",
     "moduleId": "item",
@@ -7320,7 +7320,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSJDN3YBWMC6DK7VH04",
+    "id": "01J76MWE15KJRYX5VRXGPVK7QD",
     "keyWords": "first shirt,green,armor,698,3,armor",
     "name": "First Shirt",
     "moduleId": "item",
@@ -7343,7 +7343,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSJQNDMPK839ZNYKFYG",
+    "id": "01J76MWE15932BJP8BWSJRCJAE",
     "keyWords": "roaring thunder,green,weapon,607,19,weapon",
     "name": "Roaring Thunder",
     "moduleId": "item",
@@ -7366,7 +7366,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSJE5DV1F3PEJEKE6Q4",
+    "id": "01J76MWE1500QPB12XAB4EHW2N",
     "keyWords": "plate vest,red,armor,687,11,armor",
     "name": "Plate Vest",
     "moduleId": "item",
@@ -7389,7 +7389,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSJ6DVY1Y2MPZQXX6W2",
+    "id": "01J76MWE15YZMBMH9GNX6XM2YM",
     "keyWords": "soul stone,white,material,827,12,important,obtain through event.",
     "name": "Soul Stone",
     "moduleId": "item",
@@ -7412,7 +7412,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSJDTJD44QW7XAMRV2K",
+    "id": "01J76MWE158FMSF7XMENJ4Y7HK",
     "keyWords": "atelier tent,white,key item,840,40,mystery recipes,important,story progress",
     "name": "Atelier Tent",
     "moduleId": "item",
@@ -7445,7 +7445,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSKRS94B67TRCBCGP8M",
+    "id": "01J76MWE15XYQX6J1HP3WQ1XCX",
     "keyWords": "white-hot headband,red,accessory,761,27,dream recipes,accessory,really strong monsters",
     "name": "White-Hot Headband",
     "moduleId": "item",
@@ -7478,7 +7478,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSKFWWKZQN6EF5EMTC7",
+    "id": "01J76MWE15AY8TQMX7M6CBHP92",
     "keyWords": "weightless shirt,blue,armor,701,21,armor",
     "name": "Weightless Shirt",
     "moduleId": "item",
@@ -7501,7 +7501,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSKRPC3W0GRT5RT3H4Q",
+    "id": "01J76MWE152WTPX5FWCPTSZ3F0",
     "keyWords": "plachta's clothes,green,key item,826,1,important",
     "name": "Plachta's Clothes",
     "moduleId": "item",
@@ -7524,7 +7524,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSKSY51WP1B54FF2AAS",
+    "id": "01J76MWE168NRBV59TWMRE5MXD",
     "keyWords": "meister mittens,yellow,accessory,766,13,beginner recipes,accessory,simple sweets,salty",
     "name": "Meister Mittens",
     "moduleId": "item",
@@ -7566,7 +7566,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSKQ07G9RJDXEYTT24X",
+    "id": "01J76MWE16KGDQBSD5HQYMS4RC",
     "keyWords": "alchemy mantle,white,armor,705,41,armor",
     "name": "Alchemy Mantle",
     "moduleId": "item",
@@ -7589,7 +7589,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSKWDCYFQ6G42JYHT4C",
+    "id": "01J76MWE16NHWK2XV6XTP0WJRR",
     "keyWords": "blessing of the sun,yellow,book,891,20,important",
     "name": "Blessing of the Sun",
     "moduleId": "item",
@@ -7612,7 +7612,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSKGFZDWAAEW4EJBV1N",
+    "id": "01J76MWE16V3S6PFMYGC8WZPE4",
     "keyWords": "hustle belt,red,accessory,772,29,hope recipes,accessory,drilled scar,scar of the land",
     "name": "Hustle Belt",
     "moduleId": "item",
@@ -7650,7 +7650,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSKSH91PGCHE7NMREVY",
+    "id": "01J76MWE177JBBQT7DK37XNZRG",
     "keyWords": "white panther,green,weapon,619,29,weapon",
     "name": "White Panther",
     "moduleId": "item",
@@ -7673,7 +7673,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSK5TB7DC8VNCSHWQPS",
+    "id": "01J76MWE17YCJF6XD2S1SXMZ5H",
     "keyWords": "hard coat,green,armor,692,8,armor",
     "name": "Hard Coat",
     "moduleId": "item",
@@ -7696,7 +7696,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSKECYV6RQA04A55SP3",
+    "id": "01J76MWE1762VXH7MDBDXCYB3A",
     "keyWords": "bridal blouse,white,armor,708,37,armor",
     "name": "Bridal Blouse",
     "moduleId": "item",
@@ -7719,7 +7719,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSK7EH7E67NWJ5JBFC9",
+    "id": "01J76MWE17M3XQECCCN6GCRT6F",
     "keyWords": "diamant,red,weapon,614,34,weapon",
     "name": "Diamant",
     "moduleId": "item",
@@ -7742,7 +7742,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSMZQ18FVSYKPSCCYM8",
+    "id": "01J76MWE17BSVR3XMK0S2VBFT9",
     "keyWords": "wanderer's shirt,green,armor,700,14,armor",
     "name": "Wanderer's Shirt",
     "moduleId": "item",
@@ -7765,7 +7765,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSMX131K9YMEEYR04M0",
+    "id": "01J76MWE17AHP5Q73RSFEZBCBZ",
     "keyWords": "soul techniques,blue,book,889,11,important",
     "name": "Soul Techniques",
     "moduleId": "item",
@@ -7788,7 +7788,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSMC48NG9X5RZB09T18",
+    "id": "01J76MWE17KRTKP4A1T55CTCAZ",
     "keyWords": "prototype fertilizer,white,synthesis,836,7,mystery recipes,important,story progress",
     "name": "Prototype Fertilizer",
     "moduleId": "item",
@@ -7821,7 +7821,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSMATF32W3R0G2H6XQP",
+    "id": "01J76MWE19F3W6XX71RRR2JGCB",
     "keyWords": "plate coat,red,armor,693,14,armor",
     "name": "Plate Coat",
     "moduleId": "item",
@@ -7844,7 +7844,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSMP0KF5XHHVQ5DQ6FN",
+    "id": "01J76MWE19ZWS9WCX9NFXSMJ9C",
     "keyWords": "plachta's core,green,key item,825,1,important",
     "name": "Plachta's Core",
     "moduleId": "item",
@@ -7867,7 +7867,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSMH9ZK6ESAFMDDJTAF",
+    "id": "01J76MWE19QJ9YX70MVWSXFYJZ",
     "keyWords": "grandma's clothes,white,key item,843,1,growth recipes,important,story progress",
     "name": "Grandma's Clothes",
     "moduleId": "item",
@@ -7900,7 +7900,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSMRVBPJKPDKPRAK6VD",
+    "id": "01J76MWE19G67R74590QYPH3A6",
     "keyWords": "paraselene clothes,white,armor,704,32,armor",
     "name": "Paraselene Clothes",
     "moduleId": "item",
@@ -7923,7 +7923,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSMRV5VA5DNV7C42R9H",
+    "id": "01J76MWE197E767CZ7177ZH32M",
     "keyWords": "piercing bullets,yellow,weapon,612,18,weapon",
     "name": "Piercing Bullets",
     "moduleId": "item",
@@ -7946,7 +7946,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSM3PMJSH11BWCM62FK",
+    "id": "01J76MWE1A7XB7VN6N80J0XT35",
     "keyWords": "gold jacket,yellow,armor,688,28,armor",
     "name": "Gold Jacket",
     "moduleId": "item",
@@ -7969,7 +7969,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSMHW4Q5HPGGP0YMFWW",
+    "id": "01J76MWE1A5HKW034R8BQ5W679",
     "keyWords": "old certificate,white,key item,841,1,important",
     "name": "Old Certificate",
     "moduleId": "item",
@@ -7992,7 +7992,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSM197YQ6VJET11H987",
+    "id": "01J76MWE1AN632HQX6445WJ1S0",
     "keyWords": "friendly persona,yellow,accessory,771,16,beginner recipes,accessory,silent beast,prospector's strand",
     "name": "Friendly Persona",
     "moduleId": "item",
@@ -8030,7 +8030,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSNTJHTNNBXR9034S8Y",
+    "id": "01J76MWE1AVC88M79ZXAQHFQWM",
     "keyWords": "vivid spear,red,weapon,620,39,weapon",
     "name": "Vivid Spear",
     "moduleId": "item",
@@ -8053,7 +8053,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSN180ADV5AGHP5ZMSB",
+    "id": "01J76MWE1AK6WBK28S5Q14PEX9",
     "keyWords": "natural clothes,green,armor,702,25,armor",
     "name": "Natural Clothes",
     "moduleId": "item",
@@ -8076,7 +8076,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSNYG7BF9YZN1XSZH8T",
+    "id": "01J76MWE1ACT6FKFWG2Y2PH7GQ",
     "keyWords": "moisture grass,white,material,838,2,important,obtain through event.",
     "name": "Moisture Grass",
     "moduleId": "item",
@@ -8099,7 +8099,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSNB3AKYED7QBC0T3Z2",
+    "id": "01J76MWE1AB88ZW93XVCA9797Y",
     "keyWords": "life bangle,red,accessory,760,35,dream recipes,accessory,world map",
     "name": "Life Bangle",
     "moduleId": "item",
@@ -8132,7 +8132,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSN88V2G5CFQEJ4WSK8",
+    "id": "01J76MWE1AJ00R9ZYD0K52F9S5",
     "keyWords": "ancient coat,white,armor,697,45,armor",
     "name": "Ancient Coat",
     "moduleId": "item",
@@ -8155,7 +8155,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSNY4YFXKR6J8D14X6P",
+    "id": "01J76MWE1ARXNDAR86E8C2C9YH",
     "keyWords": "plachta doll,white,key item,832,1,important",
     "name": "Plachta Doll",
     "moduleId": "item",
@@ -8178,7 +8178,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSNA1A75EANECFN53Z8",
+    "id": "01J76MWE1AHKH5FE479GMZGSH2",
     "keyWords": "alchemic drive guide,yellow,book,890,13,important",
     "name": "Alchemic Drive Guide",
     "moduleId": "item",
@@ -8201,7 +8201,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSNW1WDV14BTR6R18B7",
+    "id": "01J76MWE1AJGDZ9XH6AXVXM8JX",
     "keyWords": "recipe of origin,white,book,892,22,important",
     "name": "Recipe of Origin",
     "moduleId": "item",
@@ -8224,7 +8224,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSNRNCBM21QFGP5HTK7",
+    "id": "01J76MWE1B9WWY6C6JGV3N7JNZ",
     "keyWords": "feather ornament,green,accessory,763,24,growth recipes,accessory,saber claw",
     "name": "Feather Ornament",
     "moduleId": "item",
@@ -8257,7 +8257,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSP9PNQ7MV8NZDAH5X0",
+    "id": "01J76MWE1BRN2DDKNAX01EQBJB",
     "keyWords": "monochrome glasses,white,accessory,768,19,growth recipes,accessory,monika,light edge,brave heart",
     "name": "Monochrome Glasses",
     "moduleId": "item",
@@ -8301,7 +8301,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSPQWCSBST0QD2H2634",
+    "id": "01J76MWE1BN2VW0AH1H0H5YM19",
     "keyWords": "spirit needle,white,synthesis,828,20,growth recipes,important,julio",
     "name": "Spirit Needle",
     "moduleId": "item",
@@ -8335,7 +8335,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSP58AX5PFESDHTF74E",
+    "id": "01J76MWE1B1F0K6EVJF9F3YAKV",
     "keyWords": "sage's soil,yellow,synthesis,835,17,hope recipes,clay,fritz",
     "name": "Sage's Soil",
     "moduleId": "item",
@@ -8369,7 +8369,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSPF83Y4HFCKT1VC1XD",
+    "id": "01J76MWE1B4CNJ7RCR75G4T2TV",
     "keyWords": "sofinancier,yellow,heal item,224,34,dream recipes,food,sweets,natural yeast,sunny scent",
     "name": "Sofinancier",
     "moduleId": "item",
@@ -8412,7 +8412,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSPXRBKNXNAD5XYEKXT",
+    "id": "01J76MWE1B8AG5Y0WM7GXX1SWQ",
     "keyWords": "soft armor,blue,armor,706,29,armor",
     "name": "Soft Armor",
     "moduleId": "item",
@@ -8435,7 +8435,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSP1QJ6VNPYZAAH9127",
+    "id": "01J76MWE1B08W4T8432ZM4DN99",
     "keyWords": "alchemy drops,red,heal item,226,11,growth recipes,food,sweets,gem,honey,kirchen bell special",
     "name": "Alchemy Drops",
     "moduleId": "item",
@@ -8479,7 +8479,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSPX40VQ9KCFAH6ABAD",
+    "id": "01J76MWE1B5V392G8ADSKNQZM5",
     "keyWords": "adal cloth,yellow,synthesis,447,21,growth recipes,armor mat,cloth,leon",
     "name": "Adal Cloth",
     "moduleId": "item",
@@ -8514,7 +8514,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSPQFFV6YR3V3NF9B7G",
+    "id": "01J76MWE1B339PW27GQ61YMQV3",
     "keyWords": "breezy aroma,green,heal item,218,39,mystery recipes,medicine,hill,front of atelier",
     "name": "Breezy Aroma",
     "moduleId": "item",
@@ -8552,7 +8552,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSQH1ZBNMD996A1A9YZ",
+    "id": "01J76MWE1B4T96FYPZ59H8DHJP",
     "keyWords": "compass of hades,white,synthesis,455,27,growth recipes,important,spirit needle",
     "name": "Compass of Hades",
     "moduleId": "item",
@@ -8587,7 +8587,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSQ8CC8NNQEBX6YMEZ5",
+    "id": "01J76MWE1BPZZX55F4FM7P5A4T",
     "keyWords": "living broom,green,synthesis,844,1,hope recipes,magic item,wood,fuel,story progress",
     "name": "Living Broom",
     "moduleId": "item",
@@ -8622,7 +8622,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSQSTD28QHEJ94BR60T",
+    "id": "01J76MWE1BD8M2XJ48GJCT49PC",
     "keyWords": "kaen stone,red,material,18,5,ore,gunpowder,carries heat,magic book,gargolye,apostle,mini demon.,pilgrim road,merbert farm,enlightened mountain,moon sun mor.",
     "name": "Kaen Stone",
     "moduleId": "item",
@@ -8660,7 +8660,7 @@
     }
   },
   {
-    "id": "01J3F5PGSQ4GY6RRRWYQ6ZYTF5",
+    "id": "01J76MWE1CTV74XWB12ZKFCD8J",
     "keyWords": "weiss powder,green,material,57,14,ingredient,gunpowder,mandragora,single horn.,stash of high grade flour?,gathering of beast,puzzling path,forest of fairies.",
     "name": "Weiss Powder",
     "moduleId": "item",
@@ -8695,7 +8695,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSQFB4X5BFMEYEWT6PY",
+    "id": "01J76MWE1CVJH9TX8K53S3QP4V",
     "keyWords": "pendeloch,blue,material,77,14,secret power,gem,ghost,scarlady,gentle phantom,haunt,lich,shadow,death inquisitor,archlich.,moon sun moor,city of the lost,forgotten nursery,soul space.",
     "name": "Pendeloch",
     "moduleId": "item",
@@ -8733,7 +8733,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSQD3SM3RK7QWYFK14H",
+    "id": "01J76MWE1C293S7JZS3VE7K9PW",
     "keyWords": "sage's emblem,white,key item,839,48,mystery recipes,important,story progress",
     "name": "Sage's Emblem",
     "moduleId": "item",
@@ -8766,7 +8766,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSQEKWEB5EV6DWXW4FF",
+    "id": "01J76MWE1C4150V09GX3QA03XS",
     "keyWords": "ancient cauldron,white,machine,514,28,mystery recipes,important,ancient cauldron,library of all creation,luard",
     "name": "Ancient Cauldron",
     "moduleId": "item",
@@ -8811,7 +8811,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSQWW71C456AXJ58VDP",
+    "id": "01J76MWE1C6CEB4C6VAC9A08V8",
     "keyWords": "angel's whisper,white,buff item,290,35,hope recipes,magic item,unliving king",
     "name": "Angel's Whisper",
     "moduleId": "item",
@@ -8844,7 +8844,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSQKKFWKZD7Y7T8XRW0",
+    "id": "01J76MWE1CC02ZV1P8J1ZM4EH0",
     "keyWords": "craft,yellow,atk item,146,15,growth recipes,bomb,uni bag,explodes",
     "name": "Craft",
     "moduleId": "item",
@@ -8886,7 +8886,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSRH95XED2CHJVPJ265",
+    "id": "01J76MWE1CVFZSZC5RR2MPGSWV",
     "keyWords": "nectar of life,white,heal item,219,23,hope recipes,medicine,secret power",
     "name": "Nectar of Life",
     "moduleId": "item",
@@ -8915,7 +8915,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSRWR0F4Z1GECBRMNC4",
+    "id": "01J76MWE1CP4QGG1603S9SYEJA",
     "keyWords": "codex of creation,white,atk item,295,30,growth recipes,magic item,paper,artisans (harol, leon, cory, logy),elise",
     "name": "Codex of Creation",
     "moduleId": "item",
@@ -8949,7 +8949,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSRFCRQ5PNKNTMW0AQ4",
+    "id": "01J76MWE1DHC0XFN21YYNAFW64",
     "keyWords": "dragon bloodstone,red,material,50,42,water,elixir,poison mat,wise spirit,rok,twin header,sorcer titus,ifritter,tempestus,dragonaire,magmacius,sun destroyer yasuk,moon destroyer durak.",
     "name": "Dragon Bloodstone",
     "moduleId": "item",
@@ -8985,7 +8985,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSR9G7FW1BXD7NR47BW",
+    "id": "01J76MWE1DVGZARGH2JVZXJGS8",
     "keyWords": "living cart,yellow,exploration,359,33,mystery recipes,magic item,wood,refuel bottle,auto activate 50%",
     "name": "Living Cart",
     "moduleId": "item",
@@ -9028,7 +9028,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSR0RYA58BWRJZMMFGZ",
+    "id": "01J76MWE1DJDEKVAN05GB46GSA",
     "keyWords": "spirit weave cloth,blue,buff item,293,33,hope recipes,cloth,puni jelly,activate division",
     "name": "Spirit Weave Cloth",
     "moduleId": "item",
@@ -9070,7 +9070,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSSENGAWPV8XVYJ4A14",
+    "id": "01J76MWE1DS97523C0C3JVJJH2",
     "keyWords": "mineral extract,green,synthesis,459,23,growth recipes,medicine mat,water,metal,good water",
     "name": "Mineral Extract",
     "moduleId": "item",
@@ -9107,7 +9107,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSS73T37B4YD9TN65N3",
+    "id": "01J76MWE1DH0JYGWHM0GQQ71P7",
     "keyWords": "flugel,yellow,synthesis,448,27,dream recipes,armor mat,cloth,angel's whisper,soul awakening",
     "name": "Flugel",
     "moduleId": "item",
@@ -9150,7 +9150,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSS8VT8XR7GW9MM53Z6",
+    "id": "01J76MWE1DA68NBRVFEX8N7DJ2",
     "keyWords": "magic grass,green,material,0,2,plant,medicine mat,mandragora,white root,alraune,kimmoch,single horn.,greatly grown magic grass,pilgram road,flower garden,rocky grove,scar of the land.",
     "name": "Magic Grass",
     "moduleId": "item",
@@ -9189,7 +9189,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSS9CN37STDT8EAHY07",
+    "id": "01J76MWE1DQ8AD039ES0VEAJ3A",
     "keyWords": "black orb,white,material,21,23,ore,poison mat,fuel,dark matter,devil horn,sealed demon lord.,fertile shore,husk forest,sealed temple,underground lake.",
     "name": "Black Orb",
     "moduleId": "item",
@@ -9226,7 +9226,7 @@
     }
   },
   {
-    "id": "01J3F5PGSS1E99WPNFVBE8GVCS",
+    "id": "01J76MWE1DXXYW5TDNMXCWAG8G",
     "keyWords": "evil core,blue,material,79,22,gem,poison mat,demon soul,devil horn,sealed demon lord,flare demon,thunderous,hell gate,great demon.",
     "name": "Evil Core",
     "moduleId": "item",
@@ -9261,7 +9261,7 @@
     }
   },
   {
-    "id": "01J3F5PGSS3D5C16EB337TP1SG",
+    "id": "01J76MWE1DZZSJQHFSSAY8WQYD",
     "keyWords": "necromancer flute,green,atk item,165,48,mystery recipes,magic item,nearby forest,night",
     "name": "Necromancer Flute",
     "moduleId": "item",
@@ -9299,7 +9299,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSS63P6BMR824GTTGEN",
+    "id": "01J76MWE1D01WBY7CW6DRHQCAP",
     "keyWords": "mixed fur shirt,yellow,armor,699,8,armor",
     "name": "Mixed Fur Shirt",
     "moduleId": "item",
@@ -9322,7 +9322,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSSE8QMTGEMA2HT10YR",
+    "id": "01J76MWE1E7W68P0KH5FS39RC1",
     "keyWords": "angel ribbon,yellow,accessory,762,21,hope recipes,accessory,gold thread,purifying water",
     "name": "Angel Ribbon",
     "moduleId": "item",
@@ -9364,7 +9364,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSTVKYHHQR3WJB15213",
+    "id": "01J76MWE1E4G3ENMY9DY9BW3MA",
     "keyWords": "bottled misfortune,red,de buff item,292,12,growth recipes,medicine",
     "name": "Bottled Misfortune",
     "moduleId": "item",
@@ -9392,7 +9392,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSTMWPC9JXYVM4JSRHG",
+    "id": "01J76MWE1EYY9CRS0V430X0ABQ",
     "keyWords": "heaven's cleanser,yellow,atk item,163,54,mystery recipes,bomb,magic item,light elemental",
     "name": "Heaven's Cleanser",
     "moduleId": "item",
@@ -9426,7 +9426,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSTZ1FKBSJM9HS4ADXY",
+    "id": "01J76MWE1EDKD0BGJTND1GMC2H",
     "keyWords": "fairy poison grass,blue,material,2,11,plant,poison mat,poison mist,kimmoch,nightshade,sorcerer titus.,thin line between poison and medicine,gathering of beast,puzzzling path,foggy woodland,mountain boundary,forest of fairies,sealed temple.",
     "name": "Fairy Poison Grass",
     "moduleId": "item",
@@ -9469,7 +9469,7 @@
     }
   },
   {
-    "id": "01J3F5PGSTJT0553EC2VS82075",
+    "id": "01J76MWE1EN98G4PBX1633V0C4",
     "keyWords": "rainbow puni fluid,white,material,49,35,water,secret power,medicine mat,unidentified,rainbow puni,admiral puni,slead demon lord.",
     "name": "Rainbow Puni Fluid",
     "moduleId": "item",
@@ -9502,7 +9502,7 @@
     }
   },
   {
-    "id": "01J3F5PGSTMQZ9Y7Q7DHJ2EVXD",
+    "id": "01J76MWE1E6CEJ6PG4M8JBCYNN",
     "keyWords": "sealing book,white,de buff item,303,42,mystery recipes,magic item,paper,codex of creation,steal lots of life,elise",
     "name": "Sealing Book",
     "moduleId": "item",
@@ -9545,7 +9545,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSTN6QSY7NEQB8J5Y3F",
+    "id": "01J76MWE1ESW8XQHEXB7FWR7EF",
     "keyWords": "natural yeast,green,synthesis,429,23,hope recipes,ingredient,gunpowder,poison mat,bagel sandwich,fluffy,bought at marguerite,synthsized (hope).",
     "name": "Natural Yeast",
     "moduleId": "item",
@@ -9592,7 +9592,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGST22YZZNTNE22JSF8K",
+    "id": "01J76MWE1EKC17XNFYVW5T2YTT",
     "keyWords": "piro sotea,blue,heal item,225,31,dream recipes,food,secret power,pure water,secret of health",
     "name": "Piro Sotea",
     "moduleId": "item",
@@ -9635,7 +9635,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSTFZ47AZD5H5RBR9N8",
+    "id": "01J76MWE1EVEJEWQK58V8PTKXV",
     "keyWords": "tuned cauldron,white,machine,511,14,hope recipes,important,tuned cauldron,final area,underground lake",
     "name": "Tuned Cauldron",
     "moduleId": "item",
@@ -9680,7 +9680,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGST82BXK36CF5G4QH0N",
+    "id": "01J76MWE1EZ3935W81WPS1S13H",
     "keyWords": "teacher's cauldron,white,machine,515,10,growth recipes,important,teacher's cauldron,cory",
     "name": "Teacher's Cauldron",
     "moduleId": "item",
@@ -9720,7 +9720,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSTH24G68YEKRVM4Q22",
+    "id": "01J76MWE1EK8J3Y9EH99MY7PWD",
     "keyWords": "fairy guide,yellow,exploration,358,25,growth recipes,magic item,spruce,flickering light",
     "name": "Fairy Guide",
     "moduleId": "item",
@@ -9762,7 +9762,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSTCPTMMGY65H41455C",
+    "id": "01J76MWE1F7G4P70QW16J9WEKS",
     "keyWords": "fertile soil,yellow,synthesis,460,25,mystery recipes,clay,oskar",
     "name": "Fertile Soil",
     "moduleId": "item",
@@ -9796,7 +9796,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSVYSTQ4591SB9ERHNA",
+    "id": "01J76MWE1F4HNGN0RAJA84Z8DW",
     "keyWords": "chronicle mark,blue,accessory,769,36,dream recipes,accessory,noble sapphire,ancient seal",
     "name": "Chronicle Mark",
     "moduleId": "item",
@@ -9838,7 +9838,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSVW9E6G55YX5AV28RK",
+    "id": "01J76MWE1FSD53N52Y06N2AJKK",
     "keyWords": "spirit earrings,blue,accessory,764,33,dream recipes,accessory,bomb,magic item,medicine",
     "name": "Spirit Earrings",
     "moduleId": "item",
@@ -9918,7 +9918,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSVC2YE4K4WES72J2XN",
+    "id": "01J76MWE1FFFJMEFRSGN5YZ8D8",
     "keyWords": "stahl metal,red,synthesis,440,10,growth recipes,weapon mat,metal",
     "name": "Stahl Metal",
     "moduleId": "item",
@@ -9947,7 +9947,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSV6N4B3B3RNG3SRW25",
+    "id": "01J76MWE1FZKPDQ0HJPRDJZMWM",
     "keyWords": "ingot,red,synthesis,439,7,beginner recipes,weapon mat,metal,beast,merbert farm,complete request",
     "name": "Ingot",
     "moduleId": "item",
@@ -9991,7 +9991,7 @@
     "traitPresent": null
   },
   {
-    "id": "01J3F5PGSVDZ844NX6BFDZDH6K",
+    "id": "01J76MWE1FAETX1Q6SDYAZHZ04",
     "keyWords": "ice bomb,blue,atk item,144,12,beginner recipes,bomb,performing synthesis,water",
     "name": "Ice Bomb",
     "moduleId": "item",

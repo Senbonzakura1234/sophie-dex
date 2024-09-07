@@ -15,11 +15,6 @@ export type AppleMediaConfig = Array<{
 	media?: { width: number; height: number; ratio: number; orientation: 'landscape' | 'portrait' };
 }>;
 
-export type PageProps = {
-	params: { id: string };
-	searchParams: Record<string, string | Array<string> | undefined | null>;
-};
-
 export type CommonObject = Record<string | number | symbol, unknown>;
 
 export type KeyOf<TData extends CommonObject> = keyof TData;
@@ -28,9 +23,17 @@ export type ValueOf<TData extends CommonObject> = Required<TData>[KeyOf<TData>];
 
 export type LooseAutoComplete<TSuggest extends TLoose, TLoose = unknown> = TSuggest | NonNullable<unknown>;
 
-export type ImprovedOmit<TObject, TKeys extends LooseAutoComplete<keyof TObject>> = Pick<
+export type ImproveExclude<TKeys, TExcluded extends LooseAutoComplete<TKeys>> = Exclude<TKeys, TExcluded>;
+
+export type ImprovePick<
+	TData,
+	KRequired extends keyof TData,
+	KNonRequired extends ImproveExclude<keyof TData, KRequired> = never
+> = Pick<TData, KRequired> & Partial<Pick<TData, KNonRequired>>;
+
+export type ImprovedOmit<TObject, TKeys extends LooseAutoComplete<keyof TObject>> = ImprovePick<
 	TObject,
-	Exclude<keyof TObject, TKeys>
+	ImproveExclude<keyof TObject, TKeys>
 >;
 
 export class APIError extends TRPCError {
@@ -54,11 +57,5 @@ export type InspectRecursive<TObject> = {
 } & NonNullable<unknown>;
 
 export type PreparedPGQuery<TData = unknown> = PgPreparedQuery<PreparedQueryConfig & { execute: TData }>;
-
-export type ImprovePick<
-	TData,
-	KRequired extends keyof TData,
-	KNonRequired extends Exclude<keyof TData, KRequired> = never
-> = Pick<TData, KRequired> & Partial<Pick<TData, KNonRequired>>;
 
 export type InputData = ImprovedOmit<Required<ShareData>, 'files'>;

@@ -12,6 +12,7 @@ import { genericDaisyUIThemeEnumSchema } from '@root/types/common/zod/generic';
 import { cn, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import { getCookieData } from '@root/utils/server';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
 import { SessionProvider } from 'next-auth/react';
 import dynamic from 'next/dynamic';
@@ -23,7 +24,6 @@ const AuthNotification = dynamic(() => import('@components/layout/dynamic/AuthNo
 const ThemeSwitcher = dynamic(() => import('@components/layout/dynamic/ThemeSwitcher'), {
 	loading: () => <div className='h-8 w-[136px] rounded-lg bg-base-100 shadow-lg shadow-base-content/20 xl:h-9' />
 });
-const SpeedInsights = dynamic(() => import('@vercel/speed-insights/next').then(m => m.SpeedInsights), { ssr: false });
 
 const appleMediaConfig: AppleMediaConfig = [
 	{ url: 'iPhone_14_Pro_Max_landscape' },
@@ -215,7 +215,7 @@ const getLayoutProps = async () => {
 	return { theme: genericDaisyUIThemeEnumSchema.catch('fantasy').parse(themeCookiesRes.data?.value) };
 };
 
-export default async function RootLayout({ children }: ChildrenProps) {
+export default async function RootLayout({ children }: Readonly<ChildrenProps>) {
 	const { theme } = await getLayoutProps();
 
 	return (

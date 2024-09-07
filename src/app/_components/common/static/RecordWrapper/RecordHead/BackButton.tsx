@@ -5,7 +5,7 @@ import type { ChildrenProps, ClassNamesProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
 import { useRouter } from 'next/navigation';
 
-type Props = ClassNamesProps<'wrapper' | 'icon'> & ChildrenProps;
+type Props = Readonly<ClassNamesProps<'wrapper' | 'icon'> & ChildrenProps>;
 
 export default function BackButton({ children, classNames }: Props) {
 	const { back } = useRouter();

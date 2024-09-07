@@ -4,7 +4,7 @@ import { cn } from '@root/utils/common';
 import Link from 'next/link';
 import type { ComponentProps, MouseEventHandler, ReactNode } from 'react';
 
-export type DropdownProps = {
+export type Props = Readonly<{
 	buttonLabel?: ReactNode;
 	items: Array<
 		(
@@ -15,16 +15,11 @@ export type DropdownProps = {
 		) &
 			ClassNameProps
 	>;
-	className?: {
-		root?: string | undefined;
-		menuBtn?: string | undefined;
-		dropdown?: string | undefined;
-		item?: string | undefined;
-	};
+	className?: { root?: string; menuBtn?: string; dropdown?: string; item?: string };
 	anchor?: ComponentProps<typeof MenuItems>['anchor'];
-};
+}>;
 
-export default function Dropdown({ buttonLabel: buttonText, className, items, anchor = 'left' }: DropdownProps) {
+export default function Dropdown({ buttonLabel: buttonText, className, items, anchor = 'left' }: Props) {
 	return (
 		<Menu as='menu' className={cn('relative z-50', className?.root)}>
 			<MenuButton

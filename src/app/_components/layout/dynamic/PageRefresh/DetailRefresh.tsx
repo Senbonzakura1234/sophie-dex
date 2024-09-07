@@ -16,11 +16,11 @@ export default function DetailRefresh({ isDisabled }: RefreshProps) {
 	const trpcUtils = ApiClientCtx.useUtils();
 
 	const onRefresh = useCallback(async () => {
-		const promiseList: Array<Promise<unknown>> = [new Promise(resolve => resolve(refresh()))];
+		const promiseList: Array<Promise<unknown>> = [Promise.resolve(refresh())];
 
 		if (sessionStatus === 'authenticated') promiseList.push(trpcUtils.user.getModuleBookmarks.invalidate());
 
-		await Promise.allSettled(promiseList);
+		await Promise.allSettled<Array<Promise<unknown>>>(promiseList);
 	}, [refresh, sessionStatus, trpcUtils]);
 
 	const { isRefreshing, pullPosition } = usePullToRefresh({ onRefresh, isDisabled, maximumPullLength: 300 });

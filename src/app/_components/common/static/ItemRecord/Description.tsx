@@ -3,9 +3,9 @@ import type { ItemDescription } from '@root/server/postgresql/schema';
 import { entries } from '@root/utils/common';
 import { Fragment } from 'react';
 
-type DescriptionProps = { description: ItemDescription; search: string | undefined };
+type Props = Readonly<{ description: ItemDescription; search: string | undefined }>;
 
-export default function Description({ description, search }: DescriptionProps) {
+export default function Description({ description, search }: Props) {
 	return (
 		<ul className='max-w-[90%] list-disc pl-8 text-lg'>
 			{entries(description).map(([key, value]) =>

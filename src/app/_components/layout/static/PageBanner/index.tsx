@@ -8,9 +8,9 @@ import AuthorLink from './AuthorLink';
 import Breadcrumb from './Breadcrumb';
 import PageTitle from './PageTitle';
 
-type PageTitleProps = { bannerType: 'full' | 'top' | 'bottom' };
+type Props = Readonly<{ bannerType: 'full' | 'top' | 'bottom' }>;
 
-export default function PageBanner({ bannerType }: PageTitleProps) {
+export default function PageBanner({ bannerType }: Props) {
 	return (
 		<section
 			className={cn(

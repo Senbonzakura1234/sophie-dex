@@ -1,20 +1,16 @@
 import type { ChildrenProps, ClassNameProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
 
-type TabWrapperProps = {
-	selectedIndex: number;
-	tabListLength: number;
-	activeStyleType: 'background' | 'border';
-} & ChildrenProps &
-	ClassNameProps;
+type Props = Readonly<
+	{
+		selectedIndex: number;
+		tabListLength: number;
+		activeStyleType: 'background' | 'border';
+	} & ChildrenProps &
+		ClassNameProps
+>;
 
-export default function TabWrapper({
-	tabListLength,
-	selectedIndex,
-	children,
-	className,
-	activeStyleType
-}: TabWrapperProps) {
+export default function TabWrapper({ tabListLength, selectedIndex, children, className, activeStyleType }: Props) {
 	return (
 		<nav className={cn('overflow-hidden bg-base-100 shadow-lg shadow-base-content/30', className)}>
 			<div

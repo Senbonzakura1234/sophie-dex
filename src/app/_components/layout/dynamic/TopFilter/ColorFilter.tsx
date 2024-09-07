@@ -6,13 +6,10 @@ import type { ColorEnum } from '@root/types/common/zod/generic';
 import { genericColorEnumSchema } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
 
-const colorDefaultSelect = {
-	value: null,
-	label: 'Color'
-} as const;
+const filterDefValue = { value: null, label: 'Color' } as const;
 
-const colorSelectList: Array<SelectOptionItem<ColorEnum>> = [
-	colorDefaultSelect,
+const filterList: Array<SelectOptionItem<ColorEnum>> = [
+	filterDefValue,
 	...genericColorEnumSchema._def.values.map(color => ({
 		value: color,
 		icon: (
@@ -29,11 +26,15 @@ const colorSelectList: Array<SelectOptionItem<ColorEnum>> = [
 ];
 
 export default function ColorFilter() {
-	const [colorSelected, setColorSelected] = useQueryOnChange('color', colorSelectList, colorDefaultSelect);
+	const [colorSelected, setColorSelected] = useQueryOnChange({
+		filterDefValue,
+		filterKey: 'color',
+		filterList
+	});
 
 	return (
 		<SelectOption<ColorEnum>
-			list={colorSelectList}
+			filterList={filterList}
 			setValue={setColorSelected}
 			value={colorSelected}
 			className='my-auto min-w-[6.5rem]'

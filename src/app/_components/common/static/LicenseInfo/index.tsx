@@ -8,9 +8,9 @@ import type { LicenseInfo } from '@root/types/common/zod';
 import { env } from '@root/utils/common/env';
 import LicenseInfoHead from './LicenseInfoHead';
 
-type LicenseInfoProps = LicenseInfo & JSX.IntrinsicAttributes;
+type Props = Readonly<LicenseInfo & JSX.IntrinsicAttributes>;
 
-export default function LicenseInfo({ body, conditions, limitations, permissions, ...rest }: LicenseInfoProps) {
+export default function LicenseInfo({ body, conditions, limitations, permissions, ...rest }: Props) {
 	return (
 		<CommonWrapper classNames={{ wrapper: 'min-h-[42rem] w-full' }}>
 			<div className='flex flex-wrap gap-6'>

@@ -5,9 +5,9 @@ import dynamic from 'next/dynamic';
 const ScrollToTop = dynamic(() => import('./ScrollToTop'));
 const ScrollTopTrigger = dynamic(() => import('./ScrollTopTrigger'));
 
-type ScrollWrapperProps = ChildrenProps & { disabledScrollTopOnPageChange?: boolean; id?: string };
+type Props = Readonly<ChildrenProps & { disabledScrollTopOnPageChange?: boolean; id?: string }>;
 
-export default function ScrollWrapper({ children, disabledScrollTopOnPageChange, id }: ScrollWrapperProps) {
+export default function ScrollWrapper({ children, disabledScrollTopOnPageChange, id }: Props) {
 	return (
 		<ScrollArea.Root className='h-dvh w-dvw overflow-hidden bg-base-200 !antialiased' type='scroll'>
 			<ScrollArea.Viewport

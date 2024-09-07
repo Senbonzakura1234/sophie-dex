@@ -6,13 +6,10 @@ import type { CategoryEnum } from '@root/types/common/zod/generic';
 import { genericCategoryEnumSchema } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
 
-const categoryDefaultSelect = {
-	value: null,
-	label: 'Item Category'
-} as const;
+const filterDefValue = { value: null, label: 'Item Category' } as const;
 
-const categorySelectList: Array<SelectOptionItem<CategoryEnum>> = [
-	categoryDefaultSelect,
+const filterList: Array<SelectOptionItem<CategoryEnum>> = [
+	filterDefValue,
 	...genericCategoryEnumSchema._def.values.map(category => ({
 		value: category,
 		icon: (
@@ -26,11 +23,15 @@ const categorySelectList: Array<SelectOptionItem<CategoryEnum>> = [
 ];
 
 export default function CategoryFilter() {
-	const [cateSelected, setCateSelected] = useQueryOnChange('category', categorySelectList, categoryDefaultSelect);
+	const [cateSelected, setCateSelected] = useQueryOnChange({
+		filterDefValue,
+		filterKey: 'category',
+		filterList
+	});
 
 	return (
 		<SelectOption<CategoryEnum>
-			list={categorySelectList}
+			filterList={filterList}
 			setValue={setCateSelected}
 			value={cateSelected}
 			className='my-auto min-w-44'

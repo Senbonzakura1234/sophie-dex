@@ -2,10 +2,7 @@ import type { RefreshProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
 import { DEFAULT_REFRESH_THRESHOLD } from 'use-pull-to-refresh';
 
-type Props = {
-	isRefreshing: boolean;
-	pullPosition: number;
-} & RefreshProps;
+type Props = Readonly<{ isRefreshing: boolean; pullPosition: number } & RefreshProps>;
 
 export default function RefreshIndicator({ isDisabled, isRefreshing, pullPosition }: Props) {
 	return (

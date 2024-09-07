@@ -2,12 +2,9 @@ import Hyperlink from '@components/layout/static/Hyperlink';
 import type { HyperLinkMap } from '@root/server/postgresql/schema';
 import { Fragment } from 'react';
 
-type DescriptionProps = {
-	description: HyperLinkMap;
-	search: string | undefined;
-};
+type Props = Readonly<{ description: HyperLinkMap; search: string | undefined }>;
 
-export default function Description({ description: { contentText, contentData }, search }: DescriptionProps) {
+export default function Description({ description: { contentText, contentData }, search }: Props) {
 	return (
 		<div>
 			<span>Description:&nbsp;&nbsp;</span>

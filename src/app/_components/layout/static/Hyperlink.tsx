@@ -6,9 +6,9 @@ import Link from 'next/link';
 
 const ShareButton = dynamic(() => import('@components/common/dynamic/ShareButton'), { ssr: false });
 
-type HyperlinkProps = { input: HyperLinkData; search?: string } & ClassNamesProps<'label' | 'link'>;
+type Props = Readonly<{ input: HyperLinkData; search?: string } & ClassNamesProps<'label' | 'link'>>;
 
-export default function Hyperlink({ input, classNames, search }: HyperlinkProps) {
+export default function Hyperlink({ input, classNames, search }: Props) {
 	const { href, label } = parseHyperLinkData(input);
 
 	if (!href)

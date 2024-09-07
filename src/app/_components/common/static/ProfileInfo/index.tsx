@@ -7,12 +7,12 @@ import CreateProfileReadmeGuide from './CreateProfileReadmeGuide';
 import type { ProfileFieldProps } from './ProfileField';
 import ProfileField from './ProfileField';
 
-type ProfileInfoProps = { profile: GithubUserInfo; readmeContent: string | undefined };
+type Props = Readonly<{ profile: GithubUserInfo; readmeContent: string | undefined }>;
 
 export default function ProfileInfo({
 	profile: { avatar_url, login, bio, company = '', blog, email, location = '', twitter_username },
 	readmeContent
-}: ProfileInfoProps) {
+}: Props) {
 	const fields: Array<ProfileFieldProps> = [
 		{ label: company, type: 'company' },
 		{ label: location, type: 'location' },

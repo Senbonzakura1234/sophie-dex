@@ -6,10 +6,10 @@ import { cn, indexOf } from '@root/utils/common';
 
 import TabWrapper from '@components/common/static/TabWrapper';
 
-type Props = {
+type Props = Readonly<{
 	moduleId: NonNullable<ReturnType<typeof useModuleId>['moduleId']>;
 	searchQuery: ReturnType<typeof useSearchQuery>['searchQuery'];
-};
+}>;
 
 export default function SortControl({ moduleId, searchQuery }: Props) {
 	const currentSortBy = searchQuery.sortBy || (moduleId === 'rumor' ? 'price' : 'index');

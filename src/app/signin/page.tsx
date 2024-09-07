@@ -1,12 +1,12 @@
 import Loader from '@components/loading/Loader';
 import { providerConfig } from '@root/auth';
-import type { PageProps } from '@root/types/common';
+import type { PageProps } from '@root/types/common/props';
 import { signInQueryValidator } from '@root/types/common/zod';
 import dynamic from 'next/dynamic';
 
 const SignInTrigger = dynamic(() => import('@components/layout/dynamic/SignInTrigger'));
 
-export default async function SignIn({ searchParams }: PageProps) {
+export default async function SignIn({ searchParams }: Readonly<PageProps>) {
 	const { callbackUrl } = signInQueryValidator.parse(searchParams);
 
 	return (

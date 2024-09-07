@@ -3,23 +3,24 @@ import type { ClassNameProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
 import Image from 'next/image';
 
-type AvatarProps = {
-	size: number;
-	url?: string;
-	username?: string;
-} & ClassNameProps;
+type Props = Readonly<
+	{
+		size: number;
+		url?: string;
+		username?: string;
+	} & ClassNameProps
+>;
 
-const getUrlWithSize = ({ size, url }: ImprovedOmit<Required<AvatarProps>, 'className' | 'username'>) => {
+const getUrlWithSize = ({ size, url }: ImprovedOmit<Required<Props>, 'className' | 'username'>) => {
 	const urlObj = new URL(url);
 	urlObj.searchParams.append('size', `${size}`);
 	return urlObj.toString();
 };
 
 /**
- * @type {AvatarProps}
  * @remarks size unit: px;
  */
-export default function Avatar({ size, url, className, username = 'U' }: AvatarProps) {
+export default function Avatar({ size, url, className, username = 'U' }: Props) {
 	return (
 		<div className='avatar'>
 			<div className={cn('overflow-hidden rounded-full', className)}>

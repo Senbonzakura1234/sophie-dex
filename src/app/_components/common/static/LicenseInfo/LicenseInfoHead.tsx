@@ -1,13 +1,14 @@
 import MDXRenderer from '@components/common/static/MDXRenderer';
 import ScaleIcon from '@components/icons/outline/ScaleIcon';
 import ArrowTopRightOnSquareIcon from '@components/icons/solid/ArrowTopRightOnSquareIcon';
+import type { ImprovePick } from '@root/types/common';
 import type { LicenseInfo } from '@root/types/common/zod';
 import { env } from '@root/utils/common/env';
 import Link from 'next/link';
 
-type LicenseInfoHeadProps = Pick<LicenseInfo, 'description' | 'name'>;
+type Props = Readonly<ImprovePick<LicenseInfo, 'description' | 'name'>>;
 
-export default function LicenseInfoHead({ description, name }: LicenseInfoHeadProps) {
+export default function LicenseInfoHead({ description, name }: Props) {
 	return (
 		<div className='flex grow flex-col gap-2'>
 			<div className='flex gap-2'>

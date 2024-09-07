@@ -2,9 +2,9 @@ import type { ClassNameProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
 import PulsePlaceHolder from './PulsePlaceHolder';
 
-type RecordPlaceholderProps = ClassNameProps;
+type Props = Readonly<ClassNameProps>;
 
-export default function RecordPlaceholder({ className }: RecordPlaceholderProps) {
+export default function RecordPlaceholder({ className }: Props) {
 	return (
 		<article className={cn('card relative my-auto h-full p-1.5', className)}>
 			<div className='absolute inset-y-0 left-0 w-1/3 rounded-[inherit] bg-gradient-to-br from-accent to-primary shadow-lg shadow-primary' />

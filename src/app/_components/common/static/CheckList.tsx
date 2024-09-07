@@ -1,8 +1,8 @@
 import type { ChildrenProps } from '@root/types/common/props';
 
-type CheckListProps = { list: Array<string>; title: string; icon?: ChildrenProps['children'] };
+type Props = Readonly<{ list: Array<string>; title: string; icon?: ChildrenProps['children'] }>;
 
-export default function CheckList({ icon, list, title }: CheckListProps) {
+export default function CheckList({ icon, list, title }: Props) {
 	return (
 		<div className='flex grow flex-col gap-2'>
 			<div className='font-bold capitalize'>{title}</div>

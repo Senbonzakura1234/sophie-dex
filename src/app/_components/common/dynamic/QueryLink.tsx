@@ -6,14 +6,16 @@ import { cn, queryToParamsString } from '@root/utils/common';
 import Link from 'next/link';
 import type { ParsedUrlQueryInput } from 'querystring';
 
-type QueryLinkProps = Omit<Parameters<typeof Link>[0], 'href'> & {
-	searchQuery: ReturnType<typeof useSearchQuery>['searchQuery'];
-	disabled?: boolean;
-	href: { query: ParsedUrlQueryInput };
-	isActive?: boolean;
-	isOverridden?: boolean;
-	resetPage?: boolean;
-};
+type Props = Readonly<
+	Omit<Parameters<typeof Link>[0], 'href'> & {
+		searchQuery: ReturnType<typeof useSearchQuery>['searchQuery'];
+		disabled?: boolean;
+		href: { query: ParsedUrlQueryInput };
+		isActive?: boolean;
+		isOverridden?: boolean;
+		resetPage?: boolean;
+	}
+>;
 
 export default function QueryLink({
 	children,
@@ -25,7 +27,7 @@ export default function QueryLink({
 	isOverridden,
 	searchQuery,
 	...rest
-}: QueryLinkProps) {
+}: Props) {
 	const { moduleId } = useModuleId();
 
 	return (

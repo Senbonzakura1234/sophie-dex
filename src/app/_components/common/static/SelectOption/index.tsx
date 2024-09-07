@@ -6,18 +6,20 @@ import type { ReactNode } from 'react';
 import CustomListboxButton from './CustomListboxButton';
 import CustomListboxOption from './CustomListboxOption';
 
-type SelectOptionProps<V extends string | number> = {
-	value: SelectOptionItem<V>;
-	list: Array<SelectOptionItem<V>>;
-	setValue: SetSelectOptionItem<V>;
-	useCustomIcon?: boolean;
-	isHideLabel?: boolean;
-	customLabelText?: ReactNode;
-	customLabelIcon?: ReactNode;
-} & ClassNameProps;
+type Props<V extends string | number> = Readonly<
+	{
+		value: SelectOptionItem<V>;
+		filterList: Array<SelectOptionItem<V>>;
+		setValue: SetSelectOptionItem<V>;
+		useCustomIcon?: boolean;
+		isHideLabel?: boolean;
+		customLabelText?: ReactNode;
+		customLabelIcon?: ReactNode;
+	} & ClassNameProps
+>;
 
 export default function SelectOption<V extends string | number>({
-	list,
+	filterList,
 	value,
 	setValue,
 	className,
@@ -25,8 +27,8 @@ export default function SelectOption<V extends string | number>({
 	isHideLabel,
 	customLabelText,
 	customLabelIcon
-}: SelectOptionProps<V>) {
-	const isDisabled = list.length <= 1;
+}: Props<V>) {
+	const isDisabled = filterList.length <= 1;
 
 	return (
 		<Listbox as='menu' className={cn('relative', className)} value={value} onChange={setValue} disabled={isDisabled}>
@@ -52,7 +54,7 @@ export default function SelectOption<V extends string | number>({
 					as='ul'
 					className='legacy-scroll-area size-full max-h-52 overflow-auto rounded-md bg-base-100 py-1 shadow-lg shadow-base-content/30'
 				>
-					{list.map((item, key) => (
+					{filterList.map((item, key) => (
 						<CustomListboxOption
 							key={key}
 							isHideLabel={isHideLabel}

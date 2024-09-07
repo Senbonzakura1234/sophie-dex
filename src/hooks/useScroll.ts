@@ -8,12 +8,9 @@ export type OnScroll = (scrollInput: {
 	setIsShowScrollTop: Dispatch<SetStateAction<boolean>>;
 }) => void;
 
-type UseScrollProps = {
-	onScroll?: OnScroll;
-	scrollElementId: string;
-};
+type Props = Readonly<{ onScroll?: OnScroll; scrollElementId: string }>;
 
-export const useScroll = ({ onScroll, scrollElementId }: UseScrollProps) => {
+export const useScroll = ({ onScroll, scrollElementId }: Props) => {
 	const [isShowScrollTop, setIsShowScrollTop] = useState(false);
 
 	useEffect(() => {

@@ -5,9 +5,9 @@ import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { RelatedCategoryEnum } from '@root/types/common/zod/generic';
 import { cn, convertCode, highlightSearchedText } from '@root/utils/common';
 
-type RelatedCategoriesProps = { relatedCategories: Array<RelatedCategoryEnum>; search: string | undefined };
+type Props = Readonly<{ relatedCategories: Array<RelatedCategoryEnum>; search: string | undefined }>;
 
-export default function RelatedCategories({ relatedCategories, search }: RelatedCategoriesProps) {
+export default function RelatedCategories({ relatedCategories, search }: Props) {
 	const { searchQuery } = useSearchQuery();
 
 	return (

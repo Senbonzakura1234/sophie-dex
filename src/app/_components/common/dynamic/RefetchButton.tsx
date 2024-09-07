@@ -4,9 +4,9 @@ import ArrowPathIcon from '@components/icons/solid/ArrowPathIcon';
 import type { useModuleId } from '@root/hooks/useModuleId';
 import { ApiClientCtx } from '@root/utils/client/trpc';
 
-type RefetchButtonProps = { moduleId: NonNullable<ReturnType<typeof useModuleId>['moduleId']> };
+type Props = Readonly<{ moduleId: NonNullable<ReturnType<typeof useModuleId>['moduleId']> }>;
 
-export default function RefetchButton({ moduleId }: RefetchButtonProps) {
+export default function RefetchButton({ moduleId }: Props) {
 	const trpcUtils = ApiClientCtx.useUtils();
 
 	return (

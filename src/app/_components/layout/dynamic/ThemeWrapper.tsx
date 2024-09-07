@@ -3,7 +3,7 @@ import type { DaisyUIThemeEnum } from '@root/types/common/zod/generic';
 import { darkThemesList } from '@root/types/common/zod/generic';
 import { arrayInclude, cn } from '@root/utils/common';
 
-type Props = ChildrenProps & ClassNameProps & { defaultTheme: DaisyUIThemeEnum };
+type Props = Readonly<ChildrenProps & ClassNameProps & { defaultTheme: DaisyUIThemeEnum }>;
 
 export default function ThemeWrapper({ children, className, defaultTheme: theme }: Props) {
 	const isDarkTheme = arrayInclude(darkThemesList, theme);

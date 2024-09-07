@@ -6,7 +6,7 @@ import type { SelectOptionItem } from '@root/types/common';
 import type { DaisyUIThemeEnum } from '@root/types/common/zod/generic';
 import { themesList } from '@root/types/common/zod/generic';
 
-type Props = { defaultTheme: DaisyUIThemeEnum };
+type Props = Readonly<{ defaultTheme: DaisyUIThemeEnum }>;
 
 const themeSelectList = themesList.map(theme => ({
 	value: theme,
@@ -28,7 +28,7 @@ export default function ThemeSwitcher({ defaultTheme }: Props) {
 
 	return (
 		<SelectOption<DaisyUIThemeEnum>
-			list={themeSelectList}
+			filterList={themeSelectList}
 			setValue={setThemeSelected}
 			value={themeSelect}
 			className='min-w-[8.5rem]'

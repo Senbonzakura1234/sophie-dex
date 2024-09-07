@@ -7,7 +7,7 @@ import type { TextShadowMap } from '@root/types/common/tailwind';
 import type { CategoryEnum, ColorEnum } from '@root/types/common/zod/generic';
 import { cn, convertCode } from '@root/utils/common';
 
-type CategoryProps = { category: CategoryEnum; color: ColorEnum };
+type Props = Readonly<{ category: CategoryEnum; color: ColorEnum }>;
 
 const className = {
 	BLUE: 'app-text-shadow-BLUE text-base-200 dark:text-base-content',
@@ -17,7 +17,7 @@ const className = {
 	YELLOW: 'app-text-shadow-YELLOW text-base-200 dark:text-base-content'
 } satisfies TextShadowMap<ColorEnum>;
 
-export default function Category({ category, color }: CategoryProps) {
+export default function Category({ category, color }: Props) {
 	const { searchQuery } = useSearchQuery();
 
 	const isActive = category === searchQuery.category;

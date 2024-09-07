@@ -10,7 +10,7 @@ import dynamic from 'next/dynamic';
 
 const Notification = dynamic(() => import('@components/layout/dynamic/Notification'), { ssr: false });
 
-type Props = { input: InputData; showText?: boolean } & ClassNamesProps<'wrapper' | 'icon'>;
+type Props = Readonly<{ input: InputData; showText?: boolean } & ClassNamesProps<'wrapper' | 'icon'>>;
 
 export default function ShareButton({ classNames, input, showText }: Props) {
 	const { isCanShare, share, shareNotification } = useShareAPI(input);
@@ -23,7 +23,6 @@ export default function ShareButton({ classNames, input, showText }: Props) {
 				aria-label={`Share ${input.title}`}
 				className={cn('btn btn-primary btn-xs my-auto', classNames?.wrapper)}
 				onClick={share}
-				role='button'
 			>
 				<IconComponent className={cn('size-4', classNames?.icon)} />
 

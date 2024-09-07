@@ -6,10 +6,10 @@ import type { RumorTypeEnum } from '@root/types/common/zod/generic';
 import { genericRumorTypeEnumSchema } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
 
-const rumorTypeDefaultSelect = { value: null, label: 'Rumor type' } as const;
+const filterDefValue = { value: null, label: 'Rumor type' } as const;
 
-const rumorTypeSelectList: Array<SelectOptionItem<RumorTypeEnum>> = [
-	rumorTypeDefaultSelect,
+const filterList: Array<SelectOptionItem<RumorTypeEnum>> = [
+	filterDefValue,
 	...genericRumorTypeEnumSchema._def.values.map(rumorType => ({
 		value: rumorType,
 		icon: (
@@ -27,15 +27,15 @@ const rumorTypeSelectList: Array<SelectOptionItem<RumorTypeEnum>> = [
 ];
 
 export default function RumorTypeFilter() {
-	const [rumorTypeSelected, setRumorTypeSelected] = useQueryOnChange(
-		'rumorType',
-		rumorTypeSelectList,
-		rumorTypeDefaultSelect
-	);
+	const [rumorTypeSelected, setRumorTypeSelected] = useQueryOnChange({
+		filterDefValue,
+		filterKey: 'rumorType',
+		filterList
+	});
 
 	return (
 		<SelectOption<RumorTypeEnum>
-			list={rumorTypeSelectList}
+			filterList={filterList}
 			setValue={setRumorTypeSelected}
 			value={rumorTypeSelected}
 			className='my-auto min-w-36'

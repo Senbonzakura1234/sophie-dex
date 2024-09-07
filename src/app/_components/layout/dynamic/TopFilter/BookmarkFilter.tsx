@@ -9,25 +9,25 @@ import { useSession } from 'next-auth/react';
 import type { ChangeEventHandler } from 'react';
 import { useEffect } from 'react';
 
-const bookmarkedFilterDefault = { value: null } as const;
+const filterDefValue = { value: null } as const;
 
-const bookmarkFilterList: Array<SelectOptionItem<BooleanishEnum>> = [
-	bookmarkedFilterDefault,
+const filterList: Array<SelectOptionItem<BooleanishEnum>> = [
+	filterDefValue,
 	...genericBooleanishEnumSchema._def.values.map(value => ({ value }))
 ];
 
-type Props = { moduleId: NonNullable<ReturnType<typeof useModuleId>['moduleId']> };
+type Props = Readonly<{ moduleId: NonNullable<ReturnType<typeof useModuleId>['moduleId']> }>;
 
 export default function BookmarkFilter({ moduleId }: Props) {
 	const { status: sessionStatus } = useSession();
 
 	const isAuthenticated = sessionStatus === 'authenticated';
 
-	const [bookmarkFilter, setBookmarkFilter] = useQueryOnChange(
-		'bookmarked',
-		bookmarkFilterList,
-		bookmarkedFilterDefault
-	);
+	const [bookmarkFilter, setBookmarkFilter] = useQueryOnChange({
+		filterDefValue,
+		filterKey: 'bookmarked',
+		filterList
+	});
 
 	const isAPIDisabled = !isAuthenticated || bookmarkFilter.value === 'true';
 
@@ -40,7 +40,7 @@ export default function BookmarkFilter({ moduleId }: Props) {
 		{ enabled: !isAPIDisabled, refetchOnMount: true, refetchOnWindowFocus: true }
 	);
 
-	const isFilterDisabled = !isAuthenticated || queryStatus !== 'success' || !Boolean(data.result?.length);
+	const isFilterDisabled = !isAuthenticated || queryStatus !== 'success' || !data.result?.length;
 
 	useEffect(() => {
 		if (isAuthenticated) return;

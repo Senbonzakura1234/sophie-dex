@@ -6,9 +6,9 @@ import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { ColorEnum } from '@root/types/common/zod/generic';
 import { cn } from '@root/utils/common';
 
-type ColorProps = { color: ColorEnum };
+type Props = Readonly<{ color: ColorEnum }>;
 
-export default function Color({ color }: ColorProps) {
+export default function Color({ color }: Props) {
 	const { searchQuery } = useSearchQuery();
 
 	const isActive = color === searchQuery.color;
