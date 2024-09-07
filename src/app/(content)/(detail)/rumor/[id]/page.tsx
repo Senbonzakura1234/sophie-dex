@@ -27,7 +27,7 @@ export function generateMetadata({ params }: Readonly<PageProps>, parent: Resolv
 	return generateDetailMetadata(parent, getRecord(params));
 }
 
-export default function Rumor({ params }: Readonly<PageProps>) {
+export default function RumorPage({ params }: Readonly<PageProps>) {
 	return (
 		<Suspense fallback={<RecordPlaceholder />}>
 			<SuspenseComponent promiseData={getRecord(params)} ChildComponent={RumorRecord} showErrorContent />

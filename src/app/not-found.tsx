@@ -1,5 +1,5 @@
 import ErrorContent from '@components/layout/static/ErrorContent';
 
-export default function Error() {
+export default function NotFoundError() {
 	return <ErrorContent code='NOT_FOUND' />;
 }

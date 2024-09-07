@@ -1,5 +1,5 @@
 import ListRecordPlaceholder from '@components/loading/ListRecordPlaceholder';
 
-export default function Loading() {
+export default function ListLoading() {
 	return <ListRecordPlaceholder />;
 }

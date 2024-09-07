@@ -13,7 +13,7 @@ export async function generateMetadata(
 	return generateGenericMetadata(parent, { title: `${APP_NAME} | About` }, searchParams);
 }
 
-export default function About() {
+export default function AboutPage() {
 	return (
 		<CommonWrapper classNames={{ wrapper: 'markdown-wrapper h-auto' }}>
 			<AppVersion className='ml-auto sm:absolute sm:right-8' />

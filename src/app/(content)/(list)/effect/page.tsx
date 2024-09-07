@@ -13,7 +13,7 @@ export async function generateMetadata(
 	return generateGenericMetadata(parent, { title: `${APP_NAME} | Effects` }, searchParams);
 }
 
-export default function effects() {
+export default function EffectsPage() {
 	return (
 		<Suspense fallback={<ListRecordPlaceholder />}>
 			<APIListWrapper />

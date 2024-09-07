@@ -2,7 +2,7 @@
 
 import ErrorContent from '@components/layout/static/ErrorContent';
 
-export default function Error() {
+export default function GlobalError() {
 	return (
 		<html lang='en'>
 			<body data-theme='fantasy'>

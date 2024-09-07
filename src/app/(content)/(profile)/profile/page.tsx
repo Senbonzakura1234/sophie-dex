@@ -26,7 +26,7 @@ const getReadmeProfile = async () => {
 	return { profileRes, readmeContent };
 };
 
-export default async function Profile() {
+export default async function ProfilePage() {
 	const { profileRes, readmeContent } = await getReadmeProfile();
 
 	return profileRes.isSuccess ? (

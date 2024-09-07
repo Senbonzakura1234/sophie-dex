@@ -27,7 +27,7 @@ export function generateMetadata({ params }: Readonly<PageProps>, parent: Resolv
 	return generateDetailMetadata(parent, getRecord(params));
 }
 
-export default function Trait({ params }: Readonly<PageProps>) {
+export default function TraitPage({ params }: Readonly<PageProps>) {
 	return (
 		<Suspense fallback={<RecordPlaceholder />}>
 			<SuspenseComponent promiseData={getRecord(params)} ChildComponent={TraitRecord} showErrorContent />

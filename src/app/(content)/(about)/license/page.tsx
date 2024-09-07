@@ -15,7 +15,7 @@ export async function generateMetadata(
 	return generateGenericMetadata(parent, { title: `${APP_NAME} | License` }, searchParams);
 }
 
-export default function License() {
+export default function LicensePage() {
 	return (
 		<Suspense fallback={<RecordPlaceholder className='min-h-[42rem]' />}>
 			<SuspenseComponent promiseData={getLicense()} ChildComponent={LicenseInfo} showErrorContent />
