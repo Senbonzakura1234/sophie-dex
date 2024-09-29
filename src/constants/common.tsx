@@ -1,4 +1,4 @@
-import type { APIError, AlertTypeEnum } from '@root/types/common';
+import type { AlertTypeEnum } from '@root/types/common';
 import type { AtelierIcon } from '@root/types/common/icon';
 import type {
 	CategoryEnum,
@@ -11,6 +11,7 @@ import type {
 import { capitalize } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import type { DefaultOptions } from '@tanstack/react-query';
+import type { TRPC_ERROR_CODE_KEY } from '@trpc/server/unstable-core-do-not-import';
 import type { NextAuthConfig } from 'next-auth';
 
 export const APP_NAME = capitalize(env.NEXT_PUBLIC_APP_CODE.replaceAll('-', ' '));
@@ -83,23 +84,29 @@ export const categoryIconMap = {
 } as const satisfies Record<CategoryEnum, AtelierIcon>;
 
 export const errorMap = {
+	// Request Error
 	PARSE_ERROR: { message: 'Invalid JSON From Client', status: 400 },
 	BAD_REQUEST: { message: 'Bad Request', status: 400 },
 	UNAUTHORIZED: { message: 'Unauthorized Request', status: 401 },
-	NOT_FOUND: { message: 'Content Not Found', status: 404 },
 	FORBIDDEN: { message: 'Forbidden Content', status: 403 },
+	NOT_FOUND: { message: 'Content Not Found', status: 404 },
 	METHOD_NOT_SUPPORTED: { message: 'Method Not Supported', status: 405 },
 	TIMEOUT: { message: 'Request Timeout', status: 408 },
 	CONFLICT: { message: 'Request Conflict', status: 409 },
 	PRECONDITION_FAILED: { message: 'Request Precondition Failed', status: 412 },
 	PAYLOAD_TOO_LARGE: { message: 'Payload Request Too Large', status: 413 },
+	UNSUPPORTED_MEDIA_TYPE: { message: 'Unsupported Media Type', status: 415 },
 	UNPROCESSABLE_CONTENT: { message: 'Unprocessable Content', status: 422 },
 	TOO_MANY_REQUESTS: { message: 'Too Many Requests', status: 429 },
 	CLIENT_CLOSED_REQUEST: { message: 'Client Closed Request', status: 499 },
+
+	// Server Error
 	INTERNAL_SERVER_ERROR: { message: 'Some Thing Wrong Server', status: 500 },
 	NOT_IMPLEMENTED: { message: 'Some Thing Wrong Server', status: 501 },
-	UNSUPPORTED_MEDIA_TYPE: { message: 'Unsupported Media Type', status: 415 }
-} as const satisfies Record<APIError['code'], { message: string; status: number }>;
+	BAD_GATEWAY: { message: 'Bad Gateway', status: 502 },
+	SERVICE_UNAVAILABLE: { message: 'Service Unavailable', status: 503 },
+	GATEWAY_TIMEOUT: { message: 'Gateway Timeout', status: 504 }
+} as const satisfies Record<TRPC_ERROR_CODE_KEY, { message: string; status: number }>;
 
 export const listAboutPaths = ['about', 'license'] as const;
 

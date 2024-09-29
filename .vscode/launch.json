@@ -1,0 +1,32 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Next.js: Launch Application",
+			"type": "node-terminal",
+			"request": "launch",
+			"command": "npm run dev"
+		},
+		{
+			"name": "Next.js: Attach Debugger",
+			"type": "node",
+			"request": "launch",
+			"program": "${workspaceFolder}/node_modules/.bin/next",
+			"runtimeArgs": ["--inspect"],
+			"skipFiles": ["<node_internals>/**"],
+			"serverReadyAction": {
+				"action": "debugWithEdge",
+				"killOnServerStop": true,
+				"pattern": "- Local:.+(https?://.+)",
+				"uriFormat": "%s",
+				"webRoot": "${workspaceFolder}"
+			}
+		},
+		{
+			"name": "Drizzle: Launch Database Studio",
+			"type": "node-terminal",
+			"request": "launch",
+			"command": "npm run drizzle-studio"
+		}
+	]
+}

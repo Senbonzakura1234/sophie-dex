@@ -42,7 +42,7 @@ const getListRecord = async <TRecord extends CommonRecord>(args: GetListRecordPr
 
 	const { query } = args;
 
-	const { data, isSuccess } = await tryCatchHandler(query, 'getListRecord.executeQuery');
+	const { data, isSuccess } = await tryCatchHandler(query.execute(), 'getListRecord.executeQuery');
 
 	if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR' });
 
