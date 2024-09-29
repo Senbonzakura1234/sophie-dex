@@ -71,7 +71,7 @@ const defaultResult = {
 } satisfies Awaited<APIResult>;
 
 const getDefaultFetchHeader = (revalidate = 86400): Parameters<typeof fetch>[1] => ({
-	headers: { Authorization: `Bearer ${env.GITHUB_TOKEN}`, 'X-GitHub-Api-Version': '2022-11-28' },
+	headers: { Authorization: `Bearer ${env.APP_GITHUB_TOKEN}`, 'X-GitHub-Api-Version': '2022-11-28' },
 	...(env.NEXT_PUBLIC_NODE_ENV === 'production' ? { next: { revalidate } } : { cache: 'no-cache' })
 });
 

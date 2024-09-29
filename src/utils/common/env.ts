@@ -29,9 +29,9 @@ export const env = createEnv({
 	server: {
 		PGURL_NONPOOLING: z.string().catch(''),
 
-		GITHUB_TOKEN: z.string().catch(''),
-		GITHUB_APP_ID: z.string().catch(''),
-		GITHUB_APP_SECRET: z.string().catch(''),
+		APP_GITHUB_TOKEN: z.string().catch(''),
+		APP_GITHUB_APP_ID: z.string().catch(''),
+		APP_GITHUB_APP_SECRET: z.string().catch(''),
 
 		AUTH_SECRET: z.string().catch(''),
 		AUTH_URL: z.string().catch('')
@@ -54,9 +54,9 @@ export const env = createEnv({
 		// server
 		PGURL_NONPOOLING: process.env.PGURL_NONPOOLING,
 
-		GITHUB_TOKEN: process.env.GITHUB_TOKEN,
-		GITHUB_APP_ID: process.env.GITHUB_APP_ID,
-		GITHUB_APP_SECRET: process.env.GITHUB_APP_SECRET,
+		APP_GITHUB_TOKEN: process.env.APP_GITHUB_TOKEN,
+		APP_GITHUB_APP_ID: process.env.APP_GITHUB_APP_ID,
+		APP_GITHUB_APP_SECRET: process.env.APP_GITHUB_APP_SECRET,
 
 		AUTH_SECRET: process.env.AUTH_SECRET,
 		AUTH_URL: process.env.AUTH_URL

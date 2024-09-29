@@ -8,8 +8,8 @@ import { env } from '@root/utils/common/env';
 import GitHub from 'next-auth/providers/github';
 
 export const provider = GitHub({
-	clientId: env.GITHUB_APP_ID,
-	clientSecret: env.GITHUB_APP_SECRET,
+	clientId: env.APP_GITHUB_APP_ID,
+	clientSecret: env.APP_GITHUB_APP_SECRET,
 
 	profile: async (...args) => {
 		const profileResult = githubUserInfoSchema.safeParse(args[0]);
