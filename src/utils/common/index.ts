@@ -99,7 +99,7 @@ export function convertCode<TInput extends string>(input?: TInput | null) {
 
 export function getBaseUrl(useMainHost?: boolean) {
 	if (useMainHost) return env.NEXT_PUBLIC_APP_HOST || `http://localhost:${env.NEXT_PUBLIC_PORT ?? 3000}`;
-	if (typeof window !== 'undefined') return ''; // browser should use relative url
+	if (typeof globalThis?.document !== 'undefined') return ''; // browser should use relative url
 	if (env.NEXT_PUBLIC_VERCEL_URL) return `https://${env.NEXT_PUBLIC_VERCEL_URL}`; // SSR should use vercel url
 	return `http://localhost:${env.NEXT_PUBLIC_PORT ?? 3000}`; // dev SSR should use localhost
 }

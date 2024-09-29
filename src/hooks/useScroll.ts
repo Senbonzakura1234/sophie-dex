@@ -14,8 +14,8 @@ export const useScroll = ({ onScroll, scrollElementId }: Props) => {
 	const [isShowScrollTop, setIsShowScrollTop] = useState(false);
 
 	useEffect(() => {
-		if (typeof window === 'undefined' || !onScroll) return;
-		const scrollElement = window.document.getElementById(scrollElementId);
+		if (typeof globalThis?.document === 'undefined' || !onScroll) return;
+		const scrollElement = globalThis.document.getElementById(scrollElementId);
 
 		if (!scrollElement) return;
 
@@ -40,9 +40,9 @@ export const useScroll = ({ onScroll, scrollElementId }: Props) => {
 	}, [isShowScrollTop, onScroll, scrollElementId]);
 
 	const scrollToTop = () => {
-		if (typeof window === 'undefined' || !isShowScrollTop) return;
+		if (typeof globalThis?.document === 'undefined' || !isShowScrollTop) return;
 
-		const scrollElement = window.document.getElementById(scrollElementId);
+		const scrollElement = globalThis.document.getElementById(scrollElementId);
 
 		if (scrollElement) scrollElement.scrollTo({ top: 0, behavior: 'smooth' });
 	};

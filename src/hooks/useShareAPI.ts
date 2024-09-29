@@ -10,11 +10,11 @@ export const useShareAPI = (input: InputData) => {
 		() =>
 			Boolean(
 				tryCatchHandlerSync(() => {
-					if (!('clipboard' in window.navigator)) return false;
+					if (!('clipboard' in globalThis.navigator)) return false;
 
-					if (!('writeText' in window.navigator.clipboard)) return false;
+					if (!('writeText' in globalThis.navigator.clipboard)) return false;
 
-					if (typeof window.navigator.clipboard.writeText !== 'function') return false;
+					if (typeof globalThis.navigator.clipboard.writeText !== 'function') return false;
 
 					return true;
 				}, 'useShareAPI.isCanCopy').data
@@ -26,32 +26,32 @@ export const useShareAPI = (input: InputData) => {
 		() =>
 			Boolean(
 				tryCatchHandlerSync(() => {
-					if (typeof window === 'undefined') return false;
+					if (typeof globalThis?.document === 'undefined') return false;
 
-					if (!('navigator' in window)) return false;
+					if (!('navigator' in globalThis)) return false;
 
-					if (!('share' in window.navigator)) return false;
+					if (!('share' in globalThis.navigator)) return false;
 
-					if (!('canShare' in window.navigator)) return false;
+					if (!('canShare' in globalThis.navigator)) return false;
 
-					if (typeof window.navigator.share !== 'function') return false;
+					if (typeof globalThis.navigator.share !== 'function') return false;
 
-					if (typeof window.navigator.canShare !== 'function') return false;
+					if (typeof globalThis.navigator.canShare !== 'function') return false;
 
-					return Boolean(window.navigator.canShare(input));
+					return Boolean(globalThis.navigator.canShare(input));
 				}, 'useShareAPI.isCanShare').data
 			),
 		[input]
 	);
 
 	const share = useCallback(async () => {
-		if (isCanShare) return void tryCatchHandler(window.navigator.share(input), 'share.navigatorShare');
+		if (isCanShare) return void tryCatchHandler(globalThis.navigator.share(input), 'share.navigatorShare');
 
 		// fallback to copy to clipboard
 		if (!isCanCopy) return setShareNotification({ isOpen: true, message: 'Clipboard not supported', type: 'ERROR' });
 
 		const { isSuccess } = await tryCatchHandler(
-			window.navigator.clipboard.writeText(`${getBaseUrl()}${input.url}`),
+			globalThis.navigator.clipboard.writeText(`${getBaseUrl()}${input.url}`),
 			'share.clipboardWriteText'
 		);
 

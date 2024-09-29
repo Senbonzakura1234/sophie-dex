@@ -17,11 +17,11 @@ export function useTheme<const V extends string>(
 
 		if (next.value === themeSelect.value) return;
 
-		if (typeof window !== 'undefined') {
+		if (typeof globalThis?.document !== 'undefined') {
 			const isDarkTheme = arrayInclude(darkThemesList, next.value || 'fantasy');
 
-			window.document.body.setAttribute('data-theme', next.value!);
-			window.document.body.classList[isDarkTheme ? 'add' : 'remove']('dark');
+			globalThis.document.body.setAttribute('data-theme', next.value!);
+			globalThis.document.body.classList[isDarkTheme ? 'add' : 'remove']('dark');
 		}
 
 		setTheme(next.value!, { path: '/' });

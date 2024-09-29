@@ -21,7 +21,7 @@ const alertIconMap = {
 export default function Notification({ message, type = 'INFO', isOpen }: NotificationProps) {
 	const Icon = alertIconMap[type];
 
-	if (typeof window === 'undefined') return null;
+	if (typeof globalThis?.document === 'undefined') return null;
 
 	return (
 		<>
@@ -47,7 +47,7 @@ export default function Notification({ message, type = 'INFO', isOpen }: Notific
 						</div>
 					</div>
 				</div>,
-				window.document.body
+				globalThis.document.body
 			)}
 		</>
 	);
