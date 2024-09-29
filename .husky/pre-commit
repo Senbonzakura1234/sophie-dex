@@ -1,4 +1,4 @@
-pnpm generate-README
-pnpm lint:fix
-pnpm types
+npm run generate-README
+npm run lint:fix
+npm run types
 git add .

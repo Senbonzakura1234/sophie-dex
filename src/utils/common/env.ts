@@ -1,8 +1,6 @@
 import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
 
-console.log('Validating environment variables...');
-
 const appCodeSchema = z
 	.string()
 	.regex(/(?=\S*['-])([a-zA-Z'-]+)/)

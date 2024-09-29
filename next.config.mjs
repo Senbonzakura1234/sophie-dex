@@ -1,10 +1,4 @@
 import withMDX from '@next/mdx';
-import createJiti from 'jiti';
-import { fileURLToPath } from 'node:url';
-
-const jiti = createJiti(fileURLToPath(import.meta.url), {});
-
-jiti('./src/utils/common/env');
 
 /** @type {import('@root/types/common/next').ChainingPlugin} */
 const chainingPlugin = ({ plugins: configFnList, rootConfig: coreConfig }) =>
