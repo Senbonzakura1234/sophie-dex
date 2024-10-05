@@ -1,13 +1,14 @@
 import { auth } from '@root/auth';
 import { customPages } from '@root/constants/common';
+import { genericModuleIdEnumSchema } from '@root/types/common/zod/generic';
 import { env } from '@root/utils/common/env';
-import { genericModuleIdEnumSchema } from './types/common/zod/generic';
+import { trackEventServer } from '@root/utils/server';
 
 const testingPath = ['/test', '/api/test', '/api/export'];
 const protectedPath = ['/profile'];
 const homePath = '/';
 
-export default auth(req => {
+export default auth(async req => {
 	// Prevent testing path access on production
 	if (testingPath.some(p => req.nextUrl.pathname.startsWith(p)) && env.NEXT_PUBLIC_NODE_ENV === 'production')
 		return Response.json('Forbidden resource', { status: 403 });
@@ -35,6 +36,13 @@ export default auth(req => {
 		const search = searchParams.get('search');
 
 		if (search) {
+			const featureFlag = 'server.middleware';
+
+			await trackEventServer(
+				[featureFlag, true],
+				[`${featureFlag}.browserSearchRedirect`, { search }, { flags: [featureFlag] }]
+			);
+
 			const [firstPart = '', secondPart] = search.split(':=');
 
 			const moduleId = genericModuleIdEnumSchema.catch('item').parse(firstPart);

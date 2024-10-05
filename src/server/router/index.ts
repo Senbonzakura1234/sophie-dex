@@ -29,7 +29,7 @@ import {
 	searchQueryValidator
 } from '@root/types/common/zod';
 import type { SessionResult } from '@root/utils/server';
-import { getSessionResult } from '@root/utils/server';
+import { getSessionResult, trackEventServer } from '@root/utils/server';
 import { exportRecords, getAllRecordIds, getContentRecord } from '@root/utils/server/database';
 import { getGithubReadme } from '@root/utils/server/fetch';
 import { initTRPC } from '@trpc/server';
@@ -58,9 +58,13 @@ const protectedProcedure = t.procedure.use(opts => {
 
 export const appRouter = t.router({
 	effect: {
-		getAll: publicProcedure
-			.input(searchQueryValidator)
-			.query(({ input, ctx }) => getEffects(input, ctx.sessionResult)),
+		getAll: publicProcedure.input(searchQueryValidator).query(async ({ input, ctx }) => {
+			const featureFlag = 'server.getAll';
+
+			await trackEventServer([featureFlag, true], [`${featureFlag}.effect`, input, { flags: [featureFlag] }]);
+
+			return getEffects(input, ctx.sessionResult);
+		}),
 
 		getOne: publicProcedure
 			.input(idQueryValidator)
@@ -71,7 +75,13 @@ export const appRouter = t.router({
 		export: publicProcedure.query(() => exportRecords(exportEffectsQuery))
 	},
 	item: {
-		getAll: publicProcedure.input(searchQueryValidator).query(({ input, ctx }) => getItems(input, ctx.sessionResult)),
+		getAll: publicProcedure.input(searchQueryValidator).query(async ({ input, ctx }) => {
+			const featureFlag = 'server.getAll';
+
+			await trackEventServer([featureFlag, true], [`${featureFlag}.item`, input, { flags: [featureFlag] }]);
+
+			return getItems(input, ctx.sessionResult);
+		}),
 
 		getOne: publicProcedure.input(idQueryValidator).query(({ input }) => getContentRecord(getItemRecordQuery, input)),
 
@@ -80,9 +90,13 @@ export const appRouter = t.router({
 		export: publicProcedure.query(() => exportRecords(exportItemsQuery))
 	},
 	rumor: {
-		getAll: publicProcedure
-			.input(searchQueryValidator)
-			.query(({ input, ctx }) => getRumors(input, ctx.sessionResult)),
+		getAll: publicProcedure.input(searchQueryValidator).query(async ({ input, ctx }) => {
+			const featureFlag = 'server.getAll';
+
+			await trackEventServer([featureFlag, true], [`${featureFlag}.rumor`, input, { flags: [featureFlag] }]);
+
+			return getRumors(input, ctx.sessionResult);
+		}),
 
 		getOne: publicProcedure
 			.input(idQueryValidator)
@@ -93,9 +107,13 @@ export const appRouter = t.router({
 		export: publicProcedure.query(() => exportRecords(exportRumorsQuery))
 	},
 	trait: {
-		getAll: publicProcedure
-			.input(searchQueryValidator)
-			.query(({ input, ctx }) => getTraits(input, ctx.sessionResult)),
+		getAll: publicProcedure.input(searchQueryValidator).query(async ({ input, ctx }) => {
+			const featureFlag = 'server.getAll';
+
+			await trackEventServer([featureFlag, true], [`${featureFlag}.trait`, input, { flags: [featureFlag] }]);
+
+			return getTraits(input, ctx.sessionResult);
+		}),
 
 		getOne: publicProcedure
 			.input(idQueryValidator)
@@ -112,8 +130,15 @@ export const appRouter = t.router({
 			return getModuleBookmarks(input, ctx.sessionResult.session);
 		}),
 
-		bookmark: protectedProcedure.input(bookmarkQueryValidator).mutation(({ input, ctx }) => {
+		bookmark: protectedProcedure.input(bookmarkQueryValidator).mutation(async ({ input, ctx }) => {
 			if (!ctx.sessionResult.isAuthenticated) throw new APIError({ code: 'UNAUTHORIZED' });
+
+			const featureFlag = 'server.bookmark';
+
+			await trackEventServer(
+				[featureFlag, true],
+				[`${featureFlag}.peformBookmark`, input, { flags: [featureFlag] }]
+			);
 
 			return bookmarkRecord(input, ctx.sessionResult.session);
 		}),

@@ -2,8 +2,11 @@ import { env } from '@root/utils/common/env';
 if (env.NEXT_PUBLIC_NODE_ENV !== 'script') void import('server-only');
 
 import { auth } from '@root/auth';
+import { track } from '@vercel/analytics/server';
+import { reportValue } from '@vercel/flags';
 import type { RequestCookie } from 'next/dist/compiled/@edge-runtime/cookies';
 import { cookies } from 'next/headers';
+import { tryCatchHandler, tryCatchHandlerSync } from '../common';
 
 export const getCookieData = async (name: string) => {
 	const cookieData = cookies().get(name);
@@ -35,4 +38,15 @@ export const getSessionResult = async (): Promise<SessionResult> => {
 			expires: rawSession.expires || ''
 		}
 	};
+};
+
+export const trackEventServer = (
+	reportValueArgs: Parameters<typeof reportValue>,
+	trackArgs: Parameters<typeof track>
+) => {
+	if (env.NEXT_PUBLIC_NODE_ENV !== 'production') return;
+
+	tryCatchHandlerSync(() => reportValue(...reportValueArgs), 'trackEventServer.reportValue');
+
+	return tryCatchHandler(track(...trackArgs), 'trackEventServer.track');
 };

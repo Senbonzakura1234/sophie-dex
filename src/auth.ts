@@ -5,6 +5,7 @@ import { insertOrUpdateUser } from '@root/server/postgresql';
 import { APIError } from '@root/types/common';
 import { githubUserInfoSchema } from '@root/types/common/zod';
 import { env } from '@root/utils/common/env';
+import { trackEventServer } from '@root/utils/server';
 import GitHub from 'next-auth/providers/github';
 
 export const provider = GitHub({
@@ -12,6 +13,13 @@ export const provider = GitHub({
 	clientSecret: env.APP_GITHUB_APP_SECRET,
 
 	profile: async (...args) => {
+		const featureFlag = 'server.authentication';
+
+		await trackEventServer(
+			[featureFlag, true],
+			[`${featureFlag}.githubLogin`, { username: args[0].login || null }, { flags: [featureFlag] }]
+		);
+
 		const profileResult = githubUserInfoSchema.safeParse(args[0]);
 
 		if (!profileResult.success)
