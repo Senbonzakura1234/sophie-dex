@@ -20,10 +20,11 @@ export default function Breadcrumb() {
 					aria-label='Go to homepage'
 					className={cn(
 						'link gap-1 capitalize',
-						typeof segment === 'undefined'
+						segment === ''
 							? 'no-animation pointer-events-none !cursor-default !no-underline'
 							: 'link-hover link-primary visited:link-accent'
 					)}
+					scroll={false}
 					href='/'
 				>
 					<HomeIcon className='aspect-square h-4 !text-primary' />
@@ -41,6 +42,7 @@ export default function Breadcrumb() {
 								m !== segment ? 'link-hover link-primary visited:link-accent' : '!no-underline',
 								{ 'no-animation pointer-events-none !cursor-default': m === segment && !isDetailPage }
 							)}
+							scroll={false}
 							href={`/${m}`}
 						>
 							<LinkIcon className='hidden aspect-square h-4 2xl:inline' />
@@ -63,6 +65,7 @@ export default function Breadcrumb() {
 							? 'no-animation pointer-events-none !cursor-default !no-underline'
 							: 'link-hover link-primary visited:link-accent'
 					)}
+					scroll={false}
 					href='/about'
 				>
 					<InfoIcon className='aspect-square h-4 !text-primary' />

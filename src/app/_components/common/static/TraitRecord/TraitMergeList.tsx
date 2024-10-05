@@ -33,6 +33,7 @@ export default function TraitMergeList({ mergeFrom, search }: Props) {
 							aria-label={firstTrait.name}
 							className='btn join-item btn-xs capitalize'
 							href={`/${firstTrait.table}/${firstTrait.id}`}
+							scroll={false}
 						>
 							<span
 								className='max-sm:max-w-16 max-sm:truncate'
@@ -48,6 +49,7 @@ export default function TraitMergeList({ mergeFrom, search }: Props) {
 							aria-label={lastTrait.name}
 							className='btn join-item btn-xs capitalize'
 							href={`/${lastTrait.table}/${lastTrait.id}`}
+							scroll={false}
 						>
 							<span
 								className='max-sm:max-w-16 max-sm:truncate'

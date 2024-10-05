@@ -14,6 +14,7 @@ export default function AuthorLink() {
 				pathname: env.NEXT_PUBLIC_APP_AUTHOR
 			}}
 			prefetch={false}
+			scroll={false}
 			target='_blank'
 		>
 			<GithubIcon className='my-auto aspect-square h-4' />

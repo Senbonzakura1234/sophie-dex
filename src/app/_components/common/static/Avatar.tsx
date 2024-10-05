@@ -35,6 +35,7 @@ export default function Avatar({ size, url, className, username = 'U' }: Props) 
 						width={size}
 						height={size}
 						src={getUrlWithSize({ size, url })}
+						loading='eager'
 					/>
 				) : (
 					<div className='grid size-full place-content-center rounded-full'>{username[0]}</div>

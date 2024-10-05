@@ -46,6 +46,7 @@ export default function QueryLink({
 						})}`
 					: '/'
 			}
+			scroll={false}
 			{...rest}
 		>
 			{children}

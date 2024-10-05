@@ -28,7 +28,12 @@ export default function ProfileField({ type, label, ...restProps }: ProfileField
 			<Icon className='mt-auto aspect-square w-5 text-primary' />
 
 			{'href' in restProps ? (
-				<Link className='link-hover link link-primary visited:link-accent' href={restProps.href} target='_blank'>
+				<Link
+					className='link-hover link link-primary visited:link-accent'
+					href={restProps.href}
+					scroll={false}
+					target='_blank'
+				>
 					{label}
 				</Link>
 			) : (

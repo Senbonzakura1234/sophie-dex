@@ -43,6 +43,7 @@ export default function RecordHead({ currentId, id, name, search, moduleId }: Pr
 					href={moduleId ? `/${moduleId}/${id}` : '/'}
 					aria-label={name}
 					dangerouslySetInnerHTML={{ __html: highlightSearchedText(name, search) }}
+					scroll={false}
 				/>
 			</div>
 

@@ -28,6 +28,7 @@ export default function Hyperlink({ input, classNames, search }: Props) {
 				className={cn('mr-0.5 font-bold', classNames?.link)}
 				href={href}
 				dangerouslySetInnerHTML={{ __html: highlightSearchedText(label, search) }}
+				scroll={false}
 			/>
 
 			<ShareButton

@@ -42,6 +42,7 @@ export default function ProfileInfo({
 						<Link
 							className='link-hover link link-primary text-xl font-bold'
 							href={{ protocol: 'https', hostname: 'github', host: 'github.com', pathname: login }}
+							scroll={false}
 							target='_blank'
 						>
 							{login}

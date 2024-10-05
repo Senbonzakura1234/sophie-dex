@@ -31,6 +31,7 @@ export default function LicenseInfoHead({ description, name }: Props) {
 								host: 'github.com',
 								pathname: `/${env.NEXT_PUBLIC_APP_PATH}/blob/main/LICENSE`
 							}}
+							scroll={false}
 							target='_blank'
 						>
 							<ArrowTopRightOnSquareIcon className='aspect-square h-4' />

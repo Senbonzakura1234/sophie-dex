@@ -28,6 +28,7 @@ export default function PageBanner({ bannerType }: Props) {
 							priority
 							sizes='(max-width: 640px) 60vw, 600px'
 							src={sophieLogo}
+							loading='eager'
 						/>
 					) : null}
 
@@ -65,6 +66,7 @@ export default function PageBanner({ bannerType }: Props) {
 					priority
 					sizes='(max-width: 640px) 80vh, (max-width: 1024px) 60vw, 50vw'
 					src={topBg}
+					loading='eager'
 				/>
 			) : (
 				<div className='background-lips absolute inset-0 text-base-200 [background-color:currentColor] [background-size:4rem]' />
