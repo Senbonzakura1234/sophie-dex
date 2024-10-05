@@ -35,7 +35,7 @@ function SearchInput() {
 				onChange={e => setSearchValue(e.target.value)}
 				type='text'
 				placeholder='Name or description...'
-				className='input input-sm my-auto grow border-none p-0 !outline-none'
+				className='input input-sm my-auto grow border-none px-1 py-0 !outline-none'
 			/>
 
 			{!!searchValue ? (

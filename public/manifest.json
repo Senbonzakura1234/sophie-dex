@@ -1,5 +1,14 @@
 {
 	"background_color": "#F8FAFC",
+	"chrome_settings_overrides": {
+		"homepage": "https://sophie-dex.vercel.app/",
+		"search_provider": {
+			"favicon_url": "https://sophie-dex.vercel.app/favicon.ico",
+			"keyword": "Sophie",
+			"name": "Sophie Dex",
+			"search_url": "https://sophie-dex.vercel.app/?search={searchTerms}&moduleId={moduleId?}"
+		}
+	},
 	"description": "A wiki page created for Atelier Sophie DX",
 	"display": "standalone",
 	"display_override": ["window-control-overlay", "standalone"],
