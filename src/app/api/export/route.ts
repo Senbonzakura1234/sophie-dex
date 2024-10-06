@@ -1,7 +1,6 @@
 import { exportDBQueriesMap } from '@root/server/postgresql/repository';
 import { entries, tryCatchHandler } from '@root/utils/common';
 import { writeFile } from 'node:fs/promises';
-import { ulid } from 'ulid';
 
 export async function GET() {
 	const exportResult = await Promise.all(
@@ -11,14 +10,7 @@ export async function GET() {
 			if (!exportData.isSuccess) return { table, error: 'read-error', isSuccess: false } as const;
 
 			const writeFileResult = await tryCatchHandler(
-				writeFile(
-					`backup/${table}.json`,
-					JSON.stringify(
-						exportData.data.map(item => ({ ...item, id: ulid() })),
-						null,
-						2
-					)
-				),
+				writeFile(`backup/${table}.json`, JSON.stringify(exportData.data, null, 2)),
 				'exportDataQuery.writeFile'
 			);
 

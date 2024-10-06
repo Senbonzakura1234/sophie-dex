@@ -29,6 +29,8 @@ export const env = createEnv({
 	server: {
 		PGURL_NONPOOLING: z.string().catch(''),
 
+		ANALYZE: z.enum(['true', 'false']).catch('false'),
+
 		APP_GITHUB_TOKEN: z.string().catch(''),
 		APP_GITHUB_APP_ID: z.string().catch(''),
 		APP_GITHUB_APP_SECRET: z.string().catch(''),
@@ -53,6 +55,8 @@ export const env = createEnv({
 
 		// server
 		PGURL_NONPOOLING: process.env.PGURL_NONPOOLING,
+
+		ANALYZE: process.env.ANALYZE,
 
 		APP_GITHUB_TOKEN: process.env.APP_GITHUB_TOKEN,
 		APP_GITHUB_APP_ID: process.env.APP_GITHUB_APP_ID,

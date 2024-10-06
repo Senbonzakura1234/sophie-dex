@@ -16,6 +16,7 @@
 	},
 	"scripts": {
 		"build": "next build",
+		"build:analyze": "dotenv -e .env.analyze next build",
 		"check-info": "next info",
 		"dev": "concurrently \"npm run open-home\" \"next dev\"",
 		"dev:safe": "concurrently \"npm run open-home:safe\" \"dotenv -e .env.https next dev --experimental-https --experimental-https-key ./certificates/localhost-key.pem --experimental-https-cert ./certificates/localhost.pem\"",
@@ -69,6 +70,7 @@
 		"zod": "^3.23.8"
 	},
 	"devDependencies": {
+		"@next/bundle-analyzer": "^14.2.14",
 		"@tailwindcss/typography": "^0.5.15",
 		"@total-typescript/ts-reset": "^0.6.1",
 		"@types/mdx": "^2.0.13",

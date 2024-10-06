@@ -184,7 +184,6 @@ export const metadata: Metadata = {
 		shortcut: '/assets/splash_screens/icon.png'
 	},
 	keywords: env.NEXT_PUBLIC_APP_KEYWORD.split(','),
-	manifest: '/manifest.json',
 	metadataBase: new URL(getBaseUrl(true)),
 	other: {
 		google: 'notranslate',

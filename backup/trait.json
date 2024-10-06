@@ -1,6 +1,6 @@
 [
   {
-    "id": "01J76MWE1Z5MK8TBVZ594RTG2R",
+    "id": "01HVZGS2KVXEA5XZVFWXMEBZZK",
     "keyWords": "low price+,1,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Low Price+",
     "moduleId": "trait",
@@ -21,7 +21,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE1ZA66B87CDPEDWDT7B",
+    "id": "01HVZGS2KVJGGYZF37XJFRRGFB",
     "keyWords": "low price++,2,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Low Price++",
     "moduleId": "trait",
@@ -42,7 +42,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE20GGJXMP0XZR8YW182",
+    "id": "01HVZGS2KVQM1MHTW4ZYJNB8TY",
     "keyWords": "rare item,10,high price+,high price++,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Rare Item",
     "moduleId": "trait",
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "id": "01J76MWE201XKY7VMFWB1150MD",
+    "id": "01HVZGS2KVVQ4DMSPKZNX8KRRN",
     "keyWords": "no price,5,common item,mass produced,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "No Price",
     "moduleId": "trait",
@@ -110,7 +110,7 @@
     ]
   },
   {
-    "id": "01J76MWE20X5PWPVW1Z6XCMGV2",
+    "id": "01HVZGS2KVN95YF4A0QNJ35A22",
     "keyWords": "high class,9,high price,high price+,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "High Class",
     "moduleId": "trait",
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "id": "01J76MWE20MATWD4G6WSB2WCNT",
+    "id": "01HVZGS2KV7R5CMTEV43P7YB6Q",
     "keyWords": "high price,6,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "High Price",
     "moduleId": "trait",
@@ -165,7 +165,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE20RKTPWH0TZNN0J3T3",
+    "id": "01HVZGS2KVPFEP3TN9F1ZEQT9B",
     "keyWords": "high price+,7,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "High Price+",
     "moduleId": "trait",
@@ -186,7 +186,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE207G579STH15Y0NSMZ",
+    "id": "01HVZGS2KV11TWSGVBV7K8ZVJK",
     "keyWords": "high price++,8,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "High Price++",
     "moduleId": "trait",
@@ -207,7 +207,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE20RBZ98E8VKF7K660G",
+    "id": "01HVZGS2KW3SZZTE3CD7S19PWW",
     "keyWords": "premium price,11,high class,rare item,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Premium Price",
     "moduleId": "trait",
@@ -241,7 +241,7 @@
     ]
   },
   {
-    "id": "01J76MWE20DQ286QPXC145BWH3",
+    "id": "01HVZGS2KWT9AHG8ZZM4YXFQ4Y",
     "keyWords": "quality up++,14,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Quality Up++",
     "moduleId": "trait",
@@ -262,7 +262,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE20P091GYE9WRBJ0NZM",
+    "id": "01HVZGS2KWQSXZRMKHXA6VKTEJ",
     "keyWords": "well made,15,quality up,quality up+,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Well Made",
     "moduleId": "trait",
@@ -296,7 +296,7 @@
     ]
   },
   {
-    "id": "01J76MWE205C9N1KSF018DJGRB",
+    "id": "01HVZGS2KW2XM4F9FJVHVTPVM3",
     "keyWords": "quality up,12,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Quality Up",
     "moduleId": "trait",
@@ -317,7 +317,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE209D48VWQP9TJQRB31",
+    "id": "01HVZGS2KW60SHZMDQGD1B480G",
     "keyWords": "quality up+,13,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Quality Up+",
     "moduleId": "trait",
@@ -338,7 +338,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE21DZ9GPXV8V4TMWQJW",
+    "id": "01HVZGS2KWWRTQQ3FYBEX5AQVD",
     "keyWords": "destruction up,52,atk item,de buff item,exploration,synthesis",
     "name": "Destruction Up",
     "moduleId": "trait",
@@ -354,7 +354,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE21FJ7BA50D5RXGH195",
+    "id": "01HVZGS2KWATETJSPQBDQRF3X5",
     "keyWords": "mass produced,4,low price+,low price++,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Mass Produced",
     "moduleId": "trait",
@@ -388,7 +388,7 @@
     ]
   },
   {
-    "id": "01J76MWE21A6M8NST126KMHK1B",
+    "id": "01HVZGS2KW7DE8FEV5N2BVJAQG",
     "keyWords": "magician's wisdom,199,mp enhance,mp boost,accessory,armor,exploration,synthesis",
     "name": "Magician's Wisdom",
     "moduleId": "trait",
@@ -417,7 +417,7 @@
     ]
   },
   {
-    "id": "01J76MWE21M7HFS7N9KKP25XVS",
+    "id": "01HVZGS2KWPBT8PVX9EV8DBK3R",
     "keyWords": "recovery up+,104,buff item,heal item,exploration,synthesis",
     "name": "Recovery Up+",
     "moduleId": "trait",
@@ -433,7 +433,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE217P2Q6WF00Y9HJS4M",
+    "id": "01HVZGS2KWQ2XS69WHK5082EHP",
     "keyWords": "fixed recovery,110,buff item,heal item,exploration,synthesis",
     "name": "Fixed Recovery",
     "moduleId": "trait",
@@ -449,7 +449,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE21Q5QG9NTQJHMESH6Z",
+    "id": "01HVZGS2KWZ8ZE59E26113QB7Y",
     "keyWords": "power of beasts,221,attack enhance,attack boost,weapon,exploration,synthesis",
     "name": "Power of Beasts",
     "moduleId": "trait",
@@ -477,7 +477,7 @@
     ]
   },
   {
-    "id": "01J76MWE21TESNG9CEPJFM7YQG",
+    "id": "01HVZGS2KXV80HE55SM47XH51N",
     "keyWords": "cost bonus,466,trait enhance,trait enhance+,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Cost Bonus",
     "moduleId": "trait",
@@ -508,7 +508,7 @@
     ]
   },
   {
-    "id": "01J76MWE21DV71EYQZXYEZES23",
+    "id": "01HVZGS2KXV6HWAMM6C8BW2F19",
     "keyWords": "expert skill,313,weapon,exploration,synthesis",
     "name": "Expert Skill",
     "moduleId": "trait",
@@ -523,7 +523,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE21RW0YH7Z9VZS0DF2D",
+    "id": "01HVZGS2KYW9RMTEJA10J1SPWT",
     "keyWords": "dragon slayer,426,atk item,weapon,exploration,synthesis",
     "name": "Dragon Slayer",
     "moduleId": "trait",
@@ -539,7 +539,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE21QHJFKQH9BTJWQC9G",
+    "id": "01HVZGS2KYA0D6QVPDXKBC6BTY",
     "keyWords": "power to destroy gods,58,atk item,de buff item,exploration,synthesis",
     "name": "Power to Destroy Gods",
     "moduleId": "trait",
@@ -555,7 +555,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE21ZAV2F2H2MKQYRK8V",
+    "id": "01HVZGS2KY43M512T4SX60VD59",
     "keyWords": "multiply,174,use count +1,use count +2,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Multiply",
     "moduleId": "trait",
@@ -586,7 +586,7 @@
     ]
   },
   {
-    "id": "01J76MWE21T3DAVJDYA163Q02K",
+    "id": "01HVZGS2KY0GC39RMHSJ7VMZPF",
     "keyWords": "ultimate recovery,108,big recovery,intense recovery,buff item,heal item,exploration,synthesis",
     "name": "Ultimate Recovery",
     "moduleId": "trait",
@@ -615,7 +615,7 @@
     ]
   },
   {
-    "id": "01J76MWE218PN6XVVXMMSQ1TY0",
+    "id": "01HVZGS2KYAVFC84GVXWWW04B7",
     "keyWords": "legendary destruction,65,atk item,de buff item,exploration,synthesis",
     "name": "Legendary Destruction",
     "moduleId": "trait",
@@ -631,7 +631,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE22W5PBN5S6EBWG4HZJ",
+    "id": "01HVZGS2KZRTK0510W1Q97YGXE",
     "keyWords": "pain in numbers,62,fixed power,fixed power+,atk item,de buff item,exploration,synthesis",
     "name": "Pain in Numbers",
     "moduleId": "trait",
@@ -660,7 +660,7 @@
     ]
   },
   {
-    "id": "01J76MWE2294Y14D62HH7V7SPR",
+    "id": "01HVZGS2KZS2DK9G02154257KW",
     "keyWords": "hp enhance,190,accessory,armor,exploration,synthesis",
     "name": "HP Enhance",
     "moduleId": "trait",
@@ -676,7 +676,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2291PHF0XCH83Y46BP",
+    "id": "01HVZGS2KZYHDJDKA3470F7NPJ",
     "keyWords": "defense super enhance,226,armor,exploration,synthesis",
     "name": "Defense Super Enhance",
     "moduleId": "trait",
@@ -691,7 +691,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE22BPD9V04W0FDMCS6D",
+    "id": "01HVZGS2KWQ2Z9TPH2022R0KMR",
     "keyWords": "lp boost,203,accessory,armor,exploration,synthesis",
     "name": "LP Boost",
     "moduleId": "trait",
@@ -707,7 +707,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE22WQB7N7A7E84RE8XK",
+    "id": "01HVZGS2KXPAPWVGS96S5PN1MN",
     "keyWords": "flawless body,246,armor,exploration,synthesis",
     "name": "Flawless Body",
     "moduleId": "trait",
@@ -722,7 +722,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE22YXA1Y4RMBYBS7FJA",
+    "id": "01HVZGS2KXTAQ5WF673MTQWBYD",
     "keyWords": "blessing of skanda,352,buff item,heal item,exploration,synthesis",
     "name": "Blessing of Skanda",
     "moduleId": "trait",
@@ -738,7 +738,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE22TAZ95XA82VPCAGFA",
+    "id": "01HVZGS2KYWKDGRHF354NAAWCY",
     "keyWords": "undead slayer,429,atk item,weapon,exploration,synthesis",
     "name": "Undead Slayer",
     "moduleId": "trait",
@@ -754,7 +754,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE22TEZK6CB18WH71J3Q",
+    "id": "01HVZGS2KYED1XG6GHZTDYK6GX",
     "keyWords": "big recovery,106,recovery up,recovery up+,buff item,heal item,exploration,synthesis",
     "name": "Big Recovery",
     "moduleId": "trait",
@@ -783,7 +783,7 @@
     ]
   },
   {
-    "id": "01J76MWE22MEWGBB5XRXM9EMTF",
+    "id": "01HVZGS2KYDVC2NSHCQ392P8XS",
     "keyWords": "reduction,177,use count -1,use count -2,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Reduction",
     "moduleId": "trait",
@@ -814,7 +814,7 @@
     ]
   },
   {
-    "id": "01J76MWE22NTZM3W8F5Q99T2TE",
+    "id": "01HVZGS2KYZGK1C0MEA0H0QF3K",
     "keyWords": "intense recovery,107,recovery up+,recovery up++,buff item,heal item,exploration,synthesis",
     "name": "Intense Recovery",
     "moduleId": "trait",
@@ -843,7 +843,7 @@
     ]
   },
   {
-    "id": "01J76MWE22W6NK135702PR6T5V",
+    "id": "01HVZGS2KZEZ9CYN7DDVCADFBX",
     "keyWords": "recovery up++,105,buff item,heal item,exploration,synthesis",
     "name": "Recovery Up++",
     "moduleId": "trait",
@@ -859,7 +859,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE22R7VQNBVMNNPB2YWM",
+    "id": "01HVZGS2KZYFWT9T3AY2FD7AW1",
     "keyWords": "infinite stamina,207,full of stamina,unabating stamina,accessory,armor,exploration,synthesis",
     "name": "Infinite Stamina",
     "moduleId": "trait",
@@ -888,7 +888,7 @@
     ]
   },
   {
-    "id": "01J76MWE22YKGRN88P3KS2N03W",
+    "id": "01HVZGS2KWAP6S872D7YVW2XYG",
     "keyWords": "fixed recovery+,111,buff item,heal item,exploration,synthesis",
     "name": "Fixed Recovery+",
     "moduleId": "trait",
@@ -904,7 +904,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2274ACHK8TS64TQKYN",
+    "id": "01HVZGS2KX5BABKS41MZ40YBW9",
     "keyWords": "lp super enhance,204,accessory,armor,exploration,synthesis",
     "name": "LP Super Enhance",
     "moduleId": "trait",
@@ -920,7 +920,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE22YE90G0A9QSKT8DV6",
+    "id": "01HVZGS2KX4N7X65VY02ZYG577",
     "keyWords": "consume mp -15%,299,accessory,weapon,exploration,synthesis",
     "name": "Consume MP -15%",
     "moduleId": "trait",
@@ -936,7 +936,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE23YWT5RV03E0XJGHRN",
+    "id": "01HVZGS2KYMK1JEENA824EDTHE",
     "keyWords": "inflict blind,369,atk item,de buff item,weapon,exploration,synthesis",
     "name": "Inflict Blind",
     "moduleId": "trait",
@@ -953,7 +953,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE23DAW40PX179EKDPA3",
+    "id": "01HVZGS2KY0AYN6HCT3EP9QKA4",
     "keyWords": "effective vs many,482,area bonus,area bonus+,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Effective Vs Many",
     "moduleId": "trait",
@@ -984,7 +984,7 @@
     ]
   },
   {
-    "id": "01J76MWE23879HZNW6QKD06EHA",
+    "id": "01HVZGS2KY8Y0Z7YRDM7N1189S",
     "keyWords": "recovery up,103,buff item,heal item,exploration,synthesis",
     "name": "Recovery Up",
     "moduleId": "trait",
@@ -1000,7 +1000,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE234G68KSBS1B97S7T1",
+    "id": "01HVZGS2KY1FYZX1YBHPF2A6DV",
     "keyWords": "full of life,193,hp enhance,hp boost,accessory,armor,buff item,heal item,exploration,synthesis",
     "name": "Full of Life",
     "moduleId": "trait",
@@ -1031,7 +1031,7 @@
     ]
   },
   {
-    "id": "01J76MWE23FJSPPGA8B57VHG77",
+    "id": "01HVZGS2KY53F7XHH03QWHS0Z1",
     "keyWords": "destruction up+,53,atk item,de buff item,exploration,synthesis",
     "name": "Destruction Up+",
     "moduleId": "trait",
@@ -1047,7 +1047,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE23SWPWRGPKHWRHKMCW",
+    "id": "01HVZGS2KZ3Q4GHQ8437TDFJKP",
     "keyWords": "intense destruction,56,destruction up+,destruction up++,atk item,de buff item,exploration,synthesis",
     "name": "Intense Destruction",
     "moduleId": "trait",
@@ -1076,7 +1076,7 @@
     ]
   },
   {
-    "id": "01J76MWE2362V7F2SP8VKA9EW9",
+    "id": "01HVZGS2KZ6EVNXDX9YFHZGJRJ",
     "keyWords": "critical,145,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Critical",
     "moduleId": "trait",
@@ -1094,7 +1094,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE23X06EZ0GS4QPT0ZV6",
+    "id": "01HVZGS2KZERZF6KN312N6EF43",
     "keyWords": "dragonscale defense,229,steel defense,diamond defense,armor,exploration,synthesis",
     "name": "Dragonscale Defense",
     "moduleId": "trait",
@@ -1122,7 +1122,7 @@
     ]
   },
   {
-    "id": "01J76MWE23T07XWK34ZJVQYX9Z",
+    "id": "01HVZGS2KWJ0BB1K0247MWHFF7",
     "keyWords": "legendary recovery,116,buff item,heal item,exploration,synthesis",
     "name": "Legendary Recovery",
     "moduleId": "trait",
@@ -1138,7 +1138,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE232KZB4JYG68T5JJNC",
+    "id": "01HVZGS2KX2VXT9T8A548MF1ZV",
     "keyWords": "speed of light,235,speed of skanda,speed of gods,accessory,exploration,synthesis",
     "name": "Speed of Light",
     "moduleId": "trait",
@@ -1166,7 +1166,7 @@
     ]
   },
   {
-    "id": "01J76MWE23R6S3SCGKWVJGKXV0",
+    "id": "01HVZGS2KXGZC741EAEM8ZPYKM",
     "keyWords": "skill power +10%,306,weapon,exploration,synthesis",
     "name": "Skill Power +10%",
     "moduleId": "trait",
@@ -1181,7 +1181,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE23ARZBWKANHAW95ZPN",
+    "id": "01HVZGS2KYH2YPKJWP3YVM5RGF",
     "keyWords": "over power,407,weapon,exploration,synthesis",
     "name": "Over Power",
     "moduleId": "trait",
@@ -1196,7 +1196,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE24R5NBAVWXJSJ0RQCN",
+    "id": "01HVZGS2KY1G51V9PBE41TBM6W",
     "keyWords": "big destruction,55,destruction up,destruction up+,atk item,de buff item,exploration,synthesis",
     "name": "Big Destruction",
     "moduleId": "trait",
@@ -1225,7 +1225,7 @@
     ]
   },
   {
-    "id": "01J76MWE24G8JD0TWJKTZ837FX",
+    "id": "01HVZGS2KYWB0H167JFGXJ4MX6",
     "keyWords": "stability emphasis,154,stable effect,stable effect+,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Stability Emphasis",
     "moduleId": "trait",
@@ -1256,7 +1256,7 @@
     ]
   },
   {
-    "id": "01J76MWE24JF39P9855K674Y89",
+    "id": "01HVZGS2KYMRS47H87BEJ4T2QP",
     "keyWords": "wisdom of the gods,201,magician's wisdom,grand magician's wisdom,accessory,armor,exploration,synthesis",
     "name": "Wisdom of the Gods",
     "moduleId": "trait",
@@ -1285,7 +1285,7 @@
     ]
   },
   {
-    "id": "01J76MWE24JV1M4E21YDVT33H6",
+    "id": "01HVZGS2KYYPPG2PVKFGNS2K7J",
     "keyWords": "fixed power+,60,atk item,de buff item,exploration,synthesis",
     "name": "Fixed Power+",
     "moduleId": "trait",
@@ -1301,7 +1301,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE24BR6G890T4EK0BVEB",
+    "id": "01HVZGS2KZZZHZXSJSNP2CCNYN",
     "keyWords": "fixed recovery++,112,buff item,heal item,exploration,synthesis",
     "name": "Fixed Recovery++",
     "moduleId": "trait",
@@ -1317,7 +1317,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE249FBPVKB7CGDEG3EA",
+    "id": "01HVZGS2KZ2Y0M9NJ19XB3JRS7",
     "keyWords": "mp boost,197,accessory,armor,exploration,synthesis",
     "name": "MP Boost",
     "moduleId": "trait",
@@ -1333,7 +1333,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE249EMYKHE5BC81369K",
+    "id": "01HVZGS2KZQ3YPZHHXJ30W075E",
     "keyWords": "use count +2,173,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Use Count +2",
     "moduleId": "trait",
@@ -1351,7 +1351,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE247DFAQP3YFNCVEW51",
+    "id": "01HVZGS2KZ3R4TDDZEXYBNT2EA",
     "keyWords": "attack super enhance,220,weapon,exploration,synthesis",
     "name": "Attack Super Enhance",
     "moduleId": "trait",
@@ -1366,7 +1366,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE24GWCJ8PSSKEP634BZ",
+    "id": "01HVZGS2KZ2MN29SRS6V60ENYD",
     "keyWords": "atk spd boost,241,attack boost,speed boost,accessory,weapon,exploration,synthesis",
     "name": "ATK SPD Boost",
     "moduleId": "trait",
@@ -1395,7 +1395,7 @@
     ]
   },
   {
-    "id": "01J76MWE24FX3QYWC8V20GVHP1",
+    "id": "01HVZGS2KZN33F1PAGKQG57QZC",
     "keyWords": "destruction up++,54,atk item,de buff item,exploration,synthesis",
     "name": "Destruction Up++",
     "moduleId": "trait",
@@ -1411,7 +1411,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE24R0V6X7M5XQGDEYQJ",
+    "id": "01HVZGS2M0TJ2J3QPCQ7WB6081",
     "keyWords": "increase aggression,68,weapon,exploration,synthesis",
     "name": "Increase Aggression",
     "moduleId": "trait",
@@ -1426,7 +1426,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE25V9203ESJJYADPEV9",
+    "id": "01HVZGS2M0CB4H2ZP2RY41YVX0",
     "keyWords": "use count +1,172,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Use Count +1",
     "moduleId": "trait",
@@ -1444,7 +1444,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE259GTWNSRG53VX810H",
+    "id": "01HVZGS2M0MD3N66G6CFAVG37J",
     "keyWords": "skill enhance,307,skill power +5%,skill power +7%,weapon,exploration,synthesis",
     "name": "Skill Enhance",
     "moduleId": "trait",
@@ -1472,7 +1472,7 @@
     ]
   },
   {
-    "id": "01J76MWE25D5EETWY2FGMBJEKF",
+    "id": "01HVZGS2M0Z8MKYNVYHSRQ8K44",
     "keyWords": "avidya attack,660,weapon,exploration,synthesis",
     "name": "Avidya Attack",
     "moduleId": "trait",
@@ -1487,7 +1487,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE25AQ7AG5RMWP2JBBJK",
+    "id": "01HVZGS2M0E10NFTBFKRE1Y5SJ",
     "keyWords": "critical++,147,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Critical++",
     "moduleId": "trait",
@@ -1505,7 +1505,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE256X1Z546APGXBC12R",
+    "id": "01HVZGS2M18HFW5CSRKTV08SHC",
     "keyWords": "stable effect+,152,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Stable Effect+",
     "moduleId": "trait",
@@ -1523,7 +1523,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE25T7TST8T05QJCZKE6",
+    "id": "01HVZGS2M1FNK06HP1XEV5A50J",
     "keyWords": "hpmp super enhance,210,power of life,wisdom of the gods,accessory,armor,exploration,synthesis",
     "name": "HPMP Super Enhance",
     "moduleId": "trait",
@@ -1552,7 +1552,7 @@
     ]
   },
   {
-    "id": "01J76MWE25A3WN41EGFA21WDM0",
+    "id": "01HVZGS2M1ET2YHR3NGC93AVDS",
     "keyWords": "attack boost,219,weapon,exploration,synthesis",
     "name": "Attack Boost",
     "moduleId": "trait",
@@ -1567,7 +1567,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2579WXXW3EQJZXXJA6",
+    "id": "01HVZGS2M15FBBP9262FM8K01Q",
     "keyWords": "stable effect++,153,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Stable Effect++",
     "moduleId": "trait",
@@ -1585,7 +1585,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE25JT0ABE09BSKW86FZ",
+    "id": "01HVZGS2KZ60PGC0EDSN6D4EPY",
     "keyWords": "dreadful king,607,weapon,exploration,synthesis",
     "name": "Dreadful King",
     "moduleId": "trait",
@@ -1600,7 +1600,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE25JT5Y22R3EZD4SBN4",
+    "id": "01HVZGS2M03QK959JX0QZD6APV",
     "keyWords": "increase sharpness,66,weapon,exploration,synthesis",
     "name": "Increase Sharpness",
     "moduleId": "trait",
@@ -1615,7 +1615,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE257RPMPA4JMKX1JKNJ",
+    "id": "01HVZGS2M0BSABT5E5X39JGKE4",
     "keyWords": "stable effect,151,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Stable Effect",
     "moduleId": "trait",
@@ -1633,7 +1633,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE262GX3YYJGZZRH1GTJ",
+    "id": "01HVZGS2M0M5Y2FR89SJ033HBX",
     "keyWords": "compact mp consume,302,consume mp -15%,consume mp -20%,accessory,weapon,exploration,synthesis",
     "name": "Compact MP Consume",
     "moduleId": "trait",
@@ -1662,7 +1662,7 @@
     ]
   },
   {
-    "id": "01J76MWE26MMSHARBDCGNYJX99",
+    "id": "01HVZGS2M0Z3RWYZ9QPTMRVBZ7",
     "keyWords": "big damage numbers,64,pain in numbers,damage in numbers,atk item,de buff item,exploration,synthesis",
     "name": "Big Damage Numbers",
     "moduleId": "trait",
@@ -1691,7 +1691,7 @@
     ]
   },
   {
-    "id": "01J76MWE26S99N6ZT5F4TDS1YP",
+    "id": "01HVZGS2M06HN75YXYP3JQ996N",
     "keyWords": "blessed by god,109,buff item,heal item,exploration,synthesis",
     "name": "Blessed by God",
     "moduleId": "trait",
@@ -1707,7 +1707,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE26D5W3ACAKAMJ7CS1D",
+    "id": "01HVZGS2M1F29X5BRWG4W42JT8",
     "keyWords": "atk def enhance,236,attack enhance,defense enhance,armor,weapon,exploration,synthesis",
     "name": "ATK DEF Enhance",
     "moduleId": "trait",
@@ -1736,7 +1736,7 @@
     ]
   },
   {
-    "id": "01J76MWE26V03CWG4XN893GKAJ",
+    "id": "01HVZGS2M1CN7S41TBVT7HPKN8",
     "keyWords": "hpmp boost,209,overflowing life,grand magician's wisdom,accessory,armor,exploration,synthesis",
     "name": "HPMP Boost",
     "moduleId": "trait",
@@ -1765,7 +1765,7 @@
     ]
   },
   {
-    "id": "01J76MWE2625VVWG6PMSE5T3C0",
+    "id": "01HVZGS2KZ4XQT4FJPF07Z13JJ",
     "keyWords": "speed of skanda,233,speed enhance,speed boost,accessory,exploration,synthesis",
     "name": "Speed of Skanda",
     "moduleId": "trait",
@@ -1793,7 +1793,7 @@
     ]
   },
   {
-    "id": "01J76MWE26G1W5HRZKFCRDPJ1R",
+    "id": "01HVZGS2KZ8QAPN864VYDRE4GM",
     "keyWords": "count bonus,515,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Count Bonus",
     "moduleId": "trait",
@@ -1811,7 +1811,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE26YPD0HDD7BKFVADJF",
+    "id": "01HVZGS2KZ4RENTN064M9KGH62",
     "keyWords": "ultimate destruction,57,big destruction,intense destruction,atk item,de buff item,exploration,synthesis",
     "name": "Ultimate Destruction",
     "moduleId": "trait",
@@ -1840,7 +1840,7 @@
     ]
   },
   {
-    "id": "01J76MWE26JD8F91GXHN9KKV4P",
+    "id": "01HVZGS2M03Y8X5TD0ZB85XXR4",
     "keyWords": "big medicine enhance,114,fixed recovery+,fixed recovery++,buff item,heal item,exploration,synthesis",
     "name": "Big Medicine Enhance",
     "moduleId": "trait",
@@ -1869,7 +1869,7 @@
     ]
   },
   {
-    "id": "01J76MWE26VKRTKR5Q76CDES7A",
+    "id": "01HVZGS2M03BWZ13HH8H6BCC6N",
     "keyWords": "well rounded power,245,all stat boost,all stat super enhance,accessory,armor,weapon,exploration,synthesis",
     "name": "Well Rounded Power",
     "moduleId": "trait",
@@ -1899,7 +1899,7 @@
     ]
   },
   {
-    "id": "01J76MWE26RQDTKRS0QJ19T1BT",
+    "id": "01HVZGS2M0739PYZHC10HZJJC2",
     "keyWords": "super enhance recovery,115,medicine enhance,big medicine enhance,buff item,heal item,exploration,synthesis",
     "name": "Super Enhance Recovery",
     "moduleId": "trait",
@@ -1928,7 +1928,7 @@
     ]
   },
   {
-    "id": "01J76MWE26HFG5M4MPY0W3DTVY",
+    "id": "01HVZGS2M0R8EFRHDTC79RA6DA",
     "keyWords": "cuts easily,67,weapon,exploration,synthesis",
     "name": "Cuts Easily",
     "moduleId": "trait",
@@ -1943,7 +1943,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE276CK0ZCTAPRSNRZYH",
+    "id": "01HVZGS2M1DPQMTB81R304JM0A",
     "keyWords": "steel defense,227,defense enhance,defense boost,armor,exploration,synthesis",
     "name": "Steel Defense",
     "moduleId": "trait",
@@ -1971,7 +1971,7 @@
     ]
   },
   {
-    "id": "01J76MWE270QSGJVZ8MG01YAEA",
+    "id": "01HVZGS2M1JTM1ZTJ1JK7JWT4A",
     "keyWords": "grand magician's wisdom,200,mp boost,mp super enhance,accessory,armor,exploration,synthesis",
     "name": "Grand Magician's Wisdom",
     "moduleId": "trait",
@@ -2000,7 +2000,7 @@
     ]
   },
   {
-    "id": "01J76MWE27RAWVZV1YF26N7K3D",
+    "id": "01HVZGS2M1FHV6JS381S9N0BNA",
     "keyWords": "power of destruction,222,attack boost,attack super enhance,weapon,exploration,synthesis",
     "name": "Power of Destruction",
     "moduleId": "trait",
@@ -2028,7 +2028,7 @@
     ]
   },
   {
-    "id": "01J76MWE27PZ28EMKJH0XBR7JM",
+    "id": "01HVZGS2M1GWTPA98X0G8MM3PA",
     "keyWords": "speed boost,231,accessory,exploration,synthesis",
     "name": "Speed Boost",
     "moduleId": "trait",
@@ -2043,7 +2043,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE27GM13354V97F5JDNF",
+    "id": "01HVZGS2KZ4F9B3Q6WR5NRC07A",
     "keyWords": "damage in numbers,63,fixed power+,fixed power++,atk item,de buff item,exploration,synthesis",
     "name": "Damage in Numbers",
     "moduleId": "trait",
@@ -2072,7 +2072,7 @@
     ]
   },
   {
-    "id": "01J76MWE27M9Z1CW9KGTJMH65V",
+    "id": "01HVZGS2KZBT75MCYNDWW65ESB",
     "keyWords": "fixed power++,61,atk item,de buff item,exploration,synthesis",
     "name": "Fixed Power++",
     "moduleId": "trait",
@@ -2088,7 +2088,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE27CM8NEDDETDSHRGS9",
+    "id": "01HVZGS2M0XHJPCH7E0413CSGC",
     "keyWords": "mp super enhance,198,accessory,armor,exploration,synthesis",
     "name": "MP Super Enhance",
     "moduleId": "trait",
@@ -2104,7 +2104,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE276K89JX3TJB63A1QB",
+    "id": "01HVZGS2M0AK5RX8B4Z9SZ2C7N",
     "keyWords": "lp enhance,202,accessory,armor,exploration,synthesis",
     "name": "LP Enhance",
     "moduleId": "trait",
@@ -2120,7 +2120,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE27V4XVNVXY38ES2R4J",
+    "id": "01HVZGS2M0EQS0V7D7H9GD1XTZ",
     "keyWords": "consume mp -10%,298,accessory,weapon,exploration,synthesis",
     "name": "Consume MP -10%",
     "moduleId": "trait",
@@ -2136,7 +2136,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE27SAVJFHDZTVEGN41G",
+    "id": "01HVZGS2M063GVS5QEGYS8XSB7",
     "keyWords": "fixed power,59,atk item,de buff item,exploration,synthesis",
     "name": "Fixed Power",
     "moduleId": "trait",
@@ -2152,7 +2152,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE27TGADSQTBXZM5JA5M",
+    "id": "01HVZGS2M158J4VR9ZSJ80QDDS",
     "keyWords": "inflict seal,372,atk item,de buff item,weapon,exploration,synthesis",
     "name": "Inflict Seal",
     "moduleId": "trait",
@@ -2169,7 +2169,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE27J9S5435N9B1PTY7G",
+    "id": "01HVZGS2M13844J8YA3EPQXDJK",
     "keyWords": "power of life,195,full of life,overflowing life,accessory,armor,exploration,synthesis",
     "name": "Power of Life",
     "moduleId": "trait",
@@ -2198,7 +2198,7 @@
     ]
   },
   {
-    "id": "01J76MWE28W895EGWRTN1CGEGK",
+    "id": "01HVZGS2M1D2YBV8P6RZZYHTVA",
     "keyWords": "attack enhance,218,weapon,exploration,synthesis",
     "name": "Attack Enhance",
     "moduleId": "trait",
@@ -2213,7 +2213,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE28G878FEP01W6ACNZZ",
+    "id": "01HVZGS2M1NCSX0D6JXE635XAP",
     "keyWords": "draw out power,215,parameters +6%,parameters +7%,armor,exploration,synthesis",
     "name": "Draw Out Power",
     "moduleId": "trait",
@@ -2241,7 +2241,7 @@
     ]
   },
   {
-    "id": "01J76MWE28369JKX3PJM6P7QN9",
+    "id": "01HVZGS2M1P0TWRE5FC8PG03A3",
     "keyWords": "one hit kill,150,critical finish,always critical,atk item,de buff item,exploration,synthesis",
     "name": "One Hit Kill",
     "moduleId": "trait",
@@ -2270,7 +2270,7 @@
     ]
   },
   {
-    "id": "01J76MWE28V9VYH3ZB89F40WKV",
+    "id": "01HVZGS2M1D7KT5AREWD7Y331V",
     "keyWords": "use count -1,175,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Use Count -1",
     "moduleId": "trait",
@@ -2288,7 +2288,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE28D1TEJ4P17VG80ZNN",
+    "id": "01HVZGS2M1SA33RYMXT4GCSG86",
     "keyWords": "use count -2,176,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Use Count -2",
     "moduleId": "trait",
@@ -2306,7 +2306,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE28DX66MVD7CJ3T4J2C",
+    "id": "01HVZGS2M25J030HRJJZWNW1ES",
     "keyWords": "solid effect,155,stable effect+,stable effect++,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Solid Effect",
     "moduleId": "trait",
@@ -2337,7 +2337,7 @@
     ]
   },
   {
-    "id": "01J76MWE28Y3RY8PVBS88Y98WH",
+    "id": "01HVZGS2M2QQ8KQ7BT5HQVKQS1",
     "keyWords": "parameters +7%,213,armor,exploration,synthesis",
     "name": "Parameters +7%",
     "moduleId": "trait",
@@ -2352,7 +2352,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE28BYWE9AS3GZ2ZJ642",
+    "id": "01HVZGS2M22KB341Z65JAMM2ZV",
     "keyWords": "defense enhance,224,armor,exploration,synthesis",
     "name": "Defense Enhance",
     "moduleId": "trait",
@@ -2367,7 +2367,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2858WHK86SRXD6HCS4",
+    "id": "01HVZGS2M283E91QY2GN90Z119",
     "keyWords": "speed enhance,230,accessory,exploration,synthesis",
     "name": "Speed Enhance",
     "moduleId": "trait",
@@ -2382,7 +2382,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE28KM8MXDQTF92N4ZD6",
+    "id": "01HVZGS2M2Q95NS782APYG8WPA",
     "keyWords": "power of gods,223,power of beasts,power of destruction,weapon,exploration,synthesis",
     "name": "Power of Gods",
     "moduleId": "trait",
@@ -2410,7 +2410,7 @@
     ]
   },
   {
-    "id": "01J76MWE284WYJV74HNNZHJK1A",
+    "id": "01HVZGS2M3BQBAZM0ST3XFERZR",
     "keyWords": "zeal factor,592,accessory,exploration,synthesis",
     "name": "Zeal Factor",
     "moduleId": "trait",
@@ -2425,7 +2425,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE28DPGYX32KXA8BG4MW",
+    "id": "01HVZGS2M3G3M4KGZE2K144XK0",
     "keyWords": "inflict curse,368,atk item,de buff item,weapon,exploration,synthesis",
     "name": "Inflict Curse",
     "moduleId": "trait",
@@ -2442,7 +2442,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE294N0FGR4JQ96KXJG5",
+    "id": "01HVZGS2M317DVKYBBKY2VDGZ8",
     "keyWords": "final blow,509,enhance last,enhance last+,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Final Blow",
     "moduleId": "trait",
@@ -2473,7 +2473,7 @@
     ]
   },
   {
-    "id": "01J76MWE293JPNR17QWEBWQAHR",
+    "id": "01HVZGS2M3FCYPY4P0EFKND1PX",
     "keyWords": "multi bonus,483,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Multi Bonus",
     "moduleId": "trait",
@@ -2491,7 +2491,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE29BRM2RZWTN9TTE1S9",
+    "id": "01HVZGS2M471YV3PKQRFDCC4BE",
     "keyWords": "unwavering spirit,603,accessory,exploration,synthesis",
     "name": "Unwavering Spirit",
     "moduleId": "trait",
@@ -2506,7 +2506,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE294T1QSN6KEFRWBTHF",
+    "id": "01HVZGS2M23ST5ZKHJVRP1TJW5",
     "keyWords": "mp enhance,196,accessory,armor,exploration,synthesis",
     "name": "MP Enhance",
     "moduleId": "trait",
@@ -2522,7 +2522,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE29C8YN451FWP5MB1RQ",
+    "id": "01HVZGS2M2GKHRFABFKYGCB2AV",
     "keyWords": "parameters +6%,212,armor,exploration,synthesis",
     "name": "Parameters +6%",
     "moduleId": "trait",
@@ -2537,7 +2537,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE29WFXNB1J7RT7WK9F4",
+    "id": "01HVZGS2M2778SK2MG5J1RW8PV",
     "keyWords": "evolves the body,217,armor,exploration,synthesis",
     "name": "Evolves the Body",
     "moduleId": "trait",
@@ -2552,7 +2552,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2AKC0RZKGSAFTBQH83",
+    "id": "01HVZGS2M22V93Z4Y1Q6C42GRN",
     "keyWords": "speed of gods,234,speed boost,speed super enhance,accessory,exploration,synthesis",
     "name": "Speed of Gods",
     "moduleId": "trait",
@@ -2580,7 +2580,7 @@
     ]
   },
   {
-    "id": "01J76MWE2BZV8VE0FKJ30X8Y33",
+    "id": "01HVZGS2M233JF6S5VW1Z9BN6C",
     "keyWords": "all stat super enhance,244,all stat enhance,all stat boost,accessory,armor,weapon,exploration,synthesis",
     "name": "All Stat Super Enhance",
     "moduleId": "trait",
@@ -2610,7 +2610,7 @@
     ]
   },
   {
-    "id": "01J76MWE2B6RZT5WYRC2B74Y2R",
+    "id": "01HVZGS2M3SSGASPW19W6FW5QN",
     "keyWords": "skill power +7%,305,weapon,exploration,synthesis",
     "name": "Skill Power +7%",
     "moduleId": "trait",
@@ -2625,7 +2625,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2B9EXQ5HX4AVVDJ6NK",
+    "id": "01HVZGS2M3XZNT9QRX4EN1AFKA",
     "keyWords": "inflict slow,367,atk item,de buff item,weapon,exploration,synthesis",
     "name": "Inflict Slow",
     "moduleId": "trait",
@@ -2642,7 +2642,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2BDMZKTFX2B4B3GK7H",
+    "id": "01HVZGS2M3T3QBCE213N92YP19",
     "keyWords": "damage absorb++,403,weapon,exploration,synthesis",
     "name": "Damage Absorb++",
     "moduleId": "trait",
@@ -2657,7 +2657,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2B9WMQR5Y5KC8YCSJW",
+    "id": "01HVZGS2M1MX3ENJ9RPXPXYSPW",
     "keyWords": "speed super enhance,232,accessory,exploration,synthesis",
     "name": "Speed Super Enhance",
     "moduleId": "trait",
@@ -2672,7 +2672,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2BDV19F8CF47E2E1EZ",
+    "id": "01HVZGS2M10GDGWHQ4KV7M6ZYK",
     "keyWords": "hp boost,191,accessory,armor,exploration,synthesis",
     "name": "HP Boost",
     "moduleId": "trait",
@@ -2688,7 +2688,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2BS22ZV09XGCXS05DA",
+    "id": "01HVZGS2M1QQFWX1EEPHTJ68H1",
     "keyWords": "hp super enhance,192,accessory,armor,exploration,synthesis",
     "name": "HP Super Enhance",
     "moduleId": "trait",
@@ -2704,7 +2704,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2BT0TE8BY902ABPEJW",
+    "id": "01HVZGS2M2AQF66GXPSJP17NEH",
     "keyWords": "parameters +5%,211,armor,exploration,synthesis",
     "name": "Parameters +5%",
     "moduleId": "trait",
@@ -2719,7 +2719,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2CF6EMB4WR6GE2C2A4",
+    "id": "01HVZGS2M28SP349SC03HP9W50",
     "keyWords": "diamond defense,228,defense boost,defense super enhance,armor,exploration,synthesis",
     "name": "Diamond Defense",
     "moduleId": "trait",
@@ -2747,7 +2747,7 @@
     ]
   },
   {
-    "id": "01J76MWE2CH65DKZQRM9HKG4XY",
+    "id": "01HVZGS2M2AXSJ27NG77JVTRGD",
     "keyWords": "defense boost,225,armor,exploration,synthesis",
     "name": "Defense Boost",
     "moduleId": "trait",
@@ -2762,7 +2762,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2C2265E3RR9HFW3YPX",
+    "id": "01HVZGS2M2KYTZVTNFJS8PHPNQ",
     "keyWords": "fast use,541,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Fast Use",
     "moduleId": "trait",
@@ -2780,7 +2780,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2CNNXK4MEW7MRS9KW3",
+    "id": "01HVZGS2M3S2YPQWT3F89Q71R9",
     "keyWords": "skill power +5%,304,weapon,exploration,synthesis",
     "name": "Skill Power +5%",
     "moduleId": "trait",
@@ -2795,7 +2795,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2CS5M19CJ7JZT0DR0F",
+    "id": "01HVZGS2M300HY2PXYFS3P22QM",
     "keyWords": "soul dwelling,349,buff item,heal item,exploration,synthesis",
     "name": "Soul Dwelling",
     "moduleId": "trait",
@@ -2811,7 +2811,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2CZV60FHRQR5EHCF6V",
+    "id": "01HVZGS2M3PCVYVWC9XX499W2Y",
     "keyWords": "powerless curse,374,atk item,de buff item,exploration,synthesis",
     "name": "Powerless Curse",
     "moduleId": "trait",
@@ -2827,7 +2827,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2C0KYBZ4FRC05HZNWS",
+    "id": "01HVZGS2M3AFW8FWMPZ2AZJBKF",
     "keyWords": "halve mp consume,303,cut mp consume,compact mp consume,accessory,weapon,exploration,synthesis",
     "name": "Halve MP Consume",
     "moduleId": "trait",
@@ -2856,7 +2856,7 @@
     ]
   },
   {
-    "id": "01J76MWE2CMF94HT2E8KY235VX",
+    "id": "01HVZGS2M356HYTZV437EQXP0J",
     "keyWords": "skill super enhance,309,skill enhance,skill boost,weapon,exploration,synthesis",
     "name": "Skill Super Enhance",
     "moduleId": "trait",
@@ -2884,7 +2884,7 @@
     ]
   },
   {
-    "id": "01J76MWE2C6B2SC08JZ85V1MMQ",
+    "id": "01HVZGS2M4PM3ZMVK1SDNYK18H",
     "keyWords": "hp absorb,404,damage absorb,damage absorb+,weapon,exploration,synthesis",
     "name": "HP Absorb",
     "moduleId": "trait",
@@ -2912,7 +2912,7 @@
     ]
   },
   {
-    "id": "01J76MWE2CQVRG5C2HET1R7136",
+    "id": "01HVZGS2M2MXN17QYT2EERMAS1",
     "keyWords": "enhance the body,214,parameters +5%,parameters +6%,armor,exploration,synthesis",
     "name": "Enhance the Body",
     "moduleId": "trait",
@@ -2940,7 +2940,7 @@
     ]
   },
   {
-    "id": "01J76MWE2DVJ4W2B0ZERWE4Z5S",
+    "id": "01HVZGS2M2H1P1KPH2P74VVW69",
     "keyWords": "develops the body,216,enhance the body,draw out power,armor,exploration,synthesis",
     "name": "Develops the Body",
     "moduleId": "trait",
@@ -2968,7 +2968,7 @@
     ]
   },
   {
-    "id": "01J76MWE2DMBJC0C624K7MDPMX",
+    "id": "01HVZGS2M2WDT2DH40TSCEH7ZF",
     "keyWords": "atk spd enhance,237,attack enhance,speed enhance,accessory,weapon,exploration,synthesis",
     "name": "ATK SPD Enhance",
     "moduleId": "trait",
@@ -2997,7 +2997,7 @@
     ]
   },
   {
-    "id": "01J76MWE2DZ1KEAXRJWSNYTZ64",
+    "id": "01HVZGS2M2G3DVRF8874552AT6",
     "keyWords": "atk def boost,240,attack boost,defense boost,accessory,armor,weapon,exploration,synthesis",
     "name": "ATK DEF Boost",
     "moduleId": "trait",
@@ -3027,7 +3027,7 @@
     ]
   },
   {
-    "id": "01J76MWE2DNJ36D0G3GQYFB7ZM",
+    "id": "01HVZGS2M26SC0STT2594MRZ33",
     "keyWords": "consume mp -20%,300,accessory,weapon,exploration,synthesis",
     "name": "Consume MP -20%",
     "moduleId": "trait",
@@ -3043,7 +3043,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2DX3WFC30XFW6NZWGT",
+    "id": "01HVZGS2M3CVVNGTDTP8WQRNAH",
     "keyWords": "hpmp enhance,208,full of life,magician's wisdom,accessory,armor,exploration,synthesis",
     "name": "HPMP Enhance",
     "moduleId": "trait",
@@ -3072,7 +3072,7 @@
     ]
   },
   {
-    "id": "01J76MWE2D36YWTJ8M6P3H2Y4X",
+    "id": "01HVZGS2M3B2ZXXWKQFQM9ZPC7",
     "keyWords": "consume soul,373,atk item,de buff item,exploration,synthesis",
     "name": "Consume Soul",
     "moduleId": "trait",
@@ -3088,7 +3088,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2DYZBGQV92ZDPT76EH",
+    "id": "01HVZGS2M30RXE927NGAW707C9",
     "keyWords": "slag slayer,422,exploration,synthesis",
     "name": "Slag Slayer",
     "moduleId": "trait",
@@ -3102,7 +3102,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2D2MR2XJDE4QR5QY5K",
+    "id": "01HVZGS2M35M44NANDF1C1Q6E9",
     "keyWords": "single bonus,487,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Single Bonus",
     "moduleId": "trait",
@@ -3120,7 +3120,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2D0A0J0K486WN1QS59",
+    "id": "01HVZGS2M3EEP1X1R8VVTT0TZT",
     "keyWords": "area bonus+,481,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Area Bonus+",
     "moduleId": "trait",
@@ -3138,7 +3138,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2D5EC0TQSA4XSW5F67",
+    "id": "01HVZGS2M31P9J2GZ52SXXR9YZ",
     "keyWords": "def spd enhance,238,defense enhance,speed enhance,accessory,armor,exploration,synthesis",
     "name": "DEF SPD Enhance",
     "moduleId": "trait",
@@ -3167,7 +3167,7 @@
     ]
   },
   {
-    "id": "01J76MWE2ENJHWQQ2YS8H3F1FE",
+    "id": "01HVZGS2M4HSNFA76TCCRG1RKF",
     "keyWords": "ruthless blow,451,merciless blow,relentless blow,atk item,de buff item,exploration,synthesis",
     "name": "Ruthless Blow",
     "moduleId": "trait",
@@ -3196,7 +3196,7 @@
     ]
   },
   {
-    "id": "01J76MWE2EWHGJE4DZRH5G42RK",
+    "id": "01HVZGS2M48KQ9SRBWC5R9JDQ9",
     "keyWords": "inflict sleep,365,atk item,de buff item,weapon,exploration,synthesis",
     "name": "Inflict Sleep",
     "moduleId": "trait",
@@ -3213,7 +3213,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2E9HAADECS26PKHMCN",
+    "id": "01HVZGS2M4NN8VSM8FTSZ7DHYZ",
     "keyWords": "spirit slayer,423,atk item,weapon,exploration,synthesis",
     "name": "Spirit Slayer",
     "moduleId": "trait",
@@ -3229,7 +3229,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2EX8N7X8F6FKPB6P6P",
+    "id": "01HVZGS2M4AXGDFXHH4AJTXSYK",
     "keyWords": "area bonus,480,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Area Bonus",
     "moduleId": "trait",
@@ -3247,7 +3247,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2EQG8T7JJZ2C93G2CT",
+    "id": "01HVZGS2M4KSNF0C28E3NN3487",
     "keyWords": "size -,573,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Size -",
     "moduleId": "trait",
@@ -3265,7 +3265,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2EPFYZM2QG01X9PC56",
+    "id": "01HVZGS2M5GSB619KFY1S9FVVG",
     "keyWords": "tenacious body,247,armor,exploration,synthesis",
     "name": "Tenacious Body",
     "moduleId": "trait",
@@ -3280,7 +3280,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2EQD6BAV3N85J63NVD",
+    "id": "01HVZGS2M5PJ60VVX406NBCZJN",
     "keyWords": "inflict poison,366,atk item,de buff item,weapon,exploration,synthesis",
     "name": "Inflict Poison",
     "moduleId": "trait",
@@ -3297,7 +3297,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2FRPRVNTRNG4K9HHGZ",
+    "id": "01HVZGS2M53PWBJVJFAD3PD99C",
     "keyWords": "enhance finisher++,448,atk item,de buff item,exploration,synthesis",
     "name": "Enhance Finisher++",
     "moduleId": "trait",
@@ -3313,7 +3313,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2F4MAWGGR8H34CY1WE",
+    "id": "01HVZGS2M5XHYEMNXM7GH99YJA",
     "keyWords": "count compress+,512,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Count Compress+",
     "moduleId": "trait",
@@ -3331,7 +3331,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2G5XG2QQYJ4N15YTW7",
+    "id": "01HVZGS2M65DP8DV5AH3W1PA9K",
     "keyWords": "absorb soul,406,hp absorb,steal life,weapon,exploration,synthesis",
     "name": "Absorb Soul",
     "moduleId": "trait",
@@ -3359,7 +3359,7 @@
     ]
   },
   {
-    "id": "01J76MWE2G4KQB30B77X82TEAE",
+    "id": "01HVZGS2M62KWD40BNM97MDFR1",
     "keyWords": "inflict weak,370,atk item,de buff item,weapon,exploration,synthesis",
     "name": "Inflict Weak",
     "moduleId": "trait",
@@ -3376,7 +3376,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2G9ZQFXPMT4GRSQYZ1",
+    "id": "01HVZGS2M68KYS4G0DTMBC9EF8",
     "keyWords": "demon slayer,425,atk item,weapon,exploration,synthesis",
     "name": "Demon Slayer",
     "moduleId": "trait",
@@ -3392,7 +3392,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2G758BHZC7X5DNEWGQ",
+    "id": "01HVZGS2M6YW9JXEST5NB7NFH5",
     "keyWords": "last strike,510,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Last Strike",
     "moduleId": "trait",
@@ -3410,7 +3410,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2G795044KVCZC7YPP8",
+    "id": "01HVZGS2M4Y34P4714AZMSQ64D",
     "keyWords": "inflict no heal,371,atk item,de buff item,weapon,exploration,synthesis",
     "name": "Inflict No Heal",
     "moduleId": "trait",
@@ -3427,7 +3427,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2G9P61GTN3TXXNE01B",
+    "id": "01HVZGS2M4NFEPDS7N6RA0RCPT",
     "keyWords": "puni slayer,428,atk item,weapon,exploration,synthesis",
     "name": "Puni Slayer",
     "moduleId": "trait",
@@ -3443,7 +3443,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2GEZ7MYWHJ055PJHZ5",
+    "id": "01HVZGS2M49QEWZ5MEXMZWGK7Q",
     "keyWords": "fewer bonus+,485,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Fewer Bonus+",
     "moduleId": "trait",
@@ -3461,7 +3461,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2GZ6HV7F1SQVER3DNF",
+    "id": "01HVZGS2M476BN9Q0VY603NFMT",
     "keyWords": "size enhance,575,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Size Enhance",
     "moduleId": "trait",
@@ -3479,7 +3479,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2G28DNV28SQSG9YM2Z",
+    "id": "01HVZGS2M5ZJ8NV4H2VGMFSCDP",
     "keyWords": "skill boost,308,skill power +7%,skill power +10%,weapon,exploration,synthesis",
     "name": "Skill Boost",
     "moduleId": "trait",
@@ -3507,7 +3507,7 @@
     ]
   },
   {
-    "id": "01J76MWE2GDSCRM8493S8Q79WS",
+    "id": "01HVZGS2M5VWSHKJPQY6TEFYZB",
     "keyWords": "merciless blow,449,enhance finisher,enhance finisher+,atk item,de buff item,exploration,synthesis",
     "name": "Merciless Blow",
     "moduleId": "trait",
@@ -3536,7 +3536,7 @@
     ]
   },
   {
-    "id": "01J76MWE2GV1YAMD8EVASNCPGJ",
+    "id": "01HVZGS2M5KXJ55DM88VYMJPJR",
     "keyWords": "trait super enhance,467,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Trait Super Enhance",
     "moduleId": "trait",
@@ -3554,7 +3554,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2G1REAQX5PCV4125KY",
+    "id": "01HVZGS2M490EYAHZARDX32CRG",
     "keyWords": "force final,513,count compress,count compress+,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Force Final",
     "moduleId": "trait",
@@ -3585,7 +3585,7 @@
     ]
   },
   {
-    "id": "01J76MWE2H6TT6NY043HZD9NFR",
+    "id": "01HVZGS2M48JDETA1WXQK3Q8YY",
     "keyWords": "blessing of protection,351,buff item,heal item,exploration,synthesis",
     "name": "Blessing of Protection",
     "moduleId": "trait",
@@ -3601,7 +3601,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2H2MZ8Q38Q1M9HM9AM",
+    "id": "01HVZGS2M4K3J33BGBDR0MA0TT",
     "keyWords": "defenseless curse,375,atk item,de buff item,exploration,synthesis",
     "name": "Defenseless Curse",
     "moduleId": "trait",
@@ -3617,7 +3617,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2HYJHQ1ANHY2JW5NA9",
+    "id": "01HVZGS2M4AFQCPH8G9H2BAYQP",
     "keyWords": "cut mp consume,301,consume mp -10%,consume mp -15%,accessory,weapon,exploration,synthesis",
     "name": "Cut MP Consume",
     "moduleId": "trait",
@@ -3646,7 +3646,7 @@
     ]
   },
   {
-    "id": "01J76MWE2HYP7DKRM3P6CJVP0G",
+    "id": "01HVZGS2M4H8ZHVXFEANV62VDF",
     "keyWords": "one time end,514,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "One Time End",
     "moduleId": "trait",
@@ -3664,7 +3664,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2H6W3WCW5S8Q4ZYZ9Y",
+    "id": "01HVZGS2M5DVRDHVTQMMPSQMK2",
     "keyWords": "persistent faith,598,accessory,exploration,synthesis",
     "name": "Persistent Faith",
     "moduleId": "trait",
@@ -3679,7 +3679,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2H1EJ1C98CAQGP55YD",
+    "id": "01HVZGS2M5TVTKWFWFVYZ9QR8F",
     "keyWords": "def spd boost,242,defense boost,speed boost,accessory,armor,exploration,synthesis",
     "name": "DEF SPD Boost",
     "moduleId": "trait",
@@ -3708,7 +3708,7 @@
     ]
   },
   {
-    "id": "01J76MWE2HYX4VW19ZCZTFKE4G",
+    "id": "01HVZGS2M5K4803EPTQDRGM0Y3",
     "keyWords": "beast slayer,424,atk item,weapon,exploration,synthesis",
     "name": "Beast Slayer",
     "moduleId": "trait",
@@ -3724,7 +3724,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2HVZ9DQ66SR7DQ0V1R",
+    "id": "01HVZGS2M5Y9AG664WQ5CZMZ60",
     "keyWords": "fewer bonus,484,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Fewer Bonus",
     "moduleId": "trait",
@@ -3742,7 +3742,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2HEFR9Z92C25PBVSGY",
+    "id": "01HVZGS2M5VKDQ5QH5M6N8ARHA",
     "keyWords": "wait time enhance+,549,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Wait Time Enhance+",
     "moduleId": "trait",
@@ -3760,7 +3760,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2H34E2DEP74E7HF2RP",
+    "id": "01HVZGS2M609YHXNGY0TJZHY2Q",
     "keyWords": "hammer of justice,606,weapon,exploration,synthesis",
     "name": "Hammer of Justice",
     "moduleId": "trait",
@@ -3775,7 +3775,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2H9ZE7JZABSZ580HSE",
+    "id": "01HVZGS2M6SRCKZ9T8QKX5RVSA",
     "keyWords": "damage absorb,401,weapon,exploration,synthesis",
     "name": "Damage Absorb",
     "moduleId": "trait",
@@ -3790,7 +3790,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2HGDWKMD4EFFY7JFDQ",
+    "id": "01HVZGS2M687J81GEH924HH086",
     "keyWords": "sonic throw,543,fast use,fast use+,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Sonic Throw",
     "moduleId": "trait",
@@ -3821,7 +3821,7 @@
     ]
   },
   {
-    "id": "01J76MWE2JTMJJSFN8P3D40DB1",
+    "id": "01HVZGS2M67PV61CS2A6ATXKZ1",
     "keyWords": "fast use+,542,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Fast Use+",
     "moduleId": "trait",
@@ -3839,7 +3839,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2JQHRNZ2Y1E9XYHZYK",
+    "id": "01HVZGS2M42S8810ZKPKP8SJ6D",
     "keyWords": "damage absorb+,402,weapon,exploration,synthesis",
     "name": "Damage Absorb+",
     "moduleId": "trait",
@@ -3854,7 +3854,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2JM3JAKRESR6K6YSHF",
+    "id": "01HVZGS2M40YK4D99DS7FY3BEX",
     "keyWords": "trait enhance+,465,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Trait Enhance+",
     "moduleId": "trait",
@@ -3872,7 +3872,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2JJA0JP9ZB0BN65CE4",
+    "id": "01HVZGS2M4YBPRJSXVXBAQETVA",
     "keyWords": "wait time enhance,548,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Wait Time Enhance",
     "moduleId": "trait",
@@ -3890,7 +3890,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2JNRBVCD9CTQ3RS1DY",
+    "id": "01HVZGS2M5E7Q5N148H60XHQG7",
     "keyWords": "guide intuition,599,accessory,exploration,synthesis",
     "name": "Guide Intuition",
     "moduleId": "trait",
@@ -3905,7 +3905,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2JQDJVWG47APFP5F3D",
+    "id": "01HVZGS2M5DZWW4SP8752Y1S8Z",
     "keyWords": "super skill,314,weapon,exploration,synthesis",
     "name": "Super Skill",
     "moduleId": "trait",
@@ -3920,7 +3920,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2JX8S3SN564S5F1X7X",
+    "id": "01HVZGS2M5XMF3RPQKM7PWEKVE",
     "keyWords": "magical slayer,427,pretty fragment,atk item,weapon,exploration,synthesis",
     "name": "Magical Slayer",
     "moduleId": "trait",
@@ -3940,7 +3940,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2JBEBYEKWTKADKAE6F",
+    "id": "01HVZGS2M5D1PNA60DGH706XCM",
     "keyWords": "enhance last,507,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Enhance Last",
     "moduleId": "trait",
@@ -3958,7 +3958,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2J64852MFQ24AS1JEK",
+    "id": "01HVZGS2M6F6MTY9GCEEK3YT0Z",
     "keyWords": "kind of light,578,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Kind of Light",
     "moduleId": "trait",
@@ -3976,7 +3976,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2K1WNMEK0T7DXSFKJJ",
+    "id": "01HVZGS2M5RRDBH6DP9P9S2RCV",
     "keyWords": "easy to handle,580,kind of light,light,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Easy to Handle",
     "moduleId": "trait",
@@ -4007,7 +4007,7 @@
     ]
   },
   {
-    "id": "01J76MWE2K1DK4E4C2EK002RPG",
+    "id": "01HVZGS2M6TMW3CSW3HNM90ACP",
     "keyWords": "cunning wit,594,accessory,exploration,synthesis",
     "name": "Cunning Wit",
     "moduleId": "trait",
@@ -4022,7 +4022,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2K1HD139DDCG80768G",
+    "id": "01HVZGS2M6VR9GN4F898E9SFX2",
     "keyWords": "slowness curse,376,atk item,de buff item,exploration,synthesis",
     "name": "Slowness Curse",
     "moduleId": "trait",
@@ -4038,7 +4038,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2KY8K2NYKJ5NQVP7AN",
+    "id": "01HVZGS2M6Q2H87SPSQ787HQNZ",
     "keyWords": "enhance finisher,446,atk item,de buff item,exploration,synthesis",
     "name": "Enhance Finisher",
     "moduleId": "trait",
@@ -4054,7 +4054,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2K5J7PNW0SZMS7AG9Y",
+    "id": "01HVZGS2M6J8N0958SZAPJC07R",
     "keyWords": "count bonus+,516,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Count Bonus+",
     "moduleId": "trait",
@@ -4072,7 +4072,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2K39C5ESQXNHMQ39BJ",
+    "id": "01HVZGS2M62VB6PHD7T0E30XR0",
     "keyWords": "power throw+,546,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Power Throw+",
     "moduleId": "trait",
@@ -4090,7 +4090,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2KQDMWE9M0PSYN87EX",
+    "id": "01HVZGS2M7H4K0WC0R2MAE3ZAF",
     "keyWords": "deadly attack,664,weapon,exploration,synthesis",
     "name": "Deadly Attack",
     "moduleId": "trait",
@@ -4105,7 +4105,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2K6C9Q7X20D80QCA16",
+    "id": "01HVZGS2M7QQXE1TBN333GG697",
     "keyWords": "kirchen bell special,694,kirchen milk,buff item,heal item,exploration,synthesis",
     "name": "Kirchen Bell Special",
     "moduleId": "trait",
@@ -4125,7 +4125,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2K32S7CM4SAQYEM4AY",
+    "id": "01HVZGS2M7HTC25VBMTM5YS157",
     "keyWords": "enhance with count,518,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Enhance with Count",
     "moduleId": "trait",
@@ -4143,7 +4143,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2KN2B7R26N4A71D67M",
+    "id": "01HVZGS2M7NT71G5D0034FNQ9R",
     "keyWords": "power of madness,601,accessory,exploration,synthesis",
     "name": "Power of Madness",
     "moduleId": "trait",
@@ -4158,7 +4158,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2Q1RZMEKPTAHVEKG5F",
+    "id": "01HVZGS2M77F7K2QKG7MV4WSW6",
     "keyWords": "skillful attack,662,weapon,exploration,synthesis",
     "name": "Skillful Attack",
     "moduleId": "trait",
@@ -4173,7 +4173,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2R4RENK6254ZR05X4T",
+    "id": "01HVZGS2M7CV2YQ2MDB0846NBP",
     "keyWords": "secret of health,702,zafloa oil,buff item,heal item,exploration,synthesis",
     "name": "Secret of Health",
     "moduleId": "trait",
@@ -4193,7 +4193,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2RG7MVSBVZ3T12A5VP",
+    "id": "01HVZGS2M8FQY1XW15QZBAKBY8",
     "keyWords": "mini size,574,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Mini Size",
     "moduleId": "trait",
@@ -4211,7 +4211,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2T39S58D2DWQTWN9DH",
+    "id": "01HVZGS2M8NK358SXA92S1P17K",
     "keyWords": "fog of illusion,604,accessory,exploration,synthesis",
     "name": "Fog of Illusion",
     "moduleId": "trait",
@@ -4226,7 +4226,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2TYRTWXHNW1YEXDMXX",
+    "id": "01HVZGS2M8H4FS7EBBWS2B7VQS",
     "keyWords": "auto activate 50%,679,heal item,exploration,synthesis",
     "name": "Auto Activate 50%",
     "moduleId": "trait",
@@ -4241,7 +4241,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2TRQC2HEWSE6ZMD0CM",
+    "id": "01HVZGS2M8NNWBQF37T0DTDQTD",
     "keyWords": "super fine,699,atk item,de buff item,exploration,synthesis",
     "name": "Super Fine",
     "moduleId": "trait",
@@ -4257,7 +4257,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2T216F5CPH0CRQJ8VR",
+    "id": "01HVZGS2M8YT852RYAT5861QMS",
     "keyWords": "benevolent light,596,accessory,exploration,synthesis",
     "name": "Benevolent Light",
     "moduleId": "trait",
@@ -4272,7 +4272,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2T6D5T1DNVWKN575W8",
+    "id": "01HVZGS2M60DVZC61Q629N26SZ",
     "keyWords": "strong throw,547,power throw,power throw+,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Strong Throw",
     "moduleId": "trait",
@@ -4303,7 +4303,7 @@
     ]
   },
   {
-    "id": "01J76MWE2TWB81N3Z8MRHY79VX",
+    "id": "01HVZGS2M7JKB0DG79N7NM0044",
     "keyWords": "auto use,680,heal item,exploration,synthesis",
     "name": "Auto Use",
     "moduleId": "trait",
@@ -4318,7 +4318,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2TYT47SEBN0YGAWYM5",
+    "id": "01HVZGS2M7GWCQK2HNHK83FKGV",
     "keyWords": "few + many bonus,488,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Few + Many Bonus",
     "moduleId": "trait",
@@ -4336,7 +4336,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2V5SZXJKBMM7GVFQHN",
+    "id": "01HVZGS2M7TCRXZY6K9YKDQ20Q",
     "keyWords": "jumbo size,572,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Jumbo Size",
     "moduleId": "trait",
@@ -4354,7 +4354,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2VG48FA2A531M2FE3Y",
+    "id": "01HVZGS2M7VKVCYHNX96P8DJ2S",
     "keyWords": "burning passion,602,accessory,exploration,synthesis",
     "name": "Burning Passion",
     "moduleId": "trait",
@@ -4369,7 +4369,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2VZRPPSNG4RGKD3900",
+    "id": "01HVZGS2M716RJVJ473RJBZQDW",
     "keyWords": "carries cold,687,hakurei stone,atk item,de buff item,exploration,synthesis",
     "name": "Carries Cold",
     "moduleId": "trait",
@@ -4389,7 +4389,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2VJSXMQP0TDMTXN32A",
+    "id": "01HVZGS2M6DZ9ATH6DNXFTGE4N",
     "keyWords": "blessing of strength,350,buff item,heal item,exploration,synthesis",
     "name": "Blessing of Strength",
     "moduleId": "trait",
@@ -4405,7 +4405,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2VVBS781WVF5R98T3G",
+    "id": "01HVZGS2M6QTQ1ZBWVSR1J42PZ",
     "keyWords": "skill savings,312,halve mp consume,skill super enhance,weapon,exploration,synthesis",
     "name": "Skill Savings",
     "moduleId": "trait",
@@ -4433,7 +4433,7 @@
     ]
   },
   {
-    "id": "01J76MWE2VWYV1NJWRPGK11EDE",
+    "id": "01HVZGS2M69KVR5E8PKJ314KSC",
     "keyWords": "trait enhance,464,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Trait Enhance",
     "moduleId": "trait",
@@ -4451,7 +4451,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2VYK2EKYSV22S5ZVQ3",
+    "id": "01HVZGS2M6QSGJEGVSVVQN9MGJ",
     "keyWords": "mach throw,544,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Mach Throw",
     "moduleId": "trait",
@@ -4469,7 +4469,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2VQ09ERTBRZHD7P0N9",
+    "id": "01HVZGS2M6697T9CESTA4J6ZYH",
     "keyWords": "star of expectation,610,armor,exploration,synthesis",
     "name": "Star of Expectation",
     "moduleId": "trait",
@@ -4484,7 +4484,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2VSJHV1YRJMK6799HR",
+    "id": "01HVZGS2M7DN3TTWEZ9HEDY874",
     "keyWords": "slime compound,683,crimson herb,buff item,heal item,exploration,synthesis",
     "name": "Slime Compound",
     "moduleId": "trait",
@@ -4504,7 +4504,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2WRPSGAGDYBN5D4J7M",
+    "id": "01HVZGS2M72X95KX5D2X4X8BQ1",
     "keyWords": "enhance last+,508,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Enhance Last+",
     "moduleId": "trait",
@@ -4522,7 +4522,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2W20EH36258TNM1HDZ",
+    "id": "01HVZGS2M71PMMQ4KJB9F8DM6E",
     "keyWords": "size super enhance,576,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Size Super Enhance",
     "moduleId": "trait",
@@ -4540,7 +4540,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2WB7CE2PWR7G8YAR0V",
+    "id": "01HVZGS2M78P0ZMG69W6V5KV5P",
     "keyWords": "unceasing desire,608,weapon,exploration,synthesis",
     "name": "Unceasing Desire",
     "moduleId": "trait",
@@ -4555,7 +4555,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2W0MSXVXRH044FFT99",
+    "id": "01HVZGS2M73QV9MSKM2EMNCJE8",
     "keyWords": "absorbs light,690,night crystal,accessory,weapon,exploration,synthesis",
     "name": "Absorbs Light",
     "moduleId": "trait",
@@ -4575,7 +4575,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2WWBNAEF2F9MRF3NSS",
+    "id": "01HVZGS2M82XK1X5575MA7H4ZV",
     "keyWords": "power throw,545,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Power Throw",
     "moduleId": "trait",
@@ -4593,7 +4593,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2W97TJFH6P9T7ZNEGH",
+    "id": "01HVZGS2M8N5WPC23JNPBXB2DK",
     "keyWords": "splendid glory,595,accessory,exploration,synthesis",
     "name": "Splendid Glory",
     "moduleId": "trait",
@@ -4608,7 +4608,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2W6YR7659FZQCJN96S",
+    "id": "01HVZGS2M84JQ3CF47WDWJ48ZY",
     "keyWords": "indomitable soul,614,armor,exploration,synthesis",
     "name": "Indomitable Soul",
     "moduleId": "trait",
@@ -4623,7 +4623,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2W8BSJYZK7QNP8PJ9Q",
+    "id": "01HVZGS2M8C4Q4QWSS1EF1B681",
     "keyWords": "electrified,685,raiden ore,atk item,de buff item,exploration,synthesis",
     "name": "Electrified",
     "moduleId": "trait",
@@ -4643,7 +4643,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2W81S9AH9R3HY4Y1AR",
+    "id": "01HVZGS2M874QSZRVB381EYR6C",
     "keyWords": "crush dimension,577,size enhance,size super enhance,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Crush Dimension",
     "moduleId": "trait",
@@ -4674,7 +4674,7 @@
     ]
   },
   {
-    "id": "01J76MWE2X8MXG5T93WK2H0YMD",
+    "id": "01HVZGS2M8DNTEX1RZB4Q4BDBA",
     "keyWords": "ray of hope,611,armor,exploration,synthesis",
     "name": "Ray of Hope",
     "moduleId": "trait",
@@ -4689,7 +4689,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2X23DBQVBRF6ZXW5W4",
+    "id": "01HVZGS2M6NC4R12WQX3VFRP0W",
     "keyWords": "kind soul,613,exploration,synthesis",
     "name": "Kind Soul",
     "moduleId": "trait",
@@ -4703,7 +4703,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2X77VW635F6BQ3VVAF",
+    "id": "01HVZGS2M7EH2078NRNKHMWPHR",
     "keyWords": "ancient seal,689,ancient tablet,weapon,exploration,synthesis",
     "name": "Ancient Seal",
     "moduleId": "trait",
@@ -4722,7 +4722,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2XGAKYZYXD9JG03PH2",
+    "id": "01HVZGS2M7Y7PHYSE2S38BM0NG",
     "keyWords": "count compress,511,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Count Compress",
     "moduleId": "trait",
@@ -4740,7 +4740,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2XCK4K2WXG6A4B6MSS",
+    "id": "01HVZGS2M7HBHPZXV3QQYEV3H0",
     "keyWords": "accustoms quickly,581,light,easy to handle,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Accustoms Quickly",
     "moduleId": "trait",
@@ -4771,7 +4771,7 @@
     ]
   },
   {
-    "id": "01J76MWE2XX2PC8KJ7WYZJ84MW",
+    "id": "01HVZGS2M79BMD9CWCPY8CDDJX",
     "keyWords": "awakening courage,612,armor,exploration,synthesis",
     "name": "Awakening Courage",
     "moduleId": "trait",
@@ -4786,7 +4786,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2X22AA2QD0B51KRAYP",
+    "id": "01HVZGS2M7CK343AVS9HV2T5TJ",
     "keyWords": "purifying water,697,holy water,buff item,heal item,exploration,synthesis",
     "name": "Purifying Water",
     "moduleId": "trait",
@@ -4806,7 +4806,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2X868EDVSYTKEAYDT6",
+    "id": "01HVZGS2M8CMSW1ZBCQFJGKHPF",
     "keyWords": "demon soul,707,evil core,atk item,de buff item,exploration,synthesis",
     "name": "Demon Soul",
     "moduleId": "trait",
@@ -4826,7 +4826,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2XBX5QRZ5N3K1KEEZ7",
+    "id": "01HVZGS2M80AST2J4DYC22CE38",
     "keyWords": "light,579,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Light",
     "moduleId": "trait",
@@ -4844,7 +4844,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2X1BBZMK8BQNDSHSNZ",
+    "id": "01HVZGS2M8MK2XE6WXCA29FBWB",
     "keyWords": "pursuit of knowledge,609,weapon,exploration,synthesis",
     "name": "Pursuit of Knowledge",
     "moduleId": "trait",
@@ -4859,7 +4859,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2XYCDXE7P0GBWQE2B7",
+    "id": "01HVZGS2M890M6ZD092TRE4BRY",
     "keyWords": "no attribute,681,atk item,de buff item,exploration,synthesis",
     "name": "No Attribute",
     "moduleId": "trait",
@@ -4875,7 +4875,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2XTYKZP1RD1T0MY2F2",
+    "id": "01HVZGS2M862VKQ22DH9QDHD9F",
     "keyWords": "medicine compound,704,pelem shell,buff item,heal item,exploration,synthesis",
     "name": "Medicine Compound",
     "moduleId": "trait",
@@ -4895,7 +4895,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2XDSPWPK6EGTWGXD8E",
+    "id": "01HVZGS2M8ZH66MBR6GFVNK1M9",
     "keyWords": "bonds of belief,605,accessory,exploration,synthesis",
     "name": "Bonds of Belief",
     "moduleId": "trait",
@@ -4910,7 +4910,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2YT0WX5W5MSSEAMMZT",
+    "id": "01HVZGS2M9WMJG6NB2AKF5G4JC",
     "keyWords": "poison mist,682,fairy poison grass,atk item,de buff item,weapon,exploration,synthesis",
     "name": "Poison Mist",
     "moduleId": "trait",
@@ -4931,7 +4931,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2Y8BN3EB4JYB12Y3ZZ",
+    "id": "01HVZGS2M9F0X596R08AQV41DS",
     "keyWords": "wards evil,706,weapon,exploration,synthesis",
     "name": "Wards Evil",
     "moduleId": "trait",
@@ -4946,7 +4946,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2YF13JMK49A1N56J7R",
+    "id": "01HVZGS2M93JYY3S4V3SKR48NA",
     "keyWords": "dark matter,688,black orb,accessory,exploration,synthesis",
     "name": "Dark Matter",
     "moduleId": "trait",
@@ -4965,7 +4965,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2YXYEP7WRX191P8JBY",
+    "id": "01HVZGS2M9SKWYZW3ZQ8TJV6EB",
     "keyWords": "critical+,146,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Critical+",
     "moduleId": "trait",
@@ -4983,7 +4983,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2YSJ6HZ6X28TPWPEGX",
+    "id": "01HVZGS2M9C2EYBN98SEA288Z3",
     "keyWords": "mutated material,700,silver potato,accessory,armor,exploration,synthesis",
     "name": "Mutated Material",
     "moduleId": "trait",
@@ -5003,7 +5003,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2YTQ9CYX9QAASFM60P",
+    "id": "01HVZGS2MAEJZ9PRW4XCWQM74T",
     "keyWords": "overflowing life,194,hp boost,hp super enhance,accessory,armor,exploration,synthesis",
     "name": "Overflowing Life",
     "moduleId": "trait",
@@ -5032,7 +5032,7 @@
     ]
   },
   {
-    "id": "01J76MWE2Y4H1QASYYBHZ5JW7V",
+    "id": "01HVZGS2MA4JT2FVW2BDH1CP56",
     "keyWords": "enhance finisher+,447,atk item,de buff item,exploration,synthesis",
     "name": "Enhance Finisher+",
     "moduleId": "trait",
@@ -5048,7 +5048,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2YQRWDF6ZZ9EG1K4D7",
+    "id": "01HVZGS2MA3KED0QGJ3R8WS4CA",
     "keyWords": "super quality,17,well made,pro perfection,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Super Quality",
     "moduleId": "trait",
@@ -5082,7 +5082,7 @@
     ]
   },
   {
-    "id": "01J76MWE2Y1NGJV6EN1G04WZ10",
+    "id": "01HVZGS2MAWVT2N357QTABWE4F",
     "keyWords": "unabating stamina,206,lp boost,lp super enhance,accessory,armor,exploration,synthesis",
     "name": "Unabating Stamina",
     "moduleId": "trait",
@@ -5111,7 +5111,7 @@
     ]
   },
   {
-    "id": "01J76MWE2Y9XCJF6RY0YP8H9BB",
+    "id": "01HVZGS2MABCJ21KRY9ECYJXA1",
     "keyWords": "count boost,517,count bonus,count bonus+,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Count Boost",
     "moduleId": "trait",
@@ -5142,7 +5142,7 @@
     ]
   },
   {
-    "id": "01J76MWE2YMNFAVNFJVNN5A1ZM",
+    "id": "01HVZGS2M9FNAP23BDPYNET84V",
     "keyWords": "carries heat,686,kaen stone,atk item,de buff item,exploration,synthesis",
     "name": "Carries Heat",
     "moduleId": "trait",
@@ -5162,7 +5162,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2Y3T9BC75SNYBKKGF1",
+    "id": "01HVZGS2M91TX1FF5CYT7C0AG3",
     "keyWords": "barrage attack,661,weapon,exploration,synthesis",
     "name": "Barrage Attack",
     "moduleId": "trait",
@@ -5177,7 +5177,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2YXCWHP46CX2KJW351",
+    "id": "01HVZGS2M96WHBQ0TQM5E563JG",
     "keyWords": "cutting thread,693,gold steel web,weapon,exploration,synthesis",
     "name": "Cutting Thread",
     "moduleId": "trait",
@@ -5196,7 +5196,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2ZNYF3MS32NRXNA797",
+    "id": "01HVZGS2M9E2W0YRF26CPPWHZW",
     "keyWords": "golden radiance,698,golden puniball,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Golden Radiance",
     "moduleId": "trait",
@@ -5221,7 +5221,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2ZQHRMHV3HGWXABQ38",
+    "id": "01HVZGS2M8P9FTPMTFJM9RCWFW",
     "keyWords": "size+,571,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Size+",
     "moduleId": "trait",
@@ -5239,7 +5239,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2ZD48HN5SBGAR4QJSK",
+    "id": "01HVZGS2M86R70A1TRTEDDZZ90",
     "keyWords": "empty world,600,accessory,exploration,synthesis",
     "name": "Empty World",
     "moduleId": "trait",
@@ -5254,7 +5254,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2Z1WA7MGWA6WXPWT1M",
+    "id": "01HVZGS2M8FJCK9M5NZ301T5K0",
     "keyWords": "persistent attack,663,weapon,exploration,synthesis",
     "name": "Persistent Attack",
     "moduleId": "trait",
@@ -5269,7 +5269,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2ZA3YS2JT7AFTHKSND",
+    "id": "01HVZGS2M8ASGQ2E54P4ZBHPHQ",
     "keyWords": "unidentified,696,rainbow puni fluid,atk item,de buff item,exploration,synthesis",
     "name": "Unidentified",
     "moduleId": "trait",
@@ -5289,7 +5289,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2ZN13NAKEKAH0WNY8P",
+    "id": "01HVZGS2M8RA0KAV9WEFGNNYA5",
     "keyWords": "happy heart,593,accessory,exploration,synthesis",
     "name": "Happy Heart",
     "moduleId": "trait",
@@ -5304,7 +5304,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2ZC6XTZYY6T8PRJ3B5",
+    "id": "01HVZGS2M9HYSQRGS02BP7AEA5",
     "keyWords": "changing attack,659,weapon,exploration,synthesis",
     "name": "Changing Attack",
     "moduleId": "trait",
@@ -5319,7 +5319,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2ZKG7509ZCBV9C1GDW",
+    "id": "01HVZGS2M9Y9N6T2228APAHP79",
     "keyWords": "stinks,691,island fish fin,atk item,de buff item,exploration,synthesis",
     "name": "Stinks",
     "moduleId": "trait",
@@ -5339,7 +5339,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2ZG00BBAX6V75G0BV3",
+    "id": "01HVZGS2M90K729S1XSF4V6FHD",
     "keyWords": "auto activate 30%,678,heal item,exploration,synthesis",
     "name": "Auto Activate 30%",
     "moduleId": "trait",
@@ -5354,7 +5354,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2ZK36N9ZY0VY38FGVJ",
+    "id": "01HVZGS2M9W8BZ9QJ9411JCFK7",
     "keyWords": "dragon soul,708,weapon,exploration,synthesis",
     "name": "Dragon Soul",
     "moduleId": "trait",
@@ -5369,7 +5369,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE2Z81VE63A59SVBG7PV",
+    "id": "01HVZGS2M9GNNJ5NV8WSPEPFJJ",
     "keyWords": "special ingredient,701,bursting berry,buff item,heal item,exploration,synthesis",
     "name": "Special Ingredient",
     "moduleId": "trait",
@@ -5389,7 +5389,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE304GZ3V52D7DJXFMPZ",
+    "id": "01HVZGS2MA3WV7G5A19NVAWV44",
     "keyWords": "medicine enhance,113,fixed recovery,fixed recovery+,buff item,heal item,exploration,synthesis",
     "name": "Medicine Enhance",
     "moduleId": "trait",
@@ -5418,7 +5418,7 @@
     ]
   },
   {
-    "id": "01J76MWE303YV49J6YM1XAGGND",
+    "id": "01HVZGS2MAMNSJGNR2VEEH4VVD",
     "keyWords": "common item,3,low price,low price+,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Common Item",
     "moduleId": "trait",
@@ -5452,7 +5452,7 @@
     ]
   },
   {
-    "id": "01J76MWE30MV1HT7K87HC46ZKV",
+    "id": "01HVZGS2MAXGSHPD04V25TWGRD",
     "keyWords": "sunny scent,692,dawn fur,buff item,heal item,exploration,synthesis",
     "name": "Sunny Scent",
     "moduleId": "trait",
@@ -5472,7 +5472,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE30WFEFCBACWTD3HP3H",
+    "id": "01HVZGS2MANE22XE2CW2HDHSSK",
     "keyWords": "boost expected value,156,stability emphasis,solid effect,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Boost Expected Value",
     "moduleId": "trait",
@@ -5503,7 +5503,7 @@
     ]
   },
   {
-    "id": "01J76MWE30R15SC15XQZ8GA86J",
+    "id": "01HVZGS2MA9J64V6XP85CN941P",
     "keyWords": "eco skill,310,cut mp consume,skill enhance,weapon,exploration,synthesis",
     "name": "Eco Skill",
     "moduleId": "trait",
@@ -5531,7 +5531,7 @@
     ]
   },
   {
-    "id": "01J76MWE30CMEJDBBYYN871931",
+    "id": "01HVZGS2M9CPPXT4PFREY40TA5",
     "keyWords": "auto activate 20%,677,heal item,exploration,synthesis",
     "name": "Auto Activate 20%",
     "moduleId": "trait",
@@ -5546,7 +5546,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE30N97GZVJ0WZYVA2BM",
+    "id": "01HVZGS2M9JJJM94Q4H8S443YD",
     "keyWords": "flickering light,695,luminous water,buff item,heal item,exploration,synthesis",
     "name": "Flickering Light",
     "moduleId": "trait",
@@ -5566,7 +5566,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE30AY6M8AYTJB3F9GD3",
+    "id": "01HVZGS2M93TG11RRFWH96HGJ0",
     "keyWords": "false flower,684,dunkelstern,buff item,heal item,exploration,synthesis",
     "name": "False Flower",
     "moduleId": "trait",
@@ -5586,7 +5586,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE30ZFVYT1Z2NWGEGFKY",
+    "id": "01HVZGS2M9KAPSW7AB348CTBQN",
     "keyWords": "low price,0,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Low Price",
     "moduleId": "trait",
@@ -5607,7 +5607,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE30RSM8E80Y6XPG09T8",
+    "id": "01HVZGS2M979608V5HPF9X4F2A",
     "keyWords": "rainbow radiance,705,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Rainbow Radiance",
     "moduleId": "trait",
@@ -5628,7 +5628,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE30BEJKQSZ3M6HAX55M",
+    "id": "01HVZGS2M9CQ0WB00TE9DFY0VG",
     "keyWords": "power of faith,703,pious talisman,accessory,weapon,exploration,synthesis",
     "name": "Power of Faith",
     "moduleId": "trait",
@@ -5648,7 +5648,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE31J6FBY6TCKYVG30MR",
+    "id": "01HVZGS2MA11TA0NRVSDK12P36",
     "keyWords": "always critical,149,critical+,critical++,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Always Critical",
     "moduleId": "trait",
@@ -5679,7 +5679,7 @@
     ]
   },
   {
-    "id": "01J76MWE31NS9WPCFBJSF1QN8R",
+    "id": "01HVZGS2MAMCVBYYD8051EM034",
     "keyWords": "wild instinct,597,accessory,exploration,synthesis",
     "name": "Wild Instinct",
     "moduleId": "trait",
@@ -5694,7 +5694,7 @@
     "mergeFrom": []
   },
   {
-    "id": "01J76MWE3108QWHQE157F6XH67",
+    "id": "01HVZGS2MA67PBKBJC0S29KSV5",
     "keyWords": "critical finish,148,critical,critical+,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Critical Finish",
     "moduleId": "trait",
@@ -5725,7 +5725,7 @@
     ]
   },
   {
-    "id": "01J76MWE31T9C5E96PB98W1M5V",
+    "id": "01HVZGS2MA4EGZ920FXEB06A3W",
     "keyWords": "skill cost compress,311,compact mp consume,skill boost,weapon,exploration,synthesis",
     "name": "Skill Cost Compress",
     "moduleId": "trait",
@@ -5753,7 +5753,7 @@
     ]
   },
   {
-    "id": "01J76MWE31WT2VMAR00KCBKNMJ",
+    "id": "01HVZGS2MB6PWFMA9ERSF9EQXW",
     "keyWords": "steal life,405,damage absorb+,damage absorb++,weapon,exploration,synthesis",
     "name": "Steal Life",
     "moduleId": "trait",
@@ -5781,7 +5781,7 @@
     ]
   },
   {
-    "id": "01J76MWE31NP75W8841ZCJFK7R",
+    "id": "01HVZGS2MBY2VSKG1XTK6SEV1M",
     "keyWords": "charge item,550,wait time enhance,wait time enhance+,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Charge Item",
     "moduleId": "trait",
@@ -5812,7 +5812,7 @@
     ]
   },
   {
-    "id": "01J76MWE31CXE7D7N3JYPNTG5R",
+    "id": "01HVZGS2MARCYQQHC7TZBNEEWW",
     "keyWords": "full of life,193,dunkelheit,hp enhance,hp boost,accessory,armor,buff item,heal item,exploration,synthesis",
     "name": "Full of Life",
     "moduleId": "trait",
@@ -5847,7 +5847,7 @@
     ]
   },
   {
-    "id": "01J76MWE32W5M51R51P41GB2KN",
+    "id": "01HVZGS2MAVZ5NY6W3CMJZ2NGJ",
     "keyWords": "pro perfection,16,quality up+,quality up++,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
     "name": "Pro Perfection",
     "moduleId": "trait",
@@ -5881,7 +5881,7 @@
     ]
   },
   {
-    "id": "01J76MWE321Y9Q8GPKF06BQAPJ",
+    "id": "01HVZGS2MACE51MMN8PCZ5ZJ7T",
     "keyWords": "relentless blow,450,enhance finisher+,enhance finisher++,atk item,de buff item,exploration,synthesis",
     "name": "Relentless Blow",
     "moduleId": "trait",
@@ -5910,7 +5910,7 @@
     ]
   },
   {
-    "id": "01J76MWE32M0QE0T06CJEP9FJA",
+    "id": "01HVZGS2MAMZAM242Y396HFXVM",
     "keyWords": "full of stamina,205,lp enhance,lp boost,accessory,armor,exploration,synthesis",
     "name": "Full of Stamina",
     "moduleId": "trait",
@@ -5939,7 +5939,7 @@
     ]
   },
   {
-    "id": "01J76MWE32B8R357XM1MHBRRF3",
+    "id": "01HVZGS2MA8W6YYRBY5TWYM7YQ",
     "keyWords": "effective vs one,486,fewer bonus,fewer bonus+,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Effective Vs One",
     "moduleId": "trait",
@@ -5970,7 +5970,7 @@
     ]
   },
   {
-    "id": "01J76MWE32X9C22NXTY963RPEA",
+    "id": "01HVZGS2MBKNTS5BRN8X9ZGEB8",
     "keyWords": "all stat enhance,239,atk def enhance,atk spd enhance,atk def enhance,def spd enhance,atk spd enhance,def spd enhance,accessory,armor,weapon,exploration,synthesis",
     "name": "All Stat Enhance",
     "moduleId": "trait",
@@ -6024,7 +6024,7 @@
     ]
   },
   {
-    "id": "01J76MWE325AQ6BBYFHZX1YAB8",
+    "id": "01HVZGS2MBF4X021YBX3KH9YW4",
     "keyWords": "all stat boost,243,atk def boost,atk spd boost,atk def boost,def spd boost,atk spd boost,def spd boost,accessory,armor,weapon,exploration,synthesis",
     "name": "All Stat Boost",
     "moduleId": "trait",
