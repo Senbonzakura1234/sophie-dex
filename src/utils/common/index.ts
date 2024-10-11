@@ -135,7 +135,7 @@ export function highlightSearchedText(input: string, search: string | undefined,
 		.join('');
 }
 
-export async function tryCatchHandler<TReturn = unknown>(promise: Promise<TReturn>, operationCode: string) {
+export async function tryCatchHandler<TReturn = unknown>(promise: PromiseLike<TReturn>, operationCode: string) {
 	try {
 		return { data: await promise, isSuccess: true as const, error: null };
 	} catch (error) {

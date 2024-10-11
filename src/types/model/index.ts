@@ -2,8 +2,6 @@ import type { CommonRecord } from '@root/server/postgresql/schema';
 import type { PreparedPGQuery } from '@root/types/common';
 import type { ModuleIdEnum } from '@root/types/common/zod/generic';
 
-export type DBListResult<TRecord extends CommonRecord> = Array<TRecord & { totalRecord: number }>;
-
 export type ListMetaData = { totalPage: number; totalRecord: number };
 
 export type ListRecord<TRecord extends CommonRecord> = { records: Array<TRecord> } & ListMetaData;

@@ -9,23 +9,23 @@ import {
 	postgresql
 } from '@root/server/postgresql/repository';
 import type { CommonRecord, Effect, Item, Rumor, Trait, User } from '@root/server/postgresql/schema';
-import { users } from '@root/server/postgresql/schema';
+import { effects, items, rumors, traits, users } from '@root/server/postgresql/schema';
 import type { APIResult, ImprovePick } from '@root/types/common';
 import { APIError } from '@root/types/common';
 import type { BookmarkQuery, GithubUserInfo, ModuleIdQuery, SearchQuery } from '@root/types/common/zod';
-import type { SortByEnum } from '@root/types/common/zod/generic';
+import type { ModuleIdEnum, SortByEnum } from '@root/types/common/zod/generic';
 import { arrayInclude, deleteNullableProperty, objectValues, tryCatchHandler } from '@root/utils/common';
 import type { SessionResult } from '@root/utils/server';
 import dayjs from 'dayjs';
-import type { SQL, sql } from 'drizzle-orm';
-import { arrayOverlaps, eq } from 'drizzle-orm';
-import type { PgRelationalQuery } from 'drizzle-orm/pg-core/query-builders/query';
+import type { AnyColumn, SQL, SQLWrapper } from 'drizzle-orm';
+import { and, arrayOverlaps, asc, count, desc, eq, ilike, inArray, or } from 'drizzle-orm';
+import type { PgColumn, PgSelect } from 'drizzle-orm/pg-core';
 
-const countQueryFunc = (_: unknown, { sql: sqlFunc }: { sql: typeof sql }) => ({
-	totalRecord: sqlFunc<number>`count(*) over()`.as('total_record')
-});
+// ======================================= 				Helper Section 				=======================================
+const getWhereClause = (AND: Array<SQL>, OR: Array<SQL>) => and(or(...OR), ...AND);
 
-const getOffset = (page: number | null) => ((page ?? 1) - 1) * DEFAULT_LIMIT;
+const getOrderBy = (direction: SearchQuery['direction'], column: AnyColumn | SQLWrapper) =>
+	({ asc, desc })[direction || 'asc'](column);
 
 const getSortField = <TSearch extends Readonly<SortByEnum>>(
 	allowedSortField: Readonly<Array<TSearch>>,
@@ -33,23 +33,29 @@ const getSortField = <TSearch extends Readonly<SortByEnum>>(
 	sortBy: SortByEnum | null
 ) => (arrayInclude(allowedSortField, sortBy) ? sortBy : defaultSortField);
 
+const withPagination = <TQuery extends PgSelect>(
+	query: TQuery,
+	orderByColumn: PgColumn | SQL | SQL.Aliased,
+	page: number | null,
+	pageSize = DEFAULT_LIMIT
+) =>
+	query
+		.orderBy(orderByColumn)
+		.limit(pageSize)
+		.offset(((page ?? 1) - 1) * pageSize);
+
 type GetListRecordProp<TRecord extends CommonRecord> =
-	| { query: PgRelationalQuery<Array<TRecord & { totalRecord: number }>>; isEmptyBookmark: false }
-	| { isEmptyBookmark: true };
+	| { data: [Array<{ count: number }>, Array<TRecord>]; isEmptyResult?: false }
+	| { isEmptyResult: true };
 
 const getListRecord = async <TRecord extends CommonRecord>(args: GetListRecordProp<TRecord>) => {
-	if (args.isEmptyBookmark) return { records: [], totalRecord: 0, totalPage: 0 };
+	if (args.isEmptyResult) return { records: [], totalRecord: 0, totalPage: 0 };
 
-	const { query } = args;
+	const {
+		data: [countRes, records]
+	} = args;
 
-	const { data, isSuccess } = await tryCatchHandler(query.execute(), 'getListRecord.executeQuery');
-
-	if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR' });
-
-	const [totalRecord, records] = [
-		data[0]?.totalRecord ?? 0,
-		data.map(({ totalRecord: _, ...record }) => record)
-	] as const;
+	const totalRecord = countRes[0]?.count || 0;
 
 	return { records, totalRecord, totalPage: Math.ceil(totalRecord / DEFAULT_LIMIT) };
 };
@@ -57,7 +63,12 @@ const getListRecord = async <TRecord extends CommonRecord>(args: GetListRecordPr
 const sanitizeSearch = (input: string | null) =>
 	input?.split(' ')?.filter(Boolean)?.join(' ').replaceAll('?', '') || null;
 
+// =======================================  		   	Query Section 				   =======================================
+
 export const getEffects = async (input: SearchQuery, { isAuthenticated, session }: SessionResult) => {
+	const schema = effects;
+	const moduleId: ModuleIdEnum = 'effect';
+
 	const { search, sortBy, direction, page, bookmarked } = input;
 
 	const searchValue = sanitizeSearch(search);
@@ -69,45 +80,50 @@ export const getEffects = async (input: SearchQuery, { isAuthenticated, session 
 	if (isAuthenticated && bookmarked === 'true') {
 		isEnableBookmarkFilter = 'true';
 
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'effect' }, session);
+		const bookmarkListRes = await getModuleBookmarks({ moduleId }, session);
 
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
 		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Effect>({ isEmptyBookmark: true });
+			if (bookmarkListRes.result.length === 0) return getListRecord<Effect>({ isEmptyResult: true });
 
 			bookmarkList = bookmarkListRes.result;
 		}
 	}
 
-	const query = postgresql.query.effects.findMany({
-		extras: countQueryFunc,
-		limit: DEFAULT_LIMIT,
-		orderBy: (schema, { asc, desc }) => [
-			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.effect, 'index', sortBy)])
-		],
-		offset: getOffset(page),
-		where: (schema, { or, and, ilike, inArray }) => {
-			const OR: Array<SQL> = searchValue
-				? [
-						ilike(schema.name, `%${searchValue}%`),
-						ilike(schema.description, `%${searchValue}%`),
-						ilike(schema.keyWords, `%${searchValue}%`)
-					]
-				: [];
+	const OR: Array<SQL> = searchValue
+		? [
+				ilike(schema.name, `%${searchValue}%`),
+				ilike(schema.description, `%${searchValue}%`),
+				ilike(schema.keyWords, `%${searchValue}%`)
+			]
+		: [];
 
-			const AND: Array<SQL> = [];
+	const AND: Array<SQL> = [];
+	if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
-			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
+	const countQuery = postgresql.select({ count: count() }).from(schema).where(getWhereClause(AND, OR));
 
-			return and(or(...OR), ...AND);
-		}
-	});
+	const filterQuery = withPagination(
+		postgresql.select().from(schema).where(getWhereClause(AND, OR)).$dynamic(),
+		getOrderBy(direction, schema[getSortField(sortByMap[moduleId], sortByMap[moduleId][0], sortBy)]),
+		page
+	);
 
-	return getListRecord<Effect>({ query, isEmptyBookmark: false });
+	const queryRes = await tryCatchHandler(
+		Promise.all([countQuery.execute(), filterQuery.execute()]),
+		'getListRecord.executeQuery'
+	);
+
+	if (!queryRes.isSuccess) return getListRecord<Effect>({ isEmptyResult: true });
+
+	return getListRecord<Effect>({ data: queryRes.data });
 };
 
 export const getItems = async (input: SearchQuery, { isAuthenticated, session }: SessionResult) => {
+	const schema = items;
+	const moduleId: ModuleIdEnum = 'item';
+
 	const { search, sortBy, direction, color, relatedCategory, page, category, recipeType, bookmarked } = input;
 
 	const searchValue = sanitizeSearch(search);
@@ -119,44 +135,50 @@ export const getItems = async (input: SearchQuery, { isAuthenticated, session }:
 	if (isAuthenticated && bookmarked === 'true') {
 		isEnableBookmarkFilter = 'true';
 
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'item' }, session);
+		const bookmarkListRes = await getModuleBookmarks({ moduleId }, session);
 
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
 		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Item>({ isEmptyBookmark: true });
+			if (bookmarkListRes.result.length === 0) return getListRecord<Item>({ isEmptyResult: true });
 
 			bookmarkList = bookmarkListRes.result;
 		}
 	}
 
-	const query = postgresql.query.items.findMany({
-		extras: (_, { sql }) => ({ totalRecord: sql<number>`count(*) over()`.as('total_record') }),
-		limit: DEFAULT_LIMIT,
-		orderBy: (schema, { asc, desc }) => [
-			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.item, 'index', sortBy)])
-		],
-		offset: getOffset(page),
-		where: (schema, { or, and, ilike, eq, inArray }) => {
-			const OR: Array<SQL> = searchValue
-				? [ilike(schema.name, `%${searchValue}%`), ilike(schema.keyWords, `%${searchValue}%`)]
-				: [];
+	const OR: Array<SQL> = searchValue
+		? [ilike(schema.name, `%${searchValue}%`), ilike(schema.keyWords, `%${searchValue}%`)]
+		: [];
 
-			const AND: Array<SQL> = [];
-			if (relatedCategory) AND.push(arrayOverlaps(schema.relatedCategories, [relatedCategory]));
-			if (color) AND.push(eq(schema.color, color));
-			if (recipeType) AND.push(eq(schema.recipeType, recipeType));
-			if (category) AND.push(eq(schema.category, category));
-			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
+	const AND: Array<SQL> = [];
+	if (relatedCategory) AND.push(arrayOverlaps(schema.relatedCategories, [relatedCategory]));
+	if (color) AND.push(eq(schema.color, color));
+	if (recipeType) AND.push(eq(schema.recipeType, recipeType));
+	if (category) AND.push(eq(schema.category, category));
+	if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
-			return and(or(...OR), ...AND);
-		}
-	});
+	const countQuery = postgresql.select({ count: count() }).from(schema).where(getWhereClause(AND, OR));
 
-	return getListRecord<Item>({ query, isEmptyBookmark: false });
+	const filterQuery = withPagination(
+		postgresql.select().from(schema).where(getWhereClause(AND, OR)).$dynamic(),
+		getOrderBy(direction, schema[getSortField(sortByMap[moduleId], sortByMap[moduleId][0], sortBy)]),
+		page
+	);
+
+	const queryRes = await tryCatchHandler(
+		Promise.all([countQuery.execute(), filterQuery.execute()]),
+		'getListRecord.executeQuery'
+	);
+
+	if (!queryRes.isSuccess) return getListRecord<Item>({ isEmptyResult: true });
+
+	return getListRecord<Item>({ data: queryRes.data });
 };
 
 export const getRumors = async (input: SearchQuery, { isAuthenticated, session }: SessionResult) => {
+	const schema = rumors;
+	const moduleId: ModuleIdEnum = 'rumor';
+
 	const { search, sortBy, direction, page, rumorType, bookmarked } = input;
 
 	const searchValue = sanitizeSearch(search);
@@ -168,41 +190,47 @@ export const getRumors = async (input: SearchQuery, { isAuthenticated, session }
 	if (isAuthenticated && bookmarked === 'true') {
 		isEnableBookmarkFilter = 'true';
 
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'rumor' }, session);
+		const bookmarkListRes = await getModuleBookmarks({ moduleId }, session);
 
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
 		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Rumor>({ isEmptyBookmark: true });
+			if (bookmarkListRes.result.length === 0) return getListRecord<Rumor>({ isEmptyResult: true });
 
 			bookmarkList = bookmarkListRes.result;
 		}
 	}
 
-	const query = postgresql.query.rumors.findMany({
-		extras: countQueryFunc,
-		limit: DEFAULT_LIMIT,
-		orderBy: (schema, { asc, desc }) => [
-			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.rumor, 'price', sortBy)])
-		],
-		offset: getOffset(page),
-		where: (schema, { or, and, ilike, eq, inArray }) => {
-			const OR: Array<SQL> = searchValue
-				? [ilike(schema.name, `%${searchValue}%`), ilike(schema.keyWords, `%${searchValue}%`)]
-				: [];
+	const OR: Array<SQL> = searchValue
+		? [ilike(schema.name, `%${searchValue}%`), ilike(schema.keyWords, `%${searchValue}%`)]
+		: [];
 
-			const AND: Array<SQL> = [];
-			if (rumorType) AND.push(eq(schema.rumorType, rumorType));
-			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
+	const AND: Array<SQL> = [];
+	if (rumorType) AND.push(eq(schema.rumorType, rumorType));
+	if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
-			return and(or(...OR), ...AND);
-		}
-	});
+	const countQuery = postgresql.select({ count: count() }).from(schema).where(getWhereClause(AND, OR));
 
-	return getListRecord<Rumor>({ query, isEmptyBookmark: false });
+	const filterQuery = withPagination(
+		postgresql.select().from(schema).where(getWhereClause(AND, OR)).$dynamic(),
+		getOrderBy(direction, schema[getSortField(sortByMap[moduleId], sortByMap[moduleId][0], sortBy)]),
+		page
+	);
+
+	const queryRes = await tryCatchHandler(
+		Promise.all([countQuery.execute(), filterQuery.execute()]),
+		'getListRecord.executeQuery'
+	);
+
+	if (!queryRes.isSuccess) return getListRecord<Rumor>({ isEmptyResult: true });
+
+	return getListRecord<Rumor>({ data: queryRes.data });
 };
 
 export const getTraits = async (input: SearchQuery, { isAuthenticated, session }: SessionResult) => {
+	const schema = traits;
+	const moduleId: ModuleIdEnum = 'trait';
+
 	const { search, sortBy, direction, category, page, bookmarked } = input;
 
 	const searchValue = sanitizeSearch(search);
@@ -214,42 +242,45 @@ export const getTraits = async (input: SearchQuery, { isAuthenticated, session }
 	if (isAuthenticated && bookmarked === 'true') {
 		isEnableBookmarkFilter = 'true';
 
-		const bookmarkListRes = await getModuleBookmarks({ moduleId: 'trait' }, session);
+		const bookmarkListRes = await getModuleBookmarks({ moduleId }, session);
 
 		if (!bookmarkListRes.isSuccess) isEnableBookmarkFilter = null;
 
 		if (bookmarkListRes.isSuccess) {
-			if (bookmarkListRes.result.length === 0) return getListRecord<Trait>({ isEmptyBookmark: true });
+			if (bookmarkListRes.result.length === 0) return getListRecord<Trait>({ isEmptyResult: true });
 
 			bookmarkList = bookmarkListRes.result;
 		}
 	}
 
-	const query = postgresql.query.traits.findMany({
-		extras: countQueryFunc,
-		limit: DEFAULT_LIMIT,
-		orderBy: (schema, { asc, desc }) => [
-			{ asc, desc }[direction || 'asc'](schema[getSortField(sortByMap.trait, 'index', sortBy)])
-		],
-		offset: getOffset(page),
-		where: (schema, { or, and, ilike, inArray }) => {
-			const OR: Array<SQL> = searchValue
-				? [
-						ilike(schema.name, `%${searchValue}%`),
-						ilike(schema.description, `%${searchValue}%`),
-						ilike(schema.keyWords, `%${searchValue}%`)
-					]
-				: [];
+	const OR: Array<SQL> = searchValue
+		? [
+				ilike(schema.name, `%${searchValue}%`),
+				ilike(schema.description, `%${searchValue}%`),
+				ilike(schema.keyWords, `%${searchValue}%`)
+			]
+		: [];
 
-			const AND: Array<SQL> = [];
-			if (category) AND.push(arrayOverlaps(schema.categories, [category]));
-			if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
+	const AND: Array<SQL> = [];
+	if (category) AND.push(arrayOverlaps(schema.categories, [category]));
+	if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
-			return and(or(...OR), ...AND);
-		}
-	});
+	const countQuery = postgresql.select({ count: count() }).from(schema).where(getWhereClause(AND, OR));
 
-	return getListRecord<Trait>({ query, isEmptyBookmark: false });
+	const filterQuery = withPagination(
+		postgresql.select().from(schema).where(getWhereClause(AND, OR)).$dynamic(),
+		getOrderBy(direction, schema[getSortField(sortByMap[moduleId], sortByMap[moduleId][0], sortBy)]),
+		page
+	);
+
+	const queryRes = await tryCatchHandler(
+		Promise.all([countQuery.execute(), filterQuery.execute()]),
+		'getListRecord.executeQuery'
+	);
+
+	if (!queryRes.isSuccess) return getListRecord<Trait>({ isEmptyResult: true });
+
+	return getListRecord<Trait>({ data: queryRes.data });
 };
 
 export const checkUserExist = (username: string) =>
