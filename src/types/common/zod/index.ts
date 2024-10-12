@@ -103,7 +103,5 @@ export const ogQuerySchema = z.object({
 });
 export type OgQuery = z.infer<typeof ogQuerySchema>;
 
-export const changeVersionTypeSchema = z
-	.enum(['patch', 'minor', 'major', 'no-change-version'])
-	.catch('no-change-version');
+export const changeVersionTypeSchema = z.enum(['patch', 'minor', 'major']).catch('minor');
 export type ChangeVersionType = z.infer<typeof changeVersionTypeSchema>;

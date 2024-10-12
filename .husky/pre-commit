@@ -55,10 +55,10 @@ else
 
 		npm run prettier-package-json
 
-		git add .
-
 		echo "Version updated to $new_version successfully."
 	fi
+
+	git add .
 
 	echo "Proceeding with commit."
 fi

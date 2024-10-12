@@ -9,7 +9,6 @@ const incrementVersion = (version: string, increment: ChangeVersionType) => {
 	const [major = 0, minor = 0, patch = 0] = version.split('.').map(Number);
 
 	const objMapping = {
-		'no-change-version': null,
 		major: `${major + 1}.0.0`,
 		minor: `${major}.${minor + 1}.0`,
 		patch: `${major}.${minor}.${patch + 1}`
@@ -38,8 +37,6 @@ async function main() {
 	const currentVersion = packageDotJSONSchema.parse(packageJsonResult.data).version;
 
 	const newVersion = incrementVersion(currentVersion, incrementType);
-
-	if (!newVersion) return console.log('No version change; skipping version update.');
 
 	console.log(`Updating App Version from ${currentVersion} to ${newVersion}`);
 
