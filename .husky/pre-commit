@@ -1,4 +1,64 @@
-npm run generate-README
-npm run lint:fix
-npm run types
+#!/bin/bash
+
 git add .
+
+update_readme() {
+	README_FILE="src/app/_components/common/dynamic/Readme/README.mdx"
+
+	if git diff --cached --name-only | grep "$README_FILE" >/dev/null; then
+		echo "Staged changes found in $README_FILE"
+		npm run generate-README
+		npm run prettier-README
+	else
+		echo "No changes in $README_FILE"
+	fi
+}
+
+select_version_increment() {
+	echo -e "\033[1;34mSelect the version increment type:\033[0m"
+	select increment_type in "patch" "minor" "major" "no-change-version" "Quit"; do
+		case $increment_type in
+		patch | minor | major | no-change-version)
+			echo -e "\033[32mYou selected: $increment_type\033[0m"
+			return 0
+			;;
+		Quit)
+			echo -e "\033[31mExiting without committing.\033[0m"
+			exit 0
+			;;
+		*)
+			echo -e "\033[33mInvalid option. Defaulting to no-change-version.\033[0m"
+			increment_type="no-change-version" # Set default value
+			return 0                           # Exit the select loop
+			;;
+		esac
+	done </dev/tty
+}
+
+update_readme
+
+if git diff --cached --quiet; then
+	echo "No changes in the repository"
+	exit 1
+else
+	select_version_increment
+
+	if [[ "$increment_type" == "no-change-version" ]]; then
+		echo "\033[32mSkipping version change.\033[0m"
+	else
+		new_version=$(tsx src/scripts/changeVersion.ts "$increment_type")
+
+		if [[ $? -ne 0 ]]; then
+			echo "Failed to update package.json. Aborting commit."
+			exit 1
+		fi
+
+		npm run prettier-package-json
+
+		git add .
+
+		echo "Version updated to $new_version successfully."
+	fi
+
+	echo "Proceeding with commit."
+fi

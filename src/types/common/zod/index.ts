@@ -60,7 +60,9 @@ export type HighlightText = z.infer<typeof highlightTextValidator>;
 export const githubFileResponseSchema = z.object({ content: z.string() });
 export type GithubFileResponse = z.infer<typeof githubFileResponseSchema>;
 
-export const packageDotJSONSchema = z.object({ version: z.string() });
+export const packageDotJSONSchema = z.object({
+	version: z.string().regex(/^\d+\.\d+\.\d+$/, "Version must be in 'major.minor.patch' format")
+});
 export type PackageDotJSON = z.infer<typeof packageDotJSONSchema>;
 
 export const githubUserInfoSchema = z.object({
@@ -100,3 +102,8 @@ export const ogQuerySchema = z.object({
 	alt: z.string().min(1).optional().catch(undefined)
 });
 export type OgQuery = z.infer<typeof ogQuerySchema>;
+
+export const changeVersionTypeSchema = z
+	.enum(['patch', 'minor', 'major', 'no-change-version'])
+	.catch('no-change-version');
+export type ChangeVersionType = z.infer<typeof changeVersionTypeSchema>;

@@ -1,984 +1,825 @@
 [
-  {
-    "id": "01HVZGS2KRMSJPJWRWKMC32VG1",
-    "keyWords": "strange miniature eggs,300,green ruins,material,unknown egg",
-    "name": "Strange Miniature Eggs",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2KBQ01S539V3CR07BXP",
-          "name": "Unknown Egg",
-          "table": "item"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Green Ruins",
-    "price": 300,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KRDP37WXW6GTF0E4RG",
-    "keyWords": "remnant of a past sea?,300,prospector's strand - shore of treasures,material,seabed soil",
-    "name": "Remnant of a Past Sea?",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K7GNCB7CDHG9V34N2A",
-          "name": "Seabed Soil",
-          "table": "item"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Prospector's Strand - Shore of Treasures",
-    "price": 300,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KRSDRFC92TM4WGBMDD",
-    "keyWords": "not so whimsy strawberries?,350,flower garden,material,whimsy strawberry,stable effect++",
-    "name": "Not So Whimsy Strawberries?",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K6ZTMTTAKZVVY5T48Q",
-          "name": "Whimsy Strawberry",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2M15FBBP9262FM8K01Q",
-          "name": "Stable Effect++",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Flower Garden",
-    "price": 350,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KSZFN5EVFBEPVB36E0",
-    "keyWords": "huge puni outbreak!?,400,pilgrim road,monster,gold puni,black puni,punipuni?,super puni",
-    "name": "Huge Puni Outbreak!?",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Gold Puni"
-        },
-        {
-          "content": "Black Puni"
-        },
-        {
-          "content": "Punipuni?"
-        },
-        {
-          "content": "Super Puni"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0",
-        ", ",
-        "keyMap-1",
-        ", ",
-        "keyMap-2",
-        " and ",
-        "keyMap-3"
-      ]
-    },
-    "location": "Pilgrim Road",
-    "price": 400,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KSDVGDK2EAE6H4FGZD",
-    "keyWords": "chalk white shell,450,underground lake,material,pelem shell",
-    "name": "Chalk White Shell",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K9KKQ0WB5ZMYQ1K60Q",
-          "name": "Pelem Shell",
-          "table": "item"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Underground Lake",
-    "price": 450,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KS9PW3BNGGFA302YAM",
-    "keyWords": "enormous hakurei stones,400,verdant hill - icy cave,material,hakurei stone,jumbo size",
-    "name": "Enormous Hakurei Stones",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K7NDMT3FNKP01G78DZ",
-          "name": "Hakurei Stone",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2M7TCRXZY6K9YKDQ20Q",
-          "name": "Jumbo Size",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Verdant Hill - Icy Cave",
-    "price": 400,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KSHPWRRDHW7S2NQVC7",
-    "keyWords": "vividly colored oil,300,fallen palace - inverse entrance, upside down corridor, opposite living room,material,zafloa oil,secret of health",
-    "name": "Vividly Colored Oil",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K85S7HYMEZSG8G6G6W",
-          "name": "Zafloa Oil",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2M7CV2YQ2MDB0846NBP",
-          "name": "Secret of Health",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Fallen Palace - Inverse Entrance, Upside Down Corridor, Opposite Living Room",
-    "price": 300,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KSNHV6WR8JG711FEX2",
-    "keyWords": "fruit that gives strength,300,open ruins,material,bursting berry",
-    "name": "Fruit that Gives Strength",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2KC53VKV9P269Y58AQP",
-          "name": "Bursting Berry",
-          "table": "item"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Open Ruins",
-    "price": 300,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KSCASR2Q8VJ3KN96G3",
-    "keyWords": "fallen sorcerer,550,moon sun moor - silent bedroom,monster,sorcerer titus",
-    "name": "Fallen Sorcerer",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Sorcerer Titus"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Moon Sun Moor - Silent Bedroom",
-    "price": 550,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KS2YXYSKK2EWFDCDD8",
-    "keyWords": "herb effective for medicine,400,rocky grove,material,mystic herb,critical++",
-    "name": "Herb Effective for Medicine",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K52SB0GPT2NQG9K540",
-          "name": "Mystic Herb",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2M0E10NFTBFKRE1Y5SJ",
-          "name": "Critical++",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Rocky Grove",
-    "price": 400,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KS0Y33FCA0MSFMSN9F",
-    "keyWords": "moss with sleep compounds,350,three bridge springs,material,mossy driftwood,inflict sleep",
-    "name": "Moss with Sleep Compounds",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K56XYHM139V8257RWN",
-          "name": "Mossy Driftwood",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2M48KQ9SRBWC5R9JDQ9",
-          "name": "Inflict Sleep",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Three Bridge Springs",
-    "price": 350,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KSM7W57HPTXAYNZ764",
-    "keyWords": "thin line between poison and medicine,350,puzzling path,material,fairy poison grass",
-    "name": "Thin Line Between Poison and Medicine",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2KNZW4CWGPYDCQJEP5Y",
-          "name": "Fairy Poison Grass",
-          "table": "item"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Puzzling Path",
-    "price": 350,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KSX4XEAGTJDZDQY0BS",
-    "keyWords": "pure and clear spring water,450,small islet,material,good water,quality up++",
-    "name": "Pure and Clear Spring Water",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K96WVEJYJD3BPE3ZR4",
-          "name": "Good Water",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2KWT9AHG8ZZM4YXFQ4Y",
-          "name": "Quality Up++",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Small Islet",
-    "price": 450,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KSF43FQF00NDBKQNWZ",
-    "keyWords": "cotton disliked by dragons,450,verdant hill,material,mountain cotton,dragon slayer",
-    "name": "Cotton Disliked by Dragons",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K5JB9YW1RNDMZT70S2",
-          "name": "Mountain Cotton",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2KYW9RMTEJA10J1SPWT",
-          "name": "Dragon Slayer",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Verdant Hill",
-    "price": 450,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KSBXT5VKWTEDRGD0ZD",
-    "keyWords": "care to taste some wheat?,300,merbert farm,material,ramel wheat,low price++",
-    "name": "Care to Taste Some Wheat?",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K7Z2CPXS4WAVQG5TEB",
-          "name": "Ramel Wheat",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2KVJGGYZF37XJFRRGFB",
-          "name": "Low Price++",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Merbert Farm",
-    "price": 300,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KS1SXPRGM430MRQZ7A",
-    "keyWords": "stash of high grade flour?,450,sealed temple,material,weiss powder,super fine",
-    "name": "Stash of High Grade Flour?",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2KP89R2JNSKTQ3CTHT9",
-          "name": "Weiss Powder",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2M8NNWBQF37T0DTDQTD",
-          "name": "Super Fine",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Sealed Temple",
-    "price": 450,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KSSBV7YWPE0BHEY0PZ",
-    "keyWords": "maiden full of grudges,700,small islet - prayerless altar,monster,dark maiden",
-    "name": "Maiden Full of Grudges",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Dark Maiden"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Small Islet - Prayerless Altar",
-    "price": 700,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KS3FDYR3H9QF0WN629",
-    "keyWords": "puni among puni,700,pilgrim road,monster,admiral puni",
-    "name": "Puni Among Puni",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Admiral Puni"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Pilgrim Road",
-    "price": 700,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KSG618YGYMCPNAVGE9",
-    "keyWords": "downpour of uni,300,chick woods,material,uni,enhance finisher++",
-    "name": "Downpour of Uni",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2KCK17H621GDG42RGYM",
-          "name": "Uni",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2M53PWBJVJFAD3PD99C",
-          "name": "Enhance Finisher++",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Chick Woods",
-    "price": 300,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KSN3DMG1BXPA1NQJ4X",
-    "keyWords": "ruler of wind,1000,open ruins,monster,wind elemental",
-    "name": "Ruler of Wind",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Wind Elemental"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Open Ruins",
-    "price": 1000,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KSXH6GTTAK50G4Z7FT",
-    "keyWords": "book that steals souls,500,forgotten nursery - ancient kitchen,monster,lich order",
-    "name": "Book that Steals Souls",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Lich Order"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Forgotten Nursery - Ancient Kitchen",
-    "price": 500,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KTCG2PVPH18XE768XH",
-    "keyWords": "flash of darkness,3000,soul space,monster,demon king",
-    "name": "Flash of Darkness",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Demon King"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Soul Space",
-    "price": 3000,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KT0QJXMH3VCFDZ97VK",
-    "keyWords": "ruler of ice,1000,verdant hill - icy cave,monster,ice elemental",
-    "name": "Ruler of Ice",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Ice Elemental"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Verdant Hill - Icy Cave",
-    "price": 1000,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KTYVKVD12SS4T9CFBJ",
-    "keyWords": "heaven's twin dragons,1250,moon sun moor - prayerless church,monster,moon eater durak,sun destroyer yasuk",
-    "name": "Heaven's Twin Dragons",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Moon Eater Durak"
-        },
-        {
-          "content": "Sun Destroyer Yasuk"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0",
-        " and ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Moon Sun Moor - Prayerless Church",
-    "price": 1250,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KTNKQWPE6CECRBMRRJ",
-    "keyWords": "cursed ancient trees,300,gathering of beasts,material,kifa,inflict curse",
-    "name": "Cursed Ancient Trees",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K5M0TE6KD692V38Y5D",
-          "name": "Kifa",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2M3G3M4KGZE2K144XK0",
-          "name": "Inflict Curse",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Gathering of Beasts",
-    "price": 300,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KSXWCDVMEYTZT3XHJB",
-    "keyWords": "golden strong thread,600,forgotten nursery - masterless gazebo,material,gold steel web",
-    "name": "Golden Strong Thread",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2KB2NG0AMPBV162B9TN",
-          "name": "Gold Steel Web",
-          "table": "item"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Forgotten Nursery - Masterless Gazebo",
-    "price": 600,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KTKNVRHA3DFYNBQZ85",
-    "keyWords": "flower blooming in silence,2000,forest of fairies,material,dunkelheit",
-    "name": "Flower Blooming in Silence",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K647SF4SNQWM2Z6JMM",
-          "name": "Dunkelheit",
-          "table": "item"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Forest of Fairies",
-    "price": 2000,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KTQ0DYYSJMDX79B9HQ",
-    "keyWords": "ruler of light,1500,moon sun moor - sun waiting ring,monster,light elemental",
-    "name": "Ruler of Light",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Light Elemental"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Moon Sun Moor - Sun Waiting Ring",
-    "price": 1500,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KTA4MNMH7NFHMCD4JX",
-    "keyWords": "soaring monster bird,750,scar of the land - pierced ruins,monster,rok",
-    "name": "Soaring Monster Bird",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Rok"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Scar of the Land - Pierced Ruins",
-    "price": 750,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KVGPE8QSXVZH6M7SGF",
-    "keyWords": "ruler of the ocean,1000,underground lake - damp banks,monster,grand ocean",
-    "name": "Ruler of the Ocean",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Grand Ocean"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Underground Lake - Damp Banks",
-    "price": 1000,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KSREEV00D4J9GEXHJC",
-    "keyWords": "sacred bird, sharp fang of earth,1100,sealed temple,monster,crimson fang,heavenly bird",
-    "name": "Sacred Bird, Sharp Fang of Earth",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Crimson Fang"
-        },
-        {
-          "content": "Heavenly Bird"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0",
-        " and ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Sealed Temple",
-    "price": 1100,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KT1JGDB8HFJGK9KHC1",
-    "keyWords": "sealed disaster,750,sealed temple - beyond desired dreams,monster,sealed demon lord",
-    "name": "Sealed Disaster",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Sealed Demon Lord"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Sealed Temple - Beyond Desired Dreams",
-    "price": 750,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KTB0KJB4K05EKC7BHY",
-    "keyWords": "faintly shining ore,600,soul space - edge of pitch darkness,material,pendegrune",
-    "name": "Faintly Shining Ore",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K6862V5Q1H1H8PWEZA",
-          "name": "Pendegrune",
-          "table": "item"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Soul Space - Edge of Pitch Darkness",
-    "price": 600,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KTE80PPJM3MTYV2VD7",
-    "keyWords": "demon with horns,650,fallen palace - blue sky altar,monster,devil horn",
-    "name": "Demon with Horns",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Devil Horn"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Fallen Palace - Blue Sky Altar",
-    "price": 650,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KTD1SK7395YJYTSQA5",
-    "keyWords": "greatly grown magic grass,250,pilgrim road,material,magic grass,jumbo size",
-    "name": "Greatly Grown Magic Grass",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2KN36Z8QVJM89J84EGZ",
-          "name": "Magic Grass",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2M7TCRXZY6K9YKDQ20Q",
-          "name": "Jumbo Size",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Pilgrim Road",
-    "price": 250,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KV03V17E8DTXHYSBWZ",
-    "keyWords": "a shattered star?,750,moon sun moor,material,star powder",
-    "name": "A Shattered Star?",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2KCRWBY5SG0GY8F30DP",
-          "name": "Star Powder",
-          "table": "item"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Moon Sun Moor",
-    "price": 750,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KTZ9MZ81B9NHWRB7P8",
-    "keyWords": "crystal blessed by spirits,1000,scar of the land - pierced ruins,material,spirit crystal",
-    "name": "Crystal Blessed by Spirits",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2KAY1PPHGEM02HD1KBK",
-          "name": "Spirit Crystal",
-          "table": "item"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Scar of the Land - Pierced Ruins",
-    "price": 1000,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KTQKCQM020V5Y6D9B4",
-    "keyWords": "brave master of water,650,prospector's strand - prospector's hunt,monster,isanasius",
-    "name": "Brave Master of Water",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Isanasius"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Prospector's Strand - Prospector's Hunt",
-    "price": 650,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KTTM0DTH53EZX7YRD0",
-    "keyWords": "brutal dragon,600,scar of the land - scab of the earth,monster,dragonaire",
-    "name": "Brutal Dragon",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Dragonaire"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Scar of the Land - Scab of the Earth",
-    "price": 600,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KTSQ9GRZEJR0GR6ZV1",
-    "keyWords": "funny ghosts,300,chick woods,monster,funny face",
-    "name": "Funny Ghosts",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Funny Face"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Chick Woods",
-    "price": 300,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KV96QJE9K6EYJ8TVTH",
-    "keyWords": "shell like gemstone,500,calm banks,material,pretty shell,high price++",
-    "name": "Shell Like Gemstone",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K6VB47AF671TFPZ32C",
-          "name": "Pretty Shell",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2KV11TWSGVBV7K8ZVJK",
-          "name": "High Price++",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Calm Banks",
-    "price": 500,
-    "rumorType": "MATERIAL"
-  }
+	{
+		"id": "01HVZGS2KRMSJPJWRWKMC32VG1",
+		"keyWords": "strange miniature eggs,300,green ruins,material,unknown egg",
+		"name": "Strange Miniature Eggs",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2KBQ01S539V3CR07BXP",
+					"name": "Unknown Egg",
+					"table": "item"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0"]
+		},
+		"location": "Green Ruins",
+		"price": 300,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KRDP37WXW6GTF0E4RG",
+		"keyWords": "remnant of a past sea?,300,prospector's strand - shore of treasures,material,seabed soil",
+		"name": "Remnant of a Past Sea?",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2K7GNCB7CDHG9V34N2A",
+					"name": "Seabed Soil",
+					"table": "item"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0"]
+		},
+		"location": "Prospector's Strand - Shore of Treasures",
+		"price": 300,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KRSDRFC92TM4WGBMDD",
+		"keyWords": "not so whimsy strawberries?,350,flower garden,material,whimsy strawberry,stable effect++",
+		"name": "Not So Whimsy Strawberries?",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2K6ZTMTTAKZVVY5T48Q",
+					"name": "Whimsy Strawberry",
+					"table": "item"
+				},
+				{
+					"id": "01HVZGS2M15FBBP9262FM8K01Q",
+					"name": "Stable Effect++",
+					"table": "trait"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0", " with ", "keyMap-1"]
+		},
+		"location": "Flower Garden",
+		"price": 350,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KSZFN5EVFBEPVB36E0",
+		"keyWords": "huge puni outbreak!?,400,pilgrim road,monster,gold puni,black puni,punipuni?,super puni",
+		"name": "Huge Puni Outbreak!?",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Gold Puni"
+				},
+				{
+					"content": "Black Puni"
+				},
+				{
+					"content": "Punipuni?"
+				},
+				{
+					"content": "Super Puni"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0", ", ", "keyMap-1", ", ", "keyMap-2", " and ", "keyMap-3"]
+		},
+		"location": "Pilgrim Road",
+		"price": 400,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KSDVGDK2EAE6H4FGZD",
+		"keyWords": "chalk white shell,450,underground lake,material,pelem shell",
+		"name": "Chalk White Shell",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2K9KKQ0WB5ZMYQ1K60Q",
+					"name": "Pelem Shell",
+					"table": "item"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0"]
+		},
+		"location": "Underground Lake",
+		"price": 450,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KS9PW3BNGGFA302YAM",
+		"keyWords": "enormous hakurei stones,400,verdant hill - icy cave,material,hakurei stone,jumbo size",
+		"name": "Enormous Hakurei Stones",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2K7NDMT3FNKP01G78DZ",
+					"name": "Hakurei Stone",
+					"table": "item"
+				},
+				{
+					"id": "01HVZGS2M7TCRXZY6K9YKDQ20Q",
+					"name": "Jumbo Size",
+					"table": "trait"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0", " with ", "keyMap-1"]
+		},
+		"location": "Verdant Hill - Icy Cave",
+		"price": 400,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KSHPWRRDHW7S2NQVC7",
+		"keyWords": "vividly colored oil,300,fallen palace - inverse entrance, upside down corridor, opposite living room,material,zafloa oil,secret of health",
+		"name": "Vividly Colored Oil",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2K85S7HYMEZSG8G6G6W",
+					"name": "Zafloa Oil",
+					"table": "item"
+				},
+				{
+					"id": "01HVZGS2M7CV2YQ2MDB0846NBP",
+					"name": "Secret of Health",
+					"table": "trait"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0", " with ", "keyMap-1"]
+		},
+		"location": "Fallen Palace - Inverse Entrance, Upside Down Corridor, Opposite Living Room",
+		"price": 300,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KSNHV6WR8JG711FEX2",
+		"keyWords": "fruit that gives strength,300,open ruins,material,bursting berry",
+		"name": "Fruit that Gives Strength",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2KC53VKV9P269Y58AQP",
+					"name": "Bursting Berry",
+					"table": "item"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0"]
+		},
+		"location": "Open Ruins",
+		"price": 300,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KSCASR2Q8VJ3KN96G3",
+		"keyWords": "fallen sorcerer,550,moon sun moor - silent bedroom,monster,sorcerer titus",
+		"name": "Fallen Sorcerer",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Sorcerer Titus"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Moon Sun Moor - Silent Bedroom",
+		"price": 550,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KS2YXYSKK2EWFDCDD8",
+		"keyWords": "herb effective for medicine,400,rocky grove,material,mystic herb,critical++",
+		"name": "Herb Effective for Medicine",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2K52SB0GPT2NQG9K540",
+					"name": "Mystic Herb",
+					"table": "item"
+				},
+				{
+					"id": "01HVZGS2M0E10NFTBFKRE1Y5SJ",
+					"name": "Critical++",
+					"table": "trait"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0", " with ", "keyMap-1"]
+		},
+		"location": "Rocky Grove",
+		"price": 400,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KS0Y33FCA0MSFMSN9F",
+		"keyWords": "moss with sleep compounds,350,three bridge springs,material,mossy driftwood,inflict sleep",
+		"name": "Moss with Sleep Compounds",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2K56XYHM139V8257RWN",
+					"name": "Mossy Driftwood",
+					"table": "item"
+				},
+				{
+					"id": "01HVZGS2M48KQ9SRBWC5R9JDQ9",
+					"name": "Inflict Sleep",
+					"table": "trait"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0", " with ", "keyMap-1"]
+		},
+		"location": "Three Bridge Springs",
+		"price": 350,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KSM7W57HPTXAYNZ764",
+		"keyWords": "thin line between poison and medicine,350,puzzling path,material,fairy poison grass",
+		"name": "Thin Line Between Poison and Medicine",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2KNZW4CWGPYDCQJEP5Y",
+					"name": "Fairy Poison Grass",
+					"table": "item"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0"]
+		},
+		"location": "Puzzling Path",
+		"price": 350,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KSX4XEAGTJDZDQY0BS",
+		"keyWords": "pure and clear spring water,450,small islet,material,good water,quality up++",
+		"name": "Pure and Clear Spring Water",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2K96WVEJYJD3BPE3ZR4",
+					"name": "Good Water",
+					"table": "item"
+				},
+				{
+					"id": "01HVZGS2KWT9AHG8ZZM4YXFQ4Y",
+					"name": "Quality Up++",
+					"table": "trait"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0", " with ", "keyMap-1"]
+		},
+		"location": "Small Islet",
+		"price": 450,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KSF43FQF00NDBKQNWZ",
+		"keyWords": "cotton disliked by dragons,450,verdant hill,material,mountain cotton,dragon slayer",
+		"name": "Cotton Disliked by Dragons",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2K5JB9YW1RNDMZT70S2",
+					"name": "Mountain Cotton",
+					"table": "item"
+				},
+				{
+					"id": "01HVZGS2KYW9RMTEJA10J1SPWT",
+					"name": "Dragon Slayer",
+					"table": "trait"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0", " with ", "keyMap-1"]
+		},
+		"location": "Verdant Hill",
+		"price": 450,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KSBXT5VKWTEDRGD0ZD",
+		"keyWords": "care to taste some wheat?,300,merbert farm,material,ramel wheat,low price++",
+		"name": "Care to Taste Some Wheat?",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2K7Z2CPXS4WAVQG5TEB",
+					"name": "Ramel Wheat",
+					"table": "item"
+				},
+				{
+					"id": "01HVZGS2KVJGGYZF37XJFRRGFB",
+					"name": "Low Price++",
+					"table": "trait"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0", " with ", "keyMap-1"]
+		},
+		"location": "Merbert Farm",
+		"price": 300,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KS1SXPRGM430MRQZ7A",
+		"keyWords": "stash of high grade flour?,450,sealed temple,material,weiss powder,super fine",
+		"name": "Stash of High Grade Flour?",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2KP89R2JNSKTQ3CTHT9",
+					"name": "Weiss Powder",
+					"table": "item"
+				},
+				{
+					"id": "01HVZGS2M8NNWBQF37T0DTDQTD",
+					"name": "Super Fine",
+					"table": "trait"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0", " with ", "keyMap-1"]
+		},
+		"location": "Sealed Temple",
+		"price": 450,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KSSBV7YWPE0BHEY0PZ",
+		"keyWords": "maiden full of grudges,700,small islet - prayerless altar,monster,dark maiden",
+		"name": "Maiden Full of Grudges",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Dark Maiden"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Small Islet - Prayerless Altar",
+		"price": 700,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KS3FDYR3H9QF0WN629",
+		"keyWords": "puni among puni,700,pilgrim road,monster,admiral puni",
+		"name": "Puni Among Puni",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Admiral Puni"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Pilgrim Road",
+		"price": 700,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KSG618YGYMCPNAVGE9",
+		"keyWords": "downpour of uni,300,chick woods,material,uni,enhance finisher++",
+		"name": "Downpour of Uni",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2KCK17H621GDG42RGYM",
+					"name": "Uni",
+					"table": "item"
+				},
+				{
+					"id": "01HVZGS2M53PWBJVJFAD3PD99C",
+					"name": "Enhance Finisher++",
+					"table": "trait"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0", " with ", "keyMap-1"]
+		},
+		"location": "Chick Woods",
+		"price": 300,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KSN3DMG1BXPA1NQJ4X",
+		"keyWords": "ruler of wind,1000,open ruins,monster,wind elemental",
+		"name": "Ruler of Wind",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Wind Elemental"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Open Ruins",
+		"price": 1000,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KSXH6GTTAK50G4Z7FT",
+		"keyWords": "book that steals souls,500,forgotten nursery - ancient kitchen,monster,lich order",
+		"name": "Book that Steals Souls",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Lich Order"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Forgotten Nursery - Ancient Kitchen",
+		"price": 500,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KTCG2PVPH18XE768XH",
+		"keyWords": "flash of darkness,3000,soul space,monster,demon king",
+		"name": "Flash of Darkness",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Demon King"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Soul Space",
+		"price": 3000,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KT0QJXMH3VCFDZ97VK",
+		"keyWords": "ruler of ice,1000,verdant hill - icy cave,monster,ice elemental",
+		"name": "Ruler of Ice",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Ice Elemental"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Verdant Hill - Icy Cave",
+		"price": 1000,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KTYVKVD12SS4T9CFBJ",
+		"keyWords": "heaven's twin dragons,1250,moon sun moor - prayerless church,monster,moon eater durak,sun destroyer yasuk",
+		"name": "Heaven's Twin Dragons",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Moon Eater Durak"
+				},
+				{
+					"content": "Sun Destroyer Yasuk"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0", " and ", "keyMap-1"]
+		},
+		"location": "Moon Sun Moor - Prayerless Church",
+		"price": 1250,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KTNKQWPE6CECRBMRRJ",
+		"keyWords": "cursed ancient trees,300,gathering of beasts,material,kifa,inflict curse",
+		"name": "Cursed Ancient Trees",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2K5M0TE6KD692V38Y5D",
+					"name": "Kifa",
+					"table": "item"
+				},
+				{
+					"id": "01HVZGS2M3G3M4KGZE2K144XK0",
+					"name": "Inflict Curse",
+					"table": "trait"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0", " with ", "keyMap-1"]
+		},
+		"location": "Gathering of Beasts",
+		"price": 300,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KSXWCDVMEYTZT3XHJB",
+		"keyWords": "golden strong thread,600,forgotten nursery - masterless gazebo,material,gold steel web",
+		"name": "Golden Strong Thread",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2KB2NG0AMPBV162B9TN",
+					"name": "Gold Steel Web",
+					"table": "item"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0"]
+		},
+		"location": "Forgotten Nursery - Masterless Gazebo",
+		"price": 600,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KTKNVRHA3DFYNBQZ85",
+		"keyWords": "flower blooming in silence,2000,forest of fairies,material,dunkelheit",
+		"name": "Flower Blooming in Silence",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2K647SF4SNQWM2Z6JMM",
+					"name": "Dunkelheit",
+					"table": "item"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0"]
+		},
+		"location": "Forest of Fairies",
+		"price": 2000,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KTQ0DYYSJMDX79B9HQ",
+		"keyWords": "ruler of light,1500,moon sun moor - sun waiting ring,monster,light elemental",
+		"name": "Ruler of Light",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Light Elemental"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Moon Sun Moor - Sun Waiting Ring",
+		"price": 1500,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KTA4MNMH7NFHMCD4JX",
+		"keyWords": "soaring monster bird,750,scar of the land - pierced ruins,monster,rok",
+		"name": "Soaring Monster Bird",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Rok"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Scar of the Land - Pierced Ruins",
+		"price": 750,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KVGPE8QSXVZH6M7SGF",
+		"keyWords": "ruler of the ocean,1000,underground lake - damp banks,monster,grand ocean",
+		"name": "Ruler of the Ocean",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Grand Ocean"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Underground Lake - Damp Banks",
+		"price": 1000,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KSREEV00D4J9GEXHJC",
+		"keyWords": "sacred bird, sharp fang of earth,1100,sealed temple,monster,crimson fang,heavenly bird",
+		"name": "Sacred Bird, Sharp Fang of Earth",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Crimson Fang"
+				},
+				{
+					"content": "Heavenly Bird"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0", " and ", "keyMap-1"]
+		},
+		"location": "Sealed Temple",
+		"price": 1100,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KT1JGDB8HFJGK9KHC1",
+		"keyWords": "sealed disaster,750,sealed temple - beyond desired dreams,monster,sealed demon lord",
+		"name": "Sealed Disaster",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Sealed Demon Lord"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Sealed Temple - Beyond Desired Dreams",
+		"price": 750,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KTB0KJB4K05EKC7BHY",
+		"keyWords": "faintly shining ore,600,soul space - edge of pitch darkness,material,pendegrune",
+		"name": "Faintly Shining Ore",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2K6862V5Q1H1H8PWEZA",
+					"name": "Pendegrune",
+					"table": "item"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0"]
+		},
+		"location": "Soul Space - Edge of Pitch Darkness",
+		"price": 600,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KTE80PPJM3MTYV2VD7",
+		"keyWords": "demon with horns,650,fallen palace - blue sky altar,monster,devil horn",
+		"name": "Demon with Horns",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Devil Horn"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Fallen Palace - Blue Sky Altar",
+		"price": 650,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KTD1SK7395YJYTSQA5",
+		"keyWords": "greatly grown magic grass,250,pilgrim road,material,magic grass,jumbo size",
+		"name": "Greatly Grown Magic Grass",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2KN36Z8QVJM89J84EGZ",
+					"name": "Magic Grass",
+					"table": "item"
+				},
+				{
+					"id": "01HVZGS2M7TCRXZY6K9YKDQ20Q",
+					"name": "Jumbo Size",
+					"table": "trait"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0", " with ", "keyMap-1"]
+		},
+		"location": "Pilgrim Road",
+		"price": 250,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KV03V17E8DTXHYSBWZ",
+		"keyWords": "a shattered star?,750,moon sun moor,material,star powder",
+		"name": "A Shattered Star?",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2KCRWBY5SG0GY8F30DP",
+					"name": "Star Powder",
+					"table": "item"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0"]
+		},
+		"location": "Moon Sun Moor",
+		"price": 750,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KTZ9MZ81B9NHWRB7P8",
+		"keyWords": "crystal blessed by spirits,1000,scar of the land - pierced ruins,material,spirit crystal",
+		"name": "Crystal Blessed by Spirits",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2KAY1PPHGEM02HD1KBK",
+					"name": "Spirit Crystal",
+					"table": "item"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0"]
+		},
+		"location": "Scar of the Land - Pierced Ruins",
+		"price": 1000,
+		"rumorType": "MATERIAL"
+	},
+	{
+		"id": "01HVZGS2KTQKCQM020V5Y6D9B4",
+		"keyWords": "brave master of water,650,prospector's strand - prospector's hunt,monster,isanasius",
+		"name": "Brave Master of Water",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Isanasius"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Prospector's Strand - Prospector's Hunt",
+		"price": 650,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KTTM0DTH53EZX7YRD0",
+		"keyWords": "brutal dragon,600,scar of the land - scab of the earth,monster,dragonaire",
+		"name": "Brutal Dragon",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Dragonaire"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Scar of the Land - Scab of the Earth",
+		"price": 600,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KTSQ9GRZEJR0GR6ZV1",
+		"keyWords": "funny ghosts,300,chick woods,monster,funny face",
+		"name": "Funny Ghosts",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"content": "Funny Face"
+				}
+			],
+			"contentText": ["Spawn ", "keyMap-0"]
+		},
+		"location": "Chick Woods",
+		"price": 300,
+		"rumorType": "MONSTER"
+	},
+	{
+		"id": "01HVZGS2KV96QJE9K6EYJ8TVTH",
+		"keyWords": "shell like gemstone,500,calm banks,material,pretty shell,high price++",
+		"name": "Shell Like Gemstone",
+		"moduleId": "rumor",
+		"description": {
+			"contentData": [
+				{
+					"id": "01HVZGS2K6VB47AF671TFPZ32C",
+					"name": "Pretty Shell",
+					"table": "item"
+				},
+				{
+					"id": "01HVZGS2KV11TWSGVBV7K8ZVJK",
+					"name": "High Price++",
+					"table": "trait"
+				}
+			],
+			"contentText": ["Provide ", "keyMap-0", " with ", "keyMap-1"]
+		},
+		"location": "Calm Banks",
+		"price": 500,
+		"rumorType": "MATERIAL"
+	}
 ]

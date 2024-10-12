@@ -1,6 +1,6 @@
 {
 	"name": "sophie-dex",
-	"version": "32.6.0",
+	"version": "32.6.1",
 	"private": false,
 	"license": "MIT",
 	"author": {
@@ -31,9 +31,12 @@
 		"open-home:safe": "open-cli https://localhost:3000",
 		"open-studio": "open-cli https://local.drizzle.studio",
 		"prepare": "husky",
+		"prettier-README": "prettier README.md --write --log-level silent",
+		"prettier-package-json": "prettier package.json --write --log-level silent",
 		"start": "next start",
 		"start:local": "concurrently \"npm run open-home\" \"npm run start\"",
-		"types": "tsc --noEmit --pretty"
+		"types": "tsc --noEmit --pretty",
+		"change-version": "dotenv -e .env.script tsx src/scripts/changeVersion.ts"
 	},
 	"dependencies": {
 		"@headlessui/react": "^2.1.10",
