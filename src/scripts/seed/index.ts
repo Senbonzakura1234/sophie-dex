@@ -2,13 +2,14 @@ import effectsList from '@root/scripts/seed/effectsList';
 import itemsList from '@root/scripts/seed/itemsList';
 import rumorsList from '@root/scripts/seed/rumorsList';
 import traitsList from '@root/scripts/seed/traitsList';
+import { exportAllRecords } from '@root/server/postgresql';
 import { postgresql } from '@root/server/postgresql/repository';
 import { effects, items, rumors, traits } from '@root/server/postgresql/schema';
 import { tryCatchHandler, writeLog } from '@root/utils/common';
 
 const seed = async () => {
 	const seedResult: {
-		errorList: Array<{ id: string | undefined; error: unknown }>;
+		errorList: Array<{ id: string | undefined; error: string }>;
 		effectsSuccessCount: number;
 		itemsSuccessCount: number;
 		rumorsSuccessCount: number;
@@ -26,7 +27,7 @@ const seed = async () => {
 
 		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(effects).values(element), 'seed.seedEffect');
 
-		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
+		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error: JSON.stringify(error, null, 2) });
 		if (isSuccess) {
 			seedResult.effectsSuccessCount++;
 		}
@@ -37,7 +38,7 @@ const seed = async () => {
 
 		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(items).values(element), 'seed.seedItem');
 
-		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
+		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error: JSON.stringify(error, null, 2) });
 		if (isSuccess) {
 			seedResult.itemsSuccessCount++;
 		}
@@ -48,7 +49,7 @@ const seed = async () => {
 
 		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(rumors).values(element), 'seed.seedRumor');
 
-		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
+		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error: JSON.stringify(error, null, 2) });
 		if (isSuccess) {
 			seedResult.rumorsSuccessCount++;
 		}
@@ -59,10 +60,14 @@ const seed = async () => {
 
 		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(traits).values(element), 'seed.seedTrait');
 
-		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error });
+		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error: JSON.stringify(error, null, 2) });
 		if (isSuccess) {
 			seedResult.traitsSuccessCount++;
 		}
+	}
+
+	if (!seedResult.errorList.length) {
+		await exportAllRecords();
 	}
 
 	return seedResult;

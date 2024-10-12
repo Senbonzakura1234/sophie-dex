@@ -1,33 +1,41 @@
 #!/bin/bash
 
+# Color definitions for better readability
+RESET='\033[0m'
+BOLD='\033[1m'
+GREEN='\033[32m'
+RED='\033[31m'
+YELLOW='\033[33m'
+BLUE='\033[34m'
+
+echo -e "${BLUE}⚙ Starting pre-commit script...${RESET}"
+
 git add .
 
+# Function to update the README if there are staged changes
 update_readme() {
 	README_FILE="src/app/_components/common/dynamic/Readme/README.mdx"
 
 	if git diff --cached --name-only | grep "$README_FILE" >/dev/null; then
-		echo "Staged changes found in $README_FILE"
+		echo -e "${GREEN}✔ Staged changes found in $README_FILE${RESET}"
 		npm run generate-README
 		npm run prettier-README
 	else
-		echo "No changes in $README_FILE"
+		echo -e "${YELLOW}✖ No changes in $README_FILE${RESET}"
 	fi
 }
 
+# Function to display version increment options and capture user input
 select_version_increment() {
-	echo -e "\033[1;34mSelect the version increment type:\033[0m"
-	select increment_type in "patch" "minor" "major" "no-change-version" "Quit"; do
+	echo -e "${BLUE}${BOLD}Select the version increment type:${RESET}"
+	select increment_type in "patch" "minor" "major" "no-change-version"; do
 		case $increment_type in
 		patch | minor | major | no-change-version)
-			echo -e "\033[32mYou selected: $increment_type\033[0m"
+			echo -e "${GREEN}✔ You selected: $increment_type${RESET}"
 			return 0
 			;;
-		Quit)
-			echo -e "\033[31mExiting without committing.\033[0m"
-			exit 0
-			;;
 		*)
-			echo -e "\033[33mInvalid option. Defaulting to no-change-version.\033[0m"
+			echo -e "${YELLOW}⚠ Invalid option. Defaulting to no-change-version.${RESET}"
 			increment_type="no-change-version" # Set default value
 			return 0                           # Exit the select loop
 			;;
@@ -35,30 +43,46 @@ select_version_increment() {
 	done </dev/tty
 }
 
+# Run the README update check
 update_readme
 
+# Check for any staged changes in the repository
 if git diff --cached --quiet; then
-	echo "No changes in the repository"
+	echo -e "${RED}✖ No changes in the repository${RESET}"
 	exit 1
 else
+	# Prompt the user to select a version increment type
 	select_version_increment
 
+	# Skip version change if "no-change-version" is selected
 	if [[ "$increment_type" == "no-change-version" ]]; then
-		echo "\033[32mSkipping version change.\033[0m"
+		echo -e "${GREEN}✔ Skipping version change.${RESET}"
 	else
-		new_version=$(tsx src/scripts/changeVersion.ts "$increment_type")
+		# Run the version change script using npm
+		echo -e "${BLUE}⚙ Running version change script...${RESET}"
+		new_version=$(npm run change-version -- "$increment_type")
 
+		# Check if the script ran successfully
 		if [[ $? -ne 0 ]]; then
-			echo "Failed to update package.json. Aborting commit."
+			echo -e "${RED}✖ Failed to update package.json. Aborting commit.${RESET}"
 			exit 1
 		fi
 
+		# Run prettier on package.json after version change
+		echo -e "${BLUE}⚙ Running prettier-package-json...${RESET}"
 		npm run prettier-package-json
 
-		echo "Version updated to $new_version successfully."
+		# Run npm install to update package-lock.json
+		echo -e "${BLUE}⚙ Running npm install to update package-lock.json...${RESET}"
+		npm i
+
+		# Output the new version
+		echo -e "${GREEN}✔ Version updated to $new_version successfully.${RESET}"
 	fi
 
+	# Stage all changes, including package-lock.json
+	echo -e "${BLUE}⚙ Staging all changes...${RESET}"
 	git add .
 
-	echo "Proceeding with commit."
+	echo -e "${GREEN}✔ Proceeding with commit.${RESET}"
 fi

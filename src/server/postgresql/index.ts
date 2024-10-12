@@ -3,6 +3,7 @@ if (env.NEXT_PUBLIC_NODE_ENV !== 'script') void import('server-only');
 
 import { DEFAULT_LIMIT, sortByMap } from '@root/constants/common';
 import {
+	exportDBQueriesMap,
 	getBookmarksQueriesMap,
 	getToggleBookmarkQuery,
 	getUserRecordQuery,
@@ -14,12 +15,13 @@ import type { APIResult, ImprovePick } from '@root/types/common';
 import { APIError } from '@root/types/common';
 import type { BookmarkQuery, GithubUserInfo, ModuleIdQuery, SearchQuery } from '@root/types/common/zod';
 import type { ModuleIdEnum, SortByEnum } from '@root/types/common/zod/generic';
-import { arrayInclude, deleteNullableProperty, objectValues, tryCatchHandler } from '@root/utils/common';
+import { arrayInclude, deleteNullableProperty, entries, objectValues, tryCatchHandler } from '@root/utils/common';
 import type { SessionResult } from '@root/utils/server';
 import dayjs from 'dayjs';
 import type { AnyColumn, SQL, SQLWrapper } from 'drizzle-orm';
 import { and, arrayOverlaps, asc, count, desc, eq, ilike, inArray, or } from 'drizzle-orm';
 import type { PgColumn, PgSelect } from 'drizzle-orm/pg-core';
+import { writeFile } from 'fs/promises';
 
 // ======================================= 				Helper Section 				=======================================
 const getWhereClause = (AND: Array<SQL>, OR: Array<SQL>) => and(or(...OR), ...AND);
@@ -396,3 +398,21 @@ export const bookmarkRecord = async (
 
 	return bookmarkRes.data;
 };
+
+export const exportAllRecords = async () =>
+	await Promise.all(
+		entries(exportDBQueriesMap).map(async ([table, query]) => {
+			const exportData = await tryCatchHandler(query.execute(), 'exportDataQuery.execute');
+
+			if (!exportData.isSuccess) return { table, error: 'read-error', isSuccess: false } as const;
+
+			const writeFileResult = await tryCatchHandler(
+				writeFile(`backup/${table}.json`, JSON.stringify(exportData.data, null, 2)),
+				'exportDataQuery.writeFile'
+			);
+
+			if (!writeFileResult.isSuccess) return { table, error: 'write-error', isSuccess: false } as const;
+
+			return { table, error: null, isSuccess: true } as const;
+		})
+	);
