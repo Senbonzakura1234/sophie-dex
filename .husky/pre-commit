@@ -1,4 +1,5 @@
 #!/bin/bash
+git add .
 
 # Color definitions for better readability
 RESET='\033[0m'
@@ -9,8 +10,6 @@ YELLOW='\033[33m'
 BLUE='\033[34m'
 
 echo -e "${BLUE}⚙ Starting pre-commit script...${RESET}"
-
-git add .
 
 # Function to update the README if there are staged changes
 update_readme() {
@@ -28,16 +27,36 @@ update_readme() {
 # Function to display version increment options and capture user input
 select_version_increment() {
 	echo -e "${BLUE}${BOLD}Select the version increment type:${RESET}"
-	select increment_type in "patch" "minor" "major" "no-change-version"; do
+	select increment_type in \
+		"🔧 patch" \
+		"🌿 minor" \
+		"🚀 major" \
+		"❌ skip"; do
 		case $increment_type in
-		patch | minor | major | no-change-version)
-			echo -e "${GREEN}✔ You selected: $increment_type${RESET}"
+		"🔧 patch")
+			increment_type="patch"
+			echo -e "${GREEN}✔ You selected: 🔧 ${YELLOW}patch${RESET}"
+			return 0
+			;;
+		"🌿 minor")
+			increment_type="minor"
+			echo -e "${GREEN}✔ You selected: 🌿 ${BLUE}minor${RESET}"
+			return 0
+			;;
+		"🚀 major")
+			increment_type="major"
+			echo -e "${GREEN}✔ You selected: 🚀 ${GREEN}major${RESET}"
+			return 0
+			;;
+		"❌ skip")
+			increment_type="skip"
+			echo -e "${YELLOW}⚠ Skipping version change.${RESET}"
 			return 0
 			;;
 		*)
-			echo -e "${YELLOW}⚠ Invalid option. Defaulting to no-change-version.${RESET}"
-			increment_type="no-change-version" # Set default value
-			return 0                           # Exit the select loop
+			echo -e "${YELLOW}⚠ Invalid option. Defaulting to skip.${RESET}"
+			increment_type="skip" # Set default value
+			return 0              # Exit the select loop
 			;;
 		esac
 	done </dev/tty
@@ -54,8 +73,8 @@ else
 	# Prompt the user to select a version increment type
 	select_version_increment
 
-	# Skip version change if "no-change-version" is selected
-	if [[ "$increment_type" == "no-change-version" ]]; then
+	# Skip version change if "skip" is selected
+	if [[ "$increment_type" == "skip" ]]; then
 		echo -e "${GREEN}✔ Skipping version change.${RESET}"
 	else
 		# Run the version change script using npm
@@ -71,9 +90,6 @@ else
 		# Run prettier on package.json after version change
 		echo -e "${BLUE}⚙ Running prettier-package-json...${RESET}"
 		npm run prettier-package-json
-
-		# Run npm install to update package-lock.json
-		echo -e "${BLUE}⚙ Running npm install to update package-lock.json...${RESET}"
 		npm i
 
 		# Output the new version
