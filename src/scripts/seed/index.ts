@@ -8,19 +8,15 @@ import { effects, items, rumors, traits } from '@root/server/postgresql/schema';
 import { tryCatchHandler, writeLog } from '@root/utils/common';
 
 const seed = async () => {
+	writeLog({ args: [`Start Seeding\n`], type: 'log' });
+
 	const seedResult: {
 		errorList: Array<{ id: string | undefined; error: string }>;
 		effectsSuccessCount: number;
 		itemsSuccessCount: number;
 		rumorsSuccessCount: number;
 		traitsSuccessCount: number;
-	} = {
-		errorList: [],
-		effectsSuccessCount: 0,
-		itemsSuccessCount: 0,
-		rumorsSuccessCount: 0,
-		traitsSuccessCount: 0
-	};
+	} = { errorList: [], effectsSuccessCount: 0, itemsSuccessCount: 0, rumorsSuccessCount: 0, traitsSuccessCount: 0 };
 
 	for (let i = 0; i < effectsList.length; i++) {
 		const element = effectsList[i]!;
@@ -28,9 +24,7 @@ const seed = async () => {
 		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(effects).values(element), 'seed.seedEffect');
 
 		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error: JSON.stringify(error, null, 2) });
-		if (isSuccess) {
-			seedResult.effectsSuccessCount++;
-		}
+		if (isSuccess) seedResult.effectsSuccessCount++;
 	}
 
 	for (let i = 0; i < itemsList.length; i++) {
@@ -39,9 +33,7 @@ const seed = async () => {
 		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(items).values(element), 'seed.seedItem');
 
 		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error: JSON.stringify(error, null, 2) });
-		if (isSuccess) {
-			seedResult.itemsSuccessCount++;
-		}
+		if (isSuccess) seedResult.itemsSuccessCount++;
 	}
 
 	for (let i = 0; i < rumorsList.length; i++) {
@@ -50,9 +42,7 @@ const seed = async () => {
 		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(rumors).values(element), 'seed.seedRumor');
 
 		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error: JSON.stringify(error, null, 2) });
-		if (isSuccess) {
-			seedResult.rumorsSuccessCount++;
-		}
+		if (isSuccess) seedResult.rumorsSuccessCount++;
 	}
 
 	for (let i = 0; i < traitsList.length; i++) {
@@ -61,12 +51,12 @@ const seed = async () => {
 		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(traits).values(element), 'seed.seedTrait');
 
 		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error: JSON.stringify(error, null, 2) });
-		if (isSuccess) {
-			seedResult.traitsSuccessCount++;
-		}
+		if (isSuccess) seedResult.traitsSuccessCount++;
 	}
 
 	if (!seedResult.errorList.length) {
+		writeLog({ args: [`Export record after Seeding\n`], type: 'log' });
+
 		await exportAllRecords();
 	}
 

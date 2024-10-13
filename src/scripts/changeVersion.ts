@@ -17,19 +17,22 @@ const incrementVersion = (version: string, increment: ChangeVersionType) => {
 	}[increment];
 };
 
-async function main() {
+async function changeVersion() {
 	if (env.NEXT_PUBLIC_NODE_ENV !== 'script') exit(1);
 
 	const incrementType = changeVersionTypeSchema.parse(argv[2]);
 
-	const packageJsonPathRes = tryCatchHandlerSync(() => resolve('package.json'), 'resolve_package_json_path');
+	const packageJsonPathRes = tryCatchHandlerSync(() => resolve('package.json'), 'changeVersion.packageJsonPathRes');
 
 	if (!packageJsonPathRes.isSuccess) {
 		writeLog({ args: ['Read Json failed:', JSON.stringify(packageJsonPathRes.error, null, 2)], type: 'error' });
 		exit(1);
 	}
 
-	const readFileRes = await tryCatchHandler(readFile(packageJsonPathRes.data, 'utf-8'), 'read_package_json');
+	const readFileRes = await tryCatchHandler(
+		readFile(packageJsonPathRes.data, 'utf-8'),
+		'changeVersion.readPackageJSON'
+	);
 
 	if (!readFileRes.isSuccess) {
 		writeLog({ args: ['Read Json failed:', JSON.stringify(readFileRes.error, null, 2)], type: 'error' });
@@ -38,7 +41,7 @@ async function main() {
 
 	const packageJsonResult = tryCatchHandlerSync(
 		() => JSON.parse(readFileRes.data) as CommonObject,
-		'parse_package_json'
+		'changeVersion.parsePackageJSON'
 	);
 
 	if (!packageJsonResult.isSuccess) {
@@ -54,7 +57,7 @@ async function main() {
 
 	const writeFileRes = await tryCatchHandler(
 		writeFile(packageJsonPathRes.data, JSON.stringify({ ...packageJsonResult.data, version: newVersion }, null, 2)),
-		'write_package_json'
+		'changeVersion.updatePackageJSON'
 	);
 
 	if (!writeFileRes.isSuccess) {
@@ -66,7 +69,7 @@ async function main() {
 	writeLog({ args: [`Updated App Version to ${newVersion}`] });
 }
 
-void main()
+void changeVersion()
 	.then()
 	.catch(error => {
 		writeLog({ args: ['Error:', JSON.stringify(error, null, 2)], type: 'error' });

@@ -8,7 +8,8 @@ const config: Config = {
 	dialect: 'postgresql',
 	breakpoints: true,
 	tablesFilter: [`${APP_DB_PREFIX}-_*`],
-	dbCredentials: { url: env.PGURL_NONPOOLING }
+	dbCredentials: { url: env.PGURL_NONPOOLING },
+	strict: true
 };
 
 export default config;

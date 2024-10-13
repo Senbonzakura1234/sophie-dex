@@ -19,7 +19,7 @@ export const APP_DB_PREFIX = env.NEXT_PUBLIC_APP_CODE.replaceAll('-', '_');
 
 export const DEFAULT_LIMIT = 16;
 
-export const MAXIMUM_DB_ARRAY_FIELD_LENGTH = 100;
+export const MAXIMUM_DB_ARRAY_FIELD_LENGTH = 1000;
 export const MAXIMUM_BOOKMARK_LENGTH = MAXIMUM_DB_ARRAY_FIELD_LENGTH / 2;
 
 export const colorTWClassMap = {

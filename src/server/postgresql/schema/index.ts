@@ -1,4 +1,4 @@
-import { APP_DB_PREFIX, MAXIMUM_BOOKMARK_LENGTH } from '@root/constants/common';
+import { APP_DB_PREFIX } from '@root/constants/common';
 import type { ImprovedOmit } from '@root/types/common';
 import type { GithubUserInfo, SearchQuery } from '@root/types/common/zod';
 import type { ModuleIdEnum, RelatedCategoryEnum } from '@root/types/common/zod/generic';
@@ -102,19 +102,19 @@ export const users = pgTable('users', {
 	githubProfile: jsonb('github_profile').$type<GithubUserInfo>().notNull(),
 
 	bookmarkedEffectList: text('bookmarked_effect_list')
-		.array(MAXIMUM_BOOKMARK_LENGTH)
+		.array()
 		.notNull()
 		.$default(() => []),
 	bookmarkedItemList: text('bookmarked_item_list')
-		.array(MAXIMUM_BOOKMARK_LENGTH)
+		.array()
 		.notNull()
 		.$default(() => []),
 	bookmarkedRumorList: text('bookmarked_rumor_list')
-		.array(MAXIMUM_BOOKMARK_LENGTH)
+		.array()
 		.notNull()
 		.$default(() => []),
 	bookmarkedTraitList: text('bookmarked_trait_list')
-		.array(MAXIMUM_BOOKMARK_LENGTH)
+		.array()
 		.notNull()
 		.$default(() => []),
 
