@@ -2,24 +2,22 @@ import { env } from '@root/utils/common/env';
 if (env.NEXT_PUBLIC_NODE_ENV !== 'script') void import('server-only');
 
 import { DEFAULT_LIMIT, sortByMap } from '@root/constants/common';
+import { postgresql } from '@root/server/postgresql/repository';
 import {
 	exportDBQueriesMap,
 	getBookmarksQueriesMap,
-	getToggleBookmarkQuery,
-	getUserRecordQuery,
-	postgresql
-} from '@root/server/postgresql/repository';
-import type { CommonRecord, Effect, Item, Rumor, Trait, User } from '@root/server/postgresql/schema';
-import { effects, items, rumors, traits, users } from '@root/server/postgresql/schema';
-import type { APIResult, ImprovePick } from '@root/types/common';
+	getProfileRecordQuery
+} from '@root/server/postgresql/repository/query';
+import type { CommonRecord, Effect, Item, Profile, ProfileCreate, Rumor, Trait } from '@root/server/postgresql/schema';
+import { effects, items, profiles, rumors, traits, users } from '@root/server/postgresql/schema';
+import type { APIResult, ImprovedOmit } from '@root/types/common';
 import { APIError } from '@root/types/common';
-import type { BookmarkQuery, GithubUserInfo, ModuleIdQuery, SearchQuery } from '@root/types/common/zod';
+import type { BookmarkQuery, ModuleIdQuery, SearchQuery } from '@root/types/common/zod';
 import type { ModuleIdEnum, SortByEnum } from '@root/types/common/zod/generic';
-import { arrayInclude, deleteNullableProperty, entries, objectValues, tryCatchHandler } from '@root/utils/common';
+import { arrayInclude, capitalize, entries, objectValues, tryCatchHandler } from '@root/utils/common';
 import type { SessionResult } from '@root/utils/server';
-import dayjs from 'dayjs';
 import type { AnyColumn, SQL, SQLWrapper } from 'drizzle-orm';
-import { and, arrayOverlaps, asc, count, desc, eq, ilike, inArray, or } from 'drizzle-orm';
+import { and, arrayOverlaps, asc, count, desc, eq, ilike, inArray, or, sql } from 'drizzle-orm';
 import type { PgColumn, PgSelect } from 'drizzle-orm/pg-core';
 import { writeFile } from 'fs/promises';
 
@@ -285,53 +283,37 @@ export const getTraits = async (input: SearchQuery, { isAuthenticated, session }
 	return getListRecord<Trait>({ data: queryRes.data });
 };
 
-export const checkUserExist = (username: string) =>
-	postgresql.query.users
+export const checkProfileExist = (login: string, profile_id: number) =>
+	postgresql.query.profiles
 		.findFirst({
-			where: eq(users.username, username)
+			where: or(eq(profiles.login, login), eq(profiles.profile_id, profile_id))
 		})
 		.then(value => Boolean(value))
 		.catch(() => false);
 
-type InsertOrUpdateUserParams =
-	| {
-			userData: ImprovePick<User, 'email' | 'username' | 'githubProfile'>;
-			isUpdate: false;
-	  }
-	| {
-			userData: ImprovePick<
-				User,
-				'username',
-				| 'email'
-				| 'githubProfile'
-				| 'bookmarkedEffectList'
-				| 'bookmarkedItemList'
-				| 'bookmarkedRumorList'
-				| 'bookmarkedTraitList'
-			>;
-			isUpdate: true;
-	  };
-
-export const insertOrUpdateUser = async ({ isUpdate, userData }: InsertOrUpdateUserParams) => {
-	if (isUpdate || (await checkUserExist(userData.username))) {
+export const insertOrUpdateProfile = async (
+	profileData: ImprovedOmit<ProfileCreate, 'createdAt' | 'updatedAt' | 'id'>,
+	isUpdate: boolean
+) => {
+	if (isUpdate || (await checkProfileExist(profileData.login, profileData.profile_id))) {
 		return await postgresql
-			.update(users)
-			.set(deleteNullableProperty({ ...userData, updatedAt: dayjs().format('YYYY-MM-DD HH:mm:ss.SSSSSSZZ') }))
-			.where(eq(users.username, userData.username))
+			.update(profiles)
+			.set(profileData)
+			.where(eq(profiles.login, profileData.login))
 			.returning()
 			.then(res => res[0]);
 	}
 
 	return await postgresql
-		.insert(users)
-		.values(deleteNullableProperty(userData))
+		.insert(profiles)
+		.values(profileData)
 		.returning()
 		.then(res => res[0]);
 };
 
-export const getProfile = async (session: NonNullable<SessionResult['session']>): APIResult<GithubUserInfo> => {
+export const getProfile = async (session: NonNullable<SessionResult['session']>): APIResult<Profile> => {
 	const { data, isSuccess } = await tryCatchHandler(
-		getUserRecordQuery.execute({ username: session.user.name }),
+		getProfileRecordQuery.execute({ login: session.user.name }),
 		'getProfile.executeQuery'
 	);
 
@@ -344,11 +326,11 @@ export const getProfile = async (session: NonNullable<SessionResult['session']>)
 			error: new APIError({ code: 'NOT_FOUND', message: `User ${session.user.name} Not Found` })
 		};
 
-	return { isSuccess: true, result: data.githubProfile, error: null };
+	return { isSuccess: true, result: data, error: null };
 };
 
 const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: string) => {
-	const res = (await getBookmarksQueriesMap[moduleId].execute({ username })) as Record<string, Array<string>>;
+	const res = (await getBookmarksQueriesMap[moduleId].execute({ name: username })) as Record<string, Array<string>>;
 
 	return objectValues(res || {})[0] || [];
 };
@@ -381,6 +363,15 @@ export const getModuleBookmarks = async (
 		result: getModuleBookmarkRes.data,
 		error: null
 	};
+};
+
+type GetToggleBookmarkQuery = { username: string } & BookmarkQuery;
+
+const getToggleBookmarkQuery = ({ bookmarkRecordId, isBookmarked, moduleId, username }: GetToggleBookmarkQuery) => {
+	const columnName = users[`bookmarked${capitalize(moduleId)}List`].name;
+	const updateCommand = isBookmarked ? 'array_remove' : 'array_append';
+
+	return sql`update ${users} set ${sql.raw(columnName)} = ${sql.raw(updateCommand)}(${sql.raw(columnName)}, ${bookmarkRecordId}) where ${sql.raw(users.name.name)} = ${username}`;
 };
 
 export const bookmarkRecord = async (

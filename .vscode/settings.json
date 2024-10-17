@@ -31,6 +31,7 @@
 		"trpc",
 		"tsbuildinfo",
 		"tsconfigs",
+		"ulidx",
 		"UPSTASH",
 		"vsicons",
 		"webp"
@@ -129,7 +130,15 @@
 			"overrides": "mjs"
 		},
 		{
-			"extensions": ["postgresql/index.ts", "repository/index.ts", "repository/seed.ts", "schema/index.ts"],
+			"extensions": [
+				"postgresql/index.ts",
+				"repository/index.ts",
+				"authAdapter/index.ts",
+				"repository/get.query.ts",
+				"repository/create.query.ts",
+				"repository/update.query.ts",
+				"schema/index.ts"
+			],
 			"filename": true,
 			"format": "svg",
 			"icon": "pgsql",

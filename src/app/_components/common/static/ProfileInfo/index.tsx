@@ -1,28 +1,28 @@
 import Avatar from '@components/common/static/Avatar';
 import CommonWrapper from '@components/common/static/CommonWrapper';
 import MDXRenderer from '@components/common/static/MDXRenderer';
-import type { GithubUserInfo } from '@root/types/common/zod';
+import type { Profile } from '@root/server/postgresql/schema';
 import Link from 'next/link';
 import CreateProfileReadmeGuide from './CreateProfileReadmeGuide';
 import type { ProfileFieldProps } from './ProfileField';
 import ProfileField from './ProfileField';
 
-type Props = Readonly<{ profile: GithubUserInfo; readmeContent: string | undefined }>;
+type Props = Readonly<{ profile: Profile; readmeContent: string | undefined }>;
 
 export default function ProfileInfo({
-	profile: { avatar_url, login, bio, company = '', blog, email, location = '', twitter_username },
+	profile: { avatar_url, login, bio, company, blog, email, location, twitter_username },
 	readmeContent
 }: Props) {
 	const fields: Array<ProfileFieldProps> = [
-		{ label: company, type: 'company' },
-		{ label: location, type: 'location' },
+		{ label: company || '', type: 'company' },
+		{ label: location || '', type: 'location' },
 		{
 			label: `@${twitter_username}`,
 			type: 'twitter',
 			href: { protocol: 'https', hostname: 'twitter', host: 'twitter.com', pathname: twitter_username }
 		},
 		{ label: 'Facebook', type: 'blog', href: { pathname: blog } },
-		{ label: email, type: 'mail', href: { pathname: `mailto:${email}` } }
+		{ label: email || '', type: 'mail', href: { pathname: `mailto:${email}` } }
 	];
 
 	return (

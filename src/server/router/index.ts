@@ -20,7 +20,7 @@ import {
 	getItemRecordQuery,
 	getRumorRecordQuery,
 	getTraitRecordQuery
-} from '@root/server/postgresql/repository';
+} from '@root/server/postgresql/repository/query';
 import { APIError } from '@root/types/common';
 import {
 	bookmarkQueryValidator,

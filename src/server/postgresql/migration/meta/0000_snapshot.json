@@ -1,9 +1,227 @@
 {
-  "id": "b5877949-ccf8-4af7-a205-60097ae74244",
+  "id": "701e5ec6-6452-4b9d-8f1a-897be2a7f2ae",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
+    "public.sophie_dex_accounts": {
+      "name": "sophie_dex_accounts",
+      "schema": "",
+      "columns": {
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "type": {
+          "name": "type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "provider": {
+          "name": "provider",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "provider_account_id": {
+          "name": "provider_account_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "refresh_token": {
+          "name": "refresh_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "access_token": {
+          "name": "access_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "expires_in": {
+          "name": "expires_in",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "token_type": {
+          "name": "token_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "scope": {
+          "name": "scope",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_token": {
+          "name": "id_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "session_state": {
+          "name": "session_state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp(6) with time zone",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp(6) with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "sophie_dex_accounts_user_id_sophie_dex_users_id_fk": {
+          "name": "sophie_dex_accounts_user_id_sophie_dex_users_id_fk",
+          "tableFrom": "sophie_dex_accounts",
+          "tableTo": "sophie_dex_users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "sophie_dex_accounts_provider_provider_account_id_pk": {
+          "name": "sophie_dex_accounts_provider_provider_account_id_pk",
+          "columns": [
+            "provider",
+            "provider_account_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {}
+    },
+    "public.sophie_dex_authenticators": {
+      "name": "sophie_dex_authenticators",
+      "schema": "",
+      "columns": {
+        "credential_iD": {
+          "name": "credential_iD",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "userId": {
+          "name": "userId",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "provider_account_id": {
+          "name": "provider_account_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "credential_public_key": {
+          "name": "credential_public_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "counter": {
+          "name": "counter",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "credential_device_type": {
+          "name": "credential_device_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "credential_backed_up": {
+          "name": "credential_backed_up",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "transports": {
+          "name": "transports",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp(6) with time zone",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp(6) with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "sophie_dex_authenticators_userId_sophie_dex_users_id_fk": {
+          "name": "sophie_dex_authenticators_userId_sophie_dex_users_id_fk",
+          "tableFrom": "sophie_dex_authenticators",
+          "tableTo": "sophie_dex_users",
+          "columnsFrom": [
+            "userId"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "sophie_dex_authenticators_userId_credential_iD_pk": {
+          "name": "sophie_dex_authenticators_userId_credential_iD_pk",
+          "columns": [
+            "userId",
+            "credential_iD"
+          ]
+        }
+      },
+      "uniqueConstraints": {
+        "sophie_dex_authenticators_credential_iD_unique": {
+          "name": "sophie_dex_authenticators_credential_iD_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "credential_iD"
+          ]
+        }
+      }
+    },
     "public.sophie_dex_effects": {
       "name": "sophie_dex_effects",
       "schema": "",
@@ -16,19 +234,19 @@
         },
         "key_words": {
           "name": "key_words",
-          "type": "varchar(256)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
         "name": {
           "name": "name",
-          "type": "varchar(256)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
         "module_id": {
           "name": "module_id",
-          "type": "varchar(100)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
@@ -40,7 +258,7 @@
         },
         "description": {
           "name": "description",
-          "type": "varchar(256)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         }
@@ -62,31 +280,31 @@
         },
         "key_words": {
           "name": "key_words",
-          "type": "varchar(256)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
         "name": {
           "name": "name",
-          "type": "varchar(256)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
         "module_id": {
           "name": "module_id",
-          "type": "varchar(100)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
         "category": {
           "name": "category",
-          "type": "varchar(100)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
         "color": {
           "name": "color",
-          "type": "varchar(100)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
@@ -116,13 +334,13 @@
         },
         "recipe_type": {
           "name": "recipe_type",
-          "type": "varchar(100)",
+          "type": "text",
           "primaryKey": false,
           "notNull": false
         },
         "related_categories": {
           "name": "related_categories",
-          "type": "varchar(100)[]",
+          "type": "text[]",
           "primaryKey": false,
           "notNull": true
         },
@@ -138,6 +356,283 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
+    "public.sophie_dex_profiles": {
+      "name": "sophie_dex_profiles",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "profile_id": {
+          "name": "profile_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "login": {
+          "name": "login",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "node_id": {
+          "name": "node_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "avatar_url": {
+          "name": "avatar_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gravatar_id": {
+          "name": "gravatar_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "url": {
+          "name": "url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "html_url": {
+          "name": "html_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "followers_url": {
+          "name": "followers_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "following_url": {
+          "name": "following_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gists_url": {
+          "name": "gists_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "starred_url": {
+          "name": "starred_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "subscriptions_url": {
+          "name": "subscriptions_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "organizations_url": {
+          "name": "organizations_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "repos_url": {
+          "name": "repos_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "events_url": {
+          "name": "events_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "received_events_url": {
+          "name": "received_events_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "type": {
+          "name": "type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "site_admin": {
+          "name": "site_admin",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "company": {
+          "name": "company",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "blog": {
+          "name": "blog",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "location": {
+          "name": "location",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hireable": {
+          "name": "hireable",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bio": {
+          "name": "bio",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "twitter_username": {
+          "name": "twitter_username",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "notification_email": {
+          "name": "notification_email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "public_repos": {
+          "name": "public_repos",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "public_gists": {
+          "name": "public_gists",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "followers": {
+          "name": "followers",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "following": {
+          "name": "following",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "github_created_at": {
+          "name": "github_created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "github_updated_at": {
+          "name": "github_updated_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "private_gists": {
+          "name": "private_gists",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_private_repos": {
+          "name": "total_private_repos",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "owned_private_repos": {
+          "name": "owned_private_repos",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "disk_usage": {
+          "name": "disk_usage",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "suspended_at": {
+          "name": "suspended_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "collaborators": {
+          "name": "collaborators",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "two_factor_authentication": {
+          "name": "two_factor_authentication",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp(6) with time zone",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp(6) with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "sophie_dex_profiles_login_unique": {
+          "name": "sophie_dex_profiles_login_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "login"
+          ]
+        }
+      }
+    },
     "public.sophie_dex_rumors": {
       "name": "sophie_dex_rumors",
       "schema": "",
@@ -150,19 +645,19 @@
         },
         "key_words": {
           "name": "key_words",
-          "type": "varchar(256)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
         "name": {
           "name": "name",
-          "type": "varchar(256)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
         "module_id": {
           "name": "module_id",
-          "type": "varchar(100)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
@@ -174,7 +669,7 @@
         },
         "location": {
           "name": "location",
-          "type": "varchar(256)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
@@ -186,13 +681,68 @@
         },
         "rumor_type": {
           "name": "rumor_type",
-          "type": "varchar(100)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         }
       },
       "indexes": {},
       "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.sophie_dex_sessions": {
+      "name": "sophie_dex_sessions",
+      "schema": "",
+      "columns": {
+        "session_token": {
+          "name": "session_token",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "expires": {
+          "name": "expires",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp(6) with time zone",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp(6) with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "sophie_dex_sessions_user_id_sophie_dex_users_id_fk": {
+          "name": "sophie_dex_sessions_user_id_sophie_dex_users_id_fk",
+          "tableFrom": "sophie_dex_sessions",
+          "tableTo": "sophie_dex_users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
@@ -208,31 +758,31 @@
         },
         "key_words": {
           "name": "key_words",
-          "type": "varchar(256)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
         "name": {
           "name": "name",
-          "type": "varchar(256)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
         "module_id": {
           "name": "module_id",
-          "type": "varchar(100)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
         "categories": {
           "name": "categories",
-          "type": "varchar(100)[]",
+          "type": "text[]",
           "primaryKey": false,
           "notNull": true
         },
         "description": {
           "name": "description",
-          "type": "varchar(256)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
@@ -270,23 +820,29 @@
           "primaryKey": true,
           "notNull": true
         },
-        "username": {
-          "name": "username",
-          "type": "varchar(256)",
+        "name": {
+          "name": "name",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
         "email": {
           "name": "email",
-          "type": "varchar(256)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
-        "github_profile": {
-          "name": "github_profile",
-          "type": "jsonb",
+        "email_verified": {
+          "name": "email_verified",
+          "type": "timestamp",
           "primaryKey": false,
-          "notNull": true
+          "notNull": false
+        },
+        "image": {
+          "name": "image",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
         },
         "bookmarked_effect_list": {
           "name": "bookmarked_effect_list",
@@ -330,14 +886,63 @@
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
-        "sophie_dex_users_username_unique": {
-          "name": "sophie_dex_users_username_unique",
+        "sophie_dex_users_name_unique": {
+          "name": "sophie_dex_users_name_unique",
           "nullsNotDistinct": false,
           "columns": [
-            "username"
+            "name"
           ]
         }
       }
+    },
+    "public.sophie_dex_verification_tokens": {
+      "name": "sophie_dex_verification_tokens",
+      "schema": "",
+      "columns": {
+        "identifier": {
+          "name": "identifier",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "token": {
+          "name": "token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "expires": {
+          "name": "expires",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp(6) with time zone",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp(6) with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "sophie_dex_verification_tokens_identifier_token_pk": {
+          "name": "sophie_dex_verification_tokens_identifier_token_pk",
+          "columns": [
+            "identifier",
+            "token"
+          ]
+        }
+      },
+      "uniqueConstraints": {}
     }
   },
   "enums": {},

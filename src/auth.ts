@@ -1,46 +1,45 @@
 import NextAuth from 'next-auth';
 
 import { customPages } from '@root/constants/common';
-import { insertOrUpdateUser } from '@root/server/postgresql';
+import { insertOrUpdateProfile } from '@root/server/postgresql';
+import { authAdapter } from '@root/server/postgresql/authAdapter';
 import { APIError } from '@root/types/common';
-import { githubUserInfoSchema } from '@root/types/common/zod';
 import { env } from '@root/utils/common/env';
 import { trackEventServer } from '@root/utils/server';
 import GitHub from 'next-auth/providers/github';
+import { insertProfileValidationSchema } from './server/postgresql/schema';
+import { tryCatchHandler } from './utils/common';
 
 export const provider = GitHub({
 	clientId: env.APP_GITHUB_APP_ID,
 	clientSecret: env.APP_GITHUB_APP_SECRET,
 
-	profile: async (...args) => {
+	profile: async ({ id, plan: _, ...profile }, _tokens) => {
+		console.log('profile', profile);
 		const featureFlag = 'server.authentication';
 
 		await trackEventServer(
 			[featureFlag, true],
-			[`${featureFlag}.githubLogin`, { username: args[0].login || null }, { flags: [featureFlag] }]
+			[`${featureFlag}.githubLogin`, { username: profile.login || null }, { flags: [featureFlag] }]
 		);
 
-		const profileResult = githubUserInfoSchema.safeParse(args[0]);
+		const profileParseRes = insertProfileValidationSchema.safeParse({ profile_id: id, ...profile });
 
-		if (!profileResult.success)
-			throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get Github Profile Error' });
+		if (!profileParseRes.success) throw new APIError({ code: 'BAD_REQUEST', message: 'Profile Input Invalid' });
 
-		const user = await insertOrUpdateUser({
-			isUpdate: false,
-			userData: {
-				email: profileResult.data.email,
-				username: profileResult.data.login,
-				githubProfile: profileResult.data
-			}
-		});
+		const insertOrUpdateProfileRes = await tryCatchHandler(
+			insertOrUpdateProfile(profileParseRes.data, false),
+			'profile.insertOrUpdateProfileRes'
+		);
 
-		if (!user) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Insert Profile Error' });
+		if (!insertOrUpdateProfileRes.isSuccess)
+			throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Create or Update Profile Error' });
 
 		return {
-			id: user.githubProfile.id.toString(),
-			email: user.email,
-			image: user.githubProfile.avatar_url,
-			name: user.username
+			id: id.toString(),
+			email: profile.email,
+			image: profile.avatar_url,
+			name: profile.login
 		};
 	}
 });
@@ -48,6 +47,7 @@ export const provider = GitHub({
 export const providerConfig = { id: provider.id, name: provider.name };
 
 export const { auth, handlers } = NextAuth({
+	adapter: authAdapter,
 	providers: [provider],
 	pages: customPages
 });
