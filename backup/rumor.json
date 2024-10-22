@@ -515,31 +515,6 @@
     "rumorType": "MONSTER"
   },
   {
-    "id": "01HVZGS2KSREEV00D4J9GEXHJC",
-    "keyWords": "sacred bird, sharp fang of earth,1100,sealed temple,monster,crimson fang,heavenly bird",
-    "name": "Sacred Bird, Sharp Fang of Earth",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Crimson Fang"
-        },
-        {
-          "content": "Heavenly Bird"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0",
-        " and ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Sealed Temple",
-    "price": 1100,
-    "rumorType": "MONSTER"
-  },
-  {
     "id": "01HVZGS2KSXH6GTTAK50G4Z7FT",
     "keyWords": "book that steals souls,500,forgotten nursery - ancient kitchen,monster,lich order",
     "name": "Book that Steals Souls",
@@ -557,26 +532,6 @@
     },
     "location": "Forgotten Nursery - Ancient Kitchen",
     "price": 500,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KT1JGDB8HFJGK9KHC1",
-    "keyWords": "sealed disaster,750,sealed temple - beyond desired dreams,monster,sealed demon lord",
-    "name": "Sealed Disaster",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Sealed Demon Lord"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Sealed Temple - Beyond Desired Dreams",
-    "price": 750,
     "rumorType": "MONSTER"
   },
   {
@@ -600,28 +555,6 @@
     "rumorType": "MONSTER"
   },
   {
-    "id": "01HVZGS2KTB0KJB4K05EKC7BHY",
-    "keyWords": "faintly shining ore,600,soul space - edge of pitch darkness,material,pendegrune",
-    "name": "Faintly Shining Ore",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K6862V5Q1H1H8PWEZA",
-          "name": "Pendegrune",
-          "table": "item"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Soul Space - Edge of Pitch Darkness",
-    "price": 600,
-    "rumorType": "MATERIAL"
-  },
-  {
     "id": "01HVZGS2KT0QJXMH3VCFDZ97VK",
     "keyWords": "ruler of ice,1000,verdant hill - icy cave,monster,ice elemental",
     "name": "Ruler of Ice",
@@ -639,26 +572,6 @@
     },
     "location": "Verdant Hill - Icy Cave",
     "price": 1000,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KTE80PPJM3MTYV2VD7",
-    "keyWords": "demon with horns,650,fallen palace - blue sky altar,monster,devil horn",
-    "name": "Demon with Horns",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Devil Horn"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Fallen Palace - Blue Sky Altar",
-    "price": 650,
     "rumorType": "MONSTER"
   },
   {
@@ -684,6 +597,226 @@
     },
     "location": "Moon Sun Moor - Prayerless Church",
     "price": 1250,
+    "rumorType": "MONSTER"
+  },
+  {
+    "id": "01HVZGS2KTNKQWPE6CECRBMRRJ",
+    "keyWords": "cursed ancient trees,300,gathering of beasts,material,kifa,inflict curse",
+    "name": "Cursed Ancient Trees",
+    "moduleId": "rumor",
+    "description": {
+      "contentData": [
+        {
+          "id": "01HVZGS2K5M0TE6KD692V38Y5D",
+          "name": "Kifa",
+          "table": "item"
+        },
+        {
+          "id": "01HVZGS2M3G3M4KGZE2K144XK0",
+          "name": "Inflict Curse",
+          "table": "trait"
+        }
+      ],
+      "contentText": [
+        "Provide ",
+        "keyMap-0",
+        " with ",
+        "keyMap-1"
+      ]
+    },
+    "location": "Gathering of Beasts",
+    "price": 300,
+    "rumorType": "MATERIAL"
+  },
+  {
+    "id": "01HVZGS2KSXWCDVMEYTZT3XHJB",
+    "keyWords": "golden strong thread,600,forgotten nursery - masterless gazebo,material,gold steel web",
+    "name": "Golden Strong Thread",
+    "moduleId": "rumor",
+    "description": {
+      "contentData": [
+        {
+          "id": "01HVZGS2KB2NG0AMPBV162B9TN",
+          "name": "Gold Steel Web",
+          "table": "item"
+        }
+      ],
+      "contentText": [
+        "Provide ",
+        "keyMap-0"
+      ]
+    },
+    "location": "Forgotten Nursery - Masterless Gazebo",
+    "price": 600,
+    "rumorType": "MATERIAL"
+  },
+  {
+    "id": "01HVZGS2KTKNVRHA3DFYNBQZ85",
+    "keyWords": "flower blooming in silence,2000,forest of fairies,material,dunkelheit",
+    "name": "Flower Blooming in Silence",
+    "moduleId": "rumor",
+    "description": {
+      "contentData": [
+        {
+          "id": "01HVZGS2K647SF4SNQWM2Z6JMM",
+          "name": "Dunkelheit",
+          "table": "item"
+        }
+      ],
+      "contentText": [
+        "Provide ",
+        "keyMap-0"
+      ]
+    },
+    "location": "Forest of Fairies",
+    "price": 2000,
+    "rumorType": "MATERIAL"
+  },
+  {
+    "id": "01HVZGS2KTQ0DYYSJMDX79B9HQ",
+    "keyWords": "ruler of light,1500,moon sun moor - sun waiting ring,monster,light elemental",
+    "name": "Ruler of Light",
+    "moduleId": "rumor",
+    "description": {
+      "contentData": [
+        {
+          "content": "Light Elemental"
+        }
+      ],
+      "contentText": [
+        "Spawn ",
+        "keyMap-0"
+      ]
+    },
+    "location": "Moon Sun Moor - Sun Waiting Ring",
+    "price": 1500,
+    "rumorType": "MONSTER"
+  },
+  {
+    "id": "01HVZGS2KTA4MNMH7NFHMCD4JX",
+    "keyWords": "soaring monster bird,750,scar of the land - pierced ruins,monster,rok",
+    "name": "Soaring Monster Bird",
+    "moduleId": "rumor",
+    "description": {
+      "contentData": [
+        {
+          "content": "Rok"
+        }
+      ],
+      "contentText": [
+        "Spawn ",
+        "keyMap-0"
+      ]
+    },
+    "location": "Scar of the Land - Pierced Ruins",
+    "price": 750,
+    "rumorType": "MONSTER"
+  },
+  {
+    "id": "01HVZGS2KVGPE8QSXVZH6M7SGF",
+    "keyWords": "ruler of the ocean,1000,underground lake - damp banks,monster,grand ocean",
+    "name": "Ruler of the Ocean",
+    "moduleId": "rumor",
+    "description": {
+      "contentData": [
+        {
+          "content": "Grand Ocean"
+        }
+      ],
+      "contentText": [
+        "Spawn ",
+        "keyMap-0"
+      ]
+    },
+    "location": "Underground Lake - Damp Banks",
+    "price": 1000,
+    "rumorType": "MONSTER"
+  },
+  {
+    "id": "01HVZGS2KSREEV00D4J9GEXHJC",
+    "keyWords": "sacred bird, sharp fang of earth,1100,sealed temple,monster,crimson fang,heavenly bird",
+    "name": "Sacred Bird, Sharp Fang of Earth",
+    "moduleId": "rumor",
+    "description": {
+      "contentData": [
+        {
+          "content": "Crimson Fang"
+        },
+        {
+          "content": "Heavenly Bird"
+        }
+      ],
+      "contentText": [
+        "Spawn ",
+        "keyMap-0",
+        " and ",
+        "keyMap-1"
+      ]
+    },
+    "location": "Sealed Temple",
+    "price": 1100,
+    "rumorType": "MONSTER"
+  },
+  {
+    "id": "01HVZGS2KT1JGDB8HFJGK9KHC1",
+    "keyWords": "sealed disaster,750,sealed temple - beyond desired dreams,monster,sealed demon lord",
+    "name": "Sealed Disaster",
+    "moduleId": "rumor",
+    "description": {
+      "contentData": [
+        {
+          "content": "Sealed Demon Lord"
+        }
+      ],
+      "contentText": [
+        "Spawn ",
+        "keyMap-0"
+      ]
+    },
+    "location": "Sealed Temple - Beyond Desired Dreams",
+    "price": 750,
+    "rumorType": "MONSTER"
+  },
+  {
+    "id": "01HVZGS2KTB0KJB4K05EKC7BHY",
+    "keyWords": "faintly shining ore,600,soul space - edge of pitch darkness,material,pendegrune",
+    "name": "Faintly Shining Ore",
+    "moduleId": "rumor",
+    "description": {
+      "contentData": [
+        {
+          "id": "01HVZGS2K6862V5Q1H1H8PWEZA",
+          "name": "Pendegrune",
+          "table": "item"
+        }
+      ],
+      "contentText": [
+        "Provide ",
+        "keyMap-0"
+      ]
+    },
+    "location": "Soul Space - Edge of Pitch Darkness",
+    "price": 600,
+    "rumorType": "MATERIAL"
+  },
+  {
+    "id": "01HVZGS2KTE80PPJM3MTYV2VD7",
+    "keyWords": "demon with horns,650,fallen palace - blue sky altar,monster,devil horn",
+    "name": "Demon with Horns",
+    "moduleId": "rumor",
+    "description": {
+      "contentData": [
+        {
+          "content": "Devil Horn"
+        }
+      ],
+      "contentText": [
+        "Spawn ",
+        "keyMap-0"
+      ]
+    },
+    "location": "Fallen Palace - Blue Sky Altar",
+    "price": 650,
     "rumorType": "MONSTER"
   },
   {
@@ -716,35 +849,6 @@
     "rumorType": "MATERIAL"
   },
   {
-    "id": "01HVZGS2KTNKQWPE6CECRBMRRJ",
-    "keyWords": "cursed ancient trees,300,gathering of beasts,material,kifa,inflict curse",
-    "name": "Cursed Ancient Trees",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K5M0TE6KD692V38Y5D",
-          "name": "Kifa",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2M3G3M4KGZE2K144XK0",
-          "name": "Inflict Curse",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "location": "Gathering of Beasts",
-    "price": 300,
-    "rumorType": "MATERIAL"
-  },
-  {
     "id": "01HVZGS2KV03V17E8DTXHYSBWZ",
     "keyWords": "a shattered star?,750,moon sun moor,material,star powder",
     "name": "A Shattered Star?",
@@ -764,28 +868,6 @@
     },
     "location": "Moon Sun Moor",
     "price": 750,
-    "rumorType": "MATERIAL"
-  },
-  {
-    "id": "01HVZGS2KSXWCDVMEYTZT3XHJB",
-    "keyWords": "golden strong thread,600,forgotten nursery - masterless gazebo,material,gold steel web",
-    "name": "Golden Strong Thread",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2KB2NG0AMPBV162B9TN",
-          "name": "Gold Steel Web",
-          "table": "item"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Forgotten Nursery - Masterless Gazebo",
-    "price": 600,
     "rumorType": "MATERIAL"
   },
   {
@@ -811,28 +893,6 @@
     "rumorType": "MATERIAL"
   },
   {
-    "id": "01HVZGS2KTKNVRHA3DFYNBQZ85",
-    "keyWords": "flower blooming in silence,2000,forest of fairies,material,dunkelheit",
-    "name": "Flower Blooming in Silence",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K647SF4SNQWM2Z6JMM",
-          "name": "Dunkelheit",
-          "table": "item"
-        }
-      ],
-      "contentText": [
-        "Provide ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Forest of Fairies",
-    "price": 2000,
-    "rumorType": "MATERIAL"
-  },
-  {
     "id": "01HVZGS2KTQKCQM020V5Y6D9B4",
     "keyWords": "brave master of water,650,prospector's strand - prospector's hunt,monster,isanasius",
     "name": "Brave Master of Water",
@@ -850,26 +910,6 @@
     },
     "location": "Prospector's Strand - Prospector's Hunt",
     "price": 650,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KTQ0DYYSJMDX79B9HQ",
-    "keyWords": "ruler of light,1500,moon sun moor - sun waiting ring,monster,light elemental",
-    "name": "Ruler of Light",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Light Elemental"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Moon Sun Moor - Sun Waiting Ring",
-    "price": 1500,
     "rumorType": "MONSTER"
   },
   {
@@ -893,26 +933,6 @@
     "rumorType": "MONSTER"
   },
   {
-    "id": "01HVZGS2KTA4MNMH7NFHMCD4JX",
-    "keyWords": "soaring monster bird,750,scar of the land - pierced ruins,monster,rok",
-    "name": "Soaring Monster Bird",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Rok"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Scar of the Land - Pierced Ruins",
-    "price": 750,
-    "rumorType": "MONSTER"
-  },
-  {
     "id": "01HVZGS2KTSQ9GRZEJR0GR6ZV1",
     "keyWords": "funny ghosts,300,chick woods,monster,funny face",
     "name": "Funny Ghosts",
@@ -930,26 +950,6 @@
     },
     "location": "Chick Woods",
     "price": 300,
-    "rumorType": "MONSTER"
-  },
-  {
-    "id": "01HVZGS2KVGPE8QSXVZH6M7SGF",
-    "keyWords": "ruler of the ocean,1000,underground lake - damp banks,monster,grand ocean",
-    "name": "Ruler of the Ocean",
-    "moduleId": "rumor",
-    "description": {
-      "contentData": [
-        {
-          "content": "Grand Ocean"
-        }
-      ],
-      "contentText": [
-        "Spawn ",
-        "keyMap-0"
-      ]
-    },
-    "location": "Underground Lake - Damp Banks",
-    "price": 1000,
     "rumorType": "MONSTER"
   },
   {

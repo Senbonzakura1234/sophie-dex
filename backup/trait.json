@@ -449,22 +449,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2KWAP6S872D7YVW2XYG",
-    "keyWords": "fixed recovery+,111,buff item,heal item,exploration,synthesis",
-    "name": "Fixed Recovery+",
-    "moduleId": "trait",
-    "categories": [
-      "BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.",
-    "index": 111,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2KWZ8ZE59E26113QB7Y",
     "keyWords": "power of beasts,221,attack enhance,attack boost,weapon,exploration,synthesis",
     "name": "Power of Beasts",
@@ -491,22 +475,6 @@
         }
       ]
     ]
-  },
-  {
-    "id": "01HVZGS2KX5BABKS41MZ40YBW9",
-    "keyWords": "lp super enhance,204,accessory,armor,exploration,synthesis",
-    "name": "LP Super Enhance",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Bestows a maximum LP increase. Maximum LP increases by 10.",
-    "index": 204,
-    "itemPresent": null,
-    "mergeFrom": []
   },
   {
     "id": "01HVZGS2KXV80HE55SM47XH51N",
@@ -540,22 +508,6 @@
     ]
   },
   {
-    "id": "01HVZGS2KX4N7X65VY02ZYG577",
-    "keyWords": "consume mp -15%,299,accessory,weapon,exploration,synthesis",
-    "name": "Consume MP -15%",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Bestows reduced MP consumption effect. Reduces MP consumption of skills by 15%.",
-    "index": 299,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2KXV6HWAMM6C8BW2F19",
     "keyWords": "expert skill,313,weapon,exploration,synthesis",
     "name": "Expert Skill",
@@ -567,23 +519,6 @@
     ],
     "description": "Increases skill power by 25%, and reduces MP consumption by 25%.",
     "index": 313,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2KYMK1JEENA824EDTHE",
-    "keyWords": "inflict blind,369,atk item,de buff item,weapon,exploration,synthesis",
-    "name": "Inflict Blind",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Has a chance to inflict Blind when dealing damage.",
-    "index": 369,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -604,37 +539,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2KY0AYN6HCT3EP9QKA4",
-    "keyWords": "effective vs many,482,area bonus,area bonus+,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Effective Vs Many",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Power increases by number of targets in effect area x 15%.",
-    "index": 482,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M4AXGDFXHH4AJTXSYK",
-          "name": "Area Bonus",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M3EEP1X1R8VVTT0TZT",
-          "name": "Area Bonus+",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2KYA0D6QVPDXKBC6BTY",
     "keyWords": "power to destroy gods,58,atk item,de buff item,exploration,synthesis",
     "name": "Power to Destroy Gods",
@@ -647,22 +551,6 @@
     ],
     "description": "Increases attack item effect by 40%.",
     "index": 58,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2KY8Y0Z7YRDM7N1189S",
-    "keyWords": "recovery up,103,buff item,heal item,exploration,synthesis",
-    "name": "Recovery Up",
-    "moduleId": "trait",
-    "categories": [
-      "BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases recovery item effect by 10%.",
-    "index": 103,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -698,37 +586,6 @@
     ]
   },
   {
-    "id": "01HVZGS2KY1FYZX1YBHPF2A6DV",
-    "keyWords": "full of life,193,hp enhance,hp boost,accessory,armor,buff item,heal item,exploration,synthesis",
-    "name": "Full of Life",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Revive from KO, and also removes 3 status ailments.",
-    "index": 193,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2KZS2DK9G02154257KW",
-          "name": "HP Enhance",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M10GDGWHQ4KV7M6ZYK",
-          "name": "HP Boost",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2KY0GC39RMHSJ7VMZPF",
     "keyWords": "ultimate recovery,108,big recovery,intense recovery,buff item,heal item,exploration,synthesis",
     "name": "Ultimate Recovery",
@@ -758,22 +615,6 @@
     ]
   },
   {
-    "id": "01HVZGS2KY53F7XHH03QWHS0Z1",
-    "keyWords": "destruction up+,53,atk item,de buff item,exploration,synthesis",
-    "name": "Destruction Up+",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases attack item effect by 7%.",
-    "index": 53,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2KYAVFC84GVXWWW04B7",
     "keyWords": "legendary destruction,65,atk item,de buff item,exploration,synthesis",
     "name": "Legendary Destruction",
@@ -788,35 +629,6 @@
     "index": 65,
     "itemPresent": null,
     "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2KZ3Q4GHQ8437TDFJKP",
-    "keyWords": "intense destruction,56,destruction up+,destruction up++,atk item,de buff item,exploration,synthesis",
-    "name": "Intense Destruction",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases attack item effect by 17%.",
-    "index": 56,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2KY53F7XHH03QWHS0Z1",
-          "name": "Destruction Up+",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2KZN33F1PAGKQG57QZC",
-          "name": "Destruction Up++",
-          "table": "trait"
-        }
-      ]
-    ]
   },
   {
     "id": "01HVZGS2KZRTK0510W1Q97YGXE",
@@ -848,24 +660,6 @@
     ]
   },
   {
-    "id": "01HVZGS2KZ6EVNXDX9YFHZGJRJ",
-    "keyWords": "critical,145,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Critical",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Gives item a 15% chance to critical hit.",
-    "index": 145,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2KZS2DK9G02154257KW",
     "keyWords": "hp enhance,190,accessory,armor,exploration,synthesis",
     "name": "HP Enhance",
@@ -882,34 +676,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2KZERZF6KN312N6EF43",
-    "keyWords": "dragonscale defense,229,steel defense,diamond defense,armor,exploration,synthesis",
-    "name": "Dragonscale Defense",
-    "moduleId": "trait",
-    "categories": [
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases defense by 40.",
-    "index": 229,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M1DPQMTB81R304JM0A",
-          "name": "Steel Defense",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M28SP349SC03HP9W50",
-          "name": "Diamond Defense",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2KZYHDJDKA3470F7NPJ",
     "keyWords": "defense super enhance,226,armor,exploration,synthesis",
     "name": "Defense Super Enhance",
@@ -921,22 +687,6 @@
     ],
     "description": "Enhances armor defense. Increases defense by 15.",
     "index": 226,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2KWJ0BB1K0247MWHFF7",
-    "keyWords": "legendary recovery,116,buff item,heal item,exploration,synthesis",
-    "name": "Legendary Recovery",
-    "moduleId": "trait",
-    "categories": [
-      "BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Recovery item enhanced by a ridiculous, fixed amount. This increase scales with the original value.",
-    "index": 116,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -957,34 +707,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2KX2VXT9T8A548MF1ZV",
-    "keyWords": "speed of light,235,speed of skanda,speed of gods,accessory,exploration,synthesis",
-    "name": "Speed of Light",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases speed by 40.",
-    "index": 235,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2KZ4XQT4FJPF07Z13JJ",
-          "name": "Speed of Skanda",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M22V93Z4Y1Q6C42GRN",
-          "name": "Speed of Gods",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2KXPAPWVGS96S5PN1MN",
     "keyWords": "flawless body,246,armor,exploration,synthesis",
     "name": "Flawless Body",
@@ -996,21 +718,6 @@
     ],
     "description": "Increases maximum HP and MP by 50.",
     "index": 246,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2KXGZC741EAEM8ZPYKM",
-    "keyWords": "skill power +10%,306,weapon,exploration,synthesis",
-    "name": "Skill Power +10%",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Bestows increased skill power effect. Increases skill power and MP consumption by 10%.",
-    "index": 306,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -1031,21 +738,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2KYH2YPKJWP3YVM5RGF",
-    "keyWords": "over power,407,weapon,exploration,synthesis",
-    "name": "Over Power",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases attack power by 20, and absorb 10% of damage dealt through attacks to restore your own HP.",
-    "index": 407,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2KYWKDGRHF354NAAWCY",
     "keyWords": "undead slayer,429,atk item,weapon,exploration,synthesis",
     "name": "Undead Slayer",
@@ -1060,35 +752,6 @@
     "index": 429,
     "itemPresent": null,
     "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2KY1G51V9PBE41TBM6W",
-    "keyWords": "big destruction,55,destruction up,destruction up+,atk item,de buff item,exploration,synthesis",
-    "name": "Big Destruction",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases attack item effect by 12%.",
-    "index": 55,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2KWWRTQQ3FYBEX5AQVD",
-          "name": "Destruction Up",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2KY53F7XHH03QWHS0Z1",
-          "name": "Destruction Up+",
-          "table": "trait"
-        }
-      ]
-    ]
   },
   {
     "id": "01HVZGS2KYED1XG6GHZTDYK6GX",
@@ -1114,37 +777,6 @@
         {
           "id": "01HVZGS2KWPBT8PVX9EV8DBK3R",
           "name": "Recovery Up+",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "01HVZGS2KYWB0H167JFGXJ4MX6",
-    "keyWords": "stability emphasis,154,stable effect,stable effect+,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Stability Emphasis",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Reduces item number variation, making it easier to score higher numbers.",
-    "index": 154,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M0BSABT5E5X39JGKE4",
-          "name": "Stable Effect",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M18HFW5CSRKTV08SHC",
-          "name": "Stable Effect+",
           "table": "trait"
         }
       ]
@@ -1182,35 +814,6 @@
     ]
   },
   {
-    "id": "01HVZGS2KYMRS47H87BEJ4T2QP",
-    "keyWords": "wisdom of the gods,201,magician's wisdom,grand magician's wisdom,accessory,armor,exploration,synthesis",
-    "name": "Wisdom of the Gods",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Maximum MP increases by 70.",
-    "index": 201,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2KW7DE8FEV5N2BVJAQG",
-          "name": "Magician's Wisdom",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M1JTM1ZTJ1JK7JWT4A",
-          "name": "Grand Magician's Wisdom",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2KYZGK1C0MEA0H0QF3K",
     "keyWords": "intense recovery,107,recovery up+,recovery up++,buff item,heal item,exploration,synthesis",
     "name": "Intense Recovery",
@@ -1240,22 +843,6 @@
     ]
   },
   {
-    "id": "01HVZGS2KYYPPG2PVKFGNS2K7J",
-    "keyWords": "fixed power+,60,atk item,de buff item,exploration,synthesis",
-    "name": "Fixed Power+",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.",
-    "index": 60,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2KZEZ9CYN7DDVCADFBX",
     "keyWords": "recovery up++,105,buff item,heal item,exploration,synthesis",
     "name": "Recovery Up++",
@@ -1268,22 +855,6 @@
     ],
     "description": "Increases recovery item effect by 20%.",
     "index": 105,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2KZZZHZXSJSNP2CCNYN",
-    "keyWords": "fixed recovery++,112,buff item,heal item,exploration,synthesis",
-    "name": "Fixed Recovery++",
-    "moduleId": "trait",
-    "categories": [
-      "BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Recovery item enhanced by a fixed amount. Lower power equals stronger effect.",
-    "index": 112,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -1317,9 +888,74 @@
     ]
   },
   {
-    "id": "01HVZGS2KZQ3YPZHHXJ30W075E",
-    "keyWords": "use count +2,173,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Use Count +2",
+    "id": "01HVZGS2KWAP6S872D7YVW2XYG",
+    "keyWords": "fixed recovery+,111,buff item,heal item,exploration,synthesis",
+    "name": "Fixed Recovery+",
+    "moduleId": "trait",
+    "categories": [
+      "BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Recovery item enhanced by a small, fixed amount. Lower power equals stronger effect.",
+    "index": 111,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2KX5BABKS41MZ40YBW9",
+    "keyWords": "lp super enhance,204,accessory,armor,exploration,synthesis",
+    "name": "LP Super Enhance",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Bestows a maximum LP increase. Maximum LP increases by 10.",
+    "index": 204,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2KX4N7X65VY02ZYG577",
+    "keyWords": "consume mp -15%,299,accessory,weapon,exploration,synthesis",
+    "name": "Consume MP -15%",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Bestows reduced MP consumption effect. Reduces MP consumption of skills by 15%.",
+    "index": 299,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2KYMK1JEENA824EDTHE",
+    "keyWords": "inflict blind,369,atk item,de buff item,weapon,exploration,synthesis",
+    "name": "Inflict Blind",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Has a chance to inflict Blind when dealing damage.",
+    "index": 369,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2KY0AYN6HCT3EP9QKA4",
+    "keyWords": "effective vs many,482,area bonus,area bonus+,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Effective Vs Many",
     "moduleId": "trait",
     "categories": [
       "ATK_ITEM",
@@ -1329,8 +965,354 @@
       "EXPLORATION",
       "SYNTHESIS"
     ],
-    "description": "Increases item use count by 2. Power is reduced slightly.",
-    "index": 173,
+    "description": "Power increases by number of targets in effect area x 15%.",
+    "index": 482,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M4AXGDFXHH4AJTXSYK",
+          "name": "Area Bonus",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M3EEP1X1R8VVTT0TZT",
+          "name": "Area Bonus+",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2KY8Y0Z7YRDM7N1189S",
+    "keyWords": "recovery up,103,buff item,heal item,exploration,synthesis",
+    "name": "Recovery Up",
+    "moduleId": "trait",
+    "categories": [
+      "BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases recovery item effect by 10%.",
+    "index": 103,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2KY1FYZX1YBHPF2A6DV",
+    "keyWords": "full of life,193,hp enhance,hp boost,accessory,armor,buff item,heal item,exploration,synthesis",
+    "name": "Full of Life",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Revive from KO, and also removes 3 status ailments.",
+    "index": 193,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2KZS2DK9G02154257KW",
+          "name": "HP Enhance",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M10GDGWHQ4KV7M6ZYK",
+          "name": "HP Boost",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2KY53F7XHH03QWHS0Z1",
+    "keyWords": "destruction up+,53,atk item,de buff item,exploration,synthesis",
+    "name": "Destruction Up+",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases attack item effect by 7%.",
+    "index": 53,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2KZ3Q4GHQ8437TDFJKP",
+    "keyWords": "intense destruction,56,destruction up+,destruction up++,atk item,de buff item,exploration,synthesis",
+    "name": "Intense Destruction",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases attack item effect by 17%.",
+    "index": 56,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2KY53F7XHH03QWHS0Z1",
+          "name": "Destruction Up+",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2KZN33F1PAGKQG57QZC",
+          "name": "Destruction Up++",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2KZ6EVNXDX9YFHZGJRJ",
+    "keyWords": "critical,145,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Critical",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Gives item a 15% chance to critical hit.",
+    "index": 145,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2KZERZF6KN312N6EF43",
+    "keyWords": "dragonscale defense,229,steel defense,diamond defense,armor,exploration,synthesis",
+    "name": "Dragonscale Defense",
+    "moduleId": "trait",
+    "categories": [
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases defense by 40.",
+    "index": 229,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M1DPQMTB81R304JM0A",
+          "name": "Steel Defense",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M28SP349SC03HP9W50",
+          "name": "Diamond Defense",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2KWJ0BB1K0247MWHFF7",
+    "keyWords": "legendary recovery,116,buff item,heal item,exploration,synthesis",
+    "name": "Legendary Recovery",
+    "moduleId": "trait",
+    "categories": [
+      "BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Recovery item enhanced by a ridiculous, fixed amount. This increase scales with the original value.",
+    "index": 116,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2KX2VXT9T8A548MF1ZV",
+    "keyWords": "speed of light,235,speed of skanda,speed of gods,accessory,exploration,synthesis",
+    "name": "Speed of Light",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases speed by 40.",
+    "index": 235,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2KZ4XQT4FJPF07Z13JJ",
+          "name": "Speed of Skanda",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M22V93Z4Y1Q6C42GRN",
+          "name": "Speed of Gods",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2KXGZC741EAEM8ZPYKM",
+    "keyWords": "skill power +10%,306,weapon,exploration,synthesis",
+    "name": "Skill Power +10%",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Bestows increased skill power effect. Increases skill power and MP consumption by 10%.",
+    "index": 306,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2KYH2YPKJWP3YVM5RGF",
+    "keyWords": "over power,407,weapon,exploration,synthesis",
+    "name": "Over Power",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases attack power by 20, and absorb 10% of damage dealt through attacks to restore your own HP.",
+    "index": 407,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2KY1G51V9PBE41TBM6W",
+    "keyWords": "big destruction,55,destruction up,destruction up+,atk item,de buff item,exploration,synthesis",
+    "name": "Big Destruction",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases attack item effect by 12%.",
+    "index": 55,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2KWWRTQQ3FYBEX5AQVD",
+          "name": "Destruction Up",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2KY53F7XHH03QWHS0Z1",
+          "name": "Destruction Up+",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2KYWB0H167JFGXJ4MX6",
+    "keyWords": "stability emphasis,154,stable effect,stable effect+,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Stability Emphasis",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Reduces item number variation, making it easier to score higher numbers.",
+    "index": 154,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M0BSABT5E5X39JGKE4",
+          "name": "Stable Effect",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M18HFW5CSRKTV08SHC",
+          "name": "Stable Effect+",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2KYMRS47H87BEJ4T2QP",
+    "keyWords": "wisdom of the gods,201,magician's wisdom,grand magician's wisdom,accessory,armor,exploration,synthesis",
+    "name": "Wisdom of the Gods",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Maximum MP increases by 70.",
+    "index": 201,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2KW7DE8FEV5N2BVJAQG",
+          "name": "Magician's Wisdom",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M1JTM1ZTJ1JK7JWT4A",
+          "name": "Grand Magician's Wisdom",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2KYYPPG2PVKFGNS2K7J",
+    "keyWords": "fixed power+,60,atk item,de buff item,exploration,synthesis",
+    "name": "Fixed Power+",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Attack item enhanced by a fixed amount. Lower power equals stronger enhancement.",
+    "index": 60,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2KZZZHZXSJSNP2CCNYN",
+    "keyWords": "fixed recovery++,112,buff item,heal item,exploration,synthesis",
+    "name": "Fixed Recovery++",
+    "moduleId": "trait",
+    "categories": [
+      "BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Recovery item enhanced by a fixed amount. Lower power equals stronger effect.",
+    "index": 112,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -1351,6 +1333,24 @@
     "mergeFrom": []
   },
   {
+    "id": "01HVZGS2KZQ3YPZHHXJ30W075E",
+    "keyWords": "use count +2,173,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Use Count +2",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases item use count by 2. Power is reduced slightly.",
+    "index": 173,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
     "id": "01HVZGS2KZ3R4TDDZEXYBNT2EA",
     "keyWords": "attack super enhance,220,weapon,exploration,synthesis",
     "name": "Attack Super Enhance",
@@ -1364,34 +1364,6 @@
     "index": 220,
     "itemPresent": null,
     "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2KZ4XQT4FJPF07Z13JJ",
-    "keyWords": "speed of skanda,233,speed enhance,speed boost,accessory,exploration,synthesis",
-    "name": "Speed of Skanda",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases speed by 15.",
-    "index": 233,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M283E91QY2GN90Z119",
-          "name": "Speed Enhance",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M1GWTPA98X0G8MM3PA",
-          "name": "Speed Boost",
-          "table": "trait"
-        }
-      ]
-    ]
   },
   {
     "id": "01HVZGS2KZ2MN29SRS6V60ENYD",
@@ -1423,24 +1395,6 @@
     ]
   },
   {
-    "id": "01HVZGS2KZ8QAPN864VYDRE4GM",
-    "keyWords": "count bonus,515,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Count Bonus",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases item power by maximum use count x 2%.",
-    "index": 515,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2KZN33F1PAGKQG57QZC",
     "keyWords": "destruction up++,54,atk item,de buff item,exploration,synthesis",
     "name": "Destruction Up++",
@@ -1457,35 +1411,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2KZ4RENTN064M9KGH62",
-    "keyWords": "ultimate destruction,57,big destruction,intense destruction,atk item,de buff item,exploration,synthesis",
-    "name": "Ultimate Destruction",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases attack item effect by 30%.",
-    "index": 57,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2KY1G51V9PBE41TBM6W",
-          "name": "Big Destruction",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2KZ3Q4GHQ8437TDFJKP",
-          "name": "Intense Destruction",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2M0TJ2J3QPCQ7WB6081",
     "keyWords": "increase aggression,68,weapon,exploration,synthesis",
     "name": "Increase Aggression",
@@ -1499,35 +1424,6 @@
     "index": 68,
     "itemPresent": null,
     "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M03Y8X5TD0ZB85XXR4",
-    "keyWords": "big medicine enhance,114,fixed recovery+,fixed recovery++,buff item,heal item,exploration,synthesis",
-    "name": "Big Medicine Enhance",
-    "moduleId": "trait",
-    "categories": [
-      "BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Recovery item enhanced by a fixed amount. Lower power equals stronger effect.",
-    "index": 114,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2KWAP6S872D7YVW2XYG",
-          "name": "Fixed Recovery+",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2KZZZHZXSJSNP2CCNYN",
-          "name": "Fixed Recovery++",
-          "table": "trait"
-        }
-      ]
-    ]
   },
   {
     "id": "01HVZGS2M0CB4H2ZP2RY41YVX0",
@@ -1546,36 +1442,6 @@
     "index": 172,
     "itemPresent": null,
     "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M03BWZ13HH8H6BCC6N",
-    "keyWords": "well rounded power,245,all stat boost,all stat super enhance,accessory,armor,weapon,exploration,synthesis",
-    "name": "Well Rounded Power",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases all stats except resistances by 25.",
-    "index": 245,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2MBF4X021YBX3KH9YW4",
-          "name": "All Stat Boost",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M233JF6S5VW1Z9BN6C",
-          "name": "All Stat Super Enhance",
-          "table": "trait"
-        }
-      ]
-    ]
   },
   {
     "id": "01HVZGS2M0MD3N66G6CFAVG37J",
@@ -1606,35 +1472,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M0739PYZHC10HZJJC2",
-    "keyWords": "super enhance recovery,115,medicine enhance,big medicine enhance,buff item,heal item,exploration,synthesis",
-    "name": "Super Enhance Recovery",
-    "moduleId": "trait",
-    "categories": [
-      "BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Recovery item enhanced by a large, fixed amount. Lower power equals stronger effect.",
-    "index": 115,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2MA3WV7G5A19NVAWV44",
-          "name": "Medicine Enhance",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M03Y8X5TD0ZB85XXR4",
-          "name": "Big Medicine Enhance",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2M0Z8MKYNVYHSRQ8K44",
     "keyWords": "avidya attack,660,weapon,exploration,synthesis",
     "name": "Avidya Attack",
@@ -1646,21 +1483,6 @@
     ],
     "description": "Attacks cause 15% additional damage, and increases skill power by 10%.",
     "index": 660,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M0R8EFRHDTC79RA6DA",
-    "keyWords": "cuts easily,67,weapon,exploration,synthesis",
-    "name": "Cuts Easily",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Attacks cause 7% additional damage, and increases skill power by 7%.",
-    "index": 67,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -1683,34 +1505,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M1DPQMTB81R304JM0A",
-    "keyWords": "steel defense,227,defense enhance,defense boost,armor,exploration,synthesis",
-    "name": "Steel Defense",
-    "moduleId": "trait",
-    "categories": [
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases defense by 15.",
-    "index": 227,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M22KB341Z65JAMM2ZV",
-          "name": "Defense Enhance",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M2AXSJ27NG77JVTRGD",
-          "name": "Defense Boost",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2M18HFW5CSRKTV08SHC",
     "keyWords": "stable effect+,152,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Stable Effect+",
@@ -1727,35 +1521,6 @@
     "index": 152,
     "itemPresent": null,
     "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M1JTM1ZTJ1JK7JWT4A",
-    "keyWords": "grand magician's wisdom,200,mp boost,mp super enhance,accessory,armor,exploration,synthesis",
-    "name": "Grand Magician's Wisdom",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Maximum MP increases by 40.",
-    "index": 200,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2KZ2Y0M9NJ19XB3JRS7",
-          "name": "MP Boost",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M0XHJPCH7E0413CSGC",
-          "name": "MP Super Enhance",
-          "table": "trait"
-        }
-      ]
-    ]
   },
   {
     "id": "01HVZGS2M1FNK06HP1XEV5A50J",
@@ -1787,34 +1552,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M1FHV6JS381S9N0BNA",
-    "keyWords": "power of destruction,222,attack boost,attack super enhance,weapon,exploration,synthesis",
-    "name": "Power of Destruction",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases attack power by 25.",
-    "index": 222,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M1ET2YHR3NGC93AVDS",
-          "name": "Attack Boost",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2KZ3R4TDDZEXYBNT2EA",
-          "name": "Attack Super Enhance",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2M1ET2YHR3NGC93AVDS",
     "keyWords": "attack boost,219,weapon,exploration,synthesis",
     "name": "Attack Boost",
@@ -1826,21 +1563,6 @@
     ],
     "description": "Enhances weapon attack power. Increases attack power by 10.",
     "index": 219,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M1GWTPA98X0G8MM3PA",
-    "keyWords": "speed boost,231,accessory,exploration,synthesis",
-    "name": "Speed Boost",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Accessories with this will increase speed. Increases speed by 10.",
-    "index": 231,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -1863,35 +1585,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2KZ4F9B3Q6WR5NRC07A",
-    "keyWords": "damage in numbers,63,fixed power+,fixed power++,atk item,de buff item,exploration,synthesis",
-    "name": "Damage in Numbers",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.",
-    "index": 63,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2KYYPPG2PVKFGNS2K7J",
-          "name": "Fixed Power+",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2KZBT75MCYNDWW65ESB",
-          "name": "Fixed Power++",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2KZ60PGC0EDSN6D4EPY",
     "keyWords": "dreadful king,607,weapon,exploration,synthesis",
     "name": "Dreadful King",
@@ -1903,22 +1596,6 @@
     ],
     "description": "Dreadful king enhances the material it resides in. Causes additional damage and status effects.",
     "index": 607,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2KZBT75MCYNDWW65ESB",
-    "keyWords": "fixed power++,61,atk item,de buff item,exploration,synthesis",
-    "name": "Fixed Power++",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.",
-    "index": 61,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -1938,22 +1615,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M0XHJPCH7E0413CSGC",
-    "keyWords": "mp super enhance,198,accessory,armor,exploration,synthesis",
-    "name": "MP Super Enhance",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Bestows a maximum MP increase. Maximum MP increases by 25.",
-    "index": 198,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M0BSABT5E5X39JGKE4",
     "keyWords": "stable effect,151,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Stable Effect",
@@ -1968,22 +1629,6 @@
     ],
     "description": "Reduces item number variation slightly, making it easier to score higher numbers.",
     "index": 151,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M0AK5RX8B4Z9SZ2C7N",
-    "keyWords": "lp enhance,202,accessory,armor,exploration,synthesis",
-    "name": "LP Enhance",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Bestows a maximum LP increase. Maximum LP increases by 5.",
-    "index": 202,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -2017,22 +1662,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M0EQS0V7D7H9GD1XTZ",
-    "keyWords": "consume mp -10%,298,accessory,weapon,exploration,synthesis",
-    "name": "Consume MP -10%",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Bestows reduced MP consumption effect. Reduces MP consumption of skills by 10%.",
-    "index": 298,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M0Z3RWYZ9QPTMRVBZ7",
     "keyWords": "big damage numbers,64,pain in numbers,damage in numbers,atk item,de buff item,exploration,synthesis",
     "name": "Big Damage Numbers",
@@ -2062,22 +1691,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M063GVS5QEGYS8XSB7",
-    "keyWords": "fixed power,59,atk item,de buff item,exploration,synthesis",
-    "name": "Fixed Power",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Attack item enhanced by a small, fixed amount. Lower power equals stronger enhancement.",
-    "index": 59,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M06HN75YXYP3JQ996N",
     "keyWords": "blessed by god,109,buff item,heal item,exploration,synthesis",
     "name": "Blessed by God",
@@ -2090,23 +1703,6 @@
     ],
     "description": "Increases recovery item effect by 40%.",
     "index": 109,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M158J4VR9ZSJ80QDDS",
-    "keyWords": "inflict seal,372,atk item,de buff item,weapon,exploration,synthesis",
-    "name": "Inflict Seal",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Has a chance to inflict Seal when dealing damage.",
-    "index": 372,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -2134,35 +1730,6 @@
         {
           "id": "01HVZGS2M22KB341Z65JAMM2ZV",
           "name": "Defense Enhance",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "01HVZGS2M13844J8YA3EPQXDJK",
-    "keyWords": "power of life,195,full of life,overflowing life,accessory,armor,exploration,synthesis",
-    "name": "Power of Life",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Maximum HP increases by 70.",
-    "index": 195,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2KY1FYZX1YBHPF2A6DV",
-          "name": "Full of Life",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2MAEJZ9PRW4XCWQM74T",
-          "name": "Overflowing Life",
           "table": "trait"
         }
       ]
@@ -2198,6 +1765,454 @@
     ]
   },
   {
+    "id": "01HVZGS2KZ4XQT4FJPF07Z13JJ",
+    "keyWords": "speed of skanda,233,speed enhance,speed boost,accessory,exploration,synthesis",
+    "name": "Speed of Skanda",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases speed by 15.",
+    "index": 233,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M283E91QY2GN90Z119",
+          "name": "Speed Enhance",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M1GWTPA98X0G8MM3PA",
+          "name": "Speed Boost",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2KZ8QAPN864VYDRE4GM",
+    "keyWords": "count bonus,515,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Count Bonus",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases item power by maximum use count x 2%.",
+    "index": 515,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2KZ4RENTN064M9KGH62",
+    "keyWords": "ultimate destruction,57,big destruction,intense destruction,atk item,de buff item,exploration,synthesis",
+    "name": "Ultimate Destruction",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases attack item effect by 30%.",
+    "index": 57,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2KY1G51V9PBE41TBM6W",
+          "name": "Big Destruction",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2KZ3Q4GHQ8437TDFJKP",
+          "name": "Intense Destruction",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M03Y8X5TD0ZB85XXR4",
+    "keyWords": "big medicine enhance,114,fixed recovery+,fixed recovery++,buff item,heal item,exploration,synthesis",
+    "name": "Big Medicine Enhance",
+    "moduleId": "trait",
+    "categories": [
+      "BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Recovery item enhanced by a fixed amount. Lower power equals stronger effect.",
+    "index": 114,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2KWAP6S872D7YVW2XYG",
+          "name": "Fixed Recovery+",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2KZZZHZXSJSNP2CCNYN",
+          "name": "Fixed Recovery++",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M03BWZ13HH8H6BCC6N",
+    "keyWords": "well rounded power,245,all stat boost,all stat super enhance,accessory,armor,weapon,exploration,synthesis",
+    "name": "Well Rounded Power",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases all stats except resistances by 25.",
+    "index": 245,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2MBF4X021YBX3KH9YW4",
+          "name": "All Stat Boost",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M233JF6S5VW1Z9BN6C",
+          "name": "All Stat Super Enhance",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M0739PYZHC10HZJJC2",
+    "keyWords": "super enhance recovery,115,medicine enhance,big medicine enhance,buff item,heal item,exploration,synthesis",
+    "name": "Super Enhance Recovery",
+    "moduleId": "trait",
+    "categories": [
+      "BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Recovery item enhanced by a large, fixed amount. Lower power equals stronger effect.",
+    "index": 115,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2MA3WV7G5A19NVAWV44",
+          "name": "Medicine Enhance",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M03Y8X5TD0ZB85XXR4",
+          "name": "Big Medicine Enhance",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M0R8EFRHDTC79RA6DA",
+    "keyWords": "cuts easily,67,weapon,exploration,synthesis",
+    "name": "Cuts Easily",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Attacks cause 7% additional damage, and increases skill power by 7%.",
+    "index": 67,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M1DPQMTB81R304JM0A",
+    "keyWords": "steel defense,227,defense enhance,defense boost,armor,exploration,synthesis",
+    "name": "Steel Defense",
+    "moduleId": "trait",
+    "categories": [
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases defense by 15.",
+    "index": 227,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M22KB341Z65JAMM2ZV",
+          "name": "Defense Enhance",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M2AXSJ27NG77JVTRGD",
+          "name": "Defense Boost",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M1JTM1ZTJ1JK7JWT4A",
+    "keyWords": "grand magician's wisdom,200,mp boost,mp super enhance,accessory,armor,exploration,synthesis",
+    "name": "Grand Magician's Wisdom",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Maximum MP increases by 40.",
+    "index": 200,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2KZ2Y0M9NJ19XB3JRS7",
+          "name": "MP Boost",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M0XHJPCH7E0413CSGC",
+          "name": "MP Super Enhance",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M1FHV6JS381S9N0BNA",
+    "keyWords": "power of destruction,222,attack boost,attack super enhance,weapon,exploration,synthesis",
+    "name": "Power of Destruction",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases attack power by 25.",
+    "index": 222,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M1ET2YHR3NGC93AVDS",
+          "name": "Attack Boost",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2KZ3R4TDDZEXYBNT2EA",
+          "name": "Attack Super Enhance",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M1GWTPA98X0G8MM3PA",
+    "keyWords": "speed boost,231,accessory,exploration,synthesis",
+    "name": "Speed Boost",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Accessories with this will increase speed. Increases speed by 10.",
+    "index": 231,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2KZ4F9B3Q6WR5NRC07A",
+    "keyWords": "damage in numbers,63,fixed power+,fixed power++,atk item,de buff item,exploration,synthesis",
+    "name": "Damage in Numbers",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.",
+    "index": 63,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2KYYPPG2PVKFGNS2K7J",
+          "name": "Fixed Power+",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2KZBT75MCYNDWW65ESB",
+          "name": "Fixed Power++",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2KZBT75MCYNDWW65ESB",
+    "keyWords": "fixed power++,61,atk item,de buff item,exploration,synthesis",
+    "name": "Fixed Power++",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Attack item enhanced by a large, fixed amount. Lower power equals stronger enhancement.",
+    "index": 61,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M0XHJPCH7E0413CSGC",
+    "keyWords": "mp super enhance,198,accessory,armor,exploration,synthesis",
+    "name": "MP Super Enhance",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Bestows a maximum MP increase. Maximum MP increases by 25.",
+    "index": 198,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M0AK5RX8B4Z9SZ2C7N",
+    "keyWords": "lp enhance,202,accessory,armor,exploration,synthesis",
+    "name": "LP Enhance",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Bestows a maximum LP increase. Maximum LP increases by 5.",
+    "index": 202,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M0EQS0V7D7H9GD1XTZ",
+    "keyWords": "consume mp -10%,298,accessory,weapon,exploration,synthesis",
+    "name": "Consume MP -10%",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Bestows reduced MP consumption effect. Reduces MP consumption of skills by 10%.",
+    "index": 298,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M063GVS5QEGYS8XSB7",
+    "keyWords": "fixed power,59,atk item,de buff item,exploration,synthesis",
+    "name": "Fixed Power",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Attack item enhanced by a small, fixed amount. Lower power equals stronger enhancement.",
+    "index": 59,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M158J4VR9ZSJ80QDDS",
+    "keyWords": "inflict seal,372,atk item,de buff item,weapon,exploration,synthesis",
+    "name": "Inflict Seal",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Has a chance to inflict Seal when dealing damage.",
+    "index": 372,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M13844J8YA3EPQXDJK",
+    "keyWords": "power of life,195,full of life,overflowing life,accessory,armor,exploration,synthesis",
+    "name": "Power of Life",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Maximum HP increases by 70.",
+    "index": 195,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2KY1FYZX1YBHPF2A6DV",
+          "name": "Full of Life",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2MAEJZ9PRW4XCWQM74T",
+          "name": "Overflowing Life",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M1D2YBV8P6RZZYHTVA",
+    "keyWords": "attack enhance,218,weapon,exploration,synthesis",
+    "name": "Attack Enhance",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Enhances weapon attack power. Increases attack power by 7.",
+    "index": 218,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
     "id": "01HVZGS2M1NCSX0D6JXE635XAP",
     "keyWords": "draw out power,215,parameters +6%,parameters +7%,armor,exploration,synthesis",
     "name": "Draw Out Power",
@@ -2224,21 +2239,6 @@
         }
       ]
     ]
-  },
-  {
-    "id": "01HVZGS2M1D2YBV8P6RZZYHTVA",
-    "keyWords": "attack enhance,218,weapon,exploration,synthesis",
-    "name": "Attack Enhance",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Enhances weapon attack power. Increases attack power by 7.",
-    "index": 218,
-    "itemPresent": null,
-    "mergeFrom": []
   },
   {
     "id": "01HVZGS2M1P0TWRE5FC8PG03A3",
@@ -2270,21 +2270,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M1MX3ENJ9RPXPXYSPW",
-    "keyWords": "speed super enhance,232,accessory,exploration,synthesis",
-    "name": "Speed Super Enhance",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Accessories with this will increase speed. Increases speed by 15.",
-    "index": 232,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M1D7KT5AREWD7Y331V",
     "keyWords": "use count -1,175,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Use Count -1",
@@ -2303,22 +2288,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M10GDGWHQ4KV7M6ZYK",
-    "keyWords": "hp boost,191,accessory,armor,exploration,synthesis",
-    "name": "HP Boost",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Bestows a maximum HP increase. Maximum HP increases by 15.",
-    "index": 191,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M1SA33RYMXT4GCSG86",
     "keyWords": "use count -2,176,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Use Count -2",
@@ -2333,22 +2302,6 @@
     ],
     "description": "Reduces item use count by 2. Power is increased.",
     "index": 176,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M1QQFWX1EEPHTJ68H1",
-    "keyWords": "hp super enhance,192,accessory,armor,exploration,synthesis",
-    "name": "HP Super Enhance",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Bestows a maximum HP increase. Maximum HP increases by 25.",
-    "index": 192,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -2384,21 +2337,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M2AQF66GXPSJP17NEH",
-    "keyWords": "parameters +5%,211,armor,exploration,synthesis",
-    "name": "Parameters +5%",
-    "moduleId": "trait",
-    "categories": [
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Bestows a stat boost. Increases base stats by 5%.",
-    "index": 211,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M2QQ8KQ7BT5HQVKQS1",
     "keyWords": "parameters +7%,213,armor,exploration,synthesis",
     "name": "Parameters +7%",
@@ -2412,34 +2350,6 @@
     "index": 213,
     "itemPresent": null,
     "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M28SP349SC03HP9W50",
-    "keyWords": "diamond defense,228,defense boost,defense super enhance,armor,exploration,synthesis",
-    "name": "Diamond Defense",
-    "moduleId": "trait",
-    "categories": [
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases defense by 25.",
-    "index": 228,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M2AXSJ27NG77JVTRGD",
-          "name": "Defense Boost",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2KZYHDJDKA3470F7NPJ",
-          "name": "Defense Super Enhance",
-          "table": "trait"
-        }
-      ]
-    ]
   },
   {
     "id": "01HVZGS2M22KB341Z65JAMM2ZV",
@@ -2457,21 +2367,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M2AXSJ27NG77JVTRGD",
-    "keyWords": "defense boost,225,armor,exploration,synthesis",
-    "name": "Defense Boost",
-    "moduleId": "trait",
-    "categories": [
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Enhances armor defense. Increases defense by 10.",
-    "index": 225,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M283E91QY2GN90Z119",
     "keyWords": "speed enhance,230,accessory,exploration,synthesis",
     "name": "Speed Enhance",
@@ -2483,24 +2378,6 @@
     ],
     "description": "Accessories with this will increase speed. Increases speed by 7.",
     "index": 230,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M2KYTZVTNFJS8PHPNQ",
-    "keyWords": "fast use,541,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Fast Use",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Reduces WT after using item by 10%. Power is decreased slightly.",
-    "index": 541,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -2533,21 +2410,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M3S2YPQWT3F89Q71R9",
-    "keyWords": "skill power +5%,304,weapon,exploration,synthesis",
-    "name": "Skill Power +5%",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Bestows increased skill power effect. Increases skill power and MP consumption by 5%.",
-    "index": 304,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M3BQBAZM0ST3XFERZR",
     "keyWords": "zeal factor,592,accessory,exploration,synthesis",
     "name": "Zeal Factor",
@@ -2559,22 +2421,6 @@
     ],
     "description": "Zeal factor enhances the material it resides in. Increases HP and attack.",
     "index": 592,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M300HY2PXYFS3P22QM",
-    "keyWords": "soul dwelling,349,buff item,heal item,exploration,synthesis",
-    "name": "Soul Dwelling",
-    "moduleId": "trait",
-    "categories": [
-      "BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Massively increases the target's level.",
-    "index": 349,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -2592,22 +2438,6 @@
     ],
     "description": "Has a chance to inflict Curse when dealing damage.",
     "index": 368,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M3PCVYVWC9XX499W2Y",
-    "keyWords": "powerless curse,374,atk item,de buff item,exploration,synthesis",
-    "name": "Powerless Curse",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Massively reduces the target's attack power.",
-    "index": 374,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -2643,35 +2473,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M3AFW8FWMPZ2AZJBKF",
-    "keyWords": "halve mp consume,303,cut mp consume,compact mp consume,accessory,weapon,exploration,synthesis",
-    "name": "Halve MP Consume",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Reduces MP consumption of skills by 50%.",
-    "index": 303,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M4AFQCPH8G9H2BAYQP",
-          "name": "Cut MP Consume",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M0M5Y2FR89SJ033HBX",
-          "name": "Compact MP Consume",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2M3FCYPY4P0EFKND1PX",
     "keyWords": "multi bonus,483,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Multi Bonus",
@@ -2690,34 +2491,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M356HYTZV437EQXP0J",
-    "keyWords": "skill super enhance,309,skill enhance,skill boost,weapon,exploration,synthesis",
-    "name": "Skill Super Enhance",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases skill power and MP consumption by 30%.",
-    "index": 309,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M0MD3N66G6CFAVG37J",
-          "name": "Skill Enhance",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M5ZJ8NV4H2VGMFSCDP",
-          "name": "Skill Boost",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2M471YV3PKQRFDCC4BE",
     "keyWords": "unwavering spirit,603,accessory,exploration,synthesis",
     "name": "Unwavering Spirit",
@@ -2731,34 +2504,6 @@
     "index": 603,
     "itemPresent": null,
     "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M4PM3ZMVK1SDNYK18H",
-    "keyWords": "hp absorb,404,damage absorb,damage absorb+,weapon,exploration,synthesis",
-    "name": "HP Absorb",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Absorb 7% of damage dealt through attacks to restore your own HP.",
-    "index": 404,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M6SRCKZ9T8QKX5RVSA",
-          "name": "Damage Absorb",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M42S8810ZKPKP8SJ6D",
-          "name": "Damage Absorb+",
-          "table": "trait"
-        }
-      ]
-    ]
   },
   {
     "id": "01HVZGS2M23ST5ZKHJVRP1TJW5",
@@ -2777,34 +2522,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M2MXN17QYT2EERMAS1",
-    "keyWords": "enhance the body,214,parameters +5%,parameters +6%,armor,exploration,synthesis",
-    "name": "Enhance the Body",
-    "moduleId": "trait",
-    "categories": [
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases base stats by 10%.",
-    "index": 214,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M2AQF66GXPSJP17NEH",
-          "name": "Parameters +5%",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M2GKHRFABFKYGCB2AV",
-          "name": "Parameters +6%",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2M2GKHRFABFKYGCB2AV",
     "keyWords": "parameters +6%,212,armor,exploration,synthesis",
     "name": "Parameters +6%",
@@ -2820,34 +2537,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M2H1P1KPH2P74VVW69",
-    "keyWords": "develops the body,216,enhance the body,draw out power,armor,exploration,synthesis",
-    "name": "Develops the Body",
-    "moduleId": "trait",
-    "categories": [
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases base stats by 15%.",
-    "index": 216,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M2MXN17QYT2EERMAS1",
-          "name": "Enhance the Body",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M1NCSX0D6JXE635XAP",
-          "name": "Draw Out Power",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2M2778SK2MG5J1RW8PV",
     "keyWords": "evolves the body,217,armor,exploration,synthesis",
     "name": "Evolves the Body",
@@ -2861,35 +2550,6 @@
     "index": 217,
     "itemPresent": null,
     "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M2WDT2DH40TSCEH7ZF",
-    "keyWords": "atk spd enhance,237,attack enhance,speed enhance,accessory,weapon,exploration,synthesis",
-    "name": "ATK SPD Enhance",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases attack & speed by 5.",
-    "index": 237,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M1D2YBV8P6RZZYHTVA",
-          "name": "Attack Enhance",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M283E91QY2GN90Z119",
-          "name": "Speed Enhance",
-          "table": "trait"
-        }
-      ]
-    ]
   },
   {
     "id": "01HVZGS2M22V93Z4Y1Q6C42GRN",
@@ -2914,36 +2574,6 @@
         {
           "id": "01HVZGS2M1MX3ENJ9RPXPXYSPW",
           "name": "Speed Super Enhance",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "01HVZGS2M2G3DVRF8874552AT6",
-    "keyWords": "atk def boost,240,attack boost,defense boost,accessory,armor,weapon,exploration,synthesis",
-    "name": "ATK DEF Boost",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases attack & defense by 7.",
-    "index": 240,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M1ET2YHR3NGC93AVDS",
-          "name": "Attack Boost",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M2AXSJ27NG77JVTRGD",
-          "name": "Defense Boost",
           "table": "trait"
         }
       ]
@@ -2980,6 +2610,423 @@
     ]
   },
   {
+    "id": "01HVZGS2M3SSGASPW19W6FW5QN",
+    "keyWords": "skill power +7%,305,weapon,exploration,synthesis",
+    "name": "Skill Power +7%",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Bestows increased skill power effect. Increases skill power and MP consumption by 7%.",
+    "index": 305,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M3XZNT9QRX4EN1AFKA",
+    "keyWords": "inflict slow,367,atk item,de buff item,weapon,exploration,synthesis",
+    "name": "Inflict Slow",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Has a chance to inflict Slow when dealing damage.",
+    "index": 367,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M3T3QBCE213N92YP19",
+    "keyWords": "damage absorb++,403,weapon,exploration,synthesis",
+    "name": "Damage Absorb++",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Absorb 7% of damage dealt through attacks to restore your own HP.",
+    "index": 403,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M1MX3ENJ9RPXPXYSPW",
+    "keyWords": "speed super enhance,232,accessory,exploration,synthesis",
+    "name": "Speed Super Enhance",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Accessories with this will increase speed. Increases speed by 15.",
+    "index": 232,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M10GDGWHQ4KV7M6ZYK",
+    "keyWords": "hp boost,191,accessory,armor,exploration,synthesis",
+    "name": "HP Boost",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Bestows a maximum HP increase. Maximum HP increases by 15.",
+    "index": 191,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M1QQFWX1EEPHTJ68H1",
+    "keyWords": "hp super enhance,192,accessory,armor,exploration,synthesis",
+    "name": "HP Super Enhance",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Bestows a maximum HP increase. Maximum HP increases by 25.",
+    "index": 192,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M2AQF66GXPSJP17NEH",
+    "keyWords": "parameters +5%,211,armor,exploration,synthesis",
+    "name": "Parameters +5%",
+    "moduleId": "trait",
+    "categories": [
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Bestows a stat boost. Increases base stats by 5%.",
+    "index": 211,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M28SP349SC03HP9W50",
+    "keyWords": "diamond defense,228,defense boost,defense super enhance,armor,exploration,synthesis",
+    "name": "Diamond Defense",
+    "moduleId": "trait",
+    "categories": [
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases defense by 25.",
+    "index": 228,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M2AXSJ27NG77JVTRGD",
+          "name": "Defense Boost",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2KZYHDJDKA3470F7NPJ",
+          "name": "Defense Super Enhance",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M2AXSJ27NG77JVTRGD",
+    "keyWords": "defense boost,225,armor,exploration,synthesis",
+    "name": "Defense Boost",
+    "moduleId": "trait",
+    "categories": [
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Enhances armor defense. Increases defense by 10.",
+    "index": 225,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M2KYTZVTNFJS8PHPNQ",
+    "keyWords": "fast use,541,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Fast Use",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Reduces WT after using item by 10%. Power is decreased slightly.",
+    "index": 541,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M3S2YPQWT3F89Q71R9",
+    "keyWords": "skill power +5%,304,weapon,exploration,synthesis",
+    "name": "Skill Power +5%",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Bestows increased skill power effect. Increases skill power and MP consumption by 5%.",
+    "index": 304,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M300HY2PXYFS3P22QM",
+    "keyWords": "soul dwelling,349,buff item,heal item,exploration,synthesis",
+    "name": "Soul Dwelling",
+    "moduleId": "trait",
+    "categories": [
+      "BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Massively increases the target's level.",
+    "index": 349,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M3PCVYVWC9XX499W2Y",
+    "keyWords": "powerless curse,374,atk item,de buff item,exploration,synthesis",
+    "name": "Powerless Curse",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Massively reduces the target's attack power.",
+    "index": 374,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M3AFW8FWMPZ2AZJBKF",
+    "keyWords": "halve mp consume,303,cut mp consume,compact mp consume,accessory,weapon,exploration,synthesis",
+    "name": "Halve MP Consume",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Reduces MP consumption of skills by 50%.",
+    "index": 303,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M4AFQCPH8G9H2BAYQP",
+          "name": "Cut MP Consume",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M0M5Y2FR89SJ033HBX",
+          "name": "Compact MP Consume",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M356HYTZV437EQXP0J",
+    "keyWords": "skill super enhance,309,skill enhance,skill boost,weapon,exploration,synthesis",
+    "name": "Skill Super Enhance",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases skill power and MP consumption by 30%.",
+    "index": 309,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M0MD3N66G6CFAVG37J",
+          "name": "Skill Enhance",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M5ZJ8NV4H2VGMFSCDP",
+          "name": "Skill Boost",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M4PM3ZMVK1SDNYK18H",
+    "keyWords": "hp absorb,404,damage absorb,damage absorb+,weapon,exploration,synthesis",
+    "name": "HP Absorb",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Absorb 7% of damage dealt through attacks to restore your own HP.",
+    "index": 404,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M6SRCKZ9T8QKX5RVSA",
+          "name": "Damage Absorb",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M42S8810ZKPKP8SJ6D",
+          "name": "Damage Absorb+",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M2MXN17QYT2EERMAS1",
+    "keyWords": "enhance the body,214,parameters +5%,parameters +6%,armor,exploration,synthesis",
+    "name": "Enhance the Body",
+    "moduleId": "trait",
+    "categories": [
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases base stats by 10%.",
+    "index": 214,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M2AQF66GXPSJP17NEH",
+          "name": "Parameters +5%",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M2GKHRFABFKYGCB2AV",
+          "name": "Parameters +6%",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M2H1P1KPH2P74VVW69",
+    "keyWords": "develops the body,216,enhance the body,draw out power,armor,exploration,synthesis",
+    "name": "Develops the Body",
+    "moduleId": "trait",
+    "categories": [
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases base stats by 15%.",
+    "index": 216,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M2MXN17QYT2EERMAS1",
+          "name": "Enhance the Body",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M1NCSX0D6JXE635XAP",
+          "name": "Draw Out Power",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M2WDT2DH40TSCEH7ZF",
+    "keyWords": "atk spd enhance,237,attack enhance,speed enhance,accessory,weapon,exploration,synthesis",
+    "name": "ATK SPD Enhance",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases attack & speed by 5.",
+    "index": 237,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M1D2YBV8P6RZZYHTVA",
+          "name": "Attack Enhance",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M283E91QY2GN90Z119",
+          "name": "Speed Enhance",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M2G3DVRF8874552AT6",
+    "keyWords": "atk def boost,240,attack boost,defense boost,accessory,armor,weapon,exploration,synthesis",
+    "name": "ATK DEF Boost",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases attack & defense by 7.",
+    "index": 240,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M1ET2YHR3NGC93AVDS",
+          "name": "Attack Boost",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M2AXSJ27NG77JVTRGD",
+          "name": "Defense Boost",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
     "id": "01HVZGS2M26SC0STT2594MRZ33",
     "keyWords": "consume mp -20%,300,accessory,weapon,exploration,synthesis",
     "name": "Consume MP -20%",
@@ -2992,21 +3039,6 @@
     ],
     "description": "Bestows reduced MP consumption effect. Reduces MP consumption of skills by 20%.",
     "index": 300,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M3SSGASPW19W6FW5QN",
-    "keyWords": "skill power +7%,305,weapon,exploration,synthesis",
-    "name": "Skill Power +7%",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Bestows increased skill power effect. Increases skill power and MP consumption by 7%.",
-    "index": 305,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -3040,23 +3072,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M3XZNT9QRX4EN1AFKA",
-    "keyWords": "inflict slow,367,atk item,de buff item,weapon,exploration,synthesis",
-    "name": "Inflict Slow",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Has a chance to inflict Slow when dealing damage.",
-    "index": 367,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M3B2ZXXWKQFQM9ZPC7",
     "keyWords": "consume soul,373,atk item,de buff item,exploration,synthesis",
     "name": "Consume Soul",
@@ -3069,21 +3084,6 @@
     ],
     "description": "Massively reduces the target's level, reducing all stats and damage dealt.",
     "index": 373,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M3T3QBCE213N92YP19",
-    "keyWords": "damage absorb++,403,weapon,exploration,synthesis",
-    "name": "Damage Absorb++",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Absorb 7% of damage dealt through attacks to restore your own HP.",
-    "index": 403,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -3102,24 +3102,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M3EEP1X1R8VVTT0TZT",
-    "keyWords": "area bonus+,481,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Area Bonus+",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Power increases by number of targets in effect area x 10%.",
-    "index": 481,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M35M44NANDF1C1Q6E9",
     "keyWords": "single bonus,487,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Single Bonus",
@@ -3134,6 +3116,24 @@
     ],
     "description": "Power increases by 30 / number of targets in effect area %.",
     "index": 487,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M3EEP1X1R8VVTT0TZT",
+    "keyWords": "area bonus+,481,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Area Bonus+",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Power increases by number of targets in effect area x 10%.",
+    "index": 481,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -3161,37 +3161,6 @@
         {
           "id": "01HVZGS2M283E91QY2GN90Z119",
           "name": "Speed Enhance",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "01HVZGS2M490EYAHZARDX32CRG",
-    "keyWords": "force final,513,count compress,count compress+,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Force Final",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Completely consumes item in 1 use during battle, but increases power by use count x 7%.",
-    "index": 513,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M7Y7PHYSE2S38BM0NG",
-          "name": "Count Compress",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M5XHYEMNXM7GH99YJA",
-          "name": "Count Compress+",
           "table": "trait"
         }
       ]
@@ -3227,22 +3196,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M48JDETA1WXQK3Q8YY",
-    "keyWords": "blessing of protection,351,buff item,heal item,exploration,synthesis",
-    "name": "Blessing of Protection",
-    "moduleId": "trait",
-    "categories": [
-      "BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Massively increases the target's defense.",
-    "index": 351,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M48KQ9SRBWC5R9JDQ9",
     "keyWords": "inflict sleep,365,atk item,de buff item,weapon,exploration,synthesis",
     "name": "Inflict Sleep",
@@ -3260,22 +3213,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M4K3J33BGBDR0MA0TT",
-    "keyWords": "defenseless curse,375,atk item,de buff item,exploration,synthesis",
-    "name": "Defenseless Curse",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Massively reduces the target's defense.",
-    "index": 375,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M4NN8VSM8FTSZ7DHYZ",
     "keyWords": "spirit slayer,423,atk item,weapon,exploration,synthesis",
     "name": "Spirit Slayer",
@@ -3288,6 +3225,394 @@
     ],
     "description": "Increases damage dealt to Plant and Spirit type enemies.",
     "index": 423,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M4AXGDFXHH4AJTXSYK",
+    "keyWords": "area bonus,480,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Area Bonus",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Power increases by number of targets in effect area x 5%.",
+    "index": 480,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M4KSNF0C28E3NN3487",
+    "keyWords": "size -,573,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Size -",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Item size decreases by 1 level, equipment cost decreases by 10.",
+    "index": 573,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M5GSB619KFY1S9FVVG",
+    "keyWords": "tenacious body,247,armor,exploration,synthesis",
+    "name": "Tenacious Body",
+    "moduleId": "trait",
+    "categories": [
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases defense by 30, and increases all base stats by 15%.",
+    "index": 247,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M5PJ60VVX406NBCZJN",
+    "keyWords": "inflict poison,366,atk item,de buff item,weapon,exploration,synthesis",
+    "name": "Inflict Poison",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Has a chance to inflict Poison when dealing damage.",
+    "index": 366,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M53PWBJVJFAD3PD99C",
+    "keyWords": "enhance finisher++,448,atk item,de buff item,exploration,synthesis",
+    "name": "Enhance Finisher++",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases damage dealt to Broken targets by 30%.",
+    "index": 448,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M5XHYEMNXM7GH99YJA",
+    "keyWords": "count compress+,512,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Count Compress+",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Completely consumes item in 1 use during battle, but increases power by use count x 5%.",
+    "index": 512,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M65DP8DV5AH3W1PA9K",
+    "keyWords": "absorb soul,406,hp absorb,steal life,weapon,exploration,synthesis",
+    "name": "Absorb Soul",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Absorb 15% of damage dealt through attacks to restore your own HP.",
+    "index": 406,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M4PM3ZMVK1SDNYK18H",
+          "name": "HP Absorb",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2MB6PWFMA9ERSF9EQXW",
+          "name": "Steal Life",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M62KWD40BNM97MDFR1",
+    "keyWords": "inflict weak,370,atk item,de buff item,weapon,exploration,synthesis",
+    "name": "Inflict Weak",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Has a chance to inflict Weak when dealing damage.",
+    "index": 370,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M68KYS4G0DTMBC9EF8",
+    "keyWords": "demon slayer,425,atk item,weapon,exploration,synthesis",
+    "name": "Demon Slayer",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases damage dealt to Demon type enemies.",
+    "index": 425,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M6YW9JXEST5NB7NFH5",
+    "keyWords": "last strike,510,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Last Strike",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Power increases by 45% when use count is 1.",
+    "index": 510,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M4Y34P4714AZMSQ64D",
+    "keyWords": "inflict no heal,371,atk item,de buff item,weapon,exploration,synthesis",
+    "name": "Inflict No Heal",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Has a chance to inflict No Heal when dealing damage.",
+    "index": 371,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M4NFEPDS7N6RA0RCPT",
+    "keyWords": "puni slayer,428,atk item,weapon,exploration,synthesis",
+    "name": "Puni Slayer",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases damage dealt to Puni type enemies.",
+    "index": 428,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M49QEWZ5MEXMZWGK7Q",
+    "keyWords": "fewer bonus+,485,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Fewer Bonus+",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Power increases by 15 / number of targets in effect area %.",
+    "index": 485,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M476BN9Q0VY603NFMT",
+    "keyWords": "size enhance,575,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Size Enhance",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases item effect by a decent amount as size increases.",
+    "index": 575,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M5ZJ8NV4H2VGMFSCDP",
+    "keyWords": "skill boost,308,skill power +7%,skill power +10%,weapon,exploration,synthesis",
+    "name": "Skill Boost",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases skill power and MP consumption by 17%.",
+    "index": 308,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M3SSGASPW19W6FW5QN",
+          "name": "Skill Power +7%",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2KXGZC741EAEM8ZPYKM",
+          "name": "Skill Power +10%",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M5VWSHKJPQY6TEFYZB",
+    "keyWords": "merciless blow,449,enhance finisher,enhance finisher+,atk item,de buff item,exploration,synthesis",
+    "name": "Merciless Blow",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases damage dealt to Broken targets by 30%.",
+    "index": 449,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M6Q2H87SPSQ787HQNZ",
+          "name": "Enhance Finisher",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2MA4JT2FVW2BDH1CP56",
+          "name": "Enhance Finisher+",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M5KXJ55DM88VYMJPJR",
+    "keyWords": "trait super enhance,467,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Trait Super Enhance",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Enhances item effect according to strength of traits present. Stronger traits equal ridiculously greater enhancement.",
+    "index": 467,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M490EYAHZARDX32CRG",
+    "keyWords": "force final,513,count compress,count compress+,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Force Final",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Completely consumes item in 1 use during battle, but increases power by use count x 7%.",
+    "index": 513,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M7Y7PHYSE2S38BM0NG",
+          "name": "Count Compress",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M5XHYEMNXM7GH99YJA",
+          "name": "Count Compress+",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M48JDETA1WXQK3Q8YY",
+    "keyWords": "blessing of protection,351,buff item,heal item,exploration,synthesis",
+    "name": "Blessing of Protection",
+    "moduleId": "trait",
+    "categories": [
+      "BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Massively increases the target's defense.",
+    "index": 351,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M4K3J33BGBDR0MA0TT",
+    "keyWords": "defenseless curse,375,atk item,de buff item,exploration,synthesis",
+    "name": "Defenseless Curse",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Massively reduces the target's defense.",
+    "index": 375,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -3321,24 +3646,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M4AXGDFXHH4AJTXSYK",
-    "keyWords": "area bonus,480,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Area Bonus",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Power increases by number of targets in effect area x 5%.",
-    "index": 480,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M4H8ZHVXFEANV62VDF",
     "keyWords": "one time end,514,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "One Time End",
@@ -3357,24 +3664,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M4KSNF0C28E3NN3487",
-    "keyWords": "size -,573,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Size -",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Item size decreases by 1 level, equipment cost decreases by 10.",
-    "index": 573,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M5DVRDHVTQMMPSQMK2",
     "keyWords": "persistent faith,598,accessory,exploration,synthesis",
     "name": "Persistent Faith",
@@ -3386,21 +3675,6 @@
     ],
     "description": "Persistent faith enhances the material it resides in. Provides HP regeneration and chance to avoid KO.",
     "index": 598,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M5GSB619KFY1S9FVVG",
-    "keyWords": "tenacious body,247,armor,exploration,synthesis",
-    "name": "Tenacious Body",
-    "moduleId": "trait",
-    "categories": [
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases defense by 30, and increases all base stats by 15%.",
-    "index": 247,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -3434,23 +3708,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M5PJ60VVX406NBCZJN",
-    "keyWords": "inflict poison,366,atk item,de buff item,weapon,exploration,synthesis",
-    "name": "Inflict Poison",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Has a chance to inflict Poison when dealing damage.",
-    "index": 366,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M5K4803EPTQDRGM0Y3",
     "keyWords": "beast slayer,424,atk item,weapon,exploration,synthesis",
     "name": "Beast Slayer",
@@ -3463,22 +3720,6 @@
     ],
     "description": "Increases damage dealt to Animal and Beast type enemies.",
     "index": 424,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M53PWBJVJFAD3PD99C",
-    "keyWords": "enhance finisher++,448,atk item,de buff item,exploration,synthesis",
-    "name": "Enhance Finisher++",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases damage dealt to Broken targets by 30%.",
-    "index": 448,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -3501,24 +3742,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M5XHYEMNXM7GH99YJA",
-    "keyWords": "count compress+,512,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Count Compress+",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Completely consumes item in 1 use during battle, but increases power by use count x 5%.",
-    "index": 512,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M5VKDQ5QH5M6N8ARHA",
     "keyWords": "wait time enhance+,549,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Wait Time Enhance+",
@@ -3537,52 +3760,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M82XK1X5575MA7H4ZV",
-    "keyWords": "power throw,545,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Power Throw",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Wait time after using item increases a little, but power increases a little too.",
-    "index": 545,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M65DP8DV5AH3W1PA9K",
-    "keyWords": "absorb soul,406,hp absorb,steal life,weapon,exploration,synthesis",
-    "name": "Absorb Soul",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Absorb 15% of damage dealt through attacks to restore your own HP.",
-    "index": 406,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M4PM3ZMVK1SDNYK18H",
-          "name": "HP Absorb",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2MB6PWFMA9ERSF9EQXW",
-          "name": "Steal Life",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2M609YHXNGY0TJZHY2Q",
     "keyWords": "hammer of justice,606,weapon,exploration,synthesis",
     "name": "Hammer of Justice",
@@ -3598,23 +3775,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M62KWD40BNM97MDFR1",
-    "keyWords": "inflict weak,370,atk item,de buff item,weapon,exploration,synthesis",
-    "name": "Inflict Weak",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Has a chance to inflict Weak when dealing damage.",
-    "index": 370,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M6SRCKZ9T8QKX5RVSA",
     "keyWords": "damage absorb,401,weapon,exploration,synthesis",
     "name": "Damage Absorb",
@@ -3626,22 +3786,6 @@
     ],
     "description": "Absorb 3% of damage dealt through attacks to restore your own HP.",
     "index": 401,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M68KYS4G0DTMBC9EF8",
-    "keyWords": "demon slayer,425,atk item,weapon,exploration,synthesis",
-    "name": "Demon Slayer",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases damage dealt to Demon type enemies.",
-    "index": 425,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -3677,24 +3821,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M6YW9JXEST5NB7NFH5",
-    "keyWords": "last strike,510,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Last Strike",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Power increases by 45% when use count is 1.",
-    "index": 510,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M67PV61CS2A6ATXKZ1",
     "keyWords": "fast use+,542,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Fast Use+",
@@ -3713,23 +3839,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M4Y34P4714AZMSQ64D",
-    "keyWords": "inflict no heal,371,atk item,de buff item,weapon,exploration,synthesis",
-    "name": "Inflict No Heal",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Has a chance to inflict No Heal when dealing damage.",
-    "index": 371,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M42S8810ZKPKP8SJ6D",
     "keyWords": "damage absorb+,402,weapon,exploration,synthesis",
     "name": "Damage Absorb+",
@@ -3741,22 +3850,6 @@
     ],
     "description": "Absorb 5% of damage dealt through attacks to restore your own HP.",
     "index": 402,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M4NFEPDS7N6RA0RCPT",
-    "keyWords": "puni slayer,428,atk item,weapon,exploration,synthesis",
-    "name": "Puni Slayer",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases damage dealt to Puni type enemies.",
-    "index": 428,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -3779,24 +3872,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M49QEWZ5MEXMZWGK7Q",
-    "keyWords": "fewer bonus+,485,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Fewer Bonus+",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Power increases by 15 / number of targets in effect area %.",
-    "index": 485,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M4YBPRJSXVXBAQETVA",
     "keyWords": "wait time enhance,548,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Wait Time Enhance",
@@ -3811,24 +3886,6 @@
     ],
     "description": "Increases item power by a small amount proportional to wait time after using item.",
     "index": 548,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M476BN9Q0VY603NFMT",
-    "keyWords": "size enhance,575,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Size Enhance",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases item effect by a decent amount as size increases.",
-    "index": 575,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -3848,34 +3905,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M5ZJ8NV4H2VGMFSCDP",
-    "keyWords": "skill boost,308,skill power +7%,skill power +10%,weapon,exploration,synthesis",
-    "name": "Skill Boost",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases skill power and MP consumption by 17%.",
-    "index": 308,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M3SSGASPW19W6FW5QN",
-          "name": "Skill Power +7%",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2KXGZC741EAEM8ZPYKM",
-          "name": "Skill Power +10%",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2M5DZWW4SP8752Y1S8Z",
     "keyWords": "super skill,314,weapon,exploration,synthesis",
     "name": "Super Skill",
@@ -3889,35 +3918,6 @@
     "index": 314,
     "itemPresent": null,
     "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M5VWSHKJPQY6TEFYZB",
-    "keyWords": "merciless blow,449,enhance finisher,enhance finisher+,atk item,de buff item,exploration,synthesis",
-    "name": "Merciless Blow",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases damage dealt to Broken targets by 30%.",
-    "index": 449,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M6Q2H87SPSQ787HQNZ",
-          "name": "Enhance Finisher",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2MA4JT2FVW2BDH1CP56",
-          "name": "Enhance Finisher+",
-          "table": "trait"
-        }
-      ]
-    ]
   },
   {
     "id": "01HVZGS2M5XMF3RPQKM7PWEKVE",
@@ -3940,24 +3940,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M5KXJ55DM88VYMJPJR",
-    "keyWords": "trait super enhance,467,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Trait Super Enhance",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Enhances item effect according to strength of traits present. Stronger traits equal ridiculously greater enhancement.",
-    "index": 467,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M5D1PNA60DGH706XCM",
     "keyWords": "enhance last,507,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Enhance Last",
@@ -3972,6 +3954,24 @@
     ],
     "description": "Power increases by 10% when use count is 1.",
     "index": 507,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M6F6MTY9GCEEK3YT0Z",
+    "keyWords": "kind of light,578,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Kind of Light",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Reduces equipment cost of usable item by 5.",
+    "index": 578,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -4007,24 +4007,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M6F6MTY9GCEEK3YT0Z",
-    "keyWords": "kind of light,578,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Kind of Light",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Reduces equipment cost of usable item by 5.",
-    "index": 578,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M6TMW3CSW3HNM90ACP",
     "keyWords": "cunning wit,594,accessory,exploration,synthesis",
     "name": "Cunning Wit",
@@ -4036,22 +4018,6 @@
     ],
     "description": "Cunning wit enhances the material it resides in. Increases critical bonus and accuracy.",
     "index": 594,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M6DZ9ATH6DNXFTGE4N",
-    "keyWords": "blessing of strength,350,buff item,heal item,exploration,synthesis",
-    "name": "Blessing of Strength",
-    "moduleId": "trait",
-    "categories": [
-      "BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Massively increases the target's attack power.",
-    "index": 350,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -4072,34 +4038,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M6QTQ1ZBWVSR1J42PZ",
-    "keyWords": "skill savings,312,halve mp consume,skill super enhance,weapon,exploration,synthesis",
-    "name": "Skill Savings",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases skill power by 15%, and reduces MP consumption by 15%.",
-    "index": 312,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M3AFW8FWMPZ2AZJBKF",
-          "name": "Halve MP Consume",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M356HYTZV437EQXP0J",
-          "name": "Skill Super Enhance",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2M6Q2H87SPSQ787HQNZ",
     "keyWords": "enhance finisher,446,atk item,de buff item,exploration,synthesis",
     "name": "Enhance Finisher",
@@ -4112,24 +4050,6 @@
     ],
     "description": "Increases damage dealt to Broken targets by 10%.",
     "index": 446,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M69KVR5E8PKJ314KSC",
-    "keyWords": "trait enhance,464,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Trait Enhance",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Enhances item effect according to strength of traits present.",
-    "index": 464,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -4152,24 +4072,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M6QSGJEGVSVVQN9MGJ",
-    "keyWords": "mach throw,544,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Mach Throw",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Reduces WT after using item by 50%.",
-    "index": 544,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M62VB6PHD7T0E30XR0",
     "keyWords": "power throw+,546,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Power Throw+",
@@ -4188,21 +4090,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M6697T9CESTA4J6ZYH",
-    "keyWords": "star of expectation,610,armor,exploration,synthesis",
-    "name": "Star of Expectation",
-    "moduleId": "trait",
-    "categories": [
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Star of expectation enhances the material it resides in. Provides enhancement proportional to level.",
-    "index": 610,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M7H4K0WC0R2MAE3ZAF",
     "keyWords": "deadly attack,664,weapon,exploration,synthesis",
     "name": "Deadly Attack",
@@ -4215,26 +4102,6 @@
     "description": "Attacks cause between 1 - 50% additional damage.",
     "index": 664,
     "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M7DN3TTWEZ9HEDY874",
-    "keyWords": "slime compound,683,crimson herb,buff item,heal item,exploration,synthesis",
-    "name": "Slime Compound",
-    "moduleId": "trait",
-    "categories": [
-      "BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Restores some of the target's HP, and also recovers from Poison.",
-    "index": 683,
-    "itemPresent": {
-      "id": "01HVZGS2K6S98Y00KXRBWNM7Y8",
-      "name": "Crimson Herb",
-      "table": "item"
-    },
     "mergeFrom": []
   },
   {
@@ -4258,24 +4125,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M72X95KX5D2X4X8BQ1",
-    "keyWords": "enhance last+,508,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Enhance Last+",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Power increases by 20% when use count is 1.",
-    "index": 508,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M7HTC25VBMTM5YS157",
     "keyWords": "enhance with count,518,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Enhance with Count",
@@ -4290,24 +4139,6 @@
     ],
     "description": "Increases item power by maximum use count x 7%.",
     "index": 518,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M71PMMQ4KJB9F8DM6E",
-    "keyWords": "size super enhance,576,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Size Super Enhance",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases item effect as size increases.",
-    "index": 576,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -4327,21 +4158,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M78P0ZMG69W6V5KV5P",
-    "keyWords": "unceasing desire,608,weapon,exploration,synthesis",
-    "name": "Unceasing Desire",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Unceasing desire enhances the material it resides in. Absorbs a portion of damage dealt.",
-    "index": 608,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M77F7K2QKG7MV4WSW6",
     "keyWords": "skillful attack,662,weapon,exploration,synthesis",
     "name": "Skillful Attack",
@@ -4354,26 +4170,6 @@
     "description": "Attacks cause 20% additional damage, and increases skill power by 25%.",
     "index": 662,
     "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M73QV9MSKM2EMNCJE8",
-    "keyWords": "absorbs light,690,night crystal,accessory,weapon,exploration,synthesis",
-    "name": "Absorbs Light",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Reduces skill power by 10%, but also reduces MP consumption by 30%.",
-    "index": 690,
-    "itemPresent": {
-      "id": "01HVZGS2K8C4FCC9FB94WE54PV",
-      "name": "Night Crystal",
-      "table": "item"
-    },
     "mergeFrom": []
   },
   {
@@ -4415,21 +4211,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M8N5WPC23JNPBXB2DK",
-    "keyWords": "splendid glory,595,accessory,exploration,synthesis",
-    "name": "Splendid Glory",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Splendid glory enhances the material it resides in. Increases WT delay resistance and Break resistance.",
-    "index": 595,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M8NK358SXA92S1P17K",
     "keyWords": "fog of illusion,604,accessory,exploration,synthesis",
     "name": "Fog of Illusion",
@@ -4441,21 +4222,6 @@
     ],
     "description": "Fog of illusion enhances the material it resides in. Swaps HP and MP, adds evasion chance.",
     "index": 604,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M84JQ3CF47WDWJ48ZY",
-    "keyWords": "indomitable soul,614,armor,exploration,synthesis",
-    "name": "Indomitable Soul",
-    "moduleId": "trait",
-    "categories": [
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Indomitable soul enhances the material it resides in. Provides Break resistance and greatly increases speed of recovering from Break.",
-    "index": 614,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -4475,26 +4241,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M8C4Q4QWSS1EF1B681",
-    "keyWords": "electrified,685,raiden ore,atk item,de buff item,exploration,synthesis",
-    "name": "Electrified",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Pushes back the target's turn a little. This effect diminishes with each use until the target takes another turn.",
-    "index": 685,
-    "itemPresent": {
-      "id": "01HVZGS2K6QHA3YA17YTVTC9MN",
-      "name": "Raiden Ore",
-      "table": "item"
-    },
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M8NNWBQF37T0DTDQTD",
     "keyWords": "super fine,699,atk item,de buff item,exploration,synthesis",
     "name": "Super Fine",
@@ -4511,37 +4257,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M874QSZRVB381EYR6C",
-    "keyWords": "crush dimension,577,size enhance,size super enhance,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Crush Dimension",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases item effect by a large amount as size increases.",
-    "index": 577,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M476BN9Q0VY603NFMT",
-          "name": "Size Enhance",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M71PMMQ4KJB9F8DM6E",
-          "name": "Size Super Enhance",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2M8YT852RYAT5861QMS",
     "keyWords": "benevolent light,596,accessory,exploration,synthesis",
     "name": "Benevolent Light",
@@ -4553,21 +4268,6 @@
     ],
     "description": "Benevolent light enhances the material it resides in. Provides damage reversal and immunity to all ailments.",
     "index": 596,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M8DNTEX1RZB4Q4BDBA",
-    "keyWords": "ray of hope,611,armor,exploration,synthesis",
-    "name": "Ray of Hope",
-    "moduleId": "trait",
-    "categories": [
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Ray of hope enhances the material it resides in. Increases maximum HP, provides automatic KO revival.",
-    "index": 611,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -4603,20 +4303,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M6NC4R12WQX3VFRP0W",
-    "keyWords": "kind soul,613,exploration,synthesis",
-    "name": "Kind Soul",
-    "moduleId": "trait",
-    "categories": [
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Kind soul enhances the material it resides in. Provides a Burst Mode bonus and gauge fill rate increase.",
-    "index": 613,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M7JKB0DG79N7NM0044",
     "keyWords": "auto use,680,heal item,exploration,synthesis",
     "name": "Auto Use",
@@ -4628,6 +4314,391 @@
     ],
     "description": "Item automatically activates when the user's HP falls below 50% in battle.",
     "index": 680,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M7GWCQK2HNHK83FKGV",
+    "keyWords": "few + many bonus,488,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Few + Many Bonus",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Power increases by 20 / number of targets in effect area % + number of targets in effect area x 10%.",
+    "index": 488,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M7TCRXZY6K9YKDQ20Q",
+    "keyWords": "jumbo size,572,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Jumbo Size",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Item size increases by 2 levels, equipment cost increases by 10.",
+    "index": 572,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M7VKVCYHNX96P8DJ2S",
+    "keyWords": "burning passion,602,accessory,exploration,synthesis",
+    "name": "Burning Passion",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Burning passion enhances the material it resides in. Increases all stats by 15, bestows fire and ice resistance.",
+    "index": 602,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M716RJVJ473RJBZQDW",
+    "keyWords": "carries cold,687,hakurei stone,atk item,de buff item,exploration,synthesis",
+    "name": "Carries Cold",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Cold reduces the target's speed, and also has a low chance of inflicting Slow.",
+    "index": 687,
+    "itemPresent": {
+      "id": "01HVZGS2K7NDMT3FNKP01G78DZ",
+      "name": "Hakurei Stone",
+      "table": "item"
+    },
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M6DZ9ATH6DNXFTGE4N",
+    "keyWords": "blessing of strength,350,buff item,heal item,exploration,synthesis",
+    "name": "Blessing of Strength",
+    "moduleId": "trait",
+    "categories": [
+      "BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Massively increases the target's attack power.",
+    "index": 350,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M6QTQ1ZBWVSR1J42PZ",
+    "keyWords": "skill savings,312,halve mp consume,skill super enhance,weapon,exploration,synthesis",
+    "name": "Skill Savings",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases skill power by 15%, and reduces MP consumption by 15%.",
+    "index": 312,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M3AFW8FWMPZ2AZJBKF",
+          "name": "Halve MP Consume",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M356HYTZV437EQXP0J",
+          "name": "Skill Super Enhance",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M69KVR5E8PKJ314KSC",
+    "keyWords": "trait enhance,464,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Trait Enhance",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Enhances item effect according to strength of traits present.",
+    "index": 464,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M6QSGJEGVSVVQN9MGJ",
+    "keyWords": "mach throw,544,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Mach Throw",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Reduces WT after using item by 50%.",
+    "index": 544,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M6697T9CESTA4J6ZYH",
+    "keyWords": "star of expectation,610,armor,exploration,synthesis",
+    "name": "Star of Expectation",
+    "moduleId": "trait",
+    "categories": [
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Star of expectation enhances the material it resides in. Provides enhancement proportional to level.",
+    "index": 610,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M7DN3TTWEZ9HEDY874",
+    "keyWords": "slime compound,683,crimson herb,buff item,heal item,exploration,synthesis",
+    "name": "Slime Compound",
+    "moduleId": "trait",
+    "categories": [
+      "BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Restores some of the target's HP, and also recovers from Poison.",
+    "index": 683,
+    "itemPresent": {
+      "id": "01HVZGS2K6S98Y00KXRBWNM7Y8",
+      "name": "Crimson Herb",
+      "table": "item"
+    },
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M72X95KX5D2X4X8BQ1",
+    "keyWords": "enhance last+,508,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Enhance Last+",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Power increases by 20% when use count is 1.",
+    "index": 508,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M71PMMQ4KJB9F8DM6E",
+    "keyWords": "size super enhance,576,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Size Super Enhance",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases item effect as size increases.",
+    "index": 576,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M78P0ZMG69W6V5KV5P",
+    "keyWords": "unceasing desire,608,weapon,exploration,synthesis",
+    "name": "Unceasing Desire",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Unceasing desire enhances the material it resides in. Absorbs a portion of damage dealt.",
+    "index": 608,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M73QV9MSKM2EMNCJE8",
+    "keyWords": "absorbs light,690,night crystal,accessory,weapon,exploration,synthesis",
+    "name": "Absorbs Light",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Reduces skill power by 10%, but also reduces MP consumption by 30%.",
+    "index": 690,
+    "itemPresent": {
+      "id": "01HVZGS2K8C4FCC9FB94WE54PV",
+      "name": "Night Crystal",
+      "table": "item"
+    },
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M82XK1X5575MA7H4ZV",
+    "keyWords": "power throw,545,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Power Throw",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Wait time after using item increases a little, but power increases a little too.",
+    "index": 545,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M8N5WPC23JNPBXB2DK",
+    "keyWords": "splendid glory,595,accessory,exploration,synthesis",
+    "name": "Splendid Glory",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Splendid glory enhances the material it resides in. Increases WT delay resistance and Break resistance.",
+    "index": 595,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M84JQ3CF47WDWJ48ZY",
+    "keyWords": "indomitable soul,614,armor,exploration,synthesis",
+    "name": "Indomitable Soul",
+    "moduleId": "trait",
+    "categories": [
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Indomitable soul enhances the material it resides in. Provides Break resistance and greatly increases speed of recovering from Break.",
+    "index": 614,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M8C4Q4QWSS1EF1B681",
+    "keyWords": "electrified,685,raiden ore,atk item,de buff item,exploration,synthesis",
+    "name": "Electrified",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Pushes back the target's turn a little. This effect diminishes with each use until the target takes another turn.",
+    "index": 685,
+    "itemPresent": {
+      "id": "01HVZGS2K6QHA3YA17YTVTC9MN",
+      "name": "Raiden Ore",
+      "table": "item"
+    },
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M874QSZRVB381EYR6C",
+    "keyWords": "crush dimension,577,size enhance,size super enhance,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Crush Dimension",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases item effect by a large amount as size increases.",
+    "index": 577,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M476BN9Q0VY603NFMT",
+          "name": "Size Enhance",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M71PMMQ4KJB9F8DM6E",
+          "name": "Size Super Enhance",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M8DNTEX1RZB4Q4BDBA",
+    "keyWords": "ray of hope,611,armor,exploration,synthesis",
+    "name": "Ray of Hope",
+    "moduleId": "trait",
+    "categories": [
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Ray of hope enhances the material it resides in. Increases maximum HP, provides automatic KO revival.",
+    "index": 611,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M6NC4R12WQX3VFRP0W",
+    "keyWords": "kind soul,613,exploration,synthesis",
+    "name": "Kind Soul",
+    "moduleId": "trait",
+    "categories": [
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Kind soul enhances the material it resides in. Provides a Burst Mode bonus and gauge fill rate increase.",
+    "index": 613,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -4651,24 +4722,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M7GWCQK2HNHK83FKGV",
-    "keyWords": "few + many bonus,488,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Few + Many Bonus",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Power increases by 20 / number of targets in effect area % + number of targets in effect area x 10%.",
-    "index": 488,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M7Y7PHYSE2S38BM0NG",
     "keyWords": "count compress,511,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Count Compress",
@@ -4683,24 +4736,6 @@
     ],
     "description": "Completely consumes item in 1 use during battle, but increases power by use count x 3%.",
     "index": 511,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M7TCRXZY6K9YKDQ20Q",
-    "keyWords": "jumbo size,572,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Jumbo Size",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Item size increases by 2 levels, equipment cost increases by 10.",
-    "index": 572,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -4736,21 +4771,6 @@
     ]
   },
   {
-    "id": "01HVZGS2M7VKVCYHNX96P8DJ2S",
-    "keyWords": "burning passion,602,accessory,exploration,synthesis",
-    "name": "Burning Passion",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Burning passion enhances the material it resides in. Increases all stats by 15, bestows fire and ice resistance.",
-    "index": 602,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M79BMD9CWCPY8CDDJX",
     "keyWords": "awakening courage,612,armor,exploration,synthesis",
     "name": "Awakening Courage",
@@ -4763,26 +4783,6 @@
     "description": "Awakening courage enhances the material it resides in. Provides a bonus against powerful foes and bosses.",
     "index": 612,
     "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M716RJVJ473RJBZQDW",
-    "keyWords": "carries cold,687,hakurei stone,atk item,de buff item,exploration,synthesis",
-    "name": "Carries Cold",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Cold reduces the target's speed, and also has a low chance of inflicting Slow.",
-    "index": 687,
-    "itemPresent": {
-      "id": "01HVZGS2K7NDMT3FNKP01G78DZ",
-      "name": "Hakurei Stone",
-      "table": "item"
-    },
     "mergeFrom": []
   },
   {
@@ -4826,24 +4826,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M8P9FTPMTFJM9RCWFW",
-    "keyWords": "size+,571,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Size+",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Item size increases by 1 level, equipment cost increases by 5.",
-    "index": 571,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M80AST2J4DYC22CE38",
     "keyWords": "light,579,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Light",
@@ -4858,21 +4840,6 @@
     ],
     "description": "Reduces equipment cost of usable item by 8.",
     "index": 579,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M86R70A1TRTEDDZZ90",
-    "keyWords": "empty world,600,accessory,exploration,synthesis",
-    "name": "Empty World",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Empty world enhances the material it resides in. Provides damage conversion, reduces physical damage taken.",
-    "index": 600,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -4892,21 +4859,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M8FJCK9M5NZ301T5K0",
-    "keyWords": "persistent attack,663,weapon,exploration,synthesis",
-    "name": "Persistent Attack",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Attacks cause 15% additional damage, and increases skill power by 20%.",
-    "index": 663,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M890M6ZD092TRE4BRY",
     "keyWords": "no attribute,681,atk item,de buff item,exploration,synthesis",
     "name": "No Attribute",
@@ -4920,26 +4872,6 @@
     "description": "Increases item power by 25%, and makes its effect non-attribute. Non-attribute is not affected by any resistances or weaknesses.",
     "index": 681,
     "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M8ASGQ2E54P4ZBHPHQ",
-    "keyWords": "unidentified,696,rainbow puni fluid,atk item,de buff item,exploration,synthesis",
-    "name": "Unidentified",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases attack item effect by 5%, and also has a chance to cause Weak.",
-    "index": 696,
-    "itemPresent": {
-      "id": "01HVZGS2KPH4867XKYRXB43M3B",
-      "name": "Rainbow Puni Fluid",
-      "table": "item"
-    },
     "mergeFrom": []
   },
   {
@@ -4963,21 +4895,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M8RA0KAV9WEFGNNYA5",
-    "keyWords": "happy heart,593,accessory,exploration,synthesis",
-    "name": "Happy Heart",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Happy heart enhances the material it resides in. Increases MP and defense.",
-    "index": 593,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M8ZH66MBR6GFVNK1M9",
     "keyWords": "bonds of belief,605,accessory,exploration,synthesis",
     "name": "Bonds of Belief",
@@ -4989,21 +4906,6 @@
     ],
     "description": "Bonds of belief enhances the material it resides in. Increases assist effect, provides damage conversion.",
     "index": 605,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M9HYSQRGS02BP7AEA5",
-    "keyWords": "changing attack,659,weapon,exploration,synthesis",
-    "name": "Changing Attack",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Attacks cause 7% additional damage, and increases skill power by 15%.",
-    "index": 659,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -5029,26 +4931,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M9Y9N6T2228APAHP79",
-    "keyWords": "stinks,691,island fish fin,atk item,de buff item,exploration,synthesis",
-    "name": "Stinks",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Reduces the target's defense and speed.",
-    "index": 691,
-    "itemPresent": {
-      "id": "01HVZGS2KA7GFFSM6E9MVBH2K5",
-      "name": "Island Fish Fin",
-      "table": "item"
-    },
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M9F0X596R08AQV41DS",
     "keyWords": "wards evil,706,weapon,exploration,synthesis",
     "name": "Wards Evil",
@@ -5060,21 +4942,6 @@
     ],
     "description": "Increases damage dealt to Demon and Undead enemies.",
     "index": 706,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M90K729S1XSF4V6FHD",
-    "keyWords": "auto activate 30%,678,heal item,exploration,synthesis",
-    "name": "Auto Activate 30%",
-    "moduleId": "trait",
-    "categories": [
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Item automatically activates when the user's HP falls below 30% in battle. Consumes MP.",
-    "index": 678,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -5098,21 +4965,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M9W8BZ9QJ9411JCFK7",
-    "keyWords": "dragon soul,708,weapon,exploration,synthesis",
-    "name": "Dragon Soul",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases all stats by 15, and also increases skill power by 20%.",
-    "index": 708,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M9SKWYZW3ZQ8TJV6EB",
     "keyWords": "critical+,146,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Critical+",
@@ -5127,6 +4979,392 @@
     ],
     "description": "Gives item a 25% chance to critical hit.",
     "index": 146,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M9C2EYBN98SEA288Z3",
+    "keyWords": "mutated material,700,silver potato,accessory,armor,exploration,synthesis",
+    "name": "Mutated Material",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases defense by 10, and also causes a decent amount of HP recovery each turn.",
+    "index": 700,
+    "itemPresent": {
+      "id": "01HVZGS2K7G9AVV1FXZ7FEX962",
+      "name": "Silver Potato",
+      "table": "item"
+    },
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2MAEJZ9PRW4XCWQM74T",
+    "keyWords": "overflowing life,194,hp boost,hp super enhance,accessory,armor,exploration,synthesis",
+    "name": "Overflowing Life",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Maximum HP increases by 40.",
+    "index": 194,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M10GDGWHQ4KV7M6ZYK",
+          "name": "HP Boost",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M1QQFWX1EEPHTJ68H1",
+          "name": "HP Super Enhance",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2MA4JT2FVW2BDH1CP56",
+    "keyWords": "enhance finisher+,447,atk item,de buff item,exploration,synthesis",
+    "name": "Enhance Finisher+",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases damage dealt to Broken targets by 20%.",
+    "index": 447,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2MA3KED0QGJ3R8WS4CA",
+    "keyWords": "super quality,17,well made,pro perfection,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
+    "name": "Super Quality",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases item quality by 50% when this trait is transferred.",
+    "index": 17,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2KWQSXZRMKHXA6VKTEJ",
+          "name": "Well Made",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2MAVZ5NY6W3CMJZ2NGJ",
+          "name": "Pro Perfection",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2MAWVT2N357QTABWE4F",
+    "keyWords": "unabating stamina,206,lp boost,lp super enhance,accessory,armor,exploration,synthesis",
+    "name": "Unabating Stamina",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Maximum LP increases by 17.",
+    "index": 206,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2KWQ2Z9TPH2022R0KMR",
+          "name": "LP Boost",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2KX5BABKS41MZ40YBW9",
+          "name": "LP Super Enhance",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2MABCJ21KRY9ECYJXA1",
+    "keyWords": "count boost,517,count bonus,count bonus+,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Count Boost",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases item power by maximum use count x 5%.",
+    "index": 517,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2KZ8QAPN864VYDRE4GM",
+          "name": "Count Bonus",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M6J8N0958SZAPJC07R",
+          "name": "Count Bonus+",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2M9FNAP23BDPYNET84V",
+    "keyWords": "carries heat,686,kaen stone,atk item,de buff item,exploration,synthesis",
+    "name": "Carries Heat",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Heat causes continuous damage. The effect is small.",
+    "index": 686,
+    "itemPresent": {
+      "id": "01HVZGS2KNETTHTXPKG0SMC0V4",
+      "name": "Kaen Stone",
+      "table": "item"
+    },
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M91TX1FF5CYT7C0AG3",
+    "keyWords": "barrage attack,661,weapon,exploration,synthesis",
+    "name": "Barrage Attack",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Attacks cause 15% additional damage, and increases skill power by 15%.",
+    "index": 661,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M96WHBQ0TQM5E563JG",
+    "keyWords": "cutting thread,693,gold steel web,weapon,exploration,synthesis",
+    "name": "Cutting Thread",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases attack by 7, and attacks cause a small amount of additional damage.",
+    "index": 693,
+    "itemPresent": {
+      "id": "01HVZGS2KB2NG0AMPBV162B9TN",
+      "name": "Gold Steel Web",
+      "table": "item"
+    },
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M9E2W0YRF26CPPWHZW",
+    "keyWords": "golden radiance,698,golden puniball,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
+    "name": "Golden Radiance",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "ARMOR",
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Price when selling to shops increases quite a lot.",
+    "index": 698,
+    "itemPresent": {
+      "id": "01HVZGS2KC3GKEM3C7SGX06ZDM",
+      "name": "Golden Puniball",
+      "table": "item"
+    },
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M8P9FTPMTFJM9RCWFW",
+    "keyWords": "size+,571,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Size+",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Item size increases by 1 level, equipment cost increases by 5.",
+    "index": 571,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M86R70A1TRTEDDZZ90",
+    "keyWords": "empty world,600,accessory,exploration,synthesis",
+    "name": "Empty World",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Empty world enhances the material it resides in. Provides damage conversion, reduces physical damage taken.",
+    "index": 600,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M8FJCK9M5NZ301T5K0",
+    "keyWords": "persistent attack,663,weapon,exploration,synthesis",
+    "name": "Persistent Attack",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Attacks cause 15% additional damage, and increases skill power by 20%.",
+    "index": 663,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M8ASGQ2E54P4ZBHPHQ",
+    "keyWords": "unidentified,696,rainbow puni fluid,atk item,de buff item,exploration,synthesis",
+    "name": "Unidentified",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases attack item effect by 5%, and also has a chance to cause Weak.",
+    "index": 696,
+    "itemPresent": {
+      "id": "01HVZGS2KPH4867XKYRXB43M3B",
+      "name": "Rainbow Puni Fluid",
+      "table": "item"
+    },
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M8RA0KAV9WEFGNNYA5",
+    "keyWords": "happy heart,593,accessory,exploration,synthesis",
+    "name": "Happy Heart",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Happy heart enhances the material it resides in. Increases MP and defense.",
+    "index": 593,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M9HYSQRGS02BP7AEA5",
+    "keyWords": "changing attack,659,weapon,exploration,synthesis",
+    "name": "Changing Attack",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Attacks cause 7% additional damage, and increases skill power by 15%.",
+    "index": 659,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M9Y9N6T2228APAHP79",
+    "keyWords": "stinks,691,island fish fin,atk item,de buff item,exploration,synthesis",
+    "name": "Stinks",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "DE_BUFF_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Reduces the target's defense and speed.",
+    "index": 691,
+    "itemPresent": {
+      "id": "01HVZGS2KA7GFFSM6E9MVBH2K5",
+      "name": "Island Fish Fin",
+      "table": "item"
+    },
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M90K729S1XSF4V6FHD",
+    "keyWords": "auto activate 30%,678,heal item,exploration,synthesis",
+    "name": "Auto Activate 30%",
+    "moduleId": "trait",
+    "categories": [
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Item automatically activates when the user's HP falls below 30% in battle. Consumes MP.",
+    "index": 678,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2M9W8BZ9QJ9411JCFK7",
+    "keyWords": "dragon soul,708,weapon,exploration,synthesis",
+    "name": "Dragon Soul",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases all stats by 15, and also increases skill power by 20%.",
+    "index": 708,
     "itemPresent": null,
     "mergeFrom": []
   },
@@ -5146,26 +5384,6 @@
     "itemPresent": {
       "id": "01HVZGS2KC53VKV9P269Y58AQP",
       "name": "Bursting Berry",
-      "table": "item"
-    },
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M9C2EYBN98SEA288Z3",
-    "keyWords": "mutated material,700,silver potato,accessory,armor,exploration,synthesis",
-    "name": "Mutated Material",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases defense by 10, and also causes a decent amount of HP recovery each turn.",
-    "index": 700,
-    "itemPresent": {
-      "id": "01HVZGS2K7G9AVV1FXZ7FEX962",
-      "name": "Silver Potato",
       "table": "item"
     },
     "mergeFrom": []
@@ -5194,35 +5412,6 @@
         {
           "id": "01HVZGS2KWAP6S872D7YVW2XYG",
           "name": "Fixed Recovery+",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "01HVZGS2MAEJZ9PRW4XCWQM74T",
-    "keyWords": "overflowing life,194,hp boost,hp super enhance,accessory,armor,exploration,synthesis",
-    "name": "Overflowing Life",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Maximum HP increases by 40.",
-    "index": 194,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M10GDGWHQ4KV7M6ZYK",
-          "name": "HP Boost",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M1QQFWX1EEPHTJ68H1",
-          "name": "HP Super Enhance",
           "table": "trait"
         }
       ]
@@ -5263,22 +5452,6 @@
     ]
   },
   {
-    "id": "01HVZGS2MA4JT2FVW2BDH1CP56",
-    "keyWords": "enhance finisher+,447,atk item,de buff item,exploration,synthesis",
-    "name": "Enhance Finisher+",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases damage dealt to Broken targets by 20%.",
-    "index": 447,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2MAXGSHPD04V25TWGRD",
     "keyWords": "sunny scent,692,dawn fur,buff item,heal item,exploration,synthesis",
     "name": "Sunny Scent",
@@ -5297,40 +5470,6 @@
       "table": "item"
     },
     "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2MA3KED0QGJ3R8WS4CA",
-    "keyWords": "super quality,17,well made,pro perfection,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
-    "name": "Super Quality",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases item quality by 50% when this trait is transferred.",
-    "index": 17,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2KWQSXZRMKHXA6VKTEJ",
-          "name": "Well Made",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2MAVZ5NY6W3CMJZ2NGJ",
-          "name": "Pro Perfection",
-          "table": "trait"
-        }
-      ]
-    ]
   },
   {
     "id": "01HVZGS2MANE22XE2CW2HDHSSK",
@@ -5358,35 +5497,6 @@
         {
           "id": "01HVZGS2M25J030HRJJZWNW1ES",
           "name": "Solid Effect",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "01HVZGS2MAWVT2N357QTABWE4F",
-    "keyWords": "unabating stamina,206,lp boost,lp super enhance,accessory,armor,exploration,synthesis",
-    "name": "Unabating Stamina",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Maximum LP increases by 17.",
-    "index": 206,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2KWQ2Z9TPH2022R0KMR",
-          "name": "LP Boost",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2KX5BABKS41MZ40YBW9",
-          "name": "LP Super Enhance",
           "table": "trait"
         }
       ]
@@ -5421,37 +5531,6 @@
     ]
   },
   {
-    "id": "01HVZGS2MABCJ21KRY9ECYJXA1",
-    "keyWords": "count boost,517,count bonus,count bonus+,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Count Boost",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases item power by maximum use count x 5%.",
-    "index": 517,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2KZ8QAPN864VYDRE4GM",
-          "name": "Count Bonus",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M6J8N0958SZAPJC07R",
-          "name": "Count Bonus+",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2M9CPPXT4PFREY40TA5",
     "keyWords": "auto activate 20%,677,heal item,exploration,synthesis",
     "name": "Auto Activate 20%",
@@ -5464,26 +5543,6 @@
     "description": "Item automatically activates when the user's HP falls below 20% in battle. Consumes MP.",
     "index": 677,
     "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M9FNAP23BDPYNET84V",
-    "keyWords": "carries heat,686,kaen stone,atk item,de buff item,exploration,synthesis",
-    "name": "Carries Heat",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "DE_BUFF_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Heat causes continuous damage. The effect is small.",
-    "index": 686,
-    "itemPresent": {
-      "id": "01HVZGS2KNETTHTXPKG0SMC0V4",
-      "name": "Kaen Stone",
-      "table": "item"
-    },
     "mergeFrom": []
   },
   {
@@ -5507,21 +5566,6 @@
     "mergeFrom": []
   },
   {
-    "id": "01HVZGS2M91TX1FF5CYT7C0AG3",
-    "keyWords": "barrage attack,661,weapon,exploration,synthesis",
-    "name": "Barrage Attack",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Attacks cause 15% additional damage, and increases skill power by 15%.",
-    "index": 661,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2M93TG11RRFWH96HGJ0",
     "keyWords": "false flower,684,dunkelstern,buff item,heal item,exploration,synthesis",
     "name": "False Flower",
@@ -5537,25 +5581,6 @@
     "itemPresent": {
       "id": "01HVZGS2K5NKTE39PCS2NGWHM3",
       "name": "Dunkelstern",
-      "table": "item"
-    },
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M96WHBQ0TQM5E563JG",
-    "keyWords": "cutting thread,693,gold steel web,weapon,exploration,synthesis",
-    "name": "Cutting Thread",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases attack by 7, and attacks cause a small amount of additional damage.",
-    "index": 693,
-    "itemPresent": {
-      "id": "01HVZGS2KB2NG0AMPBV162B9TN",
-      "name": "Gold Steel Web",
       "table": "item"
     },
     "mergeFrom": []
@@ -5579,31 +5604,6 @@
     "description": "Price when selling to shops decreases a little, but also decreases duplication price.",
     "index": 0,
     "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
-    "id": "01HVZGS2M9E2W0YRF26CPPWHZW",
-    "keyWords": "golden radiance,698,golden puniball,accessory,armor,atk item,buff item,de buff item,heal item,weapon,exploration,synthesis",
-    "name": "Golden Radiance",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "ARMOR",
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Price when selling to shops increases quite a lot.",
-    "index": 698,
-    "itemPresent": {
-      "id": "01HVZGS2KC3GKEM3C7SGX06ZDM",
-      "name": "Golden Puniball",
-      "table": "item"
-    },
     "mergeFrom": []
   },
   {
@@ -5648,6 +5648,170 @@
     "mergeFrom": []
   },
   {
+    "id": "01HVZGS2MA11TA0NRVSDK12P36",
+    "keyWords": "always critical,149,critical+,critical++,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Always Critical",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Item will always critical hit.",
+    "index": 149,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M9SKWYZW3ZQ8TJV6EB",
+          "name": "Critical+",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M0E10NFTBFKRE1Y5SJ",
+          "name": "Critical++",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2MAMCVBYYD8051EM034",
+    "keyWords": "wild instinct,597,accessory,exploration,synthesis",
+    "name": "Wild Instinct",
+    "moduleId": "trait",
+    "categories": [
+      "ACCESSORY",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Wild instinct enhances the material it resides in. Increases speed, reduces wait time after using skills.",
+    "index": 597,
+    "itemPresent": null,
+    "mergeFrom": []
+  },
+  {
+    "id": "01HVZGS2MA67PBKBJC0S29KSV5",
+    "keyWords": "critical finish,148,critical,critical+,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Critical Finish",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Gives item a 50% chance to critical hit.",
+    "index": 148,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2KZ6EVNXDX9YFHZGJRJ",
+          "name": "Critical",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M9SKWYZW3ZQ8TJV6EB",
+          "name": "Critical+",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2MA4EGZ920FXEB06A3W",
+    "keyWords": "skill cost compress,311,compact mp consume,skill boost,weapon,exploration,synthesis",
+    "name": "Skill Cost Compress",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases skill power by 10%, and reduces MP consumption by 10%.",
+    "index": 311,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M0M5Y2FR89SJ033HBX",
+          "name": "Compact MP Consume",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M5ZJ8NV4H2VGMFSCDP",
+          "name": "Skill Boost",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2MB6PWFMA9ERSF9EQXW",
+    "keyWords": "steal life,405,damage absorb+,damage absorb++,weapon,exploration,synthesis",
+    "name": "Steal Life",
+    "moduleId": "trait",
+    "categories": [
+      "WEAPON",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Absorb 10% of damage dealt through attacks to restore your own HP.",
+    "index": 405,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M42S8810ZKPKP8SJ6D",
+          "name": "Damage Absorb+",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M3T3QBCE213N92YP19",
+          "name": "Damage Absorb++",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "01HVZGS2MBY2VSKG1XTK6SEV1M",
+    "keyWords": "charge item,550,wait time enhance,wait time enhance+,atk item,buff item,de buff item,heal item,exploration,synthesis",
+    "name": "Charge Item",
+    "moduleId": "trait",
+    "categories": [
+      "ATK_ITEM",
+      "BUFF_ITEM",
+      "DE_BUFF_ITEM",
+      "HEAL_ITEM",
+      "EXPLORATION",
+      "SYNTHESIS"
+    ],
+    "description": "Increases item power proportional to wait time after using item.",
+    "index": 550,
+    "itemPresent": null,
+    "mergeFrom": [
+      [
+        {
+          "id": "01HVZGS2M4YBPRJSXVXBAQETVA",
+          "name": "Wait Time Enhance",
+          "table": "trait"
+        },
+        {
+          "id": "01HVZGS2M5VKDQ5QH5M6N8ARHA",
+          "name": "Wait Time Enhance+",
+          "table": "trait"
+        }
+      ]
+    ]
+  },
+  {
     "id": "01HVZGS2MARCYQQHC7TZBNEEWW",
     "keyWords": "full of life,193,dunkelheit,hp enhance,hp boost,accessory,armor,buff item,heal item,exploration,synthesis",
     "name": "Full of Life",
@@ -5677,37 +5841,6 @@
         {
           "id": "01HVZGS2M10GDGWHQ4KV7M6ZYK",
           "name": "HP Boost",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "01HVZGS2MA11TA0NRVSDK12P36",
-    "keyWords": "always critical,149,critical+,critical++,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Always Critical",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Item will always critical hit.",
-    "index": 149,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M9SKWYZW3ZQ8TJV6EB",
-          "name": "Critical+",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M0E10NFTBFKRE1Y5SJ",
-          "name": "Critical++",
           "table": "trait"
         }
       ]
@@ -5748,21 +5881,6 @@
     ]
   },
   {
-    "id": "01HVZGS2MAMCVBYYD8051EM034",
-    "keyWords": "wild instinct,597,accessory,exploration,synthesis",
-    "name": "Wild Instinct",
-    "moduleId": "trait",
-    "categories": [
-      "ACCESSORY",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Wild instinct enhances the material it resides in. Increases speed, reduces wait time after using skills.",
-    "index": 597,
-    "itemPresent": null,
-    "mergeFrom": []
-  },
-  {
     "id": "01HVZGS2MACE51MMN8PCZ5ZJ7T",
     "keyWords": "relentless blow,450,enhance finisher+,enhance finisher++,atk item,de buff item,exploration,synthesis",
     "name": "Relentless Blow",
@@ -5786,37 +5904,6 @@
         {
           "id": "01HVZGS2M53PWBJVJFAD3PD99C",
           "name": "Enhance Finisher++",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "01HVZGS2MA67PBKBJC0S29KSV5",
-    "keyWords": "critical finish,148,critical,critical+,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Critical Finish",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Gives item a 50% chance to critical hit.",
-    "index": 148,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2KZ6EVNXDX9YFHZGJRJ",
-          "name": "Critical",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M9SKWYZW3ZQ8TJV6EB",
-          "name": "Critical+",
           "table": "trait"
         }
       ]
@@ -5852,34 +5939,6 @@
     ]
   },
   {
-    "id": "01HVZGS2MA4EGZ920FXEB06A3W",
-    "keyWords": "skill cost compress,311,compact mp consume,skill boost,weapon,exploration,synthesis",
-    "name": "Skill Cost Compress",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases skill power by 10%, and reduces MP consumption by 10%.",
-    "index": 311,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M0M5Y2FR89SJ033HBX",
-          "name": "Compact MP Consume",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M5ZJ8NV4H2VGMFSCDP",
-          "name": "Skill Boost",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
     "id": "01HVZGS2MA8W6YYRBY5TWYM7YQ",
     "keyWords": "effective vs one,486,fewer bonus,fewer bonus+,atk item,buff item,de buff item,heal item,exploration,synthesis",
     "name": "Effective Vs One",
@@ -5905,34 +5964,6 @@
         {
           "id": "01HVZGS2M49QEWZ5MEXMZWGK7Q",
           "name": "Fewer Bonus+",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "01HVZGS2MB6PWFMA9ERSF9EQXW",
-    "keyWords": "steal life,405,damage absorb+,damage absorb++,weapon,exploration,synthesis",
-    "name": "Steal Life",
-    "moduleId": "trait",
-    "categories": [
-      "WEAPON",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Absorb 10% of damage dealt through attacks to restore your own HP.",
-    "index": 405,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M42S8810ZKPKP8SJ6D",
-          "name": "Damage Absorb+",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M3T3QBCE213N92YP19",
-          "name": "Damage Absorb++",
           "table": "trait"
         }
       ]
@@ -5987,37 +6018,6 @@
         {
           "id": "01HVZGS2M31P9J2GZ52SXXR9YZ",
           "name": "DEF SPD Enhance",
-          "table": "trait"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "01HVZGS2MBY2VSKG1XTK6SEV1M",
-    "keyWords": "charge item,550,wait time enhance,wait time enhance+,atk item,buff item,de buff item,heal item,exploration,synthesis",
-    "name": "Charge Item",
-    "moduleId": "trait",
-    "categories": [
-      "ATK_ITEM",
-      "BUFF_ITEM",
-      "DE_BUFF_ITEM",
-      "HEAL_ITEM",
-      "EXPLORATION",
-      "SYNTHESIS"
-    ],
-    "description": "Increases item power proportional to wait time after using item.",
-    "index": 550,
-    "itemPresent": null,
-    "mergeFrom": [
-      [
-        {
-          "id": "01HVZGS2M4YBPRJSXVXBAQETVA",
-          "name": "Wait Time Enhance",
-          "table": "trait"
-        },
-        {
-          "id": "01HVZGS2M5VKDQ5QH5M6N8ARHA",
-          "name": "Wait Time Enhance+",
           "table": "trait"
         }
       ]

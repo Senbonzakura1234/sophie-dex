@@ -3,19 +3,18 @@ import NextAuth from 'next-auth';
 import { customPages } from '@root/constants/common';
 import { insertOrUpdateProfile } from '@root/server/postgresql';
 import { authAdapter } from '@root/server/postgresql/authAdapter';
+import { insertProfileValidationSchema } from '@root/server/postgresql/schema';
 import { APIError } from '@root/types/common';
+import { tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import { trackEventServer } from '@root/utils/server';
 import GitHub from 'next-auth/providers/github';
-import { insertProfileValidationSchema } from './server/postgresql/schema';
-import { tryCatchHandler } from './utils/common';
 
 export const provider = GitHub({
 	clientId: env.APP_GITHUB_APP_ID,
 	clientSecret: env.APP_GITHUB_APP_SECRET,
 
 	profile: async ({ id, plan: _, ...profile }, _tokens) => {
-		console.log('profile', profile);
 		const featureFlag = 'server.authentication';
 
 		await trackEventServer(

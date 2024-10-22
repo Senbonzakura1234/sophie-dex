@@ -134,9 +134,7 @@
 				"postgresql/index.ts",
 				"repository/index.ts",
 				"authAdapter/index.ts",
-				"repository/get.query.ts",
-				"repository/create.query.ts",
-				"repository/update.query.ts",
+				"repository/query.ts",
 				"schema/index.ts"
 			],
 			"filename": true,
@@ -165,7 +163,7 @@
 			"overrides": "constant"
 		},
 		{
-			"extensions": ["postgresql", "migration"],
+			"extensions": ["postgresql", "migration", "migration/meta", "authAdapter"],
 			"format": "svg",
 			"icon": "db",
 			"overrides": "postgresql"
