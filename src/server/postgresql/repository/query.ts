@@ -60,7 +60,26 @@ export const getUserByAccountQuery = postgresql
 	.prepare('getUserByAccount');
 
 export const getProfileRecordQuery = postgresql.query.profiles
-	.findFirst({ where: (schema, { eq, sql }) => eq(schema.login, sql.placeholder('login')) })
+	.findFirst({
+		where: (schema, { eq, sql }) => eq(schema.login, sql.placeholder('login')),
+		columns: {
+			avatar_url: true,
+			login: true,
+			bio: true,
+			company: true,
+			blog: true,
+			email: true,
+			location: true,
+			twitter_username: true,
+			name: true,
+			followers: true,
+			following: true,
+			public_repos: true,
+			owned_private_repos: true,
+			hireable: true,
+			collaborators: true
+		}
+	})
 	.prepare('getProfileRecord');
 
 export const getAllEffectIdsQuery = postgresql.query.effects

@@ -8,7 +8,7 @@ import {
 	getBookmarksQueriesMap,
 	getProfileRecordQuery
 } from '@root/server/postgresql/repository/query';
-import type { CommonRecord, Effect, Item, Profile, ProfileCreate, Rumor, Trait } from '@root/server/postgresql/schema';
+import type { CommonRecord, Effect, Item, ProfileCreate, Rumor, Trait } from '@root/server/postgresql/schema';
 import { effects, items, profiles, rumors, traits, users } from '@root/server/postgresql/schema';
 import type { APIResult, ImprovedOmit } from '@root/types/common';
 import { APIError } from '@root/types/common';
@@ -19,7 +19,7 @@ import type { SessionResult } from '@root/utils/server';
 import type { AnyColumn, SQL, SQLWrapper } from 'drizzle-orm';
 import { and, arrayOverlaps, asc, count, desc, eq, ilike, inArray, or, sql } from 'drizzle-orm';
 import type { PgColumn, PgSelect } from 'drizzle-orm/pg-core';
-import { writeFile } from 'fs/promises';
+import type { writeFile } from 'fs/promises';
 
 // ======================================= 				Helper Section 				=======================================
 const getWhereClause = (AND: Array<SQL>, OR: Array<SQL>) => and(or(...OR), ...AND);
@@ -311,7 +311,7 @@ export const insertOrUpdateProfile = async (
 		.then(res => res[0]);
 };
 
-export const getProfile = async (session: NonNullable<SessionResult['session']>): APIResult<Profile> => {
+export const getProfile = async (session: NonNullable<SessionResult['session']>) => {
 	const { data, isSuccess } = await tryCatchHandler(
 		getProfileRecordQuery.execute({ login: session.user.name }),
 		'getProfile.executeQuery'
@@ -390,19 +390,21 @@ export const bookmarkRecord = async (
 	return bookmarkRes.data;
 };
 
-export const exportAllRecords = async () =>
+export const exportAllRecords = async (writeFileFn?: typeof writeFile) =>
 	await Promise.all(
 		entries(exportDBQueriesMap).map(async ([table, query]) => {
 			const exportData = await tryCatchHandler(query.execute(), 'exportDataQuery.execute');
 
 			if (!exportData.isSuccess) return { table, error: 'read-error', isSuccess: false } as const;
 
-			const writeFileResult = await tryCatchHandler(
-				writeFile(`backup/${table}.json`, JSON.stringify(exportData.data, null, 2)),
-				'exportDataQuery.writeFile'
-			);
+			if (writeFileFn) {
+				const writeFileResult = await tryCatchHandler(
+					writeFileFn(`backup/${table}.json`, JSON.stringify(exportData.data, null, 2)),
+					'exportDataQuery.writeFile'
+				);
 
-			if (!writeFileResult.isSuccess) return { table, error: 'write-error', isSuccess: false } as const;
+				if (!writeFileResult.isSuccess) return { table, error: 'write-error', isSuccess: false } as const;
+			}
 
 			return { table, error: null, isSuccess: true } as const;
 		})

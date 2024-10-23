@@ -6,6 +6,7 @@ import { exportAllRecords } from '@root/server/postgresql';
 import { postgresql } from '@root/server/postgresql/repository';
 import { effects, items, rumors, traits } from '@root/server/postgresql/schema';
 import { tryCatchHandler, writeLog } from '@root/utils/common';
+import { writeFile } from 'fs/promises';
 
 const seed = async () => {
 	writeLog({ args: [`Start Seeding\n`], type: 'log' });
@@ -57,7 +58,7 @@ const seed = async () => {
 	if (!seedResult.errorList.length) {
 		writeLog({ args: [`Export record after Seeding\n`], type: 'log' });
 
-		await exportAllRecords();
+		await exportAllRecords(writeFile);
 	}
 
 	return seedResult;

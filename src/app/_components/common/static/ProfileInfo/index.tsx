@@ -6,6 +6,10 @@ import CreateProfileReadmeGuide from './CreateProfileReadmeGuide';
 import type { ProfileFieldProps } from './ProfileField';
 import ProfileField from './ProfileField';
 
+import BriefcaseIcon from '@components/icons/solid/BriefcaseIcon';
+import FollowIcon from '@components/icons/solid/FollowIcon';
+import HandShakeIcon from '@components/icons/solid/HandShakeIcon';
+import RepositoryIcon from '@components/icons/solid/RepositoryIcon';
 import type { getProfile } from '@root/server/postgresql';
 import styles from './index.module.css';
 
@@ -15,7 +19,23 @@ type Props = Readonly<{
 }>;
 
 export default function ProfileInfo({
-	profile: { avatar_url, login, bio, company, blog, email, location, twitter_username, name, ...rest },
+	profile: {
+		avatar_url,
+		login,
+		bio,
+		company,
+		blog,
+		email,
+		location,
+		twitter_username,
+		name,
+		followers,
+		following,
+		public_repos,
+		owned_private_repos,
+		hireable,
+		collaborators
+	},
 	readmeContent
 }: Props) {
 	const fields: Array<ProfileFieldProps> = [
@@ -77,7 +97,56 @@ export default function ProfileInfo({
 
 				<div className='divider divider-vertical m-0 w-full before:bg-gradient-to-br before:from-accent before:to-primary after:bg-gradient-to-tl after:from-accent after:to-primary' />
 
-				{/* <div className='divider divider-vertical m-0 w-full before:bg-gradient-to-br before:from-accent before:to-primary after:bg-gradient-to-tl after:from-accent after:to-primary' /> */}
+				<div className='flex flex-wrap items-center gap-2 font-bold'>
+					{public_repos > 0 || owned_private_repos! > 0 ? (
+						<div className='badge badge-ghost badge-outline flex h-6 items-center gap-2 rounded-3xl px-3 text-xs'>
+							<RepositoryIcon className='aspect-square w-4 align-middle text-secondary' />
+
+							{public_repos > 0 ? <span>{public_repos} public repos</span> : null}
+
+							{owned_private_repos! > 0 ? (
+								<>
+									<div className='aspect-square w-1 rounded-full bg-base-content align-middle' />
+
+									<span>{owned_private_repos} private repos</span>
+								</>
+							) : null}
+						</div>
+					) : null}
+
+					{followers > 0 || following > 0 ? (
+						<div className='badge badge-ghost badge-outline flex h-6 items-center gap-2 rounded-3xl px-3 text-xs'>
+							<FollowIcon className='aspect-square w-4 align-middle text-secondary' />
+
+							{followers > 0 ? <span>{followers} followers</span> : null}
+
+							{following > 0 ? (
+								<>
+									<div className='aspect-square w-1 rounded-full bg-base-content align-middle' />
+									<span>{following} following</span>
+								</>
+							) : null}
+						</div>
+					) : null}
+
+					{collaborators! > 0 ? (
+						<div className='badge badge-ghost badge-outline flex h-6 items-center gap-2 rounded-3xl px-3 text-xs'>
+							<HandShakeIcon className='aspect-square w-4 align-middle text-secondary' />
+
+							<span>{collaborators} collaborators</span>
+						</div>
+					) : null}
+
+					{hireable ? (
+						<div className='badge badge-ghost badge-outline flex h-6 items-center gap-2 rounded-3xl px-3 text-xs'>
+							<BriefcaseIcon className='aspect-square w-4 align-middle text-secondary' />
+
+							<span>Open for hired</span>
+						</div>
+					) : null}
+				</div>
+
+				<div className='divider divider-vertical m-0 w-full before:bg-gradient-to-br before:from-accent before:to-primary after:bg-gradient-to-tl after:from-accent after:to-primary' />
 			</div>
 		</CommonWrapper>
 	);
