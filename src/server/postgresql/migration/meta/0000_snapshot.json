@@ -1,5 +1,5 @@
 {
-  "id": "7793eff7-3066-464e-a041-201ba24bc439",
+  "id": "35bc403d-6845-4961-a094-0c816a4c22d0",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -378,6 +378,12 @@
           "primaryKey": false,
           "notNull": true
         },
+        "userId": {
+          "name": "userId",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
         "avatar_url": {
           "name": "avatar_url",
           "type": "text",
@@ -457,33 +463,9 @@
           "primaryKey": false,
           "notNull": true
         },
-        "github_created_at": {
-          "name": "github_created_at",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "github_updated_at": {
-          "name": "github_updated_at",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "private_gists": {
-          "name": "private_gists",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
-        },
         "owned_private_repos": {
           "name": "owned_private_repos",
           "type": "integer",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "suspended_at": {
-          "name": "suspended_at",
-          "type": "text",
           "primaryKey": false,
           "notNull": false
         },

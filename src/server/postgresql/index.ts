@@ -102,17 +102,16 @@ export const getEffects = async (input: SearchQuery, { isAuthenticated, session 
 	const AND: Array<SQL> = [];
 	if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
-	const countQuery = postgresql.select({ count: count() }).from(schema).where(getWhereClause(AND, OR));
-
-	const filterQuery = withPagination(
-		postgresql.select().from(schema).where(getWhereClause(AND, OR)).$dynamic(),
-		getOrderBy(direction, schema[getSortField(sortByMap[moduleId], sortByMap[moduleId][0], sortBy)]),
-		page
-	);
-
 	const queryRes = await tryCatchHandler(
-		Promise.all([countQuery.execute(), filterQuery.execute()]),
-		'getListRecord.executeQuery'
+		postgresql.batch([
+			postgresql.select({ count: count() }).from(schema).where(getWhereClause(AND, OR)),
+			withPagination(
+				postgresql.select().from(schema).where(getWhereClause(AND, OR)).$dynamic(),
+				getOrderBy(direction, schema[getSortField(sortByMap[moduleId], sortByMap[moduleId][0], sortBy)]),
+				page
+			)
+		]),
+		'getListRecord.executeBatchQuery'
 	);
 
 	if (!queryRes.isSuccess) return getListRecord<Effect>({ isEmptyResult: true });
@@ -157,17 +156,16 @@ export const getItems = async (input: SearchQuery, { isAuthenticated, session }:
 	if (category) AND.push(eq(schema.category, category));
 	if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
-	const countQuery = postgresql.select({ count: count() }).from(schema).where(getWhereClause(AND, OR));
-
-	const filterQuery = withPagination(
-		postgresql.select().from(schema).where(getWhereClause(AND, OR)).$dynamic(),
-		getOrderBy(direction, schema[getSortField(sortByMap[moduleId], sortByMap[moduleId][0], sortBy)]),
-		page
-	);
-
 	const queryRes = await tryCatchHandler(
-		Promise.all([countQuery.execute(), filterQuery.execute()]),
-		'getListRecord.executeQuery'
+		postgresql.batch([
+			postgresql.select({ count: count() }).from(schema).where(getWhereClause(AND, OR)),
+			withPagination(
+				postgresql.select().from(schema).where(getWhereClause(AND, OR)).$dynamic(),
+				getOrderBy(direction, schema[getSortField(sortByMap[moduleId], sortByMap[moduleId][0], sortBy)]),
+				page
+			)
+		]),
+		'getListRecord.executeBatchQuery'
 	);
 
 	if (!queryRes.isSuccess) return getListRecord<Item>({ isEmptyResult: true });
@@ -209,17 +207,16 @@ export const getRumors = async (input: SearchQuery, { isAuthenticated, session }
 	if (rumorType) AND.push(eq(schema.rumorType, rumorType));
 	if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
-	const countQuery = postgresql.select({ count: count() }).from(schema).where(getWhereClause(AND, OR));
-
-	const filterQuery = withPagination(
-		postgresql.select().from(schema).where(getWhereClause(AND, OR)).$dynamic(),
-		getOrderBy(direction, schema[getSortField(sortByMap[moduleId], sortByMap[moduleId][0], sortBy)]),
-		page
-	);
-
 	const queryRes = await tryCatchHandler(
-		Promise.all([countQuery.execute(), filterQuery.execute()]),
-		'getListRecord.executeQuery'
+		postgresql.batch([
+			postgresql.select({ count: count() }).from(schema).where(getWhereClause(AND, OR)),
+			withPagination(
+				postgresql.select().from(schema).where(getWhereClause(AND, OR)).$dynamic(),
+				getOrderBy(direction, schema[getSortField(sortByMap[moduleId], sortByMap[moduleId][0], sortBy)]),
+				page
+			)
+		]),
+		'getListRecord.executeBatchQuery'
 	);
 
 	if (!queryRes.isSuccess) return getListRecord<Rumor>({ isEmptyResult: true });
@@ -265,17 +262,16 @@ export const getTraits = async (input: SearchQuery, { isAuthenticated, session }
 	if (category) AND.push(arrayOverlaps(schema.categories, [category]));
 	if (isEnableBookmarkFilter === 'true') AND.push(inArray(schema.id, bookmarkList));
 
-	const countQuery = postgresql.select({ count: count() }).from(schema).where(getWhereClause(AND, OR));
-
-	const filterQuery = withPagination(
-		postgresql.select().from(schema).where(getWhereClause(AND, OR)).$dynamic(),
-		getOrderBy(direction, schema[getSortField(sortByMap[moduleId], sortByMap[moduleId][0], sortBy)]),
-		page
-	);
-
 	const queryRes = await tryCatchHandler(
-		Promise.all([countQuery.execute(), filterQuery.execute()]),
-		'getListRecord.executeQuery'
+		postgresql.batch([
+			postgresql.select({ count: count() }).from(schema).where(getWhereClause(AND, OR)),
+			withPagination(
+				postgresql.select().from(schema).where(getWhereClause(AND, OR)).$dynamic(),
+				getOrderBy(direction, schema[getSortField(sortByMap[moduleId], sortByMap[moduleId][0], sortBy)]),
+				page
+			)
+		]),
+		'getListRecord.executeBatchQuery'
 	);
 
 	if (!queryRes.isSuccess) return getListRecord<Trait>({ isEmptyResult: true });
@@ -311,23 +307,8 @@ export const insertOrUpdateProfile = async (
 		.then(res => res[0]);
 };
 
-export const getProfile = async (session: NonNullable<SessionResult['session']>) => {
-	const { data, isSuccess } = await tryCatchHandler(
-		getProfileRecordQuery.execute({ login: session.user.name }),
-		'getProfile.executeQuery'
-	);
-
-	if (!isSuccess) return { isSuccess: false, result: null, error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }) };
-
-	if (!data)
-		return {
-			isSuccess: false,
-			result: null,
-			error: new APIError({ code: 'NOT_FOUND', message: `User ${session.user.name} Not Found` })
-		};
-
-	return { isSuccess: true, result: data, error: null };
-};
+export const getProfile = async (session: NonNullable<SessionResult['session']>) =>
+	await getProfileRecordQuery.execute({ login: session.user.name });
 
 const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: string) => {
 	const res = (await getBookmarksQueriesMap[moduleId].execute({ name: username })) as Record<string, Array<string>>;

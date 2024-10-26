@@ -7821,159 +7821,6 @@
     "traitPresent": null
   },
   {
-    "id": "01HVZGS2KHHVMXNVTQ6YF9VEYC",
-    "keyWords": "paraselene clothes,white,armor,704,32,armor",
-    "name": "Paraselene Clothes",
-    "moduleId": "item",
-    "category": "ARMOR",
-    "color": "WHITE",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 704,
-    "level": 32,
-    "recipeIdea": null,
-    "recipeType": null,
-    "relatedCategories": [
-      "ARMOR"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KJH9R6CXKEZSN07705",
-    "keyWords": "piercing bullets,yellow,weapon,612,18,weapon",
-    "name": "Piercing Bullets",
-    "moduleId": "item",
-    "category": "WEAPON",
-    "color": "YELLOW",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 612,
-    "level": 18,
-    "recipeIdea": null,
-    "recipeType": null,
-    "relatedCategories": [
-      "WEAPON"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KJ6SA8GXZ8GT6MXQCV",
-    "keyWords": "gold jacket,yellow,armor,688,28,armor",
-    "name": "Gold Jacket",
-    "moduleId": "item",
-    "category": "ARMOR",
-    "color": "YELLOW",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 688,
-    "level": 28,
-    "recipeIdea": null,
-    "recipeType": null,
-    "relatedCategories": [
-      "ARMOR"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KKZVR0A7KC88VYASHN",
-    "keyWords": "old certificate,white,key item,841,1,important",
-    "name": "Old Certificate",
-    "moduleId": "item",
-    "category": "KEY_ITEM",
-    "color": "WHITE",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 841,
-    "level": 1,
-    "recipeIdea": null,
-    "recipeType": null,
-    "relatedCategories": [
-      "IMPORTANT"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KKS7S0C4QYSMNRJKC1",
-    "keyWords": "friendly persona,yellow,accessory,771,16,beginner recipes,accessory,silent beast,prospector's strand",
-    "name": "Friendly Persona",
-    "moduleId": "item",
-    "category": "ACCESSORY",
-    "color": "YELLOW",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 771,
-    "level": 16,
-    "recipeIdea": {
-      "contentData": [
-        {
-          "content": "Silent Beast"
-        },
-        {
-          "content": "Prospector's Strand"
-        }
-      ],
-      "contentText": [
-        "Hunt ",
-        "keyMap-0",
-        " at ",
-        "keyMap-1"
-      ]
-    },
-    "recipeType": "BEGINNER_RECIPES",
-    "relatedCategories": [
-      "ACCESSORY"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KKVSJN0484TXYZZBM1",
-    "keyWords": "vivid spear,red,weapon,620,39,weapon",
-    "name": "Vivid Spear",
-    "moduleId": "item",
-    "category": "WEAPON",
-    "color": "RED",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 620,
-    "level": 39,
-    "recipeIdea": null,
-    "recipeType": null,
-    "relatedCategories": [
-      "WEAPON"
-    ],
-    "traitPresent": null
-  },
-  {
     "id": "01HVZGS2KKW1C2PP6QE1WQPEHX",
     "keyWords": "plate coat,red,armor,693,14,armor",
     "name": "Plate Coat",
@@ -7997,29 +7844,6 @@
     "traitPresent": null
   },
   {
-    "id": "01HVZGS2KKXC85JSRXK8SDCVQQ",
-    "keyWords": "natural clothes,green,armor,702,25,armor",
-    "name": "Natural Clothes",
-    "moduleId": "item",
-    "category": "ARMOR",
-    "color": "GREEN",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 702,
-    "level": 25,
-    "recipeIdea": null,
-    "recipeType": null,
-    "relatedCategories": [
-      "ARMOR"
-    ],
-    "traitPresent": null
-  },
-  {
     "id": "01HVZGS2KKD0HJ036XCB60VF3B",
     "keyWords": "plachta's core,green,key item,825,1,important",
     "name": "Plachta's Core",
@@ -8035,29 +7859,6 @@
     },
     "index": 825,
     "level": 1,
-    "recipeIdea": null,
-    "recipeType": null,
-    "relatedCategories": [
-      "IMPORTANT"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KKYNB7BQSKZ4HP1T7G",
-    "keyWords": "moisture grass,white,material,838,2,important,obtain through event.",
-    "name": "Moisture Grass",
-    "moduleId": "item",
-    "category": "MATERIAL",
-    "color": "WHITE",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": "Obtain through event.",
-      "location": []
-    },
-    "index": 838,
-    "level": 2,
     "recipeIdea": null,
     "recipeType": null,
     "relatedCategories": [
@@ -8099,39 +7900,6 @@
     "traitPresent": null
   },
   {
-    "id": "01HVZGS2KMAPJ15MKZVEN975Z2",
-    "keyWords": "life bangle,red,accessory,760,35,dream recipes,accessory,world map",
-    "name": "Life Bangle",
-    "moduleId": "item",
-    "category": "ACCESSORY",
-    "color": "RED",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 760,
-    "level": 35,
-    "recipeIdea": {
-      "contentData": [
-        {
-          "content": "World Map"
-        }
-      ],
-      "contentText": [
-        "Use 100 LP to traveling around the ",
-        "keyMap-0"
-      ]
-    },
-    "recipeType": "DREAM_RECIPES",
-    "relatedCategories": [
-      "ACCESSORY"
-    ],
-    "traitPresent": null
-  },
-  {
     "id": "01HVZGS2KMNY5W5FPG0CFCETPJ",
     "keyWords": "ancient coat,white,armor,697,45,armor",
     "name": "Ancient Coat",
@@ -8155,29 +7923,6 @@
     "traitPresent": null
   },
   {
-    "id": "01HVZGS2KMAYA981SKEYANVWFH",
-    "keyWords": "plachta doll,white,key item,832,1,important",
-    "name": "Plachta Doll",
-    "moduleId": "item",
-    "category": "KEY_ITEM",
-    "color": "WHITE",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 832,
-    "level": 1,
-    "recipeIdea": null,
-    "recipeType": null,
-    "relatedCategories": [
-      "IMPORTANT"
-    ],
-    "traitPresent": null
-  },
-  {
     "id": "01HVZGS2KMFH0SG7XCQ5WGF3K3",
     "keyWords": "alchemic drive guide,yellow,book,890,13,important",
     "name": "Alchemic Drive Guide",
@@ -8193,29 +7938,6 @@
     },
     "index": 890,
     "level": 13,
-    "recipeIdea": null,
-    "recipeType": null,
-    "relatedCategories": [
-      "IMPORTANT"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KMF68N9815K2C1B9K4",
-    "keyWords": "recipe of origin,white,book,892,22,important",
-    "name": "Recipe of Origin",
-    "moduleId": "item",
-    "category": "BOOK",
-    "color": "WHITE",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 892,
-    "level": 22,
     "recipeIdea": null,
     "recipeType": null,
     "relatedCategories": [
@@ -8248,50 +7970,6 @@
       "contentText": [
         "Hunt ",
         "keyMap-0"
-      ]
-    },
-    "recipeType": "GROWTH_RECIPES",
-    "relatedCategories": [
-      "ACCESSORY"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KMA5TS83288R3JPEHQ",
-    "keyWords": "monochrome glasses,white,accessory,768,19,growth recipes,accessory,monika,light edge,brave heart",
-    "name": "Monochrome Glasses",
-    "moduleId": "item",
-    "category": "ACCESSORY",
-    "color": "WHITE",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 768,
-    "level": 19,
-    "recipeIdea": {
-      "contentData": [
-        {
-          "content": "Monika"
-        },
-        {
-          "content": "Light Edge"
-        },
-        {
-          "content": "Brave Heart"
-        }
-      ],
-      "contentText": [
-        "Use ",
-        "keyMap-0",
-        "'s ",
-        "keyMap-1",
-        " and ",
-        "keyMap-2",
-        " Skills."
       ]
     },
     "recipeType": "GROWTH_RECIPES",
@@ -8335,40 +8013,6 @@
     "traitPresent": null
   },
   {
-    "id": "01HVZGS2KMA0ZB2XM07QEY248S",
-    "keyWords": "sage's soil,yellow,synthesis,835,17,hope recipes,clay,fritz",
-    "name": "Sage's Soil",
-    "moduleId": "item",
-    "category": "SYNTHESIS",
-    "color": "YELLOW",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 835,
-    "level": 17,
-    "recipeIdea": {
-      "contentData": [
-        {
-          "content": "Fritz"
-        }
-      ],
-      "contentText": [
-        "From ",
-        "keyMap-0",
-        " Events"
-      ]
-    },
-    "recipeType": "HOPE_RECIPES",
-    "relatedCategories": [
-      "CLAY"
-    ],
-    "traitPresent": null
-  },
-  {
     "id": "01HVZGS2KNR5NVKW1H2ZTAM6BC",
     "keyWords": "sofinancier,yellow,heal item,224,34,dream recipes,food,sweets,natural yeast,sunny scent",
     "name": "Sofinancier",
@@ -8408,64 +8052,6 @@
     "relatedCategories": [
       "FOOD",
       "SWEETS"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KNKRYKNRM85B57J2HN",
-    "keyWords": "soft armor,blue,armor,706,29,armor",
-    "name": "Soft Armor",
-    "moduleId": "item",
-    "category": "ARMOR",
-    "color": "BLUE",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 706,
-    "level": 29,
-    "recipeIdea": null,
-    "recipeType": null,
-    "relatedCategories": [
-      "ARMOR"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KN6VX1DKMSA195TCWN",
-    "keyWords": "adal cloth,yellow,synthesis,447,21,growth recipes,armor mat,cloth,leon",
-    "name": "Adal Cloth",
-    "moduleId": "item",
-    "category": "SYNTHESIS",
-    "color": "YELLOW",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 447,
-    "level": 21,
-    "recipeIdea": {
-      "contentData": [
-        {
-          "content": "Leon"
-        }
-      ],
-      "contentText": [
-        "From ",
-        "keyMap-0",
-        " Events"
-      ]
-    },
-    "recipeType": "GROWTH_RECIPES",
-    "relatedCategories": [
-      "ARMOR_MAT",
-      "CLOTH"
     ],
     "traitPresent": null
   },
@@ -8669,6 +8255,634 @@
       "name": "Dark Matter",
       "table": "trait"
     }
+  },
+  {
+    "id": "01HVZGS2KN61NC61FS98VG10D6",
+    "keyWords": "sage's emblem,white,key item,839,48,mystery recipes,important,story progress",
+    "name": "Sage's Emblem",
+    "moduleId": "item",
+    "category": "KEY_ITEM",
+    "color": "WHITE",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 839,
+    "level": 48,
+    "recipeIdea": {
+      "contentData": [
+        {
+          "content": "Story Progress"
+        }
+      ],
+      "contentText": [
+        "Unlocked through ",
+        "keyMap-0"
+      ]
+    },
+    "recipeType": "MYSTERY_RECIPES",
+    "relatedCategories": [
+      "IMPORTANT"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KHHVMXNVTQ6YF9VEYC",
+    "keyWords": "paraselene clothes,white,armor,704,32,armor",
+    "name": "Paraselene Clothes",
+    "moduleId": "item",
+    "category": "ARMOR",
+    "color": "WHITE",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 704,
+    "level": 32,
+    "recipeIdea": null,
+    "recipeType": null,
+    "relatedCategories": [
+      "ARMOR"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KJH9R6CXKEZSN07705",
+    "keyWords": "piercing bullets,yellow,weapon,612,18,weapon",
+    "name": "Piercing Bullets",
+    "moduleId": "item",
+    "category": "WEAPON",
+    "color": "YELLOW",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 612,
+    "level": 18,
+    "recipeIdea": null,
+    "recipeType": null,
+    "relatedCategories": [
+      "WEAPON"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KJ6SA8GXZ8GT6MXQCV",
+    "keyWords": "gold jacket,yellow,armor,688,28,armor",
+    "name": "Gold Jacket",
+    "moduleId": "item",
+    "category": "ARMOR",
+    "color": "YELLOW",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 688,
+    "level": 28,
+    "recipeIdea": null,
+    "recipeType": null,
+    "relatedCategories": [
+      "ARMOR"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KKZVR0A7KC88VYASHN",
+    "keyWords": "old certificate,white,key item,841,1,important",
+    "name": "Old Certificate",
+    "moduleId": "item",
+    "category": "KEY_ITEM",
+    "color": "WHITE",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 841,
+    "level": 1,
+    "recipeIdea": null,
+    "recipeType": null,
+    "relatedCategories": [
+      "IMPORTANT"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KKS7S0C4QYSMNRJKC1",
+    "keyWords": "friendly persona,yellow,accessory,771,16,beginner recipes,accessory,silent beast,prospector's strand",
+    "name": "Friendly Persona",
+    "moduleId": "item",
+    "category": "ACCESSORY",
+    "color": "YELLOW",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 771,
+    "level": 16,
+    "recipeIdea": {
+      "contentData": [
+        {
+          "content": "Silent Beast"
+        },
+        {
+          "content": "Prospector's Strand"
+        }
+      ],
+      "contentText": [
+        "Hunt ",
+        "keyMap-0",
+        " at ",
+        "keyMap-1"
+      ]
+    },
+    "recipeType": "BEGINNER_RECIPES",
+    "relatedCategories": [
+      "ACCESSORY"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KKVSJN0484TXYZZBM1",
+    "keyWords": "vivid spear,red,weapon,620,39,weapon",
+    "name": "Vivid Spear",
+    "moduleId": "item",
+    "category": "WEAPON",
+    "color": "RED",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 620,
+    "level": 39,
+    "recipeIdea": null,
+    "recipeType": null,
+    "relatedCategories": [
+      "WEAPON"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KKXC85JSRXK8SDCVQQ",
+    "keyWords": "natural clothes,green,armor,702,25,armor",
+    "name": "Natural Clothes",
+    "moduleId": "item",
+    "category": "ARMOR",
+    "color": "GREEN",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 702,
+    "level": 25,
+    "recipeIdea": null,
+    "recipeType": null,
+    "relatedCategories": [
+      "ARMOR"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KKYNB7BQSKZ4HP1T7G",
+    "keyWords": "moisture grass,white,material,838,2,important,obtain through event.",
+    "name": "Moisture Grass",
+    "moduleId": "item",
+    "category": "MATERIAL",
+    "color": "WHITE",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": "Obtain through event.",
+      "location": []
+    },
+    "index": 838,
+    "level": 2,
+    "recipeIdea": null,
+    "recipeType": null,
+    "relatedCategories": [
+      "IMPORTANT"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KMAPJ15MKZVEN975Z2",
+    "keyWords": "life bangle,red,accessory,760,35,dream recipes,accessory,world map",
+    "name": "Life Bangle",
+    "moduleId": "item",
+    "category": "ACCESSORY",
+    "color": "RED",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 760,
+    "level": 35,
+    "recipeIdea": {
+      "contentData": [
+        {
+          "content": "World Map"
+        }
+      ],
+      "contentText": [
+        "Use 100 LP to traveling around the ",
+        "keyMap-0"
+      ]
+    },
+    "recipeType": "DREAM_RECIPES",
+    "relatedCategories": [
+      "ACCESSORY"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KMAYA981SKEYANVWFH",
+    "keyWords": "plachta doll,white,key item,832,1,important",
+    "name": "Plachta Doll",
+    "moduleId": "item",
+    "category": "KEY_ITEM",
+    "color": "WHITE",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 832,
+    "level": 1,
+    "recipeIdea": null,
+    "recipeType": null,
+    "relatedCategories": [
+      "IMPORTANT"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KMF68N9815K2C1B9K4",
+    "keyWords": "recipe of origin,white,book,892,22,important",
+    "name": "Recipe of Origin",
+    "moduleId": "item",
+    "category": "BOOK",
+    "color": "WHITE",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 892,
+    "level": 22,
+    "recipeIdea": null,
+    "recipeType": null,
+    "relatedCategories": [
+      "IMPORTANT"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KMA5TS83288R3JPEHQ",
+    "keyWords": "monochrome glasses,white,accessory,768,19,growth recipes,accessory,monika,light edge,brave heart",
+    "name": "Monochrome Glasses",
+    "moduleId": "item",
+    "category": "ACCESSORY",
+    "color": "WHITE",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 768,
+    "level": 19,
+    "recipeIdea": {
+      "contentData": [
+        {
+          "content": "Monika"
+        },
+        {
+          "content": "Light Edge"
+        },
+        {
+          "content": "Brave Heart"
+        }
+      ],
+      "contentText": [
+        "Use ",
+        "keyMap-0",
+        "'s ",
+        "keyMap-1",
+        " and ",
+        "keyMap-2",
+        " Skills."
+      ]
+    },
+    "recipeType": "GROWTH_RECIPES",
+    "relatedCategories": [
+      "ACCESSORY"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KMA0ZB2XM07QEY248S",
+    "keyWords": "sage's soil,yellow,synthesis,835,17,hope recipes,clay,fritz",
+    "name": "Sage's Soil",
+    "moduleId": "item",
+    "category": "SYNTHESIS",
+    "color": "YELLOW",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 835,
+    "level": 17,
+    "recipeIdea": {
+      "contentData": [
+        {
+          "content": "Fritz"
+        }
+      ],
+      "contentText": [
+        "From ",
+        "keyMap-0",
+        " Events"
+      ]
+    },
+    "recipeType": "HOPE_RECIPES",
+    "relatedCategories": [
+      "CLAY"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KNKRYKNRM85B57J2HN",
+    "keyWords": "soft armor,blue,armor,706,29,armor",
+    "name": "Soft Armor",
+    "moduleId": "item",
+    "category": "ARMOR",
+    "color": "BLUE",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 706,
+    "level": 29,
+    "recipeIdea": null,
+    "recipeType": null,
+    "relatedCategories": [
+      "ARMOR"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KN6VX1DKMSA195TCWN",
+    "keyWords": "adal cloth,yellow,synthesis,447,21,growth recipes,armor mat,cloth,leon",
+    "name": "Adal Cloth",
+    "moduleId": "item",
+    "category": "SYNTHESIS",
+    "color": "YELLOW",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 447,
+    "level": 21,
+    "recipeIdea": {
+      "contentData": [
+        {
+          "content": "Leon"
+        }
+      ],
+      "contentText": [
+        "From ",
+        "keyMap-0",
+        " Events"
+      ]
+    },
+    "recipeType": "GROWTH_RECIPES",
+    "relatedCategories": [
+      "ARMOR_MAT",
+      "CLOTH"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KN7MX5NABM7BJFG1T9",
+    "keyWords": "compass of hades,white,synthesis,455,27,growth recipes,important,spirit needle",
+    "name": "Compass of Hades",
+    "moduleId": "item",
+    "category": "SYNTHESIS",
+    "color": "WHITE",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 455,
+    "level": 27,
+    "recipeIdea": {
+      "contentData": [
+        {
+          "id": "01HVZGS2KMN5SBAYNRXW5JJ4JJ",
+          "name": "Spirit Needle",
+          "table": "item"
+        }
+      ],
+      "contentText": [
+        "Synthesize ",
+        "keyMap-0"
+      ]
+    },
+    "recipeType": "GROWTH_RECIPES",
+    "relatedCategories": [
+      "IMPORTANT"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KNAV7MVSEKAGCZG1KK",
+    "keyWords": "living broom,green,synthesis,844,1,hope recipes,magic item,wood,fuel,story progress",
+    "name": "Living Broom",
+    "moduleId": "item",
+    "category": "SYNTHESIS",
+    "color": "GREEN",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 844,
+    "level": 1,
+    "recipeIdea": {
+      "contentData": [
+        {
+          "content": "Story Progress"
+        }
+      ],
+      "contentText": [
+        "Unlocked through ",
+        "keyMap-0"
+      ]
+    },
+    "recipeType": "HOPE_RECIPES",
+    "relatedCategories": [
+      "MAGIC_ITEM",
+      "WOOD",
+      "FUEL"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KNETTHTXPKG0SMC0V4",
+    "keyWords": "kaen stone,red,material,18,5,ore,gunpowder,carries heat,magic book,gargolye,apostle,mini demon.,pilgrim road,merbert farm,enlightened mountain,moon sun mor.",
+    "name": "Kaen Stone",
+    "moduleId": "item",
+    "category": "MATERIAL",
+    "color": "RED",
+    "description": {
+      "hunt": [
+        "Magic Book",
+        "Gargolye",
+        "Apostle",
+        "Mini Demon."
+      ],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": [
+        "Pilgrim Road",
+        "Merbert Farm",
+        "Enlightened Mountain",
+        "Moon Sun Mor."
+      ]
+    },
+    "index": 18,
+    "level": 5,
+    "recipeIdea": null,
+    "recipeType": null,
+    "relatedCategories": [
+      "ORE",
+      "GUNPOWDER"
+    ],
+    "traitPresent": {
+      "id": "01HVZGS2M9FNAP23BDPYNET84V",
+      "name": "Carries Heat",
+      "table": "trait"
+    }
+  },
+  {
+    "id": "01HVZGS2KP89R2JNSKTQ3CTHT9",
+    "keyWords": "weiss powder,green,material,57,14,ingredient,gunpowder,mandragora,single horn.,stash of high grade flour?,gathering of beast,puzzling path,forest of fairies.",
+    "name": "Weiss Powder",
+    "moduleId": "item",
+    "category": "MATERIAL",
+    "color": "GREEN",
+    "description": {
+      "hunt": [
+        "Mandragora",
+        "Single Horn."
+      ],
+      "shop": null,
+      "rumor": {
+        "id": "01HVZGS2KS1SXPRGM430MRQZ7A",
+        "name": "Stash of High Grade Flour?",
+        "table": "rumor"
+      },
+      "special": null,
+      "location": [
+        "Gathering Of Beast",
+        "Puzzling Path",
+        "Forest of Fairies."
+      ]
+    },
+    "index": 57,
+    "level": 14,
+    "recipeIdea": null,
+    "recipeType": null,
+    "relatedCategories": [
+      "INGREDIENT",
+      "GUNPOWDER"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KPZK5FC5GX43RA4GM3",
+    "keyWords": "pendeloch,blue,material,77,14,secret power,gem,ghost,scarlady,gentle phantom,haunt,lich,shadow,death inquisitor,archlich.,moon sun moor,city of the lost,forgotten nursery,soul space.",
+    "name": "Pendeloch",
+    "moduleId": "item",
+    "category": "MATERIAL",
+    "color": "BLUE",
+    "description": {
+      "hunt": [
+        "Ghost",
+        "Scarlady",
+        "Gentle Phantom",
+        "Haunt",
+        "Lich",
+        "Shadow",
+        "Death Inquisitor",
+        "Archlich."
+      ],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": [
+        "Moon Sun Moor",
+        "City of the Lost",
+        "Forgotten NUrsery",
+        "Soul Space."
+      ]
+    },
+    "index": 77,
+    "level": 14,
+    "recipeIdea": null,
+    "recipeType": null,
+    "relatedCategories": [
+      "SECRET_POWER",
+      "GEM"
+    ],
+    "traitPresent": null
   },
   {
     "id": "01HVZGS2KP0QP6HXGKH3X4G8QK",
@@ -8990,12 +9204,59 @@
     "traitPresent": null
   },
   {
-    "id": "01HVZGS2KN7MX5NABM7BJFG1T9",
-    "keyWords": "compass of hades,white,synthesis,455,27,growth recipes,important,spirit needle",
-    "name": "Compass of Hades",
+    "id": "01HVZGS2KPWNKG0ZHW0W8GMZ3H",
+    "keyWords": "natural yeast,green,synthesis,429,23,hope recipes,ingredient,gunpowder,poison mat,bagel sandwich,fluffy,bought at marguerite,synthsized (hope).",
+    "name": "Natural Yeast",
     "moduleId": "item",
     "category": "SYNTHESIS",
-    "color": "WHITE",
+    "color": "GREEN",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": [
+        "Bought at Marguerite",
+        "Synthsized (Hope)."
+      ]
+    },
+    "index": 429,
+    "level": 23,
+    "recipeIdea": {
+      "contentData": [
+        {
+          "id": "01HVZGS2KDQ7A3RB5KSTGVHX83",
+          "name": "Bagel Sandwich",
+          "table": "item"
+        },
+        {
+          "id": "01HVZGS2JEH2T2SMMZ16H5NSES",
+          "name": "Fluffy",
+          "table": "effect"
+        }
+      ],
+      "contentText": [
+        "Synthesize ",
+        "keyMap-0",
+        " with ",
+        "keyMap-1"
+      ]
+    },
+    "recipeType": "HOPE_RECIPES",
+    "relatedCategories": [
+      "INGREDIENT",
+      "GUNPOWDER",
+      "POISON_MAT"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KPW8Z5ZFYAHZC4N797",
+    "keyWords": "piro sotea,blue,heal item,225,31,dream recipes,food,secret power,pure water,secret of health",
+    "name": "Piro Sotea",
+    "moduleId": "item",
+    "category": "HEAL_ITEM",
+    "color": "BLUE",
     "description": {
       "hunt": [],
       "shop": null,
@@ -9003,203 +9264,149 @@
       "special": null,
       "location": []
     },
-    "index": 455,
-    "level": 27,
+    "index": 225,
+    "level": 31,
     "recipeIdea": {
       "contentData": [
         {
-          "id": "01HVZGS2KMN5SBAYNRXW5JJ4JJ",
-          "name": "Spirit Needle",
+          "id": "01HVZGS2KEXT8YBPDR1R61C0Y3",
+          "name": "Pure Water",
           "table": "item"
+        },
+        {
+          "id": "01HVZGS2M7CV2YQ2MDB0846NBP",
+          "name": "Secret of Health",
+          "table": "trait"
         }
       ],
       "contentText": [
         "Synthesize ",
+        "keyMap-0",
+        " with ",
+        "keyMap-1"
+      ]
+    },
+    "recipeType": "DREAM_RECIPES",
+    "relatedCategories": [
+      "FOOD",
+      "SECRET_POWER"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KPZY0ZAPVSYQ2WG0YD",
+    "keyWords": "mineral extract,green,synthesis,459,23,growth recipes,medicine mat,water,metal,good water",
+    "name": "Mineral Extract",
+    "moduleId": "item",
+    "category": "SYNTHESIS",
+    "color": "GREEN",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 459,
+    "level": 23,
+    "recipeIdea": {
+      "contentData": [
+        {
+          "id": "01HVZGS2K96WVEJYJD3BPE3ZR4",
+          "name": "Good Water",
+          "table": "item"
+        }
+      ],
+      "contentText": [
+        "Obtain ",
         "keyMap-0"
       ]
     },
     "recipeType": "GROWTH_RECIPES",
     "relatedCategories": [
-      "IMPORTANT"
+      "MEDICINE_MAT",
+      "WATER",
+      "METAL"
     ],
     "traitPresent": null
   },
   {
-    "id": "01HVZGS2KNAV7MVSEKAGCZG1KK",
-    "keyWords": "living broom,green,synthesis,844,1,hope recipes,magic item,wood,fuel,story progress",
-    "name": "Living Broom",
+    "id": "01HVZGS2KQEXWJPTB065RCBX45",
+    "keyWords": "spirit earrings,blue,accessory,764,33,dream recipes,accessory,bomb,magic item,medicine",
+    "name": "Spirit Earrings",
     "moduleId": "item",
-    "category": "SYNTHESIS",
-    "color": "GREEN",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 844,
-    "level": 1,
-    "recipeIdea": {
-      "contentData": [
-        {
-          "content": "Story Progress"
-        }
-      ],
-      "contentText": [
-        "Unlocked through ",
-        "keyMap-0"
-      ]
-    },
-    "recipeType": "HOPE_RECIPES",
-    "relatedCategories": [
-      "MAGIC_ITEM",
-      "WOOD",
-      "FUEL"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KNETTHTXPKG0SMC0V4",
-    "keyWords": "kaen stone,red,material,18,5,ore,gunpowder,carries heat,magic book,gargolye,apostle,mini demon.,pilgrim road,merbert farm,enlightened mountain,moon sun mor.",
-    "name": "Kaen Stone",
-    "moduleId": "item",
-    "category": "MATERIAL",
-    "color": "RED",
-    "description": {
-      "hunt": [
-        "Magic Book",
-        "Gargolye",
-        "Apostle",
-        "Mini Demon."
-      ],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": [
-        "Pilgrim Road",
-        "Merbert Farm",
-        "Enlightened Mountain",
-        "Moon Sun Mor."
-      ]
-    },
-    "index": 18,
-    "level": 5,
-    "recipeIdea": null,
-    "recipeType": null,
-    "relatedCategories": [
-      "ORE",
-      "GUNPOWDER"
-    ],
-    "traitPresent": {
-      "id": "01HVZGS2M9FNAP23BDPYNET84V",
-      "name": "Carries Heat",
-      "table": "trait"
-    }
-  },
-  {
-    "id": "01HVZGS2KP89R2JNSKTQ3CTHT9",
-    "keyWords": "weiss powder,green,material,57,14,ingredient,gunpowder,mandragora,single horn.,stash of high grade flour?,gathering of beast,puzzling path,forest of fairies.",
-    "name": "Weiss Powder",
-    "moduleId": "item",
-    "category": "MATERIAL",
-    "color": "GREEN",
-    "description": {
-      "hunt": [
-        "Mandragora",
-        "Single Horn."
-      ],
-      "shop": null,
-      "rumor": {
-        "id": "01HVZGS2KS1SXPRGM430MRQZ7A",
-        "name": "Stash of High Grade Flour?",
-        "table": "rumor"
-      },
-      "special": null,
-      "location": [
-        "Gathering Of Beast",
-        "Puzzling Path",
-        "Forest of Fairies."
-      ]
-    },
-    "index": 57,
-    "level": 14,
-    "recipeIdea": null,
-    "recipeType": null,
-    "relatedCategories": [
-      "INGREDIENT",
-      "GUNPOWDER"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KPZK5FC5GX43RA4GM3",
-    "keyWords": "pendeloch,blue,material,77,14,secret power,gem,ghost,scarlady,gentle phantom,haunt,lich,shadow,death inquisitor,archlich.,moon sun moor,city of the lost,forgotten nursery,soul space.",
-    "name": "Pendeloch",
-    "moduleId": "item",
-    "category": "MATERIAL",
+    "category": "ACCESSORY",
     "color": "BLUE",
     "description": {
-      "hunt": [
-        "Ghost",
-        "Scarlady",
-        "Gentle Phantom",
-        "Haunt",
-        "Lich",
-        "Shadow",
-        "Death Inquisitor",
-        "Archlich."
-      ],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": [
-        "Moon Sun Moor",
-        "City of the Lost",
-        "Forgotten NUrsery",
-        "Soul Space."
-      ]
-    },
-    "index": 77,
-    "level": 14,
-    "recipeIdea": null,
-    "recipeType": null,
-    "relatedCategories": [
-      "SECRET_POWER",
-      "GEM"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KN61NC61FS98VG10D6",
-    "keyWords": "sage's emblem,white,key item,839,48,mystery recipes,important,story progress",
-    "name": "Sage's Emblem",
-    "moduleId": "item",
-    "category": "KEY_ITEM",
-    "color": "WHITE",
-    "description": {
       "hunt": [],
       "shop": null,
       "rumor": null,
       "special": null,
       "location": []
     },
-    "index": 839,
-    "level": 48,
+    "index": 764,
+    "level": 33,
     "recipeIdea": {
       "contentData": [
         {
-          "content": "Story Progress"
+          "table": "item",
+          "searchQuery": {
+            "page": null,
+            "color": null,
+            "search": null,
+            "sortBy": null,
+            "category": null,
+            "direction": null,
+            "rumorType": null,
+            "bookmarked": null,
+            "recipeType": null,
+            "relatedCategory": "BOMB"
+          }
+        },
+        {
+          "table": "item",
+          "searchQuery": {
+            "page": null,
+            "color": null,
+            "search": null,
+            "sortBy": null,
+            "category": null,
+            "direction": null,
+            "rumorType": null,
+            "bookmarked": null,
+            "recipeType": null,
+            "relatedCategory": "MAGIC_ITEM"
+          }
+        },
+        {
+          "table": "item",
+          "searchQuery": {
+            "page": null,
+            "color": null,
+            "search": null,
+            "sortBy": null,
+            "category": null,
+            "direction": null,
+            "rumorType": null,
+            "bookmarked": null,
+            "recipeType": null,
+            "relatedCategory": "MEDICINE"
+          }
         }
       ],
       "contentText": [
-        "Unlocked through ",
-        "keyMap-0"
+        "Use ",
+        "keyMap-0",
+        ", ",
+        "keyMap-1",
+        ", And ",
+        "keyMap-2",
+        " in combat"
       ]
     },
-    "recipeType": "MYSTERY_RECIPES",
+    "recipeType": "DREAM_RECIPES",
     "relatedCategories": [
-      "IMPORTANT"
+      "ACCESSORY"
     ],
     "traitPresent": null
   },
@@ -9508,335 +9715,6 @@
     "traitPresent": null
   },
   {
-    "id": "01HVZGS2KPWNKG0ZHW0W8GMZ3H",
-    "keyWords": "natural yeast,green,synthesis,429,23,hope recipes,ingredient,gunpowder,poison mat,bagel sandwich,fluffy,bought at marguerite,synthsized (hope).",
-    "name": "Natural Yeast",
-    "moduleId": "item",
-    "category": "SYNTHESIS",
-    "color": "GREEN",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": [
-        "Bought at Marguerite",
-        "Synthsized (Hope)."
-      ]
-    },
-    "index": 429,
-    "level": 23,
-    "recipeIdea": {
-      "contentData": [
-        {
-          "id": "01HVZGS2KDQ7A3RB5KSTGVHX83",
-          "name": "Bagel Sandwich",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2JEH2T2SMMZ16H5NSES",
-          "name": "Fluffy",
-          "table": "effect"
-        }
-      ],
-      "contentText": [
-        "Synthesize ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "recipeType": "HOPE_RECIPES",
-    "relatedCategories": [
-      "INGREDIENT",
-      "GUNPOWDER",
-      "POISON_MAT"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KPW8Z5ZFYAHZC4N797",
-    "keyWords": "piro sotea,blue,heal item,225,31,dream recipes,food,secret power,pure water,secret of health",
-    "name": "Piro Sotea",
-    "moduleId": "item",
-    "category": "HEAL_ITEM",
-    "color": "BLUE",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 225,
-    "level": 31,
-    "recipeIdea": {
-      "contentData": [
-        {
-          "id": "01HVZGS2KEXT8YBPDR1R61C0Y3",
-          "name": "Pure Water",
-          "table": "item"
-        },
-        {
-          "id": "01HVZGS2M7CV2YQ2MDB0846NBP",
-          "name": "Secret of Health",
-          "table": "trait"
-        }
-      ],
-      "contentText": [
-        "Synthesize ",
-        "keyMap-0",
-        " with ",
-        "keyMap-1"
-      ]
-    },
-    "recipeType": "DREAM_RECIPES",
-    "relatedCategories": [
-      "FOOD",
-      "SECRET_POWER"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KPZY0ZAPVSYQ2WG0YD",
-    "keyWords": "mineral extract,green,synthesis,459,23,growth recipes,medicine mat,water,metal,good water",
-    "name": "Mineral Extract",
-    "moduleId": "item",
-    "category": "SYNTHESIS",
-    "color": "GREEN",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 459,
-    "level": 23,
-    "recipeIdea": {
-      "contentData": [
-        {
-          "id": "01HVZGS2K96WVEJYJD3BPE3ZR4",
-          "name": "Good Water",
-          "table": "item"
-        }
-      ],
-      "contentText": [
-        "Obtain ",
-        "keyMap-0"
-      ]
-    },
-    "recipeType": "GROWTH_RECIPES",
-    "relatedCategories": [
-      "MEDICINE_MAT",
-      "WATER",
-      "METAL"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KQEXWJPTB065RCBX45",
-    "keyWords": "spirit earrings,blue,accessory,764,33,dream recipes,accessory,bomb,magic item,medicine",
-    "name": "Spirit Earrings",
-    "moduleId": "item",
-    "category": "ACCESSORY",
-    "color": "BLUE",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 764,
-    "level": 33,
-    "recipeIdea": {
-      "contentData": [
-        {
-          "table": "item",
-          "searchQuery": {
-            "page": null,
-            "color": null,
-            "search": null,
-            "sortBy": null,
-            "category": null,
-            "direction": null,
-            "rumorType": null,
-            "bookmarked": null,
-            "recipeType": null,
-            "relatedCategory": "BOMB"
-          }
-        },
-        {
-          "table": "item",
-          "searchQuery": {
-            "page": null,
-            "color": null,
-            "search": null,
-            "sortBy": null,
-            "category": null,
-            "direction": null,
-            "rumorType": null,
-            "bookmarked": null,
-            "recipeType": null,
-            "relatedCategory": "MAGIC_ITEM"
-          }
-        },
-        {
-          "table": "item",
-          "searchQuery": {
-            "page": null,
-            "color": null,
-            "search": null,
-            "sortBy": null,
-            "category": null,
-            "direction": null,
-            "rumorType": null,
-            "bookmarked": null,
-            "recipeType": null,
-            "relatedCategory": "MEDICINE"
-          }
-        }
-      ],
-      "contentText": [
-        "Use ",
-        "keyMap-0",
-        ", ",
-        "keyMap-1",
-        ", And ",
-        "keyMap-2",
-        " in combat"
-      ]
-    },
-    "recipeType": "DREAM_RECIPES",
-    "relatedCategories": [
-      "ACCESSORY"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KPRRDFP2X3MYPEHDGM",
-    "keyWords": "stahl metal,red,synthesis,440,10,growth recipes,weapon mat,metal",
-    "name": "Stahl Metal",
-    "moduleId": "item",
-    "category": "SYNTHESIS",
-    "color": "RED",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 440,
-    "level": 10,
-    "recipeIdea": {
-      "contentData": [],
-      "contentText": [
-        "Perform Synthesis & Use Items in Combat"
-      ]
-    },
-    "recipeType": "GROWTH_RECIPES",
-    "relatedCategories": [
-      "WEAPON_MAT",
-      "METAL"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KP1JJXGFJ67YYS0NHV",
-    "keyWords": "ingot,red,synthesis,439,7,beginner recipes,weapon mat,metal,beast,merbert farm,complete request",
-    "name": "Ingot",
-    "moduleId": "item",
-    "category": "SYNTHESIS",
-    "color": "RED",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 439,
-    "level": 7,
-    "recipeIdea": {
-      "contentData": [
-        {
-          "content": "Beast"
-        },
-        {
-          "content": "Merbert Farm"
-        },
-        {
-          "content": "Complete Request"
-        }
-      ],
-      "contentText": [
-        "Hunt ",
-        "keyMap-0",
-        " at ",
-        "keyMap-1",
-        " & ",
-        "keyMap-2"
-      ]
-    },
-    "recipeType": "BEGINNER_RECIPES",
-    "relatedCategories": [
-      "WEAPON_MAT",
-      "METAL"
-    ],
-    "traitPresent": null
-  },
-  {
-    "id": "01HVZGS2KQW91AMQYRAJY8WYR5",
-    "keyWords": "ice bomb,blue,atk item,144,12,beginner recipes,bomb,performing synthesis,water",
-    "name": "Ice Bomb",
-    "moduleId": "item",
-    "category": "ATK_ITEM",
-    "color": "BLUE",
-    "description": {
-      "hunt": [],
-      "shop": null,
-      "rumor": null,
-      "special": null,
-      "location": []
-    },
-    "index": 144,
-    "level": 12,
-    "recipeIdea": {
-      "contentData": [
-        {
-          "content": "Performing Synthesis"
-        },
-        {
-          "table": "item",
-          "searchQuery": {
-            "page": null,
-            "color": null,
-            "search": null,
-            "sortBy": null,
-            "category": null,
-            "direction": null,
-            "rumorType": null,
-            "bookmarked": null,
-            "recipeType": null,
-            "relatedCategory": "WATER"
-          }
-        }
-      ],
-      "contentText": [
-        "keyMap-0",
-        " & Obtain ",
-        "keyMap-1"
-      ]
-    },
-    "recipeType": "BEGINNER_RECIPES",
-    "relatedCategories": [
-      "BOMB"
-    ],
-    "traitPresent": null
-  },
-  {
     "id": "01HVZGS2KP0MVTTEATFT0ABR0J",
     "keyWords": "tuned cauldron,white,machine,511,14,hope recipes,important,tuned cauldron,final area,underground lake",
     "name": "Tuned Cauldron",
@@ -10036,6 +9914,128 @@
     "recipeType": "DREAM_RECIPES",
     "relatedCategories": [
       "ACCESSORY"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KPRRDFP2X3MYPEHDGM",
+    "keyWords": "stahl metal,red,synthesis,440,10,growth recipes,weapon mat,metal",
+    "name": "Stahl Metal",
+    "moduleId": "item",
+    "category": "SYNTHESIS",
+    "color": "RED",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 440,
+    "level": 10,
+    "recipeIdea": {
+      "contentData": [],
+      "contentText": [
+        "Perform Synthesis & Use Items in Combat"
+      ]
+    },
+    "recipeType": "GROWTH_RECIPES",
+    "relatedCategories": [
+      "WEAPON_MAT",
+      "METAL"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KP1JJXGFJ67YYS0NHV",
+    "keyWords": "ingot,red,synthesis,439,7,beginner recipes,weapon mat,metal,beast,merbert farm,complete request",
+    "name": "Ingot",
+    "moduleId": "item",
+    "category": "SYNTHESIS",
+    "color": "RED",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 439,
+    "level": 7,
+    "recipeIdea": {
+      "contentData": [
+        {
+          "content": "Beast"
+        },
+        {
+          "content": "Merbert Farm"
+        },
+        {
+          "content": "Complete Request"
+        }
+      ],
+      "contentText": [
+        "Hunt ",
+        "keyMap-0",
+        " at ",
+        "keyMap-1",
+        " & ",
+        "keyMap-2"
+      ]
+    },
+    "recipeType": "BEGINNER_RECIPES",
+    "relatedCategories": [
+      "WEAPON_MAT",
+      "METAL"
+    ],
+    "traitPresent": null
+  },
+  {
+    "id": "01HVZGS2KQW91AMQYRAJY8WYR5",
+    "keyWords": "ice bomb,blue,atk item,144,12,beginner recipes,bomb,performing synthesis,water",
+    "name": "Ice Bomb",
+    "moduleId": "item",
+    "category": "ATK_ITEM",
+    "color": "BLUE",
+    "description": {
+      "hunt": [],
+      "shop": null,
+      "rumor": null,
+      "special": null,
+      "location": []
+    },
+    "index": 144,
+    "level": 12,
+    "recipeIdea": {
+      "contentData": [
+        {
+          "content": "Performing Synthesis"
+        },
+        {
+          "table": "item",
+          "searchQuery": {
+            "page": null,
+            "color": null,
+            "search": null,
+            "sortBy": null,
+            "category": null,
+            "direction": null,
+            "rumorType": null,
+            "bookmarked": null,
+            "recipeType": null,
+            "relatedCategory": "WATER"
+          }
+        }
+      ],
+      "contentText": [
+        "keyMap-0",
+        " & Obtain ",
+        "keyMap-1"
+      ]
+    },
+    "recipeType": "BEGINNER_RECIPES",
+    "relatedCategories": [
+      "BOMB"
     ],
     "traitPresent": null
   }

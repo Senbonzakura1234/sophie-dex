@@ -1,12 +1,15 @@
 import ProfileInfo from '@components/common/static/ProfileInfo';
-import ErrorContent from '@components/layout/static/ErrorContent';
+import SuspenseComponent from '@components/layout/static/SuspenseComponent';
 import RecordPlaceholder from '@components/loading/RecordPlaceholder';
 import { APP_NAME } from '@root/constants/common';
+import { getProfileRecordQuery } from '@root/server/postgresql/repository/query';
+import { APIError } from '@root/types/common';
 import type { PageProps } from '@root/types/common/props';
+import { tryCatchHandler } from '@root/utils/common';
+import { getSessionResult } from '@root/utils/server';
 import { generateGenericMetadata } from '@root/utils/server/database';
-import { getApiServerCtx } from '@root/utils/server/trpc';
+import { getGithubReadme } from '@root/utils/server/fetch';
 import type { Metadata, ResolvingMetadata } from 'next';
-import { Suspense } from 'react';
 
 export async function generateMetadata(
 	{ searchParams }: Readonly<PageProps>,
@@ -16,24 +19,49 @@ export async function generateMetadata(
 }
 
 const getReadmeProfile = async () => {
-	const ApiServerCtx = await getApiServerCtx(true);
+	const sessionResult = await getSessionResult();
 
-	const [profileRes, readmeContent] = await Promise.all([
-		ApiServerCtx.user.getProfile.fetch(),
-		ApiServerCtx.user.getGithubReadme.fetch()
-	] as const);
+	if (!sessionResult.isAuthenticated)
+		return {
+			isSuccess: false as const,
+			result: null,
+			error: new APIError({ code: 'UNAUTHORIZED' })
+		};
 
-	return { profileRes, readmeContent };
+	const getReadmeProfileRes = await tryCatchHandler(
+		Promise.all([
+			getProfileRecordQuery.execute({ login: sessionResult.session.user.name }),
+			getGithubReadme(sessionResult.session)
+		]),
+		'getReadmeProfile.batchQuery'
+	);
+
+	if (!getReadmeProfileRes.isSuccess)
+		return {
+			isSuccess: false as const,
+			result: null,
+			error: new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get Profile error' })
+		};
+
+	const [profile, readmeContent] = getReadmeProfileRes.data;
+
+	if (!profile)
+		return {
+			isSuccess: false as const,
+			result: null,
+			error: new APIError({ code: 'NOT_FOUND', message: 'Profile not found' })
+		};
+
+	return { isSuccess: true as const, result: { profile, readmeContent }, error: null };
 };
 
 export default async function ProfilePage() {
-	const { profileRes, readmeContent } = await getReadmeProfile();
-
-	return profileRes.isSuccess ? (
-		<Suspense fallback={<RecordPlaceholder className='mx-auto min-h-[580px] w-full max-w-lg' />}>
-			<ProfileInfo profile={profileRes.result} readmeContent={readmeContent} />
-		</Suspense>
-	) : (
-		<ErrorContent code={profileRes.error.code} />
+	return (
+		<SuspenseComponent
+			promiseData={getReadmeProfile()}
+			ChildComponent={ProfileInfo}
+			showErrorContent
+			fallback={<RecordPlaceholder className='mx-auto min-h-[580px] w-full max-w-4xl' />}
+		/>
 	);
 }

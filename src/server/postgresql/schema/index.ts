@@ -206,9 +206,7 @@ export const authenticators = pgTable(
 		)
 	},
 	authenticator => ({
-		compositePK: primaryKey({
-			columns: [authenticator.userId, authenticator.credentialID]
-		})
+		compositePK: primaryKey({ columns: [authenticator.userId, authenticator.credentialID] })
 	})
 );
 
@@ -218,6 +216,9 @@ export const profiles = pgTable('profiles', {
 	profile_id: integer('profile_id').notNull(),
 
 	login: text('login').unique().notNull(),
+
+	userId: text('userId'),
+
 	avatar_url: text('avatar_url').notNull().default(''),
 	type: text('type').notNull(),
 	name: text('name'),
@@ -231,11 +232,7 @@ export const profiles = pgTable('profiles', {
 	public_repos: integer('public_repos').notNull(),
 	followers: integer('followers').notNull(),
 	following: integer('following').notNull(),
-	created_at: text('github_created_at').notNull(),
-	updated_at: text('github_updated_at').notNull(),
-	private_gists: integer('private_gists'),
 	owned_private_repos: integer('owned_private_repos'),
-	suspended_at: text('suspended_at'),
 	collaborators: integer('collaborators'),
 	two_factor_authentication: boolean('two_factor_authentication'),
 

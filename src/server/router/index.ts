@@ -3,7 +3,6 @@ import {
 	getEffects,
 	getItems,
 	getModuleBookmarks,
-	getProfile,
 	getRumors,
 	getTraits
 } from '@root/server/postgresql';
@@ -28,10 +27,11 @@ import {
 	moduleIdQueryValidator,
 	searchQueryValidator
 } from '@root/types/common/zod';
+import { writeLog } from '@root/utils/common';
+import { env } from '@root/utils/common/env';
 import type { SessionResult } from '@root/utils/server';
 import { getSessionResult, trackEventServer } from '@root/utils/server';
 import { exportRecords, getAllRecordIds, getContentRecord } from '@root/utils/server/database';
-import { getGithubReadme } from '@root/utils/server/fetch';
 import { initTRPC } from '@trpc/server';
 import { ZodError } from 'zod';
 
@@ -48,12 +48,20 @@ const t = initTRPC.context<typeof createContext>().create({
 	}
 });
 
-const publicProcedure = t.procedure;
+const publicProcedure = t.procedure.use(async opts => {
+	if (opts.type === 'query' || env.NEXT_PUBLIC_NODE_ENV !== 'production') {
+		const input = await opts.getRawInput();
 
-const protectedProcedure = t.procedure.use(opts => {
+		writeLog({ args: [`TRPC: At path ${opts.path}: `, { input, meta: opts.meta, type: opts.type }] });
+	}
+
+	return await opts.next();
+});
+
+const protectedProcedure = publicProcedure.use(async opts => {
 	if (!opts.ctx.sessionResult.isAuthenticated) throw new APIError({ code: 'UNAUTHORIZED' });
 
-	return opts.next();
+	return await opts.next();
 });
 
 export const appRouter = t.router({
@@ -141,18 +149,6 @@ export const appRouter = t.router({
 			);
 
 			return bookmarkRecord(input, ctx.sessionResult.session);
-		}),
-
-		getProfile: protectedProcedure.query(({ ctx }) => {
-			if (!ctx.sessionResult.isAuthenticated) throw new APIError({ code: 'UNAUTHORIZED' });
-
-			return getProfile(ctx.sessionResult.session);
-		}),
-
-		getGithubReadme: protectedProcedure.query(({ ctx }) => {
-			if (!ctx.sessionResult.isAuthenticated) throw new APIError({ code: 'UNAUTHORIZED' });
-
-			return getGithubReadme(ctx.sessionResult.session);
 		})
 	}
 });

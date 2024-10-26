@@ -7,7 +7,7 @@ import type { APIResult, CommonObject, PreparedPGQuery } from '@root/types/commo
 import { APIError } from '@root/types/common';
 import type { PageProps } from '@root/types/common/props';
 import type { IdQuery, OgQuery } from '@root/types/common/zod';
-import { searchQueryValidator } from '@root/types/common/zod';
+import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import {
 	capitalize,
 	deleteNullableProperty,
@@ -82,8 +82,19 @@ export async function generateDetailMetadata(
 
 export const getContentRecord = async <TRecord extends CommonRecord>(
 	query: PreparedPGQuery<TRecord | undefined>,
-	{ id }: IdQuery
+	params: IdQuery
 ) => {
+	const idQueryRes = idQueryValidator.safeParse(params);
+
+	if (!idQueryRes.success)
+		return {
+			result: null,
+			isSuccess: false as const,
+			error: new APIError({ code: 'BAD_REQUEST', message: 'Invalid Record Id' })
+		} satisfies Awaited<APIResult>;
+
+	const { id } = idQueryRes.data;
+
 	if (!id)
 		return {
 			result: null,

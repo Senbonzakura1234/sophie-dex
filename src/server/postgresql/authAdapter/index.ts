@@ -9,10 +9,18 @@ import {
 	getUserRecordByEmailQuery,
 	getUserRecordByIdQuery
 } from '@root/server/postgresql/repository/query';
-import { accounts, authenticators, sessions, users, verificationTokens } from '@root/server/postgresql/schema';
+import {
+	accounts,
+	authenticators,
+	profiles,
+	sessions,
+	users,
+	verificationTokens
+} from '@root/server/postgresql/schema';
 import { APIError } from '@root/types/common';
 import { tryCatchHandler } from '@root/utils/common';
-import { and, eq } from 'drizzle-orm';
+import type { SQL } from 'drizzle-orm';
+import { and, eq, or } from 'drizzle-orm';
 
 export const authAdapter: Adapter = {
 	createUser: async ({ email, emailVerified, image = '', name }) => {
@@ -22,10 +30,11 @@ export const authAdapter: Adapter = {
 			postgresql.insert(users).values({ email, emailVerified, image, name }).returning(),
 			'authAdapter.createUser'
 		);
-
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Create User error' });
 
 		if (!data[0]) throw new APIError({ code: 'NOT_FOUND', message: 'User not found' });
+
+		await postgresql.update(profiles).set({ userId: data[0].id }).where(eq(profiles.login, data[0].name));
 
 		return data[0];
 	},
@@ -105,9 +114,8 @@ export const authAdapter: Adapter = {
 		return data[0];
 	},
 
-	linkAccount: async data => {
-		void (await tryCatchHandler(postgresql.insert(accounts).values(data), 'authAdapter.linkAccount'));
-	},
+	linkAccount: async data =>
+		void (await tryCatchHandler(postgresql.insert(accounts).values(data), 'authAdapter.linkAccount')),
 
 	getUserByAccount: async ({ provider, providerAccountId }) => {
 		const { data, isSuccess } = await tryCatchHandler(
@@ -120,12 +128,11 @@ export const authAdapter: Adapter = {
 		return data?.[0]?.user || null;
 	},
 
-	deleteSession: async sessionToken => {
+	deleteSession: async sessionToken =>
 		void (await tryCatchHandler(
 			postgresql.delete(sessions).where(eq(sessions.sessionToken, sessionToken)),
 			'authAdapter.deleteSession'
-		));
-	},
+		)),
 
 	createVerificationToken: async ({ expires, identifier, token }) => {
 		const { data, isSuccess } = await tryCatchHandler(
@@ -153,17 +160,25 @@ export const authAdapter: Adapter = {
 	},
 
 	deleteUser: async id => {
-		void (await tryCatchHandler(postgresql.delete(users).where(eq(users.id, id)), 'authAdapter.deleteUser'));
+		const { data } = await tryCatchHandler(
+			postgresql.delete(users).where(eq(users.id, id)).returning(),
+			'deleteUser.deleteUser'
+		);
+
+		const OR: Array<SQL> = [eq(profiles.userId, id)];
+
+		if (data?.[0]) OR.push(eq(profiles.login, data[0].name));
+
+		return void (await tryCatchHandler(postgresql.delete(profiles).where(or(...OR)), 'deleteUser.deleteProfile'));
 	},
 
-	unlinkAccount: async ({ provider, providerAccountId }) => {
+	unlinkAccount: async ({ provider, providerAccountId }) =>
 		void (await tryCatchHandler(
 			postgresql
 				.delete(accounts)
 				.where(and(eq(accounts.provider, provider), eq(accounts.providerAccountId, providerAccountId))),
 			'authAdapter.unlinkAccount'
-		));
-	},
+		)),
 
 	getAccount: async (providerAccountId, provider) => {
 		const { data, isSuccess } = await tryCatchHandler(

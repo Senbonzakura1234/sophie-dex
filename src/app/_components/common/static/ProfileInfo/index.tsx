@@ -10,13 +10,15 @@ import BriefcaseIcon from '@components/icons/solid/BriefcaseIcon';
 import FollowIcon from '@components/icons/solid/FollowIcon';
 import HandShakeIcon from '@components/icons/solid/HandShakeIcon';
 import RepositoryIcon from '@components/icons/solid/RepositoryIcon';
-import type { getProfile } from '@root/server/postgresql';
+import type { getProfileRecordQuery } from '@root/server/postgresql/repository/query';
 import styles from './index.module.css';
 
-type Props = Readonly<{
-	profile: NonNullable<Awaited<ReturnType<typeof getProfile>>['result']>;
-	readmeContent: string | undefined;
-}>;
+type Props = Readonly<
+	{
+		profile: NonNullable<Awaited<ReturnType<typeof getProfileRecordQuery.execute>>>;
+		readmeContent: string | null;
+	} & JSX.IntrinsicAttributes
+>;
 
 export default function ProfileInfo({
 	profile: {

@@ -123,11 +123,10 @@ export const getLicense = async () => {
 
 export const getGithubReadme = async ({
 	user: { name }
-}: NonNullable<SessionResult['session']>): Promise<string | undefined> => {
-	const userReadmeResult = await tryCatchHandler(
-		improvedFetch([`https://raw.githubusercontent.com/${name}/${name}/main/README.md`, getDefaultFetchHeader()]),
-		'getUserReadme.get'
-	);
-
-	return userReadmeResult.isSuccess ? userReadmeResult.data : undefined;
-};
+}: NonNullable<SessionResult['session']>): Promise<string | null> =>
+	(
+		await tryCatchHandler(
+			improvedFetch([`https://raw.githubusercontent.com/${name}/${name}/main/README.md`, getDefaultFetchHeader()]),
+			'getUserReadme.get'
+		)
+	).data;

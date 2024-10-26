@@ -137,7 +137,17 @@ export function highlightSearchedText(input: string, search: string | undefined,
 
 export async function tryCatchHandler<TReturn = unknown>(promise: PromiseLike<TReturn>, operationCode: string) {
 	try {
-		return { data: await promise, isSuccess: true as const, error: null };
+		const start = globalThis.performance.now();
+
+		const data = await promise;
+
+		const end = globalThis.performance.now();
+
+		const timeTaken = end - start;
+
+		if (timeTaken > 500) writeLog({ args: [`Task ${operationCode} takes ${timeTaken.toFixed(5)}ms to end`] });
+
+		return { data, isSuccess: true as const, error: null };
 	} catch (error) {
 		writeLog({ args: [`Error at ${operationCode}`, `Detail: `, JSON.stringify(error, null, 2)], type: 'error' });
 
@@ -147,7 +157,17 @@ export async function tryCatchHandler<TReturn = unknown>(promise: PromiseLike<TR
 
 export function tryCatchHandlerSync<TReturn = unknown>(callback: () => TReturn, operationCode: string) {
 	try {
-		return { data: callback(), isSuccess: true as const, error: null };
+		const start = globalThis.performance.now();
+
+		const data = callback();
+
+		const end = globalThis.performance.now();
+
+		const timeTaken = end - start;
+
+		if (timeTaken > 1000) writeLog({ args: [`Task ${operationCode} takes ${timeTaken.toFixed(5)}ms to end`] });
+
+		return { data, isSuccess: true as const, error: null };
 	} catch (error) {
 		writeLog({ args: [`Error at ${operationCode}`, `Detail: `, JSON.stringify(error, null, 2)], type: 'error' });
 
