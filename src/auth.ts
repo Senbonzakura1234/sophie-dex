@@ -34,12 +34,7 @@ export const provider = GitHub({
 		if (!insertOrUpdateProfileRes.isSuccess)
 			throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Create or Update Profile Error' });
 
-		return {
-			id: id.toString(),
-			email: profile.email,
-			image: profile.avatar_url,
-			name: profile.login
-		};
+		return { id: id.toString(), email: profile.email, image: profile.avatar_url, name: profile.login };
 	}
 });
 
