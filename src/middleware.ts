@@ -5,12 +5,22 @@ import { env } from '@root/utils/common/env';
 import { trackEventServer } from '@root/utils/server';
 
 const testingPath = ['/test', '/api/test', '/api/export'];
+const protectedPath = ['/profile'];
 const homePath = '/';
 
 export default auth(async req => {
 	// Prevent testing path access on production
 	if (testingPath.some(p => req.nextUrl.pathname.startsWith(p)) && env.NEXT_PUBLIC_NODE_ENV === 'production')
 		return Response.json('Forbidden resource', { status: 403 });
+
+	// Redirect to login on UnAuthenticated when access Protected Page
+	if (!req.auth && protectedPath.some(p => req.nextUrl.pathname.startsWith(p))) {
+		const newUrl = new URL(customPages.signIn, req.nextUrl.origin);
+
+		newUrl.searchParams.set('callbackUrl', req.nextUrl.href);
+
+		return Response.redirect(newUrl);
+	}
 
 	// On SignIn Redirect to home on Authenticated
 	if (req.auth && req.nextUrl.pathname.startsWith(customPages.signIn)) {
@@ -47,5 +57,5 @@ export default auth(async req => {
 });
 
 export const config = {
-	matcher: ['/signin/:path*', '/test/:path*', '/api/test/:path*', '/api/export/:path*', '/']
+	matcher: ['/profile/:path*', '/signin/:path*', '/test/:path*', '/api/test/:path*', '/api/export/:path*', '/']
 };
