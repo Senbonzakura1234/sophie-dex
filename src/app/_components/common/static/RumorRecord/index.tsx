@@ -7,7 +7,7 @@ import Location from './Location';
 import Price from './Price';
 import RumorType from './RumorType';
 
-type Props = Readonly<{ data: Rumor } & { currentId?: string; search?: string } & JSX.IntrinsicAttributes>;
+type Props = Readonly<{ data: Rumor } & { currentId?: string; search?: string }>;
 
 export default function RumorRecord({ currentId, search, ...props }: Props) {
 	return (

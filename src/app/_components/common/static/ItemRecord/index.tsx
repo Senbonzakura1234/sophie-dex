@@ -11,7 +11,7 @@ import RecipeType from './RecipeType';
 import RelatedCategories from './RelatedCategories';
 import TraitPresent from './TraitPresent';
 
-type Props = Readonly<{ data: Item } & { currentId?: string; search?: string } & JSX.IntrinsicAttributes>;
+type Props = Readonly<{ data: Item } & { currentId?: string; search?: string }>;
 
 export default function ItemRecord({ currentId, search, ...props }: Props) {
 	return (

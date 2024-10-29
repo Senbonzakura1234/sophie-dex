@@ -6,7 +6,7 @@ import Categories from './Categories';
 import ItemPresent from './ItemPresent';
 import TraitMergeList from './TraitMergeList';
 
-type Props = Readonly<{ data: Trait } & { currentId?: string; search?: string } & JSX.IntrinsicAttributes>;
+type Props = Readonly<{ data: Trait } & { currentId?: string; search?: string }>;
 
 export default function TraitRecord({ currentId, search, ...props }: Props) {
 	return (

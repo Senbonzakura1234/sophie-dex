@@ -6,6 +6,7 @@ import type { PageProps } from '@root/types/common/props';
 import { tryCatchHandler } from '@root/utils/common';
 import { generateDetailMetadata, getAllRecordIds, getContentRecord } from '@root/utils/server/database';
 import type { Metadata, ResolvingMetadata } from 'next';
+import { Suspense } from 'react';
 
 const getRecord = async (params: Readonly<PageProps>['params']) => await getContentRecord(getEffectRecordQuery, params);
 
@@ -24,13 +25,12 @@ export function generateMetadata({ params }: Readonly<PageProps>, parent: Resolv
 	return generateDetailMetadata(parent, getRecord(params));
 }
 
-export default function EffectPage({ params }: Readonly<PageProps>) {
+export default async function EffectPage({ params }: Readonly<PageProps>) {
+	const resolvedProps = await getRecord(params);
+
 	return (
-		<SuspenseComponent
-			promiseData={getRecord(params)}
-			ChildComponent={EffectRecord}
-			showErrorContent
-			fallback={<RecordPlaceholder />}
-		/>
+		<Suspense fallback={<RecordPlaceholder />}>
+			<SuspenseComponent resolvedProps={resolvedProps} ChildComponent={EffectRecord} showErrorContent />
+		</Suspense>
 	);
 }

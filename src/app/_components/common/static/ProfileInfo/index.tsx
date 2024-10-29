@@ -13,12 +13,10 @@ import RepositoryIcon from '@components/icons/solid/RepositoryIcon';
 import type { getProfileRecordQuery } from '@root/server/postgresql/repository/query';
 import styles from './index.module.css';
 
-type Props = Readonly<
-	{
-		profile: NonNullable<Awaited<ReturnType<typeof getProfileRecordQuery.execute>>>;
-		readmeContent: string | null;
-	} & JSX.IntrinsicAttributes
->;
+type Props = Readonly<{
+	profile: NonNullable<Awaited<ReturnType<typeof getProfileRecordQuery.execute>>>;
+	readmeContent: string | null;
+}>;
 
 export default function ProfileInfo({
 	profile: {

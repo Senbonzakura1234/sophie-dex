@@ -8,7 +8,7 @@ import type { LicenseInfo } from '@root/types/common/zod';
 import { env } from '@root/utils/common/env';
 import LicenseInfoHead from './LicenseInfoHead';
 
-type Props = Readonly<LicenseInfo & JSX.IntrinsicAttributes>;
+type Props = Readonly<LicenseInfo>;
 
 export default function LicenseInfo({ body, conditions, limitations, permissions, ...rest }: Props) {
 	return (

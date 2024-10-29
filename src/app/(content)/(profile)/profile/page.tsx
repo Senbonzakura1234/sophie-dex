@@ -10,6 +10,7 @@ import { getSessionResult } from '@root/utils/server';
 import { generateGenericMetadata } from '@root/utils/server/database';
 import { getGithubReadme } from '@root/utils/server/fetch';
 import type { Metadata, ResolvingMetadata } from 'next';
+import { Suspense } from 'react';
 
 export async function generateMetadata(
 	{ searchParams }: Readonly<PageProps>,
@@ -56,12 +57,11 @@ const getReadmeProfile = async () => {
 };
 
 export default async function ProfilePage() {
+	const resolvedProps = await getReadmeProfile();
+
 	return (
-		<SuspenseComponent
-			promiseData={getReadmeProfile()}
-			ChildComponent={ProfileInfo}
-			showErrorContent
-			fallback={<RecordPlaceholder className='mx-auto min-h-[580px] w-full max-w-4xl' />}
-		/>
+		<Suspense fallback={<RecordPlaceholder className='mx-auto min-h-[580px] w-full max-w-4xl' />}>
+			<SuspenseComponent resolvedProps={resolvedProps} ChildComponent={ProfileInfo} showErrorContent />
+		</Suspense>
 	);
 }

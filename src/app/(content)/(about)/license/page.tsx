@@ -6,6 +6,7 @@ import type { PageProps } from '@root/types/common/props';
 import { generateGenericMetadata } from '@root/utils/server/database';
 import { getLicense } from '@root/utils/server/fetch';
 import type { Metadata, ResolvingMetadata } from 'next';
+import { Suspense } from 'react';
 
 export async function generateMetadata(
 	{ searchParams }: Readonly<PageProps>,
@@ -14,13 +15,12 @@ export async function generateMetadata(
 	return generateGenericMetadata(parent, { title: `${APP_NAME} | License` }, searchParams);
 }
 
-export default function LicensePage() {
+export default async function LicensePage() {
+	const resolvedProps = await getLicense();
+
 	return (
-		<SuspenseComponent
-			promiseData={getLicense()}
-			ChildComponent={LicenseInfo}
-			showErrorContent
-			fallback={<RecordPlaceholder className='min-h-[42rem]' />}
-		/>
+		<Suspense fallback={<RecordPlaceholder className='min-h-[42rem]' />}>
+			<SuspenseComponent resolvedProps={resolvedProps} ChildComponent={LicenseInfo} showErrorContent />
+		</Suspense>
 	);
 }

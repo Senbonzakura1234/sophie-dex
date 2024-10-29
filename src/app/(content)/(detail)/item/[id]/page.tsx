@@ -6,6 +6,7 @@ import type { PageProps } from '@root/types/common/props';
 import { tryCatchHandler } from '@root/utils/common';
 import { generateDetailMetadata, getAllRecordIds, getContentRecord } from '@root/utils/server/database';
 import type { Metadata, ResolvingMetadata } from 'next';
+import { Suspense } from 'react';
 
 export const revalidate = 9e6;
 
@@ -21,13 +22,12 @@ export function generateMetadata({ params }: Readonly<PageProps>, parent: Resolv
 	return generateDetailMetadata(parent, getRecord(params));
 }
 
-export default function ItemPage({ params }: Readonly<PageProps>) {
+export default async function ItemPage({ params }: Readonly<PageProps>) {
+	const resolvedProps = await getRecord(params);
+
 	return (
-		<SuspenseComponent
-			promiseData={getRecord(params)}
-			ChildComponent={ItemRecord}
-			showErrorContent
-			fallback={<RecordPlaceholder />}
-		/>
+		<Suspense fallback={<RecordPlaceholder />}>
+			<SuspenseComponent resolvedProps={resolvedProps} ChildComponent={ItemRecord} showErrorContent />
+		</Suspense>
 	);
 }
