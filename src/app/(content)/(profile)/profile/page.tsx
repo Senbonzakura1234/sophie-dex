@@ -61,7 +61,7 @@ export default async function ProfilePage() {
 
 	return (
 		<Suspense fallback={<RecordPlaceholder className='mx-auto min-h-[580px] w-full max-w-4xl' />}>
-			<SuspenseComponent resolvedProps={resolvedProps} ChildComponent={ProfileInfo} />
+			<SuspenseComponent resolvedProps={resolvedProps} ChildComponent={ProfileInfo} showErrorContent />
 		</Suspense>
 	);
 }
