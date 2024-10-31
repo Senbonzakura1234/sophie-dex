@@ -16,6 +16,7 @@ import type { BookmarkQuery, ModuleIdQuery, SearchQuery } from '@root/types/comm
 import type { ModuleIdEnum, SortByEnum } from '@root/types/common/zod/generic';
 import { arrayInclude, capitalize, entries, objectValues, tryCatchHandler } from '@root/utils/common';
 import type { SessionResult } from '@root/utils/server';
+import { getGithubReadme } from '@root/utils/server/fetch';
 import type { AnyColumn, SQL, SQLWrapper } from 'drizzle-orm';
 import { and, arrayOverlaps, asc, count, desc, eq, ilike, inArray, or, sql } from 'drizzle-orm';
 import type { PgColumn, PgSelect } from 'drizzle-orm/pg-core';
@@ -114,7 +115,8 @@ export const getEffects = async (input: SearchQuery, { isAuthenticated, session 
 		'getListRecord.executeBatchQuery'
 	);
 
-	if (!queryRes.isSuccess) return getListRecord<Effect>({ isEmptyResult: true });
+	if (!queryRes.isSuccess)
+		throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: `Get ${capitalize(moduleId)} List failed` });
 
 	return getListRecord<Effect>({ data: queryRes.data });
 };
@@ -168,7 +170,8 @@ export const getItems = async (input: SearchQuery, { isAuthenticated, session }:
 		'getListRecord.executeBatchQuery'
 	);
 
-	if (!queryRes.isSuccess) return getListRecord<Item>({ isEmptyResult: true });
+	if (!queryRes.isSuccess)
+		throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: `Get ${capitalize(moduleId)} List failed` });
 
 	return getListRecord<Item>({ data: queryRes.data });
 };
@@ -219,7 +222,8 @@ export const getRumors = async (input: SearchQuery, { isAuthenticated, session }
 		'getListRecord.executeBatchQuery'
 	);
 
-	if (!queryRes.isSuccess) return getListRecord<Rumor>({ isEmptyResult: true });
+	if (!queryRes.isSuccess)
+		throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: `Get ${capitalize(moduleId)} List failed` });
 
 	return getListRecord<Rumor>({ data: queryRes.data });
 };
@@ -274,7 +278,8 @@ export const getTraits = async (input: SearchQuery, { isAuthenticated, session }
 		'getListRecord.executeBatchQuery'
 	);
 
-	if (!queryRes.isSuccess) return getListRecord<Trait>({ isEmptyResult: true });
+	if (!queryRes.isSuccess)
+		throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: `Get ${capitalize(moduleId)} List failed` });
 
 	return getListRecord<Trait>({ data: queryRes.data });
 };
@@ -307,8 +312,21 @@ export const insertOrUpdateProfile = async (
 		.then(res => res[0]);
 };
 
-export const getProfile = async (session: NonNullable<SessionResult['session']>) =>
-	await getProfileRecordQuery.execute({ login: session.user.name });
+export const getReadmeProfile = async (session: NonNullable<SessionResult['session']>) => {
+	const getReadmeProfileRes = await tryCatchHandler(
+		Promise.all([getProfileRecordQuery.execute({ login: session.user.name }), getGithubReadme(session)]),
+		'getReadmeProfile.batchQuery'
+	);
+
+	if (!getReadmeProfileRes.isSuccess)
+		throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get Profile error' });
+
+	const [profile, readmeContent] = getReadmeProfileRes.data;
+
+	if (!profile) throw new APIError({ code: 'NOT_FOUND', message: 'Profile not found' });
+
+	return { profile, readmeContent };
+};
 
 const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: string) => {
 	const res = (await getBookmarksQueriesMap[moduleId].execute({ name: username })) as Record<string, Array<string>>;

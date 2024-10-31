@@ -10,13 +10,10 @@ import BriefcaseIcon from '@components/icons/solid/BriefcaseIcon';
 import FollowIcon from '@components/icons/solid/FollowIcon';
 import HandShakeIcon from '@components/icons/solid/HandShakeIcon';
 import RepositoryIcon from '@components/icons/solid/RepositoryIcon';
-import type { getProfileRecordQuery } from '@root/server/postgresql/repository/query';
+import type { RouterOutputs } from '@root/server/router';
 import styles from './index.module.css';
 
-type Props = Readonly<{
-	profile: NonNullable<Awaited<ReturnType<typeof getProfileRecordQuery.execute>>>;
-	readmeContent: string | null;
-}>;
+type Props = Readonly<RouterOutputs['user']['getReadmeProfile']>;
 
 export default function ProfileInfo({
 	profile: {

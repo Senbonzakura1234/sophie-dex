@@ -1,5 +1,4 @@
 import type { InputData } from '@root/types/common';
-import { trackEventClient } from '@root/utils/client';
 import { getBaseUrl, tryCatchHandler, tryCatchHandlerSync } from '@root/utils/common';
 import { useCallback, useMemo } from 'react';
 import { useNotification } from './useNotification';
@@ -46,8 +45,6 @@ export const useShareAPI = (input: InputData) => {
 	);
 
 	const share = useCallback(async () => {
-		trackEventClient('client.share', input, { flags: ['client.share'] });
-
 		if (isCanShare) return void tryCatchHandler(globalThis.navigator.share(input), 'share.navigatorShare');
 
 		// fallback to copy to clipboard

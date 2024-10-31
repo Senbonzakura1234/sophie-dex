@@ -7,7 +7,6 @@ import { insertProfileValidationSchema } from '@root/server/postgresql/schema';
 import { APIError } from '@root/types/common';
 import { tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
-import { trackEventServer } from '@root/utils/server';
 import GitHub from 'next-auth/providers/github';
 
 export const provider = GitHub({
@@ -15,13 +14,6 @@ export const provider = GitHub({
 	clientSecret: env.APP_GITHUB_APP_SECRET,
 
 	profile: async ({ id, plan: _, ...profile }, _tokens) => {
-		const featureFlag = 'server.authentication';
-
-		await trackEventServer(
-			[featureFlag, true],
-			[`${featureFlag}.githubLogin`, { username: profile.login || null }, { flags: [featureFlag] }]
-		);
-
 		const profileParseRes = insertProfileValidationSchema.safeParse({ profile_id: id, ...profile });
 
 		if (!profileParseRes.success) throw new APIError({ code: 'BAD_REQUEST', message: 'Profile Input Invalid' });

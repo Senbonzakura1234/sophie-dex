@@ -3,7 +3,6 @@
 import { MAXIMUM_BOOKMARK_LENGTH } from '@root/constants/common';
 import type { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
-import { trackEventClient } from '@root/utils/client';
 import { ApiClientCtx } from '@root/utils/client/trpc';
 import { capitalize, cn, tryCatchHandler } from '@root/utils/common';
 import { useSession } from 'next-auth/react';
@@ -51,8 +50,6 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 
 	const handleBookmark = async () => {
 		if (isDisabled) return;
-
-		trackEventClient('client.handleBookmark', { id, moduleId }, { flags: ['client.handleBookmark'] });
 
 		const res = await tryCatchHandler(
 			mutateAsync({

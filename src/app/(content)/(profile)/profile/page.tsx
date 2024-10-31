@@ -1,14 +1,8 @@
-import ProfileInfo from '@components/common/static/ProfileInfo';
-import SuspenseComponent from '@components/layout/static/SuspenseComponent';
+import APIProfileWrapper from '@components/layout/dynamic/ApiWrapper/profile';
 import RecordPlaceholder from '@components/loading/RecordPlaceholder';
 import { APP_NAME } from '@root/constants/common';
-import { getProfileRecordQuery } from '@root/server/postgresql/repository/query';
-import { APIError } from '@root/types/common';
 import type { PageProps } from '@root/types/common/props';
-import { tryCatchHandler } from '@root/utils/common';
-import { getSessionResult } from '@root/utils/server';
 import { generateGenericMetadata } from '@root/utils/server/database';
-import { getGithubReadme } from '@root/utils/server/fetch';
 import type { Metadata, ResolvingMetadata } from 'next';
 import { Suspense } from 'react';
 
@@ -19,49 +13,10 @@ export async function generateMetadata(
 	return generateGenericMetadata(parent, { title: `${APP_NAME} | Profile` }, searchParams);
 }
 
-const getReadmeProfile = async () => {
-	const sessionResult = await getSessionResult();
-
-	if (!sessionResult.isAuthenticated)
-		return {
-			isSuccess: false as const,
-			result: null,
-			error: new APIError({ code: 'UNAUTHORIZED' })
-		};
-
-	const getReadmeProfileRes = await tryCatchHandler(
-		Promise.all([
-			getProfileRecordQuery.execute({ login: sessionResult.session.user.name }),
-			getGithubReadme(sessionResult.session)
-		]),
-		'getReadmeProfile.batchQuery'
-	);
-
-	if (!getReadmeProfileRes.isSuccess)
-		return {
-			isSuccess: false as const,
-			result: null,
-			error: new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get Profile error' })
-		};
-
-	const [profile, readmeContent] = getReadmeProfileRes.data;
-
-	if (!profile)
-		return {
-			isSuccess: false as const,
-			result: null,
-			error: new APIError({ code: 'NOT_FOUND', message: 'Profile not found' })
-		};
-
-	return { isSuccess: true as const, result: { profile, readmeContent }, error: null };
-};
-
 export default async function ProfilePage() {
-	const resolvedProps = await getReadmeProfile();
-
 	return (
-		<Suspense fallback={<RecordPlaceholder className='mx-auto min-h-[580px] w-full max-w-4xl' />}>
-			<SuspenseComponent resolvedProps={resolvedProps} ChildComponent={ProfileInfo} showErrorContent />
+		<Suspense fallback={<RecordPlaceholder className='mx-auto min-h-[427.5px] w-full max-w-4xl' />}>
+			<APIProfileWrapper />
 		</Suspense>
 	);
 }

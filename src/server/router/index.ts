@@ -3,6 +3,7 @@ import {
 	getEffects,
 	getItems,
 	getModuleBookmarks,
+	getReadmeProfile,
 	getRumors,
 	getTraits
 } from '@root/server/postgresql';
@@ -30,9 +31,9 @@ import {
 import { writeLog } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import type { SessionResult } from '@root/utils/server';
-import { getSessionResult, trackEventServer } from '@root/utils/server';
+import { getSessionResult } from '@root/utils/server';
 import { exportRecords, getAllRecordIds, getContentRecord } from '@root/utils/server/database';
-import { initTRPC } from '@trpc/server';
+import { inferRouterOutputs, initTRPC } from '@trpc/server';
 import { ZodError } from 'zod';
 
 type TrpcCreateContextFn = () => Promise<{ sessionResult: SessionResult }>;
@@ -66,13 +67,9 @@ const protectedProcedure = publicProcedure.use(async opts => {
 
 export const appRouter = t.router({
 	effect: {
-		getAll: publicProcedure.input(searchQueryValidator).query(async ({ input, ctx }) => {
-			const featureFlag = 'server.getAll';
-
-			await trackEventServer([featureFlag, true], [`${featureFlag}.effect`, input, { flags: [featureFlag] }]);
-
-			return getEffects(input, ctx.sessionResult);
-		}),
+		getAll: publicProcedure
+			.input(searchQueryValidator)
+			.query(async ({ input, ctx }) => getEffects(input, ctx.sessionResult)),
 
 		getOne: publicProcedure
 			.input(idQueryValidator)
@@ -83,13 +80,9 @@ export const appRouter = t.router({
 		export: publicProcedure.query(() => exportRecords(exportEffectsQuery))
 	},
 	item: {
-		getAll: publicProcedure.input(searchQueryValidator).query(async ({ input, ctx }) => {
-			const featureFlag = 'server.getAll';
-
-			await trackEventServer([featureFlag, true], [`${featureFlag}.item`, input, { flags: [featureFlag] }]);
-
-			return getItems(input, ctx.sessionResult);
-		}),
+		getAll: publicProcedure
+			.input(searchQueryValidator)
+			.query(async ({ input, ctx }) => getItems(input, ctx.sessionResult)),
 
 		getOne: publicProcedure.input(idQueryValidator).query(({ input }) => getContentRecord(getItemRecordQuery, input)),
 
@@ -98,13 +91,9 @@ export const appRouter = t.router({
 		export: publicProcedure.query(() => exportRecords(exportItemsQuery))
 	},
 	rumor: {
-		getAll: publicProcedure.input(searchQueryValidator).query(async ({ input, ctx }) => {
-			const featureFlag = 'server.getAll';
-
-			await trackEventServer([featureFlag, true], [`${featureFlag}.rumor`, input, { flags: [featureFlag] }]);
-
-			return getRumors(input, ctx.sessionResult);
-		}),
+		getAll: publicProcedure
+			.input(searchQueryValidator)
+			.query(async ({ input, ctx }) => getRumors(input, ctx.sessionResult)),
 
 		getOne: publicProcedure
 			.input(idQueryValidator)
@@ -115,13 +104,9 @@ export const appRouter = t.router({
 		export: publicProcedure.query(() => exportRecords(exportRumorsQuery))
 	},
 	trait: {
-		getAll: publicProcedure.input(searchQueryValidator).query(async ({ input, ctx }) => {
-			const featureFlag = 'server.getAll';
-
-			await trackEventServer([featureFlag, true], [`${featureFlag}.trait`, input, { flags: [featureFlag] }]);
-
-			return getTraits(input, ctx.sessionResult);
-		}),
+		getAll: publicProcedure
+			.input(searchQueryValidator)
+			.query(async ({ input, ctx }) => getTraits(input, ctx.sessionResult)),
 
 		getOne: publicProcedure
 			.input(idQueryValidator)
@@ -132,25 +117,26 @@ export const appRouter = t.router({
 		export: publicProcedure.query(() => exportRecords(exportTraitsQuery))
 	},
 	user: {
-		getModuleBookmarks: protectedProcedure.input(moduleIdQueryValidator).query(({ input, ctx }) => {
+		getModuleBookmarks: protectedProcedure.input(moduleIdQueryValidator).query(async ({ input, ctx }) => {
 			if (!ctx.sessionResult.isAuthenticated) throw new APIError({ code: 'UNAUTHORIZED' });
 
-			return getModuleBookmarks(input, ctx.sessionResult.session);
+			return await getModuleBookmarks(input, ctx.sessionResult.session);
 		}),
 
 		bookmark: protectedProcedure.input(bookmarkQueryValidator).mutation(async ({ input, ctx }) => {
 			if (!ctx.sessionResult.isAuthenticated) throw new APIError({ code: 'UNAUTHORIZED' });
 
-			const featureFlag = 'server.bookmark';
+			return await bookmarkRecord(input, ctx.sessionResult.session);
+		}),
 
-			await trackEventServer(
-				[featureFlag, true],
-				[`${featureFlag}.peformBookmark`, input, { flags: [featureFlag] }]
-			);
+		getReadmeProfile: protectedProcedure.query(async ({ ctx }) => {
+			if (!ctx.sessionResult.isAuthenticated) throw new APIError({ code: 'UNAUTHORIZED' });
 
-			return bookmarkRecord(input, ctx.sessionResult.session);
+			return await getReadmeProfile(ctx.sessionResult.session);
 		})
 	}
 });
 
 export type AppRouter = typeof appRouter;
+
+export type RouterOutputs = inferRouterOutputs<AppRouter>;

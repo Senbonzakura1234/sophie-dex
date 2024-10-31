@@ -2,7 +2,6 @@ import { auth } from '@root/auth';
 import { customPages } from '@root/constants/common';
 import { genericModuleIdEnumSchema } from '@root/types/common/zod/generic';
 import { env } from '@root/utils/common/env';
-import { trackEventServer } from '@root/utils/server';
 
 const testingPath = ['/test', '/api/test', '/api/export'];
 const homePath = '/';
@@ -26,13 +25,6 @@ export default auth(async req => {
 		const search = searchParams.get('search');
 
 		if (search) {
-			const featureFlag = 'server.middleware';
-
-			await trackEventServer(
-				[featureFlag, true],
-				[`${featureFlag}.browserSearchRedirect`, { search }, { flags: [featureFlag] }]
-			);
-
 			const [firstPart = '', secondPart] = search.split(':=');
 
 			const moduleId = genericModuleIdEnumSchema.catch('item').parse(firstPart);

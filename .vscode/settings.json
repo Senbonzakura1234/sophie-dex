@@ -55,6 +55,7 @@
 	"tailwindCSS.classAttributes": [
 		"class",
 		"classes",
+		"anchorClassNames",
 		"className",
 		"classNames",
 		"ngClass",

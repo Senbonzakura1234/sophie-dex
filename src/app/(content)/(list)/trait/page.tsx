@@ -1,4 +1,4 @@
-import APIListWrapper from '@components/layout/dynamic/ApiWrapper/traits';
+import APIListWrapper from '@components/layout/dynamic/ApiWrapper/list';
 import ListRecordPlaceholder from '@components/loading/ListRecordPlaceholder';
 import { APP_NAME } from '@root/constants/common';
 import type { PageProps } from '@root/types/common/props';
@@ -16,7 +16,7 @@ export async function generateMetadata(
 export default function TraitsPage() {
 	return (
 		<Suspense fallback={<ListRecordPlaceholder />}>
-			<APIListWrapper />
+			<APIListWrapper moduleId='trait' />
 		</Suspense>
 	);
 }

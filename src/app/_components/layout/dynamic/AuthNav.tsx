@@ -5,7 +5,6 @@ import Dropdown from '@components/common/static/Dropdown';
 import GithubIcon from '@components/icons/brand/GithubIcon';
 import ProfileIcon from '@components/icons/outline/ProfileIcon';
 import SignOutIcon from '@components/icons/solid/SignOutIcon';
-import { trackEventClient } from '@root/utils/client';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { usePathname } from 'next/navigation';
 
@@ -20,7 +19,7 @@ export default function AuthNav() {
 	if (session)
 		return (
 			<Dropdown
-				anchor='bottom end'
+				anchor={{ gap: '0.25rem', padding: '0.25rem', to: 'bottom end' }}
 				items={[
 					{
 						type: 'static',
@@ -57,15 +56,7 @@ export default function AuthNav() {
 								Sign Out
 							</>
 						),
-						onClick: () => {
-							trackEventClient(
-								'client.authentication.signOut',
-								{ username: session.user?.name || '', email: session.user?.email || '' },
-								{ flags: ['client.authentication'] }
-							);
-
-							return signOut({ callbackUrl: pathname.startsWith('/profile') ? '/' : pathname });
-						},
+						onClick: () => void signOut({ callbackUrl: pathname.startsWith('/profile') ? '/' : pathname }),
 						className: 'text-primary'
 					}
 				]}
@@ -80,18 +71,14 @@ export default function AuthNav() {
 						<span className='hidden sm:inline'>Profile</span>
 					</>
 				}
-				className={{ menuBtn: 'bg-primary text-primary-content', dropdown: 'w-72' }}
+				classNames={{ menuBtn: 'bg-primary text-primary-content', dropdown: 'w-72' }}
 			/>
 		);
 
 	return (
 		<button
 			className='btn-brand flex cursor-pointer gap-2 rounded-lg px-4 py-2 text-left text-xs font-bold shadow-lg shadow-base-content/20 focus:outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-base-100/75 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary xl:text-sm'
-			onClick={() => {
-				trackEventClient('client.authentication.signIn', { pathname }, { flags: ['client.authentication'] });
-
-				return signIn();
-			}}
+			onClick={() => void signIn()}
 		>
 			<GithubIcon className='my-auto aspect-square w-4' />
 			Sign In

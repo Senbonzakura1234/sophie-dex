@@ -1,4 +1,4 @@
-import { Listbox, ListboxOptions, Transition } from '@headlessui/react';
+import { Listbox, ListboxOptions } from '@headlessui/react';
 import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
 import type { ClassNameProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
@@ -40,31 +40,27 @@ export default function SelectOption<V extends string | number>({
 				customLabelIcon={customLabelIcon}
 			/>
 
-			<Transition
-				as='div'
-				className='absolute z-10 w-full'
-				enter='transition-[opacity,transform] duration-500'
-				enterFrom='translate-y-5 opacity-0'
-				enterTo='opacity-1 translate-y-1'
-				leave='transition-[opacity,transform] duration-500'
-				leaveFrom='opacity-1 translate-y-1'
-				leaveTo='translate-y-5 opacity-0'
+			<ListboxOptions
+				anchor={{ gap: '0.25rem', padding: '0.25rem', to: 'bottom' }}
+				as='ul'
+				className={cn(
+					'legacy-scroll-area !max-h-52 z-50 overflow-auto rounded-md bg-base-100 py-1 shadow-lg shadow-base-content/30',
+					'transition duration-500 ease-out',
+					'data-[closed]:translate-y-5 data-[closed]:opacity-0'
+				)}
+				portal={false}
+				transition
 			>
-				<ListboxOptions
-					as='ul'
-					className='legacy-scroll-area size-full max-h-52 overflow-auto rounded-md bg-base-100 py-1 shadow-lg shadow-base-content/30'
-				>
-					{filterList.map((item, key) => (
-						<CustomListboxOption
-							key={key}
-							isHideLabel={isHideLabel}
-							isSelected={item.value === value.value || (key === 0 && value.value == null)}
-							optionValue={item}
-							useCustomIcon={useCustomIcon}
-						/>
-					))}
-				</ListboxOptions>
-			</Transition>
+				{filterList.map((item, key) => (
+					<CustomListboxOption
+						key={key}
+						isHideLabel={isHideLabel}
+						isSelected={item.value === value.value || (key === 0 && value.value == null)}
+						optionValue={item}
+						useCustomIcon={useCustomIcon}
+					/>
+				))}
+			</ListboxOptions>
 		</Listbox>
 	);
 }
