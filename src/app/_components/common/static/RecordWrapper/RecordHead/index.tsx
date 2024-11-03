@@ -4,15 +4,13 @@ import type { CommonRecord } from '@root/server/postgresql/schema';
 import { cn, highlightSearchedText } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import { Suspense } from 'react';
+import BookmarkBtn from './BookmarkBtn';
 
 const ShareButton = dynamic(() => import('@components/common/dynamic/ShareButton'), {
-	loading: () => <PulsePlaceHolder className='h-6 w-24 rounded-lg' />,
-	ssr: false
-});
-
-const BookmarkBtn = dynamic(() => import('./BookmarkBtn'), {
 	loading: () => <PulsePlaceHolder className='h-6 w-24 rounded-lg' />
 });
+
 const BackButton = dynamic(() => import('./BackButton'), {
 	loading: () => <PulsePlaceHolder className='mr-2 h-6 w-[61px] rounded-lg' />
 });
@@ -57,7 +55,9 @@ export default function RecordHead({ currentId, id, name, search, moduleId }: Pr
 					showText
 				/>
 
-				<BookmarkBtn id={id} name={name} moduleId={moduleId} />
+				<Suspense fallback={<PulsePlaceHolder className='h-6 w-24 rounded-lg' />}>
+					<BookmarkBtn id={id} name={name} moduleId={moduleId} />
+				</Suspense>
 			</nav>
 		</>
 	);

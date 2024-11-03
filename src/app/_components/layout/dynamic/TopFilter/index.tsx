@@ -3,6 +3,7 @@
 import QueryLink from '@components/common/dynamic/QueryLink';
 import RefetchButton from '@components/common/dynamic/RefetchButton';
 import FilterIcon from '@components/icons/outline/FilterIcon';
+import SearchInput from '@components/layout/dynamic/TopFilter/SearchInput';
 import Paginate from '@components/layout/static/Paginate';
 import { Transition } from '@headlessui/react';
 import { DEFAULT_LIMIT } from '@root/constants/common';
@@ -11,8 +12,7 @@ import { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { SearchQuery } from '@root/types/common/zod';
 import { arrayInclude, queryToParamsString } from '@root/utils/common';
-import dynamic from 'next/dynamic';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 
 import BookmarkFilter from './BookmarkFilter';
 import CategoryFilter from './CategoryFilter';
@@ -20,10 +20,6 @@ import ColorFilter from './ColorFilter';
 import RecipeTypeFilter from './RecipeTypeFilter';
 import RumorTypeFilter from './RumorTypeFilter';
 import SortControl from './SortControl';
-
-const SearchInput = dynamic(() => import('@components/layout/dynamic/TopFilter/SearchInput'), {
-	loading: () => <div className='h-8 w-full' />
-});
 
 const formatRecordCount = new Intl.NumberFormat('en-US', { minimumIntegerDigits: 3 }).format;
 
@@ -67,7 +63,9 @@ export default function TopFilter() {
 			</button>
 
 			<div className='card relative order-1 ml-auto flex w-full flex-row gap-3 overflow-hidden bg-base-100 px-5 py-2 shadow-lg shadow-primary sm:order-2 sm:w-fit md:w-1/4 md:min-w-[300px]'>
-				<SearchInput />
+				<Suspense fallback={<div className='h-8 w-full' />}>
+					<SearchInput />
+				</Suspense>
 			</div>
 
 			<Transition
@@ -85,21 +83,37 @@ export default function TopFilter() {
 
 				<div className='my-auto flex flex-wrap gap-3'>
 					<SortControl moduleId={moduleId} searchQuery={searchQuery} />
-					<BookmarkFilter moduleId={moduleId} />
+
+					<Suspense>
+						<BookmarkFilter moduleId={moduleId} />
+					</Suspense>
 				</div>
 
 				{moduleId !== 'effect' ? (
 					<div className='flex flex-wrap gap-3'>
-						{arrayInclude(['trait', 'item'], moduleId) ? <CategoryFilter /> : null}
+						{arrayInclude(['trait', 'item'], moduleId) ? (
+							<Suspense>
+								<CategoryFilter />
+							</Suspense>
+						) : null}
 
 						{moduleId === 'item' ? (
 							<>
-								<ColorFilter />
-								<RecipeTypeFilter />
+								<Suspense>
+									<ColorFilter />
+								</Suspense>
+
+								<Suspense>
+									<RecipeTypeFilter />
+								</Suspense>
 							</>
 						) : null}
 
-						{moduleId === 'rumor' ? <RumorTypeFilter /> : null}
+						{moduleId === 'rumor' ? (
+							<Suspense>
+								<RumorTypeFilter />
+							</Suspense>
+						) : null}
 					</div>
 				) : null}
 

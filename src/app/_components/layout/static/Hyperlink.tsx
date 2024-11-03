@@ -4,7 +4,7 @@ import { cn, highlightSearchedText, parseHyperLinkData } from '@root/utils/commo
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
-const ShareButton = dynamic(() => import('@components/common/dynamic/ShareButton'), { ssr: false });
+const ShareButton = dynamic(() => import('@components/common/dynamic/ShareButton'));
 
 type Props = Readonly<{ input: HyperLinkData; search?: string } & ClassNamesProps<'label' | 'link'>>;
 

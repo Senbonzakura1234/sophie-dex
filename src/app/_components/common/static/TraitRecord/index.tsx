@@ -1,7 +1,8 @@
 import RecordWrapper from '@components/common/static/RecordWrapper';
 import type { Trait } from '@root/server/postgresql/schema';
-
 import { highlightSearchedText } from '@root/utils/common';
+import { Suspense } from 'react';
+
 import Categories from './Categories';
 import ItemPresent from './ItemPresent';
 import TraitMergeList from './TraitMergeList';
@@ -22,7 +23,9 @@ export default function TraitRecord({ currentId, search, ...props }: Props) {
 
 					{itemPresent ? <ItemPresent itemPresent={itemPresent} search={search} /> : null}
 
-					<Categories categories={categories} />
+					<Suspense>
+						<Categories categories={categories} />
+					</Suspense>
 				</>
 			)}
 		</RecordWrapper>

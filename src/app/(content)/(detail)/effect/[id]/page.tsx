@@ -3,12 +3,13 @@ import SuspenseComponent from '@components/layout/static/SuspenseComponent';
 import RecordPlaceholder from '@components/loading/RecordPlaceholder';
 import { getAllEffectIdsQuery, getEffectRecordQuery } from '@root/server/postgresql/repository/query';
 import type { PageProps } from '@root/types/common/props';
-import { tryCatchHandler } from '@root/utils/common';
+import { resolveParams, tryCatchHandler } from '@root/utils/common';
 import { generateDetailMetadata, getAllRecordIds, getContentRecord } from '@root/utils/server/database';
 import type { Metadata, ResolvingMetadata } from 'next';
 import { Suspense } from 'react';
 
-const getRecord = async (params: Readonly<PageProps>['params']) => await getContentRecord(getEffectRecordQuery, params);
+const getRecord = async (params: Readonly<PageProps>['params']) =>
+	await getContentRecord(getEffectRecordQuery, await resolveParams(params));
 
 export const revalidate = 9e6;
 

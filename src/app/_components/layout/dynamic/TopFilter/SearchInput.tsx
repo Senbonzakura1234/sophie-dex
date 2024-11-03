@@ -6,7 +6,7 @@ import { useDebounce } from '@root/hooks/useDebounce';
 import { useUpdateQuery } from '@root/hooks/useUpdateQuery';
 import { useEffect, useState } from 'react';
 
-function SearchInput() {
+export default function SearchInput() {
 	const { searchQuery, updateQuery, moduleId } = useUpdateQuery();
 
 	const [searchValue, setSearchValue] = useState(searchQuery.search || null);
@@ -52,5 +52,3 @@ function SearchInput() {
 		</>
 	);
 }
-
-export default SearchInput;

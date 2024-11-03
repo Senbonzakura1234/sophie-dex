@@ -1,5 +1,6 @@
 import type { HyperLinkData } from '@root/server/postgresql/schema';
-import type { CommonObject, KeyOf, ValueOf } from '@root/types/common';
+import { type CommonObject, type KeyOf, type ValueOf } from '@root/types/common';
+import type { PageProps } from '@root/types/common/props';
 import type { SearchQuery } from '@root/types/common/zod';
 import { searchQueryValidator } from '@root/types/common/zod';
 import type { BooleanishEnum } from '@root/types/common/zod/generic';
@@ -191,4 +192,20 @@ export function parseHyperLinkData(input: HyperLinkData) {
 	}
 
 	return { label: input.name, href: `/${input.table}/${input.id}` } as const;
+}
+
+export async function resolveSearchParams(searchParams: PageProps['searchParams']): PageProps['searchParams'] {
+	const searchParamsRes = await tryCatchHandler(searchParams, 'resolveSearchParams');
+
+	if (!searchParamsRes.isSuccess) return {};
+
+	return searchParamsRes.data;
+}
+
+export async function resolveParams(params: PageProps['params']): PageProps['params'] {
+	const paramsRes = await tryCatchHandler(params, 'resolveParams');
+
+	if (!paramsRes.isSuccess) return { id: '' };
+
+	return paramsRes.data;
 }

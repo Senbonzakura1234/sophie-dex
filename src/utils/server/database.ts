@@ -24,13 +24,16 @@ export async function generateGenericMetadata(
 	extraMeta: Metadata,
 	searchParams?: Readonly<PageProps>['searchParams']
 ): Promise<Metadata> {
-	const parentRes = await tryCatchHandler(parentPromise, 'generateGenericMetadata.getParentMeta');
+	const res = await tryCatchHandler(
+		Promise.all([parentPromise, searchParams]),
+		'generateGenericMetadata.getParentMeta'
+	);
 
-	if (!parentRes.isSuccess) return { title: `Error 500 - ${errorMap.INTERNAL_SERVER_ERROR.message}` };
+	if (!res.isSuccess) return { title: `Error 500 - ${errorMap.INTERNAL_SERVER_ERROR.message}` };
 
-	const { keywords } = parentRes.data;
+	const [{ keywords }, searchParamsRes] = res.data;
 
-	const result = objectValues(searchQueryValidator.parse(searchParams)).filter(Boolean).map(String);
+	const result = objectValues(searchQueryValidator.parse(searchParamsRes)).filter(Boolean).map(String);
 
 	return { ...extraMeta, keywords: [...result, ...(keywords || [])] };
 }

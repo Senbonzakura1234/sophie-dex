@@ -1,18 +1,15 @@
 'use client';
 
+import type { ShareButtonProps } from '@components/common/dynamic/ShareButton';
 import ClipboardIcon from '@components/icons/solid/ClipboardIcon';
 import ShareSquareIcon from '@components/icons/solid/ShareSquareIcon';
 import { useShareAPI } from '@root/hooks/useShareAPI';
-import type { InputData } from '@root/types/common';
-import type { ClassNamesProps } from '@root/types/common/props';
 import { cn } from '@root/utils/common';
 import dynamic from 'next/dynamic';
 
 const Notification = dynamic(() => import('@components/layout/dynamic/Notification'), { ssr: false });
 
-type Props = Readonly<{ input: InputData; showText?: boolean } & ClassNamesProps<'wrapper' | 'icon'>>;
-
-export default function ShareButton({ classNames, input, showText }: Props) {
+export default function ShareButtonInner({ classNames, input, showText }: ShareButtonProps) {
 	const { isCanShare, share, shareNotification } = useShareAPI(input);
 
 	const IconComponent = isCanShare ? ShareSquareIcon : ClipboardIcon;

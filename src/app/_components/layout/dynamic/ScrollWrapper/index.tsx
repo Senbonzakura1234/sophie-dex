@@ -1,9 +1,10 @@
 import * as ScrollArea from '@radix-ui/react-scroll-area';
 import type { ChildrenProps } from '@root/types/common/props';
 import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
+import ScrollTopTrigger from './ScrollTopTrigger';
 
 const ScrollToTop = dynamic(() => import('./ScrollToTop'));
-const ScrollTopTrigger = dynamic(() => import('./ScrollTopTrigger'));
 
 type Props = Readonly<ChildrenProps & { disabledScrollTopOnPageChange?: boolean; id?: string }>;
 
@@ -26,7 +27,11 @@ export default function ScrollWrapper({ children, disabledScrollTopOnPageChange,
 
 			<ScrollToTop />
 
-			{disabledScrollTopOnPageChange ? null : <ScrollTopTrigger />}
+			{disabledScrollTopOnPageChange ? null : (
+				<Suspense>
+					<ScrollTopTrigger />
+				</Suspense>
+			)}
 		</ScrollArea.Root>
 	);
 }

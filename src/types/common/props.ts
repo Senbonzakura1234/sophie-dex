@@ -11,7 +11,7 @@ export type RefProps<E> = Readonly<{ refObject?: RefObject<E> }>;
 export type IconProps = Readonly<SVGProps<SVGSVGElement>>;
 export type NotificationProps = Readonly<{ message: string; type?: AlertTypeEnum; isOpen: boolean }>;
 export type PageProps = Readonly<{
-	params: { id: string };
-	searchParams: Record<string, string | Array<string> | undefined | null>;
+	params: Promise<{ id: string }>;
+	searchParams: Promise<Record<string, string | Array<string> | undefined | null>>;
 }>;
 export type RefreshProps = Readonly<ImprovePick<UsePullToRefreshParams, 'isDisabled'>>;

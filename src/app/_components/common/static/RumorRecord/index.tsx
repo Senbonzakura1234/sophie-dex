@@ -1,6 +1,7 @@
 import RecordWrapper from '@components/common/static/RecordWrapper';
 import { rumorColorMap } from '@root/constants/common';
 import type { Rumor } from '@root/server/postgresql/schema';
+import { Suspense } from 'react';
 
 import Description from './Description';
 import Location from './Location';
@@ -25,7 +26,9 @@ export default function RumorRecord({ currentId, search, ...props }: Props) {
 
 					<Location location={location} search={search} />
 
-					<RumorType rumorType={rumorType} />
+					<Suspense>
+						<RumorType rumorType={rumorType} />
+					</Suspense>
 				</>
 			)}
 		</RecordWrapper>

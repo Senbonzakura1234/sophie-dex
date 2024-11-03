@@ -6,6 +6,7 @@ import ChevronRightIcon from '@components/icons/solid/ChevronRightIcon';
 import QueryLink from '@components/common/dynamic/QueryLink';
 import type { useSearchQuery } from '@root/hooks/useSearchQuery';
 import type { SearchQuery } from '@root/types/common/zod';
+import { Suspense } from 'react';
 import GoToPageSelect from './GoToPageSelect';
 
 type Props = Readonly<{ searchQuery: ReturnType<typeof useSearchQuery>['searchQuery']; totalPage: number }>;
@@ -43,7 +44,9 @@ export default function Paginate({ totalPage, searchQuery }: Props) {
 				<ChevronLeftIcon className='aspect-square h-4' />
 			</QueryLink>
 
-			<GoToPageSelect totalPage={totalPage} />
+			<Suspense>
+				<GoToPageSelect totalPage={totalPage} />
+			</Suspense>
 
 			<QueryLink
 				aria-label='Go To Next Page'

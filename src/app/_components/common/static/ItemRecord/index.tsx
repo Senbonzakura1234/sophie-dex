@@ -1,6 +1,7 @@
 import RecordWrapper from '@components/common/static/RecordWrapper';
 import { recipeTypeColorMap } from '@root/constants/common';
 import type { Item } from '@root/server/postgresql/schema';
+import { Suspense } from 'react';
 
 import Category from './Category';
 import Color from './Color';
@@ -25,11 +26,19 @@ export default function ItemRecord({ currentId, search, ...props }: Props) {
 				<>
 					<Level level={level} color={color} />
 
-					{recipeType ? <RecipeType recipeType={recipeType} /> : null}
+					{recipeType ? (
+						<Suspense>
+							<RecipeType recipeType={recipeType} />
+						</Suspense>
+					) : null}
 
-					<Category color={color} category={category} />
+					<Suspense>
+						<Category color={color} category={category} />
+					</Suspense>
 
-					<Color color={color} />
+					<Suspense>
+						<Color color={color} />
+					</Suspense>
 
 					{recipeIdea ? <RecipeIdea recipeIdea={recipeIdea} search={search} /> : null}
 
@@ -37,7 +46,9 @@ export default function ItemRecord({ currentId, search, ...props }: Props) {
 
 					{traitPresent ? <TraitPresent traitPresent={traitPresent} search={search} /> : null}
 
-					<RelatedCategories relatedCategories={relatedCategories} search={search} />
+					<Suspense>
+						<RelatedCategories relatedCategories={relatedCategories} search={search} />
+					</Suspense>
 				</>
 			)}
 		</RecordWrapper>

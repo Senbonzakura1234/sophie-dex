@@ -6,7 +6,7 @@ import type { RequestCookie } from 'next/dist/compiled/@edge-runtime/cookies';
 import { cookies } from 'next/headers';
 
 export const getCookieData = async (name: string) => {
-	const cookieData = cookies().get(name);
+	const cookieData = (await cookies()).get(name);
 
 	return new Promise<RequestCookie | undefined>(resolve => setTimeout(() => resolve(cookieData)));
 };
