@@ -28,6 +28,7 @@ export const env = createEnv({
 	},
 	server: {
 		PGURL_NONPOOLING: z.string().catch(''),
+		AUTH_DRIZZLE_URL: z.string().catch(''),
 
 		ANALYZE: z.enum(['true', 'false']).catch('false'),
 
@@ -55,6 +56,7 @@ export const env = createEnv({
 
 		// server
 		PGURL_NONPOOLING: process.env.PGURL_NONPOOLING,
+		AUTH_DRIZZLE_URL: process.env.PGURL_NONPOOLING,
 
 		ANALYZE: process.env.ANALYZE,
 
