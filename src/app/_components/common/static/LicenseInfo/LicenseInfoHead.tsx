@@ -5,6 +5,7 @@ import type { ImprovePick } from '@root/types/common';
 import type { LicenseInfo } from '@root/types/common/zod';
 import { env } from '@root/utils/common/env';
 import Link from 'next/link';
+import { Suspense } from 'react';
 
 type Props = Readonly<ImprovePick<LicenseInfo, 'description' | 'name'>>;
 
@@ -40,7 +41,9 @@ export default function LicenseInfoHead({ description, name }: Props) {
 				</div>
 			</div>
 
-			<MDXRenderer body={description} className='!max-w-xl text-xs font-bold md:text-sm' />
+			<Suspense>
+				<MDXRenderer body={description} className='!max-w-xl text-xs font-bold md:text-sm' />
+			</Suspense>
 		</div>
 	);
 }

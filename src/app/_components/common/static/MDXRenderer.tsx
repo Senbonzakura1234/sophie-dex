@@ -1,9 +1,11 @@
+'use client';
+
 import type { Fragment, Jsx } from '@mdx-js/mdx';
 import { compile, run } from '@mdx-js/mdx';
 import type { ImprovePick } from '@root/types/common';
 import type { ClassNameProps } from '@root/types/common/props';
 import { cn, tryCatchHandler } from '@root/utils/common';
-import { Fragment as ReactFragment } from 'react';
+import { Fragment as ReactFragment, useEffect, useState } from 'react';
 import * as runtime_ from 'react/jsx-runtime';
 
 const runtime = runtime_ as { Fragment: Fragment; jsx: Jsx; jsxs: Jsx };
@@ -28,8 +30,12 @@ const getMDXModule = async ({ body }: ImprovePick<Props, 'body'>) => {
 	return runtimeResult.data as { default: typeof ReactFragment };
 };
 
-export default async function MDXRenderer({ body, className }: Props) {
-	const mdxModule = await getMDXModule({ body });
+export default function MDXRenderer({ body, className }: Props) {
+	const [mdxModule, setMdxModule] = useState<Awaited<ReturnType<typeof getMDXModule>>>({ default: ReactFragment });
+
+	useEffect(() => {
+		void getMDXModule({ body }).then(setMdxModule);
+	}, [body]);
 
 	return (
 		<div className={cn('prose max-w-none', className)}>

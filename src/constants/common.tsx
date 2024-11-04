@@ -87,7 +87,7 @@ export const errorMap = {
 	// Request Error
 	PARSE_ERROR: { message: 'Invalid JSON From Client', status: 400 },
 	BAD_REQUEST: { message: 'Bad Request', status: 400 },
-	UNAUTHORIZED: { message: 'Unauthorized Request', status: 401 },
+	UNAUTHORIZED: { message: 'Unauthorized Content', status: 401 },
 	FORBIDDEN: { message: 'Forbidden Content', status: 403 },
 	NOT_FOUND: { message: 'Content Not Found', status: 404 },
 	METHOD_NOT_SUPPORTED: { message: 'Method Not Supported', status: 405 },
@@ -115,7 +115,7 @@ export const defaultTRPCQueryOptions: DefaultOptions = {
 		refetchOnMount: false,
 		refetchOnReconnect: env.NEXT_PUBLIC_NODE_ENV === 'production',
 		refetchOnWindowFocus: false,
-		retry: env.NEXT_PUBLIC_NODE_ENV === 'production' ? 2 : 1
+		retry: false
 	}
 };
 

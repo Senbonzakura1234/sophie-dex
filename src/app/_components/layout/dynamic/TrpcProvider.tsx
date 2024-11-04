@@ -7,7 +7,7 @@ import { getBaseUrl } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { httpBatchLink, loggerLink } from '@trpc/client';
+import { httpBatchLink, loggerLink, retryLink } from '@trpc/client';
 import { useState } from 'react';
 
 export default function TrpcProvider({ children }: ChildrenProps) {
@@ -16,6 +16,15 @@ export default function TrpcProvider({ children }: ChildrenProps) {
 	const [trpcClient] = useState(() =>
 		ApiClientCtx.createClient({
 			links: [
+				retryLink({
+					retry: ({ attempts, error: { data }, op: { type } }) => {
+						if (data && data.code !== 'INTERNAL_SERVER_ERROR') return false;
+
+						if (type !== 'query') return false;
+
+						return attempts <= (env.NEXT_PUBLIC_NODE_ENV === 'production' ? 2 : 1);
+					}
+				}),
 				httpBatchLink({ url: `${getBaseUrl()}/api/trpc` }),
 				loggerLink({
 					enabled: opts =>

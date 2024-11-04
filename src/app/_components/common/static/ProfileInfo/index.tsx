@@ -11,6 +11,7 @@ import FollowIcon from '@components/icons/solid/FollowIcon';
 import HandShakeIcon from '@components/icons/solid/HandShakeIcon';
 import RepositoryIcon from '@components/icons/solid/RepositoryIcon';
 import type { RouterOutputs } from '@root/server/router';
+import { Suspense } from 'react';
 import styles from './index.module.css';
 
 type Props = Readonly<RouterOutputs['user']['getReadmeProfile']>;
@@ -86,7 +87,9 @@ export default function ProfileInfo({
 					</div>
 
 					{readmeContent ? (
-						<MDXRenderer body={readmeContent} className={styles.readmeContent} />
+						<Suspense>
+							<MDXRenderer body={readmeContent} className={styles.readmeContent} />
+						</Suspense>
 					) : (
 						<CreateProfileReadmeGuide />
 					)}
