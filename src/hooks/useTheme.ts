@@ -24,7 +24,7 @@ export function useTheme<const V extends string>(
 			globalThis.document.body.classList[isDarkTheme ? 'add' : 'remove']('dark');
 		}
 
-		setTheme(next.value!, { path: '/' });
+		setTheme(next.value!);
 	};
 
 	return [themeSelect, setThemeSelected] as const;

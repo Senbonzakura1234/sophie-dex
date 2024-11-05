@@ -1,6 +1,6 @@
 {
 	"name": "sophie-dex",
-	"version": "35.0.7",
+	"version": "35.0.8",
 	"private": false,
 	"license": "MIT",
 	"author": {
@@ -18,8 +18,8 @@
 		"build": "next build",
 		"build:analyze": "dotenv -e .env.analyze next build",
 		"check-info": "next info",
-		"dev": "concurrently \"npm run open-home\" \"next dev\"",
-		"dev:idle": "next dev",
+		"dev": "concurrently \"npm run open-home\" \"next dev --turbopack\"",
+		"dev:idle": "next dev --turbopack",
 		"dev:safe": "concurrently \"npm run open-home:safe\" \"dotenv -e .env.https next dev --experimental-https --experimental-https-key ./certificates/localhost-key.pem --experimental-https-cert ./certificates/localhost.pem\"",
 		"drizzle-gen": "dotenv drizzle-kit generate",
 		"drizzle-push": "dotenv drizzle-kit push",

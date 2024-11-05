@@ -3,13 +3,14 @@ import TwitterSquareIcon from '@components/icons/brand/TwitterSquareIcon';
 import MailIcon from '@components/icons/solid/MailIcon';
 import MapPinIcon from '@components/icons/solid/MapPinIcon';
 import OfficeIcon from '@components/icons/solid/OfficeIcon';
-import type { RouteType } from 'next/dist/lib/load-custom-routes';
+// import type { RouteType } from 'next/dist/lib/load-custom-routes';
 import Link from 'next/link';
 import type { ComponentProps } from 'react';
 
 export type ProfileFieldProps = Readonly<
 	| { type: 'company' | 'location'; label: string }
-	| { type: 'blog' | 'mail' | 'twitter'; label: string; href: ComponentProps<typeof Link<RouteType>>['href'] }
+	// | { type: 'blog' | 'mail' | 'twitter'; label: string; href: ComponentProps<typeof Link<RouteType>>['href'] }
+	| { type: 'blog' | 'mail' | 'twitter'; label: string; href: ComponentProps<typeof Link>['href'] }
 >;
 
 const iconMap = {

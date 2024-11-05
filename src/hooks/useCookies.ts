@@ -9,13 +9,13 @@ export function useCookies<T extends string>(name: string, defaultValue: T) {
 
 		if (cookie) return cookie;
 
-		setCookie(name, defaultValue, { path: '/' });
+		setCookie(name, defaultValue);
 
 		return defaultValue;
 	});
 
 	const updateCookie = (newValue: T, options: Parameters<typeof setCookie>[2] = {}) => {
-		setCookie(name, newValue, { path: '/', ...options });
+		setCookie(name, newValue, { ...options });
 
 		setValue(newValue);
 	};
