@@ -1,5 +1,4 @@
 import SignInTrigger from '@components/layout/dynamic/SignInTrigger';
-import Loader from '@components/loading/Loader';
 import { providerConfig } from '@root/auth';
 import type { PageProps } from '@root/types/common/props';
 import { signInQueryValidator } from '@root/types/common/zod';
@@ -11,7 +10,11 @@ export default async function SignIn({ searchParams }: Readonly<PageProps>) {
 
 	return (
 		<div className='fixed z-[100] flex h-screen w-screen place-content-center bg-base-100'>
-			<Loader className='m-auto aspect-square w-1/6 text-primary' />
+			<div className='m-auto inline-flex flex-wrap items-center gap-2 text-center text-primary'>
+				<span className='text-2xl capitalize xl:text-3xl'>please wait while we signing you in</span>
+
+				<span className='loading loading-bars loading-md mx-auto xl:loading-lg' />
+			</div>
 
 			<Suspense>
 				<SignInTrigger callbackUrl={callbackUrl} {...providerConfig} />
