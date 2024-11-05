@@ -9,7 +9,7 @@ export default chainingPlugin({
 	plugins: [withBundleAnalyzer({ enabled: process.env.ANALYZE === 'true' }), withMDX()],
 	rootConfig: {
 		eslint: { ignoreDuringBuilds: true },
-		experimental: { mdxRs: true },
+		experimental: { mdxRs: true, reactCompiler: true },
 		images: { remotePatterns: [{ protocol: 'https', hostname: 'avatars.githubusercontent.com', port: '' }] },
 		pageExtensions: ['ts', 'tsx', 'mdx'],
 		typescript: { ignoreBuildErrors: true }
