@@ -4,8 +4,6 @@ import { cn } from '@root/utils/common';
 import Link from 'next/link';
 import type { ComponentProps, MouseEventHandler, ReactNode } from 'react';
 
-type Anchor = 'top' | 'right' | 'bottom' | 'left';
-
 export type Props = Readonly<{
 	buttonLabel?: ReactNode;
 	items: Array<

@@ -33,7 +33,8 @@ import { env } from '@root/utils/common/env';
 import type { SessionResult } from '@root/utils/server';
 import { getSessionResult } from '@root/utils/server';
 import { exportRecords, getAllRecordIds, getContentRecord } from '@root/utils/server/database';
-import { inferRouterOutputs, initTRPC } from '@trpc/server';
+import type { inferRouterOutputs } from '@trpc/server';
+import { initTRPC } from '@trpc/server';
 import { ZodError } from 'zod';
 
 type TrpcCreateContextFn = () => Promise<{ sessionResult: SessionResult }>;

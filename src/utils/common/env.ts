@@ -30,7 +30,9 @@ export const env = createEnv({
 		PGURL_NONPOOLING: z.string().catch(''),
 		AUTH_DRIZZLE_URL: z.string().catch(''),
 
-		ANALYZE: z.enum(['true', 'false']).catch('false'),
+		ENABLE_ANALYZE: z.enum(['true', 'false']).catch('false'),
+		DISABLE_LINTER: z.enum(['true', 'false']).catch('false'),
+		DISABLE_TYPE_CHECK: z.enum(['true', 'false']).catch('false'),
 
 		APP_GITHUB_TOKEN: z.string().catch(''),
 		APP_GITHUB_APP_ID: z.string().catch(''),
@@ -58,7 +60,9 @@ export const env = createEnv({
 		PGURL_NONPOOLING: process.env.PGURL_NONPOOLING,
 		AUTH_DRIZZLE_URL: process.env.PGURL_NONPOOLING,
 
-		ANALYZE: process.env.ANALYZE,
+		ENABLE_ANALYZE: process.env.ENABLE_ANALYZE,
+		DISABLE_LINTER: process.env.DISABLE_LINTER,
+		DISABLE_TYPE_CHECK: process.env.DISABLE_TYPE_CHECK,
 
 		APP_GITHUB_TOKEN: process.env.APP_GITHUB_TOKEN,
 		APP_GITHUB_APP_ID: process.env.APP_GITHUB_APP_ID,
