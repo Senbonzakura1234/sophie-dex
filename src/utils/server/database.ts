@@ -1,23 +1,25 @@
 import { env } from '@root/utils/common/env';
 if (env.NEXT_PUBLIC_NODE_ENV !== 'script') void import('server-only');
 
-import { errorMap } from '@root/constants/common';
+import { errorMap, moduleIdList } from '@root/constants/common';
+import { getAllRecordQueriesMap } from '@root/server/postgresql/repository/query';
 import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/postgresql/schema';
 import type { APIResult, CommonObject, PreparedPGQuery } from '@root/types/common';
 import { APIError } from '@root/types/common';
 import type { PageProps } from '@root/types/common/props';
 import type { IdQuery, OgQuery } from '@root/types/common/zod';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
+import type { ModuleIdEnum } from '@root/types/common/zod/generic';
 import {
 	capitalize,
 	deleteNullableProperty,
-	entries,
 	getBaseUrl,
 	objectValues,
 	parseHyperLinkData,
 	tryCatchHandler
 } from '@root/utils/common';
-import type { Metadata, ResolvingMetadata } from 'next';
+import { getOgImgUrl, getSiteMapPriority } from '@root/utils/server';
+import type { Metadata, MetadataRoute, ResolvingMetadata } from 'next';
 
 export async function generateGenericMetadata(
 	parentPromise: ResolvingMetadata,
@@ -61,8 +63,7 @@ export async function generateDetailMetadata(
 		description: `${getBaseUrl(true)}/${recordData.moduleId}/${recordData.id}`
 	} satisfies OgQuery;
 
-	const ogSearchParam = new URLSearchParams(entries(ogQuery));
-	const ogImgUrl = `${getBaseUrl(true)}/api/og?${ogSearchParam.toString()}`;
+	const ogImgUrl = getOgImgUrl(ogQuery);
 
 	return {
 		title: ogQuery.title,
@@ -195,3 +196,42 @@ export const updateTraitKeywords = (input: Trait): Trait => ({
 		.replaceAll('_', ' ')
 		.toLowerCase()
 });
+
+export const generateRecordDetailSitemap = async (moduleId: ModuleIdEnum): Promise<MetadataRoute.Sitemap> => {
+	const { data } = await tryCatchHandler(
+		getAllRecordQueriesMap[moduleId].execute(),
+		'generateRecordsSitemap.getAllRecords'
+	);
+
+	return (data || []).map(record => {
+		const ogQuery = {
+			alt: record.name,
+			title: `${capitalize(record.moduleId)} | ${record.name}`,
+			description: `${getBaseUrl(true)}/${record.moduleId}/${record.id}`
+		} satisfies OgQuery;
+
+		return {
+			url: ogQuery.description,
+			changeFrequency: 'weekly',
+			images: [getOgImgUrl()],
+			priority: getSiteMapPriority(`detail_${moduleId}`)
+		};
+	});
+};
+
+export const generateRecordListSitemap = (): MetadataRoute.Sitemap => {
+	return moduleIdList.map(moduleId => {
+		const ogQuery = {
+			alt: moduleId,
+			title: capitalize(moduleId),
+			description: `${getBaseUrl(true)}/${moduleId}`
+		} satisfies OgQuery;
+
+		return {
+			url: ogQuery.description,
+			changeFrequency: 'weekly',
+			images: [getOgImgUrl()],
+			priority: getSiteMapPriority(`list_${moduleId}`)
+		};
+	});
+};

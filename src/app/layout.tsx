@@ -11,7 +11,7 @@ import type { ChildrenProps } from '@root/types/common/props';
 import { genericDaisyUIThemeEnumSchema } from '@root/types/common/zod/generic';
 import { cn, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
-import { getCookieData } from '@root/utils/server';
+import { getCookieData, getOgImgUrl } from '@root/utils/server';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
 import { SessionProvider } from 'next-auth/react';
@@ -192,7 +192,7 @@ export const metadata: Metadata = {
 		'mobile-web-app-description': env.NEXT_PUBLIC_APP_DESCRIPTION,
 		'og:site_name': APP_NAME,
 		'og:description': env.NEXT_PUBLIC_APP_DESCRIPTION,
-		'og:image': `${getBaseUrl()}/api/og`,
+		'og:image': getOgImgUrl(),
 		'og:title': `${APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
 		'og:url': getBaseUrl(true)
 	},
@@ -201,7 +201,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: 'summary_large_image',
 		description: env.NEXT_PUBLIC_APP_DESCRIPTION,
-		images: `${getBaseUrl()}/api/og`,
+		images: getOgImgUrl(),
 		title: `${APP_NAME} | ${env.NEXT_PUBLIC_APP_DESCRIPTION}`
 	}
 };

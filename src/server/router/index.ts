@@ -8,14 +8,14 @@ import {
 	getTraits
 } from '@root/server/postgresql';
 import {
-	exportEffectsQuery,
-	exportItemsQuery,
-	exportRumorsQuery,
-	exportTraitsQuery,
 	getAllEffectIdsQuery,
+	getAllEffectsQuery,
 	getAllItemIdsQuery,
+	getAllItemsQuery,
 	getAllRumorIdsQuery,
+	getAllRumorsQuery,
 	getAllTraitIdsQuery,
+	getAllTraitsQuery,
 	getEffectRecordQuery,
 	getItemRecordQuery,
 	getRumorRecordQuery,
@@ -77,7 +77,7 @@ export const appRouter = t.router({
 
 		getAllIds: publicProcedure.query(() => getAllRecordIds(getAllEffectIdsQuery)),
 
-		export: publicProcedure.query(() => exportRecords(exportEffectsQuery))
+		export: publicProcedure.query(() => exportRecords(getAllEffectsQuery))
 	},
 	item: {
 		getAll: publicProcedure
@@ -88,7 +88,7 @@ export const appRouter = t.router({
 
 		getAllIds: publicProcedure.query(() => getAllRecordIds(getAllItemIdsQuery)),
 
-		export: publicProcedure.query(() => exportRecords(exportItemsQuery))
+		export: publicProcedure.query(() => exportRecords(getAllItemsQuery))
 	},
 	rumor: {
 		getAll: publicProcedure
@@ -101,7 +101,7 @@ export const appRouter = t.router({
 
 		getAllIds: publicProcedure.query(() => getAllRecordIds(getAllRumorIdsQuery)),
 
-		export: publicProcedure.query(() => exportRecords(exportRumorsQuery))
+		export: publicProcedure.query(() => exportRecords(getAllRumorsQuery))
 	},
 	trait: {
 		getAll: publicProcedure
@@ -114,7 +114,7 @@ export const appRouter = t.router({
 
 		getAllIds: publicProcedure.query(() => getAllRecordIds(getAllTraitIdsQuery)),
 
-		export: publicProcedure.query(() => exportRecords(exportTraitsQuery))
+		export: publicProcedure.query(() => exportRecords(getAllTraitsQuery))
 	},
 	user: {
 		getModuleBookmarks: protectedProcedure.input(moduleIdQueryValidator).query(async ({ input, ctx }) => {

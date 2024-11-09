@@ -4,7 +4,7 @@ if (env.NEXT_PUBLIC_NODE_ENV !== 'script') void import('server-only');
 import { DEFAULT_LIMIT, sortByMap } from '@root/constants/common';
 import { postgresql } from '@root/server/postgresql/repository';
 import {
-	exportDBQueriesMap,
+	getAllRecordQueriesMap,
 	getBookmarksQueriesMap,
 	getProfileRecordQuery
 } from '@root/server/postgresql/repository/query';
@@ -391,7 +391,7 @@ export const bookmarkRecord = async (
 
 export const exportAllRecords = async (writeFileFn?: typeof writeFile) =>
 	await Promise.all(
-		entries(exportDBQueriesMap).map(async ([table, query]) => {
+		entries(getAllRecordQueriesMap).map(async ([table, query]) => {
 			const exportData = await tryCatchHandler(query.execute(), 'exportDataQuery.execute');
 
 			if (!exportData.isSuccess) return { table, error: 'read-error', isSuccess: false } as const;

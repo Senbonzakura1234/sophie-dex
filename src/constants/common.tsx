@@ -1,12 +1,13 @@
 import type { AlertTypeEnum } from '@root/types/common';
 import type { AtelierIcon } from '@root/types/common/icon';
-import type {
-	CategoryEnum,
-	ColorEnum,
-	ModuleIdEnum,
-	RecipeTypeEnum,
-	RumorTypeEnum,
-	SortByEnum
+import {
+	type CategoryEnum,
+	type ColorEnum,
+	type ModuleIdEnum,
+	type RecipeTypeEnum,
+	type RumorTypeEnum,
+	type SortByEnum,
+	genericModuleIdEnumSchema
 } from '@root/types/common/zod/generic';
 import { capitalize } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
@@ -125,3 +126,5 @@ export const KEY_BINDING_DICTIONARY = {
 } as const;
 
 export const customPages = { signIn: '/signin' } as const satisfies Partial<NextAuthConfig['pages']>;
+
+export const moduleIdList = genericModuleIdEnumSchema._def.values;

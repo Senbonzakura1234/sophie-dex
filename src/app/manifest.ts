@@ -1,5 +1,4 @@
-import { APP_NAME } from '@root/constants/common';
-import { genericModuleIdEnumSchema } from '@root/types/common/zod/generic';
+import { APP_NAME, moduleIdList } from '@root/constants/common';
 import { capitalize } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import type { MetadataRoute } from 'next';
@@ -67,7 +66,7 @@ export default function manifest(): MetadataRoute.Manifest {
 		scope: '/',
 		short_name: APP_NAME,
 		shortcuts: [
-			...genericModuleIdEnumSchema._def.values.map(m => ({
+			...moduleIdList.map(m => ({
 				description: `View the ${capitalize(m)} Page`,
 				icons,
 				name: `Open ${capitalize(m)} Page`,

@@ -93,16 +93,16 @@ export const getAllTraitIdsQuery = postgresql.query.traits
 	.findMany({ columns: { id: true } })
 	.prepare('getAllTraitIds');
 
-export const exportEffectsQuery = postgresql.query.effects.findMany().prepare('exportEffects');
-export const exportItemsQuery = postgresql.query.items.findMany().prepare('exportItems');
-export const exportRumorsQuery = postgresql.query.rumors.findMany().prepare('exportRumors');
-export const exportTraitsQuery = postgresql.query.traits.findMany().prepare('exportTraits');
+export const getAllEffectsQuery = postgresql.query.effects.findMany().prepare('getAllEffects');
+export const getAllItemsQuery = postgresql.query.items.findMany().prepare('getAllItems');
+export const getAllRumorsQuery = postgresql.query.rumors.findMany().prepare('getAllRumors');
+export const getAllTraitsQuery = postgresql.query.traits.findMany().prepare('getAllTraits');
 
-export const exportDBQueriesMap: ExportDBQueriesMap = {
-	effect: exportEffectsQuery,
-	item: exportItemsQuery,
-	rumor: exportRumorsQuery,
-	trait: exportTraitsQuery
+export const getAllRecordQueriesMap: ExportDBQueriesMap = {
+	effect: getAllEffectsQuery,
+	item: getAllItemsQuery,
+	rumor: getAllRumorsQuery,
+	trait: getAllTraitsQuery
 };
 
 export const getEffectBookmarksQuery = postgresql.query.users
