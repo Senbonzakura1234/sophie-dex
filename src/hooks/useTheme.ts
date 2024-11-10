@@ -1,8 +1,8 @@
 import { KEY_BINDING_DICTIONARY } from '@root/constants/common';
+import { useCookies } from '@root/hooks/useCookies';
 import type { SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
 import { darkThemesList } from '@root/types/common/zod/generic';
 import { arrayInclude } from '@root/utils/common';
-import { useCookies } from './useCookies';
 
 export function useTheme<const V extends string>(
 	defaultTheme: V,

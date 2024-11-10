@@ -12,6 +12,7 @@ export default chainingPlugin({
 		experimental: { mdxRs: true, reactCompiler: true },
 		images: { remotePatterns: [{ protocol: 'https', hostname: 'avatars.githubusercontent.com', port: '' }] },
 		pageExtensions: ['ts', 'tsx', 'mdx'],
-		typescript: { ignoreBuildErrors: process.env.DISABLE_TYPE_CHECK === 'true' }
+		typescript: { ignoreBuildErrors: process.env.DISABLE_TYPE_CHECK === 'true' },
+		transpilePackages: ['next-mdx-remote']
 	}
 });

@@ -1,12 +1,4 @@
-import {
-	bookmarkRecord,
-	getEffects,
-	getItems,
-	getModuleBookmarks,
-	getReadmeProfile,
-	getRumors,
-	getTraits
-} from '@root/server/postgresql';
+import { bookmarkRecord, getEffects, getItems, getRumors, getTraits } from '@root/server/postgresql';
 import {
 	getAllEffectIdsQuery,
 	getAllEffectsQuery,
@@ -32,7 +24,13 @@ import { writeLog } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
 import type { SessionResult } from '@root/utils/server';
 import { getSessionResult } from '@root/utils/server';
-import { exportRecords, getAllRecordIds, getContentRecord } from '@root/utils/server/database';
+import {
+	exportRecords,
+	getAllRecordIds,
+	getContentRecord,
+	getModuleBookmarks,
+	getReadmeProfile
+} from '@root/utils/server/database';
 import type { inferRouterOutputs } from '@trpc/server';
 import { initTRPC } from '@trpc/server';
 import { ZodError } from 'zod';

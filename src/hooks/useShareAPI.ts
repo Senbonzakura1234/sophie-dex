@@ -1,7 +1,7 @@
+import { useNotification } from '@root/hooks/useNotification';
 import type { InputData } from '@root/types/common';
 import { getBaseUrl, tryCatchHandler, tryCatchHandlerSync } from '@root/utils/common';
 import { useCallback, useMemo } from 'react';
-import { useNotification } from './useNotification';
 
 export const useShareAPI = (input: InputData) => {
 	const [shareNotification, setShareNotification] = useNotification();

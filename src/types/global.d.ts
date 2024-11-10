@@ -1,7 +1,8 @@
 declare module 'server-only';
 
 declare module 'mdx-to-md' {
-	// import type { ImprovePick } from './common';
+	import type { ImprovePick } from '@root/types/common';
+	import type { BundleMDX } from 'mdx-bundler/dist/types';
 
 	async function mdxToMd<
 		Frontmatter extends {
@@ -12,6 +13,6 @@ declare module 'mdx-to-md' {
 		path: string,
 
 		/** Configure internal library options. */
-		options?: Pick<BundleMDX<Frontmatter>, 'esbuildOptions' | 'grayMatterOptions' | 'mdxOptions'>
+		options?: ImprovePick<BundleMDX<Frontmatter>, 'esbuildOptions' | 'grayMatterOptions' | 'mdxOptions'>
 	): Promise<string>;
 }

@@ -3,20 +3,16 @@ if (env.NEXT_PUBLIC_NODE_ENV !== 'script') void import('server-only');
 
 import { DEFAULT_LIMIT, sortByMap } from '@root/constants/common';
 import { postgresql } from '@root/server/postgresql/repository';
-import {
-	getAllRecordQueriesMap,
-	getBookmarksQueriesMap,
-	getProfileRecordQuery
-} from '@root/server/postgresql/repository/query';
+import { getAllRecordQueriesMap } from '@root/server/postgresql/repository/query';
 import type { CommonRecord, Effect, Item, ProfileCreate, Rumor, Trait } from '@root/server/postgresql/schema';
 import { effects, items, profiles, rumors, traits, users } from '@root/server/postgresql/schema';
-import type { APIResult, ImprovedOmit } from '@root/types/common';
+import type { ImprovedOmit } from '@root/types/common';
 import { APIError } from '@root/types/common';
-import type { BookmarkQuery, ModuleIdQuery, SearchQuery } from '@root/types/common/zod';
+import type { BookmarkQuery, SearchQuery } from '@root/types/common/zod';
 import type { ModuleIdEnum, SortByEnum } from '@root/types/common/zod/generic';
-import { arrayInclude, capitalize, entries, objectValues, tryCatchHandler } from '@root/utils/common';
+import { arrayInclude, capitalize, entries, tryCatchHandler } from '@root/utils/common';
 import type { SessionResult } from '@root/utils/server';
-import { getGithubReadme } from '@root/utils/server/fetch';
+import { getModuleBookmarks } from '@root/utils/server/database';
 import type { AnyColumn, SQL, SQLWrapper } from 'drizzle-orm';
 import { and, arrayOverlaps, asc, count, desc, eq, ilike, inArray, or, sql } from 'drizzle-orm';
 import type { PgColumn, PgSelect } from 'drizzle-orm/pg-core';
@@ -310,58 +306,6 @@ export const insertOrUpdateProfile = async (
 		.values(profileData)
 		.returning()
 		.then(res => res[0]);
-};
-
-export const getReadmeProfile = async (session: NonNullable<SessionResult['session']>) => {
-	const getReadmeProfileRes = await tryCatchHandler(
-		Promise.all([getProfileRecordQuery.execute({ login: session.user.name }), getGithubReadme(session)]),
-		'getReadmeProfile.batchQuery'
-	);
-
-	if (!getReadmeProfileRes.isSuccess)
-		throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get Profile error' });
-
-	const [profile, readmeContent] = getReadmeProfileRes.data;
-
-	if (!profile) throw new APIError({ code: 'NOT_FOUND', message: 'Profile not found' });
-
-	return { profile, readmeContent };
-};
-
-const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: string) => {
-	const res = (await getBookmarksQueriesMap[moduleId].execute({ name: username })) as Record<string, Array<string>>;
-
-	return objectValues(res || {})[0] || [];
-};
-
-export const getModuleBookmarks = async (
-	{ moduleId }: ModuleIdQuery,
-	session: NonNullable<SessionResult['session']>
-): APIResult<Array<string>> => {
-	const getModuleBookmarkRes = await tryCatchHandler(
-		onGetBookmarks(moduleId, session.user.name),
-		'getModuleBookmarks.executeQuery'
-	);
-
-	if (!getModuleBookmarkRes.isSuccess)
-		return {
-			isSuccess: false as const,
-			result: null,
-			error: new APIError({ code: 'INTERNAL_SERVER_ERROR' })
-		};
-
-	if (!getModuleBookmarkRes.data)
-		return {
-			isSuccess: false as const,
-			result: null,
-			error: new APIError({ code: 'NOT_FOUND', message: 'User not found' })
-		};
-
-	return {
-		isSuccess: true as const,
-		result: getModuleBookmarkRes.data,
-		error: null
-	};
 };
 
 type GetToggleBookmarkQuery = { username: string } & BookmarkQuery;

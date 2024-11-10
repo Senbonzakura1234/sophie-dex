@@ -1,6 +1,6 @@
 'use client';
 
-import { getCookie, setCookie } from 'cookies-next';
+import { getCookie, setCookie } from 'cookies-next/client';
 import { useState } from 'react';
 
 export function useCookies<T extends string>(name: string, defaultValue: T) {

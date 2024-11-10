@@ -1,5 +1,4 @@
 import type { CommonRecord } from '@root/server/postgresql/schema';
-import { z } from 'zod';
 import {
 	genericBooleanishEnumSchema,
 	genericCategoryEnumSchema,
@@ -11,7 +10,8 @@ import {
 	genericRelatedCategoryEnumSchema,
 	genericRumorTypeEnumSchema,
 	genericSortByEnumSchema
-} from './generic';
+} from '@root/types/common/zod/generic';
+import { z } from 'zod';
 
 export const searchQueryValidator = z.object({
 	bookmarked: genericBooleanishEnumSchema.nullish().catch(null).default(null),

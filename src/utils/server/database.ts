@@ -2,12 +2,16 @@ import { env } from '@root/utils/common/env';
 if (env.NEXT_PUBLIC_NODE_ENV !== 'script') void import('server-only');
 
 import { errorMap, moduleIdList } from '@root/constants/common';
-import { getAllRecordQueriesMap } from '@root/server/postgresql/repository/query';
+import {
+	getAllRecordQueriesMap,
+	getBookmarksQueriesMap,
+	getProfileRecordQuery
+} from '@root/server/postgresql/repository/query';
 import type { CommonRecord, Effect, Item, Rumor, Trait } from '@root/server/postgresql/schema';
 import type { APIResult, CommonObject, PreparedPGQuery } from '@root/types/common';
 import { APIError } from '@root/types/common';
 import type { PageProps } from '@root/types/common/props';
-import type { IdQuery, OgQuery } from '@root/types/common/zod';
+import type { IdQuery, ModuleIdQuery, OgQuery } from '@root/types/common/zod';
 import { idQueryValidator, searchQueryValidator } from '@root/types/common/zod';
 import type { ModuleIdEnum } from '@root/types/common/zod/generic';
 import {
@@ -18,7 +22,9 @@ import {
 	parseHyperLinkData,
 	tryCatchHandler
 } from '@root/utils/common';
+import type { SessionResult } from '@root/utils/server';
 import { getOgImgUrl, getSiteMapPriority } from '@root/utils/server';
+import { getGithubReadme } from '@root/utils/server/fetch';
 import type { Metadata, MetadataRoute, ResolvingMetadata } from 'next';
 
 export async function generateGenericMetadata(
@@ -136,6 +142,67 @@ export const exportRecords = async <TRecord extends CommonRecord>(
 	if (isSuccess) return { isSuccess, result: data, error: null };
 
 	return { isSuccess, result: null, error: new APIError({ code: 'INTERNAL_SERVER_ERROR' }) };
+};
+
+export const getReadmeProfile = async (session: NonNullable<SessionResult['session']>) => {
+	const getReadmeProfileRes = await tryCatchHandler(
+		Promise.all([getProfileRecordQuery.execute({ login: session.user.name }), getGithubReadme(session)]),
+		'getReadmeProfile.batchQuery'
+	);
+
+	if (!getReadmeProfileRes.isSuccess)
+		return {
+			error: new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get Profile error' }),
+			isSuccess: false as const,
+			result: null
+		} satisfies Awaited<APIResult>;
+
+	const [profile, readmeContent] = getReadmeProfileRes.data;
+
+	if (!profile)
+		return {
+			error: new APIError({ code: 'NOT_FOUND', message: 'Profile not found' }),
+			isSuccess: false as const,
+			result: null
+		} satisfies Awaited<APIResult>;
+
+	return { error: null, isSuccess: true as const, result: { profile, readmeContent } } satisfies Awaited<APIResult>;
+};
+
+const onGetBookmarks = async (moduleId: ModuleIdQuery['moduleId'], username: string) => {
+	const res = (await getBookmarksQueriesMap[moduleId].execute({ name: username })) as Record<string, Array<string>>;
+
+	return objectValues(res || {})[0] || [];
+};
+
+export const getModuleBookmarks = async (
+	{ moduleId }: ModuleIdQuery,
+	session: NonNullable<SessionResult['session']>
+): APIResult<Array<string>> => {
+	const getModuleBookmarkRes = await tryCatchHandler(
+		onGetBookmarks(moduleId, session.user.name),
+		'getModuleBookmarks.executeQuery'
+	);
+
+	if (!getModuleBookmarkRes.isSuccess)
+		return {
+			isSuccess: false as const,
+			result: null,
+			error: new APIError({ code: 'INTERNAL_SERVER_ERROR' })
+		};
+
+	if (!getModuleBookmarkRes.data)
+		return {
+			isSuccess: false as const,
+			result: null,
+			error: new APIError({ code: 'NOT_FOUND', message: 'User not found' })
+		};
+
+	return {
+		isSuccess: true as const,
+		result: getModuleBookmarkRes.data,
+		error: null
+	};
 };
 
 export const updateEffectKeywords = (input: Effect): Effect => ({

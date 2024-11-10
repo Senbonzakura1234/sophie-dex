@@ -1,6 +1,6 @@
 import { moduleIdList } from '@root/constants/common';
+import { usePageSegment } from '@root/hooks/usePageSegment';
 import { arrayInclude } from '@root/utils/common';
-import { usePageSegment } from './usePageSegment';
 
 export const useModuleId = () => {
 	const { segment } = usePageSegment();

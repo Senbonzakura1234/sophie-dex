@@ -1,8 +1,8 @@
+import { useUpdateQuery } from '@root/hooks/useUpdateQuery';
 import type { ImproveExclude, SelectOptionItem, SetSelectOptionItem } from '@root/types/common';
 import type { SearchQuery } from '@root/types/common/zod';
 import { arrayInclude } from '@root/utils/common';
 import { useCallback, useMemo } from 'react';
-import { useUpdateQuery } from './useUpdateQuery';
 
 type SelectQueryKey = ImproveExclude<keyof SearchQuery, 'direction' | 'relatedCategory' | 'search' | 'sortBy'>;
 

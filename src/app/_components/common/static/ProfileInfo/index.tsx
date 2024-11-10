@@ -1,3 +1,5 @@
+import styles from './index.module.css';
+
 import Avatar from '@components/common/static/Avatar';
 import CommonWrapper from '@components/common/static/CommonWrapper';
 import MDXRenderer from '@components/common/static/MDXRenderer';
@@ -10,11 +12,10 @@ import BriefcaseIcon from '@components/icons/solid/BriefcaseIcon';
 import FollowIcon from '@components/icons/solid/FollowIcon';
 import HandShakeIcon from '@components/icons/solid/HandShakeIcon';
 import RepositoryIcon from '@components/icons/solid/RepositoryIcon';
-import type { RouterOutputs } from '@root/server/router';
+import type { getReadmeProfile } from '@root/utils/server/database';
 import { Suspense } from 'react';
-import styles from './index.module.css';
 
-type Props = Readonly<RouterOutputs['user']['getReadmeProfile']>;
+type Props = Readonly<NonNullable<Awaited<ReturnType<typeof getReadmeProfile>>['result']>>;
 
 export default function ProfileInfo({
 	profile: {
