@@ -18,13 +18,13 @@ export async function generateMetadata(
 	return generateGenericMetadata(parent, { title: `${APP_NAME} | Profile` }, searchParams);
 }
 
-const getProfile = async () => {
+const getReadmeProfile = async () => {
 	const ApiServerCtx = await getApiServerCtx();
 
-	const { data, error, isSuccess } = await tryCatchHandler(
-		ApiServerCtx.user.getReadmeProfile.fetch(),
-		'getProfile.fetch'
-	);
+	const { data, error, isSuccess } = await tryCatchHandler(ApiServerCtx.user.getReadmeProfile.fetch(), {
+		operationCode: 'getReadmeProfile.fetch',
+		suppressLog: true
+	});
 
 	if (isSuccess) return data;
 
@@ -35,7 +35,7 @@ const getProfile = async () => {
 };
 
 export default async function ProfilePage() {
-	const resolvedProps = await getProfile();
+	const resolvedProps = await getReadmeProfile();
 
 	return (
 		<Suspense fallback={<RecordPlaceholder className='mx-auto min-h-[427.5px] w-full max-w-4xl' />}>

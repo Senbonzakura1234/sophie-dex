@@ -22,7 +22,9 @@ const seed = async () => {
 	for (let i = 0; i < effectsList.length; i++) {
 		const element = effectsList[i]!;
 
-		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(effects).values(element), 'seed.seedEffect');
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(effects).values(element), {
+			operationCode: 'seed.seedEffect'
+		});
 
 		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error: JSON.stringify(error, null, 2) });
 		if (isSuccess) seedResult.effectsSuccessCount++;
@@ -31,7 +33,9 @@ const seed = async () => {
 	for (let i = 0; i < itemsList.length; i++) {
 		const element = itemsList[i]!;
 
-		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(items).values(element), 'seed.seedItem');
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(items).values(element), {
+			operationCode: 'seed.seedItem'
+		});
 
 		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error: JSON.stringify(error, null, 2) });
 		if (isSuccess) seedResult.itemsSuccessCount++;
@@ -40,7 +44,9 @@ const seed = async () => {
 	for (let i = 0; i < rumorsList.length; i++) {
 		const element = rumorsList[i]!;
 
-		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(rumors).values(element), 'seed.seedRumor');
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(rumors).values(element), {
+			operationCode: 'seed.seedRumor'
+		});
 
 		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error: JSON.stringify(error, null, 2) });
 		if (isSuccess) seedResult.rumorsSuccessCount++;
@@ -49,7 +55,9 @@ const seed = async () => {
 	for (let i = 0; i < traitsList.length; i++) {
 		const element = traitsList[i]!;
 
-		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(traits).values(element), 'seed.seedTrait');
+		const { isSuccess, error } = await tryCatchHandler(postgresql.insert(traits).values(element), {
+			operationCode: 'seed.seedTrait'
+		});
 
 		if (!isSuccess) seedResult.errorList.push({ id: element?.id, error: JSON.stringify(error, null, 2) });
 		if (isSuccess) seedResult.traitsSuccessCount++;

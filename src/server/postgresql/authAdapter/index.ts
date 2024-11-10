@@ -28,7 +28,7 @@ export const authAdapter: Adapter = {
 
 		const { data, isSuccess } = await tryCatchHandler(
 			postgresql.insert(users).values({ email, emailVerified, image, name }).returning(),
-			'authAdapter.createUser'
+			{ operationCode: 'authAdapter.createUser' }
 		);
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Create User error' });
 
@@ -40,7 +40,9 @@ export const authAdapter: Adapter = {
 	},
 
 	getUser: async id => {
-		const { data, isSuccess } = await tryCatchHandler(getUserRecordByIdQuery.execute({ id }), 'authAdapter.getUser');
+		const { data, isSuccess } = await tryCatchHandler(getUserRecordByIdQuery.execute({ id }), {
+			operationCode: 'authAdapter.getUser'
+		});
 
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get User error' });
 
@@ -48,10 +50,9 @@ export const authAdapter: Adapter = {
 	},
 
 	getUserByEmail: async email => {
-		const { data, isSuccess } = await tryCatchHandler(
-			getUserRecordByEmailQuery.execute({ email }),
-			'authAdapter.getUserByEmail'
-		);
+		const { data, isSuccess } = await tryCatchHandler(getUserRecordByEmailQuery.execute({ email }), {
+			operationCode: 'authAdapter.getUserByEmail'
+		});
 
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get Uer error' });
 
@@ -61,7 +62,7 @@ export const authAdapter: Adapter = {
 	createSession: async ({ expires, sessionToken, userId }) => {
 		const { data, isSuccess } = await tryCatchHandler(
 			postgresql.insert(sessions).values({ expires, sessionToken, userId }).returning(),
-			'authAdapter.createSession'
+			{ operationCode: 'authAdapter.createSession' }
 		);
 
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Create Session error' });
@@ -72,10 +73,9 @@ export const authAdapter: Adapter = {
 	},
 
 	getSessionAndUser: async sessionToken => {
-		const { data, isSuccess } = await tryCatchHandler(
-			getSessionAndUserQuery.execute({ sessionToken }),
-			'authAdapter.getSessionAndUser'
-		);
+		const { data, isSuccess } = await tryCatchHandler(getSessionAndUserQuery.execute({ sessionToken }), {
+			operationCode: 'authAdapter.getSessionAndUser'
+		});
 
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get Session User error' });
 
@@ -91,7 +91,7 @@ export const authAdapter: Adapter = {
 				.set({ ...input, image: input.image || '', name: input.name || '' })
 				.where(eq(users.id, input.id))
 				.returning(),
-			'authAdapter.updateUser'
+			{ operationCode: 'authAdapter.updateUser' }
 		);
 
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Update User error' });
@@ -104,7 +104,7 @@ export const authAdapter: Adapter = {
 	updateSession: async input => {
 		const { data, isSuccess } = await tryCatchHandler(
 			postgresql.update(sessions).set(input).where(eq(sessions.sessionToken, input.sessionToken)).returning(),
-			'authAdapter.updateSession'
+			{ operationCode: 'authAdapter.updateSession' }
 		);
 
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Update Session error' });
@@ -115,12 +115,14 @@ export const authAdapter: Adapter = {
 	},
 
 	linkAccount: async data =>
-		void (await tryCatchHandler(postgresql.insert(accounts).values(data), 'authAdapter.linkAccount')),
+		void (await tryCatchHandler(postgresql.insert(accounts).values(data), {
+			operationCode: 'authAdapter.linkAccount'
+		})),
 
 	getUserByAccount: async ({ provider, providerAccountId }) => {
 		const { data, isSuccess } = await tryCatchHandler(
 			getUserByAccountQuery.execute({ provider, providerAccountId }),
-			'authAdapter.getUserByAccount'
+			{ operationCode: 'authAdapter.getUserByAccount' }
 		);
 
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get User error' });
@@ -129,15 +131,14 @@ export const authAdapter: Adapter = {
 	},
 
 	deleteSession: async sessionToken =>
-		void (await tryCatchHandler(
-			postgresql.delete(sessions).where(eq(sessions.sessionToken, sessionToken)),
-			'authAdapter.deleteSession'
-		)),
+		void (await tryCatchHandler(postgresql.delete(sessions).where(eq(sessions.sessionToken, sessionToken)), {
+			operationCode: 'authAdapter.deleteSession'
+		})),
 
 	createVerificationToken: async ({ expires, identifier, token }) => {
 		const { data, isSuccess } = await tryCatchHandler(
 			postgresql.insert(verificationTokens).values({ expires, identifier, token }).returning(),
-			'authAdapter.createVerificationToken'
+			{ operationCode: 'authAdapter.createVerificationToken' }
 		);
 
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Create VerificationToken error' });
@@ -151,7 +152,7 @@ export const authAdapter: Adapter = {
 				.delete(verificationTokens)
 				.where(and(eq(verificationTokens.identifier, identifier), eq(verificationTokens.token, token)))
 				.returning(),
-			'authAdapter.useVerificationToken'
+			{ operationCode: 'authAdapter.useVerificationToken' }
 		);
 
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get VerificationToken error' });
@@ -160,16 +161,17 @@ export const authAdapter: Adapter = {
 	},
 
 	deleteUser: async id => {
-		const { data } = await tryCatchHandler(
-			postgresql.delete(users).where(eq(users.id, id)).returning(),
-			'deleteUser.deleteUser'
-		);
+		const { data } = await tryCatchHandler(postgresql.delete(users).where(eq(users.id, id)).returning(), {
+			operationCode: 'deleteUser.deleteUser'
+		});
 
 		const OR: Array<SQL> = [eq(profiles.userId, id)];
 
 		if (data?.[0]) OR.push(eq(profiles.login, data[0].name));
 
-		return void (await tryCatchHandler(postgresql.delete(profiles).where(or(...OR)), 'deleteUser.deleteProfile'));
+		return void (await tryCatchHandler(postgresql.delete(profiles).where(or(...OR)), {
+			operationCode: 'deleteUser.deleteProfile'
+		}));
 	},
 
 	unlinkAccount: async ({ provider, providerAccountId }) =>
@@ -177,13 +179,13 @@ export const authAdapter: Adapter = {
 			postgresql
 				.delete(accounts)
 				.where(and(eq(accounts.provider, provider), eq(accounts.providerAccountId, providerAccountId))),
-			'authAdapter.unlinkAccount'
+			{ operationCode: 'authAdapter.unlinkAccount' }
 		)),
 
 	getAccount: async (providerAccountId, provider) => {
 		const { data, isSuccess } = await tryCatchHandler(
 			getAccountRecordQuery.execute({ providerAccountId, provider }),
-			'authAdapter.getAccount'
+			{ operationCode: 'authAdapter.getAccount' }
 		);
 
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get Account error' });
@@ -192,10 +194,9 @@ export const authAdapter: Adapter = {
 	},
 
 	createAuthenticator: async input => {
-		const { data, isSuccess } = await tryCatchHandler(
-			postgresql.insert(authenticators).values(input).returning(),
-			'authAdapter.createAuthenticator'
-		);
+		const { data, isSuccess } = await tryCatchHandler(postgresql.insert(authenticators).values(input).returning(), {
+			operationCode: 'authAdapter.createAuthenticator'
+		});
 
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Create Authenticator error' });
 
@@ -205,10 +206,9 @@ export const authAdapter: Adapter = {
 	},
 
 	getAuthenticator: async credentialID => {
-		const { data, isSuccess } = await tryCatchHandler(
-			getAuthenticatorRecordQuery.execute({ credentialID }),
-			'authAdapter.getAuthenticator'
-		);
+		const { data, isSuccess } = await tryCatchHandler(getAuthenticatorRecordQuery.execute({ credentialID }), {
+			operationCode: 'authAdapter.getAuthenticator'
+		});
 
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get Authenticator error' });
 
@@ -216,10 +216,9 @@ export const authAdapter: Adapter = {
 	},
 
 	listAuthenticatorsByUserId: async userId => {
-		const { data, isSuccess } = await tryCatchHandler(
-			getAllAuthenticatorRecordsByUserIdQuery.execute({ userId }),
-			'authAdapter.listAuthenticatorsByUserId'
-		);
+		const { data, isSuccess } = await tryCatchHandler(getAllAuthenticatorRecordsByUserIdQuery.execute({ userId }), {
+			operationCode: 'authAdapter.listAuthenticatorsByUserId'
+		});
 
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Get list Authenticator error' });
 
@@ -233,7 +232,7 @@ export const authAdapter: Adapter = {
 				.set({ counter })
 				.where(eq(authenticators.credentialID, credentialID))
 				.returning(),
-			'authAdapter.updateAuthenticatorCounter'
+			{ operationCode: 'authAdapter.updateAuthenticatorCounter' }
 		);
 
 		if (!isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Update Authenticator error' });

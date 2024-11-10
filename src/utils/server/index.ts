@@ -5,14 +5,6 @@ import { auth } from '@root/auth';
 import { sitemapPriorityArray } from '@root/constants/server';
 import type { OgQuery } from '@root/types/common/zod';
 import { entries, getBaseUrl } from '@root/utils/common';
-import type { RequestCookie } from 'next/dist/compiled/@edge-runtime/cookies';
-import { cookies } from 'next/headers';
-
-export const getCookieData = async (name: string) => {
-	const cookieData = (await cookies()).get(name);
-
-	return new Promise<RequestCookie | undefined>(resolve => setTimeout(() => resolve(cookieData)));
-};
 
 export type SessionResult =
 	| { isAuthenticated: false; session: null }

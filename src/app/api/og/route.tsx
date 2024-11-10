@@ -11,11 +11,11 @@ import type { ImageResponseOptions } from 'next/server';
 export const runtime: ServerRuntime = 'edge';
 
 const getFontData = async (): Promise<ImageResponseOptions['fonts']> => {
-	const url = new URL('../../../fonts/comic-sans-ms/regular-bold.ttf', import.meta.url);
+	const url = new URL('src/fonts/comic-sans-ms/regular-bold.ttf', import.meta.url);
 
 	const dataResult = await tryCatchHandler(
 		fetch(url).then(res => res.arrayBuffer()),
-		'getFontData.fetch'
+		{ operationCode: 'getFontData.fetch' }
 	);
 
 	if (!dataResult.isSuccess) return undefined;

@@ -14,10 +14,9 @@ const getRecord = async (params: Readonly<PageProps>['params']) =>
 export const revalidate = 9e6;
 
 export async function generateStaticParams(): Promise<Array<{ id: string }>> {
-	const { data } = await tryCatchHandler(
-		getAllRecordIds(getAllEffectIdsQuery),
-		'generateStaticParams.getAllEffectIds'
-	);
+	const { data } = await tryCatchHandler(getAllRecordIds(getAllEffectIdsQuery), {
+		operationCode: 'generateStaticParams.getAllEffectIds'
+	});
 
 	return data?.result || [];
 }

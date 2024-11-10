@@ -32,10 +32,9 @@ export async function generateGenericMetadata(
 	extraMeta: Metadata,
 	searchParams?: Readonly<PageProps>['searchParams']
 ): Promise<Metadata> {
-	const res = await tryCatchHandler(
-		Promise.all([parentPromise, searchParams]),
-		'generateGenericMetadata.getParentMeta'
-	);
+	const res = await tryCatchHandler(Promise.all([parentPromise, searchParams]), {
+		operationCode: 'generateGenericMetadata.getParentMeta'
+	});
 
 	if (!res.isSuccess) return { title: `Error 500 - ${errorMap.INTERNAL_SERVER_ERROR.message}` };
 
@@ -50,10 +49,9 @@ export async function generateDetailMetadata(
 	parentPromise: ResolvingMetadata,
 	getRecordPromise: ReturnType<typeof getContentRecord>
 ): Promise<Metadata> {
-	const result = await tryCatchHandler(
-		Promise.all([parentPromise, getRecordPromise]),
-		'generateDetailMetadata.getParentMetaAndRecord'
-	);
+	const result = await tryCatchHandler(Promise.all([parentPromise, getRecordPromise]), {
+		operationCode: 'generateDetailMetadata.getParentMetaAndRecord'
+	});
 
 	if (!result.isSuccess) return { title: `Error 500 - ${errorMap.INTERNAL_SERVER_ERROR.message}` };
 
@@ -112,7 +110,9 @@ export const getContentRecord = async <TRecord extends CommonRecord>(
 			error: new APIError({ code: 'BAD_REQUEST', message: 'Invalid Record Id' })
 		} satisfies Awaited<APIResult>;
 
-	const { data, isSuccess } = await tryCatchHandler(query.execute({ id }), 'getContentRecord.execute');
+	const { data, isSuccess } = await tryCatchHandler(query.execute({ id }), {
+		operationCode: 'getContentRecord.execute'
+	});
 
 	if (!isSuccess || !data)
 		return {
@@ -127,7 +127,7 @@ export const getContentRecord = async <TRecord extends CommonRecord>(
 export const getAllRecordIds = async (
 	query: PreparedPGQuery<Array<{ id: string }>>
 ): APIResult<Array<{ id: string }>> => {
-	const { data, isSuccess } = await tryCatchHandler(query.execute(), 'getAllRecordIds.execute');
+	const { data, isSuccess } = await tryCatchHandler(query.execute(), { operationCode: 'getAllRecordIds.execute' });
 
 	if (isSuccess) return { isSuccess, result: data, error: null };
 
@@ -137,7 +137,7 @@ export const getAllRecordIds = async (
 export const exportRecords = async <TRecord extends CommonRecord>(
 	query: PreparedPGQuery<Array<TRecord>>
 ): APIResult<Array<TRecord>> => {
-	const { data, isSuccess } = await tryCatchHandler(query.execute(), 'exportRecords.execute');
+	const { data, isSuccess } = await tryCatchHandler(query.execute(), { operationCode: 'exportRecords.execute' });
 
 	if (isSuccess) return { isSuccess, result: data, error: null };
 
@@ -147,7 +147,7 @@ export const exportRecords = async <TRecord extends CommonRecord>(
 export const getReadmeProfile = async (session: NonNullable<SessionResult['session']>) => {
 	const getReadmeProfileRes = await tryCatchHandler(
 		Promise.all([getProfileRecordQuery.execute({ login: session.user.name }), getGithubReadme(session)]),
-		'getReadmeProfile.batchQuery'
+		{ operationCode: 'getReadmeProfile.batchQuery' }
 	);
 
 	if (!getReadmeProfileRes.isSuccess)
@@ -179,10 +179,9 @@ export const getModuleBookmarks = async (
 	{ moduleId }: ModuleIdQuery,
 	session: NonNullable<SessionResult['session']>
 ): APIResult<Array<string>> => {
-	const getModuleBookmarkRes = await tryCatchHandler(
-		onGetBookmarks(moduleId, session.user.name),
-		'getModuleBookmarks.executeQuery'
-	);
+	const getModuleBookmarkRes = await tryCatchHandler(onGetBookmarks(moduleId, session.user.name), {
+		operationCode: 'getModuleBookmarks.executeQuery'
+	});
 
 	if (!getModuleBookmarkRes.isSuccess)
 		return {
@@ -265,10 +264,9 @@ export const updateTraitKeywords = (input: Trait): Trait => ({
 });
 
 export const generateRecordDetailSitemap = async (moduleId: ModuleIdEnum): Promise<MetadataRoute.Sitemap> => {
-	const { data } = await tryCatchHandler(
-		getAllRecordQueriesMap[moduleId].execute(),
-		'generateRecordsSitemap.getAllRecords'
-	);
+	const { data } = await tryCatchHandler(getAllRecordQueriesMap[moduleId].execute(), {
+		operationCode: 'generateRecordsSitemap.getAllRecords'
+	});
 
 	return (data || []).map(record => {
 		const ogQuery = {

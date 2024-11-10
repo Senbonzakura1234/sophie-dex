@@ -57,7 +57,7 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 				moduleId,
 				isBookmarked: isNotBookmarkFilter ? isRecordBookmarked : true
 			}),
-			'handleBookmark.mutateAsync'
+			{ operationCode: 'handleBookmark.mutateAsync' }
 		);
 
 		if (!res.isSuccess) return void refetch();

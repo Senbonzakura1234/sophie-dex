@@ -11,7 +11,9 @@ import { Suspense } from 'react';
 export const revalidate = 9e6;
 
 export async function generateStaticParams(): Promise<Array<{ id: string }>> {
-	const { data } = await tryCatchHandler(getAllRecordIds(getAllTraitIdsQuery), 'generateStaticParams.getAllTraitIds');
+	const { data } = await tryCatchHandler(getAllRecordIds(getAllTraitIdsQuery), {
+		operationCode: 'generateStaticParams.getAllTraitIds'
+	});
 
 	return data?.result || [];
 }

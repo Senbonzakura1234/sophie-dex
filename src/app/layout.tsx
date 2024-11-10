@@ -11,11 +11,13 @@ import type { ChildrenProps } from '@root/types/common/props';
 import { genericDaisyUIThemeEnumSchema } from '@root/types/common/zod/generic';
 import { cn, getBaseUrl, tryCatchHandler } from '@root/utils/common';
 import { env } from '@root/utils/common/env';
-import { getCookieData, getOgImgUrl } from '@root/utils/server';
+import { getOgImgUrl } from '@root/utils/server';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { getCookie } from 'cookies-next/server';
 import type { Metadata, Viewport } from 'next';
 import { SessionProvider } from 'next-auth/react';
 import dynamic from 'next/dynamic';
+import { cookies } from 'next/headers';
 
 const AuthNav = dynamic(() => import('@components/layout/dynamic/AuthNav'), {
 	loading: () => <div className='h-9 w-[108px] rounded-lg bg-base-100 shadow-lg shadow-base-content/20 xl:h-9' />
@@ -209,12 +211,11 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { themeColor: '#996c254d', width: 'device-width', initialScale: 1 };
 
 const getLayoutProps = async () => {
-	const themeCookiesRes = await tryCatchHandler(
-		getCookieData(KEY_BINDING_DICTIONARY.THEME_COOKIE_KEY),
-		'getLayoutProps.getCookieData'
-	);
+	const themeCookiesRes = await tryCatchHandler(getCookie(KEY_BINDING_DICTIONARY.THEME_COOKIE_KEY, { cookies }), {
+		operationCode: 'getLayoutProps.getCookieData'
+	});
 
-	return { theme: genericDaisyUIThemeEnumSchema.catch('fantasy').parse(themeCookiesRes.data?.value) };
+	return { theme: genericDaisyUIThemeEnumSchema.catch('fantasy').parse(themeCookiesRes.data) };
 };
 
 export default async function RootLayout({ children }: Readonly<ChildrenProps>) {

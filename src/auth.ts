@@ -18,10 +18,9 @@ export const provider = GitHub({
 
 		if (!profileParseRes.success) throw new APIError({ code: 'BAD_REQUEST', message: 'Profile Input Invalid' });
 
-		const insertOrUpdateProfileRes = await tryCatchHandler(
-			insertOrUpdateProfile(profileParseRes.data, false),
-			'profile.insertOrUpdateProfileRes'
-		);
+		const insertOrUpdateProfileRes = await tryCatchHandler(insertOrUpdateProfile(profileParseRes.data, false), {
+			operationCode: 'profile.insertOrUpdateProfileRes'
+		});
 
 		if (!insertOrUpdateProfileRes.isSuccess)
 			throw new APIError({ code: 'INTERNAL_SERVER_ERROR', message: 'Create or Update Profile Error' });

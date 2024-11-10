@@ -12,7 +12,7 @@ const generateMD = async () => {
 
 	const mdxPathResolveRes = tryCatchHandlerSync(
 		() => resolve('src/app/_components/common/dynamic/Readme/README.mdx'),
-		'generateMD.mdxPathResolveRes'
+		{ operationCode: 'generateMD.mdxPathResolveRes' }
 	);
 
 	if (!mdxPathResolveRes.isSuccess) {
@@ -23,7 +23,9 @@ const generateMD = async () => {
 		exit(1);
 	}
 
-	const mdxToMdRes = await tryCatchHandler(mdxToMd(mdxPathResolveRes.data), 'generateMD.convertMdxToMd');
+	const mdxToMdRes = await tryCatchHandler(mdxToMd(mdxPathResolveRes.data), {
+		operationCode: 'generateMD.convertMdxToMd'
+	});
 
 	if (!mdxToMdRes.isSuccess) {
 		writeLog({
@@ -33,7 +35,9 @@ const generateMD = async () => {
 		exit(1);
 	}
 
-	const writeFileRes = await tryCatchHandler(writeFile(mdPath, mdxToMdRes.data), 'generateMD.writeFileRes');
+	const writeFileRes = await tryCatchHandler(writeFile(mdPath, mdxToMdRes.data), {
+		operationCode: 'generateMD.writeFileRes'
+	});
 
 	if (!writeFileRes.isSuccess) {
 		writeLog({

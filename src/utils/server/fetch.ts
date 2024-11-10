@@ -17,7 +17,7 @@ async function improvedFetch<TResult = unknown>(
 async function improvedFetch<TResult = unknown>(args: Parameters<typeof fetch>, validator?: ZodType<TResult>) {
 	writeLog({ args: [`Fetch: ${JSON.stringify(args[0], null, 2)}`] });
 
-	const fetchResult = await tryCatchHandler(fetch(...args), 'improvedFetch.fetch');
+	const fetchResult = await tryCatchHandler(fetch(...args), { operationCode: 'improvedFetch.fetch' });
 
 	if (!fetchResult.isSuccess) {
 		throw new APIError({
@@ -36,7 +36,7 @@ async function improvedFetch<TResult = unknown>(args: Parameters<typeof fetch>, 
 	}
 
 	if (!validator) {
-		const textResult = await tryCatchHandler(fetchResult.data.text(), 'improvedFetch.parstText');
+		const textResult = await tryCatchHandler(fetchResult.data.text(), { operationCode: 'improvedFetch.parstText' });
 
 		if (!textResult.isSuccess)
 			throw new APIError({
@@ -48,7 +48,7 @@ async function improvedFetch<TResult = unknown>(args: Parameters<typeof fetch>, 
 		return textResult.data;
 	}
 
-	const jsonResult = await tryCatchHandler(fetchResult.data.json(), 'improvedFetch.parseJson');
+	const jsonResult = await tryCatchHandler(fetchResult.data.json(), { operationCode: 'improvedFetch.parseJson' });
 
 	if (!jsonResult.isSuccess)
 		throw new APIError({
@@ -81,22 +81,20 @@ export const getVersion = async (): Promise<APIResult<PackageDotJSON>> => {
 			[`https://api.github.com/repos/${env.NEXT_PUBLIC_APP_PATH}/contents/package.json`, getDefaultFetchHeader()],
 			githubFileResponseSchema
 		),
-		'getVersion.get'
+		{ operationCode: 'getVersion.get' }
 	);
 
 	if (!githubResult.isSuccess) return defaultResult;
 
-	const base64ToStringResult = tryCatchHandlerSync(
-		() => atob(githubResult.data.content),
-		'getVersion.base64ToStringResult'
-	);
+	const base64ToStringResult = tryCatchHandlerSync(() => atob(githubResult.data.content), {
+		operationCode: 'getVersion.base64ToStringResult'
+	});
 
 	if (!base64ToStringResult.isSuccess) return defaultResult;
 
-	const jsonToObjResult = tryCatchHandlerSync(
-		() => JSON.parse(base64ToStringResult.data),
-		'getVersion.jsonToObjResult'
-	);
+	const jsonToObjResult = tryCatchHandlerSync(() => JSON.parse(base64ToStringResult.data), {
+		operationCode: 'getVersion.jsonToObjResult'
+	});
 
 	if (!jsonToObjResult.isSuccess) return defaultResult;
 
@@ -113,7 +111,7 @@ export const getLicense = async () => {
 			[`https://api.github.com/licenses/${env.NEXT_PUBLIC_APP_LICENSE_CODE}`, getDefaultFetchHeader()],
 			licenseInfoSchema
 		),
-		'getLicense.get'
+		{ operationCode: 'getLicense.get' }
 	);
 
 	return licenseResult.isSuccess
@@ -127,6 +125,6 @@ export const getGithubReadme = async ({
 	(
 		await tryCatchHandler(
 			improvedFetch([`https://raw.githubusercontent.com/${name}/${name}/main/README.md`, getDefaultFetchHeader()]),
-			'getUserReadme.get'
+			{ operationCode: 'getUserReadme.get' }
 		)
 	).data;

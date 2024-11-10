@@ -136,7 +136,12 @@ export function highlightSearchedText(input: string, search: string | undefined,
 		.join('');
 }
 
-export async function tryCatchHandler<TReturn = unknown>(promise: PromiseLike<TReturn>, operationCode: string) {
+type TryCatchOption = { operationCode?: string; suppressLog?: boolean };
+
+export async function tryCatchHandler<TReturn = unknown>(
+	promise: PromiseLike<TReturn>,
+	{ operationCode, suppressLog }: TryCatchOption
+) {
 	try {
 		const start = globalThis.performance.now();
 
@@ -150,13 +155,17 @@ export async function tryCatchHandler<TReturn = unknown>(promise: PromiseLike<TR
 
 		return { data, isSuccess: true as const, error: null };
 	} catch (error) {
-		writeLog({ args: [`Error at ${operationCode}`, `Detail: `, JSON.stringify(error, null, 2)], type: 'error' });
+		if (!suppressLog)
+			writeLog({ args: [`Error at ${operationCode}`, `Detail: `, JSON.stringify(error, null, 2)], type: 'error' });
 
 		return { data: null, isSuccess: false as const, error };
 	}
 }
 
-export function tryCatchHandlerSync<TReturn = unknown>(callback: () => TReturn, operationCode: string) {
+export function tryCatchHandlerSync<TReturn = unknown>(
+	callback: () => TReturn,
+	{ operationCode = '', suppressLog }: TryCatchOption = {}
+) {
 	try {
 		const start = globalThis.performance.now();
 
@@ -170,7 +179,8 @@ export function tryCatchHandlerSync<TReturn = unknown>(callback: () => TReturn, 
 
 		return { data, isSuccess: true as const, error: null };
 	} catch (error) {
-		writeLog({ args: [`Error at ${operationCode}`, `Detail: `, JSON.stringify(error, null, 2)], type: 'error' });
+		if (!suppressLog)
+			writeLog({ args: [`Error at ${operationCode}`, `Detail: `, JSON.stringify(error, null, 2)], type: 'error' });
 
 		return { data: null, isSuccess: false as const, error };
 	}
@@ -195,7 +205,7 @@ export function parseHyperLinkData(input: HyperLinkData) {
 }
 
 export async function resolveSearchParams(searchParams: PageProps['searchParams']): PageProps['searchParams'] {
-	const searchParamsRes = await tryCatchHandler(searchParams, 'resolveSearchParams');
+	const searchParamsRes = await tryCatchHandler(searchParams, { operationCode: 'resolveSearchParams' });
 
 	if (!searchParamsRes.isSuccess) return {};
 
@@ -203,7 +213,7 @@ export async function resolveSearchParams(searchParams: PageProps['searchParams'
 }
 
 export async function resolveParams(params: PageProps['params']): PageProps['params'] {
-	const paramsRes = await tryCatchHandler(params, 'resolveParams');
+	const paramsRes = await tryCatchHandler(params, { operationCode: 'resolveParams' });
 
 	if (!paramsRes.isSuccess) return { id: '' };
 

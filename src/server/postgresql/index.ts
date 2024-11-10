@@ -108,7 +108,7 @@ export const getEffects = async (input: SearchQuery, { isAuthenticated, session 
 				page
 			)
 		]),
-		'getListRecord.executeBatchQuery'
+		{ operationCode: 'getListRecord.executeBatchQuery' }
 	);
 
 	if (!queryRes.isSuccess)
@@ -163,7 +163,7 @@ export const getItems = async (input: SearchQuery, { isAuthenticated, session }:
 				page
 			)
 		]),
-		'getListRecord.executeBatchQuery'
+		{ operationCode: 'getListRecord.executeBatchQuery' }
 	);
 
 	if (!queryRes.isSuccess)
@@ -215,7 +215,7 @@ export const getRumors = async (input: SearchQuery, { isAuthenticated, session }
 				page
 			)
 		]),
-		'getListRecord.executeBatchQuery'
+		{ operationCode: 'getListRecord.executeBatchQuery' }
 	);
 
 	if (!queryRes.isSuccess)
@@ -271,7 +271,7 @@ export const getTraits = async (input: SearchQuery, { isAuthenticated, session }
 				page
 			)
 		]),
-		'getListRecord.executeBatchQuery'
+		{ operationCode: 'getListRecord.executeBatchQuery' }
 	);
 
 	if (!queryRes.isSuccess)
@@ -325,7 +325,7 @@ export const bookmarkRecord = async (
 		postgresql.execute(
 			getToggleBookmarkQuery({ bookmarkRecordId, isBookmarked, moduleId, username: session.user.name })
 		),
-		'bookmarkRecord.executeQuery'
+		{ operationCode: 'bookmarkRecord.executeQuery' }
 	);
 
 	if (!bookmarkRes.isSuccess) throw new APIError({ code: 'INTERNAL_SERVER_ERROR' });
@@ -336,14 +336,14 @@ export const bookmarkRecord = async (
 export const exportAllRecords = async (writeFileFn?: typeof writeFile) =>
 	await Promise.all(
 		entries(getAllRecordQueriesMap).map(async ([table, query]) => {
-			const exportData = await tryCatchHandler(query.execute(), 'exportDataQuery.execute');
+			const exportData = await tryCatchHandler(query.execute(), { operationCode: 'exportDataQuery.execute' });
 
 			if (!exportData.isSuccess) return { table, error: 'read-error', isSuccess: false } as const;
 
 			if (writeFileFn) {
 				const writeFileResult = await tryCatchHandler(
 					writeFileFn(`backup/${table}.json`, JSON.stringify(exportData.data, null, 2)),
-					'exportDataQuery.writeFile'
+					{ operationCode: 'exportDataQuery.writeFile' }
 				);
 
 				if (!writeFileResult.isSuccess) return { table, error: 'write-error', isSuccess: false } as const;
