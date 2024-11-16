@@ -5,7 +5,6 @@ import type { useModuleId } from '@root/hooks/useModuleId';
 import { useSearchQuery } from '@root/hooks/useSearchQuery';
 import { ApiClientCtx } from '@root/utils/client/trpc';
 import { capitalize, cn, tryCatchHandler } from '@root/utils/common';
-import { skipToken } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
 import { BookmarkBtnIcon, BookmarkBtnText } from './BookmarkBtnInner';
 
@@ -27,11 +26,11 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 		refetch,
 		status: queryStatus
 	} = ApiClientCtx.user.getModuleBookmarks.useQuery(
-		sessionStatus === 'authenticated' && isNotBookmarkFilter ? { moduleId } : skipToken,
+		{ moduleId },
 		{
-			enabled: sessionStatus === 'authenticated' && isNotBookmarkFilter,
 			refetchOnMount: true,
-			refetchOnWindowFocus: true
+			refetchOnWindowFocus: true,
+			enabled: sessionStatus === 'authenticated' && isNotBookmarkFilter
 		}
 	);
 

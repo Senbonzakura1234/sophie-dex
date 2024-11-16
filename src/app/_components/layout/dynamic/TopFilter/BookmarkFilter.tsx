@@ -5,7 +5,6 @@ import type { BooleanishEnum } from '@root/types/common/zod/generic';
 import { genericBooleanishEnumSchema } from '@root/types/common/zod/generic';
 import { ApiClientCtx } from '@root/utils/client/trpc';
 import { booleanToBooleanish, booleanishToBoolean, cn } from '@root/utils/common';
-import { skipToken } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
 import type { ChangeEventHandler } from 'react';
 import { useEffect } from 'react';
@@ -36,11 +35,10 @@ export default function BookmarkFilter({ moduleId }: Props) {
 		data,
 		refetch,
 		status: queryStatus
-	} = ApiClientCtx.user.getModuleBookmarks.useQuery(isAPIDisabled ? skipToken : { moduleId }, {
-		enabled: !isAPIDisabled,
-		refetchOnMount: true,
-		refetchOnWindowFocus: true
-	});
+	} = ApiClientCtx.user.getModuleBookmarks.useQuery(
+		{ moduleId },
+		{ refetchOnMount: true, refetchOnWindowFocus: true, enabled: !isAPIDisabled }
+	);
 
 	const isFilterDisabled = !isAuthenticated || queryStatus !== 'success' || !data.result?.length;
 
