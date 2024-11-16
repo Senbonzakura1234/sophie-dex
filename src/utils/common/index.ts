@@ -114,12 +114,29 @@ export function paramsToQuery(input: ReadonlyURLSearchParams | URLSearchParams) 
 		);
 }
 
-export function queryToParamsString(query: Partial<SearchQuery>) {
+export function queryToParamsString<
+	TQuery extends Partial<
+		Record<string | number | symbol, string | number | boolean | Array<string | number | boolean> | null>
+	>
+>(query: Partial<TQuery>) {
 	const queryEntries = entries(query).filter(([, value]) => Boolean(value));
 
 	if (!queryEntries.length) return '';
 
-	return `?${queryEntries.map(([key, value]) => `${key}=${encodeURIComponent(value!)}`).join('&')}` as const;
+	return `?${queryEntries
+		.map(([rawKey, value]) => {
+			if (!value) return null;
+
+			const key = typeof rawKey === 'string' || typeof rawKey === 'number' ? rawKey : rawKey.description;
+
+			if (!key) return null;
+
+			if (!(value instanceof Array)) return `${key}=${encodeURIComponent(value)}`;
+
+			return `${value.map(v => `${key}=${encodeURIComponent(v)}`).join('&')}`;
+		})
+		.filter(Boolean)
+		.join('&')}` as const;
 }
 
 export function highlightSearchedText(input: string, search: string | undefined, noPadding = false) {

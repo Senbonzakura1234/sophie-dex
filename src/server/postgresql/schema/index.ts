@@ -20,16 +20,16 @@ import { ulid } from 'ulidx';
 
 export type HighlightText = { content: string };
 export type HyperLinkRecord = { id: string; name: string; table: ModuleIdEnum };
-export type HyperLinkSearch = { searchQuery: SearchQuery; table: ModuleIdEnum };
+export type HyperLinkSearch = { searchQuery: Partial<SearchQuery>; table: ModuleIdEnum };
 
 export type HyperLinkData = HighlightText | HyperLinkRecord | HyperLinkSearch;
 
 export type ItemDescription = {
 	hunt: Array<string>;
 	location: Array<string>;
-	rumor: HyperLinkRecord | null;
-	special: string | null;
-	shop: string | null;
+	rumor?: HyperLinkRecord | null;
+	special?: string | null;
+	shop?: string | null;
 };
 
 export type RelatedCategory = { count: number; name: RelatedCategoryEnum };

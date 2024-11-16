@@ -11,8 +11,10 @@ export const useUpdateQuery = () => {
 	const { push } = useRouter();
 
 	const updateQuery = (nextQuery: Partial<SearchQuery>) => {
-		if (typeof moduleId === 'undefined') return;
-		push(`/${moduleId}${queryToParamsString({ ...searchQuery, page: null, ...nextQuery })}`);
+		if (moduleId)
+			void push(`/${moduleId}${queryToParamsString({ ...searchQuery, page: null, ...nextQuery })}`, {
+				scroll: false
+			});
 	};
 
 	return { searchQuery, moduleId, updateQuery };

@@ -4,7 +4,7 @@ if (env.NEXT_PUBLIC_NODE_ENV !== 'script') void import('server-only');
 import { auth } from '@root/auth';
 import { sitemapPriorityArray } from '@root/constants/server';
 import type { OgQuery } from '@root/types/common/zod';
-import { entries, getBaseUrl } from '@root/utils/common';
+import { getBaseUrl, queryToParamsString } from '@root/utils/common';
 
 export type SessionResult =
 	| { isAuthenticated: false; session: null }
@@ -32,13 +32,7 @@ export const getSessionResult = async (): Promise<SessionResult> => {
 	};
 };
 
-export const getOgImgUrl = (ogQuery: OgQuery = {}) => {
-	const ogSearchParam = new URLSearchParams(entries(ogQuery)).toString();
-
-	const ogImgUrl = `${getBaseUrl(true)}/api/og${ogSearchParam.length ? '?' : ''}${ogSearchParam}`;
-
-	return ogImgUrl;
-};
+export const getOgImgUrl = (ogQuery: OgQuery = {}) => `${getBaseUrl(true)}/api/og${queryToParamsString(ogQuery)}`;
 
 export const getSiteMapPriority = (path: (typeof sitemapPriorityArray)[number]) => {
 	const index = sitemapPriorityArray.indexOf(path);
