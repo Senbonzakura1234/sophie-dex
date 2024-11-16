@@ -15,7 +15,7 @@ export default function SignInRedirectInner() {
 			searchParams.set('callbackUrl', new URL(globalThis.location.href).toString());
 
 			replace(`/signin?${searchParams.toString()}`, { scroll: false });
-		}, 0);
+		}, 2000);
 
 		return () => void clearTimeout(timer);
 	}, [replace]);

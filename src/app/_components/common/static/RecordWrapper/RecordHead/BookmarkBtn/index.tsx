@@ -71,9 +71,9 @@ export default function BookmarkBtn({ id, name, moduleId }: Props) {
 			data-tip={`Maximum ${MAXIMUM_BOOKMARK_LENGTH} ${capitalize(moduleId)} bookmarks reached`}
 		>
 			<button
-				aria-label={`${data?.result?.includes(id) ? 'Remove' : ''} Bookmark ${name}`}
+				aria-label={`${isRecordBookmarked ? 'Remove Bookmarked' : 'Bookmark'} ${name}`}
 				className={cn('btn btn-primary btn-xs capitalize shadow-md shadow-current', {
-					'btn-outline': !data?.result?.includes(id) && isNotBookmarkFilter
+					'btn-outline': !isRecordBookmarked && isNotBookmarkFilter
 				})}
 				onClick={handleBookmark}
 				disabled={isDisabled}
